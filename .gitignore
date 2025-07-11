@@ -1,0 +1,18 @@
+# Ignore Python cache and environment files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ignore large data files
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.parquet
+*.zip
+*.tar.gz
+*.pkl
+*.joblib
+
+# General OS files
+.DS_Store
