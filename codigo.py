@@ -46,7 +46,11 @@ def cargar_excel() -> Path:
     """
     if _in_colab():
         from google.colab import files  # type: ignore
-        ruta_subida = Path(next(iter(files.upload())))
+        uploads = files.upload()
+        while not uploads:
+            print("⚠ No file selected. Please upload an Excel file.")
+            uploads = files.upload()
+        ruta_subida = Path(next(iter(uploads)))
         destino = _ruta_content(ruta_subida)
         ruta_subida.replace(destino)
         print(f"✔ Archivo guardado en: {destino}")
