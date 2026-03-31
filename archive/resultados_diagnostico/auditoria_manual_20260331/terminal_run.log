@@ -1,0 +1,34 @@
+📋 Fase 3: Resolviendo 7977 ambigüedades SIES...
+{
+  "output_file": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_manual_20260331/archivo_listo_para_sies.xlsx",
+  "sheet_used": "Hoja1",
+  "gobernanza_mode": "v2_flagged",
+  "usar_gobernanza_v2": true,
+  "rows": 24827,
+  "rows_enriquecidas_datos_alumnos": 24607,
+  "rows_sin_match_datos_alumnos": 220,
+  "cod_sed_resuelto_por_regla": 24607,
+  "pais_est_sec_inferido_localidad": 24607,
+  "estado_inicial": {
+    "Matrícula Duplicada": 24753,
+    "Matrícula OK": 74
+  },
+  "manual_match": {
+    "MATCH_MANUAL": 24827
+  },
+  "sies_diag": {
+    "MATCH_SIES_UNICO": 16141,
+    "MATCH_SIES_AMBIGUO": 7977,
+    "EXCLUIDO_DIPLOMADO": 709
+  },
+  "catalogo_manual_rows": 277,
+  "puente_sies_rows": 110,
+  "gob_nac_rows": 16,
+  "gob_pais_est_sec_rows": 365,
+  "gob_sede_rows": 2,
+  "catalogo_manual_source": "/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv",
+  "puente_sies_source": "/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv",
+  "gob_nac_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_nac.tsv",
+  "gob_pais_est_sec_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_pais_est_sec.tsv",
+  "gob_sede_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv"
+}

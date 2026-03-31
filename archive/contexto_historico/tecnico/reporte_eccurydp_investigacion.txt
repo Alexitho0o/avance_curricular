@@ -1,0 +1,43 @@
+================================================================================
+REPORTE DE INVESTIGACIÓN: ECCURYDP
+FASE 1 - DESAMBIGUACIÓN SIES
+================================================================================
+
+HALLAZGO CRÍTICO:
+-----------------
+ECCURYDP NO EXISTE en puente_sies.tsv
+
+Este código de carrera (CODCARPR) aparece en los datos de estudiantes pero no 
+tiene un mapeo conocido a códigos SIES.
+
+POSIBLES EQUIVALENTES IDENTIFICADOS:
+------------------------------------
+1. IECIRE - Carrera similar (Conectividad, Redes, Infraestructura)
+2. IECIREOL - Variante Online de IECIRE
+3. Podría ser una variante especial o piloto no documentada
+
+CONTEO DE ESTUDIANTES:
+---------------------
+35 estudiantes tienen CODCARPR = ECCURYDP
+
+ESTADO ACTUAL:
+--------------
+- Estos estudiantes NO PUEDEN ser procesados en la FASE 1
+- REQUIEREN INVESTIGACIÓN MANUAL
+
+RECOMENDACIONES:
+----------------
+1. Contactar área académica para clarificar ECCURYDP
+2. Determinar si:
+   - Es alias de otra carrera existente
+   - Es programa piloto/especial
+   - Es error de registro en sistema origen
+3. Una vez aclarado, crear mapeo en matriz_desambiguacion_sies.tsv
+4. Re-procesar estos 35 estudiantes en FASE 1 revisión
+
+PRÓXIMOS PASOS:
+---------------
+FASE 1.1 - Investigación manual de ECCURYDP (BLOQUEANTE para estos estudiantes)
+
+FECHA REPORTE: $(date)
+================================================================================

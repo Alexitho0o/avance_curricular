@@ -1,0 +1,40 @@
+DECISION DE GOBERNANZA COLUMNAS MU - 2026-03-31
+
+Contexto
+- Se formaliza gobernanza por columna para Matricula Unificada pregrado.
+- Referencia normativa: Manual Matricula Unificada 2026, Anexo 7, Cuadro N1 (paginas 28-31).
+
+Decisiones aplicadas
+1) Se genero una carpeta con 1 TSV por columna de salida MU:
+   - carpeta: gobernanza_columnas_mu/
+   - indice: gobernanza_columnas_mu/_INDICE_COLUMNAS.tsv
+   - cobertura esperada: 32 columnas.
+
+2) Cada TSV de columna contiene:
+   - campo de salida
+   - orden en Cuadro N1
+   - descripcion manual
+   - codigos/rangos manuales
+   - fuentes automaticas del proyecto
+   - regla implementada actual
+   - validacion aplicada
+   - fallback operativo
+   - criterio de revision manual
+
+3) FOR_ING_ACT queda explicitamente gobernado con catalogo propio:
+   - archivo: gobernanza_for_ing_act.tsv
+   - codigos: 1..11 segun Cuadro N1 + Cuadro N3.
+
+4) Generacion reproducible:
+   - script: generar_gobernanza_columnas_mu.py
+
+Validacion de cobertura ejecutada
+- columnas definidas por codigo (MATRICULA_UNIFICADA_COLUMNS): 32
+- columnas en indice gobernanza: 32
+- archivos gob_mu_*.tsv: 32
+- faltantes: 0
+- extras: 0
+
+Notas
+- Esta capa es de gobernanza documental/operativa.
+- No reemplaza validaciones de negocio ya implementadas en codigo_gobernanza_v2.py.

@@ -1,0 +1,43 @@
+DECISION TRAZABLE - FOR_ING_ACT
+Fecha: 2026-03-31
+Proyecto: avance_curricular
+
+1) Problema observado
+- En salidas generadas por codigo.py, la columna FOR_ING_ACT estaba vacía en todos los registros.
+- Evidencia previa (antes de corrección):
+  - resultados/archivo_listo_para_sies.xlsx -> hoja MATRÍCULA_UNIFICADA_32 -> FOR_ING_ACT vacío en 24.827 filas.
+
+2) Decisión de gobernanza (definitiva)
+- FOR_ING_ACT NO puede quedar vacío.
+- Regla aprobada:
+  - Si la fuente trae FOR_ING_ACT (o equivalente) y es numérico en rango 1..11, se conserva.
+  - Si no existe o es inválido, se aplica fallback operativo 10.
+- Equivalencias de origen aceptadas:
+  - FOR_ING_ACT
+  - FORMA_INGRESO
+  - FORMAINGRESO
+  - FORMA_INGRESO_ACTUAL
+  - TIPO_INGRESO
+
+3) Implementación aplicada
+- Archivo: codigo.py
+- Función nueva:
+  - _resolve_for_ing_act(series, index)
+- Aplicación de la regla en ambos flujos:
+  - construir_matricula_unificada_control(...)
+  - ejecutar_pipeline_matricula_unificada_legacy_like(...)
+
+4) Impacto esperado
+- FOR_ING_ACT deja de salir vacío.
+- Se mantiene compatibilidad con valor de catálogo (1..11).
+- En ausencia de insumo confiable se usa 10 como valor operativo consistente.
+
+5) Nota de trazabilidad documental
+- Se actualizó DOCUMENTACION_TECNICA.md para reflejar esta decisión:
+  - Ya no dice "NA por defecto" para FOR_ING_ACT.
+  - Ahora documenta fuente equivalente + fallback 10.
+
+6) Verificación posterior obligatoria
+- Ejecutar codigo.py y validar:
+  - blanks(FOR_ING_ACT) = 0 en MATRÍCULA_UNIFICADA_32.
+
