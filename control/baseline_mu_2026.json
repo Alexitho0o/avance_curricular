@@ -1,0 +1,121 @@
+{
+  "tablero": "Matricula Unificada Pregrado 2026",
+  "version_operativa": "2026-04-01",
+  "estados_permitidos": [
+    "OK",
+    "Pendiente"
+  ],
+  "fases_permitidas": [
+    "FASE 0",
+    "FASE 1",
+    "FASE 2",
+    "FASE 3",
+    "FASE 4",
+    "FASE 5",
+    "FASE 6"
+  ],
+  "columnas_ok": [
+    "PRIMER_APELLIDO",
+    "NOMBRE",
+    "SEXO",
+    "FOR_ING_ACT"
+  ],
+  "columnas_pendiente": [
+    "TIPO_DOC",
+    "N_DOC",
+    "DV",
+    "SEGUNDO_APELLIDO",
+    "FECH_NAC",
+    "NAC",
+    "PAIS_EST_SEC",
+    "COD_SED",
+    "COD_CAR",
+    "MODALIDAD",
+    "JOR",
+    "VERSION",
+    "ANIO_ING_ACT",
+    "SEM_ING_ACT",
+    "ANIO_ING_ORI",
+    "SEM_ING_ORI",
+    "ASI_INS_ANT",
+    "ASI_APR_ANT",
+    "PROM_PRI_SEM",
+    "PROM_SEG_SEM",
+    "ASI_INS_HIS",
+    "ASI_APR_HIS",
+    "NIV_ACA",
+    "SIT_FON_SOL",
+    "SUS_PRE",
+    "FECHA_MATRICULA",
+    "REINCORPORACION",
+    "VIG"
+  ],
+  "distribucion_fases": {
+    "FASE 0": [
+      "D",
+      "F",
+      "G",
+      "P"
+    ],
+    "FASE 1": [
+      "A",
+      "B",
+      "C",
+      "E",
+      "H",
+      "I",
+      "J"
+    ],
+    "FASE 2": [
+      "K",
+      "L",
+      "M",
+      "N",
+      "O"
+    ],
+    "FASE 3": [
+      "Q",
+      "R",
+      "S",
+      "T",
+      "AA",
+      "AD"
+    ],
+    "FASE 4": [
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "FASE 5": [
+      "AB",
+      "AC",
+      "AE",
+      "AF"
+    ],
+    "FASE 6": [
+      "gate_final"
+    ]
+  },
+  "invariantes": {
+    "csv_final_sin_header": true,
+    "cantidad_columnas": 32,
+    "separador": ";",
+    "sexo_valido": true,
+    "for_ing_act_fijo": "1",
+    "excluir_primera_opcion": true
+  },
+  "autoridades_documentales": [
+    "Manual_Matrícula_Unificada_2026.pdf",
+    "catalogo_manual.tsv",
+    "puente_sies.tsv",
+    "matriz_desambiguacion_sies_final.tsv",
+    "gobernanza_columnas_mu/"
+  ],
+  "notas": [
+    "Este baseline no redisenia el tablero.",
+    "Este baseline solo operacionaliza el control documental y de seguimiento."
+  ]
+}

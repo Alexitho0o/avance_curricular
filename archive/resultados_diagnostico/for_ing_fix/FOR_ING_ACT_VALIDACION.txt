@@ -1,0 +1,23 @@
+VALIDACION FOR_ING_ACT
+Fecha: 2026-03-31
+
+Salida previa (sin corrección):
+- Archivo: resultados/archivo_listo_para_sies.xlsx
+- Hoja: MATRÍCULA_UNIFICADA_32
+- Filas: 24.827
+- FOR_ING_ACT vacíos: 24.827
+
+Salida posterior (con corrección en codigo.py):
+- Archivo: resultados/for_ing_fix/archivo_listo_para_sies.xlsx
+- Hoja: MATRÍCULA_UNIFICADA_32
+- Filas: 24.827
+- FOR_ING_ACT vacíos: 0
+- Distribución FOR_ING_ACT: 10 -> 24.827
+
+Regla aplicada:
+- Si FOR_ING_ACT (o equivalente) viene en 1..11: conservar.
+- Si no viene o es inválido: usar 10.
+
+Archivos de trazabilidad de decisión:
+- DECISION_FOR_ING_ACT_2026-03-31.txt
+- DOCUMENTACION_TECNICA.md (tabla de mapeo actualizada)

@@ -1,5 +1,15 @@
 # Documentación Técnica y de Trazabilidad
 
+## Nota de vigencia operativa
+
+Para **Matrícula Unificada Pregrado 2026**, la operación oficial congelada no se toma de las secciones legacy de este documento sino de:
+
+- [ejecucion_oficial_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/ejecucion_oficial_mu_2026.md)
+- [validacion_oficial_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/validacion_oficial_mu_2026.md)
+- [resultado_corrida_referencia_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/resultado_corrida_referencia_mu_2026.md)
+
+El runtime histórico y las bitácoras legacy se conservan en `archive/` como contexto técnico, pero no forman parte de la ejecución oficial de MU Pregrado 2026.
+
 ## 1) Propósito del proyecto
 
 Este repositorio implementa un pipeline de datos para dos procesos institucionales:
@@ -12,7 +22,7 @@ El objetivo es transformar una fuente Excel operacional en salidas controladas, 
 
 ## 2) Arquitectura funcional
 
-La implementación principal está en [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo.py) y combina:
+La implementación histórica principal quedó archivada en [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/archive/legacy_runtime/codigo.py) y combina:
 
 - **Matriz de desambiguación SIES** (fase de resolución de ambigüedades).
 - **Capa A: Ingesta flexible** (detección de estructura de entrada).
@@ -30,7 +40,7 @@ La implementación principal está en [codigo.py](/Users/alexi/Documents/GitHub/
 
 ## 3) Fases de construcción (qué son y para qué sirven)
 
-Las fases documentadas en `FASE1_*`, `FASE2_*`, `FASE3_*` son **hitos de evolución** del mapeo SIES y de la lógica de resolución.
+Las fases documentadas en `archive/contexto_historico/fases/` son **hitos de evolución** del mapeo SIES y de la lógica de resolución.
 
 ### Fase 1
 
@@ -51,7 +61,7 @@ Las fases documentadas en `FASE1_*`, `FASE2_*`, `FASE3_*` son **hitos de evoluci
 
 ## 4) ¿Qué hace `REVIEW.md`?
 
-El archivo [REVIEW.md](/Users/alexi/Documents/GitHub/avance_curricular/REVIEW.md) es una **revisión técnica de referencia** (origen Colab/histórico), no un módulo ejecutable.
+El archivo [REVIEW.md](/Users/alexi/Documents/GitHub/avance_curricular/archive/contexto_historico/tecnico/REVIEW.md) es una **revisión técnica de referencia** (origen Colab/histórico), no un módulo ejecutable.
 
 Sirve para:
 
@@ -172,20 +182,10 @@ Ejecuta `avance` y `matricula` en una sola corrida y retorna ambos reportes en J
 
 | Archivo | Origen | Uso |
 |---|---|---|
-| `carreras_avance_curricular_2025_control.csv` | avance | control con headers |
-| `carreras_avance_curricular_2025_pes_ready.csv` | avance | carga PES (sin `CODIGO_IES_NUM`, sin header) |
-| `matricula_avance_curricular_2025_control.csv` | avance | control con headers |
-| `matricula_avance_curricular_2025_pes_ready.csv` | avance | carga PES |
-| `matricula_unificada_2026_control.csv` | avance | control de matrícula unificada |
-| `matricula_unificada_2026_oficial.xlsx` | avance | salida oficial matricula unificada |
 | `archivo_listo_para_sies.xlsx` | matricula | output final con diagnóstico/matching |
-| `reporte_validacion.json` | avance | issues, métricas y aptitud oficial |
-| `reporte_calidad_semantica.json` | avance | calidad por archivo/campo |
-| `reporte_procedencia.csv` | avance | trazabilidad de origen por columna |
-| `sies_ambiguedad_diagnostico.csv` | avance | diagnóstico de ambigüedad en equivalencia |
-| `sies_codcarr_sin_mapeo.csv` | avance | codcarr sin mapeo |
-| `comparacion_versiones.md` | avance | bitácora comparativa de decisiones |
-| `diccionario_columnas.md` | avance | clasificación de columnas |
+| `matricula_unificada_2026_pregrado.csv` | matricula | CSV regulatorio final |
+
+Las salidas legacy, diagnósticas o históricas de otros flujos ya no viven en `resultados/`. Fueron movidas a `archive/resultados_legacy/`, `archive/resultados_remediacion/` y `archive/resultados_diagnostico/`.
 
 ## 7.2 Trazabilidad de decisión SIES
 
@@ -225,7 +225,7 @@ Severidades:
 
 ## 8.2 Criterio de aptitud (`apto_oficial`)
 
-En `reporte_validacion.json`:
+En el flujo histórico de `avance`, el artefacto `reporte_validacion.json` queda archivado y expresa:
 
 - `matricula_unificada = false` si existen `BLOCKER/ERROR` en su área.
 - `avance_curricular = false` si existen `BLOCKER/ERROR` en áreas de avance.
@@ -253,30 +253,39 @@ Esto asegura reproducibilidad de la asignación SIES entre ejecuciones.
 ## 9.1 Ejecución completa
 
 ```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular
-../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso ambos
+cd /ruta/al/repo/avance_curricular
+export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+export OUTPUT_DIR="resultados"
+python3 codigo_gobernanza_v2.py --input "$INPUT_XLSX" --output-dir "$OUTPUT_DIR" --proceso matricula --usar-gobernanza-v2 true
 ```
 
 ## 9.2 Checklist operativo
 
 1. Verificar existencia de entrada Excel.
-2. Verificar presencia de TSV críticos en raíz del repo.
-3. Ejecutar pipeline.
-4. Revisar `reporte_validacion.json` y `reporte_calidad_semantica.json`.
-5. Ejecutar `qa_checks.py`.
+2. Verificar presencia de TSV críticos de gobernanza en la raíz del repo.
+3. Ejecutar el pipeline oficial congelado en `codigo_gobernanza_v2.py`.
+4. Verificar que existan `resultados/archivo_listo_para_sies.xlsx` y `resultados/matricula_unificada_2026_pregrado.csv`.
+5. Ejecutar la validación final desde la raíz del repo:
+
+```bash
+export OUTPUT_DIR="resultados"
+python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
+```
+
+6. Confirmar que el gate final permanezca en `CONDICIONAL` y que el tablero siga en `27 OK / 5 Pendiente`.
 
 ## 10) Limitaciones actuales conocidas
 
 - `MATCH_SIES_AMBIGUO` puede requerir validación manual de negocio en algunos casos.
 - El fallback de versión/jornada en heurística prioriza continuidad operativa sobre precisión absoluta.
-- `REVIEW.md` refleja contexto histórico y no reemplaza validación funcional en este código.
+- `archive/contexto_historico/tecnico/REVIEW.md` refleja contexto histórico y no reemplaza validación funcional en este código.
 
 ## 11) Mapa rápido de archivos del repositorio
 
-- [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo.py): pipeline principal.
+- [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/archive/legacy_runtime/codigo.py): pipeline principal histórico.
 - [README.md](/Users/alexi/Documents/GitHub/avance_curricular/README.md): guía operativa rápida.
 - [DOCUMENTACION_TECNICA.md](/Users/alexi/Documents/GitHub/avance_curricular/DOCUMENTACION_TECNICA.md): este documento.
-- [REVIEW.md](/Users/alexi/Documents/GitHub/avance_curricular/REVIEW.md): revisión técnica histórica.
+- [REVIEW.md](/Users/alexi/Documents/GitHub/avance_curricular/archive/contexto_historico/tecnico/REVIEW.md): revisión técnica histórica.
 - [catalogo_manual.tsv](/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv): catálogo de traza.
 - [puente_sies.tsv](/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv): puente llave-código SIES.
 - [matriz_desambiguacion_sies_final.tsv](/Users/alexi/Documents/GitHub/avance_curricular/matriz_desambiguacion_sies_final.tsv): matriz de resolución final.
@@ -306,7 +315,7 @@ Las 32 columnas contractuales son:
 | Ingesta AC | `cargar_fuentes` | Excel fuente | `df_carreras`, `df_matricula`, `df_historico`, `df_equiv` |
 | Modelo AC | `preparar_matricula_intermedia`, `construir_resumen_historico` | DataFrames de ingesta | métricas académicas por estudiante/programa |
 | Controles AC | `construir_carreras_control`, `construir_matricula_ac_control`, `construir_matricula_unificada_control` | DataFrames modelados | archivos contractuales de control |
-| Validación AC | `validar_*` + `generar_procedencia_y_calidad` | controles | `reporte_validacion.json`, `reporte_calidad_semantica.json`, `reporte_procedencia.csv` |
+| Validación AC | `validar_*` + `generar_procedencia_y_calidad` | controles | artefactos legacy hoy archivados: `reporte_validacion.json`, `reporte_calidad_semantica.json`, `reporte_procedencia.csv` |
 | Ingesta MU | `ejecutar_pipeline_matricula_unificada_legacy_like` | Excel fuente + `catalogo_manual.tsv` + `puente_sies.tsv` | `archivo_subida` |
 | Match manual | `_prepare_catalog_manual` + merge por `SOURCE_KEY_3` | `catalogo_manual.tsv` | `MANUAL_MATCH_STATUS`, `GRUPO_TRAZA_*` |
 | Match SIES | `_prepare_puente_sies` + reglas de diagnóstico | `puente_sies.tsv` | `SIES_MATCH_STATUS`, `SIES_MATCH_DIAG`, códigos SIES potenciales/finales |
@@ -315,7 +324,7 @@ Las 32 columnas contractuales son:
 
 ## 14) Mapeo técnico de columnas Matrícula Unificada (32)
 
-Referencia de implementación principal en modo `--proceso matricula`: [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo.py).
+Referencia histórica de implementación en modo `--proceso matricula`: [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/archive/legacy_runtime/codigo.py).
 
 | Columna salida | Equivalente manual | Origen en fuente | Regla de construcción |
 |---|---|---|---|
@@ -334,7 +343,7 @@ Referencia de implementación principal en modo `--proceso matricula`: [codigo.p
 | `MODALIDAD` | `MODALIDAD` | `JORNADA` | mapeo: diurna/vespertina=`PRESENCIAL`, semi=`SEMIPRESENCIAL`, distancia/online=`DISTANCIA` |
 | `JOR` | `JOR` | `JORNADA` | mapeo: diurna=`1`, vespertina=`2`, semi=`3`, distancia=`4` |
 | `VERSION` | `Version` | no provista | `NA` por defecto |
-| `FOR_ING_ACT` | `FOR_ING_ACT` | no provista | `NA` por defecto |
+| `FOR_ING_ACT` | `FOR_ING_ACT` | `FOR_ING_ACT` o `FORMA_INGRESO` o `FORMAINGRESO` o `FORMA_INGRESO_ACTUAL` o `TIPO_INGRESO` | si viene `1..11`, se conserva; si no existe o es inválida, fallback operativo `10` (otras formas de ingreso) |
 | `ANIO_ING_ACT` | `ANIO_ING_ACT` | `ANOINGRESO` o `ANIO_INGRESO_CARRERA_ACTUAL` | año normalizado; fallback inferido desde `CODCLI` |
 | `SEM_ING_ACT` | `SEM_ING_ACT` | `PERIODOINGRESO` o `SEM_INGRESO_CARRERA_ACTUAL` | copia directa |
 | `ANIO_ING_ORI` | `ANIO_ING_ORI` | derivada de `ANIO_ING_ACT` | se replica `ANIO_ING_ACT` |
@@ -356,9 +365,10 @@ Referencia de implementación principal en modo `--proceso matricula`: [codigo.p
 
 - Si se requiere archivo contractual de Matrícula Unificada (32 columnas exactas), usar:
   - hoja `MATRICULA_UNIFICADA_32` de `archivo_listo_para_sies.xlsx`, o
-  - `matricula_unificada_2026_control.csv` (cuando se ejecuta `--proceso avance` o `--proceso ambos`).
+  - `matricula_unificada_2026_pregrado.csv` como CSV regulatorio final vigente.
 - Si se requiere diagnóstico operativo y trazabilidad de matching SIES, usar:
   - hoja `ARCHIVO_LISTO_SUBIDA` de `archivo_listo_para_sies.xlsx`.
+- Si se requiere contexto histórico de controles o validaciones de otros flujos, revisar `archive/` y no `resultados/`.
 
 ## 16) Fuente normativa usada para gobernanza de columnas
 
