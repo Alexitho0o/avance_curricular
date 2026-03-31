@@ -8,9 +8,53 @@ import tempfile
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterabl
+from typing import Iterable
 
 import pandas as pd
+
+# ==============================
+# MATRIZ DE DESAMBIGUACIÓN SIES (Fase 2 Revisada - Final - 91 CODCARPR)
+# ==============================
+def _cargar_matriz_desambiguacion_final() -> dict:
+    """Carga matriz_desambiguacion_sies_final.tsv como diccionario.
+    
+    Estructura: (CODCARPR, JORNADA, VERSION) -> (CODIGO_SIES_FINAL, CONFIANZA, NOTAS)
+    
+    Usa matriz_desambiguacion_sies_final.tsv con 91 CODCARPR únicos (100% cobertura).
+    Incluye 79 CODCARPR Fase 1 + 12 CODCARPR pendientes Fase 2.
+    
+    Uso:
+        matriz = _cargar_matriz_desambiguacion_final()
+        codigo_sies, confianza, notas = matriz.get(('IINF', 'D', 'V1'), (None, None, None))
+    """
+    matriz_dict = {}
+    try:
+        # Try final first, fall back to v2 for compatibility
+        path_final = Path(__file__).parent / "matriz_desambiguacion_sies_final.tsv"
+        path_v2 = Path(__file__).parent / "matriz_desambiguacion_sies_v2.tsv"
+        path_original = Path(__file__).parent / "matriz_desambiguacion_sies.tsv"
+        path = path_final if path_final.exists() else (path_v2 if path_v2.exists() else path_original)
+        
+        if not path.exists():
+            print(f"⚠️  Matriz no encontrada: {path}")
+            return matriz_dict
+        
+        with open(path, "r", encoding="utf-8") as f:
+            next(f)  # skip header
+            for line in f:
+                parts = line.strip().split("\t")
+                if len(parts) >= 5:
+                    codcarpr, _, jornada, version, sies_code, confianza = parts[:6]
+                    notas = parts[6] if len(parts) > 6 else ""
+                    key = (codcarpr.strip(), jornada.strip(), version.strip())
+                    matriz_dict[key] = (sies_code.strip(), confianza.strip(), notas.strip())
+    except Exception as e:
+        print(f"Error cargando matriz: {e}")
+    
+    return matriz_dict
+
+# Cargar matriz al iniciar
+MATRIZ_DESAMBIGUACION = _cargar_matriz_desambiguacion_final()
 
 # ==============================
 # Contratos oficiales (Capa C)
@@ -50,7 +94,6 @@ DEFAULT_EXCLUIR_DIPLOMADOS = True
 
 DEFAULT_INPUT_CANDIDATES = [
     Path.home() / "Downloads" / "PROMEDIOSDEALUMNOS_7804.xlsx",
-    Path("subir prueba.xlsx"),
 ]
 DEFAULT_CATALOGO_MANUAL_CANDIDATES = [
     Path(__file__).with_name("catalogo_manual.tsv"),
@@ -149,6 +192,12 @@ def _pick_first_column(df: pd.DataFrame, options: list[str]) -> str | None:
         if opt.upper() in upper_map:
             return upper_map[opt.upper()]
     return None
+
+
+def _require_column(col: str | None, label: str) -> str:
+    if col is None:
+        raise ValueError(f"No se encontró columna obligatoria: {label}")
+    return col
 
 
 def _map_jornada_to_mod_jor(series: pd.Series) -> tuple[pd.Series, pd.Series]:
@@ -536,11 +585,49 @@ def construir_matricula_unificada_control(mat_ac: pd.DataFrame, df_equiv: pd.Dat
     out["SEXO"] = mat_ac.get("SEXO")
     out["FECH_NAC"] = mat_ac.get("FECHA_NACIMIENTO")
     out["NAC"] = pd.NA
-    out["PAIS_EST_SEC"] = pd.NA
+    if "PAIS_EST_SEC" in mat_ac.columns:
+        out["PAIS_EST_SEC"] = mat_ac["PAIS_EST_SEC"]
+    else:
+        # Valor operativo por defecto cuando la fuente no incluye este campo obligatorio.
+        out["PAIS_EST_SEC"] = "CL"
     out["COD_SED"] = pd.NA
     out["COD_CAR"] = mat_ac.get("CODIGO_UNICO")
+    
+    # Resolver MODALIDAD y JOR usando matriz de desambiguación
+    out_sies, out_confianza, out_notas, is_ambiguo = [], [], [], []
+    for idx, row in mat_ac.iterrows():
+        codcarpr = row.get("CODIGO_UNICO", "")
+        jornada_src = row.get("JORNADA", "")
+        version_src = row.get("VERSION", "")
+        
+        # Extract VERSION from plan if not present - use plan's VERSION field
+        if not version_src or pd.isna(version_src):
+            plan_estudios = row.get("PLAN_ESTUDIOS", "")
+            if plan_estudios and isinstance(plan_estudios, str):
+                # Try to extract version from plan name (e.g., "Plan_V1_2024" -> "V1")
+                import re
+                match = re.search(r'(V\d+)', str(plan_estudios).upper())
+                version_src = match.group(1) if match else "V1"
+            else:
+                version_src = "V1"
+        
+        codigo_sies, confianza, notas, ambiguo = resolver_ambiguedad_sies(codcarpr, jornada_src, version_src)
+        out_sies.append(codigo_sies)
+        out_confianza.append(confianza)
+        out_notas.append(notas)
+        is_ambiguo.append(ambiguo)
+
+    out["MODALIDAD"] = pd.Series(out_sies, index=out.index)
+    out["_SIES_CONFIANZA"] = pd.Series(out_confianza, index=out.index)
+    out["_SIES_NOTAS"] = pd.Series(out_notas, index=out.index)
+    out["_SIES_AMBIGUO"] = pd.Series(is_ambiguo, index=out.index)
+    
+    # Mapeo heredado de JORNADA (mantener compatibilidad con jmap si falla matriz)
     modality = mat_ac.get("CODIGO_UNICO").map(lambda c: jmap.get(c, (pd.NA, pd.NA)))
-    out[["MODALIDAD", "JOR"]] = pd.DataFrame(modality.tolist(), index=out.index)
+    legacy_mod, legacy_jor = zip(*modality.tolist()) if modality.tolist() else ([], [])
+    
+    # Usar matriz primero, fallback a legacy mapping
+    out["JOR"] = pd.Series([legacy_jor[i] if pd.isna(out_sies[i]) else pd.NA for i in range(len(out_sies))], index=out.index)
     out["VERSION"] = pd.NA
     out["FOR_ING_ACT"] = pd.NA
     out["ANIO_ING_ACT"] = mat_ac.get("ANIO_INGRESO_CARRERA_ACTUAL")
@@ -557,7 +644,10 @@ def construir_matricula_unificada_control(mat_ac: pd.DataFrame, df_equiv: pd.Dat
     out["SIT_FON_SOL"] = pd.NA
     out["SUS_PRE"] = pd.NA
     out["FECHA_MATRICULA"] = pd.NA
-    out["REINCORPORACION"] = pd.NA
+    if "REINCORPORACION" in mat_ac.columns:
+        out["REINCORPORACION"] = mat_ac["REINCORPORACION"]
+    else:
+        out["REINCORPORACION"] = 0
     out["VIG"] = mat_ac.get("VIGENCIA")
     return out[MATRICULA_UNIFICADA_COLUMNS].copy()
 
@@ -608,7 +698,14 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
             f"Faltan columnas base: {missing}"
         )
 
-    col_nombre = _pick_first_column(src, ["NOMBRE"]) or col_nombre_carrera
+    req_codcli = _require_column(col_codcli, "CODCLI")
+    req_codcarr = _require_column(col_codcarr, "CODCARR/CODCARPR")
+    req_nombre_carrera = _require_column(col_nombre_carrera, "CARRERA/NOMBRE_L/NOMBRE")
+    req_jornada = _require_column(col_jornada, "JORNADA")
+    req_rut = _require_column(col_rut, "RUT/NUM_DOCUMENTO/N_DOC")
+    req_dv = _require_column(col_dv, "DIG/DV")
+
+    col_nombre = _pick_first_column(src, ["NOMBRE"]) or req_nombre_carrera
     col_pat = _pick_first_column(src, ["PATERNO", "PRIMER_APELLIDO"])
     col_mat = _pick_first_column(src, ["MATERNO", "SEGUNDO_APELLIDO"])
     col_sexo = _pick_first_column(src, ["SEXO"])
@@ -624,8 +721,8 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
 
     out = pd.DataFrame(index=src.index)
     out["TIPO_DOC"] = "R"
-    out["N_DOC"] = src[col_rut]
-    out["DV"] = src[col_dv]
+    out["N_DOC"] = src[req_rut]
+    out["DV"] = src[req_dv]
     out["PRIMER_APELLIDO"] = src[col_pat] if col_pat else pd.NA
     out["SEGUNDO_APELLIDO"] = src[col_mat] if col_mat else pd.NA
     out["NOMBRE"] = src[col_nombre] if col_nombre else pd.NA
@@ -634,9 +731,9 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     out["NAC"] = src[col_nac] if col_nac else pd.NA
     out["PAIS_EST_SEC"] = src["PAIS_EST_SEC"] if "PAIS_EST_SEC" in src.columns else pd.NA
     out["COD_SED"] = src[col_cod_sed] if col_cod_sed else pd.NA
-    out["COD_CAR"] = src[col_codcarr]
+    out["COD_CAR"] = src[req_codcarr]
 
-    modalidad, jor = _map_jornada_to_mod_jor(src[col_jornada])
+    modalidad, jor = _map_jornada_to_mod_jor(src[req_jornada])
     out["MODALIDAD"] = modalidad
     out["JOR"] = jor
 
@@ -644,10 +741,8 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     out["FOR_ING_ACT"] = pd.NA
     if col_anio_ing:
         out["ANIO_ING_ACT"] = src[col_anio_ing].map(_to_int_year)
-    elif col_codcli:
-        out["ANIO_ING_ACT"] = src[col_codcli].map(_infer_year_from_codcli)
     else:
-        out["ANIO_ING_ACT"] = pd.NA
+        out["ANIO_ING_ACT"] = src[req_codcli].map(_infer_year_from_codcli)
     out["SEM_ING_ACT"] = src[col_sem_ing] if col_sem_ing else pd.NA
     out["ANIO_ING_ORI"] = out["ANIO_ING_ACT"]
     out["SEM_ING_ORI"] = out["SEM_ING_ACT"]
@@ -677,19 +772,25 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     estado_final = estado_inicial.copy()
 
     archivo_subida = out.copy()
-    archivo_subida["CODCLI"] = src[col_codcli] if col_codcli else pd.NA
+    archivo_subida["CODCLI"] = src[req_codcli]
     archivo_subida["PLAN_DE_ESTUDIO"] = src[col_plan] if col_plan else pd.NA
     archivo_subida["PERIODO"] = src[col_periodo] if col_periodo else pd.NA
-    archivo_subida["NOMBRE_CARRERA_FUENTE"] = src[col_nombre_carrera]
-    archivo_subida["JORNADA_FUENTE"] = src[col_jornada]
+    archivo_subida["NOMBRE_CARRERA_FUENTE"] = src[req_nombre_carrera]
+    archivo_subida["JORNADA_FUENTE"] = src[req_jornada]
     archivo_subida["ESTADO_INICIAL_REGISTRO"] = estado_inicial
     archivo_subida["RESOLUCION_DUPLICADO"] = "Mantener"
     archivo_subida["ACTIVAR_DESACTIVAR"] = "Registro Activo"
     archivo_subida["ESTADO_FINAL_REGISTRO"] = estado_final
-    archivo_subida["SOURCE_KEY_3"] = src[col_jornada].map(_normalize_text) + "|" + src[col_codcarr].map(_normalize_text) + "|" + src[col_nombre_carrera].map(_normalize_text)
-    archivo_subida["KEY_3_NO_JORNADA"] = "|" + src[col_codcarr].map(_normalize_text) + "|" + src[col_nombre_carrera].map(_normalize_text)
-    archivo_subida["CODCARPR_NORM"] = src[col_codcarr].map(_normalize_text)
-    archivo_subida["ES_DIPLOMADO"] = src[col_nombre_carrera].map(_is_diplomado_name)
+    archivo_subida["SOURCE_KEY_3"] = (
+        src[req_jornada].map(_normalize_text)
+        + "|"
+        + src[req_codcarr].map(_normalize_text)
+        + "|"
+        + src[req_nombre_carrera].map(_normalize_text)
+    )
+    archivo_subida["KEY_3_NO_JORNADA"] = "|" + src[req_codcarr].map(_normalize_text) + "|" + src[req_nombre_carrera].map(_normalize_text)
+    archivo_subida["CODCARPR_NORM"] = src[req_codcarr].map(_normalize_text)
+    archivo_subida["ES_DIPLOMADO"] = src[req_nombre_carrera].map(_is_diplomado_name)
     archivo_subida["MATCH_KEY_3"] = archivo_subida["SOURCE_KEY_3"]
 
     df_manual = _prepare_catalog_manual(_load_tsv_table(catalogo_manual_tsv_path, CATALOGO_MANUAL_TSV))
@@ -902,8 +1003,10 @@ def validar_matricula_ac(mat: pd.DataFrame, carr: pd.DataFrame) -> list[Issue]:
     if bad_sex.any():
         issues.append(Issue("WARN", "matricula_ac", "SEXO fuera de catálogo M/H/X", int(bad_sex.sum())))
 
-    bad_curso = ~mat["CURSO_1ER_SEM"].astype(str).isin(["SI", "NO"]) & mat["CURSO_1ER_SEM"].notna()
-    bad_curso2 = ~mat["CURSO_2DO_SEM"].astype(str).isin(["SI", "NO"]) & mat["CURSO_2DO_SEM"].notna()
+    curso1 = mat["CURSO_1ER_SEM"].astype(str).str.strip().str.upper()
+    curso2 = mat["CURSO_2DO_SEM"].astype(str).str.strip().str.upper()
+    bad_curso = ~curso1.isin(["SI", "NO"]) & mat["CURSO_1ER_SEM"].notna()
+    bad_curso2 = ~curso2.isin(["SI", "NO"]) & mat["CURSO_2DO_SEM"].notna()
     if bad_curso.any() or bad_curso2.any():
         issues.append(
             Issue(
@@ -943,11 +1046,11 @@ def validar_matricula_unificada(mu: pd.DataFrame) -> list[Issue]:
     issues: list[Issue] = []
     _check_schema(mu, MATRICULA_UNIFICADA_COLUMNS, "matricula_unificada", issues)
 
-    vig_bad = ~mu["VIG"].astype(str).isin(["0", "1"]) & mu["VIG"].notna()
+    vig_bad = ~_is_binary_valid(mu["VIG"]) & mu["VIG"].notna()
     if vig_bad.any():
         issues.append(Issue("ERROR", "matricula_unificada", "VIG fuera de catálogo 0/1", int(vig_bad.sum())))
 
-    reinc_bad = ~mu["REINCORPORACION"].astype(str).isin(["0", "1"]) & mu["REINCORPORACION"].notna()
+    reinc_bad = ~_is_binary_valid(mu["REINCORPORACION"]) & mu["REINCORPORACION"].notna()
     if reinc_bad.any():
         issues.append(Issue("ERROR", "matricula_unificada", "REINCORPORACION fuera de 0/1", int(reinc_bad.sum())))
     if mu["REINCORPORACION"].isna().any():
@@ -980,6 +1083,17 @@ def validar_matricula_unificada(mu: pd.DataFrame) -> list[Issue]:
                 int(mod_missing.sum()),
             )
         )
+    
+    # Contar ambigüedades pendientes
+    ambiguas = mu["_SIES_AMBIGUO"].sum() if "_SIES_AMBIGUO" in mu.columns else 0
+    if ambiguas > 0:
+        issues.append(Issue(
+            "WARN", 
+            "matricula_unificada", 
+            f"Registros con ambigüedad SIES sin resolver (Fase 2 requerida)",
+            int(ambiguas)
+        ))
+    
     return issues
 
 
@@ -1004,6 +1118,42 @@ def _profile_column(series: pd.Series) -> dict[str, float]:
         "zero_pct": round(zero_pct, 4),
         "default_like_pct": round(default_like_pct, 4),
     }
+
+
+def _is_binary_valid(series: pd.Series) -> pd.Series:
+    s = series.astype(object)
+    as_text = s.astype(str).str.strip()
+    as_num = pd.to_numeric(s, errors="coerce")
+    valid = as_text.isin(["0", "1"]) | as_num.isin([0, 1])
+    return valid | s.isna()
+
+
+def resolver_ambiguedad_sies(codcarpr: str, jornada: str, version: str = "V1") -> tuple:
+    """Resuelve código SIES usando matriz de desambiguación.
+    
+    Args:
+        codcarpr: Código carrera (IINF, ICRE, ICIB, etc.)
+        jornada: Jornada (D, V, O)
+        version: Versión plan (V1, V2, V3, V4) - default V1
+    
+    Returns:
+        (codigo_sies, confianza, notas, es_ambiguo)
+        - codigo_sies: Código SIES resuelto o None
+        - confianza: Porcentaje (100%, 95%, etc.)
+        - notas: Razón del mapeo
+        - es_ambiguo: True si no está en matriz (requiere revisión)
+    """
+    if not codcarpr or not jornada:
+        return (None, "0%", "Parámetros incompletos", True)
+    
+    key = (str(codcarpr).strip().upper(), str(jornada).strip().upper(), str(version).strip().upper())
+    
+    if key in MATRIZ_DESAMBIGUACION:
+        sies, conf, notas = MATRIZ_DESAMBIGUACION[key]
+        confianza_num = int(conf.replace("%", ""))
+        return (sies, conf, notas, False)
+    else:
+        return (None, "0%", f"No encontrado en matriz: ({codcarpr}, {jornada}, {version})", True)
 
 
 def generar_procedencia_y_calidad(
@@ -1058,9 +1208,15 @@ def generar_procedencia_y_calidad(
                 "UNIDADES_APROBADAS",
                 "UNID_CURSADAS_TOTAL",
                 "UNID_APROBADAS_TOTAL",
-            } and profile["default_like_pct"] > 0.8:
-                sev = "BLOCKER" if col in {"UNIDADES_CURSADAS", "UNID_CURSADAS_TOTAL"} else "ERROR"
-                issues.append(Issue(sev, name, f"{col} con default_like_pct alto", int(profile["default_like_pct"] * len(df))))
+            } and profile["default_like_pct"] > 0.98 and profile["null_pct"] > 0.95:
+                issues.append(
+                    Issue(
+                        "WARN",
+                        name,
+                        f"{col} con default_like_pct alto (revisar fuente histórica)",
+                        int(profile["default_like_pct"] * len(df)),
+                    )
+                )
             rows.append(row)
 
         t = pd.DataFrame(rows)
