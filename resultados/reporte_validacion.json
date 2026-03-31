@@ -1,0 +1,101 @@
+{
+  "rows": {
+    "carreras_control": 54,
+    "matricula_ac_control": 2830,
+    "matricula_unificada_control": 2830,
+    "historico_total": 24827,
+    "historico_mapeado": 24827,
+    "historico_sin_mapeo": 0
+  },
+  "issues": [
+    {
+      "severity": "BLOCKER",
+      "area": "matricula_unificada",
+      "message": "REINCORPORACION obligatorio vacío",
+      "count": 2830
+    },
+    {
+      "severity": "BLOCKER",
+      "area": "matricula_unificada",
+      "message": "PAIS_EST_SEC obligatorio vacío",
+      "count": 2830
+    },
+    {
+      "severity": "WARN",
+      "area": "matricula_unificada",
+      "message": "COD_CAR con MODALIDAD no resuelta (equivalencia dudosa)",
+      "count": 2830
+    },
+    {
+      "severity": "BLOCKER",
+      "area": "matricula_unificada",
+      "message": "PAIS_EST_SEC con missing_blocker masivo",
+      "count": 2830
+    },
+    {
+      "severity": "BLOCKER",
+      "area": "matricula_unificada",
+      "message": "REINCORPORACION con missing_blocker masivo",
+      "count": 2830
+    },
+    {
+      "severity": "ERROR",
+      "area": "matricula_ac",
+      "message": "CURSO_1ER_SEM con default_like_pct alto",
+      "count": 2830
+    },
+    {
+      "severity": "ERROR",
+      "area": "matricula_ac",
+      "message": "CURSO_2DO_SEM con default_like_pct alto",
+      "count": 2830
+    },
+    {
+      "severity": "BLOCKER",
+      "area": "matricula_ac",
+      "message": "UNIDADES_CURSADAS con default_like_pct alto",
+      "count": 2830
+    },
+    {
+      "severity": "ERROR",
+      "area": "matricula_ac",
+      "message": "UNIDADES_APROBADAS con default_like_pct alto",
+      "count": 2830
+    }
+  ],
+  "ambiguedad": {
+    "codcarr_total": 46,
+    "codcarr_ambiguos": 0
+  },
+  "calidad_semantica": {
+    "matricula_unificada": {
+      "avg_null_pct": 0.875,
+      "avg_default_like_pct": 0.8779,
+      "provenance_pct": {
+        "source_exact": 0.25,
+        "source_normalized": 0.5938,
+        "missing_blocker": 0.0625,
+        "manual_mapping": 0.0938
+      }
+    },
+    "carreras_ac": {
+      "avg_null_pct": 0.9091,
+      "avg_default_like_pct": 0.9091,
+      "provenance_pct": {
+        "template_preserved": 1.0
+      }
+    },
+    "matricula_ac": {
+      "avg_null_pct": 0.5,
+      "avg_default_like_pct": 0.6932,
+      "provenance_pct": {
+        "template_preserved": 0.7273,
+        "derived_rule": 0.2727
+      }
+    }
+  },
+  "apto_oficial": {
+    "matricula_unificada": false,
+    "avance_curricular": false
+  }
+}
