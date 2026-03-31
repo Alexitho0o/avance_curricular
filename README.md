@@ -6,7 +6,37 @@ Repositorio productivo para generar salidas de:
 - `matricula` (archivo final de matrícula unificada con trazabilidad SIES)
 - `ambos` (ejecución conjunta)
 
-Este README documenta el flujo oficial de `codigo.py` y sus artefactos de gobernanza.
+Este README documenta el flujo operativo oficial vigente y referencia el material legacy archivado bajo `archive/`.
+
+## Estado operativo actual
+
+Para **Matrícula Unificada 2026 - Pregrado**, el flujo operativo oficial es:
+
+- `codigo_gobernanza_v2.py` con `--proceso matricula --usar-gobernanza-v2 true`
+- invocado con `python3` como intérprete oficial congelado en este equipo
+
+Para este proceso:
+
+- el **artefacto de auditoría** es `archivo_listo_para_sies.xlsx`
+- el **artefacto regulatorio de carga** es `matricula_unificada_2026_pregrado.csv`
+- el archivo de carga objetivo es **CSV**, **sin encabezado**, con **`;`** como delimitador
+
+El flujo legacy histórico quedó archivado bajo `archive/` y no debe usarse como salida regulatoria final de MU Pregrado 2026.
+
+## Congelamiento oficial MU 2026
+
+La fuente de verdad operativa congelada para ejecución, validación y resultado esperado quedó documentada en:
+
+- [ejecucion_oficial_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/ejecucion_oficial_mu_2026.md)
+- [validacion_oficial_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/validacion_oficial_mu_2026.md)
+- [resultado_corrida_referencia_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/resultado_corrida_referencia_mu_2026.md)
+
+Para el estado final congelado del proyecto:
+
+- decisión vigente: `CONDICIONAL`
+- listo para auditoría: `SI`
+- listo para carga: `NO`
+- tablero vigente: `27 OK / 5 Pendiente`
 
 ## Documentación principal
 
@@ -17,28 +47,50 @@ Este README documenta el flujo oficial de `codigo.py` y sus artefactos de gobern
 
 | Archivo | Rol técnico | Uso operativo |
 |---|---|---|
-| [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo.py) | pipeline principal (avance + matrícula + validaciones) | ejecución productiva |
+| [codigo_gobernanza_v2.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py) | pipeline extendido con gobernanza v2 (flag + catálogos externos) | ejecución controlada v2 |
 | [catalogo_manual.tsv](/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv) | catálogo de traza por carrera/jornada/nombre | matching manual en proceso matrícula |
 | [puente_sies.tsv](/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv) | puente de negocio hacia `CODIGO_CARRERA_SIES` | asignación SIES y diagnóstico |
+| [gobernanza_sede.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv) | tabla maestra de sede (`SEDE` -> `COD_SED`) | gobernanza v2 de `COD_SED` |
+| [gobernanza_nac.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_nac.tsv) | tabla maestra de nacionalidad -> código NAC | gobernanza v2 de `NAC` |
+| [gobernanza_pais_est_sec.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_pais_est_sec.tsv) | tabla maestra localidad escolar -> país | gobernanza v2 de `PAIS_EST_SEC` |
+| [gobernanza_niveles.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_niveles.tsv) | catálogo maestro `NIVEL_GLOBAL`/`NIVEL_CARRERA` del Manual | gobernanza documental para clasificación académica |
+| [gobernanza_for_ing_act.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv) | catálogo formal de `FOR_ING_ACT` (1..11) según Manual 2026 | gobernanza documental de forma de ingreso |
+| [generar_gobernanza_columnas_mu.py](/Users/alexi/Documents/GitHub/avance_curricular/generar_gobernanza_columnas_mu.py) | generador de TSV por columna MU (32/32) | trazabilidad columna a columna contra Cuadro N°1 |
+| `gobernanza_columnas_mu/*.tsv` | un TSV por cada columna de matrícula pregrado | gobernanza detallada por campo de salida |
 | `matriz_desambiguacion_sies*.tsv` | matriz de resolución de ambiguos `(CODCARPR,JORNADA,VERSION)` | desambiguación en fase operativa SIES |
 | [qa_checks.py](/Users/alexi/Documents/GitHub/avance_curricular/qa_checks.py) | chequeos rápidos de contratos y reportes | control posterior a ejecución |
-| [REVIEW.md](/Users/alexi/Documents/GitHub/avance_curricular/REVIEW.md) | revisión técnica histórica (contexto Colab) | referencia, no runtime |
-| [FASE1_RESUMEN.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE1_RESUMEN.txt) | bitácora Fase 1 inicial | historial |
-| [FASE1_REVISADA_RESUMEN.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE1_REVISADA_RESUMEN.txt) | resumen Fase 1 revisada | historial |
-| [FASE1_REVISADA_COMPLETADA.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE1_REVISADA_COMPLETADA.txt) | cierre detallado Fase 1 revisada | historial |
-| [FASE2_RESUMEN.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE2_RESUMEN.txt) | bitácora Fase 2 inicial | historial |
-| [FASE2_REVISADA_COMPLETADA.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE2_REVISADA_COMPLETADA.txt) | cierre Fase 2 revisada | historial |
-| [FASE3_COMPLETADA.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE3_COMPLETADA.txt) | cierre Fase 3 y reportes | historial/auditoría |
+| [archive/](/Users/alexi/Documents/GitHub/avance_curricular/archive) | material legacy, bitácoras históricas y resultados archivados | contexto/historial, fuera del camino operativo principal |
 
 ## Qué documenta cada fase
 
-- Fase 1 (`FASE1_*`): base de desambiguación, primeras coberturas y problemas detectados.
-- Fase 2 (`FASE2_*`): expansión de matriz, mejoras de cobertura jornada/versión y consolidación operativa.
-- Fase 3 (`FASE3_COMPLETADA.txt`): resolución operativa de ambiguos, métricas de cierre y evidencia de exportación.
+- Fase 1, Fase 2 y Fase 3: bitácoras históricas archivadas en `archive/contexto_historico/fases/`.
 
-Estos archivos son bitácoras de evolución y auditoría. La fuente de verdad de ejecución actual es `codigo.py` más los artefactos TSV vigentes.
+Estos archivos son bitácoras de evolución y auditoría.
 
 ## Catálogos y reglas de gobernanza
+
+### Gobernanza por columna (Cuadro N°1)
+
+Se mantiene un set de **32 TSV (uno por columna de salida MU)** en:
+
+- `gobernanza_columnas_mu/`
+- índice: `gobernanza_columnas_mu/_INDICE_COLUMNAS.tsv`
+
+Generación/reconstrucción:
+
+```bash
+cd /ruta/al/repo/avance_curricular
+python3 generar_gobernanza_columnas_mu.py
+```
+
+El generador deja cada columna con:
+
+- definición de manual (`Anexo 7, Cuadro N°1`)
+- fuente automática principal/secundaria en el proyecto
+- regla implementada en `codigo_gobernanza_v2.py`
+- validación aplicada
+- fallback operativo
+- condición de revisión manual
 
 ## 1) `catalogo_manual.tsv`
 
@@ -90,81 +142,113 @@ Referencia: `20260106_36454_Manual_Matrícula_Unificada_2026.pdf` (Cuadro N°1).
 ## Instalación
 
 ```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular
-python3 -m venv ../.venv
-../.venv/bin/python -m pip install -r requirements.txt
+cd /ruta/al/repo/avance_curricular
+python3 -m pip install -r requirements.txt
 ```
 
 ## Entrada principal
 
-Excel operativo (ejemplo real):
+Excel operativo:
 
-- `/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx`
+- archivo externo al repo, informado vía `INPUT_XLSX`
 
-## Comandos de ejecución (oficiales)
+## Flujo oficial MU Pregrado 2026
 
-## Comando único (instalar + ejecutar ambos)
+El flujo oficial de Matrícula Unificada Pregrado 2026 se ejecuta en `codigo_gobernanza_v2.py`:
+
+Atajo autoservido recomendado desde la raíz del repo:
 
 ```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular && python3 -m venv ../.venv && ../.venv/bin/python -m pip install -r requirements.txt && ../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso ambos --catalogo-manual-tsv "/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv" --puente-sies-tsv "/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv"
+make run-oficial INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
 ```
 
-## Solo avance
-
 ```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular
-../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso avance
+cd /ruta/al/repo/avance_curricular
+export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+export OUTPUT_DIR="resultados"
+python3 codigo_gobernanza_v2.py --input "$INPUT_XLSX" --output-dir "$OUTPUT_DIR" --proceso matricula --usar-gobernanza-v2 true
 ```
 
-## Solo matrícula
+Este flujo genera dos artefactos distintos:
+
+| Artefacto | Rol | Uso |
+|---|---|---|
+| `archivo_listo_para_sies.xlsx` | auditoría y trazabilidad | revisión operativa, diagnóstico y exclusiones |
+| `matricula_unificada_2026_pregrado.csv` | carga regulatoria final | archivo para carga MU Pregrado 2026 |
+
+Con `--usar-gobernanza-v2 true` se agrega hoja `SIN_MATCH_DATOS_ALUMNOS` en `archivo_listo_para_sies.xlsx` para revisión manual de `CODCLI` no encontrados en `DatosAlumnos`.
+
+Con gobernanza v2, el lookup en `DatosAlumnos` usa prioridad:
+
+1. `CODCLI` contra `CODCLI`
+2. fallback `RUT+DV` contra `RUT+DV`
+
+y deja trazabilidad en `ARCHIVO_LISTO_SUBIDA`:
+
+- `DA_MATCH_MODO`
+- `NAC_STATUS`
+- `PAIS_EST_SEC_STATUS`
+- `COD_SED_STATUS`
+
+## Catálogos de gobernanza (opcional por CLI)
+
+Si no informas rutas, se buscan por defecto en la carpeta del repo:
+
+- `gobernanza_nac.tsv`
+- `gobernanza_pais_est_sec.tsv`
+- `gobernanza_sede.tsv`
+- `gobernanza_niveles.tsv` (catálogo de referencia documental; no se consume por CLI en v2 actual)
+
+El comando oficial no necesita rutas absolutas para catálogos, porque estos se resuelven por defecto desde la raíz del repo. Si necesitas forzarlos explícitamente:
 
 ```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular
-../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso matricula
-```
-
-## Ambos procesos
-
-```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular
-../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso ambos
-```
-
-## Catálogos explícitos (recomendado)
-
-```bash
-../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso matricula --catalogo-manual-tsv "/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv" --puente-sies-tsv "/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv"
+cd /ruta/al/repo/avance_curricular
+export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+export OUTPUT_DIR="resultados"
+python3 codigo_gobernanza_v2.py --input "$INPUT_XLSX" --output-dir "$OUTPUT_DIR" --proceso matricula --usar-gobernanza-v2 true --gob-nac-tsv "gobernanza_nac.tsv" --gob-pais-est-sec-tsv "gobernanza_pais_est_sec.tsv" --gob-sede-tsv "gobernanza_sede.tsv"
 ```
 
 ## QA y validación posterior
 
+Atajo autoservido recomendado desde la raíz del repo:
+
 ```bash
-cd /Users/alexi/Documents/GitHub/avance_curricular
-../.venv/bin/python qa_checks.py
+make validate-oficial
+```
+
+```bash
+cd /ruta/al/repo/avance_curricular
+export OUTPUT_DIR="resultados"
+python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
+```
+
+Para ejecutar y validar en una sola secuencia:
+
+```bash
+make run-and-validate-oficial INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+```
+
+Ayuda mínima de uso:
+
+```bash
+make help
 ```
 
 Qué valida `qa_checks.py`:
 
 - que README no contenga dumps CSV accidentales;
-- contrato exacto de columnas en `*_control.csv`;
-- coherencia mínima de `reporte_validacion.json` y `reporte_calidad_semantica.json`.
+- estructura física del `matricula_unificada_2026_pregrado.csv`;
+- invariantes globales vigentes;
+- y, con `--fase6-control-dir`, refresca el gate final y el backlog residual en `control/`.
 
 ## Salidas principales en `resultados/`
 
-- `carreras_avance_curricular_2025_control.csv`
-- `carreras_avance_curricular_2025_pes_ready.csv`
-- `matricula_avance_curricular_2025_control.csv`
-- `matricula_avance_curricular_2025_pes_ready.csv`
-- `matricula_unificada_2026_control.csv`
-- `matricula_unificada_2026_oficial.xlsx`
 - `archivo_listo_para_sies.xlsx`
-- `reporte_validacion.json`
-- `reporte_calidad_semantica.json`
-- `reporte_procedencia.csv`
+- `matricula_unificada_2026_pregrado.csv`
 
-## Qué es `REVIEW.md`
+## Material legacy archivado
 
-`REVIEW.md` es una revisión técnica histórica del script de origen en Colab. No participa en ejecución ni en validación automática del pipeline actual.
+El material histórico, los comandos legacy y las bitácoras de remediación ya no viven en el camino operativo principal. Quedaron agrupados bajo [archive/](/Users/alexi/Documents/GitHub/avance_curricular/archive) para conservar trazabilidad sin inducir a ejecutar el flujo equivocado.
 
 ## Problemas frecuentes
 
