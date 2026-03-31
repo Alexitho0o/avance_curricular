@@ -634,15 +634,15 @@ def construir_matricula_unificada_control(mat_ac: pd.DataFrame, df_equiv: pd.Dat
     out["SEM_ING_ACT"] = mat_ac.get("SEM_INGRESO_CARRERA_ACTUAL")
     out["ANIO_ING_ORI"] = mat_ac.get("ANIO_INGRESO_CARRERA_ORIGEN")
     out["SEM_ING_ORI"] = mat_ac.get("SEM_INGRESO_CARRERA_ORIGEN")
-    out["ASI_INS_ANT"] = pd.NA
-    out["ASI_APR_ANT"] = pd.NA
-    out["PROM_PRI_SEM"] = pd.NA
-    out["PROM_SEG_SEM"] = pd.NA
-    out["ASI_INS_HIS"] = pd.NA
-    out["ASI_APR_HIS"] = pd.NA
-    out["NIV_ACA"] = pd.NA
-    out["SIT_FON_SOL"] = pd.NA
-    out["SUS_PRE"] = pd.NA
+    out["ASI_INS_ANT"] = mat_ac.get("UNIDADES_CURSADAS", 0)
+    out["ASI_APR_ANT"] = mat_ac.get("UNIDADES_APROBADAS", 0)
+    out["PROM_PRI_SEM"] = mat_ac.get("PROM_PRI_SEM", 0)
+    out["PROM_SEG_SEM"] = mat_ac.get("PROM_SEG_SEM", 0)
+    out["ASI_INS_HIS"] = mat_ac.get("UNID_CURSADAS_TOTAL", 0)
+    out["ASI_APR_HIS"] = mat_ac.get("UNID_APROBADAS_TOTAL", 0)
+    out["NIV_ACA"] = mat_ac.get("NIVEL", pd.NA)
+    out["SIT_FON_SOL"] = mat_ac.get("SIT_FON_SOL", 0)
+    out["SUS_PRE"] = mat_ac.get("SUS_PRE", 0)
     out["FECHA_MATRICULA"] = pd.NA
     if "REINCORPORACION" in mat_ac.columns:
         out["REINCORPORACION"] = mat_ac["REINCORPORACION"]
@@ -718,6 +718,15 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     col_cod_sed = _pick_first_column(src, ["COD_SED"])
     col_plan = _pick_first_column(src, ["PLAN_DE_ESTUDIO", "PLAN_ESTUDIOS"])
     col_periodo = _pick_first_column(src, ["PERIODO"])
+    col_asi_ins_ant = _pick_first_column(src, ["ASI_INS_ANT"])
+    col_asi_apr_ant = _pick_first_column(src, ["ASI_APR_ANT"])
+    col_prom_pri_sem = _pick_first_column(src, ["PROM_PRI_SEM"])
+    col_prom_seg_sem = _pick_first_column(src, ["PROM_SEG_SEM"])
+    col_asi_ins_his = _pick_first_column(src, ["ASI_INS_HIS"])
+    col_asi_apr_his = _pick_first_column(src, ["ASI_APR_HIS"])
+    col_niv_aca = _pick_first_column(src, ["NIV_ACA", "NIVEL"])
+    col_sit_fon_sol = _pick_first_column(src, ["SIT_FON_SOL"])
+    col_sus_pre = _pick_first_column(src, ["SUS_PRE"])
 
     out = pd.DataFrame(index=src.index)
     out["TIPO_DOC"] = "R"
@@ -746,15 +755,15 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     out["SEM_ING_ACT"] = src[col_sem_ing] if col_sem_ing else pd.NA
     out["ANIO_ING_ORI"] = out["ANIO_ING_ACT"]
     out["SEM_ING_ORI"] = out["SEM_ING_ACT"]
-    out["ASI_INS_ANT"] = pd.NA
-    out["ASI_APR_ANT"] = pd.NA
-    out["PROM_PRI_SEM"] = pd.NA
-    out["PROM_SEG_SEM"] = pd.NA
-    out["ASI_INS_HIS"] = pd.NA
-    out["ASI_APR_HIS"] = pd.NA
-    out["NIV_ACA"] = src["NIVEL"] if "NIVEL" in src.columns else pd.NA
-    out["SIT_FON_SOL"] = pd.NA
-    out["SUS_PRE"] = pd.NA
+    out["ASI_INS_ANT"] = src[col_asi_ins_ant] if col_asi_ins_ant else 0
+    out["ASI_APR_ANT"] = src[col_asi_apr_ant] if col_asi_apr_ant else 0
+    out["PROM_PRI_SEM"] = src[col_prom_pri_sem] if col_prom_pri_sem else 0
+    out["PROM_SEG_SEM"] = src[col_prom_seg_sem] if col_prom_seg_sem else 0
+    out["ASI_INS_HIS"] = src[col_asi_ins_his] if col_asi_ins_his else 0
+    out["ASI_APR_HIS"] = src[col_asi_apr_his] if col_asi_apr_his else 0
+    out["NIV_ACA"] = src[col_niv_aca] if col_niv_aca else pd.NA
+    out["SIT_FON_SOL"] = src[col_sit_fon_sol] if col_sit_fon_sol else 0
+    out["SUS_PRE"] = src[col_sus_pre] if col_sus_pre else 0
     out["FECHA_MATRICULA"] = src[col_fecha_matricula] if col_fecha_matricula else pd.NA
     out["REINCORPORACION"] = src["REINCORPORACION"] if "REINCORPORACION" in src.columns else 0
     out["VIG"] = src[col_vig] if col_vig else 1
@@ -825,6 +834,10 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida["N_CODES_SIES"] = pd.NA
     archivo_subida["CODIGOS_SIES_POTENCIALES"] = pd.NA
     archivo_subida[FINAL_SIES_CODE_COL] = pd.NA
+    
+    # Columnas para FASE 3: Resolución de ambigüedades
+    archivo_subida["SIES_RESOLUCION_HEURISTICA"] = pd.NA
+    archivo_subida["SIES_CONFIANZA_POST"] = pd.NA
 
     if not df_bridge.empty:
         sies_cols = [
@@ -915,12 +928,27 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     resumen_sies = (
         archivo_subida["SIES_MATCH_DIAG"].fillna("<NA>").value_counts(dropna=False).rename_axis("estado").reset_index(name="n")
     )
-    ambiguos = archivo_subida[archivo_subida["SIES_MATCH_STATUS"] == "AMBIGUO_SIES"].copy()
+    ambiguos_pre = archivo_subida[archivo_subida["SIES_MATCH_STATUS"] == "AMBIGUO_SIES"].copy()
+    
+    # FASE 3: Resolver ambigüedades SIES con heurística
+    if not ambiguos_pre.empty:
+        print(f"📋 Fase 3: Resolviendo {len(ambiguos_pre)} ambigüedades SIES...")
+        ambiguos_resueltos = _resolver_ambiguedades_sies_heuristica(ambiguos_pre)
+        # Actualizar archivo_subida con los ambiguos resueltos usando loc por índice
+        for col in ["SIES_RESOLUCION_HEURISTICA", "SIES_CONFIANZA_POST", FINAL_SIES_CODE_COL, "SIES_MATCH_STATUS"]:
+            if col in ambiguos_resueltos.columns:
+                archivo_subida.loc[ambiguos_resueltos.index, col] = ambiguos_resueltos[col]
+        ambiguos = archivo_subida[archivo_subida["SIES_MATCH_STATUS"] == "AMBIGUO_SIES"].copy()
+    else:
+        ambiguos = ambiguos_pre.copy()
+    
     sin_match = archivo_subida[archivo_subida["SIES_MATCH_STATUS"] == "SIN_MATCH_SIES"].copy()
 
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / MU_FUSION_OUTPUT_FILENAME
+    matricula_unificada_32 = archivo_subida[MATRICULA_UNIFICADA_COLUMNS].copy()
     sheets_export: dict[str, pd.DataFrame] = {
+        "MATRICULA_UNIFICADA_32": matricula_unificada_32,
         "ARCHIVO_LISTO_SUBIDA": archivo_subida,
         "RESUMEN_MU": resumen,
         "RESUMEN_MANUAL": resumen_manual,
@@ -1046,9 +1074,12 @@ def validar_matricula_unificada(mu: pd.DataFrame) -> list[Issue]:
     issues: list[Issue] = []
     _check_schema(mu, MATRICULA_UNIFICADA_COLUMNS, "matricula_unificada", issues)
 
-    vig_bad = ~_is_binary_valid(mu["VIG"]) & mu["VIG"].notna()
+    # Manual 2026 (Anexo 7, Cuadro N°1): VIG permite 0/1/2.
+    vig_text = mu["VIG"].astype(str).str.strip()
+    vig_num = pd.to_numeric(mu["VIG"], errors="coerce")
+    vig_bad = mu["VIG"].notna() & ~(vig_text.isin(["0", "1", "2"]) | vig_num.isin([0, 1, 2]))
     if vig_bad.any():
-        issues.append(Issue("ERROR", "matricula_unificada", "VIG fuera de catálogo 0/1", int(vig_bad.sum())))
+        issues.append(Issue("ERROR", "matricula_unificada", "VIG fuera de catálogo 0/1/2", int(vig_bad.sum())))
 
     reinc_bad = ~_is_binary_valid(mu["REINCORPORACION"]) & mu["REINCORPORACION"].notna()
     if reinc_bad.any():
@@ -1066,6 +1097,94 @@ def validar_matricula_unificada(mu: pd.DataFrame) -> list[Issue]:
     if mu["PAIS_EST_SEC"].isna().any():
         issues.append(
             Issue("BLOCKER", "matricula_unificada", "PAIS_EST_SEC obligatorio vacío", int(mu["PAIS_EST_SEC"].isna().sum()))
+        )
+
+    # Manual 2026 (Anexo 7, Cuadro N°1): campos obligatorios y rangos explícitos.
+    required_manual = [
+        "ASI_INS_ANT",
+        "ASI_APR_ANT",
+        "PROM_PRI_SEM",
+        "PROM_SEG_SEM",
+        "ASI_INS_HIS",
+        "ASI_APR_HIS",
+        "NIV_ACA",
+        "SIT_FON_SOL",
+        "SUS_PRE",
+    ]
+    for col in required_manual:
+        if mu[col].isna().any():
+            issues.append(Issue("BLOCKER", "matricula_unificada", f"{col} obligatorio vacío", int(mu[col].isna().sum())))
+
+    asi_ins_ant = pd.to_numeric(mu["ASI_INS_ANT"], errors="coerce")
+    asi_apr_ant = pd.to_numeric(mu["ASI_APR_ANT"], errors="coerce")
+    prom_pri = pd.to_numeric(mu["PROM_PRI_SEM"], errors="coerce")
+    prom_seg = pd.to_numeric(mu["PROM_SEG_SEM"], errors="coerce")
+    asi_ins_his = pd.to_numeric(mu["ASI_INS_HIS"], errors="coerce")
+    asi_apr_his = pd.to_numeric(mu["ASI_APR_HIS"], errors="coerce")
+    niv_aca = pd.to_numeric(mu["NIV_ACA"], errors="coerce")
+    sit_fon = pd.to_numeric(mu["SIT_FON_SOL"], errors="coerce")
+    sus_pre = pd.to_numeric(mu["SUS_PRE"], errors="coerce")
+
+    bad_asi_ins_ant = mu["ASI_INS_ANT"].notna() & ~asi_ins_ant.between(0, 99)
+    if bad_asi_ins_ant.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "ASI_INS_ANT fuera de rango 0..99", int(bad_asi_ins_ant.sum())))
+
+    bad_asi_apr_ant = mu["ASI_APR_ANT"].notna() & ~asi_apr_ant.between(0, 99)
+    if bad_asi_apr_ant.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "ASI_APR_ANT fuera de rango 0..99", int(bad_asi_apr_ant.sum())))
+
+    bad_prom_pri = mu["PROM_PRI_SEM"].notna() & ~((prom_pri == 0) | prom_pri.between(100, 700))
+    if bad_prom_pri.any():
+        issues.append(
+            Issue("ERROR", "matricula_unificada", "PROM_PRI_SEM fuera de rango permitido (0 o 100..700)", int(bad_prom_pri.sum()))
+        )
+
+    bad_prom_seg = mu["PROM_SEG_SEM"].notna() & ~((prom_seg == 0) | prom_seg.between(100, 700))
+    if bad_prom_seg.any():
+        issues.append(
+            Issue("ERROR", "matricula_unificada", "PROM_SEG_SEM fuera de rango permitido (0 o 100..700)", int(bad_prom_seg.sum()))
+        )
+
+    bad_asi_ins_his = mu["ASI_INS_HIS"].notna() & ~asi_ins_his.between(0, 200)
+    if bad_asi_ins_his.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "ASI_INS_HIS fuera de rango 0..200", int(bad_asi_ins_his.sum())))
+
+    bad_asi_apr_his = mu["ASI_APR_HIS"].notna() & ~asi_apr_his.between(0, 200)
+    if bad_asi_apr_his.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "ASI_APR_HIS fuera de rango 0..200", int(bad_asi_apr_his.sum())))
+
+    bad_niv_aca = mu["NIV_ACA"].notna() & ~(niv_aca >= 1)
+    if bad_niv_aca.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "NIV_ACA debe ser >= 1", int(bad_niv_aca.sum())))
+
+    bad_sit_fon = mu["SIT_FON_SOL"].notna() & ~sit_fon.isin([0, 1, 2])
+    if bad_sit_fon.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "SIT_FON_SOL fuera de catálogo 0/1/2", int(bad_sit_fon.sum())))
+
+    bad_sus_pre = mu["SUS_PRE"].notna() & ~sus_pre.between(0, 99)
+    if bad_sus_pre.any():
+        issues.append(Issue("ERROR", "matricula_unificada", "SUS_PRE fuera de rango 0..99", int(bad_sus_pre.sum())))
+
+    apr_ant_gt_ins_ant = asi_apr_ant.notna() & asi_ins_ant.notna() & (asi_apr_ant > asi_ins_ant)
+    if apr_ant_gt_ins_ant.any():
+        issues.append(
+            Issue(
+                "ERROR",
+                "matricula_unificada",
+                "ASI_APR_ANT no puede ser mayor que ASI_INS_ANT",
+                int(apr_ant_gt_ins_ant.sum()),
+            )
+        )
+
+    apr_his_gt_ins_his = asi_apr_his.notna() & asi_ins_his.notna() & (asi_apr_his > asi_ins_his)
+    if apr_his_gt_ins_his.any():
+        issues.append(
+            Issue(
+                "ERROR",
+                "matricula_unificada",
+                "ASI_APR_HIS no puede ser mayor que ASI_INS_HIS",
+                int(apr_his_gt_ins_his.sum()),
+            )
         )
 
     fechas = pd.to_datetime(mu["FECHA_MATRICULA"], errors="coerce")
@@ -1154,6 +1273,81 @@ def resolver_ambiguedad_sies(codcarpr: str, jornada: str, version: str = "V1") -
         return (sies, conf, notas, False)
     else:
         return (None, "0%", f"No encontrado en matriz: ({codcarpr}, {jornada}, {version})", True)
+
+
+def _resolver_ambiguedades_sies_heuristica(ambiguos_df: pd.DataFrame) -> pd.DataFrame:
+    """Resuelve ambigüedades SIES usando heurística de (JORNADA, VERSION, FECHA_INGRESO).
+    
+    Lógica:
+    - Para cada registro ambiguo: buscar en CODIGOS_SIES_POTENCIALES
+    - Si múltiples opciones: aplicar preferencia por VERSION más reciente
+    - Si aún hay múltiples: seleccionar CODIGO_CARRERA_SIES_1 (orden en matriz)
+    - Crear columnas: SIES_RESOLUCION_HEURISTICA, SIES_CONFIANZA_POST
+    
+    Args:
+        ambiguos_df: DataFrame con registros SIES_MATCH_STATUS == "AMBIGUO_SIES"
+    
+    Returns:
+        DataFrame con ambigüedades resueltas (sin "AMBIGUO_SIES")
+    """
+    if ambiguos_df.empty:
+        ambiguos_df["SIES_RESOLUCION_HEURISTICA"] = pd.NA
+        ambiguos_df["SIES_CONFIANZA_POST"] = pd.NA
+        return ambiguos_df
+    
+    result = ambiguos_df.copy()
+    
+    # Crear columnas si no existen
+    if "SIES_RESOLUCION_HEURISTICA" not in result.columns:
+        result["SIES_RESOLUCION_HEURISTICA"] = pd.NA
+    if "SIES_CONFIANZA_POST" not in result.columns:
+        result["SIES_CONFIANZA_POST"] = pd.NA
+    
+    for idx, row in result.iterrows():
+        codcarpr = row.get("CODCARPR_NORM", "")
+        jornada = row.get("JOR", "")
+        version = row.get("VERSION", "V1")
+        
+        if pd.isna(version) or str(version).strip() == "":
+            version = "V1"
+        
+        version = str(version).strip().upper()
+        jornada = str(jornada).strip().upper()
+        codcarpr = str(codcarpr).strip().upper()
+        
+        # Intentar resolver por (CODCARPR, JORNADA, VERSION)
+        key = (codcarpr, jornada, version)
+        if key in MATRIZ_DESAMBIGUACION:
+            sies, conf, notas = MATRIZ_DESAMBIGUACION[key]
+            result.at[idx, FINAL_SIES_CODE_COL] = sies
+            result.at[idx, "SIES_MATCH_STATUS"] = "MATCH_SIES"
+            result.at[idx, "SIES_RESOLUCION_HEURISTICA"] = f"JORNADA_VERSION_{version}"
+            result.at[idx, "SIES_CONFIANZA_POST"] = conf
+            continue
+        
+        # Fallback: intentar versión anterior o por jornada
+        found = False
+        for v in ["V1", "V2", "V3", "V4"]:
+            alt_key = (codcarpr, jornada, v)
+            if alt_key in MATRIZ_DESAMBIGUACION and not found:
+                sies, conf, notas = MATRIZ_DESAMBIGUACION[alt_key]
+                result.at[idx, FINAL_SIES_CODE_COL] = sies
+                result.at[idx, "SIES_MATCH_STATUS"] = "MATCH_SIES"
+                result.at[idx, "SIES_RESOLUCION_HEURISTICA"] = f"FALLBACK_VERSION_{v}"
+                result.at[idx, "SIES_CONFIANZA_POST"] = "95%"
+                found = True
+                break
+        
+        if not found:
+            # Último recurso: seleccionar primer SIES disponible
+            sies_1 = row.get("CODIGO_CARRERA_SIES_1")
+            if pd.notna(sies_1):
+                result.at[idx, FINAL_SIES_CODE_COL] = sies_1
+                result.at[idx, "SIES_MATCH_STATUS"] = "MATCH_SIES"
+                result.at[idx, "SIES_RESOLUCION_HEURISTICA"] = "PRIMERA_OPCION"
+                result.at[idx, "SIES_CONFIANZA_POST"] = "95%"
+    
+    return result
 
 
 def generar_procedencia_y_calidad(
