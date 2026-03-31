@@ -1,223 +1,185 @@
-<<<<<<< HEAD
 # Avance Curricular + Matrícula Unificada
-=======
-<<<<<<< ours
-<<<<<<< ours
-<<<<<<< ours
-<<<<<<< ours
-# Avance Curricular Processor
-=======
-# Pipeline híbrido SIES/PES
->>>>>>> theirs
 
-Runner canónico: `codigo.py`.
+Repositorio productivo para generar salidas de:
 
-## Ejecución
+- `avance` (control y PES de avance curricular)
+- `matricula` (archivo final de matrícula unificada con trazabilidad SIES)
+- `ambos` (ejecución conjunta)
 
-```bash
-python3 codigo.py --input "subir prueba.xlsx" --output-dir resultados
-```
+Este README documenta el flujo oficial de `codigo.py` y sus artefactos de gobernanza.
 
-## Arquitectura
+## Documentación principal
 
-<<<<<<< ours
-1. Place the Excel file to process somewhere on your computer.
-2. Execute the script:
-=======
-# Avance Curricular
+- [DOCUMENTACION_TECNICA.md](/Users/alexi/Documents/GitHub/avance_curricular/DOCUMENTACION_TECNICA.md): arquitectura, contratos, trazabilidad y reglas de validación.
+- [README.md](/Users/alexi/Documents/GitHub/avance_curricular/README.md): operación diaria y mapa de artefactos.
 
-This repository provides a script to process curricular advancement data from an Excel file. The script reads the data, prepares the necessary sheets and exports formatted spreadsheets.
+## Inventario de artefactos del repositorio
 
-## Installation
+| Archivo | Rol técnico | Uso operativo |
+|---|---|---|
+| [codigo.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo.py) | pipeline principal (avance + matrícula + validaciones) | ejecución productiva |
+| [catalogo_manual.tsv](/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv) | catálogo de traza por carrera/jornada/nombre | matching manual en proceso matrícula |
+| [puente_sies.tsv](/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv) | puente de negocio hacia `CODIGO_CARRERA_SIES` | asignación SIES y diagnóstico |
+| `matriz_desambiguacion_sies*.tsv` | matriz de resolución de ambiguos `(CODCARPR,JORNADA,VERSION)` | desambiguación en fase operativa SIES |
+| [qa_checks.py](/Users/alexi/Documents/GitHub/avance_curricular/qa_checks.py) | chequeos rápidos de contratos y reportes | control posterior a ejecución |
+| [REVIEW.md](/Users/alexi/Documents/GitHub/avance_curricular/REVIEW.md) | revisión técnica histórica (contexto Colab) | referencia, no runtime |
+| [FASE1_RESUMEN.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE1_RESUMEN.txt) | bitácora Fase 1 inicial | historial |
+| [FASE1_REVISADA_RESUMEN.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE1_REVISADA_RESUMEN.txt) | resumen Fase 1 revisada | historial |
+| [FASE1_REVISADA_COMPLETADA.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE1_REVISADA_COMPLETADA.txt) | cierre detallado Fase 1 revisada | historial |
+| [FASE2_RESUMEN.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE2_RESUMEN.txt) | bitácora Fase 2 inicial | historial |
+| [FASE2_REVISADA_COMPLETADA.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE2_REVISADA_COMPLETADA.txt) | cierre Fase 2 revisada | historial |
+| [FASE3_COMPLETADA.txt](/Users/alexi/Documents/GitHub/avance_curricular/FASE3_COMPLETADA.txt) | cierre Fase 3 y reportes | historial/auditoría |
 
-Install the required Python packages using `pip` and the provided `requirements.txt`:
+## Qué documenta cada fase
 
-```bash
-pip install -r requirements.txt
-```
+- Fase 1 (`FASE1_*`): base de desambiguación, primeras coberturas y problemas detectados.
+- Fase 2 (`FASE2_*`): expansión de matriz, mejoras de cobertura jornada/versión y consolidación operativa.
+- Fase 3 (`FASE3_COMPLETADA.txt`): resolución operativa de ambiguos, métricas de cierre y evidencia de exportación.
 
-<<<<<<< ours
-<<<<<<< ours
-## Usage
-=======
-3. When prompted `🔢 Año matrícula focal`, enter the year you want to analyze.
-4. Choose whether to focus on a specific period; if you answer "s", you will be asked for `🔢 Período matrícula focal (1-3)`. Answering "n" will process the whole year.
-5. When prompted `Ruta de archivo .xlsx:`, provide the path to your workbook.
-6. After processing finishes, two Excel files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will appear in the same directory.
->>>>>>> theirs
+Estos archivos son bitácoras de evolución y auditoría. La fuente de verdad de ejecución actual es `codigo.py` más los artefactos TSV vigentes.
 
-Run the main script:
->>>>>>> theirs
-=======
-- **Capa A (ingesta flexible):** detección de hojas por columnas mínimas y normalización de claves.
-- **Capa B (modelo intermedio):** no colapsa a una carrera por RUT; resuelve equivalencias solo cuando son unívocas y deja ambiguos en revisión.
-- **Capa C (proyección oficial):** aplica contratos exactos de salida, valida instructivo y exporta control + PES-ready.
->>>>>>> theirs
+## Catálogos y reglas de gobernanza
 
-## Entregables
+## 1) `catalogo_manual.tsv`
 
-<<<<<<< ours
-<<<<<<< ours
-3. When prompted `Ruta de archivo .xlsx:`, provide the path to your workbook.
-4. After processing finishes, two Excel files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will appear in the same directory.
-=======
-### Oficiales
-1. `resultados/matricula_unificada_2026_oficial.xlsx`
-2. `resultados/carreras_avance_curricular_2025_pes_ready.csv`
-3. `resultados/matricula_avance_curricular_2025_pes_ready.csv`
->>>>>>> theirs
-=======
-3. When prompted `🔢 Año matrícula focal`, enter the year you want to analyze.
-4. Choose whether to focus on a specific period; if you answer "s", you will be asked for `🔢 Período matrícula focal (1-3)`. Answering "n" will process the whole year.
-5. When prompted `Ruta de archivo .xlsx:`, provide the path to your workbook.
-6. After processing finishes, two Excel files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will appear in the same directory.
->>>>>>> theirs
+Columnas esperadas:
 
-### Control
-- `resultados/matricula_unificada_2026_control.csv`
-- `resultados/carreras_avance_curricular_2025_control.csv`
-- `resultados/matricula_avance_curricular_2025_control.csv`
+- `GRUPO_TRAZA`
+- `JORNADA`
+- `CODCARPR`
+- `NOMBRE_L`
+- `ANOINGRESO`
 
-### Auditoría y trazabilidad
-- `resultados/reporte_validacion.json`
-- `resultados/sies_ambiguedad_diagnostico.csv`
-- `resultados/sies_codcarr_sin_mapeo.csv`
-- `resultados/comparacion_versiones.md`
-- `resultados/diccionario_columnas.md`
-- `resultados/reporte_procedencia.csv`
-- `resultados/reporte_calidad_semantica.json`
+Uso:
 
-## Reglas claves aplicadas
+- clasificación manual de llave de negocio en el matching de matrícula.
 
-- `pes_ready` elimina `CODIGO_IES_NUM` **por nombre de columna**, nunca por índice.
-- Ambigüedad `CODCARR -> CODIGO_UNICO` no se fuerza con `drop_duplicates`.
-- Campos sensibles de Matrícula Unificada (`PAIS_EST_SEC`, `REINCORPORACION`) no se inventan: se reportan como `BLOCKER` si faltan.
-- Orden de carga de Avance Curricular: primero Carreras, luego Matrícula.
+## 2) `puente_sies.tsv`
 
+Columnas esperadas:
 
-<<<<<<< ours
-## Check de calidad
-=======
-When executed in Colab, the script first asks for the focal year and whether you want to limit the analysis to a period. A file upload dialog then appears to select your Excel file. Once the script finishes, the resulting Excel files are automatically downloaded to your computer.
->>>>>>> theirs
+- `GRUPO_TRAZA`
+- `JORNADA`
+- `CODCARPR`
+- `NOMBRE_L`
+- `CODIGO_CARRERA_SIES`
 
-<<<<<<< ours
-### Campos mínimos exigidos (según instructivo SIES 2025)
-- **Carreras Avance Curricular 2025**: `CODIGO_UNICO`, `PLAN_ESTUDIOS`, `TIPO_UNIDAD_MEDIDA`, `TOTAL_UNIDADES_MEDIDA`, `UNIDADES_1ER_ANIO` … `UNIDADES_7MO_ANIO`, `VIGENCIA` (y `OTRA_UNIDAD_MEDIDA` si `TIPO_UNIDAD_MEDIDA = 3`).
-- **Matrícula Avance Curricular 2025**: `NUM_DOCUMENTO`, `DV`, `CODIGO_UNICO`, `PLAN_ESTUDIOS`, `CURSO_1ER_SEM`, `CURSO_2DO_SEM`, `UNIDADES_CURSADAS`, `UNIDADES_APROBADAS`, `UNID_CURSADAS_TOTAL`, `UNID_APROBADAS_TOTAL`, `VIGENCIA`.
-- **Histórico** (una o varias hojas): `RUT`, `DIG`, `ANO`, `PERIODO`, `CODRAMO`, `DESCRIPCION_ESTADO`.
+Uso:
 
-El script valida que estas columnas existan y que la suma de `UNIDADES_*_ANIO` coincida con `TOTAL_UNIDADES_MEDIDA` antes de procesar.
+- puente principal para asignación de código SIES y detección de ambiguos.
 
-## Downloading results
+## 3) Campos críticos del Manual 2026 (Anexo 7)
 
-The generated files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will be saved in the current working directory. In Google Colab, they are also offered as direct downloads once processing is complete.
-=======
-# Avance Curricular
+Referencia: `20260106_36454_Manual_Matrícula_Unificada_2026.pdf` (Cuadro N°1).
 
-<<<<<<< ours
-Herramienta en Python para procesar planillas de avance curricular.
-=======
-When executed in Colab, the script first asks for the focal year and whether you want to limit the analysis to a period. A file upload dialog then appears to select your Excel file. Once the script finishes, the resulting Excel files are automatically downloaded to your computer.
->>>>>>> theirs
+- `ASI_INS_ANT` y `ASI_APR_ANT`: rango `0..99` y coherencia `APR <= INS`.
+- `PROM_PRI_SEM` y `PROM_SEG_SEM`: `0` o `100..700`.
+- `ASI_INS_HIS` y `ASI_APR_HIS`: `0..200` y coherencia `APR <= INS`.
+- `NIV_ACA`: obligatorio y `>=1`.
+- `SIT_FON_SOL`: catálogo `0/1/2`.
+- `SUS_PRE`: rango `0..99`.
+- `VIG`: catálogo `0/1/2`.
 
 ## Requisitos
 
-- Python 3.x
-- [pandas](https://pandas.pydata.org)
-- [openpyxl](https://openpyxl.readthedocs.io)
-
-## Licencia
-
-Este proyecto se distribuye bajo los términos de la [licencia MIT](LICENSE).
->>>>>>> theirs
-=======
-The program will prompt for the location of the Excel workbook (or show an upload widget if running in Google Colab). The generated files will be saved as `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx`.
->>>>>>> theirs
-=======
-```bash
-python3 qa_checks.py
-```
->>>>>>> theirs
-=======
-# Avance Curricular Processor
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-
-Pipeline Python para dos procesos:
-- `avance`: genera Avance Curricular (salidas PES/SIES + validaciones).
-- `matricula`: genera `archivo_listo_para_sies.xlsx` estilo Matrícula Unificada.
-- `ambos`: ejecuta ambos procesos en una sola corrida.
-
-## Requisitos
 - Python 3.9+
 - `pandas`
 - `numpy`
 - `openpyxl`
 
-Instalación rápida:
+## Instalación
+
 ```bash
-python3 -m venv .venv
-./.venv/bin/python -m pip install -r requirements.txt
+cd /Users/alexi/Documents/GitHub/avance_curricular
+python3 -m venv ../.venv
+../.venv/bin/python -m pip install -r requirements.txt
 ```
 
-## Uso rápido
+## Entrada principal
 
-### 1) Solo Avance Curricular
+Excel operativo (ejemplo real):
+
+- `/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx`
+
+## Comandos de ejecución (oficiales)
+
+## Comando único (instalar + ejecutar ambos)
+
 ```bash
-./.venv/bin/python codigo.py \
-  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
-  --output-dir resultados \
-  --proceso avance
+cd /Users/alexi/Documents/GitHub/avance_curricular && python3 -m venv ../.venv && ../.venv/bin/python -m pip install -r requirements.txt && ../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso ambos --catalogo-manual-tsv "/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv" --puente-sies-tsv "/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv"
 ```
 
-### 2) Solo Matrícula Unificada
+## Solo avance
+
 ```bash
-./.venv/bin/python codigo.py \
-  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
-  --output-dir resultados \
-  --proceso matricula
+cd /Users/alexi/Documents/GitHub/avance_curricular
+../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso avance
 ```
 
-### 3) Ambos procesos
+## Solo matrícula
+
 ```bash
-./.venv/bin/python codigo.py \
-  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
-  --output-dir resultados \
-  --proceso ambos
+cd /Users/alexi/Documents/GitHub/avance_curricular
+../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso matricula
 ```
 
-## Catálogos para matching SIES (proceso matrícula)
+## Ambos procesos
 
-El proceso matrícula soporta catálogo manual y puente SIES vía TSV:
 ```bash
-./.venv/bin/python codigo.py \
-  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
-  --output-dir resultados \
-  --proceso matricula \
-  --catalogo-manual-tsv "/ruta/catalogo_manual.tsv" \
-  --puente-sies-tsv "/ruta/puente_sies.tsv"
+cd /Users/alexi/Documents/GitHub/avance_curricular
+../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso ambos
 ```
 
-Si no se pasan rutas, el script intenta autodetectar:
-- `catalogo_manual.tsv` en el repo o en `~/Downloads`
-- `puente_sies.tsv` en el repo o en `~/Downloads`
+## Catálogos explícitos (recomendado)
 
-Si no los encuentra, el pipeline igual corre, pero reporta:
-- `SIN_CATALOGO_MANUAL`
-- `SIN_PUENTE_SIES`
+```bash
+../.venv/bin/python codigo.py --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" --output-dir resultados --proceso matricula --catalogo-manual-tsv "/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv" --puente-sies-tsv "/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv"
+```
 
-<<<<<<< HEAD
-## Error común
+## QA y validación posterior
 
-Si ves:
-`FileNotFoundError: No se encontró archivo de entrada: /ruta/a/tu_workbook.xlsx`
+```bash
+cd /Users/alexi/Documents/GitHub/avance_curricular
+../.venv/bin/python qa_checks.py
+```
 
-significa que usaste una ruta de ejemplo. Debes reemplazarla por una ruta real, por ejemplo:
-`/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx`.
+Qué valida `qa_checks.py`:
+
+- que README no contenga dumps CSV accidentales;
+- contrato exacto de columnas en `*_control.csv`;
+- coherencia mínima de `reporte_validacion.json` y `reporte_calidad_semantica.json`.
+
+## Salidas principales en `resultados/`
+
+- `carreras_avance_curricular_2025_control.csv`
+- `carreras_avance_curricular_2025_pes_ready.csv`
+- `matricula_avance_curricular_2025_control.csv`
+- `matricula_avance_curricular_2025_pes_ready.csv`
+- `matricula_unificada_2026_control.csv`
+- `matricula_unificada_2026_oficial.xlsx`
+- `archivo_listo_para_sies.xlsx`
+- `reporte_validacion.json`
+- `reporte_calidad_semantica.json`
+- `reporte_procedencia.csv`
+
+## Qué es `REVIEW.md`
+
+`REVIEW.md` es una revisión técnica histórica del script de origen en Colab. No participa en ejecución ni en validación automática del pipeline actual.
+
+## Problemas frecuentes
+
+## `FileNotFoundError: No se encontró archivo de entrada`
+
+La ruta usada no existe. Reemplaza la ruta de ejemplo por un archivo real.
+
+## `zsh: no such file or directory: ./.venv/bin/python`
+
+En este repo la venv está en el directorio padre (`../.venv/bin/python`).
+
+## `MATCH_SIES_AMBIGUO`
+
+No es error de ejecución: indica ambigüedad de mapeo SIES y requiere revisión/heurística según la matriz vigente.
 
 ## Licencia
+
 MIT. Ver [LICENSE](LICENSE).
-=======
-The generated files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will be saved in the current working directory. In Google Colab, they are also offered as direct downloads once processing is complete.
->>>>>>> theirs
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031

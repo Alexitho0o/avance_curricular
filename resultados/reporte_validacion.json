@@ -1,6 +1,5 @@
 {
   "rows": {
-<<<<<<< HEAD
     "carreras_control": 54,
     "matricula_ac_control": 2830,
     "matricula_unificada_control": 2830,
@@ -12,105 +11,13 @@
     {
       "severity": "BLOCKER",
       "area": "matricula_unificada",
-      "message": "REINCORPORACION obligatorio vacío",
+      "message": "NIV_ACA obligatorio vacío",
       "count": 2830
-=======
-    "carreras_control": 27,
-    "matricula_ac_control": 1455,
-    "matricula_unificada_control": 1455,
-    "historico_total": 423,
-    "historico_mapeado": 169,
-    "historico_sin_mapeo": 254
-  },
-  "issues": [
-    {
-      "severity": "WARN",
-      "area": "matricula_ac",
-      "message": "Semestres de ingreso fuera de 1/2",
-      "count": 192
-    },
-    {
-      "severity": "BLOCKER",
-      "area": "matricula_unificada",
-      "message": "REINCORPORACION obligatorio vacío",
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "BLOCKER",
-      "area": "matricula_unificada",
-      "message": "PAIS_EST_SEC obligatorio vacío",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
     },
     {
       "severity": "WARN",
       "area": "matricula_unificada",
       "message": "COD_CAR con MODALIDAD no resuelta (equivalencia dudosa)",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "BLOCKER",
-      "area": "matricula_unificada",
-      "message": "PAIS_EST_SEC con missing_blocker masivo",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "BLOCKER",
-      "area": "matricula_unificada",
-      "message": "REINCORPORACION con missing_blocker masivo",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "ERROR",
-      "area": "matricula_ac",
-      "message": "CURSO_1ER_SEM con default_like_pct alto",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "ERROR",
-      "area": "matricula_ac",
-      "message": "CURSO_2DO_SEM con default_like_pct alto",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "BLOCKER",
-      "area": "matricula_ac",
-      "message": "UNIDADES_CURSADAS con default_like_pct alto",
-<<<<<<< HEAD
-      "count": 2830
-=======
-      "count": 1455
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
-    },
-    {
-      "severity": "ERROR",
-      "area": "matricula_ac",
-      "message": "UNIDADES_APROBADAS con default_like_pct alto",
-<<<<<<< HEAD
       "count": 2830
     }
   ],
@@ -120,33 +27,8 @@
   },
   "calidad_semantica": {
     "matricula_unificada": {
-      "avg_null_pct": 0.875,
-      "avg_default_like_pct": 0.8779,
-=======
-      "count": 1455
-    },
-    {
-      "severity": "BLOCKER",
-      "area": "matricula_ac",
-      "message": "UNID_CURSADAS_TOTAL con default_like_pct alto",
-      "count": 1455
-    },
-    {
-      "severity": "ERROR",
-      "area": "matricula_ac",
-      "message": "UNID_APROBADAS_TOTAL con default_like_pct alto",
-      "count": 1455
-    }
-  ],
-  "ambiguedad": {
-    "codcarr_total": 16,
-    "codcarr_ambiguos": 12
-  },
-  "calidad_semantica": {
-    "matricula_unificada": {
-      "avg_null_pct": 0.5626,
-      "avg_default_like_pct": 0.5694,
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
+      "avg_null_pct": 0.5625,
+      "avg_default_like_pct": 0.7891,
       "provenance_pct": {
         "source_exact": 0.25,
         "source_normalized": 0.5938,
@@ -155,25 +37,15 @@
       }
     },
     "carreras_ac": {
-<<<<<<< HEAD
       "avg_null_pct": 0.9091,
       "avg_default_like_pct": 0.9091,
-=======
-      "avg_null_pct": 0.8182,
-      "avg_default_like_pct": 0.8182,
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
       "provenance_pct": {
         "template_preserved": 1.0
       }
     },
     "matricula_ac": {
-<<<<<<< HEAD
       "avg_null_pct": 0.5,
       "avg_default_like_pct": 0.6932,
-=======
-      "avg_null_pct": 0.2728,
-      "avg_default_like_pct": 0.2828,
->>>>>>> 6b9ee2bf3f51aff72dcb8254282fd67304445031
       "provenance_pct": {
         "template_preserved": 0.7273,
         "derived_rule": 0.2727
@@ -182,6 +54,6 @@
   },
   "apto_oficial": {
     "matricula_unificada": false,
-    "avance_curricular": false
+    "avance_curricular": true
   }
 }
