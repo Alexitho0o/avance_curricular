@@ -1,59 +1,75 @@
-# Avance Curricular Processor
+# Avance Curricular + Matrícula Unificada
 
-This repository contains a single script `codigo.py` used to prepare the "Avance Curricular" reports required for SIES 2025. It reads an Excel workbook with information about students, careers and historical enrolment and generates two formatted Excel files:
+Pipeline Python para dos procesos:
+- `avance`: genera Avance Curricular (salidas PES/SIES + validaciones).
+- `matricula`: genera `archivo_listo_para_sies.xlsx` estilo Matrícula Unificada.
+- `ambos`: ejecuta ambos procesos en una sola corrida.
 
-- `A. C. Carrera 2024.xlsx`
-- `A. C. Matrícula 2024.xlsx`
+## Requisitos
+- Python 3.9+
+- `pandas`
+- `numpy`
+- `openpyxl`
 
-Both output files are written locally when running the script on your computer or saved to `/content/` when executed on Google Colab. The script also takes care of formatting columns and, in Colab, triggers a download of the results.
-
-## Requirements
-
-- Python 3.9 or newer
-- [pandas](https://pandas.pydata.org/)
-- [numpy](https://numpy.org/)
-- [openpyxl](https://openpyxl.readthedocs.io/)
-- `google.colab` (only when running on Colab)
-
-Install the dependencies with:
-
+Instalación rápida:
 ```bash
-pip install pandas numpy openpyxl
+python3 -m venv .venv
+./.venv/bin/python -m pip install -r requirements.txt
 ```
 
-## Running locally
+## Uso rápido
 
-1. Place the Excel file to process somewhere on your computer.
-2. Execute the script:
-
+### 1) Solo Avance Curricular
 ```bash
-python codigo.py
+./.venv/bin/python codigo.py \
+  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
+  --output-dir resultados \
+  --proceso avance
 ```
 
-3. When prompted `Ruta de archivo .xlsx:`, provide the path to your workbook.
-4. After processing finishes, two Excel files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will appear in the same directory.
-
-## Running in Google Colab
-
-1. Upload this repository or the `codigo.py` file to a new Colab notebook.
-2. Install the dependencies:
-
-```python
-!pip install pandas numpy openpyxl
+### 2) Solo Matrícula Unificada
+```bash
+./.venv/bin/python codigo.py \
+  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
+  --output-dir resultados \
+  --proceso matricula
 ```
 
-3. Run the script inside a cell:
-
-```python
-%run codigo.py
+### 3) Ambos procesos
+```bash
+./.venv/bin/python codigo.py \
+  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
+  --output-dir resultados \
+  --proceso ambos
 ```
 
-When executed in Colab, a file upload dialog will appear to select your Excel file. Once the script finishes, the resulting Excel files are automatically downloaded to your computer.
+## Catálogos para matching SIES (proceso matrícula)
 
-## Uploading the input file
+El proceso matrícula soporta catálogo manual y puente SIES vía TSV:
+```bash
+./.venv/bin/python codigo.py \
+  --input "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx" \
+  --output-dir resultados \
+  --proceso matricula \
+  --catalogo-manual-tsv "/ruta/catalogo_manual.tsv" \
+  --puente-sies-tsv "/ruta/puente_sies.tsv"
+```
 
-Whether you run the script locally or on Colab, you need an Excel workbook that includes the sheets required by the SIES format (Carreras, Matrícula, Históricos and Equivalencia). On Colab, use the upload widget that appears when running the script. Locally, simply provide the path when prompted.
+Si no se pasan rutas, el script intenta autodetectar:
+- `catalogo_manual.tsv` en el repo o en `~/Downloads`
+- `puente_sies.tsv` en el repo o en `~/Downloads`
 
-## Downloading results
+Si no los encuentra, el pipeline igual corre, pero reporta:
+- `SIN_CATALOGO_MANUAL`
+- `SIN_PUENTE_SIES`
 
-The generated files `A. C. Carrera 2024.xlsx` and `A. C. Matrícula 2024.xlsx` will be saved in the current working directory. In Google Colab, they are also offered as direct downloads once processing is complete.
+## Error común
+
+Si ves:
+`FileNotFoundError: No se encontró archivo de entrada: /ruta/a/tu_workbook.xlsx`
+
+significa que usaste una ruta de ejemplo. Debes reemplazarla por una ruta real, por ejemplo:
+`/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx`.
+
+## Licencia
+MIT. Ver [LICENSE](LICENSE).
