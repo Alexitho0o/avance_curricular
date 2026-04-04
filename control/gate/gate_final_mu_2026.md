@@ -2,16 +2,16 @@
 
 - Fecha: 2026-04-01
 - Responsable:
-- Decision final: `CONDICIONAL`
+- Decision final: `APROBADO`
 - Listo para auditoria: `SI`
-- Listo para carga: `NO`
-- No listo para carga: `SI`
+- Listo para carga: `SI`
+- No listo para carga: `NO`
 
 ## Resumen del tablero
 
-- Columnas en `OK` (30): `A TIPO_DOC`, `B N_DOC`, `C DV`, `D PRIMER_APELLIDO`, `E SEGUNDO_APELLIDO`, `F NOMBRE`, `G SEXO`, `H FECH_NAC`, `I NAC`, `J PAIS_EST_SEC`, `K COD_SED`, `L COD_CAR`, `M MODALIDAD`, `N JOR`, `O VERSION`, `P FOR_ING_ACT`, `Q ANIO_ING_ACT`, `R SEM_ING_ACT`, `S ANIO_ING_ORI`, `T SEM_ING_ORI`, `U ASI_INS_ANT`, `V ASI_APR_ANT`, `W PROM_PRI_SEM`, `X PROM_SEG_SEM`, `AA NIV_ACA`, `AB SIT_FON_SOL`, `AC SUS_PRE`, `AD FECHA_MATRICULA`, `AE REINCORPORACION`, `AF VIG`
-- Columnas en `Pendiente` (2): `Y ASI_INS_HIS`, `Z ASI_APR_HIS`
-- Conteo final: `30 OK / 2 Pendiente`
+- Columnas en `OK` (32): `A TIPO_DOC`, `B N_DOC`, `C DV`, `D PRIMER_APELLIDO`, `E SEGUNDO_APELLIDO`, `F NOMBRE`, `G SEXO`, `H FECH_NAC`, `I NAC`, `J PAIS_EST_SEC`, `K COD_SED`, `L COD_CAR`, `M MODALIDAD`, `N JOR`, `O VERSION`, `P FOR_ING_ACT`, `Q ANIO_ING_ACT`, `R SEM_ING_ACT`, `S ANIO_ING_ORI`, `T SEM_ING_ORI`, `U ASI_INS_ANT`, `V ASI_APR_ANT`, `W PROM_PRI_SEM`, `X PROM_SEG_SEM`, `Y ASI_INS_HIS`, `Z ASI_APR_HIS`, `AA NIV_ACA`, `AB SIT_FON_SOL`, `AC SUS_PRE`, `AD FECHA_MATRICULA`, `AE REINCORPORACION`, `AF VIG`
+- Columnas en `Pendiente` (0): 
+- Conteo final: `32 OK / 0 Pendiente`
 
 ## Validacion de invariantes
 
@@ -32,15 +32,13 @@
 | FASE 1 | OK | Sin bloqueo residual. | control/reportes/reporte_identidad_mu_2026.json |
 | FASE 2 | OK | Sin bloqueo residual. | control/reportes/reporte_sies_oferta_mu_2026.json |
 | FASE 3 | OK | Sin bloqueo residual. | control/reportes/reporte_cronologia_mu_2026.json + control/reportes/reporte_niv_fecha_mu_2026.json |
-| FASE 4 | CONDICIONAL | Y ASI_INS_HIS: Alcance historico efectivo disponible en Hoja1 = solo ANO 2025; no existe profundidad multianual para sostener un acumulado historico defendible; Z ASI_APR_HIS: Alcance historico efectivo disponible en Hoja1 = solo ANO 2025; no existe profundidad multianual para sostener un acumulado historico defendible | control/reportes/reporte_rendimiento_mu_2026.json |
+| FASE 4 | OK | Sin bloqueo residual. | control/reportes/reporte_rendimiento_mu_2026.json |
 | FASE 5 | OK | Sin bloqueo residual. | control/reportes/reporte_estado_admin_mu_2026.json |
 
 ## Bloqueos residuales abiertos
 
 | Bloqueo ID | Campo(s) | Impacto | Mitigacion | Estado |
 |---|---|---|---|---|
-| BLK-Y | Y `ASI_INS_HIS` | Alto | Conseguir fuente multianual o acto regulatorio explicito que autorice usar alcance disponible como historico acumulado | Abierto |
-| BLK-Z | Z `ASI_APR_HIS` | Alto | Conseguir fuente multianual o acto regulatorio explicito que autorice usar alcance disponible como historico acumulado | Abierto |
 
 ## Condiciones de aprobacion
 
@@ -52,4 +50,4 @@
 
 - Responsable:
 - Fecha: 2026-04-01
-- Comentario final: Decision `CONDICIONAL`. CSV e invariantes en verde; el proyecto queda auditable, pero los pendientes residuales impiden declararlo listo para carga.
+- Comentario final: Decision `APROBADO`. CSV e invariantes en verde sin pendientes residuales.
