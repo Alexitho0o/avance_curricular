@@ -1,0 +1,804 @@
+
+================================================================================
+PAGE 28
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+     
+ 
+ 
+ 
+7.  Anexos 
+ 
+Cuadro N°1: Estructura de carga de matrícula pregrado. 
+ 
+Todos los campos son obligatorios y se deben completar. Los campos que se puede dejar sin información son el Apellido Materno cuando corresponda y 
+por obligación el dígito verificador cuando el tipo de documento sea Pasaporte. 
+ 
+Columna Nombre Campo Nombre 
+Descripción Descripción Códigos Especificaciones 
+A TIPO_DOC Tipo de 
+Documento 
+Tipo de documento de identificación del 
+matriculado. 
+P: Pasaporte. 
+R: RUT. Usar letras mayúsculas. 
+B N_DOC Número de 
+Documento 
+Número de documento de identificación del 
+matriculado. No Aplica. Usar letras mayúsculas y 
+números. 
+C DV Dígito 
+Verificador Dígito verificador del RUT. No Aplica. Usar números del 0 al 9 y 
+letra K mayúscula. 
+D PRIMER_APELLIDO Primer 
+Apellido Primer apellido. No Aplica. 
+Usar letras mayúsculas de la 
+A a la Z, sin acentos, también 
+se permiten diéresis y guión. 
+E SEGUNDO_APELLIDO Segundo 
+Apellido  Segundo apellido. No Aplica. 
+Usar letras mayúsculas de la 
+A a la Z, sin acentos, también 
+se permiten diéresis y guión. 
+F NOMBRE Nombres Nombres. No Aplica. 
+Usar letras mayúsculas de la 
+A a la Z, sin acentos, también 
+se permiten diéresis y guión. 
+G SEXO Sexo Corresponde a la condición de mujer, hombre o 
+no binario de la persona reportada. 
+H: Hombre. 
+M: Mujer. 
+NB: No Binario. 
+Usar letras mayúsculas. 
+H FECH_NAC Fecha de 
+Nacimiento Fecha de nacimiento. No Aplica. Usar formato dd/mm/aaaa. 
+I NAC Nacionalidad País de nacionalidad. Del 1 al 197. Usar solo números. 
+J PAIS_EST_SEC País Estudios 
+Secundarios País donde completó sus estudios secundarios. Del 1 al 197. Usar solo números. 
+K COD_SED Código de 
+Sede 
+Código de sede de la IES en la que se encuentra 
+matriculado. 
+Códigos correspondientes a la 
+institución. Usar solo números.
+
+
+================================================================================
+PAGE 29
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+29 
+  
+L COD_CAR Código de 
+Carrera 
+Código de carrera de la IES en la que se encuentra 
+matriculado. 
+Códigos correspondientes a la 
+institución. Usar solo números. 
+M MODALIDAD Modalidad Modalidad de la carrera o programa. Códigos correspondientes a la 
+institución. Usar solo números. 
+N JOR Jornada Jornada de la carrera o programa. Códigos correspondientes a la 
+institución. Usar solo números. 
+O VERSION Versión Versión de la carrera o programa. Códigos correspondientes a la 
+institución. Usar solo números. 
+P FOR_ING_ACT 
+Forma 
+Ingreso 
+Carrera 
+Actual 
+Vía de admisión de la carrera o programa. 
+1: Ingreso Directo (regular) 
+2: Continuidad de Plan Común o 
+Bachillerato 
+3: Cambio Interno 
+4: Cambio Externo 
+5: Ingreso por Reconocimiento de 
+Aprendizajes Previos 
+6: Ingreso especial para estudiantes 
+extranjeros 
+7: Ingreso a través del Programa 
+PACE 
+8: Ingreso a través de Programas de 
+Inclusión 
+9: Acceso por características 
+especiales (Deportista, Artista, Hijo 
+de profesional de la IES, Pueblos 
+Originarios o Diplomáticos) 
+10: Otras formas de ingreso 
+11: Articulación de TNS a carrera 
+profesional 
+Usar solo números. 
+Q ANIO_ING_ACT 
+Año de 
+Ingreso 
+Carrera 
+Actual 
+Año de ingreso a la carrera actual. de 1990 a 2026. Usar solo números. 
+R SEM_ING_ACT 
+Semestre de 
+Ingreso 
+Carrera 
+Actual 
+Semestre de ingreso a la carrera actual. de 1 a 2. Usar solo números.
+
+
+================================================================================
+PAGE 30
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+30 
+  
+S ANIO_ING_ORI 
+Año de 
+Ingreso 
+Carrera de 
+Origen 
+Año de ingreso a la carrera de origen. de 1980 a 2026 y 1900. Usar solo números. 
+T SEM_ING_ORI 
+Semestre de 
+Ingreso 
+Carrera de 
+Origen 
+Semestre de ingreso a la carrera de origen. de 1 a 2 y 0. Usar solo números. 
+U ASI_INS_ANT 
+Asignaturas 
+Inscritas en el 
+Año Anterior 
+Asignaturas inscritas en el último periodo (año). 
+Considera asignaturas aprobadas y reprobadas del 
+periodo y no considera asignaturas convalidadas u 
+homologadas del periodo. 
+de 0 a 99. Usar solo números. 
+V ASI_APR_ANT 
+Asignaturas 
+Aprobadas en 
+el Año 
+Anterior 
+Asignaturas aprobadas en el último periodo (año). 
+Considera asignaturas aprobadas y no considera 
+asignaturas convalidadas u homologadas del 
+periodo. 
+de 0 a 99. Usar solo números. 
+W PROM_PRI_SEM 
+Nota 
+Promedio 
+Primer 
+Semestre Año 
+Anterior 
+Promedio de notas de asignaturas cursadas en el 
+primer semestre del año anterior. 
+Información utilizada por Junaeb. 
+de 100 a 700 y 0. Usar solo números. 
+X PROM_SEG_SEM 
+Nota 
+Promedio 
+Segundo 
+Semestre Año 
+Anterior 
+Promedio de notas de asignaturas cursadas en el 
+segundo semestre del año anterior. 
+Información utilizada por Junaeb. 
+de 100 a 700 y 0. Usar solo números. 
+Y ASI_INS_HIS 
+Asignaturas 
+Inscritas 
+Históricas 
+Asignaturas inscritas desde el inicio de la carrera 
+(tanto asignaturas aprobadas como reprobadas). 
+Las asignaturas reprobadas deben contarse todas 
+las veces como fueron reprobadas. Se deben 
+incorporar las asignaturas convalidadas u 
+homologadas de la carrera actual. 
+de 0 a 200. Usar solo números.
+
+
+================================================================================
+PAGE 31
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+31 
+  
+Z ASI_APR_HIS 
+Asignaturas 
+Aprobadas 
+Históricas 
+Asignaturas aprobadas desde el inicio de la 
+carrera. Se deben incorporar las asignaturas 
+convalidadas u homologadas de la carrera actual. 
+de 0 a 200. Usar solo números. 
+AA NIV_ACA Nivel 
+Académico 
+Semestre curricular que el matriculado se 
+encuentra cursando. 
+Corresponde a la ubicación en la malla curricular 
+de la mayoría de las asignaturas que el 
+matriculado se encuentra cursando. 
+de 1 a duración carrera. Usar solo números. 
+AB SIT_FON_SOL 
+Situación 
+Fondo 
+Solidario 
+Indica si el estudiante mantiene o no la situación 
+socioeconómica con la que obtuvo FSCU. 
+0: No cumple / No aplica 
+1: Si cumple 
+2: No presenta documentación 
+Usar solo números. 
+AC SUS_PRE Suspensiones 
+Previas 
+Número de semestres de suspensiones que tiene 
+el matriculado previo al año actual. de 0 a 99. Usar solo números. 
+AD FECHA_MATRICULA Fecha de 
+Matrícula 
+Fecha en que el o la estudiante ha sido inscrito en 
+la matrícula de la institución. Solo aplica a 
+estudiante de la cohorte 2026, es decir, año de 
+origen =2026. 
+No Aplica. 
+ 
+En caso de no contar con el dato: 
+01/01/1900 
+ 
+Usar formato dd/mm/aaaa 
+AE REINCORPORACION Reincorporaci
+ón 
+Indica si el estudiante se reincorpora a su carrera 
+en segundo semestre luego de la suspender el 
+primer semestre. Solo puede ser informado con 
+valor 1 durante la última carga de matrícula del 
+periodo. 
+0: No se reincorpora / No aplica 
+1: Si se reincorpora Usar solo números. 
+AF VIG Vigencia 
+Estado de la vigencia de la matrícula informada, 
+de acuerdo con la reglamentación interna de cada 
+institución. 
+0: Estudiante sin matrícula 
+1: Estudiante con matrícula vigente 
+2: Estudiante egresado con 
+matrícula vigente 
+Usar solo números.
+
+
+================================================================================
+PAGE 32
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+32 
+  
+Cuadro N°2: Estructura de carga de matrícula postgrado y postítulo. 
+ 
+Todos los campos son obligatorios y se deben completar. Los campos que se puede dejar sin información son el Apellido Materno cuando corresponda y 
+por obligación el dígito verificador cuando el tipo de documento sea Pasaporte. 
+ 
+Columna Nombre Campo Nombre 
+Descripción Descripción Códigos Especificaciones 
+A TIPO_DOC Tipo de 
+Documento Tipo de documento de identificación del matriculado. P: Pasaporte. 
+R: RUT. Usar letras mayúsculas. 
+B N_DOC Número de 
+Documento 
+Número de documento de identificación del 
+matriculado. No Aplica. Usar letras mayúsculas y 
+números. 
+C DV Dígito 
+Verificador Dígito verificador del RUT. No Aplica. Usar números del 0 al 9 y letra K 
+mayúscula. 
+D PRIMER_APELLIDO Primer Apellido Primer apellido. No Aplica. 
+Usar letras mayúsculas de la A a 
+la Z, sin acentos, también se 
+permiten diéresis y guión. 
+E SEGUNDO_APELLID
+O 
+Segundo 
+Apellido  Segundo apellido. No Aplica. 
+Usar letras mayúsculas de la A a 
+la Z, sin acentos, también se 
+permiten diéresis y guión. 
+F NOMBRE Nombres Nombres. No Aplica. 
+Usar letras mayúsculas de la A a 
+la Z, sin acentos, también se 
+permiten diéresis y guión. 
+G SEXO Sexo Corresponde a la condición de mujer, hombre o no 
+binario de la persona reportada. 
+H: Hombre. 
+M: Mujer. 
+NB: No Binario. 
+Usar letras mayúsculas. 
+H FECH_NAC Fecha de 
+Nacimiento Fecha de nacimiento. No Aplica. Usar formato dd/mm/aaaa. 
+I NAC Nacionalidad País de nacionalidad. Del 1 al 197. Usar solo números. 
+J PAIS_EST_SEC País Estudios 
+Secundarios País donde completó sus estudios secundarios. Del 1 al 197. Usar solo números. 
+K COD_SED Código de Sede Código de sede de la IES en la que se encuentra 
+matriculado. 
+Códigos correspondientes a la 
+institución. Usar solo números. 
+L COD_CAR Código de 
+Carrera 
+Código de carrera de la IES en la que se encuentra 
+matriculado. 
+Códigos correspondientes a la 
+institución. Usar solo números. 
+M MODALIDAD Modalidad Modalidad de la carrera o programa. Códigos correspondientes a la 
+institución. Usar solo números. 
+N JOR Jornada Jornada de la carrera o programa. Códigos correspondientes a la 
+institución. Usar solo números.
+
+
+================================================================================
+PAGE 33
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+33 
+  
+O VERSION Versión Versión de la carrera o programa. Códigos correspondientes a la 
+institución. Usar solo números. 
+P FOR_ING_ACT Forma Ingreso 
+Carrera Actual Vía de admisión de la carrera o programa. 
+1: Ingreso Directo (regular) 
+2: Continuidad de Plan Común o 
+Bachillerato 
+3: Cambio Interno 
+4: Cambio Externo 
+5: Ingreso por Reconocimiento de 
+Aprendizajes Previos 
+6: Ingreso especial para estudiantes 
+extranjeros 
+7: Ingreso a través del Programa PACE 
+8: Ingreso a través de Programas de 
+Inclusión 
+9: Acceso por características especiales 
+(Deportista, Artista, Hijo de profesional 
+de la IES, Pueblos Originarios o 
+Diplomáticos) 
+10: Otras formas de ingreso 
+11: Articulación de TNS a carrera 
+profesional 
+Usar solo números. 
+Q ANIO_ING_ACT Año de Ingreso 
+Carrera Actual Año de ingreso a la carrera actual. de 1990 a 2026. Usar solo números. 
+R SEM_ING_ACT 
+Semestre de 
+Ingreso Carrera 
+Actual 
+Semestre de ingreso a la carrera actual. de 1 a 2. Usar solo números. 
+S ANIO_ING_ORI 
+Año de Ingreso 
+Carrera de 
+Origen 
+Año de ingreso a la carrera de origen. de 1980 a 2026 y 1900. Usar solo números. 
+T SEM_ING_ORI 
+Semestre de 
+Ingreso Carrera 
+de Origen 
+Semestre de ingreso a la carrera de origen. de 1 a 2. Usar solo números. 
+U VIG Vigencia 
+Estado de la vigencia de la matrícula informada, de 
+acuerdo con la reglamentación interna de cada 
+institución. 
+0: Estudiante sin matrícula 
+1: Estudiante con matrícula vigente 
+2: Estudiante egresado con matrícula 
+vigente 
+Usar solo números.
+
+
+================================================================================
+PAGE 34
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+     
+ 
+ 
+ 
+Cuadro N°3: Descripción del campo “Forma de Ingreso a la Carrera actual” contenido 
+en la estructura de carga de matrícula. 
+ 
+Forma de ingreso carrera actual Descripción 
+1- Ingreso Directo (regular) Estudiante matriculado por vía de admisión regular. No debe 
+corresponder a ninguna de las formas de ingreso siguientes. 
+2- Continuidad desde plan común o Bachillerato. Estudiantes que, habiendo cursado un bachillerato, plan común o 
+similar, ingresan a una carrera profesional y/o técnica de nivel 
+superior. 
+3- Cambio Interno Estudiantes matriculados que ingresan a una nueva carrera en la 
+misma institución en la que estuvieron matriculados el año 
+anterior. 
+NOTA: para efectos de beneficios un estudiante que se cambia de 
+sede, jornada o versión, no se considera Cambio Interno, si 
+mantiene o disminuye la duración inicial. 
+4- Cambio Externo Estudiantes matriculados que ingresan a una carrera y provienen 
+de otra institución. 
+Este código posibilitará la carga de historiales académicos para 
+evaluar el cumplimiento de requisito para trasladar el beneficio a 
+la nueva institución. 
+5- Ingreso por Reconocimiento de Aprendizajes 
+Previos (RAP) 
+Estudiantes que acceden a un programa de estudios de 
+educación superior por la vía de reconocimiento de aprendizajes 
+previos 
+6- Ingreso especial para estudiantes extranjeros Estudiantes que hacen uso del cupo para extranjeros de la 
+institución en la que se matriculan. 
+7- Ingreso a través de PACE Estudiante que utiliza un cupo PACE para el ingreso a la 
+institución. 
+8- Ingreso a través de programas de inclusión Estudiante que ingresa a la institución a través de uso de cupo 
+especial de Inclusión. No debe coincidir con cupo PACE. 
+9- Ingreso por características especiales Deportista, artista, hijo de profesional o funcionario de la IES, 
+pueblos originarios y diplomáticos.  
+10- Otras formas de Ingreso Estudiante que utiliza una vía de admisión distinta a todas 
+aquellas descritas anteriormente. 
+11- Articulación de TNS a carrera profesional Estudiantes que, habiendo cursado un programa técnico de nivel 
+superior, ingresan a una carrera profesional.
+
+
+================================================================================
+PAGE 35
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+35 
+  
+Cuadro N°4: País de Nacionalidad. 
+ 
+COD PAIS NOMBRE PAIS COD PAIS NOMBRE PAIS COD PAIS NOMBRE PAIS COD PAIS NOMBRE PAIS 
+1 AFGANISTÁN 51 DOMINICA 101 LESOTO 151 RUMANIA 
+2 ALBANIA 52 ECUADOR 102 LETONIA 152 RUSIA 
+3 ALEMANIA 53 EGIPTO 103 LÍBANO 153 SAMOA 
+4 ANDORRA 54 EL SALVADOR 104 LIBERIA 154 SAN CRISTÓBAL Y NIEVES 
+5 ANGOLA 55 EMIRATOS ÁRABES 
+UNIDOS 
+105 LIBIA 155 SAN MARINO 
+6 ANTIGUA Y BARBUDA 56 ERITREA 106 LIECHTENSTEIN  
+156 
+SAN VICENTE Y LAS 
+GRANADINAS 
+7 ARABIA SAUDITA 57 ESLOVAQUIA 107 LITUANIA 157 SANTA LUCÍA 
+8 ARGELIA 58 ESLOVENIA 108 LUXEMBURGO 158 SANTO TOMÉ Y PRÍNCIPE 
+9 ARGENTINA 59 ESPAÑA 109 MACEDONIA 159 SENEGAL 
+10 ARMENIA 60 ESTADOS UNIDOS 110 MADAGASCAR 160 SERBIA 
+11 AUSTRALIA 61 ESTONIA 111 MALASIA 161 SEYCHELLES 
+12 AUSTRIA 62 ETIOPÍA 112 MALAUI 162 SIERRA LEONA 
+13 AZERBAIYÁN 63 FILIPINAS 113 MALDIVAS 163 SINGAPUR 
+14 BAHAMAS 64 FINLANDIA 114 MALÍ 164 SIRIA 
+15 BANGLADÉS 65 FIYI 115 MALTA 165 SOMALIA 
+16 BARBADOS 66 FRANCIA 116 MARRUECOS 166 SRI LANKA 
+17 BARÉIN 67 GABÓN 117 MAURICIO 167 SUAZILANDIA 
+18 BÉLGICA 68 GAMBIA 118 MAURITANIA 168 SUDÁFRICA 
+19 BELICE 69 GEORGIA 119 MÉXICO 169 SUDÁN 
+20 BENÍN 70 GHANA 120 MICRONESIA 170 SUDÁN DEL SUR 
+21 BIELORRUSIA 71 GRANADA 121 MOLDAVIA 171 SUECIA 
+22 BIRMANIA 72 GRECIA 122 MÓNACO 172 SUIZA 
+23 BOLIVIA 73 GUATEMALA 123 MONGOLIA 173 SURINAM 
+24 BOSNIA- HERZEGOVINA 74 GUINEA 124 MONTENEGRO 174 TAILANDIA 
+25 BOTSUANA 75 GUINEA ECUATORIAL 125 MOZAMBIQUE 175 TAIWÁN 
+26 BRASIL 76 GUINEA-BISÁU 126 NAMIBIA 176 TANZANIA 
+27 BRUNÉI 77 GUYANA 127 NAURU 177 TAYIKISTÁN 
+28 BULGARIA 78 HAITÍ 128 NEPAL 178 TIMOR ORIENTAL 
+29 BURKINA FASO 79 HONDURAS 129 NICARAGUA 179 TOGO 
+30 BURUNDI 80 HUNGRÍA 130 NÍGER 180 TONGA 
+31 BUTÁN 81 INDIA 131 NIGERIA 181 TRINIDAD Y TOBAGO 
+32 CABO VERDE 82 INDONESIA 132 NORUEGA 182 TÚNEZ 
+33 CAMBOYA 83 IRAK 133 NUEVA ZELANDA 183 TURKMENISTÁN 
+34 CAMERÚN 84 IRÁN 134 OMÁN 184 TURQUÍA 
+35 CANADÁ 85 IRLANDA 135 PAÍSES BAJOS 185 TUVALU 
+36 CATAR 86 ISLANDIA 136 PAKISTÁN 186 UCRANIA 
+37 CHAD 87 ISLAS MARSHALL 137 PALAOS 187 UGANDA 
+38 CHILE 88 ISLAS SALOMÓN 138 PALESTINA 188 URUGUAY 
+39 CHINA 89 ISRAEL 139 PANAMÁ 189 UZBEKISTÁN 
+40 CHIPRE 90 ITALIA 140 PAPÚA NUEVA GUINEA 190 VANUATU 
+41 COLOMBIA 91 JAMAICA 141 PARAGUAY 191 VATICANO 
+42 COMORAS 92 JAPÓN 142 PERÚ 192 VENEZUELA 
+43 CONGO 93 JORDANIA 143 POLONIA 193 VIETNAM 
+44 COREA DEL NORTE 94 KAZAJISTÁN 144 PORTUGAL 194 YEMEN 
+45 COREA DEL SUR 95 KENIA 145 REINO UNIDO 195 YIBUTI 
+46 COSTA DE MARFIL 96 KIRGUISTÁN 146 REPÚBLICA CENTROAFRICANA 196 ZAMBIA 
+47 COSTA RICA 97 KIRIBATI 147 REPÚBLICA CHECA 197 ZIMBABUE 
+48 CROACIA 98 KOSOVO 148 REPÚBLICA 
+DEMOCRÁTICA DEL CONGO 
+ 
+49 CUBA 99 KUWAIT 149 REPÚBLICA DOMINICANA 
+50 DINAMARCA 100 LAOS 150 RUANDA
+
+
+================================================================================
+PAGE 36
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+ 
+36 
+Cuadro N°5: Ejemplos de carga de matrícula 
+ 
+ 
+ 
+EJEMPLO CARGA DE DATOS 
+TIPO DOCUMENTO DE 
+IDENTIFICACIÓN 
+Nº DOCUMENTO DE 
+IDENTIFICACIÓN 
+DV 
+APELLIDO 
+APELLIDO 
+NOMBRE 
+GÉNERO 
+FECHA DE 
+NACIONALIDAD 
+PAÍS DONDE 
+CÓDIGO SEDE 
+CÓDIGO CARRERA 
+JORNADA 
+VERSIÓN 
+MODALIDAD 
+FORMA INGRESO 
+CARRERA ACTUAL 
+AÑO INGRESO 
+CARRERA ACTUAL 
+SEMESTRE INGRESO 
+AÑO INGRESO 
+CARRERA DE ORIGEN 
+SEMESTRE INGRESO 
+ASIGNATURAS 
+INSCRITAS EN EL 
+ASIGNATURAS 
+APROBADAS EN 
+NOTA PROMEDIO DE 
+ASIGNATURAS 
+CURSADAS 
+PRIMER 
+NOTA PROMEDIO DE 
+ASIGNATURAS 
+CURSADAS SEGUNDO 
+ASIGNATURAS 
+INSCRITAS 
+ASIGNATURAS 
+APROBADAS 
+NIVEL 
+SITUACIÓN 
+SOCIOECONÓMIC 
+SUSPENSIONES 
+PREVIAS 
+VIGENCIA 
+ESTUDIANTE 
+NUEVO CON INGRESO DIRECTO R X X X X X X X X X X X X X X 1 2026 1,2 2026 1,2 0 0 0 0 0 0 1,2 X 0 1 
+ESTUDIANTE 
+EXTRANJERO NUEVO INGRESO P X  X X X X X X X X X X X X 6 2026 1,2 2026 1,2 0 0 0 0 0 0 1,2 X 0 1 
+ESTUDIANTE 
+NUEVO BECA ARTICULACION 
+INGRESO 
+R X X X X X X X X X X X X X X 11 2026 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >=1 X 0 1 
+ESTUDIANTE 
+NUEVO INGRESO RAP DIRECTO R X X X X X X X X X X X X X X 5 2026 1,2 2026 1,2 0 0 0 0 >=0 >=0 1,2 0,1,2 0 1 
+ESTUDIANTE 
+NUEVO INGRESO ESPECIAL DIRECTO R X X X X X X X X X X X X X X 7,8, 
+9,10 2026 1,2 2026 1,2 0 0 0 0 0 0 1,2 X 0 1 
+ESTUDIANTES 
+ANTIGUO R X X X X X X X X X X X X X X X <=2025 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >=1 X X 1 
+ESTUDIANTE 
+ANTIGUO CON BENEFICOS R X X X X X X X X X X X X X X X <=2025 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >=1 X X 1 
+ESTUDIANTE 
+ANTIGUO CON FSCU R X X X X X X X X X X X X X X X <=2025 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >=1 1,2 X 1 
+ESTUDIANTE 
+ANTIGUO BACHILLERATO O 
+CONTINUIDAD 
+R X X X X X X X X X X X X X X 2 2026 1,2 <=2025 1,2 >=0 >=0 X X >0 >0 >=1 X X 1 
+ESTUDIANTE 
+ANTIGUO CON CAMBIO R X X X X X X X X X X X X X X 3 2026 1,2 <=2025 1,2 >=0 >=0 X X >0 >0 >=1 X X 1 
+ESTUDIANTE 
+ANTIGUO CON CAMBIO EXTERNO R X X X X X X X X X X X X X X 4 2026 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >=1 X X 1 
+ESTUDIANTE NUEVO/ANTIGUO 
+ARTICULACION 
+GRATUIDAD 
+R X X X X X X X X X X X X X X 11 2026 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >1 X X 1 
+ESTUDIANTE 
+ANTIGUO EGRESADO CON 
+MATRICULA 
+R X X X X X X X X X X X X X X X <=2025 1,2 <=2025 1,2 >=0 >=0 X X >=0 >=0 >=1 X X 2 
+ESTUDIANTE SIN MATRICULA 
+(ELIMINAR REGISTRO ERRÓNEO) R X X X X X X X X X X X X X X X <=2026 1,2 <=2026 1,2 >=0 >=0 X X >=0 >=0 >=1 X X 0 
+Todos los campos son obligatorios y se deben completar. Los campos que se puede dejar sin información son el Apellido Materno  cuando corresponda y por 
+obligación el dígito verificador cuando el tipo de documento sea Pasaporte.
+
+
+================================================================================
+PAGE 37
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026   
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+   
+ 
+37 
+Cuadro N°6: Mensaje de error plataforma. 
+ 
+Mensaje de Error 
+La combinación entre institución, sede, carrera, jornada, modalidad y versión no existe en Oferta 
+Académica 2026. 
+La NOTA PROMEDIO ASIGNATURAS CURSADAS SEGUNDO SEMESTRE AÑO ANTERIOR considera 
+valores del 100 al 700 para programas de Pregrado. En caso de no corresponder se debe 
+completar con 0. 
+ASIGNATURAS INSCRITAS HISTÓRICAS se encuentra fuera del rango permitido para programas de 
+Pregrado. 
+Cuando el AÑO INGRESO CARRERA ORIGEN es 1900, el SEMESTRE INGRESO CARRERA ORIGEN no 
+puede ser distinto a 0. 
+El PAÍS DE NACIONALIDAD considera valores del 1 al 197, según se indica en instructivo. 
+Los valores permitidos para TIPO DOCUMENTO son R: RUT o P: Pasaporte. 
+El SEMESTRE INGRESO CARRERA ACTUAL considera valores 1 o 2. 
+El SEMESTRE INGRESO CARRERA ORIGEN considera valores 1 o 2. 
+El AÑO INGRESO CARRERA ORIGEN no puede ser mayor al AÑO INGRESO CARRERA ACTUAL. 
+El campo SEXO considera valores 'M' Mujer, 'H' Hombre o 'NB' No Binario. Usar letras 
+mayúsculas. 
+Cuando el TIPO DOCUMENTO es 'R' (RUT), se debe completar el Dígito Verificador. 
+Cuando el TIPO DOCUMENTO es 'R' (RUT) el NÚMERO DOCUMENTO no puede contener letras. 
+Cuando el TIPO DOCUMENTO es 'P' (Pasaporte), no se debe completar el Dígito Verificador. 
+El Dígito Verificador considera números del 0 al 9 y letra K (mayúscula). 
+El PRIMER APELLIDO considera letras mayúsculas entre la A y la Z. También acepta ÄËÏÖÜ y 
+comilla simple. 
+El NOMBRE considera letras mayúsculas entre la A y la Z. También acepta ÄËÏÖÜ y comilla 
+simple. 
+La VIGENCIA considera valores 0: Estudiante sin matrícula, 1: Estudiante con matrícula vigente o 
+2: Estudiante egresado con matrícula vigente. 
+La FECHA DE NACIMIENTO no puede ser menor al 01/01/1900 ni tampoco puede estar vacía. 
+El SEGUNDO APELLIDO considera letras mayúsculas entre la A y la Z. También acepta ÄËÏÖÜ y 
+comilla simple. 
+El RUT informado supera la cantidad de dígitos permitida. 
+La FECHA DE NACIMIENTO no puede estar vacía. 
+El PAÍS ESTUDIOS SECUNDARIOS considera valores del 1 al 197, según se indica en instructivo. 
+La FORMA INGRESO CARRERA ACTUAL considera valores del 1 al 11, según indica instructivo. 
+El AÑO INGRESO CARRERA ACTUAL considera valores entre 1990 y 2026. 
+Cuando la FORMA INGRESO CARRERA ACTUAL es 1, 6, 7, 8, 9 o 10, el AÑO INGRESO CARRERA 
+ORIGEN y AÑO INGRESO CARRERA ACTUAL deben ser iguales. 
+Cuando la FORMA INGRESO CARRERA ACTUAL es 1, 6, 7, 8, 9 o 10, el SEMESTRE INGRESO 
+CARRERA ORIGEN y SEMESTRE INGRESO CARRERA ACTUAL deben ser iguales. 
+Las ASIGNATURAS INSCRITAS AÑO ANTERIOR se encuentran fuera del rango permitido. 
+Las ASIGNATURAS INSCRITAS AÑO ANTERIOR no pueden ser menor a las ASIGNATURAS 
+APROBADAS AÑO ANTERIOR.
+
+
+================================================================================
+PAGE 38
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026  
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+     
+ 38 
+  
+Según FORMA INGRESO CARRERA ACTUAL y AÑO INGRESO CARRERA ACTUAL informados, las 
+ASIGNATURAS INSCRITAS AÑO ANTERIOR no puede ser mayor a 0. 
+El NÚMERO DOCUMENTO contiene caracteres no permitidos cuando el TIPO DOCUMENTO es 'P' 
+Pasaporte. 
+El registro informado se encuentra más de una vez en el archivo. No se puede cargar más de una 
+vez un registro con la misma identificación. 
+El AÑO INGRESO CARRERA ORIGEN considera valores entre 1980 y 2026. 
+Para FORMA INGRESO CARRERA ACTUAL 2 o 3, las ASIGNATURAS INSCRITAS HISTÓRICAS no 
+pueden ser 0. 
+Las ASIGNATURAS APROBADAS HISTÓRICAS se encuentra fuera del rango permitido. 
+El NIVEL ACADÉMICO se encuentra fuera del rango permitido. 
+Cuando el AÑO INGRESO CARRERA ACTUAL es 2026 y la FORMA INGRESO CARRERA ACTUAL es 1, 
+6, 7, 8, 9, 10, el NIVEL ACADÉMICO no puede ser mayor a 2. 
+Las SUSPENSIONES PREVIAS se encuentran fuera del rango permitido. 
+El número de SUSPENSIONES PREVIAS informadas superan la cantidad de semestres entre AÑO 
+ACTUAL y AÑO INGRESO CARRERA ACTUAL. 
+Las ASIGNATURAS INSCRITAS AÑO ANTERIOR se deben completar para carreras de Pregrado, 
+NIVEL GLOBAL 1. 
+La NOTA PROMEDIO ASIGNATURAS CURSADAS PRIMER SEMESTRE AÑO ANTERIOR se debe 
+completar para programas de Pregrado, NIVEL GLOBAL 1. 
+La NOTA PROMEDIO ASIGNATURAS CURSADAS SEGUNDO SEMESTRE AÑO ANTERIOR se debe 
+completar para programas de Pregrado, NIVEL GLOBAL 1. 
+Las ASIGNATURAS INSCRITAS HISTÓRICAS se debe completar para programas de Pregrado, NIVEL 
+GLOBAL 1. 
+Las ASIGNATURAS APROBADAS HISTÓRICAS se debe completar para programas de Pregrado, 
+NIVEL GLOBAL 1. 
+El NIVEL ACADÉMICO se debe completar para programas de Pregrado, NIVEL GLOBAL 1. 
+Las SUSPENSIONES PREVIAS se deben completar para programas de Pregrado, NIVEL GLOBAL 1. 
+Para FORMA INGRESO CARRERA ACTUAL 2, 3, 4 y 11, cuando el AÑO INGRESO CARRERA ORIGEN 
+es igual a AÑO INGRESO CARRERA ACTUAL, el SEMESTRE INGRESO CARRERA ORIGEN no puede 
+ser mayor o igual al SEMESTRE INGRESO CARRERA ACTUAL. 
+Cuando el AÑO INGRESO CARRERA ORIGEN es 2026, el NIVEL ACADÉMICO no puede ser mayor a 
+2. 
+Cuando la FORMA INGRESO CARRERA ACTUAL es 1, 2, 3, 6, 7, 8, 9 o 10, el AÑO INGRESO 
+CARRERA ORIGEN no puede ser 1900. 
+Las ASIGNATURAS APROBADAS AÑO ANTERIOR se encuentran fuera del rango permitido. 
+La NOTA PROMEDIO ASIGNATURAS CURSADAS PRIMER SEMESTRE AÑO ANTERIOR se encuentra 
+fuera del rango permitido. 
+Las ASIGNATURAS APROBADAS HISTORICAS no pueden ser mayor a las ASIGNATURAS INCRITAS 
+HISTÓRICAS. 
+No corresponde el AÑO INGRESO CARRERA ACTUAL para el RUT informado. El registro se 
+encuentra como egresado de cuarto medio en 2025. 
+El NIVEL ACADÉMICO no puede ser mayor a la DURACIÓN ESTUDIO de la carrera. 
+La SITUACIÓN SOCIOECONÓMICA FONDO SOLIDARIO no corresponde para el TIPO INSTITUCIÓN. 
+La SITUACIÓN SOCIOECONÓMICA FONDO SOLIDARIO considera valores 0, 1, o 2.
+
+
+================================================================================
+PAGE 39
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026  
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+     
+ 39 
+  
+El número de SUSPENSIONES PREVIAS informadas superan la cantidad de semestres entre AÑO 
+ACTUAL y AÑO INGRESO CARRERA ACTUAL. 
+Las ASIGNATURAS APROBADAS AÑO ANTERIOR se debe completar para programas de Pregrado, 
+NIVEL GLOBAL 1. 
+La SITUACIÓN SOCIOECONÓMICA FONDO SOLIDARIO se debe completar para programas de 
+Pregrado, NIVEL GLOBAL 1. 
+Cuando el AÑO INGRESO CARRERA ORIGEN es distinto de 1900, el SEMESTRE INGRESO CARRERA 
+ORIGEN no puede ser 0. 
+El CÓDIGO NIVEL GLOBAL es obligatorio. La combinación de códigos no se encuentra en Oferta 
+Académica 2026. 
+El TIPO DOCUMENTO es obligatorio. 
+El NÚMERO DOCUMENTO es obligatorio. 
+El PRIMER APELLIDO es obligatorio. 
+El campo SEXO es obligatorio. 
+CÓDIGO SEDE es obligatorio. 
+CÓDIGO DE CARRERA es obligatorio. 
+VERSIÓN es obligatorio. 
+MODALIDAD es obligatorio. 
+La FORMA INGRESO CARRERA ACTUAL es obligatorio. 
+El AÑO INGRESO CARRERA ACTUAL es obligatorio. 
+El SEMESTRE INGRESO CARRERA ACTUAL es obligatorio. 
+El AÑO INGRESO CARRERA ORIGEN es obligatorio. 
+El SEMESTRE INGRESO CARRERA ORIGEN es obligatorio. 
+Cuando el AÑO INGRESO CARRERA ACTUAL es 2026, las SUSPENSIONES PREVIAS no pueden ser 
+mayor a 0. 
+Cuando el TIPO DOCUMENTO es 'P' Pasaporte, la FORMA INGRESO CARRERA ACTUAL debe ser 4 
+o 6, para alumnos extranjeros. 
+El RUT informado tiene una cantidad de dígitos no permitida. 
+El país de NACIONALIDAD no puede estar vacío. 
+JORNADA es obligatorio. 
+El NÚMERO DOCUMENTO no puede ser 0. 
+Inconsistencia entre AÑO ACTUAL y FECHA NACIMIENTO. Está ingresando un registro menor a 15 
+años. 
+Para matriculados en carrera Regulares de Continuidad, el AÑO INGRESO ORIGEN no puede ser 
+2026. 
+Para matriculados en carrera Regulares de Continuidad, el AÑO INGRESO CARRERA ORIGEN y 
+AÑO INGRESO CARRERA ACTUAL no pueden ser iguales, junto a los semestres de ingreso. 
+El NOMBRE es obligatorio. 
+La VIGENCIA es obligatoria. 
+El NÚMERO DOCUMENTO no debe comenzar con 0. 
+El Dígito Verificador informado no corresponda al RUT. 
+En esta carga no se pueden informar matriculados en programas de Postgrado y Postítulo. 
+En esta carga solo se deben informar matriculados de carreras de Pregrado.
+
+
+================================================================================
+PAGE 40
+================================================================================
+MANUAL DE PROCESOS: MATRÍCULA UNIFICADA 2026  
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ 
+     
+ 40 
+  
+El AÑO INGRESO CARRERA ORIGEN no corresponde para la FECHA NACIMIENTO ingresada. 
+Inconsistencia entre AÑO INGRESO CARRERA ORIGEN y FECHA NACIMIENTO. Está ingresando un 
+registro menor a 15 años. 
+Cuando el TIPO DOCUMENTO es 'P' Pasaporte, el país de NACIONALIDAD no puede ser 38 (Chile). 
+El PAÍS ESTUDIOS SECUNDARIOS es obligatorio. 
+No se puede iniciar con espacio en blanco el Primer Apellido 
+No se puede iniciar con espacio en blanco el Segundo Apellido 
+No se puede iniciar con espacio en blanco el Nombre 
+No se puede colocar dobles o más espacios en blanco el Segundo Apellido 
+No se puede colocar dobles o más espacios en blanco el Nombre 
+No se puede finalizar con espacio en blanco el Primer Apellido 
+No se puede finalizar con espacio en blanco el Segundo Apellido 
+No se puede finalizar con espacio en blanco el Nombre 
+No se puede colocar dobles o más espacios en blanco el Primer Apellido 
+La FECHA DE MATRÍCULA no puede ser posterior a la fecha de carga. 
+El campo REINCORPORACION es obligatorio y solo admite valores 0: No. y 1: Si se reincorpora. 
+Las reincorporaciones solo pueden ser informadas en el último periodo de carga programado. 
+La fecha de matrícula se encuentra fuera de los rangos permitidos, para indicar que se 
+desconoce el dato ingresar 01/01/1900.
