@@ -1383,14 +1383,7 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     with tablero_path.open(encoding='utf-8', newline='') as fh:
         tablero_rows = list(csv.DictReader(fh, delimiter='\t'))
 
-    fase4_report_path = control_dir / 'reportes' / 'reporte_rendimiento_mu_2026.json'
-    fase4_gate = {}
-    if fase4_report_path.exists():
-        fase4_gate = json.loads(fase4_report_path.read_text(encoding='utf-8')).get('columnas_fase_4', {})
-
     estado_override = {
-        'Y': fase4_gate.get('Y_ASI_INS_HIS', {}).get('estado_final', 'Pendiente'),
-        'Z': fase4_gate.get('Z_ASI_APR_HIS', {}).get('estado_final', 'Pendiente'),
         'AB': fase5_gate['AB_SIT_FON_SOL']['estado_final'],
         'AC': fase5_gate['AC_SUS_PRE']['estado_final'],
         'AE': fase5_gate['AE_REINCORPORACION']['estado_final'],

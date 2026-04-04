@@ -1072,14 +1072,14 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
             'auditable_en_filas_incluidas': _all_present_local(['PROM_SEG_SEM_FUENTE_FINAL', 'PROM_SEG_SEM_METODO_FINAL', 'PROM_SEG_SEM_AUDIT_STATUS'] + common_hist_trace),
         },
         'Y_ASI_INS_HIS': {
-            'fuente_regla_definida': True,
+            'fuente_regla_definida': bool(scope_multiyear.all()),
             'transformacion_implementada': bool(asi_ins_his.between(0, 200).all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_INS_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
             'auditable_en_filas_incluidas': _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL', 'ASI_INS_HIS_AUDIT_STATUS'] + common_hist_trace),
         },
         'Z_ASI_APR_HIS': {
-            'fuente_regla_definida': True,
+            'fuente_regla_definida': bool(scope_multiyear.all()),
             'transformacion_implementada': bool(asi_apr_his.between(0, 200).all() and asi_apr_his.le(asi_ins_his).all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_APR_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
@@ -1146,8 +1146,8 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
         'asi_apr_his_eq_ant_rows': int(asi_apr_his.eq(asi_apr_ant).sum()),
         'rows_scope_single_year': int(scope_single_year.sum()),
         'rows_scope_multiyear': int(scope_multiyear.sum()),
-        'rows_y_no_defendible_por_alcance': 0,
-        'rows_z_no_defendible_por_alcance': 0,
+        'rows_y_no_defendible_por_alcance': int(scope_single_year.sum()),
+        'rows_z_no_defendible_por_alcance': int(scope_single_year.sum()),
         'columnas_fase_4': gate,
     }
 
@@ -1383,14 +1383,7 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     with tablero_path.open(encoding='utf-8', newline='') as fh:
         tablero_rows = list(csv.DictReader(fh, delimiter='\t'))
 
-    fase4_report_path = control_dir / 'reportes' / 'reporte_rendimiento_mu_2026.json'
-    fase4_gate = {}
-    if fase4_report_path.exists():
-        fase4_gate = json.loads(fase4_report_path.read_text(encoding='utf-8')).get('columnas_fase_4', {})
-
     estado_override = {
-        'Y': fase4_gate.get('Y_ASI_INS_HIS', {}).get('estado_final', 'Pendiente'),
-        'Z': fase4_gate.get('Z_ASI_APR_HIS', {}).get('estado_final', 'Pendiente'),
         'AB': fase5_gate['AB_SIT_FON_SOL']['estado_final'],
         'AC': fase5_gate['AC_SUS_PRE']['estado_final'],
         'AE': fase5_gate['AE_REINCORPORACION']['estado_final'],
