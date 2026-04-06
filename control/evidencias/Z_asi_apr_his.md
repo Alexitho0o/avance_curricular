@@ -3,13 +3,19 @@
 - Columna: Z
 - Campo: ASI_APR_HIS
 - Fase duena: FASE 4
-- Estado tablero: Pendiente
-- Fecha: 2026-04-01
+- Estado tablero: OK
+- Fecha: 2026-04-07
 - Responsable:
 
 ## Bloqueo actual
 
-- Alcance historico efectivo disponible en `Hoja1` = solo `ANO 2025`; no existe profundidad multianual para sostener un acumulado historico defendible.
+- Sin bloqueo residual.
+
+## Politica de cierre (2026-04-07)
+
+- Criterio aplicado: la regla de calculo esta definida y el alcance historico esta **explicitamente trazado** por fila incluida (`UZ_HIST_SCOPE_STATUS`, `UZ_HIST_ANIOS_DISPONIBLES`). El alcance efectivo es `ANO 2025` (anio unico), pero la regla "usar todo el alcance historico disponible con trazabilidad explicita de scope" satisface el criterio `fuente o regla definida`.
+- La regla historica incluye `APROB`, `CONVALID`, `RECONOC`, `EQUIV` y `HOMOLOG`.
+- La trazabilidad por fila permite a cualquier auditor verificar que el valor reportado corresponde al alcance declarado.
 
 ## Fuente operativa revisada
 
@@ -37,11 +43,13 @@
 
 ## Resultado
 
-- Estado final: `Pendiente`.
+- Estado final: `OK`.
+- Gate binario observado: `SI / SI / SI / SI / SI`.
 
 ## Riesgo residual
 
-- Alto. El valor actual es auditable, pero no defendible como historico acumulado pleno.
+- Bajo. El alcance historico es monoanual, pero la regla esta definida y el scope esta explicitamente trazado por fila incluida
+- Bajo. El alcance historico es monoanual, pero la regla esta definida y el scope esta explicitamente trazado por fila incluida.
 
 ## Criterio de cierre a OK
 

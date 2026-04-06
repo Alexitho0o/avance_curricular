@@ -1,0 +1,114 @@
+[
+  {
+    "id": "GC01",
+    "desc": "FOR=1 directo SEM=1",
+    "CODCLI": "20171NETMRE016",
+    "ANOINGRESO": 2017,
+    "PERIODOINGRESO": 1,
+    "FOR_ING_ACT": 1,
+    "expected": {
+      "ANIO_ING_ACT": 2017,
+      "SEM_ING_ACT": 1,
+      "ANIO_ING_ORI": 2017,
+      "SEM_ING_ORI": 1
+    }
+  },
+  {
+    "id": "GC02",
+    "desc": "FOR=1 directo SEM=2",
+    "CODCLI": "20241ICIB128",
+    "ANOINGRESO": 2022,
+    "PERIODOINGRESO": 2,
+    "FOR_ING_ACT": 1,
+    "expected": {
+      "ANIO_ING_ACT": 2022,
+      "SEM_ING_ACT": 2,
+      "ANIO_ING_ORI": 2022,
+      "SEM_ING_ORI": 2
+    }
+  },
+  {
+    "id": "GC03",
+    "desc": "FOR=1 año antiguo 2017",
+    "CODCLI": "20171NETMRE016",
+    "ANOINGRESO": 2017,
+    "PERIODOINGRESO": 1,
+    "FOR_ING_ACT": 1,
+    "expected": {
+      "ANIO_ING_ACT": 2017,
+      "SEM_ING_ACT": 1,
+      "ANIO_ING_ORI": 2017,
+      "SEM_ING_ORI": 1
+    }
+  },
+  {
+    "id": "GC04",
+    "desc": "FOR=11 articulación TNS previo 2020→2024",
+    "CODCLI": "20241CICIB009",
+    "ANOINGRESO": 2024,
+    "FOR_ING_ACT": 11,
+    "TNS_PREV_MIN_ANO_DA": 2020,
+    "expected": {
+      "ANIO_ING_ACT": 2024,
+      "SEM_ING_ACT": 1,
+      "ANIO_ING_ORI": 2020,
+      "SEM_ING_ORI": 1
+    }
+  },
+  {
+    "id": "GC05",
+    "desc": "FOR=2 continuidad → 1900/0",
+    "CODCLI": "20251CIADM001",
+    "ANOINGRESO": 2025,
+    "FOR_ING_ACT": 2,
+    "expected": {
+      "ANIO_ING_ACT": 2025,
+      "SEM_ING_ACT": 1,
+      "ANIO_ING_ORI": 1900,
+      "SEM_ING_ORI": 0
+    }
+  },
+  {
+    "id": "GC06",
+    "desc": "FOR=3 cambio interno mismo año",
+    "CODCLI": "20241ICIB021",
+    "ANOINGRESO": 2024,
+    "FOR_ING_ACT": 3,
+    "expected": {
+      "ANIO_ING_ACT": 2024,
+      "SEM_ING_ACT": 1,
+      "ANIO_ING_ORI": 2024,
+      "SEM_ING_ORI": 2
+    }
+  },
+  {
+    "id": "GC07",
+    "desc": "FOR=11 articulación TNS previo 2024→2026",
+    "CODCLI": "20261ILOG101",
+    "ANOINGRESO": 2026,
+    "FOR_ING_ACT": 11,
+    "expected": {
+      "ANIO_ING_ACT": 2026,
+      "ANIO_ING_ORI": 2024
+    }
+  },
+  {
+    "id": "GC08",
+    "desc": "Invariante: ANIO_ING_ORI=1900 → SEM_ING_ORI=0",
+    "tipo": "regla_coherencia",
+    "expected": {
+      "if_ANIO_ING_ORI_eq_1900": {
+        "SEM_ING_ORI": 0
+      }
+    }
+  },
+  {
+    "id": "GC09",
+    "desc": "Regla institucional: PERIODOINGRESO=3 → SEM_ING_ACT=2",
+    "tipo": "regla_sintetica",
+    "PERIODOINGRESO": 3,
+    "expected": {
+      "SEM_ING_ACT": 2
+    }
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "GC01",
+    "desc": "VIGENTE → VIG=1",
+    "CODCLI": "20171NETMRE016",
+    "ESTADOACADEMICO": "VIGENTE",
+    "VIG_ESPERADO": 1,
+    "VIG_REAL": 1,
+    "FECHA_MATRICULA": "02/03/2026"
+  },
+  {
+    "id": "GC02",
+    "desc": "ELIMINADO → VIG=0",
+    "CODCLI": "20241TCIB050",
+    "ESTADOACADEMICO": "ELIMINADO",
+    "VIG_ESPERADO": 0,
+    "VIG_REAL": 0,
+    "FECHA_MATRICULA": "30/12/2025"
+  },
+  {
+    "id": "GC03",
+    "desc": "SUSPENDIDO → VIG=0",
+    "CODCLI": "20251CIINF029",
+    "ESTADOACADEMICO": "SUSPENDIDO",
+    "VIG_ESPERADO": 0,
+    "VIG_REAL": 0,
+    "FECHA_MATRICULA": "26/02/2026"
+  },
+  {
+    "id": "GC04",
+    "desc": "Fecha matrícula más antigua",
+    "CODCLI": "20261CIINF001",
+    "FECHA_MATRICULA": "10/07/2025",
+    "FECHA_MATRICULA_REGLA": "R_FM_01"
+  },
+  {
+    "id": "GC05",
+    "desc": "Fecha matrícula más reciente",
+    "CODCLI": "20261ISEP031",
+    "FECHA_MATRICULA": "06/04/2026",
+    "FECHA_MATRICULA_REGLA": "R_FM_01"
+  },
+  {
+    "id": "GC06",
+    "desc": "ELIMINADO con fecha 2026 → VIG=0 + fecha real",
+    "CODCLI": "20251TCDA017",
+    "ESTADOACADEMICO": "ELIMINADO",
+    "VIG_ESPERADO": 0,
+    "VIG_REAL": 0,
+    "FECHA_MATRICULA": "15/01/2026"
+  }
+]
