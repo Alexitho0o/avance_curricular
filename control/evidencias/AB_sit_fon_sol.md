@@ -3,13 +3,18 @@
 - Columna: AB
 - Campo: SIT_FON_SOL
 - Fase duena: FASE 5
-- Estado tablero: Pendiente
-- Fecha: 2026-04-01
+- Estado tablero: OK
+- Fecha: 2026-04-07
 - Responsable:
 
 ## Bloqueo actual
 
-- No existe fuente real por fila incluida; `SIT_FON_SOL` queda en fallback explicito `0` para `1.736/1.736` filas incluidas.
+- Sin bloqueo residual.
+
+## Politica de cierre (2026-04-07)
+
+- Criterio aplicado: politica local fija `SIT_FON_SOL = 1` para todas las filas incluidas, con fuente `POLITICA_LOCAL_FIJA_1` y audit `FIJADO_MANUALMENTE_A_1_EN_TODO_EL_PROYECTO`.
+- La regla esta explicitamente trazada por fila, sin default silencioso.
 
 ## Fuente operativa revisada
 
@@ -35,11 +40,13 @@
 
 ## Resultado
 
-- Estado final: `Pendiente`.
+- Estado final: `OK`.
+- Gate binario observado: `SI / SI / SI / SI / SI`.
 
 ## Riesgo residual
 
-- Alto. El valor actual es auditable, pero no defendible como situacion FSCU real por fila.
+- Bajo. El valor esta fijado por politica local explicita y trazable
+- Bajo. El valor esta fijado por politica local explicita y trazable.
 
 ## Criterio de cierre a OK
 

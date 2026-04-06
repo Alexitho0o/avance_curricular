@@ -343,7 +343,7 @@ Referencia histórica de implementación en modo `--proceso matricula`: [codigo.
 | `MODALIDAD` | `MODALIDAD` | `JORNADA` | mapeo: diurna/vespertina=`PRESENCIAL`, semi=`SEMIPRESENCIAL`, distancia/online=`DISTANCIA` |
 | `JOR` | `JOR` | `JORNADA` | mapeo: diurna=`1`, vespertina=`2`, semi=`3`, distancia=`4` |
 | `VERSION` | `Version` | no provista | `NA` por defecto |
-| `FOR_ING_ACT` | `FOR_ING_ACT` | `FOR_ING_ACT` o `FORMA_INGRESO` o `FORMAINGRESO` o `FORMA_INGRESO_ACTUAL` o `TIPO_INGRESO` | si viene `1..11`, se conserva; si no existe o es inválida, fallback operativo `10` (otras formas de ingreso) |
+| `FOR_ING_ACT` | `FOR_ING_ACT` | derivada por `scripts/motor_for_ing_act.py` desde DatosAlumnos + Hoja1 | árbol gobernable: 11 (articulación TNS→Prof) → 2 (continuidad) → 4 (externo, bloqueado) → 3 (interno por SITUACION) → 1 (directo); códigos 5-10 bloqueados; config en `control/config_for_ing_act.json` |
 | `ANIO_ING_ACT` | `ANIO_ING_ACT` | `ANOINGRESO` o `ANIO_INGRESO_CARRERA_ACTUAL` | año normalizado; fallback inferido desde `CODCLI` |
 | `SEM_ING_ACT` | `SEM_ING_ACT` | `PERIODOINGRESO` o `SEM_INGRESO_CARRERA_ACTUAL` | copia directa |
 | `ANIO_ING_ORI` | `ANIO_ING_ORI` | derivada de `ANIO_ING_ACT` | se replica `ANIO_ING_ACT` |
@@ -381,3 +381,156 @@ Evidencia clave extraída del manual:
 - Página 28: “Todos los campos son obligatorios…”
 - Página 30: definiciones y rangos de `ASI_INS_ANT`, `ASI_APR_ANT`, `PROM_PRI_SEM`, `PROM_SEG_SEM`, `ASI_INS_HIS`.
 - Página 31: definiciones y rangos de `ASI_APR_HIS`, `NIV_ACA`, `SIT_FON_SOL`, `SUS_PRE`, y catálogo de `VIG` (`0/1/2`).
+
+## 17) Motor de derivación FOR_ING_ACT
+
+A partir de abril 2026, `FOR_ING_ACT` no se toma de la fuente Excel sino que se **deriva por evidencia** usando `scripts/motor_for_ing_act.py`.
+
+### Arquitectura
+
+| Componente | Ruta | Función |
+|---|---|---|
+| Motor | `scripts/motor_for_ing_act.py` | Carga datos, calcula flags _DA, aplica árbol, genera artefactos |
+| Config | `control/config_for_ing_act.json` | Códigos soportados/bloqueados, reglas, umbrales, validaciones |
+| Reglas | `control/for_ing_act_rules.tsv` | Catálogo auditable de 5 reglas con prioridad y estado |
+| Tests | `scripts/test_for_ing_act.py` | 19 tests: dominio, integridad, prioridad, golden cases |
+| Golden cases | `control/for_ing_act_golden_cases.json` | 12 casos de prueba validados |
+| Trace | `control/for_ing_act_trace_long.tsv` | Trazabilidad completa con 7 flags _DA por registro |
+| Reporte | `control/for_ing_act_governance_report.md` | Dictamen, distribución, hallazgos, checklist |
+| Audit XLSX | `resultados/AUDIT_FOR_ING_ACT.xlsx` | Excel con pestañas AUDITORIA, RESUMEN, HALLAZGOS |
+
+### Árbol de decisión (orden de evaluación)
+
+1. **Código 11 — Articulación**: TNS previo encontrado (Hoja1 o DatosAlumnos) + programa actual es profesional
+2. **Código 2 — Continuidad**: programa con "CONTINUIDAD" en nombre, sin TNS previo
+3. **Código 4 — Cambio Externo**: BLOQUEADO (no existe indicador explícito en DatosAlumnos)
+4. **Código 3 — Cambio Interno**: SITUACION ∈ {24 - CAMBIO DE CARRERA, 49 - CAMBIO DE JORNADA, 27 - CAMBIO PLAN OTRA JORNADA}
+5. **Código 1 — Ingreso Directo**: default
+
+**Códigos 5-10**: bloqueados por política institucional, nunca emitidos.
+
+### Flags derivados (_DA)
+
+| Flag | Descripción | Fuente |
+|---|---|---|
+| `ES_CONTINUIDAD_DA` | Programa contiene "CONTINUIDAD" en NOMBRE_L | DatosAlumnos |
+| `ES_TECNICO_DA` | CODCARPR empieza con T o NOMBRE_L contiene TECNICO/TNS | DatosAlumnos |
+| `PROGRAMA_ACTUAL_ES_PROFESIONAL_DA` | Inverso de ES_TECNICO_DA | derivado |
+| `ES_CAMBIO_INTERNO_DA` | SITUACION ∈ {24, 49, 27} | DatosAlumnos |
+| `ES_CAMBIO_EXTERNO_DA` | Siempre 0 (bloqueado sin fuente) | política |
+| `TIENE_TNS_PREV_DA` | Mismo RUT con programa TNS en año anterior | DatosAlumnos + Hoja1 |
+| `FOR_ING_ACT_RULE_DA` | Nombre de la regla que disparó | árbol |
+
+### Validaciones
+
+| ID | Severidad | Descripción |
+|---|---|---|
+| V0 | BLOQUEANTE | FOR_ING_ACT fuera de {1,2,3,4,11} |
+| V1 | WARNING | Coherencia ANIO_ING_ORI==ANIO_ING_ACT para FOR=1 (diferida) |
+| V2 | ERROR | Programa CONTINUIDAD con FOR=1 (viola manual) |
+| V3 | WARNING | Pasaporte → FOR∈{4,6} (diferida, TIPO_DOC no disponible) |
+
+## 18) Motor de derivación Campos ING (ANIO_ING_ACT, SEM_ING_ACT, ANIO_ING_ORI, SEM_ING_ORI)
+
+A partir de abril 2026, los campos Q, R, S, T del Cuadro N°1 se **derivan por reglas gobernables** usando `scripts/motor_campos_ing.py`, consumiendo el trace de `FOR_ING_ACT` como insumo.
+
+### Arquitectura
+
+| Componente | Ruta | Función |
+|---|---|---|
+| Motor | `scripts/motor_campos_ing.py` | Carga datos + trace FOR, deriva 4 campos con cascada/mapeo, genera artefactos |
+| Config | `control/config_campos_ing.json` | Rangos, catálogos, mapeo PERIODOINGRESO, reglas por FOR_ING_ACT |
+| Reglas | `control/campos_ing_rules.tsv` | Catálogo auditable de 22 reglas (R_ACT, R_SEM, R_ORI_A, R_ORI_S) |
+| Tests | `scripts/test_campos_ing.py` | 26 tests: reglas ACT/SEM, coherencia FOR×ORI, catálogos, golden cases |
+| Golden cases | `control/campos_ing_golden_cases.json` | 9 casos de prueba validados |
+| Trace | `control/campos_ing_trace_long.tsv` | Trazabilidad 1364 registros: 4 campos + fuente + regla |
+| Reporte | `control/campos_ing_governance_report.md` | Dictamen, distribución, coherencia FOR×ORI, hallazgos |
+| Audit XLSX | `resultados/AUDIT_CAMPOS_ING.xlsx` | Excel con TRAZABILIDAD, RESUMEN×4, CRUCE_FOR×ORI, HALLAZGOS |
+
+### Reglas de derivación
+
+**ANIO_ING_ACT (Campo Q)**: Cascada `ANOINGRESO → DA_ANOINGRESO → CODCLI[:4] → 2026`. Rango válido: [1990, 2026].
+
+**SEM_ING_ACT (Campo R)**: Mapeo institucional de PERIODOINGRESO: `{1→1, 2→2, 3→2}`. Catálogo: {1, 2}.
+
+**ANIO_ING_ORI (Campo S)** — depende de FOR_ING_ACT:
+
+| FOR | Regla | Valor |
+|-----|-------|-------|
+| 1 | COPIA_ACTUAL | = ANIO_ING_ACT |
+| 11 | TNS_PREV | = TNS_PREV_MIN_ANO_DA (o 1900 si desconocido) |
+| 2 | ORIGEN_DESCONOCIDO | = 1900 |
+| 3 | BUSCAR_PROG_ANTERIOR | = ANOINGRESO del programa anterior en DA/Hoja1 (o 1900) |
+| 4 | BLOQUEADO | = 1900 |
+
+**SEM_ING_ORI (Campo T)** — depende de FOR_ING_ACT + ANIO_ING_ORI:
+
+| Condición | Valor |
+|-----------|-------|
+| FOR=1 | = SEM_ING_ACT |
+| ANIO_ING_ORI=1900 | = 0 (invariante) |
+| FOR=11 con periodo TNS | = periodo del primer registro TNS en Hoja1 |
+| FOR=3 con prog anterior | = periodo del programa anterior |
+| Sin datos | = 0 |
+
+### Validaciones
+
+| ID | Severidad | Descripción |
+|---|---|---|
+| V_RANGO_ACT | BLOQUEANTE | ANIO_ING_ACT fuera de [1990, 2026] |
+| V_CATALOGO_SEM_ACT | BLOQUEANTE | SEM_ING_ACT fuera de {1, 2} |
+| V_RANGO_ORI | BLOQUEANTE | ANIO_ING_ORI fuera de [1980, 2026] ∪ {1900} |
+| V_CATALOGO_SEM_ORI | BLOQUEANTE | SEM_ING_ORI fuera de {0, 1, 2} |
+| V_COHERENCIA_FOR1 | BLOQUEANTE | FOR=1 y ORI ≠ ACT |
+| V_COHERENCIA_1900 | BLOQUEANTE | ANIO_ORI=1900 con SEM_ORI ≠ 0 |
+| V_COHERENCIA_FOR_NO1 | WARNING | FOR≠1 con ANIO_ACT ≤ ANIO_ORI (excepto ORI=1900) |
+
+## §19. Motor de derivación VIG + FECHA_MATRICULA
+
+### Arquitectura
+
+| Componente | Ruta |
+|-----------|------|
+| Motor | `scripts/motor_vig_fecha.py` |
+| Config | `control/config_vig_fecha.json` |
+| Reglas | `control/vig_fecha_rules.tsv` (16 reglas) |
+| Tests | `scripts/test_vig_fecha.py` (23 tests, 4 clases) |
+| Trace | `control/vig_fecha_trace_long.tsv` |
+| Auditoría | `resultados/AUDIT_VIG_FECHA.xlsx` |
+| Reporte | `control/vig_fecha_governance_report.md` |
+
+### Derivación AF VIG (Vigencia)
+
+Campo AF del Cuadro N°1. Valores permitidos: 0, 1, 2.
+
+| ESTADOACADEMICO | VIG | Regla | Significado |
+|----------------|-----|-------|------------|
+| VIGENTE | 1 | R_VIG_01 | Matrícula vigente |
+| ELIMINADO | 0 | R_VIG_02 | Sin matrícula |
+| SUSPENDIDO | 0 | R_VIG_03 | Sin matrícula |
+| EGRESADO | 2 | R_VIG_04 | Egresado con matrícula vigente |
+| TITULADO | 0 | R_VIG_05 | Titulado (ya completó) |
+| null/vacío | 1 | R_VIG_10 | Fallback default |
+| No reconocido | 1 | R_VIG_11 | Fallback default |
+
+Cascada: mapeo exacto → mapeo parcial (contains) → fallback VIG=1.
+
+### Derivación AD FECHA_MATRICULA
+
+Campo AD del Cuadro N°1. Formato: dd/mm/yyyy.
+
+| Condición | Resultado | Regla |
+|----------|-----------|-------|
+| FECHAMATRICULA parseable | dd/mm/yyyy | R_FM_01 |
+| Fecha nula/inválida | 01/01/1900 | R_FM_03 |
+
+### Validaciones
+
+| Validación | Severidad | Condición |
+|-----------|-----------|----------|
+| V_CATALOGO_VIG | BLOQUEANTE | VIG fuera de {0, 1, 2} |
+| V_COHERENCIA_VIG_ESTADO | BLOQUEANTE | VIG incoherente con catálogo gobernanza |
+| V_FORMATO_FECHA | BLOQUEANTE | FECHA_MATRICULA en formato inválido |
+| V_FECHA_NO_FUTURA | WARNING | Fecha posterior a 2026-04-30 |
+| V_FECHA_RANGO | WARNING | Fecha anterior a 2020-01-01 |
+| V_VIG0_MARCADO_ROJO | INFO | Filas VIG=0 marcadas en rojo en auditoría |

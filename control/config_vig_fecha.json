@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "motor": "motor_vig_fecha",
+    "version": "1.0",
+    "fecha": "2026-04-08",
+    "descripcion": "Configuración para AF VIG (Vigencia) y AD FECHA_MATRICULA — MU Cuadro N°1",
+    "manual": "Manual Matrícula Unificada 2026 — Anexo 7 Cuadro N°1 (pregrado)"
+  },
+  "campos": {
+    "VIG": {
+      "orden_cuadro_1": "AF",
+      "nombre_manual": "Vigencia",
+      "tipo": "int",
+      "catalogo": [0, 1, 2],
+      "descripcion_catalogo": {
+        "0": "Estudiante sin matrícula",
+        "1": "Estudiante con matrícula vigente",
+        "2": "Estudiante egresado con matrícula vigente"
+      },
+      "fallback": 1,
+      "fuente_primaria": "ESTADOACADEMICO (DatosAlumnos)",
+      "fuente_secundaria": "ESTADO_ACADEMICO (Hoja1)",
+      "mapeo_estadoacademico": {
+        "VIGENTE": 1,
+        "ELIMINADO": 0,
+        "SUSPENDIDO": 0,
+        "TITULADO": 0,
+        "EGRESADO": 2
+      },
+      "mapeo_contains": {
+        "ELIMINADO": 0,
+        "SUSPENDIDO": 0,
+        "VIGENTE": 1,
+        "ALUMNO REGULAR": 1,
+        "REINCORPORACION": 1,
+        "PROCESO DE TITULO": 2,
+        "TITULACION": 2,
+        "EGRESADO": 2
+      }
+    },
+    "FECHA_MATRICULA": {
+      "orden_cuadro_1": "AD",
+      "nombre_manual": "Fecha de Matrícula",
+      "tipo": "fecha",
+      "formato_salida": "dd/mm/aaaa",
+      "fallback": "01/01/1900",
+      "fuente_primaria": "FECHAMATRICULA (DatosAlumnos)",
+      "fuente_secundaria": "DA_FECHAMATRICULA (enriched)",
+      "validaciones": {
+        "no_futura": true,
+        "formato_valido": "dd/mm/yyyy",
+        "rango_anio": [2020, 2026],
+        "fecha_corte": "2026-04-30"
+      }
+    }
+  },
+  "validaciones": {
+    "V_CATALOGO_VIG": {
+      "campo": "VIG",
+      "tipo": "catalogo",
+      "valores": [0, 1, 2],
+      "severidad": "BLOQUEANTE"
+    },
+    "V_COHERENCIA_VIG_ESTADO": {
+      "campo": "VIG",
+      "tipo": "coherencia",
+      "descripcion": "VIG debe ser coherente con ESTADOACADEMICO del catálogo de gobernanza",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_FORMATO_FECHA": {
+      "campo": "FECHA_MATRICULA",
+      "tipo": "formato",
+      "patron": "dd/mm/yyyy",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_FECHA_NO_FUTURA": {
+      "campo": "FECHA_MATRICULA",
+      "tipo": "rango",
+      "descripcion": "FECHA_MATRICULA no debe ser posterior a la fecha de carga",
+      "severidad": "WARNING"
+    },
+    "V_FECHA_RANGO": {
+      "campo": "FECHA_MATRICULA",
+      "tipo": "rango",
+      "descripcion": "FECHA_MATRICULA debe estar entre 2020-01-01 y fecha de carga",
+      "severidad": "WARNING"
+    },
+    "V_VIG0_MARCADO_ROJO": {
+      "campo": "VIG",
+      "tipo": "visual",
+      "descripcion": "Filas con VIG=0 (ELIMINADO/SUSPENDIDO) deben marcarse en rojo en auditoría",
+      "severidad": "INFO"
+    }
+  }
+}

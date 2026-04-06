@@ -39,6 +39,12 @@ if [[ ! -f "${INPUT_XLSX}" ]]; then
 fi
 
 echo "[MU2026] Repo root: ${REPO_ROOT}"
+echo "[MU2026] Compilando catálogo canónico SIES (SOURCE_KEY_3)..."
+python3 scripts/compile_puente_sies_compilado.py \
+  --duracion "DURACION_ESTUDIOS.tsv" \
+  --output "control/catalogos/PUENTE_SIES_COMPILADO.tsv" \
+  --summary-json "control/reportes/reporte_compilacion_puente_sies.json"
+
 echo "[MU2026] Ejecutando flujo oficial de Matrícula Unificada 2026..."
 echo "[MU2026] INPUT_XLSX=${INPUT_XLSX}"
 echo "[MU2026] OUTPUT_DIR=${OUTPUT_DIR}"

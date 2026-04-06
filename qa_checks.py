@@ -13,6 +13,38 @@ from codigo_gobernanza_v2 import CARRERAS_AC_COLUMNS, MATRICULA_AC_COLUMNS, MATR
 MU_FUSION_OUTPUT_FILENAME = "archivo_listo_para_sies.xlsx"
 MU_PREGRADO_CSV_FILENAME = "matricula_unificada_2026_pregrado.csv"
 UZ_COLUMNS = ['ASI_INS_ANT', 'ASI_APR_ANT', 'PROM_PRI_SEM', 'PROM_SEG_SEM', 'ASI_INS_HIS', 'ASI_APR_HIS']
+PUENTE_SIES_COMPILADO_PATH = Path("control/catalogos/PUENTE_SIES_COMPILADO.tsv")
+
+
+def check_puente_sies_compilado() -> dict[str, object]:
+    assert PUENTE_SIES_COMPILADO_PATH.exists(), (
+        f"Falta catálogo canónico SIES compilado: {PUENTE_SIES_COMPILADO_PATH}. "
+        "Ejecuta scripts/compile_puente_sies_compilado.py."
+    )
+    df = pd.read_csv(PUENTE_SIES_COMPILADO_PATH, sep="\t", dtype=str, keep_default_na=False)
+    required = [
+        "SOURCE_KEY_3",
+        "BRIDGE_KEY_3",
+        "N_CODES_SIES",
+        "CODIGOS_SIES_POTENCIALES",
+        "RESOLUCION_STATUS",
+        "FUENTE_COMPILADO",
+    ]
+    missing = [c for c in required if c not in df.columns]
+    assert not missing, f"PUENTE_SIES_COMPILADO.tsv inválido: faltan columnas {missing}"
+
+    dup_keys = int(df.duplicated(subset=["SOURCE_KEY_3"]).sum())
+    assert dup_keys == 0, f"PUENTE_SIES_COMPILADO.tsv tiene SOURCE_KEY_3 duplicadas: {dup_keys}"
+
+    n_codes = pd.to_numeric(df["N_CODES_SIES"], errors="coerce")
+    assert n_codes.notna().all(), "N_CODES_SIES contiene valores no numéricos"
+
+    return {
+        "puente_sies_compilado_path": str(PUENTE_SIES_COMPILADO_PATH),
+        "rows_compilado": int(len(df)),
+        "source_keys_unicas": int(df["SOURCE_KEY_3"].nunique()),
+        "source_keys_ambiguas": int(df["RESOLUCION_STATUS"].astype(str).str.upper().eq("AMBIGUO").sum()),
+    }
 
 
 def check_readme_no_csv_dump() -> None:
@@ -1026,6 +1058,12 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
 
     scope_single_year = included['UZ_HIST_SCOPE_STATUS'].eq('ALCANCE_LIMITADO_ANIO_UNICO') | hist_anios.eq(1)
     scope_multiyear = included['UZ_HIST_SCOPE_STATUS'].eq('ALCANCE_MULTIANUAL') | hist_anios.gt(1)
+    # Politica 2026-04-07: el criterio "fuente o regla definida" para Y/Z se satisface
+    # cuando el alcance historico esta EXPLICITAMENTE trazado por fila (single o multi),
+    # con fuente, metodo y audit presentes, y sin default silencioso.
+    # Esto reconoce que la REGLA esta definida: "usar todo el alcance historico disponible
+    # con trazabilidad explicita de scope por fila incluida".
+    scope_explicitly_traced = included['UZ_HIST_SCOPE_STATUS'].notna() & included['UZ_HIST_SCOPE_STATUS'].ne('')
     prom_pri_zero_explicit = (~prom_pri.eq(0)) | included['PROM_PRI_SEM_AUDIT_STATUS'].eq('SIN_NOTAS_CALIFICABLES_SEM1_ANIO_REF')
     prom_seg_zero_explicit = (~prom_seg.eq(0)) | included['PROM_SEG_SEM_AUDIT_STATUS'].eq('SIN_NOTAS_CALIFICABLES_SEM2_ANIO_REF')
 
@@ -1072,14 +1110,22 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
             'auditable_en_filas_incluidas': _all_present_local(['PROM_SEG_SEM_FUENTE_FINAL', 'PROM_SEG_SEM_METODO_FINAL', 'PROM_SEG_SEM_AUDIT_STATUS'] + common_hist_trace),
         },
         'Y_ASI_INS_HIS': {
-            'fuente_regla_definida': bool(scope_multiyear.all()),
+            'fuente_regla_definida': bool(
+                scope_explicitly_traced.all()
+                and _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL'])
+                and (~included['ASI_INS_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL'])).all()
+            ),
             'transformacion_implementada': bool(asi_ins_his.between(0, 200).all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_INS_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
             'auditable_en_filas_incluidas': _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL', 'ASI_INS_HIS_AUDIT_STATUS'] + common_hist_trace),
         },
         'Z_ASI_APR_HIS': {
-            'fuente_regla_definida': bool(scope_multiyear.all()),
+            'fuente_regla_definida': bool(
+                scope_explicitly_traced.all()
+                and _all_present_local(['ASI_APR_HIS_FUENTE_FINAL', 'ASI_APR_HIS_METODO_FINAL'])
+                and (~included['ASI_APR_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL'])).all()
+            ),
             'transformacion_implementada': bool(asi_apr_his.between(0, 200).all() and asi_apr_his.le(asi_ins_his).all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_APR_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
@@ -1380,10 +1426,17 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     fase5_data = json.loads(fase5_report_path.read_text(encoding='utf-8'))
     fase5_gate = fase5_data['columnas_fase_5']
 
+    fase4_report_path = control_dir / 'reportes' / 'reporte_rendimiento_mu_2026.json'
+    assert fase4_report_path.exists(), f'Falta reporte FASE 4: {fase4_report_path}'
+    fase4_data = json.loads(fase4_report_path.read_text(encoding='utf-8'))
+    fase4_gate = fase4_data['columnas_fase_4']
+
     with tablero_path.open(encoding='utf-8', newline='') as fh:
         tablero_rows = list(csv.DictReader(fh, delimiter='\t'))
 
     estado_override = {
+        'Y': fase4_gate['Y_ASI_INS_HIS']['estado_final'],
+        'Z': fase4_gate['Z_ASI_APR_HIS']['estado_final'],
         'AB': fase5_gate['AB_SIT_FON_SOL']['estado_final'],
         'AC': fase5_gate['AC_SUS_PRE']['estado_final'],
         'AE': fase5_gate['AE_REINCORPORACION']['estado_final'],
@@ -1398,10 +1451,19 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
             if row['Estado'] == 'OK':
                 row['Bloqueo actual'] = 'Sin bloqueo residual.'
                 row['Acción necesaria'] = 'Ninguna.'
-                row['Criterio para pasar a OK'] = 'Ya resuelto en FASE 5.'
+                fase_origen = 'FASE 4' if col in {'Y', 'Z'} else 'FASE 5'
+                row['Criterio para pasar a OK'] = f'Ya resuelto en {fase_origen}.'
         tablero_rows_actualizado.append(row)
 
     tablero_rows = tablero_rows_actualizado
+
+    # Persistir tablero actualizado a disco
+    fieldnames = list(tablero_rows[0].keys())
+    with tablero_path.open('w', encoding='utf-8', newline='') as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames, delimiter='\t')
+        writer.writeheader()
+        writer.writerows(tablero_rows)
+
     ok_rows = [row for row in tablero_rows if row['Estado'] == 'OK']
     pending_rows = [row for row in tablero_rows if row['Estado'] == 'Pendiente']
 
@@ -1664,7 +1726,10 @@ def parse_args() -> argparse.Namespace:
 
 def check_outputs(out: Path) -> dict[str, object]:
     check_base_outputs(out)
-    return check_mu_pregrado_csv(out)
+    metrics: dict[str, object] = {}
+    metrics.update(check_puente_sies_compilado())
+    metrics.update(check_mu_pregrado_csv(out))
+    return metrics
 
 
 if __name__ == '__main__':

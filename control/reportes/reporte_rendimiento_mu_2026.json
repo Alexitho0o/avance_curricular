@@ -1,47 +1,53 @@
 {
-  "rows_included_final": 1736,
+  "rows_included_final": 3687,
   "ventana_referencia_distribution": {
-    "2025": 1736
+    "2025": 3687
   },
   "uz_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
   "uz_scope_status_distribution": {
-    "ALCANCE_LIMITADO_ANIO_UNICO": 1736
+    "ALCANCE_LIMITADO_ANIO_UNICO": 2506,
+    "ALCANCE_MULTIANUAL": 1181
   },
   "hist_anios_disponibles_distribution": {
-    "1": 1736
+    "1": 2506,
+    "2": 876,
+    "3": 294,
+    "4": 7,
+    "5": 3,
+    "6": 1
   },
   "asi_ins_ant_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
   "asi_apr_ant_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
   "prom_pri_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
   "prom_seg_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
   "asi_ins_his_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
   "asi_apr_his_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 1736
+    "HISTORICO_HOJA1_ANIO_2025": 3687
   },
-  "prom_pri_zero_rows": 148,
-  "prom_seg_zero_rows": 425,
-  "prom_pri_zero_explicit_rows": 148,
-  "prom_seg_zero_explicit_rows": 425,
+  "prom_pri_zero_rows": 2631,
+  "prom_seg_zero_rows": 2626,
+  "prom_pri_zero_explicit_rows": 2617,
+  "prom_seg_zero_explicit_rows": 2611,
   "apr_ant_capped_rows": 0,
   "apr_his_capped_rows": 0,
-  "asi_ins_his_eq_ant_rows": 1736,
-  "asi_apr_his_eq_ant_rows": 1445,
-  "rows_scope_single_year": 1736,
-  "rows_scope_multiyear": 0,
-  "rows_y_no_defendible_por_alcance": 1736,
-  "rows_z_no_defendible_por_alcance": 1736,
+  "asi_ins_his_eq_ant_rows": 83,
+  "asi_apr_his_eq_ant_rows": 1919,
+  "rows_scope_single_year": 2506,
+  "rows_scope_multiyear": 1181,
+  "rows_y_no_defendible_por_alcance": 2506,
+  "rows_z_no_defendible_por_alcance": 2506,
   "columnas_fase_4": {
     "U_ASI_INS_ANT": {
       "fuente_regla_definida": true,
@@ -61,13 +67,21 @@
     },
     "W_PROM_PRI_SEM": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": true,
+      "transformacion_implementada": false,
       "validacion_qa_existe": true,
-      "sin_default_silencioso": true,
+      "sin_default_silencioso": false,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "OK"
+      "estado_final": "Pendiente"
     },
     "X_PROM_SEG_SEM": {
+      "fuente_regla_definida": true,
+      "transformacion_implementada": false,
+      "validacion_qa_existe": true,
+      "sin_default_silencioso": false,
+      "auditable_en_filas_incluidas": true,
+      "estado_final": "Pendiente"
+    },
+    "Y_ASI_INS_HIS": {
       "fuente_regla_definida": true,
       "transformacion_implementada": true,
       "validacion_qa_existe": true,
@@ -75,21 +89,13 @@
       "auditable_en_filas_incluidas": true,
       "estado_final": "OK"
     },
-    "Y_ASI_INS_HIS": {
-      "fuente_regla_definida": false,
-      "transformacion_implementada": true,
-      "validacion_qa_existe": true,
-      "sin_default_silencioso": true,
-      "auditable_en_filas_incluidas": true,
-      "estado_final": "Pendiente"
-    },
     "Z_ASI_APR_HIS": {
-      "fuente_regla_definida": false,
+      "fuente_regla_definida": true,
       "transformacion_implementada": true,
       "validacion_qa_existe": true,
       "sin_default_silencioso": true,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "Pendiente"
+      "estado_final": "OK"
     }
   }
 }

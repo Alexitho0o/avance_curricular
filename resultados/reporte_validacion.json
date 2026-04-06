@@ -1,0 +1,59 @@
+{
+  "rows": {
+    "carreras_control": 113,
+    "matricula_ac_control": 8645,
+    "matricula_unificada_control": 8645,
+    "historico_total": 70000,
+    "historico_mapeado": 70000,
+    "historico_sin_mapeo": 0
+  },
+  "issues": [
+    {
+      "severity": "BLOCKER",
+      "area": "matricula_unificada",
+      "message": "NIV_ACA obligatorio vacío",
+      "count": 8645
+    },
+    {
+      "severity": "WARN",
+      "area": "matricula_unificada",
+      "message": "COD_CAR con MODALIDAD no resuelta (equivalencia dudosa)",
+      "count": 8645
+    }
+  ],
+  "ambiguedad": {
+    "codcarr_total": 74,
+    "codcarr_ambiguos": 0
+  },
+  "calidad_semantica": {
+    "matricula_unificada": {
+      "avg_null_pct": 0.5625,
+      "avg_default_like_pct": 0.7808,
+      "provenance_pct": {
+        "source_exact": 0.25,
+        "source_normalized": 0.5938,
+        "missing_blocker": 0.0625,
+        "manual_mapping": 0.0938
+      }
+    },
+    "carreras_ac": {
+      "avg_null_pct": 0.9091,
+      "avg_default_like_pct": 0.9091,
+      "provenance_pct": {
+        "template_preserved": 1.0
+      }
+    },
+    "matricula_ac": {
+      "avg_null_pct": 0.5,
+      "avg_default_like_pct": 0.6672,
+      "provenance_pct": {
+        "template_preserved": 0.7273,
+        "derived_rule": 0.2727
+      }
+    }
+  },
+  "apto_oficial": {
+    "matricula_unificada": false,
+    "avance_curricular": true
+  }
+}

@@ -1,269 +1,309 @@
-# Avance Curricular + Matrícula Unificada
+# Avance Curricular + Matricula Unificada (MU 2026)
 
-Repositorio productivo para generar salidas de:
+Repositorio operativo para dos procesos:
 
-- `avance` (control y PES de avance curricular)
-- `matricula` (archivo final de matrícula unificada con trazabilidad SIES)
-- `ambos` (ejecución conjunta)
+- `avance`: productos de avance curricular.
+- `matricula`: salida regulatoria MU 2026 Pregrado.
 
-Este README documenta el flujo operativo oficial vigente y referencia el material legacy archivado bajo `archive/`.
+Este README es la fuente de verdad operativa del repositorio al **2026-04-09**.
 
-## Estado operativo actual
+## 1) Proposito y alcance
 
-Para **Matrícula Unificada 2026 - Pregrado**, el flujo operativo oficial es:
+### Alcance funcional
 
-- `codigo_gobernanza_v2.py` con `--proceso matricula --usar-gobernanza-v2 true`
-- invocado con `python3` como intérprete oficial congelado en este equipo
+- El repositorio soporta `avance`, `matricula` y `ambos` en `codigo_gobernanza_v2.py`.
+- Para MU 2026 Pregrado, la operacion oficial congelada usa solo:
+  - `--proceso matricula`
+  - `--usar-gobernanza-v2 true`
 
-Para este proceso:
+### Distincion obligatoria
 
-- el **artefacto de auditoría** es `archivo_listo_para_sies.xlsx`
-- el **artefacto regulatorio de carga** es `matricula_unificada_2026_pregrado.csv`
-- el archivo de carga objetivo es **CSV**, **sin encabezado**, con **`;`** como delimitador
+- **Operacion oficial congelada**: comandos documentados en `Makefile` + `scripts/run_oficial.sh` + `scripts/validate_oficial.sh`.
+- **Legacy/archivo/experimental**: todo lo archivado en `archive/`, backups bajo `backup_estable_2026/`, y artefactos de prueba historica en subcarpetas de `resultados/`.
 
-El flujo legacy histórico quedó archivado bajo `archive/` y no debe usarse como salida regulatoria final de MU Pregrado 2026.
+## 2) Estado operativo actual MU 2026 (congelado)
 
-## Congelamiento oficial MU 2026
+### Referencias oficiales congeladas (fecha 2026-04-01)
 
-La fuente de verdad operativa congelada para ejecución, validación y resultado esperado quedó documentada en:
+- [control/reportes/ejecucion_oficial_mu_2026.md](control/reportes/ejecucion_oficial_mu_2026.md)
+- [control/reportes/validacion_oficial_mu_2026.md](control/reportes/validacion_oficial_mu_2026.md)
+- [control/reportes/resultado_corrida_referencia_mu_2026.md](control/reportes/resultado_corrida_referencia_mu_2026.md)
 
-- [ejecucion_oficial_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/ejecucion_oficial_mu_2026.md)
-- [validacion_oficial_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/validacion_oficial_mu_2026.md)
-- [resultado_corrida_referencia_mu_2026.md](/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/resultado_corrida_referencia_mu_2026.md)
+### Nota de gobernanza (drift documental detectado)
 
-Para el estado final congelado del proyecto:
+Hay coexistencia de estados distintos dentro de `control/`:
 
-- decisión vigente: `CONDICIONAL`
-- listo para auditoría: `SI`
-- listo para carga: `NO`
-- tablero vigente: `27 OK / 5 Pendiente`
+- Los 3 reportes oficiales congelados indican estado `CONDICIONAL`.
+- `control/gate/gate_final_mu_2026.md` y `control/README.md` registran estado `APROBADO`.
 
-## Documentación principal
+Hasta emitir un nuevo congelamiento formal, este README prioriza los 3 reportes oficiales para el flujo congelado y deja la divergencia registrada como riesgo de gobernanza.
 
-- [DOCUMENTACION_TECNICA.md](/Users/alexi/Documents/GitHub/avance_curricular/DOCUMENTACION_TECNICA.md): arquitectura, contratos, trazabilidad y reglas de validación.
-- [README.md](/Users/alexi/Documents/GitHub/avance_curricular/README.md): operación diaria y mapa de artefactos.
+## 3) Arquitectura funcional
 
-## Inventario de artefactos del repositorio
+### Pipeline principal
 
-| Archivo | Rol técnico | Uso operativo |
-|---|---|---|
-| [codigo_gobernanza_v2.py](/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py) | pipeline extendido con gobernanza v2 (flag + catálogos externos) | ejecución controlada v2 |
-| [catalogo_manual.tsv](/Users/alexi/Documents/GitHub/avance_curricular/catalogo_manual.tsv) | catálogo de traza por carrera/jornada/nombre | matching manual en proceso matrícula |
-| [puente_sies.tsv](/Users/alexi/Documents/GitHub/avance_curricular/puente_sies.tsv) | puente de negocio hacia `CODIGO_CARRERA_SIES` | asignación SIES y diagnóstico |
-| [gobernanza_sede.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv) | tabla maestra de sede (`SEDE` -> `COD_SED`) | gobernanza v2 de `COD_SED` |
-| [gobernanza_nac.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_nac.tsv) | tabla maestra de nacionalidad -> código NAC | gobernanza v2 de `NAC` |
-| [gobernanza_pais_est_sec.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_pais_est_sec.tsv) | tabla maestra localidad escolar -> país | gobernanza v2 de `PAIS_EST_SEC` |
-| [gobernanza_niveles.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_niveles.tsv) | catálogo maestro `NIVEL_GLOBAL`/`NIVEL_CARRERA` del Manual | gobernanza documental para clasificación académica |
-| [gobernanza_for_ing_act.tsv](/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv) | catálogo formal de `FOR_ING_ACT` (1..11) según Manual 2026 | gobernanza documental de forma de ingreso |
-| [generar_gobernanza_columnas_mu.py](/Users/alexi/Documents/GitHub/avance_curricular/generar_gobernanza_columnas_mu.py) | generador de TSV por columna MU (32/32) | trazabilidad columna a columna contra Cuadro N°1 |
-| `gobernanza_columnas_mu/*.tsv` | un TSV por cada columna de matrícula pregrado | gobernanza detallada por campo de salida |
-| `matriz_desambiguacion_sies*.tsv` | matriz de resolución de ambiguos `(CODCARPR,JORNADA,VERSION)` | desambiguación en fase operativa SIES |
-| [qa_checks.py](/Users/alexi/Documents/GitHub/avance_curricular/qa_checks.py) | chequeos rápidos de contratos y reportes | control posterior a ejecución |
-| [archive/](/Users/alexi/Documents/GitHub/avance_curricular/archive) | material legacy, bitácoras históricas y resultados archivados | contexto/historial, fuera del camino operativo principal |
+- Script oficial: `codigo_gobernanza_v2.py`.
+- Contrato MU32 declarado en `MATRICULA_UNIFICADA_COLUMNS` (32 columnas).
+- Exporta:
+  - `resultados/archivo_listo_para_sies.xlsx` (auditoria operativa)
+  - `resultados/matricula_unificada_2026_pregrado.csv` (regulatorio)
 
-## Qué documenta cada fase
+### Fases operativas (alto nivel)
 
-- Fase 1, Fase 2 y Fase 3: bitácoras históricas archivadas en `archive/contexto_historico/fases/`.
+1. Ingesta de Excel de entrada.
+2. Construccion de matriz SIES desde `DURACION_ESTUDIOS.tsv`.
+3. Matching y desambiguacion SIES (incluye estados `AMBIGUO_SIES` y `SIN_MATCH_SIES`).
+4. Enriquecimiento con `DatosAlumnos` (incluye estados de match DA).
+5. Derivacion y trazabilidad de columnas MU32.
+6. Exportacion de workbook auditable + CSV regulatorio.
+7. Validacion QA y gate documental.
 
-Estos archivos son bitácoras de evolución y auditoría.
+### Trazabilidad complementaria
 
-## Catálogos y reglas de gobernanza
+- Gobernanza por columna: `gobernanza_columnas_mu/` + `_INDICE_COLUMNAS.tsv`.
+- Auditoria integral: `scripts/auditoria_maestra.py`.
+- Mapa de cruces del pipeline: `cruces_proyecto.tsv`.
 
-### Gobernanza por columna (Cuadro N°1)
+### Cruces criticos verificados (fuente: cruces_proyecto.tsv)
 
-Se mantiene un set de **32 TSV (uno por columna de salida MU)** en:
+- Cruce SIES central por `SOURCE_KEY_3`: `codigo_gobernanza_v2.py` L2447 (merge `archivo_subida` × `bridge_exact`).
+- Enriquecimiento OfertaAcademica: `codigo_gobernanza_v2.py` L2589+ (indice por `CODIGO_UNICO` y lookups de MODALIDAD/JOR/DURACION/COD_CAR).
+- Enriquecimiento Duracion: `codigo_gobernanza_v2.py` L3138+ (lookup por `CODIGO_UNICO`) y L3147+ (fallback por `COD_CAR`).
+- Match DatosAlumnos: `codigo_gobernanza_v2.py` L1716 (CODCLI), L1735 (fallback RUT), L1747 (`combine_first` de campos DA).
+- QA de salida y gate: `qa_checks.py` + `scripts/auditoria_maestra.py`.
 
-- `gobernanza_columnas_mu/`
-- índice: `gobernanza_columnas_mu/_INDICE_COLUMNAS.tsv`
+### Mapa de cruces del pipeline (linaje auditable)
 
-Generación/reconstrucción:
+Archivo de referencia:
 
-```bash
-cd /ruta/al/repo/avance_curricular
-python3 generar_gobernanza_columnas_mu.py
-```
+- `cruces_proyecto.tsv`
 
-El generador deja cada columna con:
+Rol operativo:
 
-- definición de manual (`Anexo 7, Cuadro N°1`)
-- fuente automática principal/secundaria en el proyecto
-- regla implementada en `codigo_gobernanza_v2.py`
-- validación aplicada
-- fallback operativo
-- condición de revisión manual
+- Inventario auditable de cruces/transformaciones en `codigo_gobernanza_v2.py`.
+- Registra por evento estos campos: `Archivo | Línea | Tipo | Descripción | Left | Right | Columnas clave | Contexto pipeline`.
+- Incluye operaciones de cruce como `merge`, `map`, `combine_first`, `concat` y cargas `_load`.
 
-## 1) `catalogo_manual.tsv`
+Uso recomendado:
 
-Columnas esperadas:
+1. Validar que el README refleje cruces reales, sin pasos inventados.
+2. Auditar que refactorizaciones no eliminen cruces criticos (SIES, DatosAlumnos, Oferta, Duracion, QA).
+3. Alinear gobernanza documental con la ejecucion oficial congelada MU 2026.
 
-- `GRUPO_TRAZA`
-- `JORNADA`
-- `CODCARPR`
-- `NOMBRE_L`
-- `ANOINGRESO`
+## 4) Flujo oficial de ejecucion (reproducible)
 
-Uso:
-
-- clasificación manual de llave de negocio en el matching de matrícula.
-
-## 2) `puente_sies.tsv`
-
-Columnas esperadas:
-
-- `GRUPO_TRAZA`
-- `JORNADA`
-- `CODCARPR`
-- `NOMBRE_L`
-- `CODIGO_CARRERA_SIES`
-
-Uso:
-
-- puente principal para asignación de código SIES y detección de ambiguos.
-
-## 3) Campos críticos del Manual 2026 (Anexo 7)
-
-Referencia: `20260106_36454_Manual_Matrícula_Unificada_2026.pdf` (Cuadro N°1).
-
-- `ASI_INS_ANT` y `ASI_APR_ANT`: rango `0..99` y coherencia `APR <= INS`.
-- `PROM_PRI_SEM` y `PROM_SEG_SEM`: `0` o `100..700`.
-- `ASI_INS_HIS` y `ASI_APR_HIS`: `0..200` y coherencia `APR <= INS`.
-- `NIV_ACA`: obligatorio y `>=1`.
-- `SIT_FON_SOL`: catálogo `0/1/2`.
-- `SUS_PRE`: rango `0..99`.
-- `VIG`: catálogo `0/1/2`.
-
-## Requisitos
-
-- Python 3.9+
-- `pandas`
-- `numpy`
-- `openpyxl`
-
-## Instalación
+### Opcion A (recomendada): `make`
 
 ```bash
 cd /ruta/al/repo/avance_curricular
-python3 -m pip install -r requirements.txt
-```
-
-## Entrada principal
-
-Excel operativo:
-
-- archivo externo al repo, informado vía `INPUT_XLSX`
-
-## Flujo oficial MU Pregrado 2026
-
-El flujo oficial de Matrícula Unificada Pregrado 2026 se ejecuta en `codigo_gobernanza_v2.py`:
-
-Atajo autoservido recomendado desde la raíz del repo:
-
-```bash
 make run-oficial INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
-```
-
-```bash
-cd /ruta/al/repo/avance_curricular
-export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
-export OUTPUT_DIR="resultados"
-python3 codigo_gobernanza_v2.py --input "$INPUT_XLSX" --output-dir "$OUTPUT_DIR" --proceso matricula --usar-gobernanza-v2 true
-```
-
-Este flujo genera dos artefactos distintos:
-
-| Artefacto | Rol | Uso |
-|---|---|---|
-| `archivo_listo_para_sies.xlsx` | auditoría y trazabilidad | revisión operativa, diagnóstico y exclusiones |
-| `matricula_unificada_2026_pregrado.csv` | carga regulatoria final | archivo para carga MU Pregrado 2026 |
-
-Con `--usar-gobernanza-v2 true` se agrega hoja `SIN_MATCH_DATOS_ALUMNOS` en `archivo_listo_para_sies.xlsx` para revisión manual de `CODCLI` no encontrados en `DatosAlumnos`.
-
-Con gobernanza v2, el lookup en `DatosAlumnos` usa prioridad:
-
-1. `CODCLI` contra `CODCLI`
-2. fallback `RUT+DV` contra `RUT+DV`
-
-y deja trazabilidad en `ARCHIVO_LISTO_SUBIDA`:
-
-- `DA_MATCH_MODO`
-- `NAC_STATUS`
-- `PAIS_EST_SEC_STATUS`
-- `COD_SED_STATUS`
-
-## Catálogos de gobernanza (opcional por CLI)
-
-Si no informas rutas, se buscan por defecto en la carpeta del repo:
-
-- `gobernanza_nac.tsv`
-- `gobernanza_pais_est_sec.tsv`
-- `gobernanza_sede.tsv`
-- `gobernanza_niveles.tsv` (catálogo de referencia documental; no se consume por CLI en v2 actual)
-
-El comando oficial no necesita rutas absolutas para catálogos, porque estos se resuelven por defecto desde la raíz del repo. Si necesitas forzarlos explícitamente:
-
-```bash
-cd /ruta/al/repo/avance_curricular
-export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
-export OUTPUT_DIR="resultados"
-python3 codigo_gobernanza_v2.py --input "$INPUT_XLSX" --output-dir "$OUTPUT_DIR" --proceso matricula --usar-gobernanza-v2 true --gob-nac-tsv "gobernanza_nac.tsv" --gob-pais-est-sec-tsv "gobernanza_pais_est_sec.tsv" --gob-sede-tsv "gobernanza_sede.tsv"
-```
-
-## QA y validación posterior
-
-Atajo autoservido recomendado desde la raíz del repo:
-
-```bash
 make validate-oficial
 ```
 
+Ejecucion + validacion en una sola secuencia:
+
 ```bash
 cd /ruta/al/repo/avance_curricular
-export OUTPUT_DIR="resultados"
-python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
-```
-
-Para ejecutar y validar en una sola secuencia:
-
-```bash
 make run-and-validate-oficial INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
 ```
 
-Ayuda mínima de uso:
+Ayuda:
 
 ```bash
 make help
 ```
 
-Qué valida `qa_checks.py`:
+La corrida oficial compila primero el catálogo canónico SIES en:
 
-- que README no contenga dumps CSV accidentales;
-- estructura física del `matricula_unificada_2026_pregrado.csv`;
-- invariantes globales vigentes;
-- y, con `--fase6-control-dir`, refresca el gate final y el backlog residual en `control/`.
+- `control/catalogos/PUENTE_SIES_COMPILADO.tsv`
 
-## Salidas principales en `resultados/`
+### Opcion B (equivalente directo)
 
-- `archivo_listo_para_sies.xlsx`
-- `matricula_unificada_2026_pregrado.csv`
+```bash
+cd /ruta/al/repo/avance_curricular
+export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+export OUTPUT_DIR="resultados"
+python3 scripts/compile_puente_sies_compilado.py \
+  --duracion "DURACION_ESTUDIOS.tsv" \
+  --output "control/catalogos/PUENTE_SIES_COMPILADO.tsv"
 
-## Material legacy archivado
+python3 codigo_gobernanza_v2.py \
+  --input "$INPUT_XLSX" \
+  --output-dir "$OUTPUT_DIR" \
+  --proceso matricula \
+  --usar-gobernanza-v2 true
 
-El material histórico, los comandos legacy y las bitácoras de remediación ya no viven en el camino operativo principal. Quedaron agrupados bajo [archive/](/Users/alexi/Documents/GitHub/avance_curricular/archive) para conservar trazabilidad sin inducir a ejecutar el flujo equivocado.
+python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
+```
 
-## Problemas frecuentes
+## 5) Artefactos de salida (que usar y que NO usar)
 
-## `FileNotFoundError: No se encontró archivo de entrada`
+### Oficiales para MU 2026 Pregrado
 
-La ruta usada no existe. Reemplaza la ruta de ejemplo por un archivo real.
+- `resultados/archivo_listo_para_sies.xlsx` (auditoria y trazabilidad)
+- `resultados/matricula_unificada_2026_pregrado.csv` (carga regulatoria)
+- `resultados/reporte_matricula.json` (metrica de corrida)
+- `resultados/auditoria_maestra.md` (dictamen QA integral)
 
-## `zsh: no such file or directory: ./.venv/bin/python`
+### Contrato MU32 (no negociable)
 
-En este repo la venv está en el directorio padre (`../.venv/bin/python`).
+- Archivo: `matricula_unificada_2026_pregrado.csv`
+- Delimitador: `;`
+- Header: **NO**
+- Columnas: **32 exactas**
 
-## `MATCH_SIES_AMBIGUO`
+Orden contractual MU32:
 
-No es error de ejecución: indica ambigüedad de mapeo SIES y requiere revisión/heurística según la matriz vigente.
+```text
+TIPO_DOC;N_DOC;DV;PRIMER_APELLIDO;SEGUNDO_APELLIDO;NOMBRE;SEXO;FECH_NAC;NAC;PAIS_EST_SEC;COD_SED;COD_CAR;MODALIDAD;JOR;VERSION;FOR_ING_ACT;ANIO_ING_ACT;SEM_ING_ACT;ANIO_ING_ORI;SEM_ING_ORI;ASI_INS_ANT;ASI_APR_ANT;PROM_PRI_SEM;PROM_SEG_SEM;ASI_INS_HIS;ASI_APR_HIS;NIV_ACA;SIT_FON_SOL;SUS_PRE;FECHA_MATRICULA;REINCORPORACION;VIG
+```
 
-## Licencia
+### No usar como salida regulatoria final
 
-MIT. Ver [LICENSE](LICENSE).
+- `resultados/matricula_unificada_2026_oficial.xlsx`
+- `resultados/MU2026_regulatorio.csv`
+- Cualquier salida en `archive/` o en subcarpetas historicas de `resultados/`
+
+## 6) Catalogos y gobernanza
+
+### Catalogos criticos
+
+| Artefacto | Estado | Uso operativo |
+|---|---|---|
+| `DURACION_ESTUDIOS.tsv` | EXISTE | Fuente canonica para matriz SIES y dimension de oferta |
+| `control/catalogos/PUENTE_SIES_COMPILADO.tsv` | EXISTE | **Fuente canónica única de cruce SIES por SOURCE_KEY_3** |
+| `puente_sies.tsv` | **NO ENCONTRADO (retirado del flujo oficial)** | Eliminado como dependencia operativa; respaldo en `control/backups/puente_sies_eliminado_2026-04-09.tsv` |
+| `catalogo_manual.tsv` | **NO ENCONTRADO** | Override manual opcional; si se requiere, debe versionarse en raiz |
+| `matriz_desambiguacion_sies_final.tsv` | **NO ENCONTRADO** | No es consumido como archivo canonico en v2 actual |
+| `resultados/backup_pre_remediacion/matriz_desambiguacion_sies_final_pre_remediacion.tsv` | EXISTE (legacy) | Evidencia historica, no canonica |
+| `gobernanza_nac.tsv` | EXISTE | Gobernanza `NAC` |
+| `gobernanza_pais_est_sec.tsv` | EXISTE | Gobernanza `PAIS_EST_SEC` |
+| `gobernanza_sede.tsv` | EXISTE | Gobernanza `COD_SED` |
+| `gobernanza_for_ing_act.tsv` | EXISTE | Gobernanza documental `FOR_ING_ACT` |
+| `gobernanza_columnas_mu/_INDICE_COLUMNAS.tsv` | EXISTE | Indice de gobernanza de 32 columnas |
+
+### Regla operativa de bloqueo
+
+Si aparece combinacion nueva sin resolucion trazable (por ejemplo `AMBIGUO_SIES`, `SIN_MATCH_SIES`, `PENDIENTE_GOBERNANZA` o exclusion por falta de match DA), la corrida **no se considera cerrada para entrega**.
+
+Adicionalmente, para operación oficial MU 2026:
+
+- Si existe `SIN_MATCH_SIES` en no-diplomados, el pipeline marca bloqueo y falla ejecución.
+- Se exporta evidencia de bloqueo en `resultados/sies_combinaciones_nuevas_bloqueantes.tsv`.
+
+Accion obligatoria:
+
+1. Actualizar `DURACION_ESTUDIOS.tsv` (canónico operativo).
+2. Regenerar `control/catalogos/PUENTE_SIES_COMPILADO.tsv`.
+3. Re-ejecutar flujo oficial.
+4. Re-validar con `qa_checks.py` y `auditoria_maestra.py`.
+
+## 7) QA y validacion
+
+### Validacion oficial
+
+```bash
+cd /ruta/al/repo/avance_curricular
+make validate-oficial
+```
+
+Equivalente (mismo orden del script oficial):
+
+```bash
+python3 qa_checks.py --output-dir resultados --fase6-control-dir control
+python3 scripts/auditoria_maestra.py --solo-validar --output-dir resultados
+```
+
+### Auditoria maestra
+
+Solo validar outputs existentes:
+
+```bash
+python3 scripts/auditoria_maestra.py --solo-validar --output-dir resultados
+```
+
+Ejecutar pipeline + validar:
+
+```bash
+python3 scripts/auditoria_maestra.py --ejecutar-pipeline --output-dir resultados --input "/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+```
+
+### Invariantes MU auditadas
+
+- CSV final sin header y con `;`.
+- 32 columnas exactas.
+- `FOR_ING_ACT = 1` en CSV final.
+- Coherencia `ASI_APR_ANT <= ASI_INS_ANT` y `ASI_APR_HIS <= ASI_INS_HIS`.
+- Rangos de `PROM_*` en `0` o `100..700`.
+- Regla bloqueante: `VIG = 0` implica `PROM_PRI_SEM = 0`, `PROM_SEG_SEM = 0`, `ASI_INS_HIS = 0`, `ASI_APR_HIS = 0`.
+
+## 8) Fuentes canonicas y duplicados
+
+### Fuentes canonicas propuestas
+
+- Ejecucion oficial: `codigo_gobernanza_v2.py` via `make run-oficial`.
+- Validacion oficial: `qa_checks.py` + `scripts/auditoria_maestra.py`.
+- Catalogo base SIES: `DURACION_ESTUDIOS.tsv` (raiz).
+- Catálogo canónico de cruce SIES: `control/catalogos/PUENTE_SIES_COMPILADO.tsv`.
+- Overrides SIES: **no operativos en MU 2026** (flujo oficial compila solo desde `DURACION_ESTUDIOS.tsv`).
+- Gobernanza de columnas: `gobernanza_columnas_mu/`.
+- Outputs oficiales: `resultados/archivo_listo_para_sies.xlsx` y `resultados/matricula_unificada_2026_pregrado.csv`.
+
+### Duplicados relevantes detectados
+
+#### `DURACION_ESTUDIOS` (mismo proposito)
+
+| Ruta | Tamano (bytes) | Filas (wc -l) | Modificado |
+|---|---:|---:|---|
+| `DURACION_ESTUDIOS.tsv` | 36720 | 152 | 2026-04-09 06:45:29 |
+| `control/backups/DURACION_ESTUDIOS_bak_2026-04-08_20-30-47.tsv` | 38196 | 157 | 2026-04-08 20:30:47 |
+| `control/backups/DURACION_ESTUDIOS_backup_pre_gob_codcarpr_2026-04-08_00-27-42.tsv` | 32877 | 140 | 2026-04-08 00:27:42 |
+| `control/backups/DURACION_ESTUDIOS_backup_pre_loop_codcli_2026-04-08_00-42-09.tsv` | 32877 | 140 | 2026-04-08 00:42:09 |
+
+Canonico recomendado: `DURACION_ESTUDIOS.tsv` en raiz.
+
+#### `tablero` y `backlog` (control vigente vs backup)
+
+| Ruta | Tamano (bytes) | Filas (wc -l) | Modificado |
+|---|---:|---:|---|
+| `control/tablero_mu_2026.tsv` | 10514 | 33 | 2026-04-08 19:45:18 |
+| `backup_estable_2026/control/tablero_mu_2026.tsv` | 12001 | 33 | 2026-04-03 21:48:51 |
+| `control/pendientes/backlog_residual_mu_2026.tsv` | 1 | 1 | 2026-04-08 19:45:23 |
+| `backup_estable_2026/control/pendientes/backlog_residual_mu_2026.tsv` | 2090 | 3 | 2026-04-03 21:48:51 |
+
+Canonico recomendado: `control/` vigente. `backup_estable_2026/` debe tratarse como snapshot historico.
+
+### Politica de consolidacion
+
+- Debe existir un solo `DURACION_ESTUDIOS.tsv` operativo en raiz.
+- Los backups en `control/backups/` son **NO operativos** (solo evidencia histórica).
+- Toda actualizacion de catalogo exige nueva corrida + validacion oficial.
+
+## 9) Troubleshooting
+
+### `FileNotFoundError: No se encontro archivo de entrada`
+
+- Verifica `INPUT_XLSX` y permisos de lectura.
+- Ejecuta desde la raiz del repo.
+
+### `AMBIGUO_SIES` o `SIN_MATCH_SIES`
+
+- Revisar hojas de auditoria en `archivo_listo_para_sies.xlsx` (`SIN_MATCH_SIES`, `RESUMEN_EJECUTIVO`).
+- Corregir `DURACION_ESTUDIOS.tsv` y recompilar.
+- Resolver desde `DURACION_ESTUDIOS.tsv` y recompilar; no usar overrides en el flujo oficial MU 2026.
+
+### `SIN_MATCH_DA` (operativamente `EXCLUIDO_SIN_MATCH_DATOS_ALUMNOS`)
+
+- Revisar hoja `SIN_MATCH_DATOS_ALUMNOS` del workbook.
+- Corregir identificacion en DatosAlumnos o ajustar gobernanza correspondiente.
+
+### `catalogo_manual.tsv` NO ENCONTRADO
+
+- Es opcional en v2 (override).
+- Si se requiere override manual, crear y versionar `catalogo_manual.tsv` en raiz con columnas esperadas por el pipeline.
+
+## 10) Licencia y notas
+
+- Licencia: [MIT](LICENSE).
+- `archive/` contiene material historico y legacy; no forma parte del camino oficial de ejecucion/validacion MU 2026.
+- Para operacion diaria, usar solo comandos de la seccion 4 y validaciones de la seccion 7.

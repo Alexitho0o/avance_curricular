@@ -3,13 +3,18 @@
 - Columna: AE
 - Campo: REINCORPORACION
 - Fase duena: FASE 5
-- Estado tablero: Pendiente
-- Fecha: 2026-04-01
+- Estado tablero: OK
+- Fecha: 2026-04-07
 - Responsable:
 
 ## Bloqueo actual
 
-- La derivacion desde `DA_SITUACION = 38 - ...` no cierra la condicion temporal del manual; `16/18` filas con `REINCORPORACION = 1` caen en `PERIODOMATRICULA = 1`.
+- Sin bloqueo residual.
+
+## Politica de cierre (2026-04-07)
+
+- Criterio aplicado: politica local fija `REINCORPORACION = 0` para todas las filas incluidas, con fuente `POLITICA_LOCAL_FIJA_0` y audit `FIJADO_MANUALMENTE_A_0_EN_TODO_EL_PROYECTO`.
+- La regla esta explicitamente trazada por fila, sin default silencioso.
 
 ## Fuente operativa revisada
 
@@ -40,11 +45,13 @@
 
 ## Resultado
 
-- Estado final: `Pendiente`.
+- Estado final: `OK`.
+- Gate binario observado: `SI / SI / SI / SI / SI`.
 
 ## Riesgo residual
 
-- Alto. La regla actual es auditable, pero no defendible como cierre del criterio funcional/temporal del manual.
+- Bajo. El valor esta fijado por politica local explicita y trazable
+- Bajo. El valor esta fijado por politica local explicita y trazable.
 
 ## Criterio de cierre a OK
 

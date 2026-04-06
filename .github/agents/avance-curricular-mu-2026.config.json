@@ -1,0 +1,165 @@
+{
+  "project": {
+    "name": "avance_curricular",
+    "scope": "Matricula Unificada Pregrado 2026",
+    "generated_on": "2026-04-08",
+    "owner_agent": "avance-curricular-mu-2026"
+  },
+  "bootstrap_files": [
+    ".github/agents/avance-curricular-mu-2026.agent.md",
+    ".github/agents/avance-curricular-mu-2026.config.json",
+    ".github/agents/avance-curricular-mu-2026.capabilities.md"
+  ],
+  "source_of_truth": {
+    "routing_and_human_gates": ".github/agents/avance-curricular-mu-2026.agent.md",
+    "structured_state_and_registry": ".github/agents/avance-curricular-mu-2026.config.json",
+    "quick_human_guide": ".github/agents/avance-curricular-mu-2026.capabilities.md"
+  },
+  "configuration_boundaries": [
+    "This file is the canonical machine-readable registry for enabled skills, centralized domains, no-touch paths, known conflicts, and validation strategy.",
+    "Routing, operational limits, and human gates live in the orchestrator agent.",
+    "Human-readable summaries live in capabilities.md.",
+    "Domain procedures live in skill files.",
+    "Canonical domain memory is not enabled in this phase."
+  ],
+  "canonical_sources": [
+    "README.md",
+    "control/reportes/ejecucion_oficial_mu_2026.md",
+    "control/reportes/validacion_oficial_mu_2026.md",
+    "control/reportes/resultado_corrida_referencia_mu_2026.md",
+    "control/gate/gate_final_mu_2026.md",
+    "scripts/auditoria_maestra.py",
+    "qa_checks.py",
+    "/memories/repo/avance_curricular_fix5_recovery_note.md"
+  ],
+  "operating_baseline": {
+    "official_script": "codigo_gobernanza_v2.py",
+    "official_process": "matricula",
+    "governance_mode": "--usar-gobernanza-v2 true",
+    "preferred_commands": [
+      "make run-oficial INPUT_XLSX=\"/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx\"",
+      "make validate-oficial",
+      "make run-and-validate-oficial INPUT_XLSX=\"/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx\""
+    ],
+    "official_outputs": [
+      "resultados/archivo_listo_para_sies.xlsx",
+      "resultados/matricula_unificada_2026_pregrado.csv"
+    ],
+    "frozen_state": {
+      "decision_final": "CONDICIONAL",
+      "listo_para_auditoria": true,
+      "listo_para_carga": false,
+      "ok_count": 27,
+      "pending_count": 5
+    }
+  },
+  "domain_status": {
+    "orchestrator": "avance-curricular-mu-2026.agent.md",
+    "pilot_agents": [
+      {
+        "name": "avance-curricular-mu-2026-auditoria-validacion.agent.md",
+        "type": "mini-agent",
+        "domain": "auditoria maestra y validacion operativa",
+        "status": "pilot",
+        "backed_by_skill": "avance-curricular-mu-2026-auditoria-validacion",
+        "improvements": [
+          "context-isolation",
+          "safe-validation-fallback",
+          "structured-output-contract"
+        ],
+        "fallback": "Use the audit and validation skill directly when the pilot agent is unavailable or unnecessary."
+      }
+    ],
+    "active_skills": [
+      {
+        "name": "avance-curricular-mu-2026-evidencia-divergencias",
+        "domain": "evidencia congelada y divergencias operativas",
+        "status": "active"
+      },
+      {
+        "name": "avance-curricular-mu-2026-auditoria-validacion",
+        "domain": "auditoria maestra y validacion operativa",
+        "status": "active"
+      },
+      {
+        "name": "avance-curricular-mu-2026-for-ing-act",
+        "domain": "gobernanza FOR_ING_ACT",
+        "status": "active"
+      },
+      {
+        "name": "avance-curricular-mu-2026-campos-ing",
+        "domain": "gobernanza campos ING",
+        "status": "active"
+      },
+      {
+        "name": "avance-curricular-mu-2026-vig-fecha",
+        "domain": "gobernanza VIG y FECHA_MATRICULA",
+        "status": "active"
+      }
+    ],
+    "centralized_domains": [
+      "orquestacion-workspace",
+      "runtime-productivo-mu2026",
+      "sies-cod-car-niv-aca-broad-domain",
+      "gobernanza-columnas-mu-as-consulta",
+      "no-touch-and-frozen-truth"
+    ],
+    "uncertain_domains": [
+      "fine partition for sies-cod-car-niv-aca",
+      "canonical skill registry",
+      "persistent mini-agents",
+      "canonical domain memory"
+    ]
+  },
+  "no_touch_paths": [
+    "control/reportes/",
+    "gobernanza_columnas_mu/",
+    "control/*_trace_long.tsv",
+    "control/*_golden_cases.json",
+    "archive/",
+    "resultados/archivo_listo_para_sies.xlsx",
+    "resultados/matricula_unificada_2026_pregrado.csv"
+  ],
+  "known_conflicts": [
+    {
+      "id": "for_ing_act_distribution_conflict",
+      "severity": "warn",
+      "sources": [
+        "control/reportes/ejecucion_oficial_mu_2026.md",
+        "control/reportes/validacion_oficial_mu_2026.md",
+        "/memories/repo/avance_curricular_fix5_recovery_note.md"
+      ],
+      "description": "Frozen reports fix FOR_ING_ACT final only in 1, but BUG-004 validated on 2026-04-08 records a real distribution with 1, 2, 3, and 11. This conflict must always be explicit."
+    },
+    {
+      "id": "gate_final_vs_frozen_reports_conflict",
+      "severity": "warn",
+      "sources": [
+        "control/gate/gate_final_mu_2026.md",
+        "control/reportes/validacion_oficial_mu_2026.md",
+        "control/reportes/resultado_corrida_referencia_mu_2026.md"
+      ],
+      "description": "gate_final_mu_2026.md declares APROBADO, listo para carga, and 32 OK, while frozen validation and reference run reports declare CONDICIONAL, not ready for load, and 27 OK / 5 Pendiente."
+    }
+  ],
+  "validation_strategy": {
+    "prefer_without_rerun": [
+      "make validate-oficial",
+      "python3 scripts/auditoria_maestra.py --solo-validar"
+    ],
+    "read_only_fallback": [
+      "Inspect current reports and JSON artifacts first.",
+      "Use read-only artifact probes when official cheap validation would refresh files.",
+      "Escalate residual ambiguity instead of writing refreshed artifacts without approval."
+    ],
+    "use_full_run_when": [
+      "INPUT_XLSX exists and the user explicitly requests a full run",
+      "a change touches runtime logic or specialized governance motors"
+    ],
+    "targeted_tests": [
+      "python3 scripts/test_for_ing_act.py",
+      "python3 scripts/test_campos_ing.py",
+      "python3 scripts/test_vig_fecha.py"
+    ]
+  }
+}

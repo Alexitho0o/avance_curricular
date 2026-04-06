@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "descripcion": "Configuración gobernable — derivación de ANIO_ING_ACT, SEM_ING_ACT, ANIO_ING_ORI, SEM_ING_ORI",
+    "norma": "Manual Matrícula Unificada 2026 — Cuadro N°1, Campos Q, R, S, T",
+    "version": "1.0.0",
+    "fecha_creacion": "2026-04-08"
+  },
+  "campos": {
+    "ANIO_ING_ACT": {
+      "campo_manual": "Q",
+      "descripcion": "Año calendario de ingreso a la carrera actual",
+      "tipo": "entero",
+      "rango": [1990, 2026],
+      "obligatorio": true,
+      "fuente_primaria": "ANOINGRESO",
+      "fuentes_alternativas": ["ANIO_INGRESO_CARRERA_ACTUAL"],
+      "fuente_fallback": "inferir desde CODCLI (4 primeros dígitos)",
+      "fallback_ultimo_recurso": 2026,
+      "errores_bloqueantes": ["nulo", "no_numerico", "fuera_de_rango"]
+    },
+    "SEM_ING_ACT": {
+      "campo_manual": "R",
+      "descripcion": "Semestre de ingreso a la carrera actual",
+      "tipo": "entero",
+      "catalogo": [1, 2],
+      "obligatorio": true,
+      "fuente_primaria": "PERIODOINGRESO",
+      "fuentes_alternativas": ["SEM_INGRESO_CARRERA_ACTUAL"],
+      "regla_institucional": {
+        "descripcion": "Mapeo PERIODOINGRESO → SEM_ING_ACT",
+        "mapeo": {"1": 1, "2": 2, "3": 2},
+        "comentario": "PERIODOINGRESO=3 se normaliza a SEM=2 (segundo semestre)"
+      },
+      "fallback_ultimo_recurso": 1,
+      "errores_bloqueantes": ["nulo", "no_numerico", "fuera_de_catalogo"]
+    },
+    "ANIO_ING_ORI": {
+      "campo_manual": "S",
+      "descripcion": "Año calendario de ingreso a la carrera de origen",
+      "tipo": "entero",
+      "rango": [1980, 2026],
+      "valor_especial_1900": "imposibilidad de identificar año de origen",
+      "obligatorio": true,
+      "reglas_por_for_ing_act": {
+        "1": {
+          "regla": "COPIA_ACTUAL",
+          "descripcion": "FOR=1 (directo): ANIO_ING_ORI = ANIO_ING_ACT",
+          "fuente": "ANIO_ING_ACT"
+        },
+        "11": {
+          "regla": "TNS_PREV",
+          "descripcion": "FOR=11 (articulación): año del ingreso al programa TNS previo",
+          "fuente": "TNS_PREV_MIN_ANO_DA",
+          "fallback": 1900
+        },
+        "2": {
+          "regla": "ORIGEN_DESCONOCIDO",
+          "descripcion": "FOR=2 (continuidad sin TNS prev): origen imposible de determinar",
+          "valor_fijo": 1900
+        },
+        "3": {
+          "regla": "BUSCAR_PROGRAMA_ANTERIOR",
+          "descripcion": "FOR=3 (cambio interno): buscar año del primer programa en institución",
+          "fuentes": ["DatosAlumnos (otro CODCLI mismo RUT)", "Hoja1 (min ANO con CODCARR distinto)"],
+          "fallback": 1900
+        },
+        "4": {
+          "regla": "BLOQUEADO",
+          "descripcion": "FOR=4 (externo): bloqueado en esta versión",
+          "valor_fijo": 1900
+        }
+      }
+    },
+    "SEM_ING_ORI": {
+      "campo_manual": "T",
+      "descripcion": "Semestre de ingreso a la carrera de origen",
+      "tipo": "entero",
+      "catalogo": [0, 1, 2],
+      "obligatorio": true,
+      "regla_coherencia_1900": "Si ANIO_ING_ORI=1900, SEM_ING_ORI DEBE ser 0",
+      "reglas_por_for_ing_act": {
+        "1": {
+          "regla": "COPIA_ACTUAL",
+          "fuente": "SEM_ING_ACT"
+        },
+        "11": {
+          "regla": "TNS_PREV_PERIODO",
+          "descripcion": "Periodo del primer registro TNS en Hoja1",
+          "fallback": 1,
+          "override_si_1900": 0
+        },
+        "2": {
+          "regla": "ORIGEN_DESCONOCIDO",
+          "valor_fijo": 0,
+          "comentario": "ANIO_ING_ORI=1900 → SEM_ING_ORI=0"
+        },
+        "3": {
+          "regla": "BUSCAR_PROGRAMA_ANTERIOR",
+          "fallback": 0,
+          "override_si_1900": 0
+        },
+        "4": {
+          "regla": "BLOQUEADO",
+          "valor_fijo": 0
+        }
+      }
+    }
+  },
+  "validaciones": {
+    "V_RANGO_ACT": {
+      "descripcion": "ANIO_ING_ACT ∈ [1990, 2026]",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_CATALOGO_SEM_ACT": {
+      "descripcion": "SEM_ING_ACT ∈ {1, 2}",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_RANGO_ORI": {
+      "descripcion": "ANIO_ING_ORI ∈ [1980, 2026] ∪ {1900}",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_CATALOGO_SEM_ORI": {
+      "descripcion": "SEM_ING_ORI ∈ {0, 1, 2}",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_COHERENCIA_FOR1": {
+      "descripcion": "FOR=1 → ANIO_ING_ORI == ANIO_ING_ACT y SEM_ING_ORI == SEM_ING_ACT",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_COHERENCIA_FOR_NO1": {
+      "descripcion": "FOR ∈ {2,3,4,11} → ANIO_ING_ACT > ANIO_ING_ORI (excepto ORI=1900)",
+      "severidad": "WARNING"
+    },
+    "V_COHERENCIA_1900": {
+      "descripcion": "ANIO_ING_ORI=1900 → SEM_ING_ORI=0",
+      "severidad": "BLOQUEANTE"
+    },
+    "V_PERIODOINGRESO_MAPEO": {
+      "descripcion": "PERIODOINGRESO solo toma valores {1, 2, 3} antes del mapeo",
+      "severidad": "ERROR"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-04-08T15:47:30",
+  "descripcion": "Exclusiones por multi-carrera activa — gobernanza institucional",
+  "catalogo_fuente": "catalogos/exclusiones_beneficios_estudiantes_con_mas_de_una_carrera_activa.tsv",
+  "reglas_total": 6,
+  "reglas_eliminar": 3,
+  "reglas_mantener_for3": 3,
+  "archivo_subida": {
+    "marcados_exclusion_mc": 63,
+    "excluidos_multi_carrera": 31,
+    "nota": "Duplicados por filas fuente pre-consolidacion son esperados"
+  },
+  "matricula_unificada_32": {
+    "filas": 1344,
+    "eliminar_ausentes": true,
+    "mantener_for3": true
+  },
+  "validaciones": {
+    "20241TPAS061": "PASS",
+    "20241TLOG031": "PASS",
+    "20261IINF112": "PASS",
+    "20261IINF144": "PASS",
+    "20261ILOG101": "PASS",
+    "20241TPAS048": "PASS"
+  },
+  "dictamen": "PASS",
+  "nota_preexistente": "NIV_ACA=20 (29 filas) es problema pre-existente no relacionado con exclusiones MC"
+}

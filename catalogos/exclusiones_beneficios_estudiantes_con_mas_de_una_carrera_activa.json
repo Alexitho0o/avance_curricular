@@ -1,0 +1,13 @@
+{
+  "version": "2026.1",
+  "descripcion": "Exclusiones y ajustes por estudiantes con mas de una carrera activa",
+  "regla": "Priorizar una sola carrera por RUT en periodo activo",
+  "acciones": {
+    "20241TPAS061": { "accion": "ELIMINAR", "motivo": "Multi-carrera activa" },
+    "20261IINF144": { "accion": "MANTENER", "for_ing_act": 3, "motivo": "Cambio interno" },
+    "20241TLOG031": { "accion": "ELIMINAR", "motivo": "Multi-carrera activa" },
+    "20261ILOG101": { "accion": "MANTENER", "for_ing_act": 3, "motivo": "Cambio interno" },
+    "20261IINF112": { "accion": "ELIMINAR", "motivo": "Multi-carrera activa" },
+    "20241TPAS048": { "accion": "MANTENER", "for_ing_act": 3, "motivo": "Cambio interno" }
+  }
+}
