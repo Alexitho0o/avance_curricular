@@ -43,7 +43,7 @@ def _cargar_matriz_desambiguacion_final() -> dict:
             next(f)  # skip header
             for line in f:
                 parts = line.strip().split("\t")
-                if len(parts) >= 5:
+                if len(parts) >= 6:
                     codcarpr, _, jornada, version, sies_code, confianza = parts[:6]
                     notas = parts[6] if len(parts) > 6 else ""
                     key = (codcarpr.strip(), jornada.strip(), version.strip())
@@ -1188,9 +1188,25 @@ def construir_resumen_historico(hist_mapeado: pd.DataFrame) -> pd.DataFrame:
             ]
         )
 
+    anio_vals = pd.to_numeric(valid["ANO"], errors="coerce").dropna()
+    if anio_vals.empty:
+        return pd.DataFrame(
+            columns=[
+                "RUT_NORM",
+                "CODIGO_UNICO",
+                "CURSO_1ER_SEM",
+                "CURSO_2DO_SEM",
+                "UNIDADES_CURSADAS",
+                "UNIDADES_APROBADAS",
+                "UNID_CURSADAS_TOTAL",
+                "UNID_APROBADAS_TOTAL",
+            ]
+        )
+    anio_ref = int(anio_vals.max())
+
     rows = []
     for (rut, cod), sub in valid.groupby(["RUT_NORM", "CODIGO_UNICO"]):
-        s24 = sub[sub["ANO"] == 2024]
+        s24 = sub[sub["ANO"] == anio_ref]
 
         estado_24 = _series_or_default(s24, "DESCRIPCION_ESTADO").str.upper()
         estado_hist = _series_or_default(sub, "DESCRIPCION_ESTADO").str.upper()
@@ -1293,7 +1309,6 @@ def construir_matricula_unificada_control(mat_ac: pd.DataFrame, df_equiv: pd.Dat
             plan_estudios = row.get("PLAN_ESTUDIOS", "")
             if plan_estudios and isinstance(plan_estudios, str):
                 # Try to extract version from plan name (e.g., "Plan_V1_2024" -> "V1")
-                import re
                 match = re.search(r'(V\d+)', str(plan_estudios).upper())
                 version_src = match.group(1) if match else "V1"
             else:
@@ -3108,7 +3123,6 @@ def resolver_ambiguedad_sies(codcarpr: str, jornada: str, version: str = "V1") -
     
     if key in MATRIZ_DESAMBIGUACION:
         sies, conf, notas = MATRIZ_DESAMBIGUACION[key]
-        confianza_num = int(conf.replace("%", ""))
         return (sies, conf, notas, False)
     else:
         return (None, "0%", f"No encontrado en matriz: ({codcarpr}, {jornada}, {version})", True)
