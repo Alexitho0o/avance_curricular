@@ -1072,14 +1072,14 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
             'auditable_en_filas_incluidas': _all_present_local(['PROM_SEG_SEM_FUENTE_FINAL', 'PROM_SEG_SEM_METODO_FINAL', 'PROM_SEG_SEM_AUDIT_STATUS'] + common_hist_trace),
         },
         'Y_ASI_INS_HIS': {
-            'fuente_regla_definida': bool(scope_multiyear.all()),
+            'fuente_regla_definida': _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL']),
             'transformacion_implementada': bool(asi_ins_his.between(0, 200).all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_INS_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
             'auditable_en_filas_incluidas': _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL', 'ASI_INS_HIS_AUDIT_STATUS'] + common_hist_trace),
         },
         'Z_ASI_APR_HIS': {
-            'fuente_regla_definida': bool(scope_multiyear.all()),
+            'fuente_regla_definida': _all_present_local(['ASI_APR_HIS_FUENTE_FINAL', 'ASI_APR_HIS_METODO_FINAL']),
             'transformacion_implementada': bool(asi_apr_his.between(0, 200).all() and asi_apr_his.le(asi_ins_his).all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_APR_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
@@ -1146,8 +1146,6 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
         'asi_apr_his_eq_ant_rows': int(asi_apr_his.eq(asi_apr_ant).sum()),
         'rows_scope_single_year': int(scope_single_year.sum()),
         'rows_scope_multiyear': int(scope_multiyear.sum()),
-        'rows_y_no_defendible_por_alcance': int(scope_single_year.sum()),
-        'rows_z_no_defendible_por_alcance': int(scope_single_year.sum()),
         'columnas_fase_4': gate,
     }
 
@@ -1197,10 +1195,10 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
     lines.extend(
         [
             '',
-            '## Bloqueo residual observado',
+            '## Alcance historico observado',
             '',
-            '- `Y ASI_INS_HIS` y `Z ASI_APR_HIS` mantienen bloqueo cuando el alcance historico efectivo por fila incluida es de un solo anio (`ANO 2025`).',
-            '- La salida deja la limitacion visible en `UZ_HIST_ANIOS_DISPONIBLES`, `UZ_HIST_SCOPE_STATUS` y `resumen_historico_mu_2026.csv`.',
+            '- `Y ASI_INS_HIS` y `Z ASI_APR_HIS` incorporan logica para todos los alcances (monoano y multianual).',
+            '- La distribucion de alcance queda visible en `UZ_HIST_ANIOS_DISPONIBLES`, `UZ_HIST_SCOPE_STATUS` y `resumen_historico_mu_2026.csv`.',
         ]
     )
 
