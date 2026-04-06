@@ -2659,6 +2659,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida.loc[vig_policy_mask & titulado_aprobado_mask, "VIG"] = 2
     archivo_subida.loc[vig_policy_mask & titulado_aprobado_mask, "VIG_FUENTE_FINAL"] = "POLITICA_CARGA_PREGRADO_INCLUIDA_DA_SITUACION"
     archivo_subida.loc[vig_policy_mask & titulado_aprobado_mask, "VIG_METODO_FINAL"] = "REGLA_EGRESADO_CON_MATRICULA_INFORMADA"
+    archivo_subida.loc[vig_policy_mask & titulado_aprobado_mask, "VIG_AUDIT_STATUS"] = "POLITICA_CARGA_PREGRADO_VIG_1"
     archivo_subida.loc[vig_policy_mask & ~titulado_aprobado_mask, "VIG_AUDIT_STATUS"] = "POLITICA_CARGA_PREGRADO_VIG_1"
     archivo_subida.loc[vig_policy_mask & titulado_aprobado_mask, "VIG_AUDIT_STATUS"] = "POLITICA_CARGA_PREGRADO_VIG_2_TITULADO"
 
