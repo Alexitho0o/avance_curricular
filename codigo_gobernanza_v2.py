@@ -300,6 +300,20 @@ def _infer_year_from_codcli(value: object) -> float:
     return float("nan")
 
 
+def _infer_sem_from_codcli(value: object) -> int | None:
+    if pd.isna(value):
+        return None
+    text = re.sub(r"[^A-Z0-9]", "", str(value).upper())
+    if len(text) < 5 or not text[:4].isdigit() or not text[4].isdigit():
+        return None
+    periodo = int(text[4])
+    if periodo == 1:
+        return 1
+    if periodo in (2, 3):
+        return 2
+    return None
+
+
 def _infer_codcarpr_from_codcli(value: object) -> str:
     if pd.isna(value):
         return ""
@@ -337,6 +351,265 @@ def _load_for_ing_act_catalog() -> tuple[set[int], str]:
             if codes:
                 return codes, str(path)
     return set(range(1, 12)), "fallback:hardcoded_1_11"
+
+
+def _normalize_semester_scalar(value: object, allow_zero: bool = False) -> int | None:
+    num = pd.to_numeric(pd.Series([value]), errors="coerce").iloc[0]
+    if pd.isna(num):
+        return None
+    sem = int(num)
+    if allow_zero and sem == 0:
+        return 0
+    if sem == 1:
+        return 1
+    if sem in (2, 3):
+        return 2
+    return None
+
+
+def _load_da_origin_records(input_file: Path) -> dict[int, list[dict[str, object]]]:
+    """Carga registros mínimos de DatosAlumnos para buscar origen previo por RUT."""
+    try:
+        xls = pd.ExcelFile(input_file)
+        if "DatosAlumnos" not in xls.sheet_names:
+            return {}
+        keep = {"CODCLI", "RUT", "CODCARPR", "ANOINGRESO", "PERIODOINGRESO"}
+        src = pd.read_excel(input_file, sheet_name="DatosAlumnos", usecols=lambda c: c in keep)
+        required = {"CODCLI", "RUT", "ANOINGRESO"}
+        if not required.issubset(src.columns):
+            return {}
+        work = src.copy()
+        work["_RUT_NUM"] = work["RUT"].map(_rut_num_only)
+        work["_CODCLI"] = work["CODCLI"].astype(str).str.strip()
+        work["_CODCARPR"] = (
+            work["CODCARPR"].map(_normalize_text)
+            if "CODCARPR" in work.columns
+            else pd.Series("", index=work.index, dtype="object")
+        )
+        work["_ANIO"] = pd.to_numeric(work["ANOINGRESO"], errors="coerce")
+        work["_SEM"] = (
+            work["PERIODOINGRESO"].map(_normalize_semester_scalar)
+            if "PERIODOINGRESO" in work.columns
+            else pd.Series([None] * len(work), index=work.index, dtype="object")
+        )
+        work = work[work["_RUT_NUM"].notna() & work["_ANIO"].notna() & work["_CODCLI"].ne("")]
+        if work.empty:
+            return {}
+        work["_RUT_NUM"] = work["_RUT_NUM"].astype(int)
+        work["_ANIO"] = work["_ANIO"].astype(int)
+        def _sem_sort_value(value: object) -> int:
+            sem = _normalize_semester_scalar(value)
+            return sem if sem in (1, 2) else 9
+        records_by_rut: dict[int, list[dict[str, object]]] = {}
+        for rut, grp in work.groupby("_RUT_NUM", dropna=True):
+            records = grp[["_CODCLI", "_CODCARPR", "_ANIO", "_SEM"]].drop_duplicates().to_dict("records")
+            records.sort(key=lambda r: (int(r["_ANIO"]), _sem_sort_value(r["_SEM"]), str(r["_CODCLI"])))
+            records_by_rut[int(rut)] = records
+        return records_by_rut
+    except Exception:
+        return {}
+
+
+def _load_for_ing_act_tns_origin_trace(trace_path: Path) -> dict[int, tuple[int | None, int | None]]:
+    if not trace_path.exists():
+        return {}
+    try:
+        header = pd.read_csv(trace_path, sep="\t", nrows=0)
+        needed = {"_RUT_NUM", "FOR_ING_ACT"}
+        if not needed.issubset(header.columns):
+            return {}
+        optional = ["TNS_PREV_MIN_ANO_DA", "TNS_PREV_CODCLI_EJEMPLO_DA"]
+        usecols = ["_RUT_NUM", "FOR_ING_ACT"] + [c for c in optional if c in header.columns]
+        trace = pd.read_csv(trace_path, sep="\t", usecols=usecols)
+        trace["FOR_ING_ACT"] = pd.to_numeric(trace["FOR_ING_ACT"], errors="coerce")
+        trace["_RUT_NUM"] = pd.to_numeric(trace["_RUT_NUM"], errors="coerce")
+        trace = trace[trace["FOR_ING_ACT"].eq(11) & trace["_RUT_NUM"].notna()].copy()
+        if trace.empty:
+            return {}
+        if "TNS_PREV_MIN_ANO_DA" in trace.columns:
+            trace["_TNS_ANIO"] = pd.to_numeric(trace["TNS_PREV_MIN_ANO_DA"], errors="coerce")
+        else:
+            trace["_TNS_ANIO"] = pd.NA
+        if "TNS_PREV_CODCLI_EJEMPLO_DA" in trace.columns:
+            trace["_TNS_SEM"] = trace["TNS_PREV_CODCLI_EJEMPLO_DA"].map(_infer_sem_from_codcli)
+        else:
+            trace["_TNS_SEM"] = None
+        out: dict[int, tuple[int | None, int | None]] = {}
+        for rut, grp in trace.groupby(trace["_RUT_NUM"].astype(int)):
+            years = pd.to_numeric(grp["_TNS_ANIO"], errors="coerce").dropna()
+            year = int(years.min()) if not years.empty else None
+            sem_values = [sem for sem in grp["_TNS_SEM"].tolist() if sem in (1, 2)]
+            sem = sem_values[0] if sem_values else None
+            out[int(rut)] = (year, sem)
+        return out
+    except Exception:
+        return {}
+
+
+def _lookup_previous_origin_for_row(
+    records_by_rut: dict[int, list[dict[str, object]]],
+    rut_num: int | None,
+    codcli_actual: object,
+    codcarpr_actual: object,
+    anio_act: object,
+    sem_act: object,
+) -> tuple[int | None, int | None]:
+    if rut_num is None:
+        return None, None
+    records = records_by_rut.get(int(rut_num), [])
+    if not records:
+        return None, None
+    current_codcli = str(codcli_actual).strip()
+    current_codcarpr = _normalize_text(codcarpr_actual)
+    current_year_num = pd.to_numeric(pd.Series([anio_act]), errors="coerce").iloc[0]
+    current_sem = _normalize_semester_scalar(sem_act, allow_zero=True)
+    current_tuple = None
+    if not pd.isna(current_year_num):
+        current_tuple = (int(current_year_num), current_sem if current_sem is not None else 9)
+
+    candidates: list[tuple[int, int | None]] = []
+    for rec in records:
+        rec_codcli = str(rec.get("_CODCLI", "")).strip()
+        if rec_codcli and rec_codcli == current_codcli:
+            continue
+        rec_codcarpr = _normalize_text(rec.get("_CODCARPR", ""))
+        if current_codcarpr and rec_codcarpr and rec_codcarpr == current_codcarpr:
+            continue
+        rec_year = rec.get("_ANIO")
+        if rec_year is None or pd.isna(rec_year):
+            continue
+        rec_sem = rec.get("_SEM")
+        rec_sem_norm = _normalize_semester_scalar(rec_sem)
+        rec_tuple = (int(rec_year), rec_sem_norm if rec_sem_norm in (1, 2) else 9)
+        if current_tuple is not None and rec_tuple >= current_tuple:
+            continue
+        candidates.append((int(rec_year), rec_sem_norm if rec_sem_norm in (1, 2) else None))
+
+    if not candidates:
+        return None, None
+    candidates.sort(key=lambda item: (item[0], item[1] if item[1] is not None else 9))
+    return candidates[0]
+
+
+def _apply_for_ing_act_origin_rules(
+    archivo_subida: pd.DataFrame,
+    input_file: Path,
+    trace_path: Path,
+) -> dict[str, int]:
+    """Deriva ANIO/SEM_ING_ORI para FOR_ING_ACT no directo antes del gate Anexo 7."""
+    stats = {"for2_1900": 0, "for3_lookup": 0, "for3_1900": 0, "for11_trace": 0, "for11_1900": 0, "otros_1900": 0}
+    if "FOR_ING_ACT" not in archivo_subida.columns:
+        return stats
+
+    for_code = pd.to_numeric(archivo_subida["FOR_ING_ACT"], errors="coerce")
+    rut_nums = archivo_subida["N_DOC"].map(_rut_num_only) if "N_DOC" in archivo_subida.columns else pd.Series([None] * len(archivo_subida), index=archivo_subida.index)
+    records_by_rut = _load_da_origin_records(input_file)
+    tns_origin_by_rut = _load_for_ing_act_tns_origin_trace(trace_path)
+
+    def set_origin(mask: pd.Series, anio: int, sem: int, source: str, method: str, audit: str) -> None:
+        if not mask.any():
+            return
+        archivo_subida.loc[mask, "ANIO_ING_ORI"] = anio
+        archivo_subida.loc[mask, "SEM_ING_ORI"] = sem
+        archivo_subida.loc[mask, "ANIO_ING_ORI_FUENTE_FINAL"] = source
+        archivo_subida.loc[mask, "ANIO_ING_ORI_METODO_FINAL"] = method
+        archivo_subida.loc[mask, "ANIO_ING_ORI_AUDIT_STATUS"] = audit
+        archivo_subida.loc[mask, "SEM_ING_ORI_FUENTE_FINAL"] = source
+        archivo_subida.loc[mask, "SEM_ING_ORI_METODO_FINAL"] = method
+        archivo_subida.loc[mask, "SEM_ING_ORI_AUDIT_STATUS"] = audit
+
+    def set_origin_at(idx: object, anio: int, sem: int, source: str, method: str, audit: str) -> None:
+        archivo_subida.at[idx, "ANIO_ING_ORI"] = anio
+        archivo_subida.at[idx, "SEM_ING_ORI"] = sem
+        archivo_subida.at[idx, "ANIO_ING_ORI_FUENTE_FINAL"] = source
+        archivo_subida.at[idx, "ANIO_ING_ORI_METODO_FINAL"] = method
+        archivo_subida.at[idx, "ANIO_ING_ORI_AUDIT_STATUS"] = audit
+        archivo_subida.at[idx, "SEM_ING_ORI_FUENTE_FINAL"] = source
+        archivo_subida.at[idx, "SEM_ING_ORI_METODO_FINAL"] = method
+        archivo_subida.at[idx, "SEM_ING_ORI_AUDIT_STATUS"] = audit
+
+    mask_for2 = for_code.eq(2)
+    set_origin(
+        mask_for2,
+        1900,
+        0,
+        "POLITICA_FOR_ING_ACT_2",
+        "ORIGEN_DESCONOCIDO_1900_0",
+        "OK_ORIGEN_DESCONOCIDO_FOR_2",
+    )
+    stats["for2_1900"] = int(mask_for2.sum())
+
+    mask_for11 = for_code.eq(11)
+    if mask_for11.any():
+        for idx in archivo_subida.index[mask_for11]:
+            rut = rut_nums.loc[idx]
+            year, sem = tns_origin_by_rut.get(int(rut), (None, None)) if rut is not None and not pd.isna(rut) else (None, None)
+            if year is not None and 1980 <= int(year) <= 2026:
+                archivo_subida.at[idx, "ANIO_ING_ORI"] = int(year)
+                archivo_subida.at[idx, "SEM_ING_ORI"] = sem if sem in (1, 2) else 1
+                archivo_subida.at[idx, "ANIO_ING_ORI_FUENTE_FINAL"] = "TRACE_MOTOR_FOR_ING_ACT:TNS_PREV_MIN_ANO_DA"
+                archivo_subida.at[idx, "ANIO_ING_ORI_METODO_FINAL"] = "TNS_PREV_ANIO"
+                archivo_subida.at[idx, "ANIO_ING_ORI_AUDIT_STATUS"] = "OK_ORIGEN_TNS_PREV_FOR_11"
+                archivo_subida.at[idx, "SEM_ING_ORI_FUENTE_FINAL"] = "TRACE_MOTOR_FOR_ING_ACT:TNS_PREV_CODCLI"
+                archivo_subida.at[idx, "SEM_ING_ORI_METODO_FINAL"] = "TNS_PREV_PERIODO"
+                archivo_subida.at[idx, "SEM_ING_ORI_AUDIT_STATUS"] = "OK_ORIGEN_TNS_PREV_FOR_11"
+                stats["for11_trace"] += 1
+            else:
+                set_origin_at(
+                    idx,
+                    1900,
+                    0,
+                    "POLITICA_FOR_ING_ACT_11_SIN_TNS_PREV_FECHABLE",
+                    "ORIGEN_DESCONOCIDO_1900_0",
+                    "FALLBACK_ORIGEN_DESCONOCIDO_FOR_11",
+                )
+                stats["for11_1900"] += 1
+
+    mask_for3 = for_code.eq(3)
+    if mask_for3.any():
+        for idx in archivo_subida.index[mask_for3]:
+            rut = rut_nums.loc[idx]
+            rut_int = int(rut) if rut is not None and not pd.isna(rut) else None
+            year, sem = _lookup_previous_origin_for_row(
+                records_by_rut,
+                rut_int,
+                archivo_subida.at[idx, "CODCLI"] if "CODCLI" in archivo_subida.columns else "",
+                archivo_subida.at[idx, "CODCARPR_NORM"] if "CODCARPR_NORM" in archivo_subida.columns else "",
+                archivo_subida.at[idx, "ANIO_ING_ACT"],
+                archivo_subida.at[idx, "SEM_ING_ACT"],
+            )
+            if year is not None and 1980 <= int(year) <= 2026:
+                archivo_subida.at[idx, "ANIO_ING_ORI"] = int(year)
+                archivo_subida.at[idx, "SEM_ING_ORI"] = sem if sem in (1, 2) else 0
+                archivo_subida.at[idx, "ANIO_ING_ORI_FUENTE_FINAL"] = "DATOSALUMNOS_PROGRAMA_ANTERIOR_RUT"
+                archivo_subida.at[idx, "ANIO_ING_ORI_METODO_FINAL"] = "MIN_ANOINGRESO_OTRO_CODCLI"
+                archivo_subida.at[idx, "ANIO_ING_ORI_AUDIT_STATUS"] = "OK_ORIGEN_PROGRAMA_ANTERIOR_FOR_3"
+                archivo_subida.at[idx, "SEM_ING_ORI_FUENTE_FINAL"] = "DATOSALUMNOS_PROGRAMA_ANTERIOR_RUT"
+                archivo_subida.at[idx, "SEM_ING_ORI_METODO_FINAL"] = "PERIODOINGRESO_OTRO_CODCLI"
+                archivo_subida.at[idx, "SEM_ING_ORI_AUDIT_STATUS"] = "OK_ORIGEN_PROGRAMA_ANTERIOR_FOR_3"
+                stats["for3_lookup"] += 1
+            else:
+                set_origin_at(
+                    idx,
+                    1900,
+                    0,
+                    "POLITICA_FOR_ING_ACT_3_SIN_PROGRAMA_ANTERIOR_FECHABLE",
+                    "ORIGEN_DESCONOCIDO_1900_0",
+                    "FALLBACK_ORIGEN_DESCONOCIDO_FOR_3",
+                )
+                stats["for3_1900"] += 1
+
+    mask_otros = for_code.isin([4, 5])
+    set_origin(
+        mask_otros,
+        1900,
+        0,
+        "POLITICA_FOR_ING_ACT_CONTINUIDAD_SIN_ORIGEN_FECHABLE",
+        "ORIGEN_DESCONOCIDO_1900_0",
+        "FALLBACK_ORIGEN_DESCONOCIDO_FOR_CONTINUIDAD",
+    )
+    stats["otros_1900"] = int(mask_otros.sum())
+    return stats
 
 
 def _normalize_period_to_semester(values: pd.Series) -> pd.Series:
@@ -3515,10 +3788,6 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         archivo_subida.loc[_m11, "FOR_ING_ACT_IMPUTADO"] = "NO"
         archivo_subida.loc[_m11, "FOR_ING_ACT_REQUIERE_REVISION"] = "NO"
 
-    # FOR_ING_ACT == 1 → ORI == ACT (política: ingreso directo, origen coincide con actual).
-    for_equal = archivo_subida["FOR_ING_ACT"].eq(1)
-    archivo_subida.loc[for_equal, "ANIO_ING_ORI"] = archivo_subida.loc[for_equal, "ANIO_ING_ACT"]
-    archivo_subida.loc[for_equal, "SEM_ING_ORI"] = archivo_subida.loc[for_equal, "SEM_ING_ACT"]
     # Trazabilidad ORI: diferenciar FOR=1 (copia) vs FOR!=1 (preservado).
     archivo_subida["ANIO_ING_ORI_FUENTE_FINAL"] = "PRESERVADO_VALOR_DERIVADO"
     archivo_subida["ANIO_ING_ORI_METODO_FINAL"] = "SIN_OVERRIDE"
@@ -3526,12 +3795,20 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida["SEM_ING_ORI_FUENTE_FINAL"] = "PRESERVADO_VALOR_DERIVADO"
     archivo_subida["SEM_ING_ORI_METODO_FINAL"] = "SIN_OVERRIDE"
     archivo_subida["SEM_ING_ORI_AUDIT_STATUS"] = "VALOR_ORIGINAL_PRESERVADO"
+
+    # FOR_ING_ACT == 1 → ORI == ACT (política: ingreso directo, origen coincide con actual).
+    for_equal = archivo_subida["FOR_ING_ACT"].eq(1)
+    archivo_subida.loc[for_equal, "ANIO_ING_ORI"] = archivo_subida.loc[for_equal, "ANIO_ING_ACT"]
+    archivo_subida.loc[for_equal, "SEM_ING_ORI"] = archivo_subida.loc[for_equal, "SEM_ING_ACT"]
     archivo_subida.loc[for_equal, "ANIO_ING_ORI_FUENTE_FINAL"] = "POLITICA_FOR_ING_ACT_1"
     archivo_subida.loc[for_equal, "ANIO_ING_ORI_METODO_FINAL"] = "COPIA_DESDE_ANIO_ING_ACT"
     archivo_subida.loc[for_equal, "ANIO_ING_ORI_AUDIT_STATUS"] = "IGUAL_ACTUAL_POR_POLITICA_FOR_ING_ACT_1"
     archivo_subida.loc[for_equal, "SEM_ING_ORI_FUENTE_FINAL"] = "POLITICA_FOR_ING_ACT_1"
     archivo_subida.loc[for_equal, "SEM_ING_ORI_METODO_FINAL"] = "COPIA_DESDE_SEM_ING_ACT"
     archivo_subida.loc[for_equal, "SEM_ING_ORI_AUDIT_STATUS"] = "IGUAL_ACTUAL_POR_POLITICA_FOR_ING_ACT_1"
+
+    for_ing_origin_stats = _apply_for_ing_act_origin_rules(archivo_subida, input_file, _trace_path)
+
     # Anexo 7 continuidad: FOR {2,3,4,5,11} exige origen distinto del ingreso actual.
     for_cont_codes = {2, 3, 4, 5, 11}
     for_continuidad = archivo_subida["FOR_ING_ACT"].isin(sorted(for_cont_codes))
@@ -4211,6 +4488,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         "gob_pais_est_sec_source": gob_pais_est_sec_tsv_path or "no_file",
         "gob_sede_source": gob_sede_tsv_path or "no_file",
         "gob_for_ing_act_source": gob_for_ing_act_source,
+        "for_ing_act_origin_stats": for_ing_origin_stats,
         "oferta_academica_source": oferta_source,
         "sit_fon_sol_patch_source": sit_fon_patch_source,
         "sit_fon_sol_patch_stats": sit_fon_sol_patch_stats,
