@@ -1,0 +1,1 @@
+(README.md original movido a docs/ para futura refactorización)

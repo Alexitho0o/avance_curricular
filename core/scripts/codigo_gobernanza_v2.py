@@ -1,0 +1,1 @@
+(codigo_gobernanza_v2.py original movido a core/scripts/)

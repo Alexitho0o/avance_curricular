@@ -1,32 +1,50 @@
 {
-  "rows_included_final": 3687,
+  "rows_included_final": 1282,
   "sit_fon_sol_distribution": {
-    "1": 3687
+    "1": 1182,
+    "0": 100
   },
   "sus_pre_distribution": {
-    "0": 3687
+    "0": 1282
   },
   "reincorporacion_distribution": {
-    "0": 3687
+    "0": 1282
   },
   "vig_distribution": {
-    "1": 3684,
-    "2": 3
+    "1": 1260,
+    "0": 22
   },
   "sit_fon_sol_fuente_distribution": {
-    "POLITICA_LOCAL_FIJA_1": 3687
+    "POLITICA_LOCAL_FIJA_1": 1182,
+    "PATCH_JSON_SIT_FON_SOL_MU2026": 100
   },
   "sus_pre_fuente_distribution": {
-    "POLITICA_LOCAL_FIJA_0": 3687
+    "POLITICA_LOCAL_FIJA_0": 1282
   },
   "reincorporacion_fuente_distribution": {
-    "POLITICA_LOCAL_FIJA_0": 3687
+    "POLITICA_LOCAL_FIJA_0": 1282
   },
   "vig_fuente_distribution": {
-    "POLITICA_CARGA_PREGRADO_INCLUIDA": 3684,
-    "POLITICA_CARGA_PREGRADO_INCLUIDA_DA_SITUACION": 3
+    "POLITICA_CARGA_PREGRADO_INCLUIDA": 1260,
+    "REGLA_BLOQUEANTE_ESTADOACADEMICO": 22
   },
-  "sit_fon_sol_default_rows": 0,
+  "sit_fon_sol_patch_enabled": true,
+  "sit_fon_sol_patch_path": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
+  "sit_fon_sol_patch_rut_total": 100,
+  "sit_fon_sol_patch_rut_column_selected": "N_DOC",
+  "sit_fon_sol_patch_matches_by_column": {
+    "N_DOC": 100,
+    "CODCLI": 0
+  },
+  "sit_fon_sol_patch_rows_targeted": 100,
+  "sit_fon_sol_patch_rows_ok": 100,
+  "sit_fon_sol_patch_rows_no_target_con_fuente_patch": 0,
+  "sit_fon_sol_patch_distribution_before_target": {
+    "1": 541
+  },
+  "sit_fon_sol_patch_distribution_after_target": {
+    "0": 541
+  },
   "sus_pre_default_rows": 0,
   "sus_pre_forzado_0_cohorte_2026_rows": 0,
   "reincorporacion_rows_1": 0,
@@ -36,12 +54,12 @@
   "reincorporacion_rows_1_periodo_3": 0,
   "reincorporacion_rows_1_sin_respaldo_temporal": 0,
   "reincorporacion_rows_1_periodo_ultimo_tramo": 0,
-  "vig_rows_0": 0,
-  "vig_rows_1": 3684,
-  "vig_rows_2": 3,
-  "vig_rows_titulado_aprobado": 3,
-  "vig_rows_policy_vig_1": 3684,
-  "vig_rows_policy_vig_2_titulado": 3,
+  "vig_rows_0": 22,
+  "vig_rows_1": 1260,
+  "vig_rows_2": 0,
+  "vig_rows_titulado_aprobado": 1,
+  "vig_rows_policy_vig_1": 1260,
+  "vig_rows_policy_vig_2_titulado": 0,
   "columnas_fase_5": {
     "AB_SIT_FON_SOL": {
       "fuente_regla_definida": true,

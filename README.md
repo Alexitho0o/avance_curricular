@@ -1,62 +1,85 @@
-# Avance Curricular + Matricula Unificada (MU 2026)
 
-Repositorio operativo para dos procesos:
+# Avance Curricular — Estructura, Uso y SDD
 
-- `avance`: productos de avance curricular.
-- `matricula`: salida regulatoria MU 2026 Pregrado.
+Repositorio estandarizado bajo Spec-Driven Development (SDD) para la gestión, validación y auditoría de datos curriculares y salida regulatoria MU 2026 Pregrado.
 
-Este README es la fuente de verdad operativa del repositorio al **2026-04-09**.
+## Estructura del Repositorio
 
-## 1) Proposito y alcance
+- **core/**
+  - `scripts/`: Scripts Python y lógica de negocio.
+  - `config/`: Makefile, requirements.txt y configuraciones.
+- **data/**
+  - `catalogos/`, `control/`, `resultados/`, `auditoria_codigo_unico_codcarpr/`: Datos de entrada, catálogos, resultados y auditorías.
+- **docs/**
+  - Documentación técnica, manuales, especificaciones y flujos de trabajo.
+- **archive/**
+  - Históricos y respaldos.
 
-### Alcance funcional
+## Ejemplo de Flujo de Trabajo
 
-- El repositorio soporta `avance`, `matricula` y `ambos` en `codigo_gobernanza_v2.py`.
-- Para MU 2026 Pregrado, la operacion oficial congelada usa solo:
-  - `--proceso matricula`
-  - `--usar-gobernanza-v2 true`
+### Opción A (recomendada): Makefile
+```bash
+cd /ruta/al/repo/avance_curricular
+make run-oficial INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+make validate-oficial
+```
+Ejecución + validación en una sola secuencia:
+```bash
+make run-and-validate-oficial INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+```
+Ayuda:
+```bash
+make help
+```
 
-### Distincion obligatoria
+### Opción B (manual, equivalente)
+```bash
+cd /ruta/al/repo/avance_curricular
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r core/config/requirements.txt
 
-- **Operacion oficial congelada**: comandos documentados en `Makefile` + `scripts/run_oficial.sh` + `scripts/validate_oficial.sh`.
-- **Legacy/archivo/experimental**: todo lo archivado en `archive/`, backups bajo `backup_estable_2026/`, y artefactos de prueba historica en subcarpetas de `resultados/`.
+export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
+export OUTPUT_DIR="data/resultados"
+python3 core/scripts/codigo_gobernanza_v2.py \
+  --input "$INPUT_XLSX" \
+  --output-dir "$OUTPUT_DIR" \
+  --proceso matricula \
+  --usar-gobernanza-v2 true
 
-## 2) Estado operativo actual MU 2026 (congelado)
+python3 core/scripts/qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "data/control"
+```
 
-### Referencias oficiales congeladas (fecha 2026-04-01)
+## Buenas Prácticas y SDD
+- Toda nueva funcionalidad debe estar precedida por una especificación en `docs/`.
+- Usar snake_case o kebab-case para archivos y carpetas.
+- Documentar scripts y módulos con docstrings y comentarios claros.
+- Mantener la trazabilidad de cambios relevantes en `docs/` o `agent.md`.
+- Los cambios deben ser atómicos y fácilmente reversibles.
+- Priorizar la legibilidad y mantenibilidad para humanos y agentes.
 
-- [control/reportes/ejecucion_oficial_mu_2026.md](control/reportes/ejecucion_oficial_mu_2026.md)
-- [control/reportes/validacion_oficial_mu_2026.md](control/reportes/validacion_oficial_mu_2026.md)
-- [control/reportes/resultado_corrida_referencia_mu_2026.md](control/reportes/resultado_corrida_referencia_mu_2026.md)
+## Artefactos Oficiales y Advertencias
 
-### Nota de gobernanza (drift documental detectado)
+| Artefacto | Estado | Uso operativo |
+|---|---|---|
+| `data/DURACION_ESTUDIOS.tsv` | EXISTE | Fuente canónica para matriz SIES y dimensión de oferta |
+| `data/control/catalogos/PUENTE_SIES_COMPILADO.tsv` | EXISTE | Fuente canónica única de cruce SIES por SOURCE_KEY_3 |
+| `data/resultados/archivo_listo_para_sies.xlsx` | EXISTE | Auditoría y trazabilidad |
+| `data/resultados/matricula_unificada_2026_pregrado.csv` | EXISTE | Carga regulatoria (MU32, 32 columnas, sin header) |
+| `data/resultados/reporte_matricula.json` | EXISTE | Métrica de corrida |
+| `data/resultados/auditoria_maestra.md` | EXISTE | Dictamen QA integral |
 
-Hay coexistencia de estados distintos dentro de `control/`:
+**No usar como salida regulatoria final:**
+- Cualquier salida en `archive/` o en subcarpetas históricas de `data/resultados/`
+- Archivos legacy: `matricula_unificada_2026_oficial.xlsx`, `MU2026_regulatorio.csv`, etc.
 
-- Los 3 reportes oficiales congelados indican estado `CONDICIONAL`.
-- `control/gate/gate_final_mu_2026.md` y `control/README.md` registran estado `APROBADO`.
+## Referencias y Documentación
+- Ver `docs/DOCUMENTACION_TECNICA.md` para detalles de integración, reglas de negocio y ejemplos avanzados.
+- Reglas para agentes de IA: ver `agent.md`.
 
-Hasta emitir un nuevo congelamiento formal, este README prioriza los 3 reportes oficiales para el flujo congelado y deja la divergencia registrada como riesgo de gobernanza.
-
-## 3) Arquitectura funcional
-
-### Pipeline principal
-
-- Script oficial: `codigo_gobernanza_v2.py`.
-- Contrato MU32 declarado en `MATRICULA_UNIFICADA_COLUMNS` (32 columnas).
-- Exporta:
-  - `resultados/archivo_listo_para_sies.xlsx` (auditoria operativa)
-  - `resultados/matricula_unificada_2026_pregrado.csv` (regulatorio)
-
-### Fases operativas (alto nivel)
-
-1. Ingesta de Excel de entrada.
-2. Construccion de matriz SIES desde `DURACION_ESTUDIOS.tsv`.
-3. Matching y desambiguacion SIES (incluye estados `AMBIGUO_SIES` y `SIN_MATCH_SIES`).
-4. Enriquecimiento con `DatosAlumnos` (incluye estados de match DA).
-5. Derivacion y trazabilidad de columnas MU32.
-6. Exportacion de workbook auditable + CSV regulatorio.
-7. Validacion QA y gate documental.
+---
+Última actualización: 2026-04-09
+Responsable: Arquitectura Técnica
 
 ### Trazabilidad complementaria
 

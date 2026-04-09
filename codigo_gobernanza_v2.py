@@ -11,6 +11,15 @@ from pathlib import Path
 from typing import Iterable
 
 import pandas as pd
+from src.patches.apply_patches import (
+    DEFAULT_SIT_FON_SOL_PATCH_PATH,
+    PATCH_AUDIT_STATUS_SIT_FON_SOL,
+    PATCH_METHOD_SIT_FON_SOL,
+    PATCH_SOURCE_SIT_FON_SOL,
+    apply_sit_fon_sol_patch,
+    load_json_patch,
+    resolve_patch_targets,
+)
 
 # ==============================
 # FUENTE ÚNICA GOBERNANZA SIES: DURACION_ESTUDIOS.tsv
@@ -165,6 +174,10 @@ DEFAULT_GOB_HOJA1_ESTADO_DESC_CANDIDATES = [
     Path(__file__).with_name("gobernanza_catalogos") / "gob_promedios_hoja1_estado_academico_descripcion.tsv",
     Path.cwd() / "gobernanza_catalogos" / "gob_promedios_hoja1_estado_academico_descripcion.tsv",
 ]
+DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES = [
+    Path(__file__).resolve().parent / DEFAULT_SIT_FON_SOL_PATCH_PATH,
+    Path.cwd() / DEFAULT_SIT_FON_SOL_PATCH_PATH,
+]
 DEFAULT_GOB_DA_ESTADO_SITUACION_CANDIDATES = [
     Path(__file__).with_name("gobernanza_catalogos") / "gob_datosalumnos_estadoacademico_situacion.tsv",
     Path.cwd() / "gobernanza_catalogos" / "gob_datosalumnos_estadoacademico_situacion.tsv",
@@ -214,6 +227,34 @@ def _normalize_doc(num: object, dv: object) -> str:
     return "".join(ch for ch in str(num) if ch.isdigit()) + str(dv).strip().upper()
 
 
+def _rut_num_only(val: object) -> int | None:
+    """Extrae solo el número de RUT (sin DV) en cualquier formato chileno.
+
+    Maneja: 12345678, 12345678.0, "12345678", "12345678-9",
+            "12.345.678-9", "12,345,678-9", "12345678K", etc.
+    """
+    if val is None or (isinstance(val, float) and pd.isna(val)):
+        return None
+    text = str(val).strip()
+    if not text or text.lower() in ("nan", "none", ""):
+        return None
+    # Intento directo para enteros y flotantes almacenados como número
+    try:
+        return int(float(text))
+    except (ValueError, OverflowError):
+        pass
+    # Eliminar DV (parte tras guión)
+    if "-" in text:
+        text = text.split("-")[0].strip()
+    # Eliminar separadores de miles (puntos o comas) y espacios
+    text = text.replace(".", "").replace(",", "").replace(" ", "")
+    try:
+        return int(text)
+    except (ValueError, OverflowError):
+        return None
+
+
+
 def _pick_sheet(book: dict[str, pd.DataFrame], required: Iterable[str]) -> pd.DataFrame:
     req = set(required)
     for df in book.values():
@@ -259,6 +300,20 @@ def _infer_year_from_codcli(value: object) -> float:
     return float("nan")
 
 
+def _infer_codcarpr_from_codcli(value: object) -> str:
+    if pd.isna(value):
+        return ""
+    text = _normalize_text(value)
+    text = re.sub(r"[^A-Z0-9]", "", text)
+    # Estructura esperada CODCLI: YYYY + periodo(1 dígito) + CODCARPR + correlativo(3 dígitos)
+    m = re.match(r"^\d{4}\d(?P<cod>[A-Z0-9]+)\d{3}$", text)
+    if not m:
+        return ""
+    cod = m.group("cod")
+    # Guardrail: CODCARPR debe contener al menos una letra.
+    return cod if re.search(r"[A-Z]", cod) else ""
+
+
 def _pick_first_column(df: pd.DataFrame, options: list[str]) -> str | None:
     upper_map = {c.upper(): c for c in df.columns}
     for opt in options:
@@ -291,6 +346,26 @@ def _normalize_period_to_semester(values: pd.Series) -> pd.Series:
     # El histórico Hoja1 usa PERIODO=3 como equivalente operacional de segundo semestre.
     sem.loc[periodo.isin([2, 3])] = 2
     return sem
+
+
+def _trimester_level_to_semester(values: pd.Series) -> pd.Series:
+    """Convierte nivel administrativo trimestral a semestre curricular MU.
+
+    Regla institucional inmutable:
+    1→1, 2→2, 3→2, 4→3, 5→4, 6→4, 7→5, 8→6, 9→6, 10→7, 11→8, 12→8.
+    Fallback para niveles >12: ceil(n*2/3), equivalente entero ((2n+2)//3).
+    """
+    nivel = pd.to_numeric(values, errors="coerce").round()
+    map_eq = {
+        1: 1, 2: 2, 3: 2,
+        4: 3, 5: 4, 6: 4,
+        7: 5, 8: 6, 9: 6,
+        10: 7, 11: 8, 12: 8,
+    }
+    sem = nivel.map(map_eq)
+    fallback_mask = sem.isna() & nivel.notna() & nivel.gt(12)
+    sem.loc[fallback_mask] = ((nivel.loc[fallback_mask] * 2 + 2) // 3)
+    return sem.astype("Float64")
 
 
 def _normalize_grade_to_mu_scale(values: pd.Series) -> pd.Series:
@@ -548,6 +623,123 @@ def _resolve_for_ing_act_row(
         "FOR_ING_ACT_IMPUTADO": "NO",
         "FOR_ING_ACT_REQUIERE_REVISION": "SI",
     }
+
+
+def _build_for_ing_act_report_payload(
+    stage_df: pd.DataFrame,
+    included_mask: pd.Series,
+    valid_codes: set[int],
+    input_source_column: str | None,
+    catalog_source: str,
+) -> dict[str, object]:
+    included_mask = included_mask.reindex(stage_df.index, fill_value=False).astype(bool)
+    included = stage_df.loc[included_mask].copy()
+    valid_codes_sorted = sorted(int(v) for v in valid_codes)
+    report: dict[str, object] = {
+        "source_used": {
+            "input_column_detected": input_source_column or "NO_ENCONTRADO",
+            "catalog_source": catalog_source or "NO_ENCONTRADO",
+            "valid_codes_catalog": valid_codes_sorted,
+        },
+        "rows_total_stage": int(len(stage_df)),
+        "rows_included_final": int(len(included)),
+        "resolved_ok": 0,
+        "unresolved": {
+            "count": 0,
+            "pct_rows_included": 0.0,
+            "reasons": {},
+            "continuidad_rule_fail_count": 0,
+        },
+        "distribution": {},
+        "invalid_examples": [],
+    }
+    if included.empty:
+        return report
+
+    for_num = pd.to_numeric(included["FOR_ING_ACT"], errors="coerce")
+    for_valid_mask = for_num.isin(valid_codes_sorted)
+    for_notnull_mask = for_num.notna()
+    for_invalido_mask = ~(for_valid_mask & for_notnull_mask)
+    review_mask = included["FOR_ING_ACT_REQUIERE_REVISION"].astype(str).str.upper().eq("SI")
+
+    continuidad_codes = {2, 3, 4, 5, 11}
+    continuidad_mask = for_num.isin(sorted(continuidad_codes))
+    anio_act = pd.to_numeric(included["ANIO_ING_ACT"], errors="coerce")
+    sem_act = pd.to_numeric(included["SEM_ING_ACT"], errors="coerce")
+    anio_ori = pd.to_numeric(included["ANIO_ING_ORI"], errors="coerce")
+    sem_ori = pd.to_numeric(included["SEM_ING_ORI"], errors="coerce")
+    continuidad_fail_mask = continuidad_mask & anio_act.eq(anio_ori) & sem_act.eq(sem_ori)
+
+    unresolved_mask = for_invalido_mask | review_mask | continuidad_fail_mask
+    resolved_ok = int((~unresolved_mask).sum())
+    unresolved_count = int(unresolved_mask.sum())
+
+    reasons: dict[str, int] = {
+        "for_ing_act_nulo_o_fuera_catalogo": int(for_invalido_mask.sum()),
+        "for_ing_act_requiere_revision": int(review_mask.sum()),
+        "anexo7_continuidad_origen_igual_actual": int(continuidad_fail_mask.sum()),
+    }
+    reasons = {k: int(v) for k, v in reasons.items() if int(v) > 0}
+
+    fuentecampo_dist = (
+        included["FOR_ING_ACT_FUENTE_CAMPO"]
+        .fillna("SIN_DATO")
+        .astype(str)
+        .str.strip()
+        .replace("", "SIN_DATO")
+        .value_counts(dropna=False)
+        .to_dict()
+    )
+    metodo_dist = (
+        included["FOR_ING_ACT_METODO"]
+        .fillna("SIN_DATO")
+        .astype(str)
+        .str.strip()
+        .replace("", "SIN_DATO")
+        .value_counts(dropna=False)
+        .to_dict()
+    )
+    report["source_used"]["fuente_campo_distribution"] = {str(k): int(v) for k, v in fuentecampo_dist.items()}
+    report["source_used"]["metodo_distribution"] = {str(k): int(v) for k, v in metodo_dist.items()}
+
+    for_dist = (
+        for_num.astype("Int64")
+        .astype(str)
+        .replace("<NA>", "NA")
+        .value_counts(dropna=False)
+        .to_dict()
+    )
+
+    example_cols = [
+        "CODCLI",
+        "N_DOC",
+        "DV",
+        "CODCARPR_NORM",
+        "NOMBRE_CARRERA_FUENTE",
+        "FOR_ING_ACT",
+        "FOR_ING_ACT_FUENTE_VALOR",
+        "FOR_ING_ACT_FUENTE_CAMPO",
+        "FOR_ING_ACT_METODO",
+        "FOR_ING_ACT_REQUIERE_REVISION",
+        "ANIO_ING_ACT",
+        "SEM_ING_ACT",
+        "ANIO_ING_ORI",
+        "SEM_ING_ORI",
+    ]
+    examples_df = included.loc[unresolved_mask, example_cols].head(25).copy()
+    examples_df.insert(0, "ROW_EXCEL_1_BASED", (examples_df.index + 2).astype(int))
+    examples_df = examples_df.fillna("").astype(str)
+
+    report["resolved_ok"] = resolved_ok
+    report["unresolved"] = {
+        "count": unresolved_count,
+        "pct_rows_included": round((unresolved_count / len(included)) * 100, 2) if len(included) else 0.0,
+        "reasons": reasons,
+        "continuidad_rule_fail_count": int(continuidad_fail_mask.sum()),
+    }
+    report["distribution"] = {str(k): int(v) for k, v in for_dist.items()}
+    report["invalid_examples"] = examples_df.to_dict(orient="records")
+    return report
 
 
 def _map_jornada_to_mod_jor(series: pd.Series) -> tuple[pd.Series, pd.Series]:
@@ -1106,6 +1298,17 @@ def _is_diplomado_name(name: object) -> bool:
     return text.startswith("DIPLOMADO") or text.startswith("DIPLOMADOS") or "EC CURSOS Y DIPLOMADOS" in text
 
 
+def _normalize_continuidad_name_for_sies(name: object) -> str:
+    text = _normalize_text(name)
+    if text.startswith("CONTINUIDAD INGENIERIA EN "):
+        return "INGENIERIA EN " + text[len("CONTINUIDAD INGENIERIA EN "):]
+    if text.startswith("CONTINUIDAD INGENIERIA "):
+        return "INGENIERIA EN " + text[len("CONTINUIDAD INGENIERIA "):]
+    if text.startswith("CONTINUIDAD "):
+        return text[len("CONTINUIDAD "):]
+    return text
+
+
 def _prepare_catalog_manual(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return df
@@ -1647,6 +1850,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     gob_nac_tsv_path: str | None = None,
     gob_pais_est_sec_tsv_path: str | None = None,
     gob_sede_tsv_path: str | None = None,
+    sit_fon_sol_patch_json_path: str | None = None,
     excluir_diplomados: bool = DEFAULT_EXCLUIR_DIPLOMADOS,
     usar_gobernanza_v2: bool = False,
     filtro_base_datos_sheet: str | None = None,
@@ -1660,7 +1864,6 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     """
     xls = pd.ExcelFile(input_file)
     selected_sheet = sheet_name or xls.sheet_names[0]
-    src = pd.read_excel(input_file, sheet_name=selected_sheet)
 
     # --- Filtro por hoja base_datos: conservar solo filas cuyo RUT aparezca en la hoja ---
     # Auto-detectar: si no se pasó el flag pero existe "base_datos" en el Excel, usarla
@@ -1668,6 +1871,48 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     if _filtro_bd_sheet is None and "base_datos" in xls.sheet_names:
         _filtro_bd_sheet = "base_datos"
         print("  ℹ️ Auto-detectada hoja 'base_datos' → se aplicará filtro por RUT")
+
+    # --- Lectura multi-hoja: concatenar todas las hojas con columnas de matrícula ---
+    # Si existe base_datos (filtro por RUT activado), concatenar TODAS las hojas que
+    # tengan CODCLI + (CODCARR o CODCARPR) + RUT/N_DOC, excluyendo hojas de soporte.
+    # Esto captura alumnos en cualquier hoja del Excel, no solo la primera.
+    _HOJAS_EXCLUIR = {"DatosAlumnos", _filtro_bd_sheet or "", "base_datos"}
+    _REQ_CODCLI = {"CODCLI"}
+    _REQ_CODCARR = {"CODCARR", "CODCARPR"}
+    _REQ_RUT = {"RUT", "NUM_DOCUMENTO", "N_DOC"}
+
+    def _hoja_es_fuente_matricula(df: pd.DataFrame) -> bool:
+        cols = set(df.columns)
+        return (
+            bool(cols & _REQ_CODCLI)
+            and bool(cols & _REQ_CODCARR)
+            and bool(cols & _REQ_RUT)
+        )
+
+    if _filtro_bd_sheet:
+        # Modo multi-hoja: leer todas las hojas candidatas
+        book_all = pd.read_excel(input_file, sheet_name=None)
+        src_sheets = []
+        for _sname, _sdf in book_all.items():
+            if _sname in _HOJAS_EXCLUIR:
+                continue
+            if _hoja_es_fuente_matricula(_sdf):
+                src_sheets.append((_sname, _sdf))
+        if len(src_sheets) > 1:
+            _sheet_names_used = [s for s, _ in src_sheets]
+            print(f"  ℹ️ Modo multi-hoja: concatenando {len(src_sheets)} hojas de matrícula: {_sheet_names_used}")
+            src = pd.concat([df for _, df in src_sheets], ignore_index=True)
+            selected_sheet = "+".join(_sheet_names_used)
+        elif len(src_sheets) == 1:
+            selected_sheet, src = src_sheets[0]
+            print(f"  ℹ️ Solo 1 hoja de matrícula encontrada: '{selected_sheet}'")
+        else:
+            # Fallback: hoja por defecto
+            selected_sheet = sheet_name or xls.sheet_names[0]
+            src = pd.read_excel(input_file, sheet_name=selected_sheet)
+            print(f"  ⚠️ No se encontraron hojas con columnas de matrícula, usando '{selected_sheet}'")
+    else:
+        src = pd.read_excel(input_file, sheet_name=selected_sheet)
 
     _filtro_bd_stats: dict[str, object] = {}
     if _filtro_bd_sheet and _filtro_bd_sheet in xls.sheet_names:
@@ -1678,19 +1923,35 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
                 bd_rut_col = _cand
                 break
         if bd_rut_col is not None:
-            bd_ruts = set(bd_df[bd_rut_col].dropna().astype(int))
+            _bd_parsed = bd_df[bd_rut_col].map(_rut_num_only)
+            _bd_parsed_ok = _bd_parsed.dropna().astype(int)
+            bd_ruts = set(_bd_parsed_ok)
+            _bd_raw_sample = bd_df[bd_rut_col].dropna().head(3).tolist()
+            _bd_fail_count = int(_bd_parsed.isna().sum())
+            print(f"  🔎 base_datos col='{bd_rut_col}' → {len(bd_ruts)} RUTs únicos "
+                  f"({_bd_fail_count} no parseables). Muestra raw: {_bd_raw_sample}")
             src_rut_col = None
             for _cand in ["RUT", "NUM_DOCUMENTO", "N_DOC"]:
                 if _cand in src.columns:
                     src_rut_col = _cand
                     break
             if src_rut_col is not None:
+                _src_parsed = src[src_rut_col].map(_rut_num_only)
+                _src_ruts_unique = set(_src_parsed.dropna().astype(int))
+                _ruts_sin_match = bd_ruts - _src_ruts_unique
+                _src_raw_sample = src[src_rut_col].dropna().head(3).tolist()
+                print(f"  🔎 Fuente col='{src_rut_col}' → {len(_src_ruts_unique)} RUTs únicos. "
+                      f"Muestra raw: {_src_raw_sample}")
+                print(f"  🔎 RUTs en base_datos sin match en fuente: {len(_ruts_sin_match)} "
+                      f"(de {len(bd_ruts)})")
                 n_before = len(src)
-                src = src[src[src_rut_col].astype(int).isin(bd_ruts)].reset_index(drop=True)
+                _src_mask = _src_parsed.map(lambda v: v in bd_ruts if v is not None else False)
+                src = src[_src_mask].reset_index(drop=True)
                 n_after = len(src)
                 _filtro_bd_stats = {
                     "hoja": _filtro_bd_sheet,
                     "ruts_en_hoja": len(bd_ruts),
+                    "ruts_bd_sin_match_fuente": len(_ruts_sin_match),
                     "filas_antes": n_before,
                     "filas_despues": n_after,
                     "filas_descartadas": n_before - n_after,
@@ -1715,6 +1976,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     # ────────────────────────────────────────────────────────────────────
 
     manual_source = catalogo_manual_tsv_path or "auto:DURACION_ESTUDIOS.tsv"
+    sit_fon_patch_source = sit_fon_sol_patch_json_path or "no_patch_json"
     puente_compilado_path = DEFAULT_PUENTE_SIES_COMPILADO_PATH.resolve()
     puente_source = str(puente_compilado_path)
     if puente_sies_tsv_path:
@@ -1774,6 +2036,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     col_cod_sed = _pick_first_column(src, ["COD_SED"])
     col_plan = _pick_first_column(src, ["PLAN_DE_ESTUDIO", "PLAN_ESTUDIOS"])
     col_periodo = _pick_first_column(src, ["PERIODO"])
+    col_regimen = _pick_first_column(src, ["REGIMEN"])
     col_asi_ins_ant = _pick_first_column(src, ["ASI_INS_ANT"])
     col_asi_apr_ant = _pick_first_column(src, ["ASI_APR_ANT"])
     col_prom_pri_sem = _pick_first_column(src, ["PROM_PRI_SEM"])
@@ -1789,6 +2052,18 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     )
 
     src_work = src.copy()
+    # Fallback gobernado: cuando CODCARR/CODCARPR viene vacío, inferir desde CODCLI.
+    # Este fallback solo usa la estructura codificada del CODCLI (sin lookup externo).
+    codcarpr_norm_src = src_work[req_codcarr].map(_normalize_text)
+    codcarpr_missing_mask = codcarpr_norm_src.eq("")
+    codcarpr_from_codcli = src_work[req_codcli].map(_infer_codcarpr_from_codcli)
+    codcarpr_fill_mask = codcarpr_missing_mask & codcarpr_from_codcli.ne("")
+    if codcarpr_fill_mask.any():
+        src_work.loc[codcarpr_fill_mask, req_codcarr] = codcarpr_from_codcli[codcarpr_fill_mask]
+        # Mantener coherencia para cálculos que aún consumen `src` directo.
+        src.loc[codcarpr_fill_mask, req_codcarr] = codcarpr_from_codcli[codcarpr_fill_mask]
+        print(f"  ↳ CODCARR inferido desde CODCLI: {int(codcarpr_fill_mask.sum())} filas")
+
     rows_enriquecidas_datos_alumnos = 0
     cod_sed_resueltos_regla = 0
     pais_est_sec_inferidos_localidad = 0
@@ -2422,6 +2697,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida["CODCLI"] = src_work[req_codcli]
     archivo_subida["PLAN_DE_ESTUDIO"] = src_work[col_plan] if col_plan else pd.NA
     archivo_subida["PERIODO"] = src_work[col_periodo] if col_periodo else pd.NA
+    archivo_subida["REGIMEN_FUENTE"] = src_work[col_regimen] if col_regimen else pd.NA
     archivo_subida["NOMBRE_CARRERA_FUENTE"] = src_work[req_nombre_carrera]
     archivo_subida["JORNADA_FUENTE"] = src_work[req_jornada]
     archivo_subida["ESTADO_INICIAL_REGISTRO"] = estado_inicial
@@ -2685,6 +2961,44 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         )
         archivo_subida = archivo_subida.merge(bridge_exact, on="SOURCE_KEY_3", how="left")
 
+        # Fallback por normalización de nombre para continuidad (sin alterar SOURCE_KEY_3 original):
+        # ej. "CONTINUIDAD AUDITORIA" -> "AUDITORIA",
+        # "CONTINUIDAD INGENIERIA ... " -> "INGENIERIA EN ...".
+        fallback_name = archivo_subida["NOMBRE_CARRERA_FUENTE"].map(_normalize_continuidad_name_for_sies)
+        fallback_key_3 = (
+            archivo_subida["JORNADA_FUENTE"].map(_normalize_text)
+            + "|"
+            + archivo_subida["CODCARPR_NORM"].map(_normalize_text)
+            + "|"
+            + fallback_name
+        )
+        fallback_lookup = (
+            df_bridge[bridge_join_cols]
+            .drop_duplicates(subset=["BRIDGE_KEY_3"], keep="first")
+            .rename(columns={"BRIDGE_KEY_3": "SOURCE_KEY_3_FALLBACK"})
+        )
+        fallback_input = pd.DataFrame(
+            {
+                "_IDX_FB": archivo_subida.index,
+                "SOURCE_KEY_3_FALLBACK": fallback_key_3,
+            }
+        )
+        fallback_join = fallback_input.merge(fallback_lookup, on="SOURCE_KEY_3_FALLBACK", how="left").set_index("_IDX_FB")
+        fallback_has_match = fallback_join["N_CODES_SIES"].notna()
+        exact_missing = archivo_subida["N_CODES_SIES"].isna()
+        apply_fallback_mask = exact_missing & fallback_has_match.reindex(archivo_subida.index, fill_value=False)
+        if apply_fallback_mask.any():
+            assign_cols = [
+                "N_CODES_SIES",
+                "CODIGOS_SIES_POTENCIALES",
+                "GRUPO_TRAZA",
+                "FAMILIA_TRAZA",
+                "FAMILIA_CODCARPR",
+            ] + [f"CODIGO_CARRERA_SIES_{idx}" for idx in range(1, MAX_SIES_CODES_PER_KEY + 1)]
+            for c in assign_cols:
+                if c in fallback_join.columns:
+                    archivo_subida.loc[apply_fallback_mask, c] = fallback_join.loc[apply_fallback_mask, c]
+
         key_exact = set(df_bridge["BRIDGE_KEY_3"])
         key_no_jornada = set(df_bridge["BRIDGE_KEY_NO_JORNADA"])
         codcarpr_bridge = set(df_bridge["CODCARPR"])
@@ -2693,12 +3007,13 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         exists_no_j = archivo_subida["KEY_3_NO_JORNADA"].isin(key_no_jornada)
         exists_cod = archivo_subida["CODCARPR_NORM"].isin(codcarpr_bridge)
         n_codes = pd.to_numeric(archivo_subida["N_CODES_SIES"], errors="coerce").fillna(0)
+        match_any = n_codes > 0
 
         archivo_subida["SIES_MATCH_STATUS"] = "SIN_MATCH_SIES"
         archivo_subida["SIES_MATCH_DIAG"] = "SIN_CODCARPR_EN_PUENTE_SIES"
 
-        unique_mask = match_exact & (n_codes == 1)
-        amb_mask = match_exact & (n_codes > 1)
+        unique_mask = match_any & (n_codes == 1)
+        amb_mask = match_any & (n_codes > 1)
 
         archivo_subida.loc[unique_mask, "SIES_MATCH_STATUS"] = "MATCH_SIES"
         archivo_subida.loc[unique_mask, "SIES_MATCH_DIAG"] = "MATCH_SIES_UNICO"
@@ -2706,9 +3021,11 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
 
         archivo_subida.loc[amb_mask, "SIES_MATCH_STATUS"] = "AMBIGUO_SIES"
         archivo_subida.loc[amb_mask, "SIES_MATCH_DIAG"] = "MATCH_SIES_AMBIGUO"
+        archivo_subida.loc[unique_mask & apply_fallback_mask, "SIES_MATCH_DIAG"] = "MATCH_SIES_UNICO_FALLBACK_NOMBRE"
+        archivo_subida.loc[amb_mask & apply_fallback_mask, "SIES_MATCH_DIAG"] = "MATCH_SIES_AMBIGUO_FALLBACK_NOMBRE"
 
-        archivo_subida.loc[(~match_exact) & exists_no_j, "SIES_MATCH_DIAG"] = "PROBABLE_PROBLEMA_JORNADA_SIES"
-        archivo_subida.loc[(~match_exact) & (~exists_no_j) & exists_cod, "SIES_MATCH_DIAG"] = "PROBABLE_PROBLEMA_NOMBRE_SIES"
+        archivo_subida.loc[(~match_any) & exists_no_j, "SIES_MATCH_DIAG"] = "PROBABLE_PROBLEMA_JORNADA_SIES"
+        archivo_subida.loc[(~match_any) & (~exists_no_j) & exists_cod, "SIES_MATCH_DIAG"] = "PROBABLE_PROBLEMA_NOMBRE_SIES"
     else:
         archivo_subida["GRUPO_TRAZA_PUENTE"] = pd.NA
         archivo_subida["FAMILIA_TRAZA_PUENTE"] = pd.NA
@@ -2823,6 +3140,93 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     # Normalización final contra reglas del manual de carga pregrado.
     # Se conserva ARCHIVO_LISTO_SUBIDA completo, y se construye una hoja
     # MATRICULA_UNIFICADA_32 lista para carga (sin diplomados, sin duplicados).
+    #
+    # Ajuste de coherencia de sede:
+    # cuando COD_SED (resuelto desde input/DA_SEDE) discrepa del componente S de
+    # CODIGO_CARRERA_SIES_FINAL, intentamos reemplazar por un CODIGO_UNICO
+    # equivalente (mismo C/J/V) con la sede solicitada, usando oferta_dim.
+    archivo_subida["SIES_AJUSTE_SEDE_FLAG"] = "NO"
+    archivo_subida["SIES_AJUSTE_SEDE_ORIGEN"] = pd.NA
+    if not oferta_dim.empty and FINAL_SIES_CODE_COL in archivo_subida.columns:
+        cod_sed_pref = pd.to_numeric(archivo_subida["COD_SED"], errors="coerce")
+        parsed_pre = archivo_subida[FINAL_SIES_CODE_COL].apply(_extract_sies_components)
+        parsed_pre_sed = pd.to_numeric(
+            parsed_pre.map(lambda x: x[0] if isinstance(x, tuple) else pd.NA),
+            errors="coerce",
+        )
+        parsed_pre_car = pd.to_numeric(
+            parsed_pre.map(lambda x: x[1] if isinstance(x, tuple) else pd.NA),
+            errors="coerce",
+        )
+        parsed_pre_jor = pd.to_numeric(
+            parsed_pre.map(lambda x: x[2] if isinstance(x, tuple) else pd.NA),
+            errors="coerce",
+        )
+        parsed_pre_ver = pd.to_numeric(
+            parsed_pre.map(lambda x: x[3] if isinstance(x, tuple) else pd.NA),
+            errors="coerce",
+        )
+        sede_mismatch = (
+            cod_sed_pref.notna()
+            & parsed_pre_sed.notna()
+            & parsed_pre_car.notna()
+            & parsed_pre_jor.notna()
+            & parsed_pre_ver.notna()
+            & cod_sed_pref.ne(parsed_pre_sed)
+        )
+        if sede_mismatch.any():
+            oferta_codes = (
+                oferta_dim[["CODIGO_UNICO"]]
+                .dropna()
+                .drop_duplicates()
+                .copy()
+            )
+            oferta_codes["_PARSED"] = oferta_codes["CODIGO_UNICO"].map(_extract_sies_components)
+            oferta_codes = oferta_codes[oferta_codes["_PARSED"].map(lambda x: isinstance(x, tuple))].copy()
+            oferta_codes["SED_PARSE"] = pd.to_numeric(oferta_codes["_PARSED"].map(lambda x: x[0]), errors="coerce")
+            oferta_codes["CAR_PARSE"] = pd.to_numeric(oferta_codes["_PARSED"].map(lambda x: x[1]), errors="coerce")
+            oferta_codes["JOR_PARSE"] = pd.to_numeric(oferta_codes["_PARSED"].map(lambda x: x[2]), errors="coerce")
+            oferta_codes["VER_PARSE"] = pd.to_numeric(oferta_codes["_PARSED"].map(lambda x: x[3]), errors="coerce")
+            oferta_codes = oferta_codes.dropna(subset=["SED_PARSE", "CAR_PARSE", "JOR_PARSE", "VER_PARSE"])
+
+            key_to_codes: dict[tuple[int, int, int, int], list[str]] = {}
+            for row in oferta_codes.itertuples(index=False):
+                key = (
+                    int(getattr(row, "SED_PARSE")),
+                    int(getattr(row, "CAR_PARSE")),
+                    int(getattr(row, "JOR_PARSE")),
+                    int(getattr(row, "VER_PARSE")),
+                )
+                key_to_codes.setdefault(key, []).append(str(getattr(row, "CODIGO_UNICO")).strip().upper())
+            unique_key_to_code = {k: v[0] for k, v in key_to_codes.items() if len(v) == 1}
+
+            ajustadas = 0
+            for idx in archivo_subida.index[sede_mismatch]:
+                key = (
+                    int(cod_sed_pref.loc[idx]),
+                    int(parsed_pre_car.loc[idx]),
+                    int(parsed_pre_jor.loc[idx]),
+                    int(parsed_pre_ver.loc[idx]),
+                )
+                nuevo_codigo = unique_key_to_code.get(key, "")
+                codigo_actual = str(archivo_subida.at[idx, FINAL_SIES_CODE_COL]).strip().upper()
+                if nuevo_codigo and codigo_actual and nuevo_codigo != codigo_actual:
+                    archivo_subida.at[idx, "SIES_AJUSTE_SEDE_ORIGEN"] = codigo_actual
+                    archivo_subida.at[idx, FINAL_SIES_CODE_COL] = nuevo_codigo
+                    archivo_subida.at[idx, "SIES_AJUSTE_SEDE_FLAG"] = "SI"
+                    diag_actual = str(archivo_subida.at[idx, "SIES_MATCH_DIAG"]).strip()
+                    archivo_subida.at[idx, "SIES_MATCH_DIAG"] = (
+                        f"{diag_actual}|AJUSTE_SEDE_GOBERNANZA"
+                        if diag_actual
+                        else "AJUSTE_SEDE_GOBERNANZA"
+                    )
+                    heur_actual = str(archivo_subida.at[idx, "SIES_RESOLUCION_HEURISTICA"]).strip()
+                    if not heur_actual or heur_actual.upper() in {"NAN", "<NA>"}:
+                        archivo_subida.at[idx, "SIES_RESOLUCION_HEURISTICA"] = "AJUSTE_SEDE_GOBERNANZA"
+                    ajustadas += 1
+            if ajustadas:
+                print(f"    ↳ Ajuste SIES por sede gobernanza: {ajustadas} filas")
+
     parsed_sies = archivo_subida[FINAL_SIES_CODE_COL].apply(_extract_sies_components)
     parsed_df = pd.DataFrame(
         {
@@ -3057,19 +3461,16 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     sem_ori = sem_ori.where(anio_ori != 1900, 0).astype("Int64")
     archivo_subida["SEM_ING_ORI"] = sem_ori
 
-    # FOR_ING_ACT: solo aceptar catálogo 1..11; no usar 10 como fallback silencioso.
-    for_ing = pd.to_numeric(archivo_subida["FOR_ING_ACT"], errors="coerce")
-    for_ing = for_ing.where(for_ing.isin(sorted(valid_for_ing_act_codes)), pd.NA).astype("Int64")
-    # BUG-004 fix: usar valor derivado por _resolve_for_ing_act_row; fallback a 1 solo si NA.
-    _for_na_mask = for_ing.isna()
-    archivo_subida["FOR_ING_ACT"] = for_ing.fillna(1).astype("Int64")
-    # Trazabilidad: solo actualizar las filas que fueron defaulteadas a 1 por NA.
-    archivo_subida.loc[_for_na_mask, "FOR_ING_ACT_FUENTE_VALOR"] = "1"
-    archivo_subida.loc[_for_na_mask, "FOR_ING_ACT_FUENTE_CAMPO"] = "DEFAULT_FALLBACK_NA"
-    archivo_subida.loc[_for_na_mask, "FOR_ING_ACT_FUENTE_NORM"] = "1"
-    archivo_subida.loc[_for_na_mask, "FOR_ING_ACT_METODO"] = "DEFAULT_1_NA_FALLBACK"
-    archivo_subida.loc[_for_na_mask, "FOR_ING_ACT_IMPUTADO"] = "SI"
-    archivo_subida.loc[_for_na_mask, "FOR_ING_ACT_REQUIERE_REVISION"] = "SI"
+    # FOR_ING_ACT: conservar solo catálogo 1..11; sin default silencioso.
+    valid_for_ing_codes_sorted = sorted(valid_for_ing_act_codes)
+    for_ing_raw = pd.to_numeric(archivo_subida["FOR_ING_ACT"], errors="coerce")
+    for_ing_invalid_mask = for_ing_raw.notna() & ~for_ing_raw.isin(valid_for_ing_codes_sorted)
+    for_ing = for_ing_raw.where(for_ing_raw.isin(valid_for_ing_codes_sorted), pd.NA).astype("Int64")
+    archivo_subida["FOR_ING_ACT"] = for_ing
+    if for_ing_invalid_mask.any():
+        archivo_subida.loc[for_ing_invalid_mask, "FOR_ING_ACT_METODO"] = "INVALIDO_FUERA_CATALOGO_1_11"
+        archivo_subida.loc[for_ing_invalid_mask, "FOR_ING_ACT_IMPUTADO"] = "NO"
+        archivo_subida.loc[for_ing_invalid_mask, "FOR_ING_ACT_REQUIERE_REVISION"] = "SI"
 
     # --- DA-based overrides: detectar FOR=2 (continuidad) y FOR=3 (cambio interno) ---
     _nombre_carr = archivo_subida.get("NOMBRE_CARRERA_FUENTE", pd.Series("", index=archivo_subida.index)).fillna("").astype(str).str.upper()
@@ -3131,6 +3532,19 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida.loc[for_equal, "SEM_ING_ORI_FUENTE_FINAL"] = "POLITICA_FOR_ING_ACT_1"
     archivo_subida.loc[for_equal, "SEM_ING_ORI_METODO_FINAL"] = "COPIA_DESDE_SEM_ING_ACT"
     archivo_subida.loc[for_equal, "SEM_ING_ORI_AUDIT_STATUS"] = "IGUAL_ACTUAL_POR_POLITICA_FOR_ING_ACT_1"
+    # Anexo 7 continuidad: FOR {2,3,4,5,11} exige origen distinto del ingreso actual.
+    for_cont_codes = {2, 3, 4, 5, 11}
+    for_continuidad = archivo_subida["FOR_ING_ACT"].isin(sorted(for_cont_codes))
+    for_continuidad_same_origin = (
+        for_continuidad
+        & archivo_subida["ANIO_ING_ACT"].eq(archivo_subida["ANIO_ING_ORI"])
+        & archivo_subida["SEM_ING_ACT"].eq(archivo_subida["SEM_ING_ORI"])
+    )
+    archivo_subida["FOR_ING_ACT_CONTINUIDAD_STATUS"] = "OK"
+    archivo_subida.loc[
+        for_continuidad_same_origin, "FOR_ING_ACT_CONTINUIDAD_STATUS"
+    ] = "INCONSISTENTE_CONTINUIDAD_ORIGEN_IGUAL_ACTUAL"
+    archivo_subida.loc[for_continuidad_same_origin, "FOR_ING_ACT_REQUIERE_REVISION"] = "SI"
 
     asi_ins_ant = pd.to_numeric(archivo_subida["ASI_INS_ANT"], errors="coerce")
     asi_ins_ant = asi_ins_ant.where(asi_ins_ant.between(0, 99), pd.NA).fillna(0).astype("Int64")
@@ -3223,7 +3637,14 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida["PAIS_EST_SEC"] = pais_num.where(pais_num.between(1, 197), pd.NA).fillna(38).astype("Int64")
 
     niv_aca_raw = pd.to_numeric(archivo_subida["NIV_ACA"], errors="coerce")
+    niv_aca_admin_orig = niv_aca_raw.copy()
+    regimen_norm = _series_or_default(archivo_subida, "REGIMEN_FUENTE").map(_normalize_text)
+    trim_regimen_mask = regimen_norm.str.contains("TRIM", regex=False)
+    niv_aca_eq_sem = _trimester_level_to_semester(niv_aca_raw)
+    niv_trim_aplicado_mask = trim_regimen_mask & niv_aca_raw.notna() & niv_aca_eq_sem.notna()
+    niv_aca_raw = niv_aca_raw.where(~niv_trim_aplicado_mask, niv_aca_eq_sem)
     niv_aca_status_final = archivo_subida["NIV_ACA_AUDIT_STATUS"].astype("object").copy()
+    niv_aca_status_final.loc[niv_trim_aplicado_mask] = "TRIM_EQ_SEM_APLICADA"
     niv_default_mask = ~niv_aca_raw.ge(1)
     niv_aca = niv_aca_raw.where(niv_aca_raw >= 1, pd.NA).fillna(1)
     dur_ref = pd.to_numeric(archivo_subida["DURACION_ESTUDIOS_REF"], errors="coerce")
@@ -3240,6 +3661,10 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     niv_aca_status_final.loc[niv_capped_dur_mask & niv_capped_2026_mask] = "ACOTADO_DURACION_Y_COHORTE_2026"
     archivo_subida["NIV_ACA"] = niv_aca.astype("Int64")
     archivo_subida["NIV_ACA_AUDIT_STATUS"] = niv_aca_status_final
+    archivo_subida["NIV_ACA_ADMIN_ORIG"] = niv_aca_admin_orig.astype("Float64")
+    archivo_subida["NIV_ACA_EQ_SEM_APLICADA"] = pd.Series("NO", index=archivo_subida.index, dtype="object")
+    archivo_subida.loc[niv_trim_aplicado_mask, "NIV_ACA_EQ_SEM_APLICADA"] = "SI"
+    print(f"    ↳ NIV_ACA equivalencia TRIMESTRAL→SEMESTRAL: {int(niv_trim_aplicado_mask.sum())} filas")
 
     archivo_subida["SIT_FON_SOL"] = pd.Series(1, index=archivo_subida.index, dtype="Int64")
     archivo_subida["SUS_PRE"] = pd.Series(0, index=archivo_subida.index, dtype="Int64")
@@ -3308,6 +3733,47 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida["FECHA_MATRICULA_METODO_FINAL"] = fecha_mat_method_final
     archivo_subida["FECHA_MATRICULA_AUDIT_STATUS"] = fecha_mat_status_final
 
+    sit_fon_sol_patch_stats: dict[str, object] = {
+        "patch_applied": False,
+        "patch_path": sit_fon_patch_source,
+        "n_rut_patch": 0,
+        "n_rows_targeted": 0,
+        "n_rows_affected": 0,
+        "n_rut_missing": 0,
+    }
+    archivo_subida["SIT_FON_SOL_PATCH_FLAG"] = "NO"
+    archivo_subida["SIT_FON_SOL_PATCH_RUT"] = pd.NA
+    if sit_fon_sol_patch_json_path:
+        _patch_map = load_json_patch(sit_fon_sol_patch_json_path)
+        _patch_rut_series, _patch_mask, _patch_col, _patch_matches_by_col, _patch_matched_ruts, _patch_missing_ruts = (
+            resolve_patch_targets(
+                archivo_subida,
+                _patch_map,
+                rut_columns_candidates=["N_DOC", "NUM_DOCUMENTO", "RUT", "RUT_NUM", "CODCLI"],
+            )
+        )
+        archivo_subida, sit_fon_sol_patch_stats = apply_sit_fon_sol_patch(
+            archivo_subida,
+            sit_fon_sol_patch_json_path,
+            rut_columns_candidates=["N_DOC", "NUM_DOCUMENTO", "RUT", "RUT_NUM", "CODCLI"],
+            target_col="SIT_FON_SOL",
+        )
+        sit_fon_sol_patch_stats["patch_applied"] = True
+        sit_fon_sol_patch_stats["n_rut_matched"] = int(len(_patch_matched_ruts))
+        sit_fon_sol_patch_stats["n_rut_missing"] = int(len(_patch_missing_ruts))
+        sit_fon_sol_patch_stats["rut_column_selected_runtime"] = _patch_col
+        sit_fon_sol_patch_stats["rut_matches_by_column_runtime"] = _patch_matches_by_col
+        archivo_subida.loc[_patch_mask, "SIT_FON_SOL_FUENTE_FINAL"] = PATCH_SOURCE_SIT_FON_SOL
+        archivo_subida.loc[_patch_mask, "SIT_FON_SOL_METODO_FINAL"] = PATCH_METHOD_SIT_FON_SOL
+        archivo_subida.loc[_patch_mask, "SIT_FON_SOL_AUDIT_STATUS"] = PATCH_AUDIT_STATUS_SIT_FON_SOL
+        archivo_subida.loc[_patch_mask, "SIT_FON_SOL_PATCH_FLAG"] = "SI"
+        archivo_subida.loc[_patch_mask, "SIT_FON_SOL_PATCH_RUT"] = _patch_rut_series[_patch_mask]
+        print(
+            "✅ Patch SIT_FON_SOL aplicado: "
+            f"{sit_fon_sol_patch_stats.get('n_rows_targeted', 0)} filas objetivo, "
+            f"{sit_fon_sol_patch_stats.get('n_rows_affected', 0)} filas cambiadas."
+        )
+
     # Construcción de carga final (pregrado): excluir diplomados, no-match de datos alumnos
     # y deduplicar por clave de matrícula.
     estado_carga = pd.Series("OK_CARGA_PREGRADO", index=archivo_subida.index, dtype="object")
@@ -3320,6 +3786,19 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     sin_match_da = archivo_subida["DA_MATCH_MODO"] == "SIN_MATCH"
     heuristica_sies_opaca = archivo_subida["SIES_RESOLUCION_HEURISTICA"].astype("object").eq("PRIMERA_OPCION")
     sin_for_ing_trazable = archivo_subida["FOR_ING_ACT"].isna()
+    for_ing_requires_review = (
+        archivo_subida["FOR_ING_ACT_REQUIERE_REVISION"]
+        .astype(str)
+        .str.strip()
+        .str.upper()
+        .eq("SI")
+    )
+    for_ing_continuidad_invalida = (
+        archivo_subida["FOR_ING_ACT_CONTINUIDAD_STATUS"]
+        .astype(str)
+        .str.strip()
+        .eq("INCONSISTENTE_CONTINUIDAD_ORIGEN_IGUAL_ACTUAL")
+    )
 
     estado_carga.loc[sin_cod_car_final] = "EXCLUIDO_SIN_MATCH_SIES"
     estado_carga.loc[(estado_carga == "OK_CARGA_PREGRADO") & excl_dipl] = "EXCLUIDO_DIPLOMADO"
@@ -3328,6 +3807,12 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     # una regla trazable y auditada para reemplazar PRIMERA_OPCION.
     estado_carga.loc[(estado_carga == "OK_CARGA_PREGRADO") & heuristica_sies_opaca] = "EXCLUIDO_SIES_HEURISTICA_OPACA"
     estado_carga.loc[(estado_carga == "OK_CARGA_PREGRADO") & sin_for_ing_trazable] = "EXCLUIDO_SIN_FOR_ING_ACT_TRAZABLE"
+    estado_carga.loc[
+        (estado_carga == "OK_CARGA_PREGRADO") & for_ing_continuidad_invalida
+    ] = "EXCLUIDO_FOR_ING_ACT_CONTINUIDAD_INVALIDA"
+    estado_carga.loc[
+        (estado_carga == "OK_CARGA_PREGRADO") & for_ing_requires_review
+    ] = "EXCLUIDO_FOR_ING_ACT_REQUIERE_REVISION"
 
     included_final_mask_pre_dedupe = estado_carga == "OK_CARGA_PREGRADO"
     titulado_aprobado_mask = archivo_subida["DA_SITUACION"].astype(str).str.startswith("31 - TITULADO APROBADO")
@@ -3422,9 +3907,46 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         repo_dir=Path(__file__).resolve().parent,
     )
 
-    # El artefacto contractual vigente mantiene FOR_ING_ACT fijo en 1 para carga oficial.
-    if not matricula_unificada_32.empty:
-        matricula_unificada_32["FOR_ING_ACT"] = pd.Series(1, index=matricula_unificada_32.index, dtype="Int64")
+    # Revalidar FOR_ING_ACT después de exclusiones multi-carrera (puede forzar códigos).
+    # Si cambia FOR, debemos re-aplicar coherencia ORI/ACT y continuidad Anexo 7.
+    for_post_mc = pd.to_numeric(archivo_subida["FOR_ING_ACT"], errors="coerce")
+    for_equal_post_mc = for_post_mc.eq(1)
+    if for_equal_post_mc.any():
+        archivo_subida.loc[for_equal_post_mc, "ANIO_ING_ORI"] = archivo_subida.loc[for_equal_post_mc, "ANIO_ING_ACT"]
+        archivo_subida.loc[for_equal_post_mc, "SEM_ING_ORI"] = archivo_subida.loc[for_equal_post_mc, "SEM_ING_ACT"]
+        idx_for_equal = for_equal_post_mc[for_equal_post_mc].index.intersection(matricula_unificada_32.index)
+        if len(idx_for_equal) > 0:
+            matricula_unificada_32.loc[idx_for_equal, "ANIO_ING_ORI"] = archivo_subida.loc[idx_for_equal, "ANIO_ING_ORI"]
+            matricula_unificada_32.loc[idx_for_equal, "SEM_ING_ORI"] = archivo_subida.loc[idx_for_equal, "SEM_ING_ORI"]
+
+    for_cont_codes_post_mc = {2, 3, 4, 5, 11}
+    anio_act_post_mc = pd.to_numeric(archivo_subida["ANIO_ING_ACT"], errors="coerce")
+    sem_act_post_mc = pd.to_numeric(archivo_subida["SEM_ING_ACT"], errors="coerce")
+    anio_ori_post_mc = pd.to_numeric(archivo_subida["ANIO_ING_ORI"], errors="coerce")
+    sem_ori_post_mc = pd.to_numeric(archivo_subida["SEM_ING_ORI"], errors="coerce")
+    for_continuidad_post_mc = for_post_mc.isin(sorted(for_cont_codes_post_mc))
+    for_continuidad_same_origin_post_mc = (
+        for_continuidad_post_mc
+        & anio_act_post_mc.eq(anio_ori_post_mc)
+        & sem_act_post_mc.eq(sem_ori_post_mc)
+    )
+    archivo_subida["FOR_ING_ACT_CONTINUIDAD_STATUS"] = "OK"
+    archivo_subida.loc[
+        for_continuidad_same_origin_post_mc, "FOR_ING_ACT_CONTINUIDAD_STATUS"
+    ] = "INCONSISTENTE_CONTINUIDAD_ORIGEN_IGUAL_ACTUAL"
+    archivo_subida.loc[for_continuidad_same_origin_post_mc, "FOR_ING_ACT_REQUIERE_REVISION"] = "SI"
+
+    post_mc_cont_invalid_mask = (
+        (estado_carga == "OK_CARGA_PREGRADO")
+        & for_continuidad_same_origin_post_mc
+    )
+    if post_mc_cont_invalid_mask.any():
+        estado_carga.loc[post_mc_cont_invalid_mask] = "EXCLUIDO_FOR_ING_ACT_CONTINUIDAD_INVALIDA"
+        idx_drop = post_mc_cont_invalid_mask[post_mc_cont_invalid_mask].index.intersection(matricula_unificada_32.index)
+        if len(idx_drop) > 0:
+            matricula_unificada_32 = matricula_unificada_32.drop(idx_drop)
+
+    # FOR_ING_ACT se conserva desde la resolución trazable (catálogo 1..11), sin sobreescritura fija.
 
     archivo_subida["ESTADO_CARGA_PREGRADO"] = estado_carga
     archivo_subida["INCLUIR_EN_MATRICULA_32"] = (estado_carga == "OK_CARGA_PREGRADO").map({True: "SI", False: "NO"})
@@ -3462,6 +3984,13 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         matricula_unificada_32["FOR_ING_ACT"].astype(str).value_counts(dropna=False).to_dict()
         if not matricula_unificada_32.empty
         else {}
+    )
+    for_ing_act_report = _build_for_ing_act_report_payload(
+        archivo_subida,
+        included_final_mask,
+        valid_for_ing_act_codes,
+        col_for_ing_act,
+        gob_for_ing_act_source,
     )
 
     # ── Trazabilidad DA: aliases con sufijo _DA para auditoría ───────────────
@@ -3592,6 +4121,11 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_CAMPOS_OBLIGATORIOS", "valor": _exc_campos, "pct": f"{_exc_campos/len(archivo_subida)*100:.1f}%"},
         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_INTRA_CODCLI", "valor": _exc_dup_intra, "pct": f"{_exc_dup_intra/len(archivo_subida)*100:.1f}%"},
         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_CLAVE_CARGA", "valor": _exc_dup_clave, "pct": f"{_exc_dup_clave/len(archivo_subida)*100:.1f}%"},
+        {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Patch JSON aplicado", "valor": "SI" if sit_fon_sol_patch_stats.get("patch_applied") else "NO", "pct": ""},
+        {"seccion": "PATCH_SIT_FON_SOL", "metrica": "RUT en patch JSON", "valor": int(sit_fon_sol_patch_stats.get("n_rut_patch", 0)), "pct": ""},
+        {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Filas objetivo patch", "valor": int(sit_fon_sol_patch_stats.get("n_rows_targeted", 0)), "pct": f"{(int(sit_fon_sol_patch_stats.get('n_rows_targeted', 0))/len(archivo_subida)*100):.1f}%"},
+        {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Filas modificadas patch", "valor": int(sit_fon_sol_patch_stats.get("n_rows_affected", 0)), "pct": f"{(int(sit_fon_sol_patch_stats.get('n_rows_affected', 0))/len(archivo_subida)*100):.1f}%"},
+        {"seccion": "PATCH_SIT_FON_SOL", "metrica": "RUT patch no encontrados", "valor": int(sit_fon_sol_patch_stats.get("n_rut_missing", 0)), "pct": ""},
         {"seccion": "VERIFICACION", "metrica": "Suma excluidos + OK = archivo_subida", "valor": _total_excluidos + _ok, "pct": "✅" if (_total_excluidos + _ok) == len(archivo_subida) else "❌ DESCUADRE"},
     ]
     resumen_ejecutivo = pd.DataFrame(resumen_ejecutivo_rows)
@@ -3611,6 +4145,19 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     sheets_export["EXCLUIDOS_CARGA_PREGR"] = excluidos_carga_pregrado
     sheets_export["SIES_AMBIGUOS_POR_RESOL"] = ambiguos
     sheets_export["SIN_MATCH_SIES"] = sin_match
+    patch_summary_rows = [
+        {"metrica": "patch_applied", "valor": sit_fon_sol_patch_stats.get("patch_applied", False)},
+        {"metrica": "patch_path", "valor": sit_fon_sol_patch_stats.get("patch_path", sit_fon_patch_source)},
+        {"metrica": "n_rut_patch", "valor": sit_fon_sol_patch_stats.get("n_rut_patch", 0)},
+        {"metrica": "n_rows_targeted", "valor": sit_fon_sol_patch_stats.get("n_rows_targeted", 0)},
+        {"metrica": "n_rows_affected", "valor": sit_fon_sol_patch_stats.get("n_rows_affected", 0)},
+        {"metrica": "n_rut_missing", "valor": sit_fon_sol_patch_stats.get("n_rut_missing", 0)},
+        {"metrica": "rut_column_selected", "valor": sit_fon_sol_patch_stats.get("rut_column_selected", "")},
+    ]
+    sheets_export["PATCH_SIT_FON_SOL"] = pd.DataFrame(patch_summary_rows)
+    _patch_missing_sample = sit_fon_sol_patch_stats.get("rut_missing_sample", [])
+    if isinstance(_patch_missing_sample, list) and _patch_missing_sample:
+        sheets_export["PATCH_SIT_FON_SOL_MISS"] = pd.DataFrame({"RUT_NO_ENCONTRADO": _patch_missing_sample})
     if not df_manual.empty:
         sheets_export["CATALOGO_MANUAL"] = df_manual
     if not df_bridge.empty:
@@ -3665,6 +4212,9 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         "gob_sede_source": gob_sede_tsv_path or "no_file",
         "gob_for_ing_act_source": gob_for_ing_act_source,
         "oferta_academica_source": oferta_source,
+        "sit_fon_sol_patch_source": sit_fon_patch_source,
+        "sit_fon_sol_patch_stats": sit_fon_sol_patch_stats,
+        "for_ing_act_report": for_ing_act_report,
     }
     if _filtro_bd_stats:
         _report["filtro_base_datos"] = _filtro_bd_stats
@@ -3676,6 +4226,20 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         _mu_json_path.write_text(json.dumps(_report, indent=2, ensure_ascii=False), encoding="utf-8")
     except Exception:
         pass  # no bloquear pipeline por fallo de escritura JSON
+    try:
+        (output_dir / "reporte_patch_sit_fon_sol.json").write_text(
+            json.dumps(sit_fon_sol_patch_stats, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+    except Exception:
+        pass
+    try:
+        (output_dir / "reporte_for_ing_act.json").write_text(
+            json.dumps(for_ing_act_report, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+    except Exception:
+        pass
     return _report
 
 
@@ -4409,6 +4973,14 @@ def parse_args() -> argparse.Namespace:
             "Por defecto se mantiene el flujo legacy para rollback inmediato."
         ),
     )
+    p.add_argument(
+        "--sit-fon-sol-patch-json",
+        default=None,
+        help=(
+            "Ruta a patch JSON provisional SIT_FON_SOL por RUT. "
+            "Si no se informa, usa patches/mu2026/sit_fon_sol_patch_ruts.json cuando exista."
+        ),
+    )
     return p.parse_args()
 
 
@@ -4433,6 +5005,7 @@ def main() -> None:
         gob_nac_tsv_path = _resolve_optional_path(args.gob_nac_tsv, DEFAULT_GOB_NAC_CANDIDATES)
         gob_pais_est_sec_tsv_path = _resolve_optional_path(args.gob_pais_est_sec_tsv, DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES)
         gob_sede_tsv_path = _resolve_optional_path(args.gob_sede_tsv, DEFAULT_GOB_SEDE_CANDIDATES)
+        sit_fon_sol_patch_json_path = _resolve_optional_path(args.sit_fon_sol_patch_json, DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES)
         report_mu = ejecutar_pipeline_matricula_unificada_legacy_like(
             input_path,
             out,
@@ -4443,6 +5016,7 @@ def main() -> None:
             gob_nac_tsv_path=gob_nac_tsv_path,
             gob_pais_est_sec_tsv_path=gob_pais_est_sec_tsv_path,
             gob_sede_tsv_path=gob_sede_tsv_path,
+            sit_fon_sol_patch_json_path=sit_fon_sol_patch_json_path,
             excluir_diplomados=(args.excluir_diplomados == "true"),
             usar_gobernanza_v2=(args.usar_gobernanza_v2 == "true"),
             filtro_base_datos_sheet=args.filtro_base_datos_sheet,
