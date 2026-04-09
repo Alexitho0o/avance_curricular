@@ -5,8 +5,8 @@
   "gobernanza_mode": "v2_flagged",
   "usar_gobernanza_v2": true,
   "rows": 8977,
-  "rows_matricula_32_final": 1131,
-  "rows_excluidas_carga_pregrado": 7846,
+  "rows_matricula_32_final": 1281,
+  "rows_excluidas_carga_pregrado": 7696,
   "rows_excluidas_sies_heuristica_opaca": 0,
   "rows_excluidas_sin_for_ing_act_trazable": 0,
   "rows_enriquecidas_datos_alumnos": 8977,
@@ -14,11 +14,14 @@
   "cod_sed_resuelto_por_regla": 8977,
   "pais_est_sec_inferido_localidad": 8977,
   "for_ing_act_distribution_final": {
-    "1": 1131
+    "1": 1131,
+    "2": 89,
+    "11": 32,
+    "3": 29
   },
   "rows_for_ing_act_imputado_final": 0,
   "rows_for_ing_act_revision_final": 0,
-  "rows_uz_all_zero_final": 16,
+  "rows_uz_all_zero_final": 18,
   "historico_mu_anio_referencia": 2026,
   "periodo_filtro_anio": 2026,
   "periodo_filtro_sem": 1,
@@ -46,6 +49,14 @@
   "gob_pais_est_sec_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_pais_est_sec.tsv",
   "gob_sede_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv",
   "gob_for_ing_act_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv",
+  "for_ing_act_origin_stats": {
+    "for2_1900": 733,
+    "for3_lookup": 32,
+    "for3_1900": 358,
+    "for11_trace": 446,
+    "for11_1900": 0,
+    "otros_1900": 0
+  },
   "oferta_academica_source": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
   "sit_fon_sol_patch_source": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
   "sit_fon_sol_patch_stats": {
@@ -100,15 +111,21 @@
         11
       ],
       "fuente_campo_distribution": {
-        "DA_VIASDEADMISION": 1131
+        "DA_VIASDEADMISION": 1131,
+        "NOMBRE_CARRERA_FUENTE": 89,
+        "TRACE_MOTOR_FOR_ING_ACT": 34,
+        "DA_SITUACION": 27
       },
       "metodo_distribution": {
-        "CATALOGO_EXACTO_VIAS_ADMISION": 1131
+        "CATALOGO_EXACTO_VIAS_ADMISION": 1131,
+        "DA_NOMBRE_CONTINUIDAD": 89,
+        "DA_TRACE_ARTICULACION_11": 34,
+        "DA_SITUACION_CAMBIO_INTERNO": 27
       }
     },
     "rows_total_stage": 8977,
-    "rows_included_final": 1131,
-    "resolved_ok": 1131,
+    "rows_included_final": 1281,
+    "resolved_ok": 1281,
     "unresolved": {
       "count": 0,
       "pct_rows_included": 0.0,
@@ -116,7 +133,10 @@
       "continuidad_rule_fail_count": 0
     },
     "distribution": {
-      "1": 1131
+      "1": 1131,
+      "2": 89,
+      "11": 32,
+      "3": 29
     },
     "invalid_examples": []
   },
