@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-08T09:20:26.142553",
+  "pipeline_version": "codigo_gobernanza_v2.py",
+  "fix_applied": "NIV_ACA_PRIORITY_INVERSION_FIX",
+  "description": "Swap NIV_ACA priority: DA_NIVEL (enrollment-level) over Hoja1.NIVEL (course-level)",
+  "bugs_fixed": [
+    {
+      "id": "BUG-001",
+      "severity": "CRITICAL",
+      "title": "NIV_ACA priority inversion",
+      "lines": "L2162-2183, L2273-2275",
+      "before": "Hoja1.NIVEL (ramo) primero, DA_NIVEL solo fallback (nunca activado)",
+      "after": "DA_NIVEL (alumno) primero, Hoja1.NIVEL solo fallback"
+    },
+    {
+      "id": "BUG-002",
+      "severity": "HIGH",
+      "title": "Dedup intra-CODCLI sin secondary sort",
+      "lines": "L942-945",
+      "before": "sort by [CODCLI, _FECHA_MAT_TMP] - arbitrario en empate",
+      "after": "sort by [CODCLI, _FECHA_MAT_TMP, _NIV_SORT desc] - mayor nivel gana"
+    }
+  ],
+  "case_rut_16197084": {
+    "codcli_20251TLOG039": {
+      "niv_aca_before": 3,
+      "niv_aca_after": 4,
+      "expected": 4,
+      "fuente": "DA_NIVEL",
+      "status": "FIXED"
+    },
+    "codcli_20181TTMREOL015": {
+      "niv_aca_before": 10,
+      "niv_aca_after": 4,
+      "fuente": "DA_NIVEL (via RUT fallback)",
+      "status": "FIXED"
+    }
+  },
+  "mu32_stats": {
+    "total_rows": 1346,
+    "niv_aca_distribution": {
+      "1": 1035,
+      "2": 41,
+      "3": 39,
+      "4": 162,
+      "5": 17,
+      "6": 2,
+      "7": 32,
+      "8": 11,
+      "10": 4,
+      "11": 3
+    }
+  },
+  "metodo_distribution": {
+    "PRIMARY_DATOS_ALUMNOS": 1346
+  },
+  "tests_passed": 4,
+  "tests_total": 4,
+  "dictamen_pipeline": "LISTO PARA ENTREGA (29 OK, 0 WARN, 0 FAIL)"
+}

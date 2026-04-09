@@ -1,0 +1,295 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Cierre final tecnico de conciliacion de 43 carreras",
+  "fecha_ejecucion": "2026-07-01T17:14:09.949965",
+  "carpeta_salida": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409",
+  "base_vigente": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_CORREGIDO_41_RESUELTOS_2_PENDIENTES_20260701_152445/01_RESULTADOS/01_CONCILIACION_CIERRE_CORREGIDA_43.tsv",
+  "base_invalida_no_utilizada": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_41_RESUELTOS_2_PENDIENTES_20260701_152345",
+  "resultado": {
+    "registros_iniciales": 43,
+    "resueltos_iniciales": 41,
+    "pendientes_iniciales": 2,
+    "registros_finales": 43,
+    "resueltos_finales": 43,
+    "pendientes_finales": 0,
+    "cambios_aplicados": [
+      "I162S2C11J2V1",
+      "I162S2C87J4V1"
+    ],
+    "cambios_no_autorizados": 0,
+    "planes_validados_contra_canonico": 16
+  },
+  "resoluciones": {
+    "I162S2C11J2V1": {
+      "codcarr": "TMIRE",
+      "plan": "TMIRE20171",
+      "estado": "RESUELTO_TECNICAMENTE_POR_PERSONA_PLAN_EXPLICITO",
+      "nivel_respaldo": "ALTO",
+      "tipo_respaldo": "DATO_INSTITUCIONAL_MAS_CRUCE_TECNICO",
+      "fundamento": "5809.CODIGO_UNICO I162S2C11J2V1 -> 17463470-K -> DatosAlumnos.CODCLI 20201TMIRE005 -> Hoja1.CODCARR TMIRE -> PLAN_DE_ESTUDIO TMIRE20171; las filas observadas corresponden a registros académicos del mismo CODCLI, no a matrículas distintas.",
+      "fuente_principal": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/04_pruebas_controladas/PRUEBA_3_PROGRAMAS_20260626_164023/programas/I162S2C11J2V1__TMIRE20171/01_IDENTIDAD_PROGRAMA.tsv; /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/04_pruebas_controladas/PRUEBA_3_PROGRAMAS_20260626_164023/programas/I162S2C11J2V1__TMIRE20171/02_MALLA_OBSERVADA.tsv",
+      "decision": "Asignar TMIRE20171 y CODCARR TMIRE al cierre técnico sin declarar equivalencia con TACI20241.",
+      "regla_oficial": "NO. Dato observado y decisión interna de cierre; no constituye regla oficial.",
+      "observaciones": "No se aplica TACI20241; no se declara equivalencia TACI20241/TMIRE20171."
+    },
+    "I162S2C87J4V1": {
+      "codcarr": "CIIND",
+      "plan": "CIIND20251",
+      "estado": "RESUELTO_TECNICAMENTE_POR_MIGRACION_Y_CURSADO_COMPLETO",
+      "nivel_respaldo": "ALTO",
+      "tipo_respaldo": "UNIVERSO_COMPLETO_PERSONAS_PLAN_Y_ASIGNATURAS",
+      "fundamento": "37 personas evaluadas; 37 con CODCLI; 37 con CODCARR CIIND; 37 con PLAN_DE_ESTUDIO CIIND20251; 37 con asignaturas bajo CIIND20251; 407 registros académicos; 0 personas con otros planes según auditoría definitiva por CODCLI.",
+      "fuente_principal": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_CIIND20251_POR_CODCLI_20260701_162235/02_RESULTADOS/03_RESULTADO_GLOBAL.tsv",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_CIIND20251_POR_CODCLI_20260701_162235/01_EVIDENCIA/01_PUENTE_PERSONA_CODCLI.tsv; /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_CIIND20251_POR_CODCLI_20260701_162235/01_EVIDENCIA/02_HOJA1_CODCLI_37_PERSONAS.tsv",
+      "decision": "Asignar CIIND20251 y CODCARR CIIND al cierre técnico por trazabilidad completa de personas, plan y asignaturas.",
+      "regla_oficial": "NO. Dato observado y decisión interna de cierre; no constituye equivalencia oficial entre códigos SIES.",
+      "observaciones": "Las mismas 37 personas aparecen asociadas a I162S2C22J4V2; no se declara equivalencia oficial entre I162S2C87J4V1 e I162S2C22J4V2."
+    }
+  },
+  "clasificacion_respaldo": {
+    "regla_oficial": "Instructivo Avance Curricular SIES 2026 no usado para crear equivalencias.",
+    "dato_observado": "5809, 5810, PROMEDIOSDEALUMNOS, canonico y resultados de auditoria.",
+    "implementacion_tecnica": "Cruces RUT+DV, CODCLI, plan y asignaturas.",
+    "decision_interna": "Asignar TMIRE20171 y CIIND20251 a los dos codigos pendientes.",
+    "pendientes": "Ninguno en la conciliacion de planes de las 43 carreras."
+  },
+  "fuentes_modificadas": false,
+  "precargas_modificadas": false,
+  "promedios_modificado": false,
+  "canonico_modificado": false,
+  "cierre_anterior_modificado": false,
+  "archivo_carga_generado": false,
+  "apto_para_continuar_a_validacion_funcional": true,
+  "apto_para_carga_sies": false,
+  "hashes_fuentes_antes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_CORREGIDO_41_RESUELTOS_2_PENDIENTES_20260701_152445/01_RESULTADOS/01_CONCILIACION_CIERRE_CORREGIDA_43.tsv": "a1abdc2de1875badcc8429ed9d5d145d3c8697db9f6ffdf0d6ec8bac4ca490f8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/01_CANONICO_TODOS_PLANES.tsv": "203d7996198dade106feadbb01bf91899feae9930d34387f1883ff31d6b6e347",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5809_PRECARGA_MATRICULA_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "a3ff54c7f1d0037bd6fedc7771e4a2d06d2795e0a5e1cac1ad9fb05d952b57d4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5810_PRECARGA_CARRERAS_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020",
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/PROMEDIOSDEALUMNOS_7804.xlsx": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_DATOSALUMNOS.tsv": "68c57f44aa428c742cb3886c9ba37e4daf17ae06d25615c7f69b65fabe2a6af6",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv": "43d284c949de6a93291d9fc363290133ec90a7797882e11aa6ce4f1bf03c958b",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_CORREGIDO_41_RESUELTOS_2_PENDIENTES_20260701_152445/00_CONTROL/manifiesto.json": "5d73c6b92f9f5554b885a948c51aa170e16076cf6d597b83dc4ab306b093c279"
+  },
+  "hashes_fuentes_despues": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_CORREGIDO_41_RESUELTOS_2_PENDIENTES_20260701_152445/01_RESULTADOS/01_CONCILIACION_CIERRE_CORREGIDA_43.tsv": "a1abdc2de1875badcc8429ed9d5d145d3c8697db9f6ffdf0d6ec8bac4ca490f8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/01_CANONICO_TODOS_PLANES.tsv": "203d7996198dade106feadbb01bf91899feae9930d34387f1883ff31d6b6e347",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5809_PRECARGA_MATRICULA_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "a3ff54c7f1d0037bd6fedc7771e4a2d06d2795e0a5e1cac1ad9fb05d952b57d4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5810_PRECARGA_CARRERAS_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020",
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/PROMEDIOSDEALUMNOS_7804.xlsx": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_DATOSALUMNOS.tsv": "68c57f44aa428c742cb3886c9ba37e4daf17ae06d25615c7f69b65fabe2a6af6",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv": "43d284c949de6a93291d9fc363290133ec90a7797882e11aa6ce4f1bf03c958b",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_CORREGIDO_41_RESUELTOS_2_PENDIENTES_20260701_152445/00_CONTROL/manifiesto.json": "5d73c6b92f9f5554b885a948c51aa170e16076cf6d597b83dc4ab306b093c279"
+  },
+  "hashes_salidas": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/03_PENDIENTES_0.tsv": "c4064a32941b9def7c0c4d02538115daf86c382d2fdcbfbf29c306e117b37ddf",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/05_CIERRE_FINAL_43_CARRERAS.xlsx": "5019fef6759660a15659b2a1c4d9db1ee7a5ba3752f5334375a911194a592bfd",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/01_CONCILIACION_FINAL_43.tsv": "ca22d4820f54710c4628cfb9daa5fa78951e58fab59af44b900faf69c1f8b0c5",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/02_RESUELTOS_43.tsv": "ca22d4820f54710c4628cfb9daa5fa78951e58fab59af44b900faf69c1f8b0c5",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/04_CAMBIOS_RESPECTO_CIERRE_41_2.tsv": "b11c86d59023075a90b652361cbd1147dce4383c5ac207c4d7d774a5f60d1d3b",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/04_CAMBIOS_DETALLE_CAMPOS.tsv": "29168e251dc9e20413a19e82cf892614841b6f2428f70c4200948e519b3cd891",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/01_EVIDENCIA/evidencia_resolucion_ciind.tsv": "8f1ae5bb6b43665a5bec548f4c4a617fa7f3dc1d2cbd311839abf5fd9c6e08cb",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/01_EVIDENCIA/decisiones_tecnicas_aplicadas.tsv": "3d8ba9e9258a872e8c36bd9440e26f159e763b5703b446fc66acc4dd9d37d097",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/01_EVIDENCIA/evidencia_resolucion_tmire.tsv": "566538c441c99eb8ed55247761908ce7a03d85d2a1a270f2fedffc6ac89a12d8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/01_EVIDENCIA/trazabilidad_fuentes.tsv": "52623973adcdb85d7f9703ab6f3ffa9efa62004244e3d83947dcf6df2fdfe16b",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/03_REPORTES/RESUMEN_CIERRE_FINAL_43_0.md": "572dbfe12df61018e64b334ddce65fada2aa25e521ccfbffee5a87aa0e5e8f19",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/00_CONTROL/conteo_estados.tsv": "f60fc826007e7b5d13478d14bc3bb0017198da28982058c2686a72fdb20485e8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/00_CONTROL/fuentes_utilizadas.tsv": "3e89e5c7a9acb3db6ffce5121bb85bbd93874faeae5e246e0457607668ca9f6f",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/00_CONTROL/validaciones_finales.tsv": "9fb9381b6dc6a2ac70ee22df97fee8e217cb965fd49e5de79c2edba987fd8817",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/00_CONTROL/hashes_fuentes.tsv": "bcdb048f0c474a4e9a30164e13d65036e4b0a91deab7b39105bac0f4fb527825"
+  },
+  "validaciones": [
+    {
+      "VALIDACION": "Filas de conciliacion final",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "CODIGO_UNICO distintos",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Duplicados CODIGO_UNICO",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Resueltos",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Pendientes",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Estados vacios",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "CODCARR vacios entre resueltos",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "PLAN_DE_ESTUDIO vacios entre resueltos",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Planes finales existen en canonico",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Otros 41 registros identicos al cierre anterior",
+      "ESPERADO": "41",
+      "OBSERVADO": "41",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Solo cambiaron dos codigos autorizados",
+      "ESPERADO": "2",
+      "OBSERVADO": "2",
+      "RESULTADO": "OK",
+      "OBSERVACION": "I162S2C11J2V1, I162S2C87J4V1"
+    },
+    {
+      "VALIDACION": "TMIRE20171 existe en canonico",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "CIIND20251 existe en canonico",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "I162S2C11J2V1 aparece una vez",
+      "ESPERADO": "1",
+      "OBSERVADO": "1",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "I162S2C87J4V1 aparece una vez",
+      "ESPERADO": "1",
+      "OBSERVADO": "1",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Fuente 5809 intacta",
+      "ESPERADO": "a3ff54c7f1d0037bd6fedc7771e4a2d06d2795e0a5e1cac1ad9fb05d952b57d4",
+      "OBSERVADO": "a3ff54c7f1d0037bd6fedc7771e4a2d06d2795e0a5e1cac1ad9fb05d952b57d4",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Fuente 5810 intacta",
+      "ESPERADO": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020",
+      "OBSERVADO": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "PROMEDIOSDEALUMNOS intacto",
+      "ESPERADO": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+      "OBSERVADO": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Cierre anterior intacto",
+      "ESPERADO": "a1abdc2de1875badcc8429ed9d5d145d3c8697db9f6ffdf0d6ec8bac4ca490f8",
+      "OBSERVADO": "a1abdc2de1875badcc8429ed9d5d145d3c8697db9f6ffdf0d6ec8bac4ca490f8",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "No se genero archivo de carga",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": "La carpeta contiene solo control, evidencia, resultados de auditoría y reportes."
+    },
+    {
+      "VALIDACION": "No se modificaron fuentes",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Resultado versionado",
+      "ESPERADO": "SI",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Manifiesto generado",
+      "ESPERADO": "SI",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/00_CONTROL/manifiesto.json",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Evidencias TMIRE incorporadas",
+      "ESPERADO": "SI",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/01_EVIDENCIA/evidencia_resolucion_tmire.tsv",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Evidencias CIIND incorporadas",
+      "ESPERADO": "SI",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/01_EVIDENCIA/evidencia_resolucion_ciind.tsv",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Reproducible desde cierre 41/2 y dos decisiones tecnicas",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Ejecucion invalida 152345 no usada como base",
+      "ESPERADO": "NO_USADA",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_41_RESUELTOS_2_PENDIENTES_20260701_152345",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    }
+  ]
+}

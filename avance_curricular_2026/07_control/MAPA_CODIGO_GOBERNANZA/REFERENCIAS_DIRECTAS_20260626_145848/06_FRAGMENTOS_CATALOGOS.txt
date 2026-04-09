@@ -1,0 +1,939 @@
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 1 — LÍNEAS 10-177
+==========================================================================================
+000010: from pathlib import Path
+000011: from typing import Iterable
+000012: 
+000013: import pandas as pd
+000014: from src.patches.apply_patches import (
+000015:     DEFAULT_SIT_FON_SOL_PATCH_PATH,
+000016:     PATCH_AUDIT_STATUS_SIT_FON_SOL,
+000017:     PATCH_METHOD_SIT_FON_SOL,
+000018:     PATCH_SOURCE_SIT_FON_SOL,
+000019:     apply_sit_fon_sol_patch,
+000020:     load_json_patch,
+000021:     resolve_patch_targets,
+000022: )
+000023: 
+000024: # ==============================
+000025: # FUENTE ÚNICA GOBERNANZA SIES: DURACION_ESTUDIOS.tsv
+000026: # ==============================
+000027: def _parse_sies_codigo_unico(codigo_unico: object) -> tuple[str | None, str | None]:
+000028:     text = str(codigo_unico or "").strip().upper()
+000029:     m = re.match(r"^I\d+S\d+C\d+J(?P<jor>\d+)V(?P<ver>\d+)$", text)
+000030:     if not m:
+000031:         return (None, None)
+000032:     j = m.group("jor")
+000033:     jornada = {"1": "D", "2": "V", "3": "O", "4": "O"}.get(j)
+000034:     version = f"V{m.group('ver')}"
+000035:     return (jornada, version)
+000036: 
+000037: 
+000038: def _split_codcarpr_candidates(canon: object, aliases: object) -> list[str]:
+000039:     out: set[str] = set()
+000040:     canon_txt = str(canon or "").strip().upper()
+000041:     if canon_txt:
+000042:         out.add(canon_txt)
+000043:     alias_txt = str(aliases or "").strip().upper()
+000044:     if alias_txt:
+000045:         for val in alias_txt.split("|"):
+000046:             val = val.strip()
+000047:             if val:
+000048:                 out.add(val)
+000049:     return sorted(out)
+000050: 
+000051: 
+000052: def _load_duracion_as_governance_df() -> pd.DataFrame:
+000053:     candidates = [
+000054:         Path(__file__).with_name("DURACION_ESTUDIOS.tsv"),
+000055:         Path.cwd() / "DURACION_ESTUDIOS.tsv",
+000056:     ]
+000057:     for path in candidates:
+000058:         if path.exists():
+000059:             try:
+000060:                 df = pd.read_csv(path, sep="\t", dtype=str, keep_default_na=False)
+000061:                 if "CODIGO_UNICO" in df.columns:
+000062:                     return df
+000063:             except Exception:
+000064:                 continue
+000065:     return pd.DataFrame()
+000066: 
+000067: 
+000068: def _cargar_matriz_desambiguacion_desde_duracion() -> dict:
+000069:     """Construye matriz (CODCARPR, JORNADA, VERSION)->SIES desde DURACION_ESTUDIOS.tsv."""
+000070:     dur = _load_duracion_as_governance_df()
+000071:     matriz_dict: dict[tuple[str, str, str], tuple[str, str, str]] = {}
+000072:     if dur.empty:
+000073:         print("⚠️  DURACION_ESTUDIOS.tsv no disponible para construir matriz SIES")
+000074:         return matriz_dict
+000075: 
+000076:     conflictos = 0
+000077:     for row in dur.itertuples(index=False):
+000078:         jornada, version = _parse_sies_codigo_unico(getattr(row, "CODIGO_UNICO", ""))
+000079:         if not jornada or not version:
+000080:             continue
+000081:         codcarprs = _split_codcarpr_candidates(
+000082:             getattr(row, "CODCARPR_CANONICO", ""),
+000083:             getattr(row, "CODCARPR_ALIAS_LIST", ""),
+000084:         )
+000085:         for codcarpr in codcarprs:
+000086:             key = (codcarpr, jornada, version)
+000087:             val = (getattr(row, "CODIGO_UNICO", ""), "100%", "AUTO_DURACION_ESTUDIOS")
+000088:             if key in matriz_dict and matriz_dict[key][0] != val[0]:
+000089:                 conflictos += 1
+000090:                 continue
+000091:             matriz_dict[key] = val
+000092: 
+000093:     if conflictos:
+000094:         print(f"⚠️  Conflictos en matriz auto desde DURACION_ESTUDIOS: {conflictos} (se conserva primera ocurrencia)")
+000095:     print(f"✅ Matriz SIES auto construida desde DURACION_ESTUDIOS: {len(matriz_dict)} llaves")
+000096:     return matriz_dict
+000097: 
+000098: 
+000099: # Cargar matriz al iniciar desde DURACION_ESTUDIOS.tsv
+000100: MATRIZ_DESAMBIGUACION = _cargar_matriz_desambiguacion_desde_duracion()
+000101: 
+000102: # ==============================
+000103: # Contratos oficiales (Capa C)
+000104: # ==============================
+000105: MATRICULA_UNIFICADA_COLUMNS = [
+000106:     "TIPO_DOC", "N_DOC", "DV", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRE", "SEXO", "FECH_NAC",
+000107:     "NAC", "PAIS_EST_SEC", "COD_SED", "COD_CAR", "MODALIDAD", "JOR", "VERSION", "FOR_ING_ACT",
+000108:     "ANIO_ING_ACT", "SEM_ING_ACT", "ANIO_ING_ORI", "SEM_ING_ORI", "ASI_INS_ANT", "ASI_APR_ANT",
+000109:     "PROM_PRI_SEM", "PROM_SEG_SEM", "ASI_INS_HIS", "ASI_APR_HIS", "NIV_ACA", "SIT_FON_SOL", "SUS_PRE",
+000110:     "FECHA_MATRICULA", "REINCORPORACION", "VIG",
+000111: ]
+000112: 
+000113: CARRERAS_AC_COLUMNS = [
+000114:     "CODIGO_IES_NUM", "CODIGO_UNICO", "PLAN_ESTUDIOS", "NOMBRE_SEDE", "NOMBRE_CARRERA", "JORNADA", "VERSION",
+000115:     "DURACION_ESTUDIOS", "DURACION_TITULACION", "DURACION_TOTAL", "NIVEL_CARRERA", "TIPO_UNIDAD_MEDIDA",
+000116:     "OTRA_UNIDAD_MEDIDA", "TOTAL_UNIDADES_MEDIDA", "UNIDADES_1ER_ANIO", "UNIDADES_2DO_ANIO", "UNIDADES_3ER_ANIO",
+000117:     "UNIDADES_4TO_ANIO", "UNIDADES_5TO_ANIO", "UNIDADES_6TO_ANIO", "UNIDADES_7MO_ANIO", "VIGENCIA",
+000118: ]
+000119: 
+000120: MATRICULA_AC_COLUMNS = [
+000121:     "CODIGO_IES_NUM", "TIPO_DOCUMENTO", "NUM_DOCUMENTO", "DV", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRES",
+000122:     "SEXO", "FECHA_NACIMIENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "ANIO_INGRESO_CARRERA_ACTUAL",
+000123:     "SEM_INGRESO_CARRERA_ACTUAL", "ANIO_INGRESO_CARRERA_ORIGEN", "SEM_INGRESO_CARRERA_ORIGEN",
+000124:     "CURSO_1ER_SEM", "CURSO_2DO_SEM", "UNIDADES_CURSADAS", "UNIDADES_APROBADAS", "UNID_CURSADAS_TOTAL",
+000125:     "UNID_APROBADAS_TOTAL", "VIGENCIA",
+000126: ]
+000127: 
+000128: ANUAL_COLS = [
+000129:     "UNIDADES_1ER_ANIO", "UNIDADES_2DO_ANIO", "UNIDADES_3ER_ANIO", "UNIDADES_4TO_ANIO",
+000130:     "UNIDADES_5TO_ANIO", "UNIDADES_6TO_ANIO", "UNIDADES_7MO_ANIO",
+000131: ]
+000132: 
+000133: MU_FUSION_OUTPUT_FILENAME = "archivo_listo_para_sies.xlsx"
+000134: MU_PREGRADO_CSV_FILENAME = "matricula_unificada_2026_pregrado.csv"
+000135: FINAL_SIES_CODE_COL = "CODIGO_CARRERA_SIES_FINAL"
+000136: MAX_SIES_CODES_PER_KEY = 5
+000137: DEFAULT_EXCLUIR_DIPLOMADOS = True
+000138: 
+000139: DEFAULT_INPUT_CANDIDATES = [
+000140:     Path.home() / "Downloads" / "PROMEDIOSDEALUMNOS_7804.xlsx",
+000141: ]
+000142: DEFAULT_CATALOGO_MANUAL_CANDIDATES = [
+000143:     Path(__file__).with_name("catalogo_manual.tsv"),
+000144:     Path.cwd() / "catalogo_manual.tsv",
+000145:     Path.home() / "Downloads" / "catalogo_manual.tsv",
+000146: ]
+000147: DEFAULT_PUENTE_SIES_CANDIDATES = [
+000148:     Path(__file__).with_name("puente_sies.tsv"),
+000149:     Path.cwd() / "puente_sies.tsv",
+000150:     Path.home() / "Downloads" / "puente_sies.tsv",
+000151: ]
+000152: DEFAULT_PUENTE_SIES_COMPILADO_PATH = Path(__file__).with_name("control") / "catalogos" / "PUENTE_SIES_COMPILADO.tsv"
+000153: DEFAULT_GOB_NAC_CANDIDATES = [
+000154:     Path(__file__).with_name("gobernanza_nac.tsv"),
+000155:     Path.cwd() / "gobernanza_nac.tsv",
+000156:     Path.home() / "Downloads" / "gobernanza_nac.tsv",
+000157: ]
+000158: DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES = [
+000159:     Path(__file__).with_name("gobernanza_pais_est_sec.tsv"),
+000160:     Path.cwd() / "gobernanza_pais_est_sec.tsv",
+000161:     Path.home() / "Downloads" / "gobernanza_pais_est_sec.tsv",
+000162: ]
+000163: DEFAULT_GOB_SEDE_CANDIDATES = [
+000164:     Path(__file__).with_name("gobernanza_sede.tsv"),
+000165:     Path.cwd() / "gobernanza_sede.tsv",
+000166:     Path.home() / "Downloads" / "gobernanza_sede.tsv",
+000167: ]
+000168: DEFAULT_GOB_FOR_ING_ACT_CANDIDATES = [
+000169:     Path(__file__).with_name("gobernanza_for_ing_act.tsv"),
+000170:     Path.cwd() / "gobernanza_for_ing_act.tsv",
+000171:     Path.home() / "Downloads" / "gobernanza_for_ing_act.tsv",
+000172: ]
+000173: DEFAULT_GOB_HOJA1_ESTADO_DESC_CANDIDATES = [
+000174:     Path(__file__).with_name("gobernanza_catalogos") / "gob_promedios_hoja1_estado_academico_descripcion.tsv",
+000175:     Path.cwd() / "gobernanza_catalogos" / "gob_promedios_hoja1_estado_academico_descripcion.tsv",
+000176: ]
+000177: DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES = [
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 2 — LÍNEAS 1595-1720
+==========================================================================================
+001595:     out["GRUPO_TRAZA"] = out["GRUPO_TRAZA"].astype(str).str.strip()
+001596:     out["JORNADA"] = out["JORNADA"].map(_normalize_text)
+001597:     out["CODCARPR"] = out["CODCARPR"].map(_normalize_text)
+001598:     out["NOMBRE_L"] = out["NOMBRE_L"].map(_normalize_text)
+001599:     out["FAMILIA_TRAZA"] = out["GRUPO_TRAZA"].map(_extract_alpha_prefix)
+001600:     out["FAMILIA_CODCARPR"] = out["CODCARPR"].map(_extract_alpha_prefix)
+001601:     out["MANUAL_KEY_3"] = out.apply(lambda r: _build_key_3(r["JORNADA"], r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+001602:     out["MANUAL_KEY_NO_JORNADA"] = out.apply(lambda r: _build_key_no_jornada(r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+001603:     return out.drop_duplicates().reset_index(drop=True)
+001604: 
+001605: 
+001606: def _load_oferta_academica_dim(input_file: Path, explicit_path: str | None = None) -> pd.DataFrame:
+001607:     """Carga dimensión de oferta académica para validaciones de carga.
+001608: 
+001609:     Busca un archivo XLSX con columnas:
+001610:     CODIGO_UNICO, MODALIDAD, JORNADA, DURACION_ESTUDIOS, TIPO_PLAN_CARRERA, NIVEL_CARRERA.
+001611:     Si no encuentra, retorna DataFrame vacío (no bloqueante).
+001612:     """
+001613:     required_cols = {"CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS"}
+001614:     candidates: list[Path] = []
+001615: 
+001616:     if explicit_path:
+001617:         candidates.append(Path(explicit_path).expanduser().resolve())
+001618:     candidates.append(input_file)
+001619:     candidates.extend(DEFAULT_OFERTA_ACADEMICA_XLSX_CANDIDATES)
+001620:     downloads = Path.home() / "Downloads"
+001621:     if downloads.exists():
+001622:         candidates.extend(sorted(downloads.glob("*Oferta*Acad*mica*.xlsx")))
+001623: 
+001624:     seen: set[Path] = set()
+001625:     for p in candidates:
+001626:         try:
+001627:             rp = p.resolve()
+001628:         except Exception:
+001629:             continue
+001630:         if rp in seen:
+001631:             continue
+001632:         seen.add(rp)
+001633:         if not rp.exists() or rp.suffix.lower() != ".xlsx":
+001634:             continue
+001635:         try:
+001636:             xls = pd.ExcelFile(rp)
+001637:         except Exception:
+001638:             continue
+001639: 
+001640:         target_sheet: str | None = None
+001641:         for sheet in xls.sheet_names:
+001642:             try:
+001643:                 cols = set(pd.read_excel(rp, sheet_name=sheet, nrows=0).columns)
+001644:             except Exception:
+001645:                 continue
+001646:             if required_cols.issubset(cols):
+001647:                 target_sheet = sheet
+001648:                 break
+001649: 
+001650:         if target_sheet is None:
+001651:             continue
+001652: 
+001653:         try:
+001654:             # Leer columnas base + columnas extendidas si existen
+001655:             base_usecols = ["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"]
+001656:             extended_cols = ["TIPO_PLAN_CARRERA", "NIVEL_CARRERA", "CODIGO_CARRERA"]
+001657:             available_cols = set(pd.read_excel(rp, sheet_name=target_sheet, nrows=0).columns)
+001658:             usecols = base_usecols + [c for c in extended_cols if c in available_cols]
+001659:             dim = pd.read_excel(
+001660:                 rp,
+001661:                 sheet_name=target_sheet,
+001662:                 usecols=usecols,
+001663:             )
+001664:             dim = dim.dropna(subset=["CODIGO_UNICO"]).copy()
+001665:             dim["CODIGO_UNICO"] = dim["CODIGO_UNICO"].astype(str).str.strip().str.upper()
+001666:             dim = dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").reset_index(drop=True)
+001667:             dim["OFERTA_SOURCE_PATH"] = str(rp)
+001668:             dim["OFERTA_SOURCE_SHEET"] = target_sheet
+001669:             return dim
+001670:         except Exception:
+001671:             continue
+001672: 
+001673:     # ── Fallback: DURACION_ESTUDIOS.tsv como dimensión oferta ────────────────
+001674:     tsv_candidates = [
+001675:         Path(__file__).with_name("DURACION_ESTUDIOS.tsv"),
+001676:         Path.cwd() / "DURACION_ESTUDIOS.tsv",
+001677:     ]
+001678:     for tsv_path in tsv_candidates:
+001679:         if tsv_path.exists():
+001680:             try:
+001681:                 dim = pd.read_csv(tsv_path, sep="\t", dtype=str)
+001682:                 if "CODIGO_UNICO" in dim.columns:
+001683:                     dim["CODIGO_UNICO"] = dim["CODIGO_UNICO"].astype(str).str.strip().str.upper()
+001684:                     for nc in ["MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA",
+001685:                                "TIPO_PLAN_CARRERA", "NIVEL_CARRERA", "CODIGO_CARRERA"]:
+001686:                         if nc in dim.columns:
+001687:                             dim[nc] = pd.to_numeric(dim[nc], errors="coerce").astype("Int64")
+001688:                     dim = dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").reset_index(drop=True)
+001689:                     dim["OFERTA_SOURCE_PATH"] = str(tsv_path)
+001690:                     dim["OFERTA_SOURCE_SHEET"] = "DURACION_ESTUDIOS_TSV"
+001691:                     return dim
+001692:             except Exception:
+001693:                 continue
+001694: 
+001695:     return pd.DataFrame(columns=["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"])
+001696: 
+001697: 
+001698: def _prepare_puente_sies(df: pd.DataFrame) -> pd.DataFrame:
+001699:     if df.empty:
+001700:         return df
+001701: 
+001702:     required = {"GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L", "CODIGO_CARRERA_SIES"}
+001703:     missing = required - set(df.columns)
+001704:     if missing:
+001705:         raise ValueError(f"Puente SIES inválido: faltan columnas {sorted(missing)}")
+001706: 
+001707:     base = df.copy()
+001708:     base["GRUPO_TRAZA"] = base["GRUPO_TRAZA"].astype(str).str.strip()
+001709:     base["JORNADA"] = base["JORNADA"].map(_normalize_text)
+001710:     base["CODCARPR"] = base["CODCARPR"].map(_normalize_text)
+001711:     base["NOMBRE_L"] = base["NOMBRE_L"].map(_normalize_text)
+001712:     base["CODIGO_CARRERA_SIES"] = base["CODIGO_CARRERA_SIES"].astype(str).str.strip()
+001713:     base["FAMILIA_TRAZA"] = base["GRUPO_TRAZA"].map(_extract_alpha_prefix)
+001714:     base["FAMILIA_CODCARPR"] = base["CODCARPR"].map(_extract_alpha_prefix)
+001715:     base["BRIDGE_KEY_3"] = base.apply(lambda r: _build_key_3(r["JORNADA"], r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+001716:     base["BRIDGE_KEY_NO_JORNADA"] = base.apply(lambda r: _build_key_no_jornada(r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+001717: 
+001718:     rows = []
+001719:     for key, sub in base.groupby("BRIDGE_KEY_3", dropna=False):
+001720:         codes = (
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 3 — LÍNEAS 1739-1819
+==========================================================================================
+001739:             "N_CODES_SIES": len(codes),
+001740:             "CODIGOS_SIES_POTENCIALES": " | ".join(codes),
+001741:         }
+001742:         for idx in range(MAX_SIES_CODES_PER_KEY):
+001743:             row[f"CODIGO_CARRERA_SIES_{idx + 1}"] = codes[idx] if idx < len(codes) else pd.NA
+001744:         rows.append(row)
+001745: 
+001746:     result = pd.DataFrame(rows).sort_values(["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]).reset_index(drop=True)
+001747:     result["CODIGO_CARRERA"] = result["CODIGO_CARRERA_SIES_1"].apply(
+001748:         lambda x: int(m.group("cod_car")) if pd.notna(x) and (m := _SIES_CODE_RE.match(str(x).strip())) else pd.NA
+001749:     )
+001750:     return result
+001751: 
+001752: 
+001753: def _build_catalog_and_bridge_from_duracion() -> tuple[pd.DataFrame, pd.DataFrame]:
+001754:     """Genera catálogo manual y puente SIES desde DURACION_ESTUDIOS.tsv."""
+001755:     dur = _load_duracion_as_governance_df()
+001756:     if dur.empty:
+001757:         return pd.DataFrame(), pd.DataFrame()
+001758: 
+001759:     required = {"CODIGO_UNICO", "NOMBRE_CARRERA", "JORNADA"}
+001760:     if not required.issubset(set(dur.columns)):
+001761:         print("⚠️  DURACION_ESTUDIOS sin columnas mínimas para construir puente/catálogo")
+001762:         return pd.DataFrame(), pd.DataFrame()
+001763: 
+001764:     rows: list[dict[str, str]] = []
+001765:     for row in dur.itertuples(index=False):
+001766:         codigo_unico = str(getattr(row, "CODIGO_UNICO", "")).strip().upper()
+001767:         nombre = str(getattr(row, "NOMBRE_CARRERA", "")).strip()
+001768:         jornada_num = str(getattr(row, "JORNADA", "")).strip()
+001769:         jornada = {"1": "D", "2": "V", "3": "O", "4": "O"}.get(jornada_num, jornada_num.upper())
+001770:         codcarprs = _split_codcarpr_candidates(
+001771:             getattr(row, "CODCARPR_CANONICO", ""),
+001772:             getattr(row, "CODCARPR_ALIAS_LIST", ""),
+001773:         )
+001774:         if not codigo_unico or not nombre or not jornada or not codcarprs:
+001775:             continue
+001776:         for codcarpr in codcarprs:
+001777:             pref = _extract_alpha_prefix(codcarpr) or "X"
+001778:             rows.append(
+001779:                 {
+001780:                     "GRUPO_TRAZA": f"DUR_{pref}",
+001781:                     "JORNADA": jornada,
+001782:                     "CODCARPR": codcarpr,
+001783:                     "NOMBRE_L": nombre,
+001784:                     "CODIGO_CARRERA_SIES": codigo_unico,
+001785:                 }
+001786:             )
+001787: 
+001788:     if not rows:
+001789:         return pd.DataFrame(), pd.DataFrame()
+001790: 
+001791:     base = pd.DataFrame(rows).drop_duplicates().reset_index(drop=True)
+001792:     cat_manual = _prepare_catalog_manual(base[["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]])
+001793:     puente = _prepare_puente_sies(base)
+001794:     print(f"✅ Catálogo/puente auto desde DURACION_ESTUDIOS: catalogo={len(cat_manual)} puente={len(puente)}")
+001795:     return cat_manual, puente
+001796: 
+001797: 
+001798: # ==============================
+001799: # CAPA A: Ingesta flexible
+001800: # ==============================
+001801: def cargar_fuentes(path: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+001802:     book = pd.read_excel(path, sheet_name=None)
+001803:     req_hist = {"ANO", "PERIODO", "RUT", "DIG", "CODCARR", "CODRAMO"}
+001804:     try:
+001805:         carreras = _pick_sheet(book, {"CODIGO_UNICO", "PLAN_ESTUDIOS"})
+001806:         matricula = _pick_sheet(book, {"NUM_DOCUMENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "DV"})
+001807:         hist = pd.concat([df for df in book.values() if req_hist.issubset(df.columns)], ignore_index=True)
+001808:         if hist.empty:
+001809:             raise ValueError("No se encontró histórico con ANO/PERIODO/RUT/DIG/CODCARR/CODRAMO")
+001810: 
+001811:         equiv = book.get("Equivalencia")
+001812:         if equiv is None:
+001813:             raise ValueError("Falta hoja Equivalencia")
+001814:         return carreras, matricula, hist.copy(), equiv.copy()
+001815:     except ValueError as err:
+001816:         # Modo compatible para archivos legacy tipo "Hoja1" con CODCARR/PLAN_DE_ESTUDIO.
+001817:         hoja1 = book.get("Hoja1")
+001818:         req_hoja1 = {"RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO", "ANO", "PERIODO", "CODRAMO"}
+001819:         if hoja1 is None or not req_hoja1.issubset(hoja1.columns):
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 4 — LÍNEAS 2236-2283
+==========================================================================================
+002236:             print(f"  ⚠️ Filtro base_datos: no se encontró columna N_DOC/RUT en hoja '{_filtro_bd_sheet}'")
+002237:     elif _filtro_bd_sheet:
+002238:         print(f"  ⚠️ Filtro base_datos: hoja '{_filtro_bd_sheet}' no existe en el Excel")
+002239: 
+002240:     # ── Depuración provisoria RUT ↔ CODCLI (pre-pipeline) ──────────────
+002241:     _pre_col_rut = _pick_first_column(src, ["RUT", "NUM_DOCUMENTO", "N_DOC"])
+002242:     _pre_col_codcli = _pick_first_column(src, ["CODCLI"])
+002243:     _stats_depur: dict[str, object] = {}
+002244:     if _pre_col_rut and _pre_col_codcli:
+002245:         from scripts.depurar_rut_multi_codcli import depurar_rut_multi_codcli
+002246:         src, _stats_depur = depurar_rut_multi_codcli(
+002247:             src, _pre_col_rut, _pre_col_codcli, output_dir,
+002248:         )
+002249:     # ────────────────────────────────────────────────────────────────────
+002250: 
+002251:     manual_source = catalogo_manual_tsv_path or "auto:DURACION_ESTUDIOS.tsv"
+002252:     sit_fon_patch_source = sit_fon_sol_patch_json_path or "no_patch_json"
+002253:     puente_compilado_path = DEFAULT_PUENTE_SIES_COMPILADO_PATH.resolve()
+002254:     puente_source = str(puente_compilado_path)
+002255:     if puente_sies_tsv_path:
+002256:         print(
+002257:             "⚠️  --puente-sies-tsv recibido, pero no se consume directamente en el pipeline. "
+002258:             "Usa scripts/compile_puente_sies_compilado.py para materializar control/catalogos/PUENTE_SIES_COMPILADO.tsv."
+002259:         )
+002260:     oferta_dim = _load_oferta_academica_dim(input_file, oferta_academica_xlsx_path)
+002261:     oferta_source = (
+002262:         oferta_dim["OFERTA_SOURCE_PATH"].iloc[0]
+002263:         if not oferta_dim.empty and "OFERTA_SOURCE_PATH" in oferta_dim.columns
+002264:         else "not_found"
+002265:     )
+002266: 
+002267:     col_codcli = _pick_first_column(src, ["CODCLI"])
+002268:     col_codcarr = _pick_first_column(src, ["CODCARR", "CODCARPR"])
+002269:     col_nombre_carrera = _pick_first_column(src, ["CARRERA", "NOMBRE_L", "NOMBRE"])
+002270:     col_jornada = _pick_first_column(src, ["JORNADA"])
+002271:     col_rut = _pick_first_column(src, ["RUT", "NUM_DOCUMENTO", "N_DOC"])
+002272:     col_dv = _pick_first_column(src, ["DIG", "DV"])
+002273: 
+002274:     missing = [
+002275:         name
+002276:         for name, col in {
+002277:             "CODCLI": col_codcli,
+002278:             "CODCARR/CODCARPR": col_codcarr,
+002279:             "CARRERA/NOMBRE_L/NOMBRE": col_nombre_carrera,
+002280:             "JORNADA": col_jornada,
+002281:             "RUT/NUM_DOCUMENTO/N_DOC": col_rut,
+002282:             "DIG/DV": col_dv,
+002283:         }.items()
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 5 — LÍNEAS 3096-3138
+==========================================================================================
+003096:         h1_map_df["KEY_H1"] = h1_map_df["ESTADO_ACADEMICO_NORM"] + "|" + h1_map_df["DESCRIPCION_ESTADO_NORM"]
+003097:         h1_vig_map = (
+003098:             h1_map_df.drop_duplicates(subset=["KEY_H1"], keep="first")
+003099:             .set_index("KEY_H1")["VIG_ESPERADO"]
+003100:             .to_dict()
+003101:         )
+003102:         key_h1 = estado_h1_norm + "|" + desc_h1_norm
+003103:         vig_esperado_h1 = pd.to_numeric(key_h1.map(h1_vig_map), errors="coerce").astype("Int64")
+003104:         vig_esperado_da = vig_esperado_da.fillna(vig_esperado_h1)
+003105: 
+003106:     # Regla institucional explícita: estados sin matrícula siempre VIG=0.
+003107:     force_vig0_da = estado_da_norm.isin(["TITULADO", "ELIMINADO", "SUSPENDIDO"])
+003108:     vig_esperado_da = vig_esperado_da.where(~force_vig0_da, 0)
+003109:     archivo_subida["VIG_ESPERADO_DA"] = vig_esperado_da
+003110: 
+003111:     # Fuente base manual: se reconstruye desde DURACION_ESTUDIOS para trazabilidad
+003112:     # de GRUPO_TRAZA/FAMILIA. El cruce SIES central se consume EXCLUSIVAMENTE
+003113:     # desde el catálogo compilado control/catalogos/PUENTE_SIES_COMPILADO.tsv.
+003114:     df_manual, _ = _build_catalog_and_bridge_from_duracion()
+003115: 
+003116:     manual_override_raw = _load_governance_tsv(
+003117:         catalogo_manual_tsv_path,
+003118:         ["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"],
+003119:     )
+003120:     if not manual_override_raw.empty:
+003121:         try:
+003122:             manual_override = _prepare_catalog_manual(
+003123:                 manual_override_raw[["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]]
+003124:             )
+003125:         except Exception as exc:
+003126:             print(f"⚠️  No se aplicó override catalogo_manual.tsv: {exc}")
+003127:             manual_override = pd.DataFrame()
+003128:         if not manual_override.empty:
+003129:             if df_manual.empty:
+003130:                 df_manual = manual_override.copy()
+003131:             else:
+003132:                 override_keys = set(manual_override["MANUAL_KEY_3"])
+003133:                 df_manual = (
+003134:                     pd.concat(
+003135:                         [
+003136:                             df_manual.loc[~df_manual["MANUAL_KEY_3"].isin(override_keys)],
+003137:                             manual_override,
+003138:                         ],
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 6 — LÍNEAS 3152-3192
+==========================================================================================
+003152:         "BRIDGE_KEY_NO_JORNADA",
+003153:         "GRUPO_TRAZA",
+003154:         "FAMILIA_TRAZA",
+003155:         "FAMILIA_CODCARPR",
+003156:         "JORNADA",
+003157:         "CODCARPR",
+003158:         "NOMBRE_L",
+003159:         "N_CODES_SIES",
+003160:         "CODIGOS_SIES_POTENCIALES",
+003161:         "CODIGO_CARRERA_SIES_1",
+003162:     ]
+003163:     df_bridge = _load_governance_tsv(str(puente_compilado_path), compiled_required)
+003164:     if df_bridge.empty:
+003165:         raise FileNotFoundError(
+003166:             "No se encontró catálogo compilado de cruce SIES en "
+003167:             f"{puente_compilado_path}. Ejecuta scripts/compile_puente_sies_compilado.py antes del run oficial."
+003168:         )
+003169:     for idx in range(1, MAX_SIES_CODES_PER_KEY + 1):
+003170:         col = f"CODIGO_CARRERA_SIES_{idx}"
+003171:         if col not in df_bridge.columns:
+003172:             df_bridge[col] = pd.NA
+003173:     if "CODIGO_CARRERA" not in df_bridge.columns:
+003174:         df_bridge["CODIGO_CARRERA"] = df_bridge["CODIGO_CARRERA_SIES_1"].apply(
+003175:             lambda x: int(m.group("cod_car")) if pd.notna(x) and (m := _SIES_CODE_RE.match(str(x).strip())) else pd.NA
+003176:         )
+003177:     df_bridge["N_CODES_SIES"] = pd.to_numeric(df_bridge["N_CODES_SIES"], errors="coerce").fillna(0).astype(int)
+003178:     df_bridge = df_bridge.drop_duplicates(subset=["BRIDGE_KEY_3"], keep="first").reset_index(drop=True)
+003179: 
+003180:     if not df_manual.empty:
+003181:         manual_exact = (
+003182:             df_manual[["MANUAL_KEY_3", "GRUPO_TRAZA", "FAMILIA_TRAZA", "FAMILIA_CODCARPR"]]
+003183:             .drop_duplicates(subset=["MANUAL_KEY_3"])
+003184:             .rename(
+003185:                 columns={
+003186:                     "MANUAL_KEY_3": "SOURCE_KEY_3",
+003187:                     "GRUPO_TRAZA": "GRUPO_TRAZA_MANUAL",
+003188:                     "FAMILIA_TRAZA": "FAMILIA_TRAZA_MANUAL",
+003189:                     "FAMILIA_CODCARPR": "FAMILIA_CODCARPR_MANUAL",
+003190:                 }
+003191:             )
+003192:         )
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 7 — LÍNEAS 3514-3622
+==========================================================================================
+003514: 
+003515:     # Estandarización de identificadores de oferta (sede/carrera/jornada/version).
+003516:     parsed_cod_sed = pd.to_numeric(archivo_subida["_PARSED_COD_SED"], errors="coerce")
+003517:     parsed_cod_car = pd.to_numeric(archivo_subida["_PARSED_COD_CAR"], errors="coerce")
+003518:     parsed_jor = pd.to_numeric(archivo_subida["_PARSED_JOR"], errors="coerce")
+003519:     parsed_version = pd.to_numeric(archivo_subida["_PARSED_VERSION"], errors="coerce")
+003520: 
+003521:     oferta_mod = pd.Series(pd.NA, index=archivo_subida.index, dtype="object")
+003522:     oferta_jor = pd.Series(pd.NA, index=archivo_subida.index, dtype="object")
+003523:     oferta_duracion = pd.Series(pd.NA, index=archivo_subida.index, dtype="object")
+003524:     oferta_cod_car = pd.Series(pd.NA, index=archivo_subida.index, dtype="object")
+003525:     if not oferta_dim.empty:
+003526:         oferta_idx = oferta_dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").set_index("CODIGO_UNICO")
+003527:         oferta_mod = archivo_subida[FINAL_SIES_CODE_COL].map(oferta_idx["MODALIDAD"].to_dict())
+003528:         oferta_jor = archivo_subida[FINAL_SIES_CODE_COL].map(oferta_idx["JORNADA"].to_dict())
+003529:         oferta_duracion = archivo_subida[FINAL_SIES_CODE_COL].map(oferta_idx["DURACION_ESTUDIOS"].to_dict())
+003530:         if "CODIGO_CARRERA" in oferta_idx.columns:
+003531:             oferta_cod_car = archivo_subida[FINAL_SIES_CODE_COL].map(oferta_idx["CODIGO_CARRERA"].to_dict())
+003532: 
+003533:     cod_sed_pre_final = pd.to_numeric(archivo_subida["COD_SED"], errors="coerce")
+003534:     cod_car_pre_final = pd.to_numeric(archivo_subida["COD_CAR"], errors="coerce")
+003535:     jor_pre_final = pd.to_numeric(archivo_subida["JOR"], errors="coerce")
+003536:     mod_pre_final = pd.to_numeric(archivo_subida["MODALIDAD"], errors="coerce")
+003537: 
+003538:     archivo_subida["COD_SED"] = (
+003539:         parsed_cod_sed.combine_first(cod_sed_pre_final).astype("Int64")
+003540:     )
+003541:     oferta_cod_car_num = pd.to_numeric(oferta_cod_car, errors="coerce")
+003542:     archivo_subida["COD_CAR"] = oferta_cod_car_num.combine_first(parsed_cod_car).combine_first(cod_car_pre_final).astype("Int64")
+003543: 
+003544:     # ── Fallback COD_CAR: extraer de CODIGOS_SIES_POTENCIALES (ambiguos con COD_CAR compartido) ──
+003545:     _cod_car_still_missing = archivo_subida["COD_CAR"].isna()
+003546:     if _cod_car_still_missing.any() and "CODIGOS_SIES_POTENCIALES" in archivo_subida.columns:
+003547:         _shared_cod_car = archivo_subida.loc[_cod_car_still_missing, "CODIGOS_SIES_POTENCIALES"].apply(
+003548:             _extract_shared_cod_car_from_potenciales
+003549:         )
+003550:         _shared_cod_car = pd.to_numeric(_shared_cod_car, errors="coerce").astype("Int64")
+003551:         archivo_subida.loc[_cod_car_still_missing, "COD_CAR"] = archivo_subida.loc[
+003552:             _cod_car_still_missing, "COD_CAR"
+003553:         ].fillna(_shared_cod_car)
+003554:         _filled_shared = _cod_car_still_missing & archivo_subida["COD_CAR"].notna()
+003555:         print(f"    ↳ COD_CAR fallback SIES_POTENCIALES_COMPARTIDO: {int(_filled_shared.sum())} filas")
+003556: 
+003557:     # ── Fallback COD_CAR: mapeo NOMBRE_CARRERA → CODIGO_CARRERA vía DURACION_ESTUDIOS ──
+003558:     _cod_car_still_missing2 = archivo_subida["COD_CAR"].isna()
+003559:     if _cod_car_still_missing2.any() and not oferta_dim.empty:
+003560:         _nombre_to_cod = _build_nombre_carrera_to_cod_car(oferta_dim)
+003561:         if _nombre_to_cod and "NOMBRE_CARRERA_FUENTE" in archivo_subida.columns:
+003562:             _nombre_norm = archivo_subida.loc[_cod_car_still_missing2, "NOMBRE_CARRERA_FUENTE"].astype(str).apply(
+003563:                 _normalize_nombre_carrera_for_lookup
+003564:             )
+003565:             _cod_car_by_nombre = _nombre_norm.map(_nombre_to_cod)
+003566:             _cod_car_by_nombre = pd.to_numeric(_cod_car_by_nombre, errors="coerce").astype("Int64")
+003567:             archivo_subida.loc[_cod_car_still_missing2, "COD_CAR"] = archivo_subida.loc[
+003568:                 _cod_car_still_missing2, "COD_CAR"
+003569:             ].fillna(_cod_car_by_nombre)
+003570:             _filled_nombre = _cod_car_still_missing2 & archivo_subida["COD_CAR"].notna()
+003571:             print(f"    ↳ COD_CAR fallback NOMBRE_CARRERA_DURACION: {int(_filled_nombre.sum())} filas")
+003572:     jor_from_offer = pd.to_numeric(oferta_jor, errors="coerce")
+003573:     archivo_subida["JOR"] = jor_from_offer.combine_first(parsed_jor).combine_first(jor_pre_final).astype("Int64")
+003574:     archivo_subida["VERSION"] = parsed_version.astype("Int64")
+003575: 
+003576:     # ── Fallback VERSION: cuando COD_CAR+JOR están, usar la versión máxima de DURACION_ESTUDIOS ──
+003577:     _ver_missing = archivo_subida["VERSION"].isna() & archivo_subida["COD_CAR"].notna() & archivo_subida["JOR"].notna()
+003578:     if _ver_missing.any() and not oferta_dim.empty:
+003579:         _dur_ver = oferta_dim[["CODIGO_UNICO"]].copy()
+003580:         _dur_ver["_VERSION"] = _dur_ver["CODIGO_UNICO"].str.extract(r"V(\d+)$", expand=False).astype(float)
+003581:         _dur_ver["_COD_CAR"] = _dur_ver["CODIGO_UNICO"].str.extract(r"C(\d+)J", expand=False).astype(float)
+003582:         _dur_ver["_JOR"] = _dur_ver["CODIGO_UNICO"].str.extract(r"J(\d+)V", expand=False).astype(float)
+003583:         _max_ver = _dur_ver.groupby(["_COD_CAR", "_JOR"])["_VERSION"].max()
+003584:         _ver_key = list(zip(
+003585:             archivo_subida.loc[_ver_missing, "COD_CAR"].astype(float),
+003586:             archivo_subida.loc[_ver_missing, "JOR"].astype(float),
+003587:         ))
+003588:         _ver_fallback = pd.Series([_max_ver.get(k, pd.NA) for k in _ver_key], index=archivo_subida.loc[_ver_missing].index)
+003589:         _ver_fallback = pd.to_numeric(_ver_fallback, errors="coerce").astype("Int64")
+003590:         archivo_subida.loc[_ver_missing, "VERSION"] = _ver_fallback
+003591:         _filled_ver = _ver_missing & archivo_subida["VERSION"].notna()
+003592:         print(f"    ↳ VERSION fallback DURACION_ESTUDIOS max: {int(_filled_ver.sum())} filas")
+003593: 
+003594:     mod_from_offer = pd.to_numeric(oferta_mod, errors="coerce")
+003595:     mod_from_jor = pd.to_numeric(_modalidad_from_jor(archivo_subida["JOR"]), errors="coerce")
+003596:     archivo_subida["MODALIDAD"] = mod_from_offer.combine_first(mod_from_jor).combine_first(mod_pre_final).astype("Int64")
+003597:     archivo_subida["DURACION_ESTUDIOS_REF"] = pd.to_numeric(oferta_duracion, errors="coerce").astype("Int64")
+003598: 
+003599:     cod_sed_source = pd.Series("SIN_FUENTE_FINAL", index=archivo_subida.index, dtype="object")
+003600:     cod_sed_method = pd.Series("SIN_METODO_FINAL", index=archivo_subida.index, dtype="object")
+003601:     cod_sed_audit = pd.Series("SIN_FUENTE_FINAL", index=archivo_subida.index, dtype="object")
+003602:     parsed_cod_sed_mask = parsed_cod_sed.notna()
+003603:     cod_sed_source.loc[parsed_cod_sed_mask] = "CODIGO_CARRERA_SIES_FINAL"
+003604:     cod_sed_method.loc[parsed_cod_sed_mask] = "PARSE_COMPONENTE_SIES"
+003605:     cod_sed_audit.loc[parsed_cod_sed_mask] = "CONSISTENTE_SIES_FINAL"
+003606:     legacy_cod_sed_mask = (~parsed_cod_sed_mask) & cod_sed_pre_final.notna()
+003607:     cod_sed_source.loc[legacy_cod_sed_mask] = archivo_subida.loc[legacy_cod_sed_mask, "COD_SED_STATUS"].replace(
+003608:         {
+003609:             "MAPEADO_GOB_SEDE": "DA_SEDE_GOBERNANZA",
+003610:             "SOURCE_EXACT": "FUENTE_EXACTA",
+003611:             "SIN_MAPEO_GOB_SEDE": "DA_SEDE_SIN_MAPEO",
+003612:         }
+003613:     )
+003614:     cod_sed_method.loc[legacy_cod_sed_mask] = archivo_subida.loc[legacy_cod_sed_mask, "COD_SED_STATUS"].replace(
+003615:         {
+003616:             "MAPEADO_GOB_SEDE": "MAPEO_GOB_SEDE",
+003617:             "SOURCE_EXACT": "COPIA_FUENTE",
+003618:             "SIN_MAPEO_GOB_SEDE": "SIN_METODO_FINAL",
+003619:         }
+003620:     )
+003621:     cod_sed_audit.loc[legacy_cod_sed_mask] = "LEGACY_PRE_FINAL"
+003622:     archivo_subida["COD_SED_FUENTE_FINAL"] = cod_sed_source
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 8 — LÍNEAS 3632-3672
+==========================================================================================
+003632:     sies_primary_mask = oferta_cod_car_mask | parsed_cod_car_mask
+003633:     cod_car_source.loc[sies_primary_mask] = "CODIGO_CARRERA_SIES_FINAL"
+003634:     cod_car_method.loc[sies_primary_mask] = "PARSE_COMPONENTE_SIES"
+003635:     cod_car_audit.loc[sies_primary_mask] = "CONSISTENTE_SIES_FINAL"
+003636:     cod_car_method.loc[oferta_cod_car_mask] = "OFERTA_LOOKUP_CODIGO_UNICO"
+003637:     # Fuente 2: fallback SIES potenciales compartidos
+003638:     _fb_shared_mask = (~sies_primary_mask) & _cod_car_still_missing & archivo_subida["COD_CAR"].notna()
+003639:     # Restar los que se llenaron por nombre (más adelante se marca)
+003640:     # _fb_shared_mask captura las filas que NO tenían COD_CAR antes pero ahora sí
+003641:     # y no vienen del parsed ni oferta → vienen del fallback compartido o nombre
+003642:     cod_car_source.loc[_fb_shared_mask] = "CODIGOS_SIES_POTENCIALES"
+003643:     cod_car_method.loc[_fb_shared_mask] = "COMPONENTE_C_COMPARTIDO"
+003644:     cod_car_audit.loc[_fb_shared_mask] = "INFERIDO_AMBIGUOS_MISMO_COD_CAR"
+003645:     # Fuente 3: fallback nombre carrera
+003646:     _fb_nombre_mask = (~sies_primary_mask) & _cod_car_still_missing2 & archivo_subida["COD_CAR"].notna()
+003647:     cod_car_source.loc[_fb_nombre_mask] = "DURACION_ESTUDIOS_NOMBRE"
+003648:     cod_car_method.loc[_fb_nombre_mask] = "MAPEO_NOMBRE_CARRERA"
+003649:     cod_car_audit.loc[_fb_nombre_mask] = "INFERIDO_NOMBRE_CARRERA_DURACION"
+003650:     # Fuente 4: legacy
+003651:     legacy_cod_car_mask = (~sies_primary_mask) & (~_fb_shared_mask) & (~_fb_nombre_mask) & cod_car_pre_final.notna()
+003652:     cod_car_source.loc[legacy_cod_car_mask] = "CODCARPR_FUENTE"
+003653:     cod_car_method.loc[legacy_cod_car_mask] = "COPIA_FUENTE"
+003654:     cod_car_audit.loc[legacy_cod_car_mask] = "LEGACY_PRE_FINAL"
+003655:     archivo_subida["COD_CAR_FUENTE_FINAL"] = cod_car_source
+003656:     archivo_subida["COD_CAR_METODO_FINAL"] = cod_car_method
+003657:     archivo_subida["COD_CAR_AUDIT_STATUS"] = cod_car_audit
+003658: 
+003659:     jor_source = pd.Series("SIN_FUENTE_FINAL", index=archivo_subida.index, dtype="object")
+003660:     jor_method = pd.Series("SIN_METODO_FINAL", index=archivo_subida.index, dtype="object")
+003661:     jor_audit = pd.Series("SIN_FUENTE_FINAL", index=archivo_subida.index, dtype="object")
+003662:     offer_jor_mask = jor_from_offer.notna()
+003663:     parsed_jor_mask = parsed_jor.notna()
+003664:     legacy_jor_mask = (~offer_jor_mask) & (~parsed_jor_mask) & jor_pre_final.notna()
+003665:     jor_matches_parsed = archivo_subida["JOR"].astype("Float64").eq(parsed_jor).fillna(False)
+003666:     jor_source.loc[offer_jor_mask] = "OFERTA_ACADEMICA"
+003667:     jor_method.loc[offer_jor_mask] = "LOOKUP_CODIGO_UNICO"
+003668:     jor_audit.loc[offer_jor_mask & parsed_jor_mask & jor_matches_parsed] = "CONSISTENTE_OFERTA_SIES"
+003669:     jor_audit.loc[offer_jor_mask & (~parsed_jor_mask)] = "CONSISTENTE_OFERTA"
+003670:     jor_audit.loc[offer_jor_mask & parsed_jor_mask & (~jor_matches_parsed)] = "DESALINEADO_OFERTA_SIES"
+003671:     jor_source.loc[(~offer_jor_mask) & parsed_jor_mask] = "CODIGO_CARRERA_SIES_FINAL"
+003672:     jor_method.loc[(~offer_jor_mask) & parsed_jor_mask] = "PARSE_COMPONENTE_SIES"
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 9 — LÍNEAS 3912-3961
+==========================================================================================
+003912:     pais_status_final.loc[pais_default_mask & pais_status_final.eq("")] = "DEFAULT_38_SIN_TRAZA"
+003913:     archivo_subida["PAIS_EST_SEC_STATUS"] = pais_status_final
+003914:     archivo_subida["PAIS_EST_SEC"] = pais_num.where(pais_num.between(1, 197), pd.NA).fillna(38).astype("Int64")
+003915: 
+003916:     niv_aca_raw = pd.to_numeric(archivo_subida["NIV_ACA"], errors="coerce")
+003917:     niv_aca_admin_orig = niv_aca_raw.copy()
+003918:     regimen_norm = _series_or_default(archivo_subida, "REGIMEN_FUENTE").map(_normalize_text)
+003919:     trim_regimen_mask = regimen_norm.str.contains("TRIM", regex=False)
+003920:     niv_aca_eq_sem = _trimester_level_to_semester(niv_aca_raw)
+003921:     niv_trim_aplicado_mask = trim_regimen_mask & niv_aca_raw.notna() & niv_aca_eq_sem.notna()
+003922:     niv_aca_raw = niv_aca_raw.where(~niv_trim_aplicado_mask, niv_aca_eq_sem)
+003923:     niv_aca_status_final = archivo_subida["NIV_ACA_AUDIT_STATUS"].astype("object").copy()
+003924:     niv_aca_status_final.loc[niv_trim_aplicado_mask] = "TRIM_EQ_SEM_APLICADA"
+003925:     niv_default_mask = ~niv_aca_raw.ge(1)
+003926:     niv_aca = niv_aca_raw.where(niv_aca_raw >= 1, pd.NA).fillna(1)
+003927:     dur_ref = pd.to_numeric(archivo_subida["DURACION_ESTUDIOS_REF"], errors="coerce")
+003928:     niv_capped_dur_mask = niv_aca.gt(dur_ref).fillna(False)
+003929:     niv_aca = niv_aca.where(dur_ref.isna() | (niv_aca <= dur_ref), dur_ref)
+003930:     niv_capped_2026_mask = (archivo_subida["ANIO_ING_ORI"].eq(2026) & niv_aca.gt(2)).fillna(False)
+003931:     niv_aca = niv_aca.where(~archivo_subida["ANIO_ING_ORI"].eq(2026) | (niv_aca <= 2), 2)
+003932:     niv_aca_status_final.loc[niv_default_mask & niv_aca_status_final.eq("DEFAULT_1_SIN_FUENTE")] = "DEFAULT_1_SIN_FUENTE"
+003933:     niv_aca_status_final.loc[niv_default_mask & niv_aca_status_final.eq("DEFAULT_1_INPUT_INVALIDO")] = "DEFAULT_1_INPUT_INVALIDO"
+003934:     niv_aca_status_final.loc[niv_default_mask & niv_aca_status_final.eq("DEFAULT_1_DA_INVALIDO")] = "DEFAULT_1_DA_INVALIDO"
+003935:     niv_aca_status_final.loc[niv_default_mask & niv_aca_status_final.eq("DEFAULT_1_INPUT_DA_INVALIDOS")] = "DEFAULT_1_INPUT_DA_INVALIDOS"
+003936:     niv_aca_status_final.loc[niv_capped_dur_mask & ~niv_capped_2026_mask] = "ACOTADO_DURACION_ESTUDIOS"
+003937:     niv_aca_status_final.loc[(~niv_capped_dur_mask) & niv_capped_2026_mask] = "ACOTADO_COHORTE_2026"
+003938:     niv_aca_status_final.loc[niv_capped_dur_mask & niv_capped_2026_mask] = "ACOTADO_DURACION_Y_COHORTE_2026"
+003939:     archivo_subida["NIV_ACA"] = niv_aca.astype("Int64")
+003940:     archivo_subida["NIV_ACA_AUDIT_STATUS"] = niv_aca_status_final
+003941:     archivo_subida["NIV_ACA_ADMIN_ORIG"] = niv_aca_admin_orig.astype("Float64")
+003942:     archivo_subida["NIV_ACA_EQ_SEM_APLICADA"] = pd.Series("NO", index=archivo_subida.index, dtype="object")
+003943:     archivo_subida.loc[niv_trim_aplicado_mask, "NIV_ACA_EQ_SEM_APLICADA"] = "SI"
+003944:     print(f"    ↳ NIV_ACA equivalencia TRIMESTRAL→SEMESTRAL: {int(niv_trim_aplicado_mask.sum())} filas")
+003945: 
+003946:     archivo_subida["SIT_FON_SOL"] = pd.Series(1, index=archivo_subida.index, dtype="Int64")
+003947:     archivo_subida["SUS_PRE"] = pd.Series(0, index=archivo_subida.index, dtype="Int64")
+003948:     archivo_subida["REINCORPORACION"] = pd.Series(0, index=archivo_subida.index, dtype="Int64")
+003949:     vig = pd.to_numeric(archivo_subida["VIG"], errors="coerce")
+003950:     archivo_subida["VIG"] = vig.where(vig.isin([0, 1, 2]), pd.NA).fillna(1).astype("Int64")
+003951: 
+003952:     # REGLA BLOQUEANTE INSTITUCIONAL: Forzar VIG=0 para TITULADO/ELIMINADO/SUSPENDIDO
+003953:     # Fundamento: En MU 2026, estos estados se clasifican como "sin matrícula"
+003954:     if "DA_ESTADOACADEMICO" in archivo_subida.columns:
+003955:         titulo_elim_susp = archivo_subida["DA_ESTADOACADEMICO"].fillna("").astype(str).str.strip().str.upper().isin(
+003956:             ["TITULADO", "ELIMINADO", "SUSPENDIDO"]
+003957:         )
+003958:         archivo_subida.loc[titulo_elim_susp, "VIG"] = 0
+003959: 
+003960:     # Regla bloqueante definitiva: tras resolver VIG final, forzar 4 columnas en cero para VIG=0.
+003961:     vig_cero_post_force = pd.to_numeric(archivo_subida["VIG"], errors="coerce").eq(0)
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 10 — LÍNEAS 4264-4312
+==========================================================================================
+004264:     )
+004265:     for_ing_act_report = _build_for_ing_act_report_payload(
+004266:         archivo_subida,
+004267:         included_final_mask,
+004268:         valid_for_ing_act_codes,
+004269:         col_for_ing_act,
+004270:         gob_for_ing_act_source,
+004271:     )
+004272: 
+004273:     # ── Trazabilidad DA: aliases con sufijo _DA para auditoría ───────────────
+004274:     if "DA_ESTADOACADEMICO" in archivo_subida.columns:
+004275:         archivo_subida["ESTADOACADEMICO_DA"] = archivo_subida["DA_ESTADOACADEMICO"]
+004276:     if "DA_SITUACION" in archivo_subida.columns:
+004277:         archivo_subida["SITUACION_DA"] = archivo_subida["DA_SITUACION"]
+004278: 
+004279:     # ── Enriquecimiento duración vía CODIGO_UNICO desde DURACION_ESTUDIOS.tsv ─
+004280:     _duracion_tsv_path = Path(__file__).with_name("DURACION_ESTUDIOS.tsv")
+004281:     if not _duracion_tsv_path.exists():
+004282:         _duracion_tsv_path = Path.cwd() / "DURACION_ESTUDIOS.tsv"
+004283:     if _duracion_tsv_path.exists():
+004284:         _dur = pd.read_csv(_duracion_tsv_path, sep="\t", dtype=str)
+004285:         _dur_cols_map = {
+004286:             "NOMBRE_CARRERA": "NOMBRE_CARRERA_TSV",
+004287:             "DURACION_ESTUDIOS": "DURACION_ESTUDIOS_TSV",
+004288:             "DURACION_TITULACION": "DURACION_TITULACION_TSV",
+004289:             "DURACION_TOTAL": "DURACION_TOTAL_TSV",
+004290:         }
+004291:         _dur_key = "CODIGO_UNICO"
+004292:         if _dur_key in _dur.columns and all(c in _dur.columns for c in _dur_cols_map):
+004293:             _dur_dedup = _dur.drop_duplicates(subset=[_dur_key], keep="first")
+004294:             _dur_idx = _dur_dedup.set_index(_dur_key)
+004295:             _sies_key = archivo_subida[FINAL_SIES_CODE_COL].astype(str).str.strip()
+004296:             for src_col, dst_col in _dur_cols_map.items():
+004297:                 archivo_subida[dst_col] = _sies_key.map(_dur_idx[src_col].to_dict())
+004298: 
+004299:             # Fallback: para filas con COD_CAR pero sin DURACION_TSV, mapear por CODIGO_CARRERA
+004300:             if "CODIGO_CARRERA" in _dur.columns:
+004301:                 _dur["_COD_CAR_INT"] = pd.to_numeric(_dur["CODIGO_CARRERA"], errors="coerce")
+004302:                 _dur_by_cod_car = _dur.drop_duplicates(subset=["_COD_CAR_INT"], keep="first")
+004303:                 _dur_cc_idx = _dur_by_cod_car.set_index("_COD_CAR_INT")
+004304:                 _needs_dur = archivo_subida["COD_CAR"].notna() & archivo_subida["NOMBRE_CARRERA_TSV"].isna()
+004305:                 if _needs_dur.any():
+004306:                     _cod_car_key = archivo_subida.loc[_needs_dur, "COD_CAR"].astype(float)
+004307:                     for src_col, dst_col in _dur_cols_map.items():
+004308:                         _mapped = _cod_car_key.map(_dur_cc_idx[src_col].to_dict())
+004309:                         archivo_subida.loc[_needs_dur, dst_col] = archivo_subida.loc[
+004310:                             _needs_dur, dst_col
+004311:                         ].fillna(_mapped)
+004312:                     _filled_dur = _needs_dur & archivo_subida["NOMBRE_CARRERA_TSV"].notna()
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 11 — LÍNEAS 4819-4859
+==========================================================================================
+004819:         return (None, "0%", f"No encontrado en matriz: ({codcarpr}, {jornada}, {version})", True)
+004820: 
+004821: 
+004822: def _build_oferta_index(oferta_dim: pd.DataFrame) -> dict:
+004823:     """Construye índice CODIGO_UNICO → atributos desde oferta_dim."""
+004824:     idx = {}
+004825:     if oferta_dim.empty:
+004826:         return idx
+004827:     for _, row in oferta_dim.iterrows():
+004828:         cu = str(row.get("CODIGO_UNICO", "")).strip().upper()
+004829:         if not cu:
+004830:             continue
+004831:         idx[cu] = {
+004832:             "TIPO_PLAN_CARRERA": row.get("TIPO_PLAN_CARRERA"),
+004833:             "JORNADA": row.get("JORNADA"),
+004834:             "DURACION_ESTUDIOS": row.get("DURACION_ESTUDIOS"),
+004835:             "MODALIDAD": row.get("MODALIDAD"),
+004836:             "CODIGO_CARRERA": row.get("CODIGO_CARRERA"),
+004837:             "NIVEL_CARRERA": row.get("NIVEL_CARRERA"),
+004838:         }
+004839:     return idx
+004840: 
+004841: 
+004842: def _load_cuadro_homologacion(input_file: Path) -> dict:
+004843:     """Carga CUADRO HOMOLOGACIÓN → dict (CODCARPR, JORNADA_DA) → CODIGO_SIES."""
+004844:     homol: dict[tuple[str, str], str] = {}
+004845:     try:
+004846:         xls = pd.ExcelFile(input_file)
+004847:         target = None
+004848:         for sheet in xls.sheet_names:
+004849:             if "HOMOLOG" in sheet.upper():
+004850:                 target = sheet
+004851:                 break
+004852:         if target is None:
+004853:             return homol
+004854:         hm = pd.read_excel(input_file, sheet_name=target)
+004855:         for _, row in hm.iterrows():
+004856:             codcarpr = str(row.get("CODCARPR", "")).strip().upper()
+004857:             jornada_da = str(row.get("JORNADA_DA", "")).strip().upper()
+004858:             codigo_sies = str(row.get("CODIGO_SIES", "")).strip().upper()
+004859:             if codcarpr and jornada_da and codigo_sies:
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 12 — LÍNEAS 4924-4964
+==========================================================================================
+004924:         if not candidatos:
+004925:             result.at[idx, "SIES_RESOLUCION_HEURISTICA"] = "PENDIENTE_GOBERNANZA"
+004926:             result.at[idx, "SIES_CONFIANZA_POST"] = "0%"
+004927:             continue
+004928: 
+004929:         # Cargar atributos canónicos desde oferta; comparar como int para robustez
+004930:         atributos = []
+004931:         for codigo in candidatos:
+004932:             oferta = oferta_idx.get(codigo, {})
+004933:             tp_val = oferta.get("TIPO_PLAN_CARRERA")
+004934:             jor_val = oferta.get("JORNADA")
+004935:             atributos.append({
+004936:                 "codigo": codigo,
+004937:                 "tp": int(tp_val) if pd.notna(tp_val) else None,
+004938:                 "jor": int(jor_val) if pd.notna(jor_val) else None,
+004939:                 "dur": oferta.get("DURACION_ESTUDIOS"),
+004940:                 "niv": oferta.get("NIVEL_CARRERA"),
+004941:                 "mod": oferta.get("MODALIDAD"),
+004942:             })
+004943: 
+004944:         # Paso 1: Filtrar por TIPO_PLAN_CARRERA esperado
+004945:         tp_esperado = 3 if codcarpr[:2] in {"CI", "CO", "CA", "CN"} else 1
+004946:         filtrados_tp = [a for a in atributos if a["tp"] == tp_esperado]
+004947:         if len(filtrados_tp) == 1:
+004948:             result.at[idx, FINAL_SIES_CODE_COL] = filtrados_tp[0]["codigo"]
+004949:             result.at[idx, "SIES_MATCH_STATUS"] = "MATCH_SIES"
+004950:             result.at[idx, "SIES_RESOLUCION_HEURISTICA"] = "REGLA_TIPO_PLAN"
+004951:             result.at[idx, "SIES_CONFIANZA_POST"] = "95%"
+004952:             continue
+004953:         # Si tp no redujo a 0, usar los filtrados; si redujo a 0, conservar todos
+004954:         residuales = filtrados_tp if filtrados_tp else atributos
+004955: 
+004956:         # Paso 2: Filtrar por JORNADA esperada (numérica SIES)
+004957:         if jornada_sies is not None:
+004958:             filtrados_jor = [a for a in residuales if a["jor"] == jornada_sies]
+004959:         else:
+004960:             filtrados_jor = []
+004961:         if len(filtrados_jor) == 1:
+004962:             result.at[idx, FINAL_SIES_CODE_COL] = filtrados_jor[0]["codigo"]
+004963:             result.at[idx, "SIES_MATCH_STATUS"] = "MATCH_SIES"
+004964:             result.at[idx, "SIES_RESOLUCION_HEURISTICA"] = "REGLA_TIPO_PLAN_JORNADA"
+
+==========================================================================================
+CATALOGOS — FRAGMENTO 13 — LÍNEAS 5189-5237
+==========================================================================================
+005189:     p.add_argument(
+005190:         "--sheet",
+005191:         default=None,
+005192:         help="Nombre de hoja para el proceso matrícula (por defecto usa la primera)",
+005193:     )
+005194:     p.add_argument(
+005195:         "--catalogo-manual-tsv",
+005196:         default=None,
+005197:         help="Ruta a TSV de catálogo manual (opcional). Si no se informa, usa CATALOGO_MANUAL_TSV embebido.",
+005198:     )
+005199:     p.add_argument(
+005200:         "--puente-sies-tsv",
+005201:         default=None,
+005202:         help=(
+005203:             "DEPRECADO: override puente SIES. "
+005204:             "No se consume directamente en el pipeline; usar scripts/compile_puente_sies_compilado.py."
+005205:         ),
+005206:     )
+005207:     p.add_argument(
+005208:         "--oferta-academica-xlsx",
+005209:         default=None,
+005210:         help=(
+005211:             "Ruta al XLSX de oferta académica (opcional). "
+005212:             "Se usa para validar y ajustar MODALIDAD/JOR y limitar NIV_ACA por DURACION_ESTUDIOS."
+005213:         ),
+005214:     )
+005215:     p.add_argument(
+005216:         "--gob-nac-tsv",
+005217:         default=None,
+005218:         help="Ruta a TSV de gobernanza NAC (opcional).",
+005219:     )
+005220:     p.add_argument(
+005221:         "--gob-pais-est-sec-tsv",
+005222:         default=None,
+005223:         help="Ruta a TSV de gobernanza PAIS_EST_SEC (opcional).",
+005224:     )
+005225:     p.add_argument(
+005226:         "--gob-sede-tsv",
+005227:         default=None,
+005228:         help="Ruta a TSV de gobernanza COD_SED (opcional).",
+005229:     )
+005230:     p.add_argument(
+005231:         "--excluir-diplomados",
+005232:         choices=["true", "false"],
+005233:         default="true" if DEFAULT_EXCLUIR_DIPLOMADOS else "false",
+005234:         help="Para proceso matrícula: excluir diplomados en asignación SIES.",
+005235:     )
+005236:     p.add_argument(
+005237:         "--filtro-base-datos-sheet",

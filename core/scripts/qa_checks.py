@@ -1,0 +1,1 @@
+(qa_checks.py original movido a core/scripts/)

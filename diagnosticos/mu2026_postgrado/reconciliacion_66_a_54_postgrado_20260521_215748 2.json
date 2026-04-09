@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-05-21T21:57:53",
+  "estado_final": "APROBADO_CON_OBSERVACIONES",
+  "universo_original": 66,
+  "incluidos_pes_ready": 54,
+  "excluidos": 12,
+  "bloqueados_error": 1,
+  "excluidos_gobernanza_pendiente": 11,
+  "excluidos_rut_invalido": 1,
+  "excluidos_no_corresponde_2026": 0,
+  "excluidos_programa_sin_mapeo": 11,
+  "excluidos_programa_generico": 0,
+  "diferencia_66_54": 12,
+  "reconciliacion_matematica": true,
+  "errores_criticos": 0,
+  "advertencias": 0,
+  "regla_reconstruccion": "reconstruido desde CONTROL_FINAL (55 CODCLI: 54 OK + 1 bloqueado) + unico grupo de excluidos que cierra 66: DDASC (11 CODCLI).",
+  "codcli_fuera_universo_66": [
+    "20261DHIAD001",
+    "20261DHIAD002",
+    "20261DHIAD003",
+    "20261DHIAD004",
+    "20261DLEMS001",
+    "20261DLEMS002"
+  ],
+  "observacion_fuera_universo_66": "Se detectaron 6 candidatos 2026 adicionales en trazabilidad/excluidos que no forman parte del universo 66 reconstruido porque no pertenecen al unico grupo que cierra 66 = control_final + excluidos faltantes. Ver hoja FUERA_UNIVERSO_66.",
+  "pregrado_no_modificado": true,
+  "pes_ready_filas": 54,
+  "pes_ready_campos": {
+    "21": 54
+  },
+  "no_existe_n_doc_111222": true,
+  "backups": [
+    {
+      "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reconciliacion_66_a_54_postgrado.xlsx",
+      "backup": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reconciliacion_66_a_54_postgrado_bkp_20260521_215748.xlsx"
+    },
+    {
+      "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reconciliacion_66_a_54_postgrado.csv",
+      "backup": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reconciliacion_66_a_54_postgrado_bkp_20260521_215748.csv"
+    }
+  ],
+  "archivo_escritorio": "/Users/alexi/Desktop/reconciliacion_66_a_54_postgrado.xlsx",
+  "archivos": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reconciliacion_66_a_54_postgrado.xlsx",
+    "csv": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reconciliacion_66_a_54_postgrado.csv",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/reconciliacion_66_a_54_postgrado_20260521_215748.md",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/reconciliacion_66_a_54_postgrado_20260521_215748.json"
+  }
+}

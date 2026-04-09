@@ -1,0 +1,104 @@
+{
+  "fecha_generacion": "2026-05-20 12:48:37",
+  "fuentes_usadas": [
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_MATRIZ_MANUAL_CONSOLIDADA_FINAL.xlsx",
+      "uso": "Matriz consolidada"
+    },
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "uso": "Llaves estructurales"
+    },
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/input/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "hoja": "DatosAlumnos",
+      "uso": "Evidencia operativa de ano"
+    }
+  ],
+  "totales": {
+    "pendientes_analizados": 35,
+    "evidencia_operativa_2026": 13,
+    "evidencia_operativa_2025": 11,
+    "sin_match_promedios": 11,
+    "requieren_anio_inicio_actividades_formal": 35,
+    "listos_auditados_referencia": 23,
+    "bloqueados_referencia": 4,
+    "ya_existen_cned_referencia": 69
+  },
+  "dictamen": "Matriz diagnostica: PROMEDIOSDEALUMNOS entrega evidencia operativa de alumnos/matricula para 24 de 35 pendientes, pero ANOINGRESO/ANOMATRICULA no reemplazan ANIO_INICIO_ACTIVIDADES formal.",
+  "advertencias": [
+    "ANOINGRESO no reemplaza ANIO_INICIO_ACTIVIDADES; se requiere fuente formal de oferta academica para cierre CNED.",
+    "No se completan Area, Subarea, Carrera Generica ni Dependencia."
+  ],
+  "resultado_qa": {
+    "Pendientes analizados = 35": {
+      "resultado": "OK",
+      "detalle": 35
+    },
+    "Evidencia 2026 = 13": {
+      "resultado": "OK",
+      "detalle": 13
+    },
+    "Evidencia 2025 = 11": {
+      "resultado": "OK",
+      "detalle": 11
+    },
+    "Sin match = 11": {
+      "resultado": "OK",
+      "detalle": 11
+    },
+    "13 + 11 + 11 = 35": {
+      "resultado": "OK",
+      "detalle": 35
+    },
+    "Todos requieren ANIO_INICIO_ACTIVIDADES formal": {
+      "resultado": "OK",
+      "detalle": 35
+    },
+    "Campos manuales de clasificacion vacios": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "Sin duplicados en hoja 2026": {
+      "resultado": "OK",
+      "detalle": 0
+    },
+    "Sin duplicados en hoja 2025": {
+      "resultado": "OK",
+      "detalle": 0
+    },
+    "Sin duplicados en hoja sin match": {
+      "resultado": "OK",
+      "detalle": 0
+    },
+    "Los 4 bloqueados no aparecen en diagnostico 35": {
+      "resultado": "OK",
+      "detalle": ""
+    },
+    "Los 69 ya existentes no aparecen en diagnostico 35": {
+      "resultado": "OK",
+      "detalle": ""
+    },
+    "No se genero archivo de carga final": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "No se modificaron fuentes": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "No se uso internet": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "No se reclasifico formalmente ANOINGRESO como ANIO_INICIO_ACTIVIDADES": {
+      "resultado": "OK",
+      "detalle": "OK"
+    }
+  },
+  "rutas_generadas": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_MATRIZ_DIAGNOSTICA_PROMEDIOS_35.xlsx",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_MATRIZ_DIAGNOSTICA_PROMEDIOS_35.json",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_MATRIZ_DIAGNOSTICA_PROMEDIOS_35_RESUMEN.md"
+  }
+}

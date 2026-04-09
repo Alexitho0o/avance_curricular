@@ -1,0 +1,65 @@
+{
+  "fecha": "2026-07-01T00:06:20",
+  "modo": "revisar",
+  "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cierre_mu2026_fases4_7.py",
+  "script_hash": "2b1ddc794b223f49fbcb6a1febc126831436d2b37ddf19709612ea81a296e186",
+  "entradas": {
+    "hashes_fuentes_antes": {
+      "principal_4070": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "complemento_95": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d",
+      "rectificacion_30": "057f528a59df69bfa7c6211007df42378a0688813622bc26575fc689cb8b2584"
+    },
+    "encoding_4070": "utf-8-sig",
+    "encoding_95": "utf-8-sig",
+    "encoding_30": "utf-8-sig",
+    "filas_4070": 4070,
+    "filas_95": 95,
+    "filas_30": 30,
+    "columnas_mu": 32,
+    "catalogo_ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/03_archivos_rectificacion/consolidacion_codcli/CATALOGO_CODCLI_COMPLETO.csv.gz",
+    "catalogo_hash": "a604e9d044363ef5e314e0ddd42590bbdb4fb9581e145ac9d8b9f913a7e22ec7",
+    "catalogo_hash_manifestado": "a604e9d044363ef5e314e0ddd42590bbdb4fb9581e145ac9d8b9f913a7e22ec7",
+    "catalogo_formato": "csv_gzip",
+    "catalogo_validacion": "VALIDO",
+    "catalogo_diferencias_memoria_relectura": 0,
+    "catalogo_filas": 1719162,
+    "catalogo_columnas": 9,
+    "catalogo_codcli_distintos": 14229,
+    "catalogo_rut_distintos": 18151,
+    "catalogo_ofertas_distintas": 138,
+    "catalogo_tiempo_carga_segundos": 1.848,
+    "script_reconstruccion_existe": "NO",
+    "script_reconstruccion_hash": "",
+    "asignacion_95_hash": "9b7c8e33341ad8662066d0bc7d73c0fa76281a1fb7d4a63e07ef5337d0572950",
+    "asignacion_30_hash": "8e90eb8c7fa5bde0050a5a8949ba1810b8ec61fcc244a1f11fe99422885811f7",
+    "decisiones_reconstruccion_hash": "7fcf415d3b82082a5621b95211fab654d733291d3fb83ec43e4670175d325935",
+    "auditoria_vigencia_hash": "b8558c5909ed6e84b6c18bf205449c00753ecf87607a01ef4791b4f7b1fe956a",
+    "filas_propuesta": 4195
+  },
+  "salidas": {
+    "propuesta_csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/PROPUESTA_DECISION_FASES4_5.csv",
+      "sha256": "5d652ee3250276197767aca249c161dd434a1903cfea711a42e37e6069ad1ca8"
+    },
+    "propuesta_xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/PROPUESTA_DECISION_FASES4_5.xlsx",
+      "sha256": "ee77118e2ad21bbdc212fde17a5e563b72bcddbdbdee81a25c4bfb9b97f5e81a"
+    },
+    "aprobacion": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/APROBACION_MATERIALIZACION.json",
+      "sha256": "f4a456e170d89f703e1dfba91270f4ace4cf232a7cc52f3f54b00c37ae98daa8"
+    }
+  },
+  "resumen": {
+    "total_principal": 4070,
+    "total_complemento_incluido": 0,
+    "incorporaciones_desde_30": 0,
+    "actualizaciones": 0,
+    "exclusiones": 0,
+    "conflictos_materiales": 36,
+    "sin_evidencia_suficiente": 0,
+    "total_final_propuesto": 4070
+  },
+  "hash_propuesta": "5d652ee3250276197767aca249c161dd434a1903cfea711a42e37e6069ad1ca8",
+  "originales_modificados": "NO"
+}

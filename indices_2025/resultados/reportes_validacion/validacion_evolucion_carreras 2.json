@@ -1,0 +1,433 @@
+{
+  "proceso": "evolucion_carreras",
+  "fase": "FASE 3",
+  "fecha_ejecucion": "2026-05-18T21:10:09-04:00",
+  "archivo_entrada": "",
+  "csv_detectado": false,
+  "encoding_detectado": "",
+  "delimitador_detectado": "",
+  "total_registros": 0,
+  "total_columnas_recibidas": 0,
+  "total_columnas_esperadas": 47,
+  "errores_bloqueantes": [],
+  "advertencias": [
+    {
+      "fila": "",
+      "columna": "",
+      "campo": "archivo_entrada",
+      "valor": "",
+      "regla": "entrada CSV",
+      "mensaje": "No se encontró CSV real para validar en indices_2025/data/raw/.",
+      "severidad": "ADVERTENCIA",
+      "referencia_manual": "FASE 3"
+    }
+  ],
+  "revision_manual": [
+    {
+      "campo": "IDSEDE",
+      "motivo": "Campo depende de catálogo externo mencionado en el manual; catálogo no disponible.",
+      "referencia_manual": "Manual_INDICES_2025.txt líneas 2211-2215",
+      "observacion": "Validación contra catálogo no implementada en FASE 3.",
+      "nivel_confianza": "alto"
+    },
+    {
+      "campo": "CODCARR",
+      "motivo": "Campo depende de catálogo externo mencionado en el manual; catálogo no disponible.",
+      "referencia_manual": "Manual_INDICES_2025.txt líneas 2221-2223",
+      "observacion": "Validación contra catálogo no implementada en FASE 3.",
+      "nivel_confianza": "alto"
+    },
+    {
+      "campo": "NOMBREDEPENDENCIA",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "El manual muestra letra 'F' nuevamente para NombreDependencia; por orden despues de G y antes de I requiere revision manual. Formato no identificado explicitamente en el fragmento extraido.",
+      "nivel_confianza": "bajo"
+    },
+    {
+      "campo": "ESPECIALIDADOMENCION",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "Nombre reconstruido desde 'EspecialidadOM' + 'encion'; el formato no queda visible en el fragmento. Formato no identificado explicitamente en el fragmento extraido.",
+      "nivel_confianza": "bajo"
+    },
+    {
+      "campo": "CODIGOSIES",
+      "motivo": "Campo depende de catálogo externo mencionado en el manual; catálogo no disponible.",
+      "referencia_manual": "Manual_INDICES_2025.txt líneas 2283-2290",
+      "observacion": "Validación contra catálogo no implementada en FASE 3.",
+      "nivel_confianza": "alto"
+    },
+    {
+      "campo": "PAESPONDERADOMAX",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "La regla visible menciona Puntaje NEM pese a que el campo es PAESPonderadoMax.",
+      "nivel_confianza": "bajo"
+    },
+    {
+      "campo": "INTNEMMAX",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "El campo se llama intNemMax, pero la descripcion visible habla de ranking de notas.",
+      "nivel_confianza": "bajo"
+    },
+    {
+      "campo": "INTPRMAX",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "El campo intPRMax queda asociado en el fragmento a una regla de promedio PSU; requiere revision.",
+      "nivel_confianza": "bajo"
+    },
+    {
+      "campo": "MATRICULA_TOTAL_ESTUDIANTES_NO_BINARIOS",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "El nombre del campo aparece como texto descriptivo, no como identificador tecnico compacto.",
+      "nivel_confianza": "bajo"
+    },
+    {
+      "campo": "MATRICULA_PRIMER_ANO_ESTUDIANTES_NO_BINARIOS",
+      "motivo": "Campo marcado como requiere_revision_manual = sí desde FASE 1.",
+      "referencia_manual": "FASE 1 diccionario técnico",
+      "observacion": "El nombre del campo aparece como texto descriptivo, no como identificador tecnico compacto.",
+      "nivel_confianza": "bajo"
+    }
+  ],
+  "estructura_columnas": [
+    {
+      "orden_esperado": 1,
+      "campo_esperado": "IDSEDE",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 2,
+      "campo_esperado": "ANIOINICIOACTIVIDADES",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 3,
+      "campo_esperado": "CODCARR",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 4,
+      "campo_esperado": "NOMBRE",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 5,
+      "campo_esperado": "TIPOCARRERA",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 6,
+      "campo_esperado": "NOMBRESEDE",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 7,
+      "campo_esperado": "NOMBRECAMPUS",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 8,
+      "campo_esperado": "NOMBREDEPENDENCIA",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 9,
+      "campo_esperado": "HORARIO",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 10,
+      "campo_esperado": "ESPECIALIDADOMENCION",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 11,
+      "campo_esperado": "IDESTADOCARRERA",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 12,
+      "campo_esperado": "ANIOINFO",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 13,
+      "campo_esperado": "CODIGOSIES",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 14,
+      "campo_esperado": "VALORMATANUAL",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 15,
+      "campo_esperado": "VALORARANCELANUAL",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 16,
+      "campo_esperado": "VALORTITULO",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 17,
+      "campo_esperado": "TIPOMONEDA",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 18,
+      "campo_esperado": "VACANTESSEMESTRE1",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 19,
+      "campo_esperado": "VACANTESSEMESTRE2",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 20,
+      "campo_esperado": "MATPRIMERANIOHOMBRES",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 21,
+      "campo_esperado": "MATPRIMERANIOMUJERES",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 22,
+      "campo_esperado": "MATPRIMERANIOEXTRANJEROS_AS",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 23,
+      "campo_esperado": "MATTOTALHOMBRES",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 24,
+      "campo_esperado": "MATTOTALMUJERES",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 25,
+      "campo_esperado": "MATTOTALEXTRANJEROS_AS",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 26,
+      "campo_esperado": "ALUMNOSRINDIERONPSU",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 27,
+      "campo_esperado": "INTALUMOTRAVIA",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 28,
+      "campo_esperado": "PAESMIN",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 29,
+      "campo_esperado": "PAESPROM",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 30,
+      "campo_esperado": "PAESMAX",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 31,
+      "campo_esperado": "PAESPONDERADOMIN",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 32,
+      "campo_esperado": "PAESPONDERADOPROM",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 33,
+      "campo_esperado": "PAESPONDERADOMAX",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 34,
+      "campo_esperado": "INTNEMMIN",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 35,
+      "campo_esperado": "INTNEMPROM",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 36,
+      "campo_esperado": "INTNEMMAX",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 37,
+      "campo_esperado": "INTPRMIN",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 38,
+      "campo_esperado": "INTPRPRO",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 39,
+      "campo_esperado": "INTPRMAX",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 40,
+      "campo_esperado": "MATTOTALCOHORTEANIOANT",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 41,
+      "campo_esperado": "NUMDOCENTESPORPROGRAMA",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 42,
+      "campo_esperado": "MATPRIMERANIOORIGINARIOH",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 43,
+      "campo_esperado": "MATPRIMERANIOORIGINARIOM",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 44,
+      "campo_esperado": "MATTOTALORIGINARIOH",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 45,
+      "campo_esperado": "MATTOTALORIGINARIOM",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 46,
+      "campo_esperado": "MATRICULA_TOTAL_ESTUDIANTES_NO_BINARIOS",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    },
+    {
+      "orden_esperado": 47,
+      "campo_esperado": "MATRICULA_PRIMER_ANO_ESTUDIANTES_NO_BINARIOS",
+      "campo_recibido": "",
+      "estado": "NO_EVALUADO",
+      "observacion": "Sin CSV real disponible."
+    }
+  ],
+  "estado_validacion": "SIN_CSV_REAL",
+  "observaciones": [
+    "No se encontró CSV real en indices_2025/data/raw/.",
+    "YAML cargado como texto; no se requiere parser externo para FASE 3."
+  ]
+}

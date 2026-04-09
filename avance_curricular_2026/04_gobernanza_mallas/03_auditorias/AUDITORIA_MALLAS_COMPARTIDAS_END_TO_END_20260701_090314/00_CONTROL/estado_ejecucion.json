@@ -1,0 +1,200 @@
+{
+  "estado_general": "COMPLETADA",
+  "etapas": {
+    "00_PRUEBAS_INTERNAS": {
+      "estado": "COMPLETADA",
+      "bloque": "CONTROL",
+      "fecha_inicio": "2026-07-01T09:03:14",
+      "salidas": [
+        "05_AUDITORIA/00_CONTROL_PRUEBAS.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:14",
+      "hashes": {
+        "05_AUDITORIA/00_CONTROL_PRUEBAS.tsv": "0e66cfaa915bc607c063bf281f90a407c400c0840709123517f2977481030cba"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "01_INVENTARIO": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_1",
+      "fecha_inicio": "2026-07-01T09:03:14",
+      "salidas": [
+        "01_INVENTARIO/01_INVENTARIO_FOCALIZADO.tsv",
+        "01_INVENTARIO/02_FUENTES_PRIORITARIAS.tsv",
+        "01_INVENTARIO/03_DUPLICADOS_HASH.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:19",
+      "hashes": {
+        "01_INVENTARIO/01_INVENTARIO_FOCALIZADO.tsv": "6f03c6945a00af3b50f71998c10cfa6edd336ce6989f08ad79cb95322f32134a",
+        "01_INVENTARIO/02_FUENTES_PRIORITARIAS.tsv": "cc87aea641846d861cc386f45b46b60d8f6cf55095bab49c3a73d43404d22430",
+        "01_INVENTARIO/03_DUPLICADOS_HASH.tsv": "35f9e5f346a4af60fbe70fee94bb699e52fcdd09446d2b41e53b4e034d7ba11f"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "02_EVIDENCIA": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_1",
+      "fecha_inicio": "2026-07-01T09:03:19",
+      "salidas": [
+        "02_EVIDENCIA/01_EVIDENCIA_OFICIAL.tsv",
+        "02_EVIDENCIA/02_DATOS_OBSERVADOS.tsv",
+        "02_EVIDENCIA/03_IMPLEMENTACION_TECNICA.tsv",
+        "02_EVIDENCIA/04_DECISIONES_INTERNAS.tsv",
+        "02_EVIDENCIA/05_HIPOTESIS_PENDIENTES.tsv",
+        "05_AUDITORIA/03_CONTROL_ENCABEZADOS_DUPLICADOS.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:39",
+      "hashes": {
+        "02_EVIDENCIA/01_EVIDENCIA_OFICIAL.tsv": "776bbe8e37e517a7f81053c28e827fe7ad7cf91e0468168559186ee2dd79c2e2",
+        "02_EVIDENCIA/02_DATOS_OBSERVADOS.tsv": "9b59f59e4607b7b4f4e8e4794dcdd0aa4437acb6cbc6f6c6397a369db57bdada",
+        "02_EVIDENCIA/03_IMPLEMENTACION_TECNICA.tsv": "5a4ff861fc36f19a9fa4e3337025afa7c6fe66e2bac252c76df8f2e177f035cc",
+        "02_EVIDENCIA/04_DECISIONES_INTERNAS.tsv": "ca0a6238105dc1d82c5596b4e8d0a1c9fc4418e30a618ec8643e688ec9ac87d0",
+        "02_EVIDENCIA/05_HIPOTESIS_PENDIENTES.tsv": "3f5bfda7a6bef3f387c0df1c51fc2a7fe551d12d4cd627c300543d158ba63373",
+        "05_AUDITORIA/03_CONTROL_ENCABEZADOS_DUPLICADOS.tsv": "42a057a2897b6e6a536c8df2046b301c2b6f8f8daf0f0a995160312bb29a23e4"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "03_IDENTIDAD_LOGISTICA": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_1",
+      "fecha_inicio": "2026-07-01T09:03:39",
+      "salidas": [
+        "03_INTERMEDIOS/01_IDENTIDAD_LOGISTICA_CONSOLIDADA.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:43",
+      "hashes": {
+        "03_INTERMEDIOS/01_IDENTIDAD_LOGISTICA_CONSOLIDADA.tsv": "1eaf9a0b4e28d9b4514680bb9d802a39ed07fb74f25ab81338e8083f88df795a"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "04_RELACIONES_PREVIAS": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_1",
+      "fecha_inicio": "2026-07-01T09:03:43",
+      "salidas": [
+        "03_INTERMEDIOS/02_RELACIONES_PREVIAS_MU_EXTRANJEROS.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:43",
+      "hashes": {
+        "03_INTERMEDIOS/02_RELACIONES_PREVIAS_MU_EXTRANJEROS.tsv": "263e0dc4d98023039184555a45606bc1e0bb6d6f75ebd2ce5a50bd47b9fe29ef"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "05_COMPARACION_MALLAS": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_2",
+      "fecha_inicio": "2026-07-01T09:03:43",
+      "salidas": [
+        "03_INTERMEDIOS/03_ASIGNATURAS_TECNICO_LOGISTICA.tsv",
+        "03_INTERMEDIOS/04_ASIGNATURAS_INGENIERIA_LOGISTICA.tsv",
+        "03_INTERMEDIOS/05_COMPARACION_MALLAS_LOGISTICA.tsv",
+        "04_RESULTADOS/01_RESUMEN_COMPARACION_LOGISTICA.tsv",
+        "04_RESULTADOS/02_DETALLE_MALLA_COMPARTIDA_LOGISTICA.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:44",
+      "hashes": {
+        "03_INTERMEDIOS/03_ASIGNATURAS_TECNICO_LOGISTICA.tsv": "8e365a45e5a5ae7a5dd5d02f6286ff66a0448df1e94fce9d84b604fd4b8040fb",
+        "03_INTERMEDIOS/04_ASIGNATURAS_INGENIERIA_LOGISTICA.tsv": "4ffeeb76013ce9a0d533a610a8217dadae35f61a1e292bbae89ec2c213417d6d",
+        "03_INTERMEDIOS/05_COMPARACION_MALLAS_LOGISTICA.tsv": "d6879cb185d55245bdee21700eaa773f45beea28e89f5394e301ca8fc3a9d451",
+        "04_RESULTADOS/01_RESUMEN_COMPARACION_LOGISTICA.tsv": "73aee9210899074e66a4d92f5a3a52ec9a9297a77f230a8d6845a7b282d28d78",
+        "04_RESULTADOS/02_DETALLE_MALLA_COMPARTIDA_LOGISTICA.tsv": "d6879cb185d55245bdee21700eaa773f45beea28e89f5394e301ca8fc3a9d451"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "06_REPRESENTACION_FLUJO": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_2",
+      "fecha_inicio": "2026-07-01T09:03:44",
+      "salidas": [
+        "04_RESULTADOS/03_REPRESENTACION_EN_FLUJO_ACTUAL.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:44",
+      "hashes": {
+        "04_RESULTADOS/03_REPRESENTACION_EN_FLUJO_ACTUAL.tsv": "e812bb8498e45ebe9127ef158adde29576f329da49072e1c31f86d80bf03e23d"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "07_IMPACTO_146": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_2",
+      "fecha_inicio": "2026-07-01T09:03:44",
+      "salidas": [
+        "04_RESULTADOS/04_IMPACTO_EN_146_CASOS.tsv",
+        "04_RESULTADOS/05_CASOS_LOGISTICA_REEVALUAR.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:44",
+      "hashes": {
+        "04_RESULTADOS/04_IMPACTO_EN_146_CASOS.tsv": "cda3b36ad358654ed84a175389d17b1bfaa6036a1a8c8c90947e84b72b344291",
+        "04_RESULTADOS/05_CASOS_LOGISTICA_REEVALUAR.tsv": "5cfc5eb9af1627aacc09cce9130a22249c854ad6567abd1d7f6d41b9b08d9f58"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "08_OTRAS_FAMILIAS": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_2",
+      "fecha_inicio": "2026-07-01T09:03:44",
+      "salidas": [
+        "04_RESULTADOS/06_OTRAS_FAMILIAS_CANDIDATAS.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:44",
+      "hashes": {
+        "04_RESULTADOS/06_OTRAS_FAMILIAS_CANDIDATAS.tsv": "7542d82542459809ff07b6cbade4b3fc8c9094fa89c7c10281918fa0d25e800a"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "09_CONCLUSION": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_3",
+      "fecha_inicio": "2026-07-01T09:03:44",
+      "salidas": [
+        "04_RESULTADOS/07_CONCLUSION_LOGISTICA.tsv",
+        "04_RESULTADOS/08_RECOMENDACION_ANTES_REVISION_MANUAL.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:03:44",
+      "hashes": {
+        "04_RESULTADOS/07_CONCLUSION_LOGISTICA.tsv": "1798ae8599ce2c87697319128a146b881d18d9789351c933f8605ef4ce08aec2",
+        "04_RESULTADOS/08_RECOMENDACION_ANTES_REVISION_MANUAL.tsv": "ec7352e35bd24750504102ed7945922db21df8b7fdc60350071d2a605550d0a5"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "10_REPORTE_FINAL": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_3",
+      "fecha_inicio": "2026-07-01T09:03:44",
+      "salidas": [
+        "04_RESULTADOS/09_RESUMEN_EJECUTIVO.md",
+        "04_RESULTADOS/10_AUDITORIA_MALLAS_COMPARTIDAS_TEC_CONT.xlsx",
+        "05_AUDITORIA/01_CONTROL_INTEGRIDAD.tsv",
+        "05_AUDITORIA/02_TRAZABILIDAD_EVIDENCIA.tsv",
+        "05_AUDITORIA/04_CONTROL_CONTEOS.tsv",
+        "05_AUDITORIA/05_CONTROL_ORIGINALES.tsv",
+        "05_AUDITORIA/06_INVENTARIO_SALIDAS.tsv",
+        "00_CONTROL/manifiesto_final.json"
+      ],
+      "fecha_fin": "2026-07-01T09:03:50",
+      "hashes": {
+        "04_RESULTADOS/09_RESUMEN_EJECUTIVO.md": "45fae1dcf30c33a1c08a632d7a302e3b60fccda8bd812fef3fc0fd591c5d051b",
+        "04_RESULTADOS/10_AUDITORIA_MALLAS_COMPARTIDAS_TEC_CONT.xlsx": "3de734082ae6811a0d7a365166852b578f2cc721167a72ec6a05d9b98e20fcc8",
+        "05_AUDITORIA/01_CONTROL_INTEGRIDAD.tsv": "6ac9912e03f9d3cd70303e3dcb0a235a80d5f36e85e31d0d013199209c403f7a",
+        "05_AUDITORIA/02_TRAZABILIDAD_EVIDENCIA.tsv": "42279a3b612490c34f9b91b5aae936e5978d5c15382a7da0e6ed865483c0ecac",
+        "05_AUDITORIA/04_CONTROL_CONTEOS.tsv": "56f0ccba5b0ab2aa992052239362e54c64ada86fbc279e0fde2d6145b818f8f2",
+        "05_AUDITORIA/05_CONTROL_ORIGINALES.tsv": "295488709fde8889410fe1a6bc2b9ff37e1f525fcfeb9ea481f7028ffa3f6a20",
+        "05_AUDITORIA/06_INVENTARIO_SALIDAS.tsv": "6c6fa20612d0f2ecee70409bd11439725f527f59899b720a647a901cbc5e2b7f",
+        "00_CONTROL/manifiesto_final.json": "33424ea7b8e9a233663ca4b3eed58900688e68833e4d4e5bbbfb2902c6a9dc05"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    }
+  },
+  "actualizado_en": "2026-07-01T09:03:50"
+}

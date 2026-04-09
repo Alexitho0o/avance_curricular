@@ -1,0 +1,51 @@
+25:# FUENTE ÚNICA GOBERNANZA SIES: DURACION_ESTUDIOS.tsv
+54:        Path(__file__).with_name("DURACION_ESTUDIOS.tsv"),
+55:        Path.cwd() / "DURACION_ESTUDIOS.tsv",
+69:    """Construye matriz (CODCARPR, JORNADA, VERSION)->SIES desde DURACION_ESTUDIOS.tsv."""
+73:        print("⚠️  DURACION_ESTUDIOS.tsv no disponible para construir matriz SIES")
+87:            val = (getattr(row, "CODIGO_UNICO", ""), "100%", "AUTO_DURACION_ESTUDIOS")
+94:        print(f"⚠️  Conflictos en matriz auto desde DURACION_ESTUDIOS: {conflictos} (se conserva primera ocurrencia)")
+95:    print(f"✅ Matriz SIES auto construida desde DURACION_ESTUDIOS: {len(matriz_dict)} llaves")
+99:# Cargar matriz al iniciar desde DURACION_ESTUDIOS.tsv
+115:    "DURACION_ESTUDIOS", "DURACION_TITULACION", "DURACION_TOTAL", "NIVEL_CARRERA", "TIPO_UNIDAD_MEDIDA",
+133:MU_FUSION_OUTPUT_FILENAME = "archivo_listo_para_sies.xlsx"
+152:DEFAULT_PUENTE_SIES_COMPILADO_PATH = Path(__file__).with_name("control") / "catalogos" / "PUENTE_SIES_COMPILADO.tsv"
+1610:    CODIGO_UNICO, MODALIDAD, JORNADA, DURACION_ESTUDIOS, TIPO_PLAN_CARRERA, NIVEL_CARRERA.
+1613:    required_cols = {"CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS"}
+1655:            base_usecols = ["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"]
+1673:    # ── Fallback: DURACION_ESTUDIOS.tsv como dimensión oferta ────────────────
+1675:        Path(__file__).with_name("DURACION_ESTUDIOS.tsv"),
+1676:        Path.cwd() / "DURACION_ESTUDIOS.tsv",
+1684:                    for nc in ["MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA",
+1690:                    dim["OFERTA_SOURCE_SHEET"] = "DURACION_ESTUDIOS_TSV"
+1695:    return pd.DataFrame(columns=["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"])
+1754:    """Genera catálogo manual y puente SIES desde DURACION_ESTUDIOS.tsv."""
+1761:        print("⚠️  DURACION_ESTUDIOS sin columnas mínimas para construir puente/catálogo")
+1794:    print(f"✅ Catálogo/puente auto desde DURACION_ESTUDIOS: catalogo={len(cat_manual)} puente={len(puente)}")
+2135:    - Construye archivo tipo "ARCHIVO_LISTO_SUBIDA" con columnas de Matrícula Unificada
+2251:    manual_source = catalogo_manual_tsv_path or "auto:DURACION_ESTUDIOS.tsv"
+2253:    puente_compilado_path = DEFAULT_PUENTE_SIES_COMPILADO_PATH.resolve()
+2258:            "Usa scripts/compile_puente_sies_compilado.py para materializar control/catalogos/PUENTE_SIES_COMPILADO.tsv."
+3111:    # Fuente base manual: se reconstruye desde DURACION_ESTUDIOS para trazabilidad
+3113:    # desde el catálogo compilado control/catalogos/PUENTE_SIES_COMPILADO.tsv.
+3414:    # Se conserva ARCHIVO_LISTO_SUBIDA completo, y se construye una hoja
+3529:        oferta_duracion = archivo_subida[FINAL_SIES_CODE_COL].map(oferta_idx["DURACION_ESTUDIOS"].to_dict())
+3557:    # ── Fallback COD_CAR: mapeo NOMBRE_CARRERA → CODIGO_CARRERA vía DURACION_ESTUDIOS ──
+3576:    # ── Fallback VERSION: cuando COD_CAR+JOR están, usar la versión máxima de DURACION_ESTUDIOS ──
+3592:        print(f"    ↳ VERSION fallback DURACION_ESTUDIOS max: {int(_filled_ver.sum())} filas")
+3597:    archivo_subida["DURACION_ESTUDIOS_REF"] = pd.to_numeric(oferta_duracion, errors="coerce").astype("Int64")
+3647:    cod_car_source.loc[_fb_nombre_mask] = "DURACION_ESTUDIOS_NOMBRE"
+3927:    dur_ref = pd.to_numeric(archivo_subida["DURACION_ESTUDIOS_REF"], errors="coerce")
+3936:    niv_aca_status_final.loc[niv_capped_dur_mask & ~niv_capped_2026_mask] = "ACOTADO_DURACION_ESTUDIOS"
+4279:    # ── Enriquecimiento duración vía CODIGO_UNICO desde DURACION_ESTUDIOS.tsv ─
+4280:    _duracion_tsv_path = Path(__file__).with_name("DURACION_ESTUDIOS.tsv")
+4282:        _duracion_tsv_path = Path.cwd() / "DURACION_ESTUDIOS.tsv"
+4287:            "DURACION_ESTUDIOS": "DURACION_ESTUDIOS_TSV",
+4376:        {"seccion": "PROCESAMIENTO", "metrica": "CODCLI en ARCHIVO_LISTO_SUBIDA", "valor": len(archivo_subida), "pct": f"{len(archivo_subida)/_codcli_fuente_total*100:.1f}%"},
+4377:        {"seccion": "PROCESAMIENTO", "metrica": "CODCLI únicos en ARCHIVO_LISTO_SUBIDA", "valor": _codcli_archivo_unicos, "pct": ""},
+4410:    # ── Máscara rojo para PENDIENTE_GOBERNANZA en ARCHIVO_LISTO_SUBIDA ──
+4417:    sheets_export["ARCHIVO_LISTO_SUBIDA"] = archivo_subida
+4446:    _write_excel_atomic(sheets_export, out_path, red_rows_sheet="ARCHIVO_LISTO_SUBIDA", red_rows_mask=_red_mask)
+4834:            "DURACION_ESTUDIOS": row.get("DURACION_ESTUDIOS"),
+4939:                "dur": oferta.get("DURACION_ESTUDIOS"),
+5212:            "Se usa para validar y ajustar MODALIDAD/JOR y limitar NIV_ACA por DURACION_ESTUDIOS."

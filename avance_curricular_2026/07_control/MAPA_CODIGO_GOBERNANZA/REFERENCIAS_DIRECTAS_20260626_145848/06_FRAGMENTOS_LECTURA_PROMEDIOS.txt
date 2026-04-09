@@ -1,0 +1,1483 @@
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 1 — LÍNEAS 125-208
+==========================================================================================
+000125:     "UNID_APROBADAS_TOTAL", "VIGENCIA",
+000126: ]
+000127: 
+000128: ANUAL_COLS = [
+000129:     "UNIDADES_1ER_ANIO", "UNIDADES_2DO_ANIO", "UNIDADES_3ER_ANIO", "UNIDADES_4TO_ANIO",
+000130:     "UNIDADES_5TO_ANIO", "UNIDADES_6TO_ANIO", "UNIDADES_7MO_ANIO",
+000131: ]
+000132: 
+000133: MU_FUSION_OUTPUT_FILENAME = "archivo_listo_para_sies.xlsx"
+000134: MU_PREGRADO_CSV_FILENAME = "matricula_unificada_2026_pregrado.csv"
+000135: FINAL_SIES_CODE_COL = "CODIGO_CARRERA_SIES_FINAL"
+000136: MAX_SIES_CODES_PER_KEY = 5
+000137: DEFAULT_EXCLUIR_DIPLOMADOS = True
+000138: 
+000139: DEFAULT_INPUT_CANDIDATES = [
+000140:     Path.home() / "Downloads" / "PROMEDIOSDEALUMNOS_7804.xlsx",
+000141: ]
+000142: DEFAULT_CATALOGO_MANUAL_CANDIDATES = [
+000143:     Path(__file__).with_name("catalogo_manual.tsv"),
+000144:     Path.cwd() / "catalogo_manual.tsv",
+000145:     Path.home() / "Downloads" / "catalogo_manual.tsv",
+000146: ]
+000147: DEFAULT_PUENTE_SIES_CANDIDATES = [
+000148:     Path(__file__).with_name("puente_sies.tsv"),
+000149:     Path.cwd() / "puente_sies.tsv",
+000150:     Path.home() / "Downloads" / "puente_sies.tsv",
+000151: ]
+000152: DEFAULT_PUENTE_SIES_COMPILADO_PATH = Path(__file__).with_name("control") / "catalogos" / "PUENTE_SIES_COMPILADO.tsv"
+000153: DEFAULT_GOB_NAC_CANDIDATES = [
+000154:     Path(__file__).with_name("gobernanza_nac.tsv"),
+000155:     Path.cwd() / "gobernanza_nac.tsv",
+000156:     Path.home() / "Downloads" / "gobernanza_nac.tsv",
+000157: ]
+000158: DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES = [
+000159:     Path(__file__).with_name("gobernanza_pais_est_sec.tsv"),
+000160:     Path.cwd() / "gobernanza_pais_est_sec.tsv",
+000161:     Path.home() / "Downloads" / "gobernanza_pais_est_sec.tsv",
+000162: ]
+000163: DEFAULT_GOB_SEDE_CANDIDATES = [
+000164:     Path(__file__).with_name("gobernanza_sede.tsv"),
+000165:     Path.cwd() / "gobernanza_sede.tsv",
+000166:     Path.home() / "Downloads" / "gobernanza_sede.tsv",
+000167: ]
+000168: DEFAULT_GOB_FOR_ING_ACT_CANDIDATES = [
+000169:     Path(__file__).with_name("gobernanza_for_ing_act.tsv"),
+000170:     Path.cwd() / "gobernanza_for_ing_act.tsv",
+000171:     Path.home() / "Downloads" / "gobernanza_for_ing_act.tsv",
+000172: ]
+000173: DEFAULT_GOB_HOJA1_ESTADO_DESC_CANDIDATES = [
+000174:     Path(__file__).with_name("gobernanza_catalogos") / "gob_promedios_hoja1_estado_academico_descripcion.tsv",
+000175:     Path.cwd() / "gobernanza_catalogos" / "gob_promedios_hoja1_estado_academico_descripcion.tsv",
+000176: ]
+000177: DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES = [
+000178:     Path(__file__).resolve().parent / DEFAULT_SIT_FON_SOL_PATCH_PATH,
+000179:     Path.cwd() / DEFAULT_SIT_FON_SOL_PATCH_PATH,
+000180: ]
+000181: DEFAULT_GOB_DA_ESTADO_SITUACION_CANDIDATES = [
+000182:     Path(__file__).with_name("gobernanza_catalogos") / "gob_datosalumnos_estadoacademico_situacion.tsv",
+000183:     Path.cwd() / "gobernanza_catalogos" / "gob_datosalumnos_estadoacademico_situacion.tsv",
+000184: ]
+000185: DEFAULT_OFERTA_ACADEMICA_XLSX_CANDIDATES = [
+000186:     Path(__file__).with_name("oferta_academica_2026.xlsx"),
+000187:     Path.cwd() / "oferta_academica_2026.xlsx",
+000188:     Path.home() / "Downloads" / "1668382 Captura IES Incremental5320 Oferta Académica Titulados5319 Titulados Histórico.xlsx",
+000189: ]
+000190: 
+000191: # Puedes pegar aquí el TSV completo del código legacy si quieres dejarlo embebido.
+000192: CATALOGO_MANUAL_TSV = ""
+000193: PUENTE_SIES_TSV = ""
+000194: 
+000195: 
+000196: @dataclass
+000197: class Issue:
+000198:     severity: str
+000199:     area: str
+000200:     message: str
+000201:     count: int = 0
+000202: 
+000203: 
+000204: def _first_existing_path(candidates: list[Path]) -> Path | None:
+000205:     for candidate in candidates:
+000206:         candidate = candidate.expanduser()
+000207:         if candidate.exists():
+000208:             return candidate
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 2 — LÍNEAS 356-402
+==========================================================================================
+000356: def _normalize_semester_scalar(value: object, allow_zero: bool = False) -> int | None:
+000357:     num = pd.to_numeric(pd.Series([value]), errors="coerce").iloc[0]
+000358:     if pd.isna(num):
+000359:         return None
+000360:     sem = int(num)
+000361:     if allow_zero and sem == 0:
+000362:         return 0
+000363:     if sem == 1:
+000364:         return 1
+000365:     if sem in (2, 3):
+000366:         return 2
+000367:     return None
+000368: 
+000369: 
+000370: def _load_da_origin_records(input_file: Path) -> dict[int, list[dict[str, object]]]:
+000371:     """Carga registros mínimos de DatosAlumnos para buscar origen previo por RUT."""
+000372:     try:
+000373:         xls = pd.ExcelFile(input_file)
+000374:         if "DatosAlumnos" not in xls.sheet_names:
+000375:             return {}
+000376:         keep = {"CODCLI", "RUT", "CODCARPR", "ANOINGRESO", "PERIODOINGRESO"}
+000377:         src = pd.read_excel(input_file, sheet_name="DatosAlumnos", usecols=lambda c: c in keep)
+000378:         required = {"CODCLI", "RUT", "ANOINGRESO"}
+000379:         if not required.issubset(src.columns):
+000380:             return {}
+000381:         work = src.copy()
+000382:         work["_RUT_NUM"] = work["RUT"].map(_rut_num_only)
+000383:         work["_CODCLI"] = work["CODCLI"].astype(str).str.strip()
+000384:         work["_CODCARPR"] = (
+000385:             work["CODCARPR"].map(_normalize_text)
+000386:             if "CODCARPR" in work.columns
+000387:             else pd.Series("", index=work.index, dtype="object")
+000388:         )
+000389:         work["_ANIO"] = pd.to_numeric(work["ANOINGRESO"], errors="coerce")
+000390:         work["_SEM"] = (
+000391:             work["PERIODOINGRESO"].map(_normalize_semester_scalar)
+000392:             if "PERIODOINGRESO" in work.columns
+000393:             else pd.Series([None] * len(work), index=work.index, dtype="object")
+000394:         )
+000395:         work = work[work["_RUT_NUM"].notna() & work["_ANIO"].notna() & work["_CODCLI"].ne("")]
+000396:         if work.empty:
+000397:             return {}
+000398:         work["_RUT_NUM"] = work["_RUT_NUM"].astype(int)
+000399:         work["_ANIO"] = work["_ANIO"].astype(int)
+000400:         def _sem_sort_value(value: object) -> int:
+000401:             sem = _normalize_semester_scalar(value)
+000402:             return sem if sem in (1, 2) else 9
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 3 — LÍNEAS 569-644
+==========================================================================================
+000569:     if mask_for3.any():
+000570:         for idx in archivo_subida.index[mask_for3]:
+000571:             rut = rut_nums.loc[idx]
+000572:             rut_int = int(rut) if rut is not None and not pd.isna(rut) else None
+000573:             year, sem = _lookup_previous_origin_for_row(
+000574:                 records_by_rut,
+000575:                 rut_int,
+000576:                 archivo_subida.at[idx, "CODCLI"] if "CODCLI" in archivo_subida.columns else "",
+000577:                 archivo_subida.at[idx, "CODCARPR_NORM"] if "CODCARPR_NORM" in archivo_subida.columns else "",
+000578:                 archivo_subida.at[idx, "ANIO_ING_ACT"],
+000579:                 archivo_subida.at[idx, "SEM_ING_ACT"],
+000580:             )
+000581:             if year is not None and 1980 <= int(year) <= 2026:
+000582:                 archivo_subida.at[idx, "ANIO_ING_ORI"] = int(year)
+000583:                 archivo_subida.at[idx, "SEM_ING_ORI"] = sem if sem in (1, 2) else 0
+000584:                 archivo_subida.at[idx, "ANIO_ING_ORI_FUENTE_FINAL"] = "DATOSALUMNOS_PROGRAMA_ANTERIOR_RUT"
+000585:                 archivo_subida.at[idx, "ANIO_ING_ORI_METODO_FINAL"] = "MIN_ANOINGRESO_OTRO_CODCLI"
+000586:                 archivo_subida.at[idx, "ANIO_ING_ORI_AUDIT_STATUS"] = "OK_ORIGEN_PROGRAMA_ANTERIOR_FOR_3"
+000587:                 archivo_subida.at[idx, "SEM_ING_ORI_FUENTE_FINAL"] = "DATOSALUMNOS_PROGRAMA_ANTERIOR_RUT"
+000588:                 archivo_subida.at[idx, "SEM_ING_ORI_METODO_FINAL"] = "PERIODOINGRESO_OTRO_CODCLI"
+000589:                 archivo_subida.at[idx, "SEM_ING_ORI_AUDIT_STATUS"] = "OK_ORIGEN_PROGRAMA_ANTERIOR_FOR_3"
+000590:                 stats["for3_lookup"] += 1
+000591:             else:
+000592:                 set_origin_at(
+000593:                     idx,
+000594:                     1900,
+000595:                     0,
+000596:                     "POLITICA_FOR_ING_ACT_3_SIN_PROGRAMA_ANTERIOR_FECHABLE",
+000597:                     "ORIGEN_DESCONOCIDO_1900_0",
+000598:                     "FALLBACK_ORIGEN_DESCONOCIDO_FOR_3",
+000599:                 )
+000600:                 stats["for3_1900"] += 1
+000601: 
+000602:     mask_otros = for_code.isin([4, 5])
+000603:     set_origin(
+000604:         mask_otros,
+000605:         1900,
+000606:         0,
+000607:         "POLITICA_FOR_ING_ACT_CONTINUIDAD_SIN_ORIGEN_FECHABLE",
+000608:         "ORIGEN_DESCONOCIDO_1900_0",
+000609:         "FALLBACK_ORIGEN_DESCONOCIDO_FOR_CONTINUIDAD",
+000610:     )
+000611:     stats["otros_1900"] = int(mask_otros.sum())
+000612:     return stats
+000613: 
+000614: 
+000615: def _normalize_period_to_semester(values: pd.Series) -> pd.Series:
+000616:     periodo = pd.to_numeric(values, errors="coerce")
+000617:     sem = pd.Series(pd.NA, index=values.index, dtype="Int64")
+000618:     sem.loc[periodo == 1] = 1
+000619:     # El histórico Hoja1 usa PERIODO=3 como equivalente operacional de segundo semestre.
+000620:     sem.loc[periodo.isin([2, 3])] = 2
+000621:     return sem
+000622: 
+000623: 
+000624: def _trimester_level_to_semester(values: pd.Series) -> pd.Series:
+000625:     """Convierte nivel administrativo trimestral a semestre curricular MU.
+000626: 
+000627:     Regla institucional inmutable:
+000628:     1→1, 2→2, 3→2, 4→3, 5→4, 6→4, 7→5, 8→6, 9→6, 10→7, 11→8, 12→8.
+000629:     Fallback para niveles >12: ceil(n*2/3), equivalente entero ((2n+2)//3).
+000630:     """
+000631:     nivel = pd.to_numeric(values, errors="coerce").round()
+000632:     map_eq = {
+000633:         1: 1, 2: 2, 3: 2,
+000634:         4: 3, 5: 4, 6: 4,
+000635:         7: 5, 8: 6, 9: 6,
+000636:         10: 7, 11: 8, 12: 8,
+000637:     }
+000638:     sem = nivel.map(map_eq)
+000639:     fallback_mask = sem.isna() & nivel.notna() & nivel.gt(12)
+000640:     sem.loc[fallback_mask] = ((nivel.loc[fallback_mask] * 2 + 2) // 3)
+000641:     return sem.astype("Float64")
+000642: 
+000643: 
+000644: def _normalize_grade_to_mu_scale(values: pd.Series) -> pd.Series:
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 4 — LÍNEAS 732-772
+==========================================================================================
+000732:                 "UZ_HIST_ANIOS_DISPONIBLES": anios_disponibles,
+000733:                 "UZ_HIST_SCOPE_STATUS": hist_scope_status,
+000734:                 "UZ_HIST_FILAS_TOTAL": int(len(sub)),
+000735:                 "UZ_HIST_FILAS_ANIO_REFERENCIA": int(len(sub_ref)),
+000736:                 "UZ_HIST_FILAS_REF_APROB": int(aprob_ref.sum()),
+000737:                 "UZ_HIST_FILAS_REF_REPROB": int(estado_ref.str.contains("REPROB", na=False).sum()),
+000738:                 "UZ_HIST_FILAS_REF_TRANSFER": int(transfer_ref.sum()),
+000739:                 "UZ_HIST_FILAS_REF_SEM1_CALIFICADAS": int((graded_ref & sem_ref.eq(1)).sum()),
+000740:                 "UZ_HIST_FILAS_REF_SEM2_CALIFICADAS": int((graded_ref & sem_ref.eq(2)).sum()),
+000741:                 "ASI_INS_ANT_HIST": int(codramo_ref[~transfer_ref].nunique()),
+000742:                 "ASI_APR_ANT_HIST": int(codramo_ref[aprob_ref].nunique()),
+000743:                 "PROM_PRI_SEM_HIST": _coerce_mu_average(sub_ref.loc[graded_ref & sem_ref.eq(1), "NOTA_MU"]),
+000744:                 "PROM_SEG_SEM_HIST": _coerce_mu_average(sub_ref.loc[graded_ref & sem_ref.eq(2), "NOTA_MU"]),
+000745:                 "ASI_INS_HIS_HIST": int(codramo_hist.dropna().count()),
+000746:                 "ASI_APR_HIS_HIST": int(codramo_hist[aprob_hist].nunique()),
+000747:                 "UZ_FUENTE_HIST": f"HISTORICO_HOJA1_ANIO_{anio_ref}",
+000748:             }
+000749:         )
+000750: 
+000751:     if not rows:
+000752:         return pd.DataFrame(), anio_ref_data
+000753:     return pd.DataFrame(rows), anio_ref_data
+000754: 
+000755: 
+000756: def _resolve_for_ing_act_row(
+000757:     raw_input_value: object,
+000758:     vias_admision_value: object,
+000759:     carrera_value: object,
+000760:     codcarpr_value: object,
+000761:     valid_codes: set[int],
+000762: ) -> dict[str, object]:
+000763:     def _numeric_code(value: object) -> int | None:
+000764:         num = pd.to_numeric(pd.Series([value]), errors="coerce").iloc[0]
+000765:         if pd.isna(num):
+000766:             return None
+000767:         num_int = int(num)
+000768:         return num_int if num_int in valid_codes else None
+000769: 
+000770:     input_code = _numeric_code(raw_input_value)
+000771:     if input_code is not None:
+000772:         return {
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 5 — LÍNEAS 1105-1180
+==========================================================================================
+001105: 
+001106: 
+001107: def _modalidad_from_jor(jor_series: pd.Series) -> pd.Series:
+001108:     j = pd.to_numeric(jor_series, errors="coerce")
+001109:     mod = pd.Series(pd.NA, index=jor_series.index, dtype="object")
+001110:     mod.loc[j.isin([1, 2])] = "1"  # Presencial
+001111:     mod.loc[j == 3] = "2"  # Semipresencial
+001112:     mod.loc[j.isin([4, 5])] = "3"  # No presencial
+001113:     return mod
+001114: 
+001115: 
+001116: def _normalize_sexo_mu(value: object) -> object:
+001117:     if pd.isna(value):
+001118:         return pd.NA
+001119:     raw = str(value).strip().upper()
+001120:     # DatosAlumnos usa códigos institucionales M/F/S; el manual MU exige H/M/NB.
+001121:     if raw == "M":
+001122:         return "H"
+001123:     if raw == "F":
+001124:         return "M"
+001125:     if raw == "S":
+001126:         return "NB"
+001127:     s = _normalize_text(value)
+001128:     if s in {"H", "HOMBRE", "MASCULINO", "MALE"}:
+001129:         return "H"
+001130:     if s in {"M", "MUJER", "FEMENINO", "FEMALE"}:
+001131:         return "M"
+001132:     if s in {"NB", "NO BINARIO", "NO-BINARIO", "X"}:
+001133:         return "NB"
+001134:     return pd.NA
+001135: 
+001136: 
+001137: def _to_ddmmyyyy(series: pd.Series, fallback: str | None = None) -> pd.Series:
+001138:     dt = pd.to_datetime(series, errors="coerce", dayfirst=True)
+001139:     out = dt.dt.strftime("%d/%m/%Y")
+001140:     if fallback is not None:
+001141:         out = out.fillna(fallback)
+001142:     return out
+001143: 
+001144: 
+001145: def _load_datos_alumnos_lookup(input_file: Path) -> pd.DataFrame:
+001146:     """Carga lookup por CODCLI desde hoja DatosAlumnos para gobernanza v2.
+001147: 
+001148:     El lookup se usa solo cuando el flag --usar-gobernanza-v2 está activo.
+001149:     """
+001150:     try:
+001151:         xls = pd.ExcelFile(input_file)
+001152:         if "DatosAlumnos" not in xls.sheet_names:
+001153:             return pd.DataFrame()
+001154: 
+001155:         src = pd.read_excel(input_file, sheet_name="DatosAlumnos")
+001156:         if "CODCLI" not in src.columns:
+001157:             return pd.DataFrame()
+001158: 
+001159:         keep = [
+001160:             "CODCLI",
+001161:             "RUT",
+001162:             "DIG",
+001163:             "DV",
+001164:             "NACIONALIDAD",
+001165:             "SEDE",
+001166:             "NOMBRES",
+001167:             "APELLIDO PATERNO",
+001168:             "APELLIDO MATERNO",
+001169:             "SEXO",
+001170:             "FECHANACIMIENTO",
+001171:             "ANOINGRESO",
+001172:             "PERIODOINGRESO",
+001173:             "ANOMATRICULA",
+001174:             "PERIODOMATRICULA",
+001175:             "FECHAMATRICULA",
+001176:             "NIVEL",
+001177:             "SITUACION",
+001178:             "ESTADOACADEMICO",
+001179:             "MATRICULA",
+001180:             "CON_FIRMA",
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 6 — LÍNEAS 1223-1263
+==========================================================================================
+001223:         if "DA_DV" not in out.columns and "DA_RUT" in out.columns:
+001224:             rut_str = out["DA_RUT"].astype(str).str.strip()
+001225:             out["DA_DV"] = rut_str.str.split("-").str[-1].str.strip()
+001226:             out["DA_RUT_NUM"] = rut_str.str.split("-").str[0].str.strip()
+001227: 
+001228:         if "DA_RUT_NORM" not in out.columns:
+001229:             if "DA_RUT_NUM" in out.columns:
+001230:                 out["DA_RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["DA_RUT_NUM"], out["DA_DV"])]
+001231:             elif "DA_DV" in out.columns:
+001232:                 out["DA_RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["DA_RUT"], out["DA_DV"])]
+001233:             else:
+001234:                 out["DA_RUT_NORM"] = ""
+001235: 
+001236:         out["DA_MATCH_FLAG"] = "1"
+001237: 
+001238:         # DatosAlumnos debería tener 1 fila por CODCLI; ante conflicto, conservar primera.
+001239:         out = out.drop_duplicates(subset=["CODCLI"], keep="first").reset_index(drop=True)
+001240:         return out
+001241:     except Exception:
+001242:         return pd.DataFrame()
+001243: 
+001244: 
+001245: def _status_from_vig(vig: object) -> str:
+001246:     try:
+001247:         return "Matrícula No Utilizada" if int(float(vig)) == 0 else "Matrícula OK"
+001248:     except Exception:
+001249:         return "Matrícula OK"
+001250: 
+001251: 
+001252: def _build_bridge_codcarpr_to_codcar(df_bridge: pd.DataFrame) -> dict[str, int]:
+001253:     """Construye mapa CODCARPR → CODIGO_CARRERA desde el puente SIES."""
+001254:     if df_bridge.empty or "CODIGO_CARRERA" not in df_bridge.columns:
+001255:         return {}
+001256:     mapping: dict[str, int] = {}
+001257:     work = df_bridge.copy()
+001258:     work["CODIGO_CARRERA_NUM"] = pd.to_numeric(work["CODIGO_CARRERA"], errors="coerce")
+001259:     for _, row in work.dropna(subset=["CODIGO_CARRERA_NUM"]).iterrows():
+001260:         codcarpr = str(row.get("CODCARPR", "")).strip()
+001261:         if codcarpr:
+001262:             mapping[codcarpr] = int(row["CODIGO_CARRERA_NUM"])
+001263:     return mapping
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 7 — LÍNEAS 1298-1369
+==========================================================================================
+001298:             rows.append({
+001299:                 "SECCION": "SIN_MATCH_SIES",
+001300:                 "PRIORIDAD": "ALTA (sin código SIES)",
+001301:                 "CODIGOS_SIES_POTENCIALES": "",
+001302:                 "CODIGO_CARRERA_OPCIONES": "",
+001303:                 "N_ALUMNOS_AFECTADOS": len(grp),
+001304:                 "CODCARPR_EJEMPLO": codcarpr,
+001305:                 "NOMBRE_CARRERA_EJEMPLO": grp.iloc[0].get("NOMBRE_CARRERA_FUENTE", ""),
+001306:                 "ACCION_REQUERIDA": "Agregar mapeo SIES para este CODCARPR",
+001307:             })
+001308:     # --- Sección 3: SIN_MATCH_DATOS_ALUMNOS (resumen) ---
+001309:     if not sin_match_datos_alumnos_df.empty:
+001310:         for codcarpr, grp in sin_match_datos_alumnos_df.groupby("COD_CAR_FUENTE", dropna=False):
+001311:             rows.append({
+001312:                 "SECCION": "SIN_MATCH_DATOS_ALUMNOS",
+001313:                 "PRIORIDAD": "MEDIA (sin match en DatosAlumnos)",
+001314:                 "CODIGOS_SIES_POTENCIALES": "",
+001315:                 "CODIGO_CARRERA_OPCIONES": "",
+001316:                 "N_ALUMNOS_AFECTADOS": len(grp),
+001317:                 "CODCARPR_EJEMPLO": codcarpr,
+001318:                 "NOMBRE_CARRERA_EJEMPLO": grp.iloc[0].get("NOMBRE_CARRERA_FUENTE", ""),
+001319:                 "ACCION_REQUERIDA": "Verificar si alumnos existen en hoja DatosAlumnos",
+001320:             })
+001321:     if not rows:
+001322:         return pd.DataFrame(columns=[
+001323:             "SECCION", "PRIORIDAD", "CODIGOS_SIES_POTENCIALES",
+001324:             "CODIGO_CARRERA_OPCIONES", "N_ALUMNOS_AFECTADOS",
+001325:             "CODCARPR_EJEMPLO", "NOMBRE_CARRERA_EJEMPLO", "ACCION_REQUERIDA",
+001326:         ])
+001327:     result = pd.DataFrame(rows)
+001328:     result = result.sort_values(["SECCION", "N_ALUMNOS_AFECTADOS"], ascending=[True, False]).reset_index(drop=True)
+001329:     return result
+001330: 
+001331: 
+001332: def _write_excel_atomic(
+001333:     sheets: dict[str, pd.DataFrame],
+001334:     final_path: Path,
+001335:     red_rows_sheet: str | None = None,
+001336:     red_rows_mask: pd.Series | None = None,
+001337: ) -> None:
+001338:     from openpyxl.styles import PatternFill, Font
+001339:     final_path.parent.mkdir(parents=True, exist_ok=True)
+001340:     with tempfile.TemporaryDirectory(prefix="mu_export_") as tmpdir:
+001341:         tmp_path = Path(tmpdir) / final_path.name
+001342:         with pd.ExcelWriter(tmp_path, engine="openpyxl") as writer:
+001343:             for sheet_name, df in sheets.items():
+001344:                 df.to_excel(writer, index=False, sheet_name=sheet_name[:31])
+001345:             # ── Formato rojo en CODCLI para filas que requieren revisión manual ──
+001346:             if red_rows_sheet and red_rows_mask is not None and red_rows_mask.any():
+001347:                 ws = writer.sheets[red_rows_sheet[:31]]
+001348:                 red_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
+001349:                 red_font = Font(color="9C0006")
+001350:                 df_target = sheets[red_rows_sheet]
+001351:                 codcli_col_idx = list(df_target.columns).index("CODCLI") + 1 if "CODCLI" in df_target.columns else 1
+001352:                 # Columnas clave para marcar: CODCLI, N_CODES_SIES, SIES_RESOLUCION_HEURISTICA
+001353:                 mark_cols = []
+001354:                 for cname in ["CODCLI", "N_CODES_SIES", "CODIGOS_SIES_POTENCIALES", "SIES_RESOLUCION_HEURISTICA"]:
+001355:                     if cname in df_target.columns:
+001356:                         mark_cols.append(list(df_target.columns).index(cname) + 1)
+001357:                 if not mark_cols:
+001358:                     mark_cols = [codcli_col_idx]
+001359:                 pos_map = {v: i for i, v in enumerate(df_target.index)}
+001360:                 for idx in red_rows_mask[red_rows_mask].index:
+001361:                     if idx in pos_map:
+001362:                         excel_row = pos_map[idx] + 2
+001363:                         for col in mark_cols:
+001364:                             cell = ws.cell(row=excel_row, column=col)
+001365:                             cell.fill = red_fill
+001366:                             cell.font = red_font
+001367:         if final_path.exists():
+001368:             final_path.unlink()
+001369:         shutil.copy2(tmp_path, final_path)
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 8 — LÍNEAS 1621-1686
+==========================================================================================
+001621:     if downloads.exists():
+001622:         candidates.extend(sorted(downloads.glob("*Oferta*Acad*mica*.xlsx")))
+001623: 
+001624:     seen: set[Path] = set()
+001625:     for p in candidates:
+001626:         try:
+001627:             rp = p.resolve()
+001628:         except Exception:
+001629:             continue
+001630:         if rp in seen:
+001631:             continue
+001632:         seen.add(rp)
+001633:         if not rp.exists() or rp.suffix.lower() != ".xlsx":
+001634:             continue
+001635:         try:
+001636:             xls = pd.ExcelFile(rp)
+001637:         except Exception:
+001638:             continue
+001639: 
+001640:         target_sheet: str | None = None
+001641:         for sheet in xls.sheet_names:
+001642:             try:
+001643:                 cols = set(pd.read_excel(rp, sheet_name=sheet, nrows=0).columns)
+001644:             except Exception:
+001645:                 continue
+001646:             if required_cols.issubset(cols):
+001647:                 target_sheet = sheet
+001648:                 break
+001649: 
+001650:         if target_sheet is None:
+001651:             continue
+001652: 
+001653:         try:
+001654:             # Leer columnas base + columnas extendidas si existen
+001655:             base_usecols = ["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"]
+001656:             extended_cols = ["TIPO_PLAN_CARRERA", "NIVEL_CARRERA", "CODIGO_CARRERA"]
+001657:             available_cols = set(pd.read_excel(rp, sheet_name=target_sheet, nrows=0).columns)
+001658:             usecols = base_usecols + [c for c in extended_cols if c in available_cols]
+001659:             dim = pd.read_excel(
+001660:                 rp,
+001661:                 sheet_name=target_sheet,
+001662:                 usecols=usecols,
+001663:             )
+001664:             dim = dim.dropna(subset=["CODIGO_UNICO"]).copy()
+001665:             dim["CODIGO_UNICO"] = dim["CODIGO_UNICO"].astype(str).str.strip().str.upper()
+001666:             dim = dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").reset_index(drop=True)
+001667:             dim["OFERTA_SOURCE_PATH"] = str(rp)
+001668:             dim["OFERTA_SOURCE_SHEET"] = target_sheet
+001669:             return dim
+001670:         except Exception:
+001671:             continue
+001672: 
+001673:     # ── Fallback: DURACION_ESTUDIOS.tsv como dimensión oferta ────────────────
+001674:     tsv_candidates = [
+001675:         Path(__file__).with_name("DURACION_ESTUDIOS.tsv"),
+001676:         Path.cwd() / "DURACION_ESTUDIOS.tsv",
+001677:     ]
+001678:     for tsv_path in tsv_candidates:
+001679:         if tsv_path.exists():
+001680:             try:
+001681:                 dim = pd.read_csv(tsv_path, sep="\t", dtype=str)
+001682:                 if "CODIGO_UNICO" in dim.columns:
+001683:                     dim["CODIGO_UNICO"] = dim["CODIGO_UNICO"].astype(str).str.strip().str.upper()
+001684:                     for nc in ["MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA",
+001685:                                "TIPO_PLAN_CARRERA", "NIVEL_CARRERA", "CODIGO_CARRERA"]:
+001686:                         if nc in dim.columns:
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 9 — LÍNEAS 1787-1883
+==========================================================================================
+001787: 
+001788:     if not rows:
+001789:         return pd.DataFrame(), pd.DataFrame()
+001790: 
+001791:     base = pd.DataFrame(rows).drop_duplicates().reset_index(drop=True)
+001792:     cat_manual = _prepare_catalog_manual(base[["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]])
+001793:     puente = _prepare_puente_sies(base)
+001794:     print(f"✅ Catálogo/puente auto desde DURACION_ESTUDIOS: catalogo={len(cat_manual)} puente={len(puente)}")
+001795:     return cat_manual, puente
+001796: 
+001797: 
+001798: # ==============================
+001799: # CAPA A: Ingesta flexible
+001800: # ==============================
+001801: def cargar_fuentes(path: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+001802:     book = pd.read_excel(path, sheet_name=None)
+001803:     req_hist = {"ANO", "PERIODO", "RUT", "DIG", "CODCARR", "CODRAMO"}
+001804:     try:
+001805:         carreras = _pick_sheet(book, {"CODIGO_UNICO", "PLAN_ESTUDIOS"})
+001806:         matricula = _pick_sheet(book, {"NUM_DOCUMENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "DV"})
+001807:         hist = pd.concat([df for df in book.values() if req_hist.issubset(df.columns)], ignore_index=True)
+001808:         if hist.empty:
+001809:             raise ValueError("No se encontró histórico con ANO/PERIODO/RUT/DIG/CODCARR/CODRAMO")
+001810: 
+001811:         equiv = book.get("Equivalencia")
+001812:         if equiv is None:
+001813:             raise ValueError("Falta hoja Equivalencia")
+001814:         return carreras, matricula, hist.copy(), equiv.copy()
+001815:     except ValueError as err:
+001816:         # Modo compatible para archivos legacy tipo "Hoja1" con CODCARR/PLAN_DE_ESTUDIO.
+001817:         hoja1 = book.get("Hoja1")
+001818:         req_hoja1 = {"RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO", "ANO", "PERIODO", "CODRAMO"}
+001819:         if hoja1 is None or not req_hoja1.issubset(hoja1.columns):
+001820:             raise err
+001821: 
+001822:         src = hoja1.copy()
+001823:         carreras = (
+001824:             src[["CODCARR", "PLAN_DE_ESTUDIO"]]
+001825:             .dropna(subset=["CODCARR", "PLAN_DE_ESTUDIO"])
+001826:             .drop_duplicates()
+001827:             .rename(columns={"CODCARR": "CODIGO_UNICO", "PLAN_DE_ESTUDIO": "PLAN_ESTUDIOS"})
+001828:         )
+001829: 
+001830:         mat_cols = ["RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO"]
+001831:         if "ESTADO_ACADEMICO" in src.columns:
+001832:             mat_cols.append("ESTADO_ACADEMICO")
+001833:         matricula = (
+001834:             src[mat_cols]
+001835:             .dropna(subset=["RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO"])
+001836:             .drop_duplicates()
+001837:             .rename(
+001838:                 columns={
+001839:                     "RUT": "NUM_DOCUMENTO",
+001840:                     "DIG": "DV",
+001841:                     "CODCARR": "CODIGO_UNICO",
+001842:                     "PLAN_DE_ESTUDIO": "PLAN_ESTUDIOS",
+001843:                 }
+001844:             )
+001845:         )
+001846:         matricula["TIPO_DOCUMENTO"] = "R"
+001847: 
+001848:         hist_cols = ["ANO", "PERIODO", "RUT", "DIG", "CODCARR", "CODRAMO"]
+001849:         extra_hist = [c for c in ["DESCRIPCION_ESTADO", "ESTADO_ACADEMICO", "JORNADA"] if c in src.columns]
+001850:         hist = src[hist_cols + extra_hist].copy()
+001851:         if "DESCRIPCION_ESTADO" not in hist.columns and "ESTADO" in src.columns:
+001852:             hist["DESCRIPCION_ESTADO"] = src["ESTADO"]
+001853: 
+001854:         equiv_cols = ["CODCARR"] + (["JORNADA"] if "JORNADA" in src.columns else [])
+001855:         equiv = src[equiv_cols].dropna(subset=["CODCARR"]).drop_duplicates().copy()
+001856:         equiv["CODIGO_UNICO"] = equiv["CODCARR"]
+001857: 
+001858:         print("Modo compatible activado: se derivaron Carreras/Matrícula/Equivalencia desde Hoja1.")
+001859:         return carreras, matricula, hist, equiv
+001860: 
+001861: 
+001862: def preparar_matricula_intermedia(df: pd.DataFrame) -> pd.DataFrame:
+001863:     out = df.copy()
+001864:     out["RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["NUM_DOCUMENTO"], out["DV"])]
+001865:     # Regla: no colapsar por RUT, solo deduplicación exacta de clave de negocio
+001866:     key = ["NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "PLAN_ESTUDIOS"]
+001867:     return out.drop_duplicates(key)
+001868: 
+001869: 
+001870: def construir_puente_equiv(df_equiv: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+001871:     cols = [c for c in ["CODCARR", "CODIGO_UNICO", "JORNADA", "VERSION"] if c in df_equiv.columns]
+001872:     bridge = df_equiv[cols].dropna(subset=["CODCARR", "CODIGO_UNICO"]).copy()
+001873:     bridge["CODCARR"] = bridge["CODCARR"].astype(str)
+001874: 
+001875:     g = (
+001876:         bridge.groupby("CODCARR")
+001877:         .agg(
+001878:             codigos_unicos=("CODIGO_UNICO", "nunique"),
+001879:             jornadas=("JORNADA", "nunique") if "JORNADA" in bridge.columns else ("CODIGO_UNICO", "size"),
+001880:             versiones=("VERSION", "nunique") if "VERSION" in bridge.columns else ("CODIGO_UNICO", "size"),
+001881:         )
+001882:         .reset_index()
+001883:     )
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 10 — LÍNEAS 2104-2263
+==========================================================================================
+002104:     out["NIV_ACA"] = mat_ac.get("NIVEL", pd.NA)
+002105:     out["SIT_FON_SOL"] = mat_ac.get("SIT_FON_SOL", 0)
+002106:     out["SUS_PRE"] = mat_ac.get("SUS_PRE", 0)
+002107:     out["FECHA_MATRICULA"] = pd.NA
+002108:     if "REINCORPORACION" in mat_ac.columns:
+002109:         out["REINCORPORACION"] = mat_ac["REINCORPORACION"]
+002110:     else:
+002111:         out["REINCORPORACION"] = 0
+002112:     out["VIG"] = mat_ac.get("VIGENCIA")
+002113:     return out[MATRICULA_UNIFICADA_COLUMNS].copy()
+002114: 
+002115: 
+002116: def ejecutar_pipeline_matricula_unificada_legacy_like(
+002117:     input_file: Path,
+002118:     output_dir: Path,
+002119:     sheet_name: str | None = None,
+002120:     catalogo_manual_tsv_path: str | None = None,
+002121:     puente_sies_tsv_path: str | None = None,
+002122:     oferta_academica_xlsx_path: str | None = None,
+002123:     gob_nac_tsv_path: str | None = None,
+002124:     gob_pais_est_sec_tsv_path: str | None = None,
+002125:     gob_sede_tsv_path: str | None = None,
+002126:     sit_fon_sol_patch_json_path: str | None = None,
+002127:     excluir_diplomados: bool = DEFAULT_EXCLUIR_DIPLOMADOS,
+002128:     usar_gobernanza_v2: bool = False,
+002129:     filtro_base_datos_sheet: str | None = None,
+002130: ) -> dict[str, object]:
+002131:     """
+002132:     Fase 1 de fusión con pipeline legacy:
+002133:     - Lee hoja fuente (primera por defecto).
+002134:     - Detecta columnas base CODCLI/CODCARR/JORNADA/CARRERA + RUT/DV.
+002135:     - Construye archivo tipo "ARCHIVO_LISTO_SUBIDA" con columnas de Matrícula Unificada
+002136:       y estados operativos del administrador de duplicados.
+002137:     """
+002138:     xls = pd.ExcelFile(input_file)
+002139:     selected_sheet = sheet_name or xls.sheet_names[0]
+002140: 
+002141:     # --- Filtro por hoja base_datos: conservar solo filas cuyo RUT aparezca en la hoja ---
+002142:     # Auto-detectar: si no se pasó el flag pero existe "base_datos" en el Excel, usarla
+002143:     _filtro_bd_sheet = filtro_base_datos_sheet
+002144:     if _filtro_bd_sheet is None and "base_datos" in xls.sheet_names:
+002145:         _filtro_bd_sheet = "base_datos"
+002146:         print("  ℹ️ Auto-detectada hoja 'base_datos' → se aplicará filtro por RUT")
+002147: 
+002148:     # --- Lectura multi-hoja: concatenar todas las hojas con columnas de matrícula ---
+002149:     # Si existe base_datos (filtro por RUT activado), concatenar TODAS las hojas que
+002150:     # tengan CODCLI + (CODCARR o CODCARPR) + RUT/N_DOC, excluyendo hojas de soporte.
+002151:     # Esto captura alumnos en cualquier hoja del Excel, no solo la primera.
+002152:     _HOJAS_EXCLUIR = {"DatosAlumnos", _filtro_bd_sheet or "", "base_datos"}
+002153:     _REQ_CODCLI = {"CODCLI"}
+002154:     _REQ_CODCARR = {"CODCARR", "CODCARPR"}
+002155:     _REQ_RUT = {"RUT", "NUM_DOCUMENTO", "N_DOC"}
+002156: 
+002157:     def _hoja_es_fuente_matricula(df: pd.DataFrame) -> bool:
+002158:         cols = set(df.columns)
+002159:         return (
+002160:             bool(cols & _REQ_CODCLI)
+002161:             and bool(cols & _REQ_CODCARR)
+002162:             and bool(cols & _REQ_RUT)
+002163:         )
+002164: 
+002165:     if _filtro_bd_sheet:
+002166:         # Modo multi-hoja: leer todas las hojas candidatas
+002167:         book_all = pd.read_excel(input_file, sheet_name=None)
+002168:         src_sheets = []
+002169:         for _sname, _sdf in book_all.items():
+002170:             if _sname in _HOJAS_EXCLUIR:
+002171:                 continue
+002172:             if _hoja_es_fuente_matricula(_sdf):
+002173:                 src_sheets.append((_sname, _sdf))
+002174:         if len(src_sheets) > 1:
+002175:             _sheet_names_used = [s for s, _ in src_sheets]
+002176:             print(f"  ℹ️ Modo multi-hoja: concatenando {len(src_sheets)} hojas de matrícula: {_sheet_names_used}")
+002177:             src = pd.concat([df for _, df in src_sheets], ignore_index=True)
+002178:             selected_sheet = "+".join(_sheet_names_used)
+002179:         elif len(src_sheets) == 1:
+002180:             selected_sheet, src = src_sheets[0]
+002181:             print(f"  ℹ️ Solo 1 hoja de matrícula encontrada: '{selected_sheet}'")
+002182:         else:
+002183:             # Fallback: hoja por defecto
+002184:             selected_sheet = sheet_name or xls.sheet_names[0]
+002185:             src = pd.read_excel(input_file, sheet_name=selected_sheet)
+002186:             print(f"  ⚠️ No se encontraron hojas con columnas de matrícula, usando '{selected_sheet}'")
+002187:     else:
+002188:         src = pd.read_excel(input_file, sheet_name=selected_sheet)
+002189: 
+002190:     _filtro_bd_stats: dict[str, object] = {}
+002191:     if _filtro_bd_sheet and _filtro_bd_sheet in xls.sheet_names:
+002192:         bd_df = pd.read_excel(input_file, sheet_name=_filtro_bd_sheet)
+002193:         bd_rut_col = None
+002194:         for _cand in ["N_DOC", "RUT", "NUM_DOCUMENTO"]:
+002195:             if _cand in bd_df.columns:
+002196:                 bd_rut_col = _cand
+002197:                 break
+002198:         if bd_rut_col is not None:
+002199:             _bd_parsed = bd_df[bd_rut_col].map(_rut_num_only)
+002200:             _bd_parsed_ok = _bd_parsed.dropna().astype(int)
+002201:             bd_ruts = set(_bd_parsed_ok)
+002202:             _bd_raw_sample = bd_df[bd_rut_col].dropna().head(3).tolist()
+002203:             _bd_fail_count = int(_bd_parsed.isna().sum())
+002204:             print(f"  🔎 base_datos col='{bd_rut_col}' → {len(bd_ruts)} RUTs únicos "
+002205:                   f"({_bd_fail_count} no parseables). Muestra raw: {_bd_raw_sample}")
+002206:             src_rut_col = None
+002207:             for _cand in ["RUT", "NUM_DOCUMENTO", "N_DOC"]:
+002208:                 if _cand in src.columns:
+002209:                     src_rut_col = _cand
+002210:                     break
+002211:             if src_rut_col is not None:
+002212:                 _src_parsed = src[src_rut_col].map(_rut_num_only)
+002213:                 _src_ruts_unique = set(_src_parsed.dropna().astype(int))
+002214:                 _ruts_sin_match = bd_ruts - _src_ruts_unique
+002215:                 _src_raw_sample = src[src_rut_col].dropna().head(3).tolist()
+002216:                 print(f"  🔎 Fuente col='{src_rut_col}' → {len(_src_ruts_unique)} RUTs únicos. "
+002217:                       f"Muestra raw: {_src_raw_sample}")
+002218:                 print(f"  🔎 RUTs en base_datos sin match en fuente: {len(_ruts_sin_match)} "
+002219:                       f"(de {len(bd_ruts)})")
+002220:                 n_before = len(src)
+002221:                 _src_mask = _src_parsed.map(lambda v: v in bd_ruts if v is not None else False)
+002222:                 src = src[_src_mask].reset_index(drop=True)
+002223:                 n_after = len(src)
+002224:                 _filtro_bd_stats = {
+002225:                     "hoja": _filtro_bd_sheet,
+002226:                     "ruts_en_hoja": len(bd_ruts),
+002227:                     "ruts_bd_sin_match_fuente": len(_ruts_sin_match),
+002228:                     "filas_antes": n_before,
+002229:                     "filas_despues": n_after,
+002230:                     "filas_descartadas": n_before - n_after,
+002231:                 }
+002232:                 print(f"  🔎 Filtro base_datos: {len(bd_ruts)} RUTs → {n_before} → {n_after} filas ({n_before - n_after} descartadas)")
+002233:             else:
+002234:                 print(f"  ⚠️ Filtro base_datos: no se encontró columna RUT en hoja fuente")
+002235:         else:
+002236:             print(f"  ⚠️ Filtro base_datos: no se encontró columna N_DOC/RUT en hoja '{_filtro_bd_sheet}'")
+002237:     elif _filtro_bd_sheet:
+002238:         print(f"  ⚠️ Filtro base_datos: hoja '{_filtro_bd_sheet}' no existe en el Excel")
+002239: 
+002240:     # ── Depuración provisoria RUT ↔ CODCLI (pre-pipeline) ──────────────
+002241:     _pre_col_rut = _pick_first_column(src, ["RUT", "NUM_DOCUMENTO", "N_DOC"])
+002242:     _pre_col_codcli = _pick_first_column(src, ["CODCLI"])
+002243:     _stats_depur: dict[str, object] = {}
+002244:     if _pre_col_rut and _pre_col_codcli:
+002245:         from scripts.depurar_rut_multi_codcli import depurar_rut_multi_codcli
+002246:         src, _stats_depur = depurar_rut_multi_codcli(
+002247:             src, _pre_col_rut, _pre_col_codcli, output_dir,
+002248:         )
+002249:     # ────────────────────────────────────────────────────────────────────
+002250: 
+002251:     manual_source = catalogo_manual_tsv_path or "auto:DURACION_ESTUDIOS.tsv"
+002252:     sit_fon_patch_source = sit_fon_sol_patch_json_path or "no_patch_json"
+002253:     puente_compilado_path = DEFAULT_PUENTE_SIES_COMPILADO_PATH.resolve()
+002254:     puente_source = str(puente_compilado_path)
+002255:     if puente_sies_tsv_path:
+002256:         print(
+002257:             "⚠️  --puente-sies-tsv recibido, pero no se consume directamente en el pipeline. "
+002258:             "Usa scripts/compile_puente_sies_compilado.py para materializar control/catalogos/PUENTE_SIES_COMPILADO.tsv."
+002259:         )
+002260:     oferta_dim = _load_oferta_academica_dim(input_file, oferta_academica_xlsx_path)
+002261:     oferta_source = (
+002262:         oferta_dim["OFERTA_SOURCE_PATH"].iloc[0]
+002263:         if not oferta_dim.empty and "OFERTA_SOURCE_PATH" in oferta_dim.columns
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 11 — LÍNEAS 2343-2386
+==========================================================================================
+002343:     sin_match_datos_alumnos_rows = 0
+002344:     da_match_modo = pd.Series("SIN_MATCH", index=src_work.index, dtype="object")
+002345: 
+002346:     gob_nac_df = _load_governance_tsv(
+002347:         gob_nac_tsv_path,
+002348:         ["NACIONALIDAD_NORM", "COD_NAC"],
+002349:     )
+002350:     gob_pais_est_sec_df = _load_governance_tsv(
+002351:         gob_pais_est_sec_tsv_path,
+002352:         ["COMUNACOLEGIO_NORM", "CIUDADCOLEGIO_NORM", "COD_PAIS_EST_SEC"],
+002353:     )
+002354:     gob_sede_df = _load_governance_tsv(
+002355:         gob_sede_tsv_path,
+002356:         ["SEDE_NORM", "COD_SED", "NOMBRE_SEDE"],
+002357:     )
+002358:     gob_hoja1_estado_desc_path = _first_existing_path(DEFAULT_GOB_HOJA1_ESTADO_DESC_CANDIDATES)
+002359:     gob_da_estado_situ_path = _first_existing_path(DEFAULT_GOB_DA_ESTADO_SITUACION_CANDIDATES)
+002360:     gob_hoja1_estado_desc_df = _load_governance_tsv(
+002361:         str(gob_hoja1_estado_desc_path) if gob_hoja1_estado_desc_path else None,
+002362:         ["ESTADO_ACADEMICO", "DESCRIPCION_ESTADO", "VIG_ESPERADO"],
+002363:     )
+002364:     gob_da_estado_situ_df = _load_governance_tsv(
+002365:         str(gob_da_estado_situ_path) if gob_da_estado_situ_path else None,
+002366:         ["ESTADOACADEMICO", "SITUACION", "VIG_ESPERADO"],
+002367:     )
+002368:     valid_for_ing_act_codes, gob_for_ing_act_source = _load_for_ing_act_catalog()
+002369: 
+002370:     # ── Período objetivo del run (para ANIO_ANTERIOR dinámico por período) ──
+002371:     if col_anio_ing and col_anio_ing in src.columns:
+002372:         _pf_anio = pd.to_numeric(src[col_anio_ing], errors="coerce").dropna()
+002373:         _pf_anio = _pf_anio[_pf_anio.between(1990, 2100)]
+002374:         periodo_filtro_anio = int(_pf_anio.mode().iloc[0]) if not _pf_anio.empty else 2026
+002375:     else:
+002376:         periodo_filtro_anio = 2026
+002377:     if col_sem_ing and col_sem_ing in src.columns:
+002378:         _pf_sem = pd.to_numeric(src[col_sem_ing], errors="coerce").dropna()
+002379:         _pf_sem = _pf_sem[_pf_sem.isin([1, 2, 3])].replace({3: 2})
+002380:         periodo_filtro_sem = int(_pf_sem.mode().iloc[0]) if not _pf_sem.empty else 1
+002381:     else:
+002382:         periodo_filtro_sem = 1
+002383:     anio_anterior_prom = periodo_filtro_anio - 1
+002384:     print(f"📌 Año anterior PROM por período: {anio_anterior_prom} (ANIO_ING_ACT={periodo_filtro_anio}, SEM={periodo_filtro_sem})")
+002385: 
+002386:     historico_mu_df, anio_ref_historico_mu = _build_mu_historico_summary(
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 12 — LÍNEAS 2750-2790
+==========================================================================================
+002750:     sem_input_da_invalid = (~sem_input_valid) & (~sem_da_valid) & _nonempty_mask(sem_input_raw) & _nonempty_mask(sem_da_raw)
+002751:     sem_act_audit.loc[sem_input_invalid_only] = "DEFAULT_1_INPUT_INVALIDO"
+002752:     sem_act_audit.loc[sem_da_invalid_only] = "DEFAULT_1_DA_INVALIDO"
+002753:     sem_act_audit.loc[sem_input_da_invalid] = "DEFAULT_1_INPUT_DA_INVALIDOS"
+002754: 
+002755:     niv_input_raw = src_work[col_niv_aca] if col_niv_aca else _na_series()
+002756:     niv_input = pd.to_numeric(niv_input_raw, errors="coerce")
+002757:     niv_da_raw = src_work["DA_NIVEL"] if "DA_NIVEL" in src_work.columns else _na_series()
+002758:     niv_da = pd.to_numeric(niv_da_raw, errors="coerce")
+002759:     niv_input_valid = niv_input.notna() & niv_input.between(1, 20)
+002760:     niv_da_valid = niv_da.notna() & niv_da.between(1, 20)
+002761:     niv_input_label = col_niv_aca if col_niv_aca else "SIN_COLUMNA_NIVEL"
+002762:     niv_aca_source = pd.Series("REGLA_DEFAULT_1", index=src_work.index, dtype="object")
+002763:     niv_aca_method = pd.Series("DEFAULT_1", index=src_work.index, dtype="object")
+002764:     niv_aca_audit = pd.Series("DEFAULT_1_SIN_FUENTE", index=src_work.index, dtype="object")
+002765:     # Prioridad: DA_NIVEL (nivel alumno en DatosAlumnos) > INPUT_NIVEL (nivel del ramo en malla Hoja1)
+002766:     niv_aca_source.loc[niv_da_valid] = "DA_NIVEL"
+002767:     niv_aca_method.loc[niv_da_valid] = "PRIMARY_DATOS_ALUMNOS"
+002768:     niv_aca_audit.loc[niv_da_valid] = "PRIMARY_DA_VALIDO"
+002769:     niv_input_fallback_mask = (~niv_da_valid) & niv_input_valid
+002770:     niv_aca_source.loc[niv_input_fallback_mask] = niv_input_label
+002771:     niv_aca_method.loc[niv_input_fallback_mask] = "FALLBACK_INPUT"
+002772:     niv_aca_audit.loc[niv_input_fallback_mask] = "FALLBACK_INPUT_VALIDO"
+002773:     niv_input_invalid_only = (~niv_da_valid) & (~niv_input_valid) & _nonempty_mask(niv_input_raw) & ~_nonempty_mask(niv_da_raw)
+002774:     niv_da_invalid_only = (~niv_da_valid) & (~niv_input_valid) & (~_nonempty_mask(niv_input_raw)) & _nonempty_mask(niv_da_raw)
+002775:     niv_input_da_invalid = (~niv_da_valid) & (~niv_input_valid) & _nonempty_mask(niv_input_raw) & _nonempty_mask(niv_da_raw)
+002776:     niv_aca_audit.loc[niv_input_invalid_only] = "DEFAULT_1_INPUT_INVALIDO"
+002777:     niv_aca_audit.loc[niv_da_invalid_only] = "DEFAULT_1_DA_INVALIDO"
+002778:     niv_aca_audit.loc[niv_input_da_invalid] = "DEFAULT_1_INPUT_DA_INVALIDOS"
+002779: 
+002780:     fecha_mat_input_raw = src_work[col_fecha_matricula] if col_fecha_matricula else _na_series()
+002781:     fecha_mat_input_dt = pd.to_datetime(fecha_mat_input_raw, errors="coerce", dayfirst=True)
+002782:     fecha_mat_da_raw = src_work["DA_FECHAMATRICULA"] if "DA_FECHAMATRICULA" in src_work.columns else _na_series()
+002783:     fecha_mat_da_dt = pd.to_datetime(fecha_mat_da_raw, errors="coerce", dayfirst=True)
+002784:     fecha_mat_input_valid = fecha_mat_input_dt.notna()
+002785:     fecha_mat_da_valid = fecha_mat_da_dt.notna()
+002786:     fecha_mat_source = pd.Series("REGLA_FALLBACK_1900", index=src_work.index, dtype="object")
+002787:     fecha_mat_method = pd.Series("DEFAULT_1900", index=src_work.index, dtype="object")
+002788:     fecha_mat_audit = pd.Series("DEFAULT_1900_SIN_FUENTE", index=src_work.index, dtype="object")
+002789:     fecha_mat_source.loc[fecha_mat_input_valid] = fecha_mat_input_label
+002790:     fecha_mat_method.loc[fecha_mat_input_valid] = "SOURCE_INPUT"
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 13 — LÍNEAS 2853-2940
+==========================================================================================
+002853:     out["ASI_APR_ANT"] = src_work[col_asi_apr_ant] if col_asi_apr_ant else _na_series()
+002854:     if "ASI_APR_ANT_HIST" in src_work.columns:
+002855:         out["ASI_APR_ANT"] = out["ASI_APR_ANT"].combine_first(src_work["ASI_APR_ANT_HIST"])
+002856:     out["PROM_PRI_SEM"] = src_work[col_prom_pri_sem] if col_prom_pri_sem else _na_series()
+002857:     if "PROM_PRI_SEM_HIST" in src_work.columns:
+002858:         out["PROM_PRI_SEM"] = out["PROM_PRI_SEM"].combine_first(src_work["PROM_PRI_SEM_HIST"])
+002859:     out["PROM_SEG_SEM"] = src_work[col_prom_seg_sem] if col_prom_seg_sem else _na_series()
+002860:     if "PROM_SEG_SEM_HIST" in src_work.columns:
+002861:         out["PROM_SEG_SEM"] = out["PROM_SEG_SEM"].combine_first(src_work["PROM_SEG_SEM_HIST"])
+002862:     out["ASI_INS_HIS"] = src_work[col_asi_ins_his] if col_asi_ins_his else _na_series()
+002863:     if "ASI_INS_HIS_HIST" in src_work.columns:
+002864:         out["ASI_INS_HIS"] = out["ASI_INS_HIS"].combine_first(src_work["ASI_INS_HIS_HIST"])
+002865:     out["ASI_APR_HIS"] = src_work[col_asi_apr_his] if col_asi_apr_his else _na_series()
+002866:     if "ASI_APR_HIS_HIST" in src_work.columns:
+002867:         out["ASI_APR_HIS"] = out["ASI_APR_HIS"].combine_first(src_work["ASI_APR_HIS_HIST"])
+002868:     # NIV_ACA: priorizar DA_NIVEL (nivel alumno) sobre Hoja1.NIVEL (nivel del ramo en malla)
+002869:     if usar_gobernanza_v2 and "DA_NIVEL" in src_work.columns:
+002870:         out["NIV_ACA"] = pd.to_numeric(src_work["DA_NIVEL"], errors="coerce")
+002871:         if col_niv_aca:
+002872:             out["NIV_ACA"] = out["NIV_ACA"].combine_first(pd.to_numeric(src_work[col_niv_aca], errors="coerce"))
+002873:     else:
+002874:         out["NIV_ACA"] = src_work[col_niv_aca] if col_niv_aca else _na_series()
+002875:     out["SIT_FON_SOL"] = 1
+002876:     out["SUS_PRE"] = 0
+002877: 
+002878:     if col_fecha_matricula:
+002879:         out["FECHA_MATRICULA"] = src_work[col_fecha_matricula]
+002880:     elif usar_gobernanza_v2 and "DA_FECHAMATRICULA" in src_work.columns:
+002881:         out["FECHA_MATRICULA"] = src_work["DA_FECHAMATRICULA"]
+002882:     else:
+002883:         out["FECHA_MATRICULA"] = _na_series()
+002884: 
+002885:     out["REINCORPORACION"] = 0
+002886: 
+002887:     out["VIG"] = src_work[col_vig] if col_vig else 1
+002888:     out = out[MATRICULA_UNIFICADA_COLUMNS].copy()
+002889: 
+002890:     def _build_fase4_trace(
+002891:         input_col: str | None,
+002892:         hist_col: str,
+002893:         input_method: str,
+002894:         hist_method: str,
+002895:     ) -> tuple[pd.Series, pd.Series, pd.Series]:
+002896:         input_values = src_work[input_col] if input_col and input_col in src_work.columns else _na_series()
+002897:         hist_values = src_work[hist_col] if hist_col in src_work.columns else _na_series()
+002898:         input_mask = input_values.notna()
+002899:         hist_mask = (~input_mask) & hist_values.notna()
+002900: 
+002901:         source = pd.Series("SIN_FUENTE_FINAL", index=src_work.index, dtype="object")
+002902:         method = pd.Series("SIN_REGLA_FINAL", index=src_work.index, dtype="object")
+002903:         audit = pd.Series("SIN_FUENTE_FINAL", index=src_work.index, dtype="object")
+002904: 
+002905:         if input_col:
+002906:             source.loc[input_mask] = f"INPUT_{input_col}"
+002907:             method.loc[input_mask] = input_method
+002908:             audit.loc[input_mask] = "FUENTE_INPUT_DIRECTA"
+002909: 
+002910:         if "UZ_FUENTE_HIST" in src_work.columns:
+002911:             source.loc[hist_mask] = src_work.loc[hist_mask, "UZ_FUENTE_HIST"].fillna("HISTORICO_HOJA1")
+002912:         else:
+002913:             source.loc[hist_mask] = "HISTORICO_HOJA1"
+002914:         method.loc[hist_mask] = hist_method
+002915:         audit.loc[hist_mask] = "CALCULADO_DESDE_HISTORICO_HOJA1"
+002916:         return source, method, audit
+002917: 
+002918:     asi_ins_ant_source, asi_ins_ant_method, asi_ins_ant_audit = _build_fase4_trace(
+002919:         col_asi_ins_ant,
+002920:         "ASI_INS_ANT_HIST",
+002921:         "INPUT_DIRECTO_ASI_INS_ANT",
+002922:         "COUNT_DISTINCT_CODRAMO_ANIO_REFERENCIA",
+002923:     )
+002924:     asi_apr_ant_source, asi_apr_ant_method, asi_apr_ant_audit = _build_fase4_trace(
+002925:         col_asi_apr_ant,
+002926:         "ASI_APR_ANT_HIST",
+002927:         "INPUT_DIRECTO_ASI_APR_ANT",
+002928:         "COUNT_DISTINCT_CODRAMO_APROB_ANIO_REFERENCIA_EXCL_EQUIV",
+002929:     )
+002930:     prom_pri_source, prom_pri_method, prom_pri_audit = _build_fase4_trace(
+002931:         col_prom_pri_sem,
+002932:         "PROM_PRI_SEM_HIST",
+002933:         "INPUT_DIRECTO_PROM_PRI_SEM",
+002934:         "AVG_NOTA_MU_SEM1_ANIO_REFERENCIA_EXCL_EQUIV",
+002935:     )
+002936:     prom_seg_source, prom_seg_method, prom_seg_audit = _build_fase4_trace(
+002937:         col_prom_seg_sem,
+002938:         "PROM_SEG_SEM_HIST",
+002939:         "INPUT_DIRECTO_PROM_SEG_SEM",
+002940:         "AVG_NOTA_MU_SEM2_ANIO_REFERENCIA_EXCL_EQUIV",
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 14 — LÍNEAS 3074-3118
+==========================================================================================
+003074:     vig_esperado_da = pd.Series(pd.NA, index=archivo_subida.index, dtype="Int64")
+003075: 
+003076:     if not gob_da_estado_situ_df.empty:
+003077:         da_map_df = gob_da_estado_situ_df.copy()
+003078:         da_map_df["ESTADOACADEMICO_NORM"] = da_map_df["ESTADOACADEMICO"].map(_normalize_text)
+003079:         da_map_df["SITUACION_NORM"] = da_map_df["SITUACION"].map(_normalize_text)
+003080:         da_map_df["KEY_DA"] = da_map_df["ESTADOACADEMICO_NORM"] + "|" + da_map_df["SITUACION_NORM"]
+003081:         da_vig_map = (
+003082:             da_map_df.drop_duplicates(subset=["KEY_DA"], keep="first")
+003083:             .set_index("KEY_DA")["VIG_ESPERADO"]
+003084:             .to_dict()
+003085:         )
+003086:         key_da = estado_da_norm + "|" + situ_da_norm
+003087:         vig_esperado_da = pd.to_numeric(key_da.map(da_vig_map), errors="coerce").astype("Int64")
+003088: 
+003089:     # Fallback Hoja1 cuando no hay match completo en DatosAlumnos.
+003090:     if not gob_hoja1_estado_desc_df.empty and "DESCRIPCION_ESTADO" in src_work.columns:
+003091:         estado_h1_norm = src_work.get("ESTADO_ACADEMICO", pd.Series("", index=src_work.index)).fillna("").map(_normalize_text)
+003092:         desc_h1_norm = src_work["DESCRIPCION_ESTADO"].fillna("").map(_normalize_text)
+003093:         h1_map_df = gob_hoja1_estado_desc_df.copy()
+003094:         h1_map_df["ESTADO_ACADEMICO_NORM"] = h1_map_df["ESTADO_ACADEMICO"].map(_normalize_text)
+003095:         h1_map_df["DESCRIPCION_ESTADO_NORM"] = h1_map_df["DESCRIPCION_ESTADO"].fillna("").map(_normalize_text)
+003096:         h1_map_df["KEY_H1"] = h1_map_df["ESTADO_ACADEMICO_NORM"] + "|" + h1_map_df["DESCRIPCION_ESTADO_NORM"]
+003097:         h1_vig_map = (
+003098:             h1_map_df.drop_duplicates(subset=["KEY_H1"], keep="first")
+003099:             .set_index("KEY_H1")["VIG_ESPERADO"]
+003100:             .to_dict()
+003101:         )
+003102:         key_h1 = estado_h1_norm + "|" + desc_h1_norm
+003103:         vig_esperado_h1 = pd.to_numeric(key_h1.map(h1_vig_map), errors="coerce").astype("Int64")
+003104:         vig_esperado_da = vig_esperado_da.fillna(vig_esperado_h1)
+003105: 
+003106:     # Regla institucional explícita: estados sin matrícula siempre VIG=0.
+003107:     force_vig0_da = estado_da_norm.isin(["TITULADO", "ELIMINADO", "SUSPENDIDO"])
+003108:     vig_esperado_da = vig_esperado_da.where(~force_vig0_da, 0)
+003109:     archivo_subida["VIG_ESPERADO_DA"] = vig_esperado_da
+003110: 
+003111:     # Fuente base manual: se reconstruye desde DURACION_ESTUDIOS para trazabilidad
+003112:     # de GRUPO_TRAZA/FAMILIA. El cruce SIES central se consume EXCLUSIVAMENTE
+003113:     # desde el catálogo compilado control/catalogos/PUENTE_SIES_COMPILADO.tsv.
+003114:     df_manual, _ = _build_catalog_and_bridge_from_duracion()
+003115: 
+003116:     manual_override_raw = _load_governance_tsv(
+003117:         catalogo_manual_tsv_path,
+003118:         ["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"],
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 15 — LÍNEAS 3820-3915
+==========================================================================================
+003820:     archivo_subida["FOR_ING_ACT_CONTINUIDAD_STATUS"] = "OK"
+003821:     archivo_subida.loc[
+003822:         for_continuidad_same_origin, "FOR_ING_ACT_CONTINUIDAD_STATUS"
+003823:     ] = "INCONSISTENTE_CONTINUIDAD_ORIGEN_IGUAL_ACTUAL"
+003824:     archivo_subida.loc[for_continuidad_same_origin, "FOR_ING_ACT_REQUIERE_REVISION"] = "SI"
+003825: 
+003826:     asi_ins_ant = pd.to_numeric(archivo_subida["ASI_INS_ANT"], errors="coerce")
+003827:     asi_ins_ant = asi_ins_ant.where(asi_ins_ant.between(0, 99), pd.NA).fillna(0).astype("Int64")
+003828:     asi_apr_ant = pd.to_numeric(archivo_subida["ASI_APR_ANT"], errors="coerce")
+003829:     asi_apr_ant = asi_apr_ant.where(asi_apr_ant.between(0, 99), pd.NA)
+003830:     asi_apr_ant_cap_mask = asi_apr_ant > asi_ins_ant
+003831:     asi_apr_ant = asi_apr_ant.where(~asi_apr_ant_cap_mask, asi_ins_ant).astype("Int64")
+003832:     archivo_subida["ASI_INS_ANT"] = asi_ins_ant
+003833:     archivo_subida["ASI_APR_ANT"] = asi_apr_ant
+003834:     archivo_subida.loc[
+003835:         archivo_subida["ASI_INS_ANT_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1"),
+003836:         "ASI_INS_ANT_AUDIT_STATUS",
+003837:     ] = "CALCULADO_ANIO_REFERENCIA_HIST"
+003838:     archivo_subida.loc[
+003839:         archivo_subida["ASI_APR_ANT_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1"),
+003840:         "ASI_APR_ANT_AUDIT_STATUS",
+003841:     ] = "CALCULADO_APROB_ANIO_REFERENCIA_EXCL_EQUIV"
+003842:     archivo_subida.loc[asi_apr_ant_cap_mask.fillna(False), "ASI_APR_ANT_AUDIT_STATUS"] = "CAP_APR_A_INS_ANT"
+003843: 
+003844:     prom_pri = pd.to_numeric(archivo_subida["PROM_PRI_SEM"], errors="coerce")
+003845:     prom_pri = prom_pri.where((prom_pri == 0) | prom_pri.between(100, 700), pd.NA).fillna(0).astype("Int64")
+003846:     prom_seg = pd.to_numeric(archivo_subida["PROM_SEG_SEM"], errors="coerce")
+003847:     prom_seg = prom_seg.where((prom_seg == 0) | prom_seg.between(100, 700), pd.NA).fillna(0).astype("Int64")
+003848:     archivo_subida["PROM_PRI_SEM"] = prom_pri
+003849:     archivo_subida["PROM_SEG_SEM"] = prom_seg
+003850:     archivo_subida.loc[
+003851:         archivo_subida["PROM_PRI_SEM_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1") & prom_pri.eq(0),
+003852:         "PROM_PRI_SEM_AUDIT_STATUS",
+003853:     ] = "SIN_NOTAS_CALIFICABLES_SEM1_ANIO_REF"
+003854:     archivo_subida.loc[
+003855:         archivo_subida["PROM_PRI_SEM_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1") & prom_pri.gt(0),
+003856:         "PROM_PRI_SEM_AUDIT_STATUS",
+003857:     ] = "CALCULADO_NOTAS_MU_SEM1_ANIO_REF"
+003858:     archivo_subida.loc[
+003859:         archivo_subida["PROM_SEG_SEM_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1") & prom_seg.eq(0),
+003860:         "PROM_SEG_SEM_AUDIT_STATUS",
+003861:     ] = "SIN_NOTAS_CALIFICABLES_SEM2_ANIO_REF"
+003862:     archivo_subida.loc[
+003863:         archivo_subida["PROM_SEG_SEM_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1") & prom_seg.gt(0),
+003864:         "PROM_SEG_SEM_AUDIT_STATUS",
+003865:     ] = "CALCULADO_NOTAS_MU_SEM2_ANIO_REF"
+003866: 
+003867:     asi_ins_his = pd.to_numeric(archivo_subida["ASI_INS_HIS"], errors="coerce")
+003868:     asi_ins_his = asi_ins_his.where(asi_ins_his.between(0, 200), pd.NA).fillna(0).astype("Int64")
+003869:     asi_apr_his = pd.to_numeric(archivo_subida["ASI_APR_HIS"], errors="coerce")
+003870:     asi_apr_his = asi_apr_his.where(asi_apr_his.between(0, 200), pd.NA)
+003871:     asi_apr_his_cap_mask = asi_apr_his > asi_ins_his
+003872:     asi_apr_his = asi_apr_his.where(~asi_apr_his_cap_mask, asi_ins_his).astype("Int64")
+003873:     archivo_subida["ASI_INS_HIS"] = asi_ins_his
+003874:     archivo_subida["ASI_APR_HIS"] = asi_apr_his
+003875: 
+003876:     # REGLA BLOQUEANTE: si VIG=0, las 4 columnas deben ser 0
+003877:     vig_cero = archivo_subida["VIG"] == 0
+003878:     if vig_cero.any():
+003879:         archivo_subida.loc[vig_cero, "PROM_PRI_SEM"] = 0
+003880:         archivo_subida.loc[vig_cero, "PROM_SEG_SEM"] = 0
+003881:         archivo_subida.loc[vig_cero, "ASI_INS_HIS"] = 0
+003882:         archivo_subida.loc[vig_cero, "ASI_APR_HIS"] = 0
+003883: 
+003884:     hist_scope_status = archivo_subida["UZ_HIST_SCOPE_STATUS"].astype("object").copy()
+003885:     archivo_subida.loc[
+003886:         archivo_subida["ASI_INS_HIS_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1"),
+003887:         "ASI_INS_HIS_AUDIT_STATUS",
+003888:     ] = hist_scope_status.where(hist_scope_status.ne(""), "CALCULADO_HISTORICO_SIN_SCOPE")
+003889:     archivo_subida.loc[
+003890:         archivo_subida["ASI_APR_HIS_AUDIT_STATUS"].eq("CALCULADO_DESDE_HISTORICO_HOJA1"),
+003891:         "ASI_APR_HIS_AUDIT_STATUS",
+003892:     ] = hist_scope_status.where(hist_scope_status.ne(""), "CALCULADO_HISTORICO_SIN_SCOPE")
+003893:     archivo_subida.loc[asi_apr_his_cap_mask.fillna(False), "ASI_APR_HIS_AUDIT_STATUS"] = "CAP_APR_A_INS_HIS"
+003894: 
+003895:     # Campos numéricos obligatorios con fallback operativo explícito.
+003896:     nac_num = pd.to_numeric(archivo_subida["NAC"], errors="coerce")
+003897:     nac_status_final = archivo_subida["NAC_STATUS"].astype("object").copy()
+003898:     nac_default_mask = ~nac_num.between(1, 197)
+003899:     nac_status_final.loc[nac_default_mask & nac_status_final.eq("SIN_INSUMO")] = "DEFAULT_38_SIN_INSUMO"
+003900:     nac_status_final.loc[nac_default_mask & nac_status_final.eq("SOURCE_TEXT")] = "DEFAULT_38_SOURCE_TEXT_INVALIDO"
+003901:     nac_status_final.loc[nac_default_mask & nac_status_final.eq("SIN_MAPEO_GOB_NAC")] = "DEFAULT_38_SIN_MAPEO_GOB_NAC"
+003902:     nac_status_final.loc[nac_default_mask & nac_status_final.eq("REVISION_MANUAL_GOB_NAC")] = "DEFAULT_38_REVISION_MANUAL_GOB_NAC"
+003903:     nac_status_final.loc[nac_default_mask & nac_status_final.eq("")] = "DEFAULT_38_SIN_TRAZA"
+003904:     archivo_subida["NAC_STATUS"] = nac_status_final
+003905:     archivo_subida["NAC"] = nac_num.where(nac_num.between(1, 197), pd.NA).fillna(38).astype("Int64")
+003906:     pais_num = pd.to_numeric(archivo_subida["PAIS_EST_SEC"], errors="coerce")
+003907:     pais_status_final = archivo_subida["PAIS_EST_SEC_STATUS"].astype("object").copy()
+003908:     pais_default_mask = ~pais_num.between(1, 197)
+003909:     pais_status_final.loc[pais_default_mask & pais_status_final.eq("SIN_INSUMO")] = "DEFAULT_38_SIN_INSUMO"
+003910:     pais_status_final.loc[pais_default_mask & pais_status_final.eq("SOURCE_EMPTY")] = "DEFAULT_38_SOURCE_EMPTY"
+003911:     pais_status_final.loc[pais_default_mask & pais_status_final.eq("SOURCE_EXACT")] = "DEFAULT_38_SOURCE_INVALIDO"
+003912:     pais_status_final.loc[pais_default_mask & pais_status_final.eq("")] = "DEFAULT_38_SIN_TRAZA"
+003913:     archivo_subida["PAIS_EST_SEC_STATUS"] = pais_status_final
+003914:     archivo_subida["PAIS_EST_SEC"] = pais_num.where(pais_num.between(1, 197), pd.NA).fillna(38).astype("Int64")
+003915: 
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 16 — LÍNEAS 4039-4079
+==========================================================================================
+004039:         sit_fon_sol_patch_stats["n_rut_matched"] = int(len(_patch_matched_ruts))
+004040:         sit_fon_sol_patch_stats["n_rut_missing"] = int(len(_patch_missing_ruts))
+004041:         sit_fon_sol_patch_stats["rut_column_selected_runtime"] = _patch_col
+004042:         sit_fon_sol_patch_stats["rut_matches_by_column_runtime"] = _patch_matches_by_col
+004043:         archivo_subida.loc[_patch_mask, "SIT_FON_SOL_FUENTE_FINAL"] = PATCH_SOURCE_SIT_FON_SOL
+004044:         archivo_subida.loc[_patch_mask, "SIT_FON_SOL_METODO_FINAL"] = PATCH_METHOD_SIT_FON_SOL
+004045:         archivo_subida.loc[_patch_mask, "SIT_FON_SOL_AUDIT_STATUS"] = PATCH_AUDIT_STATUS_SIT_FON_SOL
+004046:         archivo_subida.loc[_patch_mask, "SIT_FON_SOL_PATCH_FLAG"] = "SI"
+004047:         archivo_subida.loc[_patch_mask, "SIT_FON_SOL_PATCH_RUT"] = _patch_rut_series[_patch_mask]
+004048:         print(
+004049:             "✅ Patch SIT_FON_SOL aplicado: "
+004050:             f"{sit_fon_sol_patch_stats.get('n_rows_targeted', 0)} filas objetivo, "
+004051:             f"{sit_fon_sol_patch_stats.get('n_rows_affected', 0)} filas cambiadas."
+004052:         )
+004053: 
+004054:     # Construcción de carga final (pregrado): excluir diplomados, no-match de datos alumnos
+004055:     # y deduplicar por clave de matrícula.
+004056:     estado_carga = pd.Series("OK_CARGA_PREGRADO", index=archivo_subida.index, dtype="object")
+004057:     # Excluir filas sin COD_CAR (incluye SIN_MATCH_SIES + ambiguos no resueltos).
+004058:     # Filas que obtuvieron COD_CAR por fallback (COMPONENTE_C_COMPARTIDO,
+004059:     # MAPEO_NOMBRE_CARRERA) ya NO se excluyen aquí; su completitud regulatoria
+004060:     # se valida en EXCLUIDO_CAMPOS_OBLIGATORIOS más adelante.
+004061:     sin_cod_car_final = archivo_subida["COD_CAR"].isna()
+004062:     excl_dipl = archivo_subida["ES_DIPLOMADO"].fillna(False)
+004063:     sin_match_da = archivo_subida["DA_MATCH_MODO"] == "SIN_MATCH"
+004064:     heuristica_sies_opaca = archivo_subida["SIES_RESOLUCION_HEURISTICA"].astype("object").eq("PRIMERA_OPCION")
+004065:     sin_for_ing_trazable = archivo_subida["FOR_ING_ACT"].isna()
+004066:     for_ing_requires_review = (
+004067:         archivo_subida["FOR_ING_ACT_REQUIERE_REVISION"]
+004068:         .astype(str)
+004069:         .str.strip()
+004070:         .str.upper()
+004071:         .eq("SI")
+004072:     )
+004073:     for_ing_continuidad_invalida = (
+004074:         archivo_subida["FOR_ING_ACT_CONTINUIDAD_STATUS"]
+004075:         .astype(str)
+004076:         .str.strip()
+004077:         .eq("INCONSISTENTE_CONTINUIDAD_ORIGEN_IGUAL_ACTUAL")
+004078:     )
+004079: 
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 17 — LÍNEAS 4340-4405
+==========================================================================================
+004340:     _codcli_archivo_unicos = _codcli_archivo.nunique()
+004341:     _codcli_mu32 = matricula_unificada_32["CODCLI"].astype(str).str.strip() if "CODCLI" in matricula_unificada_32.columns else pd.Series(dtype=str)
+004342:     _codcli_mu32_unicos = _codcli_mu32.nunique() if not _codcli_mu32.empty else 0
+004343:     # Desglose estado_carga
+004344:     _ec = archivo_subida["ESTADO_CARGA_PREGRADO"]
+004345:     _ok = int((_ec == "OK_CARGA_PREGRADO").sum())
+004346:     _exc_sin_sies = int((_ec == "EXCLUIDO_SIN_MATCH_SIES").sum())
+004347:     _exc_dipl = int((_ec == "EXCLUIDO_DIPLOMADO").sum())
+004348:     _exc_sin_da = int((_ec == "EXCLUIDO_SIN_MATCH_DATOS_ALUMNOS").sum())
+004349:     _exc_opaca = int((_ec == "EXCLUIDO_SIES_HEURISTICA_OPACA").sum())
+004350:     _exc_fig = int((_ec == "EXCLUIDO_SIN_FOR_ING_ACT_TRAZABLE").sum())
+004351:     _exc_campos = int((_ec == "EXCLUIDO_CAMPOS_OBLIGATORIOS").sum())
+004352:     _exc_dup_intra = int((_ec == "EXCLUIDO_DUPLICADO_INTRA_CODCLI").sum())
+004353:     _exc_dup_clave = int((_ec == "EXCLUIDO_DUPLICADO_CLAVE_CARGA").sum())
+004354:     _total_excluidos = len(archivo_subida) - _ok
+004355:     # Match DatosAlumnos
+004356:     _da_modo = archivo_subida["DA_MATCH_MODO"] if "DA_MATCH_MODO" in archivo_subida.columns else pd.Series(dtype=str)
+004357:     _match_codcli = int((_da_modo == "MATCH_CODCLI").sum()) if not _da_modo.empty else 0
+004358:     _match_rut = int((_da_modo == "MATCH_RUT").sum()) if not _da_modo.empty else 0
+004359:     _sin_match_da_n = int((_da_modo == "SIN_MATCH").sum()) if not _da_modo.empty else 0
+004360:     # SIES
+004361:     _sies_ok = int((archivo_subida["SIES_MATCH_STATUS"] == "MATCH_SIES").sum()) if "SIES_MATCH_STATUS" in archivo_subida.columns else 0
+004362:     _sies_ambiguo = int((archivo_subida["SIES_MATCH_STATUS"] == "AMBIGUO_SIES").sum()) if "SIES_MATCH_STATUS" in archivo_subida.columns else 0
+004363:     _sies_sin = int((archivo_subida["SIES_MATCH_STATUS"] == "SIN_MATCH_SIES").sum()) if "SIES_MATCH_STATUS" in archivo_subida.columns else 0
+004364:     _sies_pend = int((archivo_subida.get("SIES_RESOLUCION_HEURISTICA", pd.Series()) == "PENDIENTE_GOBERNANZA").sum())
+004365:     # Métricas COD_CAR por método
+004366:     _ccm = archivo_subida.get("COD_CAR_METODO_FINAL", pd.Series(dtype=str))
+004367:     _cod_car_total = int(archivo_subida["COD_CAR"].notna().sum())
+004368:     _cod_car_sies = int(_ccm.isin(["PARSE_COMPONENTE_SIES", "OFERTA_LOOKUP_CODIGO_UNICO"]).sum())
+004369:     _cod_car_shared = int((_ccm == "COMPONENTE_C_COMPARTIDO").sum())
+004370:     _cod_car_nombre = int((_ccm == "MAPEO_NOMBRE_CARRERA").sum())
+004371:     _cod_car_sin = int(archivo_subida["COD_CAR"].isna().sum())
+004372: 
+004373:     resumen_ejecutivo_rows = [
+004374:         {"seccion": "ENTRADA", "metrica": "CODCLI total filas fuente (Promedios)", "valor": _codcli_fuente_total, "pct": "100.0%"},
+004375:         {"seccion": "ENTRADA", "metrica": "CODCLI únicos en fuente", "valor": _codcli_fuente_unicos, "pct": f"{_codcli_fuente_unicos/_codcli_fuente_total*100:.1f}%"},
+004376:         {"seccion": "PROCESAMIENTO", "metrica": "CODCLI en ARCHIVO_LISTO_SUBIDA", "valor": len(archivo_subida), "pct": f"{len(archivo_subida)/_codcli_fuente_total*100:.1f}%"},
+004377:         {"seccion": "PROCESAMIENTO", "metrica": "CODCLI únicos en ARCHIVO_LISTO_SUBIDA", "valor": _codcli_archivo_unicos, "pct": ""},
+004378:         {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Match por CODCLI", "valor": _match_codcli, "pct": f"{_match_codcli/len(archivo_subida)*100:.1f}%"},
+004379:         {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Match por RUT (fallback)", "valor": _match_rut, "pct": f"{_match_rut/len(archivo_subida)*100:.1f}%"},
+004380:         {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Sin match DatosAlumnos", "valor": _sin_match_da_n, "pct": f"{_sin_match_da_n/len(archivo_subida)*100:.1f}%"},
+004381:         {"seccion": "MATCH_SIES", "metrica": "MATCH_SIES (código único)", "valor": _sies_ok, "pct": f"{_sies_ok/len(archivo_subida)*100:.1f}%"},
+004382:         {"seccion": "MATCH_SIES", "metrica": "AMBIGUO_SIES (>1 código)", "valor": _sies_ambiguo, "pct": f"{_sies_ambiguo/len(archivo_subida)*100:.1f}%"},
+004383:         {"seccion": "MATCH_SIES", "metrica": "SIN_MATCH_SIES", "valor": _sies_sin, "pct": f"{_sies_sin/len(archivo_subida)*100:.1f}%"},
+004384:         {"seccion": "MATCH_SIES", "metrica": "PENDIENTE_GOBERNANZA (sin resolver)", "valor": _sies_pend, "pct": f"{_sies_pend/len(archivo_subida)*100:.1f}%"},
+004385:         {"seccion": "COD_CAR", "metrica": "COD_CAR asignado (total)", "valor": _cod_car_total, "pct": f"{_cod_car_total/len(archivo_subida)*100:.1f}%"},
+004386:         {"seccion": "COD_CAR", "metrica": "  → por SIES directo/oferta", "valor": _cod_car_sies, "pct": f"{_cod_car_sies/len(archivo_subida)*100:.1f}%"},
+004387:         {"seccion": "COD_CAR", "metrica": "  → por COMPONENTE_C_COMPARTIDO", "valor": _cod_car_shared, "pct": f"{_cod_car_shared/len(archivo_subida)*100:.1f}%"},
+004388:         {"seccion": "COD_CAR", "metrica": "  → por MAPEO_NOMBRE_CARRERA", "valor": _cod_car_nombre, "pct": f"{_cod_car_nombre/len(archivo_subida)*100:.1f}%"},
+004389:         {"seccion": "COD_CAR", "metrica": "Sin COD_CAR", "valor": _cod_car_sin, "pct": f"{_cod_car_sin/len(archivo_subida)*100:.1f}%"},
+004390:         {"seccion": "CARGA_FINAL", "metrica": "OK_CARGA_PREGRADO (→ MU32)", "valor": _ok, "pct": f"{_ok/len(archivo_subida)*100:.1f}%"},
+004391:         {"seccion": "CARGA_FINAL", "metrica": "CODCLI únicos en MATRICULA_UNIFICADA_32", "valor": _codcli_mu32_unicos, "pct": ""},
+004392:         {"seccion": "EXCLUIDOS", "metrica": "Total excluidos", "valor": _total_excluidos, "pct": f"{_total_excluidos/len(archivo_subida)*100:.1f}%"},
+004393:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIN_MATCH_SIES", "valor": _exc_sin_sies, "pct": f"{_exc_sin_sies/len(archivo_subida)*100:.1f}%"},
+004394:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DIPLOMADO", "valor": _exc_dipl, "pct": f"{_exc_dipl/len(archivo_subida)*100:.1f}%"},
+004395:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIN_MATCH_DATOS_ALUMNOS", "valor": _exc_sin_da, "pct": f"{_exc_sin_da/len(archivo_subida)*100:.1f}%"},
+004396:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIES_HEURISTICA_OPACA", "valor": _exc_opaca, "pct": f"{_exc_opaca/len(archivo_subida)*100:.1f}%"},
+004397:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIN_FOR_ING_ACT_TRAZABLE", "valor": _exc_fig, "pct": f"{_exc_fig/len(archivo_subida)*100:.1f}%"},
+004398:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_CAMPOS_OBLIGATORIOS", "valor": _exc_campos, "pct": f"{_exc_campos/len(archivo_subida)*100:.1f}%"},
+004399:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_INTRA_CODCLI", "valor": _exc_dup_intra, "pct": f"{_exc_dup_intra/len(archivo_subida)*100:.1f}%"},
+004400:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_CLAVE_CARGA", "valor": _exc_dup_clave, "pct": f"{_exc_dup_clave/len(archivo_subida)*100:.1f}%"},
+004401:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Patch JSON aplicado", "valor": "SI" if sit_fon_sol_patch_stats.get("patch_applied") else "NO", "pct": ""},
+004402:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "RUT en patch JSON", "valor": int(sit_fon_sol_patch_stats.get("n_rut_patch", 0)), "pct": ""},
+004403:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Filas objetivo patch", "valor": int(sit_fon_sol_patch_stats.get("n_rows_targeted", 0)), "pct": f"{(int(sit_fon_sol_patch_stats.get('n_rows_targeted', 0))/len(archivo_subida)*100):.1f}%"},
+004404:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Filas modificadas patch", "valor": int(sit_fon_sol_patch_stats.get("n_rows_affected", 0)), "pct": f"{(int(sit_fon_sol_patch_stats.get('n_rows_affected', 0))/len(archivo_subida)*100):.1f}%"},
+004405:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "RUT patch no encontrados", "valor": int(sit_fon_sol_patch_stats.get("n_rut_missing", 0)), "pct": ""},
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 18 — LÍNEAS 4483-4523
+==========================================================================================
+004483:         "gob_sede_rows": len(gob_sede_df),
+004484:         "oferta_academica_rows": len(oferta_dim),
+004485:         "catalogo_manual_source": manual_source,
+004486:         "puente_sies_source": puente_source,
+004487:         "gob_nac_source": gob_nac_tsv_path or "no_file",
+004488:         "gob_pais_est_sec_source": gob_pais_est_sec_tsv_path or "no_file",
+004489:         "gob_sede_source": gob_sede_tsv_path or "no_file",
+004490:         "gob_for_ing_act_source": gob_for_ing_act_source,
+004491:         "for_ing_act_origin_stats": for_ing_origin_stats,
+004492:         "oferta_academica_source": oferta_source,
+004493:         "sit_fon_sol_patch_source": sit_fon_patch_source,
+004494:         "sit_fon_sol_patch_stats": sit_fon_sol_patch_stats,
+004495:         "for_ing_act_report": for_ing_act_report,
+004496:     }
+004497:     if _filtro_bd_stats:
+004498:         _report["filtro_base_datos"] = _filtro_bd_stats
+004499:     if _stats_depur:
+004500:         _report["depuracion_rut_multi_codcli"] = _stats_depur
+004501:     # Persistir JSON del pipeline de matrícula para trazabilidad
+004502:     _mu_json_path = output_dir / "reporte_matricula.json"
+004503:     try:
+004504:         _mu_json_path.write_text(json.dumps(_report, indent=2, ensure_ascii=False), encoding="utf-8")
+004505:     except Exception:
+004506:         pass  # no bloquear pipeline por fallo de escritura JSON
+004507:     try:
+004508:         (output_dir / "reporte_patch_sit_fon_sol.json").write_text(
+004509:             json.dumps(sit_fon_sol_patch_stats, indent=2, ensure_ascii=False),
+004510:             encoding="utf-8",
+004511:         )
+004512:     except Exception:
+004513:         pass
+004514:     try:
+004515:         (output_dir / "reporte_for_ing_act.json").write_text(
+004516:             json.dumps(for_ing_act_report, indent=2, ensure_ascii=False),
+004517:             encoding="utf-8",
+004518:         )
+004519:     except Exception:
+004520:         pass
+004521:     return _report
+004522: 
+004523: 
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 19 — LÍNEAS 4831-4879
+==========================================================================================
+004831:         idx[cu] = {
+004832:             "TIPO_PLAN_CARRERA": row.get("TIPO_PLAN_CARRERA"),
+004833:             "JORNADA": row.get("JORNADA"),
+004834:             "DURACION_ESTUDIOS": row.get("DURACION_ESTUDIOS"),
+004835:             "MODALIDAD": row.get("MODALIDAD"),
+004836:             "CODIGO_CARRERA": row.get("CODIGO_CARRERA"),
+004837:             "NIVEL_CARRERA": row.get("NIVEL_CARRERA"),
+004838:         }
+004839:     return idx
+004840: 
+004841: 
+004842: def _load_cuadro_homologacion(input_file: Path) -> dict:
+004843:     """Carga CUADRO HOMOLOGACIÓN → dict (CODCARPR, JORNADA_DA) → CODIGO_SIES."""
+004844:     homol: dict[tuple[str, str], str] = {}
+004845:     try:
+004846:         xls = pd.ExcelFile(input_file)
+004847:         target = None
+004848:         for sheet in xls.sheet_names:
+004849:             if "HOMOLOG" in sheet.upper():
+004850:                 target = sheet
+004851:                 break
+004852:         if target is None:
+004853:             return homol
+004854:         hm = pd.read_excel(input_file, sheet_name=target)
+004855:         for _, row in hm.iterrows():
+004856:             codcarpr = str(row.get("CODCARPR", "")).strip().upper()
+004857:             jornada_da = str(row.get("JORNADA_DA", "")).strip().upper()
+004858:             codigo_sies = str(row.get("CODIGO_SIES", "")).strip().upper()
+004859:             if codcarpr and jornada_da and codigo_sies:
+004860:                 homol[(codcarpr, jornada_da)] = codigo_sies
+004861:     except Exception as e:
+004862:         print(f"⚠️  No se pudo cargar CUADRO HOMOLOGACIÓN: {e}")
+004863:     return homol
+004864: 
+004865: 
+004866: def _resolver_ambiguedades_sies_heuristica(
+004867:     ambiguos_df: pd.DataFrame,
+004868:     oferta_idx: dict | None = None,
+004869:     homol_dict: dict | None = None,
+004870: ) -> pd.DataFrame:
+004871:     """Resuelve ambigüedades SIES usando una cascada trazable y auditada.
+004872: 
+004873:     Lógica:
+004874:     - Entrada: CODCARPR_NORM, JORNADA_FUENTE, CODIGOS_SIES_POTENCIALES
+004875:     - Resolución por cascada: TIPO_PLAN_CARRERA → JORNADA → HOMOLOGACIÓN
+004876:     - Sin uso de PRIMERA_OPCION ni VERSION como input primario
+004877: 
+004878:     Args:
+004879:         ambiguos_df: DataFrame con registros SIES_MATCH_STATUS == "AMBIGUO_SIES"
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 20 — LÍNEAS 5165-5205
+==========================================================================================
+005165:         ("ANIO_ING_ORI", "respaldada por código"),
+005166:         ("SEM_ING_ORI", "respaldada por código"),
+005167:     ]
+005168:     known = {r[0] for r in rows}
+005169:     rows.extend((c, "inferencia operativa / pendiente de validación documental") for c in MATRICULA_UNIFICADA_COLUMNS if c not in known)
+005170:     lines = ["# Diccionario de columnas y clasificación", "", "| Columna | Clasificación |", "|---|---|"]
+005171:     lines.extend(f"| {c} | {k} |" for c, k in rows)
+005172:     (output_dir / "diccionario_columnas.md").write_text("\n".join(lines), encoding="utf-8")
+005173: 
+005174: 
+005175: def parse_args() -> argparse.Namespace:
+005176:     p = argparse.ArgumentParser(description="Pipeline híbrido SIES/PES")
+005177:     p.add_argument(
+005178:         "--input",
+005179:         default=_default_input_arg(),
+005180:         help="Ruta del Excel de entrada (por defecto detecta PROMEDIOSDEALUMNOS_7804.xlsx si existe).",
+005181:     )
+005182:     p.add_argument("--output-dir", default="resultados", help="Carpeta de salida")
+005183:     p.add_argument(
+005184:         "--proceso",
+005185:         default="avance",
+005186:         choices=["avance", "matricula", "ambos"],
+005187:         help="Qué pipeline ejecutar: avance curricular, matrícula unificada (legacy-like) o ambos",
+005188:     )
+005189:     p.add_argument(
+005190:         "--sheet",
+005191:         default=None,
+005192:         help="Nombre de hoja para el proceso matrícula (por defecto usa la primera)",
+005193:     )
+005194:     p.add_argument(
+005195:         "--catalogo-manual-tsv",
+005196:         default=None,
+005197:         help="Ruta a TSV de catálogo manual (opcional). Si no se informa, usa CATALOGO_MANUAL_TSV embebido.",
+005198:     )
+005199:     p.add_argument(
+005200:         "--puente-sies-tsv",
+005201:         default=None,
+005202:         help=(
+005203:             "DEPRECADO: override puente SIES. "
+005204:             "No se consume directamente en el pipeline; usar scripts/compile_puente_sies_compilado.py."
+005205:         ),
+
+==========================================================================================
+LECTURA_PROMEDIOS — FRAGMENTO 21 — LÍNEAS 5227-5313
+==========================================================================================
+005227:         default=None,
+005228:         help="Ruta a TSV de gobernanza COD_SED (opcional).",
+005229:     )
+005230:     p.add_argument(
+005231:         "--excluir-diplomados",
+005232:         choices=["true", "false"],
+005233:         default="true" if DEFAULT_EXCLUIR_DIPLOMADOS else "false",
+005234:         help="Para proceso matrícula: excluir diplomados en asignación SIES.",
+005235:     )
+005236:     p.add_argument(
+005237:         "--filtro-base-datos-sheet",
+005238:         default=None,
+005239:         help=(
+005240:             "Nombre de hoja del Excel de entrada que contiene los RUT (N_DOC) a incluir. "
+005241:             "Solo se procesarán las filas de la hoja fuente cuyo RUT aparezca en esta hoja. "
+005242:             "Ejemplo: --filtro-base-datos-sheet base_datos"
+005243:         ),
+005244:     )
+005245:     p.add_argument(
+005246:         "--usar-gobernanza-v2",
+005247:         choices=["true", "false"],
+005248:         default="false",
+005249:         help=(
+005250:             "Activa el nuevo flujo de matrícula (enriquecimiento por CODCLI con hoja DatosAlumnos). "
+005251:             "Por defecto se mantiene el flujo legacy para rollback inmediato."
+005252:         ),
+005253:     )
+005254:     p.add_argument(
+005255:         "--sit-fon-sol-patch-json",
+005256:         default=None,
+005257:         help=(
+005258:             "Ruta a patch JSON provisional SIT_FON_SOL por RUT. "
+005259:             "Si no se informa, usa patches/mu2026/sit_fon_sol_patch_ruts.json cuando exista."
+005260:         ),
+005261:     )
+005262:     return p.parse_args()
+005263: 
+005264: 
+005265: def main() -> None:
+005266:     args = parse_args()
+005267:     input_path = Path(args.input).expanduser().resolve()
+005268:     if not input_path.exists():
+005269:         raise FileNotFoundError(f"No se encontró archivo de entrada: {input_path}. Usa --input para indicar uno válido.")
+005270: 
+005271:     out = Path(args.output_dir).expanduser().resolve()
+005272:     reports: dict[str, object] = {}
+005273: 
+005274:     if args.proceso in {"avance", "ambos"}:
+005275:         report_avance = ejecutar_pipeline(input_path, out)
+005276:         generar_comparacion_versiones(out)
+005277:         generar_diccionario_columnas(out)
+005278:         reports["avance"] = report_avance
+005279: 
+005280:     if args.proceso in {"matricula", "ambos"}:
+005281:         catalogo_manual_tsv_path = _resolve_optional_path(args.catalogo_manual_tsv, DEFAULT_CATALOGO_MANUAL_CANDIDATES)
+005282:         puente_sies_tsv_path = args.puente_sies_tsv
+005283:         gob_nac_tsv_path = _resolve_optional_path(args.gob_nac_tsv, DEFAULT_GOB_NAC_CANDIDATES)
+005284:         gob_pais_est_sec_tsv_path = _resolve_optional_path(args.gob_pais_est_sec_tsv, DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES)
+005285:         gob_sede_tsv_path = _resolve_optional_path(args.gob_sede_tsv, DEFAULT_GOB_SEDE_CANDIDATES)
+005286:         sit_fon_sol_patch_json_path = _resolve_optional_path(args.sit_fon_sol_patch_json, DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES)
+005287:         report_mu = ejecutar_pipeline_matricula_unificada_legacy_like(
+005288:             input_path,
+005289:             out,
+005290:             sheet_name=args.sheet,
+005291:             catalogo_manual_tsv_path=catalogo_manual_tsv_path,
+005292:             puente_sies_tsv_path=puente_sies_tsv_path,
+005293:             oferta_academica_xlsx_path=args.oferta_academica_xlsx,
+005294:             gob_nac_tsv_path=gob_nac_tsv_path,
+005295:             gob_pais_est_sec_tsv_path=gob_pais_est_sec_tsv_path,
+005296:             gob_sede_tsv_path=gob_sede_tsv_path,
+005297:             sit_fon_sol_patch_json_path=sit_fon_sol_patch_json_path,
+005298:             excluir_diplomados=(args.excluir_diplomados == "true"),
+005299:             usar_gobernanza_v2=(args.usar_gobernanza_v2 == "true"),
+005300:             filtro_base_datos_sheet=args.filtro_base_datos_sheet,
+005301:         )
+005302:         reports["matricula"] = report_mu
+005303: 
+005304:     if args.proceso == "avance":
+005305:         print(json.dumps(reports["avance"], indent=2, ensure_ascii=False))
+005306:     elif args.proceso == "matricula":
+005307:         print(json.dumps(reports["matricula"], indent=2, ensure_ascii=False))
+005308:     else:
+005309:         print(json.dumps(reports, indent=2, ensure_ascii=False))
+005310: 
+005311: 
+005312: if __name__ == "__main__":
+005313:     main()

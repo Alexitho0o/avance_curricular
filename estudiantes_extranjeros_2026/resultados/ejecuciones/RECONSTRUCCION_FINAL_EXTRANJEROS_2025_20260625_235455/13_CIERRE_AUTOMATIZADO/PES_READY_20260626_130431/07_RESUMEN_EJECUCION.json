@@ -1,0 +1,83 @@
+{
+  "timestamp": "20260626_130431",
+  "proceso": "Estudiantes Extranjeros Regulares SIES 2026",
+  "anio_proceso": 2026,
+  "anio_datos": "2025",
+  "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/corregir_fase06_vigencia_extranjeros_2025.py",
+  "script_version_sha256": "bceea0091c9a9b9f4a9520b49dd73ce1afa66614c2d90f6fbfc0c6ffe688c47f",
+  "fuentes": {
+    "precarga": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/Reporte Precarga del Proceso Extranjeros Regulares 2026.csv",
+    "base_institucional": "/Users/alexi/Desktop/BASE EXTRANJEROS.xlsx",
+    "diagnostico_nacionalidad": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/12_VALIDACION_FINAL_SIES/DIAGNOSTICO_103_CHILENAS_20260626_113142/08_DECISION_NACIONALIDAD_104.csv",
+    "matriz_revision_aplicada": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/12_VALIDACION_FINAL_SIES/APLICACION_103_EXCLUSIONES_REVISION_20260626_113832/DECISION_VIGENCIA_POST_NACIONALIDAD_185_REVISION.csv",
+    "pes_185_referencia_ejecucion": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/09_PES/EXTRANJEROS_REGULARES_2025_FINAL_PES_HOJA2.csv",
+    "archivo_regresion_aprobado": "/Users/alexi/Desktop/EXTRANJEROS_REGULARES_2025_PES_READY_RESIDENCIA_0_20260626_121728.csv",
+    "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/corregir_fase06_vigencia_extranjeros_2025.py"
+  },
+  "hashes_fuentes": {
+    "precarga": "6d0fe6a9a9357ec6e0efc7e5866c512de5ba708f80a2100c39ee9a283da2bff3",
+    "base_institucional": "caaf4705e42d2b5f0de5f740de4611a23b124621bd9ebc62e492be94e3d60cbb",
+    "diagnostico_nacionalidad": "14c1b3231cecea5a67386faf9220997a736990c289260171b32b8406995f7548",
+    "matriz_revision_aplicada": "2fa74dca9a749a7e90b6642927be761ad0a62396b8190081cc7150ab3a86cff4",
+    "pes_185_referencia_ejecucion": "235edaf7363466d8cec6420c00ac8eb56067f3ddd3e82736e33670d2131670b2",
+    "archivo_regresion_aprobado": "e45eba791c4575dc90ddb31d2ed6bcca4feb1f35f5f41ba8d80af5c514d697d2",
+    "script": "bceea0091c9a9b9f4a9520b49dd73ce1afa66614c2d90f6fbfc0c6ffe688c47f"
+  },
+  "conteos": {
+    "universo": 185,
+    "excluidos": 104,
+    "chilenas": 103,
+    "sin_nacionalidad": 1,
+    "extranjeros_completos": 81,
+    "extranjeros_incompletos": 0,
+    "vigencia_0": 16,
+    "vigencia_1": 65,
+    "residencia_0": 81,
+    "nacionalidad_vacia": 0,
+    "nacionalidad_38": 0,
+    "codigo_unico_vacio": 0
+  },
+  "validaciones": {
+    "bloqueos": [],
+    "diferencias_excel_vs_csv": 0,
+    "diferencias_con_archivo_aprobado": 0,
+    "relectura": {
+      "bytes": 7572,
+      "bom": "NO",
+      "termina_con_salto": "NO",
+      "lineas_fisicas": 81,
+      "delimitadores_por_linea_ok": true,
+      "encabezado": "NO",
+      "delimitador": ";",
+      "codificacion": "cp1252",
+      "filas_relectura": 81,
+      "columnas_relectura": 20,
+      "diferencias_excel_vs_csv": 0,
+      "diferencias_con_archivo_aprobado": 0,
+      "hash_csv": "e45eba791c4575dc90ddb31d2ed6bcca4feb1f35f5f41ba8d80af5c514d697d2",
+      "hash_archivo_aprobado": "e45eba791c4575dc90ddb31d2ed6bcca4feb1f35f5f41ba8d80af5c514d697d2",
+      "hash_coincide_archivo_aprobado": "SI"
+    }
+  },
+  "salidas": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/01_RESUMEN_EXTRANJEROS_REGULARES_2025.xlsx",
+    "csv": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/02_EXTRANJEROS_REGULARES_2025_PES_READY.csv",
+    "auditoria_exclusiones": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/03_AUDITORIA_EXCLUSIONES_NACIONALIDAD.csv",
+    "auditoria_completitud": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/04_AUDITORIA_COMPLETITUD.csv",
+    "auditoria_relectura": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/05_AUDITORIA_RELECTURA_CSV.csv",
+    "comparacion_regresion": "/Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/06_COMPARACION_CON_ARCHIVO_APROBADO.csv",
+    "desktop_excel": "/Users/alexi/Desktop/RESUMEN_EXTRANJEROS_REGULARES_2025_20260626_130431.xlsx",
+    "desktop_csv": "/Users/alexi/Desktop/EXTRANJEROS_REGULARES_2025_PES_READY_20260626_130431.csv"
+  },
+  "hashes_salidas": {
+    "excel": "06c4a0f13913542c264fb34d0ff2710424db01f6ab61d74f1add0f7ea8f1e85d",
+    "csv": "e45eba791c4575dc90ddb31d2ed6bcca4feb1f35f5f41ba8d80af5c514d697d2",
+    "auditoria_exclusiones": "26bcd0fdbbfed172dff8db6f5d03f254f06434f4647a11157ecfaaedcecc04b6",
+    "auditoria_completitud": "8a01477e768d0aaf981d62c90bc6bc21d1e79f68766d110fc318654c00b93378",
+    "auditoria_relectura": "2432efce9b7a08e02b890cc711ec695dbf6c62c9113f2700ecb54ad58f2fe791",
+    "comparacion_regresion": "58ace8a91cab45346aba7d78783d30e9d78df7bb24ae08182fb08b73c4279411",
+    "desktop_excel": "06c4a0f13913542c264fb34d0ff2710424db01f6ab61d74f1add0f7ea8f1e85d",
+    "desktop_csv": "e45eba791c4575dc90ddb31d2ed6bcca4feb1f35f5f41ba8d80af5c514d697d2"
+  },
+  "estado": "LISTO_PARA_CARGA_SIES"
+}

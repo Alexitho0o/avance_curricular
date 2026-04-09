@@ -1,0 +1,284 @@
+{
+  "fecha_hora_generacion": "2026-05-19T17:45:06",
+  "fuentes_utilizadas": {
+    "duracion": "DURACION_ESTUDIOS.tsv",
+    "cned_tsv": "indices_2025/cned/data/listado_referencia_cned.tsv",
+    "cned_json": "indices_2025/cned/data/listado_referencia_cned.json",
+    "matricula_congelada_trazabilidad": "control/punto_0_carga_principal_mu2026/archivos_congelados/PARA_SUBIR_DESKTOP__matricula_unificada_2026_pregrado_PARA_SUBIR.csv"
+  },
+  "totales": {
+    "total_universo_ipss_vigente_filas": 135,
+    "total_universo_ipss_vigente_codigo_unico": 122,
+    "total_ya_existen_cned_no_crear_filas": 69,
+    "total_ya_existen_cned_no_crear_codigo_unico": 60,
+    "total_candidatos_no_existen_cned_filas": 66,
+    "total_candidatos_no_existen_cned_codigo_unico": 62,
+    "total_listo_para_carga_manual": 5,
+    "total_revisar_manual": 57,
+    "total_duplicidades_controladas_filas": 8,
+    "total_duplicidades_controladas_codigo_unico": 4
+  },
+  "resultado_QA": "QA_CON_OBSERVACIONES",
+  "resultado_qa": "QA_CON_OBSERVACIONES",
+  "estado_QA_final": "QA_CON_OBSERVACIONES",
+  "cantidad_registros_por_hoja": {
+    "00_RESUMEN": 16,
+    "01_QA": 17,
+    "02_LISTO_PARA_CARGA_MANUAL": 5,
+    "03_REVISAR_MANUAL": 57,
+    "04_YA_EXISTEN_CNED_NO_CREAR": 69,
+    "05_UNIVERSO_IPSS_VIGENTE": 135,
+    "06_CATALOGO_OPCIONES_CNED": 35,
+    "07_DUPLICIDADES_CONTROLADAS": 8,
+    "08_FUENTES_USADAS": 4
+  },
+  "advertencias": [
+    "Duplicidades estructurales por CODIGO_UNICO controladas: 4 codigos y 8 filas en 07_DUPLICIDADES_CONTROLADAS; no se fusionan por nombre",
+    "Campos criticos pendientes por falta de coincidencia confiable CNED: AREA_DE_CONOCIMIENTO: 56; CARRERA_GENERICA: 56"
+  ],
+  "errores": [],
+  "errores_corregidos_automaticamente": [
+    "Cruce reconstruido desde DURACION_ESTUDIOS y Codigo SIES CNED; no se usaron agrupaciones por nombre.",
+    "Campus derivado desde COD_SEDE 2/3.",
+    "Archivos descartados/DELTA/LISTO_CARGA/AGRUPADOS/CORREGIDO excluidos como fuente."
+  ],
+  "diagnostico_fuentes": {
+    "fuentes": {
+      "duracion": "DURACION_ESTUDIOS.tsv",
+      "cned_tsv": "indices_2025/cned/data/listado_referencia_cned.tsv",
+      "cned_json": "indices_2025/cned/data/listado_referencia_cned.json",
+      "matricula_congelada_trazabilidad": "control/punto_0_carga_principal_mu2026/archivos_congelados/PARA_SUBIR_DESKTOP__matricula_unificada_2026_pregrado_PARA_SUBIR.csv"
+    },
+    "duracion": {
+      "filas": 154,
+      "columnas": 26,
+      "encabezados": [
+        "CODIGO_IES_NUM",
+        "CODIGO_UNICO",
+        "CODIGO_CARRERA",
+        "NOMBRE_IES",
+        "COD_SEDE",
+        "NOMBRE_SEDE",
+        "NOMBRE_CARRERA",
+        "MODALIDAD",
+        "JORNADA",
+        "TIPO_PLAN_CARRERA",
+        "CARACT_PLAN_ESPECIAL",
+        "DURACION_ESTUDIOS",
+        "DURACION_TITULACION",
+        "DURACION_TOTAL",
+        "COMUNA_SEDE",
+        "PROVINCIA_SEDE",
+        "REGION_SEDE",
+        "NIVEL_GLOBAL",
+        "NIVEL_CARRERA",
+        "VIGENCIA",
+        "CODCARPR_CANONICO",
+        "CODCARPR_ALIAS_LIST",
+        "REGLA_DESAMBIGUACION",
+        "FUENTE_GOBERNANZA",
+        "ESTADO_REGISTRO",
+        "CODCARPR_RESOLUCION_ESTADO"
+      ],
+      "cobertura_campos_criticos": {
+        "CODIGO_UNICO": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "CODIGO_CARRERA": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "NOMBRE_IES": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "COD_SEDE": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "NOMBRE_SEDE": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "NOMBRE_CARRERA": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "MODALIDAD": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "JORNADA": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "TIPO_PLAN_CARRERA": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "DURACION_ESTUDIOS": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "NIVEL_GLOBAL": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "NIVEL_CARRERA": {
+          "no_vacios": 154,
+          "vacios": 0
+        },
+        "VIGENCIA": {
+          "no_vacios": 154,
+          "vacios": 0
+        }
+      },
+      "codigo_unico_unicos": 137,
+      "duplicados_codigo_unico": {
+        "I162S2C1J4V1": 2,
+        "I162S2C1J4V2": 2,
+        "I162S2C1J4V3": 2,
+        "I162S2C22J4V1": 2,
+        "I162S2C22J4V2": 2,
+        "I162S2C3J2V3": 2,
+        "I162S2C3J4V1": 2,
+        "I162S2C3J4V2": 2,
+        "I162S2C3J4V3": 2,
+        "I162S2C46J2V3": 2,
+        "I162S2C46J4V1": 2,
+        "I162S2C76J4V1": 2,
+        "I162S2C76J4V2": 2,
+        "I162S2C77J4V1": 2,
+        "I162S2C77J4V2": 2,
+        "I162S2C83J4V1": 2,
+        "I162S2C83J4V2": 2
+      },
+      "vigencia": {
+        "1": 150,
+        "2": 4
+      },
+      "sedes": {
+        "2": 151,
+        "3": 3
+      },
+      "modalidades": {
+        "3": 86,
+        "1": 66,
+        "2": 2
+      },
+      "jornadas": {
+        "4": 86,
+        "2": 42,
+        "1": 25,
+        "3": 1
+      },
+      "tipos_plan": {
+        "1": 123,
+        "3": 31
+      },
+      "duraciones": {
+        "5": 51,
+        "8": 46,
+        "4": 29,
+        "1": 20,
+        "6": 6,
+        "2": 2
+      }
+    },
+    "cned": {
+      "filas": 79,
+      "columnas": 23,
+      "encabezados": [
+        "Sede",
+        "Comuna",
+        "Región",
+        "Orden Geográfico de Region",
+        "Cod.Carr.",
+        "Carrera Genérica",
+        "Nombre Programa",
+        "Mencion Especialidad",
+        "Horario",
+        "Tipo Programa",
+        "Área Conocimiento",
+        "Tipo Carrera",
+        "Ingreso Directo",
+        "Año Inicio Actividades",
+        "Campus",
+        "Duracion (en semestres)",
+        "Titulo",
+        "Grado Academico",
+        "Codigo SIES",
+        "Nivel Pregrado/Posgrado",
+        "Modalidad Programa",
+        "Especial",
+        "Facultad"
+      ],
+      "cobertura_campos_criticos": {
+        "Codigo SIES": {
+          "no_vacios": 68,
+          "vacios": 11
+        },
+        "Nombre Programa": {
+          "no_vacios": 79,
+          "vacios": 0
+        },
+        "Área Conocimiento": {
+          "no_vacios": 79,
+          "vacios": 0
+        },
+        "Carrera Genérica": {
+          "no_vacios": 79,
+          "vacios": 0
+        }
+      },
+      "codigo_sies_unicos_no_vacios": 64,
+      "duplicados_codigo_sies": {
+        "I162S2C11J1V1": 2,
+        "I162S2C22J1V1": 2,
+        "I162S2C22J2V1": 2,
+        "I162S2C46J4V1": 2
+      },
+      "filas_json": 79
+    },
+    "matricula_congelada": {
+      "filas": 4070,
+      "columnas": 32,
+      "encabezados_detectados_asignados": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "PRIMER_APELLIDO",
+        "SEGUNDO_APELLIDO",
+        "NOMBRE",
+        "SEXO",
+        "FECH_NAC",
+        "NAC",
+        "PAIS_EST_SEC",
+        "COD_SED",
+        "COD_CAR",
+        "MODALIDAD",
+        "JOR",
+        "VERSION",
+        "FOR_ING_ACT",
+        "ANIO_ING_ACT",
+        "SEM_ING_ACT",
+        "ANIO_ING_ORI",
+        "SEM_ING_ORI",
+        "ASI_INS_ANT",
+        "ASI_APR_ANT",
+        "PROM_PRI_SEM",
+        "PROM_SEG_SEM",
+        "ASI_INS_HIS",
+        "ASI_APR_HIS",
+        "NIV_ACA",
+        "SIT_FON_SOL",
+        "SUS_PRE",
+        "FECHA_MATRICULA",
+        "REINCORPORACION",
+        "VIG"
+      ],
+      "nota": "Usada solo para diagnostico/trazabilidad; no alimenta area, subarea, carrera generica ni dependencia."
+    }
+  }
+}

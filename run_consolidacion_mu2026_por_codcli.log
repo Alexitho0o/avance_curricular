@@ -1,0 +1,118 @@
+========================================================================================================================
+CONSOLIDACIÓN MATRÍCULA UNIFICADA 2026 POR CODCLI
+========================================================================================================================
+Inicio: 2026-06-30T23:13:03.820330
+Repositorio: /Users/alexi/Documents/GitHub/avance_curricular
+
+Complemento de 95 seleccionado desde el punto de control congelado.
+Ruta: /Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv
+SHA-256: 9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d
+
+Fuentes operativas localizadas:
+1. Carga principal:
+   /Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/PARA_SUBIR_DESKTOP__matricula_unificada_2026_pregrado_PARA_SUBIR.csv
+2. Complemento 95:
+   /Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv
+3. Rectificación 30:
+   /Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/03_archivos_rectificacion/RECTIFICACION_MU2026_RECONSTRUIDA_DESDE_CERO.csv
+
+Lectura de fuentes operativas completada:
+ - Principal: 4070 filas, 32 columnas MU, encoding utf-8-sig
+ - Complemento: 95 filas, 32 columnas MU, encoding utf-8-sig
+ - Rectificación: 30 filas, 32 columnas MU, encoding utf-8-sig
+
+Descubriendo fuentes activas para reconstruir CODCLI...
+Archivos candidatos para catálogo CODCLI: 1488
+Revisando fuentes CODCLI: 1/1488
+Revisando fuentes CODCLI: 25/1488
+Revisando fuentes CODCLI: 50/1488
+Revisando fuentes CODCLI: 75/1488
+Revisando fuentes CODCLI: 100/1488
+Revisando fuentes CODCLI: 125/1488
+Revisando fuentes CODCLI: 150/1488
+Revisando fuentes CODCLI: 175/1488
+Revisando fuentes CODCLI: 200/1488
+Revisando fuentes CODCLI: 225/1488
+Revisando fuentes CODCLI: 250/1488
+Revisando fuentes CODCLI: 275/1488
+Revisando fuentes CODCLI: 300/1488
+Revisando fuentes CODCLI: 325/1488
+Revisando fuentes CODCLI: 350/1488
+Revisando fuentes CODCLI: 375/1488
+Revisando fuentes CODCLI: 400/1488
+Revisando fuentes CODCLI: 425/1488
+Revisando fuentes CODCLI: 450/1488
+Revisando fuentes CODCLI: 475/1488
+Revisando fuentes CODCLI: 500/1488
+Revisando fuentes CODCLI: 525/1488
+Revisando fuentes CODCLI: 550/1488
+Revisando fuentes CODCLI: 575/1488
+Revisando fuentes CODCLI: 600/1488
+Revisando fuentes CODCLI: 625/1488
+Revisando fuentes CODCLI: 650/1488
+Revisando fuentes CODCLI: 675/1488
+Revisando fuentes CODCLI: 700/1488
+Revisando fuentes CODCLI: 725/1488
+Revisando fuentes CODCLI: 750/1488
+Revisando fuentes CODCLI: 775/1488
+Revisando fuentes CODCLI: 800/1488
+Revisando fuentes CODCLI: 825/1488
+Revisando fuentes CODCLI: 850/1488
+Revisando fuentes CODCLI: 875/1488
+Revisando fuentes CODCLI: 900/1488
+Revisando fuentes CODCLI: 925/1488
+Revisando fuentes CODCLI: 950/1488
+Revisando fuentes CODCLI: 975/1488
+Revisando fuentes CODCLI: 1000/1488
+Revisando fuentes CODCLI: 1025/1488
+Revisando fuentes CODCLI: 1050/1488
+Revisando fuentes CODCLI: 1075/1488
+Revisando fuentes CODCLI: 1100/1488
+Revisando fuentes CODCLI: 1125/1488
+Revisando fuentes CODCLI: 1150/1488
+Revisando fuentes CODCLI: 1175/1488
+Revisando fuentes CODCLI: 1200/1488
+Revisando fuentes CODCLI: 1225/1488
+Revisando fuentes CODCLI: 1250/1488
+Revisando fuentes CODCLI: 1275/1488
+Revisando fuentes CODCLI: 1300/1488
+Revisando fuentes CODCLI: 1325/1488
+Revisando fuentes CODCLI: 1350/1488
+Revisando fuentes CODCLI: 1375/1488
+Revisando fuentes CODCLI: 1400/1488
+Revisando fuentes CODCLI: 1425/1488
+Revisando fuentes CODCLI: 1450/1488
+Revisando fuentes CODCLI: 1475/1488
+Registros de evidencia CODCLI encontrados: 1719162
+CODCLI distintos en catálogo: 14229
+RUT distintos con evidencia CODCLI: 18151
+
+Asignando CODCLI al complemento de 95 mediante RUT + oferta SIES exacta...
+Asignando CODCLI a la rectificación de 30 mediante RUT + oferta SIES exacta...
+Traceback (most recent call last):
+  File "/Users/alexi/Documents/GitHub/avance_curricular/scripts/consolidar_mu2026_por_codcli.py", line 1377, in <module>
+    catalogo_codcli.to_excel(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        writer,
+        ^^^^^^^
+        sheet_name="CATALOGO_CODCLI",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        index=False,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexi/Documents/GitHub/avance_curricular/.venv/lib/python3.13/site-packages/pandas/core/generic.py", line 2312, in to_excel
+    formatter.write(
+    ~~~~~~~~~~~~~~~^
+        excel_writer,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexi/Documents/GitHub/avance_curricular/.venv/lib/python3.13/site-packages/pandas/io/formats/excel.py", line 951, in write
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: This sheet is too large! Your sheet size is: 1719162, 9 Max sheet size is: 1048576, 16384

@@ -1,0 +1,23 @@
+1148:    El lookup se usa solo cuando el flag --usar-gobernanza-v2 está activo.
+5175:def parse_args() -> argparse.Namespace:
+5176:    p = argparse.ArgumentParser(description="Pipeline híbrido SIES/PES")
+5177:    p.add_argument(
+5182:    p.add_argument("--output-dir", default="resultados", help="Carpeta de salida")
+5183:    p.add_argument(
+5184:        "--proceso",
+5189:    p.add_argument(
+5194:    p.add_argument(
+5199:    p.add_argument(
+5207:    p.add_argument(
+5215:    p.add_argument(
+5220:    p.add_argument(
+5225:    p.add_argument(
+5230:    p.add_argument(
+5236:    p.add_argument(
+5245:    p.add_argument(
+5246:        "--usar-gobernanza-v2",
+5254:    p.add_argument(
+5262:    return p.parse_args()
+5265:def main() -> None:
+5266:    args = parse_args()
+5312:if __name__ == "__main__":

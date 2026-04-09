@@ -1,0 +1,202 @@
+
+==========================================================================================
+ENTRADA_PROCESO — FRAGMENTO 1 — LÍNEAS 1133-1173
+==========================================================================================
+001133:         return "NB"
+001134:     return pd.NA
+001135: 
+001136: 
+001137: def _to_ddmmyyyy(series: pd.Series, fallback: str | None = None) -> pd.Series:
+001138:     dt = pd.to_datetime(series, errors="coerce", dayfirst=True)
+001139:     out = dt.dt.strftime("%d/%m/%Y")
+001140:     if fallback is not None:
+001141:         out = out.fillna(fallback)
+001142:     return out
+001143: 
+001144: 
+001145: def _load_datos_alumnos_lookup(input_file: Path) -> pd.DataFrame:
+001146:     """Carga lookup por CODCLI desde hoja DatosAlumnos para gobernanza v2.
+001147: 
+001148:     El lookup se usa solo cuando el flag --usar-gobernanza-v2 está activo.
+001149:     """
+001150:     try:
+001151:         xls = pd.ExcelFile(input_file)
+001152:         if "DatosAlumnos" not in xls.sheet_names:
+001153:             return pd.DataFrame()
+001154: 
+001155:         src = pd.read_excel(input_file, sheet_name="DatosAlumnos")
+001156:         if "CODCLI" not in src.columns:
+001157:             return pd.DataFrame()
+001158: 
+001159:         keep = [
+001160:             "CODCLI",
+001161:             "RUT",
+001162:             "DIG",
+001163:             "DV",
+001164:             "NACIONALIDAD",
+001165:             "SEDE",
+001166:             "NOMBRES",
+001167:             "APELLIDO PATERNO",
+001168:             "APELLIDO MATERNO",
+001169:             "SEXO",
+001170:             "FECHANACIMIENTO",
+001171:             "ANOINGRESO",
+001172:             "PERIODOINGRESO",
+001173:             "ANOMATRICULA",
+
+==========================================================================================
+ENTRADA_PROCESO — FRAGMENTO 2 — LÍNEAS 5160-5291
+==========================================================================================
+005160:         ("MODALIDAD", "respaldada por manual"),
+005161:         ("VIG", "respaldada por manual"),
+005162:         ("COD_CAR", "respaldada por código"),
+005163:         ("ANIO_ING_ACT", "respaldada por código"),
+005164:         ("SEM_ING_ACT", "respaldada por código"),
+005165:         ("ANIO_ING_ORI", "respaldada por código"),
+005166:         ("SEM_ING_ORI", "respaldada por código"),
+005167:     ]
+005168:     known = {r[0] for r in rows}
+005169:     rows.extend((c, "inferencia operativa / pendiente de validación documental") for c in MATRICULA_UNIFICADA_COLUMNS if c not in known)
+005170:     lines = ["# Diccionario de columnas y clasificación", "", "| Columna | Clasificación |", "|---|---|"]
+005171:     lines.extend(f"| {c} | {k} |" for c, k in rows)
+005172:     (output_dir / "diccionario_columnas.md").write_text("\n".join(lines), encoding="utf-8")
+005173: 
+005174: 
+005175: def parse_args() -> argparse.Namespace:
+005176:     p = argparse.ArgumentParser(description="Pipeline híbrido SIES/PES")
+005177:     p.add_argument(
+005178:         "--input",
+005179:         default=_default_input_arg(),
+005180:         help="Ruta del Excel de entrada (por defecto detecta PROMEDIOSDEALUMNOS_7804.xlsx si existe).",
+005181:     )
+005182:     p.add_argument("--output-dir", default="resultados", help="Carpeta de salida")
+005183:     p.add_argument(
+005184:         "--proceso",
+005185:         default="avance",
+005186:         choices=["avance", "matricula", "ambos"],
+005187:         help="Qué pipeline ejecutar: avance curricular, matrícula unificada (legacy-like) o ambos",
+005188:     )
+005189:     p.add_argument(
+005190:         "--sheet",
+005191:         default=None,
+005192:         help="Nombre de hoja para el proceso matrícula (por defecto usa la primera)",
+005193:     )
+005194:     p.add_argument(
+005195:         "--catalogo-manual-tsv",
+005196:         default=None,
+005197:         help="Ruta a TSV de catálogo manual (opcional). Si no se informa, usa CATALOGO_MANUAL_TSV embebido.",
+005198:     )
+005199:     p.add_argument(
+005200:         "--puente-sies-tsv",
+005201:         default=None,
+005202:         help=(
+005203:             "DEPRECADO: override puente SIES. "
+005204:             "No se consume directamente en el pipeline; usar scripts/compile_puente_sies_compilado.py."
+005205:         ),
+005206:     )
+005207:     p.add_argument(
+005208:         "--oferta-academica-xlsx",
+005209:         default=None,
+005210:         help=(
+005211:             "Ruta al XLSX de oferta académica (opcional). "
+005212:             "Se usa para validar y ajustar MODALIDAD/JOR y limitar NIV_ACA por DURACION_ESTUDIOS."
+005213:         ),
+005214:     )
+005215:     p.add_argument(
+005216:         "--gob-nac-tsv",
+005217:         default=None,
+005218:         help="Ruta a TSV de gobernanza NAC (opcional).",
+005219:     )
+005220:     p.add_argument(
+005221:         "--gob-pais-est-sec-tsv",
+005222:         default=None,
+005223:         help="Ruta a TSV de gobernanza PAIS_EST_SEC (opcional).",
+005224:     )
+005225:     p.add_argument(
+005226:         "--gob-sede-tsv",
+005227:         default=None,
+005228:         help="Ruta a TSV de gobernanza COD_SED (opcional).",
+005229:     )
+005230:     p.add_argument(
+005231:         "--excluir-diplomados",
+005232:         choices=["true", "false"],
+005233:         default="true" if DEFAULT_EXCLUIR_DIPLOMADOS else "false",
+005234:         help="Para proceso matrícula: excluir diplomados en asignación SIES.",
+005235:     )
+005236:     p.add_argument(
+005237:         "--filtro-base-datos-sheet",
+005238:         default=None,
+005239:         help=(
+005240:             "Nombre de hoja del Excel de entrada que contiene los RUT (N_DOC) a incluir. "
+005241:             "Solo se procesarán las filas de la hoja fuente cuyo RUT aparezca en esta hoja. "
+005242:             "Ejemplo: --filtro-base-datos-sheet base_datos"
+005243:         ),
+005244:     )
+005245:     p.add_argument(
+005246:         "--usar-gobernanza-v2",
+005247:         choices=["true", "false"],
+005248:         default="false",
+005249:         help=(
+005250:             "Activa el nuevo flujo de matrícula (enriquecimiento por CODCLI con hoja DatosAlumnos). "
+005251:             "Por defecto se mantiene el flujo legacy para rollback inmediato."
+005252:         ),
+005253:     )
+005254:     p.add_argument(
+005255:         "--sit-fon-sol-patch-json",
+005256:         default=None,
+005257:         help=(
+005258:             "Ruta a patch JSON provisional SIT_FON_SOL por RUT. "
+005259:             "Si no se informa, usa patches/mu2026/sit_fon_sol_patch_ruts.json cuando exista."
+005260:         ),
+005261:     )
+005262:     return p.parse_args()
+005263: 
+005264: 
+005265: def main() -> None:
+005266:     args = parse_args()
+005267:     input_path = Path(args.input).expanduser().resolve()
+005268:     if not input_path.exists():
+005269:         raise FileNotFoundError(f"No se encontró archivo de entrada: {input_path}. Usa --input para indicar uno válido.")
+005270: 
+005271:     out = Path(args.output_dir).expanduser().resolve()
+005272:     reports: dict[str, object] = {}
+005273: 
+005274:     if args.proceso in {"avance", "ambos"}:
+005275:         report_avance = ejecutar_pipeline(input_path, out)
+005276:         generar_comparacion_versiones(out)
+005277:         generar_diccionario_columnas(out)
+005278:         reports["avance"] = report_avance
+005279: 
+005280:     if args.proceso in {"matricula", "ambos"}:
+005281:         catalogo_manual_tsv_path = _resolve_optional_path(args.catalogo_manual_tsv, DEFAULT_CATALOGO_MANUAL_CANDIDATES)
+005282:         puente_sies_tsv_path = args.puente_sies_tsv
+005283:         gob_nac_tsv_path = _resolve_optional_path(args.gob_nac_tsv, DEFAULT_GOB_NAC_CANDIDATES)
+005284:         gob_pais_est_sec_tsv_path = _resolve_optional_path(args.gob_pais_est_sec_tsv, DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES)
+005285:         gob_sede_tsv_path = _resolve_optional_path(args.gob_sede_tsv, DEFAULT_GOB_SEDE_CANDIDATES)
+005286:         sit_fon_sol_patch_json_path = _resolve_optional_path(args.sit_fon_sol_patch_json, DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES)
+005287:         report_mu = ejecutar_pipeline_matricula_unificada_legacy_like(
+005288:             input_path,
+005289:             out,
+005290:             sheet_name=args.sheet,
+005291:             catalogo_manual_tsv_path=catalogo_manual_tsv_path,
+
+==========================================================================================
+ENTRADA_PROCESO — FRAGMENTO 3 — LÍNEAS 5297-5313
+==========================================================================================
+005297:             sit_fon_sol_patch_json_path=sit_fon_sol_patch_json_path,
+005298:             excluir_diplomados=(args.excluir_diplomados == "true"),
+005299:             usar_gobernanza_v2=(args.usar_gobernanza_v2 == "true"),
+005300:             filtro_base_datos_sheet=args.filtro_base_datos_sheet,
+005301:         )
+005302:         reports["matricula"] = report_mu
+005303: 
+005304:     if args.proceso == "avance":
+005305:         print(json.dumps(reports["avance"], indent=2, ensure_ascii=False))
+005306:     elif args.proceso == "matricula":
+005307:         print(json.dumps(reports["matricula"], indent=2, ensure_ascii=False))
+005308:     else:
+005309:         print(json.dumps(reports, indent=2, ensure_ascii=False))
+005310: 
+005311: 
+005312: if __name__ == "__main__":
+005313:     main()

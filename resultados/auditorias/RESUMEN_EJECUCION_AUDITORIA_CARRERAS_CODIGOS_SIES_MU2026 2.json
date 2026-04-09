@@ -1,0 +1,109 @@
+{
+  "backup": "/Users/alexi/Documents/GitHub/avance_curricular/backups/pre_auditoria_combinaciones_sies_mu2026_20260625_171929",
+  "universo": {
+    "TOTAL_FILAS_ESTUDIANTES": 34522,
+    "TOTAL_CODCLI": 4118,
+    "TOTAL_RUT": 4118,
+    "TOTAL_CODCARPR": 45,
+    "TOTAL_PLANES_ESTUDIO": 45,
+    "TOTAL_CODIGOS_SIES_FINAL": 61,
+    "TOTAL_LLAVE_OFERTA": 64,
+    "TOTAL_LLAVE_PLAN": 64,
+    "TOTAL_LLAVE_COMPLETA": 64,
+    "FILAS_INCLUIDAS_MATRICULA_32": 4115,
+    "CODCLI_INCLUIDOS_MATRICULA_32": 4115,
+    "COMBINACIONES_ACADEMICAS_DISTINTAS": 64
+  },
+  "resumen": [
+    {
+      "Indicador": "Estudiantes procesados",
+      "Total": 34522,
+      "Porcentaje_sobre_combinaciones": ""
+    },
+    {
+      "Indicador": "CODCLI distintos",
+      "Total": 4118,
+      "Porcentaje_sobre_combinaciones": ""
+    },
+    {
+      "Indicador": "Carreras internas distintas",
+      "Total": 45,
+      "Porcentaje_sobre_combinaciones": ""
+    },
+    {
+      "Indicador": "Planes de estudio distintos",
+      "Total": 45,
+      "Porcentaje_sobre_combinaciones": ""
+    },
+    {
+      "Indicador": "Códigos SIES distintos utilizados",
+      "Total": 61,
+      "Porcentaje_sobre_combinaciones": ""
+    },
+    {
+      "Indicador": "Combinaciones académicas distintas",
+      "Total": 64,
+      "Porcentaje_sobre_combinaciones": "100.00%"
+    },
+    {
+      "Indicador": "Resueltas inequívocamente",
+      "Total": 41,
+      "Porcentaje_sobre_combinaciones": "64.06%"
+    },
+    {
+      "Indicador": "Resueltas por regla formal",
+      "Total": 5,
+      "Porcentaje_sobre_combinaciones": "7.81%"
+    },
+    {
+      "Indicador": "Resueltas manualmente",
+      "Total": 17,
+      "Porcentaje_sobre_combinaciones": "26.56%"
+    },
+    {
+      "Indicador": "Ambiguas no resueltas",
+      "Total": 1,
+      "Porcentaje_sobre_combinaciones": "1.56%"
+    },
+    {
+      "Indicador": "Inconsistentes con multicódigo",
+      "Total": 0,
+      "Porcentaje_sobre_combinaciones": "0.00%"
+    },
+    {
+      "Indicador": "Posibles errores de asignación",
+      "Total": 0,
+      "Porcentaje_sobre_combinaciones": "0.00%"
+    },
+    {
+      "Indicador": "Sin código",
+      "Total": 0,
+      "Porcentaje_sobre_combinaciones": "0.00%"
+    },
+    {
+      "Indicador": "Estudiantes potencialmente afectados",
+      "Total": 1,
+      "Porcentaje_sobre_combinaciones": ""
+    }
+  ],
+  "reproducibilidad_estudiantes": 100.0,
+  "correccion_combinaciones": 98.4375,
+  "hashes": {
+    "universo": "95873bc7e270183168a5e6cf7d07dc8bce46b12beab43b1005a0192c2c5f21dd",
+    "matriz": "5cf5042dec3817d227a2d2778f1392fabb96c29a792589d61119319bcdc63e0b",
+    "inconsistencias": "2c22de5aa93058f6a84f4ea9886c50ce159daf6ebdc0f92e73f97dd50b5770d7",
+    "impacto": "7fbcdbdf678e61cfb40c9f37ec63c0786599c7e88b6b783cf983536fca0e7cae",
+    "resumen_carreras": "3989ec116195dbf709a3e9cabd4e3b6f451c11055b03b2a7f1b6d832b7f1ed30",
+    "excel": "335a2f96d0362136ad7c4270f577755389b55cacb739e3aa626bf589513ff879",
+    "reporte": "f148e1a41ed9c28db107ec71544cd1abc3a10fc40abb3b92a1c327c8ed113f84"
+  },
+  "targets": {
+    "universo": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditorias/UNIVERSO_CARRERAS_CODIGOS_SIES_MU2026.csv",
+    "matriz": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditorias/MATRIZ_COMBINACIONES_ACADEMICAS_SIES_MU2026.csv",
+    "inconsistencias": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditorias/INCONSISTENCIAS_CODIGO_SIES_POR_COMBINACION_MU2026.csv",
+    "impacto": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditorias/IMPACTO_INCONSISTENCIAS_SIES_MU2026.csv",
+    "resumen_carreras": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditorias/RESUMEN_CARRERAS_RESOLUCION_SIES_MU2026.csv",
+    "reporte": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/reportes/REPORTE_AUDITORIA_CARRERAS_CODIGOS_SIES_MU2026.md",
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditorias/REVISION_CARRERAS_CODIGOS_SIES_MU2026.xlsx"
+  }
+}

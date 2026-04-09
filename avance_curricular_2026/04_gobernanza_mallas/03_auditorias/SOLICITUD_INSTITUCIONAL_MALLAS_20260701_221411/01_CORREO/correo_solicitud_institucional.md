@@ -1,0 +1,35 @@
+# Solicitud de información curricular para carga Avance Curricular SIES 2026
+
+```text
+Asunto: Solicitud de información curricular para carga Avance Curricular SIES 2026
+
+Estimadas/os,
+
+Junto con saludar, en el marco del proceso Avance Curricular SIES 2026 necesitamos solicitar apoyo para confirmar la ubicación curricular de las asignaturas asociadas a los planes de estudio incluidos en la carga Carreras.
+
+Actualmente contamos con información que permite identificar las carreras, sus códigos institucionales de plan y los créditos de las asignaturas. Sin embargo, la fuente disponible no permite distribuir esos créditos por año de forma suficientemente trazable para la carga SIES.
+
+El punto pendiente es la interpretación del campo NIVEL de la fuente de planes. En las auditorías realizadas se observó que NIVEL contiene valores entre 1 y 20, pero no existe una definición explícita que permita afirmar que equivale a semestre curricular o a año curricular. Por esa razón, no corresponde usarlo para completar las columnas anuales de la carga sin una confirmación institucional.
+
+Para continuar, solicitamos una fuente oficial que relacione cada plan y asignatura con su ubicación curricular. Idealmente, la tabla debería contener:
+
+- CODCARR.
+- CODPESTUD o código institucional del plan.
+- Nombre y versión del plan.
+- Vigencia del plan durante 2025.
+- Código y nombre de asignatura.
+- Créditos.
+- Semestre curricular y/o año curricular de la asignatura dentro de la malla.
+- Definición del campo semestre/año entregado.
+- Indicación de si la asignatura corresponde a práctica, titulación, examen o actividad final, cuando aplique.
+- Fecha de extracción y sistema o fuente de origen.
+
+Es importante que el semestre o año informado represente la ubicación curricular dentro del plan de estudios, no el período real en que un estudiante cursó la asignatura ni un dato derivado del avance individual.
+
+Esta información es necesaria para completar correctamente la distribución anual de créditos de los planes afectados. Mientras no contemos con esa evidencia, no se generará un archivo de carga para Carreras Avance Curricular 2026 asociado a estos casos.
+
+Quedamos atentos a la fuente disponible o, si corresponde, a la confirmación formal de cómo debe interpretarse el campo de ubicación curricular que maneja el área.
+
+Muchas gracias.
+
+```

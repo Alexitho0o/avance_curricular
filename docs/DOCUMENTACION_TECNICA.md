@@ -1,0 +1,1 @@
+(DOCUMENTACION_TECNICA.md original movido a docs/ para futura refactorización)

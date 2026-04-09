@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_scripts/ejecutar_avance_desde_precargas.py", line 490, in <module>
+    main()
+    ~~~~^^
+  File "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_scripts/ejecutar_avance_desde_precargas.py", line 267, in main
+    modulo = cargar_modulo()
+  File "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_scripts/ejecutar_avance_desde_precargas.py", line 133, in cargar_modulo
+    spec.loader.exec_module(modulo)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py", line 14, in <module>
+    from src.patches.apply_patches import (
+    ...<7 lines>...
+    )
+ModuleNotFoundError: No module named 'src'

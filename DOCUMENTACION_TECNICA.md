@@ -1,4 +1,51 @@
+
 # Documentación Técnica y de Trazabilidad
+
+## Índice SDD y Navegación
+1. [Propósito y Alcance](#proposito)
+2. [Arquitectura y Estructura de Carpetas](#estructura)
+3. [Flujos de Trabajo y Ejecución](#flujos)
+4. [Reglas SDD y Buenas Prácticas](#sdd)
+5. [Integración con Agentes de IA](#agentes)
+6. [Referencias y Artefactos Oficiales](#referencias)
+
+---
+
+## 1. <a name="proposito"></a>Propósito y Alcance
+Repositorio para la gestión, validación y auditoría de datos curriculares y salida regulatoria MU 2026 Pregrado, bajo metodología Spec-Driven Development (SDD).
+
+## 2. <a name="estructura"></a>Arquitectura y Estructura de Carpetas
+- **core/**: scripts y lógica de negocio.
+- **data/**: catálogos, resultados, auditorías.
+- **docs/**: documentación técnica, manuales, especificaciones.
+- **archive/**: históricos y respaldos.
+
+## 3. <a name="flujos"></a>Flujos de Trabajo y Ejecución
+Ver README.md para ejemplos reproducibles y comandos recomendados.
+
+## 4. <a name="sdd"></a>Reglas SDD y Buenas Prácticas
+- Toda nueva funcionalidad debe estar precedida por una especificación en `docs/`.
+- Usar snake_case o kebab-case para archivos y carpetas.
+- Documentar scripts y módulos con docstrings y comentarios claros.
+- Mantener trazabilidad de cambios relevantes en `docs/` o `agent.md`.
+- Cambios atómicos y reversibles.
+- Priorizar legibilidad y mantenibilidad para humanos y agentes.
+
+## 5. <a name="agentes"></a>Integración con Agentes de IA
+- Las reglas para agentes están en `agent.md`.
+- Toda documentación y especificación debe ser legible y accionable por agentes.
+- Los artefactos oficiales y sus advertencias están tabulados en el README.md.
+- Los agentes deben seguir el flujo SDD: especificar → implementar → documentar → validar.
+
+## 6. <a name="referencias"></a>Referencias y Artefactos Oficiales
+- Ver README.md para artefactos oficiales y advertencias de uso.
+- Manuales y ejemplos avanzados: en esta carpeta y subcarpetas.
+- Reglas agénticas: ver `agent.md`.
+
+---
+Última actualización: 2026-04-09
+Responsable: Arquitectura Técnica
+
 
 ## Nota de vigencia operativa
 

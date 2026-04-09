@@ -1,0 +1,99 @@
+{
+  "fecha_generacion": "2026-05-20 13:00:55",
+  "fuentes_usadas": [
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_MATRIZ_MANUAL_CONSOLIDADA_FINAL.xlsx",
+      "uso": "Listos, bloqueados y ya existentes"
+    },
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_MATRIZ_DIAGNOSTICA_PROMEDIOS_35.xlsx",
+      "uso": "Diagnostico PROMEDIOS de 35 pendientes"
+    },
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "uso": "Fuente estructural de llaves"
+    },
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/data/listado_referencia_cned.tsv",
+      "uso": "Catalogo de valores observados CNED"
+    },
+    {
+      "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/input/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "uso": "Evidencia operativa de alumnos/matricula"
+    }
+  ],
+  "totales_por_hoja": {
+    "01_CREAR_EVIDENCIA_2026": 13,
+    "02_CREAR_EVIDENCIA_2025": 11,
+    "04_LISTOS_AUDITADOS_23": 23,
+    "05_BLOQUEADOS_NOMINAL_4": 4,
+    "06_NO_CREAR_EXISTEN_CNED_69": 69,
+    "07_CATALOGO_VALORES_CNED": 42,
+    "03_REVISAR_SIN_MATCH_PROM_11": 11
+  },
+  "dictamen": "El archivo generado es una guia operativa para agregar programas en CNED. No es archivo de carga automatica. PROMEDIOSDEALUMNOS entrega evidencia operativa, no reemplaza la fuente formal de ano de inicio. Los campos CNED faltantes deben completarse en plataforma o con fuente institucional.",
+  "advertencias": [
+    "ANOINGRESO y ANOMATRICULA son evidencia operativa; no reemplazan ANIO_INICIO_ACTIVIDADES.",
+    "Este archivo es guia operativa, no archivo de carga automatica CNED.",
+    "No se completan Area, Subarea, Carrera Generica ni Dependencia sin fuente trazable."
+  ],
+  "resultado_qa": {
+    "Hoja 01 = 13 registros": {
+      "resultado": "OK",
+      "detalle": 13
+    },
+    "Hoja 02 = 11 registros": {
+      "resultado": "OK",
+      "detalle": 11
+    },
+    "Hoja 03 = 11 registros": {
+      "resultado": "OK",
+      "detalle": 11
+    },
+    "13 + 11 + 11 = 35": {
+      "resultado": "OK",
+      "detalle": 35
+    },
+    "Hoja 04 = 23 registros": {
+      "resultado": "OK",
+      "detalle": 23
+    },
+    "Hoja 05 = 4 registros": {
+      "resultado": "OK",
+      "detalle": 4
+    },
+    "Hoja 06 = 69 registros": {
+      "resultado": "OK",
+      "detalle": 69
+    },
+    "Sin interseccion operativos/bloqueados": {
+      "resultado": "OK",
+      "detalle": ""
+    },
+    "Sin interseccion operativos/ya existentes CNED": {
+      "resultado": "OK",
+      "detalle": ""
+    },
+    "Campos manuales vacios en hojas 01/02/03": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "ANIO_INICIO_ACTIVIDADES_FORMAL vacio en hojas 01/02/03": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "No se genero archivo de carga automatica": {
+      "resultado": "OK",
+      "detalle": "OK"
+    },
+    "No se modificaron fuentes": {
+      "resultado": "OK",
+      "detalle": "OK"
+    }
+  },
+  "rutas_generadas": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_GUIA_OPERATIVA_CREACION_PROGRAMAS.xlsx",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_GUIA_OPERATIVA_CREACION_PROGRAMAS.json",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_GUIA_OPERATIVA_CREACION_PROGRAMAS_RESUMEN.md"
+  }
+}

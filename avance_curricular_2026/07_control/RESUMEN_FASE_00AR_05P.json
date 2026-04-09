@@ -1,0 +1,92 @@
+{
+  "conciliacion": {
+    "counts": {
+      "CANDIDATO_COMMIT_POSTERIOR": 71,
+      "REVISAR_MANUALMENTE": 1
+    },
+    "personal": {
+      "NO": 72,
+      "SI": 0
+    },
+    "total": {
+      "entries": 72
+    }
+  },
+  "control_final": {
+    "branch": "backup/pre-sync-fix-20260410-avance",
+    "carreras_hash": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+    "commit": "f6db589",
+    "downloads_pdf_exists": true,
+    "matricula_hash": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+    "pdf_in_freeze_exists": false,
+    "pes_files": [],
+    "promedios_hash": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "txt_hash": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2"
+  },
+  "fuentes": {
+    "matrix": 20,
+    "missing": 12,
+    "partial": 8,
+    "pending": 20
+  },
+  "gobernanza": {
+    "carreras": {
+      "DEFINIDO_OFICIALMENTE": 9,
+      "DEFINIDO_PARCIALMENTE": 2,
+      "PENDIENTE_FUENTE_INSTITUCIONAL": 10
+    },
+    "matricula": {
+      "DEFINIDO_OFICIALMENTE": 13,
+      "DEFINIDO_PARCIALMENTE": 2,
+      "PENDIENTE_FUENTE_INSTITUCIONAL": 6
+    }
+  },
+  "promedios": {
+    "coverage_rows": 10,
+    "dict_rows": 121,
+    "sheet_granularity": {
+      "DatosAlumnos": "PERSONA_CARRERA",
+      "Hoja1": "PERSONA_ASIGNATURA",
+      "base_datos": "PERSONA",
+      "matriz": "CARRERA_PLAN"
+    },
+    "sheets": 4
+  },
+  "rectificacion": {
+    "active_sources": 4,
+    "comparison_removed": "SI",
+    "pdf_hash": "bf5a986c28f3312501d00e65447417a5927c252ae89d68cc9fc48bc35056d45f",
+    "pdf_path": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/Instructivo_Avance Curricular SIES - 2026.pdf",
+    "pdf_size": 768783,
+    "retiro_time": "2026-06-26T01:21:26.787480-04:00",
+    "source_hashes_after": {
+      "carreras": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+      "matricula": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "promedios": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+      "txt": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2"
+    },
+    "txt_hash_after": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+    "txt_hash_before": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2"
+  },
+  "validaciones": {
+    "carreras": {
+      "BLOCKER": 7,
+      "ERROR": 3
+    },
+    "cruzadas": {
+      "BLOCKER": 6,
+      "ERROR": 2,
+      "WARNING": 2
+    },
+    "matricula": {
+      "BLOCKER": 5,
+      "ERROR": 7,
+      "WARNING": 1
+    },
+    "total": {
+      "BLOCKER": 18,
+      "ERROR": 12,
+      "WARNING": 3
+    }
+  }
+}

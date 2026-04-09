@@ -1,0 +1,1 @@
+(README.md original movido a archive/backup_estable_2026/)

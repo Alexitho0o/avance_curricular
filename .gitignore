@@ -48,5 +48,18 @@ control/backups/**/*.tsv
 # Track grade conversion catalog
 !gobernanza_escala_notas.tsv
 
+# Avance Curricular SIES 2026: local frozen sources and generated outputs
+avance_curricular_2026/00_fuentes_congeladas/
+avance_curricular_2026/10_resultados/
+avance_curricular_2026/11_archivos_subida/
+!avance_curricular_2026/02_contratos/*.tsv
+!avance_curricular_2026/03_gobernanza_columnas/*.tsv
+!avance_curricular_2026/03_gobernanza_columnas/*/
+!avance_curricular_2026/03_gobernanza_columnas/**/*.tsv
+!avance_curricular_2026/04_configuracion/*.tsv
+!avance_curricular_2026/07_control/*.tsv
+!avance_curricular_2026/08_auditorias/*.tsv
+!avance_curricular_2026/09_pendientes/*.tsv
+
 # General OS files
 .DS_Store

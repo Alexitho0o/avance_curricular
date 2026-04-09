@@ -1,0 +1,288 @@
+61:                if "CODIGO_UNICO" in df.columns:
+69:    """Construye matriz (CODCARPR, JORNADA, VERSION)->SIES desde DURACION_ESTUDIOS.tsv."""
+78:        jornada, version = _parse_sies_codigo_unico(getattr(row, "CODIGO_UNICO", ""))
+82:            getattr(row, "CODCARPR_CANONICO", ""),
+83:            getattr(row, "CODCARPR_ALIAS_LIST", ""),
+87:            val = (getattr(row, "CODIGO_UNICO", ""), "100%", "AUTO_DURACION_ESTUDIOS")
+106:    "TIPO_DOC", "N_DOC", "DV", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRE", "SEXO", "FECH_NAC",
+114:    "CODIGO_IES_NUM", "CODIGO_UNICO", "PLAN_ESTUDIOS", "NOMBRE_SEDE", "NOMBRE_CARRERA", "JORNADA", "VERSION",
+121:    "CODIGO_IES_NUM", "TIPO_DOCUMENTO", "NUM_DOCUMENTO", "DV", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRES",
+122:    "SEXO", "FECHA_NACIMIENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "ANIO_INGRESO_CARRERA_ACTUAL",
+231:    """Extrae solo el número de RUT (sin DV) en cualquier formato chileno.
+246:    # Eliminar DV (parte tras guión)
+322:    # Estructura esperada CODCLI: YYYY + periodo(1 dígito) + CODCARPR + correlativo(3 dígitos)
+327:    # Guardrail: CODCARPR debe contener al menos una letra.
+376:        keep = {"CODCLI", "RUT", "CODCARPR", "ANOINGRESO", "PERIODOINGRESO"}
+378:        required = {"CODCLI", "RUT", "ANOINGRESO"}
+383:        work["_CODCLI"] = work["CODCLI"].astype(str).str.strip()
+384:        work["_CODCARPR"] = (
+385:            work["CODCARPR"].map(_normalize_text)
+386:            if "CODCARPR" in work.columns
+395:        work = work[work["_RUT_NUM"].notna() & work["_ANIO"].notna() & work["_CODCLI"].ne("")]
+405:            records = grp[["_CODCLI", "_CODCARPR", "_ANIO", "_SEM"]].drop_duplicates().to_dict("records")
+406:            records.sort(key=lambda r: (int(r["_ANIO"]), _sem_sort_value(r["_SEM"]), str(r["_CODCLI"])))
+421:        optional = ["TNS_PREV_MIN_ANO_DA", "TNS_PREV_CODCLI_EJEMPLO_DA"]
+433:        if "TNS_PREV_CODCLI_EJEMPLO_DA" in trace.columns:
+434:            trace["_TNS_SEM"] = trace["TNS_PREV_CODCLI_EJEMPLO_DA"].map(_infer_sem_from_codcli)
+472:        rec_codcli = str(rec.get("_CODCLI", "")).strip()
+475:        rec_codcarpr = _normalize_text(rec.get("_CODCARPR", ""))
+553:                archivo_subida.at[idx, "SEM_ING_ORI_FUENTE_FINAL"] = "TRACE_MOTOR_FOR_ING_ACT:TNS_PREV_CODCLI"
+576:                archivo_subida.at[idx, "CODCLI"] if "CODCLI" in archivo_subida.columns else "",
+577:                archivo_subida.at[idx, "CODCARPR_NORM"] if "CODCARPR_NORM" in archivo_subida.columns else "",
+585:                archivo_subida.at[idx, "ANIO_ING_ORI_METODO_FINAL"] = "MIN_ANOINGRESO_OTRO_CODCLI"
+588:                archivo_subida.at[idx, "SEM_ING_ORI_METODO_FINAL"] = "PERIODOINGRESO_OTRO_CODCLI"
+689:    hist["CODCARPR_NORM"] = hist["CODCARR"].map(_normalize_text)
+706:    for (rut_norm, codcarpr_norm), sub in hist.groupby(["RUT_NORM", "CODCARPR_NORM"], dropna=False):
+727:                "CODCARPR_NORM": codcarpr_norm,
+987:        "CODCLI",
+989:        "DV",
+990:        "CODCARPR_NORM",
+1146:    """Carga lookup por CODCLI desde hoja DatosAlumnos para gobernanza v2.
+1156:        if "CODCLI" not in src.columns:
+1160:            "CODCLI",
+1163:            "DV",
+1187:        out["CODCLI"] = out["CODCLI"].astype(str).str.strip()
+1188:        out = out[out["CODCLI"] != ""]
+1193:            "DV": "DA_DV",
+1217:        if "DA_DV" not in out.columns and "DA_DIG" in out.columns:
+1218:            out["DA_DV"] = out["DA_DIG"]
+1219:        if "DA_DIG" not in out.columns and "DA_DV" in out.columns:
+1220:            out["DA_DIG"] = out["DA_DV"]
+1222:        # Si no existe DA_DV ni DA_DIG, extraer del RUT (formato "12345678-K")
+1223:        if "DA_DV" not in out.columns and "DA_RUT" in out.columns:
+1225:            out["DA_DV"] = rut_str.str.split("-").str[-1].str.strip()
+1230:                out["DA_RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["DA_RUT_NUM"], out["DA_DV"])]
+1231:            elif "DA_DV" in out.columns:
+1232:                out["DA_RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["DA_RUT"], out["DA_DV"])]
+1238:        # DatosAlumnos debería tener 1 fila por CODCLI; ante conflicto, conservar primera.
+1239:        out = out.drop_duplicates(subset=["CODCLI"], keep="first").reset_index(drop=True)
+1253:    """Construye mapa CODCARPR → CODIGO_CARRERA desde el puente SIES."""
+1260:        codcarpr = str(row.get("CODCARPR", "")).strip()
+1290:                "CODCARPR_EJEMPLO": grp.iloc[0].get("CODCARPR_NORM", grp.iloc[0].get("COD_CAR", "")),
+1296:        codcarpr_col = "CODCARPR_NORM" if "CODCARPR_NORM" in sin_match.columns else "COD_CAR"
+1304:                "CODCARPR_EJEMPLO": codcarpr,
+1306:                "ACCION_REQUERIDA": "Agregar mapeo SIES para este CODCARPR",
+1317:                "CODCARPR_EJEMPLO": codcarpr,
+1325:            "CODCARPR_EJEMPLO", "NOMBRE_CARRERA_EJEMPLO", "ACCION_REQUERIDA",
+1345:            # ── Formato rojo en CODCLI para filas que requieren revisión manual ──
+1351:                codcli_col_idx = list(df_target.columns).index("CODCLI") + 1 if "CODCLI" in df_target.columns else 1
+1352:                # Columnas clave para marcar: CODCLI, N_CODES_SIES, SIES_RESOLUCION_HEURISTICA
+1354:                for cname in ["CODCLI", "N_CODES_SIES", "CODIGOS_SIES_POTENCIALES", "SIES_RESOLUCION_HEURISTICA"]:
+1390:    "CODCLI", "TIPO_DOC", "N_DOC", "DV", "COD_CAR",
+1400:    """Consolidación de candidatos usando CODCLI como clave interna primaria.
+1402:    Paso 1 – Intra-CODCLI (Caso A): si un mismo CODCLI tiene >1 fila,
+1405:             dedup por [TIPO_DOC, N_DOC, DV, COD_SED, COD_CAR, MODALIDAD, JOR, VERSION].
+1412:    identity_keys = ["TIPO_DOC", "N_DOC", "DV"]
+1414:    # ── Paso 1: Intra-CODCLI ──────────────────────────────────────────
+1420:        ["CODCLI", "_FECHA_MAT_TMP", "_NIV_SORT"], ascending=[True, False, False],
+1422:    intra_dup = candidatos.duplicated(subset=["CODCLI"], keep="first")
+1426:            "CODCLI": r["CODCLI"], "TIPO_DOC": r["TIPO_DOC"],
+1427:            "N_DOC": r["N_DOC"], "DV": r["DV"],
+1431:            "CASO": "A_INTRA_CODCLI",
+1435:    estado_carga.loc[candidatos.index[intra_dup]] = "EXCLUIDO_DUPLICADO_INTRA_CODCLI"
+1441:        "TIPO_DOC", "N_DOC", "DV", "COD_SED",
+1445:        ["TIPO_DOC", "N_DOC", "DV", "COD_CAR", "_FECHA_MAT_TMP"],
+1452:            "CODCLI": r["CODCLI"], "TIPO_DOC": r["TIPO_DOC"],
+1453:            "N_DOC": r["N_DOC"], "DV": r["DV"],
+1473:            & (candidatos["DV"] == dv)
+1489:                "CODCLI": r["CODCLI"], "TIPO_DOC": r["TIPO_DOC"],
+1490:                "N_DOC": r["N_DOC"], "DV": r["DV"],
+1494:                "CASO": "C_MULTI_CODCLI_MISMA_IDENTIDAD",
+1589:    required = {"GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"}
+1597:    out["CODCARPR"] = out["CODCARPR"].map(_normalize_text)
+1600:    out["FAMILIA_CODCARPR"] = out["CODCARPR"].map(_extract_alpha_prefix)
+1601:    out["MANUAL_KEY_3"] = out.apply(lambda r: _build_key_3(r["JORNADA"], r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+1602:    out["MANUAL_KEY_NO_JORNADA"] = out.apply(lambda r: _build_key_no_jornada(r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+1610:    CODIGO_UNICO, MODALIDAD, JORNADA, DURACION_ESTUDIOS, TIPO_PLAN_CARRERA, NIVEL_CARRERA.
+1613:    required_cols = {"CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS"}
+1655:            base_usecols = ["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"]
+1664:            dim = dim.dropna(subset=["CODIGO_UNICO"]).copy()
+1665:            dim["CODIGO_UNICO"] = dim["CODIGO_UNICO"].astype(str).str.strip().str.upper()
+1666:            dim = dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").reset_index(drop=True)
+1682:                if "CODIGO_UNICO" in dim.columns:
+1683:                    dim["CODIGO_UNICO"] = dim["CODIGO_UNICO"].astype(str).str.strip().str.upper()
+1688:                    dim = dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").reset_index(drop=True)
+1695:    return pd.DataFrame(columns=["CODIGO_UNICO", "MODALIDAD", "JORNADA", "DURACION_ESTUDIOS", "VIGENCIA"])
+1702:    required = {"GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L", "CODIGO_CARRERA_SIES"}
+1710:    base["CODCARPR"] = base["CODCARPR"].map(_normalize_text)
+1714:    base["FAMILIA_CODCARPR"] = base["CODCARPR"].map(_extract_alpha_prefix)
+1715:    base["BRIDGE_KEY_3"] = base.apply(lambda r: _build_key_3(r["JORNADA"], r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+1716:    base["BRIDGE_KEY_NO_JORNADA"] = base.apply(lambda r: _build_key_no_jornada(r["CODCARPR"], r["NOMBRE_L"]), axis=1)
+1735:            "FAMILIA_CODCARPR": sub["FAMILIA_CODCARPR"].iloc[0],
+1737:            "CODCARPR": sub["CODCARPR"].iloc[0],
+1746:    result = pd.DataFrame(rows).sort_values(["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]).reset_index(drop=True)
+1759:    required = {"CODIGO_UNICO", "NOMBRE_CARRERA", "JORNADA"}
+1766:        codigo_unico = str(getattr(row, "CODIGO_UNICO", "")).strip().upper()
+1771:            getattr(row, "CODCARPR_CANONICO", ""),
+1772:            getattr(row, "CODCARPR_ALIAS_LIST", ""),
+1782:                    "CODCARPR": codcarpr,
+1792:    cat_manual = _prepare_catalog_manual(base[["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]])
+1805:        carreras = _pick_sheet(book, {"CODIGO_UNICO", "PLAN_ESTUDIOS"})
+1806:        matricula = _pick_sheet(book, {"NUM_DOCUMENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "DV"})
+1827:            .rename(columns={"CODCARR": "CODIGO_UNICO", "PLAN_DE_ESTUDIO": "PLAN_ESTUDIOS"})
+1839:                    "RUT": "NUM_DOCUMENTO",
+1840:                    "DIG": "DV",
+1841:                    "CODCARR": "CODIGO_UNICO",
+1842:                    "PLAN_DE_ESTUDIO": "PLAN_ESTUDIOS",
+1846:        matricula["TIPO_DOCUMENTO"] = "R"
+1856:        equiv["CODIGO_UNICO"] = equiv["CODCARR"]
+1864:    out["RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["NUM_DOCUMENTO"], out["DV"])]
+1866:    key = ["NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "PLAN_ESTUDIOS"]
+1871:    cols = [c for c in ["CODCARR", "CODIGO_UNICO", "JORNADA", "VERSION"] if c in df_equiv.columns]
+1872:    bridge = df_equiv[cols].dropna(subset=["CODCARR", "CODIGO_UNICO"]).copy()
+1878:            codigos_unicos=("CODIGO_UNICO", "nunique"),
+1879:            jornadas=("JORNADA", "nunique") if "JORNADA" in bridge.columns else ("CODIGO_UNICO", "size"),
+1880:            versiones=("VERSION", "nunique") if "VERSION" in bridge.columns else ("CODIGO_UNICO", "size"),
+1892:    if "CODIGO_UNICO" not in hist.columns:
+1893:        hist["CODIGO_UNICO"] = pd.NA
+1901:        pair = bridge.drop_duplicates(["CODCARR", "JORNADA", "CODIGO_UNICO"])
+1902:        counts = pair.groupby(["CODCARR", "JORNADA"])["CODIGO_UNICO"].nunique().reset_index(name="n")
+1904:        unique_pair = unique_pair[["CODCARR", "JORNADA", "CODIGO_UNICO"]]
+1906:        if "CODIGO_UNICO_EQ" in hist.columns:
+1907:            hist["CODIGO_UNICO"] = hist["CODIGO_UNICO"].combine_first(hist["CODIGO_UNICO_EQ"])
+1908:            hist = hist.drop(columns=["CODIGO_UNICO_EQ"])
+1910:    unresolved = hist[hist["CODIGO_UNICO"].isna()].copy()
+1912:        single = bridge.groupby("CODCARR")["CODIGO_UNICO"].nunique().reset_index(name="n")
+1914:            bridge[["CODCARR", "CODIGO_UNICO"]].drop_duplicates("CODCARR"),
+1918:        unresolved = unresolved.drop(columns=[c for c in ["CODIGO_UNICO"] if c in unresolved.columns]).merge(
+1919:            single[["CODCARR", "CODIGO_UNICO"]],
+1923:        resolved = hist[hist["CODIGO_UNICO"].notna()].copy()
+1926:    review = hist[hist["CODIGO_UNICO"].isna()][["CODCARR"]].value_counts().reset_index(name="filas_sin_map")
+1934:    valid = hist_mapeado[hist_mapeado["CODIGO_UNICO"].notna()].copy()
+1939:                "CODIGO_UNICO",
+1954:                "CODIGO_UNICO",
+1966:    for (rut, cod), sub in valid.groupby(["RUT_NORM", "CODIGO_UNICO"]):
+1978:                "CODIGO_UNICO": cod,
+1994:    out = df_carreras.copy().drop_duplicates(["CODIGO_UNICO", "PLAN_ESTUDIOS"])
+2004:        out = out.merge(resumen, on=["RUT_NORM", "CODIGO_UNICO"], how="left", suffixes=("", "_CALC"))
+2026:    if {"CODIGO_UNICO", "JORNADA"}.issubset(df_equiv.columns):
+2027:        for _, r in df_equiv[["CODIGO_UNICO", "JORNADA"]].dropna().drop_duplicates().iterrows():
+2030:                jmap[r["CODIGO_UNICO"]] = ("PRESENCIAL", "1")
+2032:                jmap[r["CODIGO_UNICO"]] = ("PRESENCIAL", "2")
+2034:                jmap[r["CODIGO_UNICO"]] = ("SEMIPRESENCIAL", "3")
+2036:                jmap[r["CODIGO_UNICO"]] = ("DISTANCIA", "4")
+2038:                jmap[r["CODIGO_UNICO"]] = (pd.NA, pd.NA)
+2041:    out["TIPO_DOC"] = mat_ac.get("TIPO_DOCUMENTO")
+2042:    out["N_DOC"] = mat_ac.get("NUM_DOCUMENTO")
+2043:    out["DV"] = mat_ac.get("DV")
+2056:    out["COD_CAR"] = mat_ac.get("CODIGO_UNICO")
+2061:        codcarpr = row.get("CODIGO_UNICO", "")
+2067:            plan_estudios = row.get("PLAN_ESTUDIOS", "")
+2087:    modality = mat_ac.get("CODIGO_UNICO").map(lambda c: jmap.get(c, (pd.NA, pd.NA)))
+2134:    - Detecta columnas base CODCLI/CODCARR/JORNADA/CARRERA + RUT/DV.
+2150:    # tengan CODCLI + (CODCARR o CODCARPR) + RUT/N_DOC, excluyendo hojas de soporte.
+2153:    _REQ_CODCLI = {"CODCLI"}
+2154:    _REQ_CODCARR = {"CODCARR", "CODCARPR"}
+2155:    _REQ_RUT = {"RUT", "NUM_DOCUMENTO", "N_DOC"}
+2160:            bool(cols & _REQ_CODCLI)
+2194:        for _cand in ["N_DOC", "RUT", "NUM_DOCUMENTO"]:
+2207:            for _cand in ["RUT", "NUM_DOCUMENTO", "N_DOC"]:
+2240:    # ── Depuración provisoria RUT ↔ CODCLI (pre-pipeline) ──────────────
+2241:    _pre_col_rut = _pick_first_column(src, ["RUT", "NUM_DOCUMENTO", "N_DOC"])
+2242:    _pre_col_codcli = _pick_first_column(src, ["CODCLI"])
+2267:    col_codcli = _pick_first_column(src, ["CODCLI"])
+2268:    col_codcarr = _pick_first_column(src, ["CODCARR", "CODCARPR"])
+2271:    col_rut = _pick_first_column(src, ["RUT", "NUM_DOCUMENTO", "N_DOC"])
+2272:    col_dv = _pick_first_column(src, ["DIG", "DV"])
+2277:            "CODCLI": col_codcli,
+2278:            "CODCARR/CODCARPR": col_codcarr,
+2281:            "RUT/NUM_DOCUMENTO/N_DOC": col_rut,
+2282:            "DIG/DV": col_dv,
+2292:    req_codcli = _require_column(col_codcli, "CODCLI")
+2293:    req_codcarr = _require_column(col_codcarr, "CODCARR/CODCARPR")
+2296:    req_rut = _require_column(col_rut, "RUT/NUM_DOCUMENTO/N_DOC")
+2297:    req_dv = _require_column(col_dv, "DIG/DV")
+2310:    col_plan = _pick_first_column(src, ["PLAN_DE_ESTUDIO", "PLAN_ESTUDIOS"])
+2328:    # Fallback gobernado: cuando CODCARR/CODCARPR viene vacío, inferir desde CODCLI.
+2329:    # Este fallback solo usa la estructura codificada del CODCLI (sin lookup externo).
+2338:        print(f"  ↳ CODCARR inferido desde CODCLI: {int(codcarpr_fill_mask.sum())} filas")
+2395:        historico_mu_join["_HIST_MU_KEY"] = historico_mu_join["RUT_NORM"] + "|" + historico_mu_join["CODCARPR_NORM"]
+2433:            da_match_modo.loc[has_codcli_match] = "MATCH_CODCLI"
+2435:            # Fallback controlado: solo para no encontrados por CODCLI.
+2489:    out["DV"] = dv_source
+2720:    anio_act_source.loc[anio_codcli_mask] = "CODCLI"
+2721:    anio_act_method.loc[anio_codcli_mask] = "INFERENCIA_PREFIJO_CODCLI"
+2722:    anio_act_audit.loc[anio_codcli_mask] = "INFERIDO_CODCLI"
+2958:    rut_norm = out["N_DOC"].astype(str).str.replace(r"\D", "", regex=True) + out["DV"].astype(str).str.strip().str.upper()
+2970:    archivo_subida["CODCLI"] = src_work[req_codcli]
+2988:    archivo_subida["CODCARPR_NORM"] = src_work[req_codcarr].map(_normalize_text)
+2995:    archivo_subida["DV_STATUS"] = dv_status
+3118:        ["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"],
+3123:                manual_override_raw[["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"]]
+3142:                    .sort_values(["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L"])
+3155:        "FAMILIA_CODCARPR",
+3157:        "CODCARPR",
+3182:            df_manual[["MANUAL_KEY_3", "GRUPO_TRAZA", "FAMILIA_TRAZA", "FAMILIA_CODCARPR"]]
+3189:                    "FAMILIA_CODCARPR": "FAMILIA_CODCARPR_MANUAL",
+3201:        archivo_subida["FAMILIA_CODCARPR_MANUAL"] = pd.NA
+3223:            "FAMILIA_CODCARPR",
+3232:                "FAMILIA_CODCARPR": "FAMILIA_CODCARPR_PUENTE",
+3244:            + archivo_subida["CODCARPR_NORM"].map(_normalize_text)
+3269:                "FAMILIA_CODCARPR",
+3277:        codcarpr_bridge = set(df_bridge["CODCARPR"])
+3281:        exists_cod = archivo_subida["CODCARPR_NORM"].isin(codcarpr_bridge)
+3286:        archivo_subida["SIES_MATCH_DIAG"] = "SIN_CODCARPR_EN_PUENTE_SIES"
+3305:        archivo_subida["FAMILIA_CODCARPR_PUENTE"] = pd.NA
+3311:    archivo_subida["FAMILIA_CODCARPR"] = archivo_subida["CODCARPR_NORM"].map(_extract_alpha_prefix)
+3329:                ["SOURCE_KEY_3", "CODCARPR_NORM", "NOMBRE_CARRERA_FUENTE", "JORNADA_FUENTE", "SIES_MATCH_DIAG"],
+3389:            "CODCLI",
+3391:            "DV",
+3403:                    "CODCLI": src_work[req_codcli],
+3405:                    "DV": out["DV"],
+3409:                    "MOTIVO_REVISION": "SIN_MATCH_POR_CODCLI_Y_RUT_EN_DATOS_ALUMNOS",
+3419:    # CODIGO_CARRERA_SIES_FINAL, intentamos reemplazar por un CODIGO_UNICO
+3452:                oferta_dim[["CODIGO_UNICO"]]
+3457:            oferta_codes["_PARSED"] = oferta_codes["CODIGO_UNICO"].map(_extract_sies_components)
+3473:                key_to_codes.setdefault(key, []).append(str(getattr(row, "CODIGO_UNICO")).strip().upper())
+3526:        oferta_idx = oferta_dim.drop_duplicates(subset=["CODIGO_UNICO"], keep="first").set_index("CODIGO_UNICO")
+3579:        _dur_ver = oferta_dim[["CODIGO_UNICO"]].copy()
+3580:        _dur_ver["_VERSION"] = _dur_ver["CODIGO_UNICO"].str.extract(r"V(\d+)$", expand=False).astype(float)
+3581:        _dur_ver["_COD_CAR"] = _dur_ver["CODIGO_UNICO"].str.extract(r"C(\d+)J", expand=False).astype(float)
+3582:        _dur_ver["_JOR"] = _dur_ver["CODIGO_UNICO"].str.extract(r"J(\d+)V", expand=False).astype(float)
+3636:    cod_car_method.loc[oferta_cod_car_mask] = "OFERTA_LOOKUP_CODIGO_UNICO"
+3652:    cod_car_source.loc[legacy_cod_car_mask] = "CODCARPR_FUENTE"
+3667:    jor_method.loc[offer_jor_mask] = "LOOKUP_CODIGO_UNICO"
+3689:    mod_method.loc[offer_mod_mask] = "LOOKUP_CODIGO_UNICO"
+3779:        _codcarpr = archivo_subida.get("CODCARPR_NORM", pd.Series("", index=archivo_subida.index)).fillna("").astype(str)
+4029:                rut_columns_candidates=["N_DOC", "NUM_DOCUMENTO", "RUT", "RUT_NUM", "CODCLI"],
+4035:            rut_columns_candidates=["N_DOC", "NUM_DOCUMENTO", "RUT", "RUT_NUM", "CODCLI"],
+4136:        "DV",
+4240:                "CODCLI",
+4242:                "DV",
+4279:    # ── Enriquecimiento duración vía CODIGO_UNICO desde DURACION_ESTUDIOS.tsv ─
+4291:        _dur_key = "CODIGO_UNICO"
+4323:        df_manual["CODIGO_CARRERA"] = df_manual["CODCARPR"].map(
+4336:    _codcli_fuente = src[_pick_first_column(src, ["CODCLI"])].astype(str).str.strip()
+4339:    _codcli_archivo = archivo_subida["CODCLI"].astype(str).str.strip()
+4341:    _codcli_mu32 = matricula_unificada_32["CODCLI"].astype(str).str.strip() if "CODCLI" in matricula_unificada_32.columns else pd.Series(dtype=str)
+4352:    _exc_dup_intra = int((_ec == "EXCLUIDO_DUPLICADO_INTRA_CODCLI").sum())
+4357:    _match_codcli = int((_da_modo == "MATCH_CODCLI").sum()) if not _da_modo.empty else 0
+4368:    _cod_car_sies = int(_ccm.isin(["PARSE_COMPONENTE_SIES", "OFERTA_LOOKUP_CODIGO_UNICO"]).sum())
+4374:        {"seccion": "ENTRADA", "metrica": "CODCLI total filas fuente (Promedios)", "valor": _codcli_fuente_total, "pct": "100.0%"},
+4375:        {"seccion": "ENTRADA", "metrica": "CODCLI únicos en fuente", "valor": _codcli_fuente_unicos, "pct": f"{_codcli_fuente_unicos/_codcli_fuente_total*100:.1f}%"},
+4376:        {"seccion": "PROCESAMIENTO", "metrica": "CODCLI en ARCHIVO_LISTO_SUBIDA", "valor": len(archivo_subida), "pct": f"{len(archivo_subida)/_codcli_fuente_total*100:.1f}%"},
+4377:        {"seccion": "PROCESAMIENTO", "metrica": "CODCLI únicos en ARCHIVO_LISTO_SUBIDA", "valor": _codcli_archivo_unicos, "pct": ""},
+4378:        {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Match por CODCLI", "valor": _match_codcli, "pct": f"{_match_codcli/len(archivo_subida)*100:.1f}%"},
+4391:        {"seccion": "CARGA_FINAL", "metrica": "CODCLI únicos en MATRICULA_UNIFICADA_32", "valor": _codcli_mu32_unicos, "pct": ""},
+4399:        {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_INTRA_CODCLI", "valor": _exc_dup_intra, "pct": f"{_exc_dup_intra/len(archivo_subida)*100:.1f}%"},
+4536:    if carr["PLAN_ESTUDIOS"].isna().any():
+4537:        issues.append(Issue("ERROR", "carreras", "PLAN_ESTUDIOS vacío", int(carr["PLAN_ESTUDIOS"].isna().sum())))
+4568:    for c in ["TIPO_DOCUMENTO", "NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "PLAN_ESTUDIOS"]:
+4572:    bad_td = ~mat["TIPO_DOCUMENTO"].astype(str).isin(["R", "P"]) & mat["TIPO_DOCUMENTO"].notna()
+4574:        issues.append(Issue("ERROR", "matricula_ac", "TIPO_DOCUMENTO fuera de catálogo R/P", int(bad_td.sum())))
+4611:    keys_c = set(map(tuple, carr[["CODIGO_UNICO", "PLAN_ESTUDIOS"]].dropna().drop_duplicates().to_records(index=False)))
+4612:    keys_m = set(map(tuple, mat[["CODIGO_UNICO", "PLAN_ESTUDIOS"]].dropna().drop_duplicates().to_records(index=False)))
+4614:        issues.append(Issue("ERROR", "matricula_ac", "PLAN_ESTUDIOS no referenciado en carreras", len(keys_m - keys_c)))
+4823:    """Construye índice CODIGO_UNICO → atributos desde oferta_dim."""
+4828:        cu = str(row.get("CODIGO_UNICO", "")).strip().upper()
+4843:    """Carga CUADRO HOMOLOGACIÓN → dict (CODCARPR, JORNADA_DA) → CODIGO_SIES."""
+4856:            codcarpr = str(row.get("CODCARPR", "")).strip().upper()
+4874:    - Entrada: CODCARPR_NORM, JORNADA_FUENTE, CODIGOS_SIES_POTENCIALES
+4880:        oferta_idx: dict CODIGO_UNICO → {TIPO_PLAN_CARRERA, JORNADA, ...}
+4881:        homol_dict: dict (CODCARPR, JORNADA_DA_LETRA) → CODIGO_SIES
+4910:        codcarpr = str(row.get("CODCARPR_NORM", "")).strip().upper()
+4969:        # Paso 3: Consultar homologación (CODCARPR, JORNADA_DA_LETRA) → CODIGO_SIES
+5000:            "DV": "source_exact",
+5120:            "historico_mapeado": int(hist_map["CODIGO_UNICO"].notna().sum()),
+5121:            "historico_sin_mapeo": int(hist_map["CODIGO_UNICO"].isna().sum()),
+5250:            "Activa el nuevo flujo de matrícula (enriquecimiento por CODCLI con hoja DatosAlumnos). "

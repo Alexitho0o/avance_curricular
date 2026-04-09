@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "fecha": "2026-06-03T08:58:09",
+    "base": "/Users/alexi/Documents/GitHub/avance_curricular",
+    "dictamen": "FALTA_CAPTURAR_TABLA_CNED_NUEVA",
+    "recomendacion": "Primero se debe crear DATOS_VALIDACION_CNED_TSV_NUEVO_MANUAL.tsv pegando solo la tabla CNED completa, no el comando ni texto del chat.",
+    "repo_branch": "clean/pes-ready-final",
+    "git_status": "",
+    "cantidad_artefactos_detectados": 193,
+    "cantidad_problemas_detectados": 4,
+    "salida_excel": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/DIAGNOSTICO_END_TO_END_CNED_MU_20260603_085809.xlsx",
+    "salida_json": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/DIAGNOSTICO_END_TO_END_CNED_MU_20260603_085809.json",
+    "salida_markdown": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/DIAGNOSTICO_END_TO_END_CNED_MU_20260603_085809.md"
+  },
+  "repo_checks": {
+    "pwd": "/Users/alexi/Documents/GitHub/avance_curricular",
+    "base_existe": true,
+    "git_status": {
+      "cmd": "git status --short",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "git_branch": {
+      "cmd": "git branch --show-current",
+      "returncode": 0,
+      "stdout": "clean/pes-ready-final",
+      "stderr": ""
+    },
+    "git_log_ultimos_5": {
+      "cmd": "git --no-pager log --oneline -5",
+      "returncode": 0,
+      "stdout": "ad526d9 feat: add MU2026 PES_READY generation and exclusion audit\n4829b6a test: add optional MU2026 cross-validation fixture\nfc556ef docs: align README with runtime governance and official outputs\naf498fe docs: align README with runtime governance and official outputs\n4c3fb73 docs: align README with runtime governance and official outputs",
+      "stderr": ""
+    }
+  },
+  "issues": [
+    {
+      "severidad": "MEDIA",
+      "area": "CNED",
+      "problema_detectado": "El TSV anterior tiene solo 12 columnas.",
+      "accion_recomendada": "Actualizar la base CNED con una tabla completa, pero solo después de capturar correctamente el TSV nuevo."
+    },
+    {
+      "severidad": "ALTA",
+      "area": "CNED",
+      "problema_detectado": "No existe DATOS_VALIDACION_CNED_TSV_NUEVO_MANUAL.tsv.",
+      "accion_recomendada": "Crear el archivo manual pegando solo la tabla CNED completa con encabezados, no el comando."
+    },
+    {
+      "severidad": "MEDIA",
+      "area": "CNED",
+      "problema_detectado": "No existe DATOS_VALIDACION_CNED_TSV_ACTUALIZADO.tsv.",
+      "accion_recomendada": "Generar el TSV actualizado solo cuando el TSV nuevo manual tenga más de 50 columnas y lectura correcta."
+    },
+    {
+      "severidad": "ALTA",
+      "area": "Matrícula Unificada",
+      "problema_detectado": "No se encontró matricula_unificada_2026_pregrado_PARA_SUBIR.csv.",
+      "accion_recomendada": "Confirmar si la carga principal pregrado está en otra ruta o regenerar artefacto PES_READY."
+    }
+  ]
+}

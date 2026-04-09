@@ -1,0 +1,1 @@
+(generar_gobernanza_columnas_mu.py original movido a core/scripts/)

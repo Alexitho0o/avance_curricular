@@ -1,0 +1,48 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Conciliación trazable 5810 a plan canónico",
+  "fecha_ejecucion": "2026-07-01T14:22:17.018622",
+  "fuentes": {
+    "precarga_5810": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5810_PRECARGA_CARRERAS_AVANCE_CURRICULAR_2026_CONGELADA.tsv",
+      "sha256": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020"
+    },
+    "mapeo_seguro_43": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212/03_MAPEO_SEGURO_43_CARRERAS.tsv",
+      "sha256": "c4ae5f9f4cf17c921c7b750811f4e39cd85de06fd65e9a9596a8895c38c6615d"
+    },
+    "trazabilidad_34": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/05_AUDITORIA/FASE7_TRAZABILIDAD_34_CARRERAS.tsv",
+      "sha256": "7a961b527f7b8b45ff7ef7158a48ffc8609abe5792510ade616e929feaf7845c"
+    },
+    "canonico_general": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/01_CANONICO_TODOS_PLANES.tsv",
+      "sha256": "203d7996198dade106feadbb01bf91899feae9930d34387f1883ff31d6b6e347"
+    }
+  },
+  "cadena_trazabilidad": [
+    "5810.CODIGO_UNICO",
+    "03_MAPEO_SEGURO_43_CARRERAS.CODIGO_UNICO",
+    "PLAN_DE_ESTUDIO_CANONICO",
+    "CANONICO_TODOS_PLANES.CODPESTUD"
+  ],
+  "registros_5810": 43,
+  "registros_resueltos": 38,
+  "registros_pendientes": 5,
+  "planes_resueltos": [
+    "IADM20241",
+    "ICDA20251",
+    "ICIB20241",
+    "ICRE20241",
+    "IINF20241",
+    "ILOG20241",
+    "TAMD20241",
+    "TCRE20241",
+    "TENS20251",
+    "TLOG20241",
+    "TPAS20241"
+  ],
+  "asignaciones_por_nombre": false,
+  "fuentes_modificadas": false,
+  "apto_para_carga": false
+}

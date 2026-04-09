@@ -1,0 +1,8 @@
+# Reanudar diagnostico de fuentes de avance
+
+Estado: DIAGNOSTICO_FUENTES_COMPLETADO_CON_BRECHAS
+Carpeta: /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/05_RESOLUCION_PENDIENTES/DIAGNOSTICO_FUENTES_AVANCE_20260703_142658
+
+```bash
+python3 scripts/diagnosticar_fuentes_avance_sies2026.py --execution-dir "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157" --prep-dir "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/04_CONCILIACION_MATRICULA/PREPARACION_MATRICULA_20260703_141254" --run-dir "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/05_RESOLUCION_PENDIENTES/DIAGNOSTICO_FUENTES_AVANCE_20260703_142658"
+```

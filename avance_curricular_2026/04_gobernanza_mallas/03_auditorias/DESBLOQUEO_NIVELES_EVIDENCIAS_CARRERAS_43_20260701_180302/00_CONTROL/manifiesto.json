@@ -1,0 +1,253 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Desbloqueo niveles y evidencias Carreras 43",
+  "fecha_ejecucion": "2026-07-01T18:03:03.710842",
+  "carpeta_base_analizada": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055",
+  "carpeta_salida": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/DESBLOQUEO_NIVELES_EVIDENCIAS_CARRERAS_43_20260701_180302",
+  "resultado": {
+    "bloqueados_niveles_iniciales": 33,
+    "requiere_evidencia_iniciales": 9,
+    "columna_nivel": "NIVEL",
+    "semantica_confirmada": "NO",
+    "conversion_semestral_casos": 0,
+    "conversion_anual_casos": 0,
+    "semantica_no_confirmada_casos": 42,
+    "casos_creditos_fuera_duracion": 33,
+    "casos_actividades_titulacion_practica_confirmadas": 0,
+    "candidatos_actividad_final_por_nombre": 1,
+    "contradiccion_real_casos": 0,
+    "evidencia_recuperada_casos": 0,
+    "evidencia_no_recuperada_casos": 9,
+    "validadas_finales": 1,
+    "validadas_con_observacion": 0,
+    "bloqueadas_por_niveles_finales": 33,
+    "requiere_evidencia_finales": 9,
+    "pendientes_finales": 42,
+    "apto_para_materializacion_posterior": false,
+    "archivo_carga_generado": false
+  },
+  "fuentes_modificadas": false,
+  "auditoria_anterior_intacta": true,
+  "hashes_fuentes_antes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/04_RESULTADOS/matriz_funcional_carreras.tsv": "9c33382678e07d313dd44e91a177d2d06752c6b21974f26210d15c8b753e2019",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/distribucion_anual_por_plan.tsv": "338fda9cc60ac06c207efa9f44f12bf3560478a0933cabb0dd5ece11435067ec",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/coherencia_duracion.tsv": "bc875782474c6277ff588937e1997788fa95b586cd25e43c112e50c6fa3110cd",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/02_PLANES/clasificacion_planes_aplicables.tsv": "6d9d8df9270af6023f013575bb46efc91c03e0186560fb49f7d6cd442fea2327",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/02_PLANES/planes_por_personas_5809.tsv": "e4114ccf056933c2119d87d27aa19e862db3a9098932609eee460f1bd218e321",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/detalle_unidades_por_plan.tsv": "a1e2d8b9a978e5557d7d32722ecff8d9f9a075c76a8d77c6d156cdf945819356",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/duplicados_unidades.tsv": "9e8e48d34b1a949778e2679636df1337cf5156c84c7ced75601e2b1dd3c647d4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/unidades_sin_nivel.tsv": "e995f87cbe4303b2870c4ddec609c93909fdeb16bf003b9e6b0d82bdd6d70d57",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/00_CONTROL/validaciones_globales.tsv": "5ba16d1b8e607f3837e10588587c272ebd5abeb906b14cd27d7d4391b278fdef",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/00_CONTROL/manifiesto.json": "bab59be14288b3f9575e2461a0c252eafd539167b4ac874d48058e5b1c3a3f09",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5810_PRECARGA_CARRERAS_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5809_PRECARGA_MATRICULA_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "a3ff54c7f1d0037bd6fedc7771e4a2d06d2795e0a5e1cac1ad9fb05d952b57d4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/01_CONCILIACION_FINAL_43.tsv": "ca22d4820f54710c4628cfb9daa5fa78951e58fab59af44b900faf69c1f8b0c5",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/01_CANONICO_TODOS_PLANES.tsv": "203d7996198dade106feadbb01bf91899feae9930d34387f1883ff31d6b6e347",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/02_RESUMEN_POR_PLAN.tsv": "7e60ae71475fa36d828a5f8592dd7c10c4dbf7e6b6fd30e5db06fb417efa69a8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/01_fuentes_institucionales/planes_estudio/Listado_Planes_estudio_Sedes_RE_CO_20260701.xlsx": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_DATOSALUMNOS.tsv": "68c57f44aa428c742cb3886c9ba37e4daf17ae06d25615c7f69b65fabe2a6af6",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv": "43d284c949de6a93291d9fc363290133ec90a7797882e11aa6ce4f1bf03c958b",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CONFIRMACION_GOBERNANZA_PROMEDIOSALUMNOS_20260701_165732/06_RESULTADOS/RESUMEN_CONFIRMACION_GOBERNANZA.md": "a6cb8a94d4ebffe0f6de960c0bc482e2b6defdfd6dddd095072c82455839b65f"
+  },
+  "hashes_fuentes_despues": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/04_RESULTADOS/matriz_funcional_carreras.tsv": "9c33382678e07d313dd44e91a177d2d06752c6b21974f26210d15c8b753e2019",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/distribucion_anual_por_plan.tsv": "338fda9cc60ac06c207efa9f44f12bf3560478a0933cabb0dd5ece11435067ec",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/coherencia_duracion.tsv": "bc875782474c6277ff588937e1997788fa95b586cd25e43c112e50c6fa3110cd",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/02_PLANES/clasificacion_planes_aplicables.tsv": "6d9d8df9270af6023f013575bb46efc91c03e0186560fb49f7d6cd442fea2327",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/02_PLANES/planes_por_personas_5809.tsv": "e4114ccf056933c2119d87d27aa19e862db3a9098932609eee460f1bd218e321",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/detalle_unidades_por_plan.tsv": "a1e2d8b9a978e5557d7d32722ecff8d9f9a075c76a8d77c6d156cdf945819356",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/duplicados_unidades.tsv": "9e8e48d34b1a949778e2679636df1337cf5156c84c7ced75601e2b1dd3c647d4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/03_UNIDADES/unidades_sin_nivel.tsv": "e995f87cbe4303b2870c4ddec609c93909fdeb16bf003b9e6b0d82bdd6d70d57",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/00_CONTROL/validaciones_globales.tsv": "5ba16d1b8e607f3837e10588587c272ebd5abeb906b14cd27d7d4391b278fdef",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_FUNCIONAL_CARRERAS_43_REANUDADA_20260701_174055/00_CONTROL/manifiesto.json": "bab59be14288b3f9575e2461a0c252eafd539167b4ac874d48058e5b1c3a3f09",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5810_PRECARGA_CARRERAS_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "330d7fa08228b74c477f1bf8a5964ea8bf8e670a8894ab97440045f03b592020",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/5809_PRECARGA_MATRICULA_AVANCE_CURRICULAR_2026_CONGELADA.tsv": "a3ff54c7f1d0037bd6fedc7771e4a2d06d2795e0a5e1cac1ad9fb05d952b57d4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_FINAL_43_RESUELTAS_0_PENDIENTES_20260701_171409/02_RESULTADOS/01_CONCILIACION_FINAL_43.tsv": "ca22d4820f54710c4628cfb9daa5fa78951e58fab59af44b900faf69c1f8b0c5",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/01_CANONICO_TODOS_PLANES.tsv": "203d7996198dade106feadbb01bf91899feae9930d34387f1883ff31d6b6e347",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/02_RESULTADOS/02_RESUMEN_POR_PLAN.tsv": "7e60ae71475fa36d828a5f8592dd7c10c4dbf7e6b6fd30e5db06fb417efa69a8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/01_fuentes_institucionales/planes_estudio/Listado_Planes_estudio_Sedes_RE_CO_20260701.xlsx": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx": "7911e0de3b9ec5df70b6667161e94a2f6751bc5f3c24ba55cce5dbcea35ef19d",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_DATOSALUMNOS.tsv": "68c57f44aa428c742cb3886c9ba37e4daf17ae06d25615c7f69b65fabe2a6af6",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv": "43d284c949de6a93291d9fc363290133ec90a7797882e11aa6ce4f1bf03c958b",
+    "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CONFIRMACION_GOBERNANZA_PROMEDIOSALUMNOS_20260701_165732/06_RESULTADOS/RESUMEN_CONFIRMACION_GOBERNANZA.md": "a6cb8a94d4ebffe0f6de960c0bc482e2b6defdfd6dddd095072c82455839b65f"
+  },
+  "excel": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/DESBLOQUEO_NIVELES_EVIDENCIAS_CARRERAS_43_20260701_180302/05_RESULTADOS/DESBLOQUEO_FUNCIONAL_CARRERAS_43.xlsx",
+  "validaciones": [
+    {
+      "VALIDACION": "Total de CODIGO_UNICO final",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "CODIGO_UNICO distintos",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Registros iniciales pendientes",
+      "ESPERADO": "42",
+      "OBSERVADO": "42",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Bloqueados iniciales por niveles",
+      "ESPERADO": "33",
+      "OBSERVADO": "33",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Requiere evidencia iniciales",
+      "ESPERADO": "9",
+      "OBSERVADO": "9",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin codigos agregados",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin codigos eliminados",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin cambios en CODCARR",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin cambios en CODPESTUD",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin cambios en campos no modificables",
+      "ESPERADO": "602",
+      "OBSERVADO": "602",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin cambios en unidad de medida",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Totales de creditos trazables",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Distribuciones reproducibles",
+      "ESPERADO": "43",
+      "OBSERVADO": "43",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Suma anual igual total para caso validado",
+      "ESPERADO": "1",
+      "OBSERVADO": "1",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Creditos no distribuidos 0 para caso validado",
+      "ESPERADO": "1",
+      "OBSERVADO": "1",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Duplicados funcionales no controlados",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": "Los duplicados de fuente institucional permanecen controlados por llave canónica de auditoría previa."
+    },
+    {
+      "VALIDACION": "Los 9 casos tienen diagnostico individual",
+      "ESPERADO": "9",
+      "OBSERVADO": "9",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Los 33 casos tienen diagnostico individual",
+      "ESPERADO": "33",
+      "OBSERVADO": "33",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Toda modificacion de estado tiene fuente",
+      "ESPERADO": "0",
+      "OBSERVADO": "0",
+      "RESULTADO": "OK",
+      "OBSERVACION": "No se modificaron estados funcionales; las decisiones de mantener estado tienen fuente registrada."
+    },
+    {
+      "VALIDACION": "Toda inferencia esta marcada",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Fuentes originales intactas",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Auditoria anterior intacta",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Sin archivo de carga",
+      "ESPERADO": "SI",
+      "OBSERVADO": "SI",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Resultado versionado",
+      "ESPERADO": "SI",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/DESBLOQUEO_NIVELES_EVIDENCIAS_CARRERAS_43_20260701_180302",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    },
+    {
+      "VALIDACION": "Manifiesto generado",
+      "ESPERADO": "SI",
+      "OBSERVADO": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/DESBLOQUEO_NIVELES_EVIDENCIAS_CARRERAS_43_20260701_180302/00_CONTROL/manifiesto.json",
+      "RESULTADO": "OK",
+      "OBSERVACION": ""
+    }
+  ]
+}

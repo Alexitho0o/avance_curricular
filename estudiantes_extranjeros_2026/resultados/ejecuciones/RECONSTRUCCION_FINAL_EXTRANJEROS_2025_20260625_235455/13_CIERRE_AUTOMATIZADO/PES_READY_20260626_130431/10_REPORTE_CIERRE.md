@@ -1,0 +1,12 @@
+# Cierre automatizado Extranjeros Regulares 2025
+
+Estado: LISTO_PARA_CARGA_SIES
+Universo: 185
+Excluidos: 104
+Extranjeros completos: 81
+Extranjeros incompletos: 0
+VIGENCIA=0: 16
+VIGENCIA=1: 65
+CSV: /Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/02_EXTRANJEROS_REGULARES_2025_PES_READY.csv
+Excel: /Users/alexi/Documents/GitHub/avance_curricular/estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/01_RESUMEN_EXTRANJEROS_REGULARES_2025.xlsx
+Bloqueos: 0

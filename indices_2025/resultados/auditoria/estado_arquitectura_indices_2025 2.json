@@ -1,0 +1,949 @@
+{
+  "fecha_hora": "2026-05-18T20:52:35-04:00",
+  "fuente_oficial": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/docs/Manual_INDICES_2025.txt",
+  "artefactos_globales": {
+    "manual": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/docs/Manual_INDICES_2025.txt",
+      "exists": true,
+      "size_bytes": 115659
+    },
+    "fase0_secciones": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/fase0_indice_secciones_manual.json",
+      "exists": true,
+      "size_bytes": 32803
+    },
+    "fase1_diccionario_evolucion_carreras": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_evolucion_carreras.json",
+      "exists": true,
+      "size_bytes": 79046
+    },
+    "procesos_json": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/procesos/procesos_indices_2025.json",
+      "exists": true,
+      "size_bytes": 21507
+    },
+    "procesos_csv": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/procesos/procesos_indices_2025.csv",
+      "exists": true,
+      "size_bytes": 12868
+    },
+    "estado_proyecto": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/auditoria/ESTADO_PROYECTO_INDICES_2025.md",
+      "exists": true,
+      "size_bytes": 8377
+    },
+    "bitacora_decisiones": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/auditoria/BITACORA_DECISIONES_INDICES_2025.md",
+      "exists": true,
+      "size_bytes": 1527
+    }
+  },
+  "carpetas": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/docs",
+      "relative_path": "docs",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/procesos",
+      "relative_path": "config/procesos",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas",
+      "relative_path": "config/reglas",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/catalogos",
+      "relative_path": "config/catalogos",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/core",
+      "relative_path": "scripts/core",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos",
+      "relative_path": "scripts/procesos",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/validadores",
+      "relative_path": "scripts/validadores",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/utilidades",
+      "relative_path": "scripts/utilidades",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/raw",
+      "relative_path": "data/raw",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/interim",
+      "relative_path": "data/interim",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/processed",
+      "relative_path": "data/processed",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures",
+      "relative_path": "data/fixtures",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion",
+      "relative_path": "resultados/reportes_validacion",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios",
+      "relative_path": "resultados/diccionarios",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/logs",
+      "relative_path": "resultados/logs",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida",
+      "relative_path": "resultados/plantillas_salida",
+      "exists": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/auditoria",
+      "relative_path": "resultados/auditoria",
+      "exists": true
+    }
+  ],
+  "procesos": [
+    {
+      "id_proceso": "identificacion_casa_central",
+      "nombre_proceso": "Identificación y casa central",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/03_proceso_identificacion_casa_central.py",
+          "exists": true,
+          "size_bytes": 2587
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_identificacion_casa_central.yaml",
+          "exists": true,
+          "size_bytes": 1079
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_identificacion_casa_central_esqueleto.json",
+          "exists": true,
+          "size_bytes": 517
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_identificacion_casa_central.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_identificacion_casa_central.md",
+          "exists": true,
+          "size_bytes": 815
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_identificacion_casa_central.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "junta_directiva",
+      "nombre_proceso": "Junta directiva",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/04_proceso_junta_directiva.py",
+          "exists": true,
+          "size_bytes": 2488
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_junta_directiva.yaml",
+          "exists": true,
+          "size_bytes": 1002
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_junta_directiva_esqueleto.json",
+          "exists": true,
+          "size_bytes": 475
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_junta_directiva.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_junta_directiva.md",
+          "exists": true,
+          "size_bytes": 773
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_junta_directiva.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "ayudas_estudiantiles",
+      "nombre_proceso": "Ayudas estudiantiles",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/05_proceso_ayudas_estudiantiles.py",
+          "exists": true,
+          "size_bytes": 2528
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_ayudas_estudiantiles.yaml",
+          "exists": true,
+          "size_bytes": 1032
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_ayudas_estudiantiles_esqueleto.json",
+          "exists": true,
+          "size_bytes": 490
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_ayudas_estudiantiles.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_ayudas_estudiantiles.md",
+          "exists": true,
+          "size_bytes": 788
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_ayudas_estudiantiles.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "investigacion",
+      "nombre_proceso": "Investigación",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/06_proceso_investigacion.py",
+          "exists": true,
+          "size_bytes": 2473
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_investigacion.yaml",
+          "exists": true,
+          "size_bytes": 992
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_investigacion_esqueleto.json",
+          "exists": true,
+          "size_bytes": 471
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_investigacion.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_investigacion.md",
+          "exists": true,
+          "size_bytes": 769
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_investigacion.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "sede",
+      "nombre_proceso": "Sede",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/07_proceso_sede.py",
+          "exists": true,
+          "size_bytes": 2400
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_sede.yaml",
+          "exists": true,
+          "size_bytes": 936
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_sede_esqueleto.json",
+          "exists": true,
+          "size_bytes": 442
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_sede.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_sede.md",
+          "exists": true,
+          "size_bytes": 740
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_sede.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "campus",
+      "nombre_proceso": "Campus",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/08_proceso_campus.py",
+          "exists": true,
+          "size_bytes": 2416
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_campus.yaml",
+          "exists": true,
+          "size_bytes": 948
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_campus_esqueleto.json",
+          "exists": true,
+          "size_bytes": 448
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_campus.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_campus.md",
+          "exists": true,
+          "size_bytes": 746
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_campus.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "dependencias",
+      "nombre_proceso": "Dependencias",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/09_proceso_dependencias.py",
+          "exists": true,
+          "size_bytes": 2464
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_dependencias.yaml",
+          "exists": true,
+          "size_bytes": 984
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_dependencias_esqueleto.json",
+          "exists": true,
+          "size_bytes": 466
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_dependencias.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_dependencias.md",
+          "exists": true,
+          "size_bytes": 764
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_dependencias.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "docentes",
+      "nombre_proceso": "Docentes",
+      "tipo_proceso": "mixto",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/10_proceso_docentes.py",
+          "exists": true,
+          "size_bytes": 2432
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_docentes.yaml",
+          "exists": true,
+          "size_bytes": 985
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_docentes_esqueleto.json",
+          "exists": true,
+          "size_bytes": 492
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_docentes.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_docentes.md",
+          "exists": true,
+          "size_bytes": 752
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_docentes.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "origen_estudiantes",
+      "nombre_proceso": "Origen estudiantes",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/11_proceso_origen_estudiantes.py",
+          "exists": true,
+          "size_bytes": 2512
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_origen_estudiantes.yaml",
+          "exists": true,
+          "size_bytes": 1021
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_origen_estudiantes_esqueleto.json",
+          "exists": true,
+          "size_bytes": 485
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_origen_estudiantes.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_origen_estudiantes.md",
+          "exists": true,
+          "size_bytes": 782
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_origen_estudiantes.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "inmueble",
+      "nombre_proceso": "Inmueble",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/12_proceso_inmueble.py",
+          "exists": true,
+          "size_bytes": 2432
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_inmueble.yaml",
+          "exists": true,
+          "size_bytes": 961
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_inmueble_esqueleto.json",
+          "exists": true,
+          "size_bytes": 455
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_inmueble.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_inmueble.md",
+          "exists": true,
+          "size_bytes": 752
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_inmueble.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "biblioteca",
+      "nombre_proceso": "Biblioteca",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/13_proceso_biblioteca.py",
+          "exists": true,
+          "size_bytes": 2448
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_biblioteca.yaml",
+          "exists": true,
+          "size_bytes": 974
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_biblioteca_esqueleto.json",
+          "exists": true,
+          "size_bytes": 461
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_biblioteca.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_biblioteca.md",
+          "exists": true,
+          "size_bytes": 758
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_biblioteca.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "laboratorios_talleres",
+      "nombre_proceso": "Laboratorios y talleres",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/14_proceso_laboratorios_talleres.py",
+          "exists": true,
+          "size_bytes": 2538
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_laboratorios_talleres.yaml",
+          "exists": true,
+          "size_bytes": 1045
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_laboratorios_talleres_esqueleto.json",
+          "exists": true,
+          "size_bytes": 498
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_laboratorios_talleres.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_laboratorios_talleres.md",
+          "exists": true,
+          "size_bytes": 795
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_laboratorios_talleres.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "nuevos_programas",
+      "nombre_proceso": "Nuevos programas",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/15_proceso_nuevos_programas.py",
+          "exists": true,
+          "size_bytes": 2496
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_nuevos_programas.yaml",
+          "exists": true,
+          "size_bytes": 1011
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_nuevos_programas_esqueleto.json",
+          "exists": true,
+          "size_bytes": 479
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_nuevos_programas.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_nuevos_programas.md",
+          "exists": true,
+          "size_bytes": 776
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_nuevos_programas.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "evolucion_programas",
+      "nombre_proceso": "Evolución de programas",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/16_proceso_evolucion_programas.py",
+          "exists": true,
+          "size_bytes": 2524
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_evolucion_programas.yaml",
+          "exists": true,
+          "size_bytes": 1037
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_evolucion_programas_esqueleto.json",
+          "exists": true,
+          "size_bytes": 496
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_evolucion_programas.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_evolucion_programas.md",
+          "exists": true,
+          "size_bytes": 793
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_evolucion_programas.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "evolucion_carreras",
+      "nombre_proceso": "Evolución de Carreras",
+      "tipo_proceso": "csv",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/17_proceso_evolucion_carreras.py",
+          "exists": true,
+          "size_bytes": 2516
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_evolucion_carreras.yaml",
+          "exists": true,
+          "size_bytes": 1043
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_evolucion_carreras_esqueleto.json",
+          "exists": true,
+          "size_bytes": 507
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_evolucion_carreras.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_evolucion_carreras.md",
+          "exists": true,
+          "size_bytes": 790
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_evolucion_carreras.csv",
+          "exists": true,
+          "size_bytes": 771
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "egresados_titulados",
+      "nombre_proceso": "Egresados y titulados",
+      "tipo_proceso": "mixto",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/18_proceso_egresados_titulados.py",
+          "exists": true,
+          "size_bytes": 2522
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_egresados_titulados.yaml",
+          "exists": true,
+          "size_bytes": 1083
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_egresados_titulados_esqueleto.json",
+          "exists": true,
+          "size_bytes": 543
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_egresados_titulados.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_egresados_titulados.md",
+          "exists": true,
+          "size_bytes": 789
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_egresados_titulados.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "administracion",
+      "nombre_proceso": "Administración",
+      "tipo_proceso": "manual",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/19_proceso_administracion.py",
+          "exists": true,
+          "size_bytes": 2481
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_administracion.yaml",
+          "exists": true,
+          "size_bytes": 1001
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_administracion_esqueleto.json",
+          "exists": true,
+          "size_bytes": 475
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_administracion.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_administracion.md",
+          "exists": true,
+          "size_bytes": 772
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_administracion.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "malla_curricular",
+      "nombre_proceso": "Malla curricular",
+      "tipo_proceso": "csv",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/20_proceso_malla_curricular.py",
+          "exists": true,
+          "size_bytes": 2496
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_malla_curricular.yaml",
+          "exists": true,
+          "size_bytes": 1062
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_malla_curricular_esqueleto.json",
+          "exists": true,
+          "size_bytes": 507
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_malla_curricular.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_malla_curricular.md",
+          "exists": true,
+          "size_bytes": 776
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_malla_curricular.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "sobre_carga_datos",
+      "nombre_proceso": "Sobre la carga de datos",
+      "tipo_proceso": "csv",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/21_proceso_sobre_carga_datos.py",
+          "exists": true,
+          "size_bytes": 2510
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_sobre_carga_datos.yaml",
+          "exists": true,
+          "size_bytes": 1042
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_sobre_carga_datos_esqueleto.json",
+          "exists": true,
+          "size_bytes": 484
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_sobre_carga_datos.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_sobre_carga_datos.md",
+          "exists": true,
+          "size_bytes": 791
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_sobre_carga_datos.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "errores_carga",
+      "nombre_proceso": "Errores en la carga",
+      "tipo_proceso": "no_informado",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/22_proceso_errores_carga.py",
+          "exists": true,
+          "size_bytes": 2478
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_errores_carga.yaml",
+          "exists": true,
+          "size_bytes": 1010
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_errores_carga_esqueleto.json",
+          "exists": true,
+          "size_bytes": 481
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_errores_carga.xlsx",
+          "exists": true,
+          "size_bytes": 8858
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_errores_carga.md",
+          "exists": true,
+          "size_bytes": 779
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_errores_carga.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    },
+    {
+      "id_proceso": "obtencion_reportes",
+      "nombre_proceso": "Obtención de reportes",
+      "tipo_proceso": "no_informado",
+      "estado_implementacion": "esqueleto",
+      "archivos": {
+        "script": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/scripts/procesos/23_proceso_obtencion_reportes.py",
+          "exists": true,
+          "size_bytes": 2516
+        },
+        "yaml": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/config/reglas/reglas_obtencion_reportes.yaml",
+          "exists": true,
+          "size_bytes": 1027
+        },
+        "diccionario": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/diccionarios/diccionario_obtencion_reportes_esqueleto.json",
+          "exists": true,
+          "size_bytes": 483
+        },
+        "plantilla_excel": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/plantillas_salida/plantilla_salida_obtencion_reportes.xlsx",
+          "exists": true,
+          "size_bytes": 8855
+        },
+        "plantilla_markdown": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/resultados/reportes_validacion/PLANTILLA_REPORTE_obtencion_reportes.md",
+          "exists": true,
+          "size_bytes": 790
+        },
+        "fixture": {
+          "path": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/data/fixtures/fixture_obtencion_reportes.csv",
+          "exists": true,
+          "size_bytes": 25
+        }
+      },
+      "pendientes": []
+    }
+  ]
+}

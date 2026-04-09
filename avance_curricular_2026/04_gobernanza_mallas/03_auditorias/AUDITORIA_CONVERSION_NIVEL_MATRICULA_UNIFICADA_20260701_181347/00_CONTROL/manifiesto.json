@@ -1,0 +1,22 @@
+{
+  "auditoria": "AUDITORIA_CONVERSION_NIVEL_MATRICULA_UNIFICADA",
+  "timestamp": "20260701_181347",
+  "carpeta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/AUDITORIA_CONVERSION_NIVEL_MATRICULA_UNIFICADA_20260701_181347",
+  "excel": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/AUDITORIA_CONVERSION_NIVEL_MATRICULA_UNIFICADA_20260701_181347/06_RESULTADOS/AUDITORIA_CONVERSION_NIVEL_MU.xlsx",
+  "conclusion": "EQUIVALENCIA_DE_NIVEL_NO_DEMOSTRADA",
+  "scripts_mu_revisados": 38,
+  "referencias_nivel_encontradas": 24621,
+  "fuente_original_nivel": "PROMEDIOSDEALUMNOS: DatosAlumnos.NIVEL y Hoja1.NIVEL",
+  "formula_conversion_encontrada": "DA_NIVEL > INPUT_NIVEL/NIV_ACA; trimestral->semestral si REGIMEN TRIM; cap duración/cohorte; default 1",
+  "semantica_tecnica_mu": "NIV_ACA como posición curricular del matriculado; Hoja1.NIVEL como nivel de ramo/malla",
+  "estado_gobernanza": "GOBERNADA_Y_REPRODUCIBLE para MU; NO_CONFIRMADA para reutilización en Avance",
+  "planes_comparados": 10,
+  "asignaturas_comparables": 306,
+  "contradicciones": 0,
+  "casos_candidatos_desbloqueo": 0,
+  "casos_requieren_validacion": 33,
+  "fuentes_modificadas": "NO",
+  "scripts_modificados": "NO",
+  "matriz_avance_modificada": "NO",
+  "archivo_carga_generado": "NO"
+}

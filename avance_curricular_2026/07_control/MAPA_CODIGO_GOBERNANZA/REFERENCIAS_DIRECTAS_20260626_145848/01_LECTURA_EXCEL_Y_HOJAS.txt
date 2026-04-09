@@ -1,0 +1,67 @@
+140:    Path.home() / "Downloads" / "PROMEDIOSDEALUMNOS_7804.xlsx",
+371:    """Carga registros mínimos de DatosAlumnos para buscar origen previo por RUT."""
+373:        xls = pd.ExcelFile(input_file)
+374:        if "DatosAlumnos" not in xls.sheet_names:
+377:        src = pd.read_excel(input_file, sheet_name="DatosAlumnos", usecols=lambda c: c in keep)
+619:    # El histórico Hoja1 usa PERIODO=3 como equivalente operacional de segundo semestre.
+1120:    # DatosAlumnos usa códigos institucionales M/F/S; el manual MU exige H/M/NB.
+1146:    """Carga lookup por CODCLI desde hoja DatosAlumnos para gobernanza v2.
+1151:        xls = pd.ExcelFile(input_file)
+1152:        if "DatosAlumnos" not in xls.sheet_names:
+1155:        src = pd.read_excel(input_file, sheet_name="DatosAlumnos")
+1238:        # DatosAlumnos debería tener 1 fila por CODCLI; ante conflicto, conservar primera.
+1313:                "PRIORIDAD": "MEDIA (sin match en DatosAlumnos)",
+1319:                "ACCION_REQUERIDA": "Verificar si alumnos existen en hoja DatosAlumnos",
+1343:            for sheet_name, df in sheets.items():
+1344:                df.to_excel(writer, index=False, sheet_name=sheet_name[:31])
+1636:            xls = pd.ExcelFile(rp)
+1641:        for sheet in xls.sheet_names:
+1643:                cols = set(pd.read_excel(rp, sheet_name=sheet, nrows=0).columns)
+1657:            available_cols = set(pd.read_excel(rp, sheet_name=target_sheet, nrows=0).columns)
+1659:            dim = pd.read_excel(
+1661:                sheet_name=target_sheet,
+1802:    book = pd.read_excel(path, sheet_name=None)
+1816:        # Modo compatible para archivos legacy tipo "Hoja1" con CODCARR/PLAN_DE_ESTUDIO.
+1817:        hoja1 = book.get("Hoja1")
+1858:        print("Modo compatible activado: se derivaron Carreras/Matrícula/Equivalencia desde Hoja1.")
+2119:    sheet_name: str | None = None,
+2129:    filtro_base_datos_sheet: str | None = None,
+2138:    xls = pd.ExcelFile(input_file)
+2139:    selected_sheet = sheet_name or xls.sheet_names[0]
+2141:    # --- Filtro por hoja base_datos: conservar solo filas cuyo RUT aparezca en la hoja ---
+2142:    # Auto-detectar: si no se pasó el flag pero existe "base_datos" en el Excel, usarla
+2143:    _filtro_bd_sheet = filtro_base_datos_sheet
+2144:    if _filtro_bd_sheet is None and "base_datos" in xls.sheet_names:
+2145:        _filtro_bd_sheet = "base_datos"
+2146:        print("  ℹ️ Auto-detectada hoja 'base_datos' → se aplicará filtro por RUT")
+2149:    # Si existe base_datos (filtro por RUT activado), concatenar TODAS las hojas que
+2152:    _HOJAS_EXCLUIR = {"DatosAlumnos", _filtro_bd_sheet or "", "base_datos"}
+2167:        book_all = pd.read_excel(input_file, sheet_name=None)
+2175:            _sheet_names_used = [s for s, _ in src_sheets]
+2176:            print(f"  ℹ️ Modo multi-hoja: concatenando {len(src_sheets)} hojas de matrícula: {_sheet_names_used}")
+2178:            selected_sheet = "+".join(_sheet_names_used)
+2184:            selected_sheet = sheet_name or xls.sheet_names[0]
+2185:            src = pd.read_excel(input_file, sheet_name=selected_sheet)
+2188:        src = pd.read_excel(input_file, sheet_name=selected_sheet)
+2191:    if _filtro_bd_sheet and _filtro_bd_sheet in xls.sheet_names:
+2192:        bd_df = pd.read_excel(input_file, sheet_name=_filtro_bd_sheet)
+2204:            print(f"  🔎 base_datos col='{bd_rut_col}' → {len(bd_ruts)} RUTs únicos "
+2218:                print(f"  🔎 RUTs en base_datos sin match en fuente: {len(_ruts_sin_match)} "
+2232:                print(f"  🔎 Filtro base_datos: {len(bd_ruts)} RUTs → {n_before} → {n_after} filas ({n_before - n_after} descartadas)")
+2234:                print(f"  ⚠️ Filtro base_datos: no se encontró columna RUT en hoja fuente")
+2236:            print(f"  ⚠️ Filtro base_datos: no se encontró columna N_DOC/RUT en hoja '{_filtro_bd_sheet}'")
+2238:        print(f"  ⚠️ Filtro base_datos: hoja '{_filtro_bd_sheet}' no existe en el Excel")
+2765:    # Prioridad: DA_NIVEL (nivel alumno en DatosAlumnos) > INPUT_NIVEL (nivel del ramo en malla Hoja1)
+2868:    # NIV_ACA: priorizar DA_NIVEL (nivel alumno) sobre Hoja1.NIVEL (nivel del ramo en malla)
+3089:    # Fallback Hoja1 cuando no hay match completo en DatosAlumnos.
+4355:    # Match DatosAlumnos
+4380:        {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Sin match DatosAlumnos", "valor": _sin_match_da_n, "pct": f"{_sin_match_da_n/len(archivo_subida)*100:.1f}%"},
+4498:        _report["filtro_base_datos"] = _filtro_bd_stats
+4846:        xls = pd.ExcelFile(input_file)
+4848:        for sheet in xls.sheet_names:
+4854:        hm = pd.read_excel(input_file, sheet_name=target)
+5180:        help="Ruta del Excel de entrada (por defecto detecta PROMEDIOSDEALUMNOS_7804.xlsx si existe).",
+5242:            "Ejemplo: --filtro-base-datos-sheet base_datos"
+5250:            "Activa el nuevo flujo de matrícula (enriquecimiento por CODCLI con hoja DatosAlumnos). "
+5290:            sheet_name=args.sheet,
+5300:            filtro_base_datos_sheet=args.filtro_base_datos_sheet,

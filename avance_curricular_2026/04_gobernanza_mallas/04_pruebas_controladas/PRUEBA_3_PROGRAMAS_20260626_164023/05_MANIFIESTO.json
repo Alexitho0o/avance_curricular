@@ -1,0 +1,48 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproceso": "Carreras",
+  "anio_datos": 2025,
+  "ejecucion": "PRUEBA_3_PROGRAMAS",
+  "fecha": "2026-06-26T16:40:23.553059-04:00",
+  "fuentes": {
+    "hoja1": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv",
+    "matriz": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_MATRIZ.tsv",
+    "puente": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_integral_multicodcli_2026/auditoria_20260618_144641/00_RESPALDO_ENTRADAS/PUENTE_SIES_COMPILADO.tsv"
+  },
+  "programas": [
+    {
+      "TIPO_MUESTRA": "TRIMESTRAL",
+      "CODCARR": "TCRE",
+      "PLAN_DE_ESTUDIO": "TCRE20241",
+      "JORNADA": "O",
+      "CODIGO_UNICO": "I162S2C6J4V2",
+      "ESTADO_CRUCE": "CODIGO_UNICO_NO_BLOQUEANTE"
+    },
+    {
+      "TIPO_MUESTRA": "SEMESTRAL_ANTIGUA",
+      "CODCARR": "TMIRE",
+      "PLAN_DE_ESTUDIO": "TMIRE20171",
+      "JORNADA": "V",
+      "CODIGO_UNICO": "I162S2C11J2V1",
+      "ESTADO_CRUCE": "CODIGO_UNICO_NO_BLOQUEANTE"
+    },
+    {
+      "TIPO_MUESTRA": "BIMESTRAL_ANTIGUA",
+      "CODCARR": "IECSREOL",
+      "PLAN_DE_ESTUDIO": "IECSREOL20211",
+      "JORNADA": "O",
+      "CODIGO_UNICO": "I162S2C46J4V3",
+      "ESTADO_CRUCE": "CODIGO_UNICO_NO_BLOQUEANTE"
+    }
+  ],
+  "reglas_candidatas": {
+    "tipo_unidad_medida": "1=Asignaturas/cursos/módulos",
+    "unidad": "RAMOEQUIV cuando existe; en caso contrario CODRAMO",
+    "trimestral_a_anio": "niveles agrupados de tres; pendiente validación",
+    "semestral_a_anio": "niveles agrupados de dos; pendiente validación",
+    "bimestral_a_anio": "sin conversión automática"
+  },
+  "clasificacion": "IMPLEMENTACION_TECNICA_CANDIDATA_NO_OFICIAL",
+  "precargas_modificadas": false,
+  "pes_generado": false
+}

@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-07-03T12:52:00-04:00",
+  "proceso": "Avance Curricular SIES 2026",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "carpeta_proceso": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026",
+  "fuentes_seleccionadas": [
+    {
+      "ROL": "FUENTE_NORMATIVA_PRINCIPAL",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/Instructivo_Avance Curricular SIES - 2026.txt",
+      "SHA256": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "CRITERIO": "Ruta congelada previa del proyecto y nombre exacto indicado en el prompt."
+    },
+    {
+      "ROL": "PRECARGA_CARRERAS_5810",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/5810_Precarga Carreras Avance Curricular 20268.csv",
+      "SHA256": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+      "CRITERIO": "Archivo CSV original congelado; 5809 no corresponde a carreras segun prompt."
+    },
+    {
+      "ROL": "PRECARGA_MATRICULA_5809",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/5809_Precarga Matrícula Avance Curricular 2026.csv",
+      "SHA256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "CRITERIO": "Archivo CSV original congelado 5809 indicado por prompt."
+    },
+    {
+      "ROL": "FUENTE_ESTUDIANTES_PROMEDIOS",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "SHA256": "3013fed700f871f93379bc93ebf974910f30c7c4320d40bd3d8b8638fad6a5fb",
+      "CRITERIO": "Ruta principal del repositorio indicada por el prompt. La comparacion /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/COMPARACION_PROMEDIOS_CONGELADO_VS_INPUT_20260701_232300 documenta cero diferencias reales contra congelado anterior."
+    },
+    {
+      "ROL": "FUENTE_PLANES_ESTUDIO",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/01_fuentes_institucionales/planes_estudio/Listado_Planes_estudio_Sedes_RE_CO_20260701.xlsx",
+      "SHA256": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+      "CRITERIO": "Ruta institucional vigente dentro de avance_curricular_2026."
+    }
+  ],
+  "inventario": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/01_FUENTES/INVENTARIO_FUENTES.tsv",
+  "duplicados_fisicos": 5
+}

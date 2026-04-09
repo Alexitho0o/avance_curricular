@@ -1,0 +1,79 @@
+============================================================
+COLUMNAS OFICIALES DEFINIDAS EN EL CÓDIGO
+============================================================
+113:CARRERAS_AC_COLUMNS = [
+120:MATRICULA_AC_COLUMNS = [
+128:ANUAL_COLS = [
+1995:    for col in CARRERAS_AC_COLUMNS:
+1998:    return out[CARRERAS_AC_COLUMNS].copy()
+2018:    for col in MATRICULA_AC_COLUMNS:
+2021:    return out[MATRICULA_AC_COLUMNS].copy()
+4534:    _check_schema(carr, CARRERAS_AC_COLUMNS, "carreras", issues)
+4552:    annual = carr[ANUAL_COLS].apply(pd.to_numeric, errors="coerce").fillna(0).sum(axis=1)
+4566:    _check_schema(mat, MATRICULA_AC_COLUMNS, "matricula_ac", issues)
+5012:        "carreras_ac": {c: "template_preserved" for c in CARRERAS_AC_COLUMNS},
+5013:        "matricula_ac": {c: "template_preserved" for c in MATRICULA_AC_COLUMNS},
+
+============================================================
+FUNCIÓN DE EXPORTACIÓN CONTROL/PES
+============================================================
+def exportar_control_y_pes(
+    df: pd.DataFrame, control_path: Path, pes_path: Path, issues: list[Issue], area: str
+) -> None:
+    df.to_csv(control_path, index=False, encoding="utf-8")
+    if "CODIGO_IES_NUM" not in df.columns:
+        issues.append(Issue("ERROR", area, "No existe CODIGO_IES_NUM para generar pes_ready"))
+        return
+    pes = df.drop(columns=["CODIGO_IES_NUM"])
+    pes.to_csv(pes_path, index=False, header=False, encoding="utf-8")
+
+
+def _profile_column(series: pd.Series) -> dict[str, float]:
+    s = series.astype(object)
+    null_pct = float(s.isna().mean())
+    zero_pct = float((pd.to_numeric(s, errors="coerce") == 0).fillna(False).mean())
+    default_like_pct = float(s.fillna("").astype(str).str.strip().isin(["", "0", "NO", "N/A", "NA"]).mean())
+    return {
+        "null_pct": round(null_pct, 4),
+        "zero_pct": round(zero_pct, 4),
+        "default_like_pct": round(default_like_pct, 4),
+    }
+
+
+def _is_binary_valid(series: pd.Series) -> pd.Series:
+    s = series.astype(object)
+    as_text = s.astype(str).str.strip()
+    as_num = pd.to_numeric(s, errors="coerce")
+    valid = as_text.isin(["0", "1"]) | as_num.isin([0, 1])
+    return valid | s.isna()
+
+
+
+============================================================
+RUTAS Y ENTRADA POR DEFECTO
+============================================================
+139:DEFAULT_INPUT_CANDIDATES = [
+140:    Path.home() / "Downloads" / "PROMEDIOSDEALUMNOS_7804.xlsx",
+142:DEFAULT_CATALOGO_MANUAL_CANDIDATES = [
+147:DEFAULT_PUENTE_SIES_CANDIDATES = [
+153:DEFAULT_GOB_NAC_CANDIDATES = [
+158:DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES = [
+163:DEFAULT_GOB_SEDE_CANDIDATES = [
+168:DEFAULT_GOB_FOR_ING_ACT_CANDIDATES = [
+173:DEFAULT_GOB_HOJA1_ESTADO_DESC_CANDIDATES = [
+177:DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES = [
+181:DEFAULT_GOB_DA_ESTADO_SITUACION_CANDIDATES = [
+185:DEFAULT_OFERTA_ACADEMICA_XLSX_CANDIDATES = [
+212:def _default_input_arg() -> str:
+213:    existing = _first_existing_path(DEFAULT_INPUT_CANDIDATES)
+216:    return str(DEFAULT_INPUT_CANDIDATES[-1])
+346:    path = _first_existing_path(DEFAULT_GOB_FOR_ING_ACT_CANDIDATES)
+1619:    candidates.extend(DEFAULT_OFERTA_ACADEMICA_XLSX_CANDIDATES)
+2358:    gob_hoja1_estado_desc_path = _first_existing_path(DEFAULT_GOB_HOJA1_ESTADO_DESC_CANDIDATES)
+2359:    gob_da_estado_situ_path = _first_existing_path(DEFAULT_GOB_DA_ESTADO_SITUACION_CANDIDATES)
+5180:        help="Ruta del Excel de entrada (por defecto detecta PROMEDIOSDEALUMNOS_7804.xlsx si existe).",
+5281:        catalogo_manual_tsv_path = _resolve_optional_path(args.catalogo_manual_tsv, DEFAULT_CATALOGO_MANUAL_CANDIDATES)
+5283:        gob_nac_tsv_path = _resolve_optional_path(args.gob_nac_tsv, DEFAULT_GOB_NAC_CANDIDATES)
+5284:        gob_pais_est_sec_tsv_path = _resolve_optional_path(args.gob_pais_est_sec_tsv, DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES)
+5285:        gob_sede_tsv_path = _resolve_optional_path(args.gob_sede_tsv, DEFAULT_GOB_SEDE_CANDIDATES)
+5286:        sit_fon_sol_patch_json_path = _resolve_optional_path(args.sit_fon_sol_patch_json, DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES)

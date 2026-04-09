@@ -1,0 +1,3901 @@
+
+--- Página 1 ---
+MANUAL DEL SISTEMA INDICES CNED
+Abril 2025
+1
+--- Página 2 ---
+Manual de Sistema INDICES – abril/2025
+Tabla de Contenidos
+1. INTRODUCCIÓN ...................................................................................................................... 3
+1.1. PROCESO INDICES........................................................................................................ 3
+1.2. ADMINISTRADOR ........................................................................................................... 3
+2. SECCIÓN: IDENTIFICACIÓN Y CASA CENTRAL............................................................ 4
+3. SECCIÓN: JUNTA DIRECTIVA ............................................................................................ 5
+4. SECCIÓN: AYUDAS ESTUDIANTILES............................................................................... 5
+5. SECCIÓN: INVESTIGACIÓN ................................................................................................. 7
+6. SECCIÓN: SEDE ..................................................................................................................... 8
+7. SECCIÓN: CAMPUS ............................................................................................................... 9
+8. SECCIÓN: DEPENDENCIAS ................................................................................................ 9
+9. SECCIÓN: DOCENTES ........................................................................................................ 10
+10. SECCIÓN: ORIGEN ESTUDIANTES ............................................................................. 13
+11. SECCIÓN: INMUEBLE ..................................................................................................... 16
+12. SECCIÓN: BIBLIOTECA .................................................................................................. 16
+13. SECCIÓN: LABORATORIOS Y TALLERES ................................................................ 24
+14. SECCIÓN: NUEVOS PROGRAMAS .............................................................................. 26
+15. SECCIÓN: EVOLUCIÓN DE PROGRAMAS ................................................................ 32
+16. SECCIÓN: EGRESADOS Y TITULADOS ..................................................................... 39
+17. SECCIÓN: ADMINISTRACIÓN ....................................................................................... 40
+18. CARGA DE ARCHIVO CSV DE EVOLUCIÓN DE CARRERAS ............................... 41
+19. CARGA DE ARCHIVO CSV DE EGRESADOS Y TITULADOS ................................ 53
+20. CARGA DE ARCHIVO CSV DE DOCENTES ............................................................... 56
+21. MALLA CURIICULAR: VARIABLES SOLICITADAS Y DEFINICIONES ................ 63
+22. SOBRE LA CARGA DE DATOS ..................................................................................... 63
+23. ERRORES EN LA CARGA DE DATOS......................................................................... 67
+24. OBTENCIÓN DE REPORTES ......................................................................................... 68
+25. ANEXO ................................................................................................................................. 71
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+2
+--- Página 3 ---
+Manual de Sistema INDICES – abril/2025
+1. INTRODUCCIÓN
+1.1. PROCESO INDICES
+Este proceso histórico, consiste en la recopilación de datos de educación superior
+(IES) y su análisis (CNED). Las instituciones de educación superior entregan datos
+sobre diferentes dimesiones de su estructura: matrículas, aranceles, docentes,
+matrícula, biblioteca, inmuebles, laboratorios y talleres entre otros, permitiendo
+realizar una caracterización del sistema de educación. El nuevo portal INDICES que
+permitirá una mejor interacción del usuario con el portal y facilitará el traspaso de
+información desde la institución al CNED.
+El proceso INDICES se dividie en cuatro etapas. Estas son:
+i. Recopilación de datos de educación superior a través del portal INDICES, las
+instituciones de educación superior transfieres los datos de las diferentes
+dimensiones solicitadas.
+ii. Extracción de la información, transformación y carga.
+iii. Validación de las bases de datos, en la que se verifica la consistencia y
+coherencia de las bases de datos generadas.
+iv. Presentación de los datos utilizando la herramienta de visualizacion de datos
+“Tableau”.
+1.2. ADMINISTRADOR
+A continuación, presentamos algunas consideraciones que debe tener en cuenta la
+institución:
+i. Para ingresar al sistema de recopilación INDICES la institución debe definir un
+administrador del sistema, quien será el responsable de manejar códigos,
+contraseñas y de transferir la información al sistema. Se requiere ingresar los
+datos del administrador, entre ellos: nombre, RUT, cargo, profesión, teléfono(s)
+de contacto(s) y dirección de correo electrónico.
+ii. Si la institución cambia de administrador, se solicita enviar un correo al
+responsable de INDICES comunicando la situación y remitiendo los datos del
+nuevo administrador.
+iii. Si el administrador extravía la contraseña puede ingresar a la sección “¿Olvidó
+su password?” El sistema solicitará el RUT del administrador y el código de la
+institución.
+iv. El administrador puede generar distintintos usuarios quienes podrán acceder a
+algunas partes del sistema para ingresar información en secciones especificas.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+3
+--- Página 4 ---
+Manual de Sistema INDICES – abril/2025
+2. SECCIÓN: IDENTIFICACIÓN Y CASA CENTRAL
+A continuación presentamos las definiciones relacionadas con la identificación de la
+institución de educación superior.
+Tabla 1: Identificación
+Variable Definición Formato
+Código Institución Código CNED de la institución
+Nombre oficial de la
+Nombre institución
+institución.
+Sigla CNED con la que se
+Sigla de la institución
+reconoce la institución.
+Año en que la institución dio
+Año de inicio de actividades inicio oficialmente a sus
+actividades académicas.
+Nombre de la persona jurídica
+propietaria, controladora o
+administradora de la
+institución. Es posible utilizar
+el nombre abreviado de la
+Nombre del propietario/ misma, siempre que éste
+controlador/ administrador conste en sus instrumentos
+constitutivos o sus
+modificaciones. En el caso de
+las universidades estatales, se
+deberá colocar: "Estado de
+Chile".
+Nombres, apellido paterno y
+materno del Rector en
+Rector ejercicio al momento de
+completar el presente
+formulario.
+Los posibles Tipos son:
+a) Universidad.
+Tipo de Institución Clasificación de la institución. b) I. P.
+c) C.F.T.
+d) FF.AA.
+Información específica de la casa central de la institución.
+Tabla 2: Casa Central
+Variable Definición
+Comuna Comuna donde se ubica la administración central de la institución.
+Dirección Indique el nombre de la calle y el número donde se ubica la administración
+(Calle, Número) central de la institución.
+Página Web Dirección de la página Web de la Institución.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+4
+--- Página 5 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición
+Información general de la institución que considere importante consignar, por
+Observaciones
+ejemplo, la misión/visión/objetivos institucionales.
+Latitud y Indique la latitud y longitud de la Casa Central. Se recomienda obtener esta
+Longitud información desde Google Maps.
+3. SECCIÓN: JUNTA DIRECTIVA
+En esta sección se indica los integrantes de la junta directiva y su Rut asociado.
+Tabla 3: Junta Directiva
+Variable Definición
+Rol Único Tributario de cada integrante de la junta directiva u órgano superior
+Rut
+de la institución.
+Identifique a los integrantes de la junta directiva u órgano superior de la
+Nombre
+institución
+4. SECCIÓN: AYUDAS ESTUDIANTILES
+Este módulo especifica las ayudas estudiantiles propias de la institución, excluyendo las
+ayudas estudiantiles por parte del estado. Pueden corresponder a beneficios de la
+institución o un programa. Si el beneficio está asociado a un programa debe seleccionar
+desde “alcance del beneficio” la opción “programa” y dirigirse a la sección “ayudas
+estudiantiles por programa” para seleccionar el conjunto de programas asociados con el
+beneficio.
+Tabla 4: Ayudas Estudiantiles
+Variable Definición Formato
+Nombre que la institución da
+Nombre del beneficio al beneficio de ayuda Texto
+estudiantil.
+Los posibles valores para
+seleccionar son:
+Corresponde a una a) Préstamos
+Tipo de beneficio clasificación del beneficio b) Créditos
+según su operacionalización. c) Becas
+d) Descuentos
+e) Otros
+Los posibles valores para
+Corresponde a una
+seleccionar son:
+Alcance del beneficio clasificación del beneficio
+a) Institucional
+según su alcance.
+b) Programa
+Los posibles valores para
+Corresponde al tipo de
+seleccionar son:
+Tipo de beneficiario beneficiario según su tipo de
+programa.
+a) Estudiante pregrado
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+5
+--- Página 6 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+b) Estudiante pregrado
+c) Otro
+Descripción breve de las
+características más relevantes
+del beneficio, indicando por
+ejemplo la política institucional
+Descripción del beneficio Texto
+que lo justifica, desde cuándo
+existe, periodicidad de la
+entrega, cupos disponibles,
+entre otros.
+Los posibles valores para
+seleccionar son:
+a) Arancel
+Corresponde al tipo de
+Características del beneficio. b) Alimentación
+beneficio según su objetivo.
+c) Matrícula
+d) Materiales
+e) Residencia
+f) Otros
+Descripción breve del objetivo
+Objetivo del beneficio general que motiva el Texto
+beneficio.
+Corresponde al monto total
+Número Positivo, expresado
+Monto total asignado asignado a cada beneficio
+en: Miles de pesos.
+para el año a reportar.
+Corresponde al número total
+de estudiantes que recibieron
+N° total de Beneficiarios Número Entero Positivo.
+cada beneficio para el año a
+reportar.
+Corresponde al monto total
+Monto total por asignado asignado dividido por el Número Real.
+número de beneficiarios.
+Indica si el beneficio requiere
+¿Requiere Postulación? Ticked.
+una postulación.
+Descripción breve de los
+criterios y requisitos fijados
+Criterios/ Requisitos de
+por la institución que deben Texto
+asignación
+cumplir los alumnos que
+deseen postular al beneficio.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+6
+--- Página 7 ---
+Manual de Sistema INDICES – abril/2025
+5. SECCIÓN: INVESTIGACIÓN
+La información reportada en esta sección corresponde al primer semestre del proceso en
+curso1.
+Tabla 5: Investigación
+Variable Definición
+Corresponde al número de personas por área del
+N° de investigadores jornada completa conocimiento que realizan labores de investigación,
+por área del conocimiento dedicando un mínimo de 33 horas semanales a
+dichas funciones.
+Corresponde al número de personas por área del
+N° de investigadores media jornada por conocimiento que realizan labores de investigación,
+área por área del conocimiento dedicando entre 20 y 32 horas semanales a dichas
+funciones.
+Corresponde al número de personas por área del
+N° de investigadores jornada hora por conocimiento que realizan labores de investigación,
+área por área del conocimiento dedicando menos de 19 horas semanales a dichas
+funciones.
+Corresponde al número de publicaciones indexadas
+N° de publicaciones WOS (ex ISI) por
+según la clasificación WOS (ex ISI) por área del
+área del conocimiento
+conocimiento.
+Corresponde al número de publicaciones indexadas
+N° de publicaciones SciELO por área del
+según la clasificación SciELO por área del
+conocimiento
+conocimiento.
+N° de Otras publicaciones por área del Corresponde al número de Otras publicaciones por
+conocimiento área del conocimiento.
+Corresponde al total de números de proyectos de
+investigación realizados en la institución durante el
+año anterior al reporte de datos, financiados con
+fondos internos (incluye todos los proyectos en
+N° de proyectos financiados con fondos ejecución independientemente del año de
+internos adjudicación). Para los indicadores de esta sección,
+si deben considerarse aquellos proyectos de
+investigación que impliquen una prestación de
+servicios. No debe considerarse como investigación
+la preparación de materiales para la docencia.
+Corresponde al número de proyectos adjudicados
+durante el año anterior al reporte de datos,
+financiados con fondos internos. Para los
+indicadores de esta sección, si deben considerarse
+N° de proyectos Nuevos
+aquellos proyectos de investigación que impliquen
+una prestación de servicios. No debe considerarse
+como investigación la preparación de materiales
+para la docencia.
+1 Si lo estima conveniente es posible actualizar el año anterior del proceso.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+7
+--- Página 8 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición
+Monto total anual, en miles de pesos, provenientes
+de fondos internos de la institución, que fueron
+Fondos internos, Monto M$
+ejecutados el año pasado a proyectos de
+investigación.
+6. SECCIÓN: SEDE
+INDICES considera como “Sede” a una ciudad determinada. Así “Sede” es definido como
+el conjunto de campus, centros docentes, facultades, escuelas, direcciones e institutos con
+que cuenta la institución en una ciudad determinada –y sus cercanías-, y que están
+permanentemente al servicio de las actividades académicas propias de la institución.
+En nombre de la sede debe incluir sólo la ciudad en que se encuentra el conjunto de
+unidades de la institución, no hace referencia a nombres de fantasía.
+Tabla 6: Sede
+Variable Definición Formato
+Corresponde al nombre de la
+ciudad, pudiendo ingresar sólo
+una sede por ciudad. No se
+Nombre (Ciudad)
+puede ingresar un nombre de
+fantasía, por ejemplo, “Casa
+Central".
+Código Código CNED de la sede.
+Corresponde al año en que la
+Año inicio actividades
+sede inició oficialmente sus
+académicas
+actividades académicas.
+Los posibles estados de las
+sedes son:
+a) “Funciona normalmente”, si
+atiende a estudiantes de
+primer año y de cursos
+superiores.
+Es una clasificación de la
+b)” Cerrada”, significa que
+sede según la situación de
+Estado de la sede para el año de proceso se
+funcionamiento en que se
+encuentra sin actividad.
+encuentra.
+c) “No admite nuevos
+estudiantes”, la sede atiende a
+estudiantes de cursos
+superiores, sin admisión de
+estudiantes primer año en los
+programas que ofrece.
+d) Administrativa
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+8
+--- Página 9 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Comuna donde se ubica la
+Comuna
+sede.
+Datos de localización de la
+sede. En el caso que una
+sede se componga de varios
+Dirección de la sede inmuebles, indique la
+dirección correspondiente a la
+administración central de la
+sede.
+Indique la latitud y longitud de
+la Sede. Se recomienda
+Latitud y Longitud
+obtener esta información
+desde Google Maps.
+7. SECCIÓN: CAMPUS
+Un campus –para INDICES- corresponde al conjunto de inmuebles que, dentro de la sede,
+se relacionan con ésta en aspectos administrativos, económicos y académicos. De esta
+manera, una sede puede estar compuesta por varios campus.
+El nombre de campus es definido por la institución.
+Tabla 7: Campus
+Variable Definición Formato
+Identificación del campus,
+Nombre Campus puede ingresar un nombre de
+fantasía.
+Las opciones de tipo son:
+Casa Central, Complejo
+Inmobiliario, Departamento,
+Clasificación del campus
+Clasificación 01 Predio agrícola, Centro
+según tipo de infraestructura.
+deportivo, Edificio, Casa,
+Campus Virtual
+Las opciones de tipo son:
+programas pregrado,
+Clasificación del campus
+Clasificación 02 programas pregrado y
+según uso.
+posgrado, administrativo,
+virtual.
+Comuna donde se ubica el
+Comuna
+campus.
+Dirección donde se ubica el
+Dirección
+campus.
+8. SECCIÓN: DEPENDENCIAS
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+9
+--- Página 10 ---
+Manual de Sistema INDICES – abril/2025
+Para la captura de datos en la plataforma INDICES, la dependencia corresponde a la unidad
+académica y/o administrativa de la cual dependen los programas de estudio. Esta
+clasificación será utilizada en el módulo de programas donde podrá seleccionar la
+dependencia de cada uno.
+El nombre de la dependencia lo define la institución, por ejemplo: Facultad de Ingeniería,
+Escuela de Artes, etc.
+Tabla 8: Dependencias
+Variable Definición Formato
+Corresponde al nombre de la
+dependencia definido por la
+Nombre institución, por ejemplo,
+Facultad de Ingeniería,
+Escuela de Artes, entre otros.
+Dirección donde se ubica la
+Dirección
+dependencia.
+Las opciones de tipo son:
+a) Facultad;
+Clasificación de la b) Escuela/Instituto;
+Tipo
+dependencia. c) Departamento;
+d) Unidad;
+e) Otro.
+Breve descripción de aspectos
+Otro sustantivos de la
+dependencia.
+Máxima autoridad de la
+Responsable
+dependencia
+Es una clasificación de la Las opciones de tipo son:
+dependencia según la a) Sí (abierto);
+Estado
+situación de funcionamiento b) No (cerrado);
+en que se encuentra.
+9. SECCIÓN: DOCENTES
+Esta sección se orienta a la caracterización de la planta académica, considerar los
+siguientes aspectos: i) Respecto a las horas semanales, referirse a las horas semanales
+destinadas a docencia y/o investigación según los contratos de la planta académica: ii)
+incluir las horas de docencia y/o investigaciones realizadas por parte de la planta
+administrativa, directivos de la institución o autoridades según corresponda.
+La clasificación según formación es la siguiente:
+• Doctor
+• Magíster
+• Especialista médico u odontólogo
+• Profesional y/o licenciado
+• Técnico de Nivel superior
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+10
+--- Página 11 ---
+Manual de Sistema INDICES – abril/2025
+• Sin título profesional ni grado académico
+Para efectos de INDICES, el tipo de jornada se clasifica de acuerdo con las horas
+semanales según los siguientes criterios:
+• Jornada Completa: 33 horas o más a la semana para docencia y/o investigación.
+• Media jornada: entre 20 y 32 horas a la semana para docencia y/o investigación.
+• Hora: menor o igual a 19 horas de docencia y/o investigación a la semana.
+La fecha de corte de los datos corresponde al primer semestre del año en proceso.
+Tabla 9: Docentes
+Variable Definición Formato
+Corresponde al número total de
+docentes o académicos con el grado de
+Doctor, Magíster, Profesional o
+Licenciado, Especialistas Médicos u
+Odontólogos, Técnicos de Nivel Superior
+y Otros docentes sin título o grado
+Docentes según formación
+académico que están contratados Número Entero
+académica contratados a
+durante el presente año a jornada P ositivo
+jornada completa
+completa en docencia y/o investigación,
+desagregados por sexo.
+Considere como jornada completa la de
+aquellos académicos o docentes cuyo
+contrato comprometa un mínimo de 33
+horas semanales.
+Corresponde al número total de horas
+semanales comprometidas en la sede
+por los de docentes o académicos con el
+grado de Doctor, Magíster, Profesional o
+Horas semanales de docentes Licenciado, Especialistas Médicos u Número Positivo,
+o académicos contratados a Odontólogos, Técnicos de Nivel Superior expresado en Horas
+jornada completa y Otros docentes sin título o grado Semanales.
+académico, que poseen contratos en
+régimen de jornada completa durante el
+presente año en docencia y/o
+investigación.
+Corresponde al monto en
+remuneraciones pagadas a los docentes
+con el grado de Doctor, Magíster,
+Profesional o Licenciado, Especialistas
+Gasto total en remuneración Número Positivo,
+Médicos u Odontólogos, Técnicos de
+de docentes contratados a expresado en Miles
+Nivel Superior y Otros docentes sin título
+jornada completa de pesos.
+o grado académico, que poseen
+contratos en régimen de jornada
+completa durante el presente año.
+Considerar la remuneración semanal.
+Docentes según formación Corresponde al número total de
+Número Entero
+académica contratados a docentes o académicos con el grado de
+Positivo
+jornada media Doctor, Magíster, Profesional o
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+11
+--- Página 12 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Licenciado, Especialistas Médicos u
+Odontólogos, Técnicos de Nivel Superior
+y Otros docentes sin título o grado
+académico que están contratados
+durante el presente año en jornada
+media, desagregados por sexo.
+Considere como media jornada la de
+aquellos académicos o docentes cuyo
+contrato comprometa entre 20 y 32
+horas semanales en docencia y/o
+investigación.
+Corresponde al número total de horas
+semanales comprometidas en la sede
+por los de docentes o académicos con el
+grado de Doctor, Magíster, Profesional o
+Horas semanales de docentes Licenciado, Especialistas Médicos u Número Positivo,
+o académicos contratados a Odontólogos, Técnicos de Nivel Superior expresado en Horas
+jornada media y Otros docentes sin título o grado Semanales.
+académico, que poseen contratos en
+régimen de jornada media durante el
+presente año en docencia y/o
+investigación.
+Corresponde al monto en
+remuneraciones pagadas a los docentes
+en aula con el grado de Doctor,
+Magíster, Profesional o Licenciado,
+Gasto total en remuneración Número Positivo,
+Especialistas Médicos u Odontólogos,
+de los docentes contratados a expresado en Miles
+Técnicos de Nivel Superior y Otros
+jornada media de pesos.
+docentes sin título o grado académico,
+que poseen contratos en régimen de
+jornada media durante el presente año.
+Considerar la remuneración semanal.
+Corresponde al número total de
+docentes o académicos con el grado de
+Doctor, Magíster, Profesional o
+Licenciado, Especialistas Médicos u
+Odontólogos, Técnicos de Nivel Superior
+y Otros docentes sin título o grado
+Docentes según formación académico que están contratados Número Entero
+contratados a jornada hora durante el presente año en jornada hora, Positivo
+desagregados por sexo. Considere
+como jornada hora la de aquellos
+académicos o docentes cuyo contrato
+comprometa un máximo de 19
+semanales en docencia y/o
+investigación.
+Corresponde al número total de horas
+Horas semanales de docentes semanales comprometidas en la sede Número Positivo,
+o académicos contratados a por los de docentes o académicos con el expresado en Horas
+jornada hora grado de Doctor, Magíster, Profesional o Semanales.
+Licenciado, Especialistas Médicos u
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+12
+--- Página 13 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Odontólogos, Técnicos de Nivel Superior
+y Otros docentes sin título o grado
+académico, que poseen contratos en
+régimen de jornada hora durante el
+presente año en docencia y/o
+investigación.
+Corresponde al monto en
+remuneraciones pagadas a los docentes
+en aula con el grado de Doctor,
+Magíster, Profesional o Licenciado,
+Gasto total en remuneración Número Positivo,
+Especialistas Médicos u Odontólogos,
+de los docentes contratados a expresado en Miles
+Técnicos de Nivel Superior y Otros
+jornada hora de pesos.
+docentes sin título o grado académico,
+que poseen contratos en régimen de
+jornada hora durante el presente año.
+Considerar la remuneración semanal.
+10. SECCIÓN: ORIGEN ESTUDIANTES
+a. Estudiantes según establecimiento de enseñanza media y educación superior
+Corresponde al número de estudiantes de primer año, desagregados por sede y sexo,
+de acuerdo con el tipo de establecimiento donde cursaron su enseñanza media; se
+solicita incluir también a los estudiantes que convalidan estudios.
+• Establecimientos municipales
+• Establecimientos subvencionados
+• Establecimientos particulares pagados
+• Otras Instituciones de educación superior
+• Otras carreras de la misma institución
+• Instituciones extranjeras de educación superior
+• Otros orígenes
+Nota: Si el estudiante proviene de establecimiento de administración delegada registrar
+como “otros orígenes”.
+Tabla 10: Origen Inmediato estudiante
+Variable Definición Formato
+Corresponde al N° total de estudiantes
+matriculados en primer año de las
+carreras o programas que se imparten
+N° de estudiantes de primer
+en la sede que provienen de
+año de establecimientos N° Entero Positivo
+establecimientos de enseñanza media
+municipales
+municipales y que no han estado
+anteriormente en la educación
+superior, desagregados por sexo.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+13
+--- Página 14 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Corresponde al N° total de estudiantes
+matriculados en primer año de las
+carreras o programas que se imparten
+N° de estudiantes de primer
+en la sede que provienen de
+año de establecimientos N° Entero Positivo
+estudiantes subvencionados y que no
+subvencionados
+han estado anteriormente en la
+educación superior, desagregados por
+sexo
+Corresponde al N° total de estudiantes
+matriculados en el primer año de las
+carreras o programas que se imparten
+N° de estudiantes de primer
+en la sede que provienen de
+año de establecimientos N° Entero Positivo
+establecimientos particulares pagados
+particular pagado
+y que no han estado anteriormente en
+la educación superior, desagregados
+por sexo.
+Corresponde al N° total de estudiantes
+N° de estudiantes de primer matriculados en el primer año de las
+año que provienen de otras carreras o programas que se imparten
+N° Entero Positivo
+instituciones de educación en la sede que provienen de otras
+superior instituciones de educación superior,
+desagregados por sexo.
+Corresponde al N° total de estudiantes
+matriculados en el primer año de las
+N° de estudiantes de primer
+carreras o programas que se imparten
+año que provienen de otras
+en la sede que provienen de otros N° Entero Positivo
+carreras de la misma
+programas ofrecidos por la institución,
+institución
+ya sea en la misma o en otra sede,
+desagregados por sexo.
+Corresponde al N° total de estudiantes
+matriculados en el primer año de las
+N° de estudiantes de primer carreras o programas que se imparten
+año que provienen de en la sede que a lo menos el último N° Entero Positivo
+instituciones extranjeras año lo hayan realizado en una
+institución extranjera de educación
+superior, desagregados por sexo
+Corresponde al N° total de estudiantes
+matriculados en el primer año de las
+N° de estudiantes de primer carreras o programas que se imparten
+N° Entero Positivo
+año otros orígenes en la sede que no pueden incluirse en
+ninguna de las categorías anteriores,
+desagregados por sexo.
+b. Estudiantes según residencia de sede
+Corresponde al N° de estudiantes de primer año, desagregados por sede y sexo, de
+acuerdo con su residencia en el último año:
+• Estudiantes de la Región
+• Estudiantes de otras regiones
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+14
+--- Página 15 ---
+Manual de Sistema INDICES – abril/2025
+• Estudiantes Extranjeros
+Tabla 11: Origen según Residencia
+Variable Definición Formato
+Corresponde al total de estudiantes
+matriculados en el primer año de las
+carreras o programas, cuya residencia
+N° de estudiantes de la región N° Entero Positivo
+en el último año se ubicaba en la misma
+región en que se encuentra la sede de la
+institución, desagregados por sexo.
+Corresponde al total de estudiantes
+matriculados en el primer año de las
+N° de estudiantes de otras carreras o programas, cuya residencia
+N° Entero Positivo
+regiones en el último año se ubicaba en una
+región distinta a la sede de la institución,
+desagregados por sexo.
+Corresponde al total de estudiantes de
+nacionalidad extranjera matriculados en
+N° de estudiantes extranjeros el primer año de las carreras o N° Entero Positivo
+programas que se imparten en la sede,
+desagregados por sexo.
+c. Estudiantes según tipo de formación de enseñanza media
+Corresponde N° de estudiantes de primer año, desagregados por sexo, de acuerdo con
+la modalidad de formación de enseñanza media:
+• Científico Humanista
+• Técnico Profesional
+• Escuelas Artísticas
+Tabla 12: Origen según Tipo Enseñanza Media
+Variable Definición Formato
+Corresponde a los estudiantes
+matriculados en primer año de las
+N° de estudiantes de primer
+carreras o programas que se imparten en
+año proveniente de
+la sede, cuyo origen académico N° Entero Positivo
+enseñanza media científico
+corresponda a un establecimiento
+humanista
+científico humanista, desagregados por
+sexo.
+Corresponde a los estudiantes
+N° de estudiantes de primer matriculados en primer año de las
+año proveniente de carreras o programas que se imparten en
+N° Entero Positivo
+enseñanza media técnico la sede, cuyo origen académico
+profesional corresponda a un establecimiento técnico
+profesional, desagregados por sexo.
+N° de estudiantes de primer Corresponde a los estudiantes
+N° Entero Positivo
+año proveniente de matriculados en prime año de las carreras
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+15
+--- Página 16 ---
+Manual de Sistema INDICES – abril/2025
+enseñanza media escuelas o programas que se imparten en la sede,
+artísticas cuyo origen académico corresponda a una
+escuela artística, desagregados por sexo.
+11. SECCIÓN: INMUEBLE
+Esta sección se orienta a la caracterización de inmuebles. La fecha de corte de los datos
+corresponde al primer semestre del año en proceso.
+Tabla 13: Inmueble
+Variable Definición Formato
+Corresponde al N° total de
+N° total de inmuebles inmuebles disponibles en la N° Entero Positivo.
+sede.
+Corresponde a la superficie
+N° Positivo, expresado en la
+total de los terrenos en que se
+Total m2 de terreno siguiente unidad: metros
+emplazan los inmuebles que
+cuadrados.
+utiliza la sede.
+Corresponde la superficie total N° Positivo, expresado en la
+Total, m2 construidos construida o edificada de los siguiente unidad: metros
+inmuebles que utiliza la sede. cuadrados.
+Corresponde al N° total de
+N° salas de clases salas de clase que tienen los N° Entero Positivo.
+inmuebles de la sede.
+Corresponde al total de la
+N° Positivo, expresado en la
+superficie construida que se
+Total m2 salas de clases siguiente unidad: metros
+destina a salas de clases en
+cuadrados.
+los inmuebles de la sede.
+Corresponde al N° total de
+oficinas que tienen los
+N° de oficinas inmuebles de la sede y que se N° Entero Positivo.
+destinan a docentes,
+administrativos o directivos.
+Corresponde al total de la
+N° Positivo, expresado en la
+superficie construida que se
+Total m2 salas de oficinas siguiente unidad: metros
+destina a oficinas en los
+cuadrados.
+inmuebles de la sede.
+Corresponde total de
+N° total de auditorios auditorios que tienen los N° Entero Positivo.
+inmuebles de la sede.
+Corresponde al total de la
+N° Positivo, expresado en la
+superficie construida que se
+Total m2 salas de auditorios siguiente unidad: metros
+destina a auditorios en los
+cuadrados.
+inmuebles de la sede.
+Corresponde a los Megas de
+Conectividad en Megas del
+conectividad contratado en el N° real.
+Inmueble
+inmueble.
+12. SECCIÓN: BIBLIOTECA
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+16
+--- Página 17 ---
+Manual de Sistema INDICES – abril/2025
+En este módulo se debe tener en consideración:
+• La biblioteca es un servicio de vital importancia para las universidades, puesto que es
+una combinación orgánica de personas, recursos, colecciones locales y virtuales e
+infraestructura, cuyo propósito es apoyar a los usuarios en el proceso de transformar la
+información en conocimiento.
+• La información y el conocimiento son esenciales en el establecimiento de los objetivos
+de la universidad. Las formas mediante las cuales la información es seleccionada,
+adquirida, almacenada, procesada y distribuida, pueden determinar en parte el nivel de
+éxito de la docencia, la investigación y la extensión.
+La fecha de corte de los datos corresponde al primer semestre del año en proceso.
+a. Bibliotecas
+Tabla 14: Biblioteca
+Variable Definición Formato
+Total de bibliotecas de la
+Bibliotecas N° de bibliotecas de la sede.
+Institución
+N° de bibliotecas cuyas
+colecciones y servicios están Las opciones son:
+normalizados y automatizados a) Se dispone de software
+de acuerdo a criterios especializado en gestión
+bibliotecarios profesionales. bibliotecaria con la modalidad
+Se clasifican en: i) bibliotecas de Open Access.
+que cuentan con software b) Se dispone de software
+especializado de Gestión especializado en gestión
+Bibliotecaria con modalidad bibliotecaria con la modalidad
+Bibliotecas por tipo de Open Access, por ejemplo, suscripción o adquisición
+software especializado SymphyAleph, Alma, pagada.
+Millennium, Koha, etc.; ii) c) No cuenta con un software
+bibliotecas que disponen de especializado en gestión
+software especializado en bibliotecaria.
+Gestión Bibliotecaria, con la
+modalidad de suscripción o La suma total de estas
+adquisición pagada; iii) opciones debe ser menor o
+bibliotecas que no disponen igual que el total de
+de Software especializado en bibliotecas.
+Gestión Bibliotecaria.
+El Descubridor es un software Deberá seleccionar entre:
+especializado de búsqueda de a) Se dispone de descubridor
+información referida a la con la modalidad de Open
+Descubridor
+totalidad de los recursos Access.
+impresos o digitales suscritos, b) Se dispone de descubridor
+en convenio u Open Access. con la modalidad de
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+17
+--- Página 18 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Se clasifican en: i) Descubridor suscripción o adquisición
+con modalidad de Open pagada.
+Access; ii) Descubridor con c) No se dispone de
+modalidad de suscripción o descubridor.
+adquisición pagada.
+Algunos ejemplos son: Primo,
+Ebsco, Discovery Service,
+Vufind y Summon.
+Superficie total de la
+biblioteca, se sugiere
+considerar diversos tipos de
+salas y espacios: áreas de
+acceso y tránsito, salas de
+Mts2 construidos lectura, salas de estudio, N° Entero Positivo.
+oficinas del personal, espacios
+para depósito o
+almacenamiento, bodegas,
+puntos de consulta y
+referencia, baños, entre otros.
+N° de puestos de trabajo
+destinados a los usuarios,
+sean estos individuales y/o
+Puestos de trabajo habilitados
+colaborativos. N° Entero Positivo.
+para los Usuarios
+Pueden estar destinados para
+reuniones, trabajos, estudios
+y otros.
+b. Personas
+Tabla 15: Personal en Biblioteca
+Variable Definición Formato
+Bibliotecólogos N° de personas que poseen el N° Entero Positivo.
+título profesional de
+bibliotecólogo que están
+contratadas en el presente
+año para labores de la(s)
+biblioteca(s) de la sede, que
+mantengan contrato vigente
+con la institución.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+18
+--- Página 19 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Horas Semanales contratadas N° de horas semanales N° Entero Positivo.
+de los Bibliotecólogos contratadas a personas que
+poseen el título profesional de
+bibliotecólogo, que están
+contratadas en el presente
+año para labores de la(s)
+biblioteca(s) de la sede, que
+mantengan contrato vigente
+con la institución.
+Técnicos Bibliotecarios N° de personas que poseen el N° Entero Positivo.
+título de técnico en biblioteca
+que están contratadas en el
+presente año para labores de
+la(s) biblioteca(s) de la sede,
+que mantengan contrato
+vigente con la institución.
+Otros Profesionales N° de personas con título N° Entero Positivo.
+profesional que no poseen el
+título de bibliotecario o
+bibliotecólogo que prestan
+servicios en la biblioteca y
+mantienen contrato vigente
+con la institución.
+Por ejemplo: ingeniero
+informático, diseñador,
+periodista, historiador, y
+otros.
+Otros Técnicos y/o Corresponde al N° de N° Entero Positivo.
+Administrativos personas administrativas,
+técnicas o sin título
+profesional que prestan
+servicio en la biblioteca de la
+institución.
+Por ejemplo: Técnico en
+Recursos Humanos, Técnico
+en Administración,
+secretarias, auxiliares, etc.,
+que mantengan contrato
+vigente con la institución.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+19
+--- Página 20 ---
+Manual de Sistema INDICES – abril/2025
+c. Formación/Servicios
+Tabla 16: Servicios Biblioteca
+Variable Definición Formato
+Programa para atender la Considere si la biblioteca Las opciones son:
+inclusión de personas con dispone de servicios a) Si, consolidado.
+discapacidad. orientados a personas en b) Si, incipiente.
+¿Cuenta con un programa de situación de discapacidad, c) Sin programa.
+i nclusión? incluyendo espacios, material
+de trabajo y recursos
+bibliográficos.
+Algunos ejemplos de servicios
+para inclusión: i) personal
+capacitado; ii) recursos
+bibliográficos en formatos
+pertinentes; iii) software
+especializados; iv)
+infraestructura especializada:
+mobiliario, accesos,
+señalética.
+Programa de extensión y/o Considere si la biblioteca de la Las opciones son:
+vinculación con el medio. institución participa en a) Si, consolidado.
+¿Cuenta con un programa de actividades/programas b) Si, incipiente.
+extensión y/o vinculación con formales de extensión o c) Sin programa.
+e l medio? vinculación con el medio.
+Algunos ejemplos son: i) feria
+del postulante; ii) recepción
+de nuevos estudiantes; iii)
+jornadas de trabajo
+institucionales, etc.
+Programa de apoyo al proceso Considere si la biblioteca Las opciones son:
+de enseñanza aprendizaje. dispone de programas de a) Si, consolidado.
+¿Cuenta con un programa de inducción, talleres, b) Si, incipiente.
+apoyo al proceso de capacitaciones o asesorías c) Sin programa.
+e nseñanza aprendizaje? destinados a estudiantes,
+académicos y funcionarios
+para el proceso de enseñanza-
+aprendizaje.
+Por ejemplo: programas de
+servicios de biblioteca,
+habilidades informacionales,
+citas y referencias
+bibliográficas, entre otros.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+20
+--- Página 21 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Programa de apoyo a la Considere si la biblioteca Las opciones son:
+investigación. dispone de programas de a) Si, consolidado.
+¿Cuenta con un programa de inducción, talleres y b) Si, incipiente.
+a poyo a la investigación? capacitaciones destinados a c) Sin programa.
+investigadores. Debe contar
+con programas específicos de
+contenidos referidos a: dónde
+publicar, cómo ingresar a
+publicar en WOS, SCOPUS,
+orientación ORCID,
+RESEARCHER ID, factores de
+impacto, índice h, entre otros.
+Convenios Interbibliotecarios Corresponde al N° total de N° Entero Positivo.
+convenios firmados y vigentes
+que tiene la biblioteca, con el
+fin de acceder a recursos
+bibliográficos y servicios
+disponibles de otras
+instituciones.
+d. Material Bibliográfico
+Tabla 17: Material Bibliográfico
+Variable Definición Formato
+Títulos impresos/físicos Corresponde al N° total de N° Entero Positivo.
+títulos únicos disponibles en
+formato impreso. No
+considerar fotocopias de
+libros completos o
+incompletos, tesis o trabajos
+de titulación.
+Ejemplares impresos/físicos Corresponde al N° total de N° Entero Positivo.
+ejemplares únicos disponibles
+en formato impreso. No
+considerar fotocopias de
+libros completos o
+incompletos, tesis o trabajos
+de titulación.
+Títulos de revistas Corresponde al N° total de N° Entero Positivo.
+impresas/físicas suscritas y/o títulos de revistas con
+convenio suscripción vigente en
+formato impreso. Las
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+21
+--- Página 22 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+suscripciones contabilizadas
+deben tener una duración
+mínima de un año.
+Por ejemplo: Annual Review
+of Biomedical Engineering,
+Vol. 19., Annual Review of
+Biomedical Engineering, Vol.
+21.
+Trabajos de Corresponde al N° total de N° Entero Positivo.
+titulación/graduación trabajos de titulación
+disponibles disponibles en Bibliotecas. Por
+ejemplo: tesis, artículos,
+trabajos de titulación y otros.
+Bases de datos suscritas yo en Corresponde al total de bases N° Entero Positivo.
+convenio de datos suscritas y/o en
+convenio. Por ejemplo, IEEE,
+Access Medicina, E-Libro, etc.
+Convenios BEIC tales como
+Nature, etc.
+Títulos de E-books en bases Corresponde al N° total de N° Entero Positivo.
+de datos suscritas títulos de E-books a texto
+completo disponibles en las
+bases de datos suscritas y/o
+en convenio.
+Títulos de revistas digitales Corresponde al N° total de N° Entero Positivo.
+suscritas y/o en convenio títulos de revistas digitales a
+texto completo disponibles en
+bases de datos suscritas y/o
+e n convenio.
+Títulos digitales distintos de E- Corresponde al total de títulos N° Entero Positivo.
+books o revistas en bases de a texto completo disponibles
+datos suscritas y/o convenio. en bases de datos suscritas
+distintos a E-book y revistas.
+Por ejemplo: normas, videos,
+apuntes, películas, datos
+estadísticos, calculadoras, etc.
+No considerar resúmenes,
+referencias bibliográficas,
+entre otros.
+Títulos digitalizados para fines Corresponde al total de títulos N° Entero Positivo.
+académicos digitalizados para fines
+académicos
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+22
+--- Página 23 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+Bases de datos Open Access Corresponde al total de bases N° Entero Positivo.
+disponibles de datos Open Access
+disponibles a través del portal
+de bibliotecas.
+Repositorio académico. Un repositorio académico es Las opciones son:
+¿Dispone de un repositorio un programa accesible vía a) Si.
+académico? Internet donde se almacena, b) No.
+organiza, mantiene y difunde
+la información académica y de
+investigación producida por la
+institución; debe tener
+actualización permanente.
+e. Uso del material
+Tabla 18: Material
+Variable Definición Formato
+Prestamos Impresos/Físicos Corresponde al N° total de N° Entero Positivo.
+préstamos de material
+bibliográfico realizados a
+usuarios internos
+(estudiantes, académicos,
+investigadores y
+funcionarios).
+Incluye material bibliotecario
+físico, DVD, libros, revistas
+impresas, mapas, normas y
+similares.
+Descargas Digitales Corresponde al N° total de N° Entero Positivo.
+descargas de recursos
+digitales suscritos realizadas
+en bases de datos suscritas
+realizados por usuarios
+internos (estudiantes,
+académicos, investigadores y
+funcionarios).
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+23
+--- Página 24 ---
+Manual de Sistema INDICES – abril/2025
+f. Inversión
+Tabla 19: Inversión
+Variable Definición Formato
+Inversión anual destinado a Corresponde a la participación Porcentaje.
+recursos de aprendizaje presupuestaria realizada por Está distribuido de la
+biblioteca. Considere el gasto siguiente forma,
+en recursos para el a) Impreso/Físico;
+aprendizaje físicos y digitales, b) Digital/Electrónico;
+software, hardware, c) Tecnológico (hardware y
+vinculación con el medio, software);
+difusión, etc. d) Otro.
+La suma debe ser igual a
+100%.
+13. SECCIÓN: LABORATORIOS Y TALLERES
+En este módulo es importante destacar algunos conceptos como los siguientes:
+i. Taller: Es una parte de la infraestructura de la institución que está destinada a
+labores específicas y de especialización de los estudiantes, por ejemplo, existen
+talleres equipados con herramientas y máquinas, talleres de confección, talleres
+gráficos, taller de mantenimiento industrial, taller de arquitectura, etc.
+ii. Laboratorio: Es de carácter más general y de uso común, por ejemplo, laboratorio
+de computación equipado con estaciones de trabajo, laboratorio fotográfico,
+laboratorio multimedial de inglés, etc.
+La fecha de corte de los datos corresponde al primer semestre del año de proceso.
+Tabla 20: Laboratorios y Talleres
+Variable Definición Formato
+N° de laboratorios y talleres N° total de laboratorios y N° Entero Positivo.
+talleres que tiene el(los)
+inmueble(s) de la sede.
+Superficie construida de Corresponde al total de la N° Positivo, expresado en la
+laboratorios y talleres superficie construida, siguiente unidad: metros
+expresada en metros cuadrados.
+cuadrados, que se destinan a
+laboratorios y talleres en el
+(los) inmueble(s) de la sede.
+Valor del equipamiento Corresponde al valor N° Positivo, expresado en la
+aproximado, expresado en UF siguiente unidad: U.F.
+del 31 de diciembre del año
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+24
+--- Página 25 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+inmediatamente anterior, del
+equipamiento disponible en
+los laboratorios y talleres de la
+sede. Debe considerar para
+ello la depreciación de los
+equipos y excluir del cálculo el
+valor del (de los) inmueble(s)
+que se destinan a laboratorios
+y talleres, y el valor de los
+artefactos de uso común
+(teléfonos, lámparas o
+estufas, entre otros).
+N° de PC para estudiantes Corresponde al N° total de N° Entero Positivo.
+computadores disponibles
+para el uso de los estudiantes
+en los laboratorios y talleres
+de la sede.
+N° de PC con Internet Corresponde al N° total de N° Entero Positivo.
+computadores con conexión a
+Internet disponibles para el
+uso de los estudiantes en los
+laboratorios y talleres de la
+sede.
+Inversión en equipamiento Corresponde al monto total, N° Positivo, expresado en
+expresado en UF del 31 de U.F.
+diciembre del año
+inmediatamente anterior,
+destinado en el año pasado a
+la adquisición de
+equipamiento, incluido el
+software especializado para
+los laboratorios y los talleres
+de la sede.
+Inversión en infraestructura Corresponde al monto total, N° Positivo, expresado en
+expresado en UF del 31 de U.F.
+diciembre del año
+inmediatamente anterior,
+destinado en el año pasado a
+la creación o mantención de la
+infraestructura de los
+laboratorios y los talleres de la
+sede.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+25
+--- Página 26 ---
+Manual de Sistema INDICES – abril/2025
+14. SECCIÓN: NUEVOS PROGRAMAS
+Este módulo tiene por objetivo ingresar carreras o programas nuevos. Una vez que se
+ingresa la sección se debe digitar la carrera o programa, luego el equipo INDICES procede
+a autorizar o rechazar la carrera o programa según corresponda.
+Un programa no es ingresado al sistema si ya existe previamente, las situaciones más
+comunes son:
+i. Está inactivo, en este caso se debe cambiar el estado.
+ii. El programa existe, pero con otra mención, en este caso, se sugiere tener un
+programa con varias menciones (generalmente el antiguo ya existente en la
+base) si eso no es posible se debe contactar al CNED para solucionar el caso
+particular.
+Dado que la modificación de características de un determinado programa puede afectar la
+captura de los datos, toda modificación debe ser solicitada al equipo INDICES.
+Tabla 21: Nuevos Programas
+Variable Definición Descripción Formato
+Los posibles valores
+para seleccionar son:
+a) Plan común o ciclo
+básico.
+b) Bachillerato.
+c) Técnico de nivel
+superior.
+d) Profesional.
+Clasificación del e) Profesional con
+Tipo de
+programa según su Licenciatura. Texto.
+Carrera/Programa
+plan de estudios. f) Licenciatura.
+g) Magíster.
+h) Doctorado.
+i) Diplomado.
+j) Postítulo.
+k) Especialidad
+médica.
+l) Especialidad
+odontológica.
+Si es una carrera
+Denominación oficial técnica debe usar el
+del programa, prefijo TNS. por
+conforme a los ejemplo, “TNS. en
+documentos oficiales Química”.
+Nombre del Programa correspondientes y Si es una Ingeniería Texto.
+las convenciones del de Ejecución debe
+CNED. usar el prefijo Ing.
+No incluya menciones Ejec. por ejemplo,
+ni especialidades “Ing. Ejec. en
+Informática”.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+26
+--- Página 27 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Descripción Formato
+Opciones de salida
+del programa,
+Especializaciones y corresponde a
+Texto.
+menciones diferentes
+especialidades o
+menciones.
+Año de inicio de
+Año de Inicio de
+actividades del N° Entero Positivo.
+actividades
+programa.
+Un campus es
+conjunto de
+inmuebles que, dentro
+de la sede, se
+relacionan con ésta
+en algunos aspectos
+Campus administrativos, Texto.
+económicos y
+académicos. De esta
+manera, una sede
+puede estar
+compuesta por varios
+campus.
+Los valores para
+seleccionar son:
+a) Diurno (Más del
+60% de las clases se
+Corresponde a la imparten antes de las
+Horario jornada en la cual se 18 horas). Texto.
+dicta el programa. b) Vespertino (Más
+del 60% de las clases
+se imparten después
+de las 18 horas).
+c) Otro horario.
+Los valores para
+seleccionar son:
+Clasificación del a) “Funciona
+programa según la Normalmente” para
+situación de las carreras con
+funcionamiento en estudiantes nuevos y
+que se encuentra. antiguos.
+Esta variable se usa b) “No recibe nuevos
+Estado de la carrera o para realizar estudiantes” para las
+Texto.
+programa validaciones de carreras que sólo
+carácter lógico en el tienen estudiantes
+ingreso de la antiguos.
+información. Es c) “Nuevas” para las
+interna para uso carreras que sólo
+operacional del tienen estudiantes
+sistema. nuevos.
+d) “Inactiva” para las
+carreras que no son
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+27
+--- Página 28 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Descripción Formato
+oferta y que no tienen
+matriculas total.
+Un programa o
+carrera es Especial
+cuando presenta
+alguna de las
+siguientes
+características:
+1) No está dirigido a
+estudiantes que
+provienen de la
+educación media.
+2) La carrera o
+programa se orientan
+a la regularización de
+títulos.
+3) La carrera o
+programa se imparte
+Clasificación del
+en modalidad a
+programa según el
+Tipo del programa distancia o no Texto.
+tipo de estudiantes
+presencial o semi-
+que admite.
+presencial (a lo
+menos un 40% del
+programa se imparte
+a distancia).
+4) La carrera o
+programa exige
+experiencia laboral.
+5) La carrera o
+programa
+corresponde a una
+continuidad de
+estudios.
+Si el programa no es
+especial entonces es
+Regular.
+Los valores para
+seleccionar son:
+Clasificación del a) Regularización de
+Detalle del Tipo de programa según el título.
+Programa objetivo que el b) Continuidad de Texto.
+(especiales) estudiante tiene al estudios (o
+ingresar. articulación) de
+estudios.
+c) Otro objetivo
+Los posibles valores
+Clasificación del
+Modalidad del para seleccionar son:
+programa según el Texto.
+Programa a) Presencial (El
+tipo de modalidad que
+estudiante debe
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+28
+--- Página 29 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Descripción Formato
+el estudiante puede asistir a clases
+escoger. presenciales).
+b) Semi-presencial (El
+estudiante asiste a
+clases presenciales,
+pero a lo menos un
+40% de sus
+actividades son a
+distancia –en línea).
+c) No presencial (el
+estudiante no asiste a
+actividades
+académicas en la
+institución, sus
+estudios son a
+distancia o en línea).
+Los valores para
+seleccionar son:
+Área del Administración y
+conocimiento, Comercio, Arte y
+subárea del Arquitectura,
+conocimiento y Ciencias, Ciencias
+carrera genérica en Sociales, Derecho,
+que se clasifica al Educación,
+programa. Humanidades,
+Área, Subárea, Recursos Naturales,
+Texto.
+Carrera genérica, Esta clasificación Salud, Tecnología.
+corresponde a una
+elaboración propia La Sub–área y carrera
+realizada por el genérica tienen
+CNED, validada por valores que dependen
+las IES en más de de la elección del
+quince años de “Área”.
+funcionamiento. La clasificación de la
+carrera genérica se
+sugiere en los
+listados.
+Ejemplo de título con
+menciones es”
+Biólogo M/ Medio
+Ambiente”.
+Título al que conduce
+Ejemplo de título en
+el programa. Debe
+carrera técnica es
+incluir las respectivas
+Título “TNS. en Texto.
+las menciones o
+Construcción”.
+especializaciones, en
+Ejemplo de título en
+caso de existir.
+Ingeniería de
+Ejecución es
+“Ingeniero Ejec. en
+Industria”.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+29
+--- Página 30 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Descripción Formato
+Grado académico al Solo debe ser
+Grado académico que conduce el ingresado por las Texto.
+programa. universidades.
+Corresponde a la
+siguiente unidad
+Algunos ejemplos son
+administrativa de la
+facultades, escuelas,
+Dependencia institución de quien Texto.
+direcciones, unidades
+depende la
+e institutos.
+administración de la
+carrera.
+Los posibles valores
+Clasificación del de la variable son:
+programa según su a) Anual
+Tipo Régimen Texto.
+planificación en el b) Semestral
+tiempo. c) Mixto
+d) Trimestral
+En el caso en que la
+Duración en carrera o programa
+semestres del tenga una
+Duración programa conforme al organización anual, N° Entero Positivo.
+respectivo plan de deberá considerarse
+estudio. que un año equivale a
+dos semestres.
+Los posibles valores a
+seleccionar son:
+a) "Ingreso directo”:
+los estudiantes
+pueden cursar
+inmediatamente los
+cursos propios de la
+carrera, sin tener que
+cursar previamente un
+plan común, ciclo
+básico o bachillerato.
+b) “Ingreso a través
+de un plan común” los
+Forma en que los
+estudiantes deben
+Formas de ingreso estudiantes pueden Ticket y Texto.
+cursar un conjunto de
+ingresar al programa
+cursos que forman
+parte del plan de
+estudios de la carrera,
+antes de decidir por la
+línea de especialidad
+que seguirá y que
+conduce a un título
+diferenciado.
+c) “Ingreso mediante
+un bachillerato” los
+estudiantes deben
+cursar un ciclo de
+asignaturas que
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+30
+--- Página 31 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Descripción Formato
+conduce al grado
+académico de
+bachiller y la carrera o
+programa contempla
+vacantes para
+estudiantes
+provenientes del
+bachillerato.
+d) “Ingreso a través
+de otro programa” se
+exige que los
+estudiantes hayan
+aprobado un
+programa distinto a un
+bachillerato, pero que
+concluye con un título
+o grado académico,
+para ingresar a la
+carrera o programa.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+31
+--- Página 32 ---
+Manual de Sistema INDICES – abril/2025
+15. SECCIÓN: EVOLUCIÓN DE PROGRAMAS2
+En este módulo se presentan las variables y descripciones relacionadas con requisitos de
+ingreso.
+Tabla 22: Evolución Programas
+Variable Definición Glosario y/o Formato
+consideraciones
+Los posibles valores
+para seleccionar son:
+a) “Funciona
+Normalmente” para
+las carreras con
+estudiantes nuevos y
+antiguos.
+b) “No recibe nuevos
+Clasificación del
+estudiantes” para las
+programa según la
+carreras que sólo
+Estado del programa situación de Texto.
+tienen estudiantes
+funcionamiento en
+antiguos.
+que se encuentra.
+c) “Nuevas” para las
+carreras que sólo
+tienen estudiantes
+nuevos.
+d) “Inactiva” para las
+carreras que no son
+oferta y que no tienen
+matriculas total.
+Valor en pesos que se
+cobra a los
+estudiantes de primer
+año matriculados en
+el programa por
+Se debe cumplir:
+concepto de matrícula
+Valor de la
+Valor de la Matrícula o arancel básico. Si la N° Entero Positivo.
+Matrícula<= Valor
+matrícula es
+arancel anual
+semestral o por
+cuotas, debe sumar
+todos los pagos
+parciales exigidos
+durante el año.
+Valor en pesos del
+arancel anual que el
+estudiante de primer Se debe cumplir:
+año debe pagar a la Valor de la
+Valor arancel anual N° Entero Positivo.
+institución a propósito Matrícula<= Valor
+de la suscripción de arancel anual
+un contrato de
+prestación de
+2 Se considera PDT en el año 2021 y PSU para años anteriores.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+32
+--- Página 33 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+servicios
+educacionales para
+este programa
+(excluida la
+matrícula).
+Monto en pesos que
+deben pagar los
+estudiantes para el
+desarrollo del proceso
+de titulación o
+graduación, una vez
+que se encuentran
+Valor titulación egresados. Incluye el N° entero positivo.
+desarrollo y
+presentación del
+trabajo final del
+programa o la
+rendición de un
+examen de título o
+graduación.
+Tipo de moneda
+usado en valor de 1. UF
+Tipo Moneda Texto.
+matrícula, arancel y 2. Pesos
+titulación
+Corresponde al N°
+total de vacantes
+Vacantes Primer
+ofrecidas en el primer N° Entero Positivo.
+Semestre
+semestre para primer
+año.
+Corresponde al N°
+total de vacantes
+Vacantes Segundo
+ofrecidas en el N° Entero Positivo.
+Semestre
+segundo semestre
+para primer año.
+Se debe cumplir:
+Matrícula primer año
+N° de hombres hombres <= Matrícula
+Matrícula Primer año matriculados en el total hombres.
+hombres (incluye primer año al 30 de
+N° Entero Positivo.
+extranjeros y pueblos abril de cada año. Debe ser cero si el
+originarios) Incluye estudiantes estado de la carrera
+extranjeros. es “Inactivo” o “No
+recibe nuevos
+estudiantes”.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+33
+--- Página 34 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+Se debe cumplir:
+Matrícula primer año
+N° de mujeres mujeres <= Matrícula
+Matrícula Primer año matriculadas en el total mujeres.
+mujeres (incluye primer año al 30 de
+N° Entero Positivo.
+extranjeros y pueblos abril de cada año. Debe ser cero si el
+originarios) Incluye estudiantes estado de la carrera
+extranjeros es “Inactivo” o “No
+recibe nuevos
+estudiantes”.
+Corresponde al N° de
+estudiantes Se debe cumplir:
+Matricula en primer extranjeros Matricula en primer
+N° Entero Positivo
+año solo Extranjeros matriculados en el año extranjeros <=
+primer año al 30 de M atrícula primer año.
+abril de cada año.
+Se debe cumplir:
+Matrícula primer año
+N° total de hombres
+hombres <= Matrícula
+matriculados en el
+total hombres.
+Matrícula Total programa al 30 de
+hombres (incluye abril de cada año.
+Debe ser cero si el N° Entero Positivo.
+extranjeros y pueblos Esta matrícula es
+estado de la carrera
+originarios) igual a la suma de
+es “Inactivo”.
+estudiantes hombres
+Incluye los
+nuevos y antiguos.
+extranjeros.
+Se debe cumplir:
+N° total de mujeres Matrícula primer año
+matriculadas en el mujeres <= Matrícula
+Matrícula Total programa al 30 de total mujeres.
+mujeres (incluye abril de cada año.
+N° Entero Positivo.
+extranjeros y pueblos Esta matrícula es Debe ser cero si el
+originarios) igual a la suma de estado de la carrera
+alumnas nuevas y es “Inactivo”. Incluye
+antiguas. los extranjeros.
+N° total de
+estudiantes Se debe cumplir:
+Matrícula Total Solo extranjeros Matricula en total
+N° Entero Positivo
+Extranjeros matriculados el extranjeros <=
+programa al 30 de M atrícula total.
+abril de cada año.
+N.º de Estudiantes N° de estudiantes Se debe cumplir que:
+matriculados en matriculados en
+N° Entero Positivo.
+primer año que primer año que N.º de Estudiantes
+ingresaron vía PAES3 ingresaron vía PAES. matriculados en
+3 Se considera PAES a partir del año 2023, PDT en los años 2021-2022 y PSU para años anteriores.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+34
+--- Página 35 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+primer año que
+ingresaron vía PAES
++ N.º de Estudiantes
+matriculados en
+primer año que
+ingresaron por otra
+vía distinta a PAES =
+Matrícula de primer
+a ño.
+Se debe cumplir que:
+N.º de Estudiantes
+matriculados en
+primer año que
+N.º de Estudiantes N° de estudiantes
+ingresaron vía PAES
+matriculados en matriculados en
++ N.º de Estudiantes
+primer año que primer año ingresaron N° Entero Positivo.
+matriculados en
+ingresaron por otra por una vía distinta a
+primer año que
+vía distinta a PAES la PAES
+ingresaron por otra
+vía distinta a PAES =
+Matrícula de primer
+año.
+Valor máximo -por
+programa- del
+promedio de las Se debe cumplir que:
+pruebas Competencia
+Matemática y “Puntaje mínimo
+N° Entero Positivo, su
+Puntaje máximo Competencia Lectora promedio PAES <=
+rango varía entre100
+promedio PAES ponderadas en un Puntaje promedio
+y 1000 puntos.
+50%. Considerar sólo PAES <= Puntaje
+estudiantes máximo promedio
+matriculados en PAES”.
+primer año y que
+ingresaron vía PAES.
+Valor promedio -por
+programa- del
+promedio de las Se debe cumplir que:
+pruebas Competencia
+Matemática y “Puntaje mínimo
+N° Entero Positivo, su
+Puntaje promedio Competencia Lectora promedio PAES <=
+rango varía entre100
+PAES ponderadas en un Puntaje promedio
+y 1000 puntos.
+50%. Considerar sólo PAES <= Puntaje
+estudiantes máximo promedio
+matriculados en PAES”.
+primer año y que
+ingresaron vía PAES.
+Valor mínimo -por N° Entero Positivo, su
+Puntaje mínimo Se debe cumplir que:
+programa- del rango varía entre100
+promedio PAES
+promedio de las y 1000 puntos.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+35
+--- Página 36 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+pruebas Competencia “Puntaje mínimo
+Matemática y promedio PAES <=
+Competencia Lectora Puntaje promedio
+ponderadas en un PAES <= Puntaje
+50%. Considerar sólo máximo promedio
+estudiantes PAES”.
+matriculados en
+primer año y que
+ingresaron vía PAES.
+Valor máximo -por
+programa- del
+puntaje ponderado de Se debe cumplir que:
+selección o corte que
+exige esta carrera “Mínimo del Puntaje
+N° Entero Positivo, su
+Máximo del Puntaje como requisito de ponderado PAES <=
+rango varía entre100
+ponderado PAES ingreso. Considerar Promedio del Puntaje
+y 1000 puntos.
+sólo estudiantes ponderado PAES <=
+matriculados en Máximo del Puntaje
+primer año y que ponderado PAES”.
+ingresaron vía PAES
+(admisión ordinaria).
+Valor promedio -por
+programa- del puntaje
+ponderado de Se debe cumplir que:
+selección o corte que
+exige esta carrera “Mínimo del Puntaje
+N° Entero Positivo, su
+Promedio del Puntaje como requisito de ponderado PAES <=
+rango varía entre100
+ponderado PAES ingreso. Considerar Promedio del Puntaje
+y 1000 puntos.
+sólo estudiantes ponderado PAES <=
+matriculados en Máximo del Puntaje
+primer año y que ponderado PAES”.
+ingresaron vía PAES
+(admisión ordinaria).
+Valor mínimo -por
+programa- del
+puntaje ponderado de Se debe cumplir que:
+selección o corte que
+exige esta carrera “Mínimo del Puntaje
+N° Entero Positivo, su
+Mínimo del Puntaje como requisito de ponderado PAES <=
+rango varía entre100
+ponderado PAES ingreso. Considerar Promedio del Puntaje
+y 1000 puntos.
+sólo estudiantes ponderado PAES <=
+matriculados en Máximo del Puntaje
+primer año y que ponderado PAES”.
+ingresaron vía PAES
+(admisión ordinaria).
+Valor máximo -por
+Se debe cumplir que:
+programa- del Puntaje N° Entero Positivo, su
+Máximo Puntaje NEM PAES rango varía entre100
+Mínimo Puntaje
+correspondiente a las y 1000 puntos.
+NEM<= Promedio
+notas de enseñanza
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+36
+--- Página 37 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+media. Considerar Puntaje NEM <=
+sólo estudiantes Máximo Puntaje NEM
+matriculados en
+primer año y que
+ingresaron vía PAES
+(admisión ordinaria).
+Valor promedio -por
+programa- del Puntaje
+PAES
+Se debe cumplir que:
+correspondiente a las
+notas de enseñanza N° Entero Positivo, su
+Promedio Puntaje Mínimo Puntaje
+media. Considerar rango varía entre100
+NEM NEM<= Promedio
+sólo estudiantes y 1000 puntos.
+Puntaje NEM <=
+matriculados en
+Máximo Puntaje NEM
+primer año y que
+ingresaron vía PAES
+(admisión ordinaria).
+Valor mínimo -por
+programa- del Puntaje
+PAES
+Se debe cumplir que:
+correspondiente a las
+notas de enseñanza N° Entero Positivo, su
+Mínimo Puntaje
+Mínimo Puntaje NEM media. Considerar rango varía entre100
+NEM<= Promedio
+sólo estudiantes y 1000 puntos.
+Puntaje NEM <=
+matriculados en
+Máximo Puntaje NEM
+primer año y que
+ingresaron vía PAES
+(admisión ordinaria).
+Valor máximo -por
+programa- del Puntaje
+PAES Se debe cumplir que:
+correspondiente al
+ranking de notas. Mínimo Puntaje N° Entero Positivo, su
+Máximo Puntaje
+Considerar sólo Ranking<= Promedio rango varía entre100
+Ranking Notas
+estudiantes Puntaje Ranking <= y 1000 puntos.
+matriculados en Máximo Puntaje
+primer año y que Ranking
+ingresaron vía PAES
+(admisión ordinaria).
+Valor promedio -por
+programa- del Puntaje
+PAES Se debe cumplir que:
+correspondiente al
+ranking de notas. Mínimo Puntaje N° Entero Positivo, su
+Promedio Puntaje
+Considerar sólo Ranking<= Promedio rango varía entre100
+Ranking Notas
+estudiantes Puntaje Ranking <= y 1000 puntos.
+matriculados en Máximo Puntaje
+primer año y que Ranking
+ingresaron vía PAES
+(admisión ordinaria).
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+37
+--- Página 38 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+Valor mínimo -por
+programa- del Puntaje
+PAES Se debe cumplir que:
+correspondiente al
+ranking de notas. Mínimo Puntaje N° Entero Positivo, su
+Mínimo Puntaje
+Considerar sólo Ranking<= Promedio rango varía entre100
+Ranking Notas
+estudiantes Puntaje Ranking <= y 1000 puntos.
+matriculados en Máximo Puntaje
+primer año y que Ranking
+ingresaron vía PAES
+(admisión ordinaria).
+N° total de Se debe cumplir que:
+estudiantes
+N° matriculados de la matriculados N° matriculados de la
+N° Entero Positivo.
+cohorte anterior. correspondientes a la cohorte anterior<=
+cohorte del año “Matrícula de primer
+anterior. a ño” del año anterior.
+N° de docentes o
+académicos que
+tienen jornada
+comprometida con el
+programa. La suma
+N° de docentes del N° total de docentes
+total de los docentes N° Entero Positivo.
+programa del programa.
+por programa no es
+necesariamente la
+suma total de
+docentes de la
+institución.
+Corresponde al N° de
+Se debe cumplir:
+estudiantes se sexo
+Matricula en primer
+masculino
+Matricula en primer año estudiantes
+provenientes pueblos
+año estudiantes hombres provenientes
+originarios N° Entero Positivo
+provenientes pueblos pueblos originarios
+matriculados en el
+originarios hombres <= Matrícula primer
+primer año al 30 de
+año hombres.
+abril de cada año. Se
+solicita por sexo.
+Corresponde al N° de
+Se debe cumplir:
+estudiantes se sexo
+Matricula en primer
+femenino
+Matricula en primer año estudiantes
+provenientes pueblos
+año estudiantes mujeres provenientes
+originarios N° Entero Positivo
+provenientes pueblos pueblos originarios
+matriculados en el
+originarios mujeres <= Matrícula primer
+primer año al 30 de
+año mujeres.
+abril de cada año. Se
+solicita por sexo.
+Corresponde al N° Se debe cumplir:
+Matricula total N° Entero Positivo
+total de estudiantes Matricula total
+estudiantes
+de sexo masculino estudiantes de sexo
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+38
+--- Página 39 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Glosario y/o Formato
+consideraciones
+provenientes pueblos provenientes pueblos masculino
+originarios hombres originarios provenientes pueblos
+matriculados al 30 de originarios <=
+abril de cada año. Matrícula total
+Se solicita por sexo. hombres.
+Se debe cumplir:
+Corresponde al N°
+Matricula total
+total de estudiantes
+estudiantes de sexo
+Matricula total de sexo femenino
+femenino
+estudiantes provenientes pueblos N° Entero Positivo
+provenientes pueblos
+provenientes pueblos originarios
+originarios <=
+originarios mujeres matriculados al 30 de
+Matrícula total
+abril de cada año.
+mujeres.
+Se solicita por sexo.
+Corresponde al N° Se debe cumplir:
+Matricula total total de estudiantes Matricula total
+estudiantes no no binarios estudiantes no N° Entero Positivo
+binarios matriculados al 30 de binarios <= Matrícula
+abril de cada año. total.
+.
+Corresponde al N°
+Se debe cumplir:
+total de estudiantes
+Matricula primer año Matricula total
+no binarios
+estudiantes no estudiantes no N° Entero Positivo
+matriculados en
+binarios binarios <= Matrícula
+primer año al 30 de
+primer año.
+abril de cada año.
+.
+16. SECCIÓN: EGRESADOS Y TITULADOS
+En este módulo se especifican las variables, definiciones, descripción y formato de los
+requisitos de ingreso. La ubicación es la siguiente: Menú Superior “Programas” → Menú
+Izquierdo “Egresados/Titulados.”
+La fecha de corte de los datos corresponde al período enero-diciembre del año anterior al
+proceso.
+Tabla 23: Egresados y Titulados
+Variable Definición Formato
+N° total de hombres
+Hombres egresados en el año egresados, pero no titulados,
+N° Entero Positivo.
+anterior durante el año pasado. Por
+egresado se entenderá al
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+39
+--- Página 40 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+estudiante que ha finalizado el
+plan de estudio o currículo de
+la carrera o programa, pero
+aún no concluye las
+actividades conducentes a la
+obtención del grado
+académico y/o título
+profesional.
+N° total de mujeres
+egresadas, pero no tituladas,
+durante el año pasado. Por
+egresada se entenderá a la
+estudiante que ha finalizado el
+Mujeres egresadas en el año plan de estudio o currículo de
+N° Entero Positivo.
+anterior la carrera o programa, pero
+aún no concluye las
+actividades conducentes a la
+obtención del grado
+académico y/o título
+profesional.
+N° total de hombres titulados
+durante el año pasado. Por
+titulado se entenderá al
+estudiante que ha finalizado
+completamente las
+Hombres titulados en el año
+actividades conducentes a la N° Entero Positivo.
+anterior
+obtención del grado
+académico, el título
+profesional o el título técnico
+de nivel superior con que
+concluye la carrera.
+N° total de mujeres tituladas
+durante el año pasado. Por
+titulada se entenderá al
+estudiante que ha finalizado
+completamente las
+Mujeres tituladas en el año
+actividades conducentes a la N° Entero Positivo.
+anterior
+obtención del grado
+académico, el título
+profesional o el título técnico
+de nivel superior con que
+concluye la carrera.
+17. SECCIÓN: ADMINISTRACIÓN
+Esta sección permite la creación usuarios del sistema INDICES para traspasar información
+desde las instituciones al sistema. Es posible asignar secciones y sedes para que el usuario
+pueda visualizar solo partes del sistema.
+Tabla 24: Administración
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+40
+--- Página 41 ---
+Manual de Sistema INDICES – abril/2025
+Variable Definición Formato
+N° entero, ingresar sin
+Rut RUT del usuario.
+guiones.
+Nombre Nombre del usuario. Texto.
+Los posibles valores son:
+Sexo Sexo del usuario. a) Hombre.
+b) Mujer.
+Profesión Profesión del usuario. Texto.
+Cargo en la institución del
+Cargo Texto.
+usuario.
+Teléfono Teléfono directo del usuario. (xx)xxxx-xxx ó (xx)xxxx-xxxx
+E mail Correo electrónico del usuario. correo@dominio.cl
+La sección “Administrar Usuario” permite desplegar las características de un usuario. Los
+datos solicitados son: RUT, nombre, genero, profesión, cargo, teléfono, email.
+Podrá seleccionar un usuario y asignar las sedes/secciones a las cuales puede acceder.
+18. CARGA DE ARCHIVO CSV DE EVOLUCIÓN DE CARRERAS
+Las instrucciones para la correcta carga de archivo CSV de evolución de carreras son las
+siguientes:
+i. Ingresar a la sección “Evolución Pregrado (CSV)” o “Evolución Posgrado (CSV)”
+según corresponda.
+ii. Descargue el archivo haciendo clic en el botón "Módulo CSV", luego seleccione
+“Descargar CSV”. Guarde el archivo en formato CSV: separado por ";" (Punto y
+coma)
+iii. Cuando complete la información, diríjase al botón “Examinar” e importe el archivo
+indicando que es un archivo separado por ";" (Punto y coma). Presione el botón
+“Subir”.
+iv. Revise el reporte.
+Posteriormente, podrían suceder tres cosas al cargar cada carrera:
+i. Carga sin problema.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+41
+--- Página 42 ---
+Manual de Sistema INDICES – abril/2025
+ii. No Carga (Error), la información ingresada no se graba en la base de datos (color
+rojo).
+Evalué el reporte y rectifique los casos que presentan problemas de carga. Repita el
+proceso.
+Tabla 25: CSV Evolución Carreras
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+Código CNED de la
+N° entero
+A Idsede No Sede en la que se
+positivo.
+dicta el programa
+Año que comenzó
+AnioInicioActivid con actividades N° entero
+B No
+ades académicas el positivo.
+programa
+Código CNED, es N° entero
+C Codcarr No
+único. positivo.
+Nombre con que
+fue registrado el
+D Nombre No Texto.
+programa en el
+sistema INDICES.
+Tipo de Carrera
+que fue ingresado
+E TipoCarrera No Texto.
+en el sistema
+INDICES
+Nombre de la sede
+F NombreSede No donde se dicta el Texto.
+programa.
+Nombre del
+G nombreCampus No campus donde se Texto.
+dicta el programa.
+NombreDepende Dependencia del
+F No
+ncia programa.
+Horario del
+I Horario No Texto.
+programa.
+Especialidad o
+EspecialidadOM
+J No mención que tiene
+encion
+el programa
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+42
+--- Página 43 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+Editable.
+En la celda
+solo deberá
+escribir un N°
+según se
+señala a
+Estado actual en continuación:
+N° entero
+K idEstadoCarrera Si que se encuentra la a) Funciona
+positivo.
+carrera. Normalmente
+= 1
+b) Nuevo = 5
+c) No recibe
+Estudiantes
+Nuevos = 4
+d) Inactivos =
+2
+N° entero
+positivo mayor N° entero
+L Anioinfo Si Año de proceso
+que o igual positivo.
+que cero
+Corresponde al
+código de los
+programas de
+CodigoSIES
+M Si estudio del Servicio Texto.
+de Información de
+Educación Superior
+(SIES)
+Valor en pesos que
+se cobró este año a
+los estudiantes de
+primer año
+matriculados en el Se debe
+programa por cumplir:
+concepto de
+N° entero
+N valorMatAnual Si matrícula o arancel Valor de la
+positivo.
+básico. Si la Matrícula<=
+matrícula es Valor arancel
+semestral o por anual
+cuotas, debe sumar
+todos los pagos
+parciales exigidos
+durante el año.
+Valor en pesos del Se debe
+arancel anual que cumplir:
+el estudiante de
+valorArancelAnu N° entero
+O Si primer año debe Valor de la
+al positivo.
+pagar a la Matrícula<=
+institución a Valor arancel
+propósito de la anual
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+43
+--- Página 44 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+suscripción de un
+contrato de
+prestación de
+servicios
+educacionales para
+este programa
+(excluida la
+matrícula).
+Corresponde al
+monto en pesos
+que deben pagar
+los estudiantes
+para el desarrollo
+del proceso de
+titulación o
+graduación, una
+vez que se N° entero N° entero
+P valorTitulo Si
+encuentran positivo. positivo.
+egresados. Incluye
+el desarrollo y
+presentación del
+trabajo final de la
+carrera o programa
+o la rendición de un
+examen de título o
+graduación.
+Tipo moneda
+UF
+usada en valor de
+Q TipoMoneda Si Texto.
+matrícula, arancel y
+Pesos
+titulación
+N° total de
+VacantesSemest vacantes ofrecidas N° entero
+R Si
+re1 en el primer positivo.
+semestre.
+N° total de
+VacantesSemest vacantes ofrecidas N° entero
+S Si
+re2 en el segundo positivo.
+semestre.
+Se debe
+cumplir:
+N° de hombres Matrícula
+matriculados en el primer año
+MatPrimerAnioH primer año al 30 de hombres <= N° entero
+T Si
+ombres abril de cada año. Matrícula total positivo.
+Incluye estudiantes hombres.
+extranjeros.
+Debe ser cero
+si el estado de
+la carrera es
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+44
+--- Página 45 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+“Inactivo” o
+“No recibe
+nuevos
+estudiantes.”
+Se debe
+cumplir:
+Matrícula
+primer año
+N° de mujeres mujeres <=
+matriculadas en el Matrícula total
+MatPrimerAnioM primer año al 30 de mujeres. N° entero
+U Si
+ujeres abril de cada año. positivo.
+Incluye estudiantes Debe ser cero
+extranjeros si el estado de
+la carrera es
+“Inactivo” o
+“No recibe
+nuevos
+estudiantes”.
+Se debe
+cumplir:
+N° de estudiantes
+extranjeros
+MatPrimerAnioE Matricula en N° entero
+V Si matriculados en el
+xtranjeros_as primer año positivo.
+primer año al 30 de
+extranjeros <=
+abril de cada año.
+Matrícula
+p rimer año.
+Se debe
+cumplir:
+N° total de Matrícula
+hombres primer año
+matriculados en el hombres <=
+programa al 30 de Matrícula total
+MatTotalHombre abril de cada año. hombres. N° entero
+W Si
+s Esta matrícula es positivo.
+igual a la suma de Debe ser cero
+estudiantes si el estado de
+hombres nuevos y la carrera es
+antiguos. “Inactivo”.
+Incluye los
+extranjeros.
+N° total de mujeres Se debe
+matriculadas en el cumplir:
+programa al 30 de N° entero
+X MatTotalMujeres Si
+abril de cada año. Matrícula positivo.
+Esta matrícula es primer año
+igual a la suma de mujeres <=
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+45
+--- Página 46 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+alumnas nuevas y Matrícula total
+antiguas. mujeres.
+Debe ser cero
+si el estado de
+la carrera es
+“Inactivo”.
+Incluye los
+extranjeros.
+Se debe
+N° total de cumplir:
+estudiantes
+MatTotalExtranje extranjeros Matricula en N° entero
+Y Si
+ros_as matriculados el total positivo.
+programa al 30 de extranjeros <=
+abril de cada año. Matrícula
+t otal.
+Se debe
+cumplir que:
+N.º de
+Estudiantes
+matriculados
+N° de estudiantes
+en primer año
+matriculados en
+que
+primer año que
+ingresaron vía
+ingresaron vía
+PAES + N.º
+AlumnosRindier PAES. En caso de N° entero
+Z Si de
+onPSU que ningún positivo.
+Estudiantes
+estudiante rindiera
+matriculados
+la prueba PAES se
+en primer año
+puede dejar en
+que
+cero.
+ingresaron por
+otra vía
+distinta a
+PAES =
+Matrícula de
+p rimer año.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+46
+--- Página 47 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+Se debe
+cumplir que:
+N.º de
+Estudiantes
+matriculados
+en primer año
+que
+N° de estudiantes ingresaron vía
+matriculados en PAES + N.º
+primer año de N° entero
+AA intAlumOtraVia Si
+ingresaron por una Estudiantes positivo.
+vía distinta a la matriculados
+PAES en primer año
+que
+ingresaron por
+otra vía
+distinta a
+PAES =
+Matrícula de
+primer año.
+Valor mínimo -por
+Se debe
+programa- del
+cumplir que:
+promedio de las
+pruebas
+“Puntaje
+Competencia
+mínimo
+Matemática y
+promedio
+Competencia
+PAES <= N° Entero
+AB PAESmin Si Lectora
+Puntaje Positivo.
+ponderadas en un
+promedio
+50%. Considerar
+PAES <=
+sólo estudiantes
+Puntaje
+matriculados en
+máximo
+primer año y que
+promedio
+ingresaron vía
+PAES”.
+PAES.
+Se debe
+Valor promedio -
+cumplir que:
+por programa- del
+promedio de las
+“Puntaje
+pruebas
+mínimo
+Competencia
+promedio
+Matemática y
+PAES <= N° Entero
+AC PAESprom Si Competencia
+Puntaje Positivo.
+Lectora
+promedio
+ponderadas en un
+PAES <=
+50%. Considerar
+Puntaje
+sólo estudiantes
+máximo
+matriculados en
+promedio
+primer año y que
+PAES”.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+47
+--- Página 48 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+ingresaron vía
+PAES.
+Valor máximo -por Se debe
+programa- del cumplir que:
+promedio de las
+pruebas “Mínimo del
+Competencia Puntaje
+Matemática y ponderado
+Competencia PAES <=
+N° Entero
+AD PAESmax Si Lectora Promedio del
+Positivo.
+ponderadas en un Puntaje
+50%. Considerar ponderado
+sólo estudiantes PAES <=
+matriculados en Máximo del
+primer año y que Puntaje
+ingresaron vía ponderado
+PAES. PAES”.
+Se debe
+Valor mínimo -por
+cumplir que:
+programa- del
+puntaje ponderado
+“Mínimo del
+de selección o
+Puntaje
+corte que exige
+ponderado
+esta carrera como
+PAES <=
+PAESPonderado requisito de N° Entero
+AE Si Promedio del
+Min ingreso. Positivo.
+Puntaje
+Considerar sólo
+ponderado
+estudiantes
+PAES <=
+matriculados en
+Máximo del
+primer año y que
+Puntaje
+ingresaron vía
+ponderado
+PAES.
+PAES”.
+Se debe
+Valor promedio -
+cumplir que:
+por programa- del
+puntaje ponderado
+“Mínimo del
+de selección o
+Puntaje
+corte que exige
+ponderado
+esta carrera como
+PAES <=
+PAESPonderado requisito de N° Entero
+AF Si Promedio del
+Prom ingreso. Positivo.
+Puntaje
+Considerar sólo
+ponderado
+estudiantes
+PAES <=
+matriculados en
+Máximo del
+primer año y que
+Puntaje
+ingresaron vía
+ponderado
+PAES.
+PAES”.
+Valor máximo -por Se debe
+PAESPonderado N° Entero
+AG Si programa- del cumplir que:
+Max Positivo.
+puntaje ponderado
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+48
+--- Página 49 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+de selección o Mínimo
+corte que exige Puntaje
+esta carrera como NEM<=
+requisito de Promedio
+ingreso. Puntaje NEM
+Considerar sólo <= Máximo
+estudiantes Puntaje NEM
+matriculados en
+primer año y que
+ingresaron vía
+PAES.
+Valor mínimo -por
+programa- del Se debe
+Puntaje PAES cumplir que:
+correspondiente a
+las notas de Mínimo
+enseñanza media. Puntaje N° Entero
+AH IntNemMin Si
+Considerar sólo NEM<= Positivo.
+estudiantes Promedio
+matriculados en Puntaje NEM
+primer año y que <= Máximo
+ingresaron vía Puntaje NEM
+PAES.
+Valor promedio -
+por programa- del Se debe
+Puntaje PAES cumplir que:
+correspondiente a
+las notas de Mínimo
+enseñanza media. Puntaje N° Entero
+AI IntNemProm Si
+Considerar sólo NEM<= Positivo.
+estudiantes Promedio
+matriculados en Puntaje NEM
+primer año y que <= Máximo
+ingresaron vía Puntaje NEM
+PAES.
+Se debe
+Valor máximo -por
+cumplir que:
+programa- del
+Puntaje PAES
+Mínimo
+correspondiente al
+Puntaje
+ranking de notas.
+Ranking<= N° Entero
+AJ intNemMax Si Considerar sólo
+Promedio Positivo.
+estudiantes
+Puntaje
+matriculados en
+Ranking <=
+primer año y que
+Máximo
+ingresaron vía
+Puntaje
+PAES.
+Ranking
+Valor mínimo -por Se debe
+N° Entero
+AK intPRMin Si programa- del cumplir que:
+Positivo.
+Puntaje PAES
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+49
+--- Página 50 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+correspondiente al Mínimo
+ranking de notas. Puntaje
+Considerar sólo Ranking<=
+estudiantes Promedio
+matriculados en Puntaje
+primer año y que Ranking <=
+ingresaron vía Máximo
+PAES. Puntaje
+Ranking
+Se debe
+Valor promedio -
+cumplir que:
+por programa- del
+Puntaje PAES
+Mínimo
+correspondiente al
+Puntaje
+ranking de notas.
+Ranking<= N° Entero
+AL intPRPro Si Considerar sólo
+Promedio Positivo.
+estudiantes
+Puntaje
+matriculados en
+Ranking <=
+primer año y que
+Máximo
+ingresaron vía
+Puntaje
+PAES.
+Ranking
+Valor máximo -por Se debe
+programa- del cumplir que:
+promedio de las
+pruebas de “Puntaje
+Matemáticas y mínimo
+Lenguaje y promedio
+Comunicación PSU <= N° Entero
+AM intPRMax Si
+ponderadas en un Puntaje Positivo.
+50%. Considerar promedio
+sólo estudiantes PSU <=
+matriculados en Puntaje
+primer año y que máximo
+ingresaron vía promedio
+PAES. PSU”.
+Se debe
+cumplir que:
+N°
+N° total de
+matriculados
+MatTotalCohort estudiantes
+de la cohorte
+AN eAnioAnt Si matriculados de la Texto.
+anterior<=
+cohorte del año
+“Matrícula de
+anterior.
+primer año”
+del año
+anterior.
+NumDocentesPo N° total de N° de
+N° Entero
+AO rPrograma SI docentes del docentes o
+Positivo.
+programa. académicos
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+50
+--- Página 51 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+que tienen
+jornada
+comprometida
+con el
+programa. La
+suma total de
+los docentes
+por programa
+no es
+necesariamen
+te la suma
+total de
+docentes de
+la institución.
+MatPrimerAnioO SI Matricula en Se debe N° Entero
+riginarioH primer año cumplir: Positivo.
+estudiantes Matricula en
+provenientes primer año
+pueblos originarios estudiantes
+AP
+H provenientes
+pueblos
+originarios <=
+Matrícula
+primer año.
+Se debe
+cumplir:
+Matricula en Matricula en
+primer año primer año
+MatPrimerAnioO estudiantes estudiantes N° Entero
+AQ SI
+riginarioM provenientes provenientes Positivo.
+pueblos originarios pueblos
+H originarios <=
+Matrícula
+primer año.
+Se debe
+cumplir:
+Matricula
+Matricula Total
+total
+estudiantes
+MatTotalOrigina estudiantes N° Entero
+AR SI provenientes
+rioH provenientes Positivo.
+pueblos originarios
+pueblos
+H
+originarios <=
+Matrícula
+total.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+51
+--- Página 52 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Editab Valores
+Descripción Formato
+Orden Columna le Validos
+Se debe
+cumplir:
+Matricula
+Matricula Total
+total
+estudiantes
+MatTotalOrigina estudiantes N° Entero
+AS SI provenientes
+rioM provenientes Positivo.
+pueblos originarios
+pueblos
+H
+originarios <=
+Matrícula
+total.
+Matricula total SI Corresponde al N° Se debe N° Entero
+estudiantes no total de cumplir: Positivo
+binarios estudiantes no Matricula
+binarios total
+AT matriculados al 30 estudiantes
+de abril de cada no binarios <=
+año. Matrícula
+primer año.
+Matricula primer SI Corresponde al N° Se debe N° Entero
+año estudiantes total de cumplir: Positivo
+no binarios estudiantes no Matricula
+binarios total
+AU matriculados en estudiantes
+primer año al 30 de no binarios <=
+abril de cada año. Matrícula
+primer año.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+52
+--- Página 53 ---
+Manual de Sistema INDICES – Versión 04/2015
+19. CARGA DE ARCHIVO CSV DE EGRESADOS Y TITULADOS N° Entero Positivo.
+Las instrucciones para la correcta carga de archivo CSV de egresados y titulados son las
+siguientes:
+• Ingresar a la sección “Egresados y Titulados (CSV)” (pregrado) o “Egresados y
+Graduados (CSV)” (posgrado) según corresponda.
+• Descargue el archivo haciendo clic en el botón "Módulo CSV", luego seleccione
+“Descargar CSV”. Guarde el archivo en formato CSV: separado por ";" (Punto y
+coma)
+• Cuando complete la información, diríjase al botón “Examinar” e importe el archivo
+indicando que es un archivo separado por ";" (Punto y coma). Presione el botón
+“Subir”.
+• Revise el reporte.
+. Posteriormente, podrían suceder tres cosas al cargar cada carrera:
+• Carga sin problema.
+• No Carga (Error), la información ingresada no se graba en la base de datos (color
+rojo).
+Evalué el reporte y rectifique los casos que presentan problemas de carga. Repita el
+proceso.
+Tabla 26: CSV Egresados y Titulados
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Código de la
+Sede en la que N° Entero
+A idsede No
+se dicta el Positivo.
+programa.
+Año que
+comenzó con
+N° Entero
+B AnioInicioActividades No actividades
+Positivo.
+académicas el
+programa.
+N° Entero
+C codcarr No Código CNED.
+Positivo.
+Nombre con que
+fue registrado la
+D nombre No carrera en el Texto.
+sistema
+INDICES.
+Tipo de Carrera
+que fue
+N° Entero
+E TipoCarrera No ingresado en el
+Positivo.
+sistema
+INDICES.
+53
+--- Página 54 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Nombre de la
+sede donde se
+F nombreSede No Texto.
+dicta el programa
+o carrera.
+En caso de que
+dentro de la sede
+se dicte una
+carrera en
+distintos campus
+G nombreCampus No Texto.
+la diferencia de
+la carrera se
+dará por el
+nombre del
+campus.
+Dependencia a
+la que el
+programa está
+adjunto,
+H nombreDependencia No Texto.
+Facultad,
+Departamento,
+etc. Puede no
+tener.
+Horario de la
+I Horario No Texto.
+carrera.
+Especialidad que
+EspecialidadOMencio tiene la carrera,
+J No Texto.
+n no es parte del
+nombre.
+N° Entero
+L Anioinfo Si Año de proceso.
+Positivo.
+N° total de
+hombres
+egresados, pero
+no titulados,
+durante el año
+pasado. Por
+egresado se
+entenderá al
+estudiante que
+N° Entero
+M Egresados Si ha finalizado el
+Positivo.
+plan de estudio o
+currículo de la
+carrera o
+programa, pero
+aún no concluye
+las actividades
+conducentes a la
+obtención del
+grado académico
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+54
+--- Página 55 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+y/o título
+profesional.
+N° total de
+mujeres
+egresadas, pero
+no tituladas,
+durante el año
+pasado. Por
+egresada se
+entenderá a la
+estudiante que
+ha finalizado el
+N° Entero
+N Egresadas Si plan de estudio o
+Positivo.
+currículo de la
+carrera o
+programa, pero
+aún no concluye
+las actividades
+conducentes a la
+obtención del
+grado académico
+y/o título
+profesional.
+N° total de
+hombres
+titulados durante
+el año pasado.
+Por titulado se
+entenderá al
+estudiante que
+ha finalizado
+completamente
+las actividades N° Entero
+O Titulados Si
+conducentes a la Positivo.
+obtención del
+grado
+académico, el
+título profesional
+o el título técnico
+de nivel superior
+con que
+concluye la
+carrera.
+N° total de
+mujeres tituladas
+durante el año
+pasado. Por N° Entero
+P Tituladas Si
+titulada se Positivo.
+entenderá al
+estudiante que
+ha finalizado
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+55
+--- Página 56 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+completamente
+las actividades
+conducentes a la
+obtención del
+grado
+académico, el
+título profesional
+o el título técnico
+de nivel superior
+con que
+concluye la
+carrera.
+20. CARGA DE ARCHIVO CSV DE DOCENTES
+Las instrucciones para la correcta carga de archivo CSV de docentes son las siguientes:
+i. Ingresar a la sección “Gestión Docentes (CSV)”.
+ii. Descargue el archivo haciendo clic en el botón "Módulo CSV", luego seleccione
+“Descargar CSV”. Guarde el archivo en formato CSV: separado por ";" (Punto y
+coma)
+iii. Cuando complete la información, diríjase al botón “Examinar” e importe el archivo
+indicando que es un archivo separado por ";" (Punto y coma). Presione el botón
+“Subir”.
+iv. Revise el reporte.
+. Posteriormente, podrían suceder tres cosas al cargar cada carrera:
+i. Carga sin problema.
+ii. No Carga (Error), la información ingresada no se graba en la base de datos (color
+rojo).
+Evalué el reporte y rectifique los casos que presentan problemas de carga. Repita el
+proceso.
+Tabla 27: CSV Docentes
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Código de la N° Entero
+A idSede No
+Sede en la que Positivo.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+56
+--- Página 57 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+se dicta el
+programa
+Nombre de la
+B NombreSede No Texto.
+sede
+Año inicio
+N° Entero
+C InicioDeActividades No actividades de la
+Positivo.
+sede
+Doctores jornada
+N° Entero
+D DJCH Si completa
+Positivo.
+hombres
+Doctores jornada
+N° Entero
+E DJCM Si completa
+Positivo.
+mujeres
+Horas doctores
+jornada completa N° Entero
+F HorasDJC Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+doctores jornada
+G DJC_GTRD$ Si Positivo. Miles
+completa
+de pesos.
+(remuneración
+semanal)
+magíster jornada
+N° Entero
+H MJCH Si completa
+Positivo.
+hombres
+magíster jornada
+N° Entero
+I MJCM Si completa
+Positivo.
+mujeres
+Horas magíster
+jornada completa N° Entero
+J HorasMJC Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+magíster jornada
+K MJC_GTRD$ Si Positivo. Miles
+completa
+de pesos.
+(remuneración
+semanal)
+Especialidades
+N° Entero
+L emJCH Si jornada completa
+Positivo.
+hombres
+Especialidades
+N° Entero
+M emJCM Si jornada completa
+Positivo.
+mujeres
+Horas
+especialidades
+N° Entero
+N HorasemJC Si jornada completa
+Positivo.
+(horas
+semanales)
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+57
+--- Página 58 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Gasto en
+remuneraciones,
+N° Entero
+especialidades
+O EMOJC_GTRD$ Si Positivo. Miles
+jornada completa
+de pesos.
+(remuneración
+semanal)
+Profesionales
+N° Entero
+P PJCH Si jornada completa
+Positivo.
+hombres
+Profesionales
+N° Entero
+Q PJCM Si jornada completa
+Positivo.
+mujeres
+Horas
+profesionales
+N° Entero
+R HorasPJC Si jornada completa
+Positivo.
+(horas
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+profesionales
+S PyoLJC_GTRD$ Si Positivo. Miles
+jornada completa
+de pesos.
+(remuneración
+semanal)
+Técnicos jornada
+N° Entero
+T TnJCH Si completa
+Positivo.
+hombres
+Técnicos jornada
+N° Entero
+U TnJCM Si completa
+Positivo.
+mujeres
+Horas técnicos
+jornada completa N° Entero
+V HorasTnJC Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+técnicos jornada
+W TNSJC_GTRD$ Si Positivo. Miles
+completa
+de pesos.
+(remuneración
+semanal)
+Oficios jornada
+N° Entero
+X OJCH Si completa
+Positivo.
+hombres
+Oficios jornada
+N° Entero
+Y OJCM Si completa
+Positivo.
+mujeres
+Horas oficios
+jornada completa N° Entero
+Z HorasOJC Si
+(horas Positivo.
+semanales)
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+58
+--- Página 59 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Gasto en
+remuneraciones,
+N° Entero
+oficios jornada
+AA STOGJC_GTRD$ Si Positivo. Miles
+completa
+de pesos.
+(remuneración
+semanal)
+Doctores jornada N° Entero
+AB DJMH Si
+media hombres Positivo.
+Doctores jornada N° Entero
+AC DJMM Si
+media mujeres Positivo.
+Horas doctores
+jornada media N° Entero
+AD HorasDJM Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+doctores jornada
+AE DJM_GTRD$ Si Positivo. Miles
+media
+de pesos.
+(remuneración
+semanal)
+magíster jornada N° Entero
+AF MJMH Si
+media hombres Positivo.
+magíster jornada N° Entero
+AG MJMM Si
+media mujeres Positivo.
+Horas magíster
+jornada media N° Entero
+AH HorasMJM Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+magíster jornada
+AI MJM_GTRD$ Si Positivo. Miles
+media
+de pesos.
+(remuneración
+semanal)
+Especialidades
+N° Entero
+AJ emJMH Si jornada media
+Positivo.
+hombres
+Especialidades
+N° Entero
+AK emJMM Si jornada media
+Positivo.
+mujeres
+Horas
+especialidades
+N° Entero
+AL HorasemJM Si jornada media
+Positivo.
+(horas
+semanales)
+Gasto en
+N° Entero
+remuneraciones,
+AM EMOJM_GTRD$ Si Positivo. Miles
+especialidades
+de pesos.
+jornada media
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+59
+--- Página 60 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+(remuneración
+semanal)
+Profesionales
+N° Entero
+AN PJMH Si jornada media
+Positivo.
+hombres
+Profesionales
+N° Entero
+AO PJMM Si jornada media
+Positivo.
+mujeres
+Horas
+profesionales
+N° Entero
+AP HorasPJM Si jornada media
+Positivo.
+(horas
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+profesionales
+AQ PyoLJM_GTRD$ Si Positivo. Miles
+jornada media
+de pesos.
+(remuneración
+semanal)
+Técnicos jornada N° Entero
+AR TnJMH Si
+media hombres Positivo.
+Técnicos jornada N° Entero
+AS TnJMM Si
+media mujeres Positivo.
+Horas técnicos
+jornada media N° Entero
+AT HorasTnJM Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+técnicos jornada
+AU TNSJM_GTRD$ Si Positivo. Miles
+media
+de pesos.
+(remuneración
+semanal)
+Oficios jornada N° Entero
+AV OJMH Si
+media hombres Positivo.
+Oficios jornada N° Entero
+AW OJMM Si
+media mujeres Positivo.
+Horas oficios
+jornada media N° Entero
+AX HorasOJM Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+oficios jornada
+AY STOGJM_GTRD$ Si Positivo. Miles
+media
+de pesos.
+(remuneración
+semanal)
+Doctores jornada N° Entero
+AZ DJHH Si
+hora hombres Positivo.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+60
+--- Página 61 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Doctores jornada N° Entero
+BA DJHM Si
+hora mujeres Positivo.
+Horas doctores
+jornada hora N° Entero
+BB HorasDJH Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+doctores jornada
+BC DJH_GTRD$ Si Positivo. Miles
+hora
+de pesos.
+(remuneración
+semanal)
+magíster jornada N° Entero
+BD MJHH Si
+hora hombres Positivo.
+magíster jornada N° Entero
+BE MJHM Si
+hora mujeres Positivo.
+Horas magíster
+jornada hora N° Entero
+BF HorasMJH Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+magíster jornada
+BG MJH_GTRD$ Si Positivo. Miles
+hora
+de pesos.
+(remuneración
+semanal)
+Especialidades
+N° Entero
+BH emJHH Si jornada hora
+Positivo.
+hombres
+Especialidades
+N° Entero
+BI emJHM Si jornada hora
+Positivo.
+mujeres
+Horas
+especialidades
+N° Entero
+BJ HorasemJH Si jornada hora
+Positivo.
+(horas
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+especialidades
+BK EMOJH_GTRD$ Si Positivo. Miles
+jornada hora
+de pesos.
+(remuneración
+semanal)
+Profesionales
+N° Entero
+BL PJHH Si jornada hora
+Positivo.
+hombres
+Profesionales
+N° Entero
+BM PJHM Si jornada hora
+Positivo.
+mujeres
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+61
+--- Página 62 ---
+Manual de Sistema INDICES – abril/2025
+Columna Nombre Columna Editable Descripción Formato
+Orden
+Horas
+profesionales
+N° Entero
+BN HorasPJH Si jornada hora
+Positivo.
+(horas
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+profesional
+BO PyoLJH_GTRD$ Si Positivo. Miles
+jornada hora
+de pesos.
+(remuneración
+semanal)
+Técnicos jornada N° Entero
+BP TnJHH Si
+hora hombres Positivo.
+Técnicos jornada N° Entero
+BQ TnJHM Si
+hora mujeres Positivo.
+Horas técnicos
+jornada hora N° Entero
+BR HorasTnJH Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+técnico jornada
+BS TNSJH_GTRD$ Si Positivo. Miles
+hora
+de pesos.
+(remuneración
+semanal)
+Oficios jornada N° Entero
+BT OJHH Si
+hora hombres Positivo.
+Oficios jornada N° Entero
+BU OJHM Si
+hora mujeres Positivo.
+Horas oficios
+jornada hora N° Entero
+BV HorasOJH Si
+(horas Positivo.
+semanales)
+Gasto en
+remuneraciones,
+N° Entero
+oficios jornada
+BW STOGJH_GTRD$ Si Positivo. Miles
+hora
+de pesos.
+(remuneración
+semanal)
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+62
+--- Página 63 ---
+Manual de Sistema INDICES – Versión 04/2015
+21. MALLA CURIICULAR: VARIABLES SOLICITADAS Y DEFINICIONES
+En esta sección se presentan las definiciones asociadas a las variables solicitadas en el
+proceso de Malla Curricular. Las definiciones que se presentan se encuentran relación con
+los procesos INDICES como también con otros procesos de reporte de datos en Educación
+Superior. De igual forma, estas definiciones tienen, en algunos casos, un sentido general,
+lo que permite abordar la diversidad de situaciones específicas que tienen las IES.
+i. Código de institución (Cód. Institución): Corresponde al identificador numérico
+otorgado por el CNED.
+ii. Código de programa de estudio (Código de programa CNED que cursa):
+Corresponde al código del programa otorgado por el CNED.
+iii. Código de programa IES (Código de programa interno): corresponde al código
+de programa interno generado por la institución para el uso institucional.
+iv. Versión de la malla (Versión Malla): Corresponde un código otorgado por la
+institución a la malla curricular, es un identificador único.
+v. Año Malla: Corresponde al año de creación de la malla por parte de la institución.
+vi. Código de asignatura: Es el código interno de la asignatura generado por la
+institución.
+vii. Asignaturas previas: Corresponde al número de asignaturas o cursos que son un
+prerrequisito.
+viii. Nombre Asignatura o práctica: Nombre de la asignatura generado por la
+institución.
+ix. Nivel de la asignatura o práctica: Es el semestre, trimestre, año, etc donde se
+dicta la asignatura según la medida dada por la organización (1, 2, 3, etc.).
+x. Organización: Corresponde a la clasificación u organización de la malla por
+régimen (anual, semestral, etc.).
+xi. Horas, Créditos o equivalentes de la asignatura y práctica: Unidad utilizada para
+cuantificar el trabajo académico del estudiante, su valor depende de la definición de
+la unidad de la asignatura y práctica, por ejemplo, 30 (créditos) o 5 (horas).
+xii. Unidad de la asignatura y práctica: Tipo de unidad utilizada para cuantificar el
+trabajo académico del estudiante (horas, créditos, etc.).
+xiii. Categoría Tipo: clasificación de la malla según tipo de curso desde la perspectiva
+del contenido (teórico, practico, etc.).
+xiv. ULR de la malla: Enlace web de la malla.
+xv. N° de mallas actuales: Corresponde al número de mallas vigentes del programa.
+xvi. Tipo Hora: Corresponde a las horas desde la perspectiva del trabajo (horas
+pedagógicas, horas prácticas, horas trabajo autónomo, horas trabajo practico).
+22. SOBRE LA CARGA DE DATOS
+Para la correcta carga del archivo CSV, disponible en la plataforma, debe realizar los
+siguientes pasos:
+63
+--- Página 64 ---
+Manual de Sistema INDICES – abril/2025
+i. Ir a la sección Programas y luego seleccionar la subsección Malla.
+Ilustración 1: Interfaz de carga de datos
+ii. Descargue el archivo, con formato definido, en la opción Descarga Plantilla CSV.
+Ilustración 2: Botón descarga planilla CSV
+Ilustración 3: Estructura archivo CSV
+iii. Llene los datos requeridos en la planilla dispuesta. Una vez completa la planilla,
+cargue la Malla Curricular a través de la opción Elegir archivo. Nota: Debe
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+64
+--- Página 65 ---
+Manual de Sistema INDICES – abril/2025
+mantener la extensión del archivo en CSV. Por su parte, en esta primera versión el
+proceso corresponde a 2022 (por defecto).
+Ilustración 4: Botón de carga archivo CSV
+iv. Una vez que cargue el archivo se realizaran una serie de validaciones (internas). En
+caso de que no cumpla con algunas de las validaciones de formato de datos,
+presentes en el manual de usuario, no se cargará su archivo. Si tiene un error en la
+carga, resuelva los errores y vuelva a cargar. Para un mayor detalle sobre el tipo de
+errores y su posible solución, ver la sección 4. ERRORES EN CARGA DE DATOS.
+Ilustración 5: Mensaje de error en la carga del archivo CSV (ejemplo)
+v. Si desea revisar los datos subidos a la plataforma seleccione la lista desplegable
+Proceso (para seleccionar el proceso de interés) y, luego, Descargar Datos.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+65
+--- Página 66 ---
+Manual de Sistema INDICES – abril/2025
+Ilustración 6: Mensaje de error en la carga del archivo CSV
+vi. En caso de que necesite rectificar datos de otros procesos, póngase en contacto
+con el equipo INDICES.
+Importante: En caso de que el archivo CSV tenga más de 5.000 filas, el reporte de
+validación se desplegará en un archivo con un reporte que contine la información cargada
+que podrá descarga directamente en el sistema INDICES.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+66
+--- Página 67 ---
+Manual de Sistema INDICES – abril/2025
+Ilustración 7: Archivo con Log de error en la carga CSV
+23. ERRORES EN LA CARGA DE DATOS
+En esta sección presentamos un listado de los errores más comunes en la carga y una
+sugerencia para corregirlos permitiendo la carga del archivo CSV.
+Tabla 28: Errores de carga
+Mensaje de Error Sugerencia
+Buscar en el sistema el código CNED del
+Carrera no existe programa e incorporarlo al archivo CSV.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+67
+--- Página 68 ---
+Manual de Sistema INDICES – abril/2025
+Mensaje de Error Sugerencia
+Las asignaturas ingresadas en otros procesos
+no se deben volver a cargar, para identificarlas
+se debe obtener el reporte de la malla. Se debe
+Asignatura Registrada Previamente
+eliminar esta asignatura de la carga y solo subir
+la diferencia, es decir, aquellas asignaturas no
+cargadas.
+Se debe convertir el archivo a formato CSV.
+El formato o el tipo de archivo no es permitido
+Se debe convertir el archivo a formato CSV,
+Verifique que el archivo esté con el formato y verificar que no falta ningún encabezado y que
+las columnas correctas. todas las columnas cumplen con los formatos
+solicitados (entero, varchar, etc.).
+24. OBTENCIÓN DE REPORTES
+Para obtener un reporte de lo cargado previamente, debe llevar a cabo los siguientes pasos:
+i. Seleccionar la sección Programas y luego la subsección Programas Malla.
+Posteriormente, seleccionar el botón “Ver”, el cual desplegará un listado de carreras.
+Para revisar cada uno de los programas cargados debe hacer clic en “Opciones”.
+Ilustración 8: Sección visualización de la Malla por programa de estudio
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+68
+--- Página 69 ---
+Manual de Sistema INDICES – abril/2025
+ii. Realizado el paso previo, se desplegará esquemática y resumidamente la malla del
+programa de estudio seleccionado.
+Ilustración 9: Estructura de la malla curricular por programa de estudio
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+69
+--- Página 70 ---
+Manual de Sistema INDICES – abril/2025
+iii. En caso de que desee obtener un archivo Excel con el respaldo de los datos
+cargados, se debe dirigir a la sección Programas y luego seleccionar la subsección
+Programas Malla. Posteriormente, seleccionar el periodo de interés y descargar el
+archivo correspondiente.
+Ilustración 10: Botón reporte CSV estructura de la malla
+iv. Al llevar a cabo el paso previo, se desplegará un archivo con la estructura dispuesta
+en la Ilustración 8.
+Ilustración 11: Reporte CSV de la malla curricular por proceso
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+70
+--- Página 71 ---
+Manual de Sistema INDICES – abril/2025
+25. ANEXO
+Presentamos el esquema de registro donde se describe el nombre, tipo, descripción,
+valores de las variables más algunas observaciones que ayudan a cargar los datos.
+Tabla 29: Esquema de registro malla curricular
+Nombre Tipo Descripción Valores Observación
+Código CNED de 1001
+Cód. Institución Entero
+la institución.
+Revisar el libro
+Código de
+Código INDICES 28341 con códigos de
+programa CNED Entero
+del programa. programas
+que cursa
+CNED
+Código de AD200 y
+Código de programa interno similares
+Varchar
+programa interno otorgado por la
+institución.
+Si existen
+Código de malla 140923 cambios en la
+académica del malla y la
+programa. institución
+Versión Malla Entero considera que es
+una diferente
+debe cambiar el
+código e
+incrementarlo
+Año de 2015
+Año Malla Entero
+confección de la
+malla curricular
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+71
+--- Página 72 ---
+Manual de Sistema INDICES – abril/2025
+Nombre Tipo Descripción Valores Observación
+Código de Mat_3030,
+Código de asignatura Eco_3112 y
+Varchar
+asignatura interno otorgado similares
+por la institución
+Numero Numero de 5
+Asignaturas Entero asignaturas
+Previas previas
+Nombre
+Nombre de la Matemática I
+Asignatura o Varchar
+asignatura
+práctica
+El curso MAT_1
+Número de nivel Entre 1er a 20mo se dicta en el “6”
+Nivel de la en que se dicta la semestre.
+semestre (1 al
+asignatura o Entero asignatura según
+20)
+practica la malla vigente El curso EST_2
+se dicta en el “8”
+semestre.
+El programa
+Organización o Año=1 16.953 se
+clasificación de la organiza en
+Semestre=2
+malla por “Semestre”.
+Trimestre=3
+Organización Varchar régimen.
+Bimestre=4
+El programa
+16.924 se
+organiza “Anual”.
+Las unidades
+Unidad utilizada 30 son horas,
+Horas, Créditos para cuantificar créditos o
+o equivalentes la carga de similares
+Entero
+de la asignatura trabajo del
+y práctica estudiante al
+rendir el curso
+Tipo de unidad Horas=1
+utilizada para
+Unidad de la Créditos=2
+cuantificar el
+asignatura y Entero Otros=3
+trabajo
+práctica
+académico del
+estudiante.
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+72
+--- Página 73 ---
+Manual de Sistema INDICES – abril/2025
+Nombre Tipo Descripción Valores Observación
+Se refiere a una Obligatorio=1
+clasificación de la
+Categoría Entero Optativo=2
+malla desde una
+perspectiva
+c urricular.
+Teórico=1
+Tipo de curso Práctico=2
+desde la
+Tipo Entero Teórico-
+perspectiva del
+Práctico=3
+contenido.
+https://acceso-
+Enlace al sitio sup.mineduc.cl/a
+web de la malla
+cceso-
+Ulr de la malla Varchar curricular.
+buscador/institu
+cion/367/carrera
+/I367S1C7J1V1
+N° de mallas 1
+N° de mallas
+Varchar vigentes del
+actuales
+programa.
+Tipo de horas Horas
+desde la pedagógicas=1
+perspectiva del Horas
+trabajo. practicas=2
+Tipo Horas Entero
+Horas trabajo
+autónomo=3
+Horas trabajo
+practico=4
+Departamento Gestión de la Calidad Consejo Nacional de Educación
+Marchant Pereira 844, Providencia, Santiago, Chile.
+Tel: [56 2] 2341 3412 - [56 2] 2341 3413
+73

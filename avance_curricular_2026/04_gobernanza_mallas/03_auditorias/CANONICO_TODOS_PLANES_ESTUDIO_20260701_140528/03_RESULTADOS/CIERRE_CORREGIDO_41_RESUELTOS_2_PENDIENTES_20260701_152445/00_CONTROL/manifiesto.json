@@ -1,0 +1,28 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Cierre corregido de identidad de 43 carreras",
+  "fecha_ejecucion": "2026-07-01T15:24:45.546758",
+  "entrada": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CONCILIACION_TRAZABLE_5810_PLAN_CANONICO_20260701_142216/01_RESULTADOS/01_CONCILIACION_5810_PLAN_CANONICO.tsv",
+  "ejecucion_anterior_invalidada": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/03_RESULTADOS/CIERRE_41_RESUELTOS_2_PENDIENTES_20260701_152345",
+  "motivo_invalidacion": "Las columnas incorporadas mediante merge contenían NaN. El evaluador lógico trató NaN como valor verdadero y dejó sin estado de cierre a 38 registros previamente resueltos.",
+  "correccion": "Se aplicó fillna antes de evaluar las decisiones y se establecieron catálogos explícitos de estados resueltos y pendientes.",
+  "resultado": {
+    "registros_totales": 43,
+    "resueltos": 41,
+    "pendientes": 2
+  },
+  "nuevas_resoluciones_tecnicas": {
+    "I162S2C83J4V1": "ADMP20251",
+    "I162S2C85J4V1": "CONG20251",
+    "I162S2C86J4V1": "AUDT20251"
+  },
+  "pendientes": [
+    "I162S2C11J2V1",
+    "I162S2C87J4V1"
+  ],
+  "nivel_respaldo": "Decisión técnica derivada de datos observados y resultados de auditoría. No constituye regla oficial.",
+  "fuentes_originales_modificadas": false,
+  "precargas_modificadas": false,
+  "archivo_para_carga_generado": false,
+  "apto_para_carga": false
+}

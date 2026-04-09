@@ -3,17 +3,30 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 from pathlib import Path
 import re
 import pandas as pd
 
 # La validacion oficial no debe depender del runtime legacy archivado.
 from codigo_gobernanza_v2 import CARRERAS_AC_COLUMNS, MATRICULA_AC_COLUMNS, MATRICULA_UNIFICADA_COLUMNS
+from src.patches.apply_patches import (
+    DEFAULT_SIT_FON_SOL_PATCH_PATH,
+    PATCH_AUDIT_STATUS_SIT_FON_SOL,
+    PATCH_METHOD_SIT_FON_SOL,
+    PATCH_SOURCE_SIT_FON_SOL,
+    load_json_patch,
+    resolve_patch_targets,
+)
 
 MU_FUSION_OUTPUT_FILENAME = "archivo_listo_para_sies.xlsx"
 MU_PREGRADO_CSV_FILENAME = "matricula_unificada_2026_pregrado.csv"
 UZ_COLUMNS = ['ASI_INS_ANT', 'ASI_APR_ANT', 'PROM_PRI_SEM', 'PROM_SEG_SEM', 'ASI_INS_HIS', 'ASI_APR_HIS']
 PUENTE_SIES_COMPILADO_PATH = Path("control/catalogos/PUENTE_SIES_COMPILADO.tsv")
+SIT_FON_SOL_PATCH_PATH = Path(DEFAULT_SIT_FON_SOL_PATCH_PATH)
+FOR_ING_ACT_VALID_CODES = set(range(1, 12))
+FOR_ING_CONTINUIDAD_CODES = {2, 3, 4, 5, 11}
+FOR_ING_REPORT_FILENAME = "reporte_for_ing_act.json"
 
 
 def check_puente_sies_compilado() -> dict[str, object]:
@@ -121,6 +134,20 @@ def _valid_ddmmyyyy_mask(series: pd.Series) -> pd.Series:
     return fmt_mask & parsed_mask
 
 
+def _trimester_level_to_semester(series: pd.Series) -> pd.Series:
+    nivel = pd.to_numeric(series, errors='coerce').round()
+    mapping = {
+        1: 1, 2: 2, 3: 2,
+        4: 3, 5: 4, 6: 4,
+        7: 5, 8: 6, 9: 6,
+        10: 7, 11: 8, 12: 8,
+    }
+    sem = nivel.map(mapping)
+    fallback_mask = sem.isna() & nivel.notna() & nivel.gt(12)
+    sem.loc[fallback_mask] = ((nivel.loc[fallback_mask] * 2 + 2) // 3)
+    return sem.astype('Float64')
+
+
 def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
     csv_path = out / MU_PREGRADO_CSV_FILENAME
     xlsx_path = out / MU_FUSION_OUTPUT_FILENAME
@@ -145,8 +172,23 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
     mu_csv = pd.read_csv(csv_path, sep=';', header=None, dtype=str, keep_default_na=False, names=MATRICULA_UNIFICADA_COLUMNS)
     assert mu_csv.shape[1] == len(MATRICULA_UNIFICADA_COLUMNS), 'CSV final no tiene 32 columnas exactas'
 
-    bad_for_ing = ~mu_csv['FOR_ING_ACT'].astype(str).str.strip().eq('1')
-    assert not bad_for_ing.any(), f'FOR_ING_ACT distinto de 1 en filas: {(bad_for_ing[bad_for_ing].index[:5] + 1).tolist()}'
+    for_ing_num = pd.to_numeric(mu_csv['FOR_ING_ACT'], errors='coerce')
+    bad_for_ing = for_ing_num.isna() | ~for_ing_num.isin(sorted(FOR_ING_ACT_VALID_CODES))
+    assert not bad_for_ing.any(), (
+        'FOR_ING_ACT nulo o fuera de catálogo 1..11 en filas: '
+        f'{(bad_for_ing[bad_for_ing].index[:10] + 1).tolist()}'
+    )
+
+    anio_act = pd.to_numeric(mu_csv['ANIO_ING_ACT'], errors='coerce')
+    sem_act = pd.to_numeric(mu_csv['SEM_ING_ACT'], errors='coerce')
+    anio_ori = pd.to_numeric(mu_csv['ANIO_ING_ORI'], errors='coerce')
+    sem_ori = pd.to_numeric(mu_csv['SEM_ING_ORI'], errors='coerce')
+    continuidad_mask = for_ing_num.isin(sorted(FOR_ING_CONTINUIDAD_CODES))
+    continuidad_mismatch = continuidad_mask & anio_act.eq(anio_ori) & sem_act.eq(sem_ori)
+    assert not continuidad_mismatch.any(), (
+        'Anexo 7 continuidad incumplido (FOR_ING_ACT en {2,3,4,5,11} con año/sem origen igual a actual) '
+        f'en filas: {(continuidad_mismatch[continuidad_mismatch].index[:10] + 1).tolist()}'
+    )
 
     bad_sexo = ~mu_csv['SEXO'].astype(str).str.strip().isin({'H', 'M', 'NB'})
     assert not bad_sexo.any(), f'SEXO fuera de catálogo H/M/NB en filas: {(bad_sexo[bad_sexo].index[:5] + 1).tolist()}'
@@ -174,9 +216,22 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
     metrics: dict[str, object] = {
         'rows_csv_final': int(len(mu_csv)),
         'for_ing_act_distribution': mu_csv['FOR_ING_ACT'].astype(str).value_counts(dropna=False).to_dict(),
+        'for_ing_act_continuidad_rows': int(continuidad_mask.sum()),
+        'for_ing_act_continuidad_regla_fail_rows': int(continuidad_mismatch.sum()),
         'uz_all_zero_rows': int(uz_all_zero_mask.sum()),
         'uz_all_zero_pct': _pct(int(uz_all_zero_mask.sum()), int(len(mu_csv))),
     }
+
+    for_ing_report_path = out / FOR_ING_REPORT_FILENAME
+    assert for_ing_report_path.exists(), f'Falta reporte FOR_ING_ACT: {for_ing_report_path}'
+    for_ing_report = json.loads(for_ing_report_path.read_text(encoding='utf-8'))
+    assert int(for_ing_report.get('rows_included_final', -1)) == int(len(mu_csv)), (
+        'reporte_for_ing_act.json no cuadra con filas incluidas finales del CSV regulatorio'
+    )
+    metrics['for_ing_act_report_path'] = str(for_ing_report_path)
+    metrics['for_ing_act_report_unresolved'] = int(
+        (for_ing_report.get('unresolved', {}) or {}).get('count', 0)
+    )
 
     if xlsx_path.exists():
         mu_xlsx = pd.read_excel(xlsx_path, sheet_name='MATRICULA_UNIFICADA_32', dtype=str).fillna('')
@@ -248,6 +303,10 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
             'NIV_ACA_FUENTE_FINAL',
             'NIV_ACA_METODO_FINAL',
             'NIV_ACA_AUDIT_STATUS',
+            'REGIMEN_FUENTE',
+            'DURACION_ESTUDIOS_REF',
+            'NIV_ACA_ADMIN_ORIG',
+            'NIV_ACA_EQ_SEM_APLICADA',
             'FECHA_MATRICULA_FUENTE_FINAL',
             'FECHA_MATRICULA_METODO_FINAL',
             'FECHA_MATRICULA_AUDIT_STATUS',
@@ -322,6 +381,9 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
             'NIV_ACA_FUENTE_FINAL',
             'NIV_ACA_METODO_FINAL',
             'NIV_ACA_AUDIT_STATUS',
+            'REGIMEN_FUENTE',
+            'NIV_ACA_ADMIN_ORIG',
+            'NIV_ACA_EQ_SEM_APLICADA',
             'FECHA_MATRICULA_FUENTE_FINAL',
             'FECHA_MATRICULA_METODO_FINAL',
             'FECHA_MATRICULA_AUDIT_STATUS',
@@ -378,6 +440,39 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
                 'uz_hist_base_pct': _pct(hist_rows, int(len(included))),
             }
         )
+        trim_mask = included['REGIMEN_FUENTE'].astype(str).str.upper().str.contains('TRIM', regex=False)
+        niv_admin_orig = pd.to_numeric(included['NIV_ACA_ADMIN_ORIG'], errors='coerce')
+        niv_eq_sem = _trimester_level_to_semester(niv_admin_orig)
+        niv_eq_expected = niv_eq_sem.where(trim_mask, pd.NA)
+        dur_ref_inc = pd.to_numeric(included['DURACION_ESTUDIOS_REF'], errors='coerce')
+        niv_eq_expected = niv_eq_expected.where(dur_ref_inc.isna() | niv_eq_expected.le(dur_ref_inc), dur_ref_inc)
+        anio_ori_inc = pd.to_numeric(included['ANIO_ING_ORI'], errors='coerce')
+        niv_eq_expected = niv_eq_expected.where(~anio_ori_inc.eq(2026) | niv_eq_expected.le(2), 2)
+        niv_final_inc = pd.to_numeric(included['NIV_ACA'], errors='coerce')
+        trim_mismatch = trim_mask & niv_eq_expected.notna() & niv_final_inc.notna() & niv_final_inc.ne(niv_eq_expected)
+        trim_mismatch_count = int(trim_mismatch.sum())
+        trim_examples = included.loc[
+            trim_mismatch,
+            ['CODCLI', 'N_DOC', 'REGIMEN_FUENTE', 'NIV_ACA_ADMIN_ORIG', 'NIV_ACA', 'DURACION_ESTUDIOS_REF', 'ANIO_ING_ORI'],
+        ].head(10)
+        metrics.update(
+            {
+                'niv_aca_trim_rows': int(trim_mask.sum()),
+                'niv_aca_trim_eq_aplicada_rows': int(included['NIV_ACA_EQ_SEM_APLICADA'].eq('SI').sum()),
+                'niv_aca_trim_mismatch_rows': trim_mismatch_count,
+                'niv_aca_trim_mismatch_examples': trim_examples.to_dict(orient='records'),
+            }
+        )
+        if trim_mismatch_count > 0:
+            print(
+                f'[MU2026][WARN] NIV_ACA trimestral: {trim_mismatch_count} mismatches contra tabla institucional '
+                '(muestra top10 en métrica niv_aca_trim_mismatch_examples).'
+            )
+        if os.getenv('QA_ENFORCE_NIV_TRIM_EQ', '0').strip() == '1':
+            assert trim_mismatch_count == 0, (
+                'NIV_ACA trimestral con mismatches activos frente a tabla institucional '
+                f'en filas: {(trim_mismatch[trim_mismatch].index[:10] + 1).tolist()}'
+            )
         assert fallback_rows == 0, 'FOR_ING_ACT no debe quedar imputado en filas finales'
         assert review_rows == 0, 'FOR_ING_ACT no debe quedar en revisión en filas finales'
         if hist_rows > 0:
@@ -805,10 +900,13 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         'NIV_ACA_FUENTE_FINAL',
         'NIV_ACA_METODO_FINAL',
         'NIV_ACA_AUDIT_STATUS',
+        'REGIMEN_FUENTE',
+        'DURACION_ESTUDIOS_REF',
+        'NIV_ACA_ADMIN_ORIG',
+        'NIV_ACA_EQ_SEM_APLICADA',
         'FECHA_MATRICULA_FUENTE_FINAL',
         'FECHA_MATRICULA_METODO_FINAL',
         'FECHA_MATRICULA_AUDIT_STATUS',
-        'DURACION_ESTUDIOS_REF',
     ]
     missing_cols = [col for col in required_cols if col not in included.columns]
     assert not missing_cols, f'FASE 3: faltan columnas de trazabilidad: {missing_cols}'
@@ -833,6 +931,13 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
     niv_valid = niv_num.ge(1)
     niv_le_dur = dur_ref.isna() | niv_num.le(dur_ref)
     niv_cohorte_2026_ok = (~cohorte_2026_mask) | niv_num.le(2)
+    trim_mask = included['REGIMEN_FUENTE'].astype(str).str.upper().str.contains('TRIM', regex=False)
+    niv_admin_orig = pd.to_numeric(included['NIV_ACA_ADMIN_ORIG'], errors='coerce')
+    niv_eq_sem = _trimester_level_to_semester(niv_admin_orig)
+    niv_eq_expected = niv_eq_sem.where(trim_mask, pd.NA)
+    niv_eq_expected = niv_eq_expected.where(dur_ref.isna() | niv_eq_expected.le(dur_ref), dur_ref)
+    niv_eq_expected = niv_eq_expected.where(~cohorte_2026_mask | niv_eq_expected.le(2), 2)
+    trim_mismatch = trim_mask & niv_eq_expected.notna() & niv_num.notna() & niv_num.ne(niv_eq_expected)
     fecha_policy_ok = (cohorte_2026_mask & ~fecha_1900_mask) | ((~cohorte_2026_mask) & fecha_1900_mask)
 
     gate = {
@@ -928,6 +1033,9 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         'niv_aca_default_1_rows': int(included['NIV_ACA_AUDIT_STATUS'].astype(str).str.startswith('DEFAULT_1').sum()),
         'niv_aca_acotado_duracion_rows': int(included['NIV_ACA_AUDIT_STATUS'].astype(str).str.contains('ACOTADO_DURACION', regex=False).sum()),
         'niv_aca_acotado_cohorte_2026_rows': int(included['NIV_ACA_AUDIT_STATUS'].astype(str).str.contains('COHORTE_2026', regex=False).sum()),
+        'niv_aca_trim_rows': int(trim_mask.sum()),
+        'niv_aca_trim_eq_aplicada_rows': int(included['NIV_ACA_EQ_SEM_APLICADA'].eq('SI').sum()),
+        'niv_aca_trim_mismatch_rows': int(trim_mismatch.sum()),
         'fecha_matricula_1900_rows': int(fecha_1900_mask.sum()),
         'fecha_matricula_1900_fuera_2026_rows': int(((~cohorte_2026_mask) & fecha_1900_mask).sum()),
         'fecha_matricula_1900_en_2026_rows': int((cohorte_2026_mask & fecha_1900_mask).sum()),
@@ -943,6 +1051,9 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         'niv_aca_default_1_rows': summary['niv_aca_default_1_rows'],
         'niv_aca_acotado_duracion_rows': summary['niv_aca_acotado_duracion_rows'],
         'niv_aca_acotado_cohorte_2026_rows': summary['niv_aca_acotado_cohorte_2026_rows'],
+        'niv_aca_trim_rows': summary['niv_aca_trim_rows'],
+        'niv_aca_trim_eq_aplicada_rows': summary['niv_aca_trim_eq_aplicada_rows'],
+        'niv_aca_trim_mismatch_rows': summary['niv_aca_trim_mismatch_rows'],
         'fecha_matricula_fuente_distribution': summary['fecha_matricula_fuente_distribution'],
         'fecha_matricula_1900_rows': summary['fecha_matricula_1900_rows'],
         'fecha_matricula_1900_fuera_2026_rows': summary['fecha_matricula_1900_fuera_2026_rows'],
@@ -969,6 +1080,9 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         f'- Filas `SEM_ING_ORI != SEM_ING_ACT`: {summary["sem_ing_ori_diff_rows"]}',
         f'- Ajustes `NIV_ACA` por duracion: {summary["niv_aca_acotado_duracion_rows"]}',
         f'- Ajustes `NIV_ACA` por cohorte 2026: {summary["niv_aca_acotado_cohorte_2026_rows"]}',
+        f'- Filas regimen TRIMESTRAL evaluadas: {summary["niv_aca_trim_rows"]}',
+        f'- Filas con equivalencia TRIM→SEM aplicada: {summary["niv_aca_trim_eq_aplicada_rows"]}',
+        f'- Mismatches trimestrales residuales: {summary["niv_aca_trim_mismatch_rows"]}',
         f'- Filas `FECHA_MATRICULA = 01/01/1900`: {summary["fecha_matricula_1900_rows"]}',
         f'- Filas `FECHA_MATRICULA = 01/01/1900` fuera de cohorte 2026: {summary["fecha_matricula_1900_fuera_2026_rows"]}',
         f'- Filas `FECHA_MATRICULA = 01/01/1900` dentro de cohorte 2026: {summary["fecha_matricula_1900_en_2026_rows"]}',
@@ -1295,15 +1409,116 @@ def generate_fase5_estado_admin_reports(out: Path, control_dir: Path) -> dict[st
     vig = pd.to_numeric(included['VIG'], errors='coerce')
     da_situacion_31 = included['DA_SITUACION'].astype(str).str.startswith('31 - TITULADO APROBADO')
 
+    runtime_patch_stats: dict[str, object] = {}
+    runtime_report_path = out / 'reporte_matricula.json'
+    if runtime_report_path.exists():
+        try:
+            runtime_payload = json.loads(runtime_report_path.read_text(encoding='utf-8'))
+            runtime_raw = runtime_payload.get('sit_fon_sol_patch_stats', {})
+            if isinstance(runtime_raw, dict):
+                runtime_patch_stats = runtime_raw
+        except Exception:
+            runtime_patch_stats = {}
+
+    patch_path_exists = SIT_FON_SOL_PATCH_PATH.exists()
+    patch_map: dict[str, int] = {}
+    patch_target_mask = pd.Series(False, index=included.index)
+    patch_expected_values = pd.Series(pd.NA, index=included.index, dtype='Float64')
+    patch_rut_series = pd.Series('', index=included.index, dtype='object')
+    patch_column_selected = ''
+    patch_matches_by_column: dict[str, int] = {}
+    if patch_path_exists:
+        patch_map = load_json_patch(SIT_FON_SOL_PATCH_PATH)
+        (
+            patch_rut_series,
+            patch_target_mask,
+            patch_column_selected,
+            patch_matches_by_column,
+            _patch_matched_ruts,
+            _patch_missing_ruts,
+        ) = resolve_patch_targets(
+            included,
+            patch_map,
+            rut_columns_candidates=['N_DOC', 'NUM_DOCUMENTO', 'RUT', 'RUT_NUM', 'CODCLI'],
+        )
+        patch_expected_values = pd.to_numeric(patch_rut_series.map(patch_map), errors='coerce')
+
+    sit_source = included['SIT_FON_SOL_FUENTE_FINAL'].astype(str)
+    sit_method = included['SIT_FON_SOL_METODO_FINAL'].astype(str)
+    sit_audit = included['SIT_FON_SOL_AUDIT_STATUS'].astype(str)
+
+    allowed_sources = {'POLITICA_LOCAL_FIJA_1'}
+    if patch_path_exists:
+        allowed_sources.add(PATCH_SOURCE_SIT_FON_SOL)
+
+    patch_target_values_ok = True
+    if patch_target_mask.any():
+        patch_target_values_ok = bool(
+            sit_fon[patch_target_mask]
+            .astype('Int64')
+            .astype('string')
+            .eq(
+                patch_expected_values[patch_target_mask]
+                .astype('Int64')
+                .astype('string')
+            )
+            .all()
+        )
+
+    patch_target_trace_ok = True
+    if patch_target_mask.any():
+        patch_target_trace_ok = bool(
+            sit_source[patch_target_mask].eq(PATCH_SOURCE_SIT_FON_SOL).all()
+            and sit_method[patch_target_mask].eq(PATCH_METHOD_SIT_FON_SOL).all()
+            and sit_audit[patch_target_mask].eq(PATCH_AUDIT_STATUS_SIT_FON_SOL).all()
+        )
+
+    patch_non_target_trace_ok = bool(~sit_source[~patch_target_mask].eq(PATCH_SOURCE_SIT_FON_SOL).any())
+    patch_flag_cols_present = {'SIT_FON_SOL_PATCH_FLAG', 'SIT_FON_SOL_PATCH_RUT'}.issubset(set(included.columns))
+    patch_flag_ok = True
+    if patch_flag_cols_present:
+        patch_flag = included['SIT_FON_SOL_PATCH_FLAG'].astype(str)
+        patch_flag_ok = bool(patch_flag[~patch_target_mask].ne('SI').all())
+        if patch_target_mask.any():
+            patch_flag_ok = patch_flag_ok and bool(patch_flag[patch_target_mask].eq('SI').all())
+    patch_target_rows = int(patch_target_mask.sum())
+    patch_target_rows_ok = 0
+    if patch_target_mask.any():
+        patch_target_rows_ok = int(
+            sit_fon[patch_target_mask]
+            .astype('Int64')
+            .astype('string')
+            .eq(
+                patch_expected_values[patch_target_mask]
+                .astype('Int64')
+                .astype('string')
+            )
+            .sum()
+        )
+    patch_non_target_bad_source_rows = int(sit_source[~patch_target_mask].eq(PATCH_SOURCE_SIT_FON_SOL).sum())
+
+    ab_payload = {
+        'fuente_regla_definida': bool(sit_source.isin(allowed_sources).all()),
+        'transformacion_implementada': bool(sit_fon.isin([0, 1, 2]).all() and patch_target_values_ok),
+        'validacion_qa_existe': True,
+        'sin_default_silencioso': bool(patch_target_trace_ok and patch_non_target_trace_ok),
+        'auditable_en_filas_incluidas': bool(
+            _all_present(['SIT_FON_SOL_FUENTE_FINAL', 'SIT_FON_SOL_METODO_FINAL', 'SIT_FON_SOL_AUDIT_STATUS'], included)
+            and patch_flag_ok
+        ),
+        'estado_final': 'OK',
+    }
+    ab_payload['estado_final'] = 'OK' if all(
+        [
+            ab_payload['fuente_regla_definida'],
+            ab_payload['transformacion_implementada'],
+            ab_payload['sin_default_silencioso'],
+            ab_payload['auditable_en_filas_incluidas'],
+        ]
+    ) else 'ERROR'
+
     gate = {
-        'AB_SIT_FON_SOL': {
-            'fuente_regla_definida': bool(included['SIT_FON_SOL_FUENTE_FINAL'].astype(str).eq('POLITICA_LOCAL_FIJA_1').all()),
-            'transformacion_implementada': bool(sit_fon.eq(1).all()),
-            'validacion_qa_existe': True,
-            'sin_default_silencioso': bool(included['SIT_FON_SOL_AUDIT_STATUS'].astype(str).eq('FIJADO_MANUALMENTE_A_1_EN_TODO_EL_PROYECTO').all()),
-            'auditable_en_filas_incluidas': _all_present(['SIT_FON_SOL_FUENTE_FINAL', 'SIT_FON_SOL_METODO_FINAL', 'SIT_FON_SOL_AUDIT_STATUS'], included),
-            'estado_final': 'OK',
-        },
+        'AB_SIT_FON_SOL': ab_payload,
         'AC_SUS_PRE': {
             'fuente_regla_definida': bool(included['SUS_PRE_FUENTE_FINAL'].astype(str).eq('POLITICA_LOCAL_FIJA_0').all()),
             'transformacion_implementada': bool(sus_pre.eq(0).all()),
@@ -1340,7 +1555,16 @@ def generate_fase5_estado_admin_reports(out: Path, control_dir: Path) -> dict[st
         'sus_pre_fuente_distribution': included['SUS_PRE_FUENTE_FINAL'].value_counts(dropna=False).to_dict(),
         'reincorporacion_fuente_distribution': included['REINCORPORACION_FUENTE_FINAL'].value_counts(dropna=False).to_dict(),
         'vig_fuente_distribution': included['VIG_FUENTE_FINAL'].value_counts(dropna=False).to_dict(),
-        'sit_fon_sol_default_rows': 0,
+        'sit_fon_sol_patch_enabled': bool(patch_path_exists),
+        'sit_fon_sol_patch_path': str(SIT_FON_SOL_PATCH_PATH.resolve()) if patch_path_exists else 'NO_ENCONTRADO',
+        'sit_fon_sol_patch_rut_total': int(len(patch_map)),
+        'sit_fon_sol_patch_rut_column_selected': patch_column_selected,
+        'sit_fon_sol_patch_matches_by_column': patch_matches_by_column,
+        'sit_fon_sol_patch_rows_targeted': patch_target_rows,
+        'sit_fon_sol_patch_rows_ok': patch_target_rows_ok,
+        'sit_fon_sol_patch_rows_no_target_con_fuente_patch': patch_non_target_bad_source_rows,
+        'sit_fon_sol_patch_distribution_before_target': runtime_patch_stats.get('sit_fon_sol_distribution_before_target', {}),
+        'sit_fon_sol_patch_distribution_after_target': runtime_patch_stats.get('sit_fon_sol_distribution_after_target', {}),
         'sus_pre_default_rows': 0,
         'sus_pre_forzado_0_cohorte_2026_rows': 0,
         'reincorporacion_rows_1': 0,
@@ -1372,7 +1596,12 @@ def generate_fase5_estado_admin_reports(out: Path, control_dir: Path) -> dict[st
         f'- Distribucion `SUS_PRE`: {summary["sus_pre_distribution"]}',
         f'- Distribucion `REINCORPORACION`: {summary["reincorporacion_distribution"]}',
         f'- Distribucion `VIG`: {summary["vig_distribution"]}',
-        f'- Filas `SIT_FON_SOL` por default explicito: {summary["sit_fon_sol_default_rows"]}',
+        f'- Patch `SIT_FON_SOL` habilitado: {summary["sit_fon_sol_patch_enabled"]}',
+        f'- Patch `SIT_FON_SOL` path: {summary["sit_fon_sol_patch_path"]}',
+        f'- Patch `SIT_FON_SOL` RUT totales: {summary["sit_fon_sol_patch_rut_total"]}',
+        f'- Patch `SIT_FON_SOL` filas objetivo: {summary["sit_fon_sol_patch_rows_targeted"]}',
+        f'- Patch `SIT_FON_SOL` filas objetivo OK: {summary["sit_fon_sol_patch_rows_ok"]}',
+        f'- Patch `SIT_FON_SOL` no-target con fuente patch: {summary["sit_fon_sol_patch_rows_no_target_con_fuente_patch"]}',
         f'- Filas `SUS_PRE` por default explicito: {summary["sus_pre_default_rows"]}',
         f'- Filas `SUS_PRE` forzadas a `0` por politica de cohorte 2026: {summary["sus_pre_forzado_0_cohorte_2026_rows"]}',
         f'- Filas `REINCORPORACION = 1`: {summary["reincorporacion_rows_1"]}',
@@ -1404,7 +1633,9 @@ def generate_fase5_estado_admin_reports(out: Path, control_dir: Path) -> dict[st
             '',
             '## Bloqueo residual observado',
             '',
-            '- `AB SIT_FON_SOL` y `AC SUS_PRE` quedan cerrados por politica local fija auditable sobre todas las filas incluidas.',
+            '- `AB SIT_FON_SOL` queda validado con trazabilidad mixta: politica local fija + patch JSON por RUT en filas objetivo.',
+            '- La validacion AB exige que filas objetivo del patch terminen con `SIT_FON_SOL=0` y que filas no objetivo no queden marcadas con fuente de patch.',
+            '- `AC SUS_PRE` queda cerrado por politica local fija auditable sobre todas las filas incluidas.',
             '- `AE REINCORPORACION` queda cerrado por politica local fija auditable en `0` para todas las filas incluidas.',
         ]
     )
@@ -1478,9 +1709,16 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     cols_ok = mu.shape[1] == len(MATRICULA_UNIFICADA_COLUMNS)
     separator_ok = first_line.count(';') == len(MATRICULA_UNIFICADA_COLUMNS) - 1
     sexo_ok = mu['SEXO'].astype(str).str.strip().isin({'H', 'M', 'NB'}).all()
-    for_ing_ok = mu['FOR_ING_ACT'].astype(str).str.strip().eq('1').all()
+    for_ing_num = pd.to_numeric(mu['FOR_ING_ACT'], errors='coerce')
+    for_ing_ok = bool(for_ing_num.notna().all() and for_ing_num.isin(sorted(FOR_ING_ACT_VALID_CODES)).all())
+    anio_act = pd.to_numeric(mu['ANIO_ING_ACT'], errors='coerce')
+    sem_act = pd.to_numeric(mu['SEM_ING_ACT'], errors='coerce')
+    anio_ori = pd.to_numeric(mu['ANIO_ING_ORI'], errors='coerce')
+    sem_ori = pd.to_numeric(mu['SEM_ING_ORI'], errors='coerce')
+    for_cont_mask = for_ing_num.isin(sorted(FOR_ING_CONTINUIDAD_CODES))
+    for_cont_rule_ok = bool((~(for_cont_mask & anio_act.eq(anio_ori) & sem_act.eq(sem_ori))).all())
     primera_ok = ~included['SIES_RESOLUCION_HEURISTICA'].eq('PRIMERA_OPCION').any()
-    invariants_ok = all([header_ok, cols_ok, separator_ok, sexo_ok, for_ing_ok, primera_ok])
+    invariants_ok = all([header_ok, cols_ok, separator_ok, sexo_ok, for_ing_ok, for_cont_rule_ok, primera_ok])
 
     decision = 'RECHAZADO'
     if invariants_ok:
@@ -1625,7 +1863,8 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
             'columnas_exactas_32': bool(cols_ok),
             'separador_punto_y_coma': bool(separator_ok),
             'sexo_valido': bool(sexo_ok),
-            'for_ing_act_fijo_1': bool(for_ing_ok),
+            'for_ing_act_catalogo_1_11': bool(for_ing_ok),
+            'for_ing_act_continuidad_origen_distinto': bool(for_cont_rule_ok),
             'exclusion_primera_opcion': bool(primera_ok),
         },
         'bloqueos_residuales': backlog_rows,
@@ -1656,7 +1895,8 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
         f"| 32 columnas exactas | {'SI' if cols_ok else 'NO'} | resultados/matricula_unificada_2026_pregrado.csv | Columnas observadas: {mu.shape[1]} |",
         f"| Separador `;` | {'SI' if separator_ok else 'NO'} | resultados/matricula_unificada_2026_pregrado.csv | Delimitacion contractual vigente |",
         f"| `SEXO` valido | {'SI' if sexo_ok else 'NO'} | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {summary['sexo_distribution']} |",
-        f"| `FOR_ING_ACT = 1` | {'SI' if for_ing_ok else 'NO'} | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {summary['for_ing_act_distribution']} |",
+        f"| `FOR_ING_ACT` en catálogo `1..11` | {'SI' if for_ing_ok else 'NO'} | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {summary['for_ing_act_distribution']} |",
+        f"| Anexo 7 continuidad (`FOR` en `{{2,3,4,5,11}}` ⇒ ORI != ACT) | {'SI' if for_cont_rule_ok else 'NO'} | resultados/matricula_unificada_2026_pregrado.csv | Filas continuidad evaluadas: {int(for_cont_mask.sum())} |",
         f"| Exclusion de `PRIMERA_OPCION` | {'SI' if primera_ok else 'NO'} | resultados/archivo_listo_para_sies.xlsx | Filas incluidas con heuristica opaca: {summary['rows_included_primera_opcion']} |",
         '',
         '## Estado por fase',

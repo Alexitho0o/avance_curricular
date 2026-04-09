@@ -1,0 +1,62 @@
+{
+  "nombre": "CIERRE_CARGA_COMPLEMENTARIA_95_CODCLI_MU2026",
+  "version": "1.0",
+  "fecha_cierre": "2026-05-11T12:55:00",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "carpeta_cierre": "control/auditoria_mu2026_complemento95_cierre_final",
+  "estado_final": "CARGA_COMPLEMENTARIA_95_FINALIZADA_EN_PES",
+  "advertencia": "NO BORRAR ESTA CARPETA. Contiene la evidencia formal del cierre del proceso complementario MU2026.",
+  "observacion": "La carga complementaria fue posterior a la carga principal y no reemplaza el Punto 0.",
+  "pes_sies": {
+    "estado_proceso": "Finalizado",
+    "proceso_terminado": "95 líneas",
+    "ultima_carga": "11/05/2026 12:55",
+    "ultimo_intento": "Finalizado",
+    "registros_procesados_ultimo_intento": 95,
+    "registros_cargados_visibles_plataforma": 4426
+  },
+  "archivo_final": {
+    "version": "V3",
+    "nombre": "matricula_unificada_2026_COMPLEMENTO_95_CODCLI_CORREGIDO_V3.csv",
+    "ruta_repo": "resultados/complemento_95_codcli/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_CORREGIDO_V3.csv",
+    "ruta_desktop": "/Users/alexi/Desktop/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+    "filas": 95,
+    "columnas": 32,
+    "encabezado": false,
+    "delimitador": ";",
+    "sha256": "1940923b7e9f811df9b5af50d0badc8563bc17ed9ce8078fbab054d221c6e1f2"
+  },
+  "punto_0": {
+    "descripcion": "Carga principal MU2026 · base histórica previa e intocable",
+    "filas": 4070,
+    "columnas": 32,
+    "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+    "ruta_repo": "resultados/matricula_unificada_2026_pregrado_PES_READY.csv",
+    "ruta_congelado": "control/punto_0_carga_principal_mu2026/",
+    "modificado_por_complemento": false,
+    "reemplazado_por_complemento": false
+  },
+  "historial_correcciones": {
+    "V2": {
+      "fecha": "2026-05-10",
+      "cambios": 97,
+      "tipos": ["tildes/acentos", "doble espacio nombres", "FOR=11 articulacion TNS", "ANIO_ORI desde TNS", "NIV_ACA cap"],
+      "errores_sies_originales_resueltos": 49,
+      "errores_residuales": 4
+    },
+    "V3": {
+      "fecha": "2026-05-11",
+      "cambios": 16,
+      "tipos": ["4 estudiantes Ciclo Inicial: FOR 1->2, ANIO_ORI 2026->2025, SEM_ORI 1->2, ASI_HIS 0->4"],
+      "causa_raiz": "4 estudiantes CI ya existian en carga principal con FOR=2/ANIO_ORI=2025; V2 los sobrescribio incorrectamente",
+      "errores_sies_resueltos": 4,
+      "estado_final": "FINALIZADO"
+    }
+  },
+  "rutas_evidencia": {
+    "punto_0_congelado": "control/punto_0_carga_principal_mu2026/",
+    "auditoria_pre_carga": "control/auditoria_mu2026_punto0_complemento95/",
+    "directorio_complemento": "resultados/complemento_95_codcli/",
+    "cierre_final": "control/auditoria_mu2026_complemento95_cierre_final/"
+  }
+}

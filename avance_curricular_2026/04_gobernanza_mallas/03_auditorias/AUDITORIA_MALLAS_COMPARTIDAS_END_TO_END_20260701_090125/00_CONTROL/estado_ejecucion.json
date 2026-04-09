@@ -1,0 +1,51 @@
+{
+  "estado_general": "EN_EJECUCION",
+  "etapas": {
+    "00_PRUEBAS_INTERNAS": {
+      "estado": "COMPLETADA",
+      "bloque": "CONTROL",
+      "fecha_inicio": "2026-07-01T09:01:25",
+      "salidas": [
+        "05_AUDITORIA/00_CONTROL_PRUEBAS.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:01:25",
+      "hashes": {
+        "05_AUDITORIA/00_CONTROL_PRUEBAS.tsv": "0e66cfaa915bc607c063bf281f90a407c400c0840709123517f2977481030cba"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "01_INVENTARIO": {
+      "estado": "COMPLETADA",
+      "bloque": "BLOQUE_1",
+      "fecha_inicio": "2026-07-01T09:01:25",
+      "salidas": [
+        "01_INVENTARIO/01_INVENTARIO_FOCALIZADO.tsv",
+        "01_INVENTARIO/02_FUENTES_PRIORITARIAS.tsv",
+        "01_INVENTARIO/03_DUPLICADOS_HASH.tsv"
+      ],
+      "fecha_fin": "2026-07-01T09:01:30",
+      "hashes": {
+        "01_INVENTARIO/01_INVENTARIO_FOCALIZADO.tsv": "63192a64915d2baadd63b6dd298bfbbac9ffb1c375e8c298a6c027776e95a946",
+        "01_INVENTARIO/02_FUENTES_PRIORITARIAS.tsv": "cc87aea641846d861cc386f45b46b60d8f6cf55095bab49c3a73d43404d22430",
+        "01_INVENTARIO/03_DUPLICADOS_HASH.tsv": "6f1b12d2f7f6ae4fc0f3bc42f1830846bfbe47093698f3fe52624360659948cb"
+      },
+      "controles": "OK",
+      "bloqueos": []
+    },
+    "02_EVIDENCIA": {
+      "estado": "EN_EJECUCION",
+      "bloque": "BLOQUE_1",
+      "fecha_inicio": "2026-07-01T09:01:30",
+      "salidas": [
+        "02_EVIDENCIA/01_EVIDENCIA_OFICIAL.tsv",
+        "02_EVIDENCIA/02_DATOS_OBSERVADOS.tsv",
+        "02_EVIDENCIA/03_IMPLEMENTACION_TECNICA.tsv",
+        "02_EVIDENCIA/04_DECISIONES_INTERNAS.tsv",
+        "02_EVIDENCIA/05_HIPOTESIS_PENDIENTES.tsv",
+        "05_AUDITORIA/03_CONTROL_ENCABEZADOS_DUPLICADOS.tsv"
+      ]
+    }
+  },
+  "actualizado_en": "2026-07-01T09:01:30"
+}

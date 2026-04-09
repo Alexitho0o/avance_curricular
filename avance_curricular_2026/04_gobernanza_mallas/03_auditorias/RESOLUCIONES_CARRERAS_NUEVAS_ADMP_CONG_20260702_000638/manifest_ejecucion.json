@@ -1,0 +1,41 @@
+{
+  "fecha_ejecucion": "2026-07-02T00:06:39.018953",
+  "proceso": "Avance Curricular SIES 2026",
+  "subprocesos": [
+    "5810 Carreras",
+    "5809 Matrícula"
+  ],
+  "resoluciones": [
+    {
+      "CODIGO_UNICO": "I162S2C83J4V1",
+      "PLAN_ESTUDIOS": "1",
+      "CODCARR": "ADMP",
+      "CODPESTUD": "ADMP20251",
+      "NIVEL_MIN": 1,
+      "NIVEL_MAX": 12,
+      "ANIO_MAX": 6,
+      "ESTUDIANTES_5809": 70
+    },
+    {
+      "CODIGO_UNICO": "I162S2C85J4V1",
+      "PLAN_ESTUDIOS": "1",
+      "CODCARR": "CONG",
+      "CODPESTUD": "CONG20251",
+      "NIVEL_MIN": 1,
+      "NIVEL_MAX": 7,
+      "ANIO_MAX": 4,
+      "ESTUDIANTES_5809": 38
+    }
+  ],
+  "pendiente": {
+    "CODIGO_UNICO": "I162S2C86J4V1",
+    "CARRERA": "AUDITORIA",
+    "ESTUDIANTES_5809": 41,
+    "MOTIVO": "FALTA_EVIDENCIA_MALLA_INSTITUCIONAL"
+  },
+  "regla_deduplicacion": "CODPESTUD+CODRAMO+NIVEL+CREDITO",
+  "filas_equivalencia": "Las filas Clase=0 con RamoEquiv no se contabilizan como unidades adicionales.",
+  "fuentes_modificadas": false,
+  "precargas_modificadas": false,
+  "archivo_final_carga_generado": false
+}

@@ -1,0 +1,44 @@
+====================================================================================================
+FASE 2 - ASIGNACION CODCLI 95 Y 30
+====================================================================================================
+Inicio: 2026-06-30T23:49:16
+Repositorio: /Users/alexi/Documents/GitHub/avance_curricular
+Cargando catalogo persistido desde csv.gz...
+Catalogo validado contra manifiesto.
+Tiempo carga catalogo segundos: 1.897
+Fuentes operativas 95 y 30 validadas.
+Asignando CODCLI al complemento de 95...
+Asignando CODCLI a la rectificacion de 30...
+Guardando salidas CSV de asignacion...
+Guardando Excel de conflictos y resumen...
+====================================================================================================
+RESUMEN FASE 2
+====================================================================================================
+ORIGEN_OPERATIVO  FILAS_OPERATIVAS  CODCLI_ASIGNADOS_INEQUIVOCAMENTE  MAS_DE_UN_CODCLI_MISMO_RUT_OFERTA  CODCLI_UNICO_POR_RUT_PERO_OFERTA_DISTINTA  VARIOS_CODCLI_POR_RUT_SIN_OFERTA_EXACTA  SIN_CODCLI_EN_CATALOGO  CONFLICTO_DE_FUENTE  PORCENTAJE_ASIGNADO  PORCENTAJE_PENDIENTE  TIEMPO_CARGA_CATALOGO_SEGUNDOS  TIEMPO_ASIGNACION_SEGUNDOS
+  COMPLEMENTO_95                95                                 0                                  2                                          0                                        0                       0                   93                  0.0                 100.0                           1.897                      26.732
+RECTIFICACION_30                30                                 0                                  1                                          0                                        0                       0                   29                  0.0                 100.0                           1.897                      26.732
+Conflictos totales: 125
+Primeros conflictos (maximo 20):
+ORIGEN_OPERATIVO FILA_OPERATIVA       CLASIFICACION   RUT_NORM  OFERTA_SIES CODCLI_EXACTOS                                                                 CODCLI_DEL_RUT
+  COMPLEMENTO_95              1 CONFLICTO_DE_FUENTE 12914312-6  S2C22M3J4V2  20261CIIND024                                20261CIIND024 || 20261COTEIQ014 || 20261IIND096
+  COMPLEMENTO_95              2 CONFLICTO_DE_FUENTE 13309622-1  S2C77M3J4V1   20261ILOG066                                   20261IIND045 || 20261ILOG066 || 20261IPRE035
+  COMPLEMENTO_95              3 CONFLICTO_DE_FUENTE 13549404-6 S2C125M3J4V1   20261ISEP028                                   20251ICIB114 || 20261ISEP028 || 20261TAMD109
+  COMPLEMENTO_95              4 CONFLICTO_DE_FUENTE 13713354-7  S2C46M3J4V3   20261ICIB102                   20241TCIB082 || 20251ADMP032 || 20261ICIB102 || 20261IFIN008
+  COMPLEMENTO_95              5 CONFLICTO_DE_FUENTE 13981110-0  S2C46M3J4V3   20261ICIB128                   20241TCIB102 || 20251ADMP055 || 20261ICIB128 || 20261IFIN038
+  COMPLEMENTO_95              6 CONFLICTO_DE_FUENTE 14025806-7  S2C87M3J4V2   20261IIND095                                   20261ICDA008 || 20261IIND095 || 20261IINF149
+  COMPLEMENTO_95              7 CONFLICTO_DE_FUENTE 15120991-2 S2C112M3J4V1   20261IMDI047                                   20261IMDI047 || 20261ISEP028 || 20261TMDI038
+  COMPLEMENTO_95              8 CONFLICTO_DE_FUENTE 15410888-2  S2C46M3J4V3   20261ICIB116                                   20241TCIB050 || 20261ICIB116 || 20261IFIN026
+  COMPLEMENTO_95              9 CONFLICTO_DE_FUENTE 15505499-9  S2C78M1J2V1   20261TAMD118                                   20251IADM006 || 20261TAMD118 || 20261TCIB097
+  COMPLEMENTO_95             10 CONFLICTO_DE_FUENTE 15614182-8  S2C76M3J4V1   20261IADM122                                 20261COTEIQ013 || 20261IADM122 || 20261ICIB100
+  COMPLEMENTO_95             11 CONFLICTO_DE_FUENTE 15651488-8   S2C1M1J1V1   20261IINF158                                  20261DDASC008 || 20261IINF158 || 20261IMDI068
+  COMPLEMENTO_95             12 CONFLICTO_DE_FUENTE 15936911-0  S2C77M1J2V1   20261ILOG070                   20241TLOG026 || 20251AUDT048 || 20261ILOG070 || 20261IPRE038
+  COMPLEMENTO_95             13 CONFLICTO_DE_FUENTE 16017798-5 S2C114M1J2V1   20261TEIQ124                                   20261TADP009 || 20261TEIQ124 || 20261TENS204
+  COMPLEMENTO_95             14 CONFLICTO_DE_FUENTE 16187766-2  S2C77M1J2V1   20261ILOG085                  20241TLOG034 || 20251CIADM011 || 20261ILOG085 || 20261IRHU013
+  COMPLEMENTO_95             15 CONFLICTO_DE_FUENTE 16359936-8  S2C79M1J2V1   20261TLOG060                                   20261TFAR020 || 20261TLOG060 || 20261TPAS003
+  COMPLEMENTO_95             16 CONFLICTO_DE_FUENTE 16683292-6   S2C6M3J4V2   20261TCRE008                                   20261ICIB008 || 20261TCRE008 || 20261TENS070
+  COMPLEMENTO_95             17 CONFLICTO_DE_FUENTE 16862350-K  S2C91M1J2V1   20261TENS198                                   20261TENS198 || 20261TFIN017 || 20261TLOG019
+  COMPLEMENTO_95             18 CONFLICTO_DE_FUENTE 16967059-5   S2C1M3J4V2   20261IINF142 20241TPAS054 || 20251CICIB032 || 20261CIINF017 || 20261IINF142 || 20261IMDI050
+  COMPLEMENTO_95             19 CONFLICTO_DE_FUENTE 17043569-9 S2C114M1J2V1 20261COTEIQ040                               20261COTEIQ040 || 20261COTENS018 || 20261IADM121
+  COMPLEMENTO_95             20 CONFLICTO_DE_FUENTE 17054616-4  S2C46M3J4V3   20261ICIB140                   20241TCIB080 || 20251ADMP026 || 20261ICIB140 || 20261IIND007
+Estado final: FASE2_COMPLETADA_CON_CONFLICTOS
+Tiempo total segundos: 51.031

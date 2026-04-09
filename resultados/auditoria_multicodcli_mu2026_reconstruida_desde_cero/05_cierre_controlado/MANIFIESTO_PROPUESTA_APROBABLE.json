@@ -1,0 +1,86 @@
+{
+  "fecha": "2026-07-01T00:23:32",
+  "modo": "integrar-resolucion",
+  "estado": "PROPUESTA_APROBABLE_GENERADA",
+  "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cierre_mu2026_fases4_7.py",
+  "script_hash": "a7d92e7cad42ebf61fe70a9a335637ea3740085ab3b8349f237e01af99e266b7",
+  "entradas": {
+    "propuesta_original": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/PROPUESTA_DECISION_FASES4_5.csv",
+      "sha256": "5d652ee3250276197767aca249c161dd434a1903cfea711a42e37e6069ad1ca8"
+    },
+    "resolucion_36": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/resolucion_36_conflictos/RESOLUCION_36_CONFLICTOS_MU2026.csv",
+      "sha256": "1ee757fccf88273e979699c5d0184d35ba58d36bb42efdf71a6dcdd6718be523"
+    },
+    "propuesta_derivada": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/resolucion_36_conflictos/PROPUESTA_DECISION_FASES4_5_RESUELTA_36.csv",
+      "sha256": "bdb8a40bbd5ddb1350fb78dd22979a7530d7872f33701e229714039376e4eb3a"
+    }
+  },
+  "salidas": {
+    "propuesta_aprobable_csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/PROPUESTA_DECISION_FASES4_5_APROBABLE.csv",
+      "sha256": "9cfe16b8d24546b64418a01d971f17c202a159aec92f72424f71dd5aa5e2d2c8"
+    },
+    "propuesta_aprobable_xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/PROPUESTA_DECISION_FASES4_5_APROBABLE.xlsx",
+      "sha256": "c8a7ca882d6714755198316965ae4be9c9741282d1bdd1dd17594020f4250393"
+    },
+    "aprobacion_aprobable": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/APROBACION_MATERIALIZACION_APROBABLE.json",
+      "sha256": "f99753ebaa5a2bd25f0547903d8f5d60a385bf8dfea6ad1bc397942f236c36b1"
+    }
+  },
+  "resumen": {
+    "total_principal": 4070,
+    "total_complemento_incluido": 6,
+    "incorporaciones_desde_30": 29,
+    "actualizaciones": 0,
+    "exclusiones": 90,
+    "conflictos_materiales": 0,
+    "sin_evidencia_suficiente": 0,
+    "total_final_propuesto": 4105,
+    "carga_principal": 4070,
+    "complemento_conservado": 6,
+    "ya_representados": 1,
+    "control_aritmetico": "4070 + 6 + 29 = 4105"
+  },
+  "controles": {
+    "fecha": "2026-07-01T00:23:32",
+    "modo": "integrar-resolucion",
+    "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cierre_mu2026_fases4_7.py",
+    "script_hash": "a7d92e7cad42ebf61fe70a9a335637ea3740085ab3b8349f237e01af99e266b7",
+    "propuesta_original_hash": "5d652ee3250276197767aca249c161dd434a1903cfea711a42e37e6069ad1ca8",
+    "resolucion_36_hash": "1ee757fccf88273e979699c5d0184d35ba58d36bb42efdf71a6dcdd6718be523",
+    "propuesta_derivada_hash": "bdb8a40bbd5ddb1350fb78dd22979a7530d7872f33701e229714039376e4eb3a",
+    "diferencias_relectura": 0,
+    "fuentes_originales_modificadas": "NO",
+    "catalogo_ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/03_archivos_rectificacion/consolidacion_codcli/CATALOGO_CODCLI_COMPLETO.csv.gz",
+    "catalogo_hash": "a604e9d044363ef5e314e0ddd42590bbdb4fb9581e145ac9d8b9f913a7e22ec7",
+    "catalogo_hash_manifestado": "a604e9d044363ef5e314e0ddd42590bbdb4fb9581e145ac9d8b9f913a7e22ec7",
+    "catalogo_formato": "csv_gzip",
+    "catalogo_validacion": "VALIDO",
+    "catalogo_diferencias_memoria_relectura": 0,
+    "catalogo_filas": 1719162,
+    "catalogo_columnas": 9,
+    "catalogo_codcli_distintos": 14229,
+    "catalogo_rut_distintos": 18151,
+    "catalogo_ofertas_distintas": 138,
+    "hashes_fuentes_antes": {
+      "principal_4070": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "complemento_95": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d",
+      "rectificacion_30": "057f528a59df69bfa7c6211007df42378a0688813622bc26575fc689cb8b2584"
+    },
+    "encoding_4070": "utf-8-sig",
+    "encoding_95": "utf-8-sig",
+    "encoding_30": "utf-8-sig",
+    "filas_4070": 4070,
+    "filas_95": 95,
+    "filas_30": 30,
+    "columnas_mu": 32,
+    "filas_fisicas_incorporaciones_30_ok": true,
+    "filas_fisicas_complemento_95_ok": true,
+    "caso_ya_representado_no_agregado": true
+  }
+}

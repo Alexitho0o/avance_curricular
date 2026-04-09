@@ -92,6 +92,40 @@ def _git_commit_hash() -> str:
         return "N/A"
 
 
+def _git_modified_line_refs(files: list[str] | None = None) -> list[str]:
+    files = files or ["codigo_gobernanza_v2.py", "qa_checks.py"]
+    try:
+        diff_txt = subprocess.check_output(
+            ["git", "diff", "--unified=0", "--no-color", "--", *files],
+            cwd=str(REPO_DIR),
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8", errors="ignore")
+    except Exception:
+        return []
+    if not diff_txt.strip():
+        return []
+
+    refs: list[str] = []
+    current_file: str | None = None
+    for line in diff_txt.splitlines():
+        if line.startswith("+++ b/"):
+            current_file = line.replace("+++ b/", "", 1).strip()
+            continue
+        if not current_file or not line.startswith("@@"):
+            continue
+        m = re.search(r"\+(\d+)(?:,(\d+))?", line)
+        if not m:
+            continue
+        start = int(m.group(1))
+        count = int(m.group(2) or "1")
+        end = start + max(count - 1, 0)
+        if end == start:
+            refs.append(f"{current_file}:L{start}")
+        else:
+            refs.append(f"{current_file}:L{start}-L{end}")
+    return refs[:120]
+
+
 def _now_iso() -> str:
     return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -715,6 +749,36 @@ def coherencia_logica_vs_evidencia(
         c.detalle = "Catálogo FOR_ING_ACT o columna no disponible"
     checks.append(c)
 
+    # 4.4b Anexo 7 — continuidad requiere origen distinto del ingreso actual
+    c = Check("Anexo 7 continuidad: FOR_ING_ACT {2,3,4,5,11} ⇒ ORI != ACT")
+    required_cols = {"FOR_ING_ACT", "ANIO_ING_ACT", "SEM_ING_ACT", "ANIO_ING_ORI", "SEM_ING_ORI"}
+    if required_cols.issubset(set(arch.columns)):
+        scope = arch.copy()
+        if "INCLUIR_EN_MATRICULA_32" in scope.columns:
+            scope = scope[scope["INCLUIR_EN_MATRICULA_32"].astype(str).str.upper().eq("SI")].copy()
+        for_vals = pd.to_numeric(scope["FOR_ING_ACT"], errors="coerce")
+        continuidad_mask = for_vals.isin([2, 3, 4, 5, 11])
+        anio_act_vals = pd.to_numeric(scope["ANIO_ING_ACT"], errors="coerce")
+        sem_act_vals = pd.to_numeric(scope["SEM_ING_ACT"], errors="coerce")
+        anio_ori_vals = pd.to_numeric(scope["ANIO_ING_ORI"], errors="coerce")
+        sem_ori_vals = pd.to_numeric(scope["SEM_ING_ORI"], errors="coerce")
+        invalid_mask = continuidad_mask & anio_act_vals.eq(anio_ori_vals) & sem_act_vals.eq(sem_ori_vals)
+        if not invalid_mask.any():
+            c.estado = "OK"
+            c.detalle = f"{int(continuidad_mask.sum())} filas continuidad auditadas, todas con ORI != ACT"
+        else:
+            muestras = scope.loc[invalid_mask, ["CODCLI", "N_DOC", "FOR_ING_ACT", "ANIO_ING_ACT", "SEM_ING_ACT"]].head(5)
+            muestras_txt = muestras.astype(str).to_dict(orient="records")
+            c.estado = "FAIL"
+            c.detalle = (
+                f"{int(invalid_mask.sum())} filas incumplen Anexo 7 continuidad "
+                f"(muestra: {muestras_txt})"
+            )
+    else:
+        c.estado = "SKIP"
+        c.detalle = "Columnas cronológicas FOR/ORI/ACT no disponibles para validar continuidad"
+    checks.append(c)
+
     # 4.5 Gobernanza bloqueante — COD_SED vs catálogo sede
     c = Check("GOB bloqueante: COD_SED vs catálogo sede")
     gob_sede_path = REPO_DIR / "gobernanza_sede.tsv"
@@ -807,6 +871,7 @@ def generar_reporte(
     detections: dict[str, list[tuple[int, str]]],
     checks: list[Check],
     output_path: Path,
+    modified_line_refs: list[str] | None = None,
 ) -> bool:
     """Genera resultados/auditoria_maestra.md y retorna True si LISTO."""
     all_ok = all(c.estado in ("OK", "WARN", "SKIP") for c in checks)
@@ -825,6 +890,13 @@ def generar_reporte(
     for k, v in meta.items():
         lines.append(f"| {k} | {v} |")
     lines.append(f"")
+
+    if modified_line_refs:
+        lines.append("## Cambios de Código Aplicados (Git Diff)")
+        lines.append("")
+        for ref in modified_line_refs:
+            lines.append(f"- `{ref}`")
+        lines.append("")
 
     # Checklist
     lines.append(f"## Checklist de Componentes")
@@ -1040,8 +1112,11 @@ def main() -> int:
     # --- Parte 5: Reporte y dictamen ---
     all_checks = checks_empiricos + checks_coherencia
     report_path = output_dir / "auditoria_maestra.md"
+    modified_line_refs = _git_modified_line_refs()
+    if modified_line_refs:
+        meta["Git-Diff-Refs"] = str(len(modified_line_refs))
     print(f"\n📝 Parte 5: Generando reporte en {report_path}...")
-    is_ok = generar_reporte(meta, linaje, detections, all_checks, report_path)
+    is_ok = generar_reporte(meta, linaje, detections, all_checks, report_path, modified_line_refs=modified_line_refs)
 
     # --- Resumen terminal ---
     n_ok = sum(1 for c in all_checks if c.estado == "OK")

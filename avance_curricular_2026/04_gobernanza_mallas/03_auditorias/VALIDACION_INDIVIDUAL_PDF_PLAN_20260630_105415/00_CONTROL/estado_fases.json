@@ -1,0 +1,755 @@
+{
+  "ano_proceso": "2026",
+  "ano_referencia_datos": "2025",
+  "fases": {
+    "fase_0": {
+      "comando_reanudacion": "python scripts/validar_pdf_plan_34_directas.py \u2013fase 1 \u2013reanudar",
+      "conteos": {
+        "archivos_validos": 5,
+        "bloqueos": 0,
+        "entradas_requeridas": 5
+      },
+      "entradas": {
+        "carpeta_cierre_seguro": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212",
+        "carpeta_conciliacion": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/02_conciliacion/CONCILIACION_CANONICA_PDF_HOJA1_20260626_170541",
+        "hoja1_congelada": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv",
+        "mapeo_pdf_plan_canonico": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/02_conciliacion/CONCILIACION_CANONICA_PDF_HOJA1_20260626_170541/01_MAPEO_PDF_PLAN_CANONICO.tsv",
+        "mapeo_seguro_43": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212/03_MAPEO_SEGURO_43_CARRERAS.tsv",
+        "puente_sies": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_integral_multicodcli_2026/auditoria_20260618_144641/00_RESPALDO_ENTRADAS/PUENTE_SIES_COMPILADO.tsv",
+        "totales_documentales": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212/02_TOTALES_DOCUMENTALES_CORREGIDOS_POR_PDF.tsv"
+      },
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 0,
+      "fecha_fin": "2026-06-30T10:54:15",
+      "fecha_inicio": "2026-06-30T10:54:15",
+      "hashes": {
+        "hoja1_congelada": "43d284c949de6a93291d9fc363290133ec90a7797882e11aa6ce4f1bf03c958b",
+        "mapeo_pdf_plan_canonico": "2b7b8d57dc61c8f63950f545728032e6be5478fbb9a725d371acd9014751fb58",
+        "mapeo_seguro_43": "c4ae5f9f4cf17c921c7b750811f4e39cd85de06fd65e9a9596a8895c38c6615d",
+        "puente_sies": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0",
+        "totales_documentales": "d3a53fb1113869d5aba0db0fffe8a7f64707d47936c88d12988b62fcd2efb7bc"
+      },
+      "nombre": "DESCUBRIMIENTO_Y_CONTROL_DE_ENTRADAS",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/01_ENTRADAS/inventario_entradas.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/01_ENTRADAS/hashes_entradas.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/00_CONTROL/estado_fases.json"
+      ],
+      "validaciones": [
+        {
+          "estado": "COMPLETADA",
+          "validacion": "tsv_utf8_dtype_str_keep_default_na_false"
+        },
+        {
+          "estado": "COMPLETADA",
+          "validacion": "hash_sha256_entradas"
+        }
+      ]
+    },
+    "fase_1": {
+      "comando_reanudacion": "python scripts/validar_pdf_plan_34_directas.py \u2013fase 2 \u2013reanudar",
+      "conteos": {
+        "directas": 34,
+        "duplicados_codigo_unico": 0,
+        "excluidas": 9,
+        "total_carreras": 43
+      },
+      "entradas": {},
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 1,
+      "fecha_fin": "2026-06-30T10:58:32",
+      "fecha_inicio": "2026-06-30T10:58:32",
+      "hashes": {},
+      "nombre": "NORMALIZACION_Y_UNIVERSO_34_DIRECTAS",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/01_UNIVERSO_34_CARRERAS_DIRECTAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/01_CONTROL_UNIVERSO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/02_DUPLICADOS_CODIGO_UNICO.tsv"
+      ],
+      "validaciones": [
+        {
+          "control": "total_carreras_matriz",
+          "esperado": 43,
+          "estado": "OK",
+          "valor": 43
+        },
+        {
+          "control": "carreras_directas",
+          "esperado": 34,
+          "estado": "OK",
+          "valor": 34
+        },
+        {
+          "control": "carreras_no_directas_excluidas",
+          "esperado": 9,
+          "estado": "OK",
+          "valor": 9
+        },
+        {
+          "control": "duplicados_codigo_unico",
+          "esperado": 0,
+          "estado": "OK",
+          "valor": 0
+        },
+        {
+          "control": "columna_pdf",
+          "esperado": "detectada",
+          "estado": "OK",
+          "valor": "ARCHIVO_PDF"
+        },
+        {
+          "control": "columna_cobertura",
+          "esperado": "detectada",
+          "estado": "OK",
+          "valor": "COBERTURA_NORMALIZADA"
+        },
+        {
+          "control": "columna_plan_matriz",
+          "esperado": "opcional",
+          "estado": "OK",
+          "valor": "PLAN_ESTUDIOS"
+        },
+        {
+          "control": "columna_carrera",
+          "esperado": "opcional",
+          "estado": "OK",
+          "valor": "NOMBRE_CARRERA"
+        },
+        {
+          "control": "columna_jornada",
+          "esperado": "opcional",
+          "estado": "OK",
+          "valor": "JORNADA"
+        }
+      ]
+    },
+    "fase_2": {
+      "comando_reanudacion": "python scripts/validar_pdf_plan_34_directas.py \u2013fase 3 \u2013reanudar",
+      "conteos": {
+        "pdf_directos": 11,
+        "pdf_mapeo_multiple": 0,
+        "pdf_sin_mapeo": 0,
+        "planes_no_existentes_hoja1": 0
+      },
+      "entradas": {},
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 2,
+      "fecha_fin": "2026-06-30T11:00:04",
+      "fecha_inicio": "2026-06-30T11:00:04",
+      "hashes": {},
+      "nombre": "VALIDACION_MAPEO_CANONICO_PDF_PLAN",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/02_MAPEO_PDF_PLAN_NORMALIZADO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/03_PDF_SIN_MAPEO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/04_PDF_MAPEO_MULTIPLE.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/05_PLANES_NO_EXISTENTES_HOJA1.tsv"
+      ],
+      "validaciones": [
+        {
+          "estado": "OK",
+          "validacion": "pdf_directo_con_mapeo_unico"
+        },
+        {
+          "estado": "OK",
+          "validacion": "plan_canonico_existe_hoja1"
+        }
+      ]
+    },
+    "fase_3": {
+      "comando_reanudacion": "python scripts/validar_pdf_plan_34_directas.py \u2013fase 4 \u2013reanudar",
+      "conteos": {
+        "carreras_procesadas": 34,
+        "codcarr_difiere_canonico": 2,
+        "codigos_multiples_en_puente": 12,
+        "codigos_no_en_puente": 13,
+        "puente_bloqueante": 0
+      },
+      "entradas": {},
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 3,
+      "fecha_fin": "2026-06-30T11:02:47",
+      "fecha_inicio": "2026-06-30T11:02:47",
+      "hashes": {},
+      "nombre": "VALIDACION_CODIGO_UNICO_Y_PUENTE",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/03_VALIDACION_PUENTE_34.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/06_CODIGOS_NO_EN_PUENTE.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/07_CODIGOS_MULTIPLES_EN_PUENTE.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/08_CODCARR_DIFIERE_CANONICO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/09_PUENTE_BLOQUEANTE.tsv"
+      ],
+      "validaciones": [
+        {
+          "bloqueos": 13,
+          "validacion": "codigo_unico_existe_puente"
+        },
+        {
+          "bloqueos": 12,
+          "validacion": "codigo_unico_relacion_unica"
+        },
+        {
+          "bloqueos": 2,
+          "validacion": "codcarpr_coincide_canonico"
+        },
+        {
+          "bloqueos": 0,
+          "validacion": "puente_no_bloqueante"
+        }
+      ]
+    },
+    "fase_4": {
+      "comando_reanudacion": "python scripts/validar_pdf_plan_34_directas.py \u2013fase 5 \u2013reanudar",
+      "conteos": {
+        "bloqueos": 0,
+        "carreras_procesadas": 34,
+        "contradicciones_pdf_plan": 0,
+        "identidades_con_variantes": 34,
+        "identidades_resueltas": 34,
+        "multiples_jornadas": 34,
+        "version_logica_fase4": "INTEGRACION_IDENTIDAD_CARRERAS_V1"
+      },
+      "entradas": {
+        "comparacion_identidad_pdf_plan": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/05_AUDITORIA/FASE5_COMPARACION_IDENTIDAD_PDF_PLAN.tsv",
+        "comparacion_identidad_puente": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/05_AUDITORIA/FASE5_COMPARACION_PUENTE_PREVIO.tsv",
+        "detalle_identidad_34": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06A_IDENTIDAD_APLICADA_34_DETALLE_RELACIONES.tsv",
+        "identidad_34": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06_IDENTIDAD_APLICADA_34_CARRERAS.tsv"
+      },
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 4,
+      "fecha_fin": "2026-06-30T16:28:39",
+      "fecha_inicio": "2026-06-30T16:28:39",
+      "fecha_reconstruccion_identidad": "2026-06-30T16:28:39",
+      "fuente_identidad": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06_IDENTIDAD_APLICADA_34_CARRERAS.tsv",
+      "hash_fuente_identidad": "69e7e6288dd3fec6e0fbea34d4f15940fef44b48c1526bd8af7391defc2419ed",
+      "hashes": {
+        "detalle_identidad_34": "d6b8825311d77b482ef781c2ca1f3efc818dddab137ad3a0f9971abe60a8fdb3",
+        "identidad_34": "69e7e6288dd3fec6e0fbea34d4f15940fef44b48c1526bd8af7391defc2419ed"
+      },
+      "nombre": "VALIDACION_PLAN_EN_MATRIZ",
+      "original_reemplazado_con_respaldo": true,
+      "pendientes": [],
+      "respaldo_pre_integracion": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/07_RESPALDOS/FASE4_PRE_INTEGRACION_IDENTIDAD_20260630_162837",
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/10_PLAN_ESTUDIOS_SIES_INVALIDO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/11_IDENTIDAD_PDF_PLAN_NO_EVALUABLE.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/12_DUPLICADOS_CODIGO_UNICO_PLAN_ESTUDIOS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/13_CONTRADICCIONES_IDENTIDAD_PDF_PLAN.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/14_VARIANTES_LEGITIMAS_34.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/15_TRAZABILIDAD_IDENTIDAD_INTEGRADA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_AUDITORIA/CORRECCION_FUNCIONAL_FASE4_INTEGRACION_IDENTIDAD.json"
+      ],
+      "validaciones": [
+        {
+          "estado": "OK",
+          "validacion": "plan_estudios_sies_separado"
+        },
+        {
+          "estado": "OK",
+          "validacion": "plan_institucional_desde_identidad"
+        },
+        {
+          "estado": "OK",
+          "validacion": "sin_comparacion_plan_sies_vs_plan_institucional"
+        },
+        {
+          "errores": 0,
+          "estado": "OK",
+          "validacion": "identidad_34_unica"
+        }
+      ],
+      "version_logica_nueva": "INTEGRACION_IDENTIDAD_CARRERAS_V1"
+    },
+    "fase_5": {
+      "comando_reanudacion": "",
+      "conteos": {
+        "ambiguas": 0,
+        "apto_para_carga": false,
+        "asignaturas_canonicas_evaluadas": 2001,
+        "asignaturas_distintas": 191,
+        "bloqueos_estructurales": 0,
+        "carreras_bloqueadas": 0,
+        "carreras_completas": 0,
+        "carreras_esperadas": 34,
+        "carreras_evaluadas": 34,
+        "carreras_observaciones": 0,
+        "carreras_revision": 34,
+        "diferencias_nivel": 4,
+        "filas_pdf": 415,
+        "matches_aproximados": 44,
+        "matches_exactos": 267,
+        "no_evaluables": 0,
+        "originales_modificados": false,
+        "pdf_bloqueados": 0,
+        "pdf_completos": 0,
+        "pdf_esperados": 11,
+        "pdf_evaluados": 11,
+        "pdf_observaciones": 0,
+        "pdf_revision": 11,
+        "pes_generado": false,
+        "precarga_generada": false,
+        "revisar_nombre": 36,
+        "sin_correspondencia": 64
+      },
+      "entradas": {
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/01_extraccion_pdf/EXTRACCION_MALLAS_PDF_20260626_165945/02_MALLA_PDF_CANDIDATA.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/01_extraccion_pdf/EXTRACCION_MALLAS_PDF_20260626_165945/02_MALLA_PDF_CANDIDATA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/02_conciliacion/CONCILIACION_CANONICA_PDF_HOJA1_20260626_170541/03_CONCILIACION_CANONICA_PDF_HOJA1.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/02_conciliacion/CONCILIACION_CANONICA_PDF_HOJA1_20260626_170541/03_CONCILIACION_CANONICA_PDF_HOJA1.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_DIAGNOSTICO_MALLAS_20260626_170631/01_CONCILIACION_CLASIFICADA_415.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_DIAGNOSTICO_MALLAS_20260626_170631/01_CONCILIACION_CLASIFICADA_415.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212/02_TOTALES_DOCUMENTALES_CORREGIDOS_POR_PDF.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212/02_TOTALES_DOCUMENTALES_CORREGIDOS_POR_PDF.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06A_IDENTIDAD_APLICADA_34_DETALLE_RELACIONES.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06A_IDENTIDAD_APLICADA_34_DETALLE_RELACIONES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06_IDENTIDAD_APLICADA_34_CARRERAS.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06_IDENTIDAD_APLICADA_34_CARRERAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/01_UNIVERSO_34_CARRERAS_DIRECTAS.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/01_UNIVERSO_34_CARRERAS_DIRECTAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/02_MAPEO_PDF_PLAN_NORMALIZADO.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/02_MAPEO_PDF_PLAN_NORMALIZADO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv"
+      },
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 5,
+      "fecha_fin": "2026-06-30T16:47:35",
+      "fecha_inicio": "2026-06-30T16:45:45",
+      "hashes": {
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/derivados_tsv/PROMEDIOSDEALUMNOS_7804__HOJA_HOJA1.tsv": "43d284c949de6a93291d9fc363290133ec90a7797882e11aa6ce4f1bf03c958b",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/01_extraccion_pdf/EXTRACCION_MALLAS_PDF_20260626_165945/02_MALLA_PDF_CANDIDATA.tsv": "6163972131ba91201f91f45208ff1f5e86687c4b033036c6078b6945b210faef",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/02_conciliacion/CONCILIACION_CANONICA_PDF_HOJA1_20260626_170541/03_CONCILIACION_CANONICA_PDF_HOJA1.tsv": "7b29294071d754a07690223d952cc8c315bef06cba830831923cf55807fa9254",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_DIAGNOSTICO_MALLAS_20260626_170631/01_CONCILIACION_CLASIFICADA_415.tsv": "ee3a53db3974673880bebda7846326e139cc6abc5210f40a22cd88326c5c65a1",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CIERRE_SEGURO_MAPEO_MALLAS_20260626_171212/02_TOTALES_DOCUMENTALES_CORREGIDOS_POR_PDF.tsv": "d3a53fb1113869d5aba0db0fffe8a7f64707d47936c88d12988b62fcd2efb7bc",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06A_IDENTIDAD_APLICADA_34_DETALLE_RELACIONES.tsv": "d6b8825311d77b482ef781c2ca1f3efc818dddab137ad3a0f9971abe60a8fdb3",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06_IDENTIDAD_APLICADA_34_CARRERAS.tsv": "69e7e6288dd3fec6e0fbea34d4f15940fef44b48c1526bd8af7391defc2419ed",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/01_UNIVERSO_34_CARRERAS_DIRECTAS.tsv": "d6031dc3c5ef4fb801451f51a8b45dff2c13669826b590a21f45957a80b18676",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/02_MAPEO_PDF_PLAN_NORMALIZADO.tsv": "2b7b8d57dc61c8f63950f545728032e6be5478fbb9a725d371acd9014751fb58",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv": "d861f673ab71bfb107a679da98ca471120d7c08cb13c4fd84e4dc9e05a834e5b"
+      },
+      "nombre": "CLASIFICACION_INDIVIDUAL",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05A_FUENTES_ACADEMICAS_FASE5.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05B_ASIGNATURAS_EXTRAIDAS_PDF_11.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05C_ASIGNATURAS_CANONICAS_HOJA1_11_PLANES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05D_CONCILIACION_EXACTA_ASIGNATURAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05E_CONCILIACION_APROXIMADA_ASIGNATURAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/12_VALIDACION_ASIGNATURAS_PDF_PLAN.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/13_RESUMEN_VALIDACION_11_PDF.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/14_VALIDACION_34_CARRERAS_PDF_PLAN.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/15_RESUMEN_FASE5_PDF_PLAN.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_MATCH_EXACTO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_MATCH_APROXIMO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_DIFERENCIAS_NIVEL.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_REVISAR_NOMBRE.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_AMBIGUAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_SIN_CORRESPONDENCIA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_NO_EVALUABLES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_TOTALES_DOCUMENTALES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_CONTROL_COBERTURA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_CONTROL_INTEGRIDAD.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_TRAZABILIDAD_ASIGNATURAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE5_CONCILIACION_CANONICA_REFERENCIA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_LOGS/fase5_validacion_academica_pdf_plan.log"
+      ],
+      "validaciones": [
+        {
+          "CONTROL": "34_carreras_preservadas",
+          "ESTADO": "OK",
+          "OBSERVACION": "34"
+        },
+        {
+          "CONTROL": "11_pdf_preservados",
+          "ESTADO": "OK",
+          "OBSERVACION": "11"
+        },
+        {
+          "CONTROL": "11_planes_preservados",
+          "ESTADO": "OK",
+          "OBSERVACION": "11"
+        },
+        {
+          "CONTROL": "sin_plan_estudios_como_codigo_institucional",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_keep_first",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_keep_last",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "multiples_jornadas_preservadas",
+          "ESTADO": "ERROR",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_precarga",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_pes",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_fase_posterior",
+          "ESTADO": "OK",
+          "OBSERVACION": "PENDIENTE"
+        },
+        {
+          "CONTROL": "pdf_evaluados",
+          "ESPERADO": 11,
+          "ESTADO": "OK",
+          "VALOR": 11
+        },
+        {
+          "CONTROL": "carreras_evaluadas",
+          "ESPERADO": 34,
+          "ESTADO": "OK",
+          "VALOR": 34
+        },
+        {
+          "CONTROL": "filas_pdf_evaluadas",
+          "ESPERADO": 415,
+          "ESTADO": "OK",
+          "VALOR": 415
+        }
+      ]
+    },
+    "fase_6": {
+      "comando_reanudacion": "",
+      "conteos": {
+        "ambiguos": 76,
+        "aproximados_confirmados": 0,
+        "aproximados_revisados": 44,
+        "apto_para_carga": false,
+        "bloqueos_estructurales": 0,
+        "carreras_bloqueadas": 0,
+        "carreras_completas": 0,
+        "carreras_observaciones": 0,
+        "carreras_revision": 34,
+        "casos_no_exactos": 148,
+        "casos_revision_manual": 146,
+        "equivalencias_nombre_confirmadas": 0,
+        "errores_extraccion": 0,
+        "exactas_preservadas": 267,
+        "niveles_explicados": 1,
+        "niveles_revisados": 4,
+        "no_curriculares": 0,
+        "nombres_revisados": 36,
+        "originales_modificados": false,
+        "pdf_bloqueados": 0,
+        "pdf_completos": 0,
+        "pdf_observaciones": 0,
+        "pdf_revision": 11,
+        "pendientes_fusion_division": 13,
+        "pendientes_otro_plan": 0,
+        "pendientes_sin_evidencia": 14,
+        "pes_generado": false,
+        "precarga_generada": false,
+        "sin_correspondencia_real": 43,
+        "sin_correspondencia_revisados": 64,
+        "universo_total": 415
+      },
+      "entradas": {
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05B_ASIGNATURAS_EXTRAIDAS_PDF_11.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05B_ASIGNATURAS_EXTRAIDAS_PDF_11.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05C_ASIGNATURAS_CANONICAS_HOJA1_11_PLANES.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05C_ASIGNATURAS_CANONICAS_HOJA1_11_PLANES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05D_CONCILIACION_EXACTA_ASIGNATURAS.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05D_CONCILIACION_EXACTA_ASIGNATURAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05E_CONCILIACION_APROXIMADA_ASIGNATURAS.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05E_CONCILIACION_APROXIMADA_ASIGNATURAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/12_VALIDACION_ASIGNATURAS_PDF_PLAN.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/12_VALIDACION_ASIGNATURAS_PDF_PLAN.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/13_RESUMEN_VALIDACION_11_PDF.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/13_RESUMEN_VALIDACION_11_PDF.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/14_VALIDACION_34_CARRERAS_PDF_PLAN.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/14_VALIDACION_34_CARRERAS_PDF_PLAN.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/15_RESUMEN_FASE5_PDF_PLAN.tsv": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/15_RESUMEN_FASE5_PDF_PLAN.tsv"
+      },
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 6,
+      "fecha_fin": "2026-06-30T16:57:07",
+      "fecha_inicio": "2026-06-30T16:57:06",
+      "hashes": {
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv": "d861f673ab71bfb107a679da98ca471120d7c08cb13c4fd84e4dc9e05a834e5b",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05B_ASIGNATURAS_EXTRAIDAS_PDF_11.tsv": "9707ce25af0e95ae4a4e0257eb46e41c9165e7dc492fc91e781c8686ec07345c",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05C_ASIGNATURAS_CANONICAS_HOJA1_11_PLANES.tsv": "45f7693522db3822ec3c04629e5e275d8e1c7acf20b43672e5199da22cede0c4",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05D_CONCILIACION_EXACTA_ASIGNATURAS.tsv": "1d0779d191bc026f2d4655ef46592a17a22034abe584a1ca5c96c7bc5c62136e",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05E_CONCILIACION_APROXIMADA_ASIGNATURAS.tsv": "40a69f51897fc232a31d56478bdbb8cab9d67766317ad5bb08b765cd10016c74",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/12_VALIDACION_ASIGNATURAS_PDF_PLAN.tsv": "3f3099e61bcf9f22d48d5cd90fd51c847f5f1f302109c200047f3d27621a8049",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/13_RESUMEN_VALIDACION_11_PDF.tsv": "0b787a561193d16b78b8519da5008d718ae5ac9110fabac450a64f65684b07a3",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/14_VALIDACION_34_CARRERAS_PDF_PLAN.tsv": "02ce51e5d47c1b81e431c256d4a5598c111b768e6bc41e121a66ef45caa736f4",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/15_RESUMEN_FASE5_PDF_PLAN.tsv": "c97e41f1c252981ea7f63b7103c06c99c96c30ad05057a922d1ab782bf351efa"
+      },
+      "nombre": "INCORPORACION_CONTROLADA_DE_TOTALES",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/06A_UNIVERSO_148_NO_EXACTOS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/06B_CANDIDATOS_148_CASOS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_UNIVERSO_148.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_REVISION_44_APROXIMADOS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_REVISION_4_DIFERENCIAS_NIVEL.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_REVISION_36_NOMBRES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_REVISION_64_SIN_CORRESPONDENCIA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_CONTROL_EXTRACCION_148.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_CANDIDATOS_MULTIPLES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_CAMBIOS_ESTADO_FASE5_FASE6.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_CONTROL_415_FILAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_CONTROL_INTEGRIDAD.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE6_TRAZABILIDAD_148.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/16_CIERRE_148_CASOS_NO_EXACTOS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/17_VALIDACION_ASIGNATURAS_PDF_PLAN_POST_REVISION.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/18_RESUMEN_POST_REVISION_11_PDF.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/19_RESUMEN_POST_REVISION_34_CARRERAS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/20_REVISION_MANUAL_CASOS_PENDIENTES.xlsx",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_LOGS/fase6_revision_no_exactos.log"
+      ],
+      "validaciones": [
+        {
+          "CONTROL": "universo_fase5_415",
+          "ESTADO": "OK",
+          "OBSERVACION": "415"
+        },
+        {
+          "CONTROL": "exactas_preservadas_267",
+          "ESTADO": "OK",
+          "OBSERVACION": "267"
+        },
+        {
+          "CONTROL": "no_exactos_148",
+          "ESTADO": "OK",
+          "OBSERVACION": "148"
+        },
+        {
+          "CONTROL": "aproximados_44",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "nivel_4",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "nombres_36",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_correspondencia_64",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "post_415",
+          "ESTADO": "OK",
+          "OBSERVACION": "415"
+        },
+        {
+          "CONTROL": "pdf_11_preservados",
+          "ESTADO": "OK",
+          "OBSERVACION": "11"
+        },
+        {
+          "CONTROL": "carreras_34_preservadas",
+          "ESTADO": "OK",
+          "OBSERVACION": "34"
+        },
+        {
+          "CONTROL": "multiples_jornadas_21",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_fase_posterior",
+          "ESTADO": "OK",
+          "OBSERVACION": "PENDIENTE"
+        },
+        {
+          "CONTROL": "sin_precarga_pes",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        }
+      ]
+    },
+    "fase_7": {
+      "comando_reanudacion": "",
+      "conteos": {
+        "aproximados_decisiones": 0,
+        "apto_para_carga": false,
+        "casos_agrupados": 0,
+        "casos_no_agrupables": 146,
+        "casos_originales": 146,
+        "casos_preservados": 146,
+        "casos_unicos": 146,
+        "decisiones_humanas_aplicadas": 0,
+        "decisiones_humanas_detectadas": 0,
+        "decisiones_maestras": 146,
+        "fusion_division_decisiones": 13,
+        "grupos_no_propagables": 146,
+        "grupos_propagables": 0,
+        "niveles_decisiones": 0,
+        "nombres_decisiones": 76,
+        "originales_modificados": false,
+        "pendientes_sin_evidencia_decisiones": 14,
+        "pes_generado": false,
+        "precarga_generada": false,
+        "reduccion_absoluta": 0,
+        "reduccion_porcentual": 0.0,
+        "sin_correspondencia_decisiones": 43
+      },
+      "entradas": {},
+      "errores": [],
+      "estado": "COMPLETADA",
+      "fase": 7,
+      "fecha_fin": "2026-06-30T17:06:32",
+      "fecha_inicio": "2026-06-30T17:06:31",
+      "hashes": {},
+      "nombre": "VALIDACION_FINAL_Y_CIERRE",
+      "pendientes": [],
+      "salidas": [
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/07A_GRUPOS_DECISION_MAESTRA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/07B_MAPEO_CASO_A_DECISION_MAESTRA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/07C_CANDIDATOS_POR_DECISION_MAESTRA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_AUDITORIA_EXCEL_ORIGINAL.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_RESUMEN_AGRUPACION_REVISION.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_GRUPOS_DECISION_MAESTRA.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_CASOS_AGRUPADOS.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_CASOS_NO_AGRUPABLES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_CONTROL_PROPAGACION.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/22_PLANTILLA_IMPORTACION_DECISIONES_REVISOR.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/23_MAPEO_PROPAGACION_DECISIONES.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_CONTROL_EXCEL_OPTIMIZADO.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_CONTROL_INTEGRIDAD.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/05_AUDITORIA/FASE7_TRAZABILIDAD_REVISION.tsv",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/06_LOGS/fase7_preparacion_revision_manual.log",
+        "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/21_REVISION_MANUAL_OPTIMIZADA.xlsx"
+      ],
+      "validaciones": [
+        {
+          "CONTROL": "excel_original_hash_preservado",
+          "ESTADO": "OK",
+          "OBSERVACION": "ab9c06c48a038394220b1f58aec5590667029550550d07aac7acc98b6bbcdc53"
+        },
+        {
+          "CONTROL": "casos_originales_146",
+          "ESTADO": "OK",
+          "OBSERVACION": 146
+        },
+        {
+          "CONTROL": "casos_trazados_146",
+          "ESTADO": "OK",
+          "OBSERVACION": 146
+        },
+        {
+          "CONTROL": "sin_casos_adicionales",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "cada_caso_con_decision_maestra",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "sin_decisiones_humanas_aplicadas",
+          "ESTADO": "OK",
+          "OBSERVACION": "0"
+        },
+        {
+          "CONTROL": "sin_precarga_pes",
+          "ESTADO": "OK",
+          "OBSERVACION": ""
+        },
+        {
+          "CONTROL": "apto_para_carga",
+          "ESTADO": "OK",
+          "OBSERVACION": "NO"
+        }
+      ]
+    }
+  },
+  "fecha_creacion": "2026-06-30T10:54:15",
+  "proceso": "Avance Curricular SIES 2026",
+  "reanudaciones": [
+    {
+      "fase_solicitada": "1",
+      "fecha": "2026-06-30T10:58:32",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "2",
+      "fecha": "2026-06-30T11:00:04",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "3",
+      "fecha": "2026-06-30T11:00:42",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "3",
+      "fecha": "2026-06-30T11:02:47",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "4",
+      "fecha": "2026-06-30T11:03:54",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "4",
+      "fecha": "2026-06-30T16:28:39",
+      "forzar": true
+    },
+    {
+      "fase_solicitada": "5",
+      "fecha": "2026-06-30T16:43:29",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "5",
+      "fecha": "2026-06-30T16:45:45",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "5",
+      "fecha": "2026-06-30T16:48:05",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "6",
+      "fecha": "2026-06-30T16:56:25",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "6",
+      "fecha": "2026-06-30T16:57:06",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "6",
+      "fecha": "2026-06-30T16:58:16",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "7",
+      "fecha": "2026-06-30T17:05:58",
+      "forzar": false
+    },
+    {
+      "fase_solicitada": "7",
+      "fecha": "2026-06-30T17:06:31",
+      "forzar": false
+    }
+  ],
+  "run_dir": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415",
+  "subproceso": "Carreras"
+}

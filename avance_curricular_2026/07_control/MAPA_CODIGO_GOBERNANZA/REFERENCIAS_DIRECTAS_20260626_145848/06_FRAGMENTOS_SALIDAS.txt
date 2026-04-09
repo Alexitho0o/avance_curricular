@@ -1,0 +1,250 @@
+
+==========================================================================================
+SALIDAS — FRAGMENTO 1 — LÍNEAS 118-158
+==========================================================================================
+000118: ]
+000119: 
+000120: MATRICULA_AC_COLUMNS = [
+000121:     "CODIGO_IES_NUM", "TIPO_DOCUMENTO", "NUM_DOCUMENTO", "DV", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRES",
+000122:     "SEXO", "FECHA_NACIMIENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "ANIO_INGRESO_CARRERA_ACTUAL",
+000123:     "SEM_INGRESO_CARRERA_ACTUAL", "ANIO_INGRESO_CARRERA_ORIGEN", "SEM_INGRESO_CARRERA_ORIGEN",
+000124:     "CURSO_1ER_SEM", "CURSO_2DO_SEM", "UNIDADES_CURSADAS", "UNIDADES_APROBADAS", "UNID_CURSADAS_TOTAL",
+000125:     "UNID_APROBADAS_TOTAL", "VIGENCIA",
+000126: ]
+000127: 
+000128: ANUAL_COLS = [
+000129:     "UNIDADES_1ER_ANIO", "UNIDADES_2DO_ANIO", "UNIDADES_3ER_ANIO", "UNIDADES_4TO_ANIO",
+000130:     "UNIDADES_5TO_ANIO", "UNIDADES_6TO_ANIO", "UNIDADES_7MO_ANIO",
+000131: ]
+000132: 
+000133: MU_FUSION_OUTPUT_FILENAME = "archivo_listo_para_sies.xlsx"
+000134: MU_PREGRADO_CSV_FILENAME = "matricula_unificada_2026_pregrado.csv"
+000135: FINAL_SIES_CODE_COL = "CODIGO_CARRERA_SIES_FINAL"
+000136: MAX_SIES_CODES_PER_KEY = 5
+000137: DEFAULT_EXCLUIR_DIPLOMADOS = True
+000138: 
+000139: DEFAULT_INPUT_CANDIDATES = [
+000140:     Path.home() / "Downloads" / "PROMEDIOSDEALUMNOS_7804.xlsx",
+000141: ]
+000142: DEFAULT_CATALOGO_MANUAL_CANDIDATES = [
+000143:     Path(__file__).with_name("catalogo_manual.tsv"),
+000144:     Path.cwd() / "catalogo_manual.tsv",
+000145:     Path.home() / "Downloads" / "catalogo_manual.tsv",
+000146: ]
+000147: DEFAULT_PUENTE_SIES_CANDIDATES = [
+000148:     Path(__file__).with_name("puente_sies.tsv"),
+000149:     Path.cwd() / "puente_sies.tsv",
+000150:     Path.home() / "Downloads" / "puente_sies.tsv",
+000151: ]
+000152: DEFAULT_PUENTE_SIES_COMPILADO_PATH = Path(__file__).with_name("control") / "catalogos" / "PUENTE_SIES_COMPILADO.tsv"
+000153: DEFAULT_GOB_NAC_CANDIDATES = [
+000154:     Path(__file__).with_name("gobernanza_nac.tsv"),
+000155:     Path.cwd() / "gobernanza_nac.tsv",
+000156:     Path.home() / "Downloads" / "gobernanza_nac.tsv",
+000157: ]
+000158: DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES = [
+
+==========================================================================================
+SALIDAS — FRAGMENTO 2 — LÍNEAS 2120-2160
+==========================================================================================
+002120:     catalogo_manual_tsv_path: str | None = None,
+002121:     puente_sies_tsv_path: str | None = None,
+002122:     oferta_academica_xlsx_path: str | None = None,
+002123:     gob_nac_tsv_path: str | None = None,
+002124:     gob_pais_est_sec_tsv_path: str | None = None,
+002125:     gob_sede_tsv_path: str | None = None,
+002126:     sit_fon_sol_patch_json_path: str | None = None,
+002127:     excluir_diplomados: bool = DEFAULT_EXCLUIR_DIPLOMADOS,
+002128:     usar_gobernanza_v2: bool = False,
+002129:     filtro_base_datos_sheet: str | None = None,
+002130: ) -> dict[str, object]:
+002131:     """
+002132:     Fase 1 de fusión con pipeline legacy:
+002133:     - Lee hoja fuente (primera por defecto).
+002134:     - Detecta columnas base CODCLI/CODCARR/JORNADA/CARRERA + RUT/DV.
+002135:     - Construye archivo tipo "ARCHIVO_LISTO_SUBIDA" con columnas de Matrícula Unificada
+002136:       y estados operativos del administrador de duplicados.
+002137:     """
+002138:     xls = pd.ExcelFile(input_file)
+002139:     selected_sheet = sheet_name or xls.sheet_names[0]
+002140: 
+002141:     # --- Filtro por hoja base_datos: conservar solo filas cuyo RUT aparezca en la hoja ---
+002142:     # Auto-detectar: si no se pasó el flag pero existe "base_datos" en el Excel, usarla
+002143:     _filtro_bd_sheet = filtro_base_datos_sheet
+002144:     if _filtro_bd_sheet is None and "base_datos" in xls.sheet_names:
+002145:         _filtro_bd_sheet = "base_datos"
+002146:         print("  ℹ️ Auto-detectada hoja 'base_datos' → se aplicará filtro por RUT")
+002147: 
+002148:     # --- Lectura multi-hoja: concatenar todas las hojas con columnas de matrícula ---
+002149:     # Si existe base_datos (filtro por RUT activado), concatenar TODAS las hojas que
+002150:     # tengan CODCLI + (CODCARR o CODCARPR) + RUT/N_DOC, excluyendo hojas de soporte.
+002151:     # Esto captura alumnos en cualquier hoja del Excel, no solo la primera.
+002152:     _HOJAS_EXCLUIR = {"DatosAlumnos", _filtro_bd_sheet or "", "base_datos"}
+002153:     _REQ_CODCLI = {"CODCLI"}
+002154:     _REQ_CODCARR = {"CODCARR", "CODCARPR"}
+002155:     _REQ_RUT = {"RUT", "NUM_DOCUMENTO", "N_DOC"}
+002156: 
+002157:     def _hoja_es_fuente_matricula(df: pd.DataFrame) -> bool:
+002158:         cols = set(df.columns)
+002159:         return (
+002160:             bool(cols & _REQ_CODCLI)
+
+==========================================================================================
+SALIDAS — FRAGMENTO 3 — LÍNEAS 3399-3439
+==========================================================================================
+003399:         mask_no_match_da = da_match_modo == "SIN_MATCH"
+003400:         if mask_no_match_da.any():
+003401:             sin_match_datos_alumnos_df = pd.DataFrame(
+003402:                 {
+003403:                     "CODCLI": src_work[req_codcli],
+003404:                     "N_DOC": out["N_DOC"],
+003405:                     "DV": out["DV"],
+003406:                     "COD_CAR_FUENTE": src_work[req_codcarr],
+003407:                     "NOMBRE_CARRERA_FUENTE": src_work[req_nombre_carrera],
+003408:                     "JORNADA_FUENTE": src_work[req_jornada],
+003409:                     "MOTIVO_REVISION": "SIN_MATCH_POR_CODCLI_Y_RUT_EN_DATOS_ALUMNOS",
+003410:                 }
+003411:             ).loc[mask_no_match_da].reset_index(drop=True)
+003412: 
+003413:     # Normalización final contra reglas del manual de carga pregrado.
+003414:     # Se conserva ARCHIVO_LISTO_SUBIDA completo, y se construye una hoja
+003415:     # MATRICULA_UNIFICADA_32 lista para carga (sin diplomados, sin duplicados).
+003416:     #
+003417:     # Ajuste de coherencia de sede:
+003418:     # cuando COD_SED (resuelto desde input/DA_SEDE) discrepa del componente S de
+003419:     # CODIGO_CARRERA_SIES_FINAL, intentamos reemplazar por un CODIGO_UNICO
+003420:     # equivalente (mismo C/J/V) con la sede solicitada, usando oferta_dim.
+003421:     archivo_subida["SIES_AJUSTE_SEDE_FLAG"] = "NO"
+003422:     archivo_subida["SIES_AJUSTE_SEDE_ORIGEN"] = pd.NA
+003423:     if not oferta_dim.empty and FINAL_SIES_CODE_COL in archivo_subida.columns:
+003424:         cod_sed_pref = pd.to_numeric(archivo_subida["COD_SED"], errors="coerce")
+003425:         parsed_pre = archivo_subida[FINAL_SIES_CODE_COL].apply(_extract_sies_components)
+003426:         parsed_pre_sed = pd.to_numeric(
+003427:             parsed_pre.map(lambda x: x[0] if isinstance(x, tuple) else pd.NA),
+003428:             errors="coerce",
+003429:         )
+003430:         parsed_pre_car = pd.to_numeric(
+003431:             parsed_pre.map(lambda x: x[1] if isinstance(x, tuple) else pd.NA),
+003432:             errors="coerce",
+003433:         )
+003434:         parsed_pre_jor = pd.to_numeric(
+003435:             parsed_pre.map(lambda x: x[2] if isinstance(x, tuple) else pd.NA),
+003436:             errors="coerce",
+003437:         )
+003438:         parsed_pre_ver = pd.to_numeric(
+003439:             parsed_pre.map(lambda x: x[3] if isinstance(x, tuple) else pd.NA),
+
+==========================================================================================
+SALIDAS — FRAGMENTO 4 — LÍNEAS 4361-4471
+==========================================================================================
+004361:     _sies_ok = int((archivo_subida["SIES_MATCH_STATUS"] == "MATCH_SIES").sum()) if "SIES_MATCH_STATUS" in archivo_subida.columns else 0
+004362:     _sies_ambiguo = int((archivo_subida["SIES_MATCH_STATUS"] == "AMBIGUO_SIES").sum()) if "SIES_MATCH_STATUS" in archivo_subida.columns else 0
+004363:     _sies_sin = int((archivo_subida["SIES_MATCH_STATUS"] == "SIN_MATCH_SIES").sum()) if "SIES_MATCH_STATUS" in archivo_subida.columns else 0
+004364:     _sies_pend = int((archivo_subida.get("SIES_RESOLUCION_HEURISTICA", pd.Series()) == "PENDIENTE_GOBERNANZA").sum())
+004365:     # Métricas COD_CAR por método
+004366:     _ccm = archivo_subida.get("COD_CAR_METODO_FINAL", pd.Series(dtype=str))
+004367:     _cod_car_total = int(archivo_subida["COD_CAR"].notna().sum())
+004368:     _cod_car_sies = int(_ccm.isin(["PARSE_COMPONENTE_SIES", "OFERTA_LOOKUP_CODIGO_UNICO"]).sum())
+004369:     _cod_car_shared = int((_ccm == "COMPONENTE_C_COMPARTIDO").sum())
+004370:     _cod_car_nombre = int((_ccm == "MAPEO_NOMBRE_CARRERA").sum())
+004371:     _cod_car_sin = int(archivo_subida["COD_CAR"].isna().sum())
+004372: 
+004373:     resumen_ejecutivo_rows = [
+004374:         {"seccion": "ENTRADA", "metrica": "CODCLI total filas fuente (Promedios)", "valor": _codcli_fuente_total, "pct": "100.0%"},
+004375:         {"seccion": "ENTRADA", "metrica": "CODCLI únicos en fuente", "valor": _codcli_fuente_unicos, "pct": f"{_codcli_fuente_unicos/_codcli_fuente_total*100:.1f}%"},
+004376:         {"seccion": "PROCESAMIENTO", "metrica": "CODCLI en ARCHIVO_LISTO_SUBIDA", "valor": len(archivo_subida), "pct": f"{len(archivo_subida)/_codcli_fuente_total*100:.1f}%"},
+004377:         {"seccion": "PROCESAMIENTO", "metrica": "CODCLI únicos en ARCHIVO_LISTO_SUBIDA", "valor": _codcli_archivo_unicos, "pct": ""},
+004378:         {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Match por CODCLI", "valor": _match_codcli, "pct": f"{_match_codcli/len(archivo_subida)*100:.1f}%"},
+004379:         {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Match por RUT (fallback)", "valor": _match_rut, "pct": f"{_match_rut/len(archivo_subida)*100:.1f}%"},
+004380:         {"seccion": "MATCH_DATOS_ALUMNOS", "metrica": "Sin match DatosAlumnos", "valor": _sin_match_da_n, "pct": f"{_sin_match_da_n/len(archivo_subida)*100:.1f}%"},
+004381:         {"seccion": "MATCH_SIES", "metrica": "MATCH_SIES (código único)", "valor": _sies_ok, "pct": f"{_sies_ok/len(archivo_subida)*100:.1f}%"},
+004382:         {"seccion": "MATCH_SIES", "metrica": "AMBIGUO_SIES (>1 código)", "valor": _sies_ambiguo, "pct": f"{_sies_ambiguo/len(archivo_subida)*100:.1f}%"},
+004383:         {"seccion": "MATCH_SIES", "metrica": "SIN_MATCH_SIES", "valor": _sies_sin, "pct": f"{_sies_sin/len(archivo_subida)*100:.1f}%"},
+004384:         {"seccion": "MATCH_SIES", "metrica": "PENDIENTE_GOBERNANZA (sin resolver)", "valor": _sies_pend, "pct": f"{_sies_pend/len(archivo_subida)*100:.1f}%"},
+004385:         {"seccion": "COD_CAR", "metrica": "COD_CAR asignado (total)", "valor": _cod_car_total, "pct": f"{_cod_car_total/len(archivo_subida)*100:.1f}%"},
+004386:         {"seccion": "COD_CAR", "metrica": "  → por SIES directo/oferta", "valor": _cod_car_sies, "pct": f"{_cod_car_sies/len(archivo_subida)*100:.1f}%"},
+004387:         {"seccion": "COD_CAR", "metrica": "  → por COMPONENTE_C_COMPARTIDO", "valor": _cod_car_shared, "pct": f"{_cod_car_shared/len(archivo_subida)*100:.1f}%"},
+004388:         {"seccion": "COD_CAR", "metrica": "  → por MAPEO_NOMBRE_CARRERA", "valor": _cod_car_nombre, "pct": f"{_cod_car_nombre/len(archivo_subida)*100:.1f}%"},
+004389:         {"seccion": "COD_CAR", "metrica": "Sin COD_CAR", "valor": _cod_car_sin, "pct": f"{_cod_car_sin/len(archivo_subida)*100:.1f}%"},
+004390:         {"seccion": "CARGA_FINAL", "metrica": "OK_CARGA_PREGRADO (→ MU32)", "valor": _ok, "pct": f"{_ok/len(archivo_subida)*100:.1f}%"},
+004391:         {"seccion": "CARGA_FINAL", "metrica": "CODCLI únicos en MATRICULA_UNIFICADA_32", "valor": _codcli_mu32_unicos, "pct": ""},
+004392:         {"seccion": "EXCLUIDOS", "metrica": "Total excluidos", "valor": _total_excluidos, "pct": f"{_total_excluidos/len(archivo_subida)*100:.1f}%"},
+004393:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIN_MATCH_SIES", "valor": _exc_sin_sies, "pct": f"{_exc_sin_sies/len(archivo_subida)*100:.1f}%"},
+004394:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DIPLOMADO", "valor": _exc_dipl, "pct": f"{_exc_dipl/len(archivo_subida)*100:.1f}%"},
+004395:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIN_MATCH_DATOS_ALUMNOS", "valor": _exc_sin_da, "pct": f"{_exc_sin_da/len(archivo_subida)*100:.1f}%"},
+004396:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIES_HEURISTICA_OPACA", "valor": _exc_opaca, "pct": f"{_exc_opaca/len(archivo_subida)*100:.1f}%"},
+004397:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_SIN_FOR_ING_ACT_TRAZABLE", "valor": _exc_fig, "pct": f"{_exc_fig/len(archivo_subida)*100:.1f}%"},
+004398:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_CAMPOS_OBLIGATORIOS", "valor": _exc_campos, "pct": f"{_exc_campos/len(archivo_subida)*100:.1f}%"},
+004399:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_INTRA_CODCLI", "valor": _exc_dup_intra, "pct": f"{_exc_dup_intra/len(archivo_subida)*100:.1f}%"},
+004400:         {"seccion": "EXCLUIDOS", "metrica": "  → EXCLUIDO_DUPLICADO_CLAVE_CARGA", "valor": _exc_dup_clave, "pct": f"{_exc_dup_clave/len(archivo_subida)*100:.1f}%"},
+004401:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Patch JSON aplicado", "valor": "SI" if sit_fon_sol_patch_stats.get("patch_applied") else "NO", "pct": ""},
+004402:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "RUT en patch JSON", "valor": int(sit_fon_sol_patch_stats.get("n_rut_patch", 0)), "pct": ""},
+004403:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Filas objetivo patch", "valor": int(sit_fon_sol_patch_stats.get("n_rows_targeted", 0)), "pct": f"{(int(sit_fon_sol_patch_stats.get('n_rows_targeted', 0))/len(archivo_subida)*100):.1f}%"},
+004404:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "Filas modificadas patch", "valor": int(sit_fon_sol_patch_stats.get("n_rows_affected", 0)), "pct": f"{(int(sit_fon_sol_patch_stats.get('n_rows_affected', 0))/len(archivo_subida)*100):.1f}%"},
+004405:         {"seccion": "PATCH_SIT_FON_SOL", "metrica": "RUT patch no encontrados", "valor": int(sit_fon_sol_patch_stats.get("n_rut_missing", 0)), "pct": ""},
+004406:         {"seccion": "VERIFICACION", "metrica": "Suma excluidos + OK = archivo_subida", "valor": _total_excluidos + _ok, "pct": "✅" if (_total_excluidos + _ok) == len(archivo_subida) else "❌ DESCUADRE"},
+004407:     ]
+004408:     resumen_ejecutivo = pd.DataFrame(resumen_ejecutivo_rows)
+004409: 
+004410:     # ── Máscara rojo para PENDIENTE_GOBERNANZA en ARCHIVO_LISTO_SUBIDA ──
+004411:     _red_mask = archivo_subida["SIES_RESOLUCION_HEURISTICA"] == "PENDIENTE_GOBERNANZA" if "SIES_RESOLUCION_HEURISTICA" in archivo_subida.columns else pd.Series(False, index=archivo_subida.index)
+004412: 
+004413:     sheets_export: dict[str, pd.DataFrame] = {}
+004414:     sheets_export["RESUMEN_EJECUTIVO"] = resumen_ejecutivo
+004415:     sheets_export["REVISION_MANUAL"] = revision_manual
+004416:     sheets_export["MATRICULA_UNIFICADA_32"] = matricula_unificada_32
+004417:     sheets_export["ARCHIVO_LISTO_SUBIDA"] = archivo_subida
+004418:     sheets_export["RESUMEN_MU"] = resumen
+004419:     sheets_export["RESUMEN_MANUAL"] = resumen_manual
+004420:     sheets_export["RESUMEN_SIES"] = resumen_sies
+004421:     sheets_export["RESUMEN_CARGA_PREGRADO"] = resumen_carga_pregrado
+004422:     sheets_export["EXCLUIDOS_CARGA_PREGR"] = excluidos_carga_pregrado
+004423:     sheets_export["SIES_AMBIGUOS_POR_RESOL"] = ambiguos
+004424:     sheets_export["SIN_MATCH_SIES"] = sin_match
+004425:     patch_summary_rows = [
+004426:         {"metrica": "patch_applied", "valor": sit_fon_sol_patch_stats.get("patch_applied", False)},
+004427:         {"metrica": "patch_path", "valor": sit_fon_sol_patch_stats.get("patch_path", sit_fon_patch_source)},
+004428:         {"metrica": "n_rut_patch", "valor": sit_fon_sol_patch_stats.get("n_rut_patch", 0)},
+004429:         {"metrica": "n_rows_targeted", "valor": sit_fon_sol_patch_stats.get("n_rows_targeted", 0)},
+004430:         {"metrica": "n_rows_affected", "valor": sit_fon_sol_patch_stats.get("n_rows_affected", 0)},
+004431:         {"metrica": "n_rut_missing", "valor": sit_fon_sol_patch_stats.get("n_rut_missing", 0)},
+004432:         {"metrica": "rut_column_selected", "valor": sit_fon_sol_patch_stats.get("rut_column_selected", "")},
+004433:     ]
+004434:     sheets_export["PATCH_SIT_FON_SOL"] = pd.DataFrame(patch_summary_rows)
+004435:     _patch_missing_sample = sit_fon_sol_patch_stats.get("rut_missing_sample", [])
+004436:     if isinstance(_patch_missing_sample, list) and _patch_missing_sample:
+004437:         sheets_export["PATCH_SIT_FON_SOL_MISS"] = pd.DataFrame({"RUT_NO_ENCONTRADO": _patch_missing_sample})
+004438:     if not df_manual.empty:
+004439:         sheets_export["CATALOGO_MANUAL"] = df_manual
+004440:     if not df_bridge.empty:
+004441:         sheets_export["PUENTE_SIES"] = df_bridge
+004442:     if usar_gobernanza_v2:
+004443:         sheets_export["SIN_MATCH_DATOS_ALUMNOS"] = sin_match_datos_alumnos_df
+004444:     if not auditoria_consolidacion.empty:
+004445:         sheets_export["AUDITORIA_CONSOLIDACION"] = auditoria_consolidacion
+004446:     _write_excel_atomic(sheets_export, out_path, red_rows_sheet="ARCHIVO_LISTO_SUBIDA", red_rows_mask=_red_mask)
+004447:     _write_mu_csv_atomic(matricula_unificada_32, csv_out_path)
+004448: 
+004449:     if not auditoria_consolidacion.empty:
+004450:         audit_tsv_path = output_dir / "auditoria_consolidacion_codcli.tsv"
+004451:         auditoria_consolidacion.to_csv(audit_tsv_path, sep="\t", index=False)
+004452: 
+004453:     _report = {
+004454:         "output_file": str(out_path),
+004455:         "csv_output_file": str(csv_out_path),
+004456:         "sheet_used": selected_sheet,
+004457:         "gobernanza_mode": "v2_flagged" if usar_gobernanza_v2 else "legacy_default",
+004458:         "usar_gobernanza_v2": bool(usar_gobernanza_v2),
+004459:         "rows": len(archivo_subida),
+004460:         "rows_matricula_32_final": len(matricula_unificada_32),
+004461:         "rows_excluidas_carga_pregrado": int((archivo_subida["ESTADO_CARGA_PREGRADO"] != "OK_CARGA_PREGRADO").sum()),
+004462:         "rows_excluidas_sies_heuristica_opaca": int((archivo_subida["ESTADO_CARGA_PREGRADO"] == "EXCLUIDO_SIES_HEURISTICA_OPACA").sum()),
+004463:         "rows_excluidas_sin_for_ing_act_trazable": int((archivo_subida["ESTADO_CARGA_PREGRADO"] == "EXCLUIDO_SIN_FOR_ING_ACT_TRAZABLE").sum()),
+004464:         "rows_enriquecidas_datos_alumnos": rows_enriquecidas_datos_alumnos,
+004465:         "rows_sin_match_datos_alumnos": sin_match_datos_alumnos_rows,
+004466:         "cod_sed_resuelto_por_regla": cod_sed_resueltos_regla,
+004467:         "pais_est_sec_inferido_localidad": pais_est_sec_inferidos_localidad,
+004468:         "for_ing_act_distribution_final": for_ing_distribution_final,
+004469:         "rows_for_ing_act_imputado_final": int((included_final_mask & archivo_subida["FOR_ING_ACT_IMPUTADO"].eq("SI")).sum()),
+004470:         "rows_for_ing_act_revision_final": int((included_final_mask & archivo_subida["FOR_ING_ACT_REQUIERE_REVISION"].eq("SI")).sum()),
+004471:         "rows_uz_all_zero_final": int(uz_all_zero_mask.sum()) if not matricula_unificada_32.empty else 0,

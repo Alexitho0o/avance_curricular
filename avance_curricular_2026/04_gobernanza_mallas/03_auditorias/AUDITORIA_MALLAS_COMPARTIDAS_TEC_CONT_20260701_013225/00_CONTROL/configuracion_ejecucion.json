@@ -1,0 +1,72 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Auditoria transversal de carreras tecnicas, profesionales y continuidad con mallas compartidas",
+  "anio_proceso": 2026,
+  "anio_referencia_datos": 2025,
+  "familia_piloto": "LOGISTICA",
+  "modo_auditoria": "solo_lectura",
+  "solo_logistica": false,
+  "rutas_prioritarias": [
+    "avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/Instructivo_Avance Curricular SIES - 2026.txt",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/01_TABLA_MAESTRA_IDENTIDAD_CARRERAS.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06_IDENTIDAD_APLICADA_34_CARRERAS.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/06A_IDENTIDAD_APLICADA_34_DETALLE_RELACIONES.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/07_CARRERAS_IDENTIDAD_VALIDADA.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/10_VALIDACION_PDF_PLAN_INTEGRADA.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/INTEGRACION_IDENTIDAD_CARRERAS_20260630_111622/04_RESULTADOS/11_RESUMEN_FINAL_INTEGRACION.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/01_UNIVERSO_34_CARRERAS_DIRECTAS.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/02_MAPEO_PDF_PLAN_NORMALIZADO.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/03_VALIDACION_PUENTE_34.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/04_VALIDACION_PLAN_MATRIZ.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05B_ASIGNATURAS_EXTRAIDAS_PDF_11.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05C_ASIGNATURAS_CANONICAS_HOJA1_11_PLANES.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05D_CONCILIACION_EXACTA_ASIGNATURAS.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/02_INTERMEDIOS/05E_CONCILIACION_APROXIMADA_ASIGNATURAS.tsv",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/20_REVISION_MANUAL_CASOS_PENDIENTES.xlsx",
+    "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/VALIDACION_INDIVIDUAL_PDF_PLAN_20260630_105415/04_RESULTADOS/21_REVISION_MANUAL_OPTIMIZADA.xlsx"
+  ],
+  "extensiones_permitidas": [
+    ".csv",
+    ".json",
+    ".log",
+    ".md",
+    ".pdf",
+    ".py",
+    ".sh",
+    ".sql",
+    ".tsv",
+    ".txt",
+    ".xlsm",
+    ".xlsx",
+    ".yaml",
+    ".yml"
+  ],
+  "directorios_excluidos": [
+    ".git",
+    ".pytest_cache",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    "venv"
+  ],
+  "sufijos_excluidos": [
+    ".bak",
+    ".lock",
+    ".swp",
+    ".temp",
+    ".tmp"
+  ],
+  "limites_lectura": {
+    "max_archivos": null,
+    "contexto_lineas_texto": 5,
+    "no_ocr": true
+  },
+  "restricciones": {
+    "internet": "NO_USAR",
+    "fuentes_originales": "SOLO_LECTURA",
+    "pdfs": "NO_MODIFICAR",
+    "excel_revision_manual": "NO_MODIFICAR",
+    "precarga": "NO_GENERAR",
+    "pes": "NO_GENERAR"
+  }
+}

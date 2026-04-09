@@ -1,0 +1,601 @@
+============================================================
+AYUDA REAL DEL PROGRAMA
+============================================================
+⚠️  Conflictos en matriz auto desde DURACION_ESTUDIOS: 25 (se conserva primera ocurrencia)
+✅ Matriz SIES auto construida desde DURACION_ESTUDIOS: 211 llaves
+usage: codigo_gobernanza_v2.py [-h] [--input INPUT] [--output-dir OUTPUT_DIR]
+                               [--proceso {avance,matricula,ambos}]
+                               [--sheet SHEET]
+                               [--catalogo-manual-tsv CATALOGO_MANUAL_TSV]
+                               [--puente-sies-tsv PUENTE_SIES_TSV]
+                               [--oferta-academica-xlsx OFERTA_ACADEMICA_XLSX]
+                               [--gob-nac-tsv GOB_NAC_TSV]
+                               [--gob-pais-est-sec-tsv GOB_PAIS_EST_SEC_TSV]
+                               [--gob-sede-tsv GOB_SEDE_TSV]
+                               [--excluir-diplomados {true,false}]
+                               [--filtro-base-datos-sheet FILTRO_BASE_DATOS_SHEET]
+                               [--usar-gobernanza-v2 {true,false}]
+                               [--sit-fon-sol-patch-json SIT_FON_SOL_PATCH_JSON]
+
+Pipeline híbrido SIES/PES
+
+options:
+  -h, --help            show this help message and exit
+  --input INPUT         Ruta del Excel de entrada (por defecto detecta
+                        PROMEDIOSDEALUMNOS_7804.xlsx si existe).
+  --output-dir OUTPUT_DIR
+                        Carpeta de salida
+  --proceso {avance,matricula,ambos}
+                        Qué pipeline ejecutar: avance curricular, matrícula
+                        unificada (legacy-like) o ambos
+  --sheet SHEET         Nombre de hoja para el proceso matrícula (por defecto
+                        usa la primera)
+  --catalogo-manual-tsv CATALOGO_MANUAL_TSV
+                        Ruta a TSV de catálogo manual (opcional). Si no se
+                        informa, usa CATALOGO_MANUAL_TSV embebido.
+  --puente-sies-tsv PUENTE_SIES_TSV
+                        DEPRECADO: override puente SIES. No se consume
+                        directamente en el pipeline; usar
+                        scripts/compile_puente_sies_compilado.py.
+  --oferta-academica-xlsx OFERTA_ACADEMICA_XLSX
+                        Ruta al XLSX de oferta académica (opcional). Se usa
+                        para validar y ajustar MODALIDAD/JOR y limitar NIV_ACA
+                        por DURACION_ESTUDIOS.
+  --gob-nac-tsv GOB_NAC_TSV
+                        Ruta a TSV de gobernanza NAC (opcional).
+  --gob-pais-est-sec-tsv GOB_PAIS_EST_SEC_TSV
+                        Ruta a TSV de gobernanza PAIS_EST_SEC (opcional).
+  --gob-sede-tsv GOB_SEDE_TSV
+                        Ruta a TSV de gobernanza COD_SED (opcional).
+  --excluir-diplomados {true,false}
+                        Para proceso matrícula: excluir diplomados en
+                        asignación SIES.
+  --filtro-base-datos-sheet FILTRO_BASE_DATOS_SHEET
+                        Nombre de hoja del Excel de entrada que contiene los
+                        RUT (N_DOC) a incluir. Solo se procesarán las filas de
+                        la hoja fuente cuyo RUT aparezca en esta hoja.
+                        Ejemplo: --filtro-base-datos-sheet base_datos
+  --usar-gobernanza-v2 {true,false}
+                        Activa el nuevo flujo de matrícula (enriquecimiento
+                        por CODCLI con hoja DatosAlumnos). Por defecto se
+                        mantiene el flujo legacy para rollback inmediato.
+  --sit-fon-sol-patch-json SIT_FON_SOL_PATCH_JSON
+                        Ruta a patch JSON provisional SIT_FON_SOL por RUT. Si
+                        no se informa, usa
+                        patches/mu2026/sit_fon_sol_patch_ruts.json cuando
+                        exista.
+
+============================================================
+CARGA DE FUENTES Y CONSTRUCCIÓN AVANCE CURRICULAR
+LÍNEAS 1801-2021
+============================================================
+def cargar_fuentes(path: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    book = pd.read_excel(path, sheet_name=None)
+    req_hist = {"ANO", "PERIODO", "RUT", "DIG", "CODCARR", "CODRAMO"}
+    try:
+        carreras = _pick_sheet(book, {"CODIGO_UNICO", "PLAN_ESTUDIOS"})
+        matricula = _pick_sheet(book, {"NUM_DOCUMENTO", "CODIGO_UNICO", "PLAN_ESTUDIOS", "DV"})
+        hist = pd.concat([df for df in book.values() if req_hist.issubset(df.columns)], ignore_index=True)
+        if hist.empty:
+            raise ValueError("No se encontró histórico con ANO/PERIODO/RUT/DIG/CODCARR/CODRAMO")
+
+        equiv = book.get("Equivalencia")
+        if equiv is None:
+            raise ValueError("Falta hoja Equivalencia")
+        return carreras, matricula, hist.copy(), equiv.copy()
+    except ValueError as err:
+        # Modo compatible para archivos legacy tipo "Hoja1" con CODCARR/PLAN_DE_ESTUDIO.
+        hoja1 = book.get("Hoja1")
+        req_hoja1 = {"RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO", "ANO", "PERIODO", "CODRAMO"}
+        if hoja1 is None or not req_hoja1.issubset(hoja1.columns):
+            raise err
+
+        src = hoja1.copy()
+        carreras = (
+            src[["CODCARR", "PLAN_DE_ESTUDIO"]]
+            .dropna(subset=["CODCARR", "PLAN_DE_ESTUDIO"])
+            .drop_duplicates()
+            .rename(columns={"CODCARR": "CODIGO_UNICO", "PLAN_DE_ESTUDIO": "PLAN_ESTUDIOS"})
+        )
+
+        mat_cols = ["RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO"]
+        if "ESTADO_ACADEMICO" in src.columns:
+            mat_cols.append("ESTADO_ACADEMICO")
+        matricula = (
+            src[mat_cols]
+            .dropna(subset=["RUT", "DIG", "CODCARR", "PLAN_DE_ESTUDIO"])
+            .drop_duplicates()
+            .rename(
+                columns={
+                    "RUT": "NUM_DOCUMENTO",
+                    "DIG": "DV",
+                    "CODCARR": "CODIGO_UNICO",
+                    "PLAN_DE_ESTUDIO": "PLAN_ESTUDIOS",
+                }
+            )
+        )
+        matricula["TIPO_DOCUMENTO"] = "R"
+
+        hist_cols = ["ANO", "PERIODO", "RUT", "DIG", "CODCARR", "CODRAMO"]
+        extra_hist = [c for c in ["DESCRIPCION_ESTADO", "ESTADO_ACADEMICO", "JORNADA"] if c in src.columns]
+        hist = src[hist_cols + extra_hist].copy()
+        if "DESCRIPCION_ESTADO" not in hist.columns and "ESTADO" in src.columns:
+            hist["DESCRIPCION_ESTADO"] = src["ESTADO"]
+
+        equiv_cols = ["CODCARR"] + (["JORNADA"] if "JORNADA" in src.columns else [])
+        equiv = src[equiv_cols].dropna(subset=["CODCARR"]).drop_duplicates().copy()
+        equiv["CODIGO_UNICO"] = equiv["CODCARR"]
+
+        print("Modo compatible activado: se derivaron Carreras/Matrícula/Equivalencia desde Hoja1.")
+        return carreras, matricula, hist, equiv
+
+
+def preparar_matricula_intermedia(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    out["RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(out["NUM_DOCUMENTO"], out["DV"])]
+    # Regla: no colapsar por RUT, solo deduplicación exacta de clave de negocio
+    key = ["NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "PLAN_ESTUDIOS"]
+    return out.drop_duplicates(key)
+
+
+def construir_puente_equiv(df_equiv: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    cols = [c for c in ["CODCARR", "CODIGO_UNICO", "JORNADA", "VERSION"] if c in df_equiv.columns]
+    bridge = df_equiv[cols].dropna(subset=["CODCARR", "CODIGO_UNICO"]).copy()
+    bridge["CODCARR"] = bridge["CODCARR"].astype(str)
+
+    g = (
+        bridge.groupby("CODCARR")
+        .agg(
+            codigos_unicos=("CODIGO_UNICO", "nunique"),
+            jornadas=("JORNADA", "nunique") if "JORNADA" in bridge.columns else ("CODIGO_UNICO", "size"),
+            versiones=("VERSION", "nunique") if "VERSION" in bridge.columns else ("CODIGO_UNICO", "size"),
+        )
+        .reset_index()
+    )
+    g["es_ambiguo"] = g["codigos_unicos"] > 1
+    return bridge, g
+
+
+def mapear_historico_con_equiv(df_hist: pd.DataFrame, bridge: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    hist = df_hist.copy()
+    hist["RUT_NORM"] = [_normalize_doc(n, d) for n, d in zip(hist["RUT"], hist["DIG"])]
+    hist["CODCARR"] = hist["CODCARR"].astype(str)
+    if "CODIGO_UNICO" not in hist.columns:
+        hist["CODIGO_UNICO"] = pd.NA
+
+    key_jornada = {"CODCARR", "JORNADA"}.issubset(hist.columns) and {"CODCARR", "JORNADA"}.issubset(bridge.columns)
+
+    if key_jornada:
+        hist["JORNADA"] = hist["JORNADA"].astype(str)
+        bridge = bridge.copy()
+        bridge["JORNADA"] = bridge["JORNADA"].astype(str)
+        pair = bridge.drop_duplicates(["CODCARR", "JORNADA", "CODIGO_UNICO"])
+        counts = pair.groupby(["CODCARR", "JORNADA"])["CODIGO_UNICO"].nunique().reset_index(name="n")
+        unique_pair = pair.merge(counts[counts["n"] == 1], on=["CODCARR", "JORNADA"], how="inner")
+        unique_pair = unique_pair[["CODCARR", "JORNADA", "CODIGO_UNICO"]]
+        hist = hist.merge(unique_pair, on=["CODCARR", "JORNADA"], how="left", suffixes=("", "_EQ"))
+        if "CODIGO_UNICO_EQ" in hist.columns:
+            hist["CODIGO_UNICO"] = hist["CODIGO_UNICO"].combine_first(hist["CODIGO_UNICO_EQ"])
+            hist = hist.drop(columns=["CODIGO_UNICO_EQ"])
+
+    unresolved = hist[hist["CODIGO_UNICO"].isna()].copy()
+    if not unresolved.empty:
+        single = bridge.groupby("CODCARR")["CODIGO_UNICO"].nunique().reset_index(name="n")
+        single = single[single["n"] == 1].merge(
+            bridge[["CODCARR", "CODIGO_UNICO"]].drop_duplicates("CODCARR"),
+            on="CODCARR",
+            how="left",
+        )
+        unresolved = unresolved.drop(columns=[c for c in ["CODIGO_UNICO"] if c in unresolved.columns]).merge(
+            single[["CODCARR", "CODIGO_UNICO"]],
+            on="CODCARR",
+            how="left",
+        )
+        resolved = hist[hist["CODIGO_UNICO"].notna()].copy()
+        hist = pd.concat([resolved, unresolved], ignore_index=True)
+
+    review = hist[hist["CODIGO_UNICO"].isna()][["CODCARR"]].value_counts().reset_index(name="filas_sin_map")
+    return hist, review
+
+
+# ==============================
+# CAPA B: Modelo intermedio
+# ==============================
+def construir_resumen_historico(hist_mapeado: pd.DataFrame) -> pd.DataFrame:
+    valid = hist_mapeado[hist_mapeado["CODIGO_UNICO"].notna()].copy()
+    if valid.empty:
+        return pd.DataFrame(
+            columns=[
+                "RUT_NORM",
+                "CODIGO_UNICO",
+                "CURSO_1ER_SEM",
+                "CURSO_2DO_SEM",
+                "UNIDADES_CURSADAS",
+                "UNIDADES_APROBADAS",
+                "UNID_CURSADAS_TOTAL",
+                "UNID_APROBADAS_TOTAL",
+            ]
+        )
+
+    anio_vals = pd.to_numeric(valid["ANO"], errors="coerce").dropna()
+    if anio_vals.empty:
+        return pd.DataFrame(
+            columns=[
+                "RUT_NORM",
+                "CODIGO_UNICO",
+                "CURSO_1ER_SEM",
+                "CURSO_2DO_SEM",
+                "UNIDADES_CURSADAS",
+                "UNIDADES_APROBADAS",
+                "UNID_CURSADAS_TOTAL",
+                "UNID_APROBADAS_TOTAL",
+            ]
+        )
+    anio_ref = int(anio_vals.max())
+
+    rows = []
+    for (rut, cod), sub in valid.groupby(["RUT_NORM", "CODIGO_UNICO"]):
+        s_ref = sub[sub["ANO"] == anio_ref]
+
+        estado_ref = _series_or_default(s_ref, "DESCRIPCION_ESTADO").str.upper()
+        estado_hist = _series_or_default(sub, "DESCRIPCION_ESTADO").str.upper()
+
+        codramo_ref = s_ref["CODRAMO"] if "CODRAMO" in s_ref.columns else pd.Series(index=s_ref.index, dtype=object)
+        codramo_hist = sub["CODRAMO"] if "CODRAMO" in sub.columns else pd.Series(index=sub.index, dtype=object)
+
+        rows.append(
+            {
+                "RUT_NORM": rut,
+                "CODIGO_UNICO": cod,
+                "CURSO_1ER_SEM": "SI" if (s_ref["PERIODO"] == 1).any() else "NO",
+                "CURSO_2DO_SEM": "SI" if (s_ref["PERIODO"] == 2).any() else "NO",
+                "UNIDADES_CURSADAS": codramo_ref.nunique(),
+                "UNIDADES_APROBADAS": codramo_ref[estado_ref.str.contains("APROB", na=False)].nunique(),
+                "UNID_CURSADAS_TOTAL": codramo_hist.nunique(),
+                "UNID_APROBADAS_TOTAL": codramo_hist[
+                    estado_hist.str.contains(r"APROB|CONVALID|RECONOC|EQUIV|HOMOLOG", regex=True, na=False)
+                ].nunique(),
+            }
+        )
+
+    return pd.DataFrame(rows)
+
+
+def construir_carreras_control(df_carreras: pd.DataFrame) -> pd.DataFrame:
+    out = df_carreras.copy().drop_duplicates(["CODIGO_UNICO", "PLAN_ESTUDIOS"])
+    for col in CARRERAS_AC_COLUMNS:
+        if col not in out.columns:
+            out[col] = pd.NA
+    return out[CARRERAS_AC_COLUMNS].copy()
+
+
+def construir_matricula_ac_control(df_matricula: pd.DataFrame, resumen: pd.DataFrame) -> pd.DataFrame:
+    out = df_matricula.copy()
+    if not resumen.empty:
+        out = out.merge(resumen, on=["RUT_NORM", "CODIGO_UNICO"], how="left", suffixes=("", "_CALC"))
+
+    calc_cols = [
+        "CURSO_1ER_SEM",
+        "CURSO_2DO_SEM",
+        "UNIDADES_CURSADAS",
+        "UNIDADES_APROBADAS",
+        "UNID_CURSADAS_TOTAL",
+        "UNID_APROBADAS_TOTAL",
+    ]
+    for col in calc_cols:
+        if col not in out.columns and f"{col}_CALC" in out.columns:
+            out[col] = out[f"{col}_CALC"]
+
+    for col in MATRICULA_AC_COLUMNS:
+        if col not in out.columns:
+            out[col] = pd.NA
+    return out[MATRICULA_AC_COLUMNS].copy()
+
+============================================================
+VALIDACIONES CARRERAS Y MATRÍCULA AC
+LÍNEAS 4532-4615
+============================================================
+def validar_carreras(carr: pd.DataFrame) -> list[Issue]:
+    issues: list[Issue] = []
+    _check_schema(carr, CARRERAS_AC_COLUMNS, "carreras", issues)
+
+    if carr["PLAN_ESTUDIOS"].isna().any():
+        issues.append(Issue("ERROR", "carreras", "PLAN_ESTUDIOS vacío", int(carr["PLAN_ESTUDIOS"].isna().sum())))
+    bad_tum = ~carr["TIPO_UNIDAD_MEDIDA"].astype(str).isin(["1", "2", "3"]) & carr["TIPO_UNIDAD_MEDIDA"].notna()
+    if bad_tum.any():
+        issues.append(Issue("ERROR", "carreras", "TIPO_UNIDAD_MEDIDA fuera de catálogo", int(bad_tum.sum())))
+    tum3 = carr["TIPO_UNIDAD_MEDIDA"].astype(str) == "3"
+    if tum3.any() and carr.loc[tum3, "OTRA_UNIDAD_MEDIDA"].isna().any():
+        issues.append(
+            Issue(
+                "ERROR",
+                "carreras",
+                "OTRA_UNIDAD_MEDIDA faltante cuando TIPO_UNIDAD_MEDIDA=3",
+                int(carr.loc[tum3, "OTRA_UNIDAD_MEDIDA"].isna().sum()),
+            )
+        )
+
+    annual = carr[ANUAL_COLS].apply(pd.to_numeric, errors="coerce").fillna(0).sum(axis=1)
+    total = pd.to_numeric(carr["TOTAL_UNIDADES_MEDIDA"], errors="coerce")
+    mismatch = total.notna() & (annual != total)
+    if mismatch.any():
+        issues.append(Issue("WARN", "carreras", "Suma de unidades anuales distinta al total", int(mismatch.sum())))
+
+    vig_bad = ~carr["VIGENCIA"].astype(str).isin(["0", "1"]) & carr["VIGENCIA"].notna()
+    if vig_bad.any():
+        issues.append(Issue("ERROR", "carreras", "VIGENCIA fuera de catálogo 0/1", int(vig_bad.sum())))
+    return issues
+
+
+def validar_matricula_ac(mat: pd.DataFrame, carr: pd.DataFrame) -> list[Issue]:
+    issues: list[Issue] = []
+    _check_schema(mat, MATRICULA_AC_COLUMNS, "matricula_ac", issues)
+
+    for c in ["TIPO_DOCUMENTO", "NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "PLAN_ESTUDIOS"]:
+        if mat[c].isna().any():
+            issues.append(Issue("ERROR", "matricula_ac", f"{c} vacío", int(mat[c].isna().sum())))
+
+    bad_td = ~mat["TIPO_DOCUMENTO"].astype(str).isin(["R", "P"]) & mat["TIPO_DOCUMENTO"].notna()
+    if bad_td.any():
+        issues.append(Issue("ERROR", "matricula_ac", "TIPO_DOCUMENTO fuera de catálogo R/P", int(bad_td.sum())))
+    bad_sex = ~mat["SEXO"].astype(str).isin(["M", "H", "X"]) & mat["SEXO"].notna()
+    if bad_sex.any():
+        issues.append(Issue("WARN", "matricula_ac", "SEXO fuera de catálogo M/H/X", int(bad_sex.sum())))
+
+    curso1 = mat["CURSO_1ER_SEM"].astype(str).str.strip().str.upper()
+    curso2 = mat["CURSO_2DO_SEM"].astype(str).str.strip().str.upper()
+    bad_curso = ~curso1.isin(["SI", "NO"]) & mat["CURSO_1ER_SEM"].notna()
+    bad_curso2 = ~curso2.isin(["SI", "NO"]) & mat["CURSO_2DO_SEM"].notna()
+    if bad_curso.any() or bad_curso2.any():
+        issues.append(
+            Issue(
+                "ERROR",
+                "matricula_ac",
+                "CURSO_1ER_SEM/CURSO_2DO_SEM fuera de catálogo SI/NO",
+                int(bad_curso.sum() + bad_curso2.sum()),
+            )
+        )
+
+    sem1 = pd.to_numeric(mat["SEM_INGRESO_CARRERA_ACTUAL"], errors="coerce")
+    sem2 = pd.to_numeric(mat["SEM_INGRESO_CARRERA_ORIGEN"], errors="coerce")
+    bad_sem = (~sem1.isin([1, 2]) & sem1.notna()) | (~sem2.isin([1, 2]) & sem2.notna())
+    if bad_sem.any():
+        issues.append(Issue("WARN", "matricula_ac", "Semestres de ingreso fuera de 1/2", int(bad_sem.sum())))
+
+    apr_gt_cur = pd.to_numeric(mat["UNIDADES_APROBADAS"], errors="coerce") > pd.to_numeric(
+        mat["UNIDADES_CURSADAS"], errors="coerce"
+    )
+    if apr_gt_cur.any():
+        issues.append(Issue("WARN", "matricula_ac", "UNIDADES_APROBADAS > UNIDADES_CURSADAS", int(apr_gt_cur.sum())))
+
+    aprt_gt_curt = pd.to_numeric(mat["UNID_APROBADAS_TOTAL"], errors="coerce") > pd.to_numeric(
+        mat["UNID_CURSADAS_TOTAL"], errors="coerce"
+    )
+    if aprt_gt_curt.any():
+        issues.append(Issue("WARN", "matricula_ac", "UNID_APROBADAS_TOTAL > UNID_CURSADAS_TOTAL", int(aprt_gt_curt.sum())))
+
+    keys_c = set(map(tuple, carr[["CODIGO_UNICO", "PLAN_ESTUDIOS"]].dropna().drop_duplicates().to_records(index=False)))
+    keys_m = set(map(tuple, mat[["CODIGO_UNICO", "PLAN_ESTUDIOS"]].dropna().drop_duplicates().to_records(index=False)))
+    if keys_m - keys_c:
+        issues.append(Issue("ERROR", "matricula_ac", "PLAN_ESTUDIOS no referenciado en carreras", len(keys_m - keys_c)))
+    return issues
+
+============================================================
+EXPORTACIÓN CONTROL/PES
+============================================================
+4764:def exportar_control_y_pes(
+5094:    exportar_control_y_pes(
+5101:    exportar_control_y_pes(
+
+============================================================
+PIPELINE GENERAL
+LÍNEAS 5073-5140
+============================================================
+def ejecutar_pipeline(input_file: Path, output_dir: Path) -> dict[str, object]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    issues: list[Issue] = []
+
+    carreras_raw, mat_raw, hist_raw, equiv = cargar_fuentes(input_file)
+
+    mat_i = preparar_matricula_intermedia(mat_raw)
+    bridge, diag_amb = construir_puente_equiv(equiv)
+    hist_map, review_nomap = mapear_historico_con_equiv(hist_raw, bridge)
+    resumen = construir_resumen_historico(hist_map)
+
+    carreras_ctrl = construir_carreras_control(carreras_raw)
+    matac_ctrl = construir_matricula_ac_control(mat_i, resumen)
+    mu_ctrl = construir_matricula_unificada_control(matac_ctrl, equiv)
+
+    issues.extend(validar_carreras(carreras_ctrl))
+    issues.extend(validar_matricula_ac(matac_ctrl, carreras_ctrl))
+    issues.extend(validar_matricula_unificada(mu_ctrl))
+
+    mu_ctrl.to_csv(output_dir / "matricula_unificada_2026_control.csv", index=False, encoding="utf-8")
+    mu_ctrl.to_excel(output_dir / "matricula_unificada_2026_oficial.xlsx", index=False)
+    exportar_control_y_pes(
+        carreras_ctrl,
+        output_dir / "carreras_avance_curricular_2025_control.csv",
+        output_dir / "carreras_avance_curricular_2025_pes_ready.csv",
+        issues,
+        "carreras",
+    )
+    exportar_control_y_pes(
+        matac_ctrl,
+        output_dir / "matricula_avance_curricular_2025_control.csv",
+        output_dir / "matricula_avance_curricular_2025_pes_ready.csv",
+        issues,
+        "matricula_ac",
+    )
+
+    diag_amb.to_csv(output_dir / "sies_ambiguedad_diagnostico.csv", index=False, encoding="utf-8")
+    review_nomap.to_csv(output_dir / "sies_codcarr_sin_mapeo.csv", index=False, encoding="utf-8")
+
+    calidad_semantica = generar_procedencia_y_calidad(output_dir, mu_ctrl, carreras_ctrl, matac_ctrl, issues)
+
+    report = {
+        "rows": {
+            "carreras_control": len(carreras_ctrl),
+            "matricula_ac_control": len(matac_ctrl),
+            "matricula_unificada_control": len(mu_ctrl),
+            "historico_total": len(hist_raw),
+            "historico_mapeado": int(hist_map["CODIGO_UNICO"].notna().sum()),
+            "historico_sin_mapeo": int(hist_map["CODIGO_UNICO"].isna().sum()),
+        },
+        "issues": [i.__dict__ for i in issues],
+        "ambiguedad": {
+            "codcarr_total": int(len(diag_amb)),
+            "codcarr_ambiguos": int(diag_amb["es_ambiguo"].sum()) if not diag_amb.empty else 0,
+        },
+        "calidad_semantica": calidad_semantica,
+        "apto_oficial": {
+            "matricula_unificada": not any(
+                i.severity in {"BLOCKER", "ERROR"} and i.area in {"matricula_unificada"} for i in issues
+            ),
+            "avance_curricular": not any(
+                i.severity in {"BLOCKER", "ERROR"} and i.area in {"carreras", "matricula_ac", "carreras_ac"}
+                for i in issues
+            ),
+        },
+    }
+    (output_dir / "reporte_validacion.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    return report
+
+============================================================
+ARGUMENTOS Y SELECCIÓN DEL PROCESO
+LÍNEAS 5175-5309
+============================================================
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Pipeline híbrido SIES/PES")
+    p.add_argument(
+        "--input",
+        default=_default_input_arg(),
+        help="Ruta del Excel de entrada (por defecto detecta PROMEDIOSDEALUMNOS_7804.xlsx si existe).",
+    )
+    p.add_argument("--output-dir", default="resultados", help="Carpeta de salida")
+    p.add_argument(
+        "--proceso",
+        default="avance",
+        choices=["avance", "matricula", "ambos"],
+        help="Qué pipeline ejecutar: avance curricular, matrícula unificada (legacy-like) o ambos",
+    )
+    p.add_argument(
+        "--sheet",
+        default=None,
+        help="Nombre de hoja para el proceso matrícula (por defecto usa la primera)",
+    )
+    p.add_argument(
+        "--catalogo-manual-tsv",
+        default=None,
+        help="Ruta a TSV de catálogo manual (opcional). Si no se informa, usa CATALOGO_MANUAL_TSV embebido.",
+    )
+    p.add_argument(
+        "--puente-sies-tsv",
+        default=None,
+        help=(
+            "DEPRECADO: override puente SIES. "
+            "No se consume directamente en el pipeline; usar scripts/compile_puente_sies_compilado.py."
+        ),
+    )
+    p.add_argument(
+        "--oferta-academica-xlsx",
+        default=None,
+        help=(
+            "Ruta al XLSX de oferta académica (opcional). "
+            "Se usa para validar y ajustar MODALIDAD/JOR y limitar NIV_ACA por DURACION_ESTUDIOS."
+        ),
+    )
+    p.add_argument(
+        "--gob-nac-tsv",
+        default=None,
+        help="Ruta a TSV de gobernanza NAC (opcional).",
+    )
+    p.add_argument(
+        "--gob-pais-est-sec-tsv",
+        default=None,
+        help="Ruta a TSV de gobernanza PAIS_EST_SEC (opcional).",
+    )
+    p.add_argument(
+        "--gob-sede-tsv",
+        default=None,
+        help="Ruta a TSV de gobernanza COD_SED (opcional).",
+    )
+    p.add_argument(
+        "--excluir-diplomados",
+        choices=["true", "false"],
+        default="true" if DEFAULT_EXCLUIR_DIPLOMADOS else "false",
+        help="Para proceso matrícula: excluir diplomados en asignación SIES.",
+    )
+    p.add_argument(
+        "--filtro-base-datos-sheet",
+        default=None,
+        help=(
+            "Nombre de hoja del Excel de entrada que contiene los RUT (N_DOC) a incluir. "
+            "Solo se procesarán las filas de la hoja fuente cuyo RUT aparezca en esta hoja. "
+            "Ejemplo: --filtro-base-datos-sheet base_datos"
+        ),
+    )
+    p.add_argument(
+        "--usar-gobernanza-v2",
+        choices=["true", "false"],
+        default="false",
+        help=(
+            "Activa el nuevo flujo de matrícula (enriquecimiento por CODCLI con hoja DatosAlumnos). "
+            "Por defecto se mantiene el flujo legacy para rollback inmediato."
+        ),
+    )
+    p.add_argument(
+        "--sit-fon-sol-patch-json",
+        default=None,
+        help=(
+            "Ruta a patch JSON provisional SIT_FON_SOL por RUT. "
+            "Si no se informa, usa patches/mu2026/sit_fon_sol_patch_ruts.json cuando exista."
+        ),
+    )
+    return p.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    input_path = Path(args.input).expanduser().resolve()
+    if not input_path.exists():
+        raise FileNotFoundError(f"No se encontró archivo de entrada: {input_path}. Usa --input para indicar uno válido.")
+
+    out = Path(args.output_dir).expanduser().resolve()
+    reports: dict[str, object] = {}
+
+    if args.proceso in {"avance", "ambos"}:
+        report_avance = ejecutar_pipeline(input_path, out)
+        generar_comparacion_versiones(out)
+        generar_diccionario_columnas(out)
+        reports["avance"] = report_avance
+
+    if args.proceso in {"matricula", "ambos"}:
+        catalogo_manual_tsv_path = _resolve_optional_path(args.catalogo_manual_tsv, DEFAULT_CATALOGO_MANUAL_CANDIDATES)
+        puente_sies_tsv_path = args.puente_sies_tsv
+        gob_nac_tsv_path = _resolve_optional_path(args.gob_nac_tsv, DEFAULT_GOB_NAC_CANDIDATES)
+        gob_pais_est_sec_tsv_path = _resolve_optional_path(args.gob_pais_est_sec_tsv, DEFAULT_GOB_PAIS_EST_SEC_CANDIDATES)
+        gob_sede_tsv_path = _resolve_optional_path(args.gob_sede_tsv, DEFAULT_GOB_SEDE_CANDIDATES)
+        sit_fon_sol_patch_json_path = _resolve_optional_path(args.sit_fon_sol_patch_json, DEFAULT_SIT_FON_SOL_PATCH_CANDIDATES)
+        report_mu = ejecutar_pipeline_matricula_unificada_legacy_like(
+            input_path,
+            out,
+            sheet_name=args.sheet,
+            catalogo_manual_tsv_path=catalogo_manual_tsv_path,
+            puente_sies_tsv_path=puente_sies_tsv_path,
+            oferta_academica_xlsx_path=args.oferta_academica_xlsx,
+            gob_nac_tsv_path=gob_nac_tsv_path,
+            gob_pais_est_sec_tsv_path=gob_pais_est_sec_tsv_path,
+            gob_sede_tsv_path=gob_sede_tsv_path,
+            sit_fon_sol_patch_json_path=sit_fon_sol_patch_json_path,
+            excluir_diplomados=(args.excluir_diplomados == "true"),
+            usar_gobernanza_v2=(args.usar_gobernanza_v2 == "true"),
+            filtro_base_datos_sheet=args.filtro_base_datos_sheet,
+        )
+        reports["matricula"] = report_mu
+
+    if args.proceso == "avance":
+        print(json.dumps(reports["avance"], indent=2, ensure_ascii=False))
+    elif args.proceso == "matricula":
+        print(json.dumps(reports["matricula"], indent=2, ensure_ascii=False))
+    else:
+        print(json.dumps(reports, indent=2, ensure_ascii=False))

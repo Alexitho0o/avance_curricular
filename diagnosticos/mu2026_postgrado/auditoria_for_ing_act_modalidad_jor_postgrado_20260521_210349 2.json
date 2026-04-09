@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-05-21T21:03:50",
+  "inputs": {
+    "pes_ready": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY.csv",
+    "con_titulos": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv",
+    "control_final": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv",
+    "trazabilidad": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/trazabilidad_matricula_unificada_2026_postgrado_postitulo.tsv",
+    "diccionario": "/Users/alexi/Documents/GitHub/avance_curricular/control/diccionarios/diccionario_postgrado_postitulo_mu2026.tsv",
+    "matriz": "/Users/alexi/Documents/GitHub/avance_curricular/input/PROMEDIOSDEALUMNOS_7804.xlsx",
+    "manual_txt": "/Users/alexi/Documents/GitHub/avance_curricular/manual_matrícula_unificada.txt"
+  },
+  "n_pes_ready": 55,
+  "n_con_titulos": 55,
+  "n_control_ok": 55,
+  "distribucion_jor_antes": {
+    "3": 18,
+    "4": 37
+  },
+  "distribucion_jor_despues": {
+    "3": 18,
+    "4": 37
+  },
+  "distribucion_modalidad_antes": {
+    "2": 18,
+    "3": 37
+  },
+  "distribucion_modalidad_despues": {
+    "2": 18,
+    "3": 37
+  },
+  "distribucion_for_ing_act_antes": {
+    "1": 35,
+    "10": 20
+  },
+  "distribucion_for_ing_act_despues": {
+    "1": 35,
+    "10": 20
+  },
+  "registros_modificados_jor": 0,
+  "registros_modificados_modalidad": 0,
+  "registros_modificados_for_ing_act": 0,
+  "pes_field_counts": {
+    "21": 55
+  },
+  "corrected_field_counts": {
+    "21": 55
+  },
+  "corrected_has_header": false,
+  "corrected_delimiter": ";",
+  "coherencia_codigo_unico_ok": 55,
+  "coherencia_matriz_ok": 55,
+  "coherencia_diccionario_ok": 55,
+  "online_segun_matriz": 37,
+  "no_online_segun_matriz": 18,
+  "codigos_por_combo": [
+    {
+      "CODIGO_UNICO": "I162S2C53J3V1",
+      "COD_CAR": "53",
+      "MODALIDAD": "2",
+      "JOR": "3",
+      "VERSION": "1",
+      "NOMBRE_CARRERA": "DIPLOMADO EN CIBERSEGURIDAD APLICADA",
+      "n": 18
+    },
+    {
+      "CODIGO_UNICO": "I162S2C66J4V1",
+      "COD_CAR": "66",
+      "MODALIDAD": "3",
+      "JOR": "4",
+      "VERSION": "1",
+      "NOMBRE_CARRERA": "DIPLOMADO EN FULLSTACK",
+      "n": 15
+    },
+    {
+      "CODIGO_UNICO": "I162S2C70J4V1",
+      "COD_CAR": "70",
+      "MODALIDAD": "3",
+      "JOR": "4",
+      "VERSION": "1",
+      "NOMBRE_CARRERA": "DIPLOMADO REDES INDUSTRIALES",
+      "n": 22
+    }
+  ],
+  "manual_jor": {
+    "confirma_campo": true,
+    "confirma_codigos_numericos_institucion": true,
+    "confirma_significado_1_2_3_4": false,
+    "lineas_referencia": [
+      840,
+      1340
+    ],
+    "nota": "El manual define JOR como jornada y exige codigos numericos institucionales, pero no trae tabla semantica 1/2/3/4."
+  },
+  "evidencia_fuente_jor": {
+    "puente_lineas": "84-85",
+    "auditoria_cierre_lineas": "539-553",
+    "diccionario_lineas_incluidas": "3,4,6,25 aprox. segun CODCARPR cargados"
+  },
+  "validacion_csv_corregido": {
+    "rows": 55,
+    "field_counts": {
+      "21": 55
+    },
+    "has_header": false,
+    "delimiter": ";",
+    "all_21_fields": true
+  },
+  "outputs": {
+    "xlsx": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_FOR_ING_ACT_MODALIDAD_JOR_AUDITORIA.xlsx",
+    "csv_corregido": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY_FOR_ING_ACT_MODALIDAD_JOR_CORREGIDO.csv",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/auditoria_for_ing_act_modalidad_jor_postgrado_20260521_210349.md",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/auditoria_for_ing_act_modalidad_jor_postgrado_20260521_210349.json"
+  }
+}

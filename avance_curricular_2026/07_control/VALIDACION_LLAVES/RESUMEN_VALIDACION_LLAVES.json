@@ -1,0 +1,56 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "anio_datos": 2025,
+  "rama": "backup/pre-sync-fix-20260410-avance",
+  "commit": "ac7123bdabc02841357be9fe5b67c007afc57016",
+  "fecha_ejecucion": "2026-06-26T14:27:15",
+  "fuentes_analizadas": 13,
+  "llaves_analizadas": 13,
+  "precarga_carreras_filas": 43,
+  "precarga_matricula_filas": 2371,
+  "codcli": {
+    "estado": "PARCIAL",
+    "cobertura": 100.0,
+    "apto_principal": false,
+    "apto_auxiliar": true
+  },
+  "documento": {
+    "estado": "PARCIAL",
+    "cobertura": 100.0,
+    "apto_fallback": true
+  },
+  "codigo_unico": {
+    "estado": "PARCIAL",
+    "cobertura": 100.0,
+    "conflictos": 46
+  },
+  "plan_estudios": {
+    "estado": "PENDIENTE_VALIDACION",
+    "cobertura": 100.0,
+    "ambiguos": 15
+  },
+  "cruces": {
+    "uno_a_uno": 6041,
+    "uno_a_muchos": 6152,
+    "muchos_a_uno": 4092,
+    "muchos_a_muchos": 3
+  },
+  "fuentes_aptas_congelar": [
+    "PROMEDIOSDEALUMNOS_7804.xlsx (ya congelada)",
+    "DURACION_ESTUDIOS.tsv (parcial)",
+    "PUENTE_SIES_COMPILADO.tsv (parcial)"
+  ],
+  "fuentes_no_aptas": [
+    "archivo_listo_para_sies.xlsx como fuente oficial",
+    "PUENTE_MU_EXTRANJEROS_CODIGOS_SIES_2026.tsv como fuente oficial",
+    "resultados legacy"
+  ],
+  "bloqueos": [
+    "many-to-many abiertos",
+    "PLAN_ESTUDIOS no validado",
+    "malla/unidades faltantes",
+    "vigencia Avance no validada"
+  ],
+  "estado_b03": "B03_LLAVES_PARCIALMENTE_VALIDADAS",
+  "dictamen": "Existen llaves utiles para auditoria y contraste, pero no una llave principal suficiente para completar productivamente Avance Curricular."
+}
