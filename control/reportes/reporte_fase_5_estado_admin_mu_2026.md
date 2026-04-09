@@ -1,17 +1,22 @@
 # Reporte FASE 5 - Estado administrativo MU 2026
 
-- Filas incluidas en carga final: 3687
-- Distribucion `SIT_FON_SOL`: {'1': 3687}
-- Distribucion `SUS_PRE`: {'0': 3687}
-- Distribucion `REINCORPORACION`: {'0': 3687}
-- Distribucion `VIG`: {'1': 3684, '2': 3}
-- Filas `SIT_FON_SOL` por default explicito: 0
+- Filas incluidas en carga final: 1282
+- Distribucion `SIT_FON_SOL`: {'1': 1182, '0': 100}
+- Distribucion `SUS_PRE`: {'0': 1282}
+- Distribucion `REINCORPORACION`: {'0': 1282}
+- Distribucion `VIG`: {'1': 1260, '0': 22}
+- Patch `SIT_FON_SOL` habilitado: True
+- Patch `SIT_FON_SOL` path: /Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json
+- Patch `SIT_FON_SOL` RUT totales: 100
+- Patch `SIT_FON_SOL` filas objetivo: 100
+- Patch `SIT_FON_SOL` filas objetivo OK: 100
+- Patch `SIT_FON_SOL` no-target con fuente patch: 0
 - Filas `SUS_PRE` por default explicito: 0
 - Filas `SUS_PRE` forzadas a `0` por politica de cohorte 2026: 0
 - Filas `REINCORPORACION = 1`: 0
 - Filas `REINCORPORACION = 1` sin respaldo temporal: 0
-- Filas `VIG = 2`: 3
-- Filas `VIG = 2` por politica de titulado aprobado: 3
+- Filas `VIG = 2`: 0
+- Filas `VIG = 2` por politica de titulado aprobado: 0
 
 ## Gate por columna
 
@@ -24,5 +29,7 @@
 
 ## Bloqueo residual observado
 
-- `AB SIT_FON_SOL` y `AC SUS_PRE` quedan cerrados por politica local fija auditable sobre todas las filas incluidas.
+- `AB SIT_FON_SOL` queda validado con trazabilidad mixta: politica local fija + patch JSON por RUT en filas objetivo.
+- La validacion AB exige que filas objetivo del patch terminen con `SIT_FON_SOL=0` y que filas no objetivo no queden marcadas con fuente de patch.
+- `AC SUS_PRE` queda cerrado por politica local fija auditable sobre todas las filas incluidas.
 - `AE REINCORPORACION` queda cerrado por politica local fija auditable en `0` para todas las filas incluidas.

@@ -4,35 +4,35 @@
   "sheet_used": "Hoja1",
   "gobernanza_mode": "v2_flagged",
   "usar_gobernanza_v2": true,
-  "rows": 6142,
-  "rows_matricula_32_final": 1282,
-  "rows_excluidas_carga_pregrado": 4860,
+  "rows": 8977,
+  "rows_matricula_32_final": 1131,
+  "rows_excluidas_carga_pregrado": 7846,
   "rows_excluidas_sies_heuristica_opaca": 0,
   "rows_excluidas_sin_for_ing_act_trazable": 0,
-  "rows_enriquecidas_datos_alumnos": 6142,
+  "rows_enriquecidas_datos_alumnos": 8977,
   "rows_sin_match_datos_alumnos": 0,
-  "cod_sed_resuelto_por_regla": 6142,
-  "pais_est_sec_inferido_localidad": 6142,
+  "cod_sed_resuelto_por_regla": 8977,
+  "pais_est_sec_inferido_localidad": 8977,
   "for_ing_act_distribution_final": {
-    "1": 1282
+    "1": 1131
   },
   "rows_for_ing_act_imputado_final": 0,
   "rows_for_ing_act_revision_final": 0,
-  "rows_uz_all_zero_final": 21,
+  "rows_uz_all_zero_final": 16,
   "historico_mu_anio_referencia": 2026,
   "periodo_filtro_anio": 2026,
   "periodo_filtro_sem": 1,
   "anio_anterior_prom": 2025,
   "estado_inicial": {
-    "Matrícula Duplicada": 5737,
-    "Matrícula OK": 405
+    "Matrícula Duplicada": 8966,
+    "Matrícula OK": 11
   },
   "manual_match": {
-    "MATCH_MANUAL": 6142
+    "MATCH_MANUAL": 8977
   },
   "sies_diag": {
-    "MATCH_SIES_UNICO": 4589,
-    "MATCH_SIES_AMBIGUO": 1553
+    "MATCH_SIES_UNICO": 6472,
+    "MATCH_SIES_AMBIGUO": 2505
   },
   "catalogo_manual_rows": 181,
   "puente_sies_rows": 161,
@@ -47,17 +47,91 @@
   "gob_sede_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv",
   "gob_for_ing_act_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv",
   "oferta_academica_source": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+  "sit_fon_sol_patch_source": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
+  "sit_fon_sol_patch_stats": {
+    "patch_path": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
+    "patch_estado": "PROVISORIO_AUDITABLE",
+    "patch_proposito": "Corrección provisoria de errores SIT_FON_SOL incompatibles con el tipo de institución",
+    "patch_regla_normativa": "Para instituciones no adscritas a Fondo Solidario, SIT_FON_SOL debe ser 0",
+    "n_rut_patch": 196,
+    "rut_column_selected": "N_DOC",
+    "rut_columns_evaluated": [
+      "N_DOC",
+      "CODCLI"
+    ],
+    "rut_matches_by_column": {
+      "N_DOC": 1417,
+      "CODCLI": 0
+    },
+    "n_rows_total": 8977,
+    "n_rows_targeted": 1417,
+    "n_rows_affected": 1417,
+    "n_rut_matched": 196,
+    "n_rut_missing": 0,
+    "rut_missing_sample": [],
+    "sit_fon_sol_distribution_before_target": {
+      "1": 1417
+    },
+    "sit_fon_sol_distribution_after_target": {
+      "0": 1417
+    },
+    "patch_applied": true,
+    "rut_column_selected_runtime": "N_DOC",
+    "rut_matches_by_column_runtime": {
+      "N_DOC": 1417,
+      "CODCLI": 0
+    }
+  },
+  "for_ing_act_report": {
+    "source_used": {
+      "input_column_detected": "NO_ENCONTRADO",
+      "catalog_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv",
+      "valid_codes_catalog": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fuente_campo_distribution": {
+        "DA_VIASDEADMISION": 1131
+      },
+      "metodo_distribution": {
+        "CATALOGO_EXACTO_VIAS_ADMISION": 1131
+      }
+    },
+    "rows_total_stage": 8977,
+    "rows_included_final": 1131,
+    "resolved_ok": 1131,
+    "unresolved": {
+      "count": 0,
+      "pct_rows_included": 0.0,
+      "reasons": {},
+      "continuidad_rule_fail_count": 0
+    },
+    "distribution": {
+      "1": 1131
+    },
+    "invalid_examples": []
+  },
   "filtro_base_datos": {
     "hoja": "base_datos",
-    "ruts_en_hoja": 1318,
-    "filas_antes": 70000,
-    "filas_despues": 6901,
-    "filas_descartadas": 63099
+    "ruts_en_hoja": 1282,
+    "ruts_bd_sin_match_fuente": 1,
+    "filas_antes": 41106,
+    "filas_despues": 9182,
+    "filas_descartadas": 31924
   },
   "depuracion_rut_multi_codcli": {
-    "total_rut": 1283,
-    "rut_multi_codcli": 70,
-    "codcli_excluidos": 85,
-    "filas_excluidas": 759
+    "total_rut": 1281,
+    "rut_multi_codcli": 29,
+    "codcli_excluidos": 29,
+    "filas_excluidas": 205
   }
 }

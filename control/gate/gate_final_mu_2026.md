@@ -17,11 +17,12 @@
 
 | Invariante | Resultado | Evidencia | Observacion |
 |---|---|---|---|
-| CSV final sin header | SI | resultados/matricula_unificada_2026_pregrado.csv | Filas finales: 1282 |
+| CSV final sin header | SI | resultados/matricula_unificada_2026_pregrado.csv | Filas finales: 1131 |
 | 32 columnas exactas | SI | resultados/matricula_unificada_2026_pregrado.csv | Columnas observadas: 32 |
 | Separador `;` | SI | resultados/matricula_unificada_2026_pregrado.csv | Delimitacion contractual vigente |
-| `SEXO` valido | SI | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {'H': 661, 'M': 621} |
-| `FOR_ING_ACT = 1` | SI | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {'1': 1282} |
+| `SEXO` valido | SI | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {'M': 595, 'H': 536} |
+| `FOR_ING_ACT` en catálogo `1..11` | SI | resultados/matricula_unificada_2026_pregrado.csv | Distribucion observada: {'1': 1131} |
+| Anexo 7 continuidad (`FOR` en `{2,3,4,5,11}` ⇒ ORI != ACT) | SI | resultados/matricula_unificada_2026_pregrado.csv | Filas continuidad evaluadas: 0 |
 | Exclusion de `PRIMERA_OPCION` | SI | resultados/archivo_listo_para_sies.xlsx | Filas incluidas con heuristica opaca: 0 |
 
 ## Estado por fase

@@ -1,0 +1,1 @@
+(Makefile original movido a core/config/ para futura refactorización)

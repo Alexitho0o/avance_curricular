@@ -1,0 +1,153 @@
+[
+  {
+    "id": "GC01",
+    "description": "Articulación TNS→ING con programa CONTINUIDAD y TNS prev en Hoja1",
+    "codcli": "20241CICIB009",
+    "expected_for_ing_act": 11,
+    "expected_rule": "ARTICULACION_11",
+    "expected_flags": {
+      "ES_CONTINUIDAD_DA": 1,
+      "TIENE_TNS_PREV_DA": 1,
+      "PROGRAMA_ACTUAL_ES_PROFESIONAL_DA": 1,
+      "ES_CAMBIO_INTERNO_DA": 0
+    },
+    "justificacion": "CONTINUIDAD INGENIERIA CIBERSEGURIDAD + TNS prev 2020 en Hoja1"
+  },
+  {
+    "id": "GC02",
+    "description": "Articulación sin programa CONTINUIDAD formal (ING directa con TNS prev)",
+    "codcli": "20261ICIB102",
+    "expected_for_ing_act": 11,
+    "expected_rule": "ARTICULACION_11",
+    "expected_flags": {
+      "ES_CONTINUIDAD_DA": 0,
+      "TIENE_TNS_PREV_DA": 1,
+      "PROGRAMA_ACTUAL_ES_PROFESIONAL_DA": 1,
+      "ES_CAMBIO_INTERNO_DA": 0
+    },
+    "justificacion": "INGENIERIA EN CIBERSEGURIDAD NIV=7, TNS prev 2024 en DatosAlumnos"
+  },
+  {
+    "id": "GC03",
+    "description": "Continuidad programa formal SIN evidencia TNS prev → code 2",
+    "codcli": "20261CADMP001",
+    "expected_for_ing_act": 2,
+    "expected_rule": "CONTINUIDAD_2",
+    "expected_flags": {
+      "ES_CONTINUIDAD_DA": 1,
+      "TIENE_TNS_PREV_DA": 0,
+      "PROGRAMA_ACTUAL_ES_PROFESIONAL_DA": 1,
+      "ES_CAMBIO_INTERNO_DA": 0
+    },
+    "justificacion": "CONTINUIDAD ADMINISTRACION PUBLICA, sin TNS prev encontrado en datos"
+  },
+  {
+    "id": "GC04",
+    "description": "Cambio interno por SITUACION=24 (cambio de carrera) en TNS",
+    "codcli_pattern": "FOR=3 AND ES_TECNICO_DA=1 AND SITUACION=24",
+    "expected_for_ing_act": 3,
+    "expected_rule": "INTERNO_3",
+    "expected_flags": {
+      "ES_CAMBIO_INTERNO_DA": 1,
+      "ES_CONTINUIDAD_DA": 0,
+      "TIENE_TNS_PREV_DA": 0
+    },
+    "justificacion": "TNS con SITUACION=24 CAMBIO DE CARRERA → código 3, NO 11 (no es articulación)"
+  },
+  {
+    "id": "GC05",
+    "description": "Cambio interno por SITUACION=49 (cambio de jornada)",
+    "codcli_pattern": "FOR=3 AND SITUACION=49",
+    "expected_for_ing_act": 3,
+    "expected_rule": "INTERNO_3",
+    "expected_flags": {
+      "ES_CAMBIO_INTERNO_DA": 1,
+      "ES_CONTINUIDAD_DA": 0
+    },
+    "justificacion": "Cambio de jornada → código 3 (cambio interno)"
+  },
+  {
+    "id": "GC06",
+    "description": "Ingreso directo regular — alumno nuevo NIVEL=1, sin flags especiales",
+    "codcli": "20261TFIN001",
+    "expected_for_ing_act": 1,
+    "expected_rule": "DIRECTO_1",
+    "expected_flags": {
+      "ES_CONTINUIDAD_DA": 0,
+      "TIENE_TNS_PREV_DA": 0,
+      "ES_CAMBIO_INTERNO_DA": 0,
+      "ES_CAMBIO_EXTERNO_DA": 0
+    },
+    "justificacion": "TECNICO EN FINANZAS, NIVEL=1, ANOINGRESO=2026, sin flags → default 1"
+  },
+  {
+    "id": "GC07",
+    "description": "Alumno antiguo en ING con TNS prev → articulación 11 (no cambia aunque sea antiguo)",
+    "codcli": "20241IINF077",
+    "expected_for_ing_act": 11,
+    "expected_rule": "ARTICULACION_11",
+    "expected_flags": {
+      "TIENE_TNS_PREV_DA": 1,
+      "PROGRAMA_ACTUAL_ES_PROFESIONAL_DA": 1,
+      "ES_CONTINUIDAD_DA": 0
+    },
+    "justificacion": "ING INFORMATICA NIV=7, TNS prev 2019 Hoja1 — articulación original sigue vigente"
+  },
+  {
+    "id": "GC08",
+    "description": "CONTINUIDAD + CAMBIO INTERNO + TNS prev → code 11 gana (prioridad)",
+    "codcli": "20261CICDA003",
+    "expected_for_ing_act": 11,
+    "expected_rule": "ARTICULACION_11",
+    "expected_flags": {
+      "ES_CONTINUIDAD_DA": 1,
+      "ES_CAMBIO_INTERNO_DA": 1,
+      "TIENE_TNS_PREV_DA": 1,
+      "PROGRAMA_ACTUAL_ES_PROFESIONAL_DA": 1
+    },
+    "justificacion": "Tiene CONTINUIDAD + CAMBIO CARRERA + TNS prev → code 11 por prioridad máxima"
+  },
+  {
+    "id": "GC09",
+    "description": "Alumno antiguo TNS rematricula (NIVEL>1) sin cambio → code 1",
+    "codcli": "20241TCRE027",
+    "expected_for_ing_act": 1,
+    "expected_rule": "DIRECTO_1",
+    "expected_flags": {
+      "ES_TECNICO_DA": 1,
+      "PROGRAMA_ACTUAL_ES_PROFESIONAL_DA": 0,
+      "TIENE_TNS_PREV_DA": 0,
+      "ES_CAMBIO_INTERNO_DA": 0
+    },
+    "justificacion": "TNS CONECTIVIDAD Y REDES NIVEL=7, mismo programa, sin cambio → ingreso directo original"
+  },
+  {
+    "id": "GC10",
+    "description": "CONTINUIDAD + CAMBIO JORNADA sin TNS prev → code 2 (continuidad > interno)",
+    "codcli_pattern": "ES_CONTINUIDAD_DA=1 AND ES_CAMBIO_INTERNO_DA=1 AND TIENE_TNS_PREV_DA=0",
+    "expected_for_ing_act": 2,
+    "expected_rule": "CONTINUIDAD_2",
+    "expected_flags": {
+      "ES_CONTINUIDAD_DA": 1,
+      "ES_CAMBIO_INTERNO_DA": 1,
+      "TIENE_TNS_PREV_DA": 0
+    },
+    "justificacion": "CONTINUIDAD programa sin TNS prev → code 2 tiene prioridad sobre code 3"
+  },
+  {
+    "id": "GC11",
+    "description": "Código bloqueado nunca emitido — verificar ausencia de codes 5-10",
+    "codcli_pattern": "ALL",
+    "expected_for_ing_act": "NOT IN {5,6,7,8,9,10}",
+    "expected_rule": "N/A",
+    "justificacion": "Ningún registro debe tener FOR_ING_ACT ∈ {5,6,7,8,9,10}"
+  },
+  {
+    "id": "GC12",
+    "description": "FOR=4 (externo) es 0 por política de bloqueo",
+    "codcli_pattern": "ALL",
+    "expected_for_ing_act": "COUNT(FOR=4) == 0",
+    "expected_rule": "N/A",
+    "justificacion": "Sin fuente explícita de cambio externo, ningún registro debe tener FOR=4"
+  }
+]

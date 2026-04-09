@@ -1,0 +1,34 @@
+{
+  "patch_path": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
+  "patch_estado": "PROVISORIO_AUDITABLE",
+  "patch_proposito": "Corrección provisoria de errores SIT_FON_SOL incompatibles con el tipo de institución",
+  "patch_regla_normativa": "Para instituciones no adscritas a Fondo Solidario, SIT_FON_SOL debe ser 0",
+  "n_rut_patch": 196,
+  "rut_column_selected": "N_DOC",
+  "rut_columns_evaluated": [
+    "N_DOC",
+    "CODCLI"
+  ],
+  "rut_matches_by_column": {
+    "N_DOC": 1417,
+    "CODCLI": 0
+  },
+  "n_rows_total": 8977,
+  "n_rows_targeted": 1417,
+  "n_rows_affected": 1417,
+  "n_rut_matched": 196,
+  "n_rut_missing": 0,
+  "rut_missing_sample": [],
+  "sit_fon_sol_distribution_before_target": {
+    "1": 1417
+  },
+  "sit_fon_sol_distribution_after_target": {
+    "0": 1417
+  },
+  "patch_applied": true,
+  "rut_column_selected_runtime": "N_DOC",
+  "rut_matches_by_column_runtime": {
+    "N_DOC": 1417,
+    "CODCLI": 0
+  }
+}
