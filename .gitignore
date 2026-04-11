@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
 
 # Ignore large data files
 *.xlsx
@@ -44,6 +47,10 @@ control/backups/**/*.tsv
 
 # Track matrix files
 !matriz_desambiguacion_sies_final.tsv
+
+# Ignore accidental Finder duplicates and Office temp files
+* 2.*
+~$*.xlsx
 
 # Track grade conversion catalog
 !gobernanza_escala_notas.tsv
