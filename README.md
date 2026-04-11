@@ -5,15 +5,20 @@ Repositorio estandarizado bajo Spec-Driven Development (SDD) para la gestión, v
 
 ## Estructura del Repositorio
 
-- **core/**
-  - `scripts/`: Scripts Python y lógica de negocio.
-  - `config/`: Makefile, requirements.txt y configuraciones.
-- **data/**
-  - `catalogos/`, `control/`, `resultados/`, `auditoria_codigo_unico_codcarpr/`: Datos de entrada, catálogos, resultados y auditorías.
+- **scripts/**
+  - Orquestación oficial del pipeline y utilitarios operativos.
+- **resultados/**
+  - Salidas reales de ejecución y validación.
+- **control/**
+  - Catálogos compilados, reportes técnicos, evidencia y trazabilidad.
 - **docs/**
-  - Documentación técnica, manuales, especificaciones y flujos de trabajo.
+  - Documentación técnica, manuales, especificaciones y gobernanza.
+- **data/**
+  - Soporte documental y referencias; no es la ruta runtime principal de outputs.
 - **archive/**
   - Históricos y respaldos.
+- **core/**
+  - Estructura objetivo o transicional; no corresponde al runtime oficial actual.
 
 ## Ejemplo de Flujo de Trabajo
 
@@ -37,17 +42,17 @@ make help
 cd /ruta/al/repo/avance_curricular
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r core/config/requirements.txt
+pip install -r requirements.txt
 
 export INPUT_XLSX="/ruta/externa/PROMEDIOSDEALUMNOS_7804.xlsx"
-export OUTPUT_DIR="data/resultados"
-python3 core/scripts/codigo_gobernanza_v2.py \
+export OUTPUT_DIR="resultados"
+python3 codigo_gobernanza_v2.py \
   --input "$INPUT_XLSX" \
   --output-dir "$OUTPUT_DIR" \
   --proceso matricula \
   --usar-gobernanza-v2 true
 
-python3 core/scripts/qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "data/control"
+python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
 ```
 
 ## Buenas Prácticas y SDD
@@ -62,15 +67,15 @@ python3 core/scripts/qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir
 
 | Artefacto | Estado | Uso operativo |
 |---|---|---|
-| `data/DURACION_ESTUDIOS.tsv` | EXISTE | Fuente canónica para matriz SIES y dimensión de oferta |
-| `data/control/catalogos/PUENTE_SIES_COMPILADO.tsv` | EXISTE | Fuente canónica única de cruce SIES por SOURCE_KEY_3 |
-| `data/resultados/archivo_listo_para_sies.xlsx` | EXISTE | Auditoría y trazabilidad |
-| `data/resultados/matricula_unificada_2026_pregrado.csv` | EXISTE | Carga regulatoria (MU32, 32 columnas, sin header) |
-| `data/resultados/reporte_matricula.json` | EXISTE | Métrica de corrida |
-| `data/resultados/auditoria_maestra.md` | EXISTE | Dictamen QA integral |
+| `DURACION_ESTUDIOS.tsv` | EXISTE | Fuente canónica para matriz SIES y dimensión de oferta |
+| `control/catalogos/PUENTE_SIES_COMPILADO.tsv` | EXISTE | Fuente canónica única de cruce SIES por SOURCE_KEY_3 |
+| `resultados/archivo_listo_para_sies.xlsx` | EXISTE | Auditoría y trazabilidad |
+| `resultados/matricula_unificada_2026_pregrado.csv` | EXISTE | Carga regulatoria (MU32, 32 columnas, sin header) |
+| `resultados/reporte_matricula.json` | EXISTE | Métrica de corrida |
+| `resultados/auditoria_maestra.md` | EXISTE | Dictamen QA integral |
 
 **No usar como salida regulatoria final:**
-- Cualquier salida en `archive/` o en subcarpetas históricas de `data/resultados/`
+- Cualquier salida en `archive/` o en subcarpetas históricas de `resultados/`
 - Archivos legacy: `matricula_unificada_2026_oficial.xlsx`, `MU2026_regulatorio.csv`, etc.
 
 ## Referencias y Documentación
@@ -78,7 +83,7 @@ python3 core/scripts/qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir
 - Reglas para agentes de IA: ver `agent.md`.
 
 ---
-Última actualización: 2026-04-09
+Última actualización: 2026-04-10
 Responsable: Arquitectura Técnica
 
 ### Trazabilidad complementaria
@@ -330,3 +335,35 @@ Canonico recomendado: `control/` vigente. `backup_estable_2026/` debe tratarse c
 - Licencia: [MIT](LICENSE).
 - `archive/` contiene material historico y legacy; no forma parte del camino oficial de ejecucion/validacion MU 2026.
 - Para operacion diaria, usar solo comandos de la seccion 4 y validaciones de la seccion 7.
+
+---
+
+## Gobernanza operativa del repositorio
+
+La referencia vigente de gobernanza del repositorio se documenta en:
+
+- `docs/GOBERNANZA_REPOSITORIO.md`
+
+### Resumen operativo vigente
+
+- La ruta runtime oficial de outputs es `resultados/`.
+- El flujo oficial se ejecuta mediante:
+  - `make run-oficial`
+  - `make validate-oficial`
+  - `make run-and-validate-oficial`
+- Los scripts oficiales son:
+  - `scripts/run_oficial.sh`
+  - `scripts/validate_oficial.sh`
+  - `scripts/run_and_validate_oficial.sh`
+- Los motores oficiales son:
+  - `codigo_gobernanza_v2.py`
+  - `qa_checks.py`
+  - `scripts/auditoria_maestra.py`
+  - `scripts/compile_puente_sies_compilado.py`
+
+### Importante
+
+- `data/resultados/` no debe interpretarse como ruta activa de outputs.
+- `core/` no debe interpretarse como fuente runtime oficial mientras no se formalice su migración.
+- Los scripts legacy o exploratorios no deben usarse como flujo estándar.
+
