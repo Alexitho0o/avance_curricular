@@ -1,4 +1,3 @@
-
 # Avance Curricular — Estructura, Uso y SDD
 
 Repositorio estandarizado bajo Spec-Driven Development (SDD) para la gestión, validación y auditoría de datos curriculares y salida regulatoria MU 2026 Pregrado.
@@ -367,3 +366,23 @@ La referencia vigente de gobernanza del repositorio se documenta en:
 - `data/resultados/` no debe interpretarse como ruta activa de outputs.
 - `core/` no debe interpretarse como fuente runtime oficial mientras no se formalice su migración.
 - Los scripts legacy o exploratorios no deben usarse como flujo estándar.
+
+## Herramientas Auxiliares
+
+### Fixture opcional de validación cruzada MU2026
+
+El proyecto incluye un fixture paralelo de validación cruzada end to end para Matrícula Unificada 2026, ubicado en:
+
+`control/fixtures/mu2026_validacion_cruzada/`
+
+Este fixture permite probar 20 registros válidos y 14 casos de error controlados contra reglas críticas del Manual de Proceso Matrícula Unificada 2026. Su ejecución es opcional y no reemplaza `qa_checks.py`, `scripts/auditoria_maestra.py` ni el gate oficial de liberación.
+
+Para ejecutarlo:
+
+```bash
+bash scripts/run_fixture_mu2026.sh
+```
+
+El fixture guarda sus resultados en:
+
+`control/fixtures/mu2026_validacion_cruzada/resultados/`
