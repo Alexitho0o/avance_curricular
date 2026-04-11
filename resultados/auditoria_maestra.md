@@ -5,29 +5,33 @@
 ## Metadata
 | Campo | Valor |
 |-------|-------|
-| Fecha/Hora | 2026-04-23 08:21:16 |
-| Commit | 0eb1e38 |
+| Fecha/Hora | 2026-05-07 08:44:01 |
+| Commit | 01cc0d4 |
 | Output-Dir | /Users/alexi/Documents/GitHub/avance_curricular/resultados |
 | Modo | solo-validar |
 | Input | (outputs existentes) |
 | Pipeline-Script | /Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py |
 | Pipeline-Líneas | 5692 |
-| Git-Diff-Refs | 12 |
+| Git-Diff-Refs | 16 |
 
 ## Cambios de Código Aplicados (Git Diff)
 
-- `codigo_gobernanza_v2.py:L1082-L1120`
-- `codigo_gobernanza_v2.py:L1687-L1690`
-- `codigo_gobernanza_v2.py:L2441-L2458`
-- `codigo_gobernanza_v2.py:L3103`
-- `codigo_gobernanza_v2.py:L3305-L3312`
-- `codigo_gobernanza_v2.py:L3356-L3364`
-- `codigo_gobernanza_v2.py:L3375-L3383`
-- `codigo_gobernanza_v2.py:L3428-L3436`
-- `codigo_gobernanza_v2.py:L5202-L5260`
-- `qa_checks.py:L88-L114`
-- `qa_checks.py:L121`
-- `qa_checks.py:L427-L439`
+- `qa_checks.py:L31-L66`
+- `qa_checks.py:L619-L620`
+- `qa_checks.py:L770-L772`
+- `qa_checks.py:L791-L793`
+- `qa_checks.py:L814`
+- `qa_checks.py:L1300-L1301`
+- `qa_checks.py:L1472-L1475`
+- `qa_checks.py:L1534-L1536`
+- `qa_checks.py:L1561`
+- `qa_checks.py:L1589-L1590`
+- `qa_checks.py:L1881-L1883`
+- `qa_checks.py:L1958-L1962`
+- `qa_checks.py:L2100-L2120`
+- `qa_checks.py:L2156-L2158`
+- `qa_checks.py:L2185`
+- `qa_checks.py:L2232-L2243`
 
 ## Checklist de Componentes
 
@@ -289,4 +293,4 @@ Todos los checks pasaron. El archivo `archivo_listo_para_sies.xlsx` y el CSV reg
 son aptos para entrega oficial al SIES.
 
 ---
-*Generado automáticamente por `scripts/auditoria_maestra.py` el 2026-04-23 08:21:16*
+*Generado automáticamente por `scripts/auditoria_maestra.py` el 2026-05-07 08:44:01*

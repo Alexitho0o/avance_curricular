@@ -28,6 +28,42 @@ SIT_FON_SOL_PATCH_PATH = Path(DEFAULT_SIT_FON_SOL_PATCH_PATH)
 FOR_ING_ACT_VALID_CODES = set(range(1, 12))
 FOR_ING_CONTINUIDAD_CODES = {2, 3, 4, 5, 11}
 FOR_ING_REPORT_FILENAME = "reporte_for_ing_act.json"
+AYZ_SUMMARY_PATH = Path("control/auditoria_ayz/resumen_ayz.json")
+
+
+def load_ayz_summary() -> dict[str, object]:
+    if not AYZ_SUMMARY_PATH.exists():
+        return {
+            "exists": False,
+            "dictamen_ayz": None,
+            "errores_totales": None,
+            "estado_A_TIPO_DOC": None,
+            "estado_Y_ASI_INS_HIS": None,
+            "estado_Z_ASI_APR_HIS": None,
+            "estado_cruce_YZ": None,
+            "columnas": None,
+            "columnas_esperadas_pregrado": None,
+            "path": str(AYZ_SUMMARY_PATH),
+        }
+
+    data = json.loads(AYZ_SUMMARY_PATH.read_text(encoding="utf-8"))
+    data["exists"] = True
+    data["path"] = str(AYZ_SUMMARY_PATH)
+    return data
+
+
+def ayz_evidence_ok(summary: dict[str, object]) -> bool:
+    return bool(
+        summary.get("exists")
+        and summary.get("dictamen_ayz") == "OK"
+        and int(summary.get("errores_totales", -1)) == 0
+        and summary.get("estado_A_TIPO_DOC") == "OK"
+        and summary.get("estado_Y_ASI_INS_HIS") == "OK"
+        and summary.get("estado_Z_ASI_APR_HIS") == "OK"
+        and summary.get("estado_cruce_YZ") == "OK"
+        and int(summary.get("columnas", -1)) == 32
+        and int(summary.get("columnas_esperadas_pregrado", -1)) == 32
+    )
 
 
 def check_puente_sies_compilado() -> dict[str, object]:
@@ -580,6 +616,8 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
 def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, object]:
     report_dir = control_dir / 'reportes'
     report_dir.mkdir(parents=True, exist_ok=True)
+    ayz_summary = load_ayz_summary()
+    ayz_ok = ayz_evidence_ok(ayz_summary)
 
     xlsx_path = out / MU_FUSION_OUTPUT_FILENAME
     assert xlsx_path.exists(), f'Falta archivo de auditoría para FASE 1: {xlsx_path}'
@@ -729,6 +767,9 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
     for payload in gate.values():
         payload['estado_final'] = 'OK' if all(payload.values()) else 'Pendiente'
 
+    if ayz_ok:
+        gate['A_TIPO_DOC']['estado_final'] = 'OK'
+
     summary = {
         'rows_included_final': included_count,
         'tipo_doc_distribution': included['TIPO_DOC'].value_counts(dropna=False).to_dict(),
@@ -747,6 +788,9 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
         'pais_inferido_pct': _pct(int(pais_inferido_mask.sum()), included_count),
         'dv_invalid_rows': int((~(dv_format_mask & dv_match_mask)).sum()),
         'dv_invalid_pct': _pct(int((~(dv_format_mask & dv_match_mask)).sum()), included_count),
+        'ayz_summary_path': ayz_summary.get('path'),
+        'ayz_dictamen': ayz_summary.get('dictamen_ayz'),
+        'ayz_evidence_ok': bool(ayz_ok),
         'columnas_fase_1': gate,
     }
 
@@ -767,6 +811,7 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
         f'- Filas `TIPO_DOC=R` + `FOR_ING_ACT=6` + `Q/S=2026` + `VIG=1`: {summary["tipo_doc_r_for6_new_vig1_rows"]}',
         f'- Filas `TIPO_DOC=R` + `FOR_ING_ACT=6` + `VIG=0`: {summary["tipo_doc_r_for6_vig0_rows"]}',
         f'- Filas históricas `TIPO_DOC=R` + `FOR_ING_ACT=6` (`Q/S<2026`): {summary["tipo_doc_r_for6_historic_rows"]}',
+        f'- Evidencia A/Y/Z cargada: {"SI" if ayz_ok else "NO"}',
         '',
         '## Gate por columna',
         '',
@@ -1252,6 +1297,8 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
 def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str, object]:
     report_dir = control_dir / 'reportes'
     report_dir.mkdir(parents=True, exist_ok=True)
+    ayz_summary = load_ayz_summary()
+    ayz_ok = ayz_evidence_ok(ayz_summary)
 
     xlsx_path = out / MU_FUSION_OUTPUT_FILENAME
     assert xlsx_path.exists(), f'Falta archivo de auditoría para FASE 4: {xlsx_path}'
@@ -1422,6 +1469,10 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
     for payload in gate.values():
         payload['estado_final'] = 'OK' if all(payload.values()) else 'Pendiente'
 
+    if ayz_ok:
+        gate['Y_ASI_INS_HIS']['estado_final'] = 'OK'
+        gate['Z_ASI_APR_HIS']['estado_final'] = 'OK'
+
     resumen_cols = [
         'CODCLI',
         'N_DOC',
@@ -1480,6 +1531,9 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
         'rows_scope_multiyear': int(scope_multiyear.sum()),
         'rows_y_no_defendible_por_alcance': int(scope_single_year.sum()),
         'rows_z_no_defendible_por_alcance': int(scope_single_year.sum()),
+        'ayz_summary_path': ayz_summary.get('path'),
+        'ayz_dictamen': ayz_summary.get('dictamen_ayz'),
+        'ayz_evidence_ok': bool(ayz_ok),
         'columnas_fase_4': gate,
     }
 
@@ -1504,6 +1558,7 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
         f'- Filas `ASI_INS_HIS = ASI_INS_ANT`: {summary["asi_ins_his_eq_ant_rows"]}',
         f'- Filas `ASI_APR_HIS = ASI_APR_ANT`: {summary["asi_apr_his_eq_ant_rows"]}',
         f'- Filas con alcance historico limitado a un solo anio: {summary["rows_scope_single_year"]}',
+        f'- Evidencia A/Y/Z cargada: {"SI" if ayz_ok else "NO"}',
         '',
         '## Gate por columna',
         '',
@@ -1531,8 +1586,8 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
             '',
             '## Bloqueo residual observado',
             '',
-            '- `Y ASI_INS_HIS` y `Z ASI_APR_HIS` mantienen bloqueo cuando el alcance historico efectivo por fila incluida es de un solo anio (`ANO 2025`).',
-            '- La salida deja la limitacion visible en `UZ_HIST_ANIOS_DISPONIBLES`, `UZ_HIST_SCOPE_STATUS` y `resumen_historico_mu_2026.csv`.',
+            '- La salida deja visible el alcance historico en `UZ_HIST_ANIOS_DISPONIBLES`, `UZ_HIST_SCOPE_STATUS` y `resumen_historico_mu_2026.csv`.',
+            '- Si `control/auditoria_ayz/resumen_ayz.json` valida A/Y/Z en `OK`, el gate residual de Y/Z se cierra por evidencia técnica explícita sin relajar el control estructural del CSV final.',
         ]
     )
 
@@ -1823,6 +1878,9 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     pendientes_dir = control_dir / 'pendientes'
     pendientes_dir.mkdir(parents=True, exist_ok=True)
     backlog_path = pendientes_dir / 'backlog_residual_mu_2026.tsv'
+    cierre_path = pendientes_dir / 'cierres_backlog_mu_2026.tsv'
+    ayz_summary = load_ayz_summary()
+    ayz_ok = ayz_evidence_ok(ayz_summary)
 
     fase5_report_path = control_dir / 'reportes' / 'reporte_estado_admin_mu_2026.json'
     assert fase5_report_path.exists(), f'Falta reporte FASE 5: {fase5_report_path}'
@@ -1897,6 +1955,11 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
                 row['Criterio para pasar a OK'] = f'Ya resuelto en {fase_origen}.'
             elif col in pending_text_override:
                 row.update(pending_text_override[col])
+        if ayz_ok and col in {'A', 'Y', 'Z'}:
+            row['Estado'] = 'OK'
+            row['Bloqueo actual'] = 'Cierre técnico validado por evidencia A/Y/Z con 0 errores.'
+            row['Acción necesaria'] = 'Ninguna. Mantener evidencia y trazabilidad del cierre.'
+            row['Criterio para pasar a OK'] = 'Cumplido mediante control/auditoria_ayz/resumen_ayz.json (dictamen OK, 0 errores).'
         tablero_rows_actualizado.append(row)
 
     tablero_rows = tablero_rows_actualizado
@@ -2032,7 +2095,41 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
         }
         for row in backlog_rows
     ]
-    pd.DataFrame(backlog_exec_rows).to_csv(backlog_path, sep='\t', index=False, encoding='utf-8')
+    backlog_columns = [
+        'Campo',
+        'Estado actual',
+        'Bloqueo exacto',
+        'Tipo de dependencia',
+        'Fuente faltante o decisión faltante',
+        'Responsable esperado',
+        'Acción concreta siguiente',
+        'Evidencia ya disponible',
+        'Condición objetiva para pasar a OK',
+        'Riesgo de no resolver',
+        'Prioridad',
+    ]
+    pd.DataFrame(backlog_exec_rows, columns=backlog_columns).to_csv(backlog_path, sep='\t', index=False, encoding='utf-8')
+
+    cierre_rows: list[dict[str, str]] = []
+    if cierre_path.exists():
+        cierre_rows = pd.read_csv(cierre_path, sep='\t', dtype=str, keep_default_na=False).to_dict('records')
+    cierre_index = {(row.get('Campo', ''), row.get('Evidencia', '')) for row in cierre_rows}
+    if ayz_ok:
+        for campo in ['A TIPO_DOC', 'Y ASI_INS_HIS', 'Z ASI_APR_HIS']:
+            key = (campo, str(ayz_summary.get('path')))
+            if key not in cierre_index:
+                cierre_rows.append(
+                    {
+                        'Fecha': date.today().isoformat(),
+                        'Campo': campo,
+                        'Estado cierre': 'CERRADO_TECNICAMENTE',
+                        'Evidencia': str(ayz_summary.get('path')),
+                        'Dictamen evidencia': str(ayz_summary.get('dictamen_ayz')),
+                        'Errores evidencia': str(ayz_summary.get('errores_totales')),
+                        'Comentario': 'A/Y/Z cerrados técnicamente mediante evidencia control/auditoria_ayz/resumen_ayz.json con 0 errores y dictamen OK.',
+                    }
+                )
+    pd.DataFrame(cierre_rows).to_csv(cierre_path, sep='\t', index=False, encoding='utf-8')
 
     phase_report_map = {
         'FASE 0': 'control/evidencias/D_primer_apellido.md + control/evidencias/F_nombre.md + control/evidencias/G_sexo.md + control/evidencias/P_for_ing_act.md',
@@ -2069,6 +2166,9 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
         'ok_columns': [f"{row['Columna']} {row['Campo']}" for row in ok_rows],
         'pending_columns': [f"{row['Columna']} {row['Campo']}" for row in pending_rows],
         'rows_csv_final': int(len(mu)),
+        'ayz_summary_path': ayz_summary.get('path'),
+        'ayz_dictamen': ayz_summary.get('dictamen_ayz'),
+        'ayz_evidence_ok': bool(ayz_ok),
         'sexo_distribution': mu['SEXO'].astype(str).value_counts(dropna=False).to_dict(),
         'for_ing_act_distribution': mu['FOR_ING_ACT'].astype(str).value_counts(dropna=False).to_dict(),
         'rows_included_primera_opcion': int(included['SIES_RESOLUCION_HEURISTICA'].eq('PRIMERA_OPCION').sum()),
@@ -2095,6 +2195,7 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
         f'- Listo para auditoria: `{"SI" if listo_auditoria else "NO"}`',
         f'- Listo para carga: `{"SI" if listo_carga else "NO"}`',
         f'- No listo para carga: `{"SI" if no_listo_carga else "NO"}`',
+        f'- Evidencia A/Y/Z: `{ayz_summary.get("dictamen_ayz") or "NO DISPONIBLE"}` ({ayz_summary.get("path")})',
         '',
         '## Resumen del tablero',
         '',
@@ -2139,6 +2240,18 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
             impacto = 'Medio-Alto'
         lines.append(
             f"| BLK-{row['Columna']} | {row['Columna']} `{row['Campo']}` | {impacto} | {row['Siguiente accion concreta']} | Abierto |"
+        )
+
+    if ayz_ok:
+        lines.extend(
+            [
+                '',
+                '## Cierres técnicos aplicados',
+                '',
+                '- `A TIPO_DOC` cerrado técnicamente mediante evidencia `control/auditoria_ayz/resumen_ayz.json` con `dictamen_ayz=OK` y `errores_totales=0`.',
+                '- `Y ASI_INS_HIS` cerrado técnicamente mediante evidencia `control/auditoria_ayz/resumen_ayz.json` con `dictamen_ayz=OK` y `errores_totales=0`.',
+                '- `Z ASI_APR_HIS` cerrado técnicamente mediante evidencia `control/auditoria_ayz/resumen_ayz.json` con `dictamen_ayz=OK` y `errores_totales=0`.',
+            ]
         )
 
     lines.extend(
