@@ -83,7 +83,7 @@ python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
 - Reglas para agentes de IA: ver `agent.md`.
 
 ---
-Última actualización: 2026-04-10
+Última actualización: 2026-04-19
 Responsable: Arquitectura Técnica
 
 ### Trazabilidad complementaria
@@ -260,7 +260,8 @@ python3 scripts/auditoria_maestra.py --ejecutar-pipeline --output-dir resultados
 
 - CSV final sin header y con `;`.
 - 32 columnas exactas.
-- `FOR_ING_ACT = 1` en CSV final.
+- `FOR_ING_ACT` en catálogo manual `1..11` en CSV final.
+- Para `FOR_ING_ACT` en `{2,3,4,5,11}`, QA exige continuidad/origen trazable y evita `ORI = ACT` como falso directo.
 - Coherencia `ASI_APR_ANT <= ASI_INS_ANT` y `ASI_APR_HIS <= ASI_INS_HIS`.
 - Rangos de `PROM_*` en `0` o `100..700`.
 - Regla bloqueante: `VIG = 0` implica `PROM_PRI_SEM = 0`, `PROM_SEG_SEM = 0`, `ASI_INS_HIS = 0`, `ASI_APR_HIS = 0`.
@@ -366,4 +367,3 @@ La referencia vigente de gobernanza del repositorio se documenta en:
 - `data/resultados/` no debe interpretarse como ruta activa de outputs.
 - `core/` no debe interpretarse como fuente runtime oficial mientras no se formalice su migración.
 - Los scripts legacy o exploratorios no deben usarse como flujo estándar.
-

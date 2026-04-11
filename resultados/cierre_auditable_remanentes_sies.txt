@@ -1,0 +1,10 @@
+CIERRE AUDITABLE REMANENTES SIES
+
+Filas remanentes: 3
+Conclusión:
+- Los remanentes mantienen VERSION=3 en runtime.
+- La oferta real contiene I162S2C3J4V3.
+- Sin embargo, en DURACION_ESTUDIOS.tsv el V3 no incluye alias IETMREOL ni NETMRE.
+- Por tanto, no existe respaldo de gobernanza para asignar V3 a esos CODCARPR.
+- Se confirma que el patch no debe forzar resolución para estos casos.
+- Mantener PENDIENTE_GOBERNANZA es correcto.

@@ -1,53 +1,51 @@
 {
-  "rows_included_final": 3687,
+  "rows_included_final": 3433,
   "ventana_referencia_distribution": {
-    "2025": 3687
+    "2025": 3433
   },
   "uz_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "HISTORICO_HOJA1_ANIO_2025": 3433
   },
   "uz_scope_status_distribution": {
-    "ALCANCE_LIMITADO_ANIO_UNICO": 2506,
-    "ALCANCE_MULTIANUAL": 1181
+    "ALCANCE_LIMITADO_ANIO_UNICO": 2351,
+    "ALCANCE_MULTIANUAL": 1082
   },
   "hist_anios_disponibles_distribution": {
-    "1": 2506,
-    "2": 876,
-    "3": 294,
-    "4": 7,
-    "5": 3,
-    "6": 1
+    "1": 2351,
+    "2": 1082
   },
   "asi_ins_ant_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "HISTORICO_HOJA1_ANIO_2025": 3433
   },
   "asi_apr_ant_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "HISTORICO_HOJA1_ANIO_2025": 3433
   },
   "prom_pri_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "HISTORICO_HOJA1_ANIO_2025": 3433
   },
   "prom_seg_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "HISTORICO_HOJA1_ANIO_2025": 3433
   },
   "asi_ins_his_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "POLITICA_CUADRO5_C1": 2109,
+    "HISTORICO_HOJA1_ANIO_2025": 1324
   },
   "asi_apr_his_fuente_distribution": {
-    "HISTORICO_HOJA1_ANIO_2025": 3687
+    "POLITICA_CUADRO5_C1": 2109,
+    "HISTORICO_HOJA1_ANIO_2025": 1324
   },
-  "prom_pri_zero_rows": 2631,
-  "prom_seg_zero_rows": 2626,
-  "prom_pri_zero_explicit_rows": 2617,
-  "prom_seg_zero_explicit_rows": 2611,
+  "prom_pri_zero_rows": 2355,
+  "prom_seg_zero_rows": 2359,
+  "prom_pri_zero_explicit_rows": 2350,
+  "prom_seg_zero_explicit_rows": 2354,
   "apr_ant_capped_rows": 0,
   "apr_his_capped_rows": 0,
-  "asi_ins_his_eq_ant_rows": 83,
-  "asi_apr_his_eq_ant_rows": 1919,
-  "rows_scope_single_year": 2506,
-  "rows_scope_multiyear": 1181,
-  "rows_y_no_defendible_por_alcance": 2506,
-  "rows_z_no_defendible_por_alcance": 2506,
+  "asi_ins_his_eq_ant_rows": 2120,
+  "asi_apr_his_eq_ant_rows": 3351,
+  "rows_scope_single_year": 2351,
+  "rows_scope_multiyear": 1082,
+  "rows_y_no_defendible_por_alcance": 2351,
+  "rows_z_no_defendible_por_alcance": 2351,
   "columnas_fase_4": {
     "U_ASI_INS_ANT": {
       "fuente_regla_definida": true,
@@ -67,35 +65,35 @@
     },
     "W_PROM_PRI_SEM": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": false,
+      "transformacion_implementada": true,
       "validacion_qa_existe": true,
-      "sin_default_silencioso": false,
+      "sin_default_silencioso": true,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "Pendiente"
+      "estado_final": "OK"
     },
     "X_PROM_SEG_SEM": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": false,
+      "transformacion_implementada": true,
       "validacion_qa_existe": true,
-      "sin_default_silencioso": false,
+      "sin_default_silencioso": true,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "Pendiente"
+      "estado_final": "OK"
     },
     "Y_ASI_INS_HIS": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": true,
+      "transformacion_implementada": false,
       "validacion_qa_existe": true,
       "sin_default_silencioso": true,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "OK"
+      "estado_final": "Pendiente"
     },
     "Z_ASI_APR_HIS": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": true,
+      "transformacion_implementada": false,
       "validacion_qa_existe": true,
       "sin_default_silencioso": true,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "OK"
+      "estado_final": "Pendiente"
     }
   }
 }

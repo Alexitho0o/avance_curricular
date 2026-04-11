@@ -1,15 +1,15 @@
 # Reporte FASE 5 - Estado administrativo MU 2026
 
-- Filas incluidas en carga final: 1282
-- Distribucion `SIT_FON_SOL`: {'1': 1182, '0': 100}
-- Distribucion `SUS_PRE`: {'0': 1282}
-- Distribucion `REINCORPORACION`: {'0': 1282}
-- Distribucion `VIG`: {'1': 1260, '0': 22}
+- Filas incluidas en carga final: 3433
+- Distribucion `SIT_FON_SOL`: {'1': 3237, '0': 196}
+- Distribucion `SUS_PRE`: {'0': 3433}
+- Distribucion `REINCORPORACION`: {'0': 3433}
+- Distribucion `VIG`: {'1': 3338, '0': 95}
 - Patch `SIT_FON_SOL` habilitado: True
 - Patch `SIT_FON_SOL` path: /Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json
-- Patch `SIT_FON_SOL` RUT totales: 100
-- Patch `SIT_FON_SOL` filas objetivo: 100
-- Patch `SIT_FON_SOL` filas objetivo OK: 100
+- Patch `SIT_FON_SOL` RUT totales: 196
+- Patch `SIT_FON_SOL` filas objetivo: 196
+- Patch `SIT_FON_SOL` filas objetivo OK: 196
 - Patch `SIT_FON_SOL` no-target con fuente patch: 0
 - Filas `SUS_PRE` por default explicito: 0
 - Filas `SUS_PRE` forzadas a `0` por politica de cohorte 2026: 0

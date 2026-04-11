@@ -1,5 +1,7 @@
 # Resultado Corrida Referencia MU 2026
 
+Documento de contraste congelado. No reemplaza el gate vigente ni la distribución actual de `FOR_ING_ACT` observada en `resultados/reporte_for_ing_act.json`.
+
 - Fecha de corrida de referencia: 2026-04-01
 - Input usado: [PROMEDIOSDEALUMNOS_7804.xlsx](/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx)
 - Output usado: [resultados/](/Users/alexi/Documents/GitHub/avance_curricular/resultados)
@@ -53,7 +55,7 @@ python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
 - 32 columnas exactas: `SI`
 - separador `;`: `SI`
 - `SEXO` solo `H/M/NB`: `SI`
-- `FOR_ING_ACT = 1`: `SI`
+- `FOR_ING_ACT = 1` en esta referencia congelada: `SI`
 - exclusión de `PRIMERA_OPCION`: `SI`
 
 ## Distribuciones observadas en la corrida de referencia
@@ -71,4 +73,4 @@ python3 qa_checks.py --output-dir "$OUTPUT_DIR" --fase6-control-dir "control"
 
 ## Conclusión de reproducibilidad
 
-La corrida de referencia reproduce el estado congelado vigente del proyecto: `CONDICIONAL`, `27 OK / 5 Pendiente`, auditable y no listo para carga.
+La corrida de referencia reproduce el estado congelado de contraste del `2026-04-01`: `CONDICIONAL`, `27 OK / 5 Pendiente`, auditable y no listo para carga.

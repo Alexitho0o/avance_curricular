@@ -1,7 +1,7 @@
 # Ejecución Oficial MU 2026
 
 - Fecha de congelamiento: 2026-04-01
-- Estado congelado esperado: `CONDICIONAL`
+- Baseline congelada de referencia: `CONDICIONAL`
 - Alcance: Matrícula Unificada Pregrado 2026
 
 ## Unica forma oficial de ejecutar
@@ -62,13 +62,13 @@ python3 codigo_gobernanza_v2.py --input "$INPUT_XLSX" --output-dir "$OUTPUT_DIR"
 
 ## Resultado esperado mínimo
 
-- `rows_matricula_32_final = 1736`
-- `rows_excluidas_carga_pregrado = 23091`
-- `rows_excluidas_sies_heuristica_opaca = 7973`
-- `FOR_ING_ACT` final solo en `1`
-- referencia histórica efectiva de rendimiento en `2025`
 - workbook con hoja `ARCHIVO_LISTO_SUBIDA`
 - CSV final sin header, con `32` columnas y delimitador `;`
+- `FOR_ING_ACT` exportado desde resolución trazable, sin sobreescritura fija a `1`
+- distribución final verificable en `resultados/reporte_for_ing_act.json`
+- dictamen vigente verificable en `control/gate/gate_final_mu_2026.md`
+
+Las métricas congeladas del baseline `2026-04-01` se preservan en `control/reportes/resultado_corrida_referencia_mu_2026.md` como contraste histórico.
 
 ## Salidas que no deben usarse como corrida oficial
 

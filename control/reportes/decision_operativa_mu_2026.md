@@ -1,8 +1,10 @@
 # Decision Operativa MU 2026
 
+Documento de contraste congelado al `2026-04-01`. Para operar hoy manda el gate vigente regenerado por `qa_checks.py` en `control/gate/gate_final_mu_2026.md`.
+
 - Fecha de emision: 2026-04-01
-- Decision vigente: `CONDICIONAL`
-- Estado operativo vigente:
+- Decision congelada de referencia: `CONDICIONAL`
+- Estado operativo de esa referencia:
   - Listo para auditoria: `SI`
   - Listo para carga: `NO`
 
@@ -54,7 +56,7 @@ El proyecto solo puede pasar a `APROBADO` si los cinco campos pendientes salen d
 - 32 columnas exactas;
 - separador `;`;
 - `SEXO` valido;
-- `FOR_ING_ACT = 1`;
+- la referencia congelada verificaba `FOR_ING_ACT = 1`;
 - exclusion de `PRIMERA_OPCION`; y
 - trazabilidad auditable por fila incluida para todos los campos.
 
