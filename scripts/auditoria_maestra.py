@@ -865,6 +865,82 @@ def coherencia_logica_vs_evidencia(
 # ---------------------------------------------------------------------------
 # Parte 5 — Reporte y Dictamen
 # ---------------------------------------------------------------------------
+
+def _load_gate_final_status() -> dict[str, Any]:
+    """Lee control/gate/gate_final_mu_2026.md y extrae decisión + pendientes."""
+    gate_path = REPO_DIR / "control" / "gate" / "gate_final_mu_2026.md"
+    if not gate_path.exists():
+        return {
+            "exists": False,
+            "decision": None,
+            "pending_columns": [],
+            "path": str(gate_path),
+        }
+
+    text = gate_path.read_text(encoding="utf-8", errors="ignore")
+    decision = None
+    pending_columns: list[str] = []
+
+    m_decision = re.search(r"Decision\s+final:\s*`?([A-ZÁÉÍÓÚ_]+)`?", text, re.IGNORECASE)
+    if m_decision:
+        decision = m_decision.group(1).strip().upper()
+
+    m_pending = re.search(r"Columnas\s+en\s+`?Pendiente`?\s*\(\d+\):\s*(.+)", text, re.IGNORECASE)
+    if m_pending:
+        raw = m_pending.group(1)
+        pending_columns = [item.strip().strip("`") for item in raw.split(",") if item.strip()]
+
+    return {
+        "exists": True,
+        "decision": decision,
+        "pending_columns": pending_columns,
+        "path": str(gate_path),
+    }
+
+
+def _resolver_dictamen_unico(checks: list[Check]) -> tuple[str, str, list[str]]:
+    """
+    Regla de verdad única de aceptación:
+    - LISTO PARA ENTREGA: solo si no hay FAIL, gate qa_checks existe, gate=APROBADO,
+      sin pendientes A/Y/Z y sin divergencia entre validadores.
+    - CONDICIONAL: si no hay FAIL pero aún hay pendientes críticos o divergencia.
+    - NO LISTO: si hay FAIL en la auditoría maestra.
+    """
+    has_fail = any(c.estado == "FAIL" for c in checks)
+    if has_fail:
+        return "NO LISTO", "❌", ["Existen checks FAIL en auditoría maestra."]
+
+    gate = _load_gate_final_status()
+    razones: list[str] = []
+
+    if not gate["exists"]:
+        razones.append("No existe gate final de qa_checks (control/gate/gate_final_mu_2026.md).")
+    else:
+        gate_decision = str(gate.get("decision") or "").upper()
+        if gate_decision in {"", "UNKNOWN", "N/A"}:
+            razones.append("No se pudo determinar la decisión del gate final de qa_checks.")
+        elif gate_decision != "APROBADO":
+            razones.append(f"qa_checks no está en APROBADO (decision={gate_decision}).")
+
+        pending = {str(x).upper() for x in gate.get("pending_columns", [])}
+        criticos = {"A TIPO_DOC", "Y ASI_INS_HIS", "Z ASI_APR_HIS"}
+        pendientes_criticos = sorted(criticos.intersection(pending))
+        if pendientes_criticos:
+            razones.append(
+                "Persisten pendientes críticos del Cuadro N°1: " + ", ".join(pendientes_criticos)
+            )
+
+        if gate_decision in {"CONDICIONAL", "RECHAZADO"}:
+            razones.append(
+                "Existe divergencia de validadores si auditoría maestra intenta declarar LISTO PARA ENTREGA."
+            )
+
+    if razones:
+        return "CONDICIONAL", "⚠️", razones
+
+    return "LISTO PARA ENTREGA", "✅", []
+
+
 def generar_reporte(
     meta: dict[str, str],
     linaje: list[LineageEntry],
@@ -873,16 +949,19 @@ def generar_reporte(
     output_path: Path,
     modified_line_refs: list[str] | None = None,
 ) -> bool:
-    """Genera resultados/auditoria_maestra.md y retorna True si LISTO."""
-    all_ok = all(c.estado in ("OK", "WARN", "SKIP") for c in checks)
-    has_fail = any(c.estado == "FAIL" for c in checks)
-    dictamen = "LISTO PARA ENTREGA" if not has_fail else "NO LISTO"
-    icono = "✅" if not has_fail else "❌"
+    """Genera resultados/auditoria_maestra.md y retorna True solo si LISTO PARA ENTREGA."""
+    dictamen, icono, razones_dictamen = _resolver_dictamen_unico(checks)
+    has_fail = dictamen == "NO LISTO"
 
     lines: list[str] = []
     lines.append(f"# Auditoría Maestra — Gate de Entrega MU 2026")
     lines.append(f"")
     lines.append(f"**Dictamen: {icono} {dictamen}**")
+    if razones_dictamen:
+        lines.append("")
+        lines.append("**Fundamento de decisión:**")
+        for razon in razones_dictamen:
+            lines.append(f"- {razon}")
     lines.append(f"")
     lines.append(f"## Metadata")
     lines.append(f"| Campo | Valor |")
@@ -950,7 +1029,7 @@ def generar_reporte(
     lines.append(f"")
     lines.append(f"### {icono} {dictamen}")
     lines.append(f"")
-    if has_fail:
+    if dictamen == "NO LISTO":
         lines.append(f"**Causas de bloqueo:**")
         for c in checks:
             if c.estado == "FAIL":
@@ -960,6 +1039,14 @@ def generar_reporte(
         lines.append(f"1. Corregir los FAIL listados arriba.")
         lines.append(f"2. Re-ejecutar el pipeline: `python3 codigo_gobernanza_v2.py --proceso matricula --usar-gobernanza-v2 true`")
         lines.append(f"3. Re-ejecutar esta auditoría: `python3 scripts/auditoria_maestra.py --solo-validar`")
+    elif dictamen == "CONDICIONAL":
+        lines.append("La salida es auditable y estructuralmente consistente, pero no corresponde declararla lista")
+        lines.append("para entrega final mientras existan pendientes críticos del manual o divergencia entre validadores.")
+        lines.append("")
+        lines.append("**Para pasar a LISTO PARA ENTREGA:**")
+        lines.append("1. qa_checks en APROBADO (sin pendientes críticos).")
+        lines.append("2. Cierre formal de A TIPO_DOC, Y ASI_INS_HIS y Z ASI_APR_HIS o aceptación normativa explícita.")
+        lines.append("3. Sin divergencia de decisión entre qa_checks y auditoría maestra.")
     else:
         lines.append(f"Todos los checks pasaron. El archivo `archivo_listo_para_sies.xlsx` y el CSV regulatorio")
         lines.append(f"son aptos para entrega oficial al SIES.")
@@ -969,7 +1056,7 @@ def generar_reporte(
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(lines), encoding="utf-8")
-    return not has_fail
+    return dictamen == "LISTO PARA ENTREGA"
 
 
 # ---------------------------------------------------------------------------
@@ -1127,7 +1214,11 @@ def main() -> int:
     if is_ok:
         print(f"  ✅ DICTAMEN: LISTO PARA ENTREGA  ({n_ok} OK, {n_warn} WARN, {n_fail} FAIL)")
     else:
-        print(f"  ❌ DICTAMEN: NO LISTO  ({n_ok} OK, {n_warn} WARN, {n_fail} FAIL)")
+        dictamen_preview, icono_preview, _ = _resolver_dictamen_unico(all_checks)
+        if dictamen_preview == "CONDICIONAL":
+            print(f"  ⚠️ DICTAMEN: CONDICIONAL  ({n_ok} OK, {n_warn} WARN, {n_fail} FAIL)")
+        else:
+            print(f"  ❌ DICTAMEN: NO LISTO  ({n_ok} OK, {n_warn} WARN, {n_fail} FAIL)")
     print(f"  📄 Reporte: {report_path}")
     print("=" * 80)
 
