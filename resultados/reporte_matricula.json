@@ -4,38 +4,41 @@
   "sheet_used": "Hoja1",
   "gobernanza_mode": "v2_flagged",
   "usar_gobernanza_v2": true,
-  "rows": 8977,
-  "rows_matricula_32_final": 1281,
-  "rows_excluidas_carga_pregrado": 7696,
+  "rows": 28933,
+  "rows_matricula_32_final": 3433,
+  "rows_excluidas_carga_pregrado": 25500,
   "rows_excluidas_sies_heuristica_opaca": 0,
   "rows_excluidas_sin_for_ing_act_trazable": 0,
-  "rows_enriquecidas_datos_alumnos": 8977,
+  "rows_enriquecidas_datos_alumnos": 28933,
   "rows_sin_match_datos_alumnos": 0,
-  "cod_sed_resuelto_por_regla": 8977,
-  "pais_est_sec_inferido_localidad": 8977,
+  "cod_sed_resuelto_por_regla": 28933,
+  "pais_est_sec_inferido_localidad": 28933,
   "for_ing_act_distribution_final": {
-    "1": 1131,
-    "2": 89,
+    "1": 2926,
+    "2": 383,
+    "3": 84,
     "11": 32,
-    "3": 29
+    "6": 8
   },
   "rows_for_ing_act_imputado_final": 0,
   "rows_for_ing_act_revision_final": 0,
-  "rows_uz_all_zero_final": 18,
+  "rows_uz_all_zero_final": 2114,
   "historico_mu_anio_referencia": 2026,
   "periodo_filtro_anio": 2026,
   "periodo_filtro_sem": 1,
   "anio_anterior_prom": 2025,
   "estado_inicial": {
-    "Matrícula Duplicada": 8966,
-    "Matrícula OK": 11
+    "Matrícula Duplicada": 28897,
+    "Matrícula OK": 36
   },
   "manual_match": {
-    "MATCH_MANUAL": 8977
+    "MATCH_MANUAL": 28927,
+    "SIN_MATCH_MANUAL": 6
   },
   "sies_diag": {
-    "MATCH_SIES_UNICO": 6472,
-    "MATCH_SIES_AMBIGUO": 2505
+    "MATCH_SIES_UNICO": 21024,
+    "MATCH_SIES_AMBIGUO": 7903,
+    "EXCLUIDO_DIPLOMADO": 6
   },
   "catalogo_manual_rows": 181,
   "puente_sies_rows": 161,
@@ -50,14 +53,14 @@
   "gob_sede_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv",
   "gob_for_ing_act_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv",
   "for_ing_act_origin_stats": {
-    "for2_1900": 733,
+    "for2_1900": 3841,
     "for3_lookup": 32,
-    "for3_1900": 358,
-    "for11_trace": 446,
+    "for3_1900": 1217,
+    "for11_trace": 474,
     "for11_1900": 0,
     "otros_1900": 0
   },
-  "oferta_academica_source": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+  "oferta_academica_source": "/Users/alexi/Downloads/1668382 Captura IES Incremental5320 Oferta Académica Titulados5319 Titulados Histórico.xlsx",
   "sit_fon_sol_patch_source": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
   "sit_fon_sol_patch_stats": {
     "patch_path": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
@@ -74,7 +77,7 @@
       "N_DOC": 1417,
       "CODCLI": 0
     },
-    "n_rows_total": 8977,
+    "n_rows_total": 28933,
     "n_rows_targeted": 1417,
     "n_rows_affected": 1417,
     "n_rut_matched": 196,
@@ -111,21 +114,21 @@
         11
       ],
       "fuente_campo_distribution": {
-        "DA_VIASDEADMISION": 1131,
-        "NOMBRE_CARRERA_FUENTE": 89,
-        "TRACE_MOTOR_FOR_ING_ACT": 34,
-        "DA_SITUACION": 27
+        "DA_VIASDEADMISION": 2934,
+        "NOMBRE_CARRERA_FUENTE": 383,
+        "DA_SITUACION": 82,
+        "TRACE_MOTOR_FOR_ING_ACT": 34
       },
       "metodo_distribution": {
-        "CATALOGO_EXACTO_VIAS_ADMISION": 1131,
-        "DA_NOMBRE_CONTINUIDAD": 89,
-        "DA_TRACE_ARTICULACION_11": 34,
-        "DA_SITUACION_CAMBIO_INTERNO": 27
+        "CATALOGO_EXACTO_VIAS_ADMISION": 2934,
+        "DA_NOMBRE_CONTINUIDAD": 383,
+        "DA_SITUACION_CAMBIO_INTERNO": 82,
+        "DA_TRACE_ARTICULACION_11": 34
       }
     },
-    "rows_total_stage": 8977,
-    "rows_included_final": 1281,
-    "resolved_ok": 1281,
+    "rows_total_stage": 28933,
+    "rows_included_final": 3433,
+    "resolved_ok": 3433,
     "unresolved": {
       "count": 0,
       "pct_rows_included": 0.0,
@@ -133,25 +136,26 @@
       "continuidad_rule_fail_count": 0
     },
     "distribution": {
-      "1": 1131,
-      "2": 89,
+      "1": 2926,
+      "2": 383,
+      "3": 84,
       "11": 32,
-      "3": 29
+      "6": 8
     },
     "invalid_examples": []
   },
   "filtro_base_datos": {
     "hoja": "base_datos",
-    "ruts_en_hoja": 1282,
-    "ruts_bd_sin_match_fuente": 1,
+    "ruts_en_hoja": 4012,
+    "ruts_bd_sin_match_fuente": 575,
     "filas_antes": 41106,
-    "filas_despues": 9182,
-    "filas_descartadas": 31924
+    "filas_despues": 29823,
+    "filas_descartadas": 11283
   },
   "depuracion_rut_multi_codcli": {
-    "total_rut": 1281,
-    "rut_multi_codcli": 29,
-    "codcli_excluidos": 29,
-    "filas_excluidas": 205
+    "total_rut": 3437,
+    "rut_multi_codcli": 102,
+    "codcli_excluidos": 102,
+    "filas_excluidas": 890
   }
 }

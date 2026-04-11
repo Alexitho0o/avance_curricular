@@ -390,11 +390,11 @@ Referencia histórica de implementación en modo `--proceso matricula`: [codigo.
 | `MODALIDAD` | `MODALIDAD` | `JORNADA` | mapeo: diurna/vespertina=`PRESENCIAL`, semi=`SEMIPRESENCIAL`, distancia/online=`DISTANCIA` |
 | `JOR` | `JOR` | `JORNADA` | mapeo: diurna=`1`, vespertina=`2`, semi=`3`, distancia=`4` |
 | `VERSION` | `Version` | no provista | `NA` por defecto |
-| `FOR_ING_ACT` | `FOR_ING_ACT` | derivada por `scripts/motor_for_ing_act.py` desde DatosAlumnos + Hoja1 | árbol gobernable: 11 (articulación TNS→Prof) → 2 (continuidad) → 4 (externo, bloqueado) → 3 (interno por SITUACION) → 1 (directo); códigos 5-10 bloqueados; config en `control/config_for_ing_act.json` |
+| `FOR_ING_ACT` | `FOR_ING_ACT` | resuelta dentro de `codigo_gobernanza_v2.py` (`_resolve_for_ing_act_row` + overrides DA + traza final) | conserva el catálogo manual `1..11` desde `gobernanza_for_ing_act.tsv`; QA oficial valida catálogo `1..11`, trazabilidad y continuidad/origen; `scripts/motor_for_ing_act.py` queda como motor standalone de contraste/gobernanza |
 | `ANIO_ING_ACT` | `ANIO_ING_ACT` | `ANOINGRESO` o `ANIO_INGRESO_CARRERA_ACTUAL` | año normalizado; fallback inferido desde `CODCLI` |
 | `SEM_ING_ACT` | `SEM_ING_ACT` | `PERIODOINGRESO` o `SEM_INGRESO_CARRERA_ACTUAL` | copia directa |
-| `ANIO_ING_ORI` | `ANIO_ING_ORI` | derivada de `ANIO_ING_ACT` | se replica `ANIO_ING_ACT` |
-| `SEM_ING_ORI` | `SEM_ING_ORI` | derivada de `SEM_ING_ACT` | se replica `SEM_ING_ACT` |
+| `ANIO_ING_ORI` | `ANIO_ING_ORI` | derivada de `ANIO_ING_ACT` + `FOR_ING_ACT` + trazas previas | `FOR=1` replica actual; continuidad/cambio usa origen trazado o `1900`; otros códigos preservan el valor derivado con traza |
+| `SEM_ING_ORI` | `SEM_ING_ORI` | derivada de `SEM_ING_ACT` + `FOR_ING_ACT` + trazas previas | `FOR=1` replica actual; continuidad/cambio usa semestre de origen trazado o `0` si `ANIO_ING_ORI=1900`; otros códigos preservan el valor derivado con traza |
 | `ASI_INS_ANT` | `ASI_INS_ANT` | `ASI_INS_ANT` (si existe) | fallback operativo `0`; en proceso `avance` se deriva de `UNIDADES_CURSADAS`; rango validado `0..99` |
 | `ASI_APR_ANT` | `ASI_APR_ANT` | `ASI_APR_ANT` (si existe) | fallback operativo `0`; en proceso `avance` se deriva de `UNIDADES_APROBADAS`; rango validado `0..99` y `<= ASI_INS_ANT` |
 | `PROM_PRI_SEM` | `PROM_PRI_SEM` | `PROM_PRI_SEM` (si existe) | fallback operativo `0`; rango validado `0` o `100..700` |
@@ -429,32 +429,28 @@ Evidencia clave extraída del manual:
 - Página 30: definiciones y rangos de `ASI_INS_ANT`, `ASI_APR_ANT`, `PROM_PRI_SEM`, `PROM_SEG_SEM`, `ASI_INS_HIS`.
 - Página 31: definiciones y rangos de `ASI_APR_HIS`, `NIV_ACA`, `SIT_FON_SOL`, `SUS_PRE`, y catálogo de `VIG` (`0/1/2`).
 
-## 17) Motor de derivación FOR_ING_ACT
+## 17) Gobernanza y resolución FOR_ING_ACT
 
-A partir de abril 2026, `FOR_ING_ACT` no se toma de la fuente Excel sino que se **deriva por evidencia** usando `scripts/motor_for_ing_act.py`.
+En el runtime oficial MU 2026, `FOR_ING_ACT` se resuelve dentro de `codigo_gobernanza_v2.py` y se valida con `qa_checks.py`. El script `scripts/motor_for_ing_act.py` se preserva como artefacto standalone de gobernanza/contraste: sirve para auditar un subconjunto de reglas, pero no es hoy la autoridad directa del export oficial.
 
 ### Arquitectura
 
 | Componente | Ruta | Función |
 |---|---|---|
-| Motor | `scripts/motor_for_ing_act.py` | Carga datos, calcula flags _DA, aplica árbol, genera artefactos |
-| Config | `control/config_for_ing_act.json` | Códigos soportados/bloqueados, reglas, umbrales, validaciones |
-| Reglas | `control/for_ing_act_rules.tsv` | Catálogo auditable de 5 reglas con prioridad y estado |
-| Tests | `scripts/test_for_ing_act.py` | 19 tests: dominio, integridad, prioridad, golden cases |
-| Golden cases | `control/for_ing_act_golden_cases.json` | 12 casos de prueba validados |
-| Trace | `control/for_ing_act_trace_long.tsv` | Trazabilidad completa con 7 flags _DA por registro |
-| Reporte | `control/for_ing_act_governance_report.md` | Dictamen, distribución, hallazgos, checklist |
-| Audit XLSX | `resultados/AUDIT_FOR_ING_ACT.xlsx` | Excel con pestañas AUDITORIA, RESUMEN, HALLAZGOS |
+| Runtime oficial | `codigo_gobernanza_v2.py` | Resuelve `FOR_ING_ACT`, aplica overrides DA, preserva trazabilidad y exporta `resultados/reporte_for_ing_act.json` |
+| Validación oficial | `qa_checks.py` | Exige catálogo `1..11`, distribución consistente stage/CSV, continuidad/origen válido y cero imputados/revisión en filas finales |
+| Catálogo manual | `gobernanza_for_ing_act.tsv` | Dominio documental `1..11` del manual MU |
+| Motor standalone de contraste | `scripts/motor_for_ing_act.py` | Auditoría/gobernanza focalizada sobre subconjunto `1/2/3/4/11`; útil para contraste, no para mandar el export oficial |
+| Config standalone | `control/config_for_ing_act.json` | Configuración del motor standalone; no reemplaza la autoridad del runtime oficial |
+| Reporte de corrida oficial | `resultados/reporte_for_ing_act.json` | Distribución y trazabilidad realmente observadas en `ARCHIVO_LISTO_SUBIDA` y CSV final |
 
-### Árbol de decisión (orden de evaluación)
+### Comportamiento vigente observado
 
-1. **Código 11 — Articulación**: TNS previo encontrado (Hoja1 o DatosAlumnos) + programa actual es profesional
-2. **Código 2 — Continuidad**: programa con "CONTINUIDAD" en nombre, sin TNS previo
-3. **Código 4 — Cambio Externo**: BLOQUEADO (no existe indicador explícito en DatosAlumnos)
-4. **Código 3 — Cambio Interno**: SITUACION ∈ {24 - CAMBIO DE CARRERA, 49 - CAMBIO DE JORNADA, 27 - CAMBIO PLAN OTRA JORNADA}
-5. **Código 1 — Ingreso Directo**: default
-
-**Códigos 5-10**: bloqueados por política institucional, nunca emitidos.
+1. `codigo_gobernanza_v2.py` parte desde `VIASDEADMISION`/equivalentes y respeta el catálogo manual `1..11` cuando encuentra un valor gobernado o un mapeo textual equivalente.
+2. Luego aplica overrides DA sobre filas incluidas para continuidad (`2`), cambio interno (`3`) y articulación trazada (`11`).
+3. La validación oficial no exige que todo quede en `1`; exige catálogo `1..11`, trazabilidad por fila y coherencia de continuidad/origen.
+4. En los outputs versionados del repo se observan hoy códigos `1`, `2`, `3`, `6` y `11`.
+5. Los artefactos standalone de `scripts/motor_for_ing_act.py` se mantienen como contraste útil, especialmente para reglas `1/2/3/4/11`, pero no deben imponerse por sobre el runtime oficial cuando divergen.
 
 ### Flags derivados (_DA)
 
@@ -468,14 +464,14 @@ A partir de abril 2026, `FOR_ING_ACT` no se toma de la fuente Excel sino que se 
 | `TIENE_TNS_PREV_DA` | Mismo RUT con programa TNS en año anterior | DatosAlumnos + Hoja1 |
 | `FOR_ING_ACT_RULE_DA` | Nombre de la regla que disparó | árbol |
 
-### Validaciones
+### Validaciones oficiales relevantes
 
 | ID | Severidad | Descripción |
 |---|---|---|
-| V0 | BLOQUEANTE | FOR_ING_ACT fuera de {1,2,3,4,11} |
-| V1 | WARNING | Coherencia ANIO_ING_ORI==ANIO_ING_ACT para FOR=1 (diferida) |
-| V2 | ERROR | Programa CONTINUIDAD con FOR=1 (viola manual) |
-| V3 | WARNING | Pasaporte → FOR∈{4,6} (diferida, TIPO_DOC no disponible) |
+| V0 | BLOQUEANTE | `FOR_ING_ACT` fuera del catálogo `1..11` en el CSV final |
+| V1 | BLOQUEANTE | Para `FOR=1`, `ANIO_ING_ORI` y `SEM_ING_ORI` deben replicar el ingreso actual |
+| V2 | BLOQUEANTE | Para `FOR∈{2,3,4,5,11}`, la continuidad no puede quedar con origen igual al actual |
+| V3 | BLOQUEANTE | Filas finales con `FOR_ING_ACT_IMPUTADO=SI` o `FOR_ING_ACT_REQUIERE_REVISION=SI` |
 
 ## 18) Motor de derivación Campos ING (ANIO_ING_ACT, SEM_ING_ACT, ANIO_ING_ORI, SEM_ING_ORI)
 

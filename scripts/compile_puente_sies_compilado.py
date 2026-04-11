@@ -64,6 +64,46 @@ def _extract_cod_carrera_from_sies(code: str) -> int | None:
     return int(m.group("cod"))
 
 
+def _extract_shared_cod_carrera_from_sies(codes: list[object]) -> int | None:
+    cod_cars: set[int] = set()
+    seen_code = False
+    for code in codes:
+        for token in str("" if code is None else code).split("|"):
+            token = _normalize_text(token)
+            if token in INVALID_TOKEN_VALUES:
+                continue
+            cod_car = _extract_cod_carrera_from_sies(token)
+            if cod_car is None:
+                return None
+            seen_code = True
+            cod_cars.add(cod_car)
+    if seen_code and len(cod_cars) == 1:
+        return next(iter(cod_cars))
+    return None
+
+
+def _parse_anio_ingreso_condition(value: object) -> tuple[int | None, int | None]:
+    text = _normalize_text(value)
+    if not text:
+        return (None, None)
+
+    compact = text.replace(" ", "")
+    m = re.search(r"(?:ANIO_ING_ACT|ANOINGRESO)?<=?(\d{4})", compact)
+    if m and "<" in compact[: m.end()]:
+        return (None, int(m.group(1)))
+    m = re.search(r"(?:ANIO_ING_ACT|ANOINGRESO)?>=?(\d{4})", compact)
+    if m and ">" in compact[: m.end()]:
+        return (int(m.group(1)), None)
+
+    m = re.search(r"MENOR O IGUAL A\s*(\d{4})", text)
+    if m:
+        return (None, int(m.group(1)))
+    m = re.search(r"MAYOR O IGUAL A\s*(\d{4})", text)
+    if m:
+        return (int(m.group(1)), None)
+    return (None, None)
+
+
 def _load_duracion_rows(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path, sep="\t", dtype=str, keep_default_na=False)
     required = {"CODIGO_UNICO", "NOMBRE_CARRERA", "JORNADA", "CODCARPR_CANONICO", "CODCARPR_ALIAS_LIST"}
@@ -83,6 +123,14 @@ def _load_duracion_rows(path: Path) -> pd.DataFrame:
         if not codigo_unico or not nombre or not jornada or not codcarprs:
             continue
 
+        condicion = ""
+        for cond_col in ("CONDICION_ANIO_INGRESO", "CONDICION_SIES", "CONDICION"):
+            if hasattr(row, cond_col):
+                condicion = _normalize_text(getattr(row, cond_col, ""))
+                if condicion:
+                    break
+        anio_min, anio_max = _parse_anio_ingreso_condition(condicion)
+
         for codcarpr in codcarprs:
             pref = _extract_alpha_prefix(codcarpr) or "X"
             rows.append(
@@ -92,12 +140,27 @@ def _load_duracion_rows(path: Path) -> pd.DataFrame:
                     "CODCARPR": codcarpr,
                     "NOMBRE_L": nombre,
                     "CODIGO_CARRERA_SIES": codigo_unico,
+                    "CONDICION_ANIO_INGRESO": condicion,
+                    "ANIO_INGRESO_MIN": anio_min if anio_min is not None else "",
+                    "ANIO_INGRESO_MAX": anio_max if anio_max is not None else "",
                     "FUENTE_FILA": "DURACION_ESTUDIOS",
                 }
             )
 
     if not rows:
-        return pd.DataFrame(columns=["GRUPO_TRAZA", "JORNADA", "CODCARPR", "NOMBRE_L", "CODIGO_CARRERA_SIES", "FUENTE_FILA"])
+        return pd.DataFrame(
+            columns=[
+                "GRUPO_TRAZA",
+                "JORNADA",
+                "CODCARPR",
+                "NOMBRE_L",
+                "CODIGO_CARRERA_SIES",
+                "CONDICION_ANIO_INGRESO",
+                "ANIO_INGRESO_MIN",
+                "ANIO_INGRESO_MAX",
+                "FUENTE_FILA",
+            ]
+        )
 
     out = pd.DataFrame(rows)
     out["SOURCE_KEY_3"] = out.apply(lambda r: _build_key_3(r["JORNADA"], r["CODCARPR"], r["NOMBRE_L"]), axis=1)
@@ -295,8 +358,47 @@ def _compile_catalog(
 
         for idx in range(MAX_SIES_CODES_PER_KEY):
             row[f"CODIGO_CARRERA_SIES_{idx + 1}"] = codes[idx] if idx < len(codes) else ""
+            if idx < len(codes):
+                code_sub = sub[sub["CODIGO_CARRERA_SIES"].astype(str).str.strip().eq(codes[idx])]
+                condiciones = sorted(
+                    v
+                    for v in code_sub.get("CONDICION_ANIO_INGRESO", pd.Series(dtype=str))
+                    .dropna()
+                    .astype(str)
+                    .str.strip()
+                    .unique()
+                    .tolist()
+                    if v
+                )
+                mins = sorted(
+                    v
+                    for v in code_sub.get("ANIO_INGRESO_MIN", pd.Series(dtype=str))
+                    .dropna()
+                    .astype(str)
+                    .str.strip()
+                    .unique()
+                    .tolist()
+                    if v
+                )
+                maxs = sorted(
+                    v
+                    for v in code_sub.get("ANIO_INGRESO_MAX", pd.Series(dtype=str))
+                    .dropna()
+                    .astype(str)
+                    .str.strip()
+                    .unique()
+                    .tolist()
+                    if v
+                )
+                row[f"CODIGO_CARRERA_SIES_{idx + 1}_CONDICION_ANIO_INGRESO"] = " | ".join(condiciones)
+                row[f"CODIGO_CARRERA_SIES_{idx + 1}_ANIO_INGRESO_MIN"] = mins[0] if len(mins) == 1 else ""
+                row[f"CODIGO_CARRERA_SIES_{idx + 1}_ANIO_INGRESO_MAX"] = maxs[0] if len(maxs) == 1 else ""
+            else:
+                row[f"CODIGO_CARRERA_SIES_{idx + 1}_CONDICION_ANIO_INGRESO"] = ""
+                row[f"CODIGO_CARRERA_SIES_{idx + 1}_ANIO_INGRESO_MIN"] = ""
+                row[f"CODIGO_CARRERA_SIES_{idx + 1}_ANIO_INGRESO_MAX"] = ""
 
-        cod_car = _extract_cod_carrera_from_sies(unique_code) if unique_code else None
+        cod_car = _extract_shared_cod_carrera_from_sies(codes)
         row["CODIGO_CARRERA"] = cod_car if cod_car is not None else ""
 
         rows.append(row)

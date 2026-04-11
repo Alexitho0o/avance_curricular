@@ -1,7 +1,9 @@
 # Resumen Ejecutivo MU 2026
 
+Documento de contraste congelado al `2026-04-01`. El dictamen operativo vigente se obtiene desde `control/gate/gate_final_mu_2026.md`, no desde este resumen histórico.
+
 - Fecha de cierre ejecutivo: 2026-04-01
-- Decision vigente del proyecto: `CONDICIONAL`
+- Decision congelada de referencia: `CONDICIONAL`
 - Listo para auditoria: `SI`
 - Listo para carga: `NO`
 

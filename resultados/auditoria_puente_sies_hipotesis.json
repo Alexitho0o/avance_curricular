@@ -1,0 +1,36 @@
+{
+  "PUENTE_SIES_llave_insuficiente": "CONFIRMADA",
+  "runtime_resuelve_mas_que_puente_exportado": "CONFIRMADA",
+  "dominante_no_es_ausencia_codigo_sies": "CONFIRMADA",
+  "atributo_critico_version": "CONFIRMADA",
+  "cod_car_jor_version_permite_seleccion_unica": "CONFIRMADA",
+  "casos_deben_seguir_gobernanza_manual": "CONFIRMADA",
+  "error_principal_logica_no_oferta": "CONFIRMADA",
+  "error_exportacion_reconciliacion_trazabilidad": "CONFIRMADA",
+  "evidencia": {
+    "puente_status": {
+      "UNICO": 91,
+      "AMBIGUO": 70
+    },
+    "runtime_final_status": {
+      "MATCH_SIES": 28010,
+      "AMBIGUO_SIES": 917,
+      "EXCLUIDO_DIPLOMADO": 6
+    },
+    "clasificacion": {
+      "FALTA_DE_EVIDENCIA_EN_FUENTE": 46,
+      "DESALINEACION_CATALOGO_VS_RUNTIME": 17,
+      "AMBIGUEDAD_TECNICA_RESOLUBLE": 5,
+      "LLAVE_INSUFICIENTE": 2
+    },
+    "selector": {
+      "initial_ambiguous_rows": 7903,
+      "initial_ambiguous_cjv_resolvable_rows": 7900,
+      "final_pending_rows": 923,
+      "final_pending_cjv_resolvable_rows": 914,
+      "final_pending_included_rows": 77,
+      "final_pending_included_cjv_resolvable_rows": 75,
+      "unico_changed_if_selector_only_ambiguous": 0
+    }
+  }
+}

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+from datetime import date
 import json
 import os
 from pathlib import Path
@@ -40,6 +41,7 @@ def check_puente_sies_compilado() -> dict[str, object]:
         "BRIDGE_KEY_3",
         "N_CODES_SIES",
         "CODIGOS_SIES_POTENCIALES",
+        "CODIGO_CARRERA",
         "RESOLUCION_STATUS",
         "FUENTE_COMPILADO",
     ]
@@ -52,11 +54,71 @@ def check_puente_sies_compilado() -> dict[str, object]:
     n_codes = pd.to_numeric(df["N_CODES_SIES"], errors="coerce")
     assert n_codes.notna().all(), "N_CODES_SIES contiene valores no numéricos"
 
+    sies_code_re = re.compile(r"^I\d+S\d+C(?P<cod_car>\d+)J\d+V\d+$", re.IGNORECASE)
+    blank_tokens = {"", "NAN", "NONE", "NULL", "<NA>"}
+
+    def _shared_cod_car(row: pd.Series) -> object:
+        values = [row.get("CODIGOS_SIES_POTENCIALES", "")]
+        values.extend(row.get(f"CODIGO_CARRERA_SIES_{idx}", "") for idx in range(1, 6))
+        cod_cars: set[int] = set()
+        seen = False
+        for value in values:
+            for token in str("" if value is None else value).split("|"):
+                token = token.strip().upper()
+                if token in blank_tokens:
+                    continue
+                match = sies_code_re.match(token)
+                if not match:
+                    return pd.NA
+                seen = True
+                cod_cars.add(int(match.group("cod_car")))
+        if seen and len(cod_cars) == 1:
+            return next(iter(cod_cars))
+        return pd.NA
+
+    cod_car_derived = pd.to_numeric(df.apply(_shared_cod_car, axis=1), errors="coerce")
+    cod_car_actual = pd.to_numeric(df["CODIGO_CARRERA"], errors="coerce")
+    cod_car_bad = cod_car_derived.notna() & (cod_car_actual.isna() | cod_car_actual.ne(cod_car_derived))
+    assert not cod_car_bad.any(), (
+        "PUENTE_SIES_COMPILADO.tsv tiene CODIGO_CARRERA vacío/inconsistente "
+        f"en {int(cod_car_bad.sum())} filas con C compartido; ejemplos: "
+        f"{df.loc[cod_car_bad, ['SOURCE_KEY_3', 'CODIGOS_SIES_POTENCIALES', 'CODIGO_CARRERA']].head(5).to_dict('records')}"
+    )
+
+    condition_cols = [
+        (
+            f"CODIGO_CARRERA_SIES_{idx}_CONDICION_ANIO_INGRESO",
+            f"CODIGO_CARRERA_SIES_{idx}_ANIO_INGRESO_MIN",
+            f"CODIGO_CARRERA_SIES_{idx}_ANIO_INGRESO_MAX",
+        )
+        for idx in range(1, 6)
+    ]
+    condition_rows = 0
+    for cond_col, min_col, max_col in condition_cols:
+        if cond_col not in df.columns:
+            continue
+        cond_nonempty = df[cond_col].astype(str).str.strip().ne("")
+        condition_rows += int(cond_nonempty.sum())
+        min_num = pd.to_numeric(df[min_col], errors="coerce") if min_col in df.columns else pd.Series(pd.NA, index=df.index)
+        max_num = pd.to_numeric(df[max_col], errors="coerce") if max_col in df.columns else pd.Series(pd.NA, index=df.index)
+        bounds_missing = cond_nonempty & min_num.isna() & max_num.isna()
+        assert not bounds_missing.any(), (
+            f"{cond_col} tiene condición sin cota min/max derivable; ejemplos: "
+            f"{df.loc[bounds_missing, ['SOURCE_KEY_3', cond_col]].head(5).to_dict('records')}"
+        )
+        bounds_inverted = min_num.notna() & max_num.notna() & min_num.gt(max_num)
+        assert not bounds_inverted.any(), (
+            f"{cond_col} tiene rango ANIO_INGRESO invertido; ejemplos: "
+            f"{df.loc[bounds_inverted, ['SOURCE_KEY_3', cond_col, min_col, max_col]].head(5).to_dict('records')}"
+        )
+
     return {
         "puente_sies_compilado_path": str(PUENTE_SIES_COMPILADO_PATH),
         "rows_compilado": int(len(df)),
         "source_keys_unicas": int(df["SOURCE_KEY_3"].nunique()),
         "source_keys_ambiguas": int(df["RESOLUCION_STATUS"].astype(str).str.upper().eq("AMBIGUO").sum()),
+        "codigo_carrera_derivable": int(cod_car_derived.notna().sum()),
+        "condiciones_anio_ingreso": condition_rows,
     }
 
 
@@ -199,6 +261,24 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
     asi_apr_his = pd.to_numeric(mu_csv['ASI_APR_HIS'], errors='coerce')
     prom_pri = pd.to_numeric(mu_csv['PROM_PRI_SEM'], errors='coerce')
     prom_seg = pd.to_numeric(mu_csv['PROM_SEG_SEM'], errors='coerce')
+    niv_aca = pd.to_numeric(mu_csv['NIV_ACA'], errors='coerce')
+    vig = pd.to_numeric(mu_csv['VIG'], errors='coerce')
+
+    c1_cuadro5_mask = (
+        mu_csv['TIPO_DOC'].astype(str).str.strip().eq('R')
+        & for_ing_num.eq(1)
+        & anio_act.eq(2026)
+        & sem_act.isin([1, 2])
+        & anio_ori.eq(2026)
+        & sem_ori.isin([1, 2])
+        & niv_aca.le(2)
+        & vig.eq(1)
+    )
+    c1_yz_bad = c1_cuadro5_mask & ~(asi_ins_his.eq(0) & asi_apr_his.eq(0))
+    assert not c1_yz_bad.fillna(False).any(), (
+        'Cuadro 5 C1 incumplido (FOR_ING_ACT=1, ingreso 2026, origen 2026, NIV_ACA<=2, VIG=1) '
+        f'con Y/Z distinto de 0 en filas: {(c1_yz_bad[c1_yz_bad].index[:10] + 1).tolist()}'
+    )
 
     bad_apr_ant = asi_apr_ant > asi_ins_ant
     assert not bad_apr_ant.fillna(False).any(), f'ASI_APR_ANT > ASI_INS_ANT en filas: {(bad_apr_ant[bad_apr_ant].index[:5] + 1).tolist()}'
@@ -344,6 +424,19 @@ def check_mu_pregrado_csv(out: Path) -> dict[str, object]:
         stage = pd.read_excel(xlsx_path, sheet_name='ARCHIVO_LISTO_SUBIDA', dtype=str).fillna('')
         missing_stage = [col for col in stage_cols if col not in stage.columns]
         assert not missing_stage, f'ARCHIVO_LISTO_SUBIDA sin trazabilidad esperada: {missing_stage}'
+        if {'CODCARPR_NORM', 'PLAN_DE_ESTUDIO'}.issubset(stage.columns):
+            codcarpr_looks_plan = stage['CODCARPR_NORM'].astype(str).str.upper().str.fullmatch(r'[A-Z]{2,}\d{4,5}')
+            plan_looks_codcarpr = stage['PLAN_DE_ESTUDIO'].astype(str).str.upper().str.fullmatch(r'[A-Z]{2,10}')
+            inverted = codcarpr_looks_plan & plan_looks_codcarpr
+            assert not inverted.any(), (
+                'CODCARPR_NORM y PLAN_DE_ESTUDIO parecen invertidos en ARCHIVO_LISTO_SUBIDA; ejemplos: '
+                f"{stage.loc[inverted, ['CODCLI', 'CODCARPR_NORM', 'PLAN_DE_ESTUDIO']].head(5).to_dict('records')}"
+            )
+        metrics['plan_codcarpr_swaps'] = (
+            int(stage['CODCARPR_PLAN_SWAP_FLAG'].astype(str).str.upper().eq('SI').sum())
+            if 'CODCARPR_PLAN_SWAP_FLAG' in stage.columns
+            else 0
+        )
 
         included = stage[stage['INCLUIR_EN_MATRICULA_32'] == 'SI'].copy()
         assert len(included) == len(mu_csv), 'El staging incluido no coincide con el CSV final'
@@ -514,6 +607,25 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
     expected_dv = n_doc_digits.map(_rut_expected_dv)
     dv_match_mask = dv_upper.eq(expected_dv) & expected_dv.ne('')
     dv_format_mask = dv_upper.str.fullmatch(r'[0-9K]')
+    tipo_doc_upper = included['TIPO_DOC'].astype(str).str.strip().str.upper()
+    tipo_doc_catalog_mask = tipo_doc_upper.isin({'R', 'P'})
+    for_ing_num = pd.to_numeric(included['FOR_ING_ACT'], errors='coerce')
+    anio_act = pd.to_numeric(included['ANIO_ING_ACT'], errors='coerce')
+    anio_ori = pd.to_numeric(included['ANIO_ING_ORI'], errors='coerce')
+    vig_num = pd.to_numeric(included['VIG'], errors='coerce')
+    rut_for6_new_vig1_mask = (
+        tipo_doc_upper.eq('R')
+        & for_ing_num.eq(6)
+        & anio_act.eq(2026)
+        & anio_ori.eq(2026)
+        & vig_num.eq(1)
+    )
+    rut_for6_vig0_mask = tipo_doc_upper.eq('R') & for_ing_num.eq(6) & vig_num.eq(0)
+    rut_for6_historic_mask = (
+        tipo_doc_upper.eq('R')
+        & for_ing_num.eq(6)
+        & (anio_act.lt(2026) | anio_ori.lt(2026))
+    )
     fech_nac_valid_mask = _valid_ddmmyyyy_mask(included['FECH_NAC'])
     segundo_apellido_nonempty = included['SEGUNDO_APELLIDO'].astype(str).str.strip().ne('')
     segundo_apellido_valid_mask = (
@@ -551,9 +663,12 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
     gate = {
         'A_TIPO_DOC': {
             'fuente_regla_definida': True,
-            'transformacion_implementada': bool(included['TIPO_DOC'].eq('R').all()),
+            'transformacion_implementada': bool(tipo_doc_catalog_mask.all() and not rut_for6_new_vig1_mask.any()),
             'validacion_qa_existe': True,
-            'sin_default_silencioso': bool(included['TIPO_DOC_STATUS'].eq('REGLA_FIJA_R').all()),
+            'sin_default_silencioso': bool(
+                included['TIPO_DOC_STATUS'].replace('', pd.NA).notna().all()
+                and not rut_for6_new_vig1_mask.any()
+            ),
             'auditable_en_filas_incluidas': bool(included['TIPO_DOC_STATUS'].replace('', pd.NA).notna().all()),
         },
         'B_N_DOC': {
@@ -617,6 +732,9 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
     summary = {
         'rows_included_final': included_count,
         'tipo_doc_distribution': included['TIPO_DOC'].value_counts(dropna=False).to_dict(),
+        'tipo_doc_r_for6_new_vig1_rows': int(rut_for6_new_vig1_mask.sum()),
+        'tipo_doc_r_for6_vig0_rows': int(rut_for6_vig0_mask.sum()),
+        'tipo_doc_r_for6_historic_rows': int(rut_for6_historic_mask.sum()),
         'segundo_apellido_vacio_rows': int(segundo_vacio_mask.sum()),
         'segundo_apellido_vacio_pct': _pct(int(segundo_vacio_mask.sum()), included_count),
         'fech_nac_1900_rows': int(fech_nac_1900_mask.sum()),
@@ -646,6 +764,9 @@ def generate_fase1_identity_reports(out: Path, control_dir: Path) -> dict[str, o
         f'- Filas `PAIS_EST_SEC` con default 38 explícito: {summary["pais_default_38_rows"]} ({summary["pais_default_38_pct"]}%)',
         f'- Filas `PAIS_EST_SEC` inferidas por localidad: {summary["pais_inferido_rows"]} ({summary["pais_inferido_pct"]}%)',
         f'- Filas con DV inválido: {summary["dv_invalid_rows"]} ({summary["dv_invalid_pct"]}%)',
+        f'- Filas `TIPO_DOC=R` + `FOR_ING_ACT=6` + `Q/S=2026` + `VIG=1`: {summary["tipo_doc_r_for6_new_vig1_rows"]}',
+        f'- Filas `TIPO_DOC=R` + `FOR_ING_ACT=6` + `VIG=0`: {summary["tipo_doc_r_for6_vig0_rows"]}',
+        f'- Filas históricas `TIPO_DOC=R` + `FOR_ING_ACT=6` (`Q/S<2026`): {summary["tipo_doc_r_for6_historic_rows"]}',
         '',
         '## Gate por columna',
         '',
@@ -885,6 +1006,8 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
     assert len(included) == len(mu32), 'FASE 3: included no coincide con MATRÍCULA_UNIFICADA_32'
 
     required_cols = [
+        'FOR_ING_ACT',
+        'FOR_ING_ACT_CONTINUIDAD_STATUS',
         'ANIO_ING_ACT_FUENTE_FINAL',
         'ANIO_ING_ACT_METODO_FINAL',
         'ANIO_ING_ACT_AUDIT_STATUS',
@@ -912,6 +1035,7 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
     assert not missing_cols, f'FASE 3: faltan columnas de trazabilidad: {missing_cols}'
 
     included_count = int(len(included))
+    for_ing_num = pd.to_numeric(included['FOR_ING_ACT'], errors='coerce')
     anio_act_num = pd.to_numeric(included['ANIO_ING_ACT'], errors='coerce')
     sem_act_num = pd.to_numeric(included['SEM_ING_ACT'], errors='coerce')
     anio_ori_num = pd.to_numeric(included['ANIO_ING_ORI'], errors='coerce')
@@ -928,6 +1052,11 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
     sem_ori_valid = sem_ori_num.isin([0, 1, 2])
     ori_anio_equal_act = anio_ori_num.eq(anio_act_num)
     ori_sem_equal_act = sem_ori_num.eq(sem_act_num)
+    for_direct_mask = for_ing_num.eq(1)
+    for_cont_mask = for_ing_num.isin(sorted(FOR_ING_CONTINUIDAD_CODES))
+    continuidad_status_ok = included['FOR_ING_ACT_CONTINUIDAD_STATUS'].replace('', 'OK').eq('OK')
+    ori_anio_policy_ok = ((~for_direct_mask) | ori_anio_equal_act) & ((~for_cont_mask) | continuidad_status_ok)
+    ori_sem_policy_ok = ((~for_direct_mask) | ori_sem_equal_act) & ((~for_cont_mask) | continuidad_status_ok)
     niv_valid = niv_num.ge(1)
     niv_le_dur = dur_ref.isna() | niv_num.le(dur_ref)
     niv_cohorte_2026_ok = (~cohorte_2026_mask) | niv_num.le(2)
@@ -967,7 +1096,7 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         },
         'S_ANIO_ING_ORI': {
             'fuente_regla_definida': bool(included['ANIO_ING_ORI_FUENTE_FINAL'].replace('', pd.NA).notna().all()),
-            'transformacion_implementada': bool(anio_ori_valid.all() and ori_anio_equal_act.all()),
+            'transformacion_implementada': bool(anio_ori_valid.all() and ori_anio_policy_ok.all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(
                 included['ANIO_ING_ORI_AUDIT_STATUS'].replace('', pd.NA).notna().all()
@@ -979,7 +1108,7 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         },
         'T_SEM_ING_ORI': {
             'fuente_regla_definida': bool(included['SEM_ING_ORI_FUENTE_FINAL'].replace('', pd.NA).notna().all()),
-            'transformacion_implementada': bool(sem_ori_valid.all() and ori_sem_equal_act.all()),
+            'transformacion_implementada': bool(sem_ori_valid.all() and ori_sem_policy_ok.all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(
                 included['SEM_ING_ORI_AUDIT_STATUS'].replace('', pd.NA).notna().all()
@@ -1020,6 +1149,8 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
 
     summary = {
         'rows_included_final': included_count,
+        'for_ing_act_distribution': included['FOR_ING_ACT'].astype(str).value_counts(dropna=False).to_dict(),
+        'for_ing_act_continuidad_rows': int(for_cont_mask.sum()),
         'anio_ing_act_fuente_distribution': included['ANIO_ING_ACT_FUENTE_FINAL'].value_counts(dropna=False).to_dict(),
         'sem_ing_act_fuente_distribution': included['SEM_ING_ACT_FUENTE_FINAL'].value_counts(dropna=False).to_dict(),
         'anio_ing_ori_fuente_distribution': included['ANIO_ING_ORI_FUENTE_FINAL'].value_counts(dropna=False).to_dict(),
@@ -1030,6 +1161,7 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         'sem_ing_act_default_1_rows': int(included['SEM_ING_ACT_AUDIT_STATUS'].astype(str).str.startswith('DEFAULT_1').sum()),
         'anio_ing_ori_policy_rows': int(included['ANIO_ING_ORI_AUDIT_STATUS'].eq('IGUAL_ACTUAL_POR_POLITICA_FOR_ING_ACT_1').sum()),
         'sem_ing_ori_policy_rows': int(included['SEM_ING_ORI_AUDIT_STATUS'].eq('IGUAL_ACTUAL_POR_POLITICA_FOR_ING_ACT_1').sum()),
+        'for_ing_act_continuidad_ok_rows': int((for_cont_mask & continuidad_status_ok).sum()),
         'niv_aca_default_1_rows': int(included['NIV_ACA_AUDIT_STATUS'].astype(str).str.startswith('DEFAULT_1').sum()),
         'niv_aca_acotado_duracion_rows': int(included['NIV_ACA_AUDIT_STATUS'].astype(str).str.contains('ACOTADO_DURACION', regex=False).sum()),
         'niv_aca_acotado_cohorte_2026_rows': int(included['NIV_ACA_AUDIT_STATUS'].astype(str).str.contains('COHORTE_2026', regex=False).sum()),
@@ -1074,8 +1206,13 @@ def generate_fase3_cronologia_reports(out: Path, control_dir: Path) -> dict[str,
         '# Reporte FASE 3 - Cronologia MU 2026',
         '',
         f'- Filas incluidas en carga final: {included_count}',
+        f'- Distribucion `FOR_ING_ACT` en filas incluidas: {summary["for_ing_act_distribution"]}',
         f'- Fuentes `ANIO_ING_ACT`: {summary["anio_ing_act_fuente_distribution"]}',
         f'- Fuentes `SEM_ING_ACT`: {summary["sem_ing_act_fuente_distribution"]}',
+        f'- Fuentes `ANIO_ING_ORI`: {summary["anio_ing_ori_fuente_distribution"]}',
+        f'- Fuentes `SEM_ING_ORI`: {summary["sem_ing_ori_fuente_distribution"]}',
+        f'- Filas `FOR_ING_ACT = 1` con origen igual al actual: {summary["anio_ing_ori_policy_rows"]}',
+        f'- Filas continuidad/cambio (`FOR` en {sorted(FOR_ING_CONTINUIDAD_CODES)}) con regla ORI validada: {summary["for_ing_act_continuidad_ok_rows"]}',
         f'- Filas `ANIO_ING_ORI != ANIO_ING_ACT`: {summary["anio_ing_ori_diff_rows"]}',
         f'- Filas `SEM_ING_ORI != SEM_ING_ACT`: {summary["sem_ing_ori_diff_rows"]}',
         f'- Ajustes `NIV_ACA` por duracion: {summary["niv_aca_acotado_duracion_rows"]}',
@@ -1157,6 +1294,7 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
         'ASI_APR_HIS_FUENTE_FINAL',
         'ASI_APR_HIS_METODO_FINAL',
         'ASI_APR_HIS_AUDIT_STATUS',
+        'VIG_AUDIT_STATUS',
     ]
     missing_cols = [col for col in required_cols if col not in included.columns]
     assert not missing_cols, f'FASE 4: faltan columnas de trazabilidad: {missing_cols}'
@@ -1169,17 +1307,47 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
     asi_ins_his = pd.to_numeric(included['ASI_INS_HIS'], errors='coerce')
     asi_apr_his = pd.to_numeric(included['ASI_APR_HIS'], errors='coerce')
     hist_anios = pd.to_numeric(included['UZ_HIST_ANIOS_DISPONIBLES'], errors='coerce')
+    vig = pd.to_numeric(included['VIG'], errors='coerce')
+    anio_act = pd.to_numeric(included['ANIO_ING_ACT'], errors='coerce')
+    sem_act = pd.to_numeric(included['SEM_ING_ACT'], errors='coerce')
+    anio_ori = pd.to_numeric(included['ANIO_ING_ORI'], errors='coerce')
+    sem_ori = pd.to_numeric(included['SEM_ING_ORI'], errors='coerce')
+    niv_aca = pd.to_numeric(included['NIV_ACA'], errors='coerce')
 
     scope_single_year = included['UZ_HIST_SCOPE_STATUS'].eq('ALCANCE_LIMITADO_ANIO_UNICO') | hist_anios.eq(1)
     scope_multiyear = included['UZ_HIST_SCOPE_STATUS'].eq('ALCANCE_MULTIANUAL') | hist_anios.gt(1)
-    # Politica 2026-04-07: el criterio "fuente o regla definida" para Y/Z se satisface
-    # cuando el alcance historico esta EXPLICITAMENTE trazado por fila (single o multi),
-    # con fuente, metodo y audit presentes, y sin default silencioso.
-    # Esto reconoce que la REGLA esta definida: "usar todo el alcance historico disponible
-    # con trazabilidad explicita de scope por fila incluida".
+    # Para Y/Z el manual exige acumulado "desde el inicio de la carrera".
+    # Por eso, la trazabilidad de scope explicita no basta por si sola:
+    # si el alcance historico por fila queda limitado a un unico anio,
+    # la implementacion no puede declararse plenamente alineada al manual.
     scope_explicitly_traced = included['UZ_HIST_SCOPE_STATUS'].notna() & included['UZ_HIST_SCOPE_STATUS'].ne('')
-    prom_pri_zero_explicit = (~prom_pri.eq(0)) | included['PROM_PRI_SEM_AUDIT_STATUS'].eq('SIN_NOTAS_CALIFICABLES_SEM1_ANIO_REF')
-    prom_seg_zero_explicit = (~prom_seg.eq(0)) | included['PROM_SEG_SEM_AUDIT_STATUS'].eq('SIN_NOTAS_CALIFICABLES_SEM2_ANIO_REF')
+    scope_meets_manual_historico = ~scope_single_year
+    c1_cuadro5_mask = (
+        included['TIPO_DOC'].astype(str).str.strip().eq('R')
+        & pd.to_numeric(included['FOR_ING_ACT'], errors='coerce').eq(1)
+        & anio_act.eq(2026)
+        & sem_act.isin([1, 2])
+        & anio_ori.eq(2026)
+        & sem_ori.isin([1, 2])
+        & niv_aca.le(2)
+        & vig.eq(1)
+    )
+    yz_c1_zero_ok = c1_cuadro5_mask & asi_ins_his.eq(0) & asi_apr_his.eq(0)
+    yz_manual_ok = scope_meets_manual_historico | yz_c1_zero_ok
+    # En FASE 4, un promedio en cero es defendible por dos rutas:
+    # 1) no hubo notas calificables en el semestre de referencia; o
+    # 2) la regla bloqueante VIG=0 forzo las 4 columnas a cero con traza explicita.
+    vig_zero_forced_explicit = vig.eq(0) & included['VIG_AUDIT_STATUS'].replace('', pd.NA).notna()
+    prom_pri_zero_explicit = (
+        (~prom_pri.eq(0))
+        | included['PROM_PRI_SEM_AUDIT_STATUS'].eq('SIN_NOTAS_CALIFICABLES_SEM1_ANIO_REF')
+        | vig_zero_forced_explicit
+    )
+    prom_seg_zero_explicit = (
+        (~prom_seg.eq(0))
+        | included['PROM_SEG_SEM_AUDIT_STATUS'].eq('SIN_NOTAS_CALIFICABLES_SEM2_ANIO_REF')
+        | vig_zero_forced_explicit
+    )
 
     def _all_present_local(cols: list[str]) -> bool:
         return bool(included[cols].replace('', pd.NA).notna().all().all())
@@ -1229,7 +1397,7 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
                 and _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL'])
                 and (~included['ASI_INS_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL'])).all()
             ),
-            'transformacion_implementada': bool(asi_ins_his.between(0, 200).all()),
+            'transformacion_implementada': bool(asi_ins_his.between(0, 200).all() and yz_manual_ok.all()),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_INS_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
             'auditable_en_filas_incluidas': _all_present_local(['ASI_INS_HIS_FUENTE_FINAL', 'ASI_INS_HIS_METODO_FINAL', 'ASI_INS_HIS_AUDIT_STATUS'] + common_hist_trace),
@@ -1240,7 +1408,11 @@ def generate_fase4_rendimiento_reports(out: Path, control_dir: Path) -> dict[str
                 and _all_present_local(['ASI_APR_HIS_FUENTE_FINAL', 'ASI_APR_HIS_METODO_FINAL'])
                 and (~included['ASI_APR_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL'])).all()
             ),
-            'transformacion_implementada': bool(asi_apr_his.between(0, 200).all() and asi_apr_his.le(asi_ins_his).all()),
+            'transformacion_implementada': bool(
+                asi_apr_his.between(0, 200).all()
+                and asi_apr_his.le(asi_ins_his).all()
+                and yz_manual_ok.all()
+            ),
             'validacion_qa_existe': True,
             'sin_default_silencioso': bool(~included['ASI_APR_HIS_AUDIT_STATUS'].isin(['SIN_FUENTE_FINAL']).any()),
             'auditable_en_filas_incluidas': _all_present_local(['ASI_APR_HIS_FUENTE_FINAL', 'ASI_APR_HIS_METODO_FINAL', 'ASI_APR_HIS_AUDIT_STATUS'] + common_hist_trace),
@@ -1657,6 +1829,11 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     fase5_data = json.loads(fase5_report_path.read_text(encoding='utf-8'))
     fase5_gate = fase5_data['columnas_fase_5']
 
+    fase1_report_path = control_dir / 'reportes' / 'reporte_identidad_mu_2026.json'
+    assert fase1_report_path.exists(), f'Falta reporte FASE 1: {fase1_report_path}'
+    fase1_data = json.loads(fase1_report_path.read_text(encoding='utf-8'))
+    fase1_gate = fase1_data['columnas_fase_1']
+
     fase4_report_path = control_dir / 'reportes' / 'reporte_rendimiento_mu_2026.json'
     assert fase4_report_path.exists(), f'Falta reporte FASE 4: {fase4_report_path}'
     fase4_data = json.loads(fase4_report_path.read_text(encoding='utf-8'))
@@ -1666,11 +1843,45 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
         tablero_rows = list(csv.DictReader(fh, delimiter='\t'))
 
     estado_override = {
+        'A': fase1_gate['A_TIPO_DOC']['estado_final'],
+        'W': fase4_gate['W_PROM_PRI_SEM']['estado_final'],
+        'X': fase4_gate['X_PROM_SEG_SEM']['estado_final'],
         'Y': fase4_gate['Y_ASI_INS_HIS']['estado_final'],
         'Z': fase4_gate['Z_ASI_APR_HIS']['estado_final'],
         'AB': fase5_gate['AB_SIT_FON_SOL']['estado_final'],
         'AC': fase5_gate['AC_SUS_PRE']['estado_final'],
         'AE': fase5_gate['AE_REINCORPORACION']['estado_final'],
+    }
+    fase4_scope_single_year = int(fase4_data.get('rows_scope_single_year', 0))
+    fase1_r_for6_new_vig1_rows = int(fase1_data.get('tipo_doc_r_for6_new_vig1_rows', 0))
+    pending_text_override = {
+        'A': {
+            'Bloqueo actual': (
+                'Anomalía documental activa: '
+                f'{fase1_r_for6_new_vig1_rows} filas incluidas presentan `TIPO_DOC=R` con `FOR_ING_ACT=6`, '
+                '`Q/S=2026` y `VIG=1`; el Cuadro N°5 solo muestra ese patrón de nuevo ingreso extranjero con `TIPO_DOC=P`.'
+            ),
+            'Acción necesaria': 'Revisar en fuente de identidad/documento si corresponde `P` o si `FOR_ING_ACT=6` fue asignado indebidamente; no corregir por sobreescritura automática sin respaldo.',
+            'Criterio para pasar a OK': 'Eliminar o justificar formalmente las filas activas `R + 6 + Q/S=2026 + VIG=1`.',
+        },
+        'Y': {
+            'Bloqueo actual': (
+                'Cobertura historica no plenamente alineada al manual: '
+                f'{fase4_scope_single_year} filas incluidas quedaron con `ALCANCE_LIMITADO_ANIO_UNICO`, '
+                'pero `Y ASI_INS_HIS` exige acumulado desde el inicio de la carrera.'
+            ),
+            'Acción necesaria': 'Incorporar fuente historica multianual o acto regulatorio explicito que permita usar alcance monoanual.',
+            'Criterio para pasar a OK': 'Cobertura historica multianual o validacion normativa explicita para el alcance disponible.',
+        },
+        'Z': {
+            'Bloqueo actual': (
+                'Cobertura historica no plenamente alineada al manual: '
+                f'{fase4_scope_single_year} filas incluidas quedaron con `ALCANCE_LIMITADO_ANIO_UNICO`, '
+                'pero `Z ASI_APR_HIS` exige acumulado desde el inicio de la carrera.'
+            ),
+            'Acción necesaria': 'Incorporar fuente historica multianual o acto regulatorio explicito que permita usar alcance monoanual.',
+            'Criterio para pasar a OK': 'Cobertura historica multianual o validacion normativa explicita para el alcance disponible.',
+        },
     }
 
     tablero_rows_actualizado = []
@@ -1684,6 +1895,8 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
                 row['Acción necesaria'] = 'Ninguna.'
                 fase_origen = 'FASE 4' if col in {'Y', 'Z'} else 'FASE 5'
                 row['Criterio para pasar a OK'] = f'Ya resuelto en {fase_origen}.'
+            elif col in pending_text_override:
+                row.update(pending_text_override[col])
         tablero_rows_actualizado.append(row)
 
     tablero_rows = tablero_rows_actualizado
@@ -1729,6 +1942,7 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
     no_listo_carga = not listo_carga
 
     dependency_map = {
+        'A': 'Datos/fuente + normativa de identidad/documental',
         'Y': 'Externa: nueva fuente historica multianual o acto regulatorio explicito',
         'Z': 'Externa: nueva fuente historica multianual o acto regulatorio explicito',
         'AB': 'Funcional: fuente institucional administrativa por fila incluida',
@@ -1870,11 +2084,12 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
         'bloqueos_residuales': backlog_rows,
         'estado_por_fase': phase_rows,
     }
+    today_iso = date.today().isoformat()
 
     lines = [
         '# Gate Final MU 2026',
         '',
-        '- Fecha: 2026-04-01',
+        f'- Fecha: {today_iso}',
         '- Responsable:',
         f'- Decision final: `{decision}`',
         f'- Listo para auditoria: `{"SI" if listo_auditoria else "NO"}`',
@@ -1938,7 +2153,7 @@ def generate_fase6_gate_final(out: Path, control_dir: Path, base_metrics: dict[s
             '## Firma operativa',
             '',
             '- Responsable:',
-            '- Fecha: 2026-04-01',
+            f'- Fecha: {today_iso}',
             f"- Comentario final: Decision `{decision}`. " +
             (
                 'CSV e invariantes en verde; el proyecto queda auditable, pero los pendientes residuales impiden declararlo listo para carga.'

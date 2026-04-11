@@ -1,37 +1,59 @@
 {
-  "rows_included_final": 1736,
+  "rows_included_final": 3433,
+  "for_ing_act_distribution": {
+    "1": 2926,
+    "2": 383,
+    "3": 84,
+    "11": 32,
+    "6": 8
+  },
+  "for_ing_act_continuidad_rows": 499,
   "anio_ing_act_fuente_distribution": {
-    "DA_ANOINGRESO": 1736
+    "DA_ANOINGRESO": 3433
   },
   "sem_ing_act_fuente_distribution": {
-    "DA_PERIODOINGRESO": 1736
+    "DA_PERIODOINGRESO": 3433
   },
   "anio_ing_ori_fuente_distribution": {
-    "POLITICA_FOR_ING_ACT_FIJO_1": 1736
+    "POLITICA_FOR_ING_ACT_1": 2926,
+    "POLITICA_FOR_ING_ACT_2": 383,
+    "POLITICA_FOR_ING_ACT_3_SIN_PROGRAMA_ANTERIOR_FECHABLE": 80,
+    "TRACE_MOTOR_FOR_ING_ACT:TNS_PREV_MIN_ANO_DA": 34,
+    "PRESERVADO_VALOR_DERIVADO": 8,
+    "DATOSALUMNOS_PROGRAMA_ANTERIOR_RUT": 2
   },
   "sem_ing_ori_fuente_distribution": {
-    "POLITICA_FOR_ING_ACT_FIJO_1": 1736
+    "POLITICA_FOR_ING_ACT_1": 2926,
+    "POLITICA_FOR_ING_ACT_2": 383,
+    "POLITICA_FOR_ING_ACT_3_SIN_PROGRAMA_ANTERIOR_FECHABLE": 80,
+    "TRACE_MOTOR_FOR_ING_ACT:TNS_PREV_CODCLI": 34,
+    "PRESERVADO_VALOR_DERIVADO": 8,
+    "DATOSALUMNOS_PROGRAMA_ANTERIOR_RUT": 2
   },
   "niv_aca_fuente_distribution": {
-    "INPUT_NIVEL": 1736
+    "DA_NIVEL": 3433
   },
   "fecha_matricula_fuente_distribution": {
-    "POLITICA_COHORTE_ORIGEN_2026": 1724,
-    "DA_FECHAMATRICULA": 12
+    "DA_FECHAMATRICULA": 2114,
+    "POLITICA_COHORTE_ORIGEN_2026": 1319
   },
   "anio_ing_act_default_2026_rows": 0,
   "sem_ing_act_default_1_rows": 0,
-  "anio_ing_ori_policy_rows": 1736,
-  "sem_ing_ori_policy_rows": 1736,
+  "anio_ing_ori_policy_rows": 2926,
+  "sem_ing_ori_policy_rows": 2926,
+  "for_ing_act_continuidad_ok_rows": 499,
   "niv_aca_default_1_rows": 0,
-  "niv_aca_acotado_duracion_rows": 263,
-  "niv_aca_acotado_cohorte_2026_rows": 8,
-  "fecha_matricula_1900_rows": 1724,
-  "fecha_matricula_1900_fuera_2026_rows": 1724,
+  "niv_aca_acotado_duracion_rows": 1,
+  "niv_aca_acotado_cohorte_2026_rows": 45,
+  "niv_aca_trim_rows": 3428,
+  "niv_aca_trim_eq_aplicada_rows": 3428,
+  "niv_aca_trim_mismatch_rows": 0,
+  "fecha_matricula_1900_rows": 1319,
+  "fecha_matricula_1900_fuera_2026_rows": 1319,
   "fecha_matricula_1900_en_2026_rows": 0,
   "fecha_matricula_non1900_fuera_2026_rows": 0,
-  "anio_ing_ori_diff_rows": 0,
-  "sem_ing_ori_diff_rows": 0,
+  "anio_ing_ori_diff_rows": 499,
+  "sem_ing_ori_diff_rows": 469,
   "columnas_fase_3": {
     "Q_ANIO_ING_ACT": {
       "fuente_regla_definida": true,

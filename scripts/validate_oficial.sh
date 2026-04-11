@@ -42,6 +42,7 @@ echo "[MU2026] OUTPUT_DIR=${OUTPUT_DIR}"
 
 python3 qa_checks.py \
   --output-dir "${OUTPUT_DIR}" \
+  --fase3-control-dir "control" \
   --fase6-control-dir "control"
 
 python3 scripts/auditoria_maestra.py \

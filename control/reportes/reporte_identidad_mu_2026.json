@@ -1,14 +1,17 @@
 {
-  "rows_included_final": 1736,
+  "rows_included_final": 3433,
   "tipo_doc_distribution": {
-    "R": 1736
+    "R": 3433
   },
-  "segundo_apellido_vacio_rows": 2,
-  "segundo_apellido_vacio_pct": 0.12,
+  "tipo_doc_r_for6_new_vig1_rows": 4,
+  "tipo_doc_r_for6_vig0_rows": 1,
+  "tipo_doc_r_for6_historic_rows": 3,
+  "segundo_apellido_vacio_rows": 6,
+  "segundo_apellido_vacio_pct": 0.17,
   "fech_nac_1900_rows": 0,
   "fech_nac_1900_pct": 0.0,
-  "nac_default_38_rows": 0,
-  "nac_default_38_pct": 0.0,
+  "nac_default_38_rows": 1,
+  "nac_default_38_pct": 0.03,
   "pais_default_38_rows": 0,
   "pais_default_38_pct": 0.0,
   "pais_inferido_rows": 0,
@@ -18,11 +21,11 @@
   "columnas_fase_1": {
     "A_TIPO_DOC": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": true,
+      "transformacion_implementada": false,
       "validacion_qa_existe": true,
-      "sin_default_silencioso": true,
+      "sin_default_silencioso": false,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "OK"
+      "estado_final": "Pendiente"
     },
     "B_N_DOC": {
       "fuente_regla_definida": true,
@@ -42,11 +45,11 @@
     },
     "E_SEGUNDO_APELLIDO": {
       "fuente_regla_definida": true,
-      "transformacion_implementada": true,
+      "transformacion_implementada": false,
       "validacion_qa_existe": true,
       "sin_default_silencioso": true,
       "auditable_en_filas_incluidas": true,
-      "estado_final": "OK"
+      "estado_final": "Pendiente"
     },
     "H_FECH_NAC": {
       "fuente_regla_definida": true,

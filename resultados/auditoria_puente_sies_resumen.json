@@ -1,0 +1,195 @@
+{
+  "shapes": {
+    "PUENTE_SIES": [
+      161,
+      27
+    ],
+    "ARCHIVO_LISTO_SUBIDA": [
+      28933,
+      "columnas_leidas_selectivas"
+    ],
+    "MATRICULA_UNIFICADA_32_rows_reporte": 3433,
+    "MATRICULA_UNIFICADA_32_cols": 32,
+    "PUENTE_SIES_COMPILADO": [
+      161,
+      27
+    ],
+    "SIES_PENDIENTES": [
+      923,
+      16
+    ]
+  },
+  "puente_counts": {
+    "RESOLUCION_STATUS": {
+      "UNICO": 91,
+      "AMBIGUO": 70
+    },
+    "MATCH_STATUS_OBSERVADO": {
+      "": 96,
+      "MATCH_SIES": 58,
+      "AMBIGUO_SIES": 7
+    },
+    "GOBERNANZA_STATUS": {
+      "RESUELTO_UNICO": 91,
+      "AMBIGUO_NO_OBSERVADO": 46,
+      "PENDIENTE_GOBERNANZA": 24
+    },
+    "ES_BLOQUEANTE": {
+      "NO": 91,
+      "SI": 70
+    },
+    "OBSERVADO_EN_UNIVERSO": {
+      "NO": 96,
+      "SI": 65
+    },
+    "JORNADA": {
+      "O": 95,
+      "V": 44,
+      "D": 22
+    },
+    "FAMILIA_TRAZA": {
+      "DUR": 161
+    },
+    "CODCARPR_top20": {
+      "ICRE": 5,
+      "IETMRE": 5,
+      "IADM": 4,
+      "IECIRE": 4,
+      "IINF": 4,
+      "ILOG": 4,
+      "NETMRE": 4,
+      "CICIB": 4,
+      "CICRE": 4,
+      "IECIREOL": 4,
+      "NCONRE": 4,
+      "ICIB": 3,
+      "TAMD": 3,
+      "TCIB": 3,
+      "TCRE": 3,
+      "TLOG": 3,
+      "TPAS": 3,
+      "TPCRE": 3,
+      "IACI": 3,
+      "COTENS": 2
+    }
+  },
+  "runtime_counts": {
+    "SIES_MATCH_DIAG": {
+      "MATCH_SIES_UNICO": 20501,
+      "MATCH_SIES_AMBIGUO": 7903,
+      "MATCH_SIES_UNICO|AJUSTE_SEDE_GOBERNANZA": 523,
+      "EXCLUIDO_DIPLOMADO": 6
+    },
+    "SIES_MATCH_STATUS": {
+      "MATCH_SIES": 28010,
+      "AMBIGUO_SIES": 917,
+      "EXCLUIDO_DIPLOMADO": 6
+    },
+    "SIES_RESOLUCION_HEURISTICA": {
+      "": 20507,
+      "REGLA_TIPO_PLAN": 6986,
+      "PENDIENTE_GOBERNANZA": 917,
+      "AJUSTE_SEDE_GOBERNANZA": 523
+    },
+    "ESTADO_CARGA_PREGRADO": {
+      "EXCLUIDO_DUPLICADO_INTRA_CODCLI": 25429,
+      "OK_CARGA_PREGRADO": 3433,
+      "EXCLUIDO_FOR_ING_ACT_REQUIERE_REVISION": 37,
+      "EXCLUIDO_MULTI_CARRERA_ACTIVA": 28,
+      "EXCLUIDO_SIN_MATCH_SIES": 6
+    },
+    "INCLUIR_EN_MATRICULA_32": {
+      "NO": 25500,
+      "SI": 3433
+    }
+  },
+  "classification_counts": {
+    "FALTA_DE_EVIDENCIA_EN_FUENTE": 46,
+    "DESALINEACION_CATALOGO_VS_RUNTIME": 17,
+    "AMBIGUEDAD_TECNICA_RESOLUBLE": 5,
+    "LLAVE_INSUFICIENTE": 2
+  },
+  "familia_ambig_rank": {
+    "DUR|IECIREOL": 4,
+    "DUR|IETMRE": 4,
+    "DUR|NETMRE": 4,
+    "DUR|IACI": 3,
+    "DUR|NCONRE": 3,
+    "DUR|TPCRE": 3,
+    "DUR|ADMP": 2,
+    "DUR|CADMP": 2,
+    "DUR|CIADM": 2,
+    "DUR|CICRE": 2,
+    "DUR|CIIND": 2,
+    "DUR|CIINF": 2,
+    "DUR|CILOG": 2,
+    "DUR|IADM": 2,
+    "DUR|IETMREOL": 2,
+    "DUR|IINF": 2,
+    "DUR|NCONREOL": 2,
+    "DUR|NINFREOL": 2,
+    "DUR|NITMRE": 2,
+    "DUR|TCRE": 2,
+    "DUR|TTMRE": 2,
+    "DUR|AUDT": 1,
+    "DUR|CNATP": 1,
+    "DUR|ICDA": 1,
+    "DUR|ICRE": 1,
+    "DUR|IECIRE": 1,
+    "DUR|IEMORE": 1,
+    "DUR|IFIN": 1,
+    "DUR|IIND": 1,
+    "DUR|IMDI": 1,
+    "DUR|IPRE": 1,
+    "DUR|IRHU": 1,
+    "DUR|ISEP": 1,
+    "DUR|NATP": 1,
+    "DUR|NAUTRE": 1,
+    "DUR|NECIRE": 1,
+    "DUR|NICIRE": 1,
+    "DUR|NINFRE": 1,
+    "DUR|TPCREOL": 1,
+    "DUR|TTMREOL": 1
+  },
+  "codcarpr_ambig_rank": {
+    "IECIREOL|O": 4,
+    "ADMP|O": 2,
+    "CADMP|O": 2,
+    "CIADM|O": 2,
+    "CICRE|O": 2,
+    "CIIND|O": 2,
+    "CIINF|O": 2,
+    "CILOG|O": 2,
+    "IACI|O": 2,
+    "IADM|O": 2,
+    "IETMREOL|O": 2,
+    "IETMRE|O": 2,
+    "NCONREOL|O": 2,
+    "NCONRE|O": 2,
+    "NETMRE|O": 2,
+    "NINFREOL|O": 2,
+    "AUDT|O": 1,
+    "CNATP|V": 1,
+    "IACI|V": 1,
+    "ICDA|O": 1
+  },
+  "downstream_impact": {
+    "initial_ambiguous_rows": 7903,
+    "initial_ambiguous_included": 1021,
+    "final_pending_rows": 923,
+    "final_pending_included": 77,
+    "unique_rows_by_n_codes": 21024,
+    "ambiguous_rows_by_n_codes": 7903,
+    "class_rows_with_included_impact": 24,
+    "class_rows_with_final_pending": 7
+  },
+  "no_regression_unico": {
+    "unique_keys": 91,
+    "unique_rows_runtime": 21024,
+    "unique_rows_changed_if_only_ambiguous_selector": 0
+  },
+  "outputs": {
+    "map_path": "resultados/auditoria_puente_sies_mapa_cruces.tsv",
+    "class_path": "resultados/auditoria_puente_sies_clasificacion_ambiguos.tsv"
+  }
+}
