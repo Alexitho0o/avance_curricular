@@ -23,6 +23,7 @@ control/backups/**/*.tsv
 !gobernanza_columnas_mu/
 !gobernanza_columnas_mu/*.tsv
 !control/tablero_mu_2026.tsv
+!control/vigencia_0_codcli_mu2026.tsv
 !control/reportes/reporte_fech_nac.tsv
 !control/reportes/reporte_nac_pais_sec.tsv
 !control/reportes/sies_pendientes.tsv
@@ -57,3 +58,6 @@ control/backups/**/*.tsv
 
 # General OS files
 .DS_Store
+
+# Archivos de diagnóstico grandes (>100MB, excluidos del repo)
+diagnosticos/mu2026_postgrado/diagnostico_codcar_postgrado_20260508_084606.md

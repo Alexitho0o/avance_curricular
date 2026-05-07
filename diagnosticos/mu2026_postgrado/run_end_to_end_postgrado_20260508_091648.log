@@ -1,0 +1,216 @@
+============================================================
+EJECUCIÓN END-TO-END · MATRÍCULA UNIFICADA 2026 POSTGRADO
+============================================================
+Fecha ejecución: Fri May  8 09:16:48 -04 2026
+Ruta proyecto: /Users/alexi/Documents/GitHub/avance_curricular
+
+============================================================
+1. VERIFICACIÓN DE ARCHIVOS BASE
+============================================================
+OK     control/diccionarios/diccionario_postgrado_postitulo_mu2026.tsv
+OK     resultados/trazabilidad_matricula_unificada_2026_postgrado_postitulo.tsv
+OK     resultados/matricula_unificada_2026_postgrado_postitulo_control.csv
+OK     resultados/matricula_unificada_2026_postgrado_postitulo.csv
+OK     diagnosticos/mu2026_postgrado/auditoria_cierre_postgrado_postitulo.py
+
+============================================================
+2. EJECUCIÓN SCRIPT AUDITORÍA / CIERRE END-TO-END
+============================================================
+======================================================================
+  AUDITORÍA END-TO-END · CIERRE MU2026 · POSTGRADO/POSTÍTULO
+======================================================================
+
+▶ FASE 0 · Preparación segura...
+  Archivos requeridos: OK
+  Pregrado intacto: True
+
+▶ Cargando datos...
+  PES-ready: 55 líneas
+  Control: 55 registros
+  Trazabilidad: 462 registros
+  Diccionario: 23 entradas
+
+▶ FASE 1 · Estructura PES-ready...
+  Filas: 55 | Campos por fila: {21: 55} | OK
+
+▶ FASE 2 · Dominios...
+  OK | Pasaportes: 0
+
+▶ FASE 3 · Contraste PES-ready vs control...
+  PES-ready=55, control OK=55, bloqueados=0 | OK
+
+▶ FASE 4 · Contraste vs trazabilidad...
+  Candidatos 2026: 72 | Incluidos: 55 | Excluidos: 17 | OK
+
+▶ FASE 5 · Contraste vs diccionario gobernado...
+  Evaluados: 55 | OK
+
+▶ FASE 6 · Generando artefactos de cierre...
+  Artefactos generados: 5
+
+======================================================================
+  RESULTADO FINAL
+======================================================================
+
+  Estado:           APROBADO_CON_OBSERVACIONES
+  Errores críticos: 0
+  Advertencias:     1
+
+  Filas PES-ready:         55
+  Candidatos 2026 incluidos:  55
+  Candidatos 2026 excluidos:  17
+
+  Reporte Markdown:  /Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/auditoria_final_pes_ready_postgrado_postitulo_20260508_091648.md
+  JSON de cierre:    /Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/resumen_cierre_postgrado_postitulo_20260508_091648.json
+  PES-ready FINAL:   /Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY.csv
+  Control FINAL:     /Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv
+  Excluidos 2026:    /Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_excluidos_2026_gobernanza.csv
+
+  Advertencias:
+    ⚠ No hay registros con TIPO_DOC=P (pasaporte). Cero casos detectados.
+
+  No se modificó el flujo pregrado.
+
+======================================================================
+
+Código salida auditoría: 0
+
+============================================================
+3. IDENTIFICAR ÚLTIMOS ARTEFACTOS GENERADOS
+============================================================
+Reporte auditoría: diagnosticos/mu2026_postgrado/auditoria_final_pes_ready_postgrado_postitulo_20260508_091648.md
+JSON cierre:       diagnosticos/mu2026_postgrado/resumen_cierre_postgrado_postitulo_20260508_091648.json
+PES-ready final:   resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY.csv
+Control final:     resultados/matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv
+Excluidos 2026:    resultados/matricula_unificada_2026_postgrado_postitulo_excluidos_2026_gobernanza.csv
+
+============================================================
+4. RESUMEN JSON DE CIERRE
+============================================================
+Estado final: NO_INFORMADO
+Errores críticos: 0
+Advertencias: 1
+Filas PES-ready: 55
+Campos por fila: {'21': 55}
+Candidatos 2026: NO_INFORMADO
+Incluidos 2026: 55
+Excluidos 2026: 17
+
+============================================================
+5. VALIDACIÓN ESTRUCTURAL PES-READY FINAL
+============================================================
+Archivo: resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY.csv
+Filas:       55
+
+Campos por fila:
+21 55
+
+Campos vacíos por fila:
+Revisión campos vacíos finalizada
+
+Primeras 5 filas:
+R;17732202;4;ITURRA;MUNOZ;JAVIER ENRIQUE;H;17/07/1991;38;38;2;53;2;3;1;1;2026;1;2026;1;1
+R;19438893;4;FLORES;GALVEZ;JEFREY ALEXIS;H;18/07/1996;38;38;2;53;2;3;1;1;2026;1;2026;1;1
+R;111222;8;PAREDES;MORALES;CRISTOPHER;H;17/11/1993;38;38;2;53;2;3;1;1;2026;1;2026;1;1
+R;17211755;4;LEAL;ORELLANA;WILLIAM;H;12/06/1979;38;38;2;53;2;3;1;1;2026;1;2026;1;1
+R;18473789;2;PEREZ;OYARZO;FELIPE ALEJANDRO;H;05/11/1993;38;38;2;53;2;3;1;1;2026;1;2026;1;1
+
+Últimas 5 filas:
+R;12976140;7;ALARCON;BASSO;YURI HERMES;H;07/09/1976;38;38;2;70;3;4;1;10;2026;1;2026;1;1
+R;27405974;5;PARRA;DUQUE;LUIS DANIEL;H;09/03/1990;38;38;2;70;3;4;1;10;2026;1;2026;1;1
+R;26719506;4;RANGEL;CADENAS;MOISES JESUS;H;26/09/1993;38;38;2;70;3;4;1;10;2026;1;2026;1;1
+R;27086679;4;MORALES;MORALES;LEONET;H;30/06/1990;38;38;2;70;3;4;1;10;2026;1;2026;1;1
+R;19801993;3;GALVEZ;FLORES;BENJAMIN ANTONIO;H;21/12/1997;38;38;2;70;3;4;1;1;2026;1;2026;1;1
+
+============================================================
+6. DISTRIBUCIONES PES-READY FINAL
+============================================================
+Distribución COD_CAR:
+53 18
+66 15
+70 22
+
+Distribución VIG:
+1 55
+
+Distribución SEXO:
+H 51
+M 4
+
+Distribución FOR_ING_ACT:
+1 35
+10 20
+
+============================================================
+7. DETALLE DE EXCLUSIONES 2026
+============================================================
+Archivo: resultados/matricula_unificada_2026_postgrado_postitulo_excluidos_2026_gobernanza.csv
+Filas excluidas 2026: 17
+
+Distribución por ACCION_CARGA:
+EXCLUIR_HASTA_VALIDAR: 17
+
+Distribución por ESTADO_GOBERNANZA:
+PENDIENTE_REVISION: 17
+
+Distribución por CODCARPR / NOMBRE_L:
+DDASC | DIPLOMADO EN DATA SCIENCE: 11
+DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE: 4
+DLEMS | DIPLOMADO LIDERAZGO ESTRATÉGICO Y MANAGEMENT 4.0: 2
+
+Detalle completo excluidos 2026:
+CODCLI | RUT | CODCARPR | CODIGOCARRERA | NOMBRE_L | ANOMATRICULA | ANOINGRESO | ESTADOACADEMICO | ESTADO_GOBERNANZA | ACCION_CARGA | ESTADO_TRAZABILIDAD | OBSERVACION_DICCIONARIO
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20261DDASC001 | 20299187-4 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC002 | 15895590-3 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC003 | 19572724-4 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC004 | 26793816-4 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC005 | 20144816-6 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC006 | 20528652-7 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC007 | 20948099-9 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC008 | 15651488-8 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC009 | 15416526-6 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | ELIMINADO | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC010 | 15397331-8 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DDASC011 | 20643076-1 | DDASC | DDASC | DIPLOMADO EN DATA SCIENCE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DHIAD001 | 13422085-6 | DHIAD | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DHIAD002 | 10515044-K | DHIAD | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DHIAD003 | 14111591-K | DHIAD | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DHIAD004 | 14201993-0 | DHIAD | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DLEMS001 | 20954371-0 | DLEMS | DLEMS | DIPLOMADO LIDERAZGO ESTRATÉGICO Y MANAGEMENT 4.0 | 2026 | 2026 | ELIMINADO | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+20261DLEMS002 | 16246532-5 | DLEMS | DLEMS | DIPLOMADO LIDERAZGO ESTRATÉGICO Y MANAGEMENT 4.0 | 2026 | 2026 | VIGENTE | PENDIENTE_REVISION | EXCLUIR_HASTA_VALIDAR | EXCLUIDO_POR_GOBERNANZA_PENDIENTE | No se encontró equivalente explícito en oferta/matriz revisada.
+
+============================================================
+8. DETALLE DE ERRORES / BLOQUEADOS EN CONTROL FINAL
+============================================================
+Registros control final: 55
+Distribución ESTADO_VALIDACION_PES:
+OK: 55
+
+Registros con errores/bloqueos: 0
+Sin errores ni bloqueos en control final.
+
+============================================================
+9. VERIFICACIÓN NO MODIFICACIÓN PREGRADO
+============================================================
+OK pregrado intacto presente: resultados/matricula_unificada_2026_pregrado.csv (    4115 líneas)
+OK pregrado intacto presente: resultados/matricula_unificada_2026_pregrado_PES_READY.csv (    4070 líneas)
+OK pregrado intacto presente: resultados/matricula_unificada_2026_control.csv (    3443 líneas)
+
+Estado Git resumido de archivos postgrado/pregrado:
+?? diagnosticos/mu2026_postgrado/auditoria_final_pes_ready_postgrado_postitulo_20260508_091648.md
+?? diagnosticos/mu2026_postgrado/resumen_cierre_postgrado_postitulo_20260508_091648.json
+?? diagnosticos/mu2026_postgrado/run_end_to_end_postgrado_20260508_091648.log
+
+============================================================
+10. RESULTADO FINAL CONSOLA
+============================================================
+ESTADO_FINAL=REVISAR_JSON
+FILAS_PES_READY=55
+ERRORES_CRITICOS=0
+ADVERTENCIAS=1
+CANDIDATOS_2026=REVISAR_JSON
+INCLUIDOS_2026=55
+EXCLUIDOS_2026=17
+
+No se modificó el flujo pregrado.
+============================================================

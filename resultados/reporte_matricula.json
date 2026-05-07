@@ -4,41 +4,39 @@
   "sheet_used": "Hoja1",
   "gobernanza_mode": "v2_flagged",
   "usar_gobernanza_v2": true,
-  "rows": 28933,
-  "rows_matricula_32_final": 3433,
-  "rows_excluidas_carga_pregrado": 25500,
+  "rows": 34522,
+  "rows_matricula_32_final": 4115,
+  "rows_excluidas_carga_pregrado": 30407,
   "rows_excluidas_sies_heuristica_opaca": 0,
   "rows_excluidas_sin_for_ing_act_trazable": 0,
-  "rows_enriquecidas_datos_alumnos": 28933,
+  "rows_enriquecidas_datos_alumnos": 34522,
   "rows_sin_match_datos_alumnos": 0,
-  "cod_sed_resuelto_por_regla": 28933,
-  "pais_est_sec_inferido_localidad": 28933,
+  "cod_sed_resuelto_por_regla": 34522,
+  "pais_est_sec_inferido_localidad": 34522,
   "for_ing_act_distribution_final": {
-    "1": 2926,
-    "2": 383,
-    "3": 84,
-    "11": 32,
-    "6": 8
+    "1": 3601,
+    "2": 378,
+    "3": 98,
+    "11": 31,
+    "6": 7
   },
   "rows_for_ing_act_imputado_final": 0,
   "rows_for_ing_act_revision_final": 0,
-  "rows_uz_all_zero_final": 2114,
+  "rows_uz_all_zero_final": 2014,
   "historico_mu_anio_referencia": 2026,
   "periodo_filtro_anio": 2026,
   "periodo_filtro_sem": 1,
   "anio_anterior_prom": 2025,
   "estado_inicial": {
-    "Matrícula Duplicada": 28897,
-    "Matrícula OK": 36
+    "Matrícula Duplicada": 34498,
+    "Matrícula OK": 24
   },
   "manual_match": {
-    "MATCH_MANUAL": 28927,
-    "SIN_MATCH_MANUAL": 6
+    "MATCH_MANUAL": 34522
   },
   "sies_diag": {
-    "MATCH_SIES_UNICO": 21024,
-    "MATCH_SIES_AMBIGUO": 7903,
-    "EXCLUIDO_DIPLOMADO": 6
+    "MATCH_SIES_UNICO": 25302,
+    "MATCH_SIES_AMBIGUO": 9220
   },
   "catalogo_manual_rows": 181,
   "puente_sies_rows": 161,
@@ -53,14 +51,14 @@
   "gob_sede_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_sede.tsv",
   "gob_for_ing_act_source": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_for_ing_act.tsv",
   "for_ing_act_origin_stats": {
-    "for2_1900": 3841,
-    "for3_lookup": 32,
-    "for3_1900": 1217,
-    "for11_trace": 474,
+    "for2_1900": 3821,
+    "for3_lookup": 43,
+    "for3_1900": 1356,
+    "for11_trace": 461,
     "for11_1900": 0,
     "otros_1900": 0
   },
-  "oferta_academica_source": "/Users/alexi/Downloads/1668382 Captura IES Incremental5320 Oferta Académica Titulados5319 Titulados Histórico.xlsx",
+  "oferta_academica_source": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
   "sit_fon_sol_patch_source": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
   "sit_fon_sol_patch_stats": {
     "patch_path": "/Users/alexi/Documents/GitHub/avance_curricular/patches/mu2026/sit_fon_sol_patch_ruts.json",
@@ -74,25 +72,34 @@
       "CODCLI"
     ],
     "rut_matches_by_column": {
-      "N_DOC": 1417,
+      "N_DOC": 1383,
       "CODCLI": 0
     },
-    "n_rows_total": 28933,
-    "n_rows_targeted": 1417,
-    "n_rows_affected": 1417,
-    "n_rut_matched": 196,
-    "n_rut_missing": 0,
-    "rut_missing_sample": [],
+    "n_rows_total": 34522,
+    "n_rows_targeted": 1383,
+    "n_rows_affected": 0,
+    "n_rut_matched": 188,
+    "n_rut_missing": 8,
+    "rut_missing_sample": [
+      "10993320",
+      "12772342",
+      "15177926",
+      "15222036",
+      "15844099",
+      "16088342",
+      "16382199",
+      "16480285"
+    ],
     "sit_fon_sol_distribution_before_target": {
-      "1": 1417
+      "0": 1383
     },
     "sit_fon_sol_distribution_after_target": {
-      "0": 1417
+      "0": 1383
     },
     "patch_applied": true,
     "rut_column_selected_runtime": "N_DOC",
     "rut_matches_by_column_runtime": {
-      "N_DOC": 1417,
+      "N_DOC": 1383,
       "CODCLI": 0
     }
   },
@@ -114,21 +121,21 @@
         11
       ],
       "fuente_campo_distribution": {
-        "DA_VIASDEADMISION": 2934,
-        "NOMBRE_CARRERA_FUENTE": 383,
-        "DA_SITUACION": 82,
-        "TRACE_MOTOR_FOR_ING_ACT": 34
+        "DA_VIASDEADMISION": 3608,
+        "NOMBRE_CARRERA_FUENTE": 378,
+        "DA_SITUACION": 96,
+        "TRACE_MOTOR_FOR_ING_ACT": 33
       },
       "metodo_distribution": {
-        "CATALOGO_EXACTO_VIAS_ADMISION": 2934,
-        "DA_NOMBRE_CONTINUIDAD": 383,
-        "DA_SITUACION_CAMBIO_INTERNO": 82,
-        "DA_TRACE_ARTICULACION_11": 34
+        "CATALOGO_EXACTO_VIAS_ADMISION": 3608,
+        "DA_NOMBRE_CONTINUIDAD": 378,
+        "DA_SITUACION_CAMBIO_INTERNO": 96,
+        "DA_TRACE_ARTICULACION_11": 33
       }
     },
-    "rows_total_stage": 28933,
-    "rows_included_final": 3433,
-    "resolved_ok": 3433,
+    "rows_total_stage": 34522,
+    "rows_included_final": 4115,
+    "resolved_ok": 4115,
     "unresolved": {
       "count": 0,
       "pct_rows_included": 0.0,
@@ -136,26 +143,121 @@
       "continuidad_rule_fail_count": 0
     },
     "distribution": {
-      "1": 2926,
-      "2": 383,
-      "3": 84,
-      "11": 32,
-      "6": 8
+      "1": 3601,
+      "2": 378,
+      "3": 98,
+      "11": 31,
+      "6": 7
     },
     "invalid_examples": []
   },
+  "pes_ready_report": {
+    "source_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado.csv",
+    "pes_ready_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado_PES_READY.csv",
+    "desktop_path": "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+    "audit_corrections_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_correcciones_pes_ready_20260508_230900.csv",
+    "audit_exclusions_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_exclusiones_pes_ready_20260508_230900.csv",
+    "summary_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/resumen_pes_ready_20260508_230900.md",
+    "copied_to_desktop": true,
+    "copy_status": "OK",
+    "exclusion_verification": {
+      "rows_bruto": 4115,
+      "rows_pes_ready": 4070,
+      "rows_excluded": 45,
+      "rows_included": 4070,
+      "exclusion_audit_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/verificacion_exclusiones_pes_ready_20260508_230900.csv",
+      "exclusion_summary_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/resumen_verificacion_exclusiones_pes_ready_20260508_230900.md",
+      "exclusion_reason_counts": {
+        "RUT tipo R con más de 8 dígitos": 41,
+        "Exclusión auditada por control/exclusiones_pes_mu2026.tsv": 2,
+        "Edad menor a 15 años respecto de ANIO_ING_ACT": 1,
+        "NIV_ACA mayor que duración de carrera": 1
+      },
+      "excluded_without_trace_count": 0,
+      "duplicate_keys_bruto": 0,
+      "duplicate_keys_pes_ready": 0,
+      "invalid_field_rows_bruto": 0,
+      "invalid_field_rows_pes_ready": 0
+    },
+    "source_size_bytes": 513582,
+    "pes_ready_size_bytes": 508017,
+    "rows_initial": 4115,
+    "rows_corrected_unique": 473,
+    "rows_excluded_unique": 45,
+    "rows_final": 4070,
+    "correction_counts": {
+      "REGLA_1_SIT_FON_SOL": 0,
+      "REGLA_2_FOR_DIRECTO_ORIGEN": 0,
+      "REGLA_3_FOR_23_ORIGEN_1900": 471,
+      "REGLA_4_FOR_23_ASI_INS_HIS": 10,
+      "REGLA_5_ASI_INS_ANT_CERO": 1,
+      "REGLA_VIG0_NOMINA_FORZADOS": 289,
+      "REGLA_VIG0_NOMINA_YA_CERO": 463
+    },
+    "exclusion_counts": {
+      "REGLA_6_RUT_MAYOR_8": 41,
+      "REGLA_7_EDAD_MENOR_15_ACT": 2,
+      "REGLA_7_EDAD_MENOR_15_ORI": 2,
+      "REGLA_8_OFERTA_INEXISTENTE": 0,
+      "REGLA_9_NIV_ACA_GT_DURACION": 1,
+      "REGLA_10_QM_2025": 0,
+      "REGLA_11_EXCLUSION_AUDITADA": 2
+    },
+    "validation_counts": {
+      "SIT_FON_SOL distinto de 0": 0,
+      "FOR_ING_ACT 1,2,3,6,7,8,9,10 con ANIO_ING_ORI=1900": 0,
+      "FOR_ING_ACT 1,6,7,8,9,10 con ORI != ACT": 0,
+      "FOR_ING_ACT 2 o 3 con ASI_INS_HIS=0": 0,
+      "ASI_APR_HIS > ASI_INS_HIS": 0,
+      "TIPO_DOC=R con N_DOC mayor a 8 dígitos": 0,
+      "FOR_ING_ACT 2 o 3 con año origen = año actual y semestre origen >= actual": 0,
+      "filas con cantidad de campos distinta de 32": 0
+    },
+    "header_free": true,
+    "csv_file_validation": {
+      "total_rows": 4070,
+      "first_row_fields": 32,
+      "invalid_field_rows": 0,
+      "header_detectado": false
+    },
+    "qm_2025_source": "SIN_FUENTE_LOCAL_TRAZABLE",
+    "exclusiones_auditadas_rows": 2
+  },
+  "control_vigencia_0_codcli": {
+    "status": "APLICADO",
+    "control_path": "/Users/alexi/Documents/GitHub/avance_curricular/control/vigencia_0_codcli_mu2026.tsv",
+    "control_exists": true,
+    "codcli_control_total": 494,
+    "codcli_encontrados_universo": 494,
+    "codcli_encontrados_salida_final": 494,
+    "filas_afectadas": 494,
+    "filas_afectadas_universo": 2024,
+    "codcli_no_encontrados": 0,
+    "codcli_no_encontrados_sample": [],
+    "audit_path": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_vigencia_0_codcli_mu2026_20260508_230520.csv",
+    "validacion_codcli_encontrados_vig_0": true,
+    "validacion_fuera_control_no_alterado": true,
+    "codcli_fuera_control_alterados_por_regla": 0,
+    "filas_fuera_control_alteradas_universo": 0
+  },
+  "kpi_dashboard": {
+    "status": "creado",
+    "message": "KPI_Dashboard creado con 4,115 registros.",
+    "backup_sheet": null,
+    "backup_file": null
+  },
   "filtro_base_datos": {
     "hoja": "base_datos",
-    "ruts_en_hoja": 4012,
-    "ruts_bd_sin_match_fuente": 575,
+    "ruts_en_hoja": 4290,
+    "ruts_bd_sin_match_fuente": 172,
     "filas_antes": 41106,
-    "filas_despues": 29823,
-    "filas_descartadas": 11283
+    "filas_despues": 35468,
+    "filas_descartadas": 5638
   },
   "depuracion_rut_multi_codcli": {
-    "total_rut": 3437,
-    "rut_multi_codcli": 102,
-    "codcli_excluidos": 102,
-    "filas_excluidas": 890
+    "total_rut": 4118,
+    "rut_multi_codcli": 112,
+    "codcli_excluidos": 112,
+    "filas_excluidas": 946
   }
 }

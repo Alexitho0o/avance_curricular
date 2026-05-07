@@ -6,6 +6,7 @@ import re
 import shutil
 import tempfile
 import unicodedata
+from datetime import datetime
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -109,6 +110,9 @@ MATRICULA_UNIFICADA_COLUMNS = [
     "PROM_PRI_SEM", "PROM_SEG_SEM", "ASI_INS_HIS", "ASI_APR_HIS", "NIV_ACA", "SIT_FON_SOL", "SUS_PRE",
     "FECHA_MATRICULA", "REINCORPORACION", "VIG",
 ]
+
+CONTROL_VIGENCIA_0_CODCLI_REL_PATH = Path("control") / "vigencia_0_codcli_mu2026.tsv"
+CONTROL_VIGENCIA_0_CODCLI_MOTIVO = "CONTROL_VIGENCIA_0_CODCLI"
 
 CARRERAS_AC_COLUMNS = [
     "CODIGO_IES_NUM", "CODIGO_UNICO", "PLAN_ESTUDIOS", "NOMBRE_SEDE", "NOMBRE_CARRERA", "JORNADA", "VERSION",
@@ -1494,6 +1498,199 @@ def _write_mu_csv_atomic(df: pd.DataFrame, final_path: Path) -> None:
         shutil.copy2(tmp_path, final_path)
 
 
+def _norm_codcli_series(series: pd.Series) -> pd.Series:
+    return series.fillna("").astype(str).str.strip()
+
+
+def _empty_control_vigencia_0_codcli_stats(control_path: Path, status: str) -> dict[str, object]:
+    return {
+        "status": status,
+        "control_path": str(control_path),
+        "control_exists": control_path.exists(),
+        "codcli_control_total": 0,
+        "codcli_encontrados_universo": 0,
+        "codcli_encontrados_salida_final": 0,
+        "filas_afectadas": 0,
+        "filas_afectadas_universo": 0,
+        "codcli_no_encontrados": 0,
+        "codcli_no_encontrados_sample": [],
+        "audit_path": "",
+        "validacion_codcli_encontrados_vig_0": True,
+        "validacion_fuera_control_no_alterado": True,
+        "codcli_fuera_control_alterados_por_regla": 0,
+    }
+
+
+def _leer_control_vigencia_0_codcli(control_path: Path, process_year: int, process_period: int) -> pd.DataFrame:
+    required = ["CODCLI", "MOTIVO", "ANIO", "PERIODO", "VIG"]
+    control = pd.read_csv(control_path, sep="\t", dtype=str, keep_default_na=False)
+    missing = [col for col in required if col not in control.columns]
+    if missing:
+        raise ValueError(
+            f"Control vigencia CODCLI inválido: faltan columnas {missing} en {control_path}"
+        )
+
+    control = control[required].copy()
+    for col in required:
+        control[col] = control[col].astype(str).str.strip()
+    control["CODCLI"] = control["CODCLI"].str.strip()
+    control = control[control["CODCLI"].ne("")].copy()
+
+    target = control[
+        control["ANIO"].eq(str(process_year))
+        & control["PERIODO"].eq(str(process_period))
+    ].copy()
+    bad_vig = target[~target["VIG"].eq("0")]
+    if not bad_vig.empty:
+        sample = bad_vig["CODCLI"].head(10).tolist()
+        raise ValueError(
+            "Control vigencia CODCLI inválido: todos los registros aplicables "
+            f"deben tener VIG=0. Muestra: {sample}"
+        )
+    return target.drop_duplicates(subset=["CODCLI"], keep="first").reset_index(drop=True)
+
+
+def _aplicar_control_vigencia_0_codcli(
+    archivo_subida: pd.DataFrame,
+    matricula_unificada_32: pd.DataFrame,
+    output_dir: Path,
+    process_year: int,
+    process_period: int,
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, object]]:
+    """Aplica control externo de CODCLI con VIG=0 sin cambiar la cantidad de filas."""
+    control_path = Path(__file__).resolve().parent / CONTROL_VIGENCIA_0_CODCLI_REL_PATH
+    stats = _empty_control_vigencia_0_codcli_stats(control_path, "NO_APLICADO")
+
+    if not control_path.exists():
+        print(
+            "  ℹ️ Control VIG=0 por CODCLI no aplicado: "
+            f"no existe {control_path}"
+        )
+        stats["status"] = "CONTROL_NO_EXISTE"
+        return archivo_subida, matricula_unificada_32, stats
+
+    control = _leer_control_vigencia_0_codcli(control_path, process_year, process_period)
+    stats["codcli_control_total"] = int(control["CODCLI"].nunique())
+    if control.empty:
+        print(
+            "  ℹ️ Control VIG=0 por CODCLI no aplicado: "
+            f"sin filas para {process_year}-{process_period}"
+        )
+        stats["status"] = "SIN_FILAS_APLICABLES"
+        return archivo_subida, matricula_unificada_32, stats
+
+    archivo_subida = archivo_subida.copy()
+    matricula_unificada_32 = matricula_unificada_32.copy()
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    control_codclis = set(control["CODCLI"])
+    archivo_codcli = _norm_codcli_series(archivo_subida["CODCLI"])
+    matched_universe_mask = archivo_codcli.isin(control_codclis)
+    matched_universe_idx = matched_universe_mask[matched_universe_mask].index
+    matched_final_idx = matched_universe_idx.intersection(matricula_unificada_32.index)
+    found_universe_codcli = set(archivo_codcli[matched_universe_mask])
+    found_final_codcli = set(archivo_codcli.loc[matched_final_idx])
+    not_found_codcli = sorted(control_codclis - found_universe_codcli)
+
+    vig_before_universe = archivo_subida["VIG"].copy()
+    vig_before_final = matricula_unificada_32["VIG"].copy() if "VIG" in matricula_unificada_32.columns else pd.Series(dtype="object")
+    outside_universe_idx = archivo_subida.index.difference(matched_universe_idx)
+    outside_final_idx = matricula_unificada_32.index.difference(matched_final_idx)
+
+    if len(matched_universe_idx) > 0:
+        archivo_subida.loc[matched_universe_idx, "VIG"] = 0
+        for col, value in {
+            "VIG_FUENTE_FINAL": str(control_path),
+            "VIG_METODO_FINAL": CONTROL_VIGENCIA_0_CODCLI_MOTIVO,
+            "VIG_AUDIT_STATUS": CONTROL_VIGENCIA_0_CODCLI_MOTIVO,
+            "FLAG_INCONSISTENCIA_VIG": CONTROL_VIGENCIA_0_CODCLI_MOTIVO,
+        }.items():
+            if col in archivo_subida.columns:
+                archivo_subida.loc[matched_universe_idx, col] = value
+    if len(matched_final_idx) > 0 and "VIG" in matricula_unificada_32.columns:
+        matricula_unificada_32.loc[matched_final_idx, "VIG"] = 0
+
+    def _join_values(values: pd.Series) -> str:
+        cleaned = sorted({str(v).strip() for v in values.dropna().tolist() if str(v).strip()})
+        return " | ".join(cleaned)
+
+    audit_rows: list[dict[str, object]] = []
+    for row in control.itertuples(index=False):
+        codcli = str(row.CODCLI).strip()
+        universe_idx = archivo_subida.index[archivo_codcli.eq(codcli)]
+        final_idx = universe_idx.intersection(matricula_unificada_32.index)
+        if len(final_idx) > 0 and not vig_before_final.empty:
+            vig_antes = _join_values(vig_before_final.loc[final_idx])
+            vig_despues = _join_values(matricula_unificada_32.loc[final_idx, "VIG"])
+        elif len(universe_idx) > 0:
+            vig_antes = _join_values(vig_before_universe.loc[universe_idx])
+            vig_despues = _join_values(archivo_subida.loc[universe_idx, "VIG"])
+        else:
+            vig_antes = ""
+            vig_despues = ""
+        audit_rows.append({
+            "CODCLI": codcli,
+            "encontrado_en_universo": "SI" if len(universe_idx) > 0 else "NO",
+            "filas_afectadas": int(len(final_idx)),
+            "filas_en_universo": int(len(universe_idx)),
+            "VIG_ANTES": vig_antes,
+            "VIG_DESPUES": vig_despues,
+            "MOTIVO": str(row.MOTIVO).strip() or CONTROL_VIGENCIA_0_CODCLI_MOTIVO,
+            "ANIO": str(row.ANIO).strip(),
+            "PERIODO": str(row.PERIODO).strip(),
+        })
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    audit_path = output_dir / f"auditoria_vigencia_0_codcli_mu2026_{timestamp}.csv"
+    pd.DataFrame(audit_rows).to_csv(audit_path, index=False, encoding="utf-8")
+
+    if len(matched_final_idx) > 0:
+        final_vig0_ok = bool(
+            pd.to_numeric(matricula_unificada_32.loc[matched_final_idx, "VIG"], errors="coerce")
+            .eq(0)
+            .all()
+        )
+    else:
+        final_vig0_ok = True
+    outside_final_changed = 0
+    if not vig_before_final.empty and "VIG" in matricula_unificada_32.columns:
+        outside_final_changed = int(
+            (
+                matricula_unificada_32.loc[outside_final_idx, "VIG"].astype(str)
+                != vig_before_final.loc[outside_final_idx].astype(str)
+            ).sum()
+        )
+    outside_universe_changed = int(
+        (
+            archivo_subida.loc[outside_universe_idx, "VIG"].astype(str)
+            != vig_before_universe.loc[outside_universe_idx].astype(str)
+        ).sum()
+    )
+
+    stats.update({
+        "status": "APLICADO",
+        "control_exists": True,
+        "codcli_encontrados_universo": int(len(found_universe_codcli)),
+        "codcli_encontrados_salida_final": int(len(found_final_codcli)),
+        "filas_afectadas": int(len(matched_final_idx)),
+        "filas_afectadas_universo": int(len(matched_universe_idx)),
+        "codcli_no_encontrados": int(len(not_found_codcli)),
+        "codcli_no_encontrados_sample": not_found_codcli[:20],
+        "audit_path": str(audit_path),
+        "validacion_codcli_encontrados_vig_0": final_vig0_ok,
+        "validacion_fuera_control_no_alterado": outside_final_changed == 0 and outside_universe_changed == 0,
+        "codcli_fuera_control_alterados_por_regla": int(outside_final_changed),
+        "filas_fuera_control_alteradas_universo": int(outside_universe_changed),
+    })
+    print(
+        "  ✅ Control VIG=0 por CODCLI aplicado: "
+        f"{stats['codcli_control_total']} CODCLI en control, "
+        f"{stats['codcli_encontrados_universo']} encontrados, "
+        f"{stats['filas_afectadas']} filas finales afectadas."
+    )
+    return archivo_subida, matricula_unificada_32, stats
+
+
 _AUDIT_CONSOL_COLUMNS = [
     "CODCLI", "TIPO_DOC", "N_DOC", "DV", "COD_CAR",
     "NOMBRE_CARRERA", "VIG", "ANIO_ING_ACT",
@@ -2303,6 +2500,26 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     _filtro_bd_stats: dict[str, object] = {}
     if _filtro_bd_sheet and _filtro_bd_sheet in xls.sheet_names:
         bd_df = pd.read_excel(input_file, sheet_name=_filtro_bd_sheet)
+        # Prueba controlada: detección opcional de CODCLI (columna C) en base_datos.
+        # No modifica el flujo actual; solo reporta trazabilidad.
+        bd_codcli_col = None
+        if "CODCLI" in bd_df.columns:
+            bd_codcli_col = "CODCLI"
+        elif len(bd_df.columns) >= 3:
+            # Fallback posicional para prueba controlada cuando la 3ra columna existe.
+            bd_codcli_col = bd_df.columns[2]
+
+        if bd_codcli_col is not None:
+            _codcli_series = bd_df[bd_codcli_col].fillna("").astype(str).str.strip()
+            _codcli_informado = int((_codcli_series != "").sum())
+            _codcli_vacio = int((_codcli_series == "").sum())
+            print(
+                f"  🔎 base_datos CODCLI detectado (col='{bd_codcli_col}') → "
+                f"informados={_codcli_informado}, vacíos={_codcli_vacio}"
+            )
+        else:
+            print("  ℹ️ base_datos: columna CODCLI no existe; se continúa con la lógica actual")
+
         bd_rut_col = None
         for _cand in ["N_DOC", "RUT", "NUM_DOCUMENTO"]:
             if _cand in bd_df.columns:
@@ -2931,9 +3148,9 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     fecha_mat_audit.loc[fecha_da_invalid_only] = "DEFAULT_1900_DA_INVALIDA"
     fecha_mat_audit.loc[fecha_input_da_invalid] = "DEFAULT_1900_INPUT_DA_INVALIDAS"
 
-    sit_fon_source = pd.Series("POLITICA_LOCAL_FIJA_1", index=src_work.index, dtype="object")
-    sit_fon_method = pd.Series("CONSTANTE_1_GLOBAL", index=src_work.index, dtype="object")
-    sit_fon_audit = pd.Series("FIJADO_MANUALMENTE_A_1_EN_TODO_EL_PROYECTO", index=src_work.index, dtype="object")
+    sit_fon_source = pd.Series("INSTITUCION_NO_ADSCRITA_FONDO_SOLIDARIO_0", index=src_work.index, dtype="object")
+    sit_fon_method = pd.Series("CONSTANTE_0_GLOBAL", index=src_work.index, dtype="object")
+    sit_fon_audit = pd.Series("FIJADO_A_0_INSTITUCION_NO_ADSCRITA_FONDO_SOLIDARIO", index=src_work.index, dtype="object")
 
     sus_pre_source = pd.Series("POLITICA_LOCAL_FIJA_0", index=src_work.index, dtype="object")
     sus_pre_method = pd.Series("CONSTANTE_0_GLOBAL", index=src_work.index, dtype="object")
@@ -3003,7 +3220,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
             out["NIV_ACA"] = out["NIV_ACA"].combine_first(pd.to_numeric(src_work[col_niv_aca], errors="coerce"))
     else:
         out["NIV_ACA"] = src_work[col_niv_aca] if col_niv_aca else _na_series()
-    out["SIT_FON_SOL"] = 1
+    out["SIT_FON_SOL"] = 0  # Institución no adscrita a Fondo Solidario
     out["SUS_PRE"] = 0
 
     if col_fecha_matricula:
@@ -4133,7 +4350,7 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida.loc[niv_trim_aplicado_mask, "NIV_ACA_EQ_SEM_APLICADA"] = "SI"
     print(f"    ↳ NIV_ACA equivalencia TRIMESTRAL→SEMESTRAL: {int(niv_trim_aplicado_mask.sum())} filas")
 
-    archivo_subida["SIT_FON_SOL"] = pd.Series(1, index=archivo_subida.index, dtype="Int64")
+    archivo_subida["SIT_FON_SOL"] = pd.Series(0, index=archivo_subida.index, dtype="Int64")  # Institución no adscrita a Fondo Solidario
     archivo_subida["SUS_PRE"] = pd.Series(0, index=archivo_subida.index, dtype="Int64")
     archivo_subida["REINCORPORACION"] = pd.Series(0, index=archivo_subida.index, dtype="Int64")
     vig = pd.to_numeric(archivo_subida["VIG"], errors="coerce")
@@ -4443,6 +4660,14 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     archivo_subida["ESTADO_CARGA_PREGRADO"] = estado_carga
     archivo_subida["INCLUIR_EN_MATRICULA_32"] = (estado_carga == "OK_CARGA_PREGRADO").map({True: "SI", False: "NO"})
 
+    archivo_subida, matricula_unificada_32, control_vigencia_0_codcli_stats = _aplicar_control_vigencia_0_codcli(
+        archivo_subida,
+        matricula_unificada_32,
+        output_dir,
+        process_year=int(periodo_filtro_anio),
+        process_period=int(periodo_filtro_sem),
+    )
+
     resumen_carga_pregrado = (
         estado_carga.value_counts(dropna=False)
         .rename_axis("estado_carga")
@@ -4660,7 +4885,20 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     if not auditoria_consolidacion.empty:
         sheets_export["AUDITORIA_CONSOLIDACION"] = auditoria_consolidacion
     _write_excel_atomic(sheets_export, out_path, red_rows_sheet="ARCHIVO_LISTO_SUBIDA", red_rows_mask=_red_mask)
+    # ── KPI Dashboard (Regla 12: fallo controlado, no bloquea pipeline) ──────
+    _kpi_result: dict[str, object] = {"status": "omitido", "message": "no ejecutado aún"}
+    try:
+        from src.kpi_dashboard import construir_kpi_dashboard as _construir_kpi
+        _kpi_result = _construir_kpi(out_path)
+    except Exception as _kpi_exc:
+        _kpi_result = {"status": "error", "message": str(_kpi_exc), "backup_sheet": None, "backup_file": None}
     _write_mu_csv_atomic(matricula_unificada_32, csv_out_path)
+    pes_ready_report = _generar_pes_ready_y_copiar(
+        csv_out_path,
+        output_dir,
+        oferta_dim,
+        process_year=int(periodo_filtro_anio),
+    )
 
     if not auditoria_consolidacion.empty:
         audit_tsv_path = output_dir / "auditoria_consolidacion_codcli.tsv"
@@ -4709,6 +4947,9 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         "sit_fon_sol_patch_source": sit_fon_patch_source,
         "sit_fon_sol_patch_stats": sit_fon_sol_patch_stats,
         "for_ing_act_report": for_ing_act_report,
+        "pes_ready_report": pes_ready_report,
+        "control_vigencia_0_codcli": control_vigencia_0_codcli_stats,
+        "kpi_dashboard": _kpi_result,
     }
     if _filtro_bd_stats:
         _report["filtro_base_datos"] = _filtro_bd_stats
@@ -4720,6 +4961,30 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
         _mu_json_path.write_text(json.dumps(_report, indent=2, ensure_ascii=False), encoding="utf-8")
     except Exception:
         pass  # no bloquear pipeline por fallo de escritura JSON
+    # ── Reporte de KPI Dashboard en consola ───────────────────────────────
+    _kpi_status = _kpi_result.get("status", "?")
+    _kpi_msg = _kpi_result.get("message", "")
+    _kpi_icon = {"creado": "✅", "actualizado": "✅", "respaldado_y_reemplazado": "🔄", "error": "⚠️"}.get(_kpi_status, "ℹ️")
+    print(f"  {_kpi_icon} KPI_Dashboard [{_kpi_status}]: {_kpi_msg}")
+    if _kpi_result.get("backup_sheet"):
+        print(f"     Respaldo de hoja anterior: {_kpi_result['backup_sheet']}")
+    if _kpi_result.get("backup_file"):
+        print(f"     Respaldo físico: {_kpi_result['backup_file']}")
+    # ── Checklist ejecutivo en terminal ──────────────────────────────────
+    try:
+        from src.checklist_ejecutivo import imprimir_checklist_ejecutivo_mu2026 as _checklist
+        _pes_ready_path = output_dir / "matricula_unificada_2026_pregrado_PES_READY.csv"
+        _desktop_path = Path("/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv")
+        _checklist(
+            df_mu32=matricula_unificada_32,
+            df_subida=archivo_subida,
+            pes_ready_path=_pes_ready_path,
+            desktop_path=_desktop_path,
+            output_dir=output_dir,
+            report=_report,
+        )
+    except Exception as _cl_exc:
+        print(f"  ⚠️  Checklist ejecutivo: error al imprimir ({_cl_exc})")
     try:
         (output_dir / "reporte_patch_sit_fon_sol.json").write_text(
             json.dumps(sit_fon_sol_patch_stats, indent=2, ensure_ascii=False),
@@ -5017,6 +5282,791 @@ def _run_mu_pipeline_for_control(input_file: Path, output_dir: Path) -> tuple[pd
     if not csv_path.exists():
         raise FileNotFoundError(f"No se generó la salida MU esperada: {csv_path}")
     return _load_mu_control_from_pregrado_csv(csv_path), report
+
+
+def _load_mu_csv_as_text_df(csv_path: Path) -> pd.DataFrame:
+    df = pd.read_csv(
+        csv_path,
+        sep=";",
+        header=None,
+        names=MATRICULA_UNIFICADA_COLUMNS,
+        dtype=str,
+        keep_default_na=False,
+    )
+    for column in MATRICULA_UNIFICADA_COLUMNS:
+        df[column] = df[column].fillna("").astype(str).str.strip()
+    return df
+
+
+def _pes_append_correction(
+    audit_rows: list[dict[str, object]],
+    df: pd.DataFrame,
+    indices: list[int],
+    rule_id: str,
+    field: str,
+    old_values: pd.Series,
+    new_values: pd.Series,
+    detail: str,
+) -> None:
+    for idx in indices:
+        old_value = str(old_values.loc[idx])
+        new_value = str(new_values.loc[idx])
+        if old_value == new_value:
+            continue
+        audit_rows.append(
+            {
+                "fila_original_csv": int(df.at[idx, "_ROW_NUM_ORIG"]),
+                "rule_id": rule_id,
+                "accion": "CORRECCION",
+                "campo": field,
+                "valor_anterior": old_value,
+                "valor_nuevo": new_value,
+                "TIPO_DOC": df.at[idx, "TIPO_DOC"],
+                "N_DOC": df.at[idx, "N_DOC"],
+                "DV": df.at[idx, "DV"],
+                "detalle": detail,
+            }
+        )
+
+
+def _pes_append_exclusion(
+    audit_rows: list[dict[str, object]],
+    df: pd.DataFrame,
+    indices: list[int],
+    rule_id: str,
+    detail: str,
+) -> None:
+    for idx in indices:
+        audit_rows.append(
+            {
+                "fila_original_csv": int(df.at[idx, "_ROW_NUM_ORIG"]),
+                "rule_id": rule_id,
+                "accion": "EXCLUSION",
+                "TIPO_DOC": df.at[idx, "TIPO_DOC"],
+                "N_DOC": df.at[idx, "N_DOC"],
+                "DV": df.at[idx, "DV"],
+                "FOR_ING_ACT": df.at[idx, "FOR_ING_ACT"],
+                "ANIO_ING_ACT": df.at[idx, "ANIO_ING_ACT"],
+                "SEM_ING_ACT": df.at[idx, "SEM_ING_ACT"],
+                "ANIO_ING_ORI": df.at[idx, "ANIO_ING_ORI"],
+                "SEM_ING_ORI": df.at[idx, "SEM_ING_ORI"],
+                "COD_SED": df.at[idx, "COD_SED"],
+                "COD_CAR": df.at[idx, "COD_CAR"],
+                "JOR": df.at[idx, "JOR"],
+                "MODALIDAD": df.at[idx, "MODALIDAD"],
+                "VERSION": df.at[idx, "VERSION"],
+                "NIV_ACA": df.at[idx, "NIV_ACA"],
+                "FECH_NAC": df.at[idx, "FECH_NAC"],
+                "detalle": detail,
+            }
+        )
+
+
+def _build_oferta_combo_duration_maps(oferta_dim: pd.DataFrame) -> tuple[set[tuple[str, str, str, str, str]], dict[tuple[str, str, str, str, str], int]]:
+    combos: set[tuple[str, str, str, str, str]] = set()
+    durations: dict[tuple[str, str, str, str, str], int] = {}
+    if oferta_dim.empty:
+        return combos, durations
+
+    for _, row in oferta_dim.iterrows():
+        components = _extract_sies_components(row.get("CODIGO_UNICO"))
+        if not components:
+            continue
+        cod_sed, cod_car, jor_from_sies, version = components
+        modalidad = str(row.get("MODALIDAD", "")).strip()
+        jor = str(row.get("JORNADA", "")).strip() or jor_from_sies
+        key = (cod_sed, cod_car, jor, modalidad, version)
+        if all(key):
+            combos.add(key)
+            dur = pd.to_numeric(pd.Series([row.get("DURACION_ESTUDIOS")]), errors="coerce").iloc[0]
+            if pd.notna(dur):
+                durations[key] = int(dur)
+    return combos, durations
+
+
+def _detect_egresado_cuarto_medio_2025_local(df: pd.DataFrame) -> tuple[pd.Series, str]:
+    """Hook extensible: hoy no existe fuente local trazable para esta regla PES."""
+    return pd.Series(False, index=df.index), "SIN_FUENTE_LOCAL_TRAZABLE"
+
+
+def _load_exclusiones_pes_mu2026() -> pd.DataFrame:
+    path = Path(__file__).with_name("control") / "exclusiones_pes_mu2026.tsv"
+    if not path.exists():
+        return pd.DataFrame(columns=["N_DOC", "DV", "motivo_exclusion", "fuente", "fecha"])
+
+    try:
+        df = pd.read_csv(path, sep="\t", dtype=str, keep_default_na=False)
+    except Exception as exc:
+        print(f"  ⚠️ No se pudo leer exclusiones PES auditadas: {exc}")
+        return pd.DataFrame(columns=["N_DOC", "DV", "motivo_exclusion", "fuente", "fecha"])
+
+    required = {"N_DOC", "DV", "motivo_exclusion", "fuente", "fecha"}
+    if not required.issubset(df.columns):
+        print("  ⚠️ exclusiones_pes_mu2026.tsv inválido: faltan columnas requeridas")
+        return pd.DataFrame(columns=["N_DOC", "DV", "motivo_exclusion", "fuente", "fecha"])
+
+    out = df[list(required)].copy()
+    for col in ["N_DOC", "DV", "motivo_exclusion", "fuente", "fecha"]:
+        out[col] = out[col].fillna("").astype(str).str.strip()
+    out = out[(out["N_DOC"] != "") & (out["DV"] != "")].drop_duplicates(subset=["N_DOC", "DV"], keep="first")
+    return out.reset_index(drop=True)
+
+
+def _verificar_exclusiones_pes_ready(
+    bruto_path: Path,
+    pes_ready_path: Path,
+    output_dir: Path,
+    timestamp: str,
+    exclusion_rule_map: dict[tuple[str, str, str], str] | None = None,
+) -> dict[str, object]:
+    """Compara bruto vs PES_READY, clasifica excluidos y genera auditoría formal."""
+
+    _RULE_TO_REASON: dict[str, str] = {
+        "REGLA_6_RUT_MAYOR_8": "RUT tipo R con más de 8 dígitos",
+        "REGLA_7_EDAD_MENOR_15_ACT": "Edad menor a 15 años respecto de ANIO_ING_ACT",
+        "REGLA_7_EDAD_MENOR_15_ORI": "Edad menor a 15 años respecto de ANIO_ING_ORI",
+        "REGLA_8_OFERTA_INEXISTENTE": "Oferta académica inexistente",
+        "REGLA_9_NIV_ACA_GT_DURACION": "NIV_ACA mayor que duración de carrera",
+        "REGLA_10_QM_2025": "Otro motivo PES_READY auditado",
+        "REGLA_11_EXCLUSION_AUDITADA": "Exclusión auditada por control/exclusiones_pes_mu2026.tsv",
+    }
+
+    _VERIF_AUDIT_COLS = [
+        "LINEA_ORIGINAL", "CLAVE_DOC",
+        "TIPO_DOC", "N_DOC", "DV",
+        "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRE", "FECH_NAC",
+        "COD_SED", "COD_CAR", "MODALIDAD", "JOR", "VERSION",
+        "FOR_ING_ACT", "ANIO_ING_ACT", "SEM_ING_ACT",
+        "ANIO_ING_ORI", "SEM_ING_ORI",
+        "ASI_INS_ANT", "ASI_APR_ANT", "ASI_INS_HIS", "ASI_APR_HIS",
+        "NIV_ACA", "SIT_FON_SOL", "VIG",
+        "MOTIVO_EXCLUSION_PES_READY",
+    ]
+
+    verif_csv_path = output_dir / f"verificacion_exclusiones_pes_ready_{timestamp}.csv"
+    verif_md_path = output_dir / f"resumen_verificacion_exclusiones_pes_ready_{timestamp}.md"
+
+    result: dict[str, object] = {
+        "rows_bruto": 0,
+        "rows_pes_ready": 0,
+        "rows_excluded": 0,
+        "rows_included": 0,
+        "exclusion_audit_path": str(verif_csv_path),
+        "exclusion_summary_path": str(verif_md_path),
+        "exclusion_reason_counts": {},
+        "excluded_without_trace_count": 0,
+        "duplicate_keys_bruto": 0,
+        "duplicate_keys_pes_ready": 0,
+        "invalid_field_rows_bruto": 0,
+        "invalid_field_rows_pes_ready": 0,
+    }
+
+    if not bruto_path.exists():
+        print("  ⚠️ Verificación PES_READY: archivo bruto no encontrado; se omite verificación")
+        return result
+    if not pes_ready_path.exists():
+        print("  ⚠️ Verificación PES_READY: archivo PES_READY no encontrado; se omite verificación")
+        return result
+
+    def _count_bad_field_rows(path: Path) -> int:
+        n_cols = len(MATRICULA_UNIFICADA_COLUMNS)
+        count = 0
+        with path.open("r", encoding="utf-8", errors="ignore") as fh:
+            for line in fh:
+                if len(line.rstrip("\n").split(";")) != n_cols:
+                    count += 1
+        return count
+
+    bruto_df = _load_mu_csv_as_text_df(bruto_path)
+    bruto_df.insert(0, "_LINEA", range(1, len(bruto_df) + 1))
+    pes_df_v = _load_mu_csv_as_text_df(pes_ready_path)
+
+    rows_bruto = len(bruto_df)
+    rows_pes_ready = len(pes_df_v)
+    invalid_bruto = _count_bad_field_rows(bruto_path)
+    invalid_pes = _count_bad_field_rows(pes_ready_path)
+
+    result["rows_bruto"] = rows_bruto
+    result["rows_pes_ready"] = rows_pes_ready
+    result["invalid_field_rows_bruto"] = invalid_bruto
+    result["invalid_field_rows_pes_ready"] = invalid_pes
+
+    bruto_df["_KEY"] = (
+        bruto_df["TIPO_DOC"].str.strip() + "|"
+        + bruto_df["N_DOC"].str.strip() + "|"
+        + bruto_df["DV"].str.strip()
+    )
+    pes_df_v["_KEY"] = (
+        pes_df_v["TIPO_DOC"].str.strip() + "|"
+        + pes_df_v["N_DOC"].str.strip() + "|"
+        + pes_df_v["DV"].str.strip()
+    )
+
+    dup_bruto = int(bruto_df["_KEY"].duplicated(keep=False).sum())
+    dup_pes = int(pes_df_v["_KEY"].duplicated(keep=False).sum())
+    result["duplicate_keys_bruto"] = dup_bruto
+    result["duplicate_keys_pes_ready"] = dup_pes
+
+    pes_key_set = set(pes_df_v["_KEY"].tolist())
+    excluded_mask = ~bruto_df["_KEY"].isin(pes_key_set)
+    excluded_df = bruto_df[excluded_mask].copy().reset_index(drop=True)
+
+    rows_excluded = len(excluded_df)
+    rows_included = rows_bruto - rows_excluded
+    result["rows_excluded"] = rows_excluded
+    result["rows_included"] = rows_included
+
+    print(f"  ℹ️ Verificación PES_READY · bruto: {rows_bruto} filas")
+    print(f"  ℹ️ Verificación PES_READY · final: {rows_pes_ready} filas")
+    print(f"  ℹ️ Verificación PES_READY · excluidos: {rows_excluded}")
+
+    if rows_excluded == 0:
+        pd.DataFrame(columns=_VERIF_AUDIT_COLS).to_csv(verif_csv_path, index=False, encoding="utf-8")
+        md_no_excl = [
+            "# Verificación de estudiantes excluidos PES_READY MU2026",
+            "",
+            f"Fecha ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+            "",
+            f"- Archivo bruto: `{bruto_path}`",
+            f"- Archivo PES_READY: `{pes_ready_path}`",
+            f"- Filas bruto: {rows_bruto}",
+            f"- Filas PES_READY: {rows_pes_ready}",
+            "",
+            "## Conclusión operativa",
+            "",
+            "✅ Sin exclusiones. Bruto y PES_READY tienen la misma cantidad de filas.",
+        ]
+        verif_md_path.write_text("\n".join(md_no_excl), encoding="utf-8")
+        print(f"  ℹ️ Verificación PES_READY · auditoría: {verif_csv_path}")
+        return result
+
+    # Classify exclusion reasons
+    if exclusion_rule_map:
+        def _motivo_from_map(tipo_doc: str, n_doc: str, dv: str) -> str:
+            k3 = (str(tipo_doc).strip(), str(n_doc).strip(), str(dv).strip())
+            rule_id = exclusion_rule_map.get(k3, "OTRO")
+            return _RULE_TO_REASON.get(rule_id, "Otro motivo PES_READY auditado")
+
+        excluded_df["MOTIVO_EXCLUSION_PES_READY"] = [
+            _motivo_from_map(row["TIPO_DOC"], row["N_DOC"], row["DV"])
+            for _, row in excluded_df.iterrows()
+        ]
+    else:
+        excluded_df["MOTIVO_EXCLUSION_PES_READY"] = "Otro motivo PES_READY auditado"
+
+        n_doc_digits = excluded_df["N_DOC"].astype(str).str.replace(r"\D", "", regex=True)
+        mask_rut6 = excluded_df["TIPO_DOC"].eq("R") & n_doc_digits.str.len().gt(8)
+        excluded_df.loc[mask_rut6, "MOTIVO_EXCLUSION_PES_READY"] = "RUT tipo R con más de 8 dígitos"
+
+        birth_yr = pd.to_numeric(excluded_df["FECH_NAC"].astype(str).str.extract(r"(\d{4})$")[0], errors="coerce")
+        anio_act6 = pd.to_numeric(excluded_df["ANIO_ING_ACT"], errors="coerce")
+        anio_ori6 = pd.to_numeric(excluded_df["ANIO_ING_ORI"], errors="coerce")
+        mask_age_act6 = birth_yr.notna() & anio_act6.notna() & (anio_act6 - birth_yr).lt(15)
+        mask_age_ori6 = birth_yr.notna() & anio_ori6.notna() & anio_ori6.ne(1900) & (anio_ori6 - birth_yr).lt(15)
+        excluded_df.loc[mask_age_act6 & ~mask_rut6, "MOTIVO_EXCLUSION_PES_READY"] = "Edad menor a 15 años respecto de ANIO_ING_ACT"
+        excluded_df.loc[mask_age_ori6 & ~mask_rut6 & ~mask_age_act6, "MOTIVO_EXCLUSION_PES_READY"] = "Edad menor a 15 años respecto de ANIO_ING_ORI"
+
+        exclusiones_tsv = _load_exclusiones_pes_mu2026()
+        if not exclusiones_tsv.empty:
+            _tsv_key_set = set(zip(
+                exclusiones_tsv["N_DOC"].astype(str).str.strip(),
+                exclusiones_tsv["DV"].astype(str).str.strip(),
+            ))
+            mask_tsv = pd.Series(
+                [(str(r["N_DOC"]).strip(), str(r["DV"]).strip()) in _tsv_key_set for _, r in excluded_df.iterrows()],
+                index=excluded_df.index,
+            )
+            excluded_df.loc[mask_tsv, "MOTIVO_EXCLUSION_PES_READY"] = "Exclusión auditada por control/exclusiones_pes_mu2026.tsv"
+
+    without_trace = int((excluded_df["MOTIVO_EXCLUSION_PES_READY"] == "Otro motivo PES_READY auditado").sum())
+    result["excluded_without_trace_count"] = without_trace
+
+    if without_trace > 0:
+        print(f"  ⚠️ Verificación PES_READY · {without_trace} excluido(s) sin motivo trazable local")
+
+    reason_counts: dict[str, int] = excluded_df["MOTIVO_EXCLUSION_PES_READY"].value_counts().to_dict()
+    result["exclusion_reason_counts"] = reason_counts
+
+    excluded_df.rename(columns={"_LINEA": "LINEA_ORIGINAL"}, inplace=True)
+    excluded_df["CLAVE_DOC"] = excluded_df["_KEY"]
+    out_cols_present = [c for c in _VERIF_AUDIT_COLS if c in excluded_df.columns]
+    excluded_df[out_cols_present].to_csv(verif_csv_path, index=False, encoding="utf-8")
+
+    print(f"  ℹ️ Verificación PES_READY · auditoría: {verif_csv_path}")
+
+    md_lines = [
+        "# Verificación de estudiantes excluidos PES_READY MU2026",
+        "",
+        f"Fecha ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "",
+        f"- Archivo bruto: `{bruto_path}`",
+        f"- Archivo PES_READY: `{pes_ready_path}`",
+        f"- Filas bruto: {rows_bruto}",
+        f"- Filas PES_READY: {rows_pes_ready}",
+        f"- Excluidos: {rows_excluded}",
+        f"- Incluidos: {rows_included}",
+        "",
+        "## Conteo por motivo de exclusión",
+        "",
+    ]
+    for motivo, cnt in sorted(reason_counts.items()):
+        md_lines.append(f"- {motivo}: {cnt}")
+    md_lines.extend([
+        "",
+        "## Validación de duplicados",
+        "",
+        f"- Claves duplicadas en bruto: {dup_bruto}",
+        f"- Claves duplicadas en PES_READY: {dup_pes}",
+        "",
+        "## Validación de campos por fila",
+        "",
+        f"- Filas con campos ≠ 32 en bruto: {invalid_bruto}",
+        f"- Filas con campos ≠ 32 en PES_READY: {invalid_pes}",
+        "",
+        "## Conclusión operativa",
+        "",
+    ])
+    if without_trace == 0:
+        md_lines.append("✅ Todos los estudiantes excluidos tienen motivo trazable.")
+    else:
+        md_lines.append(
+            f"⚠️ {without_trace} estudiante(s) excluido(s) sin motivo trazable local. "
+            "Revisar manualmente y actualizar control/exclusiones_pes_mu2026.tsv si corresponde."
+        )
+    if dup_bruto > 0:
+        md_lines.append(f"⚠️ {dup_bruto} fila(s) con clave duplicada en bruto.")
+    if dup_pes > 0:
+        md_lines.append(f"⚠️ {dup_pes} fila(s) con clave duplicada en PES_READY.")
+    if invalid_bruto > 0:
+        md_lines.append(f"⚠️ {invalid_bruto} fila(s) con cantidad de campos incorrecta en bruto.")
+    if invalid_pes > 0:
+        md_lines.append(f"⚠️ {invalid_pes} fila(s) con cantidad de campos incorrecta en PES_READY.")
+
+    verif_md_path.write_text("\n".join(md_lines), encoding="utf-8")
+    return result
+
+
+def _validate_pes_ready_csv(csv_path: Path) -> dict[str, object]:
+    header_detectado = False
+    invalid_field_rows = 0
+    total_rows = 0
+    first_row_fields = 0
+
+    with csv_path.open("r", encoding="utf-8", errors="ignore", newline="") as handle:
+        reader = pd.read_csv(
+            handle,
+            sep=";",
+            header=None,
+            dtype=str,
+            keep_default_na=False,
+            chunksize=5000,
+        )
+        for chunk in reader:
+            if total_rows == 0 and not chunk.empty:
+                first_row = [str(v).strip() for v in chunk.iloc[0].tolist()]
+                first_row_fields = len(first_row)
+                header_detectado = first_row == MATRICULA_UNIFICADA_COLUMNS
+            total_rows += len(chunk)
+            invalid_field_rows += int((chunk.shape[1] != len(MATRICULA_UNIFICADA_COLUMNS)) * len(chunk))
+
+    return {
+        "total_rows": total_rows,
+        "first_row_fields": first_row_fields,
+        "invalid_field_rows": invalid_field_rows,
+        "header_detectado": header_detectado,
+    }
+
+
+def _generar_pes_ready_y_copiar(src_path: Path, output_dir: Path, oferta_dim: pd.DataFrame, process_year: int | None = None) -> dict[str, object]:
+    dst_path = Path("/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv")
+    pes_ready_path = output_dir / "matricula_unificada_2026_pregrado_PES_READY.csv"
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    audit_corr_path = output_dir / f"auditoria_correcciones_pes_ready_{timestamp}.csv"
+    audit_exc_path = output_dir / f"auditoria_exclusiones_pes_ready_{timestamp}.csv"
+    summary_md_path = output_dir / f"resumen_pes_ready_{timestamp}.md"
+
+    report: dict[str, object] = {
+        "source_path": str(src_path),
+        "pes_ready_path": str(pes_ready_path),
+        "desktop_path": str(dst_path),
+        "audit_corrections_path": str(audit_corr_path),
+        "audit_exclusions_path": str(audit_exc_path),
+        "summary_path": str(summary_md_path),
+        "copied_to_desktop": False,
+        "copy_status": "NO_EJECUTADO",
+    }
+
+    print(f"  ℹ️ PES_READY · origen bruto: {src_path}")
+    print(f"  ℹ️ PES_READY · destino resultados: {pes_ready_path}")
+    print(f"  ℹ️ PES_READY · destino Escritorio: {dst_path}")
+
+    if not src_path.exists():
+        print("  ⚠️ PES_READY: origen bruto no existe; se omite generación")
+        report["copy_status"] = "ORIGEN_NO_EXISTE"
+        return report
+
+    raw_df = _load_mu_csv_as_text_df(src_path)
+    raw_df["_ROW_NUM_ORIG"] = range(1, len(raw_df) + 1)
+    pes_df = raw_df.copy()
+    correction_rows: list[dict[str, object]] = []
+    exclusion_rows: list[dict[str, object]] = []
+    correction_counts: dict[str, int] = {}
+    exclusion_counts: dict[str, int] = {}
+
+    direct_codes = {"1", "6", "7", "8", "9", "10"}
+    historial_codes = {"2", "3"}
+    tracked_for_codes = direct_codes | historial_codes
+    effective_process_year = process_year
+    if effective_process_year is None:
+        _anio_mode = pd.to_numeric(pes_df["ANIO_ING_ACT"], errors="coerce").dropna()
+        effective_process_year = int(_anio_mode.mode().iloc[0]) if not _anio_mode.empty else datetime.now().year
+
+    # Regla 1 · SIT_FON_SOL = 0 para toda la carga PES
+    mask_sit = pes_df["SIT_FON_SOL"].astype(str).str.strip().ne("0")
+    idx_sit = pes_df.index[mask_sit].tolist()
+    if idx_sit:
+        old_vals = pes_df.loc[idx_sit, "SIT_FON_SOL"].copy()
+        new_vals = pd.Series("0", index=idx_sit, dtype="object")
+        _pes_append_correction(correction_rows, pes_df, idx_sit, "REGLA_1_SIT_FON_SOL", "SIT_FON_SOL", old_vals, new_vals, "Institución no adscrita a Fondo Solidario: valor forzado a 0 para carga PES")
+        pes_df.loc[idx_sit, "SIT_FON_SOL"] = "0"
+    correction_counts["REGLA_1_SIT_FON_SOL"] = len(idx_sit)
+
+    # Regla 2 · FOR_ING_ACT directo: origen debe coincidir con actual
+    mask_direct = pes_df["FOR_ING_ACT"].isin(direct_codes)
+    mask_direct_fix = mask_direct & ((pes_df["ANIO_ING_ORI"] != pes_df["ANIO_ING_ACT"]) | (pes_df["SEM_ING_ORI"] != pes_df["SEM_ING_ACT"]))
+    idx_direct = pes_df.index[mask_direct_fix].tolist()
+    if idx_direct:
+        old_year = pes_df.loc[idx_direct, "ANIO_ING_ORI"].copy()
+        old_sem = pes_df.loc[idx_direct, "SEM_ING_ORI"].copy()
+        new_year = pes_df.loc[idx_direct, "ANIO_ING_ACT"].copy()
+        new_sem = pes_df.loc[idx_direct, "SEM_ING_ACT"].copy()
+        _pes_append_correction(correction_rows, pes_df, idx_direct, "REGLA_2_FOR_DIRECTO_ORIGEN", "ANIO_ING_ORI", old_year, new_year, "FOR_ING_ACT directo exige año origen = año actual")
+        _pes_append_correction(correction_rows, pes_df, idx_direct, "REGLA_2_FOR_DIRECTO_ORIGEN", "SEM_ING_ORI", old_sem, new_sem, "FOR_ING_ACT directo exige semestre origen = semestre actual")
+        pes_df.loc[idx_direct, "ANIO_ING_ORI"] = new_year
+        pes_df.loc[idx_direct, "SEM_ING_ORI"] = new_sem
+    correction_counts["REGLA_2_FOR_DIRECTO_ORIGEN"] = len(idx_direct)
+
+    # Regla 3 · FOR_ING_ACT 2/3 con ANIO_ING_ORI = 1900
+    mask_hist_1900 = pes_df["FOR_ING_ACT"].isin(historial_codes) & pes_df["ANIO_ING_ORI"].eq("1900")
+    idx_hist = []
+    new_year_map: dict[int, str] = {}
+    new_sem_map: dict[int, str] = {}
+    for idx in pes_df.index[mask_hist_1900]:
+        sem_act = str(pes_df.at[idx, "SEM_ING_ACT"]).strip()
+        anio_act = pd.to_numeric(pd.Series([pes_df.at[idx, "ANIO_ING_ACT"]]), errors="coerce").iloc[0]
+        if pd.isna(anio_act) or sem_act not in {"1", "2"}:
+            continue
+        idx_hist.append(idx)
+        if sem_act == "1":
+            new_year_map[idx] = str(int(anio_act) - 1)
+            new_sem_map[idx] = "2"
+        else:
+            new_year_map[idx] = str(int(anio_act))
+            new_sem_map[idx] = "1"
+    if idx_hist:
+        old_year = pes_df.loc[idx_hist, "ANIO_ING_ORI"].copy()
+        old_sem = pes_df.loc[idx_hist, "SEM_ING_ORI"].copy()
+        new_year = pd.Series(new_year_map)
+        new_sem = pd.Series(new_sem_map)
+        _pes_append_correction(correction_rows, pes_df, idx_hist, "REGLA_3_FOR_23_ORIGEN_1900", "ANIO_ING_ORI", old_year, new_year, "FOR_ING_ACT 2/3 con origen 1900: ajuste trazable por semestre actual")
+        _pes_append_correction(correction_rows, pes_df, idx_hist, "REGLA_3_FOR_23_ORIGEN_1900", "SEM_ING_ORI", old_sem, new_sem, "FOR_ING_ACT 2/3 con origen 1900: ajuste trazable por semestre actual")
+        pes_df.loc[idx_hist, "ANIO_ING_ORI"] = new_year
+        pes_df.loc[idx_hist, "SEM_ING_ORI"] = new_sem
+    correction_counts["REGLA_3_FOR_23_ORIGEN_1900"] = len(idx_hist)
+
+    # Regla 4 · FOR_ING_ACT 2/3 con ASI_INS_HIS = 0
+    asi_ins_his_num = pd.to_numeric(pes_df["ASI_INS_HIS"], errors="coerce").fillna(0)
+    asi_apr_his_num = pd.to_numeric(pes_df["ASI_APR_HIS"], errors="coerce").fillna(0)
+    niv_aca_num = pd.to_numeric(pes_df["NIV_ACA"], errors="coerce")
+    mask_asi_his_zero = pes_df["FOR_ING_ACT"].isin(historial_codes) & asi_ins_his_num.eq(0)
+    idx_asi_his = pes_df.index[mask_asi_his_zero].tolist()
+    if idx_asi_his:
+        old_vals = pes_df.loc[idx_asi_his, "ASI_INS_HIS"].copy()
+        new_vals = pd.Series(index=idx_asi_his, dtype="object")
+        for idx in idx_asi_his:
+            niv = pd.to_numeric(pd.Series([pes_df.at[idx, "NIV_ACA"]]), errors="coerce").iloc[0]
+            apr = pd.to_numeric(pd.Series([pes_df.at[idx, "ASI_APR_HIS"]]), errors="coerce").iloc[0]
+            min_value = int(niv) if pd.notna(niv) and int(niv) > 0 else 1
+            apr_value = int(apr) if pd.notna(apr) and int(apr) > 0 else 0
+            new_vals.loc[idx] = str(max(min_value, apr_value))
+        _pes_append_correction(correction_rows, pes_df, idx_asi_his, "REGLA_4_FOR_23_ASI_INS_HIS", "ASI_INS_HIS", old_vals, new_vals, "FOR_ING_ACT 2/3 no permite ASI_INS_HIS = 0; imputación mínima trazable")
+        pes_df.loc[idx_asi_his, "ASI_INS_HIS"] = new_vals
+    correction_counts["REGLA_4_FOR_23_ASI_INS_HIS"] = len(idx_asi_his)
+
+    # Regla 5 · ASI_INS_ANT = 0 para ingreso del año del proceso sin trayectoria previa aplicable
+    asi_ins_ant_num = pd.to_numeric(pes_df["ASI_INS_ANT"], errors="coerce").fillna(0)
+    asi_apr_ant_num = pd.to_numeric(pes_df["ASI_APR_ANT"], errors="coerce").fillna(0)
+    anio_ing_act_num = pd.to_numeric(pes_df["ANIO_ING_ACT"], errors="coerce")
+    mask_asi_ant_zero = pes_df["FOR_ING_ACT"].isin(direct_codes) & anio_ing_act_num.eq(effective_process_year) & (asi_ins_ant_num.ne(0) | asi_apr_ant_num.ne(0))
+    idx_asi_ant = pes_df.index[mask_asi_ant_zero].tolist()
+    if idx_asi_ant:
+        old_ins_ant = pes_df.loc[idx_asi_ant, "ASI_INS_ANT"].copy()
+        old_apr_ant = pes_df.loc[idx_asi_ant, "ASI_APR_ANT"].copy()
+        new_zero = pd.Series("0", index=idx_asi_ant, dtype="object")
+        _pes_append_correction(correction_rows, pes_df, idx_asi_ant, "REGLA_5_ASI_INS_ANT_CERO", "ASI_INS_ANT", old_ins_ant, new_zero, "Ingreso directo del año del proceso: ASI_INS_ANT debe ser 0")
+        _pes_append_correction(correction_rows, pes_df, idx_asi_ant, "REGLA_5_ASI_INS_ANT_CERO", "ASI_APR_ANT", old_apr_ant, new_zero, "Ingreso directo del año del proceso: ASI_APR_ANT debe ser 0 cuando se ajusta ASI_INS_ANT")
+        pes_df.loc[idx_asi_ant, "ASI_INS_ANT"] = "0"
+        pes_df.loc[idx_asi_ant, "ASI_APR_ANT"] = "0"
+    correction_counts["REGLA_5_ASI_INS_ANT_CERO"] = len(idx_asi_ant)
+
+    offer_combos, offer_durations = _build_oferta_combo_duration_maps(oferta_dim)
+
+    # Reglas de exclusión
+    n_doc_digits = pes_df["N_DOC"].astype(str).str.replace(r"\D", "", regex=True)
+    mask_rut_gt8 = pes_df["TIPO_DOC"].eq("R") & n_doc_digits.str.len().gt(8)
+    idx_rut_gt8 = pes_df.index[mask_rut_gt8].tolist()
+    _pes_append_exclusion(exclusion_rows, pes_df, idx_rut_gt8, "REGLA_6_RUT_MAYOR_8", "TIPO_DOC=R con N_DOC numérico superior a 8 dígitos")
+    exclusion_counts["REGLA_6_RUT_MAYOR_8"] = len(idx_rut_gt8)
+
+    birth_year = pd.to_numeric(pes_df["FECH_NAC"].astype(str).str.extract(r"(\d{4})$")[0], errors="coerce")
+    anio_ori_num = pd.to_numeric(pes_df["ANIO_ING_ORI"], errors="coerce")
+    age_act = anio_ing_act_num - birth_year
+    age_ori = anio_ori_num - birth_year
+    mask_age_act = birth_year.notna() & anio_ing_act_num.notna() & age_act.lt(15)
+    mask_age_ori = birth_year.notna() & anio_ori_num.notna() & anio_ori_num.ne(1900) & age_ori.lt(15)
+    idx_age_act = pes_df.index[mask_age_act].tolist()
+    idx_age_ori = pes_df.index[mask_age_ori].tolist()
+    _pes_append_exclusion(exclusion_rows, pes_df, idx_age_act, "REGLA_7_EDAD_MENOR_15_ACT", "Menor de 15 años respecto de ANIO_ING_ACT")
+    _pes_append_exclusion(exclusion_rows, pes_df, idx_age_ori, "REGLA_7_EDAD_MENOR_15_ORI", "Menor de 15 años respecto de ANIO_ING_ORI")
+    exclusion_counts["REGLA_7_EDAD_MENOR_15_ACT"] = len(idx_age_act)
+    exclusion_counts["REGLA_7_EDAD_MENOR_15_ORI"] = len(idx_age_ori)
+
+    if offer_combos:
+        row_keys = list(zip(
+            pes_df["COD_SED"].astype(str).str.strip(),
+            pes_df["COD_CAR"].astype(str).str.strip(),
+            pes_df["JOR"].astype(str).str.strip(),
+            pes_df["MODALIDAD"].astype(str).str.strip(),
+            pes_df["VERSION"].astype(str).str.strip(),
+        ))
+        mask_offer_missing = pd.Series([key not in offer_combos for key in row_keys], index=pes_df.index)
+    else:
+        mask_offer_missing = pd.Series(False, index=pes_df.index)
+    idx_offer_missing = pes_df.index[mask_offer_missing].tolist()
+    _pes_append_exclusion(exclusion_rows, pes_df, idx_offer_missing, "REGLA_8_OFERTA_INEXISTENTE", "Combinación COD_SED/COD_CAR/JOR/MODALIDAD/VERSION no existe en oferta local")
+    exclusion_counts["REGLA_8_OFERTA_INEXISTENTE"] = len(idx_offer_missing)
+
+    duration_values = pd.Series(index=pes_df.index, dtype="float64")
+    if offer_durations:
+        duration_values = pd.Series([offer_durations.get(key) for key in row_keys], index=pes_df.index, dtype="float64")
+    mask_niv_gt_dur = niv_aca_num.notna() & duration_values.notna() & niv_aca_num.gt(duration_values)
+    idx_niv_gt_dur = pes_df.index[mask_niv_gt_dur].tolist()
+    _pes_append_exclusion(exclusion_rows, pes_df, idx_niv_gt_dur, "REGLA_9_NIV_ACA_GT_DURACION", "NIV_ACA supera la duración de carrera disponible en catálogo local")
+    exclusion_counts["REGLA_9_NIV_ACA_GT_DURACION"] = len(idx_niv_gt_dur)
+
+    mask_qm_2025, qm_2025_source = _detect_egresado_cuarto_medio_2025_local(pes_df)
+    idx_qm_2025 = pes_df.index[mask_qm_2025].tolist()
+    _pes_append_exclusion(exclusion_rows, pes_df, idx_qm_2025, "REGLA_10_QM_2025", f"Caso detectado por fuente local: {qm_2025_source}")
+    exclusion_counts["REGLA_10_QM_2025"] = len(idx_qm_2025)
+
+    exclusiones_auditadas_df = _load_exclusiones_pes_mu2026()
+    if not exclusiones_auditadas_df.empty:
+        _audit_key = set(
+            zip(
+                exclusiones_auditadas_df["N_DOC"].astype(str).str.strip(),
+                exclusiones_auditadas_df["DV"].astype(str).str.strip(),
+            )
+        )
+        mask_exclusion_auditada = pd.Series(
+            list(zip(pes_df["N_DOC"].astype(str).str.strip(), pes_df["DV"].astype(str).str.strip())),
+            index=pes_df.index,
+        ).isin(_audit_key)
+    else:
+        mask_exclusion_auditada = pd.Series(False, index=pes_df.index)
+    idx_exclusion_auditada = pes_df.index[mask_exclusion_auditada].tolist()
+    if idx_exclusion_auditada:
+        motivo_map = {
+            (str(row.N_DOC).strip(), str(row.DV).strip()): (
+                str(row.motivo_exclusion).strip(),
+                str(row.fuente).strip(),
+                str(row.fecha).strip(),
+            )
+            for row in exclusiones_auditadas_df.itertuples(index=False)
+        }
+        for idx in idx_exclusion_auditada:
+            key = (str(pes_df.at[idx, "N_DOC"]).strip(), str(pes_df.at[idx, "DV"]).strip())
+            motivo, fuente, fecha = motivo_map.get(key, ("EXCLUSION_AUDITADA", "N/A", ""))
+            _pes_append_exclusion(
+                exclusion_rows,
+                pes_df,
+                [idx],
+                "REGLA_11_EXCLUSION_AUDITADA",
+                f"{motivo} | fuente={fuente} | fecha={fecha}",
+            )
+    exclusion_counts["REGLA_11_EXCLUSION_AUDITADA"] = len(idx_exclusion_auditada)
+
+    exclusion_mask = mask_rut_gt8 | mask_age_act | mask_age_ori | mask_offer_missing | mask_niv_gt_dur | mask_qm_2025 | mask_exclusion_auditada
+    pes_df = pes_df.loc[~exclusion_mask].copy()
+
+    pes_df = pes_df[MATRICULA_UNIFICADA_COLUMNS].copy()
+
+    # ── Regla institucional: forzar VIG = 0 según nómina manual ──────────────
+    _nomina_vig0_path = Path("patches/mu2026/vig0_nomina_institucional.tsv")
+    if _nomina_vig0_path.exists():
+        try:
+            from src.forzar_vig_cero import aplicar_nomina_vig_cero as _forzar_vig0
+            pes_df, _vig0_stats = _forzar_vig0(pes_df, _nomina_vig0_path, output_dir)
+            correction_counts["REGLA_VIG0_NOMINA_FORZADOS"] = _vig0_stats.get("total_forzados", 0)
+            correction_counts["REGLA_VIG0_NOMINA_YA_CERO"] = _vig0_stats.get("total_ya_vig0", 0)
+        except Exception as _vig0_exc:
+            print(f"  ⚠️  Regla VIG=0 nómina institucional: error al aplicar ({_vig0_exc})")
+    # ─────────────────────────────────────────────────────────────────────────
+    _write_mu_csv_atomic(pes_df, pes_ready_path)
+
+    correction_df = pd.DataFrame(correction_rows)
+    if correction_df.empty:
+        correction_df = pd.DataFrame(columns=["fila_original_csv", "rule_id", "accion", "campo", "valor_anterior", "valor_nuevo", "TIPO_DOC", "N_DOC", "DV", "detalle"])
+    correction_df.to_csv(audit_corr_path, index=False, encoding="utf-8")
+
+    exclusion_df = pd.DataFrame(exclusion_rows)
+    if exclusion_df.empty:
+        exclusion_df = pd.DataFrame(columns=["fila_original_csv", "rule_id", "accion", "TIPO_DOC", "N_DOC", "DV", "FOR_ING_ACT", "ANIO_ING_ACT", "SEM_ING_ACT", "ANIO_ING_ORI", "SEM_ING_ORI", "COD_SED", "COD_CAR", "JOR", "MODALIDAD", "VERSION", "NIV_ACA", "FECH_NAC", "detalle"])
+    exclusion_df.to_csv(audit_exc_path, index=False, encoding="utf-8")
+
+    # --- Verificación integrada de exclusiones ---
+    excl_rule_map: dict[tuple[str, str, str], str] = {}
+    for exc_row in exclusion_rows:
+        k3 = (str(exc_row["TIPO_DOC"]).strip(), str(exc_row["N_DOC"]).strip(), str(exc_row["DV"]).strip())
+        if k3 not in excl_rule_map:
+            excl_rule_map[k3] = str(exc_row["rule_id"])
+
+    verif_result = _verificar_exclusiones_pes_ready(src_path, pes_ready_path, output_dir, timestamp, excl_rule_map)
+
+    rows_excl_diff = int(len(raw_df)) - int(len(pes_df))
+    if rows_excl_diff > 0 and not Path(verif_result["exclusion_audit_path"]).exists():
+        raise RuntimeError(
+            f"PES_READY excluyó {rows_excl_diff} fila(s) pero no se generó auditoría de verificación. "
+            "Revisar _verificar_exclusiones_pes_ready()."
+        )
+    if verif_result.get("excluded_without_trace_count", 0) > 0:
+        print(
+            f"  ⚠️ PES_READY · {verif_result['excluded_without_trace_count']} excluido(s) sin motivo trazable local. "
+            "Ver resumen de verificación."
+        )
+    report["exclusion_verification"] = verif_result
+    # --- fin verificación ---
+
+    validation_counts = {
+        "SIT_FON_SOL distinto de 0": int(pes_df["SIT_FON_SOL"].astype(str).str.strip().ne("0").sum()),
+        "FOR_ING_ACT 1,2,3,6,7,8,9,10 con ANIO_ING_ORI=1900": int((pes_df["FOR_ING_ACT"].isin(tracked_for_codes) & pes_df["ANIO_ING_ORI"].eq("1900")).sum()),
+        "FOR_ING_ACT 1,6,7,8,9,10 con ORI != ACT": int((pes_df["FOR_ING_ACT"].isin(direct_codes) & ((pes_df["ANIO_ING_ORI"] != pes_df["ANIO_ING_ACT"]) | (pes_df["SEM_ING_ORI"] != pes_df["SEM_ING_ACT"]))).sum()),
+        "FOR_ING_ACT 2 o 3 con ASI_INS_HIS=0": int((pes_df["FOR_ING_ACT"].isin(historial_codes) & pd.to_numeric(pes_df["ASI_INS_HIS"], errors="coerce").fillna(0).eq(0)).sum()),
+        "ASI_APR_HIS > ASI_INS_HIS": int((pd.to_numeric(pes_df["ASI_APR_HIS"], errors="coerce").fillna(0) > pd.to_numeric(pes_df["ASI_INS_HIS"], errors="coerce").fillna(0)).sum()),
+        "TIPO_DOC=R con N_DOC mayor a 8 dígitos": int((pes_df["TIPO_DOC"].eq("R") & pes_df["N_DOC"].astype(str).str.replace(r"\D", "", regex=True).str.len().gt(8)).sum()),
+        "FOR_ING_ACT 2 o 3 con año origen = año actual y semestre origen >= actual": int((pes_df["FOR_ING_ACT"].isin(historial_codes) & (pes_df["ANIO_ING_ORI"] == pes_df["ANIO_ING_ACT"]) & (pd.to_numeric(pes_df["SEM_ING_ORI"], errors="coerce").fillna(99) >= pd.to_numeric(pes_df["SEM_ING_ACT"], errors="coerce").fillna(-1))).sum()),
+    }
+
+    csv_file_validation = _validate_pes_ready_csv(pes_ready_path)
+    validation_counts["filas con cantidad de campos distinta de 32"] = int(csv_file_validation["invalid_field_rows"])
+    validation_header_free = not bool(csv_file_validation["header_detectado"])
+    all_valid = all(value == 0 for value in validation_counts.values()) and validation_header_free
+
+    src_size = src_path.stat().st_size if src_path.exists() else -1
+    pes_ready_size = pes_ready_path.stat().st_size if pes_ready_path.exists() else -1
+
+    copy_status = "NO_COPIADO_VALIDACION"
+    if all_valid:
+        try:
+            dst_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(pes_ready_path, dst_path)
+            dst_size = dst_path.stat().st_size if dst_path.exists() else -1
+            if dst_path.exists() and dst_size == pes_ready_size:
+                copy_status = "OK"
+                report["copied_to_desktop"] = True
+                print(
+                    "✅ Copia para subir creada en Escritorio: "
+                    "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv"
+                )
+            else:
+                copy_status = "FALLA_COPIA"
+                print(f"  ⚠️ PES_READY generado pero la copia al Escritorio falló validación de tamaño (src={pes_ready_size}, dst={dst_size})")
+        except Exception as exc:
+            copy_status = "FALLA_COPIA"
+            print(f"  ⚠️ PES_READY generado pero la copia al Escritorio falló: {exc}")
+    else:
+        print("  ❌ PES_READY no cumple validaciones finales; no se copia al Escritorio")
+
+    report["copy_status"] = copy_status
+    report["source_size_bytes"] = src_size
+    report["pes_ready_size_bytes"] = pes_ready_size
+    report["rows_initial"] = int(len(raw_df))
+    report["rows_corrected_unique"] = int(correction_df["fila_original_csv"].nunique()) if not correction_df.empty else 0
+    report["rows_excluded_unique"] = int(exclusion_df["fila_original_csv"].nunique()) if not exclusion_df.empty else 0
+    report["rows_final"] = int(len(pes_df))
+    report["correction_counts"] = correction_counts
+    report["exclusion_counts"] = exclusion_counts
+    report["validation_counts"] = validation_counts
+    report["header_free"] = validation_header_free
+    report["csv_file_validation"] = csv_file_validation
+    report["qm_2025_source"] = qm_2025_source
+    report["exclusiones_auditadas_rows"] = len(idx_exclusion_auditada)
+
+    print(f"  ℹ️ PES_READY · campos primera fila: {csv_file_validation['first_row_fields']}")
+    print(f"  ℹ️ PES_READY · estado copia: {copy_status}")
+
+    summary_lines = [
+        "# Resumen PES_READY MU2026",
+        "",
+        f"Fecha ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "",
+        "## Conteo general",
+        "",
+        f"- Filas iniciales: {report['rows_initial']}",
+        f"- Filas corregidas: {report['rows_corrected_unique']}",
+        f"- Filas excluidas: {report['rows_excluded_unique']}",
+        f"- Filas finales: {report['rows_final']}",
+        "",
+        "## Correcciones por regla",
+        "",
+    ]
+    for rule_id, count in correction_counts.items():
+        summary_lines.append(f"- {rule_id}: {count}")
+    summary_lines.extend([
+        "",
+        "## Exclusiones por motivo",
+        "",
+    ])
+    for rule_id, count in exclusion_counts.items():
+        summary_lines.append(f"- {rule_id}: {count}")
+    summary_lines.extend([
+        "",
+        "## Validaciones finales",
+        "",
+    ])
+    for label, count in validation_counts.items():
+        summary_lines.append(f"- {label}: {count}")
+    summary_lines.extend([
+        f"- archivo sin encabezado: {validation_header_free}",
+        f"- ruta archivo final resultados: {pes_ready_path}",
+        f"- ruta copia Escritorio: {dst_path}",
+        f"- estado copia: {copy_status}",
+        f"- fuente local regla 10: {qm_2025_source}",
+        "",
+        "## Verificación de estudiantes excluidos",
+        "",
+    ])
+    _verif_ev = report.get("exclusion_verification", {})
+    summary_lines.append(f"- CSV verificación: {_verif_ev.get('exclusion_audit_path', 'N/A')}")
+    summary_lines.append(f"- Excluidos: {_verif_ev.get('rows_excluded', 0)}")
+    _verif_motivos = _verif_ev.get("exclusion_reason_counts", {})
+    for _motivo, _cnt in sorted(_verif_motivos.items()):
+        summary_lines.append(f"  - {_motivo}: {_cnt}")
+    _excl_sin_traza = _verif_ev.get("excluded_without_trace_count", 0)
+    if _excl_sin_traza > 0:
+        summary_lines.append(
+            f"- ⚠️ ADVERTENCIA: {_excl_sin_traza} excluido(s) sin motivo trazable local. "
+            "Revisar y actualizar control/exclusiones_pes_mu2026.tsv."
+        )
+    summary_lines.extend([
+        "",
+        "## Auditorías",
+        "",
+        f"- {audit_corr_path}",
+        f"- {audit_exc_path}",
+    ])
+    summary_md_path.write_text("\n".join(summary_lines), encoding="utf-8")
+
+    return report
 
 
 def _profile_column(series: pd.Series) -> dict[str, float]:

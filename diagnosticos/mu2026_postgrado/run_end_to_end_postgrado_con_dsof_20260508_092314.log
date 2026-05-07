@@ -1,0 +1,211 @@
+============================================================
+REGENERACIÓN END-TO-END · MU2026 POSTGRADO/POSTÍTULO · CON DSOF
+============================================================
+Fecha ejecución: Fri May  8 09:23:14 -04 2026
+Ruta proyecto: /Users/alexi/Documents/GitHub/avance_curricular
+
+============================================================
+1. VALIDACIÓN DICCIONARIO ACTUALIZADO
+============================================================
+Diccionario: control/diccionarios/diccionario_postgrado_postitulo_mu2026.tsv
+
+Entrada DSOF:
+CODCARPR  CODIGOCARRERA  NOMBRE_L_FUENTE                  NOMBRE_CARRERA_OFERTA            CODIGO_UNICO   COD_SED  COD_CAR  MODALIDAD  JOR  VERSION  NIVEL_GLOBAL  NIVEL_CARRERA  VIGENCIA_OFERTA  ESTADO_GOBERNANZA    ACCION_CARGA  OBSERVACION
+DSOF      DSOF           DIPLOMADO EN SEGURIDAD OFENSIVA  DIPLOMADO EN SEGURIDAD OFENSIVA  I162S2C68J4V1  2        68       3          4    1        3             5              1                MATCH_EXACTO_NOMBRE  INCLUIR       Agregado desde oferta/matriz disponible; programa con CODIGO_UNICO trazable I162S2C68J4V1.
+
+Resumen ACCION_CARGA diccionario:
+EXCLUIR 1
+EXCLUIR_HASTA_VALIDAR 8
+INCLUIR 15
+
+============================================================
+2. REGENERAR TRAZABILIDAD POSTGRADO/POSTÍTULO
+============================================================
+# Trazabilidad regenerada con DSOF
+
+- Trazabilidad: resultados/trazabilidad_matricula_unificada_2026_postgrado_postitulo.tsv
+- Candidatos totales: 462
+- Candidatos 2026: 72
+- Candidatos 2026 INCLUIR: 55
+- Candidatos 2026 excluidos: 17
+
+## Distribución 2026 por ACCION_CARGA
+
+- INCLUIR: 55
+- EXCLUIR_HASTA_VALIDAR: 17
+
+## Distribución 2026 INCLUIR por COD_CAR
+
+- COD_CAR 70: 22
+- COD_CAR 53: 18
+- COD_CAR 66: 15
+
+## Registros 2026 DSOF
+
+
+============================================================
+3. REGENERAR CONTROL Y PES-READY PRELIMINAR
+============================================================
+# PES-ready preliminar regenerado con DSOF
+
+- Control: resultados/matricula_unificada_2026_postgrado_postitulo_control.csv
+- PES-ready preliminar: resultados/matricula_unificada_2026_postgrado_postitulo.csv
+- Registros base 2026 INCLUIR: 55
+- Registros OK PES-ready: 55
+- Registros bloqueados: 0
+
+## Distribución COD_CAR
+- COD_CAR 70: 22
+- COD_CAR 53: 18
+- COD_CAR 66: 15
+
+## Registros DSOF en control
+
+============================================================
+4. EJECUTAR AUDITORÍA FINAL END-TO-END
+============================================================
+======================================================================
+  AUDITORÍA END-TO-END · CIERRE MU2026 · POSTGRADO/POSTÍTULO
+======================================================================
+
+▶ FASE 0 · Preparación segura...
+  Archivos requeridos: OK
+  Pregrado intacto: True
+
+▶ Cargando datos...
+  PES-ready: 55 líneas
+  Control: 55 registros
+  Trazabilidad: 462 registros
+  Diccionario: 24 entradas
+
+▶ FASE 1 · Estructura PES-ready...
+  Filas: 55 | Campos por fila: {21: 55} | OK
+
+▶ FASE 2 · Dominios...
+  OK | Pasaportes: 0
+
+▶ FASE 3 · Contraste PES-ready vs control...
+  PES-ready=55, control OK=55, bloqueados=0 | OK
+
+▶ FASE 4 · Contraste vs trazabilidad...
+  Candidatos 2026: 72 | Incluidos: 55 | Excluidos: 17 | OK
+
+▶ FASE 5 · Contraste vs diccionario gobernado...
+  Evaluados: 55 | OK
+
+▶ FASE 6 · Generando artefactos de cierre...
+  Artefactos generados: 5
+
+======================================================================
+  RESULTADO FINAL
+======================================================================
+
+  Estado:           APROBADO_CON_OBSERVACIONES
+  Errores críticos: 0
+  Advertencias:     1
+
+  Filas PES-ready:         55
+  Candidatos 2026 incluidos:  55
+  Candidatos 2026 excluidos:  17
+
+  Reporte Markdown:  /Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/auditoria_final_pes_ready_postgrado_postitulo_20260508_092318.md
+  JSON de cierre:    /Users/alexi/Documents/GitHub/avance_curricular/diagnosticos/mu2026_postgrado/resumen_cierre_postgrado_postitulo_20260508_092318.json
+  PES-ready FINAL:   /Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY.csv
+  Control FINAL:     /Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv
+  Excluidos 2026:    /Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_postgrado_postitulo_excluidos_2026_gobernanza.csv
+
+  Advertencias:
+    ⚠ No hay registros con TIPO_DOC=P (pasaporte). Cero casos detectados.
+
+  No se modificó el flujo pregrado.
+
+======================================================================
+
+Código salida auditoría: 0
+
+============================================================
+5. RESULTADO Y DETALLE FINAL
+============================================================
+Reporte auditoría: diagnosticos/mu2026_postgrado/auditoria_final_pes_ready_postgrado_postitulo_20260508_092318.md
+JSON cierre:       diagnosticos/mu2026_postgrado/resumen_cierre_postgrado_postitulo_20260508_092318.json
+PES-ready final:   resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY.csv
+Control final:     resultados/matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv
+Excluidos 2026:    resultados/matricula_unificada_2026_postgrado_postitulo_excluidos_2026_gobernanza.csv
+
+Resumen JSON:
+timestamp: 2026-05-08T09:23:18.238996
+estado_global: APROBADO_CON_OBSERVACIONES
+errores_criticos: 0
+advertencias: 1
+filas_pes_ready: 55
+campos_por_fila: {'21': 55}
+candidatos_2026_total: 72
+candidatos_2026_incluidos: 55
+candidatos_2026_excluidos: 17
+candidatos_2026_excluidos_hasta_validar: 17
+candidatos_2026_excluidos_genericos: 0
+candidatos_2026_sin_diccionario: 0
+control_ok: 55
+control_bloqueados: 0
+distribucion_cod_car: {'70': 22, '53': 18, '66': 15}
+distribucion_vig: {'1': 55}
+distribucion_sexo: {'H': 51, 'M': 4}
+distribucion_for_ing_act: {'1': 35, '10': 20}
+pes_final_creado: True
+control_final_creado: True
+pregrado_no_modificado: True
+
+Validación estructura PES-ready final:
+campos=21 filas=55
+Filas PES-ready final:       55
+
+Distribución COD_CAR final:
+53 18
+66 15
+70 22
+
+Distribución VIG final:
+1 55
+
+Detalle DSOF en control final:
+
+Detalle excluidos 2026 posterior a DSOF:
+Excluidos 2026: 17
+DDASC | DIPLOMADO EN DATA SCIENCE: 11
+DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE: 4
+DLEMS | DIPLOMADO LIDERAZGO ESTRATÉGICO Y MANAGEMENT 4.0: 2
+
+Detalle:
+20261DDASC001 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC002 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC003 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC004 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC005 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC006 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC007 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC008 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC009 | DDASC | DIPLOMADO EN DATA SCIENCE | ELIMINADO | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC010 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DDASC011 | DDASC | DIPLOMADO EN DATA SCIENCE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DHIAD001 | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DHIAD002 | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DHIAD003 | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DHIAD004 | DHIAD | DIPLOMADO HERRAMIENTAS DE IA PARA EL APOYO DOCENTE | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DLEMS001 | DLEMS | DIPLOMADO LIDERAZGO ESTRATÉGICO Y MANAGEMENT 4.0 | ELIMINADO | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+20261DLEMS002 | DLEMS | DIPLOMADO LIDERAZGO ESTRATÉGICO Y MANAGEMENT 4.0 | VIGENTE | EXCLUIR_HASTA_VALIDAR | PENDIENTE_REVISION
+
+Verificación pregrado:
+OK pregrado presente: resultados/matricula_unificada_2026_pregrado.csv (    4115 líneas)
+OK pregrado presente: resultados/matricula_unificada_2026_pregrado_PES_READY.csv (    4070 líneas)
+OK pregrado presente: resultados/matricula_unificada_2026_control.csv (    3443 líneas)
+
+============================================================
+CIERRE
+============================================================
+Si DSOF era 2026 válido, el esperado es:
+- PES-ready final: 56 filas
+- COD_CAR 68: 1 registro
+- Excluidos 2026: 16
+
+No se modificó el flujo pregrado.
+============================================================

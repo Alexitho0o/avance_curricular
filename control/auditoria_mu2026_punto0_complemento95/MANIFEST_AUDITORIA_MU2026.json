@@ -1,0 +1,332 @@
+{
+  "nombre": "AUDITORIA_DIGITAL_MU2026_PUNTO0_COMPLEMENTO95",
+  "version": "1.0",
+  "fecha_creacion": "2026-05-09T00:34:54",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "carpeta_auditoria": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95",
+  "estado_final": "AUDITORIA_COMPLETA_VERIFICADA",
+  "advertencia": "NO BORRAR ESTA CARPETA. Contiene el punto de control digital auditable de MU2026.",
+  "git_tag_sugerido": "mu2026-punto0-complemento95-20260509",
+  "git_tag_instruccion": "Ver COMANDOS_GIT_SUGERIDOS.md. NO ejecutar sin autorización explícita.",
+  "resumen": {
+    "archivos_auditados": 19,
+    "hashes_coincidentes": 19,
+    "hashes_difieren": 0,
+    "bytes_originales_total": 1921285,
+    "bytes_copias_total": 1921285,
+    "originales_intactos": true
+  },
+  "carga_principal": {
+    "estado": "VALIDADO",
+    "desktop_filas": 4070,
+    "desktop_cols": 32,
+    "pes_ready_filas": 4070,
+    "pes_ready_cols": 32,
+    "hashes_iguales": true,
+    "sha256_desktop": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+    "sha256_pes_ready": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+    "encabezado": false,
+    "delimitador": ";",
+    "nota": "No incluye complemento 95. Proceso paralelo e independiente."
+  },
+  "complemento_95": {
+    "estado": "VALIDADO",
+    "desktop_filas": 95,
+    "desktop_cols": 32,
+    "repo_filas": 95,
+    "repo_cols": 32,
+    "hashes_iguales": true,
+    "celdas_vacias": 0,
+    "vig_valores": {
+      "1": 95
+    },
+    "sha256_desktop": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d",
+    "sha256_repo_csv": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d",
+    "encabezado": false,
+    "delimitador": ";",
+    "nota": "Proceso paralelo independiente. No modifica la carga principal."
+  },
+  "archivos_originales": {
+    "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv": {
+      "ruta": "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "nombre": "matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "bytes": 508017,
+      "mtime": "2026-05-08T23:09:00",
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado_PES_READY.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado_PES_READY.csv",
+      "nombre": "matricula_unificada_2026_pregrado_PES_READY.csv",
+      "bytes": 508017,
+      "mtime": "2026-05-08T23:09:00",
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado.csv",
+      "nombre": "matricula_unificada_2026_pregrado.csv",
+      "bytes": 513582,
+      "mtime": "2026-05-08T23:09:00",
+      "sha256": "20f3c67b68630ca82400f1047702a7a5b7055956e0cd03f3ac9979c0490c94b3"
+    },
+    "/Users/alexi/Desktop/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv": {
+      "ruta": "/Users/alexi/Desktop/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "nombre": "matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "bytes": 11611,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/00_resguardo_carga_principal.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/00_resguardo_carga_principal.csv",
+      "nombre": "00_resguardo_carga_principal.csv",
+      "bytes": 247,
+      "mtime": "2026-05-09T00:10:38",
+      "sha256": "6795b1464cdee3f78064c588bc8177e1de70089b38b7943fc11420062fb7904c"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/01_auditoria_nomina_95.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/01_auditoria_nomina_95.csv",
+      "nombre": "01_auditoria_nomina_95.csv",
+      "bytes": 24339,
+      "mtime": "2026-05-09T00:10:38",
+      "sha256": "9ccf7fc3e7b0c2488f3041a9ff4f8b2c044e775ddb42f2ba5e028e3ceed6662b"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/02_auditoria_vigencia_datosalumnos.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/02_auditoria_vigencia_datosalumnos.csv",
+      "nombre": "02_auditoria_vigencia_datosalumnos.csv",
+      "bytes": 5639,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "df3daafdcd0af676ff7c7aa5246cf89e5f48ce0df116c571783eebf2bd995ada"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/04_auditoria_32_campos_complemento_95.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/04_auditoria_32_campos_complemento_95.csv",
+      "nombre": "04_auditoria_32_campos_complemento_95.csv",
+      "bytes": 117657,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "21d034d77485ce3d88afbe32579092b8b31a5c5881f2bb4217e3441ab0374421"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/README_COMPLEMENTO_95_CODCLI.md": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/README_COMPLEMENTO_95_CODCLI.md",
+      "nombre": "README_COMPLEMENTO_95_CODCLI.md",
+      "bytes": 16259,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "cb2ca176d5442beda3a1ae7d6dfe8eb34990a1a55a9f11bc3f4b182017c446c5"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "nombre": "matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "bytes": 11611,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/mu2026_complemento_95_codcli.py": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/mu2026_complemento_95_codcli.py",
+      "nombre": "mu2026_complemento_95_codcli.py",
+      "bytes": 34836,
+      "mtime": "2026-05-09T00:17:02",
+      "sha256": "15752728abb8702fc28e8ccf25b250ed3a5d02778da0af5c39be24e67ccc484c"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/respaldo_mu2026_punto0_complemento95.py": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/respaldo_mu2026_punto0_complemento95.py",
+      "nombre": "respaldo_mu2026_punto0_complemento95.py",
+      "bytes": 25752,
+      "mtime": "2026-05-09T00:22:19",
+      "sha256": "da4b8668505c62ed1fed985e65c626d402803365df325c788307527b69053963"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_confirmacion_vigencia_real_95_codcli.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_confirmacion_vigencia_real_95_codcli.xlsx",
+      "nombre": "auditoria_confirmacion_vigencia_real_95_codcli.xlsx",
+      "bytes": 20202,
+      "mtime": "2026-05-08T23:46:42",
+      "sha256": "a91e3e6350a6e38d507066b25db9ca4e4546d0a53c1612108b7f22fde9d46227"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_confirmacion_vigencia_real_95_codcli.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_confirmacion_vigencia_real_95_codcli.csv",
+      "nombre": "auditoria_confirmacion_vigencia_real_95_codcli.csv",
+      "bytes": 34029,
+      "mtime": "2026-05-08T23:46:42",
+      "sha256": "1c853d9b47fc76cafe7ef53fc8956705c4e90dfed097feea68a4b2598f3388b3"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multi_codcli_decision_final.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multi_codcli_decision_final.xlsx",
+      "nombre": "auditoria_multi_codcli_decision_final.xlsx",
+      "bytes": 14376,
+      "mtime": "2026-05-08T23:39:41",
+      "sha256": "8bfb83f14927a1269cecc25b5c9e6a0d58822fbf3b638d794f6c470461dbc259"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multi_codcli_decision_final.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multi_codcli_decision_final.csv",
+      "nombre": "auditoria_multi_codcli_decision_final.csv",
+      "bytes": 29313,
+      "mtime": "2026-05-08T23:39:41",
+      "sha256": "6961e97937227b7f9d2a93665a8eae69a6bab214512ba1ef92974fd20f4382a4"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/nomina_codcli_vigentes_a_reincorporar_mu2026.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/nomina_codcli_vigentes_a_reincorporar_mu2026.xlsx",
+      "nombre": "nomina_codcli_vigentes_a_reincorporar_mu2026.xlsx",
+      "bytes": 10110,
+      "mtime": "2026-05-08T23:40:44",
+      "sha256": "4b8f5b0e474adea329b1c2f126de17e796baebc6611973a5871f2de209803211"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/nomina_codcli_vigentes_a_reincorporar_mu2026.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/nomina_codcli_vigentes_a_reincorporar_mu2026.csv",
+      "nombre": "nomina_codcli_vigentes_a_reincorporar_mu2026.csv",
+      "bytes": 24342,
+      "mtime": "2026-05-08T23:40:43",
+      "sha256": "9c1db8474c82c9403f3f88f0d8ec2c6503b8d87ce670ab0b87fb9a026922f870"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_riesgo_no_subir_95_codcli.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_riesgo_no_subir_95_codcli.xlsx",
+      "nombre": "auditoria_riesgo_no_subir_95_codcli.xlsx",
+      "bytes": 11346,
+      "mtime": "2026-05-08T23:54:37",
+      "sha256": "374abea31d649ee4b499f9b9d6c16122914779289093e0b9a0d5b7d30e35ae47"
+    }
+  },
+  "archivos_copiados": {
+    "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/carga_principal/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "nombre": "matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "bytes": 508017,
+      "mtime": "2026-05-08T23:09:00",
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado_PES_READY.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/carga_principal/matricula_unificada_2026_pregrado_PES_READY.csv",
+      "nombre": "matricula_unificada_2026_pregrado_PES_READY.csv",
+      "bytes": 508017,
+      "mtime": "2026-05-08T23:09:00",
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/carga_principal/matricula_unificada_2026_pregrado.csv",
+      "nombre": "matricula_unificada_2026_pregrado.csv",
+      "bytes": 513582,
+      "mtime": "2026-05-08T23:09:00",
+      "sha256": "20f3c67b68630ca82400f1047702a7a5b7055956e0cd03f3ac9979c0490c94b3"
+    },
+    "/Users/alexi/Desktop/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "nombre": "matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "bytes": 11611,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/00_resguardo_carga_principal.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/00_resguardo_carga_principal.csv",
+      "nombre": "00_resguardo_carga_principal.csv",
+      "bytes": 247,
+      "mtime": "2026-05-09T00:10:38",
+      "sha256": "6795b1464cdee3f78064c588bc8177e1de70089b38b7943fc11420062fb7904c"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/01_auditoria_nomina_95.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/01_auditoria_nomina_95.csv",
+      "nombre": "01_auditoria_nomina_95.csv",
+      "bytes": 24339,
+      "mtime": "2026-05-09T00:10:38",
+      "sha256": "9ccf7fc3e7b0c2488f3041a9ff4f8b2c044e775ddb42f2ba5e028e3ceed6662b"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/02_auditoria_vigencia_datosalumnos.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/02_auditoria_vigencia_datosalumnos.csv",
+      "nombre": "02_auditoria_vigencia_datosalumnos.csv",
+      "bytes": 5639,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "df3daafdcd0af676ff7c7aa5246cf89e5f48ce0df116c571783eebf2bd995ada"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/04_auditoria_32_campos_complemento_95.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/04_auditoria_32_campos_complemento_95.csv",
+      "nombre": "04_auditoria_32_campos_complemento_95.csv",
+      "bytes": 117657,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "21d034d77485ce3d88afbe32579092b8b31a5c5881f2bb4217e3441ab0374421"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/README_COMPLEMENTO_95_CODCLI.md": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/README_COMPLEMENTO_95_CODCLI.md",
+      "nombre": "README_COMPLEMENTO_95_CODCLI.md",
+      "bytes": 16259,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "cb2ca176d5442beda3a1ae7d6dfe8eb34990a1a55a9f11bc3f4b182017c446c5"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/complemento_95/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "nombre": "matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+      "bytes": 11611,
+      "mtime": "2026-05-09T00:10:42",
+      "sha256": "9a6bc998c19282da421d6e9aa51606d94d886a87bcf958f74efb40109be62c6d"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/mu2026_complemento_95_codcli.py": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/scripts/mu2026_complemento_95_codcli.py",
+      "nombre": "mu2026_complemento_95_codcli.py",
+      "bytes": 34836,
+      "mtime": "2026-05-09T00:17:02",
+      "sha256": "15752728abb8702fc28e8ccf25b250ed3a5d02778da0af5c39be24e67ccc484c"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/respaldo_mu2026_punto0_complemento95.py": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/scripts/respaldo_mu2026_punto0_complemento95.py",
+      "nombre": "respaldo_mu2026_punto0_complemento95.py",
+      "bytes": 25752,
+      "mtime": "2026-05-09T00:22:19",
+      "sha256": "da4b8668505c62ed1fed985e65c626d402803365df325c788307527b69053963"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_confirmacion_vigencia_real_95_codcli.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/auditoria_confirmacion_vigencia_real_95_codcli.xlsx",
+      "nombre": "auditoria_confirmacion_vigencia_real_95_codcli.xlsx",
+      "bytes": 20202,
+      "mtime": "2026-05-08T23:46:42",
+      "sha256": "a91e3e6350a6e38d507066b25db9ca4e4546d0a53c1612108b7f22fde9d46227"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_confirmacion_vigencia_real_95_codcli.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/auditoria_confirmacion_vigencia_real_95_codcli.csv",
+      "nombre": "auditoria_confirmacion_vigencia_real_95_codcli.csv",
+      "bytes": 34029,
+      "mtime": "2026-05-08T23:46:42",
+      "sha256": "1c853d9b47fc76cafe7ef53fc8956705c4e90dfed097feea68a4b2598f3388b3"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multi_codcli_decision_final.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/auditoria_multi_codcli_decision_final.xlsx",
+      "nombre": "auditoria_multi_codcli_decision_final.xlsx",
+      "bytes": 14376,
+      "mtime": "2026-05-08T23:39:41",
+      "sha256": "8bfb83f14927a1269cecc25b5c9e6a0d58822fbf3b638d794f6c470461dbc259"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_multi_codcli_decision_final.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/auditoria_multi_codcli_decision_final.csv",
+      "nombre": "auditoria_multi_codcli_decision_final.csv",
+      "bytes": 29313,
+      "mtime": "2026-05-08T23:39:41",
+      "sha256": "6961e97937227b7f9d2a93665a8eae69a6bab214512ba1ef92974fd20f4382a4"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/nomina_codcli_vigentes_a_reincorporar_mu2026.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/nomina_codcli_vigentes_a_reincorporar_mu2026.xlsx",
+      "nombre": "nomina_codcli_vigentes_a_reincorporar_mu2026.xlsx",
+      "bytes": 10110,
+      "mtime": "2026-05-08T23:40:44",
+      "sha256": "4b8f5b0e474adea329b1c2f126de17e796baebc6611973a5871f2de209803211"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/nomina_codcli_vigentes_a_reincorporar_mu2026.csv": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/nomina_codcli_vigentes_a_reincorporar_mu2026.csv",
+      "nombre": "nomina_codcli_vigentes_a_reincorporar_mu2026.csv",
+      "bytes": 24342,
+      "mtime": "2026-05-08T23:40:43",
+      "sha256": "9c1db8474c82c9403f3f88f0d8ec2c6503b8d87ce670ab0b87fb9a026922f870"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_riesgo_no_subir_95_codcli.xlsx": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/archivos_congelados/auditorias_previas/auditoria_riesgo_no_subir_95_codcli.xlsx",
+      "nombre": "auditoria_riesgo_no_subir_95_codcli.xlsx",
+      "bytes": 11346,
+      "mtime": "2026-05-08T23:54:37",
+      "sha256": "374abea31d649ee4b499f9b9d6c16122914779289093e0b9a0d5b7d30e35ae47"
+    }
+  },
+  "rutas_evidencia": {
+    "punto_0_original": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026",
+    "punto_0_copia": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/evidencia/punto_0/punto_0_carga_principal_mu2026",
+    "complemento_95_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/complemento_95_codcli",
+    "complemento_95_copia": "/Users/alexi/Documents/GitHub/avance_curricular/control/auditoria_mu2026_punto0_complemento95/evidencia/complemento_95/complemento_95_codcli"
+  },
+  "observaciones": [
+    "Respaldo digital auditable dentro del repositorio. No depende de ZIP.",
+    "El ZIP en el Escritorio es un respaldo auxiliar externo.",
+    "Para restaurar: ver RESTAURACION.md.",
+    "Para versionar en Git: ver COMANDOS_GIT_SUGERIDOS.md.",
+    "Validaciones de estructura confirmadas: carga 4070x32, complemento 95x32."
+  ]
+}

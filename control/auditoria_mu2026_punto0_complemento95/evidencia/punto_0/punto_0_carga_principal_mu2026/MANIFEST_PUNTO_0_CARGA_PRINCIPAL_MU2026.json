@@ -1,0 +1,135 @@
+{
+  "nombre_punto_control": "PUNTO_0_CARGA_PRINCIPAL_MU2026",
+  "fecha_creacion": "2026-05-09T00:17:11",
+  "descripcion": "Punto 0 de resguardo de la carga principal correcta de Matrícula Unificada 2026, sin incorporar aún el complemento paralelo de 95 CODCLI vigentes. Este punto sirve como base de comparación antes de volver a ejecutar el pipeline.",
+  "regla": "NO modificar, NO sobrescribir y NO reemplazar estos archivos. Solo lectura y comparación.",
+  "carga_principal_esperada": {
+    "filas": 4070,
+    "campos": 32,
+    "encabezado": false,
+    "delimitador": ";",
+    "incluye_complemento_95_codcli": false
+  },
+  "archivos": {
+    "PES_READY_REPO": {
+      "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado_PES_READY.csv",
+      "existe_original": true,
+      "existe": true,
+      "filas": 4070,
+      "columnas_distintas": [
+        32
+      ],
+      "tiene_encabezado": false,
+      "vig_unicos": [
+        "0",
+        "1"
+      ],
+      "celdas_vacias": 5,
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/PES_READY_REPO__matricula_unificada_2026_pregrado_PES_READY.csv",
+      "sha256_copia": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    },
+    "PARA_SUBIR_DESKTOP": {
+      "ruta_original": "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "existe_original": true,
+      "existe": true,
+      "filas": 4070,
+      "columnas_distintas": [
+        32
+      ],
+      "tiene_encabezado": false,
+      "vig_unicos": [
+        "0",
+        "1"
+      ],
+      "celdas_vacias": 5,
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/PARA_SUBIR_DESKTOP__matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "sha256_copia": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    },
+    "BRUTO_REPO": {
+      "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado.csv",
+      "existe_original": true,
+      "existe": true,
+      "filas": 4115,
+      "columnas_distintas": [
+        32
+      ],
+      "tiene_encabezado": false,
+      "vig_unicos": [
+        "0",
+        "1"
+      ],
+      "celdas_vacias": 5,
+      "sha256": "20f3c67b68630ca82400f1047702a7a5b7055956e0cd03f3ac9979c0490c94b3",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/BRUTO_REPO__matricula_unificada_2026_pregrado.csv",
+      "sha256_copia": "20f3c67b68630ca82400f1047702a7a5b7055956e0cd03f3ac9979c0490c94b3"
+    },
+    "AUDITORIA_VIG0_RUT": {
+      "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_ruts_forzados_vigencia_0.csv",
+      "existe_original": true,
+      "sha256": "a6eb8d0aac58e5016f1e633fdf4ed9e76b53f2d70ccd3f3e74ce8e09b97818fc",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/AUDITORIA_VIG0_RUT__auditoria_ruts_forzados_vigencia_0.csv",
+      "sha256_copia": "a6eb8d0aac58e5016f1e633fdf4ed9e76b53f2d70ccd3f3e74ce8e09b97818fc"
+    },
+    "AUDITORIA_EXCLUSIONES_PES_READY": {
+      "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_exclusiones_pes_ready_20260508_230900.csv",
+      "existe_original": true,
+      "sha256": "9f94c0e1902a21fb3d2469fb19c0f07caa1028898f1cbbf89beff6e72e0845e5",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/AUDITORIA_EXCLUSIONES_PES_READY__auditoria_exclusiones_pes_ready_20260508_230900.csv",
+      "sha256_copia": "9f94c0e1902a21fb3d2469fb19c0f07caa1028898f1cbbf89beff6e72e0845e5"
+    },
+    "VERIFICACION_EXCLUSIONES_PES_READY": {
+      "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/verificacion_exclusiones_pes_ready_20260508_230900.csv",
+      "existe_original": true,
+      "sha256": "066bd64db27dcb93cdcf13b82d0d1b0547749f0815a46475591e5e2e0f70c676",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/VERIFICACION_EXCLUSIONES_PES_READY__verificacion_exclusiones_pes_ready_20260508_230900.csv",
+      "sha256_copia": "066bd64db27dcb93cdcf13b82d0d1b0547749f0815a46475591e5e2e0f70c676"
+    },
+    "AUDITORIA_CONSOLIDACION_CODCLI": {
+      "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/auditoria_consolidacion_codcli.tsv",
+      "existe_original": true,
+      "sha256": "9975a58f292f70faf52f548bc73ae28c2e447d56bd633e6ee558d59ffe0e56df",
+      "ruta_copia_punto_0": "/Users/alexi/Documents/GitHub/avance_curricular/control/punto_0_carga_principal_mu2026/archivos_congelados/AUDITORIA_CONSOLIDACION_CODCLI__auditoria_consolidacion_codcli.tsv",
+      "sha256_copia": "9975a58f292f70faf52f548bc73ae28c2e447d56bd633e6ee558d59ffe0e56df"
+    }
+  },
+  "validaciones": [
+    {
+      "control": "PES_READY existe",
+      "estado": "OK",
+      "detalle": "/Users/alexi/Documents/GitHub/avance_curricular/resultados/matricula_unificada_2026_pregrado_PES_READY.csv"
+    },
+    {
+      "control": "PES_READY filas = 4070",
+      "estado": "OK",
+      "detalle": "4070"
+    },
+    {
+      "control": "PES_READY columnas = [32]",
+      "estado": "OK",
+      "detalle": "[32]"
+    },
+    {
+      "control": "PES_READY sin encabezado",
+      "estado": "OK",
+      "detalle": "False"
+    },
+    {
+      "control": "Desktop PARA_SUBIR existe",
+      "estado": "OK",
+      "detalle": "/Users/alexi/Desktop/matricula_unificada_2026_pregrado_PARA_SUBIR.csv"
+    },
+    {
+      "control": "Desktop PARA_SUBIR filas = 4070",
+      "estado": "OK",
+      "detalle": "4070"
+    },
+    {
+      "control": "Hash PES_READY repo == Desktop PARA_SUBIR",
+      "estado": "OK",
+      "detalle": "repo=8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704 | desktop=8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704"
+    }
+  ],
+  "estado_punto_0": "OK"
+}
