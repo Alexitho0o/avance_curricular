@@ -5175,6 +5175,240 @@ def _load_exclusiones_pes_mu2026() -> pd.DataFrame:
     return out.reset_index(drop=True)
 
 
+def _verificar_exclusiones_pes_ready(
+    bruto_path: Path,
+    pes_ready_path: Path,
+    output_dir: Path,
+    timestamp: str,
+    exclusion_rule_map: dict[tuple[str, str, str], str] | None = None,
+) -> dict[str, object]:
+    """Compara bruto vs PES_READY, clasifica excluidos y genera auditoría formal."""
+
+    _RULE_TO_REASON: dict[str, str] = {
+        "REGLA_6_RUT_MAYOR_8": "RUT tipo R con más de 8 dígitos",
+        "REGLA_7_EDAD_MENOR_15_ACT": "Edad menor a 15 años respecto de ANIO_ING_ACT",
+        "REGLA_7_EDAD_MENOR_15_ORI": "Edad menor a 15 años respecto de ANIO_ING_ORI",
+        "REGLA_8_OFERTA_INEXISTENTE": "Oferta académica inexistente",
+        "REGLA_9_NIV_ACA_GT_DURACION": "NIV_ACA mayor que duración de carrera",
+        "REGLA_10_QM_2025": "Otro motivo PES_READY auditado",
+        "REGLA_11_EXCLUSION_AUDITADA": "Exclusión auditada por control/exclusiones_pes_mu2026.tsv",
+    }
+
+    _VERIF_AUDIT_COLS = [
+        "LINEA_ORIGINAL", "CLAVE_DOC",
+        "TIPO_DOC", "N_DOC", "DV",
+        "PRIMER_APELLIDO", "SEGUNDO_APELLIDO", "NOMBRE", "FECH_NAC",
+        "COD_SED", "COD_CAR", "MODALIDAD", "JOR", "VERSION",
+        "FOR_ING_ACT", "ANIO_ING_ACT", "SEM_ING_ACT",
+        "ANIO_ING_ORI", "SEM_ING_ORI",
+        "ASI_INS_ANT", "ASI_APR_ANT", "ASI_INS_HIS", "ASI_APR_HIS",
+        "NIV_ACA", "SIT_FON_SOL", "VIG",
+        "MOTIVO_EXCLUSION_PES_READY",
+    ]
+
+    verif_csv_path = output_dir / f"verificacion_exclusiones_pes_ready_{timestamp}.csv"
+    verif_md_path = output_dir / f"resumen_verificacion_exclusiones_pes_ready_{timestamp}.md"
+
+    result: dict[str, object] = {
+        "rows_bruto": 0,
+        "rows_pes_ready": 0,
+        "rows_excluded": 0,
+        "rows_included": 0,
+        "exclusion_audit_path": str(verif_csv_path),
+        "exclusion_summary_path": str(verif_md_path),
+        "exclusion_reason_counts": {},
+        "excluded_without_trace_count": 0,
+        "duplicate_keys_bruto": 0,
+        "duplicate_keys_pes_ready": 0,
+        "invalid_field_rows_bruto": 0,
+        "invalid_field_rows_pes_ready": 0,
+    }
+
+    if not bruto_path.exists():
+        print("  ⚠️ Verificación PES_READY: archivo bruto no encontrado; se omite verificación")
+        return result
+    if not pes_ready_path.exists():
+        print("  ⚠️ Verificación PES_READY: archivo PES_READY no encontrado; se omite verificación")
+        return result
+
+    def _count_bad_field_rows(path: Path) -> int:
+        n_cols = len(MATRICULA_UNIFICADA_COLUMNS)
+        count = 0
+        with path.open("r", encoding="utf-8", errors="ignore") as fh:
+            for line in fh:
+                if len(line.rstrip("\n").split(";")) != n_cols:
+                    count += 1
+        return count
+
+    bruto_df = _load_mu_csv_as_text_df(bruto_path)
+    bruto_df.insert(0, "_LINEA", range(1, len(bruto_df) + 1))
+    pes_df_v = _load_mu_csv_as_text_df(pes_ready_path)
+
+    rows_bruto = len(bruto_df)
+    rows_pes_ready = len(pes_df_v)
+    invalid_bruto = _count_bad_field_rows(bruto_path)
+    invalid_pes = _count_bad_field_rows(pes_ready_path)
+
+    result["rows_bruto"] = rows_bruto
+    result["rows_pes_ready"] = rows_pes_ready
+    result["invalid_field_rows_bruto"] = invalid_bruto
+    result["invalid_field_rows_pes_ready"] = invalid_pes
+
+    bruto_df["_KEY"] = (
+        bruto_df["TIPO_DOC"].str.strip() + "|"
+        + bruto_df["N_DOC"].str.strip() + "|"
+        + bruto_df["DV"].str.strip()
+    )
+    pes_df_v["_KEY"] = (
+        pes_df_v["TIPO_DOC"].str.strip() + "|"
+        + pes_df_v["N_DOC"].str.strip() + "|"
+        + pes_df_v["DV"].str.strip()
+    )
+
+    dup_bruto = int(bruto_df["_KEY"].duplicated(keep=False).sum())
+    dup_pes = int(pes_df_v["_KEY"].duplicated(keep=False).sum())
+    result["duplicate_keys_bruto"] = dup_bruto
+    result["duplicate_keys_pes_ready"] = dup_pes
+
+    pes_key_set = set(pes_df_v["_KEY"].tolist())
+    excluded_mask = ~bruto_df["_KEY"].isin(pes_key_set)
+    excluded_df = bruto_df[excluded_mask].copy().reset_index(drop=True)
+
+    rows_excluded = len(excluded_df)
+    rows_included = rows_bruto - rows_excluded
+    result["rows_excluded"] = rows_excluded
+    result["rows_included"] = rows_included
+
+    print(f"  ℹ️ Verificación PES_READY · bruto: {rows_bruto} filas")
+    print(f"  ℹ️ Verificación PES_READY · final: {rows_pes_ready} filas")
+    print(f"  ℹ️ Verificación PES_READY · excluidos: {rows_excluded}")
+
+    if rows_excluded == 0:
+        pd.DataFrame(columns=_VERIF_AUDIT_COLS).to_csv(verif_csv_path, index=False, encoding="utf-8")
+        md_no_excl = [
+            "# Verificación de estudiantes excluidos PES_READY MU2026",
+            "",
+            f"Fecha ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+            "",
+            f"- Archivo bruto: `{bruto_path}`",
+            f"- Archivo PES_READY: `{pes_ready_path}`",
+            f"- Filas bruto: {rows_bruto}",
+            f"- Filas PES_READY: {rows_pes_ready}",
+            "",
+            "## Conclusión operativa",
+            "",
+            "✅ Sin exclusiones. Bruto y PES_READY tienen la misma cantidad de filas.",
+        ]
+        verif_md_path.write_text("\n".join(md_no_excl), encoding="utf-8")
+        print(f"  ℹ️ Verificación PES_READY · auditoría: {verif_csv_path}")
+        return result
+
+    # Classify exclusion reasons
+    if exclusion_rule_map:
+        def _motivo_from_map(tipo_doc: str, n_doc: str, dv: str) -> str:
+            k3 = (str(tipo_doc).strip(), str(n_doc).strip(), str(dv).strip())
+            rule_id = exclusion_rule_map.get(k3, "OTRO")
+            return _RULE_TO_REASON.get(rule_id, "Otro motivo PES_READY auditado")
+
+        excluded_df["MOTIVO_EXCLUSION_PES_READY"] = [
+            _motivo_from_map(row["TIPO_DOC"], row["N_DOC"], row["DV"])
+            for _, row in excluded_df.iterrows()
+        ]
+    else:
+        excluded_df["MOTIVO_EXCLUSION_PES_READY"] = "Otro motivo PES_READY auditado"
+
+        n_doc_digits = excluded_df["N_DOC"].astype(str).str.replace(r"\D", "", regex=True)
+        mask_rut6 = excluded_df["TIPO_DOC"].eq("R") & n_doc_digits.str.len().gt(8)
+        excluded_df.loc[mask_rut6, "MOTIVO_EXCLUSION_PES_READY"] = "RUT tipo R con más de 8 dígitos"
+
+        birth_yr = pd.to_numeric(excluded_df["FECH_NAC"].astype(str).str.extract(r"(\d{4})$")[0], errors="coerce")
+        anio_act6 = pd.to_numeric(excluded_df["ANIO_ING_ACT"], errors="coerce")
+        anio_ori6 = pd.to_numeric(excluded_df["ANIO_ING_ORI"], errors="coerce")
+        mask_age_act6 = birth_yr.notna() & anio_act6.notna() & (anio_act6 - birth_yr).lt(15)
+        mask_age_ori6 = birth_yr.notna() & anio_ori6.notna() & anio_ori6.ne(1900) & (anio_ori6 - birth_yr).lt(15)
+        excluded_df.loc[mask_age_act6 & ~mask_rut6, "MOTIVO_EXCLUSION_PES_READY"] = "Edad menor a 15 años respecto de ANIO_ING_ACT"
+        excluded_df.loc[mask_age_ori6 & ~mask_rut6 & ~mask_age_act6, "MOTIVO_EXCLUSION_PES_READY"] = "Edad menor a 15 años respecto de ANIO_ING_ORI"
+
+        exclusiones_tsv = _load_exclusiones_pes_mu2026()
+        if not exclusiones_tsv.empty:
+            _tsv_key_set = set(zip(
+                exclusiones_tsv["N_DOC"].astype(str).str.strip(),
+                exclusiones_tsv["DV"].astype(str).str.strip(),
+            ))
+            mask_tsv = pd.Series(
+                [(str(r["N_DOC"]).strip(), str(r["DV"]).strip()) in _tsv_key_set for _, r in excluded_df.iterrows()],
+                index=excluded_df.index,
+            )
+            excluded_df.loc[mask_tsv, "MOTIVO_EXCLUSION_PES_READY"] = "Exclusión auditada por control/exclusiones_pes_mu2026.tsv"
+
+    without_trace = int((excluded_df["MOTIVO_EXCLUSION_PES_READY"] == "Otro motivo PES_READY auditado").sum())
+    result["excluded_without_trace_count"] = without_trace
+
+    if without_trace > 0:
+        print(f"  ⚠️ Verificación PES_READY · {without_trace} excluido(s) sin motivo trazable local")
+
+    reason_counts: dict[str, int] = excluded_df["MOTIVO_EXCLUSION_PES_READY"].value_counts().to_dict()
+    result["exclusion_reason_counts"] = reason_counts
+
+    excluded_df.rename(columns={"_LINEA": "LINEA_ORIGINAL"}, inplace=True)
+    excluded_df["CLAVE_DOC"] = excluded_df["_KEY"]
+    out_cols_present = [c for c in _VERIF_AUDIT_COLS if c in excluded_df.columns]
+    excluded_df[out_cols_present].to_csv(verif_csv_path, index=False, encoding="utf-8")
+
+    print(f"  ℹ️ Verificación PES_READY · auditoría: {verif_csv_path}")
+
+    md_lines = [
+        "# Verificación de estudiantes excluidos PES_READY MU2026",
+        "",
+        f"Fecha ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "",
+        f"- Archivo bruto: `{bruto_path}`",
+        f"- Archivo PES_READY: `{pes_ready_path}`",
+        f"- Filas bruto: {rows_bruto}",
+        f"- Filas PES_READY: {rows_pes_ready}",
+        f"- Excluidos: {rows_excluded}",
+        f"- Incluidos: {rows_included}",
+        "",
+        "## Conteo por motivo de exclusión",
+        "",
+    ]
+    for motivo, cnt in sorted(reason_counts.items()):
+        md_lines.append(f"- {motivo}: {cnt}")
+    md_lines.extend([
+        "",
+        "## Validación de duplicados",
+        "",
+        f"- Claves duplicadas en bruto: {dup_bruto}",
+        f"- Claves duplicadas en PES_READY: {dup_pes}",
+        "",
+        "## Validación de campos por fila",
+        "",
+        f"- Filas con campos ≠ 32 en bruto: {invalid_bruto}",
+        f"- Filas con campos ≠ 32 en PES_READY: {invalid_pes}",
+        "",
+        "## Conclusión operativa",
+        "",
+    ])
+    if without_trace == 0:
+        md_lines.append("✅ Todos los estudiantes excluidos tienen motivo trazable.")
+    else:
+        md_lines.append(
+            f"⚠️ {without_trace} estudiante(s) excluido(s) sin motivo trazable local. "
+            "Revisar manualmente y actualizar control/exclusiones_pes_mu2026.tsv si corresponde."
+        )
+    if dup_bruto > 0:
+        md_lines.append(f"⚠️ {dup_bruto} fila(s) con clave duplicada en bruto.")
+    if dup_pes > 0:
+        md_lines.append(f"⚠️ {dup_pes} fila(s) con clave duplicada en PES_READY.")
+    if invalid_bruto > 0:
+        md_lines.append(f"⚠️ {invalid_bruto} fila(s) con cantidad de campos incorrecta en bruto.")
+    if invalid_pes > 0:
+        md_lines.append(f"⚠️ {invalid_pes} fila(s) con cantidad de campos incorrecta en PES_READY.")
+
+    verif_md_path.write_text("\n".join(md_lines), encoding="utf-8")
+    return result
+
+
 def _validate_pes_ready_csv(csv_path: Path) -> dict[str, object]:
     header_detectado = False
     invalid_field_rows = 0
@@ -5440,6 +5674,29 @@ def _generar_pes_ready_y_copiar(src_path: Path, output_dir: Path, oferta_dim: pd
         exclusion_df = pd.DataFrame(columns=["fila_original_csv", "rule_id", "accion", "TIPO_DOC", "N_DOC", "DV", "FOR_ING_ACT", "ANIO_ING_ACT", "SEM_ING_ACT", "ANIO_ING_ORI", "SEM_ING_ORI", "COD_SED", "COD_CAR", "JOR", "MODALIDAD", "VERSION", "NIV_ACA", "FECH_NAC", "detalle"])
     exclusion_df.to_csv(audit_exc_path, index=False, encoding="utf-8")
 
+    # --- Verificación integrada de exclusiones ---
+    excl_rule_map: dict[tuple[str, str, str], str] = {}
+    for exc_row in exclusion_rows:
+        k3 = (str(exc_row["TIPO_DOC"]).strip(), str(exc_row["N_DOC"]).strip(), str(exc_row["DV"]).strip())
+        if k3 not in excl_rule_map:
+            excl_rule_map[k3] = str(exc_row["rule_id"])
+
+    verif_result = _verificar_exclusiones_pes_ready(src_path, pes_ready_path, output_dir, timestamp, excl_rule_map)
+
+    rows_excl_diff = int(len(raw_df)) - int(len(pes_df))
+    if rows_excl_diff > 0 and not Path(verif_result["exclusion_audit_path"]).exists():
+        raise RuntimeError(
+            f"PES_READY excluyó {rows_excl_diff} fila(s) pero no se generó auditoría de verificación. "
+            "Revisar _verificar_exclusiones_pes_ready()."
+        )
+    if verif_result.get("excluded_without_trace_count", 0) > 0:
+        print(
+            f"  ⚠️ PES_READY · {verif_result['excluded_without_trace_count']} excluido(s) sin motivo trazable local. "
+            "Ver resumen de verificación."
+        )
+    report["exclusion_verification"] = verif_result
+    # --- fin verificación ---
+
     validation_counts = {
         "SIT_FON_SOL distinto de 0": int(pes_df["SIT_FON_SOL"].astype(str).str.strip().ne("0").sum()),
         "FOR_ING_ACT 1,2,3,6,7,8,9,10 con ANIO_ING_ORI=1900": int((pes_df["FOR_ING_ACT"].isin(tracked_for_codes) & pes_df["ANIO_ING_ORI"].eq("1900")).sum()),
@@ -5535,6 +5792,23 @@ def _generar_pes_ready_y_copiar(src_path: Path, output_dir: Path, oferta_dim: pd
         f"- ruta copia Escritorio: {dst_path}",
         f"- estado copia: {copy_status}",
         f"- fuente local regla 10: {qm_2025_source}",
+        "",
+        "## Verificación de estudiantes excluidos",
+        "",
+    ])
+    _verif_ev = report.get("exclusion_verification", {})
+    summary_lines.append(f"- CSV verificación: {_verif_ev.get('exclusion_audit_path', 'N/A')}")
+    summary_lines.append(f"- Excluidos: {_verif_ev.get('rows_excluded', 0)}")
+    _verif_motivos = _verif_ev.get("exclusion_reason_counts", {})
+    for _motivo, _cnt in sorted(_verif_motivos.items()):
+        summary_lines.append(f"  - {_motivo}: {_cnt}")
+    _excl_sin_traza = _verif_ev.get("excluded_without_trace_count", 0)
+    if _excl_sin_traza > 0:
+        summary_lines.append(
+            f"- ⚠️ ADVERTENCIA: {_excl_sin_traza} excluido(s) sin motivo trazable local. "
+            "Revisar y actualizar control/exclusiones_pes_mu2026.tsv."
+        )
+    summary_lines.extend([
         "",
         "## Auditorías",
         "",
