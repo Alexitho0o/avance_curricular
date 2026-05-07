@@ -1,7 +1,7 @@
 
 ## Validación controlada CODCLI en base_datos
 
-Fecha: $(date '+%Y-%m-%d %H:%M:%S')
+Fecha: 2026-05-07 11:43:01
 
 ### Resultado
 Se validó la incorporación/control de CODCLI como columna auxiliar en `base_datos`, sin alterar la lógica estable del flujo.
