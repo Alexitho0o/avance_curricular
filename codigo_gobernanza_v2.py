@@ -2303,6 +2303,26 @@ def ejecutar_pipeline_matricula_unificada_legacy_like(
     _filtro_bd_stats: dict[str, object] = {}
     if _filtro_bd_sheet and _filtro_bd_sheet in xls.sheet_names:
         bd_df = pd.read_excel(input_file, sheet_name=_filtro_bd_sheet)
+        # Prueba controlada: detección opcional de CODCLI (columna C) en base_datos.
+        # No modifica el flujo actual; solo reporta trazabilidad.
+        bd_codcli_col = None
+        if "CODCLI" in bd_df.columns:
+            bd_codcli_col = "CODCLI"
+        elif len(bd_df.columns) >= 3:
+            # Fallback posicional para prueba controlada cuando la 3ra columna existe.
+            bd_codcli_col = bd_df.columns[2]
+
+        if bd_codcli_col is not None:
+            _codcli_series = bd_df[bd_codcli_col].fillna("").astype(str).str.strip()
+            _codcli_informado = int((_codcli_series != "").sum())
+            _codcli_vacio = int((_codcli_series == "").sum())
+            print(
+                f"  🔎 base_datos CODCLI detectado (col='{bd_codcli_col}') → "
+                f"informados={_codcli_informado}, vacíos={_codcli_vacio}"
+            )
+        else:
+            print("  ℹ️ base_datos: columna CODCLI no existe; se continúa con la lógica actual")
+
         bd_rut_col = None
         for _cand in ["N_DOC", "RUT", "NUM_DOCUMENTO"]:
             if _cand in bd_df.columns:
