@@ -1,0 +1,47 @@
+{
+  "timestamp": "20260603_151235",
+  "rutas": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_PROGRAMAS_FALTANTES_CREAR_INDICES_DESDE_PROMEDIOS_20260603_151235.xlsx",
+    "csv": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_PROGRAMAS_FALTANTES_CREAR_INDICES_DESDE_PROMEDIOS_20260603_151235.csv",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_PROGRAMAS_FALTANTES_CREAR_INDICES_DESDE_PROMEDIOS_20260603_151235.md",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/resultados/CNED_PROGRAMAS_FALTANTES_CREAR_INDICES_DESDE_PROMEDIOS_20260603_151235.json",
+    "fuente_principal": "/Users/alexi/Documents/GitHub/avance_curricular/input/PROMEDIOSDEALUMNOS_7804.xlsx",
+    "fuente_existentes": "/Users/alexi/Documents/GitHub/avance_curricular/indices_2025/cned/data/listado_referencia_cned.tsv"
+  },
+  "conteos": {
+    "TOTAL_OFERTA_MATRIZ": 139,
+    "TOTAL_VIGENTES": 139,
+    "TOTAL_YA_EXISTE_EN_INDICES": 64,
+    "TOTAL_FALTA_CREAR_EN_INDICES": 71,
+    "TOTAL_DUDOSO_REVISAR_MANUAL": 4,
+    "TOTAL_NO_CREAR": 0
+  },
+  "validaciones": [
+    "PROMEDIOSDEALUMNOS_7804.xlsx existe",
+    "La hoja matriz existe en PROMEDIOSDEALUMNOS_7804.xlsx",
+    "La hoja matriz contiene filas: 139",
+    "CODIGO_UNICO existe y no contiene vacíos en matriz",
+    "Todo CODIGO_UNICO no vacío cumple formato esperado",
+    "No hay duplicados inesperados por CODIGO_UNICO en matriz",
+    "Los derivados de CODIGO_UNICO son coherentes con COD_SEDE",
+    "Existe base de programas ya existentes en INDICES/SIES",
+    "El cruce por CODIGO_UNICO se ejecutó",
+    "PROGRAMAS_FALTANTES_PARA_CREAR contiene solo FALTA_CREAR_EN_INDICES",
+    "PROGRAMAS_FALTANTES_PARA_CREAR no tiene CODIGO_UNICO vacío",
+    "PROGRAMAS_FALTANTES_PARA_CREAR no tiene duplicados por CODIGO_UNICO",
+    "Todos los campos de pantalla están presentes en la hoja principal",
+    "Las clasificaciones finales cubren todo el universo matriz",
+    "Todos los códigos esperados del usuario existen en OFERTA_MATRIZ_NORMALIZADA",
+    "El Excel final contiene todas las hojas obligatorias",
+    "El CSV tiene la misma cantidad de filas que PROGRAMAS_FALTANTES_PARA_CREAR",
+    "El JSON coincide con el conteo de PROGRAMAS_FALTANTES_PARA_CREAR",
+    "El Markdown instruye usar la hoja PROGRAMAS_FALTANTES_PARA_CREAR"
+  ],
+  "estado_final": "REQUIERE_REVISION_MANUAL",
+  "errores_bloqueantes": [],
+  "advertencias_no_bloqueantes": [
+    "El nombre solicitado PROGRAMAS_EXISTENTES_NORMALIZADOS se exportó como PROGRAMAS_EXIST_NORMALIZADOS por límite de 31 caracteres de Excel.",
+    "TIPO_PLAN_CARRERA se mapeó con regla empírica mayoritaria 1→Programa Regular y 3→Programa Especial; existen outliers históricos en la referencia.",
+    "MODALIDAD=2 y JORNADA=3 quedan en REVISAR por ausencia de solape exacto suficiente en la base existente."
+  ]
+}

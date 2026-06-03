@@ -1,0 +1,375 @@
+cd /Users/alexi/Documents/GitHub/avance_curricular
+source .venv/bin/activate
+
+python - <<'PY'
+from pathlib import Path
+from datetime import datetime
+import subprocess
+import pandas as pd
+import json
+import re
+import unicodedata
+import csv
+
+print("=" * 120)
+print("CNED — Comparación TSV anterior vs nueva tabla completa de Validación CNED")
+print("=" * 120)
+
+BASE_DIR = Path("/Users/alexi/Documents/GitHub/avance_curricular")
+CNED_DIR = BASE_DIR / "indices_2025" / "cned"
+DATA_DIR = CNED_DIR / "data"
+RESULTADOS_DIR = CNED_DIR / "resultados"
+
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+RESULTADOS_DIR.mkdir(parents=True, exist_ok=True)
+
+TSV_ANTERIOR = DATA_DIR / "DATOS_VALIDACION_CNED_TSV.tsv"
+
+TS = datetime.now().strftime("%Y%m%d_%H%M%S")
+TSV_NUEVO = DATA_DIR / f"DATOS_VALIDACION_CNED_TSV_NUEVO_{TS}.tsv"
+TSV_ACTUALIZADO = DATA_DIR / "DATOS_VALIDACION_CNED_TSV_ACTUALIZADO.tsv"
+
+OUT_XLSX = RESULTADOS_DIR / f"CNED_COMPARACION_TSV_ANTERIOR_VS_NUEVO_{TS}.xlsx"
+OUT_JSON = RESULTADOS_DIR / f"CNED_COMPARACION_TSV_ANTERIOR_VS_NUEVO_{TS}.json"
+OUT_MD = RESULTADOS_DIR / f"CNED_COMPARACION_TSV_ANTERIOR_VS_NUEVO_{TS}.md"
+
+if not TSV_ANTERIOR.exists():
+    raise SystemExit(f"ERROR: no existe el TSV anterior esperado: {TSV_ANTERIOR}")
+
+try:
+    clipboard = subprocess.check_output(["pbpaste"], text=True)
+except Exception as e:
+    raise SystemExit(f"ERROR: no pude leer el portapapeles con pbpaste: {e}")
+
+if not clipboard.strip():
+    raise SystemExit("ERROR: el portapapeles está vacío. Copia primero la tabla completa con encabezados.")
+
+# Limpieza defensiva de caracteres que suelen romper el parseo
+clipboard = clipboard.replace(""", '"').replace(""", '"').replace("'", "'").replace("'", "'")
+clipboard = clipboard.replace("\r\n", "\n").replace("\r", "\n")
+
+TSV_NUEVO.write_text(clipboard, encoding="utf-8")
+print(f"Nueva tabla guardada temporalmente en: {TSV_NUEVO}")
+
+def norm_txt(x):
+    if pd.isna(x):
+        return ""
+    s = str(x).strip()
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = s.upper()
+    s = re.sub(r"\s+", " ", s)
+    return s.strip()
+
+def norm_col(c):
+    s = norm_txt(c)
+    s = s.replace(".", "")
+    s = s.replace("º", "N")
+    s = s.replace("°", "N")
+    s = s.replace("/", "_")
+    s = re.sub(r"[^A-Z0-9_ ]+", "", s)
+    s = s.replace(" ", "_")
+    s = re.sub(r"_+", "_", s)
+    return s.strip("_")
+
+def read_table_robusta(path):
+    intentos = [
+        dict(sep="\t", engine="python", dtype=str, keep_default_na=False, quoting=csv.QUOTE_NONE, on_bad_lines="warn"),
+        dict(sep="\t", engine="python", dtype=str, keep_default_na=False, quotechar="\x07", on_bad_lines="warn"),
+        dict(sep=None, engine="python", dtype=str, keep_default_na=False, quoting=csv.QUOTE_NONE, on_bad_lines="warn"),
+    ]
+
+    last_error = None
+    for kwargs in intentos:
+        try:
+            df = pd.read_csv(path, **kwargs)
+            if df.shape[1] >= 2:
+                return df
+        except Exception as e:
+            last_error = e
+
+    raise SystemExit(f"ERROR: no pude leer {path}: {last_error}")
+
+def find_col(df, options):
+    lookup = {norm_col(c): c for c in df.columns}
+    for op in options:
+        key = norm_col(op)
+        if key in lookup:
+            return lookup[key]
+    return None
+
+def unique_count(df, col):
+    if not col:
+        return 0
+    return int(df[col].astype(str).str.strip().replace("", pd.NA).dropna().nunique())
+
+df_old = read_table_robusta(TSV_ANTERIOR)
+df_new = read_table_robusta(TSV_NUEVO)
+
+df_old = df_old.rename(columns={c: c.replace("Códgo SIES", "Código SIES") for c in df_old.columns})
+df_new = df_new.rename(columns={c: c.replace("Códgo SIES", "Código SIES") for c in df_new.columns})
+
+old_cols_norm = set(norm_col(c) for c in df_old.columns)
+new_cols_norm = set(norm_col(c) for c in df_new.columns)
+
+cols_solo_old_norm = old_cols_norm - new_cols_norm
+cols_solo_new_norm = new_cols_norm - old_cols_norm
+
+key_options = {
+    "Año": ["Año", "Anio"],
+    "Cód. Institución": ["Cód. Institución", "Cod. Institución", "Codigo Institucion"],
+    "Nombre Institución": ["Nombre Institución", "Nombre Institucion"],
+    "Nombre de la Sede": ["Nombre de la Sede", "Nombre Sede"],
+    "Comuna": ["Comuna donde se imparte la carrera o programa", "Comuna"],
+    "Cód. Carrera": ["Cód. Carrera", "Cod. Carrera", "Codigo Carrera", "Código Carrera"],
+    "Carrera Genérica": ["Carrera Genérica", "Carrera Generica"],
+    "Nombre Programa": ["Nombre Programa", "Nombre de Programa"],
+    "Horario": ["Horario"],
+    "Tipo Programa": ["Tipo Programa"],
+    "Área Conocimiento": ["Area Conocimiento", "Área Conocimiento"],
+    "Tipo Carrera": ["Tipo Carrera"],
+    "Ingreso Directo": ["IngresoDirecto", "Ingreso Directo"],
+    "Año Inicio Actividades": ["Año Inicio Actividades", "Anio Inicio Actividades"],
+    "Nombre del Campus": ["Nombre del Campus", "Campus"],
+    "Duración": ["Duración (en semestres)", "Duracion (en semestres)", "Duracion"],
+    "Cód. Campus": ["Cód. Campus", "Cod. Campus", "Codigo Campus"],
+    "Cód. Sede": ["Cód. Sede", "Cod. Sede", "Codigo Sede"],
+    "Título": ["Título", "Titulo"],
+    "Valor matrícula": ["Valor de matrícula", "Valor matricula"],
+    "Valor arancel": ["Valor de arancel", "Valor arancel"],
+    "Vacantes": ["Vacantes"],
+    "Matrícula Primer Año": ["Matrícula Primer Año", "Matricula Primer Año", "Matricula primer año"],
+    "Matrícula Total": ["Matrícula Total", "Matricula Total"],
+    "Código SIES": ["Código SIES", "Codigo SIES", "Códgo SIES", "Cod. SIES"],
+    "Pregrado/Posgrado": ["Pregrado/Posgrado", "Pregrado Posgrado"],
+}
+
+det_old = {k: find_col(df_old, v) for k, v in key_options.items()}
+det_new = {k: find_col(df_new, v) for k, v in key_options.items()}
+
+col_year_old = det_old["Año"]
+col_year_new = det_new["Año"]
+col_cod_carrera_old = det_old["Cód. Carrera"]
+col_cod_carrera_new = det_new["Cód. Carrera"]
+col_sies_old = det_old["Código SIES"]
+col_sies_new = det_new["Código SIES"]
+col_programa_old = det_old["Nombre Programa"]
+col_programa_new = det_new["Nombre Programa"]
+col_prepost_old = det_old["Pregrado/Posgrado"]
+col_prepost_new = det_new["Pregrado/Posgrado"]
+
+years_old = sorted([x for x in df_old[col_year_old].astype(str).str.strip().unique() if x]) if col_year_old else []
+years_new = sorted([x for x in df_new[col_year_new].astype(str).str.strip().unique() if x]) if col_year_new else []
+
+cod_carrera_old = unique_count(df_old, col_cod_carrera_old)
+cod_carrera_new = unique_count(df_new, col_cod_carrera_new)
+sies_old = unique_count(df_old, col_sies_old)
+sies_new = unique_count(df_new, col_sies_new)
+programas_old = unique_count(df_old, col_programa_old)
+programas_new = unique_count(df_new, col_programa_new)
+
+prepost_old = sorted([x for x in df_old[col_prepost_old].astype(str).str.strip().unique() if x]) if col_prepost_old else []
+prepost_new = sorted([x for x in df_new[col_prepost_new].astype(str).str.strip().unique() if x]) if col_prepost_new else []
+
+old_cod_set = set(df_old[col_cod_carrera_old].astype(str).str.strip()) if col_cod_carrera_old else set()
+new_cod_set = set(df_new[col_cod_carrera_new].astype(str).str.strip()) if col_cod_carrera_new else set()
+old_cod_set.discard("")
+new_cod_set.discard("")
+
+old_sies_set = set(df_old[col_sies_old].astype(str).str.strip()) if col_sies_old else set()
+new_sies_set = set(df_new[col_sies_new].astype(str).str.strip()) if col_sies_new else set()
+old_sies_set.discard("")
+new_sies_set.discard("")
+
+cod_solo_nuevo = sorted(new_cod_set - old_cod_set)
+cod_solo_anterior = sorted(old_cod_set - new_cod_set)
+sies_solo_nuevo = sorted(new_sies_set - old_sies_set)
+sies_solo_anterior = sorted(old_sies_set - new_sies_set)
+
+score_new = 0
+motivos = []
+
+if df_new.shape[0] > df_old.shape[0]:
+    score_new += 2
+    motivos.append("La nueva tabla tiene más filas.")
+if df_new.shape[1] > df_old.shape[1]:
+    score_new += 2
+    motivos.append("La nueva tabla tiene más columnas.")
+if len(years_new) > len(years_old):
+    score_new += 2
+    motivos.append("La nueva tabla cubre más años.")
+if cod_carrera_new > cod_carrera_old:
+    score_new += 2
+    motivos.append("La nueva tabla contiene más Cód. Carrera únicos.")
+if sies_new > sies_old:
+    score_new += 1
+    motivos.append("La nueva tabla contiene más códigos SIES únicos.")
+if programas_new > programas_old:
+    score_new += 1
+    motivos.append("La nueva tabla contiene más programas únicos.")
+if "Posgrado" in prepost_new and "Posgrado" not in prepost_old:
+    score_new += 2
+    motivos.append("La nueva tabla incorpora registros Posgrado.")
+
+dictamen = "CONVIENE_ACTUALIZAR_TSV_BASE" if score_new >= 3 else "NO_ACTUALIZAR_SIN_REVISION"
+
+if dictamen == "CONVIENE_ACTUALIZAR_TSV_BASE":
+    TSV_ACTUALIZADO.write_text(TSV_NUEVO.read_text(encoding="utf-8"), encoding="utf-8")
+
+resumen_general = pd.DataFrame([
+    ["Archivo anterior", str(TSV_ANTERIOR)],
+    ["Archivo nuevo temporal", str(TSV_NUEVO)],
+    ["Archivo actualizado sugerido", str(TSV_ACTUALIZADO) if dictamen == "CONVIENE_ACTUALIZAR_TSV_BASE" else ""],
+    ["Filas TSV anterior", df_old.shape[0]],
+    ["Columnas TSV anterior", df_old.shape[1]],
+    ["Filas nueva tabla", df_new.shape[0]],
+    ["Columnas nueva tabla", df_new.shape[1]],
+    ["Diferencia filas nueva - anterior", df_new.shape[0] - df_old.shape[0]],
+    ["Diferencia columnas nueva - anterior", df_new.shape[1] - df_old.shape[1]],
+    ["Años TSV anterior", ", ".join(years_old)],
+    ["Años nueva tabla", ", ".join(years_new)],
+    ["Cantidad años TSV anterior", len(years_old)],
+    ["Cantidad años nueva tabla", len(years_new)],
+    ["Cód. Carrera únicos TSV anterior", cod_carrera_old],
+    ["Cód. Carrera únicos nueva tabla", cod_carrera_new],
+    ["Código SIES únicos TSV anterior", sies_old],
+    ["Código SIES únicos nueva tabla", sies_new],
+    ["Nombre Programa únicos TSV anterior", programas_old],
+    ["Nombre Programa únicos nueva tabla", programas_new],
+    ["Pregrado/Posgrado TSV anterior", ", ".join(prepost_old)],
+    ["Pregrado/Posgrado nueva tabla", ", ".join(prepost_new)],
+    ["Dictamen", dictamen],
+    ["Motivos", " | ".join(motivos)],
+], columns=["Métrica", "Valor"])
+
+det_cols = pd.DataFrame([
+    [k, det_old.get(k, ""), det_new.get(k, "")]
+    for k in key_options.keys()
+], columns=["Campo clave", "Columna detectada TSV anterior", "Columna detectada nueva tabla"])
+
+cols_df = pd.DataFrame({
+    "COLUMNAS_TSV_ANTERIOR": pd.Series(list(df_old.columns)),
+    "COLUMNAS_NUEVA_TABLA": pd.Series(list(df_new.columns)),
+})
+
+with pd.ExcelWriter(OUT_XLSX, engine="openpyxl") as writer:
+    resumen_general.to_excel(writer, sheet_name="00_RESUMEN", index=False)
+    det_cols.to_excel(writer, sheet_name="01_COLUMNAS_CLAVE", index=False)
+    cols_df.to_excel(writer, sheet_name="02_COLUMNAS_ORIGINALES", index=False)
+    pd.DataFrame({"COLUMNAS_SOLO_NUEVA_TABLA_NORMALIZADAS": sorted(cols_solo_new_norm)}).to_excel(writer, sheet_name="03_COLS_SOLO_NUEVA", index=False)
+    pd.DataFrame({"COLUMNAS_SOLO_TSV_ANTERIOR_NORMALIZADAS": sorted(cols_solo_old_norm)}).to_excel(writer, sheet_name="04_COLS_SOLO_ANTERIOR", index=False)
+    pd.DataFrame({"COD_CARRERA_SOLO_NUEVA_TABLA": cod_solo_nuevo}).to_excel(writer, sheet_name="05_COD_CARR_SOLO_NUEVA", index=False)
+    pd.DataFrame({"COD_CARRERA_SOLO_TSV_ANTERIOR": cod_solo_anterior}).to_excel(writer, sheet_name="06_COD_CARR_SOLO_ANT", index=False)
+    pd.DataFrame({"CODIGO_SIES_SOLO_NUEVA_TABLA": sies_solo_nuevo}).to_excel(writer, sheet_name="07_SIES_SOLO_NUEVA", index=False)
+    pd.DataFrame({"CODIGO_SIES_SOLO_TSV_ANTERIOR": sies_solo_anterior}).to_excel(writer, sheet_name="08_SIES_SOLO_ANT", index=False)
+
+payload = {
+    "fecha": datetime.now().isoformat(timespec="seconds"),
+    "tsv_anterior": str(TSV_ANTERIOR),
+    "tsv_nuevo_temporal": str(TSV_NUEVO),
+    "tsv_actualizado": str(TSV_ACTUALIZADO) if dictamen == "CONVIENE_ACTUALIZAR_TSV_BASE" else None,
+    "filas_tsv_anterior": int(df_old.shape[0]),
+    "columnas_tsv_anterior": int(df_old.shape[1]),
+    "filas_nueva_tabla": int(df_new.shape[0]),
+    "columnas_nueva_tabla": int(df_new.shape[1]),
+    "diferencia_filas": int(df_new.shape[0] - df_old.shape[0]),
+    "diferencia_columnas": int(df_new.shape[1] - df_old.shape[1]),
+    "anios_tsv_anterior": years_old,
+    "anios_nueva_tabla": years_new,
+    "cod_carrera_unicos_tsv_anterior": cod_carrera_old,
+    "cod_carrera_unicos_nueva_tabla": cod_carrera_new,
+    "codigo_sies_unicos_tsv_anterior": sies_old,
+    "codigo_sies_unicos_nueva_tabla": sies_new,
+    "programas_unicos_tsv_anterior": programas_old,
+    "programas_unicos_nueva_tabla": programas_new,
+    "pregrado_posgrado_tsv_anterior": prepost_old,
+    "pregrado_posgrado_nueva_tabla": prepost_new,
+    "dictamen": dictamen,
+    "motivos": motivos,
+    "excel_comparativo": str(OUT_XLSX),
+}
+OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+OUT_MD.write_text(f"""# CNED — Comparación TSV anterior vs nueva tabla completa
+
+## Dictamen
+
+`{dictamen}`
+
+## Resultado comparativo
+
+| Métrica | TSV anterior | Nueva tabla |
+|---|---:|---:|
+| Filas | {df_old.shape[0]} | {df_new.shape[0]} |
+| Columnas | {df_old.shape[1]} | {df_new.shape[1]} |
+| Años cubiertos | {len(years_old)} | {len(years_new)} |
+| Cód. Carrera únicos | {cod_carrera_old} | {cod_carrera_new} |
+| Código SIES únicos | {sies_old} | {sies_new} |
+| Programas únicos | {programas_old} | {programas_new} |
+
+## Años detectados
+
+- TSV anterior: `{", ".join(years_old)}`
+- Nueva tabla: `{", ".join(years_new)}`
+
+## Pregrado/Posgrado
+
+- TSV anterior: `{", ".join(prepost_old)}`
+- Nueva tabla: `{", ".join(prepost_new)}`
+
+## Motivos
+
+{chr(10).join("- " + m for m in motivos)}
+
+## Archivos generados
+
+- TSV anterior: `{TSV_ANTERIOR}`
+- TSV nuevo temporal: `{TSV_NUEVO}`
+- TSV actualizado sugerido: `{TSV_ACTUALIZADO if dictamen == "CONVIENE_ACTUALIZAR_TSV_BASE" else "No generado como base actualizada"}`
+- Excel comparativo: `{OUT_XLSX}`
+- JSON comparativo: `{OUT_JSON}`
+""", encoding="utf-8")
+
+print()
+print("=" * 120)
+print("RESULTADO")
+print("=" * 120)
+print(f"TSV anterior: {TSV_ANTERIOR}")
+print(f"TSV nuevo temporal: {TSV_NUEVO}")
+print()
+print(f"Filas TSV anterior: {df_old.shape[0]}")
+print(f"Columnas TSV anterior: {df_old.shape[1]}")
+print(f"Filas nueva tabla: {df_new.shape[0]}")
+print(f"Columnas nueva tabla: {df_new.shape[1]}")
+print()
+print(f"Años TSV anterior ({len(years_old)}): {', '.join(years_old)}")
+print(f"Años nueva tabla ({len(years_new)}): {', '.join(years_new)}")
+print()
+print(f"Cód. Carrera únicos TSV anterior: {cod_carrera_old}")
+print(f"Cód. Carrera únicos nueva tabla: {cod_carrera_new}")
+print(f"Código SIES únicos TSV anterior: {sies_old}")
+print(f"Código SIES únicos nueva tabla: {sies_new}")
+print(f"Programas únicos TSV anterior: {programas_old}")
+print(f"Programas únicos nueva tabla: {programas_new}")
+print()
+print(f"Pregrado/Posgrado TSV anterior: {', '.join(prepost_old)}")
+print(f"Pregrado/Posgrado nueva tabla: {', '.join(prepost_new)}")
+print()
+print(f"DICTAMEN: {dictamen}")
+print("Motivos:")
+for m in motivos:
+    print(f"- {m}")
+print()
+if dictamen == "CONVIENE_ACTUALIZAR_TSV_BASE":
+    print(f"TSV actualizado generado en: {TSV_ACTUALIZADO}")
+else:
+    print("No se reemplazó la base. Revisar el Excel comparativo antes de actualizar.")
+print()
+print(f"Excel comparativo: {OUT_XLSX}")
+print(f"JSON comparativo: {OUT_JSON}")
+print(f"Markdown resumen: {OUT_MD}")
+print()
+print("Abrir Excel comparativo:")
+print(f"open '{OUT_XLSX}'")
+print("=" * 120)
+PY
