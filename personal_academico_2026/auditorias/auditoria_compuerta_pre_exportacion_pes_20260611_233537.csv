@@ -1,0 +1,11 @@
+﻿timestamp,criterio,resultado,estado,severidad,detalle,fuente,accion_requerida
+2026-06-11T23:35:37,estructura_34_columnas,OK,OK,INFO,Oficiales=34; base=34.,ESTRUCTURA_OFICIAL,Mantener 34 columnas oficiales.
+2026-06-11T23:35:37,nombres_columnas,OK,OK,INFO,Nombres coinciden exactamente.,ESTRUCTURA_OFICIAL,Sin accion.
+2026-06-11T23:35:37,orden_columnas,OK,OK,INFO,Orden coincide exactamente.,ESTRUCTURA_OFICIAL,Sin accion.
+2026-06-11T23:35:37,columnas_faltantes,OK,OK,INFO,No hay columnas faltantes.,ESTRUCTURA_OFICIAL,Sin accion.
+2026-06-11T23:35:37,columnas_adicionales,OK,OK,INFO,No hay columnas adicionales.,ESTRUCTURA_OFICIAL,Sin accion.
+2026-06-11T23:35:37,errores_criticos,1,BLOQUEADO_ERROR_CRITICO,ERROR,fila 20 fecha_futura FECHA_OBT_TIT_O_GRADO=2027-11-29,VALIDACION_TECNICA_PREVENTIVA,Corregir errores criticos con respaldo.
+2026-06-11T23:35:37,advertencias,569,ADVERTENCIA,WARN,Advertencias detectadas: 569.,VALIDACION_TECNICA_PREVENTIVA,Revisar antes de exportacion controlada.
+2026-06-11T23:35:37,correcciones_pendientes,1,PENDIENTE_CONFIRMACION,WARN,CORR_FECHA_TITULO_FUTURA_001 FECHA_OBT_TIT_O_GRADO=2027-11-29,PENDIENTE_CONFIRMACION,Completar y autorizar correccion con respaldo.
+2026-06-11T23:35:37,exportador_bloqueado,OK,BLOQUEADO,INFO,Exportador requiere autorizacion explicita; esta fase no genera PES_READY.,VALIDACION_TECNICA_PREVENTIVA,Mantener bloqueado hasta auditoria aprobada.
+2026-06-11T23:35:37,decision_final,BLOQUEADO_ERROR_CRITICO,BLOQUEADO_ERROR_CRITICO,ERROR,"Actualmente el archivo NO esta listo para exportacion PES porque existe 1 error critico: fecha futura en FECHA_OBT_TIT_O_GRADO, fila 20, valor 2027-11-29.",VALIDACION_TECNICA_PREVENTIVA,Resolver bloqueo antes de exportar.

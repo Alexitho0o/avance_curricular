@@ -1,0 +1,235 @@
+{
+  "fecha_hora": "2026-06-11T23:15:57",
+  "rama_git": "feature/personal-academico-base-preliminar-2026",
+  "hash_original": "b50569b55424845de28ed541a2febbff256311ebcc35889344bc27efad4d7715",
+  "hash_copia": "b50569b55424845de28ed541a2febbff256311ebcc35889344bc27efad4d7715",
+  "backup_excel": "personal_academico_2026/insumos/preliminares/backups/Libro1_base_preliminar_personal_academico_2026_20260611_231557.xlsx",
+  "total_hojas_detectadas": 1,
+  "hojas": [
+    {
+      "nombre": "Hoja1",
+      "filas_utiles": 192,
+      "filas_excel": 192,
+      "columnas": 34,
+      "filas_vacias": 0,
+      "celdas_con_valor": 5456,
+      "posibles_encabezados": [
+        1,
+        168
+      ]
+    }
+  ],
+  "hoja_seleccionada": "Hoja1",
+  "auditoria": "personal_academico_2026/auditorias/base_preliminar/auditoria_incorporacion_base_preliminar_20260611_231557.csv",
+  "raw_tsv": "personal_academico_2026/insumos/preliminares/base_preliminar_personal_academico_en_institucion_RAW.tsv",
+  "base_normalizada": "personal_academico_2026/data/base_general/base_preliminar_en_institucion_normalizada.tsv",
+  "base_general": "personal_academico_2026/data/base_general/base_general_personal_academico_en_institucion.tsv",
+  "catalogo_mapeo": "personal_academico_2026/catalogos/mapeo_encabezados_base_preliminar_en_institucion.tsv",
+  "reporte": "personal_academico_2026/docs/REPORTE_FASE_3_BASE_PRELIMINAR.md",
+  "bitacora": "personal_academico_2026/bitacoras/base_preliminar/BITACORA_FASE_3_BASE_PRELIMINAR.md",
+  "reporte_3b": "personal_academico_2026/docs/REPORTE_FASE_3B_DEPURACION_FECHAS_Y_NA.md",
+  "bitacora_3b": "personal_academico_2026/bitacoras/base_preliminar/BITACORA_FASE_3B_DEPURACION_FECHAS_Y_NA.md",
+  "diagnostico_fechas": "personal_academico_2026/auditorias/base_preliminar/diagnostico_fechas_base_general_20260611_231557.csv",
+  "total_filas_normalizadas": 190,
+  "total_valores_excel_na": 26,
+  "total_valores_nd": 0,
+  "total_valores_na": 0,
+  "total_valores_no_aplica": 760,
+  "total_campos_fecha_no_disponibles": 197,
+  "total_fechas_ambiguas": 0,
+  "total_fechas_futuras": 1,
+  "total_fechas_invalidas": 0,
+  "total_horas_coma_decimal": 0,
+  "total_dv_minuscula_normalizada": 1,
+  "total_campos_obligatorios_preventivos_vacios": 0,
+  "total_posibles_duplicados_documento": 0,
+  "total_documentos_multiples_funciones": 0,
+  "total_encabezados_repetidos_internos": 1,
+  "total_columnas_raw": 34,
+  "total_filas_raw": 192,
+  "total_filas_utiles": 191,
+  "total_filas_base_general": 190,
+  "total_filas_incorporadas": 0,
+  "total_filas_actualizadas": 190,
+  "vacios::NIVEL_FORMACIÓN_ESPECIALIDAD": 190,
+  "vacios::TIPO_ESPECIALIDAD": 190,
+  "vacios::PAÍS_OBT_ESPECIALIDAD": 190,
+  "vacios::COMUNA_MAYOR_FUNCIÓN": 170,
+  "vacios::NUM_HORAS_PLANTA": 165,
+  "vacios::NUM_HORAS_CONTRATA": 166,
+  "vacios::NUM_HORAS_HONORARIO": 1,
+  "total_fechas_anio_cuatro_digitos": 373,
+  "base_general_backup": "personal_academico_2026/data/base_general/backups/base_general_personal_academico_en_institucion_20260611_231557.tsv",
+  "total_campos_fecha_revisados": 570,
+  "conteos_fecha": {
+    "FECHA_OK": 372,
+    "FECHA_NO_DISPONIBLE": 197,
+    "FECHA_FUTURA": 1
+  },
+  "problemas_por_columna": {
+    "FECHA_OBTENCION_ESPECIALIDAD": 190,
+    "FECHA_OBT_TIT_O_GRADO": 8
+  },
+  "muestras_problemas_fecha": [
+    {
+      "fila": "2",
+      "documento": "R|10063280|2",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "3",
+      "documento": "R|10393519|9",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "4",
+      "documento": "R|10536500|4",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "5",
+      "documento": "R|10727793|5",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "6",
+      "documento": "R|11250569|5",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "7",
+      "documento": "R|11481000|2",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "8",
+      "documento": "R|11613889|1",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "9",
+      "documento": "R|11640980|1",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "10",
+      "documento": "R|11944423|3",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "11",
+      "documento": "R|12141132|6",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "12",
+      "documento": "R|12240733|0",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "13",
+      "documento": "R|12534768|1",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "14",
+      "documento": "R|12632439|1",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "15",
+      "documento": "R|12721395|K",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "16",
+      "documento": "R|12816751|K",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "17",
+      "documento": "R|13021689|7",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "18",
+      "documento": "R|13056867|K",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "19",
+      "documento": "R|13191365|6",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "20",
+      "documento": "R|13255405|6",
+      "campo": "FECHA_OBTENCION_ESPECIALIDAD",
+      "valor": "NO APLICA",
+      "clasificacion": "FECHA_NO_DISPONIBLE",
+      "accion_recomendada": "Confirmar dato fuente o respaldar que no aplica; no inventar fecha."
+    },
+    {
+      "fila": "20",
+      "documento": "R|13255405|6",
+      "campo": "FECHA_OBT_TIT_O_GRADO",
+      "valor": "2027-11-29",
+      "clasificacion": "FECHA_FUTURA",
+      "accion_recomendada": "Revisar contra documento fuente; confirmar si corresponde o corregir con respaldo."
+    }
+  ]
+}

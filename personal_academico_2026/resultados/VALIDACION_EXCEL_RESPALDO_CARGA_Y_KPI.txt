@@ -1,0 +1,63 @@
+VALIDACION_EXCEL_RESPALDO_CARGA_Y_KPI
+fecha_hora: 2026-06-12T15:41:00
+fase: Fase 10D aplicada
+motor: XlsxWriter
+mejoras_implementadas: etiquetas oficiales del instructivo para NIVEL_FORMACION_ACADEMICO y CARGO_NORMALIZADO, catalogo visible en TABLAS_RESUMEN, dashboard ejecutivo actualizado
+registros_DETALLE_TRAZABILIDAD: 190
+registros_BASE_KPI: 190
+KPIs_documentados: 54
+cargados: 181
+pendientes: 9
+formulas_detectadas: si (183)
+graficos_detectados: si (41)
+tablas_excel_detectadas: si (30)
+pivots_nativos: no (0)
+openpyxl_load_workbook_OK: si
+validacion_porcentajes: si
+validacion_diccionario_KPI_no_generico: si
+validacion_motivos_legibles: si
+validacion_etiquetas_descriptivas: si
+etiquetas_oficiales_nivel_formacion_aplicadas: OK
+etiquetas_oficiales_cargo_normalizado_aplicadas: OK
+catalogo_oficial_incluido_en_TABLAS_RESUMEN: OK
+sin_etiquetas_genericas_en_RESUMEN_TABLAS_BASE: OK
+etiquetas_genericas_detectadas: []
+vinculos_externos: 0
+hojas_ocultas: []
+ruta_repo: personal_academico_2026/resultados/Personal_Academico_2026_RESPALDO_CARGA_Y_KPI.xlsx
+ruta_Escritorio: /Users/alexi/Desktop/Personal_Academico_2026_RESPALDO_CARGA_Y_KPI.xlsx
+
+fase_11: aplicada
+archivo_historico_detectado: /Users/alexi/Documents/GitHub/avance_curricular/personal_academico_2026/PAC_web_2008_2025_SIES_EE.xlsx
+glosario_detectado: /Users/alexi/Documents/GitHub/avance_curricular/personal_academico_2026/OFICIAL_GLOSARIO_PAC_WEB_E.pdf
+anios_disponibles: 2008-2025
+institucion_objetivo: IP CIISA (162)
+hojas_historicas_creadas: ['HIST_BASE_NORMALIZADA', 'HIST_KPI_2008_2025', 'HIST_KPI_ULTIMOS_5_ANIOS', 'HIST_KPI_ULTIMOS_3_ANIOS', 'HIST_KPI_ULTIMOS_2_ANIOS', 'HIST_COMPARATIVO_2026_VS_2025', 'HIST_DICCIONARIO_KPI', 'HIST_ALERTAS_EJECUTIVAS']
+KPIs_historicos_calculados: 103
+comparativo_2026_vs_2025: OK
+HIST_BASE_NORMALIZADA_filas: 2703
+validacion_hojas_historicas: OK
+
+fase_11B: aplicada
+institucion_objetivo_configurada_explicitamente: IP CIISA (162)
+metodo_deteccion_institucion_objetivo: coincidencia exacta por código SIES
+anios_encontrados_institucion_objetivo: 2008-2025
+total_filas_historicas_institucion_objetivo: 18
+validacion_nombre_institucion: OK
+seleccion_por_nombre_parcial: NO
+configuracion_institucion_objetivo_en_TABLAS_RESUMEN: OK
+validacion_codigo_162_en_TABLAS_RESUMEN: OK
+
+fase_11C: aplicada
+codigo_SIES_continuidad: 162
+nombre_historico_detectado: IP CIISA
+nombre_actual_referencial: IP San Sebastián / Instituto Profesional San Sebastián
+criterio_continuidad: mismo codigo SIES 162
+metodo_cruce: coincidencia exacta por codigo SIES
+seleccion_por_nombre_parcial: NO
+anios_historicos_encontrados: 2008-2025
+filas_historicas: 18
+nota_continuidad_institucional: La serie historica se mantiene por continuidad del Codigo SIES 162. Aunque la institucion aparece historicamente como IP CIISA/CIISA y actualmente corresponde a IP San Sebastian, el analisis compara la misma entidad institucional por codigo SIES, no por coincidencia textual de nombre.
+CONTINUIDAD_INSTITUCIONAL_en_TABLAS_RESUMEN: OK
+nombre_actual_referencial_en_excel: OK
+nota_continuidad_en_excel: OK
