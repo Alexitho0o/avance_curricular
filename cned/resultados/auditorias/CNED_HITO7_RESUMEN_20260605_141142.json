@@ -1,0 +1,36 @@
+{
+  "fecha": "2026-06-05T14:11:42",
+  "git_status_inicial": "## feature/cned-reconstruccion-limpia...origin/feature/cned-reconstruccion-limpia\n?? cned/scripts/hito7_resolver_campos_oficiales_cned.py",
+  "matriz_hito6": "cned/resultados/archivos_subida/CNED_MATRIZ_RESOLUCION_BLOQUEOS_HITO6_20260605_140333.xlsx",
+  "base_hito5": "cned/resultados/archivos_subida/CNED_BASE_SANEADA_PRELIMINAR_HITO5_20260605_135231.xlsx",
+  "campos_oficiales_bloqueantes": [
+    "Régimen",
+    "VIGENCIA_CARRERA",
+    "ACREDITACION",
+    "ANIO_INICIO",
+    "AREA_ACTUAL",
+    "DURACION_REGIMEN",
+    "NOMBRE_TITULO",
+    "REGIMEN",
+    "REQUISITO_INGRESO",
+    "SEMESTRES_RECONOCIDOS"
+  ],
+  "equivalencia_interna_posible": 1,
+  "requieren_fuente_institucional": 8,
+  "campos_formulario_decision": 43,
+  "campos_auxiliares_excluibles": [
+    "CNED_ALERTAS",
+    "CNED_ESTADO_AUDITORIA",
+    "CNED_PUEDE_SUBIR_PRELIMINAR",
+    "MATCH_CODIGO_UNICO_DERIVADO"
+  ],
+  "semaforo": "ROJO",
+  "archivos_generados": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/archivos_subida/CNED_HITO7_PLANTILLA_RESOLUCION_INSTITUCIONAL_20260605_141142.xlsx",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/reportes/CNED_HITO7_RESOLUCION_CAMPOS_OFICIALES_20260605_141142.md",
+    "csv_oficiales": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/auditorias/CNED_HITO7_CAMPOS_OFICIALES_20260605_141142.csv",
+    "csv_formulario": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/auditorias/CNED_HITO7_CAMPOS_FORMULARIO_20260605_141142.csv",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/auditorias/CNED_HITO7_RESUMEN_20260605_141142.json"
+  },
+  "guardrail_mu2026": "OK: no se detectaron modificaciones en archivos protegidos de MU2026."
+}
