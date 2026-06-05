@@ -1,0 +1,429 @@
+{
+  "fecha": "2026-06-05T13:52:32",
+  "git_status_inicial": "## feature/cned-reconstruccion-limpia...origin/feature/cned-reconstruccion-limpia [ahead 1, behind 1]\n?? cned/resultados/auditorias/CNED_HITO5_RESUMEN_20260605_135145.json\n?? cned/resultados/reportes/CNED_HITO5_RESOLUCION_MARCAS_REVISION_20260605_135145.md\n?? cned/scripts/hito5_resolver_marcas_revision_cned.py",
+  "base_hito4": "cned/resultados/archivos_subida/CNED_BASE_OPERATIVA_AUDITADA_PRE_SUBIDA_20260605_133904.xlsx",
+  "sha256_base_antes": "f04520469c6889ff608130823f3a85277cf7528e7121f3105d0550bd51f1b5ec",
+  "sha256_base_despues": "f04520469c6889ff608130823f3a85277cf7528e7121f3105d0550bd51f1b5ec",
+  "total_registros": 71,
+  "total_marcas_detectadas": 2310,
+  "marcas_columnas_oficiales": 221,
+  "marcas_columnas_auxiliares": 214,
+  "marcas_columnas_desconocidas": 1875,
+  "total_si": 0,
+  "total_revisar": 0,
+  "total_no": 71,
+  "semaforo": "ROJO",
+  "columnas_con_marcas": [
+    {
+      "columna": "ACREDITACION",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "ACREDITACION",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "ANIO_INICIO",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "ANIO_INICIO",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "ARANCEL_ANUAL",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "AREA_ACTUAL",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "AREA_ACTUAL",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "AREA_ADMIN_DERECHO",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_AGRI_SILVI_PESCA_VET",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_ARTES_HUMANIDADES",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_CIENCIAS_NAT_MAT_ESTAD",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_CS_SOCIAL_PERIODISMO_INFO",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_EDUCACION",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_INGE_INDUSTRIA_CONSTRUC",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_SALUD_BIENESTAR",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_SERVICIOS",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "AREA_TECNO_INFO_COMUNICA",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "Año de inicio de Actividades",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 10
+    },
+    {
+      "columna": "CNED_ALERTAS",
+      "tipo_columna": "AUXILIAR_TECNICA",
+      "clasificacion_marca": "MARCA_TECNICA_REMOVIBLE",
+      "marcas": 71
+    },
+    {
+      "columna": "CNED_ESTADO_AUDITORIA",
+      "tipo_columna": "AUXILIAR_TECNICA",
+      "clasificacion_marca": "MARCA_TECNICA_REMOVIBLE",
+      "marcas": 71
+    },
+    {
+      "columna": "CNED_PUEDE_SUBIR_PRELIMINAR",
+      "tipo_columna": "AUXILIAR_TECNICA",
+      "clasificacion_marca": "MARCA_TECNICA_REMOVIBLE",
+      "marcas": 71
+    },
+    {
+      "columna": "COSTO_TITULACION",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Campus",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 3
+    },
+    {
+      "columna": "Carrera Genérica",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "DURACION_REGIMEN",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "DURACION_REGIMEN",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "Dependencia",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Detalle del Tipo de Programa (especiales)",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 14
+    },
+    {
+      "columna": "EXPERIENCIA_LABORAL",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "FECHA_ADMISION_INICIAL",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "FORMATO_VALOR",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Grado Académico que otorga el programa",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Horario",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 1
+    },
+    {
+      "columna": "Ingreso Directo",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Ingreso otro",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 35
+    },
+    {
+      "columna": "LICENCIA_ENS_MEDIA",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "MAIL_DIFUSION_CARRERA",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "MALLA_CURRICULAR",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "MATCH_CODIGO_UNICO_DERIVADO",
+      "tipo_columna": "AUXILIAR_TECNICA",
+      "clasificacion_marca": "MARCA_TECNICA_REMOVIBLE",
+      "marcas": 1
+    },
+    {
+      "columna": "Modalidad del Programa",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 2
+    },
+    {
+      "columna": "NOMBRE_TITULO",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "NOMBRE_TITULO",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "NOTAS_ENS_MEDIA",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "OTROS_REQUISITOS",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Observaciones",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "OBSERVACION_INSTITUCIONAL",
+      "marcas": 71
+    },
+    {
+      "columna": "Otro Tipo de Ingreso",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 35
+    },
+    {
+      "columna": "PERFIL_EGRESO",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "PROMEDIO_MIN_ENS_MEDIA",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "RECONOCIMIENTOS_APREN_PREVIOS",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "REGIMEN",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "REGIMEN",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "REQUISITO_INGRESO",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "REQUISITO_INGRESO",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "Régimen",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 71
+    },
+    {
+      "columna": "SEMESTRES_RECONOCIDOS",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "BLOQUEO_CRITICO",
+      "marcas": 1
+    },
+    {
+      "columna": "SEMESTRES_RECONOCIDOS",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 10
+    },
+    {
+      "columna": "Sub Área",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "TEXTO_REQUISITO_INGRESO",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "Título que otorga el programa",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 10
+    },
+    {
+      "columna": "VACANTES_PRIMER_SEMESTRE",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "VACANTES_SEGUNDO_SEMESTRE",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 11
+    },
+    {
+      "columna": "VALOR_CERTIFICADO_DIPLOMA",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "VALOR_MATRICULA_ANUAL",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    },
+    {
+      "columna": "VIGENCIA_CARRERA",
+      "tipo_columna": "OFICIAL_PROBABLE",
+      "clasificacion_marca": "CAMPO_PENDIENTE_REAL",
+      "marcas": 62
+    },
+    {
+      "columna": "Área del Conocimiento",
+      "tipo_columna": "DESCONOCIDA",
+      "clasificacion_marca": "DUDA_METODOLOGICA",
+      "marcas": 71
+    }
+  ],
+  "alertas_validacion": [
+    [
+      "MARCAS_TECNICAS_EN_CAMPOS_OFICIALES",
+      71
+    ],
+    [
+      "MARCAS_TECNICAS_EN_COLUMNAS_DESCONOCIDAS",
+      71
+    ]
+  ],
+  "archivos_generados": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/archivos_subida/CNED_BASE_SANEADA_PRELIMINAR_HITO5_20260605_135231.xlsx",
+    "csv_si": null,
+    "tsv_si": null,
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/reportes/CNED_HITO5_RESOLUCION_MARCAS_REVISION_20260605_135231.md",
+    "marcas_csv": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/auditorias/CNED_HITO5_MARCAS_REVISION_20260605_135231.csv",
+    "validaciones_csv": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/auditorias/CNED_HITO5_VALIDACIONES_REGISTROS_20260605_135231.csv",
+    "json": "/Users/alexi/Documents/GitHub/avance_curricular/cned/resultados/auditorias/CNED_HITO5_RESUMEN_20260605_135231.json"
+  },
+  "guardrail_mu2026": "OK: no se detectaron modificaciones en archivos protegidos de MU2026.",
+  "advertencia": "No es archivo final sin instructivo oficial confirmado."
+}
