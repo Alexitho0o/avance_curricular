@@ -1,0 +1,11 @@
+ID_CONCLUSION,CONCLUSION,FASE_ORIGEN,AUDITORIA,ARTEFACTO,CAMPO_O_SECCION,RESULTADO,NIVEL_EVIDENCIA,OBSERVACION
+C01,Universos 2022-2026 congelados,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,01_integridad_fuentes_gobernadas.csv,PERSONAS_REALES,"71,70,85,124,202",ALTO,Sin PII.
+C02,Hashes de fuentes verificados,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,01_integridad_fuentes_gobernadas.csv,COINCIDE_SHA,True para 5 fuentes,ALTO,SHA completos en inventario.
+C03,Formula SIES congelada,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,31_dictamen_metodologico_final.md,formula,ROTAN / DOTACION_BASE * 100,ALTO,Nuevos excluidos.
+C04,Cuatro KPI congelados,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,28_kpi_final_auditado.csv,TASA_OFICIAL_ROTACION,49.295775; 44.285714; 41.176471; 17.741935,ALTO,Agregado sin PII.
+C05,Conciliacion independiente,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,08_conciliacion_modulo_vs_recalculo.csv,ESTADO,36/36 coincide,ALTO,No implica recalc en Fase 3A.
+C06,Reingresos validos,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,09_validacion_reingresos.csv,VALIDACION,13 reingresos validos,ALTO,No corrigen tasa historica.
+C07,Movilidad registrada,Fase 2B,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,12_resumen_movilidad.csv,metricas,208 filas persona-par; 123 personas; 370 eventos,ALTO,No decir 208 docentes con movilidad.
+C08,Pruebas ejecutadas,Fase 2B/3A,personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348,25_resultado_pruebas.txt,pruebas,compileall y harness; pytest si disponible,MEDIO,Fase 3A revalida paquete.
+C09,Estado de publicacion,Fase 2C-B,dictamen metodologico externo,respuesta de auditoria 2C-B,conclusion,METODOLOGICAMENTE_PUBLICABLE,ALTO,No equivale a autorizacion comunicacional.
+C10,Dictamen 2C-B,Fase 2C-B,dictamen metodologico externo,respuesta de auditoria 2C-B,estado documental,RESUELTO_METODOLOGICAMENTE,ALTO,2023/2025 cierre nominal pendiente.

@@ -1,0 +1,2243 @@
+{
+  "repo_real": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "branch": "backup/pre-sync-fix-20260410-avance",
+  "head": "5c5cc160cb64b1690dad871e722d52bd2bc5eadc",
+  "upstream": "origin/backup/pre-sync-fix-20260410-avance",
+  "upstream_head": "6e15e063b85ee4b8b8d8937db5dc050a1833253b",
+  "status_short": "",
+  "status_branch_short": "## backup/pre-sync-fix-20260410-avance...origin/backup/pre-sync-fix-20260410-avance [ahead 1, behind 1]",
+  "diff_stat": "",
+  "diff": "",
+  "diff_cached": "",
+  "untracked": [],
+  "ahead": 1,
+  "behind": 1,
+  "merge_base_upstream": "fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1",
+  "last_10_commits": [
+    "5c5cc160cb64b1690dad871e722d52bd2bc5eadc | 2026-07-06T13:16:16-04:00 | Alexi Burgos | chore(git): excluye diagnostico mayor a 100MB",
+    "fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1 | 2026-07-06T11:58:19-04:00 | Alexi Burgos | chore(git): refuerza exclusiones de temporales",
+    "94d9a1237e6679e5033a11ad4699da3c22b8fe89 | 2026-04-09T08:59:36-04:00 | Alexi Burgos | cd /Users/alexi/Documents/GitHub/avance_curricular",
+    "dba1b4dcfd3d4832db49815d388f714fa01ce127 | 2026-04-09T08:57:14-04:00 | Alexi Burgos | MU2026: activar versionado de DURACION_ESTUDIOS.tsv (no ignorado) + huella",
+    "5ddb6868f72e5a0419d83ff586f945eb599d81b8 | 2026-04-06T02:08:26-04:00 | Alexi Burgos | chore: agrega catálogos de gobernanza (Hoja1 y DatosAlumnos) para estados y VIG esperado",
+    "a4bbc80386f406629c15c15a8532e2047cc89787 | 2026-04-06T09:09:34-04:00 | Alexi Burgos | Merge pull request #10 from Alexitho0o/copilot/revision-y-mapeo-del-proyecto",
+    "7630a9d0f521252e662b04193d7065435abfb7f2 | 2026-04-06T12:56:59Z | copilot-swe-agent[bot] | chore: track gobernanza_escala_notas.tsv and related governance files in git",
+    "b02dc21b85989ec23fa90b99fda4b06e33b3a05b | 2026-04-06T12:56:30Z | copilot-swe-agent[bot] | feat: add gobernanza_escala_notas.tsv; fix _normalize_grade_to_mu_scale lower bound; rename s24->s_ref",
+    "11af25b19884b150b71ee41b8c8999885e94786f | 2026-04-06T12:42:44Z | copilot-swe-agent[bot] | fix: off-by-one guard in matriz loader, dynamic year in resumen historico, redundant import, unused variable; pin dep versions",
+    "83d58d828e3392eedd9b320505253257f69bcc73 | 2026-04-06T02:08:26-04:00 | Alexi Burgos | chore: agrega catálogos de gobernanza (Hoja1 y DatosAlumnos) para estados y VIG esperado"
+  ],
+  "local_ahead_commits": [
+    "5c5cc160cb64b1690dad871e722d52bd2bc5eadc"
+  ],
+  "remote_behind_commits": [
+    "6e15e063b85ee4b8b8d8937db5dc050a1833253b"
+  ],
+  "commit_info": {
+    "5c5cc160cb64b1690dad871e722d52bd2bc5eadc": {
+      "metadata": "5c5cc160cb64b1690dad871e722d52bd2bc5eadc | fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1 | 2026-07-06T13:16:16-04:00 | Alexi Burgos | chore(git): excluye diagnostico mayor a 100MB",
+      "paths": [
+        {
+          "estado": "M",
+          "ruta": ".gitignore"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/106_carreras_16769_gobernado_por_codigo_unico/CARRERAS_16769_GOBERNADO_20260709_102827/manifest_h106_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/DIAGNOSTICO_GOBERNADO_CARRERAS_16769_20260709_105549/INFORME_DIAGNOSTICO_GOBERNADO_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/DIAGNOSTICO_GOBERNADO_CARRERAS_16769_20260709_105549/diagnostico_gobernado_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/DIAGNOSTICO_GOBERNADO_CARRERAS_16769_20260709_105549/manifest_diagnostico_gobernado_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/DIAGNOSTICO_GOBERNADO_CARRERAS_16769_20260709_105803/INFORME_DIAGNOSTICO_GOBERNADO_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/DIAGNOSTICO_GOBERNADO_CARRERAS_16769_20260709_105803/diagnostico_gobernado_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/DIAGNOSTICO_GOBERNADO_CARRERAS_16769_20260709_105803/manifest_diagnostico_gobernado_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/109_diagnostico_gobernado_carreras_16769/diagnostico_gobernado_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/110_cierre_funcional_nivel_periodizacion_carreras_16769/CIERRE_FUNCIONAL_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_111323/BORRADOR_CORREO_DOCENCIA_REGISTRO_CURRICULAR_NIVEL_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/110_cierre_funcional_nivel_periodizacion_carreras_16769/CIERRE_FUNCIONAL_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_111343/BORRADOR_CORREO_DOCENCIA_REGISTRO_CURRICULAR_NIVEL_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/110_cierre_funcional_nivel_periodizacion_carreras_16769/CIERRE_FUNCIONAL_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_111343/INFORME_CIERRE_FUNCIONAL_NIVEL_PERIODIZACION_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/110_cierre_funcional_nivel_periodizacion_carreras_16769/CIERRE_FUNCIONAL_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_111343/cierre_funcional_nivel_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/110_cierre_funcional_nivel_periodizacion_carreras_16769/CIERRE_FUNCIONAL_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_111343/manifest_cierre_funcional_nivel_periodizacion_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/110_cierre_funcional_nivel_periodizacion_carreras_16769/cierre_funcional_nivel_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/111_decision_interna_nivel_periodizacion_carreras_16769/DECISION_INTERNA_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_112825/INFORME_DECISION_INTERNA_NIVEL_PERIODIZACION_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/111_decision_interna_nivel_periodizacion_carreras_16769/DECISION_INTERNA_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_112825/decision_interna_nivel_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/111_decision_interna_nivel_periodizacion_carreras_16769/DECISION_INTERNA_NIVEL_PERIODIZACION_CARRERAS_16769_20260709_112825/manifest_decision_interna_nivel_periodizacion_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/111_decision_interna_nivel_periodizacion_carreras_16769/decision_interna_nivel_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114231/INFORME_DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114231/decision_alternativa_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114231/manifest_decision_alternativa_periodizacion_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114429/INFORME_DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114429/decision_alternativa_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114429/manifest_decision_alternativa_periodizacion_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112a_decision_alternativa_periodizacion_carreras_16769/decision_alternativa_periodizacion_carreras_16769.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112b_csv_final_controlado_carreras_16769/CSV_FINAL_CONTROLADO_CARRERAS_16769_HOJA10_20260709_121827/INFORME_CSV_FINAL_CONTROLADO_CARRERAS_16769_H112B.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112b_csv_final_controlado_carreras_16769/CSV_FINAL_CONTROLADO_CARRERAS_16769_HOJA10_20260709_121827/h112b_generar_desde_hoja_10.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112b_csv_final_controlado_carreras_16769/CSV_FINAL_CONTROLADO_CARRERAS_16769_HOJA10_20260709_121827/manifest_csv_final_controlado_carreras_16769_h112b.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112d_cierre_gobernado_carga_completa_carreras_16769/CIERRE_GOBERNADO_CARGA_COMPLETA_CARRERAS_16769_20260709_132126/INFORME_CIERRE_GOBERNADO_CARGA_COMPLETA_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112d_cierre_gobernado_carga_completa_carreras_16769/CIERRE_GOBERNADO_CARGA_COMPLETA_CARRERAS_16769_20260709_132126/INFORME_DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112d_cierre_gobernado_carga_completa_carreras_16769/CIERRE_GOBERNADO_CARGA_COMPLETA_CARRERAS_16769_20260709_132126/manifest_cierre_gobernado_carga_completa_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/112d_cierre_gobernado_carga_completa_carreras_16769/CIERRE_GOBERNADO_CARGA_COMPLETA_CARRERAS_16769_20260709_132126/manifest_decision_alternativa_periodizacion_carreras_16769.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113_matricula_16768_regenerada_validada_post_carreras/MATRICULA_16768_REGENERADA_VALIDADA_POST_CARRERAS_20260709_133728/INFORME_MATRICULA_16768_H113_REGENERADA.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113_matricula_16768_regenerada_validada_post_carreras/MATRICULA_16768_REGENERADA_VALIDADA_POST_CARRERAS_20260709_133728/manifest_matricula_16768_h113_regenerada.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113b_excel_kpi_gobernado_matricula_16768/EXCEL_KPI_GOBERNADO_MATRICULA_16768_20260709_134959/INFORME_EXCEL_KPI_GOBERNADO_H113B.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113b_excel_kpi_gobernado_matricula_16768/EXCEL_KPI_GOBERNADO_MATRICULA_16768_20260709_134959/manifest_excel_kpi_gobernado_h113b.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113c_excel_kpi_gobernado_formato_matricula_16768/EXCEL_KPI_GOBERNADO_FORMATO_MATRICULA_16768_20260709_135340/INFORME_EXCEL_KPI_GOBERNADO_H113C_FORMATO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113c_excel_kpi_gobernado_formato_matricula_16768/EXCEL_KPI_GOBERNADO_FORMATO_MATRICULA_16768_20260709_135340/manifest_excel_kpi_gobernado_h113c_formato.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113d_excel_kpi_ancho_semaforo_matricula_16768/EXCEL_KPI_ANCHO_SEMAFORO_MATRICULA_16768_20260709_135833/INFORME_EXCEL_KPI_GOBERNADO_H113D_ANCHO_SEMAFORO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113d_excel_kpi_ancho_semaforo_matricula_16768/EXCEL_KPI_ANCHO_SEMAFORO_MATRICULA_16768_20260709_135833/manifest_excel_kpi_gobernado_h113d_ancho_semaforo.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113e_excel_kpi_centrado_semaforo_porcentajes_matricula_16768/EXCEL_KPI_CENTRADO_SEMAFORO_PORCENTAJES_MATRICULA_16768_20260709_140748/INFORME_EXCEL_KPI_GOBERNADO_H113E_CENTRADO_SEMAFORO_PORCENTAJES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113e_excel_kpi_centrado_semaforo_porcentajes_matricula_16768/EXCEL_KPI_CENTRADO_SEMAFORO_PORCENTAJES_MATRICULA_16768_20260709_140748/manifest_excel_kpi_gobernado_h113e_centrado_semaforo_porcentajes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113f_mapeo_excel_semaforo_matricula_16768/MAPEO_EXCEL_SEMAFORO_MATRICULA_16768_20260709_141402/INFORME_MAPEO_EXCEL_H113E_SEMAFORO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113f_mapeo_excel_semaforo_matricula_16768/MAPEO_EXCEL_SEMAFORO_MATRICULA_16768_20260709_141402/manifest_mapeo_excel_h113e_semaforo.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113g_excel_kpi_semaforo_fisico_matricula_16768/EXCEL_KPI_SEMAFORO_FISICO_MATRICULA_16768_20260709_141812/INFORME_EXCEL_KPI_GOBERNADO_H113G_SEMAFORO_FISICO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113g_excel_kpi_semaforo_fisico_matricula_16768/EXCEL_KPI_SEMAFORO_FISICO_MATRICULA_16768_20260709_141812/manifest_excel_kpi_gobernado_h113g_semaforo_fisico.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113h_limpieza_escritorio_matricula_16768/LIMPIEZA_ESCRITORIO_MATRICULA_16768_20260709_142628/INFORME_LIMPIEZA_ESCRITORIO_MATRICULA_16768.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113h_limpieza_escritorio_matricula_16768/LIMPIEZA_ESCRITORIO_MATRICULA_16768_20260709_142628/INVENTARIO_MALLAS_PLANES_AVANCE_CURRICULAR_20260709_040937.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113h_limpieza_escritorio_matricula_16768/LIMPIEZA_ESCRITORIO_MATRICULA_16768_20260709_142628/manifest_limpieza_escritorio_matricula_16768.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/DIAGNOSTICO_PROFUNDO_NIVEL_MALLAS_CARRERAS_20260709_041746.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/EJECUTAR AVANCE CURRICULAR.docx"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Ing_Administracion_de_Empresas_2024.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Ing_Ciberseguridad_.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Ing_Ciencia_de_Datos.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Ing_Conectividad_y_Redes_.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Ing_Informatica_2024.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Ing_Logistica_2024.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Tec_Administracion_de_Empresas_2024.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Tec_Conectividad_y_Redes_.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Tec_Enfermeria.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Tec_Logistica_2024.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/MALLAS/Tec_Programacion_y_Analisis_de_Sistemas_2024.pdf"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/01_RETIRADO_DEL_ESCRITORIO/_RESGUARDO_LIMPIEZA_MATRICULA_16768_20260709_142628/INVENTARIO_MALLAS_PLANES_AVANCE_CURRICULAR_20260709_040937.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/INFORME_LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/113i_limpieza_profunda_escritorio_matricula_16768/LIMPIEZA_PROFUNDA_ESCRITORIO_MATRICULA_16768_20260709_143042/manifest_limpieza_profunda_escritorio_matricula_16768.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/114a_diagnostico_gobernado_exceso_unidades_matricula_16768/DIAGNOSTICO_GOBERNADO_EXCESO_UNIDADES_MATRICULA_16768_20260710_115501/INFORME_DIAGNOSTICO_GOBERNADO_EXCESO_UNIDADES_H114A.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/114a_diagnostico_gobernado_exceso_unidades_matricula_16768/DIAGNOSTICO_GOBERNADO_EXCESO_UNIDADES_MATRICULA_16768_20260710_115501/manifest_diagnostico_gobernado_exceso_unidades_h114a.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/114b_correccion_aprobadas_total_segun_plan_matricula_16768/CORRECCION_APROBADAS_TOTAL_SEGUN_PLAN_MATRICULA_16768_20260710_130853/INFORME_H114B_CORRECCION_APROBADAS_TOTAL.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/114b_correccion_aprobadas_total_segun_plan_matricula_16768/CORRECCION_APROBADAS_TOTAL_SEGUN_PLAN_MATRICULA_16768_20260710_130853/manifest_h114b_correccion_aprobadas_total.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/27_auditoria_temporal_promedios/AUDITORIA_TEMPORAL_PROMEDIOS_20260707_174606/04_REPORTES/INFORME_AUDITORIA_TEMPORAL_PROMEDIOS_ULTIMO_PROCESAMIENTO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/27_auditoria_temporal_promedios/AUDITORIA_TEMPORAL_PROMEDIOS_20260707_174900/04_REPORTES/INFORME_AUDITORIA_TEMPORAL_PROMEDIOS_ULTIMO_PROCESAMIENTO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/27_auditoria_temporal_promedios/AUDITORIA_TEMPORAL_PROMEDIOS_20260707_174900/05_MANIFEST/manifest_auditoria_temporal_promedios.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/28_auditoria_fila_a_fila_codcli_rut_2025/AUDITORIA_FILA_A_FILA_CODCLI_RUT_2025_20260707_175439/04_REPORTES/INFORME_AUDITORIA_FILA_A_FILA_CODCLI_RUT_2025.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/28_auditoria_fila_a_fila_codcli_rut_2025/AUDITORIA_FILA_A_FILA_CODCLI_RUT_2025_20260707_175439/05_MANIFEST/manifest_auditoria_fila_a_fila_codcli_rut_2025.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/INFORME_AUDITORIA_CORREGIDA_LOGICA_2025_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/auditoria_corregida_logica_2025_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/manifest_auditoria_corregida_logica_2025_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/30_mapeo_resolucion_bloqueos_5809_2025/MAPEO_RESOLUCION_BLOQUEOS_5809_2025_20260708_092026/04_REPORTES/INFORME_MAPEO_RESOLUCION_BLOQUEOS_5809_LOGICA_2025.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/30_mapeo_resolucion_bloqueos_5809_2025/MAPEO_RESOLUCION_BLOQUEOS_5809_2025_20260708_092026/05_MANIFEST/manifest_mapeo_resolucion_bloqueos_5809_logica_2025.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/30_mapeo_resolucion_bloqueos_5809_2025/mapear_resolucion_bloqueos_5809_2025.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/31_aplicacion_regla_gobernada_sin_actividad_5809_2025/REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025_20260708_092815/04_REPORTES/INFORME_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/31_aplicacion_regla_gobernada_sin_actividad_5809_2025/REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025_20260708_092815/05_MANIFEST/manifest_regla_gobernada_sin_actividad_5809_2025.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/31_aplicacion_regla_gobernada_sin_actividad_5809_2025/aplicar_regla_gobernada_sin_actividad_5809_2025.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/33_validacion_estado_y_avance_2025_5809/INFORME_VALIDACION_ESTADO_Y_AVANCE_2025_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/33_validacion_estado_y_avance_2025_5809/manifest_validacion_estado_y_avance_2025_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/33_validacion_estado_y_avance_2025_5809/validacion_estado_y_avance_2025_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/34_matriz_resolucion_pendientes_anual_5809/MATRIZ_RESOLUCION_PENDIENTES_ANUAL_5809_20260708_121147/04_REPORTES/INFORME_MATRIZ_RESOLUCION_PENDIENTES_ANUAL_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/34_matriz_resolucion_pendientes_anual_5809/MATRIZ_RESOLUCION_PENDIENTES_ANUAL_5809_20260708_121147/05_MANIFEST/manifest_matriz_resolucion_pendientes_anual_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/35_propuesta_resolucion_anual_5809/PROPUESTA_RESOLUCION_ANUAL_5809_20260708_123319/04_REPORTES/INFORME_PROPUESTA_RESOLUCION_ANUAL_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/35_propuesta_resolucion_anual_5809/PROPUESTA_RESOLUCION_ANUAL_5809_20260708_123319/05_MANIFEST/manifest_propuesta_resolucion_anual_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/36_cierre_parcial_priorizacion_anual_5809/CIERRE_PARCIAL_PRIORIZACION_ANUAL_5809_20260708_123933/04_REPORTES/INFORME_CIERRE_PARCIAL_PRIORIZACION_ANUAL_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/36_cierre_parcial_priorizacion_anual_5809/CIERRE_PARCIAL_PRIORIZACION_ANUAL_5809_20260708_123933/05_MANIFEST/manifest_cierre_parcial_priorizacion_anual_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/37_diagnostico_estados_y_diferencias_aprobadas_5809/DIAGNOSTICO_ESTADOS_DIF_APROBADAS_5809_20260708_124221/04_REPORTES/INFORME_DIAGNOSTICO_ESTADOS_Y_DIFERENCIAS_APROBADAS_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/37_diagnostico_estados_y_diferencias_aprobadas_5809/DIAGNOSTICO_ESTADOS_DIF_APROBADAS_5809_20260708_124221/05_MANIFEST/manifest_diagnostico_estados_y_diferencias_aprobadas_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/38_auditoria_metodologia_codcli_multiple_5809/AUDITORIA_METODOLOGIA_CODCLI_MULTIPLE_5809_20260708_124934/04_REPORTES/INFORME_AUDITORIA_METODOLOGIA_CODCLI_MULTIPLE_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/38_auditoria_metodologia_codcli_multiple_5809/AUDITORIA_METODOLOGIA_CODCLI_MULTIPLE_5809_20260708_124934/05_MANIFEST/manifest_auditoria_metodologia_codcli_multiple_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/39_puente_codcli_por_codigo_unico_5809/PUENTE_CODCLI_POR_CODIGO_UNICO_5809_20260708_125500/04_REPORTES/INFORME_PUENTE_CODCLI_POR_CODIGO_UNICO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/39_puente_codcli_por_codigo_unico_5809/PUENTE_CODCLI_POR_CODIGO_UNICO_5809_20260708_125500/05_MANIFEST/manifest_puente_codcli_por_codigo_unico_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/40_busqueda_diccionario_rut_codigo_sies_codcli/BUSQUEDA_DICCIONARIO_RUT_CODIGO_SIES_CODCLI_20260708_125849/04_REPORTES/INFORME_BUSQUEDA_DICCIONARIO_RUT_CODIGO_SIES_CODCLI.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/40_busqueda_diccionario_rut_codigo_sies_codcli/BUSQUEDA_DICCIONARIO_RUT_CODIGO_SIES_CODCLI_20260708_125849/05_MANIFEST/manifest_busqueda_diccionario_rut_codigo_sies_codcli.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/41_validacion_candidatos_diccionario_rut_codigo_codcli/VALIDACION_CANDIDATOS_DICCIONARIO_20260708_130936/04_REPORTES/INFORME_VALIDACION_CANDIDATOS_DICCIONARIO_RUT_CODIGO_CODCLI.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/41_validacion_candidatos_diccionario_rut_codigo_codcli/VALIDACION_CANDIDATOS_DICCIONARIO_20260708_130936/05_MANIFEST/manifest_validacion_candidatos_diccionario_rut_codigo_codcli.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/42_recalculo_anual_5809_codcli_filtrado/RECALCULO_ANUAL_5809_CODCLI_FILTRADO_20260708_135735/04_REPORTES/INFORME_RECALCULO_ANUAL_5809_CODCLI_FILTRADO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/42_recalculo_anual_5809_codcli_filtrado/RECALCULO_ANUAL_5809_CODCLI_FILTRADO_20260708_135735/05_MANIFEST/manifest_recalculo_anual_5809_codcli_filtrado.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/43_auditoria_columnas_recalculo_42/AUDITORIA_COLUMNAS_RECALCULO_42_20260708_140429/04_REPORTES/INFORME_AUDITORIA_COLUMNAS_RECALCULO_42.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/43_auditoria_columnas_recalculo_42/AUDITORIA_COLUMNAS_RECALCULO_42_20260708_140429/05_MANIFEST/manifest_auditoria_columnas_recalculo_42.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/44_diagnostico_periodo_y_recalculo_filtrado_5809/DIAGNOSTICO_PERIODO_RECALCULO_FILTRADO_5809_20260708_141337/04_REPORTES/INFORME_DIAGNOSTICO_PERIODO_Y_RECALCULO_FILTRADO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/44_diagnostico_periodo_y_recalculo_filtrado_5809/DIAGNOSTICO_PERIODO_RECALCULO_FILTRADO_5809_20260708_141337/05_MANIFEST/manifest_diagnostico_periodo_recalculo_filtrado_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/45_auditoria_codcli_puente_vs_promedios/AUDITORIA_CODCLI_PUENTE_VS_PROMEDIOS_20260708_141631/04_REPORTES/INFORME_AUDITORIA_CODCLI_PUENTE_VS_PROMEDIOS.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/45_auditoria_codcli_puente_vs_promedios/AUDITORIA_CODCLI_PUENTE_VS_PROMEDIOS_20260708_141631/05_MANIFEST/manifest_auditoria_codcli_puente_vs_promedios.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/46_diagnostico_columnas_mapeo_identidad_codcli/DIAGNOSTICO_COLUMNAS_MAPEO_IDENTIDAD_CODCLI_20260708_142056/04_REPORTES/INFORME_DIAGNOSTICO_COLUMNAS_MAPEO_IDENTIDAD_CODCLI.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/46_diagnostico_columnas_mapeo_identidad_codcli/DIAGNOSTICO_COLUMNAS_MAPEO_IDENTIDAD_CODCLI_20260708_142056/05_MANIFEST/manifest_diagnostico_columnas_mapeo_identidad_codcli.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/47_recalculo_anual_5809_codcli_lista_correcto/RECALCULO_ANUAL_5809_CODCLI_LISTA_CORRECTO_20260708_142629/04_REPORTES/INFORME_RECALCULO_ANUAL_5809_CODCLI_LISTA_CORRECTO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/47_recalculo_anual_5809_codcli_lista_correcto/RECALCULO_ANUAL_5809_CODCLI_LISTA_CORRECTO_20260708_142629/05_MANIFEST/manifest_recalculo_anual_5809_codcli_lista_correcto.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/48_inferencia_estados_aeir_aprobadas_5809/INFERENCIA_ESTADOS_AEIR_APROBADAS_5809_20260708_143038/04_REPORTES/INFORME_INFERENCIA_ESTADOS_AEIR_APROBADAS_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/48_inferencia_estados_aeir_aprobadas_5809/INFERENCIA_ESTADOS_AEIR_APROBADAS_5809_20260708_143038/05_MANIFEST/manifest_inferencia_estados_aeir_aprobadas_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/50_recalculo_16_19_diccionario_estado_promedios/RECALCULO_16_19_DICCIONARIO_ESTADO_PROMEDIOS_20260708_143748/04_REPORTES/INFORME_RECALCULO_16_19_DICCIONARIO_ESTADO_PROMEDIOS.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/50_recalculo_16_19_diccionario_estado_promedios/RECALCULO_16_19_DICCIONARIO_ESTADO_PROMEDIOS_20260708_143748/05_MANIFEST/manifest_recalculo_16_19_diccionario_estado_promedios.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/51_gobernanza_integral_inputs_columnas_transformaciones_5809/GOBERNANZA_INTEGRAL_5809_20260708_144544/INFORME_GOBERNANZA_INTEGRAL_INPUTS_COLUMNAS_TRANSFORMACIONES_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/51_gobernanza_integral_inputs_columnas_transformaciones_5809/GOBERNANZA_INTEGRAL_5809_20260708_144544/gobernanza_integral_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/51_gobernanza_integral_inputs_columnas_transformaciones_5809/GOBERNANZA_INTEGRAL_5809_20260708_144544/manifest_gobernanza_integral_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_165151/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_165151/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_165151/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_171351_H54/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_171351_H54/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_171351_H54/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_172433_H55/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_172433_H55/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_172433_H55/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_173435_H56/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_173435_H56/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_173435_H56/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_175249_H57/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_175249_H57/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_175249_H57/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_181000_H58/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_181000_H58/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_181000_H58/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/manifest_validacion_gobernanza_precalculo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/validador_gobernanza_precalculo_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/INFORME_MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/manifest_matriz_resolucion_bloqueos_16_19_gobernada_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/matriz_resolucion_bloqueos_16_19_gobernada_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/plan_uso_validador_h52_matriz_16_19.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/54_auditoria_diferencia_solo_aprobadas_19_5809/AUDITORIA_DIF_SOLO_APROBADAS_19_20260708_171351/INFORME_AUDITORIA_DIFERENCIA_SOLO_APROBADAS_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/54_auditoria_diferencia_solo_aprobadas_19_5809/AUDITORIA_DIF_SOLO_APROBADAS_19_20260708_171351/auditoria_diferencia_solo_aprobadas_19_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/54_auditoria_diferencia_solo_aprobadas_19_5809/AUDITORIA_DIF_SOLO_APROBADAS_19_20260708_171351/manifest_auditoria_diferencia_solo_aprobadas_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/54_auditoria_diferencia_solo_aprobadas_19_5809/AUDITORIA_DIF_SOLO_APROBADAS_19_20260708_171351/plan_uso_validador_h52_auditoria_dif_19.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/55_auditoria_diferencia_16_18_multiple_5809/AUDITORIA_DIF_16_18_MULTIPLE_20260708_172433/INFORME_AUDITORIA_DIFERENCIA_16_18_MULTIPLE_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/55_auditoria_diferencia_16_18_multiple_5809/AUDITORIA_DIF_16_18_MULTIPLE_20260708_172433/auditoria_diferencia_16_18_multiple_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/55_auditoria_diferencia_16_18_multiple_5809/AUDITORIA_DIF_16_18_MULTIPLE_20260708_172433/manifest_auditoria_diferencia_16_18_multiple_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/55_auditoria_diferencia_16_18_multiple_5809/AUDITORIA_DIF_16_18_MULTIPLE_20260708_172433/plan_uso_validador_h52_auditoria_16_18.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/56_auditoria_sin_registros_2025_codcli_lista_5809/AUDITORIA_SIN_REGISTROS_2025_CODCLI_LISTA_20260708_173435/INFORME_AUDITORIA_SIN_REGISTROS_2025_CODCLI_LISTA_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/56_auditoria_sin_registros_2025_codcli_lista_5809/AUDITORIA_SIN_REGISTROS_2025_CODCLI_LISTA_20260708_173435/auditoria_sin_registros_2025_codcli_lista_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/56_auditoria_sin_registros_2025_codcli_lista_5809/AUDITORIA_SIN_REGISTROS_2025_CODCLI_LISTA_20260708_173435/manifest_auditoria_sin_registros_2025_codcli_lista_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/56_auditoria_sin_registros_2025_codcli_lista_5809/AUDITORIA_SIN_REGISTROS_2025_CODCLI_LISTA_20260708_173435/plan_uso_validador_h52_auditoria_sin_registros_2025.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/INFORME_AUDITORIA_SIN_CODCLI_LISTA_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/auditoria_sin_codcli_lista_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/manifest_auditoria_sin_codcli_lista_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/plan_uso_validador_h52_auditoria_sin_codcli_lista.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/58_consolidado_resolucion_16_19_gobernado_5809/CONSOLIDADO_RESOLUCION_16_19_GOBERNADO_20260708_181000/INFORME_CONSOLIDADO_RESOLUCION_16_19_GOBERNADO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/58_consolidado_resolucion_16_19_gobernado_5809/CONSOLIDADO_RESOLUCION_16_19_GOBERNADO_20260708_181000/consolidado_resolucion_16_19_gobernado_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/58_consolidado_resolucion_16_19_gobernado_5809/CONSOLIDADO_RESOLUCION_16_19_GOBERNADO_20260708_181000/manifest_consolidado_resolucion_16_19_gobernado_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/58_consolidado_resolucion_16_19_gobernado_5809/CONSOLIDADO_RESOLUCION_16_19_GOBERNADO_20260708_181000/plan_uso_validador_h52_consolidado_resolucion_16_19.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/59_paquete_validacion_humana_16_19_5809/PAQUETE_VALIDACION_HUMANA_16_19_20260708_182553/BORRADOR_CORREO_VALIDACION_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/59_paquete_validacion_humana_16_19_5809/PAQUETE_VALIDACION_HUMANA_16_19_20260708_182553/INFORME_PAQUETE_VALIDACION_HUMANA_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/59_paquete_validacion_humana_16_19_5809/PAQUETE_VALIDACION_HUMANA_16_19_20260708_182553/manifest_paquete_validacion_humana_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/59_paquete_validacion_humana_16_19_5809/PAQUETE_VALIDACION_HUMANA_16_19_20260708_182553/paquete_validacion_humana_16_19_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/59_paquete_validacion_humana_16_19_5809/PAQUETE_VALIDACION_HUMANA_16_19_20260708_182553/plan_uso_validador_h52_paquete_validacion_humana_16_19.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/60_terminal_revision_manual_16_19_5809/TERMINAL_REVISION_MANUAL_16_19_20260708_220519/manifest_terminal_revision_manual_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/61_terminal_revision_218_convalidacion_homologacion_19_5809/REVISION_218_CONVALIDACION_HOMOLOGACION_19_20260708_220755/manifest_revision_218_convalidacion_homologacion_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/62_decision_funcional_candidata_columna_19_solo_a_5809/DECISION_FUNCIONAL_CANDIDATA_19_SOLO_A_20260708_220943/INFORME_DECISION_FUNCIONAL_CANDIDATA_COLUMNA_19_SOLO_A_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/62_decision_funcional_candidata_columna_19_solo_a_5809/DECISION_FUNCIONAL_CANDIDATA_19_SOLO_A_20260708_220943/manifest_decision_funcional_candidata_columna_19_solo_a_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/63_terminal_revision_38_decision_funcional_restante_5809/REVISION_38_DECISION_FUNCIONAL_RESTANTE_20260708_221125/manifest_revision_38_decision_funcional_restante_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/64_exploracion_gobernanza_transversal_mu_avance/EXPLORACION_GOBERNANZA_TRANSVERSAL_MU_AVANCE_20260708_221914/INFORME_EXPLORACION_GOBERNANZA_TRANSVERSAL_MU_AVANCE.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/64_exploracion_gobernanza_transversal_mu_avance/EXPLORACION_GOBERNANZA_TRANSVERSAL_MU_AVANCE_20260708_221914/exploracion_gobernanza_transversal_mu_avance.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/64_exploracion_gobernanza_transversal_mu_avance/EXPLORACION_GOBERNANZA_TRANSVERSAL_MU_AVANCE_20260708_221914/manifest_exploracion_gobernanza_transversal_mu_avance.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/65_consolidado_post_h64_decisiones_bloqueos_16_19_5809/CONSOLIDADO_POST_H64_16_19_20260708_223521/INFORME_CONSOLIDADO_POST_H64_DECISIONES_BLOQUEOS_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/65_consolidado_post_h64_decisiones_bloqueos_16_19_5809/CONSOLIDADO_POST_H64_16_19_20260708_223521/manifest_consolidado_post_h64_decisiones_bloqueos_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/66_correccion_dictamen_post_h64_16_19_5809/CORRECCION_DICTAMEN_POST_H64_16_19_20260708_230001/BORRADOR_DECISION_FUNCIONAL_16_19_POST_H64.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/66_correccion_dictamen_post_h64_16_19_5809/CORRECCION_DICTAMEN_POST_H64_16_19_20260708_230001/INFORME_CORRECCION_DICTAMEN_POST_H64_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/66_correccion_dictamen_post_h64_16_19_5809/CORRECCION_DICTAMEN_POST_H64_16_19_20260708_230001/PROMPT_GOBERNANZA_PERIODO_RAW_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/66_correccion_dictamen_post_h64_16_19_5809/CORRECCION_DICTAMEN_POST_H64_16_19_20260708_230001/correccion_dictamen_post_h64_16_19_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/66_correccion_dictamen_post_h64_16_19_5809/CORRECCION_DICTAMEN_POST_H64_16_19_20260708_230001/manifest_correccion_dictamen_post_h64_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/67_gobernanza_periodo_raw_5809/GOBERNANZA_PERIODO_RAW_5809_20260708_231226/BORRADOR_DECISION_FUNCIONAL_PERIODO_RAW_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/67_gobernanza_periodo_raw_5809/GOBERNANZA_PERIODO_RAW_5809_20260708_231226/INFORME_GOBERNANZA_PERIODO_RAW_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/67_gobernanza_periodo_raw_5809/GOBERNANZA_PERIODO_RAW_5809_20260708_231226/gobernanza_periodo_raw_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/67_gobernanza_periodo_raw_5809/GOBERNANZA_PERIODO_RAW_5809_20260708_231226/manifest_gobernanza_periodo_raw_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/68_paquete_decision_funcional_16_19_5809/PAQUETE_DECISION_FUNCIONAL_16_19_5809_20260708_232551/BORRADOR_SOLICITUD_VALIDACION_FUNCIONAL_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/68_paquete_decision_funcional_16_19_5809/PAQUETE_DECISION_FUNCIONAL_16_19_5809_20260708_232551/INFORME_PAQUETE_DECISION_FUNCIONAL_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/68_paquete_decision_funcional_16_19_5809/PAQUETE_DECISION_FUNCIONAL_16_19_5809_20260708_232551/h68_paquete_decision_funcional_16_19.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/68_paquete_decision_funcional_16_19_5809/PAQUETE_DECISION_FUNCIONAL_16_19_5809_20260708_232551/manifest_paquete_decision_funcional_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/69_paquete_operativo_167_pendientes_16_19_5809/PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809_20260708_232822/BORRADOR_SOLICITUD_FUENTE_ACADEMICA_COMPLEMENTARIA_57.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/69_paquete_operativo_167_pendientes_16_19_5809/PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809_20260708_232822/BORRADOR_SOLICITUD_MAPEO_INSTITUCIONAL_102.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/69_paquete_operativo_167_pendientes_16_19_5809/PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809_20260708_232822/BORRADOR_SOLICITUD_REVISION_FUNCIONAL_PUNTUAL_8.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/69_paquete_operativo_167_pendientes_16_19_5809/PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809_20260708_232822/INFORME_PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/69_paquete_operativo_167_pendientes_16_19_5809/PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809_20260708_232822/h69_paquete_operativo_167_pendientes_16_19.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/69_paquete_operativo_167_pendientes_16_19_5809/PAQUETE_OPERATIVO_167_PENDIENTES_16_19_5809_20260708_232822/manifest_paquete_operativo_167_pendientes_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/70_muestra_rapida_15_casos_prioridades_16_19_5809/MUESTRA_RAPIDA_15_CASOS_16_19_5809_20260708_233122/BORRADOR_ENVIO_MUESTRA_RAPIDA_15_CASOS_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/70_muestra_rapida_15_casos_prioridades_16_19_5809/MUESTRA_RAPIDA_15_CASOS_16_19_5809_20260708_233122/INFORME_MUESTRA_RAPIDA_15_CASOS_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/70_muestra_rapida_15_casos_prioridades_16_19_5809/MUESTRA_RAPIDA_15_CASOS_16_19_5809_20260708_233122/h70_muestra_rapida_15_casos_16_19.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/70_muestra_rapida_15_casos_prioridades_16_19_5809/MUESTRA_RAPIDA_15_CASOS_16_19_5809_20260708_233122/manifest_muestra_rapida_15_casos_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/71_revision_end_to_end_muestra_15_hasta_csv_piloto_5809/REVISION_E2E_MUESTRA_15_HASTA_CSV_PILOTO_5809_20260708_233848/BLOQUEO_SUBIDA_SIES_MUESTRA_15.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/71_revision_end_to_end_muestra_15_hasta_csv_piloto_5809/REVISION_E2E_MUESTRA_15_HASTA_CSV_PILOTO_5809_20260708_233848/INFORME_REVISION_E2E_MUESTRA_15_HASTA_CSV_PILOTO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/71_revision_end_to_end_muestra_15_hasta_csv_piloto_5809/REVISION_E2E_MUESTRA_15_HASTA_CSV_PILOTO_5809_20260708_233848/h71_revision_end_to_end_muestra_15_hasta_csv_piloto.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/71_revision_end_to_end_muestra_15_hasta_csv_piloto_5809/REVISION_E2E_MUESTRA_15_HASTA_CSV_PILOTO_5809_20260708_233848/manifest_revision_e2e_muestra_15_hasta_csv_piloto_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/72_revision_end_to_end_167_pendientes_hasta_csv_piloto_5809/REVISION_E2E_167_PENDIENTES_HASTA_CSV_PILOTO_5809_20260708_234434/BLOQUEO_SUBIDA_SIES_167_PENDIENTES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/72_revision_end_to_end_167_pendientes_hasta_csv_piloto_5809/REVISION_E2E_167_PENDIENTES_HASTA_CSV_PILOTO_5809_20260708_234434/INFORME_REVISION_E2E_167_PENDIENTES_HASTA_CSV_PILOTO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/72_revision_end_to_end_167_pendientes_hasta_csv_piloto_5809/REVISION_E2E_167_PENDIENTES_HASTA_CSV_PILOTO_5809_20260708_234434/h72_revision_end_to_end_167_hasta_csv_piloto.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/72_revision_end_to_end_167_pendientes_hasta_csv_piloto_5809/REVISION_E2E_167_PENDIENTES_HASTA_CSV_PILOTO_5809_20260708_234434/manifest_revision_e2e_167_pendientes_hasta_csv_piloto_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/73_consolidado_final_estado_16_19_5809/CONSOLIDADO_FINAL_ESTADO_16_19_5809_20260708_234940/ACTA_TECNICA_CIERRE_DOCUMENTAL_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/73_consolidado_final_estado_16_19_5809/CONSOLIDADO_FINAL_ESTADO_16_19_5809_20260708_234940/INFORME_CONSOLIDADO_FINAL_ESTADO_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/73_consolidado_final_estado_16_19_5809/CONSOLIDADO_FINAL_ESTADO_16_19_5809_20260708_234940/h73_consolidado_final_estado_16_19_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/73_consolidado_final_estado_16_19_5809/CONSOLIDADO_FINAL_ESTADO_16_19_5809_20260708_234940/manifest_consolidado_final_estado_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/74_entregable_final_cierre_tecnico_16_19_5809/ENTREGABLE_FINAL_CIERRE_TECNICO_16_19_5809_20260708_235059/ACTA_TECNICA_CIERRE_DOCUMENTAL_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/74_entregable_final_cierre_tecnico_16_19_5809/ENTREGABLE_FINAL_CIERRE_TECNICO_16_19_5809_20260708_235059/INFORME_CONSOLIDADO_FINAL_ESTADO_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/74_entregable_final_cierre_tecnico_16_19_5809/ENTREGABLE_FINAL_CIERRE_TECNICO_16_19_5809_20260708_235059/README_H74_ENTREGABLE_FINAL.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/74_entregable_final_cierre_tecnico_16_19_5809/ENTREGABLE_FINAL_CIERRE_TECNICO_16_19_5809_20260708_235059/RESUMEN_EJECUTIVO_CIERRE_TECNICO_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/74_entregable_final_cierre_tecnico_16_19_5809/ENTREGABLE_FINAL_CIERRE_TECNICO_16_19_5809_20260708_235059/indice_artifactos_h74.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/74_entregable_final_cierre_tecnico_16_19_5809/ENTREGABLE_FINAL_CIERRE_TECNICO_16_19_5809_20260708_235059/manifest_consolidado_final_estado_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/75_auditoria_terminal_entregable_h74_16_19_5809/AUDITORIA_TERMINAL_ENTREGABLE_H74_16_19_5809_20260709_000029/INFORME_AUDITORIA_TERMINAL_ENTREGABLE_H74_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/75_auditoria_terminal_entregable_h74_16_19_5809/AUDITORIA_TERMINAL_ENTREGABLE_H74_16_19_5809_20260709_000029/h75_auditoria_terminal_entregable_h74_16_19.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/75_auditoria_terminal_entregable_h74_16_19_5809/AUDITORIA_TERMINAL_ENTREGABLE_H74_16_19_5809_20260709_000029/manifest_auditoria_terminal_entregable_h74_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/76_fundamento_metodologico_h68_256_decision_funcional_5809/FUNDAMENTO_METODOLOGICO_H68_256_DECISION_FUNCIONAL_5809_20260709_001907/INFORME_FUNDAMENTO_METODOLOGICO_H68_256_DECISION_FUNCIONAL_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/76_fundamento_metodologico_h68_256_decision_funcional_5809/FUNDAMENTO_METODOLOGICO_H68_256_DECISION_FUNCIONAL_5809_20260709_001907/PROPUESTA_ACTA_DECISION_FUNCIONAL_H68_256_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/76_fundamento_metodologico_h68_256_decision_funcional_5809/FUNDAMENTO_METODOLOGICO_H68_256_DECISION_FUNCIONAL_5809_20260709_001907/h76_fundamento_metodologico_h68_256_y_solucion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/76_fundamento_metodologico_h68_256_decision_funcional_5809/FUNDAMENTO_METODOLOGICO_H68_256_DECISION_FUNCIONAL_5809_20260709_001907/manifest_fundamento_metodologico_h68_256_decision_funcional_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/77_registro_decisiones_usuario_h68_256_16_19_5809/REGISTRO_DECISIONES_USUARIO_H68_256_16_19_5809_20260709_004025/INFORME_REGISTRO_DECISIONES_USUARIO_H68_256_16_19_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/77_registro_decisiones_usuario_h68_256_16_19_5809/REGISTRO_DECISIONES_USUARIO_H68_256_16_19_5809_20260709_004025/h77_registro_decisiones_usuario_h68_256.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/77_registro_decisiones_usuario_h68_256_16_19_5809/REGISTRO_DECISIONES_USUARIO_H68_256_16_19_5809_20260709_004025/manifest_registro_decisiones_usuario_h68_256_16_19_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/78_auditoria_fina_21_estado_17_periodo_5809/AUDITORIA_FINA_21_ESTADO_17_PERIODO_5809_20260709_005631/INFORME_AUDITORIA_FINA_21_ESTADO_17_PERIODO_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/78_auditoria_fina_21_estado_17_periodo_5809/AUDITORIA_FINA_21_ESTADO_17_PERIODO_5809_20260709_005631/h78_auditoria_fina_21_estado_y_17_periodo.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/78_auditoria_fina_21_estado_17_periodo_5809/AUDITORIA_FINA_21_ESTADO_17_PERIODO_5809_20260709_005631/manifest_auditoria_fina_21_estado_17_periodo_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/79_matriz_limpia_252_cerrables_4_bloqueados_h68_5809/MATRIZ_LIMPIA_252_CERRABLES_4_BLOQUEADOS_H68_5809_20260709_011408/INFORME_MATRIZ_LIMPIA_252_CERRABLES_4_BLOQUEADOS_H68_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/79_matriz_limpia_252_cerrables_4_bloqueados_h68_5809/MATRIZ_LIMPIA_252_CERRABLES_4_BLOQUEADOS_H68_5809_20260709_011408/h79_matriz_limpia_252_cerrables_4_bloqueados_h68.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/79_matriz_limpia_252_cerrables_4_bloqueados_h68_5809/MATRIZ_LIMPIA_252_CERRABLES_4_BLOQUEADOS_H68_5809_20260709_011408/manifest_matriz_limpia_252_cerrables_4_bloqueados_h68_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/80_gobernanza_titulacion_nivel20_periodos_45_5809/GOBERNANZA_TITULACION_NIVEL20_PERIODOS_45_5809_20260709_012554/INFORME_GOBERNANZA_TITULACION_NIVEL20_PERIODOS_45_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/80_gobernanza_titulacion_nivel20_periodos_45_5809/GOBERNANZA_TITULACION_NIVEL20_PERIODOS_45_5809_20260709_012554/h80_gobernanza_titulacion_nivel20_periodos_45.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/80_gobernanza_titulacion_nivel20_periodos_45_5809/GOBERNANZA_TITULACION_NIVEL20_PERIODOS_45_5809_20260709_012554/manifest_gobernanza_titulacion_nivel20_periodos_45_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/81_auditoria_notas_3_titulados_nivel20_5809/AUDITORIA_NOTAS_3_TITULADOS_NIVEL20_5809_20260709_014503/INFORME_AUDITORIA_NOTAS_3_TITULADOS_NIVEL20_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/81_auditoria_notas_3_titulados_nivel20_5809/AUDITORIA_NOTAS_3_TITULADOS_NIVEL20_5809_20260709_014503/h81_auditoria_notas_3_titulados_nivel20.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/81_auditoria_notas_3_titulados_nivel20_5809/AUDITORIA_NOTAS_3_TITULADOS_NIVEL20_5809_20260709_014503/manifest_auditoria_notas_3_titulados_nivel20_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/82_gobernanza_periodos_135_246_titulados_nivel20_5809/GOBERNANZA_PERIODOS_135_246_TITULADOS_NIVEL20_5809_20260709_015105/INFORME_GOBERNANZA_PERIODOS_135_246_TITULADOS_NIVEL20_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/82_gobernanza_periodos_135_246_titulados_nivel20_5809/GOBERNANZA_PERIODOS_135_246_TITULADOS_NIVEL20_5809_20260709_015105/h82_gobernanza_periodos_135_246_titulados_nivel20.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/82_gobernanza_periodos_135_246_titulados_nivel20_5809/GOBERNANZA_PERIODOS_135_246_TITULADOS_NIVEL20_5809_20260709_015105/manifest_gobernanza_periodos_135_246_titulados_nivel20_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/83_cierre_fila187_eliminada_ambas_carreras_5809/CIERRE_FILA187_ELIMINADA_AMBAS_CARRERAS_5809_20260709_015620/INFORME_CIERRE_FILA187_ELIMINADA_AMBAS_CARRERAS_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/83_cierre_fila187_eliminada_ambas_carreras_5809/CIERRE_FILA187_ELIMINADA_AMBAS_CARRERAS_5809_20260709_015620/h83_cierre_fila187_eliminada_ambas_carreras.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/83_cierre_fila187_eliminada_ambas_carreras_5809/CIERRE_FILA187_ELIMINADA_AMBAS_CARRERAS_5809_20260709_015620/manifest_cierre_fila187_eliminada_ambas_carreras_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/84_consolidado_post_h83_h68_cerrado_167_pendientes_5809/CONSOLIDADO_POST_H83_H68_CERRADO_167_PENDIENTES_5809_20260709_020053/ACTA_TECNICA_H84_H68_CERRADO_167_PENDIENTES_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/84_consolidado_post_h83_h68_cerrado_167_pendientes_5809/CONSOLIDADO_POST_H83_H68_CERRADO_167_PENDIENTES_5809_20260709_020053/INFORME_CONSOLIDADO_POST_H83_H68_CERRADO_167_PENDIENTES_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/84_consolidado_post_h83_h68_cerrado_167_pendientes_5809/CONSOLIDADO_POST_H83_H68_CERRADO_167_PENDIENTES_5809_20260709_020053/h84_consolidado_post_h83_h68_cerrado_167_pendientes.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/84_consolidado_post_h83_h68_cerrado_167_pendientes_5809/CONSOLIDADO_POST_H83_H68_CERRADO_167_PENDIENTES_5809_20260709_020053/manifest_consolidado_post_h83_h68_cerrado_167_pendientes_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/85_resolucion_efectiva_167_h72_5809/RESOLUCION_EFECTIVA_167_H72_5809_20260709_021606/INFORME_RESOLUCION_EFECTIVA_167_H72_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/85_resolucion_efectiva_167_h72_5809/RESOLUCION_EFECTIVA_167_H72_5809_20260709_021606/h85_resolucion_efectiva_167_h72.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/85_resolucion_efectiva_167_h72_5809/RESOLUCION_EFECTIVA_167_H72_5809_20260709_021606/manifest_resolucion_efectiva_167_h72_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/86_aplicacion_criterio_h77_periodo_157_h85_5809/APLICACION_CRITERIO_H77_PERIODO_157_H85_5809_20260709_022204/INFORME_APLICACION_CRITERIO_H77_PERIODO_157_H85_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/86_aplicacion_criterio_h77_periodo_157_h85_5809/APLICACION_CRITERIO_H77_PERIODO_157_H85_5809_20260709_022204/h86_aplicar_criterio_h77_periodo_157_h85.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/86_aplicacion_criterio_h77_periodo_157_h85_5809/APLICACION_CRITERIO_H77_PERIODO_157_H85_5809_20260709_022204/manifest_aplicacion_criterio_h77_periodo_157_h85_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/87_periodo5_y_bloque_b_107_post_h86_5809/PERIODO5_Y_BLOQUE_B_107_POST_H86_5809_20260709_022628/INFORME_PERIODO5_Y_BLOQUE_B_107_POST_H86_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/87_periodo5_y_bloque_b_107_post_h86_5809/PERIODO5_Y_BLOQUE_B_107_POST_H86_5809_20260709_022628/h87_periodo5_y_bloque_b_107_post_h86.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/87_periodo5_y_bloque_b_107_post_h86_5809/PERIODO5_Y_BLOQUE_B_107_POST_H86_5809_20260709_022628/manifest_periodo5_y_bloque_b_107_post_h86_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/88_resolucion_bloque_b_107_post_h87_5809/RESOLUCION_BLOQUE_B_107_POST_H87_5809_20260709_022940/INFORME_RESOLUCION_BLOQUE_B_107_POST_H87_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/88_resolucion_bloque_b_107_post_h87_5809/RESOLUCION_BLOQUE_B_107_POST_H87_5809_20260709_022940/h88_resolucion_bloque_b_107_post_h87.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/88_resolucion_bloque_b_107_post_h87_5809/RESOLUCION_BLOQUE_B_107_POST_H87_5809_20260709_022940/manifest_resolucion_bloque_b_107_post_h87_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/89_resolucion_7_pendientes_reales_post_h88_5809/RESOLUCION_7_PENDIENTES_REALES_POST_H88_5809_20260709_023200/INFORME_RESOLUCION_7_PENDIENTES_REALES_POST_H88_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/89_resolucion_7_pendientes_reales_post_h88_5809/RESOLUCION_7_PENDIENTES_REALES_POST_H88_5809_20260709_023200/h89_resolucion_7_pendientes_reales_post_h88.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/89_resolucion_7_pendientes_reales_post_h88_5809/RESOLUCION_7_PENDIENTES_REALES_POST_H88_5809_20260709_023200/manifest_resolucion_7_pendientes_reales_post_h88_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/90_consolidado_final_16_19_post_h89_5809/CONSOLIDADO_FINAL_16_19_POST_H89_5809_20260709_023452/ACTA_CIERRE_DOCUMENTAL_16_19_POST_H89_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/90_consolidado_final_16_19_post_h89_5809/CONSOLIDADO_FINAL_16_19_POST_H89_5809_20260709_023452/INFORME_CONSOLIDADO_FINAL_16_19_POST_H89_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/90_consolidado_final_16_19_post_h89_5809/CONSOLIDADO_FINAL_16_19_POST_H89_5809_20260709_023452/h90_consolidado_final_16_19_post_h89.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/90_consolidado_final_16_19_post_h89_5809/CONSOLIDADO_FINAL_16_19_POST_H89_5809_20260709_023452/manifest_consolidado_final_16_19_post_h89_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/91_diagnostico_columnas_20_21_acumuladas_5809/DIAGNOSTICO_COLUMNAS_20_21_ACUMULADAS_5809_20260709_023822/INFORME_DIAGNOSTICO_COLUMNAS_20_21_ACUMULADAS_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/91_diagnostico_columnas_20_21_acumuladas_5809/DIAGNOSTICO_COLUMNAS_20_21_ACUMULADAS_5809_20260709_023822/h91_diagnostico_columnas_20_21_acumuladas.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/91_diagnostico_columnas_20_21_acumuladas_5809/DIAGNOSTICO_COLUMNAS_20_21_ACUMULADAS_5809_20260709_023822/manifest_diagnostico_columnas_20_21_acumuladas_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/92_analisis_escenarios_acumulados_20_21_5809/ANALISIS_ESCENARIOS_ACUMULADOS_20_21_5809_20260709_024331/INFORME_ANALISIS_ESCENARIOS_ACUMULADOS_20_21_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/92_analisis_escenarios_acumulados_20_21_5809/ANALISIS_ESCENARIOS_ACUMULADOS_20_21_5809_20260709_024331/h92_analisis_escenarios_acumulados_20_21.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/92_analisis_escenarios_acumulados_20_21_5809/ANALISIS_ESCENARIOS_ACUMULADOS_20_21_5809_20260709_024331/manifest_analisis_escenarios_acumulados_20_21_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/93_decision_funcional_acumulado_20_21_5809/DECISION_FUNCIONAL_ACUMULADO_20_21_5809_20260709_024732/ACTA_DECISION_FUNCIONAL_ACUMULADO_20_21_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/93_decision_funcional_acumulado_20_21_5809/DECISION_FUNCIONAL_ACUMULADO_20_21_5809_20260709_024732/INFORME_DECISION_FUNCIONAL_ACUMULADO_20_21_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/93_decision_funcional_acumulado_20_21_5809/DECISION_FUNCIONAL_ACUMULADO_20_21_5809_20260709_024732/h93_decision_funcional_acumulado_20_21.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/93_decision_funcional_acumulado_20_21_5809/DECISION_FUNCIONAL_ACUMULADO_20_21_5809_20260709_024732/manifest_decision_funcional_acumulado_20_21_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/94d_materializacion_5809_entregable_16_21/MATERIALIZACION_5809_ENTREGABLE_16_21_20260709_030447/INFORME_5809_ENTREGABLE_CANDIDATO_16_21.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/94d_materializacion_5809_entregable_16_21/MATERIALIZACION_5809_ENTREGABLE_16_21_20260709_030447/h94d_materializar_5809_entregable_16_21.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/94d_materializacion_5809_entregable_16_21/MATERIALIZACION_5809_ENTREGABLE_16_21_20260709_030447/manifest_5809_entregable_candidato_16_21.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/95_validacion_final_sies_ready_5809/VALIDACION_FINAL_SIES_READY_5809_20260709_030847/INFORME_VALIDACION_FINAL_SIES_READY_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/95_validacion_final_sies_ready_5809/VALIDACION_FINAL_SIES_READY_5809_20260709_030847/h95_validacion_final_sies_ready_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/95_validacion_final_sies_ready_5809/VALIDACION_FINAL_SIES_READY_5809_20260709_030847/manifest_validacion_final_sies_ready_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/96_sies_ready_21_campos_5809/SIES_READY_21_CAMPOS_5809_20260709_032225/INFORME_H96_SIES_READY_21_CAMPOS_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/96_sies_ready_21_campos_5809/SIES_READY_21_CAMPOS_5809_20260709_032225/h96_sies_ready_21_campos_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/96_sies_ready_21_campos_5809/SIES_READY_21_CAMPOS_5809_20260709_032225/manifest_h96_sies_ready_21_campos_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/97_sies_ready_21_campos_con_fecha_sin_vigencia_5809/SIES_READY_21_CAMPOS_CON_FECHA_SIN_VIGENCIA_5809_20260709_033145/INFORME_H97_SIES_READY_21_CAMPOS_CON_FECHA_SIN_VIGENCIA_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/97_sies_ready_21_campos_con_fecha_sin_vigencia_5809/SIES_READY_21_CAMPOS_CON_FECHA_SIN_VIGENCIA_5809_20260709_033145/h97_sies_ready_21_campos_con_fecha_sin_vigencia_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/97_sies_ready_21_campos_con_fecha_sin_vigencia_5809/SIES_READY_21_CAMPOS_CON_FECHA_SIN_VIGENCIA_5809_20260709_033145/manifest_h97_sies_ready_21_campos_con_fecha_sin_vigencia_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/98_bloqueo_h97_confirmacion_manual_precarga_5809/BLOQUEO_H97_CONFIRMACION_MANUAL_PRECARGA_5809_20260709_034137/INFORME_H98_BLOQUEO_H97_CONFIRMACION_MANUAL_PRECARGA_5809.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/98_bloqueo_h97_confirmacion_manual_precarga_5809/BLOQUEO_H97_CONFIRMACION_MANUAL_PRECARGA_5809_20260709_034137/h98_bloqueo_h97_confirmacion_manual_precarga_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/98_bloqueo_h97_confirmacion_manual_precarga_5809/BLOQUEO_H97_CONFIRMACION_MANUAL_PRECARGA_5809_20260709_034137/manifest_h98_bloqueo_h97_confirmacion_manual_precarga_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_archivo_final_subir_sies_5809/ARCHIVO_FINAL_SUBIR_SIES_5809_20260709_034408/h99_archivo_final_subir_sies_5809.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_archivo_final_subir_sies_5809/ARCHIVO_FINAL_SUBIR_SIES_5809_20260709_034408/manifest_h99_archivo_final_subir_sies_5809.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_MAPEO_RESOLUCION_BLOQUEOS_5809_2025_20260708_092026/INFORME_MAPEO_RESOLUCION_BLOQUEOS_5809_LOGICA_2025.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_MAPEO_RESOLUCION_BLOQUEOS_5809_2025_20260708_092026/LEEME_MAPEO_RESOLUCION_BLOQUEOS_5809_2025.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_MAPEO_RESOLUCION_BLOQUEOS_5809_2025_20260708_092026/manifest_mapeo_resolucion_bloqueos_5809_logica_2025.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_MAPEO_RESOLUCION_BLOQUEOS_5809_2025_20260708_092026/mapear_resolucion_bloqueos_5809_2025.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025_20260708_092815/INFORME_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025_20260708_092815/LEEME_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025_20260708_092815/aplicar_regla_gobernada_sin_actividad_5809_2025.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/AVANCE_CURRICULAR_2026_REGLA_GOBERNADA_SIN_ACTIVIDAD_5809_2025_20260708_092815/manifest_regla_gobernada_sin_actividad_5809_2025.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "avance_curricular_2026/99_limpieza_escritorio_y_respaldo/LIMPIEZA_ESCRITORIO_AVANCE_CURRICULAR_20260709_032740/manifest_limpieza_escritorio_avance_curricular.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/escritorio_extranjeros_2025_20260707_012829/INFORME_AUDITORIA_Y_LIMPIEZA_EXTRANJEROS_2025_20260706_235821.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/escritorio_extranjeros_2025_20260707_012829/RESUMEN_EJECUCION_CUARENTENA_FISICA_EXTRANJEROS_2025_20260707_002524.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/escritorio_extranjeros_2025_20260707_012829/RESUMEN_MANIFEST_CUARENTENA_SIMULADA_EXTRANJEROS_2025_20260707_002106.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/escritorio_extranjeros_2025_20260707_012829/manifest_cuarentena_simulada_extranjeros_2025_20260707_002106.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/escritorio_extranjeros_2025_20260707_012829/manifest_ejecucion_cuarentena_fisica_extranjeros_2025_20260707_002524.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/post_gobierno_escritorio_20260707_150720/CIERRE_EJECUTIVO_EXTRANJEROS_2025_20260707_003724.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/post_gobierno_escritorio_20260707_150720/GOBIERNO_104_ESTADO_NACIONALIDAD_TVS_20260707_011112.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_ESCRITORIO_NO_BORRAR/post_gobierno_escritorio_20260707_150720/RESUMEN_GOBIERNO_104_ESTADO_NACIONALIDAD_TVS_20260707_011112.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_aplicacion_reglas_institucionales_v4_20260624_231036/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_aplicacion_reglas_institucionales_v4_20260624_231505/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_aplicacion_reglas_institucionales_v4_20260625_115018/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_busqueda_final_pendientes_v3_20260624_195330/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_busqueda_final_pendientes_v3_20260624_195634/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_correcciones_v5_20260625_121527/data/frozen/MANIFIESTO_BASE_EXTRANJEROS_2025_CONGELADA_V2_61 2.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_gobernanza_columnas_extranjeros_20260624_180126/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/backups/pre_readme_precarga_20260618_111909/README 2.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/_CUARENTENA_PROPUESTA_NO_EJECUTADA/cuarentena_extranjeros_2025_20260707_002106/CUARENTENA_PROPUESTA/data/frozen/MANIFIESTO_BASE_EXTRANJEROS_2025_CONGELADA_V2_61 2.json"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_aplicacion_reglas_institucionales_v4_20260624_231036/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_aplicacion_reglas_institucionales_v4_20260624_231505/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_aplicacion_reglas_institucionales_v4_20260625_115018/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_busqueda_final_pendientes_v3_20260624_195330/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_busqueda_final_pendientes_v3_20260624_195634/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_correcciones_v5_20260625_121527/data/frozen/MANIFIESTO_BASE_EXTRANJEROS_2025_CONGELADA_V2_61 2.json"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_gobernanza_columnas_extranjeros_20260624_180126/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/backups/pre_readme_precarga_20260618_111909/README 2.md"
+        },
+        {
+          "estado": "D",
+          "ruta": "estudiantes_extranjeros_2026/data/frozen/MANIFIESTO_BASE_EXTRANJEROS_2025_CONGELADA_V2_61 2.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_estado_academico/GOBIERNO_104_ESTADO_NACIONALIDAD_TVS_20260707_011112/GOBIERNO_104_ESTADO_NACIONALIDAD_TVS_20260707_011112.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_estado_academico/GOBIERNO_104_ESTADO_NACIONALIDAD_TVS_20260707_011112/RESUMEN_GOBIERNO_104_ESTADO_NACIONALIDAD_TVS_20260707_011112.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/AUDITORIA_INTEGRAL_EXTRANJEROS_20260706_235821/INFORME_AUDITORIA_Y_LIMPIEZA_EXTRANJEROS_2025_20260706_235821.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/CIERRE_EJECUTIVO_EXTRANJEROS_2025_20260707_003724/CIERRE_EJECUTIVO_EXTRANJEROS_2025_20260707_003724.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/DIAGNOSTICO_ESCRITORIO_VS_GITHUB_EXTRANJEROS_2025_20260707_150535/DIAGNOSTICO_ESCRITORIO_VS_GITHUB_EXTRANJEROS_2025_20260707_150535.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/DIAGNOSTICO_ESCRITORIO_VS_GITHUB_EXTRANJEROS_2025_20260707_150535/RESUMEN_DIAGNOSTICO_ESCRITORIO_VS_GITHUB_EXTRANJEROS_2025_20260707_150535.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/EJECUCION_CUARENTENA_FISICA_EXTRANJEROS_2025_20260707_002524/RESUMEN_EJECUCION_CUARENTENA_FISICA_EXTRANJEROS_2025_20260707_002524.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/EJECUCION_CUARENTENA_FISICA_EXTRANJEROS_2025_20260707_002524/manifest_ejecucion_cuarentena_fisica_extranjeros_2025_20260707_002524.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/EJECUCION_ESCRITORIO_A_GITHUB_EXTRANJEROS_2025_20260707_150720/EJECUCION_ESCRITORIO_A_GITHUB_EXTRANJEROS_2025_20260707_150720.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/EJECUCION_ESCRITORIO_A_GITHUB_EXTRANJEROS_2025_20260707_150720/RESUMEN_EJECUCION_ESCRITORIO_A_GITHUB_EXTRANJEROS_2025_20260707_150720.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/LIMPIEZA_ESCRITORIO_EXTRANJEROS_2025_20260707_012829/LIMPIEZA_ESCRITORIO_EXTRANJEROS_2025_20260707_012829.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/LIMPIEZA_ESCRITORIO_EXTRANJEROS_2025_20260707_012829/RESUMEN_LIMPIEZA_ESCRITORIO_EXTRANJEROS_2025_20260707_012829.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/MANIFEST_CUARENTENA_SIMULADA_EXTRANJEROS_2025_20260707_002106/NO_EJECUTAR_mover_a_cuarentena_20260707_002106.sh"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/MANIFEST_CUARENTENA_SIMULADA_EXTRANJEROS_2025_20260707_002106/RESUMEN_MANIFEST_CUARENTENA_SIMULADA_EXTRANJEROS_2025_20260707_002106.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/MANIFEST_CUARENTENA_SIMULADA_EXTRANJEROS_2025_20260707_002106/manifest_cuarentena_simulada_extranjeros_2025_20260707_002106.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/RESCATE_CSV_CORREGIDO_SIES_EXTRANJEROS_2025_20260707_150814/RESCATE_CSV_CORREGIDO_SIES_EXTRANJEROS_2025_20260707_150814.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/RESCATE_CSV_CORREGIDO_SIES_EXTRANJEROS_2025_20260707_150814/RESUMEN_RESCATE_CSV_CORREGIDO_SIES_EXTRANJEROS_2025_20260707_150814.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/correcciones_carga_sies/CORRECCION_FECHA_NACIMIENTO_104_20260707_145949/RESUMEN_CORRECCION_FECHA_NACIMIENTO_104_20260707_145949.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/BUSQUEDA_NACIONALIDAD_DATOS_ALUMNOS_20260706_162621/02_RESUMEN_BUSQUEDA_NACIONALIDAD.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/BUSQUEDA_NACIONALIDAD_DATOS_ALUMNOS_20260706_162621/03_HASHES_BUSQUEDA_NACIONALIDAD.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_SOLO_SUBPROYECTO_20260706_215458/BLOQUEO_AUDITORIA_PRE_CSV.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_SOLO_SUBPROYECTO_TVS_FIX_20260706_215828/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_SOLO_SUBPROYECTO_TVS_FIX_20260706_215828/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_SOLO_SUBPROYECTO_TVS_FIX_20260706_215828/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_180302/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_180302/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_180302/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_180823/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_180823/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_180823/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_181353/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_181353/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_181353/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_181949/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_181949/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_181949/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_182521/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_182521/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_182521/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_183114/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_183114/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_20260706_183114/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_CHILENA_TVS_20260706_174541/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_CHILENA_TVS_20260706_174541/07_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/GENERACION_CARGA_104_VIGENCIA_0_CHILENA_TVS_20260706_174541/08_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_20260706_165312/10_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_20260706_165312/11_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_20260706_165312/12_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_20260706_165312/NO_GENERADO_BLOQUEADO_POR_NACIONALIDAD"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_20260706_172032/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_20260706_172032/07_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_20260706_172032/08_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_20260706_172300/06_RESUMEN_EJECUCION.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_20260706_172300/07_REPORTE_PARA_SIES.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/14_CORRECCION_SIES_120_CASOS/RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_20260706_172300/08_HASHES.sha256"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/00_gobernanza/MANIFEST_SUBPROYECTO.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/00_gobernanza/MANIFEST_SUBPROYECTO.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/00_gobernanza/bitacora_decisiones.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/00_gobernanza/criterios_versionado.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_README_VALIDADOR_IRE_2026.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_config_validador_ire_2026.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_validador_ire_2026.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/06_validaciones/contenido/HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_003623.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/06_validaciones/estructura/HITO_1B_INVENTARIO_TECNICO_FUENTES_IRE_2026_20260709_144958.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_2A_REGLAS_FUNCIONALES_INICIALES_IRE_2026_20260709_145724.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_3A_REGLAS_VALIDACION_IRE_2026_20260710_000222.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_1B_INVENTARIO_TECNICO_FUENTES_IRE_2026_20260709_144958.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_2A_LECTURA_FUNCIONAL_INSTRUCTIVO_IRE_2026_20260709_145724.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_2B_COMPARACION_DICCIONARIO_VS_ESTRUCTURA_IRE_2026_20260709_233948.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_2C_REPORTE_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_3A_DISENO_VALIDACIONES_IRE_2026_20260710_000222.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_3B_Z_CIERRE_DOCUMENTAL_VALIDADOR_IRE_2026_20260710_085242.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_1B_LOG_EJECUCION_20260709_144958.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_2B_LOG_EJECUCION_20260709_233948.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_2C_LOG_EJECUCION_20260709_235255.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3A_LOG_EJECUCION_20260710_000222.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3B_LOG_EJECUCION_20260710_003623.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3B_Z_CIERRE_VERIFICACION_VALIDADOR_IRE_2026_20260710_085242.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/07_diccionario.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/08_configuracion_fuentes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/09_resumen_gobernanza.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/10_resumen_gobernanza.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/07_diccionario.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/08_configuracion_fuentes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/09_resumen_gobernanza.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/10_resumen_gobernanza.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/07_diccionario.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/08_configuracion_fuentes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/09_resumen_gobernanza.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/10_resumen_gobernanza.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/04_resumen_base_longitudinal.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/17_interpretacion_kpi.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/22_auditoria_proteccion_datos.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/23_revision_tecnica_modulos.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/25_resultado_pruebas.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/29_kpi_final_auditado.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/30_resumen_ejecutivo_fase_2b.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/31_dictamen_metodologico_final.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/32_dictamen_tecnico_final.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/33_dictamen_integracion.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/34_manifest_auditoria.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/35_sha256_manifest_auditoria.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/36_plan_paso_7_git.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/24_kpi_rotacion_historico.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/25_kpi_rotacion_historico.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/26_manifest_fuentes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/27_manifest_auditoria.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/28_resultado_pruebas.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/29_dictamen_final.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/24_kpi_rotacion_historico.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/25_kpi_rotacion_historico.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/26_manifest_fuentes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/27_manifest_auditoria.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/28_resultado_pruebas.txt"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/29_dictamen_final.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/15_resumen.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/16_resumen.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/17_manifest.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/15_resumen.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/16_resumen.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/17_manifest.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/data/manifests/config_fuentes_aprobadas.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/data/manifests/fuentes_personal_academico.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/data/manifests/homologacion_columnas.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/data/manifests/schema_homologado.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/data/manifests/versiones_fuentes.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/__init__.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/__main__.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/cli.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/configuracion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/congelamiento.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/descubrimiento_fuentes.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/homologacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/integridad.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/inventario.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/manifiestos.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/gobernanza_historica/normalizacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/__init__.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/__main__.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/auditoria.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/cli.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/comparacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/config.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/exportacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/historico_consolidacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/historico_exportacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/historico_fuentes.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/kpis.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/lectura.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/kpi_rotacion/validacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/outputs/KPI_ROTACION/ROTACION_DOCENTE.md"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/outputs/KPI_ROTACION/kpi_rotacion.json"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/__init__.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/__main__.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/carga.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/cli.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/configuracion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/exportacion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/reconstruccion.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/utilidades.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "personal_academico_2026/reconstruccion_rotacion/validaciones.py"
+        },
+        {
+          "estado": "M",
+          "ruta": "scripts/corregir_fase06_vigencia_extranjeros_2025.py"
+        },
+        {
+          "estado": "A",
+          "ruta": "tests/test_kpi_rotacion_personal_academico.py"
+        }
+      ],
+      "clasificacion": {
+        "total_rutas": 505,
+        "toca_personal_academico_2026": true,
+        "toca_rutas_sensibles_definidas": true,
+        "rutas_sensibles": [
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/07_diccionario.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/08_configuracion_fuentes.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/09_resumen_gobernanza.md",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150437/10_resumen_gobernanza.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/07_diccionario.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/08_configuracion_fuentes.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/09_resumen_gobernanza.md",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150547/10_resumen_gobernanza.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/07_diccionario.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/08_configuracion_fuentes.json",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/09_resumen_gobernanza.md",
+          "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641/10_resumen_gobernanza.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/04_resumen_base_longitudinal.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/17_interpretacion_kpi.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/22_auditoria_proteccion_datos.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/23_revision_tecnica_modulos.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/25_resultado_pruebas.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/29_kpi_final_auditado.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/30_resumen_ejecutivo_fase_2b.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/31_dictamen_metodologico_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/32_dictamen_tecnico_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/33_dictamen_integracion.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/34_manifest_auditoria.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/35_sha256_manifest_auditoria.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/36_plan_paso_7_git.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/24_kpi_rotacion_historico.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/25_kpi_rotacion_historico.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/26_manifest_fuentes.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/27_manifest_auditoria.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/28_resultado_pruebas.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134257/29_dictamen_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/24_kpi_rotacion_historico.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/25_kpi_rotacion_historico.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/26_manifest_fuentes.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/27_manifest_auditoria.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/28_resultado_pruebas.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_historico_20260713_134450/29_dictamen_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/15_resumen.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/16_resumen.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/17_manifest.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/15_resumen.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/16_resumen.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/17_manifest.json",
+          "personal_academico_2026/gobernanza_historica/__init__.py",
+          "personal_academico_2026/gobernanza_historica/__main__.py",
+          "personal_academico_2026/gobernanza_historica/cli.py",
+          "personal_academico_2026/gobernanza_historica/configuracion.py",
+          "personal_academico_2026/gobernanza_historica/congelamiento.py",
+          "personal_academico_2026/gobernanza_historica/descubrimiento_fuentes.py",
+          "personal_academico_2026/gobernanza_historica/homologacion.py",
+          "personal_academico_2026/gobernanza_historica/integridad.py",
+          "personal_academico_2026/gobernanza_historica/inventario.py",
+          "personal_academico_2026/gobernanza_historica/manifiestos.py",
+          "personal_academico_2026/gobernanza_historica/normalizacion.py",
+          "personal_academico_2026/kpi_rotacion/__init__.py",
+          "personal_academico_2026/kpi_rotacion/__main__.py",
+          "personal_academico_2026/kpi_rotacion/auditoria.py",
+          "personal_academico_2026/kpi_rotacion/cli.py",
+          "personal_academico_2026/kpi_rotacion/comparacion.py",
+          "personal_academico_2026/kpi_rotacion/config.py",
+          "personal_academico_2026/kpi_rotacion/exportacion.py",
+          "personal_academico_2026/kpi_rotacion/historico_consolidacion.py",
+          "personal_academico_2026/kpi_rotacion/historico_exportacion.py",
+          "personal_academico_2026/kpi_rotacion/historico_fuentes.py",
+          "personal_academico_2026/kpi_rotacion/kpis.py",
+          "personal_academico_2026/kpi_rotacion/lectura.py",
+          "personal_academico_2026/kpi_rotacion/validacion.py",
+          "personal_academico_2026/reconstruccion_rotacion/__init__.py",
+          "personal_academico_2026/reconstruccion_rotacion/__main__.py",
+          "personal_academico_2026/reconstruccion_rotacion/carga.py",
+          "personal_academico_2026/reconstruccion_rotacion/cli.py",
+          "personal_academico_2026/reconstruccion_rotacion/configuracion.py",
+          "personal_academico_2026/reconstruccion_rotacion/exportacion.py",
+          "personal_academico_2026/reconstruccion_rotacion/reconstruccion.py",
+          "personal_academico_2026/reconstruccion_rotacion/utilidades.py",
+          "personal_academico_2026/reconstruccion_rotacion/validaciones.py"
+        ]
+      }
+    },
+    "6e15e063b85ee4b8b8d8937db5dc050a1833253b": {
+      "metadata": "6e15e063b85ee4b8b8d8937db5dc050a1833253b | fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1 | 2026-07-06T13:16:16-04:00 | Alexi Burgos | chore(git): excluye diagnostico mayor a 100MB",
+      "paths": [
+        {
+          "estado": "M",
+          "ruta": ".gitignore"
+        }
+      ],
+      "clasificacion": {
+        "total_rutas": 1,
+        "toca_personal_academico_2026": false,
+        "toca_rutas_sensibles_definidas": false,
+        "rutas_sensibles": []
+      }
+    }
+  },
+  "heads_informados": {
+    "af2006bea8ac13ffddff1f6f4759e6361934a2e7": {
+      "exists": true,
+      "metadata": "af2006bea8ac13ffddff1f6f4759e6361934a2e7 | fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1 | 2026-07-06T13:16:16-04:00 | Alexi Burgos | chore(git): excluye diagnostico mayor a 100MB",
+      "is_ancestor_of_current_head": false,
+      "diff_name_status_count_to_current_head": 28,
+      "diff_classification_to_current_head": {
+        "total_rutas": 28,
+        "toca_personal_academico_2026": true,
+        "toca_rutas_sensibles_definidas": true,
+        "rutas_sensibles": [
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/04_resumen_base_longitudinal.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/17_interpretacion_kpi.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/22_auditoria_proteccion_datos.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/23_revision_tecnica_modulos.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/25_resultado_pruebas.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/29_kpi_final_auditado.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/30_resumen_ejecutivo_fase_2b.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/31_dictamen_metodologico_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/32_dictamen_tecnico_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/33_dictamen_integracion.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/34_manifest_auditoria.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/35_sha256_manifest_auditoria.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/36_plan_paso_7_git.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/15_resumen.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/16_resumen.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614/17_manifest.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/15_resumen.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/16_resumen.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726/17_manifest.json",
+          "personal_academico_2026/reconstruccion_rotacion/__init__.py",
+          "personal_academico_2026/reconstruccion_rotacion/__main__.py",
+          "personal_academico_2026/reconstruccion_rotacion/carga.py",
+          "personal_academico_2026/reconstruccion_rotacion/cli.py",
+          "personal_academico_2026/reconstruccion_rotacion/configuracion.py",
+          "personal_academico_2026/reconstruccion_rotacion/exportacion.py",
+          "personal_academico_2026/reconstruccion_rotacion/reconstruccion.py",
+          "personal_academico_2026/reconstruccion_rotacion/utilidades.py",
+          "personal_academico_2026/reconstruccion_rotacion/validaciones.py"
+        ]
+      }
+    },
+    "51f8e644786718e6aaed20bf96c79be5eb82e92f": {
+      "exists": true,
+      "metadata": "51f8e644786718e6aaed20bf96c79be5eb82e92f | fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1 | 2026-07-06T13:16:16-04:00 | Alexi Burgos | chore(git): excluye diagnostico mayor a 100MB",
+      "is_ancestor_of_current_head": false,
+      "diff_name_status_count_to_current_head": 13,
+      "diff_classification_to_current_head": {
+        "total_rutas": 13,
+        "toca_personal_academico_2026": true,
+        "toca_rutas_sensibles_definidas": true,
+        "rutas_sensibles": [
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/04_resumen_base_longitudinal.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/17_interpretacion_kpi.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/22_auditoria_proteccion_datos.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/23_revision_tecnica_modulos.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/25_resultado_pruebas.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/29_kpi_final_auditado.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/30_resumen_ejecutivo_fase_2b.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/31_dictamen_metodologico_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/32_dictamen_tecnico_final.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/33_dictamen_integracion.md",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/34_manifest_auditoria.json",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/35_sha256_manifest_auditoria.txt",
+          "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348/36_plan_paso_7_git.md"
+        ]
+      }
+    },
+    "5c5cc160cb64b1690dad871e722d52bd2bc5eadc": {
+      "exists": true,
+      "metadata": "5c5cc160cb64b1690dad871e722d52bd2bc5eadc | fe6fb6c549c5634a22eda2f8dcd5dbed6ed103e1 | 2026-07-06T13:16:16-04:00 | Alexi Burgos | chore(git): excluye diagnostico mayor a 100MB",
+      "is_ancestor_of_current_head": true,
+      "diff_name_status_count_to_current_head": 0,
+      "diff_classification_to_current_head": {}
+    }
+  },
+  "diagnostico": {
+    "head_actual_coincide_fase_2a": false,
+    "head_actual_coincide_fase_2b": false,
+    "divergencia_toca_personal_academico_2026": true,
+    "fase_2b_no_rastreada": false,
+    "working_tree_limpio": true,
+    "clasificacion_hito": "CONTINUA_CON_OBSERVACION_RAMA_DIVERGIDA_SIN_CAMBIOS_WORKTREE"
+  }
+}

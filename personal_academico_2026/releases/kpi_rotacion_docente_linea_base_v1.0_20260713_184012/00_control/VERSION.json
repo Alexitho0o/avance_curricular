@@ -1,0 +1,56 @@
+{
+  "proyecto": "Personal Academico SIES 2026",
+  "subproyecto": "KPI historico de rotacion docente",
+  "version": "1.0.0",
+  "linea_base": "kpi_rotacion_docente_linea_base_v1.0",
+  "fecha_congelamiento": "2026-07-13T18:40:12.635982-04:00",
+  "zona_horaria": "America/Santiago",
+  "estado_metodologico": "APROBADO",
+  "estado_tecnico": "APROBADO",
+  "estado_documental": "RESUELTO_METODOLOGICAMENTE",
+  "estado_estadistico": "APTO_COMO_SERIE_DESCRIPTIVA_CENSAL",
+  "estado_publicacion": "METODOLOGICAMENTE_PUBLICABLE",
+  "estado_administrativo": "2023_Y_2025_PENDIENTE_SOLO_CIERRE_NOMINAL; NO_PUBLICACION_INSTITUCIONAL_AUTORIZADA",
+  "integracion": "NO_INTEGRADA",
+  "rama_observada": "backup/pre-sync-fix-20260410-avance",
+  "head_observado": "5c5cc160cb64b1690dad871e722d52bd2bc5eadc",
+  "upstream_observado": "origin/backup/pre-sync-fix-20260410-avance",
+  "upstream_head_observado": "6e15e063b85ee4b8b8d8937db5dc050a1833253b",
+  "ahead": 1,
+  "behind": 1,
+  "auditorias_fuente": [
+    "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641",
+    "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726",
+    "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348"
+  ],
+  "auditorias_no_vigentes": [
+    "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155614"
+  ],
+  "universos_anuales": {
+    "2022": 71,
+    "2023": 70,
+    "2024": 85,
+    "2025": 124,
+    "2026": 202
+  },
+  "pares_analizados": [
+    "2022-2023",
+    "2023-2024",
+    "2024-2025",
+    "2025-2026"
+  ],
+  "formula": "TASA_ROTACION_SIES = ROTAN / DOTACION_BASE * 100",
+  "clave_persona": [
+    "TIPO_DOCUMENTO",
+    "NUM_DOCUMENTO",
+    "DV"
+  ],
+  "advertencias_vigentes": [
+    "rama Git divergida ahead 1 behind 1",
+    "pytest no disponible si el entorno no lo provee",
+    "2023 y 2025 pendientes solo de cierre administrativo nominal",
+    "no existe autorizacion comunicacional institucional registrada"
+  ],
+  "responsable_congelamiento": "proceso automatizado bajo revision del usuario",
+  "schema_version": "VERSION.json/v1"
+}
