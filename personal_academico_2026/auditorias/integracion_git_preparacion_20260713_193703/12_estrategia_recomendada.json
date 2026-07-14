@@ -1,0 +1,14 @@
+{
+  "resultado": "PREPARACION_INTEGRACION_APROBADA_CON_OBSERVACIONES",
+  "base_recomendada": "6e15e063b85ee4b8b8d8937db5dc050a1833253b",
+  "base_recomendada_tipo": "upstream local de la rama actual, sujeto a autorizacion y refresco remoto previo",
+  "estrategia_recomendada": "B+E",
+  "descripcion": "Crear posteriormente una rama limpia desde el upstream local de la rama actual o desde la rama institucional que el usuario confirme, y reconstruir solo los cambios seleccionados del subproyecto con rutas explicitas. No hacer cherry-pick completo del commit actual.",
+  "por_que_no_head_actual": "El HEAD actual observado no coincide con el informado y su commit local ahead mezcla otros subproyectos.",
+  "observaciones": [
+    "HEAD actual difiere del informado 5c5cc160...",
+    "rama ahead 1 behind 1",
+    "se requiere excepcion especifica para CSV/TSV publicables si se desean versionar",
+    "rama principal remota no puede confirmarse sin fetch"
+  ]
+}
