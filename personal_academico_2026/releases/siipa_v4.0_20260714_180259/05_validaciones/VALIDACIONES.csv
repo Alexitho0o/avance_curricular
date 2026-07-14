@@ -1,0 +1,164 @@
+CONTROL,ESPERADO,OBSERVADO,ESTADO,DETALLE
+numero_hojas,18,18,OK,Conteo de hojas del workbook generado.
+orden_hojas,00_PORTADA | 01_RESUMEN_EJECUTIVO | 02_KPI_MAESTRO | 03_ESTABILIDAD | 04_DIVERSIDAD | 05_CAPACIDAD_HORAS | 06_FORMACION_CARGO | 07_CALIDAD_DATOS | 08_DATOS_CRUZADOS | 09_RAW_2022 | 10_RAW_2023 | 11_RAW_2024 | 12_RAW_2025 | 13_RAW_2026 | 90_DICCIONARIO_KPI | 91_PARAMETROS | 92_CALCULOS | 93_VALIDACIONES,00_PORTADA | 01_RESUMEN_EJECUTIVO | 02_KPI_MAESTRO | 03_ESTABILIDAD | 04_DIVERSIDAD | 05_CAPACIDAD_HORAS | 06_FORMACION_CARGO | 07_CALIDAD_DATOS | 08_DATOS_CRUZADOS | 09_RAW_2022 | 10_RAW_2023 | 11_RAW_2024 | 12_RAW_2025 | 13_RAW_2026 | 90_DICCIONARIO_KPI | 91_PARAMETROS | 92_CALCULOS | 93_VALIDACIONES,OK,Orden exacto exigido para SIIPA.
+persona_anio,552,552,OK,Registros homologados persona-año en 08_DATOS_CRUZADOS.
+duplicados_persona_anio,0,0,OK,Duplicados por ANIO + CLAVE_PERSONA.
+claves_incompletas,0,0,OK,Claves incompletas en datos cruzados.
+formulas_raw_datos_cruzados,0,0,OK,Fórmulas detectadas en hojas RAW o datos cruzados.
+referencia_v3_1,0,0,OK,Las rutas efectivamente usadas no apuntan a SIIPA v3.1.
+acceso_onedrive,0,0,OK,Las fuentes leídas pertenecen a normalized_restricted local.
+universo_2022,71,71,OK,Filas del CSV normalizado personal_academico_2022.csv.
+raw_2022_encabezados,encabezados_reales,79,OK,La fila 1 de RAW replica los encabezados del CSV.
+datos_cruzados_2022,71,71,OK,Registros homologados por año.
+edad_calculable_2022,71,71,OK,Edad calculada al 31 de diciembre del año analizado.
+sexo_2022_hombre,60,60,OK,Conteo anual de hombres.
+sexo_2022_mujer,11,11,OK,Conteo anual de mujeres.
+sexo_2022_identidad,71,71,OK,HOMBRE + MUJER debe igualar el universo anual.
+horas_calculables_2022,71,71,OK,"Total contractual calculado desde planta, contrata y honorarios."
+horas_total_2022,1051,1051,OK,"Suma de horas contractuales con tolerancia 0,1."
+universo_2023,70,70,OK,Filas del CSV normalizado personal_academico_2023.csv.
+raw_2023_encabezados,encabezados_reales,80,OK,La fila 1 de RAW replica los encabezados del CSV.
+datos_cruzados_2023,70,70,OK,Registros homologados por año.
+edad_calculable_2023,70,70,OK,Edad calculada al 31 de diciembre del año analizado.
+sexo_2023_hombre,57,57,OK,Conteo anual de hombres.
+sexo_2023_mujer,13,13,OK,Conteo anual de mujeres.
+sexo_2023_identidad,70,70,OK,HOMBRE + MUJER debe igualar el universo anual.
+horas_calculables_2023,70,70,OK,"Total contractual calculado desde planta, contrata y honorarios."
+horas_total_2023,1202,1202,OK,"Suma de horas contractuales con tolerancia 0,1."
+universo_2024,85,85,OK,Filas del CSV normalizado personal_academico_2024.csv.
+raw_2024_encabezados,encabezados_reales,74,OK,La fila 1 de RAW replica los encabezados del CSV.
+datos_cruzados_2024,85,85,OK,Registros homologados por año.
+edad_calculable_2024,85,85,OK,Edad calculada al 31 de diciembre del año analizado.
+sexo_2024_hombre,66,66,OK,Conteo anual de hombres.
+sexo_2024_mujer,19,19,OK,Conteo anual de mujeres.
+sexo_2024_identidad,85,85,OK,HOMBRE + MUJER debe igualar el universo anual.
+horas_calculables_2024,85,85,OK,"Total contractual calculado desde planta, contrata y honorarios."
+horas_total_2024,1703.05,1703.05,OK,"Suma de horas contractuales con tolerancia 0,1."
+universo_2025,124,124,OK,Filas del CSV normalizado personal_academico_2025.csv.
+raw_2025_encabezados,encabezados_reales,78,OK,La fila 1 de RAW replica los encabezados del CSV.
+datos_cruzados_2025,124,124,OK,Registros homologados por año.
+edad_calculable_2025,124,124,OK,Edad calculada al 31 de diciembre del año analizado.
+sexo_2025_hombre,85,85,OK,Conteo anual de hombres.
+sexo_2025_mujer,39,39,OK,Conteo anual de mujeres.
+sexo_2025_identidad,124,124,OK,HOMBRE + MUJER debe igualar el universo anual.
+horas_calculables_2025,124,124,OK,"Total contractual calculado desde planta, contrata y honorarios."
+horas_total_2025,2885.67,2885.67,OK,"Suma de horas contractuales con tolerancia 0,1."
+universo_2026,202,202,OK,Filas del CSV normalizado personal_academico_2026.csv.
+raw_2026_encabezados,encabezados_reales,78,OK,La fila 1 de RAW replica los encabezados del CSV.
+datos_cruzados_2026,202,202,OK,Registros homologados por año.
+edad_calculable_2026,202,202,OK,Edad calculada al 31 de diciembre del año analizado.
+sexo_2026_hombre,130,130,OK,Conteo anual de hombres.
+sexo_2026_mujer,72,72,OK,Conteo anual de mujeres.
+sexo_2026_identidad,202,202,OK,HOMBRE + MUJER debe igualar el universo anual.
+horas_calculables_2026,202,202,OK,"Total contractual calculado desde planta, contrata y honorarios."
+horas_total_2026,3538.58,3538.58,OK,"Suma de horas contractuales con tolerancia 0,1."
+rotacion_congelada_2022-2023,OK,OK,OK,KPI de rotación coincide con la línea base congelada.
+rotacion_tasa_2022-2023,49.295775,49.295775,OK,Tasa calculada como ROTAN / DOTACION_BASE * 100.
+rotacion_identidad_base_2022-2023,71,71,OK,PERMANECEN + ROTAN = DOTACION_BASE.
+rotacion_identidad_siguiente_2022-2023,70,70,OK,PERMANECEN + NUEVOS = DOTACION_SIGUIENTE.
+rotacion_congelada_2023-2024,OK,OK,OK,KPI de rotación coincide con la línea base congelada.
+rotacion_tasa_2023-2024,44.285714,44.285714,OK,Tasa calculada como ROTAN / DOTACION_BASE * 100.
+rotacion_identidad_base_2023-2024,70,70,OK,PERMANECEN + ROTAN = DOTACION_BASE.
+rotacion_identidad_siguiente_2023-2024,85,85,OK,PERMANECEN + NUEVOS = DOTACION_SIGUIENTE.
+rotacion_congelada_2024-2025,OK,OK,OK,KPI de rotación coincide con la línea base congelada.
+rotacion_tasa_2024-2025,41.176471,41.176471,OK,Tasa calculada como ROTAN / DOTACION_BASE * 100.
+rotacion_identidad_base_2024-2025,85,85,OK,PERMANECEN + ROTAN = DOTACION_BASE.
+rotacion_identidad_siguiente_2024-2025,124,124,OK,PERMANECEN + NUEVOS = DOTACION_SIGUIENTE.
+rotacion_congelada_2025-2026,OK,OK,OK,KPI de rotación coincide con la línea base congelada.
+rotacion_tasa_2025-2026,17.741935,17.741935,OK,Tasa calculada como ROTAN / DOTACION_BASE * 100.
+rotacion_identidad_base_2025-2026,124,124,OK,PERMANECEN + ROTAN = DOTACION_BASE.
+rotacion_identidad_siguiente_2025-2026,202,202,OK,PERMANECEN + NUEVOS = DOTACION_SIGUIENTE.
+suma_formacion_2022,71,71,OK,Suma de personas por FORMACION.
+porcentaje_formacion_2022,100,100,OK,Suma porcentual por FORMACION.
+suma_cargo_2022,71,71,OK,Suma de personas por CARGO.
+porcentaje_cargo_2022,100,100,OK,Suma porcentual por CARGO.
+suma_tipo_contractual_2022,71,71,OK,Suma de personas por TIPO_CONTRACTUAL.
+porcentaje_tipo_contractual_2022,100,100,OK,Suma porcentual por TIPO_CONTRACTUAL.
+suma_tramo_edad_2022,71,71,OK,Suma de personas por TRAMO_EDAD.
+porcentaje_tramo_edad_2022,100,100,OK,Suma porcentual por TRAMO_EDAD.
+suma_tramo_horas_2022,71,71,OK,Suma de personas por TRAMO_HORAS.
+porcentaje_tramo_horas_2022,100,100,OK,Suma porcentual por TRAMO_HORAS.
+suma_programa_2022,71,71,OK,Suma de personas por PROGRAMA.
+porcentaje_programa_2022,100,100,OK,Suma porcentual por PROGRAMA.
+suma_genero_2022,71,71,OK,Hombres + mujeres + sin información = universo.
+horas_componentes_2022,1051,1051,OK,Horas totales igualan suma de componentes.
+suma_formacion_2023,70,70,OK,Suma de personas por FORMACION.
+porcentaje_formacion_2023,100,100,OK,Suma porcentual por FORMACION.
+suma_cargo_2023,70,70,OK,Suma de personas por CARGO.
+porcentaje_cargo_2023,100,100,OK,Suma porcentual por CARGO.
+suma_tipo_contractual_2023,70,70,OK,Suma de personas por TIPO_CONTRACTUAL.
+porcentaje_tipo_contractual_2023,100,100,OK,Suma porcentual por TIPO_CONTRACTUAL.
+suma_tramo_edad_2023,70,70,OK,Suma de personas por TRAMO_EDAD.
+porcentaje_tramo_edad_2023,100,100,OK,Suma porcentual por TRAMO_EDAD.
+suma_tramo_horas_2023,70,70,OK,Suma de personas por TRAMO_HORAS.
+porcentaje_tramo_horas_2023,100,100,OK,Suma porcentual por TRAMO_HORAS.
+suma_programa_2023,70,70,OK,Suma de personas por PROGRAMA.
+porcentaje_programa_2023,100,100,OK,Suma porcentual por PROGRAMA.
+suma_genero_2023,70,70,OK,Hombres + mujeres + sin información = universo.
+horas_componentes_2023,1202,1202,OK,Horas totales igualan suma de componentes.
+suma_formacion_2024,85,85,OK,Suma de personas por FORMACION.
+porcentaje_formacion_2024,100,100,OK,Suma porcentual por FORMACION.
+suma_cargo_2024,85,85,OK,Suma de personas por CARGO.
+porcentaje_cargo_2024,100,100,OK,Suma porcentual por CARGO.
+suma_tipo_contractual_2024,85,85,OK,Suma de personas por TIPO_CONTRACTUAL.
+porcentaje_tipo_contractual_2024,100,100,OK,Suma porcentual por TIPO_CONTRACTUAL.
+suma_tramo_edad_2024,85,85,OK,Suma de personas por TRAMO_EDAD.
+porcentaje_tramo_edad_2024,100,100,OK,Suma porcentual por TRAMO_EDAD.
+suma_tramo_horas_2024,85,85,OK,Suma de personas por TRAMO_HORAS.
+porcentaje_tramo_horas_2024,100,100,OK,Suma porcentual por TRAMO_HORAS.
+suma_programa_2024,85,85,OK,Suma de personas por PROGRAMA.
+porcentaje_programa_2024,100,100,OK,Suma porcentual por PROGRAMA.
+suma_genero_2024,85,85,OK,Hombres + mujeres + sin información = universo.
+horas_componentes_2024,1703.05,1703.05,OK,Horas totales igualan suma de componentes.
+suma_formacion_2025,124,124,OK,Suma de personas por FORMACION.
+porcentaje_formacion_2025,100,100,OK,Suma porcentual por FORMACION.
+suma_cargo_2025,124,124,OK,Suma de personas por CARGO.
+porcentaje_cargo_2025,100,100,OK,Suma porcentual por CARGO.
+suma_tipo_contractual_2025,124,124,OK,Suma de personas por TIPO_CONTRACTUAL.
+porcentaje_tipo_contractual_2025,100,100,OK,Suma porcentual por TIPO_CONTRACTUAL.
+suma_tramo_edad_2025,124,124,OK,Suma de personas por TRAMO_EDAD.
+porcentaje_tramo_edad_2025,100,100,OK,Suma porcentual por TRAMO_EDAD.
+suma_tramo_horas_2025,124,124,OK,Suma de personas por TRAMO_HORAS.
+porcentaje_tramo_horas_2025,100,100,OK,Suma porcentual por TRAMO_HORAS.
+suma_programa_2025,124,124,OK,Suma de personas por PROGRAMA.
+porcentaje_programa_2025,100,100,OK,Suma porcentual por PROGRAMA.
+suma_genero_2025,124,124,OK,Hombres + mujeres + sin información = universo.
+horas_componentes_2025,2885.67,2885.67,OK,Horas totales igualan suma de componentes.
+suma_formacion_2026,202,202,OK,Suma de personas por FORMACION.
+porcentaje_formacion_2026,100,100,OK,Suma porcentual por FORMACION.
+suma_cargo_2026,202,202,OK,Suma de personas por CARGO.
+porcentaje_cargo_2026,100,100,OK,Suma porcentual por CARGO.
+suma_tipo_contractual_2026,202,202,OK,Suma de personas por TIPO_CONTRACTUAL.
+porcentaje_tipo_contractual_2026,100,100,OK,Suma porcentual por TIPO_CONTRACTUAL.
+suma_tramo_edad_2026,202,202,OK,Suma de personas por TRAMO_EDAD.
+porcentaje_tramo_edad_2026,100,100,OK,Suma porcentual por TRAMO_EDAD.
+suma_tramo_horas_2026,202,202,OK,Suma de personas por TRAMO_HORAS.
+porcentaje_tramo_horas_2026,100,100,OK,Suma porcentual por TRAMO_HORAS.
+suma_programa_2026,202,202,OK,Suma de personas por PROGRAMA.
+porcentaje_programa_2026,100,100,OK,Suma porcentual por PROGRAMA.
+suma_genero_2026,202,202,OK,Hombres + mujeres + sin información = universo.
+horas_componentes_2026,3538.58,3538.58,OK,Horas totales igualan suma de componentes.
+kpi_maestro_poblado,mayor que 0,200,OK,02_KPI_MAESTRO contiene indicadores calculados.
+kpi_maestro_sin_duplicados,200,200,OK,Clave CODIGO_KPI + ANIO_PERIODO sin duplicados.
+diccionario_completo,41,41,OK,Todo KPI del maestro tiene definición.
+diccionario_sin_sobrantes,41,41,OK,El diccionario sólo contiene KPI del maestro.
+semaforos_textuales,VERDE/AMARILLO/ROJO/GRIS,AMARILLO; GRIS; ROJO; VERDE,OK,Semáforos restringidos a estados textuales permitidos.
+descripciones_dinamicas,0,0,OK,Todos los KPI del maestro tienen descripción generada por Python.
+formulas_excel_total,0,0,OK,El workbook no contiene fórmulas Excel.
+nan_inf_total,0,0,OK,No hay valores NaN o infinitos.
+pii_hojas_analiticas,0,0,OK,Hojas analíticas no contienen columnas de identificación individual.
+parametros_documentados,mayor que 0,15,OK,91_PARAMETROS documenta reglas y umbrales usados.
+calculos_auxiliares,mayor que 0,369,OK,92_CALCULOS contiene resultados auxiliares calculados en Python.
+portada,poblada,SISTEMA INTEGRADO DE INDICADORES DE PERSONAL ACADÉMICO,OK,Portada institucional generada.
+dashboard_ejecutivo,poblado,Resumen ejecutivo SIIPA v4.0,OK,Resumen ejecutivo con tarjetas y síntesis.
+graficos_total,10,10,OK,Gráficos ubicados en 01_RESUMEN_EJECUTIVO.
+graficos_series,series no vacías,True,OK,Cada gráfico contiene al menos una serie.
+graficos_categorias,categorías no vacías,True,OK,Cada gráfico contiene categorías.
+graficos_sin_ref,0,0,OK,Rangos de gráficos sin referencias rotas.
+parametros_ocultos,hidden,hidden,OK,"91_PARAMETROS oculta, no veryHidden."
+calculos_ocultos,hidden,hidden,OK,"92_CALCULOS oculta, no veryHidden."
+validaciones_visibles,visible,visible,OK,93_VALIDACIONES visible para revisión técnica.
+enlaces_externos,0,0,OK,No existen vínculos externos en el workbook.
+rutas_cloud_operativas,0,0,OK,No existen rutas cloud operativas en hojas públicas o analíticas.
+texto_centrado_muestra,center,center,OK,Encabezados y celdas analíticas centradas.
+decimales_muestra,0.0,0.0,OK,Valores numéricos persistidos con formato decimal según tipo.
