@@ -20,14 +20,14 @@
       "ruta_relativa": "00_control/DIAGNOSTICO_GIT.json",
       "nombre": "DIAGNOSTICO_GIT.json",
       "categoria": "00_control",
-      "tamano_bytes": 131550,
-      "sha256": "0bc79c06b598b2e098a636951bb6065b886619db6c914d8c93666b352ec76ae5",
-      "fecha_modificacion": "2026-07-13T18:40:15.286260-04:00",
+      "tamano_bytes": 131649,
+      "sha256": "ba32d96a557c116a4f7ae81840ca2526e2280676eed54aec05b21aaaac52a62b",
+      "fecha_modificacion": "2026-07-14T01:06:32.546454-04:00",
       "contiene_PII": false,
       "versionable": true,
       "origen": "Fase 3A release",
       "descripcion": "artefacto de congelamiento institucional",
-      "estado_validacion": "VALIDADO"
+      "estado_validacion": "VALIDADO_SANEADO_PUBLICACION"
     },
     {
       "ruta_relativa": "00_control/DICTAMEN_CONGELAMIENTO.json",
@@ -59,9 +59,9 @@
       "ruta_relativa": "00_control/MANIFEST.json",
       "nombre": "MANIFEST.json",
       "categoria": "00_control",
-      "tamano_bytes": 15649,
+      "tamano_bytes": 15846,
       "sha256": null,
-      "fecha_modificacion": "2026-07-13T18:41:44.254552-04:00",
+      "fecha_modificacion": "2026-07-14T01:06:32.546454-04:00",
       "contiene_PII": false,
       "versionable": true,
       "origen": "Fase 3A release",
@@ -98,9 +98,9 @@
       "ruta_relativa": "00_control/SHA256SUMS.txt",
       "nombre": "SHA256SUMS.txt",
       "categoria": "00_control",
-      "tamano_bytes": 2995,
+      "tamano_bytes": 2871,
       "sha256": null,
-      "fecha_modificacion": "2026-07-13T18:41:44.257631-04:00",
+      "fecha_modificacion": "2026-07-14T01:06:32.546454-04:00",
       "contiene_PII": false,
       "versionable": true,
       "origen": "Fase 3A release",
@@ -380,5 +380,7 @@
       "descripcion": "artefacto de congelamiento institucional",
       "estado_validacion": "VALIDADO"
     }
-  ]
+  ],
+  "metadatos_saneados": true,
+  "criterio_saneamiento": "Se actualizaron hashes y tamaños derivados por saneamiento de metadatos públicos sin modificar KPI ni metodología."
 }
