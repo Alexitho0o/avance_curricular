@@ -1,0 +1,1537 @@
+{
+  "version_transformador": "gobernanza_historica_fase_1.0.0",
+  "reglas": [
+    {
+      "anio": 2022,
+      "columna_original": "TIPO_DOCUMENTO",
+      "nombre_homologado": "TIPO_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NUM_DOCUMENTO",
+      "nombre_homologado": "NUM_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "DV",
+      "nombre_homologado": "DV",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "PRIMER_APELLIDO",
+      "nombre_homologado": "PRIMER_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "SEGUNDO_APELLIDO",
+      "nombre_homologado": "SEGUNDO_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NOMBRES",
+      "nombre_homologado": "NOMBRES",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "SEXO",
+      "nombre_homologado": "SEXO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "FECHA_NACIMIENTO",
+      "nombre_homologado": "FECHA_NACIMIENTO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NACIONALIDAD",
+      "nombre_homologado": "NACIONALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NIVEL_FORMACION_ACADEMICO",
+      "nombre_homologado": "NIVEL_FORMACION_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NOMBRE_TITULO_O_GRADO",
+      "nombre_homologado": "NOMBRE_TITULO_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "nombre_homologado": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "PAIS_OBTENCION_TIT_O_GRADO",
+      "nombre_homologado": "PAIS_OBTENCION_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "FECHA_OBT_TIT_O_GRADO",
+      "nombre_homologado": "FECHA_OBT_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NIVEL_FORMACION_ESPECIALIDAD",
+      "nombre_homologado": "NIVEL_FORMACION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "TIPO_ESPECIALIDAD",
+      "nombre_homologado": "TIPO_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NOMBRE_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "PAIS_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "PAIS_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "FECHA_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "FECHA_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "PRINCIPAL_CARGO_ACADEMICO",
+      "nombre_homologado": "PRINCIPAL_CARGO_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "CARGO_NORMALIZADO",
+      "nombre_homologado": "CARGO_NORMALIZADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "COMUNA_MAYOR_FUNCION",
+      "nombre_homologado": "COMUNA_MAYOR_FUNCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "COMUNA_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "COMUNA_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NUM_HORAS_PLANTA",
+      "nombre_homologado": "NUM_HORAS_PLANTA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NUM_HORAS_CONTRATA",
+      "nombre_homologado": "NUM_HORAS_CONTRATA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "NUM_HORAS_HONORARIOS",
+      "nombre_homologado": "NUM_HORAS_HONORARIOS",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "JERARQUIA_ACADEMICA",
+      "nombre_homologado": "JERARQUIA_ACADEMICA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "JERARQUIA_ACADEMICA_OCDE",
+      "nombre_homologado": "JERARQUIA_ACADEMICA_OCDE",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2022,
+      "columna_original": "VIGENCIA",
+      "nombre_homologado": "VIGENCIA",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "TIPO_DOCUMENTO",
+      "nombre_homologado": "TIPO_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NUM_DOCUMENTO",
+      "nombre_homologado": "NUM_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "DV",
+      "nombre_homologado": "DV",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "PRIMER_APELLIDO",
+      "nombre_homologado": "PRIMER_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "SEGUNDO_APELLIDO",
+      "nombre_homologado": "SEGUNDO_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NOMBRES",
+      "nombre_homologado": "NOMBRES",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "SEXO",
+      "nombre_homologado": "SEXO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "FECHA_NACIMIENTO",
+      "nombre_homologado": "FECHA_NACIMIENTO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NACIONALIDAD",
+      "nombre_homologado": "NACIONALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NIVEL_FORMACION_ACADEMICO",
+      "nombre_homologado": "NIVEL_FORMACION_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NOMBRE_TITULO_O_GRADO",
+      "nombre_homologado": "NOMBRE_TITULO_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "nombre_homologado": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "PAIS_OBTENCION_TIT_O_GRADO",
+      "nombre_homologado": "PAIS_OBTENCION_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "FECHA_OBT_TIT_O_GRADO",
+      "nombre_homologado": "FECHA_OBT_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NIVEL_FORMACION_ESPECIALIDAD",
+      "nombre_homologado": "NIVEL_FORMACION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "TIPO_ESPECIALIDAD",
+      "nombre_homologado": "TIPO_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NOMBRE_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "PAIS_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "PAIS_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "FECHA_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "FECHA_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "PRINCIPAL_CARGO_ACADEMICO",
+      "nombre_homologado": "PRINCIPAL_CARGO_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "CARGO_NORMALIZADO",
+      "nombre_homologado": "CARGO_NORMALIZADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "COMUNA_MAYOR_FUNCION",
+      "nombre_homologado": "COMUNA_MAYOR_FUNCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "COMUNA_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "COMUNA_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NUM_HORAS_PLANTA",
+      "nombre_homologado": "NUM_HORAS_PLANTA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NUM_HORAS_CONTRATA",
+      "nombre_homologado": "NUM_HORAS_CONTRATA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "NUM_HORAS_HONORARIOS",
+      "nombre_homologado": "NUM_HORAS_HONORARIOS",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "JERARQUIA_ACADEMICA",
+      "nombre_homologado": "JERARQUIA_ACADEMICA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "JERARQUIA_ACADEMICA_OCDE",
+      "nombre_homologado": "JERARQUIA_ACADEMICA_OCDE",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2023,
+      "columna_original": "VIGENCIA",
+      "nombre_homologado": "VIGENCIA",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "TIPO_DOCUMENTO",
+      "nombre_homologado": "TIPO_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NUM_DOCUMENTO",
+      "nombre_homologado": "NUM_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "DV",
+      "nombre_homologado": "DV",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "PRIMER_APELLIDO",
+      "nombre_homologado": "PRIMER_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "SEGUNDO_APELLIDO",
+      "nombre_homologado": "SEGUNDO_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NOMBRES",
+      "nombre_homologado": "NOMBRES",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "SEXO",
+      "nombre_homologado": "SEXO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "FECHA_NACIMIENTO",
+      "nombre_homologado": "FECHA_NACIMIENTO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NACIONALIDAD",
+      "nombre_homologado": "NACIONALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NOMBRE_TITULO O GRADO",
+      "nombre_homologado": "NOMBRE_TITULO_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NIVEL_FORMACION_ESPECIALIDAD",
+      "nombre_homologado": "NIVEL_FORMACION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "TIPO_ESPECIALIDAD",
+      "nombre_homologado": "TIPO_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NOMBRE_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "PRINCIPAL_CARGO_ACADEMICO",
+      "nombre_homologado": "PRINCIPAL_CARGO_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "CARGO_NORMALIZADO",
+      "nombre_homologado": "CARGO_NORMALIZADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "COMUNA_MAYOR_FUNCION",
+      "nombre_homologado": "COMUNA_MAYOR_FUNCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "COMUNA_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "COMUNA_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NUM_HORAS_PLANTA",
+      "nombre_homologado": "NUM_HORAS_PLANTA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NUM_HORAS_CONTRATA",
+      "nombre_homologado": "NUM_HORAS_CONTRATA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "NUM_HORAS_HONORARIO",
+      "nombre_homologado": "NUM_HORAS_HONORARIOS",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "JERARQUIA_ACADEMICA",
+      "nombre_homologado": "JERARQUIA_ACADEMICA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "JERARQUIA_ACADEMICA_OCDE",
+      "nombre_homologado": "JERARQUIA_ACADEMICA_OCDE",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "VIGENCIA",
+      "nombre_homologado": "VIGENCIA",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "NIVEL_FORMACION_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "PAIS_OBTENCION_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "FECHA_OBT_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "PAIS_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2024,
+      "columna_original": "",
+      "nombre_homologado": "FECHA_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "NO_DISPONIBLE_EN_ESE_AÑO",
+      "observaciones": "No se inventa valor; queda documentado como no disponible."
+    },
+    {
+      "anio": 2025,
+      "columna_original": "TIPO_DOCUMENTO",
+      "nombre_homologado": "TIPO_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NUM_DOCUMENTO",
+      "nombre_homologado": "NUM_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "DV",
+      "nombre_homologado": "DV",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "PRIMER_APELLIDO",
+      "nombre_homologado": "PRIMER_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "SEGUNDO_APELLIDO",
+      "nombre_homologado": "SEGUNDO_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NOMBRES",
+      "nombre_homologado": "NOMBRES",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "SEXO",
+      "nombre_homologado": "SEXO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "FECHA_NACIMIENTO",
+      "nombre_homologado": "FECHA_NACIMIENTO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NACIONALIDAD",
+      "nombre_homologado": "NACIONALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NIVEL_FORMACION_ACADEMICO",
+      "nombre_homologado": "NIVEL_FORMACION_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NOMBRE_TITULO_O_GRADO",
+      "nombre_homologado": "NOMBRE_TITULO_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "nombre_homologado": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "PAIS_OBTENCION_TIT_O_GRADO",
+      "nombre_homologado": "PAIS_OBTENCION_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "FECHA_OBT_TIT_O_GRADO",
+      "nombre_homologado": "FECHA_OBT_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NIVEL_FORMACION_ESPECIALIDAD",
+      "nombre_homologado": "NIVEL_FORMACION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "TIPO_ESPECIALIDAD",
+      "nombre_homologado": "TIPO_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NOMBRE_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "PAIS_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "PAIS_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "FECHA_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "FECHA_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "PRINCIPAL_CARGO_ACADEMICO",
+      "nombre_homologado": "PRINCIPAL_CARGO_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "CARGO_NORMALIZADO",
+      "nombre_homologado": "CARGO_NORMALIZADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "COMUNA_MAYOR_FUNCION",
+      "nombre_homologado": "COMUNA_MAYOR_FUNCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "COMUNA_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "COMUNA_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NUM_HORAS_PLANTA",
+      "nombre_homologado": "NUM_HORAS_PLANTA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NUM_HORAS_CONTRATA",
+      "nombre_homologado": "NUM_HORAS_CONTRATA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "NUM_HORAS_HONORARIOS",
+      "nombre_homologado": "NUM_HORAS_HONORARIOS",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "JERARQUIA_ACADEMICA",
+      "nombre_homologado": "JERARQUIA_ACADEMICA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "JERARQUIA_ACADEMICA_OCDE",
+      "nombre_homologado": "JERARQUIA_ACADEMICA_OCDE",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2025,
+      "columna_original": "VIGENCIA",
+      "nombre_homologado": "VIGENCIA",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "TIPO_DOCUMENTO",
+      "nombre_homologado": "TIPO_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NUM_DOCUMENTO",
+      "nombre_homologado": "NUM_DOCUMENTO",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "DV",
+      "nombre_homologado": "DV",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "PRIMER_APELLIDO",
+      "nombre_homologado": "PRIMER_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "SEGUNDO_APELLIDO",
+      "nombre_homologado": "SEGUNDO_APELLIDO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NOMBRES",
+      "nombre_homologado": "NOMBRES",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "SEXO",
+      "nombre_homologado": "SEXO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "FECHA_NACIMIENTO",
+      "nombre_homologado": "FECHA_NACIMIENTO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NACIONALIDAD",
+      "nombre_homologado": "NACIONALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NIVEL_FORMACION_ACADEMICO",
+      "nombre_homologado": "NIVEL_FORMACION_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NOMBRE_TITULO_O_GRADO",
+      "nombre_homologado": "NOMBRE_TITULO_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "nombre_homologado": "NOMBRE_INSTITUCION_OBT_TITULO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "PAIS_OBTENCION_TIT_O_GRADO",
+      "nombre_homologado": "PAIS_OBTENCION_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "FECHA_OBT_TIT_O_GRADO",
+      "nombre_homologado": "FECHA_OBT_TIT_O_GRADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NIVEL_FORMACION_ESPECIALIDAD",
+      "nombre_homologado": "NIVEL_FORMACION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "TIPO_ESPECIALIDAD",
+      "nombre_homologado": "TIPO_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NOMBRE_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "nombre_homologado": "NOMBRE_INST_OBT_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "PAIS_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "PAIS_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "FECHA_OBTENCION_ESPECIALIDAD",
+      "nombre_homologado": "FECHA_OBTENCION_ESPECIALIDAD",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "PRINCIPAL_CARGO_ACADEMICO",
+      "nombre_homologado": "PRINCIPAL_CARGO_ACADEMICO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "CARGO_NORMALIZADO",
+      "nombre_homologado": "CARGO_NORMALIZADO",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SUPERIOR_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "nombre_homologado": "NIVEL_SECUNDARIO_ADSCRIPCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "COMUNA_MAYOR_FUNCION",
+      "nombre_homologado": "COMUNA_MAYOR_FUNCION",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "NOMBRE_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "TOTAL_HORAS_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "COMUNA_PRINCIPAL_PROGRAMA",
+      "nombre_homologado": "COMUNA_PRINCIPAL_PROGRAMA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NUM_HORAS_PLANTA",
+      "nombre_homologado": "NUM_HORAS_PLANTA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NUM_HORAS_CONTRATA",
+      "nombre_homologado": "NUM_HORAS_CONTRATA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "NUM_HORAS_HONORARIOS",
+      "nombre_homologado": "NUM_HORAS_HONORARIOS",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "JERARQUIA_ACADEMICA",
+      "nombre_homologado": "JERARQUIA_ACADEMICA",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "JERARQUIA_ACADEMICA_OCDE",
+      "nombre_homologado": "JERARQUIA_ACADEMICA_OCDE",
+      "tipo": "string",
+      "obligatoria": "NO",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    },
+    {
+      "anio": 2026,
+      "columna_original": "VIGENCIA",
+      "nombre_homologado": "VIGENCIA",
+      "tipo": "string",
+      "obligatoria": "SI",
+      "equivalencia": "DIRECTA",
+      "observaciones": ""
+    }
+  ],
+  "politica_valores_no_disponibles": "NO_DISPONIBLE_EN_ESE_AÑO",
+  "politica_no_imputacion": "No se inventan valores, no se rellenan ceros y no se copian valores entre anios."
+}

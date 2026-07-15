@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "fecha_congelamiento": "2026-07-13T18:40:12.635982-04:00",
+  "formula": "TASA_ROTACION_SIES = ROTAN / DOTACION_BASE * 100",
+  "clave_identidad": [
+    "TIPO_DOCUMENTO",
+    "NUM_DOCUMENTO",
+    "DV"
+  ],
+  "unidad_analisis": "persona",
+  "caracter": "serie descriptiva censal; no causal ni inferencial",
+  "advertencias_generales": [
+    "rama Git divergida ahead 1 behind 1",
+    "pytest no disponible si el entorno no lo provee",
+    "2023 y 2025 pendientes solo de cierre administrativo nominal",
+    "no existe autorizacion comunicacional institucional registrada"
+  ],
+  "auditorias_referencia": [
+    "personal_academico_2026/auditorias/gobernanza_historica_20260713_150641",
+    "personal_academico_2026/auditorias/kpi_rotacion_reconstruccion_20260713_155726",
+    "personal_academico_2026/auditorias/kpi_rotacion_fase_2b_20260713_174348"
+  ],
+  "datos": [
+    {
+      "PERIODO": "2022-2023",
+      "ANIO_BASE": 2022,
+      "ANIO_SIGUIENTE": 2023,
+      "DOTACION_BASE": 71,
+      "DOTACION_SIGUIENTE": 70,
+      "PERMANECEN": 36,
+      "ROTAN": 35,
+      "NUEVOS": 34,
+      "TASA_ROTACION_PCT": "49.295775",
+      "ESTADO_METODOLOGICO": "APROBADO",
+      "ESTADO_PUBLICACION": "METODOLOGICAMENTE_PUBLICABLE",
+      "ADVERTENCIA": "Fuente 2023 con cierre administrativo nominal pendiente."
+    },
+    {
+      "PERIODO": "2023-2024",
+      "ANIO_BASE": 2023,
+      "ANIO_SIGUIENTE": 2024,
+      "DOTACION_BASE": 70,
+      "DOTACION_SIGUIENTE": 85,
+      "PERMANECEN": 39,
+      "ROTAN": 31,
+      "NUEVOS": 46,
+      "TASA_ROTACION_PCT": "44.285714",
+      "ESTADO_METODOLOGICO": "APROBADO",
+      "ESTADO_PUBLICACION": "METODOLOGICAMENTE_PUBLICABLE",
+      "ADVERTENCIA": "Fuente 2023 con cierre administrativo nominal pendiente."
+    },
+    {
+      "PERIODO": "2024-2025",
+      "ANIO_BASE": 2024,
+      "ANIO_SIGUIENTE": 2025,
+      "DOTACION_BASE": 85,
+      "DOTACION_SIGUIENTE": 124,
+      "PERMANECEN": 50,
+      "ROTAN": 35,
+      "NUEVOS": 74,
+      "TASA_ROTACION_PCT": "41.176471",
+      "ESTADO_METODOLOGICO": "APROBADO",
+      "ESTADO_PUBLICACION": "METODOLOGICAMENTE_PUBLICABLE",
+      "ADVERTENCIA": "Fuente 2025 con cierre administrativo nominal pendiente."
+    },
+    {
+      "PERIODO": "2025-2026",
+      "ANIO_BASE": 2025,
+      "ANIO_SIGUIENTE": 2026,
+      "DOTACION_BASE": 124,
+      "DOTACION_SIGUIENTE": 202,
+      "PERMANECEN": 102,
+      "ROTAN": 22,
+      "NUEVOS": 100,
+      "TASA_ROTACION_PCT": "17.741935",
+      "ESTADO_METODOLOGICO": "APROBADO",
+      "ESTADO_PUBLICACION": "METODOLOGICAMENTE_PUBLICABLE",
+      "ADVERTENCIA": "Fuente 2025 con cierre administrativo nominal pendiente."
+    }
+  ]
+}
