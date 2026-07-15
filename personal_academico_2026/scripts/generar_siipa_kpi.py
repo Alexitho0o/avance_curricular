@@ -435,6 +435,7 @@ def build_person_year(
     source: AnnualSource,
 ) -> list[dict[str, Any]]:
     columns = column_mapping(source.headers)
+    source_hash = sha256(source.path)
 
     required = [
         "tipo_documento",
@@ -537,7 +538,7 @@ def build_person_year(
             "HORAS_HONORARIOS": hours_fees,
             "HORAS_TOTAL": total_hours,
             "FUENTE": source.path.name,
-            "SHA256_FUENTE": sha256(source.path),
+            "SHA256_FUENTE": source_hash,
         })
 
     return records
@@ -2072,10 +2073,11 @@ def export_excel(output: Path) -> None:
             for year in sources
         )
     )
-    used_paths = [
+    source_paths = [
         str(source.path)
         for source in sources.values()
-    ] + [str(output)]
+    ]
+    used_paths = source_paths + [str(output)]
 
     annual_records = {
         year: [
@@ -3293,12 +3295,12 @@ def export_excel(output: Path) -> None:
             0,
             sum(
                 1
-                for value in used_paths
+                for value in source_paths
                 if "onedrive" in value.lower()
             ),
             not any(
                 "onedrive" in value.lower()
-                for value in used_paths
+                for value in source_paths
             ),
             "Las fuentes leídas pertenecen a normalized_restricted local.",
         ),
