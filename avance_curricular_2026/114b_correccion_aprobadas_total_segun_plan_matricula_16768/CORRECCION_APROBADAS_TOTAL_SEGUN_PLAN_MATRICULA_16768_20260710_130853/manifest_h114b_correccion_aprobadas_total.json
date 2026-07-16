@@ -1,0 +1,46 @@
+{
+  "hito": "H114B",
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Matrícula Avance Curricular 2026",
+  "id_sies": 16768,
+  "anio_referencia": 2025,
+  "timestamp": "20260710_130853",
+  "dictamen": "CSV_H114B_CORREGIDO_PARA_PRUEBA_PES",
+  "fuentes": {
+    "csv_h113": {
+      "ruta": "/Users/alexi/Desktop/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_FINAL_H113_REGENERADO.csv",
+      "sha256": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3"
+    },
+    "carreras_h112b": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/112b_csv_final_controlado_carreras_16769/CSV_FINAL_CONTROLADO_CARRERAS_16769_HOJA10_20260709_121827/5810_CARRERAS_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16769_21C_H112B_CONTROLADO.csv",
+      "sha256": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0"
+    }
+  },
+  "transformacion": {
+    "campo_modificado": "UNID_APROBADAS_TOTAL",
+    "regla": "min(valor_original, TOTAL_UNIDADES_MEDIDA, UNID_CURSADAS_TOTAL)",
+    "registros_modificados": 247,
+    "otros_campos_modificados": 0
+  },
+  "validaciones": {
+    "filas": 2371,
+    "columnas_fisicas": 21,
+    "cruces_validos": 2371,
+    "aprobadas_anuales_sobre_cursadas": 0,
+    "aprobadas_totales_sobre_cursadas_totales": 0,
+    "aprobadas_totales_sobre_total_plan": 0,
+    "aprobadas_totales_sobre_125_plan": 0,
+    "duplicados_estudiante_carrera_plan": 0,
+    "fechas_invalidas": 0,
+    "curso_1_sem_invalido": 0,
+    "curso_2_sem_invalido": 0,
+    "vigencia_invalida": 0
+  },
+  "salidas": {
+    "csv_repo": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/114b_correccion_aprobadas_total_segun_plan_matricula_16768/CORRECCION_APROBADAS_TOTAL_SEGUN_PLAN_MATRICULA_16768_20260710_130853/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_H114B_CORREGIDO_PLAN.csv",
+    "csv_desktop": "/Users/alexi/Desktop/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_H114B_CORREGIDO_PLAN.csv",
+    "excel_auditoria": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/114b_correccion_aprobadas_total_segun_plan_matricula_16768/CORRECCION_APROBADAS_TOTAL_SEGUN_PLAN_MATRICULA_16768_20260710_130853/AUDITORIA_CORRECCION_APROBADAS_TOTAL_SEGUN_PLAN_H114B.xlsx",
+    "excel_revision_desktop": "/Users/alexi/Desktop/5809_MATRICULA_AVANCE_CURRICULAR_2026_REVISION_H114B_CORREGIDO_PLAN.xlsx",
+    "informe": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/114b_correccion_aprobadas_total_segun_plan_matricula_16768/CORRECCION_APROBADAS_TOTAL_SEGUN_PLAN_MATRICULA_16768_20260710_130853/INFORME_H114B_CORRECCION_APROBADAS_TOTAL.md"
+  }
+}

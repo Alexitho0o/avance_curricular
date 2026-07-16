@@ -1,0 +1,781 @@
+{
+  "id_hito": "HITO 2A",
+  "tipo": "PROMPT",
+  "fecha_hora_ejecucion": "2026-07-09T14:57:24-0400",
+  "proceso": "Infraestructura y Recursos Educacionales",
+  "subproyecto": "IRE 2026",
+  "anio_proceso": 2026,
+  "fuente_oficial": "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+  "hash_fuente": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+  "estructura_tecnica_observada": {
+    "clasificacion": "B. ESTRUCTURA TECNICA",
+    "ruta": "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+    "hash": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae",
+    "columnas": 54,
+    "delimitador_observado": ";",
+    "encabezados": [
+      "TIPO_INFRAESTRUCTURA",
+      "NOMBRE_IDENTIFICACION",
+      "COMUNA",
+      "DIRECCION_INMUEBLE",
+      "SITUACION_TENENCIA",
+      "ANIO_INICIO_USO_INMUEBLE",
+      "USO_EXCLUSIVO",
+      "PORCENTAJE_USO",
+      "NOMBRE_INSTITUCION_COMPARTE",
+      "FECHA_INICIO_TENENCIA",
+      "FECHA_TERMINO",
+      "DESCRIPCION_OTRA_TENENCIA",
+      "FUNCION_DOCENCIA",
+      "FUNCION_INVESTIGACION",
+      "FUNCION_EXTENSION",
+      "FUNCION_ADM_OFICINAS",
+      "FUNCION_OTRAS",
+      "DESC_OTRAS_FUNCIONES",
+      "TOTAL_M2_TERRENO",
+      "TOTAL_M2_EDIFICADOS",
+      "TOTAL_SALAS_CLASES",
+      "CAPACIDAD_SALAS_CLASES",
+      "TOTAL_M2_SALAS_CLASES",
+      "TOTAL_AUDITORIOS",
+      "CAPACIDAD_AUDITORIOS",
+      "TOTAL_M2_AUDITORIOS",
+      "TOTAL_LABORATORIOS",
+      "TOTAL_M2_LABORATORIOS",
+      "TOTAL_TALLERES",
+      "TOTAL_M2_TALLERES",
+      "TOTAL_PC_NB_DISPONIBLE",
+      "TOTAL_M2_CASINOS_CAFETERIAS",
+      "TOTAL_M2_AREAS_VERDES",
+      "UR_DESC_ACTIVIDADES",
+      "UR_TOTAL_M2_TERRENO",
+      "UR_TOTAL_M2_CONSTRUIDOS",
+      "UR_SITUACION_TENENCIA",
+      "UR_DESC_TENENCIA_OTRA",
+      "TOTAL_M2_BIBLIOTECA",
+      "TOTAL_M2_SALAS_LECTURA",
+      "TOTAL_PROFESIONALES_BIBLIOTECA",
+      "HORAS_PERSONAL_BIBLIOTECA",
+      "TOTAL_TITULOS_DISPONIBLES",
+      "TOTAL_VOLUMENES_DISPONIBLES",
+      "TOTAL_SUSCRIPCIONES_REVISTAS",
+      "TOTAL_TITULOS_LIBROS_DIGITALES",
+      "TOTAL_SUSCRIPCIONES_DIGITALES",
+      "TOTAL_BASE_DATOS",
+      "TOTAL_HECTAREAS_PREDIO",
+      "SISTEMA_GESTION_APRENDIZAJES",
+      "SISTEMA_VIDEO_CONFERENCIA",
+      "SISTEMA_APLICACION_EVALUACION",
+      "DESCRIPCION_PLATAFORMA_VIRTUAL",
+      "VIGENCIA"
+    ]
+  },
+  "reglas_oficiales": [
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Proceso",
+      "regla": "El proceso corresponde a Infraestructura y Recursos Educacionales 2026.",
+      "fuente": "Portada y encabezado, lineas 4-8; seccion 2, lineas 32-39."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Fecha de referencia",
+      "regla": "La informacion debe corresponder a infraestructura utilizada y recursos educacionales disponibles al 30 de junio de 2026.",
+      "fuente": "Seccion 1, lineas 28-31; seccion 4, lineas 159-165."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Plazo",
+      "regla": "El plazo de carga en plataforma del archivo correctamente llenado es el 24 de julio de 2026.",
+      "fuente": "Plazo de entrega, lineas 49-51."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Medio oficial",
+      "regla": "La carga se realiza en PES; los archivos no deben enviarse por correo electronico.",
+      "fuente": "Seccion 2, lineas 32-44."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Formato",
+      "regla": "El archivo completado debe cargarse en formato .CSV, sin comprimir, y no existe restriccion de nombre.",
+      "fuente": "Seccion 2, lineas 37-39."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Encabezados",
+      "regla": "Antes de cargar en PES se deben eliminar los encabezados o nombres de columnas.",
+      "fuente": "Anexo II, lineas 548-568."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Carga acumulativa",
+      "regla": "La carga funciona de forma acumulativa y reemplaza el resto de la informacion si se sube mas de una vez la combinacion codigo de institucion, tipo de infraestructura, nombre de identificacion, comuna y direccion del inmueble.",
+      "fuente": "Anexo II, lineas 593-596."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Tipos",
+      "regla": "TIPO_INFRAESTRUCTURA acepta valores 1 a 6: uso permanente, uso restringido, biblioteca, libros y bases digitales, predios y plataformas virtuales.",
+      "fuente": "Anexo I, lineas 252-263; Anexo III, linea 740."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Todos los campos",
+      "regla": "Todos los campos deben ser cargados; si no se cuenta con auditorios, talleres, computadores, casinos, areas verdes, entre otros, se debe completar con 0.",
+      "fuente": "Anexo I, lineas 246-248; Anexo II, lineas 566-568."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "tema": "Vigencia",
+      "regla": "VIGENCIA usa 0 para eliminar un registro cargado y 1 para mantener un registro cargado; es obligatoria.",
+      "fuente": "Anexo I, lineas 539-543; Anexo III, lineas 733 y 793."
+    }
+  ],
+  "definiciones": [
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Inmuebles",
+      "definicion": "Bienes raices usados por la institucion para actividades propias: edificaciones, construcciones, terrenos, predios y similares. Inmuebles no usados para actividades propias no se informan.",
+      "fuente": "Seccion 3.1.a, lineas 61-65."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Inmuebles de Uso Permanente",
+      "definicion": "Inmuebles usados o disponibles permanentemente, todos los dias y horarios, sin necesidad de solicitar permiso a un tercero.",
+      "fuente": "Seccion 3.1.b, lineas 66-70."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Inmuebles de Uso Restringido",
+      "definicion": "Inmuebles no propios a los que se accede solo algunos dias u horarios para actividades especificas, servicios o actividades academicas puntuales.",
+      "fuente": "Seccion 3.1.c, lineas 71-77."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Nombre o identificacion",
+      "definicion": "Nombre con que la institucion identifica inmuebles, bibliotecas o predios; cada inmueble, biblioteca o predio informado debe contar con nombre de identificacion.",
+      "fuente": "Seccion 3.1.d, lineas 78-84."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Direccion",
+      "definicion": "Nombre de calle y numeracion de la ubicacion fisica; construcciones en una misma direccion y misma situacion de tenencia se informan en una sola fila.",
+      "fuente": "Seccion 3.1.e, lineas 89-97."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Situacion de tenencia",
+      "definicion": "Figura bajo la cual la institucion mantiene posesion o uso del inmueble: propietario, arrendatario, comodatario, usufructuario, leasing o leaseback u otro.",
+      "fuente": "Seccion 3.1.f, lineas 98-101."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Laboratorios",
+      "definicion": "Espacios equipados y destinados a experimentos, pruebas e investigacion por estudiantes y/o academicos.",
+      "fuente": "Seccion 3.1.g, lineas 102-103."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Talleres",
+      "definicion": "Espacios destinados principalmente a actividades practicas o desarrollo de habilidades, principalmente de estudiantes.",
+      "fuente": "Seccion 3.1.h, lineas 104-105."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Biblioteca",
+      "definicion": "Espacio fisico con coleccion de material de informacion, servicios, personal, equipos y programas para usuarios de la institucion; si hay mas de una biblioteca, cada una se informa en fila distinta.",
+      "fuente": "Seccion 3.1.i, lineas 106-112."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Metros cuadrados de terreno",
+      "definicion": "Total de metros cuadrados de terrenos donde se encuentran los inmuebles informados; en departamentos, oficinas o plantas dentro de un edificio no es necesario informar este dato.",
+      "fuente": "Seccion 3.1.j, lineas 113-116."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Metros cuadrados construidos",
+      "definicion": "Total de metros cuadrados edificados; en salas, bibliotecas, auditorios, talleres y laboratorios se informan metros cuadrados utiles.",
+      "fuente": "Seccion 3.1.k, lineas 117-119."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Uso exclusivo",
+      "definicion": "Indica si el inmueble es usado exclusivamente por la institucion o compartido con otra institucion u organizacion.",
+      "fuente": "Seccion 3.1.n, lineas 133-137."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Porcentaje de uso",
+      "definicion": "Aplica solo a inmuebles compartidos; estima el porcentaje de disponibilidad total usado por la institucion.",
+      "fuente": "Seccion 3.1.o, lineas 138-140."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Funciones de inmuebles",
+      "definicion": "Caracterizacion de actividades principales; puede informarse mas de una funcion: Docencia, Investigacion, Extension, Administracion y Otras.",
+      "fuente": "Seccion 3.1.p, lineas 141-146."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "termino": "Sistemas virtuales",
+      "definicion": "Incluye sistema de gestion de aprendizajes, software de videoconferencia y sistemas de supervision de evaluaciones online.",
+      "fuente": "Seccion 3.1.q-s, lineas 147-158."
+    }
+  ],
+  "fechas_relevantes": [
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "fecha": "2026",
+      "tipo": "anio_proceso",
+      "descripcion": "Proceso 2026."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "fecha": "2026-06-30",
+      "tipo": "fecha_referencia_datos",
+      "descripcion": "Infraestructura usada y recursos poseidos por la institucion a esta fecha."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "fecha": "2026-07-24",
+      "tipo": "plazo_carga",
+      "descripcion": "Fecha limite de carga en plataforma PES."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "fecha": "AAAA-MM",
+      "tipo": "formato_fecha_tenencia",
+      "descripcion": "Formato requerido para FECHA_INICIO_TENENCIA y FECHA_TERMINO."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "fecha": "previa a julio de 2026",
+      "tipo": "validacion_fecha_inicio_tenencia",
+      "descripcion": "FECHA_INICIO_TENENCIA debe ser valida y previa a julio de 2026."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "fecha": "posterior a mayo de 2026",
+      "tipo": "validacion_fecha_termino",
+      "descripcion": "FECHA_TERMINO debe ser valida con formato AAAA-MM posterior a mayo de 2026."
+    }
+  ],
+  "formato_carga": {
+    "clasificacion": "A. REGLA OFICIAL",
+    "plataforma": "Plataforma de Educacion Superior (PES), http://pes.mineduc.cl",
+    "medio_oficial": "PES; no envio por correo electronico.",
+    "formato_archivo": ".CSV",
+    "delimitador_indicado": "CSV delimitado por comas",
+    "encabezados": "No deben cargarse encabezados o nombres de columnas.",
+    "compresion": "Sin comprimir.",
+    "restriccion_nombre_archivo": "No tiene restriccion de nombre.",
+    "codificacion": {
+      "clasificacion": "F. HIPOTESIS O PENDIENTE",
+      "valor": "No indicada en el instructivo."
+    },
+    "id_carga": {
+      "clasificacion": "A. REGLA OFICIAL",
+      "valor": "16770",
+      "fuente": "Anexo I y Anexo II."
+    },
+    "observacion_tecnica": {
+      "clasificacion": "B. ESTRUCTURA TECNICA",
+      "valor": "El CSV de estructura observado en HITO 1B contiene encabezados separados por punto y coma (;)."
+    }
+  },
+  "universo": {
+    "clasificacion": "A. REGLA OFICIAL",
+    "que_debe_informarse": [
+      "Todos los inmuebles, locales y dependencias utilizados por la institucion para sus actividades.",
+      "Predios y similares usados por la institucion.",
+      "Recursos educacionales ligados a dichos inmuebles.",
+      "Laboratorios, talleres y computadores disponibles para estudiantes.",
+      "Bibliotecas, colecciones fisicas, libros digitales, suscripciones digitales y bases de datos.",
+      "Plataformas virtuales institucionales para aprendizaje, videoconferencia y evaluacion online."
+    ],
+    "exclusiones_explicitas": [
+      "Inmuebles que la institucion posee pero no utiliza para actividades propias.",
+      "Sitios eriazos, terrenos para futuras construcciones, inmuebles arrendados a terceros o usados por terceros, cuando no se usan para actividades propias.",
+      "Espacios de areas verdes excluyen casinos, cafeterias, patios de comida, predios, cultivos, canchas y campos deportivos."
+    ],
+    "casos_especiales": [
+      "Predios agricolas o forestales, campos experimentales, parcelas, sitios, fundos o similares se informan con TIPO_INFRAESTRUCTURA = 5, no como inmueble permanente codigo 1.",
+      "Plataformas virtuales se esperan como informacion institucional en una unica linea referida a sede central o administrativa principal.",
+      "Libros y bases digitales se asignan a biblioteca digital; si no existe, usar datos de casa central."
+    ],
+    "pendientes": [
+      "No se identifica en este hito una lista institucional de sedes o registros a declarar; debe cruzarse en hitos posteriores con fuentes institucionales."
+    ]
+  },
+  "campos_mencionados": [
+    "TIPO_INFRAESTRUCTURA",
+    "NOMBRE_IDENTIFICACION",
+    "COMUNA",
+    "DIRECCION_INMUEBLE",
+    "SITUACION_TENENCIA",
+    "ANIO_INICIO_USO_INMUEBLE",
+    "USO_EXCLUSIVO",
+    "PORCENTAJE_USO",
+    "NOMBRE_INSTITUCION_COMPARTE",
+    "FECHA_INICIO_TENENCIA",
+    "FECHA_TERMINO",
+    "DESCRIPCION_OTRA_TENENCIA",
+    "FUNCION_DOCENCIA",
+    "FUNCION_INVESTIGACION",
+    "FUNCION_EXTENSION",
+    "FUNCION_ADM_OFICINAS",
+    "FUNCION_OTRAS",
+    "DESC_OTRAS_FUNCIONES",
+    "TOTAL_M2_TERRENO",
+    "TOTAL_M2_EDIFICADOS",
+    "TOTAL_SALAS_CLASES",
+    "CAPACIDAD_SALAS_CLASES",
+    "TOTAL_M2_SALAS_CLASES",
+    "TOTAL_AUDITORIOS",
+    "CAPACIDAD_AUDITORIOS",
+    "TOTAL_M2_AUDITORIOS",
+    "TOTAL_LABORATORIOS",
+    "TOTAL_M2_LABORATORIOS",
+    "TOTAL_TALLERES",
+    "TOTAL_M2_TALLERES",
+    "TOTAL_PC_NB_DISPONIBLE",
+    "TOTAL_M2_CASINOS_CAFETERIAS",
+    "TOTAL_M2_AREAS_VERDES",
+    "UR_DESC_ACTIVIDADES",
+    "UR_TOTAL_M2_TERRENO",
+    "UR_TOTAL_M2_CONSTRUIDOS",
+    "UR_SITUACION_TENENCIA",
+    "UR_DESC_TENENCIA_OTRA",
+    "TOTAL_M2_BIBLIOTECA",
+    "TOTAL_M2_SALAS_LECTURA",
+    "TOTAL_PROFESIONALES_BIBLIOTECA",
+    "HORAS_PERSONAL_BIBLIOTECA",
+    "TOTAL_TITULOS_DISPONIBLES",
+    "TOTAL_VOLUMENES_DISPONIBLES",
+    "TOTAL_SUSCRIPCIONES_REVISTAS",
+    "TOTAL_TITULOS_LIBROS_DIGITALES",
+    "TOTAL_SUSCRIPCIONES_DIGITALES",
+    "TOTAL_BASE_DATOS",
+    "TOTAL_HECTAREAS_PREDIO",
+    "SISTEMA_GESTION_APRENDIZAJES",
+    "SISTEMA_VIDEO_CONFERENCIA",
+    "SISTEMA_APLICACION_EVALUACION",
+    "DESCRIPCION_PLATAFORMA_VIRTUAL",
+    "VIGENCIA"
+  ],
+  "bloques_funcionales_preliminares": [
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Identificacion de infraestructura",
+      "campos": [
+        "TIPO_INFRAESTRUCTURA",
+        "NOMBRE_IDENTIFICACION"
+      ],
+      "nota": "Bloque preliminar de trabajo; el instructivo define campos y tipos, no esta agrupacion como tal."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Ubicacion",
+      "campos": [
+        "COMUNA",
+        "DIRECCION_INMUEBLE"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Tenencia y uso",
+      "campos": [
+        "SITUACION_TENENCIA",
+        "ANIO_INICIO_USO_INMUEBLE",
+        "USO_EXCLUSIVO",
+        "PORCENTAJE_USO",
+        "NOMBRE_INSTITUCION_COMPARTE",
+        "FECHA_INICIO_TENENCIA",
+        "FECHA_TERMINO",
+        "DESCRIPCION_OTRA_TENENCIA"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Funciones",
+      "campos": [
+        "FUNCION_DOCENCIA",
+        "FUNCION_INVESTIGACION",
+        "FUNCION_EXTENSION",
+        "FUNCION_ADM_OFICINAS",
+        "FUNCION_OTRAS",
+        "DESC_OTRAS_FUNCIONES"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Superficie general",
+      "campos": [
+        "TOTAL_M2_TERRENO",
+        "TOTAL_M2_EDIFICADOS"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Salas, auditorios, laboratorios y talleres",
+      "campos": [
+        "TOTAL_SALAS_CLASES",
+        "CAPACIDAD_SALAS_CLASES",
+        "TOTAL_M2_SALAS_CLASES",
+        "TOTAL_AUDITORIOS",
+        "CAPACIDAD_AUDITORIOS",
+        "TOTAL_M2_AUDITORIOS",
+        "TOTAL_LABORATORIOS",
+        "TOTAL_M2_LABORATORIOS",
+        "TOTAL_TALLERES",
+        "TOTAL_M2_TALLERES"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Equipamiento computacional",
+      "campos": [
+        "TOTAL_PC_NB_DISPONIBLE"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Casinos, cafeterias y areas verdes",
+      "campos": [
+        "TOTAL_M2_CASINOS_CAFETERIAS",
+        "TOTAL_M2_AREAS_VERDES"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Unidad rural o predio, si corresponde",
+      "campos": [
+        "UR_DESC_ACTIVIDADES",
+        "UR_TOTAL_M2_TERRENO",
+        "UR_TOTAL_M2_CONSTRUIDOS",
+        "UR_SITUACION_TENENCIA",
+        "UR_DESC_TENENCIA_OTRA",
+        "TOTAL_HECTAREAS_PREDIO"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Biblioteca",
+      "campos": [
+        "TOTAL_M2_BIBLIOTECA",
+        "TOTAL_M2_SALAS_LECTURA",
+        "TOTAL_PROFESIONALES_BIBLIOTECA",
+        "HORAS_PERSONAL_BIBLIOTECA"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Recursos bibliograficos y digitales",
+      "campos": [
+        "TOTAL_TITULOS_DISPONIBLES",
+        "TOTAL_VOLUMENES_DISPONIBLES",
+        "TOTAL_SUSCRIPCIONES_REVISTAS",
+        "TOTAL_TITULOS_LIBROS_DIGITALES",
+        "TOTAL_SUSCRIPCIONES_DIGITALES",
+        "TOTAL_BASE_DATOS"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Plataformas virtuales",
+      "campos": [
+        "SISTEMA_GESTION_APRENDIZAJES",
+        "SISTEMA_VIDEO_CONFERENCIA",
+        "SISTEMA_APLICACION_EVALUACION",
+        "DESCRIPCION_PLATAFORMA_VIRTUAL"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    },
+    {
+      "clasificacion": "E. DECISION INTERNA",
+      "bloque": "Vigencia",
+      "campos": [
+        "VIGENCIA"
+      ],
+      "nota": "Bloque preliminar de trabajo."
+    }
+  ],
+  "reglas_por_campo": [
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "TIPO_INFRAESTRUCTURA",
+      "regla_oficial": "Usar numeros del 1 al 6. Es obligatorio.",
+      "fuente_seccion": "Anexo I, lineas 252-263; Anexo III, lineas 740 y 815.",
+      "tipo_dato_formato": "Numero entero",
+      "valores_permitidos": {
+        "1": "Inmuebles de Uso Permanente",
+        "2": "Inmuebles de Uso Restringido",
+        "3": "Caracteristicas de Biblioteca",
+        "4": "Caracteristicas de Libros y Bases Digitales",
+        "5": "Predios",
+        "6": "Plataformas Virtuales"
+      },
+      "obligatoriedad": "Obligatorio",
+      "condicion": "Todos los registros",
+      "pendiente": null
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "NOMBRE_IDENTIFICACION, COMUNA, DIRECCION_INMUEBLE",
+      "regla_oficial": "Deben completarse para inmuebles, bibliotecas y predios; usar mayusculas sin acentos y sin abreviaciones, con numeros permitidos en nombre/direccion.",
+      "fuente_seccion": "Seccion 3.1.d-e; Anexo I, lineas 264-280.",
+      "tipo_dato_formato": "Texto en mayusculas; direccion y nombre admiten numeros",
+      "valores_permitidos": "Letras A-Z; numeros donde aplica",
+      "obligatoriedad": "Obligatorio segun instructivo",
+      "condicion": "Todos los registros informados requieren identificacion y ubicacion; plataformas virtuales refieren sede central o administrativa principal.",
+      "pendiente": "Validar si PES exige comuna/direccion para todos los tipos con igual regla tecnica."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "SITUACION_TENENCIA",
+      "regla_oficial": "Para inmuebles de uso permanente debe completarse; acepta 1 Propio, 2 Arrendado, 3 En Comodato, 4 En Usufructo, 5 Leasing o LeaseBack, 6 Otro.",
+      "fuente_seccion": "Anexo I, lineas 288-295; Anexo III, lineas 756, 771, 772.",
+      "tipo_dato_formato": "Numero entero",
+      "valores_permitidos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar cuando TIPO_INFRAESTRUCTURA = 1; no completar para tipos 2, 3, 4 y 5 segun mensajes de error.",
+      "pendiente": null
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "ANIO_INICIO_USO_INMUEBLE",
+      "regla_oficial": "Año en que la institucion comenzo a usar el inmueble; formato AAAA; valores permitidos desde 1800 a 2026.",
+      "fuente_seccion": "Anexo I, lineas 296-299; Anexo III, lineas 757, 774-781, 825.",
+      "tipo_dato_formato": "Numero en formato AAAA",
+      "valores_permitidos": "1800 a 2026",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar cuando TIPO_INFRAESTRUCTURA = 1; no completar para tipos 2, 3, 4 y 5.",
+      "pendiente": "No se explicita regla para tipo 6 en mensajes revisados."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "USO_EXCLUSIVO, PORCENTAJE_USO, NOMBRE_INSTITUCION_COMPARTE",
+      "regla_oficial": "USO_EXCLUSIVO acepta 1 uso exclusivo y 2 uso compartido. Si es compartido se completa PORCENTAJE_USO y NOMBRE_INSTITUCION_COMPARTE; si es exclusivo no se completan esos campos.",
+      "fuente_seccion": "Seccion 3.1.n-o; Anexo I, lineas 300-313; Anexo III, lineas 750-753 y 758.",
+      "tipo_dato_formato": "USO_EXCLUSIVO numero 1 o 2; PORCENTAJE_USO numero entero; nombre en mayusculas",
+      "valores_permitidos": "USO_EXCLUSIVO 1 o 2; PORCENTAJE_USO 1 a 99 segun mensaje de valores permitidos",
+      "obligatoriedad": "Condicional",
+      "condicion": "USO_EXCLUSIVO para tipo 1; porcentaje y nombre solo si USO_EXCLUSIVO = 2.",
+      "pendiente": "Confirmar tratamiento de porcentaje 100 en PES, dado mensaje de valores 1 a 99."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "FECHA_INICIO_TENENCIA, FECHA_TERMINO, DESCRIPCION_OTRA_TENENCIA",
+      "regla_oficial": "Fechas de tenencia usan formato AAAA-MM. FECHA_INICIO_TENENCIA es obligatoria para situacion 2, 3, 4, 5 o 6. FECHA_TERMINO se exige para arriendo, comodato, usufructo y leasing; no se completa para propio. DESCRIPCION_OTRA_TENENCIA se completa solo cuando situacion es Otro.",
+      "fuente_seccion": "Anexo I, lineas 321-335; Anexo III, lineas 667-724, 783-789, 831-832.",
+      "tipo_dato_formato": "Fecha AAAA-MM; texto mayusculas sin acentos para descripcion",
+      "valores_permitidos": "Fechas validas; inicio previa a julio 2026; termino posterior a mayo 2026",
+      "obligatoriedad": "Condicional",
+      "condicion": "Segun SITUACION_TENENCIA",
+      "pendiente": "No se identifica regla explicita de FECHA_INICIO_TENENCIA para situacion 2 salvo mensaje general 2-6."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "FUNCION_* y DESC_OTRAS_FUNCIONES",
+      "regla_oficial": "Para inmuebles tipo 1 debe completarse al menos una funcion principal. Cada funcion se marca con X si corresponde. DESC_OTRAS_FUNCIONES y FUNCION_OTRAS se requieren mutuamente cuando se usa la opcion Otras.",
+      "fuente_seccion": "Seccion 3.1.p; Anexo I, lineas 336-365; Anexo III, lineas 679, 725-727, 754-755, 790-791.",
+      "tipo_dato_formato": "Marca X; descripcion texto mayusculas sin acentos",
+      "valores_permitidos": "X cuando corresponde",
+      "obligatoriedad": "Condicional",
+      "condicion": "Aplica a inmuebles tipo 1; no completar para tipos 2, 3, 4, 5 segun mensajes.",
+      "pendiente": null
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "Caracteristicas de inmueble tipo 1",
+      "regla_oficial": "Para TIPO_INFRAESTRUCTURA = 1 se deben completar superficies, salas, capacidades, auditorios, laboratorios, talleres, computadores, casinos/cafeterias y areas verdes. Si no existen algunos recursos, completar con 0.",
+      "fuente_seccion": "Seccion 4, lineas 183-190; Anexo I, lineas 366-421; Anexo III, lineas 642-655, 799, 829-830.",
+      "tipo_dato_formato": "Numerico; maximo un decimal en varios campos",
+      "valores_permitidos": "Numeros; relaciones TOTAL_M2_SALAS_CLASES <= TOTAL_M2_EDIFICADOS",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar para tipo 1; no completar para otros tipos segun mensajes.",
+      "pendiente": "Confirmar si todos los campos numericos aceptan decimal o algunos deben ser enteros en PES."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "Caracteristicas de inmueble de uso restringido tipo 2",
+      "regla_oficial": "Para TIPO_INFRAESTRUCTURA = 2 se completan descripcion de actividades, metros de terreno, metros construidos y situacion de tenencia restringida; no se completan bloques de inmueble permanente, libros/bases digitales, predios, plataformas, biblioteca ni funciones principales.",
+      "fuente_seccion": "Seccion 4, lineas 196-201; Anexo I, lineas 429-456; Anexo III, lineas 656-666, 728, 759-775, 809-817.",
+      "tipo_dato_formato": "Texto mayusculas; numeros con maximo un decimal; UR_SITUACION_TENENCIA numero 1 o 2",
+      "valores_permitidos": "UR_SITUACION_TENENCIA: 1 Arrendado, 2 Otra",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar para tipo 2; UR_DESC_TENENCIA_OTRA si UR_SITUACION_TENENCIA = 2.",
+      "pendiente": "El mensaje dice completar UR_DESC_TENENCIA_OTRA cuando UR_DESC_TENENCIA_OTRA es igual a 2; se interpreta como referencia probable a UR_SITUACION_TENENCIA, pero queda pendiente por redaccion."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "Bibliotecas tipo 3",
+      "regla_oficial": "Cada biblioteca se informa en fila distinta con metros cuadrados, salas de lectura, profesionales, horas, titulos, volumenes y suscripciones a revistas fisicas.",
+      "fuente_seccion": "Seccion 3.1.i; seccion 4, lineas 202-209; Anexo I, lineas 457-489; Anexo III, lineas 669-674, 702-712, 717, 729-730, 776-778, 808-821.",
+      "tipo_dato_formato": "Numerico; algunos maximo un decimal; titulos/volumenes/suscripciones enteros",
+      "valores_permitidos": "TOTAL_M2_SALAS_LECTURA <= TOTAL_M2_BIBLIOTECA; TOTAL_TITULOS_DISPONIBLES <= TOTAL_VOLUMENES_DISPONIBLES",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar para tipo 3; no completar bloques incompatibles.",
+      "pendiente": null
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "Libros y bases digitales tipo 4",
+      "regla_oficial": "Informar libros digitales completos, suscripciones a revistas digitales y bases de datos especializadas; asignar a biblioteca digital o, si no existe, a casa central.",
+      "fuente_seccion": "Seccion 4, lineas 214-223; Anexo I, lineas 490-502; Anexo III, lineas 663-678, 713-716, 731-736, 779-782, 822-823.",
+      "tipo_dato_formato": "Numerico entero",
+      "valores_permitidos": "Numeros",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar para tipo 4; no completar bloques incompatibles.",
+      "pendiente": "TOTAL_SUSCRIPCIONES_DIGITALES aparece como requerido en mensajes; confirmar si puede ser 0 cuando no exista."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "Predios tipo 5",
+      "regla_oficial": "Predios agricolas, forestales, campos experimentales, parcelas, sitios, fundos o similares se informan con tipo 5, incluyendo hectareas.",
+      "fuente_seccion": "Seccion 4, lineas 191-195 y 224-231; Anexo I, lineas 503-506; Anexo III, lineas 695-701, 718-719, 734, 738-739, 761-763, 772, 824.",
+      "tipo_dato_formato": "Numerico; hectareas maximo un decimal",
+      "valores_permitidos": "Numeros",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar TOTAL_HECTAREAS_PREDIO para tipo 5; no completar bloques incompatibles.",
+      "pendiente": null
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "Plataformas virtuales tipo 6",
+      "regla_oficial": "Informar en una unica linea institucional los sistemas de gestion de aprendizajes, videoconferencia, aplicacion/evaluacion y descripcion de plataforma virtual.",
+      "fuente_seccion": "Seccion 4, lineas 232-241; Anexo I, lineas 514-538; Anexo III, lineas 653, 686-688, 794-807.",
+      "tipo_dato_formato": "Texto abierto; descripcion largo 1000",
+      "valores_permitidos": "Letras A-Z segun mensajes de error; texto abierto en Anexo I",
+      "obligatoriedad": "Condicional",
+      "condicion": "Completar para tipo 6; no completar bloques incompatibles.",
+      "pendiente": "Hay tension entre texto abierto y mensajes de valores A-Z; validar caracteres permitidos antes de carga."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL",
+      "campo_o_grupo": "VIGENCIA",
+      "regla_oficial": "Variable para mantener o eliminar registros cargados. 0 elimina, 1 mantiene. No puede quedar vacio.",
+      "fuente_seccion": "Anexo I, lineas 539-543; Anexo III, lineas 733 y 793.",
+      "tipo_dato_formato": "Numero entero",
+      "valores_permitidos": [
+        0,
+        1
+      ],
+      "obligatoriedad": "Obligatorio",
+      "condicion": "Todos los registros",
+      "pendiente": "Debe confirmarse en hito posterior como se usa en una primera carga sin registros previos."
+    }
+  ],
+  "reglas_vigencia": {
+    "clasificacion": "A. REGLA OFICIAL",
+    "campo": "VIGENCIA",
+    "significado": "Variable utilizada para mantener o eliminar un registro cargado.",
+    "valores_permitidos": {
+      "0": "Eliminar registro cargado",
+      "1": "Mantener registro cargado"
+    },
+    "efecto_funcional": "Controla eliminacion o mantencion de registros cargados.",
+    "obligatoriedad": "Obligatorio; no puede quedar vacio.",
+    "aplica_solo_a_este_proceso": {
+      "clasificacion": "F. HIPOTESIS O PENDIENTE",
+      "valor": "El instructivo lo describe dentro de IRE 2026; no se debe asumir aplicacion fuera de este proceso."
+    },
+    "pendiente": "Confirmar tratamiento operacional de VIGENCIA en primera carga versus cargas acumulativas posteriores."
+  },
+  "validaciones_derivadas": {
+    "validaciones_oficiales": [
+      "Verificar TIPO_INFRAESTRUCTURA en valores 1,2,3,4,5,6.",
+      "Verificar fecha de referencia de datos al 30 de junio de 2026 en fuentes institucionales posteriores.",
+      "Cargar archivo CSV sin encabezados en PES.",
+      "Validar VIGENCIA obligatorio con valores 0 o 1.",
+      "Validar reglas condicionales por TIPO_INFRAESTRUCTURA segun Anexo III.",
+      "Validar fechas de tenencia en formato AAAA-MM y contra referencia junio 2026.",
+      "Validar que para uso compartido se completen porcentaje y nombre de institucion, y para uso exclusivo no se completen.",
+      "Validar relaciones numericas: TOTAL_M2_SALAS_CLASES <= TOTAL_M2_EDIFICADOS, TOTAL_M2_SALAS_LECTURA <= TOTAL_M2_BIBLIOTECA, TOTAL_TITULOS_DISPONIBLES <= TOTAL_VOLUMENES_DISPONIBLES."
+    ],
+    "validaciones_tecnicas_sugeridas": [
+      {
+        "clasificacion": "D. IMPLEMENTACION TECNICA",
+        "validacion": "Construir diccionario estructurado desde Anexo I y compararlo contra los 54 encabezados del CSV."
+      },
+      {
+        "clasificacion": "D. IMPLEMENTACION TECNICA",
+        "validacion": "Crear validador de columnas obligatorias, condicionales y prohibidas por tipo antes de generar cualquier carga."
+      },
+      {
+        "clasificacion": "D. IMPLEMENTACION TECNICA",
+        "validacion": "Normalizar mayusculas, acentos y abreviaciones solo en derivados de trabajo, nunca en fuentes originales."
+      },
+      {
+        "clasificacion": "D. IMPLEMENTACION TECNICA",
+        "validacion": "Validar delimitador real de salida contra PES antes de carga por diferencia coma versus punto y coma."
+      }
+    ],
+    "validaciones_pendientes": [
+      "Codificacion de archivo no indicada por instructivo.",
+      "Confirmar delimitador efectivo aceptado por PES para la institucion.",
+      "Confirmar tratamiento de campos que deben cargarse con 0 versus campos que no se deben completar.",
+      "Confirmar si plataformas virtuales aceptan caracteres distintos de A-Z pese a estar definidas como texto abierto."
+    ]
+  },
+  "contradicciones": [
+    {
+      "clasificacion": "B. ESTRUCTURA TECNICA / F. HIPOTESIS O PENDIENTE",
+      "tipo": "Diferencia formato-delimitador",
+      "descripcion": "El instructivo indica CSV delimitado por comas, mientras la estructura tecnica observada en HITO 1B trae encabezados separados por punto y coma (;).",
+      "impacto": "Debe resolverse antes de generar archivo candidato de carga.",
+      "fuente": "Instructivo lineas 37-39 y 557-561; CSV estructura HITO 1B."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL / F. HIPOTESIS O PENDIENTE",
+      "tipo": "Tension todos los campos versus no completar",
+      "descripcion": "El instructivo indica que todos los campos deben ser cargados, pero Anexo III contiene multiples reglas donde ciertos bloques no deben completarse para determinados tipos.",
+      "impacto": "Se debe traducir en regla tecnica: columnas presentes siempre, valores 0/blanco segun tipo y campo, pendiente de formalizacion.",
+      "fuente": "Anexo I lineas 246-248; Anexo III lineas 656-688 y otras."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL / F. HIPOTESIS O PENDIENTE",
+      "tipo": "Redaccion posiblemente erronea",
+      "descripcion": "El mensaje indica completar UR_DESC_TENENCIA_OTRA cuando UR_DESC_TENENCIA_OTRA es igual a 2; parece referirse a UR_SITUACION_TENENCIA = 2, pero no se corrige por supuesto.",
+      "impacto": "Pendiente de validacion o prueba contra PES.",
+      "fuente": "Anexo III, linea 769."
+    },
+    {
+      "clasificacion": "A. REGLA OFICIAL / F. HIPOTESIS O PENDIENTE",
+      "tipo": "Texto abierto versus valores A-Z",
+      "descripcion": "Anexo I define campos de plataformas virtuales como texto abierto, pero mensajes de error mencionan que algunos campos pueden contener letras A-Z.",
+      "impacto": "No asumir caracteres permitidos hasta validar contra estructura PES o prueba de carga.",
+      "fuente": "Anexo I lineas 514-538; Anexo III lineas 796-807."
+    }
+  ],
+  "pendientes": [
+    "Extraer diccionario oficial campo a campo desde Anexo I en formato estructurado.",
+    "Comparar el diccionario oficial contra los 54 encabezados del CSV de estructura.",
+    "Resolver delimitador efectivo para archivo candidato de carga: coma indicada oficialmente versus punto y coma observado tecnicamente.",
+    "Definir matriz campo x TIPO_INFRAESTRUCTURA con obligatorio, permitido, prohibido, cero o blanco.",
+    "Confirmar codificacion esperada de PES, porque el instructivo no la indica.",
+    "Confirmar tratamiento operativo de VIGENCIA en primera carga y en cargas acumulativas.",
+    "No generar archivo de carga hasta completar hitos de diccionario, comparacion y validacion."
+  ],
+  "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+  "proximo_hito_sugerido": "HITO 2B - COMANDO - Extraccion estructurada del diccionario oficial y comparacion preliminar contra los 54 encabezados del CSV de estructura IRE 2026."
+}

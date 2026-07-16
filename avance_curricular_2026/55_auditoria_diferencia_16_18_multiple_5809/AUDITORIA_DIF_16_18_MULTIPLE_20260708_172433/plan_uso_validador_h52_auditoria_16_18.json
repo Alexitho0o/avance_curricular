@@ -1,0 +1,35 @@
+{
+  "descripcion": "Auditoria diagnostica de 71 casos DIFERENCIA_16_18_O_MULTIPLE. No corrige, no recalcula 20-21 y no genera carga.",
+  "columnas_usadas": [
+    "CODIGO_UNICO",
+    "PLAN_ESTUDIOS",
+    "CODCLI_LISTA",
+    "ANO",
+    "PERIODO",
+    "CODRAMO"
+  ],
+  "llaves_usadas": [
+    "CODCLI_LISTA",
+    "CODIGO_UNICO",
+    "PLAN_ESTUDIOS"
+  ],
+  "diccionarios_usados": [],
+  "transformaciones": [
+    "Diagnostico documental de diferencias columnas 16, 17 y 18; sin correccion de datos"
+  ],
+  "campos_calculo": [
+    "16",
+    "17",
+    "18"
+  ],
+  "anio_calculo": 2025,
+  "genera_sies_ready": false,
+  "modifica_fuentes_originales": false,
+  "usa_todos_codcli_rut": false,
+  "filtra_por_programa": true,
+  "usa_inferencias_como_reglas_oficiales": false,
+  "usa_estados_AEIR": false,
+  "usa_codcli_lista": true,
+  "mezcla_anual_acumulado": false,
+  "modo": "AUDITORIA_DIAGNOSTICA_NO_CORRECTIVA_16_18"
+}

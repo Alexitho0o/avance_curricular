@@ -1,0 +1,34 @@
+{
+  "hito": "H106",
+  "proceso": "Avance Curricular SIES 2026",
+  "carga": "Carreras Avance Curricular 2026",
+  "id_carga": 16769,
+  "fecha_ejecucion": "20260709_102827",
+  "fuente_base_5810": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/5810_Precarga Carreras Avance Curricular 20268.csv",
+  "fuente_unidades": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/DESBLOQUEO_NIVELES_EVIDENCIAS_CARRERAS_43_20260701_180302/05_RESULTADOS/DESBLOQUEO_FUNCIONAL_CARRERAS_43.xlsx",
+  "hoja_unidades": "MATRIZ_ACTUALIZADA_43",
+  "llave_cruce": "CODIGO_UNICO",
+  "validaciones": {
+    "filas": 43,
+    "columnas": 21,
+    "campos_fisicos_por_linea": {
+      "21": 43
+    },
+    "match_codigo_unico": "43/43",
+    "duplicados_codigo_unico_precarga": 0,
+    "duplicados_codigo_unico_fuente_unidades": 0,
+    "duplicados_codigo_unico_plan_salida": 0,
+    "total_igual_suma_anios": "OK 43/43"
+  },
+  "salidas": {
+    "csv_repo": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/106_carreras_16769_gobernado_por_codigo_unico/CARRERAS_16769_GOBERNADO_20260709_102827/5810_CARRERAS_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16769_21C_GOBERNADO.csv",
+    "xlsx_repo": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/106_carreras_16769_gobernado_por_codigo_unico/CARRERAS_16769_GOBERNADO_20260709_102827/5810_CARRERAS_AVANCE_CURRICULAR_2026_REVISION_GOBERNADA_21C.xlsx",
+    "csv_desktop": "/Users/alexi/Desktop/5810_CARRERAS_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16769_21C_GOBERNADO.csv",
+    "xlsx_desktop": "/Users/alexi/Desktop/5810_CARRERAS_AVANCE_CURRICULAR_2026_REVISION_GOBERNADA_21C.xlsx"
+  },
+  "sha256": {
+    "csv_repo": "c5cd01ae3ce0d4be931f3aaa7d509fd1dd9167a470be5692a816a3b3fcb4bce8",
+    "xlsx_repo": "d9ba14a4c2bbe1889cf55353f77616db0f84a20b3b1471a8077c21c06cd26525"
+  },
+  "decision": "No se usa NIVEL ni PROMEDIOS. Se usa CODIGO_UNICO porque es único en precarga, único en fuente de unidades y cubre 43/43."
+}

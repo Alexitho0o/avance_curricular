@@ -1,0 +1,35 @@
+{
+  "id_hito": "HITO 3B",
+  "version_config": "1.0.0",
+  "encoding_candidates": [
+    "utf-8-sig",
+    "utf-8",
+    "cp1252",
+    "latin-1"
+  ],
+  "delimiter_candidates": [
+    ";",
+    ",",
+    "\\t",
+    "|"
+  ],
+  "default_no_completar_severity": "ADVERTENCIA",
+  "apply_internal_rules": true,
+  "pending_contradictions": [
+    "Delimitador oficial coma versus punto y coma observado en la estructura tecnica.",
+    "Codificacion PES no especificada oficialmente.",
+    "Representacion blanco versus cero para campos NO_COMPLETAR.",
+    "Excepcion de TOTAL_M2_TERRENO para departamentos, oficinas o plantas.",
+    "Condicion ambigua de UR_DESC_TENENCIA_OTRA.",
+    "Texto abierto versus letras A-Z en plataformas virtuales.",
+    "CODIGO_INSTITUCION mencionado en clave PES pero ausente del CSV.",
+    "FECHA_TERMINO para SITUACION_TENENCIA=6 Otro."
+  ],
+  "dictamenes": [
+    "APTO_TECNICAMENTE",
+    "APTO_CON_ADVERTENCIAS",
+    "NO_APTO_BLOQUEANTES",
+    "NO_EVALUABLE"
+  ],
+  "nota_gobernanza": "Esta configuracion no resuelve contradicciones oficiales ni autoriza generar un archivo de carga PES."
+}

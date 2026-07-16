@@ -1,0 +1,36 @@
+{
+  "descripcion": "Consolidado gobernado documental de 423 pendientes 16-19. No corrige, no recalcula 20-21, no genera carga y no crea SIES_READY.",
+  "columnas_usadas": [
+    "CODIGO_UNICO",
+    "PLAN_ESTUDIOS",
+    "CODCLI_LISTA",
+    "CODCLI",
+    "ANO",
+    "PERIODO",
+    "CODRAMO",
+    "ESTADO",
+    "DESCRIPCION_ESTADO"
+  ],
+  "llaves_usadas": [
+    "CODCLI_LISTA",
+    "CODIGO_UNICO",
+    "PLAN_ESTUDIOS"
+  ],
+  "diccionarios_usados": [
+    "DIC_ESTADO_PROMEDIOS"
+  ],
+  "transformaciones": [
+    "Consolidacion documental de rutas; sin correccion ni recalculo"
+  ],
+  "campos_calculo": [],
+  "anio_calculo": 2025,
+  "genera_sies_ready": false,
+  "modifica_fuentes_originales": false,
+  "usa_todos_codcli_rut": false,
+  "filtra_por_programa": true,
+  "usa_inferencias_como_reglas_oficiales": false,
+  "usa_estados_AEIR": true,
+  "usa_codcli_lista": true,
+  "mezcla_anual_acumulado": false,
+  "modo": "CONSOLIDADO_GOBERNADO_NO_CORRECTIVO_16_19"
+}

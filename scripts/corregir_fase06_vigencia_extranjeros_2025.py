@@ -6,6 +6,7 @@ import csv
 import hashlib
 import io
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -17,6 +18,7 @@ from typing import Any
 
 import pandas as pd
 from openpyxl import load_workbook
+from openpyxl.utils import get_column_letter
 from openpyxl.styles import Alignment, Font, PatternFill
 
 
@@ -1641,10 +1643,15 @@ def row_to_sies_line(values: list[str]) -> str:
     return buffer.getvalue()
 
 
+def sanitize_cp1252_text(value: str) -> str:
+    # Replace or drop characters not encodable in cp1252 while preserving visible text.
+    return clean(value).encode("cp1252", errors="replace").decode("cp1252")
+
+
 def write_sies_csv_cp1252_no_final_newline(df: pd.DataFrame, path: Path) -> None:
     lines = []
     for _, row in df.iterrows():
-        lines.append(row_to_sies_line([clean(row[col]) for col in COLUMNAS_SIES_REGULARES]))
+        lines.append(row_to_sies_line([sanitize_cp1252_text(clean(row[col])) for col in COLUMNAS_SIES_REGULARES]))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes("\n".join(lines).encode("cp1252"))
 
@@ -2056,11 +2063,1276 @@ def run_final_mode(args: argparse.Namespace) -> int:
     return 0 if status == "LISTO_PARA_CARGA_SIES" else 2
 
 
+def normalize_key(value: Any) -> str:
+    text = canon_text(value)
+    return re.sub(r"[^A-Z0-9]+", "", text)
+
+
+def read_csv_flexible(path: Path) -> pd.DataFrame:
+    encodings = ["utf-8-sig", "cp1252", "latin1"]
+    separators = [";", ",", "\t", "|"]
+    for enc in encodings:
+        for sep in separators:
+            try:
+                df = pd.read_csv(path, sep=sep, dtype=str, keep_default_na=False, encoding=enc).fillna("")
+                if len(df.columns) >= 2:
+                    return df
+            except Exception:
+                continue
+    return pd.DataFrame()
+
+
+def split_rut(value: Any) -> tuple[str, str, str]:
+    raw = clean(value).upper()
+    if not raw:
+        return "", "", ""
+    compact = re.sub(r"[^0-9K]", "", raw)
+    if not compact:
+        return "", "", ""
+    if "-" in raw:
+        left, right = raw.split("-", 1)
+        body = re.sub(r"[^0-9]", "", left)
+        dv = re.sub(r"[^0-9K]", "", right)
+        if body and dv:
+            return body, dv[-1], f"{body}{dv[-1]}"
+    if len(compact) >= 2 and compact[-1] in "0123456789K":
+        return compact[:-1], compact[-1], compact
+    return compact, "", compact
+
+
+def rut_variants(body: str, dv: str) -> set[str]:
+    out: set[str] = set()
+    if body:
+        out.add(body)
+    if body and dv:
+        out.add(f"{body}{dv}")
+        out.add(f"{body}-{dv}")
+    return {re.sub(r"[^0-9A-Z]", "", x.upper()) for x in out if clean(x)}
+
+
+def doc_variants(num_documento: str, dv: str) -> set[str]:
+    body = re.sub(r"[^0-9]", "", clean(num_documento))
+    dv_norm = re.sub(r"[^0-9K]", "", clean(dv).upper())
+    return rut_variants(body, dv_norm[-1] if dv_norm else "")
+
+
+def format_row_location(file_path: Path, sheet_name: str, row_idx: int, col_name: str) -> dict[str, str]:
+    return {
+        "ARCHIVO_FUENTE": str(file_path),
+        "HOJA_FUENTE": sheet_name,
+        "FILA_FUENTE": str(row_idx),
+        "COLUMNA_MATCH": clean(col_name),
+    }
+
+
+def load_nacionalidad_catalogo() -> tuple[dict[str, str], dict[str, str], set[str]]:
+    cat = ROOT / "estudiantes_extranjeros_2026/data/governed/catalogos/NACIONALIDAD_SIES.tsv"
+    by_code: dict[str, str] = {}
+    by_text: dict[str, str] = {}
+    codes: set[str] = set()
+    if not cat.exists():
+        return by_code, by_text, codes
+    df = pd.read_csv(cat, sep="\t", dtype=str, keep_default_na=False).fillna("")
+    for _, row in df.iterrows():
+        code = strip_excel_decimal(row.get("CODIGO", ""))
+        desc = clean(row.get("DESCRIPCION_OFICIAL", ""))
+        desc_norm = canon_text(row.get("DESCRIPCION_NORMALIZADA", ""))
+        sinonimos = clean(row.get("SINONIMOS_CONTROLADOS", ""))
+        if not code:
+            continue
+        codes.add(code)
+        if desc:
+            by_code[code] = desc
+        for txt in [desc, desc_norm] + [x.strip() for x in sinonimos.split("|") if x.strip()]:
+            key = canon_text(txt)
+            if key:
+                by_text[key] = code
+    return by_code, by_text, codes
+
+
+def map_nacionalidad_to_sies(value: str, by_text: dict[str, str], valid_codes: set[str]) -> str:
+    v = clean(value)
+    if not v:
+        return ""
+    numeric = strip_excel_decimal(v)
+    if numeric in valid_codes:
+        return numeric
+    key = canon_text(v)
+    return by_text.get(key, "")
+
+
+def classify_nacionalidad(codes: set[str]) -> str:
+    if not codes:
+        return "SIN_NACIONALIDAD_EN_FUENTES"
+    if len(codes) > 1:
+        return "CONFLICTO_MULTIPLES_NACIONALIDADES"
+    only = next(iter(codes))
+    if only == "38":
+        return "SOLO_CHILENA_CONFIRMADA"
+    return "NACIONALIDAD_UNICA_RECUPERADA"
+
+
+ESTADO_KEYS = {
+    "ESTADO",
+    "ESTADOACADEMICO",
+    "ESTADO_ACADEMICO",
+    "ESTACAD",
+    "SITUACION",
+    "SITUACIONACADEMICA",
+    "SITUACION_ACADEMICA",
+    "ESTADOALUMNO",
+    "ESTADO_MATRICULA",
+}
+
+ACTIVIDAD_KEYS = {
+    "ANOMATRICULA",
+    "ANIOMATRICULA",
+    "AÑO_MATRICULA",
+    "PERIODO",
+    "PERIODOACADEMICO",
+    "PERIODO_ACADEMICO",
+    "ASIGNATURAS",
+    "ASIGNATURASINSCRITAS",
+    "ASIGNATURAS_INSCRITAS",
+    "ASIGNATURASCURSADAS",
+    "ASIGNATURAS_CURSADAS",
+    "RAMOSINSCRITOS",
+    "RAMOS_INSCRITOS",
+    "RAMOSCURSADOS",
+    "RAMOS_CURSADOS",
+    "CREDITOSINSCRITOS",
+    "CREDITOS_INSCRITOS",
+    "CREDITOSAPROBADOS",
+    "CREDITOS_APROBADOS",
+    "ACTIVIDADACADEMICA",
+    "ACTIVIDAD_ACADEMICA",
+    "MATRICULA2025",
+    "MATRICULA_2025",
+    "INSCRIPCION2025",
+    "INSCRIPCION_2025",
+}
+
+CODCLI_KEYS = {"CODCLI", "CODALUMNO", "CODIGOALUMNO", "IDALUMNO"}
+DOC_KEYS = {"RUT", "RUN", "NRODOC", "NUMDOCUMENTO", "DOCUMENTO", "RUTALUMNO", "RUNALUMNO", "N_DOC"}
+
+
+def classify_estado_academico(value: str) -> str:
+    v = canon_text(value)
+    if not v:
+        return "ESTADO_NO_ENCONTRADO"
+    if any(tok in v for tok in ["ELIMIN", "DESERT", "INACT", "ABANDON", "RETIR", "BAJA", "SUSPEND"]):
+        return "ESTADO_ELIMINADO_DESERTOR_INACTIVO"
+    if any(tok in v for tok in ["EGRES", "TITUL"]):
+        return "ESTADO_EGRESADO_TITULADO"
+    if any(tok in v for tok in ["VIGENTE", "ACTIV", "REGULAR", "MATRICUL"]):
+        return "ESTADO_ACTIVO_O_VIGENTE"
+    return "ESTADO_NO_CLASIFICADO"
+
+
+def activity_2025_from_row(activity_values: dict[str, str]) -> tuple[str, str]:
+    used_fields = [k for k, v in activity_values.items() if clean(v)]
+    if not used_fields:
+        return "ACTIVIDAD_2025_NO_DETERMINADA", ""
+
+    observed = False
+    explicit_negative = False
+    details: list[str] = []
+    for key, raw in activity_values.items():
+        val = clean(raw)
+        if not val:
+            continue
+        nkey = normalize_key(key)
+        nval = canon_text(val)
+        details.append(f"{key}={val}")
+        if "2025" in val:
+            observed = True
+        if nkey in {"ANOMATRICULA", "ANIOMATRICULA", "MATRICULA2025", "INSCRIPCION2025"} and val == "2025":
+            observed = True
+        if re.fullmatch(r"\d+(\.\d+)?", val):
+            try:
+                observed = observed or float(val) > 0
+                explicit_negative = explicit_negative or float(val) == 0
+            except ValueError:
+                pass
+        if any(tok in nval for tok in ["SI", "VIGENTE", "INSCRIT", "CURSAD", "ACTIVO", "MATRICUL", "APROBAD"]):
+            observed = True
+        if any(tok in nval for tok in ["NO", "SIN", "NINGUNA", "NINGUNO", "INACT", "DESERT", "ELIMIN"]):
+            explicit_negative = True
+
+    if observed:
+        return "ACTIVIDAD_2025_OBSERVADA", " | ".join(details[:6])
+    if explicit_negative:
+        return "SIN_ACTIVIDAD_2025_OBSERVADA", " | ".join(details[:6])
+    return "ACTIVIDAD_2025_NO_DETERMINADA", " | ".join(details[:6])
+
+
+def classify_nacionalidad_observada(values: set[str]) -> tuple[str, str]:
+    clean_values = {canon_text(v) for v in values if clean(v)}
+    if not clean_values:
+        return "SIN_NACIONALIDAD_OBSERVADA", ""
+    if len(clean_values) > 1:
+        has_chile = any("CHIL" in v for v in clean_values)
+        has_other = any("CHIL" not in v for v in clean_values)
+        if has_chile and has_other:
+            return "CONFLICTO_NACIONALIDAD", " | ".join(sorted(clean_values))
+    only = next(iter(clean_values)) if len(clean_values) == 1 else ""
+    if only and "CHIL" in only:
+        return "NACIONALIDAD_OBSERVADA_CHILENA", only
+    if only:
+        return "NACIONALIDAD_OBSERVADA_EXTRANJERA", only
+    return "CONFLICTO_NACIONALIDAD", " | ".join(sorted(clean_values))
+
+
+def select_best_match_row(case_matches: pd.DataFrame) -> pd.Series | None:
+    if case_matches.empty:
+        return None
+    ranked: list[tuple[int, int, pd.Series]] = []
+    for idx, row in case_matches.reset_index(drop=True).iterrows():
+        score = 0
+        if clean(row.get("NACIONALIDAD_DATOS_ALUMNOS", "")):
+            score += 50
+        if clean(row.get("LETRA_COLUMNA_NACIONALIDAD", "")) == "Z":
+            score += 20
+        if clean(row.get("ESTADO_ACADEMICO_OBSERVADO", "")):
+            score += 10
+        if clean(row.get("ACTIVIDAD_2025_EVIDENCIA", "")):
+            score += 10
+        ranked.append((score, idx, row))
+    ranked.sort(key=lambda x: (-x[0], x[1]))
+    return ranked[0][2]
+
+
+def motivo_vigencia_0(
+    num_doc: str,
+    clas_nac: str,
+    clas_estado: str,
+    clas_actividad: str,
+    has_complementary_evidence: bool,
+) -> str:
+    if re.sub(r"[^0-9]", "", num_doc) == "26481336":
+        return "DECISION_OPERATIVA_TVS_OBSERVADO"
+    if clas_nac == "NACIONALIDAD_OBSERVADA_CHILENA":
+        if has_complementary_evidence:
+            return "NACIONALIDAD_CHILENA_Y_EVIDENCIA_ACADEMICA_COMPLEMENTARIA"
+        return "NACIONALIDAD_CHILENA_NO_CORRESPONDE_UNIVERSO_EXTRANJEROS"
+    if clas_nac == "NACIONALIDAD_OBSERVADA_EXTRANJERA":
+        if clas_estado == "ESTADO_ELIMINADO_DESERTOR_INACTIVO" and clas_actividad != "ACTIVIDAD_2025_OBSERVADA":
+            return "ESTADO_ACADEMICO_ELIMINADO_SIN_ACTIVIDAD_2025"
+        if clas_actividad == "SIN_ACTIVIDAD_2025_OBSERVADA":
+            return "SIN_MATRICULA_O_SIN_ASIGNATURAS_2025"
+    return "SIN_NACIONALIDAD_EXTRANJERA_DEMOSTRADA"
+
+
+def run_sies120_mode(args: argparse.Namespace) -> int:
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_root = ROOT / "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455"
+    out_base = run_root / "14_CORRECCION_SIES_120_CASOS"
+    if args.generar_carga_104_vigencia_0 and args.auditar_estado_actividad:
+        out_dir = out_base / f"GENERACION_CARGA_104_VIGENCIA_0_AUDITORIA_ESTADO_{ts}"
+    elif args.generar_carga_104_vigencia_0:
+        out_dir = out_base / f"GENERACION_CARGA_104_VIGENCIA_0_CHILENA_TVS_{ts}"
+    else:
+        out_dir = out_base / f"RESOLUCION_104_NACIONALIDAD_DATOS_ALUMNOS_Z_{ts}"
+    out_dir.mkdir(parents=True, exist_ok=False)
+
+    listado_src = Path(args.listado_sies_120)
+    precarga_path = Path(args.precarga) if args.precarga else ROOT / "estudiantes_extranjeros_2026/Reporte Precarga del Proceso Extranjeros Regulares 2026.csv"
+    csv_prev_path = Path(args.csv_previo)
+    fallback_csv_previo = ROOT / "estudiantes_extranjeros_2026/resultados/ejecuciones/RECONSTRUCCION_FINAL_EXTRANJEROS_2025_20260625_235455/13_CIERRE_AUTOMATIZADO/PES_READY_20260626_130431/02_EXTRANJEROS_REGULARES_2025_PES_READY.csv"
+    if not csv_prev_path.exists() and fallback_csv_previo.exists():
+        csv_prev_path = fallback_csv_previo
+    script_path = Path(__file__).resolve()
+
+    bloqueos: list[str] = []
+    source_hashes: dict[str, str] = {}
+
+    for name, path in {
+        "listado_sies_120": listado_src,
+        "precarga_oficial": precarga_path,
+        "csv_previo": csv_prev_path,
+    }.items():
+        if not path.exists():
+            raise SystemExit(f"BLOQUEADO_POR_VALIDACION_FINAL:{name.upper()}_INEXISTENTE:{path}")
+        source_hashes[name] = sha256(path)
+    source_hashes["script"] = sha256(script_path)
+
+    if source_hashes["csv_previo"] != "e45eba791c4575dc90ddb31d2ed6bcca4feb1f35f5f41ba8d80af5c514d697d2":
+        raise SystemExit("BLOQUEADO_POR_VALIDACION_FINAL:CSV_PREVIO_HASH_NO_COINCIDE")
+
+    listado = pd.read_excel(listado_src, sheet_name=0, dtype=str, keep_default_na=False).fillna("")
+    if len(listado) != 120:
+        bloqueos.append(f"LISTADO_SIES_NO_TIENE_120_FILAS:{len(listado)}")
+
+    alias_120 = {
+        "TIPO_DOCUMENTO": ["TIPODOCUMENTO"],
+        "NUM_DOCUMENTO": ["NUMDOCUMENTO"],
+        "DV": ["DV"],
+        "PRIMER_APELLIDO": ["PRIMERAPELLIDO"],
+        "SEGUNDO_APELLIDO": ["SEGUNDOAPELLIDO"],
+        "NOMBRES": ["NOMBRES"],
+        "CODIGO_UNICO": ["CODIGOUNICO"],
+        "VIGENCIA": ["CARGAREGULARVIGENCIA", "VIGENCIA"],
+    }
+    key_to_col = {normalize_key(c): c for c in listado.columns}
+    map_120: dict[str, str] = {}
+    for logical, keys in alias_120.items():
+        found = ""
+        for k in keys:
+            if k in key_to_col:
+                found = key_to_col[k]
+                break
+        if not found:
+            bloqueos.append(f"LISTADO_SIES_COLUMNA_FALTANTE:{logical}")
+        else:
+            map_120[logical] = found
+
+    if any(x.startswith("LISTADO_SIES_COLUMNA_FALTANTE") for x in bloqueos):
+        raise SystemExit("BLOQUEADO_POR_VALIDACION_FINAL:LISTADO_SIES_ESTRUCTURA_INVALIDA")
+
+    l120 = pd.DataFrame({
+        "TIPO_DOCUMENTO": listado[map_120["TIPO_DOCUMENTO"]].map(clean),
+        "NUM_DOCUMENTO": listado[map_120["NUM_DOCUMENTO"]].map(strip_excel_decimal),
+        "DV": listado[map_120["DV"]].map(clean),
+        "PRIMER_APELLIDO": listado[map_120["PRIMER_APELLIDO"]].map(clean),
+        "SEGUNDO_APELLIDO": listado[map_120["SEGUNDO_APELLIDO"]].map(clean),
+        "NOMBRES": listado[map_120["NOMBRES"]].map(clean),
+        "CODIGO_UNICO": listado[map_120["CODIGO_UNICO"]].map(clean),
+        "VIGENCIA_SIES_LISTADO": listado[map_120["VIGENCIA"]].map(clean),
+    })
+    l120["DOC_BODY"] = l120["NUM_DOCUMENTO"].map(lambda x: re.sub(r"[^0-9]", "", clean(x)))
+    l120["DV_NORM"] = l120["DV"].map(lambda x: re.sub(r"[^0-9K]", "", clean(x).upper())[-1:] if clean(x) else "")
+    l120["CODIGO_UNICO_NORM"] = l120["CODIGO_UNICO"].map(normalize_code)
+    l120["KEY_DOC"] = l120.apply(lambda r: f"{r['TIPO_DOCUMENTO']}|{r['DOC_BODY']}|{r['DV_NORM']}|{r['CODIGO_UNICO_NORM']}", axis=1)
+    if int(l120["KEY_DOC"].nunique()) != 120:
+        bloqueos.append("LISTADO_SIES_NO_TIENE_120_CASOS_UNICOS")
+
+    precarga = pd.read_csv(precarga_path, sep=";", encoding="cp1252", dtype=str, keep_default_na=False).fillna("")
+    if "PAIS_ORIGEN" in precarga.columns and "PAIS_DE_ORIGEN" not in precarga.columns:
+        precarga = precarga.rename(columns={"PAIS_ORIGEN": "PAIS_DE_ORIGEN"})
+    precarga.insert(0, "ID_REGISTRO", [f"PRECARGA_{i:04d}" for i in range(1, len(precarga) + 1)])
+    for col in ["NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "TIPO_DOCUMENTO"]:
+        precarga[col] = precarga[col].map(clean)
+    precarga["DOC_BODY"] = precarga["NUM_DOCUMENTO"].map(lambda x: re.sub(r"[^0-9]", "", clean(x)))
+    precarga["DV_NORM"] = precarga["DV"].map(lambda x: re.sub(r"[^0-9K]", "", clean(x).upper())[-1:] if clean(x) else "")
+    precarga["CODIGO_UNICO_NORM"] = precarga["CODIGO_UNICO"].map(normalize_code)
+    precarga["KEY_DOC"] = precarga.apply(lambda r: f"{r['TIPO_DOCUMENTO']}|{r['DOC_BODY']}|{r['DV_NORM']}|{r['CODIGO_UNICO_NORM']}", axis=1)
+
+    prev = pd.read_csv(csv_prev_path, sep=";", header=None, encoding="cp1252", dtype=str, keep_default_na=False).fillna("")
+    if prev.shape[1] != 20:
+        bloqueos.append(f"CSV_PREVIO_COLUMNAS_INVALIDAS:{prev.shape[1]}")
+    prev.columns = COLUMNAS_SIES_REGULARES
+    for col in ["NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "TIPO_DOCUMENTO"]:
+        prev[col] = prev[col].map(clean)
+    prev["DOC_BODY"] = prev["NUM_DOCUMENTO"].map(lambda x: re.sub(r"[^0-9]", "", clean(x)))
+    prev["DV_NORM"] = prev["DV"].map(lambda x: re.sub(r"[^0-9K]", "", clean(x).upper())[-1:] if clean(x) else "")
+    prev["CODIGO_UNICO_NORM"] = prev["CODIGO_UNICO"].map(normalize_code)
+    prev["KEY_DOC"] = prev.apply(lambda r: f"{r['TIPO_DOCUMENTO']}|{r['DOC_BODY']}|{r['DV_NORM']}|{r['CODIGO_UNICO_NORM']}", axis=1)
+
+    c120 = l120.merge(
+        precarga[["ID_REGISTRO", "KEY_DOC"] + COLUMNAS_SIES_REGULARES],
+        on="KEY_DOC",
+        how="left",
+        validate="one_to_one",
+        suffixes=("", "_PRECARGA"),
+    )
+    if c120["ID_REGISTRO"].map(clean).eq("").any():
+        bloqueos.append("NO_SE_PUEDE_CONTRASTAR_120_VS_PRECARGA")
+
+    c120["EN_CSV_PREVIO"] = c120["KEY_DOC"].isin(set(prev["KEY_DOC"]))
+    ya_cargados = c120[c120["EN_CSV_PREVIO"]].copy()
+    pendientes = c120[~c120["EN_CSV_PREVIO"]].copy()
+    if len(ya_cargados) != 16 or len(pendientes) != 104:
+        bloqueos.append(f"CONTEO_YA_CARGADOS_PENDIENTES_INVALIDO:{len(ya_cargados)}:{len(pendientes)}")
+
+    pendientes = pendientes.reset_index(drop=True)
+    pendientes["CASE_ID"] = [f"CASO_{i+1:03d}" for i in range(len(pendientes))]
+    pendientes["RUT_VARIANTS"] = pendientes.apply(lambda r: sorted(doc_variants(r["NUM_DOCUMENTO"], r["DV"])), axis=1)
+
+    case_variants: dict[str, set[str]] = {}
+    variant_to_cases: dict[str, set[str]] = defaultdict(set)
+    for _, row in pendientes.iterrows():
+        case = clean(row["CASE_ID"])
+        vars_set = set(row["RUT_VARIANTS"])
+        case_variants[case] = vars_set
+        for v in vars_set:
+            variant_to_cases[v].add(case)
+
+    keywords = [
+        "DATOS ALUMNOS",
+        "DATOSDEALUMNOS",
+        "PROMEDIOSDEALUMNOS",
+        "BASE EXTRANJEROS",
+        "ALUMNOS",
+        "MATRICULA",
+        "MATRÍCULA",
+        "ASIGNATURAS",
+        "AVANCE",
+        "INSCRIPCIONES",
+        "RAMOS",
+        "ACTAS",
+    ]
+    exclude_name_tokens = [
+        "BUSQUEDA_NACIONALIDAD",
+        "RESOLUCION_104_NACIONALIDAD",
+        "CORRECCION_SIES_120",
+        "AUDITORIA_MATCH_RUT",
+        "EVIDENCIA_NACIONALIDAD_104",
+    ]
+    roots = [Path("/Users/alexi/Desktop"), ROOT]
+    skip_dirs = {".git", ".venv", "node_modules", "__pycache__", "archive", "backups", "resultados", "build", "dist"}
+    files: list[Path] = []
+    for rt in roots:
+        for dirpath, dirnames, filenames in os.walk(rt):
+            dirnames[:] = [d for d in dirnames if d not in skip_dirs]
+            for name in filenames:
+                if not name.lower().endswith((".xlsx", ".xls", ".csv")):
+                    continue
+                fp = Path(dirpath) / name
+                n_full = canon_text(str(fp))
+                if any(tok in n_full for tok in exclude_name_tokens):
+                    continue
+                score = 0
+                n = canon_text(fp.name)
+                p = canon_text(str(fp.parent))
+                for kw in keywords:
+                    if kw in n:
+                        score += 2
+                    if kw in p:
+                        score += 1
+                if score > 0:
+                    files.append(fp)
+    files = sorted(set(files))
+
+    probable_doc_cols = set(DOC_KEYS)
+    probable_codcli_cols = set(CODCLI_KEYS)
+
+    match_rows: list[dict[str, Any]] = []
+    reviewed_rows: list[dict[str, Any]] = []
+
+    for file_path in files:
+        ext = file_path.suffix.lower()
+        try:
+            if ext in {".xlsx", ".xls"}:
+                xl = pd.ExcelFile(file_path)
+                for sh in xl.sheet_names:
+                    df = pd.read_excel(file_path, sheet_name=sh, dtype=str, keep_default_na=False).fillna("")
+                    if df.empty:
+                        continue
+                    col_keys = {c: normalize_key(c) for c in df.columns}
+                    doc_cols = [c for c, k in col_keys.items() if k in probable_doc_cols]
+                    codcli_cols = [c for c, k in col_keys.items() if k in probable_codcli_cols]
+                    estado_cols = [c for c, k in col_keys.items() if k in ESTADO_KEYS]
+                    actividad_cols = [c for c, k in col_keys.items() if k in ACTIVIDAD_KEYS or "2025" in clean(c)]
+
+                    nac_cols: list[tuple[str, str, str]] = []
+                    if len(df.columns) >= 26:
+                        z_col = df.columns[25]
+                        z_head = canon_text(z_col)
+                        if "NACIONALIDAD" in z_head:
+                            nac_cols.append((z_col, "Z", "Z"))
+                    for i, c in enumerate(df.columns, start=1):
+                        head = canon_text(c)
+                        if "NACIONALIDAD" in head:
+                            letter = get_column_letter(i)
+                            if not any(x[0] == c for x in nac_cols):
+                                nac_cols.append((c, letter, "HEADER"))
+
+                    reviewed_rows.append({
+                        "ARCHIVO": str(file_path),
+                        "HOJA": sh,
+                        "FILAS": int(len(df)),
+                        "COLUMNAS": int(len(df.columns)),
+                        "TIENE_COLUMNA_Z": "SI" if len(df.columns) >= 26 else "NO",
+                        "HEADER_Z": clean(df.columns[25]) if len(df.columns) >= 26 else "",
+                        "COLUMNA_NACIONALIDAD_DETECTADA": "|".join([f"{x[0]}({x[1]})" for x in nac_cols]),
+                    })
+
+                    for idx, row in df.iterrows():
+                        cell_hits: list[tuple[str, str, str, str]] = []
+                        search_cols = doc_cols if doc_cols else list(df.columns)
+                        for c in search_cols:
+                            raw = clean(row.get(c, ""))
+                            if not raw:
+                                continue
+                            body, dvf, full = split_rut(raw)
+                            variants = rut_variants(body, dvf)
+                            if not variants:
+                                continue
+                            matched_cases: set[str] = set()
+                            for v in variants:
+                                matched_cases |= variant_to_cases.get(v, set())
+                            if not matched_cases:
+                                continue
+                            for case in sorted(matched_cases):
+                                cell_hits.append((case, c, raw, "DOC_DIRECTO" if c in doc_cols else "BUSQUEDA_BRUTA"))
+
+                        if not cell_hits:
+                            continue
+
+                        codcli = ""
+                        for cc in codcli_cols:
+                            codcli = clean(row.get(cc, ""))
+                            if codcli:
+                                break
+
+                        nac_values = []
+                        for nc, letter, source in nac_cols:
+                            nac_raw = clean(row.get(nc, ""))
+                            nac_values.append((nc, letter, source, nac_raw))
+                        if not nac_values:
+                            nac_values = [("", "", "", "")]
+
+                        estado_obs = ""
+                        for ec in estado_cols:
+                            estado_obs = clean(row.get(ec, ""))
+                            if estado_obs:
+                                break
+                        actividad_raw = {ac: clean(row.get(ac, "")) for ac in actividad_cols}
+                        clas_act_row, actividad_evidencia = activity_2025_from_row(actividad_raw)
+
+                        for case, match_col, rut_raw, tmatch in cell_hits:
+                            b, d, f = split_rut(rut_raw)
+                            for nc, letter, source, nac_raw in nac_values:
+                                match_rows.append({
+                                    "CASE_ID": case,
+                                    "RUT_DATOS_ALUMNOS": rut_raw,
+                                    "RUT_CUERPO_DATOS_ALUMNOS": b,
+                                    "DV_DATOS_ALUMNOS": d,
+                                    "CODCLI_DATOS_ALUMNOS": codcli,
+                                    "NACIONALIDAD_DATOS_ALUMNOS": nac_raw,
+                                    "COLUMNA_NACIONALIDAD": nc,
+                                    "LETRA_COLUMNA_NACIONALIDAD": letter,
+                                    "ESTADO_ACADEMICO_OBSERVADO": estado_obs,
+                                    "CLASIFICACION_ACTIVIDAD_2025_FILA": clas_act_row,
+                                    "ACTIVIDAD_2025_EVIDENCIA": actividad_evidencia,
+                                    "ARCHIVO_FUENTE": str(file_path),
+                                    "HOJA_FUENTE": sh,
+                                    "FILA_EXCEL": int(idx + 2),
+                                    "TIPO_MATCH": tmatch,
+                                    "COLUMNA_MATCH_RUT": match_col,
+                                    "FUENTE_COLUMNA_NACIONALIDAD": source,
+                                })
+            else:
+                df = read_csv_flexible(file_path)
+                if df.empty:
+                    reviewed_rows.append({
+                        "ARCHIVO": str(file_path),
+                        "HOJA": "CSV",
+                        "FILAS": 0,
+                        "COLUMNAS": 0,
+                        "TIENE_COLUMNA_Z": "NO",
+                        "HEADER_Z": "",
+                        "COLUMNA_NACIONALIDAD_DETECTADA": "",
+                    })
+                    continue
+                col_keys = {c: normalize_key(c) for c in df.columns}
+                doc_cols = [c for c, k in col_keys.items() if k in probable_doc_cols]
+                codcli_cols = [c for c, k in col_keys.items() if k in probable_codcli_cols]
+                estado_cols = [c for c, k in col_keys.items() if k in ESTADO_KEYS]
+                actividad_cols = [c for c, k in col_keys.items() if k in ACTIVIDAD_KEYS or "2025" in clean(c)]
+                nac_cols = []
+                for i, c in enumerate(df.columns, start=1):
+                    if "NACIONALIDAD" in canon_text(c):
+                        nac_cols.append((c, get_column_letter(i), "HEADER"))
+                reviewed_rows.append({
+                    "ARCHIVO": str(file_path),
+                    "HOJA": "CSV",
+                    "FILAS": int(len(df)),
+                    "COLUMNAS": int(len(df.columns)),
+                    "TIENE_COLUMNA_Z": "NO",
+                    "HEADER_Z": "",
+                    "COLUMNA_NACIONALIDAD_DETECTADA": "|".join([f"{x[0]}({x[1]})" for x in nac_cols]),
+                })
+                for idx, row in df.iterrows():
+                    search_cols = doc_cols if doc_cols else list(df.columns)
+                    found_cases: set[str] = set()
+                    match_col = ""
+                    rut_raw = ""
+                    for c in search_cols:
+                        raw = clean(row.get(c, ""))
+                        if not raw:
+                            continue
+                        body, dvf, _ = split_rut(raw)
+                        vars_set = rut_variants(body, dvf)
+                        for v in vars_set:
+                            if v in variant_to_cases:
+                                found_cases |= variant_to_cases[v]
+                                match_col = c
+                                rut_raw = raw
+                    if not found_cases:
+                        continue
+                    codcli = ""
+                    for cc in codcli_cols:
+                        codcli = clean(row.get(cc, ""))
+                        if codcli:
+                            break
+                    nac_values = [("", "", "", "")]
+                    if nac_cols:
+                        nac_values = [(nc, letter, src, clean(row.get(nc, ""))) for nc, letter, src in nac_cols]
+                    estado_obs = ""
+                    for ec in estado_cols:
+                        estado_obs = clean(row.get(ec, ""))
+                        if estado_obs:
+                            break
+                    actividad_raw = {ac: clean(row.get(ac, "")) for ac in actividad_cols}
+                    clas_act_row, actividad_evidencia = activity_2025_from_row(actividad_raw)
+                    b, d, _ = split_rut(rut_raw)
+                    for case in sorted(found_cases):
+                        for nc, letter, source, nac_raw in nac_values:
+                            match_rows.append({
+                                "CASE_ID": case,
+                                "RUT_DATOS_ALUMNOS": rut_raw,
+                                "RUT_CUERPO_DATOS_ALUMNOS": b,
+                                "DV_DATOS_ALUMNOS": d,
+                                "CODCLI_DATOS_ALUMNOS": codcli,
+                                "NACIONALIDAD_DATOS_ALUMNOS": nac_raw,
+                                "COLUMNA_NACIONALIDAD": nc,
+                                "LETRA_COLUMNA_NACIONALIDAD": letter,
+                                "ESTADO_ACADEMICO_OBSERVADO": estado_obs,
+                                "CLASIFICACION_ACTIVIDAD_2025_FILA": clas_act_row,
+                                "ACTIVIDAD_2025_EVIDENCIA": actividad_evidencia,
+                                "ARCHIVO_FUENTE": str(file_path),
+                                "HOJA_FUENTE": "CSV",
+                                "FILA_EXCEL": int(idx + 2),
+                                "TIPO_MATCH": "DOC_DIRECTO" if match_col in doc_cols else "BUSQUEDA_BRUTA",
+                                "COLUMNA_MATCH_RUT": match_col,
+                                "FUENTE_COLUMNA_NACIONALIDAD": source,
+                            })
+        except Exception as exc:
+            reviewed_rows.append({
+                "ARCHIVO": str(file_path),
+                "HOJA": "",
+                "FILAS": 0,
+                "COLUMNAS": 0,
+                "TIENE_COLUMNA_Z": "",
+                "HEADER_Z": "",
+                "COLUMNA_NACIONALIDAD_DETECTADA": f"ERROR:{type(exc).__name__}",
+            })
+
+    matches_df = pd.DataFrame(match_rows)
+    reviewed_df = pd.DataFrame(reviewed_rows)
+
+    required_match_cols = [
+        "NUM_DOCUMENTO_SIES", "DV_SIES", "CODIGO_UNICO", "NOMBRES", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO",
+        "RUT_DATOS_ALUMNOS", "RUT_CUERPO_DATOS_ALUMNOS", "DV_DATOS_ALUMNOS", "CODCLI_DATOS_ALUMNOS",
+        "NACIONALIDAD_DATOS_ALUMNOS", "COLUMNA_NACIONALIDAD", "LETRA_COLUMNA_NACIONALIDAD", "ARCHIVO_FUENTE",
+        "HOJA_FUENTE", "FILA_EXCEL", "TIPO_MATCH", "CLASIFICACION_FINAL",
+        "ESTADO_ACADEMICO_OBSERVADO", "CLASIFICACION_ACTIVIDAD_2025_FILA", "ACTIVIDAD_2025_EVIDENCIA",
+    ]
+
+    clas_rows = []
+    full_match_rows = []
+    z_match_rows = []
+    for _, prow in pendientes.iterrows():
+        case = clean(prow["CASE_ID"])
+        subset = matches_df[matches_df["CASE_ID"].eq(case)].copy() if not matches_df.empty else pd.DataFrame()
+        subset_nac = subset[subset["NACIONALIDAD_DATOS_ALUMNOS"].map(clean).ne("")] if not subset.empty else pd.DataFrame()
+        nac_norms = set(subset_nac["NACIONALIDAD_DATOS_ALUMNOS"].map(canon_text).tolist()) if not subset_nac.empty else set()
+        if subset.empty:
+            clas = "SIN_MATCH_DATOS_ALUMNOS"
+        elif subset_nac.empty:
+            clas = "MATCH_SIN_NACIONALIDAD"
+        elif len(nac_norms) > 1:
+            clas = "CONFLICTO_NACIONALIDAD"
+        else:
+            only = next(iter(nac_norms))
+            if "CHIL" in only:
+                clas = "NACIONALIDAD_OBSERVADA_CHILENA"
+            else:
+                clas = "NACIONALIDAD_OBSERVADA_EXTRANJERA"
+
+        row_base = {
+            "CASE_ID": case,
+            "NUM_DOCUMENTO_SIES": clean(prow.get("NUM_DOCUMENTO", "")),
+            "DV_SIES": clean(prow.get("DV", "")),
+            "CODIGO_UNICO": clean(prow.get("CODIGO_UNICO", "")),
+            "NOMBRES": clean(prow.get("NOMBRES", "")),
+            "PRIMER_APELLIDO": clean(prow.get("PRIMER_APELLIDO", "")),
+            "SEGUNDO_APELLIDO": clean(prow.get("SEGUNDO_APELLIDO", "")),
+            "CLASIFICACION_FINAL": clas,
+        }
+        clas_rows.append(row_base)
+
+        if subset.empty:
+            full_match_rows.append({
+                **row_base,
+                "RUT_DATOS_ALUMNOS": "",
+                "RUT_CUERPO_DATOS_ALUMNOS": "",
+                "DV_DATOS_ALUMNOS": "",
+                "CODCLI_DATOS_ALUMNOS": "",
+                "NACIONALIDAD_DATOS_ALUMNOS": "",
+                "COLUMNA_NACIONALIDAD": "",
+                "LETRA_COLUMNA_NACIONALIDAD": "",
+                "ARCHIVO_FUENTE": "",
+                "HOJA_FUENTE": "",
+                "FILA_EXCEL": "",
+                "TIPO_MATCH": "",
+            })
+            continue
+
+        for _, m in subset.iterrows():
+            merged = {
+                **row_base,
+                "RUT_DATOS_ALUMNOS": clean(m.get("RUT_DATOS_ALUMNOS", "")),
+                "RUT_CUERPO_DATOS_ALUMNOS": clean(m.get("RUT_CUERPO_DATOS_ALUMNOS", "")),
+                "DV_DATOS_ALUMNOS": clean(m.get("DV_DATOS_ALUMNOS", "")),
+                "CODCLI_DATOS_ALUMNOS": clean(m.get("CODCLI_DATOS_ALUMNOS", "")),
+                "NACIONALIDAD_DATOS_ALUMNOS": clean(m.get("NACIONALIDAD_DATOS_ALUMNOS", "")),
+                "COLUMNA_NACIONALIDAD": clean(m.get("COLUMNA_NACIONALIDAD", "")),
+                "LETRA_COLUMNA_NACIONALIDAD": clean(m.get("LETRA_COLUMNA_NACIONALIDAD", "")),
+                "ARCHIVO_FUENTE": clean(m.get("ARCHIVO_FUENTE", "")),
+                "HOJA_FUENTE": clean(m.get("HOJA_FUENTE", "")),
+                "FILA_EXCEL": clean(m.get("FILA_EXCEL", "")),
+                "TIPO_MATCH": clean(m.get("TIPO_MATCH", "")),
+                "ESTADO_ACADEMICO_OBSERVADO": clean(m.get("ESTADO_ACADEMICO_OBSERVADO", "")),
+                "CLASIFICACION_ACTIVIDAD_2025_FILA": clean(m.get("CLASIFICACION_ACTIVIDAD_2025_FILA", "")),
+                "ACTIVIDAD_2025_EVIDENCIA": clean(m.get("ACTIVIDAD_2025_EVIDENCIA", "")),
+            }
+            full_match_rows.append(merged)
+            if clean(m.get("LETRA_COLUMNA_NACIONALIDAD", "")) == "Z":
+                z_match_rows.append(merged)
+
+    clas_df = pd.DataFrame(clas_rows)
+    match_full_df = pd.DataFrame(full_match_rows)
+    if match_full_df.empty:
+        match_full_df = pd.DataFrame(columns=required_match_cols)
+    match_full_df = match_full_df[required_match_cols].copy()
+    match_z_df = pd.DataFrame(z_match_rows)
+    if match_z_df.empty:
+        match_z_df = pd.DataFrame(columns=required_match_cols)
+    else:
+        match_z_df = match_z_df[required_match_cols].copy()
+
+    chilena_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("NACIONALIDAD_OBSERVADA_CHILENA")].copy()
+    extranjera_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("NACIONALIDAD_OBSERVADA_EXTRANJERA")].copy()
+    sin_match_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("SIN_MATCH_DATOS_ALUMNOS")].copy()
+    sin_nac_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("MATCH_SIN_NACIONALIDAD")].copy()
+    conflictos_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("CONFLICTO_NACIONALIDAD")].copy()
+
+    if int(l120["KEY_DOC"].nunique()) != 120:
+        bloqueos.append("LISTADO_SIES_NO_TIENE_120_CASOS_UNICOS")
+    if len(pendientes) != 104:
+        bloqueos.append("PENDIENTES_DISTINTOS_104")
+
+    # Forzar caso especial TVS 26481336 como chilena observada manual
+    clas_df.loc[clas_df["NUM_DOCUMENTO_SIES"].eq("26481336"), "CLASIFICACION_FINAL"] = "NACIONALIDAD_OBSERVADA_CHILENA_TVS"
+
+    chilena_df = clas_df[clas_df["CLASIFICACION_FINAL"].isin(["NACIONALIDAD_OBSERVADA_CHILENA", "NACIONALIDAD_OBSERVADA_CHILENA_TVS"])].copy()
+    extranjera_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("NACIONALIDAD_OBSERVADA_EXTRANJERA")].copy()
+    sin_match_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("SIN_MATCH_DATOS_ALUMNOS")].copy()
+    sin_nac_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("MATCH_SIN_NACIONALIDAD")].copy()
+    conflictos_df = clas_df[clas_df["CLASIFICACION_FINAL"].eq("CONFLICTO_NACIONALIDAD")].copy()
+
+    if not args.generar_carga_104_vigencia_0:
+        if len(chilena_df) > 0:
+            bloqueos.append("NO_GENERAR_CSV_POR_CHILENA_OBSERVADA")
+        if len(sin_match_df) > 0 or len(sin_nac_df) > 0:
+            bloqueos.append("NO_GENERAR_CSV_POR_FALTA_NACIONALIDAD")
+        if len(conflictos_df) > 0:
+            bloqueos.append("NO_GENERAR_CSV_POR_CONFLICTO_NACIONALIDAD")
+
+        resumen = pd.DataFrame([{
+            "PROCESO": "Estudiantes Extranjeros Regulares SIES 2026",
+            "ANIO_DATOS": clean(args.anio_datos),
+            "CASOS_SIES": int(len(c120)),
+            "CASOS_UNICOS_SIES": int(l120["KEY_DOC"].nunique()),
+            "YA_CARGADOS": int(len(ya_cargados)),
+            "PENDIENTES": int(len(pendientes)),
+            "MATCH_EN_DATOS_ALUMNOS": int(len(clas_df[clas_df["CLASIFICACION_FINAL"].ne("SIN_MATCH_DATOS_ALUMNOS")])),
+            "CON_NACIONALIDAD_OBSERVADA": int(len(chilena_df) + len(extranjera_df)),
+            "NACIONALIDAD_OBSERVADA_CHILENA": int(len(chilena_df)),
+            "NACIONALIDAD_OBSERVADA_EXTRANJERA": int(len(extranjera_df)),
+            "SIN_MATCH_DATOS_ALUMNOS": int(len(sin_match_df)),
+            "MATCH_SIN_NACIONALIDAD": int(len(sin_nac_df)),
+            "CONFLICTO_NACIONALIDAD": int(len(conflictos_df)),
+            "CSV_GENERADO": "NO",
+            "ESTADO_FINAL": "DIAGNOSTICO_CORREGIDO_CON_EVIDENCIA_DATOS_ALUMNOS",
+        }])
+
+        out_01 = out_dir / "01_RESUMEN.xlsx"
+        out_02 = out_dir / "02_104_PENDIENTES_BASE.xlsx"
+        out_03 = out_dir / "03_MATCH_DATOS_ALUMNOS_COLUMNA_Z.xlsx"
+        out_04 = out_dir / "04_EVIDENCIA_NACIONALIDAD_104.xlsx"
+        out_05 = out_dir / "05_AUDITORIA_MATCH_RUT.csv"
+        out_06 = out_dir / "06_RESUMEN_EJECUCION.json"
+        out_07 = out_dir / "07_REPORTE_PARA_SIES.md"
+        out_08 = out_dir / "08_HASHES.sha256"
+
+        write_excel(out_01, {
+            "RESUMEN": resumen,
+            "120_SIES": c120,
+            "16_YA_CARGADOS": ya_cargados,
+            "104_PENDIENTES": pendientes,
+        })
+        write_excel(out_02, {"104_PENDIENTES": pendientes})
+        write_excel(out_03, {"MATCH_COLUMNA_Z": match_z_df})
+        write_excel(out_04, {
+            "RESUMEN": resumen,
+            "104_PENDIENTES": pendientes,
+            "MATCHES_DATOS_ALUMNOS": match_full_df,
+            "CHILENA_OBSERVADA": chilena_df,
+            "EXTRANJERA_OBSERVADA": extranjera_df,
+            "SIN_MATCH": sin_match_df,
+            "MATCH_SIN_NACIONALIDAD": sin_nac_df,
+            "CONFLICTOS": conflictos_df,
+            "ARCHIVOS_REVISADOS": reviewed_df,
+        })
+        write_csv(match_full_df, out_05)
+
+        resumen_json = {
+            "timestamp": ts,
+            "proceso": "Estudiantes Extranjeros Regulares SIES 2026",
+            "anio_datos": clean(args.anio_datos),
+            "script": str(script_path),
+            "fuentes": {
+                "listado_sies_120": str(listado_src),
+                "precarga_oficial": str(precarga_path),
+                "csv_previo": str(csv_prev_path),
+                "busqueda_raices": ["/Users/alexi/Desktop", str(ROOT)],
+            },
+            "hashes_fuentes": source_hashes,
+            "conteos": resumen.iloc[0].to_dict(),
+            "bloqueos": bloqueos,
+            "csv_generado": "NO",
+            "estado": "DIAGNOSTICO_CORREGIDO_CON_EVIDENCIA_DATOS_ALUMNOS",
+            "salidas": {
+                "01_RESUMEN": str(out_01),
+                "02_104_PENDIENTES_BASE": str(out_02),
+                "03_MATCH_DATOS_ALUMNOS_COLUMNA_Z": str(out_03),
+                "04_EVIDENCIA_NACIONALIDAD_104": str(out_04),
+                "05_AUDITORIA_MATCH_RUT": str(out_05),
+                "06_RESUMEN_EJECUCION": str(out_06),
+                "07_REPORTE_PARA_SIES": str(out_07),
+                "08_HASHES": str(out_08),
+            },
+        }
+        out_06.write_text(json.dumps(resumen_json, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+        report_lines = [
+            "# Reporte para SIES - Diagnostico corregido con Datos Alumnos",
+            "",
+            "## Resultado del contraste 120 casos",
+            f"- Total informado por SIES: {len(c120)}.",
+            f"- Ya cargados con VIGENCIA=0: {len(ya_cargados)}.",
+            f"- Pendientes: {len(pendientes)}.",
+            "",
+            "## Revisión de nacionalidad observada en Datos Alumnos",
+            "Se realizó búsqueda directa por RUT con y sin DV (incluyendo formatos con puntos y guion) en archivos de Datos Alumnos.",
+            f"- NACIONALIDAD_OBSERVADA_CHILENA: {len(chilena_df)}.",
+            f"- NACIONALIDAD_OBSERVADA_EXTRANJERA: {len(extranjera_df)}.",
+            f"- SIN_MATCH_DATOS_ALUMNOS: {len(sin_match_df)}.",
+            f"- MATCH_SIN_NACIONALIDAD: {len(sin_nac_df)}.",
+            f"- CONFLICTO_NACIONALIDAD: {len(conflictos_df)}.",
+            "",
+            "## Estado operativo",
+            "No se genera CSV de carga en este diagnóstico, por presencia de nacionalidad chilena observada y/o faltantes/conflictos de nacionalidad en pendientes.",
+        ]
+        out_07.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+
+        hash_targets = [out_01, out_02, out_03, out_04, out_05, out_06, out_07]
+        out_08.write_text("\n".join([f"{sha256(p)}  {p}" for p in hash_targets]) + "\n", encoding="utf-8")
+
+        print(json.dumps(resumen_json, ensure_ascii=False, indent=2))
+        return 2
+
+    # Generation branch: 104 with NACIONALIDAD=38 and VIGENCIA=0 plus auditable rationale.
+    carga_cols = COLUMNAS_SIES_REGULARES.copy()
+    carga_104 = pendientes[carga_cols].copy()
+    for col in carga_cols:
+        carga_104[col] = carga_104[col].map(clean)
+    carga_104["FECHA_NACIMIENTO"] = carga_104["FECHA_NACIMIENTO"].map(normalize_date)
+    carga_104["NACIONALIDAD"] = "38"
+    carga_104["VIGENCIA"] = "0"
+
+    mask_res_vacia = carga_104["TIPO_RESIDENCIA_ESTUDIANTE"].map(clean).eq("")
+    carga_104.loc[mask_res_vacia, "TIPO_RESIDENCIA_ESTUDIANTE"] = "0"
+    mask_origen_blank = carga_104["TIPO_RESIDENCIA_ESTUDIANTE"].isin(["0", "1"])
+    carga_104.loc[mask_origen_blank, "PAIS_DE_ORIGEN"] = ""
+
+    evidencia_nac_rows: list[dict[str, Any]] = []
+    evidencia_estado_rows: list[dict[str, Any]] = []
+    auditoria_rows: list[dict[str, Any]] = []
+    clas_prev_map = {clean(r.get("CASE_ID", "")): clean(r.get("CLASIFICACION_FINAL", "")) for _, r in clas_df.iterrows()}
+
+    for _, row in pendientes.iterrows():
+        case_id = clean(row.get("CASE_ID", ""))
+        num_doc = clean(row.get("NUM_DOCUMENTO", ""))
+        dv = clean(row.get("DV", ""))
+        codigo_unico = clean(row.get("CODIGO_UNICO", ""))
+
+        case_matches = match_full_df[match_full_df["CASE_ID"].eq(case_id)].copy() if "CASE_ID" in match_full_df.columns else pd.DataFrame()
+        best = select_best_match_row(case_matches)
+
+        nac_vals = set(case_matches["NACIONALIDAD_DATOS_ALUMNOS"].map(clean).tolist()) if not case_matches.empty else set()
+        clas_nac, nac_value = classify_nacionalidad_observada(nac_vals)
+        clas_prev = clas_prev_map.get(case_id, "")
+        if clas_prev in {"NACIONALIDAD_OBSERVADA_CHILENA", "NACIONALIDAD_OBSERVADA_EXTRANJERA"}:
+            clas_nac = clas_prev
+            if not nac_value:
+                nac_value = "CHILENA" if clas_prev == "NACIONALIDAD_OBSERVADA_CHILENA" else "EXTRANJERA"
+
+        estado_values = [clean(x) for x in case_matches.get("ESTADO_ACADEMICO_OBSERVADO", pd.Series(dtype=str)).tolist() if clean(x)]
+        estado_obs = clean(best.get("ESTADO_ACADEMICO_OBSERVADO", "")) if best is not None else ""
+        if not estado_obs and estado_values:
+            estado_obs = estado_values[0]
+        clas_estado = classify_estado_academico(estado_obs)
+
+        actividad_classes = [clean(x) for x in case_matches.get("CLASIFICACION_ACTIVIDAD_2025_FILA", pd.Series(dtype=str)).tolist() if clean(x)]
+        if best is not None and clean(best.get("CLASIFICACION_ACTIVIDAD_2025_FILA", "")):
+            clas_actividad = clean(best.get("CLASIFICACION_ACTIVIDAD_2025_FILA", ""))
+        elif "ACTIVIDAD_2025_OBSERVADA" in actividad_classes:
+            clas_actividad = "ACTIVIDAD_2025_OBSERVADA"
+        elif "SIN_ACTIVIDAD_2025_OBSERVADA" in actividad_classes:
+            clas_actividad = "SIN_ACTIVIDAD_2025_OBSERVADA"
+        else:
+            clas_actividad = "ACTIVIDAD_2025_NO_DETERMINADA"
+
+        actividad_obs = clean(best.get("ACTIVIDAD_2025_EVIDENCIA", "")) if best is not None else ""
+        if not actividad_obs and not case_matches.empty:
+            evidencias = [clean(x) for x in case_matches.get("ACTIVIDAD_2025_EVIDENCIA", pd.Series(dtype=str)).tolist() if clean(x)]
+            actividad_obs = " | ".join(evidencias[:3])
+
+        archivo_nac = clean(best.get("ARCHIVO_FUENTE", "")) if best is not None else ""
+        hoja_nac = clean(best.get("HOJA_FUENTE", "")) if best is not None else ""
+        fila_nac = clean(best.get("FILA_EXCEL", "")) if best is not None else ""
+        col_nac = clean(best.get("COLUMNA_NACIONALIDAD", "")) if best is not None else ""
+        letra_nac = clean(best.get("LETRA_COLUMNA_NACIONALIDAD", "")) if best is not None else ""
+        codcli_obs = clean(best.get("CODCLI_DATOS_ALUMNOS", "")) if best is not None else ""
+        rut_obs = clean(best.get("RUT_DATOS_ALUMNOS", "")) if best is not None else ""
+
+        archivo_estado = archivo_nac
+        hoja_estado = hoja_nac
+        fila_estado = fila_nac
+
+        fuente_decision = "Regla institucional de descarte de precarga Extranjeros Regulares"
+        observacion_operativa = ""
+
+        if re.sub(r"[^0-9]", "", num_doc) == "26481336":
+            clas_nac = "NACIONALIDAD_OBSERVADA_CHILENA_TVS"
+            nac_value = "CHILENA"
+            fuente_decision = "Decisión operativa manual / TVS observado"
+            observacion_operativa = "TVS observado; se completa como Chilena para carga de descarte VIGENCIA=0."
+
+        has_complementary = bool(estado_obs or actividad_obs)
+        motivo = motivo_vigencia_0(num_doc, clas_nac, clas_estado, clas_actividad, has_complementary)
+
+        evidencia_parts: list[str] = []
+        if letra_nac == "Z":
+            evidencia_parts.append("Datos Alumnos columna Z NACIONALIDAD")
+        elif col_nac:
+            evidencia_parts.append(f"Datos Alumnos columna {col_nac} NACIONALIDAD")
+        if estado_obs:
+            evidencia_parts.append(f"Datos Alumnos ESTADO_ACADEMICO={estado_obs}")
+        if actividad_obs:
+            evidencia_parts.append(f"Evidencia actividad/asignaturas 2025: {actividad_obs}")
+        if archivo_nac:
+            evidencia_parts.append(f"Fuente: {Path(archivo_nac).name} hoja {hoja_nac} fila {fila_nac}")
+        if fuente_decision.startswith("Decisión operativa manual"):
+            evidencia_parts.append("Decisión operativa manual TVS observado")
+        evidencia_usada = " | ".join([p for p in evidencia_parts if clean(p)])
+        if not evidencia_usada:
+            evidencia_usada = "Sin evidencia documental concluyente; se aplica descarte de precarga según regla institucional del proceso."
+
+        nacionalidad_valor_observada = nac_value if nac_value else ""
+        if not nacionalidad_valor_observada and clas_nac == "NACIONALIDAD_OBSERVADA_CHILENA":
+            nacionalidad_valor_observada = "CHILENA"
+
+        evidencia_nac_rows.append({
+            "CASE_ID": case_id,
+            "NUM_DOCUMENTO": num_doc,
+            "DV": dv,
+            "CODIGO_UNICO": codigo_unico,
+            "NOMBRES": clean(row.get("NOMBRES", "")),
+            "PRIMER_APELLIDO": clean(row.get("PRIMER_APELLIDO", "")),
+            "SEGUNDO_APELLIDO": clean(row.get("SEGUNDO_APELLIDO", "")),
+            "NACIONALIDAD_VALOR_OBSERVADA": nacionalidad_valor_observada,
+            "CLASIFICACION_NACIONALIDAD": clas_nac,
+            "NACIONALIDAD_CODIGO_USADO": "38",
+            "ARCHIVO_FUENTE_NACIONALIDAD": archivo_nac,
+            "HOJA_FUENTE_NACIONALIDAD": hoja_nac,
+            "FILA_FUENTE_NACIONALIDAD": fila_nac,
+            "COLUMNA_NACIONALIDAD": col_nac,
+            "LETRA_COLUMNA_NACIONALIDAD": letra_nac,
+            "EVIDENCIA_USADA": evidencia_usada,
+        })
+
+        evidencia_estado_rows.append({
+            "CASE_ID": case_id,
+            "NUM_DOCUMENTO": num_doc,
+            "DV": dv,
+            "CODIGO_UNICO": codigo_unico,
+            "ESTADO_ACADEMICO_OBSERVADO": estado_obs,
+            "CLASIFICACION_ESTADO_ACADEMICO": clas_estado,
+            "ACTIVIDAD_2025_OBSERVADA": actividad_obs,
+            "CLASIFICACION_ACTIVIDAD_2025": clas_actividad,
+            "CODCLI_DATOS_ALUMNOS": codcli_obs,
+            "RUT_DATOS_ALUMNOS": rut_obs,
+            "ARCHIVO_FUENTE_ESTADO": archivo_estado,
+            "HOJA_FUENTE_ESTADO": hoja_estado,
+            "FILA_FUENTE_ESTADO": fila_estado,
+        })
+
+        auditoria_rows.append({
+            "NUM_DOCUMENTO": num_doc,
+            "DV": dv,
+            "CODIGO_UNICO": codigo_unico,
+            "NOMBRES": clean(row.get("NOMBRES", "")),
+            "PRIMER_APELLIDO": clean(row.get("PRIMER_APELLIDO", "")),
+            "SEGUNDO_APELLIDO": clean(row.get("SEGUNDO_APELLIDO", "")),
+            "NACIONALIDAD_FINAL": "38",
+            "VIGENCIA_FINAL": "0",
+            "ESTADO_ACADEMICO_OBSERVADO": estado_obs,
+            "ACTIVIDAD_2025_OBSERVADA": actividad_obs,
+            "CLASIFICACION_NACIONALIDAD": clas_nac,
+            "CLASIFICACION_ESTADO_ACADEMICO": clas_estado,
+            "CLASIFICACION_ACTIVIDAD_2025": clas_actividad,
+            "MOTIVO_VIGENCIA_0": motivo,
+            "EVIDENCIA_USADA": evidencia_usada,
+            "FUENTE_DECISION": fuente_decision,
+            "OBSERVACION_OPERATIVA": observacion_operativa,
+            "NACIONALIDAD_VALOR_OBSERVADA": nacionalidad_valor_observada,
+            "NACIONALIDAD_CODIGO_USADO": "38",
+            "CODCLI_DATOS_ALUMNOS": codcli_obs,
+            "RUT_DATOS_ALUMNOS": rut_obs,
+            "ARCHIVO_FUENTE_NACIONALIDAD": archivo_nac,
+            "HOJA_FUENTE_NACIONALIDAD": hoja_nac,
+            "FILA_FUENTE_NACIONALIDAD": fila_nac,
+            "ARCHIVO_FUENTE_ESTADO": archivo_estado,
+            "HOJA_FUENTE_ESTADO": hoja_estado,
+            "FILA_FUENTE_ESTADO": fila_estado,
+        })
+
+    evidencia_nac_df = pd.DataFrame(evidencia_nac_rows)
+    evidencia_estado_df = pd.DataFrame(evidencia_estado_rows)
+    auditoria_full_df = pd.DataFrame(auditoria_rows)
+
+    auditoria_cols = [
+        "NUM_DOCUMENTO",
+        "DV",
+        "CODIGO_UNICO",
+        "NOMBRES",
+        "PRIMER_APELLIDO",
+        "SEGUNDO_APELLIDO",
+        "NACIONALIDAD_FINAL",
+        "VIGENCIA_FINAL",
+        "ESTADO_ACADEMICO_OBSERVADO",
+        "ACTIVIDAD_2025_OBSERVADA",
+        "CLASIFICACION_NACIONALIDAD",
+        "CLASIFICACION_ESTADO_ACADEMICO",
+        "CLASIFICACION_ACTIVIDAD_2025",
+        "MOTIVO_VIGENCIA_0",
+        "EVIDENCIA_USADA",
+        "FUENTE_DECISION",
+        "OBSERVACION_OPERATIVA",
+    ]
+    auditoria_df = auditoria_full_df[auditoria_cols].copy()
+
+    out_01 = out_dir / "01_RESUMEN_GENERACION_CARGA.xlsx"
+    out_02 = out_dir / "02_CARGA_104_CON_TITULOS.xlsx"
+    out_03 = out_dir / "03_CARGA_104_FORMATO_SIES.csv"
+    out_04 = out_dir / "04_AUDITORIA_DECISIONES_104.csv"
+    out_05 = out_dir / "05_VALIDACION_CSV_SIES.csv"
+    out_06 = out_dir / "06_RESUMEN_EJECUCION.json"
+    out_07 = out_dir / "07_HASHES.sha256"
+    out_08 = out_dir / "08_REPORTE_PARA_SIES.md"
+
+    write_csv(auditoria_df, out_04)
+
+    carga_titulos = carga_104[carga_cols].copy()
+    carga_titulos = carga_titulos.merge(
+        auditoria_full_df,
+        on=["NUM_DOCUMENTO", "DV", "CODIGO_UNICO", "NOMBRES", "PRIMER_APELLIDO", "SEGUNDO_APELLIDO"],
+        how="left",
+        validate="one_to_one",
+    )
+
+    ordered_titulo_cols = carga_cols + [
+        "CLASIFICACION_NACIONALIDAD",
+        "CLASIFICACION_ESTADO_ACADEMICO",
+        "CLASIFICACION_ACTIVIDAD_2025",
+        "MOTIVO_VIGENCIA_0",
+        "EVIDENCIA_USADA",
+        "NACIONALIDAD_VALOR_OBSERVADA",
+        "NACIONALIDAD_CODIGO_USADO",
+        "ESTADO_ACADEMICO_OBSERVADO",
+        "ACTIVIDAD_2025_OBSERVADA",
+        "CODCLI_DATOS_ALUMNOS",
+        "RUT_DATOS_ALUMNOS",
+        "ARCHIVO_FUENTE_NACIONALIDAD",
+        "HOJA_FUENTE_NACIONALIDAD",
+        "FILA_FUENTE_NACIONALIDAD",
+        "ARCHIVO_FUENTE_ESTADO",
+        "HOJA_FUENTE_ESTADO",
+        "FILA_FUENTE_ESTADO",
+        "OBSERVACION_OPERATIVA",
+    ]
+    for col in ordered_titulo_cols:
+        if col not in carga_titulos.columns:
+            carga_titulos[col] = ""
+    carga_titulos = carga_titulos[ordered_titulo_cols].copy()
+
+    estado_summary = (
+        auditoria_df["CLASIFICACION_ESTADO_ACADEMICO"].value_counts(dropna=False).rename_axis("CLASIFICACION").reset_index(name="CANTIDAD")
+        if not auditoria_df.empty else pd.DataFrame(columns=["CLASIFICACION", "CANTIDAD"])
+    )
+    actividad_summary = (
+        auditoria_df["CLASIFICACION_ACTIVIDAD_2025"].value_counts(dropna=False).rename_axis("CLASIFICACION").reset_index(name="CANTIDAD")
+        if not auditoria_df.empty else pd.DataFrame(columns=["CLASIFICACION", "CANTIDAD"])
+    )
+
+    resumen_carga = pd.DataFrame([{
+        "PROCESO": "Estudiantes Extranjeros Regulares SIES 2026",
+        "ANIO_DATOS": clean(args.anio_datos),
+        "CASOS_SIES": int(len(c120)),
+        "YA_CARGADOS": int(len(ya_cargados)),
+        "PENDIENTES_INCLUIDOS_CSV": int(len(carga_titulos)),
+        "NACIONALIDAD_38_FILAS": int(carga_titulos["NACIONALIDAD"].eq("38").sum()),
+        "VIGENCIA_0_FILAS": int(carga_titulos["VIGENCIA"].eq("0").sum()),
+        "CASO_TVS_26481336": int((carga_titulos["NUM_DOCUMENTO"].map(lambda x: re.sub(r"[^0-9]", "", clean(x))).eq("26481336")).sum()),
+    }])
+
+    write_sies_csv_cp1252_no_final_newline(carga_104[carga_cols], out_03)
+    physical = detect_csv_physical(out_03)
+    reread = pd.read_csv(out_03, sep=";", header=None, encoding="cp1252", dtype=str, keep_default_na=False).fillna("")
+    reread.columns = carga_cols
+    dup_count = int(reread.duplicated(subset=["TIPO_DOCUMENTO", "NUM_DOCUMENTO", "CODIGO_UNICO"], keep=False).sum())
+
+    csv_lines = out_03.read_bytes().splitlines()
+    delimitadores_ok = all(line.decode("cp1252", errors="replace").count(";") == 19 for line in csv_lines)
+    vigencia_ok = int(reread["VIGENCIA"].eq("0").sum()) == 104
+    nacionalidad_no_vacia_ok = int(reread["NACIONALIDAD"].map(clean).eq("").sum()) == 0
+    nacionalidad_38_ok = int(reread["NACIONALIDAD"].eq("38").sum()) == 104
+    motivo_ok = int(auditoria_df["MOTIVO_VIGENCIA_0"].map(clean).eq("").sum()) == 0
+    evidencia_ok = int(auditoria_df["EVIDENCIA_USADA"].map(clean).eq("").sum()) == 0
+    tvs_mask = auditoria_df["NUM_DOCUMENTO"].map(lambda x: re.sub(r"[^0-9]", "", clean(x))).eq("26481336")
+    tvs_ok = False
+    if int(tvs_mask.sum()) == 1:
+        tvs_row = auditoria_df[tvs_mask].iloc[0]
+        tvs_ok = (
+            clean(tvs_row.get("CLASIFICACION_NACIONALIDAD", "")) == "NACIONALIDAD_OBSERVADA_CHILENA_TVS"
+            and "OPERATIVA MANUAL" in canon_text(tvs_row.get("FUENTE_DECISION", ""))
+            and "TVS OBSERVADO" in canon_text(tvs_row.get("OBSERVACION_OPERATIVA", ""))
+        )
+
+    validation_rows = [
+        {"REGLA": "FILAS_EXACTAS_104", "OK": "SI" if len(reread) == 104 else "NO", "DETALLE": str(len(reread))},
+        {"REGLA": "COLUMNAS_EXACTAS_20", "OK": "SI" if reread.shape[1] == 20 else "NO", "DETALLE": str(reread.shape[1])},
+        {"REGLA": "SIN_ENCABEZADO", "OK": "SI" if physical["encabezado"] == "NO" else "NO", "DETALLE": physical["encabezado"]},
+        {"REGLA": "DELIMITADORES_19_POR_FILA", "OK": "SI" if delimitadores_ok else "NO", "DETALLE": str(delimitadores_ok)},
+        {"REGLA": "VIGENCIA_TODO_0", "OK": "SI" if vigencia_ok else "NO", "DETALLE": str(int(reread["VIGENCIA"].eq("0").sum()))},
+        {"REGLA": "NACIONALIDAD_NO_VACIA", "OK": "SI" if nacionalidad_no_vacia_ok else "NO", "DETALLE": str(int(reread["NACIONALIDAD"].map(clean).eq("").sum()))},
+        {"REGLA": "NACIONALIDAD_TODO_38", "OK": "SI" if nacionalidad_38_ok else "NO", "DETALLE": str(int(reread["NACIONALIDAD"].eq("38").sum()))},
+        {"REGLA": "SIN_BOM", "OK": "SI" if physical["bom"] == "NO" else "NO", "DETALLE": physical["bom"]},
+        {"REGLA": "SIN_LINEA_FINAL_VACIA", "OK": "SI" if physical["termina_con_salto"] == "NO" else "NO", "DETALLE": physical["termina_con_salto"]},
+        {"REGLA": "RELECTURA_CP1252_OK", "OK": "SI" if len(reread) == 104 else "NO", "DETALLE": "cp1252;"},
+        {"REGLA": "SIN_DUPLICADOS_DOC_CODIGO", "OK": "SI" if dup_count == 0 else "NO", "DETALLE": str(dup_count)},
+        {"REGLA": "CASO_26481336_TVS_OBSERVADO", "OK": "SI" if tvs_ok else "NO", "DETALLE": str(int(tvs_mask.sum()))},
+        {"REGLA": "MOTIVO_VIGENCIA_0_COMPLETO", "OK": "SI" if motivo_ok else "NO", "DETALLE": str(int(auditoria_df["MOTIVO_VIGENCIA_0"].map(clean).eq("").sum()))},
+        {"REGLA": "EVIDENCIA_USADA_COMPLETA", "OK": "SI" if evidencia_ok else "NO", "DETALLE": str(int(auditoria_df["EVIDENCIA_USADA"].map(clean).eq("").sum()))},
+    ]
+    valid_df = pd.DataFrame(validation_rows)
+    write_csv(valid_df, out_05)
+
+    failed = valid_df[valid_df["OK"].ne("SI")].copy()
+    if not failed.empty:
+        bloqueos.extend([f"VALIDACION_FALLA:{x}" for x in failed["REGLA"].tolist()])
+
+    write_excel(out_02, {
+        "RESUMEN": resumen_carga,
+        "CARGA_104_CON_TITULOS": carga_titulos,
+        "EVIDENCIA_NACIONALIDAD": evidencia_nac_df,
+        "EVIDENCIA_ESTADO_ACTIVIDAD": evidencia_estado_df,
+        "CASO_TVS_OBSERVADO": auditoria_df[tvs_mask].copy(),
+        "AUDITORIA_DECISIONES": auditoria_df,
+        "VALIDACION_CSV": valid_df,
+        "ARCHIVOS_REVISADOS": reviewed_df,
+    })
+    write_excel(out_01, {
+        "RESUMEN": resumen_carga,
+        "ESTADOS_ACADEMICOS": estado_summary,
+        "ACTIVIDAD_2025": actividad_summary,
+    })
+
+    desktop_xlsx = Path.home() / f"Desktop/CARGA_104_EXTRANJEROS_VIGENCIA_0_CON_TITULOS_AUDITADO_{ts}.xlsx"
+    desktop_csv = Path.home() / f"Desktop/CARGA_104_EXTRANJEROS_VIGENCIA_0_FORMATO_SIES_AUDITADO_{ts}.csv"
+    shutil.copy2(out_02, desktop_xlsx)
+    shutil.copy2(out_03, desktop_csv)
+
+    csv_hash = sha256(out_03)
+    chilena_count = int(auditoria_df["CLASIFICACION_NACIONALIDAD"].eq("NACIONALIDAD_OBSERVADA_CHILENA").sum())
+    chilena_tvs_count = int(auditoria_df["CLASIFICACION_NACIONALIDAD"].eq("NACIONALIDAD_OBSERVADA_CHILENA_TVS").sum())
+    summary_json = {
+        "timestamp": ts,
+        "proceso": "Estudiantes Extranjeros Regulares SIES 2026",
+        "anio_datos": clean(args.anio_datos),
+        "script": str(script_path),
+        "fuentes": {
+            "listado_sies_120": str(listado_src),
+            "precarga_oficial": str(precarga_path),
+            "csv_previo": str(csv_prev_path),
+            "busqueda_raices": ["/Users/alexi/Desktop", str(ROOT)],
+        },
+        "hashes_fuentes": source_hashes,
+        "conteos": {
+            "casos_sies": int(len(c120)),
+            "ya_cargados": int(len(ya_cargados)),
+            "pendientes_cargados": int(len(carga_104)),
+            "nacionalidad_38": int(carga_104["NACIONALIDAD"].eq("38").sum()),
+            "vigencia_0": int(carga_104["VIGENCIA"].eq("0").sum()),
+            "nacionalidad_observada_chilena": chilena_count,
+            "nacionalidad_observada_chilena_tvs": chilena_tvs_count,
+            "caso_tvs_26481336": int(tvs_mask.sum()),
+        },
+        "resumen_estados_academicos": estado_summary.to_dict(orient="records"),
+        "resumen_actividad_2025": actividad_summary.to_dict(orient="records"),
+        "csv_hash_sha256": csv_hash,
+        "csv_generado": "SI" if failed.empty else "NO",
+        "estado": "GENERACION_CARGA_104_VIGENCIA_0_COMPLETA" if failed.empty else "BLOQUEADO_POR_VALIDACION_CSV",
+        "bloqueos": bloqueos,
+        "salidas": {
+            "01_RESUMEN_GENERACION_CARGA": str(out_01),
+            "02_CARGA_104_CON_TITULOS": str(out_02),
+            "03_CARGA_104_FORMATO_SIES": str(out_03),
+            "04_AUDITORIA_DECISIONES_104": str(out_04),
+            "05_VALIDACION_CSV_SIES": str(out_05),
+            "06_RESUMEN_EJECUCION": str(out_06),
+            "07_HASHES": str(out_07),
+            "08_REPORTE_PARA_SIES": str(out_08),
+            "desktop_xlsx": str(desktop_xlsx),
+            "desktop_csv": str(desktop_csv),
+        },
+    }
+    out_06.write_text(json.dumps(summary_json, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    report = [
+        "# Reporte para SIES - Carga correctiva 104 registros auditada",
+        "",
+        "- SIES informó 120 casos.",
+        "- 16 ya estaban cargados con VIGENCIA=0.",
+        "- Se generó archivo correctivo solo con los 104 pendientes.",
+        "- Los 104 se informan con VIGENCIA=0 para descarte de precarga.",
+        "- La VIGENCIA=0 no proviene directamente de un campo de Datos Alumnos.",
+        "- La VIGENCIA=0 corresponde a la decisión de descartar del proceso de Extranjeros Regulares.",
+        "- La decisión se fundamenta en:",
+        f"  - nacionalidad chilena observada en Datos Alumnos para {chilena_count} casos;",
+        "  - TVS observado para 26481336;",
+        "  - estado académico/actividad 2025 como evidencia complementaria cuando existe.",
+        "- El CSV no incorpora estudiantes extranjeros vigentes; solo informa registros de descarte de precarga.",
+    ]
+    out_08.write_text("\n".join(report) + "\n", encoding="utf-8")
+
+    hash_targets = [out_01, out_02, out_03, out_04, out_05, out_06, out_08]
+    out_07.write_text("\n".join([f"{sha256(p)}  {p}" for p in hash_targets]) + "\n", encoding="utf-8")
+
+    print(json.dumps(summary_json, ensure_ascii=False, indent=2))
+    return 0 if failed.empty else 2
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Proceso Estudiantes Extranjeros Regulares 2025 - SIES 2026"
     )
-    parser.add_argument("--modo", choices=["fase06", "final"], default="fase06", help="Modo de ejecucion")
+    parser.add_argument("--modo", choices=["fase06", "final", "sies120"], default="fase06", help="Modo de ejecucion")
     parser.add_argument("--anio-datos", default="2025", help="Año de datos del proceso")
     parser.add_argument("--reanudar", help="Ruta a ESTADO_EJECUCION.json")
     parser.add_argument(
@@ -2075,11 +3347,34 @@ def main() -> int:
     parser.add_argument("--matriz-revision", help="Carpeta con matriz de revision aplicada")
     parser.add_argument("--salida", help="Carpeta raiz de salida")
     parser.add_argument("--archivo-regresion", help="CSV aprobado para regresion logica")
+    parser.add_argument(
+        "--listado-sies-120",
+        default="/Users/alexi/Desktop/Listado Registros IP San Sebastian.xlsx",
+        help="Listado XLSX recibido desde SIES con 120 casos observados",
+    )
+    parser.add_argument(
+        "--csv-previo",
+        default="/Users/alexi/Desktop/EXTRANJEROS_REGULARES_2025_PES_READY_RESIDENCIA_0_20260626_121728.csv",
+        help="CSV previamente cargado y aceptado por SIES (81 filas)",
+    )
+    parser.add_argument(
+        "--generar-carga-104-vigencia-0",
+        action="store_true",
+        help="Genera carga SIES de 104 pendientes con NACIONALIDAD=38 y VIGENCIA=0",
+    )
+    parser.add_argument(
+        "--auditar-estado-actividad",
+        action="store_true",
+        help="Incorpora auditoría de estado académico y actividad 2025 en la generación de carga 104",
+    )
     parser.add_argument("--generar-excel", action="store_true", help="Generar Excel de revision")
     parser.add_argument("--generar-pes", action="store_true", help="Generar CSV final SIES")
     parser.add_argument("--copiar-escritorio", action="store_true", help="Copiar Excel y CSV al Escritorio")
     parser.add_argument("--abrir-resultados", action="store_true", help="Abrir Excel y seleccionar CSV en Finder")
     args = parser.parse_args()
+
+    if args.modo == "sies120":
+        return run_sies120_mode(args)
 
     if args.modo == "final":
         return run_final_mode(args)

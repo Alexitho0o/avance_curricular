@@ -1,0 +1,98 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Matriz resolucion bloqueos 16-19 gobernada 5809",
+  "timestamp": "20260708_170521",
+  "anio_proceso": 2026,
+  "anio_referencia_datos": 2025,
+  "declaracion_carga": "NO_LISTO_PARA_CARGA",
+  "fuentes_originales_modificadas": "NO",
+  "correcciones_automaticas_aplicadas": "NO",
+  "recalculo_20_21": "NO",
+  "sies_ready_generado": "NO",
+  "validator_52": {
+    "plan_path": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/plan_uso_validador_h52_matriz_16_19.json",
+    "validator_timestamp": "20260708_170521_H53",
+    "validator_dir": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53",
+    "validator_manifest": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/manifest_validacion_gobernanza_precalculo_5809.json",
+    "returncode": 0,
+    "stdout": "VALIDADOR GOBERNANZA PRECALCULO 5809 — GENERADO\nFuentes originales modificadas: NO\nDeclaración carga: NO_LISTO_PARA_CARGA\nEstado validador: APTO_PARA_CONTROL_PREVIO\n\nDICTAMEN\n| Proceso                     | Subproyecto                          | Anio proceso | Anio referencia datos | Gobernanza leida                                                                                     | Declaracion carga   | Estado validador         | Fuentes originales modificadas | Hojas gobernanza leidas | Controles obligatorios | Controles faltantes | Reglas plan bloqueadas | Bloqueos vigentes heredados | SIES_READY generado | Dictamen                                                                     | Proximo paso permitido                                                   |\n| --------------------------- | ------------------------------------ | ------------ | --------------------- | ---------------------------------------------------------------------------------------------------- | ------------------- | ------------------------ | ------------------------------ | ----------------------- | ---------------------- | ------------------- | ---------------------- | --------------------------- | ------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ |\n| Avance Curricular SIES 2026 | Validador gobernanza precalculo 5809 | 2026         | 2025                  | /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/51_gobernanza_integral_inp... | NO_LISTO_PARA_CARGA | APTO_PARA_CONTROL_PREVIO | NO                             | 21                      | 12                     | 0                   | 0                      | 6                           | NO                  | Validador apto como control previo. No habilita carga ni calculo definitivo. | Solo validar un plan tecnico futuro; no corregir datos ni generar carga. |\n\nCONTROLES OBLIGATORIOS\n| ID_CONTROL | Intento bloqueado                                       | Resultado control |\n| ---------- | ------------------------------------------------------- | ----------------- |\n| C01        | Usar N_CODCLI como CODCLI academico                     | OK                |\n| C02        | Usar estados A/E/I/R sin diccionario PROMEDIOS          | OK                |\n| C03        | Calcular 16-19 sin CODCLI_LISTA                         | OK                |\n| C04        | Sumar todos los CODCLI del RUT sin filtrar por programa | OK                |\n| C05        | Usar 2026 para calculo anual 2025                       | OK                |\n| C06        | Mezclar 16-19 anual con 20-21 acumulado                 | OK                |\n| C07        | Presentar inferencias como reglas oficiales             | OK                |\n| C08        | Generar SIES_READY con bloqueos vigentes                | OK                |\n| C09        | Usar columnas no gobernadas                             | OK                |\n| C10        | Modificar fuentes originales                            | OK                |\n| C11        | Reanudar desde paso incorrecto                          | OK                |\n| C12        | Ejecutar con gobernanza incompleta                      | OK                |\n\nARCHIVOS\nExcel: /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/VALIDACION_GOBERNANZA_PRECALCULO_5809.xlsx\nInforme: /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md\nManifest: /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/manifest_validacion_gobernanza_precalculo_5809.json\nScript: /Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_170521_H53/validador_gobernanza_precalculo_5809.py\n",
+    "stderr": "",
+    "estado_validador": "APTO_PARA_CONTROL_PREVIO",
+    "declaracion_carga": "NO_LISTO_PARA_CARGA",
+    "fuentes_originales_modificadas": "NO",
+    "plan": {
+      "descripcion": "Matriz de clasificacion de bloqueos 16-19. No recalcula, no corrige, no genera carga.",
+      "columnas_usadas": [
+        "CODIGO_UNICO",
+        "PLAN_ESTUDIOS",
+        "CODCLI_LISTA",
+        "ESTADO",
+        "DESCRIPCION_ESTADO"
+      ],
+      "llaves_usadas": [
+        "CODCLI_LISTA",
+        "CODIGO_UNICO",
+        "PLAN_ESTUDIOS"
+      ],
+      "diccionarios_usados": [
+        "DIC_ESTADO_PROMEDIOS"
+      ],
+      "transformaciones": [
+        "Clasificacion documental de bloqueos; sin transformacion de datos fuente"
+      ],
+      "campos_calculo": [
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "anio_calculo": 2025,
+      "genera_sies_ready": false,
+      "modifica_fuentes_originales": false,
+      "usa_todos_codcli_rut": false,
+      "filtra_por_programa": true,
+      "usa_inferencias_como_reglas_oficiales": false,
+      "usa_estados_AEIR": true,
+      "usa_codcli_lista": true,
+      "mezcla_anual_acumulado": false,
+      "modo": "CLASIFICACION_NO_OPERATIVA_SIN_RECALCULO"
+    }
+  },
+  "conteos": {
+    "total_pendientes": 423,
+    "dif_solo_aprobadas_19": 223,
+    "dif_16_18_multiple": 71,
+    "sin_registros_2025": 122,
+    "sin_codcli_lista": 7,
+    "resoluble_tecnico_post_validacion": 3,
+    "requiere_revision_funcional": 420,
+    "no_resoluble_con_evidencia_actual": 131
+  },
+  "hashes_inputs_antes": {
+    "GOBERNANZA_51": "2f61471e0c4ff1cac1e1d8c6bee16c72bd58cc0efdbe72c247a332a3672842f6",
+    "VALIDADOR_52_SCRIPT": "4c7c9e858acf9e2e224a5f57dddb027d797401c0ef5f665eeccc9c00f094d79f",
+    "RECALCULO_50": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "hashes_inputs_despues_pre_outputs": {
+    "GOBERNANZA_51": "2f61471e0c4ff1cac1e1d8c6bee16c72bd58cc0efdbe72c247a332a3672842f6",
+    "VALIDADOR_52_SCRIPT": "4c7c9e858acf9e2e224a5f57dddb027d797401c0ef5f665eeccc9c00f094d79f",
+    "RECALCULO_50": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "archivos": {
+    "Excel": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_5809.xlsx",
+    "Informe": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/INFORME_MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_5809.md",
+    "Manifest": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/manifest_matriz_resolucion_bloqueos_16_19_gobernada_5809.json",
+    "Script": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/matriz_resolucion_bloqueos_16_19_gobernada_5809.py"
+  },
+  "hashes_inputs_despues": {
+    "GOBERNANZA_51": "2f61471e0c4ff1cac1e1d8c6bee16c72bd58cc0efdbe72c247a332a3672842f6",
+    "VALIDADOR_52_SCRIPT": "4c7c9e858acf9e2e224a5f57dddb027d797401c0ef5f665eeccc9c00f094d79f",
+    "RECALCULO_50": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "sies_ready_detectado": [],
+  "hashes_salidas": {
+    "Excel": "93b111e018ccd2dfd589c8d401e30f92551c8242409ba65fc44283661b1b7509",
+    "Informe": "6977d08c07b7c388cf4c5a0392ef86989dd963e8f727007f7b2b2d9907518b5a",
+    "Script": "6c098bf007822f40bde0538fad2c02d585c4f2d0f85296982fd4ce7ba6313c15"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Validador gobernanza precalculo 5809",
+  "timestamp": "20260708_182553_H59",
+  "anio_proceso": 2026,
+  "anio_referencia_datos": 2025,
+  "estado_carga": "NO_LISTO_PARA_CARGA",
+  "estado_validador": "APTO_PARA_CONTROL_PREVIO",
+  "fuentes_originales_modificadas": "NO",
+  "gobernanza_xlsx": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/51_gobernanza_integral_inputs_columnas_transformaciones_5809/GOBERNANZA_INTEGRAL_5809_20260708_144544/GOBERNANZA_INTEGRAL_INPUTS_COLUMNAS_TRANSFORMACIONES_5809.xlsx",
+  "gobernanza_hash_sha256": "2f61471e0c4ff1cac1e1d8c6bee16c72bd58cc0efdbe72c247a332a3672842f6",
+  "plan_uso": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/59_paquete_validacion_humana_16_19_5809/PAQUETE_VALIDACION_HUMANA_16_19_20260708_182553/plan_uso_validador_h52_paquete_validacion_humana_16_19.json",
+  "plan": {
+    "descripcion": "Paquete documental para validacion humana de 423 pendientes 16-19. No corrige, no recalcula 20-21, no genera carga ni SIES_READY.",
+    "columnas_usadas": [
+      "CODIGO_UNICO",
+      "PLAN_ESTUDIOS",
+      "NUM_DOCUMENTO",
+      "DV",
+      "CODCLI_LISTA",
+      "CODCLI",
+      "ANO",
+      "PERIODO",
+      "CODRAMO",
+      "ESTADO",
+      "DESCRIPCION_ESTADO"
+    ],
+    "llaves_usadas": [
+      "CODIGO_UNICO",
+      "PLAN_ESTUDIOS",
+      "NUM_DOCUMENTO",
+      "DV",
+      "CODCLI_LISTA"
+    ],
+    "diccionarios_usados": [
+      "DIC_ESTADO_PROMEDIOS"
+    ],
+    "transformaciones": [
+      "Preparacion documental de preguntas para validacion humana; sin correccion"
+    ],
+    "campos_calculo": [],
+    "anio_calculo": 2025,
+    "genera_sies_ready": false,
+    "modifica_fuentes_originales": false,
+    "usa_todos_codcli_rut": false,
+    "filtra_por_programa": true,
+    "usa_inferencias_como_reglas_oficiales": false,
+    "usa_estados_AEIR": true,
+    "usa_codcli_lista": true,
+    "mezcla_anual_acumulado": false,
+    "modo": "PAQUETE_VALIDACION_HUMANA_NO_CORRECTIVO_16_19"
+  },
+  "conteos": {
+    "hojas_gobernanza_leidas": 21,
+    "controles_obligatorios": 12,
+    "controles_faltantes": 0,
+    "reglas_plan_bloqueadas": 0,
+    "bloqueos_vigentes_heredados": 6,
+    "fuentes_hash_ok": 7,
+    "fuentes_hash_difieren": 0
+  },
+  "controles": [
+    {
+      "ID_CONTROL": "C01",
+      "Intento bloqueado": "Usar N_CODCLI como CODCLI academico",
+      "Evidencia gobernanza": "N_CODCLI en 03_COLUMNAS_INVENTARIO con BLOQUEADA y prohibicion en 12.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear cualquier plan que use N_CODCLI como llave academica."
+    },
+    {
+      "ID_CONTROL": "C02",
+      "Intento bloqueado": "Usar estados A/E/I/R sin diccionario PROMEDIOS",
+      "Evidencia gobernanza": "Hoja 05 con A/E/I/R/NULL y columnas ESTADO/DESCRIPCION_ESTADO gobernadas.",
+      "Resultado control": "OK",
+      "Accion": "Exigir diccionario PROMEDIOS antes de interpretar estados."
+    },
+    {
+      "ID_CONTROL": "C03",
+      "Intento bloqueado": "Calcular 16-19 sin CODCLI_LISTA",
+      "Evidencia gobernanza": "CODCLI_LISTA gobernada y hoja 08 documenta columnas 16-19.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear calculo 16-19 si CODCLI_LISTA no participa."
+    },
+    {
+      "ID_CONTROL": "C04",
+      "Intento bloqueado": "Sumar todos los CODCLI del RUT sin filtrar por programa",
+      "Evidencia gobernanza": "Prohibicion explicita y llave programa en 06_LLAVES_GOBERNADAS.",
+      "Resultado control": "OK",
+      "Accion": "Exigir filtro por programa antes de contar unidades."
+    },
+    {
+      "ID_CONTROL": "C05",
+      "Intento bloqueado": "Usar 2026 para calculo anual 2025",
+      "Evidencia gobernanza": "Prohibicion explicita y año referencia datos 2025.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear ANO=2026 en calculo anual 16-19."
+    },
+    {
+      "ID_CONTROL": "C06",
+      "Intento bloqueado": "Mezclar 16-19 anual con 20-21 acumulado",
+      "Evidencia gobernanza": "Hoja 09 separa acumulado; transformacion autorizada obliga separacion.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear formulas que traten anual y acumulado como el mismo universo."
+    },
+    {
+      "ID_CONTROL": "C07",
+      "Intento bloqueado": "Presentar inferencias como reglas oficiales",
+      "Evidencia gobernanza": "Prohibiciones P06/P07 e incidencia metodologica de inferencia A/E/I/R.",
+      "Resultado control": "OK",
+      "Accion": "Exigir separacion: regla oficial, dato observado, implementacion, decision y pendiente."
+    },
+    {
+      "ID_CONTROL": "C08",
+      "Intento bloqueado": "Generar SIES_READY con bloqueos vigentes",
+      "Evidencia gobernanza": "NO_LISTO_PARA_CARGA, bloqueos vigentes y prohibicion SIES_READY.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear cualquier salida final mientras existan bloqueos."
+    },
+    {
+      "ID_CONTROL": "C09",
+      "Intento bloqueado": "Usar columnas no gobernadas",
+      "Evidencia gobernanza": "03_COLUMNAS_INVENTARIO contiene Estado gobernanza por columna.",
+      "Resultado control": "OK",
+      "Accion": "Validar cada columna usada contra inventario antes de ejecutar."
+    },
+    {
+      "ID_CONTROL": "C10",
+      "Intento bloqueado": "Modificar fuentes originales",
+      "Evidencia gobernanza": "Hashes de fuentes del paso 51 y regla de no modificacion.",
+      "Resultado control": "OK",
+      "Accion": "Comparar hash antes/despues y bloquear escritura sobre fuentes."
+    },
+    {
+      "ID_CONTROL": "C11",
+      "Intento bloqueado": "Reanudar desde paso incorrecto",
+      "Evidencia gobernanza": "Reglas de reanudacion: paso 50 reemplaza paso 48.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear uso de paso 48 como base de decision."
+    },
+    {
+      "ID_CONTROL": "C12",
+      "Intento bloqueado": "Ejecutar con gobernanza incompleta",
+      "Evidencia gobernanza": "Hojas minimas requeridas presentes.",
+      "Resultado control": "OK",
+      "Accion": "Bloquear si falta alguna hoja critica de gobernanza."
+    }
+  ],
+  "validacion_plan": [
+    {
+      "ID_REGLA": "R01",
+      "Validacion": "No usar N_CODCLI como CODCLI academico",
+      "Resultado": "OK",
+      "Evidencia": "Columnas/llaves declaradas: CODIGO_UNICO, PLAN_ESTUDIOS, NUM_DOCUMENTO, DV, CODCLI_LISTA, CODCLI, ANO, PERIODO, CODRAMO, ESTADO, DESCRIPCION_ESTADO, CODIGO_UNICO, PLAN_ESTUDIOS, NUM_DOCUMENTO, DV, CODCLI_LISTA",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R02",
+      "Validacion": "No usar A/E/I/R sin diccionario PROMEDIOS",
+      "Resultado": "OK",
+      "Evidencia": "usa_estados_AEIR=True; diccionarios_usados=DIC_ESTADO_PROMEDIOS",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R03",
+      "Validacion": "No calcular 16-19 sin CODCLI_LISTA",
+      "Resultado": "OK",
+      "Evidencia": "campos_calculo=; CODCLI_LISTA=True",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R04",
+      "Validacion": "No sumar todos los CODCLI del RUT sin filtrar por programa",
+      "Resultado": "OK",
+      "Evidencia": "usa_todos_codcli_rut=False; filtra_por_programa=True",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R05",
+      "Validacion": "No usar 2026 para calculo anual 2025",
+      "Resultado": "OK",
+      "Evidencia": "anio_calculo=2025",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R06",
+      "Validacion": "No mezclar 16-19 anual con 20-21 acumulado",
+      "Resultado": "OK",
+      "Evidencia": "campos_calculo=",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R07",
+      "Validacion": "No presentar inferencias como reglas oficiales",
+      "Resultado": "OK",
+      "Evidencia": "usa_inferencias_como_reglas_oficiales=False",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R08",
+      "Validacion": "No generar SIES_READY con bloqueos vigentes",
+      "Resultado": "OK",
+      "Evidencia": "genera_sies_ready=False; bloqueos_vigentes=6",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R09",
+      "Validacion": "No usar columnas no gobernadas",
+      "Resultado": "OK",
+      "Evidencia": "Todas las columnas declaradas estan gobernadas o no se declararon columnas.",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    },
+    {
+      "ID_REGLA": "R10",
+      "Validacion": "No modificar fuentes originales",
+      "Resultado": "OK",
+      "Evidencia": "modifica_fuentes_originales=False",
+      "Accion": "Sin bloqueo para el plan evaluado."
+    }
+  ],
+  "bloqueos_vigentes": [
+    {
+      "ID_BLOQUEO": "B01",
+      "Bloqueo": "423 pendientes 16-19 con diccionario estado PROMEDIOS",
+      "Casos": 423,
+      "Fuente": "Paso 50 / hoja 00_DICTAMEN y 06_PENDIENTES_16_19",
+      "Requisito para resolver": "Resolver diferencias y criterios E/I/NULL/programa antes de definitivo.",
+      "Responsable sugerido": "Equipo funcional academico + datos",
+      "Puede resolverse automaticamente": "NO",
+      "Riesgo": "Alto: no puede declararse listo."
+    },
+    {
+      "ID_BLOQUEO": "B02",
+      "Bloqueo": "223 diferencia solo aprobadas 19",
+      "Casos": 223,
+      "Fuente": "Paso 50",
+      "Requisito para resolver": "Cerrar tratamiento de aprobadas, convalidaciones, homologaciones y NULL/blanco.",
+      "Responsable sugerido": "Equipo funcional academico",
+      "Puede resolverse automaticamente": "NO",
+      "Riesgo": "Alto: afecta UNIDADES_APROBADAS."
+    },
+    {
+      "ID_BLOQUEO": "B03",
+      "Bloqueo": "71 diferencia 16-18 o múltiple",
+      "Casos": 71,
+      "Fuente": "Paso 50",
+      "Requisito para resolver": "Validar periodo, ramos, duplicados o mapeo programa.",
+      "Responsable sugerido": "Datos + funcional",
+      "Puede resolverse automaticamente": "NO",
+      "Riesgo": "Medio/alto: afecta presencia y cursadas."
+    },
+    {
+      "ID_BLOQUEO": "B04",
+      "Bloqueo": "122 sin registros 2025 para CODCLI_LISTA",
+      "Casos": 122,
+      "Fuente": "Paso 50",
+      "Requisito para resolver": "Revisar CODCLI_LISTA, programa 2025 y cobertura PROMEDIOS.",
+      "Responsable sugerido": "Datos institucionales",
+      "Puede resolverse automaticamente": "NO",
+      "Riesgo": "Alto: ausencia de evidencia anual."
+    },
+    {
+      "ID_BLOQUEO": "B05",
+      "Bloqueo": "7 bloqueo sin CODCLI_LISTA",
+      "Casos": 7,
+      "Fuente": "MAPEO_IDENTIDAD_CODCLI / Paso 50",
+      "Requisito para resolver": "Completar o resolver identidad academica antes de calcular.",
+      "Responsable sugerido": "Datos institucionales",
+      "Puede resolverse automaticamente": "NO",
+      "Riesgo": "Alto: sin llave academica."
+    },
+    {
+      "ID_BLOQUEO": "B06",
+      "Bloqueo": "20-21 acumulado pendiente/no cerrado",
+      "Casos": "PENDIENTE",
+      "Fuente": "Gobernanza columnas 20-21",
+      "Requisito para resolver": "Definir fuente historica completa, regla acumulada y limite por plan.",
+      "Responsable sugerido": "Equipo funcional academico + datos",
+      "Puede resolverse automaticamente": "NO",
+      "Riesgo": "Alto: separacion anual/acumulado no cerrada."
+    }
+  ],
+  "hashes_fuentes_registrados": {
+    "F01_INSTRUCTIVO_OFICIAL": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+    "F02_PRECARGA_5809": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+    "F03_PRECARGA_5810": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+    "F04_PROMEDIOS_ACTUALIZADO": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "F05_MAPEO_IDENTIDAD_CODCLI": "ed50755cd8d56270d79e5c422dfad88434082692cf865368faca6caf1af619b7",
+    "F06_PLANES_ESTUDIO": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+    "F07_RECALCULO_50_EVIDENCIA": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "hashes_fuentes_antes": {
+    "F01_INSTRUCTIVO_OFICIAL": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+    "F02_PRECARGA_5809": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+    "F03_PRECARGA_5810": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+    "F04_PROMEDIOS_ACTUALIZADO": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "F05_MAPEO_IDENTIDAD_CODCLI": "ed50755cd8d56270d79e5c422dfad88434082692cf865368faca6caf1af619b7",
+    "F06_PLANES_ESTUDIO": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+    "F07_RECALCULO_50_EVIDENCIA": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "hashes_fuentes_despues_pre_outputs": {
+    "F01_INSTRUCTIVO_OFICIAL": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+    "F02_PRECARGA_5809": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+    "F03_PRECARGA_5810": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+    "F04_PROMEDIOS_ACTUALIZADO": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "F05_MAPEO_IDENTIDAD_CODCLI": "ed50755cd8d56270d79e5c422dfad88434082692cf865368faca6caf1af619b7",
+    "F06_PLANES_ESTUDIO": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+    "F07_RECALCULO_50_EVIDENCIA": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "sies_ready_detectado": [],
+  "archivos": {
+    "Excel": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/VALIDACION_GOBERNANZA_PRECALCULO_5809.xlsx",
+    "Informe": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/INFORME_VALIDACION_GOBERNANZA_PRECALCULO_5809.md",
+    "Manifest": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/manifest_validacion_gobernanza_precalculo_5809.json",
+    "Script": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_182553_H59/validador_gobernanza_precalculo_5809.py"
+  },
+  "hashes_fuentes_despues": {
+    "F01_INSTRUCTIVO_OFICIAL": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+    "F02_PRECARGA_5809": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+    "F03_PRECARGA_5810": "6aba308f1316c1d314a5bedc0597f534807c101d313a142c0ee7d4483bda594d",
+    "F04_PROMEDIOS_ACTUALIZADO": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "F05_MAPEO_IDENTIDAD_CODCLI": "ed50755cd8d56270d79e5c422dfad88434082692cf865368faca6caf1af619b7",
+    "F06_PLANES_ESTUDIO": "97da5d13cd5463b8eb6cba463d7419744cab3789aa69618c55f9389615d6c787",
+    "F07_RECALCULO_50_EVIDENCIA": "6c1538a1cbcc81c008e9257851dc13388197c868f4d350f42e02eabfb9d395f2"
+  },
+  "hashes_salidas": {
+    "Excel": "85dd988aba537c3f62561a5a5d36076e1a117a6384ceca9cf541c88a7d5a04f3",
+    "Informe": "eb63e331d1df7e2f580ce0278f4d3d2f4f14fb16fa740b1eae73bed56de60ead",
+    "Script": "4c7c9e858acf9e2e224a5f57dddb027d797401c0ef5f665eeccc9c00f094d79f"
+  }
+}

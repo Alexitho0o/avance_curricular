@@ -1,0 +1,34 @@
+{
+  "descripcion": "Auditoria diagnostica de 223 casos DIFERENCIA_SOLO_APROBADAS_19. No corrige, no recalcula y no genera carga.",
+  "columnas_usadas": [
+    "CODIGO_UNICO",
+    "PLAN_ESTUDIOS",
+    "CODCLI_LISTA",
+    "ESTADO",
+    "DESCRIPCION_ESTADO"
+  ],
+  "llaves_usadas": [
+    "CODCLI_LISTA",
+    "CODIGO_UNICO",
+    "PLAN_ESTUDIOS"
+  ],
+  "diccionarios_usados": [
+    "DIC_ESTADO_PROMEDIOS"
+  ],
+  "transformaciones": [
+    "Diagnostico documental de diferencias columna 19; sin correccion de datos"
+  ],
+  "campos_calculo": [
+    "19"
+  ],
+  "anio_calculo": 2025,
+  "genera_sies_ready": false,
+  "modifica_fuentes_originales": false,
+  "usa_todos_codcli_rut": false,
+  "filtra_por_programa": true,
+  "usa_inferencias_como_reglas_oficiales": false,
+  "usa_estados_AEIR": true,
+  "usa_codcli_lista": true,
+  "mezcla_anual_acumulado": false,
+  "modo": "AUDITORIA_DIAGNOSTICA_NO_CORRECTIVA"
+}

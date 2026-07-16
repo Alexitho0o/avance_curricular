@@ -1,0 +1,80 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "Auditoria sin CODCLI_LISTA 5809",
+  "timestamp": "20260708_175249",
+  "anio_proceso": 2026,
+  "anio_referencia_datos": 2025,
+  "declaracion_carga": "NO_LISTO_PARA_CARGA",
+  "fuentes_originales_modificadas": "NO",
+  "correcciones_aplicadas": "NO",
+  "sies_ready_generado": "NO",
+  "recalculo_20_21": "NO",
+  "mezcla_hitos_54_55_56": "NO",
+  "estado_validador_hito_52": "APTO_PARA_CONTROL_PREVIO",
+  "carpeta_salida": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249",
+  "archivos": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/AUDITORIA_SIN_CODCLI_LISTA_5809.xlsx",
+    "informe": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/INFORME_AUDITORIA_SIN_CODCLI_LISTA_5809.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/manifest_auditoria_sin_codcli_lista_5809.json",
+    "script": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/auditoria_sin_codcli_lista_5809.py"
+  },
+  "entradas_obligatorias": {
+    "gobernanza_51": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/51_gobernanza_integral_inputs_columnas_transformaciones_5809/GOBERNANZA_INTEGRAL_5809_20260708_144544/GOBERNANZA_INTEGRAL_INPUTS_COLUMNAS_TRANSFORMACIONES_5809.xlsx",
+    "validador_52_script": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_165151/validador_gobernanza_precalculo_5809.py",
+    "validador_52_xlsx": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_165151/VALIDACION_GOBERNANZA_PRECALCULO_5809.xlsx",
+    "matriz_53": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/53_matriz_resolucion_bloqueos_16_19_gobernada_5809/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_20260708_170521/MATRIZ_RESOLUCION_BLOQUEOS_16_19_GOBERNADA_5809.xlsx",
+    "precarga_5809": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/00_fuentes_congeladas/CARGA_CONGELADA_20260626_005826/originales/5809_Precarga Matrícula Avance Curricular 2026.csv",
+    "promedios_actualizado": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/25_actualizacion_fuente_promedios/CAMBIO_PROMEDIOSDEALUMNOS_20260704_221059/00_FUENTE_CONGELADA/PROMEDIOSDEALUMNOS_7804_ACTUALIZADO_20260704_221059.xlsx",
+    "mapeo_identidad_codcli": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/04_CONCILIACION_MATRICULA/PREPARACION_MATRICULA_20260703_141254/02_IDENTIFICADORES/MAPEO_IDENTIDAD_CODCLI.xlsx"
+  },
+  "validador_hito_52_ejecucion": {
+    "plan": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/57_auditoria_sin_codcli_lista_5809/AUDITORIA_SIN_CODCLI_LISTA_20260708_175249/plan_uso_validador_h52_auditoria_sin_codcli_lista.json",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_175249_H57/manifest_validacion_gobernanza_precalculo_5809.json",
+    "carpeta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/52_validador_gobernanza_precalculo_5809/VALIDADOR_GOBERNANZA_PRECALCULO_5809_20260708_175249_H57",
+    "returncode": 0
+  },
+  "conteos": {
+    "casos_auditados": 7,
+    "casos_hoja_06_hito_53": 7,
+    "causas_principales": {
+      "RUT_NO_EXISTE_EN_MAPEO_IDENTIDAD": 1,
+      "CODIGO_UNICO_NO_EXISTE_EN_MAPEO_IDENTIDAD": 0,
+      "RUT_EXISTE_PERO_NO_PARA_CODIGO_UNICO": 0,
+      "RUT_EXISTE_EN_PROMEDIOS_CON_OTRO_CODCLI": 1,
+      "DOCUMENTO_NO_CALZA_ENTRE_PRECARGA_Y_MAPEO": 1,
+      "POSIBLE_CASO_EXTRANJERO_O_DOCUMENTO_NO_RUT": 4,
+      "REQUIERE_MAPEO_INSTITUCIONAL": 0,
+      "REQUIERE_FUENTE_ACADEMICA_COMPLEMENTARIA": 0,
+      "REQUIERE_REVISION_FUNCIONAL": 0
+    },
+    "causas_detectadas": {
+      "RUT_NO_EXISTE_EN_MAPEO_IDENTIDAD": 6,
+      "CODIGO_UNICO_NO_EXISTE_EN_MAPEO_IDENTIDAD": 0,
+      "RUT_EXISTE_PERO_NO_PARA_CODIGO_UNICO": 0,
+      "RUT_EXISTE_EN_PROMEDIOS_CON_OTRO_CODCLI": 1,
+      "DOCUMENTO_NO_CALZA_ENTRE_PRECARGA_Y_MAPEO": 1,
+      "POSIBLE_CASO_EXTRANJERO_O_DOCUMENTO_NO_RUT": 5,
+      "REQUIERE_MAPEO_INSTITUCIONAL": 7,
+      "REQUIERE_FUENTE_ACADEMICA_COMPLEMENTARIA": 6,
+      "REQUIERE_REVISION_FUNCIONAL": 7
+    },
+    "hojas_excel": {
+      "00_DICTAMEN": 1,
+      "01_VALIDACION_GOBERNANZA": 7,
+      "02_RESUMEN_CAUSAS": 9,
+      "03_7_CASOS": 7,
+      "04_BUSQUEDA_RUT_MAPEO": 7,
+      "05_BUSQUEDA_RUT_PROMEDIOS": 7,
+      "06_BUSQUEDA_CODIGO_UNICO": 7,
+      "07_ESTADO_ACADEMICO_OBSERVADO": 28,
+      "08_CAUSAS_PROPUESTAS": 9,
+      "09_NO_RESOLVER_AUTOMATICO": 7,
+      "10_FUENTES": 13
+    }
+  },
+  "hashes_salida": {
+    "excel": "9aeea4fd43c6e8fbbe96b1fc0d17c7586894e6e48432048cab0f3e9a42572d96",
+    "informe": "34a766894dbc6f08df50fabf06fbcdd1bdc54e6e19fa1ce9435e7d2057fd87b2",
+    "script": "4b26c49d1fc8d7d6160432e5d870335c457881b9baec4df1a221bd600cfb1116"
+  }
+}

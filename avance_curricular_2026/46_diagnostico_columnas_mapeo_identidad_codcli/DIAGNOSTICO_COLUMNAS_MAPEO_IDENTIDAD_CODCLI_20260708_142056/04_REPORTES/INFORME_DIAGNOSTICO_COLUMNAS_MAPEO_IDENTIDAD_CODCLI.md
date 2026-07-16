@@ -1,0 +1,10 @@
+# Diagnóstico columnas MAPEO_IDENTIDAD_CODCLI
+
+Proceso: Avance Curricular SIES 2026
+Estado: NO_LISTO_PARA_CARGA
+
+- Dictamen: COLUMNA_CODCLI_COMPATIBLE_CON_PROMEDIOS_ENCONTRADA
+- CODCLI distintos en PROMEDIOS: 13068
+- Máximo match de columna MAPEO con PROMEDIOS: 1782
+
+Hojas clave: `02_PERFIL_COLUMNAS_MAPEO` y `03_CANDIDATAS_CODCLI`.

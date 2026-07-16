@@ -1,0 +1,112 @@
+{
+  "proceso": "Avance Curricular SIES 2026",
+  "subproyecto": "validacion fila a fila columnas 16-21 archivo 5809",
+  "timestamp": "20260707_181435",
+  "fuentes": {
+    "promediosdealumnos": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/25_actualizacion_fuente_promedios/CAMBIO_PROMEDIOSDEALUMNOS_20260704_221059/00_FUENTE_CONGELADA/PROMEDIOSDEALUMNOS_7804_ACTUALIZADO_20260704_221059.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "modificada": false
+    },
+    "csv_5809": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/14_sies_ready_5809/SIES_READY_TECNICO_5809_22_COLUMNAS_20260704_151418/01_ARCHIVO_SIES_READY_TECNICO/5809_MATRICULA_AVANCE_CURRICULAR_2026_SIES_READY_TECNICO.csv",
+      "sha256": "f8861361d5fe0bf033ed15500c22031381b058e7e214245cfa04753ed128c28b",
+      "modificada": false
+    }
+  },
+  "salidas": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/AUDITORIA_CORREGIDA_LOGICA_2025_5809.xlsx",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/INFORME_AUDITORIA_CORREGIDA_LOGICA_2025_5809.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/manifest_auditoria_corregida_logica_2025_5809.json",
+    "desktop_dir": "/Users/alexi/Desktop/AVANCE_CURRICULAR_2026_AUDITORIA_LOGICA_2025_5809_20260707_181435"
+  },
+  "columnas_detectadas": {
+    "CODCLI": "CODCLI",
+    "RUT": "RUT",
+    "DV": "DIG",
+    "ANO": "ANO",
+    "PERIODO": "PERIODO",
+    "CODRAMO_ASIGNATURA": "CODRAMO",
+    "ESTADO": "DESCRIPCION_ESTADO",
+    "NOTA": "NOTA_FINAL",
+    "NOTA_ESCALA": "1_7"
+  },
+  "nota_salvaguardas": {
+    "prohibidas_por_nombre": [
+      "ANIO",
+      "ANO",
+      "CODCLI",
+      "DIG",
+      "DIGITO",
+      "DIGITOVERIFICADOR",
+      "DOCUMENTO",
+      "DV",
+      "NUMDOCUMENTO",
+      "NUMERODOCUMENTO",
+      "PERIODO",
+      "RUT"
+    ],
+    "umbral_identificador": ">80%",
+    "umbral_compatibilidad_escala": ">=80%",
+    "motivo": "Valores compatibles con escala 1 a 7; umbral interno >=80%"
+  },
+  "b2_acumulado": {
+    "ejecutable": false,
+    "output_col": null,
+    "source_col": null,
+    "checks": [
+      {
+        "columna_5809": "CODIGO_UNICO",
+        "columna_hoja1": "CODIGO_UNICO",
+        "ejecutable": "NO",
+        "interseccion_valores": 0,
+        "motivo": "Columna no disponible en ambas fuentes"
+      },
+      {
+        "columna_5809": "PLAN_ESTUDIOS",
+        "columna_hoja1": "PLAN_ESTUDIOS",
+        "ejecutable": "NO",
+        "interseccion_valores": 0,
+        "motivo": "Columna no disponible en ambas fuentes"
+      },
+      {
+        "columna_5809": "PLAN_ESTUDIOS",
+        "columna_hoja1": "PLAN_DE_ESTUDIO",
+        "ejecutable": "NO",
+        "interseccion_valores": 0,
+        "motivo": "Sin interseccion directa de valores"
+      }
+    ],
+    "reason": "No existe llave plan/carrera directa compatible entre 5809 y Hoja1. CODIGO_UNICO no existe en Hoja1; PLAN_ESTUDIOS del 5809 no intersecta con PLAN_DE_ESTUDIO de Hoja1."
+  },
+  "metricas": {
+    "total_filas": 2371,
+    "filas_con_codcli": 2345,
+    "filas_sin_codcli": 26,
+    "filas_con_evidencia_2025": 2225,
+    "filas_con_evidencia_2026_mismo_codcli": 1172,
+    "filas_ok_columnas_16_19": 1943,
+    "filas_diferencia_columnas_16_19": 274,
+    "filas_estados_no_clasificados": 8,
+    "filas_sin_evidencia_2025": 146,
+    "filas_b1_ok_20_21": 1413,
+    "filas_b1_diferencia_20_21": 958
+  },
+  "dictamen_anual_2025": "BLOQUEO_SIN_CODCLI",
+  "dictamen_acumulado_2025": "REVISAR_LOGICA_ACUMULADA",
+  "hojas_excel_requeridas": [
+    "DICTAMEN_GLOBAL",
+    "VALIDACIONES",
+    "COLUMNAS_DETECTADAS",
+    "CATALOGO_ESTADO",
+    "MAPEO_CODCLI_RUT",
+    "AUDITORIA_ANUAL_2025_FILA_A_FILA",
+    "FILAS_REVISAR_ANUAL_2025",
+    "RESUMEN_ANUAL_2025",
+    "AUDITORIA_ACUMULADO_2025_FILA_A_FILA",
+    "FILAS_REVISAR_ACUMULADO_2025",
+    "RESUMEN_ACUMULADO_2025",
+    "LOGICA_AUDITADA",
+    "FUENTES"
+  ]
+}

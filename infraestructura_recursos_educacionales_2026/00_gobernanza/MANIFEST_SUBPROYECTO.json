@@ -1,0 +1,969 @@
+{
+  "id_hito": "HITO 1A",
+  "tipo": "COMANDO + GOBERNANZA INICIAL",
+  "fecha_hora_ejecucion": "2026-07-09T14:42:29-0400",
+  "proceso": "Infraestructura y Recursos Educacionales",
+  "subproyecto": "IRE 2026",
+  "anio_proceso": 2026,
+  "repositorio_base": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "carpeta_subproyecto": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026",
+  "objetivo": "Crear la estructura base del subproyecto IRE 2026, copiar las fuentes originales desde Descargas, calcular hash SHA-256, clasificar archivos, crear manifiesto inicial y registrar el HITO 1A como punto de partida formal.",
+  "archivos_esperados": [
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+    "20260706_89535_Estructura_IRE_ID_16770.csv"
+  ],
+  "archivos_encontrados": [
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+    "20260706_89535_Estructura_IRE_ID_16770.csv"
+  ],
+  "archivos_copiados": [
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+    "20260706_89535_Estructura_IRE_ID_16770.csv"
+  ],
+  "archivos_no_encontrados": [],
+  "rutas_origen": {
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt": "/Users/alexi/Downloads/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+    "20260706_89535_Estructura_IRE_ID_16770.csv": "/Users/alexi/Downloads/20260706_89535_Estructura_IRE_ID_16770.csv"
+  },
+  "rutas_destino": {
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+    "20260706_89535_Estructura_IRE_ID_16770.csv": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv"
+  },
+  "clasificacion_archivos": {
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt": "instructivo oficial / fuente original / no modificable",
+    "20260706_89535_Estructura_IRE_ID_16770.csv": "estructura tecnica oficial / fuente original / no modificable"
+  },
+  "hash_sha256_origen": {
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+    "20260706_89535_Estructura_IRE_ID_16770.csv": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae"
+  },
+  "hash_sha256_destino": {
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+    "20260706_89535_Estructura_IRE_ID_16770.csv": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae"
+  },
+  "validacion_integridad_copia": {
+    "20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt": {
+      "archivo_origen_existe": true,
+      "archivo_destino_existe": true,
+      "nombre_origen_destino_identico": true,
+      "hash_origen_destino_coincide": true,
+      "resultado": "OK"
+    },
+    "20260706_89535_Estructura_IRE_ID_16770.csv": {
+      "archivo_origen_existe": true,
+      "archivo_destino_existe": true,
+      "nombre_origen_destino_identico": true,
+      "hash_origen_destino_coincide": true,
+      "resultado": "OK"
+    }
+  },
+  "carpetas_creadas": [
+    "infraestructura_recursos_educacionales_2026/",
+    "infraestructura_recursos_educacionales_2026/00_gobernanza/",
+    "infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/instructivos/",
+    "infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/calendarios/",
+    "infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/oficios/",
+    "infraestructura_recursos_educacionales_2026/01_fuentes_oficiales/estructuras_tecnicas/",
+    "infraestructura_recursos_educacionales_2026/02_fuentes_institucionales/precargas/",
+    "infraestructura_recursos_educacionales_2026/02_fuentes_institucionales/bases_origen/",
+    "infraestructura_recursos_educacionales_2026/02_fuentes_institucionales/reportes_plataforma/",
+    "infraestructura_recursos_educacionales_2026/02_fuentes_institucionales/respaldos_originales/",
+    "infraestructura_recursos_educacionales_2026/03_diccionarios/",
+    "infraestructura_recursos_educacionales_2026/04_scripts/py/",
+    "infraestructura_recursos_educacionales_2026/04_scripts/sh/",
+    "infraestructura_recursos_educacionales_2026/04_scripts/sql/",
+    "infraestructura_recursos_educacionales_2026/04_scripts/skills/",
+    "infraestructura_recursos_educacionales_2026/04_scripts/agents/",
+    "infraestructura_recursos_educacionales_2026/05_datos_trabajo/staging/",
+    "infraestructura_recursos_educacionales_2026/05_datos_trabajo/normalizados/",
+    "infraestructura_recursos_educacionales_2026/05_datos_trabajo/conciliados/",
+    "infraestructura_recursos_educacionales_2026/05_datos_trabajo/muestras_controladas/",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/estructura/",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/contenido/",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/duplicados/",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/consistencia/",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/",
+    "infraestructura_recursos_educacionales_2026/07_resultados/archivos_carga/",
+    "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/",
+    "infraestructura_recursos_educacionales_2026/07_resultados/reportes_gestion/",
+    "infraestructura_recursos_educacionales_2026/07_resultados/evidencias/",
+    "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/",
+    "infraestructura_recursos_educacionales_2026/08_logs/errores/",
+    "infraestructura_recursos_educacionales_2026/08_logs/historial_cambios/",
+    "infraestructura_recursos_educacionales_2026/09_respaldo/reemplazados/",
+    "infraestructura_recursos_educacionales_2026/09_respaldo/descartados/",
+    "infraestructura_recursos_educacionales_2026/09_respaldo/congelados_manual/",
+    "infraestructura_recursos_educacionales_2026/10_entrega/final_pes/",
+    "infraestructura_recursos_educacionales_2026/10_entrega/copia_escritorio_si_corresponde/",
+    "infraestructura_recursos_educacionales_2026/10_entrega/resumen_envio/"
+  ],
+  "archivos_creados": [
+    "infraestructura_recursos_educacionales_2026/00_gobernanza/MANIFEST_SUBPROYECTO.json",
+    "infraestructura_recursos_educacionales_2026/00_gobernanza/MANIFEST_SUBPROYECTO.md",
+    "infraestructura_recursos_educacionales_2026/00_gobernanza/bitacora_decisiones.md",
+    "infraestructura_recursos_educacionales_2026/00_gobernanza/criterios_versionado.md",
+    "infraestructura_recursos_educacionales_2026/03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.csv",
+    "infraestructura_recursos_educacionales_2026/03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.json",
+    "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_2B_COMPARACION_DICCIONARIO_VS_ESTRUCTURA_IRE_2026_20260709_233948.md",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/estructura/HITO_2B_COMPARACION_CAMPOS_INSTRUCTIVO_VS_CSV_IRE_2026_20260709_233948.csv",
+    "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_2B_LOG_EJECUCION_20260709_233948.txt",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_LARGA_CAMPO_TIPO_INFRAESTRUCTURA_IRE_2026_20260709_235255.csv",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_ANCHA_CAMPO_TIPO_INFRAESTRUCTURA_IRE_2026_20260709_235255.csv",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_2C_PENDIENTES_CONTRADICCIONES_CAMPO_TIPO_IRE_2026_20260709_235255.csv",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.json",
+    "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_2C_REPORTE_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.md",
+    "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_2C_LOG_EJECUCION_20260709_235255.txt",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_3A_REGLAS_VALIDACION_IRE_2026_20260710_000222.csv",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/reglas_funcionales/HITO_3A_REGLAS_VALIDACION_IRE_2026_20260710_000222.json",
+    "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_3A_DISENO_VALIDACIONES_IRE_2026_20260710_000222.md",
+    "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3A_LOG_EJECUCION_20260710_000222.txt",
+    "infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_validador_ire_2026.py",
+    "infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_config_validador_ire_2026.json",
+    "infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_README_VALIDADOR_IRE_2026.md",
+    "infraestructura_recursos_educacionales_2026/05_datos_trabajo/muestras_controladas/HITO_3B_MUESTRA_CONTROLADA_IRE_2026_20260710_003623.csv",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/contenido/HITO_3B_RESULTADO_VALIDACION_IRE_2026_20260710_003623.csv",
+    "infraestructura_recursos_educacionales_2026/06_validaciones/contenido/HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_003623.json",
+    "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3B_LOG_EJECUCION_20260710_003623.txt",
+    "infraestructura_recursos_educacionales_2026/07_resultados/reportes_auditoria/HITO_3B_Z_CIERRE_DOCUMENTAL_VALIDADOR_IRE_2026_20260710_085242.md",
+    "infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3B_Z_CIERRE_VERIFICACION_VALIDADOR_IRE_2026_20260710_085242.json"
+  ],
+  "validaciones_realizadas": [
+    "Existe la carpeta del subproyecto.",
+    "Existen todas las subcarpetas base solicitadas.",
+    "El instructivo fue copiado a 01_fuentes_oficiales/instructivos/.",
+    "La estructura tecnica fue copiada a 01_fuentes_oficiales/estructuras_tecnicas/.",
+    "Los nombres destino son identicos a los nombres origen.",
+    "El hash SHA-256 del origen y destino coincide para cada archivo.",
+    "El manifiesto JSON existe.",
+    "El manifiesto MD existe.",
+    "La bitacora existe.",
+    "Los criterios de versionado existen."
+  ],
+  "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+  "pendientes": [
+    "Confirmar delimitador oficial versus punto y coma observado en la estructura tecnica.",
+    "Confirmar codificacion aceptada por PES.",
+    "Confirmar tratamiento blanco versus cero para campos no aplicables.",
+    "Resolver excepcion de TOTAL_M2_TERRENO.",
+    "Confirmar condicion de UR_DESC_TENENCIA_OTRA.",
+    "Confirmar formato y caracteres de plataformas virtuales.",
+    "Confirmar rol de CODIGO_INSTITUCION.",
+    "Confirmar FECHA_TERMINO para tenencia Otro.",
+    "Probar el validador contra una fuente institucional real cuando sea incorporada por el usuario."
+  ],
+  "proximo_hito_sugerido": "HITO 3C - COMANDO - Prueba del validador contra una fuente institucional o archivo candidato IRE 2026 cuando el usuario incorpore el archivo de datos.",
+  "historial_hitos": [
+    {
+      "id_hito": "HITO 1B",
+      "tipo": "COMANDO",
+      "fecha_hora_ejecucion": "2026-07-09T14:49:58-0400",
+      "proceso": "Infraestructura y Recursos Educacionales",
+      "subproyecto": "IRE 2026",
+      "objetivo": "Inventario tecnico inicial de las fuentes originales IRE 2026 sin modificar archivos, sin interpretar reglas funcionales y sin generar archivos de carga.",
+      "archivos_entrada": [
+        "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+        "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv"
+      ],
+      "archivos_salida": [
+        "06_validaciones/estructura/HITO_1B_INVENTARIO_TECNICO_FUENTES_IRE_2026_20260709_144958.json",
+        "07_resultados/reportes_auditoria/HITO_1B_INVENTARIO_TECNICO_FUENTES_IRE_2026_20260709_144958.md",
+        "08_logs/ejecuciones/HITO_1B_LOG_EJECUCION_20260709_144958.txt",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "comandos_ejecutados": [
+        "ls -l <fuentes originales incorporadas>",
+        "sed -n <archivos de gobernanza existentes>",
+        "python3 - <<PY <generacion de inventario tecnico, reportes y actualizacion de gobernanza>",
+        "python3 -m json.tool <validacion JSON>",
+        "test -f <validacion de salidas esperadas>"
+      ],
+      "validaciones_realizadas": [
+        "Verificacion de existencia de ambas fuentes originales esperadas.",
+        "Calculo de tamano, fecha de modificacion y hash SHA-256.",
+        "Lectura en modo solo lectura para deteccion de codificacion probable.",
+        "Conteo tecnico de lineas y caracteres del instructivo TXT.",
+        "Extraccion de muestra controlada de primeras 30 lineas del instructivo TXT.",
+        "Deteccion de delimitador del CSV.",
+        "Conteo de filas y columnas del CSV.",
+        "Lectura de encabezados del CSV.",
+        "Extraccion de muestra controlada de primeras 5 filas del CSV.",
+        "Revision tecnica de columnas vacias, filas vacias, duplicados de encabezado, BOM y caracteres problematicos.",
+        "Revision de consistencia de cantidad de columnas por fila."
+      ],
+      "resultados_tecnicos": {
+        "instructivo_txt": {
+          "lineas": 841,
+          "caracteres": 57624,
+          "codificacion": "utf-8",
+          "hash_sha256": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+          "lectura_exitosa": true
+        },
+        "estructura_csv": {
+          "filas_totales": 1,
+          "filas_datos": 0,
+          "columnas": 54,
+          "delimitador": ";",
+          "codificacion": "utf-8",
+          "encabezados_detectados": true,
+          "lista_nombres_columnas": [
+            "TIPO_INFRAESTRUCTURA",
+            "NOMBRE_IDENTIFICACION",
+            "COMUNA",
+            "DIRECCION_INMUEBLE",
+            "SITUACION_TENENCIA",
+            "ANIO_INICIO_USO_INMUEBLE",
+            "USO_EXCLUSIVO",
+            "PORCENTAJE_USO",
+            "NOMBRE_INSTITUCION_COMPARTE",
+            "FECHA_INICIO_TENENCIA",
+            "FECHA_TERMINO",
+            "DESCRIPCION_OTRA_TENENCIA",
+            "FUNCION_DOCENCIA",
+            "FUNCION_INVESTIGACION",
+            "FUNCION_EXTENSION",
+            "FUNCION_ADM_OFICINAS",
+            "FUNCION_OTRAS",
+            "DESC_OTRAS_FUNCIONES",
+            "TOTAL_M2_TERRENO",
+            "TOTAL_M2_EDIFICADOS",
+            "TOTAL_SALAS_CLASES",
+            "CAPACIDAD_SALAS_CLASES",
+            "TOTAL_M2_SALAS_CLASES",
+            "TOTAL_AUDITORIOS",
+            "CAPACIDAD_AUDITORIOS",
+            "TOTAL_M2_AUDITORIOS",
+            "TOTAL_LABORATORIOS",
+            "TOTAL_M2_LABORATORIOS",
+            "TOTAL_TALLERES",
+            "TOTAL_M2_TALLERES",
+            "TOTAL_PC_NB_DISPONIBLE",
+            "TOTAL_M2_CASINOS_CAFETERIAS",
+            "TOTAL_M2_AREAS_VERDES",
+            "UR_DESC_ACTIVIDADES",
+            "UR_TOTAL_M2_TERRENO",
+            "UR_TOTAL_M2_CONSTRUIDOS",
+            "UR_SITUACION_TENENCIA",
+            "UR_DESC_TENENCIA_OTRA",
+            "TOTAL_M2_BIBLIOTECA",
+            "TOTAL_M2_SALAS_LECTURA",
+            "TOTAL_PROFESIONALES_BIBLIOTECA",
+            "HORAS_PERSONAL_BIBLIOTECA",
+            "TOTAL_TITULOS_DISPONIBLES",
+            "TOTAL_VOLUMENES_DISPONIBLES",
+            "TOTAL_SUSCRIPCIONES_REVISTAS",
+            "TOTAL_TITULOS_LIBROS_DIGITALES",
+            "TOTAL_SUSCRIPCIONES_DIGITALES",
+            "TOTAL_BASE_DATOS",
+            "TOTAL_HECTAREAS_PREDIO",
+            "SISTEMA_GESTION_APRENDIZAJES",
+            "SISTEMA_VIDEO_CONFERENCIA",
+            "SISTEMA_APLICACION_EVALUACION",
+            "DESCRIPCION_PLATAFORMA_VIRTUAL",
+            "VIGENCIA"
+          ],
+          "hash_sha256": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae",
+          "lectura_exitosa": true,
+          "consistencia_columnas": {
+            "consistente": true,
+            "cantidad_columnas_esperada": 54,
+            "distribucion_cantidad_columnas": {
+              "54": 1
+            },
+            "filas_inconsistentes": []
+          }
+        }
+      },
+      "errores": [],
+      "estado_hito": "COMPLETADO",
+      "pendientes": [
+        "Ejecutar HITO 2A para lectura funcional controlada del instructivo oficial IRE 2026."
+      ],
+      "proximo_hito_sugerido": "HITO 2A - PROMPT - Lectura funcional controlada del instructivo oficial IRE 2026: alcance, fecha de referencia, plazo, formato de carga, secciones y reglas oficiales iniciales."
+    },
+    {
+      "id_hito": "HITO 2A",
+      "tipo": "PROMPT",
+      "fecha_hora_ejecucion": "2026-07-09T14:57:24-0400",
+      "objetivo": "Leer funcionalmente el instructivo oficial IRE 2026 para extraer, ordenar y documentar reglas oficiales iniciales del proceso, sin transformar datos y sin generar archivo de carga.",
+      "fuente_usada": "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+      "archivos_entrada": [
+        "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+        "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv"
+      ],
+      "archivos_salida": [
+        "07_resultados/reportes_auditoria/HITO_2A_LECTURA_FUNCIONAL_INSTRUCTIVO_IRE_2026_20260709_145724.md",
+        "06_validaciones/reglas_funcionales/HITO_2A_REGLAS_FUNCIONALES_INICIALES_IRE_2026_20260709_145724.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "reglas_extraidas": {
+        "cantidad_reglas_generales": 10,
+        "cantidad_definiciones": 15,
+        "cantidad_reglas_por_campo_o_grupo": 14,
+        "fecha_referencia_datos": "2026-06-30",
+        "plazo_carga": "2026-07-24",
+        "formato": ".CSV sin encabezados",
+        "tipos_infraestructura": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "vigencia": {
+          "clasificacion": "A. REGLA OFICIAL",
+          "campo": "VIGENCIA",
+          "significado": "Variable utilizada para mantener o eliminar un registro cargado.",
+          "valores_permitidos": {
+            "0": "Eliminar registro cargado",
+            "1": "Mantener registro cargado"
+          },
+          "efecto_funcional": "Controla eliminacion o mantencion de registros cargados.",
+          "obligatoriedad": "Obligatorio; no puede quedar vacio.",
+          "aplica_solo_a_este_proceso": {
+            "clasificacion": "F. HIPOTESIS O PENDIENTE",
+            "valor": "El instructivo lo describe dentro de IRE 2026; no se debe asumir aplicacion fuera de este proceso."
+          },
+          "pendiente": "Confirmar tratamiento operacional de VIGENCIA en primera carga versus cargas acumulativas posteriores."
+        }
+      },
+      "validaciones_derivadas": {
+        "validaciones_oficiales": [
+          "Verificar TIPO_INFRAESTRUCTURA en valores 1,2,3,4,5,6.",
+          "Verificar fecha de referencia de datos al 30 de junio de 2026 en fuentes institucionales posteriores.",
+          "Cargar archivo CSV sin encabezados en PES.",
+          "Validar VIGENCIA obligatorio con valores 0 o 1.",
+          "Validar reglas condicionales por TIPO_INFRAESTRUCTURA segun Anexo III.",
+          "Validar fechas de tenencia en formato AAAA-MM y contra referencia junio 2026.",
+          "Validar que para uso compartido se completen porcentaje y nombre de institucion, y para uso exclusivo no se completen.",
+          "Validar relaciones numericas: TOTAL_M2_SALAS_CLASES <= TOTAL_M2_EDIFICADOS, TOTAL_M2_SALAS_LECTURA <= TOTAL_M2_BIBLIOTECA, TOTAL_TITULOS_DISPONIBLES <= TOTAL_VOLUMENES_DISPONIBLES."
+        ],
+        "validaciones_tecnicas_sugeridas": [
+          {
+            "clasificacion": "D. IMPLEMENTACION TECNICA",
+            "validacion": "Construir diccionario estructurado desde Anexo I y compararlo contra los 54 encabezados del CSV."
+          },
+          {
+            "clasificacion": "D. IMPLEMENTACION TECNICA",
+            "validacion": "Crear validador de columnas obligatorias, condicionales y prohibidas por tipo antes de generar cualquier carga."
+          },
+          {
+            "clasificacion": "D. IMPLEMENTACION TECNICA",
+            "validacion": "Normalizar mayusculas, acentos y abreviaciones solo en derivados de trabajo, nunca en fuentes originales."
+          },
+          {
+            "clasificacion": "D. IMPLEMENTACION TECNICA",
+            "validacion": "Validar delimitador real de salida contra PES antes de carga por diferencia coma versus punto y coma."
+          }
+        ],
+        "validaciones_pendientes": [
+          "Codificacion de archivo no indicada por instructivo.",
+          "Confirmar delimitador efectivo aceptado por PES para la institucion.",
+          "Confirmar tratamiento de campos que deben cargarse con 0 versus campos que no se deben completar.",
+          "Confirmar si plataformas virtuales aceptan caracteres distintos de A-Z pese a estar definidas como texto abierto."
+        ]
+      },
+      "contradicciones": [
+        {
+          "clasificacion": "B. ESTRUCTURA TECNICA / F. HIPOTESIS O PENDIENTE",
+          "tipo": "Diferencia formato-delimitador",
+          "descripcion": "El instructivo indica CSV delimitado por comas, mientras la estructura tecnica observada en HITO 1B trae encabezados separados por punto y coma (;).",
+          "impacto": "Debe resolverse antes de generar archivo candidato de carga.",
+          "fuente": "Instructivo lineas 37-39 y 557-561; CSV estructura HITO 1B."
+        },
+        {
+          "clasificacion": "A. REGLA OFICIAL / F. HIPOTESIS O PENDIENTE",
+          "tipo": "Tension todos los campos versus no completar",
+          "descripcion": "El instructivo indica que todos los campos deben ser cargados, pero Anexo III contiene multiples reglas donde ciertos bloques no deben completarse para determinados tipos.",
+          "impacto": "Se debe traducir en regla tecnica: columnas presentes siempre, valores 0/blanco segun tipo y campo, pendiente de formalizacion.",
+          "fuente": "Anexo I lineas 246-248; Anexo III lineas 656-688 y otras."
+        },
+        {
+          "clasificacion": "A. REGLA OFICIAL / F. HIPOTESIS O PENDIENTE",
+          "tipo": "Redaccion posiblemente erronea",
+          "descripcion": "El mensaje indica completar UR_DESC_TENENCIA_OTRA cuando UR_DESC_TENENCIA_OTRA es igual a 2; parece referirse a UR_SITUACION_TENENCIA = 2, pero no se corrige por supuesto.",
+          "impacto": "Pendiente de validacion o prueba contra PES.",
+          "fuente": "Anexo III, linea 769."
+        },
+        {
+          "clasificacion": "A. REGLA OFICIAL / F. HIPOTESIS O PENDIENTE",
+          "tipo": "Texto abierto versus valores A-Z",
+          "descripcion": "Anexo I define campos de plataformas virtuales como texto abierto, pero mensajes de error mencionan que algunos campos pueden contener letras A-Z.",
+          "impacto": "No asumir caracteres permitidos hasta validar contra estructura PES o prueba de carga.",
+          "fuente": "Anexo I lineas 514-538; Anexo III lineas 796-807."
+        }
+      ],
+      "pendientes": [
+        "Extraer diccionario oficial campo a campo desde Anexo I en formato estructurado.",
+        "Comparar el diccionario oficial contra los 54 encabezados del CSV de estructura.",
+        "Resolver delimitador efectivo para archivo candidato de carga: coma indicada oficialmente versus punto y coma observado tecnicamente.",
+        "Definir matriz campo x TIPO_INFRAESTRUCTURA con obligatorio, permitido, prohibido, cero o blanco.",
+        "Confirmar codificacion esperada de PES, porque el instructivo no la indica.",
+        "Confirmar tratamiento operativo de VIGENCIA en primera carga y en cargas acumulativas.",
+        "No generar archivo de carga hasta completar hitos de diccionario, comparacion y validacion."
+      ],
+      "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+      "proximo_hito_sugerido": "HITO 2B - COMANDO - Extraccion estructurada del diccionario oficial y comparacion preliminar contra los 54 encabezados del CSV de estructura IRE 2026."
+    },
+    {
+      "id_hito": "HITO 2B",
+      "tipo": "COMANDO",
+      "fecha_hora_ejecucion": "2026-07-09T23:39:48-0400",
+      "objetivo": "Construir un diccionario estructurado y auditable de los 54 campos IRE 2026 desde el instructivo oficial y compararlo contra la estructura tecnica CSV.",
+      "fuentes_usadas": [
+        {
+          "ruta": "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+          "hash_sha256": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+          "rol": "fuente oficial principal"
+        },
+        {
+          "ruta": "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+          "hash_sha256": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae",
+          "rol": "estructura tecnica oficial"
+        },
+        {
+          "ruta": "07_resultados/reportes_auditoria/HITO_2A_LECTURA_FUNCIONAL_INSTRUCTIVO_IRE_2026_20260709_145724.md",
+          "rol": "antecedente funcional controlado"
+        },
+        {
+          "ruta": "06_validaciones/reglas_funcionales/HITO_2A_REGLAS_FUNCIONALES_INICIALES_IRE_2026_20260709_145724.json",
+          "rol": "reglas iniciales estructuradas"
+        }
+      ],
+      "archivos_entrada": [
+        "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+        "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+        "07_resultados/reportes_auditoria/HITO_2A_LECTURA_FUNCIONAL_INSTRUCTIVO_IRE_2026_20260709_145724.md",
+        "06_validaciones/reglas_funcionales/HITO_2A_REGLAS_FUNCIONALES_INICIALES_IRE_2026_20260709_145724.json"
+      ],
+      "archivos_salida": [
+        "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.csv",
+        "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.json",
+        "07_resultados/reportes_auditoria/HITO_2B_COMPARACION_DICCIONARIO_VS_ESTRUCTURA_IRE_2026_20260709_233948.md",
+        "06_validaciones/estructura/HITO_2B_COMPARACION_CAMPOS_INSTRUCTIVO_VS_CSV_IRE_2026_20260709_233948.csv",
+        "08_logs/ejecuciones/HITO_2B_LOG_EJECUCION_20260709_233948.txt",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "campos_csv_total": 54,
+      "campos_ok": 48,
+      "campos_observados": 6,
+      "campos_solo_csv": 0,
+      "campos_solo_instructivo": 1,
+      "coincidencias_nombres_exactas": 54,
+      "distribucion_estado_campos": {
+        "OK_OFICIAL_Y_CSV": 48,
+        "CONTRADICCION": 6
+      },
+      "contradicciones": [
+        "El instructivo exige CSV delimitado por comas, mientras la estructura tecnica original observada usa punto y coma.",
+        "El instructivo dice que todos los campos deben cargarse, pero tambien ordena no completar bloques o campos segun TIPO_INFRAESTRUCTURA.",
+        "TOTAL_M2_TERRENO se exige para tipo 1 en Anexo III, pero la definicion permite omitirlo en departamentos, oficinas o plantas dentro de un edificio.",
+        "UR_DESC_TENENCIA_OTRA se condiciona en Anexo III a que el propio campo sea igual a 2, aunque es un campo descriptivo; no se corrige por supuesto.",
+        "Los cuatro campos de plataformas se definen como texto abierto en Anexo I, mientras Anexo III solo explicita letras A-Z.",
+        "La codificacion del archivo de carga no esta indicada oficialmente."
+      ],
+      "pendientes": [
+        "Resolver el delimitador efectivo de carga mediante antecedente oficial o prueba controlada posterior; no asumir coma ni punto y coma.",
+        "Confirmar la codificacion aceptada por PES.",
+        "Confirmar si CODIGO_INSTITUCION es metadato inyectado por PES o un campo omitido de la estructura descargada; no agregarlo al CSV sin respaldo.",
+        "Resolver la excepcion de TOTAL_M2_TERRENO para departamentos, oficinas o plantas.",
+        "Confirmar que la condicion correcta de UR_DESC_TENENCIA_OTRA es UR_SITUACION_TENENCIA=2.",
+        "Precisar el conjunto real de caracteres admitidos en campos de plataformas virtuales.",
+        "Construir en HITO 2C la matriz exhaustiva campo por tipo con estados completar, no completar, cero, blanco y condicional."
+      ],
+      "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+      "proximo_hito_sugerido": "HITO 2C - PROMPT - Construccion de matriz funcional campo por tipo de infraestructura y reglas completar / no completar para IRE 2026."
+    },
+    {
+      "id_hito": "HITO 2C",
+      "tipo": "PROMPT",
+      "fecha_hora_ejecucion": "2026-07-09T23:52:55-0400",
+      "objetivo": "Construir una matriz funcional oficial/tecnica para gobernar los 324 cruces entre los 54 campos y los 6 tipos de infraestructura IRE 2026.",
+      "fuentes_usadas": [
+        {
+          "ruta": "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+          "hash_sha256": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+          "rol": "fuente oficial"
+        },
+        {
+          "ruta": "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+          "hash_sha256": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae",
+          "rol": "estructura tecnica"
+        },
+        {
+          "ruta": "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.csv",
+          "rol": "diccionario estructurado HITO 2B"
+        },
+        {
+          "ruta": "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.json",
+          "rol": "diccionario JSON HITO 2B"
+        },
+        {
+          "ruta": "07_resultados/reportes_auditoria/HITO_2B_COMPARACION_DICCIONARIO_VS_ESTRUCTURA_IRE_2026_20260709_233948.md",
+          "rol": "reporte comparativo HITO 2B"
+        }
+      ],
+      "archivos_entrada": [
+        "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+        "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+        "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.csv",
+        "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.json",
+        "07_resultados/reportes_auditoria/HITO_2B_COMPARACION_DICCIONARIO_VS_ESTRUCTURA_IRE_2026_20260709_233948.md",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "archivos_salida": [
+        "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_LARGA_CAMPO_TIPO_INFRAESTRUCTURA_IRE_2026_20260709_235255.csv",
+        "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_ANCHA_CAMPO_TIPO_INFRAESTRUCTURA_IRE_2026_20260709_235255.csv",
+        "06_validaciones/reglas_funcionales/HITO_2C_PENDIENTES_CONTRADICCIONES_CAMPO_TIPO_IRE_2026_20260709_235255.csv",
+        "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.json",
+        "07_resultados/reportes_auditoria/HITO_2C_REPORTE_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.md",
+        "08_logs/ejecuciones/HITO_2C_LOG_EJECUCION_20260709_235255.txt",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "total_campos": 54,
+      "total_tipos_infraestructura": 6,
+      "total_cruces": 324,
+      "conteo_estados": {
+        "COMPLETAR_OBLIGATORIO": 32,
+        "COMPLETAR_CONDICIONAL": 6,
+        "NO_COMPLETAR": 245,
+        "COMPLETAR_SI_APLICA": 5,
+        "SIEMPRE_COMPLETAR": 30,
+        "PENDIENTE_REVISION": 0,
+        "CONTRADICCION": 6,
+        "NO_APLICA": 0
+      },
+      "contradicciones": [
+        {
+          "ID_PENDIENTE": "P2C-001",
+          "CAMPO": "ARCHIVO_CSV",
+          "TIPO_INFRAESTRUCTURA": "TODOS",
+          "TIPO_PROBLEMA": "CONTRADICCION_TECNICA_OFICIAL",
+          "DESCRIPCION": "El instructivo exige CSV delimitado por comas y la estructura tecnica original usa punto y coma.",
+          "IMPACTO": "Impide fijar con certeza el delimitador del archivo candidato.",
+          "FUENTE": "Instructivo, lineas 37-38 y 557-569; HITO 1B, delimitador observado ';'.",
+          "ACCION_RECOMENDADA": "Obtener confirmacion oficial o ejecutar prueba controlada en PES en un hito autorizado.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-002",
+          "CAMPO": "TODOS_LOS_CAMPOS",
+          "TIPO_INFRAESTRUCTURA": "1,2,3,4,5,6",
+          "TIPO_PROBLEMA": "CONTRADICCION_DE_INTERPRETACION",
+          "DESCRIPCION": "Todos los campos deben cargarse, pero Anexo III ordena NO completar campos y bloques segun el tipo.",
+          "IMPACTO": "Debe distinguirse columna estructural presente de valor funcional informado; falta confirmar blanco versus 0 en campos no aplicables.",
+          "FUENTE": "Anexo I, lineas 246-248; Anexo II, lineas 566-568; Anexo III, lineas 656-824.",
+          "ACCION_RECOMENDADA": "Definir en HITO 3A validacion de presencia de columna separada de presencia de valor y mantener pendiente el marcador de no aplicabilidad.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-003",
+          "CAMPO": "TOTAL_M2_TERRENO",
+          "TIPO_INFRAESTRUCTURA": "1",
+          "TIPO_PROBLEMA": "CONTRADICCION",
+          "DESCRIPCION": "Anexo III exige completar el campo para tipo 1, pero la definicion permite omitirlo en departamentos, oficinas o plantas dentro de un edificio.",
+          "IMPACTO": "No puede automatizarse una obligatoriedad absoluta para todos los inmuebles tipo 1.",
+          "FUENTE": "Definiciones, lineas 113-116; Anexo I, lineas 366-368; Anexo III, linea 829.",
+          "ACCION_RECOMENDADA": "Solicitar criterio oficial y conservar el cruce como CONTRADICCION.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-004",
+          "CAMPO": "UR_DESC_TENENCIA_OTRA",
+          "TIPO_INFRAESTRUCTURA": "2",
+          "TIPO_PROBLEMA": "CONDICION_AMBIGUA",
+          "DESCRIPCION": "Anexo III condiciona el campo a que el propio campo sea igual a 2, aunque es texto descriptivo.",
+          "IMPACTO": "No puede implementarse literalmente la condicion.",
+          "FUENTE": "Anexo I, lineas 451-456; Anexo III, linea 769.",
+          "ACCION_RECOMENDADA": "Confirmar si la condicion pretendida es UR_SITUACION_TENENCIA=2.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-005",
+          "CAMPO": "SISTEMA_GESTION_APRENDIZAJES",
+          "TIPO_INFRAESTRUCTURA": "6",
+          "TIPO_PROBLEMA": "CONTRADICCION_FORMATO",
+          "DESCRIPCION": "Anexo I define texto abierto, mientras Anexo III solo explicita que puede contener letras A-Z.",
+          "IMPACTO": "No puede fijarse el conjunto completo de caracteres permitidos.",
+          "FUENTE": "Anexo I, lineas 514-538; Anexo III, lineas 796-807.",
+          "ACCION_RECOMENDADA": "Confirmar estructura visible en PES o realizar prueba controlada antes de restringir caracteres.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-006",
+          "CAMPO": "SISTEMA_VIDEO_CONFERENCIA",
+          "TIPO_INFRAESTRUCTURA": "6",
+          "TIPO_PROBLEMA": "CONTRADICCION_FORMATO",
+          "DESCRIPCION": "Anexo I define texto abierto, mientras Anexo III solo explicita que puede contener letras A-Z.",
+          "IMPACTO": "No puede fijarse el conjunto completo de caracteres permitidos.",
+          "FUENTE": "Anexo I, lineas 514-538; Anexo III, lineas 796-807.",
+          "ACCION_RECOMENDADA": "Confirmar estructura visible en PES o realizar prueba controlada antes de restringir caracteres.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-007",
+          "CAMPO": "SISTEMA_APLICACION_EVALUACION",
+          "TIPO_INFRAESTRUCTURA": "6",
+          "TIPO_PROBLEMA": "CONTRADICCION_FORMATO",
+          "DESCRIPCION": "Anexo I define texto abierto, mientras Anexo III solo explicita que puede contener letras A-Z.",
+          "IMPACTO": "No puede fijarse el conjunto completo de caracteres permitidos.",
+          "FUENTE": "Anexo I, lineas 514-538; Anexo III, lineas 796-807.",
+          "ACCION_RECOMENDADA": "Confirmar estructura visible en PES o realizar prueba controlada antes de restringir caracteres.",
+          "ESTADO": "ABIERTO"
+        },
+        {
+          "ID_PENDIENTE": "P2C-008",
+          "CAMPO": "DESCRIPCION_PLATAFORMA_VIRTUAL",
+          "TIPO_INFRAESTRUCTURA": "6",
+          "TIPO_PROBLEMA": "CONTRADICCION_FORMATO",
+          "DESCRIPCION": "Anexo I define texto abierto, mientras Anexo III solo explicita que puede contener letras A-Z.",
+          "IMPACTO": "No puede fijarse el conjunto completo de caracteres permitidos.",
+          "FUENTE": "Anexo I, lineas 514-538; Anexo III, lineas 796-807.",
+          "ACCION_RECOMENDADA": "Confirmar estructura visible en PES o realizar prueba controlada antes de restringir caracteres.",
+          "ESTADO": "ABIERTO"
+        }
+      ],
+      "pendientes": [
+        "Confirmar delimitador y codificacion aceptados por PES.",
+        "Confirmar tratamiento de valores NO_COMPLETAR: blanco, cero u otro marcador.",
+        "Resolver excepcion de TOTAL_M2_TERRENO para ciertos inmuebles tipo 1.",
+        "Confirmar condicion correcta de UR_DESC_TENENCIA_OTRA.",
+        "Confirmar caracteres permitidos en plataformas virtuales.",
+        "Confirmar rol de CODIGO_INSTITUCION y FECHA_TERMINO para tenencia Otro.",
+        "Disenar validaciones tecnicas y funcionales en HITO 3A sin generar aun archivo de carga."
+      ],
+      "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+      "proximo_hito_sugerido": "HITO 3A - PROMPT - Diseno de reglas de validacion tecnica y funcional para archivo candidato IRE 2026."
+    },
+    {
+      "id_hito": "HITO 3A",
+      "tipo": "PROMPT",
+      "fecha_hora_ejecucion": "2026-07-10T00:02:22-0400",
+      "objetivo": "Disenar un set gobernado de reglas de validacion tecnica y funcional para futuros archivos candidatos IRE 2026, sin validar datos reales ni generar archivo de carga.",
+      "fuentes_usadas": [
+        {
+          "ruta": "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+          "hash_sha256": "2fa7f09fcdc23b706765e81333ed91e800dcc3423defc34503cb4e7ccb583637",
+          "rol": "fuente oficial"
+        },
+        {
+          "ruta": "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+          "hash_sha256": "117babcfd945589969f6d508ff9e173214854ac4355df526a61b09de1061deae",
+          "rol": "estructura tecnica"
+        },
+        {
+          "ruta": "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.csv",
+          "rol": "diccionario HITO 2B"
+        },
+        {
+          "ruta": "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.json",
+          "rol": "matriz funcional HITO 2C"
+        }
+      ],
+      "archivos_entrada": [
+        "01_fuentes_oficiales/instructivos/20260707_87395_Infraestructura_y_Recursos_Educacionales_2026_SIES_-_Instructivo_2026.txt",
+        "01_fuentes_oficiales/estructuras_tecnicas/20260706_89535_Estructura_IRE_ID_16770.csv",
+        "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.csv",
+        "03_diccionarios/HITO_2B_DICCIONARIO_OFICIAL_CAMPOS_IRE_2026_20260709_233948.json",
+        "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_LARGA_CAMPO_TIPO_INFRAESTRUCTURA_IRE_2026_20260709_235255.csv",
+        "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_ANCHA_CAMPO_TIPO_INFRAESTRUCTURA_IRE_2026_20260709_235255.csv",
+        "06_validaciones/reglas_funcionales/HITO_2C_PENDIENTES_CONTRADICCIONES_CAMPO_TIPO_IRE_2026_20260709_235255.csv",
+        "06_validaciones/reglas_funcionales/HITO_2C_MATRIZ_FUNCIONAL_CAMPO_TIPO_IRE_2026_20260709_235255.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "archivos_salida": [
+        "06_validaciones/reglas_funcionales/HITO_3A_REGLAS_VALIDACION_IRE_2026_20260710_000222.csv",
+        "06_validaciones/reglas_funcionales/HITO_3A_REGLAS_VALIDACION_IRE_2026_20260710_000222.json",
+        "07_resultados/reportes_auditoria/HITO_3A_DISENO_VALIDACIONES_IRE_2026_20260710_000222.md",
+        "08_logs/ejecuciones/HITO_3A_LOG_EJECUCION_20260710_000222.txt",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ],
+      "total_reglas": 131,
+      "reglas_por_severidad": {
+        "ADVERTENCIA": 25,
+        "BLOQUEANTE": 87,
+        "INFORMATIVA": 8,
+        "PENDIENTE_CONFIRMACION": 11
+      },
+      "reglas_por_tipo_validacion": {
+        "AUDITORIA": 5,
+        "CANTIDAD_COLUMNAS": 1,
+        "CODIFICACION": 1,
+        "COHERENCIA": 19,
+        "CONDICIONALIDAD": 12,
+        "DELIMITADOR": 1,
+        "DOMINIO": 7,
+        "DUPLICIDAD": 1,
+        "ENCABEZADOS": 2,
+        "ESTRUCTURA": 3,
+        "FECHA": 5,
+        "FORMATO_ARCHIVO": 2,
+        "LLAVE": 2,
+        "NO_COMPLETITUD": 13,
+        "NUMERICA": 5,
+        "OBLIGATORIEDAD": 38,
+        "ORDEN_COLUMNAS": 1,
+        "PLATAFORMA_PES": 1,
+        "TEXTO": 10,
+        "VIGENCIA": 2
+      },
+      "reglas_implementables": 106,
+      "reglas_implementables_con_decision_interna": 10,
+      "reglas_pendientes_confirmacion": 11,
+      "reglas_por_estado_implementacion": {
+        "IMPLEMENTABLE_CON_DECISION_INTERNA": 10,
+        "IMPLEMENTABLE_DIRECTO": 106,
+        "NO_IMPLEMENTAR_AUN": 2,
+        "REQUIERE_CONFIRMACION_OFICIAL": 9,
+        "SOLO_DOCUMENTAR": 4
+      },
+      "contradicciones_heredadas": [
+        "Coma oficial versus punto y coma observado.",
+        "Todos los campos deben cargarse versus reglas NO completar.",
+        "Excepcion TOTAL_M2_TERRENO.",
+        "Condicion ambigua UR_DESC_TENENCIA_OTRA.",
+        "Texto abierto versus letras A-Z en plataformas.",
+        "Codificacion PES no especificada.",
+        "CODIGO_INSTITUCION mencionado pero ausente del CSV."
+      ],
+      "pendientes": [
+        "Confirmar delimitador oficial del archivo PES.",
+        "Confirmar codificacion aceptada por PES.",
+        "Confirmar representacion de campos NO_COMPLETAR: vacio, cero u otro marcador.",
+        "Resolver excepcion de TOTAL_M2_TERRENO para ciertos inmuebles tipo 1.",
+        "Confirmar condicion de UR_DESC_TENENCIA_OTRA.",
+        "Confirmar caracteres permitidos en plataformas virtuales.",
+        "Confirmar rol de CODIGO_INSTITUCION y FECHA_TERMINO para tenencia Otro."
+      ],
+      "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+      "proximo_hito_sugerido": "HITO 3B - COMANDO - Implementacion del validador tecnico-funcional IRE 2026 basado en matriz HITO 2C y reglas HITO 3A."
+    },
+    {
+      "id_hito": "HITO 3B-Z",
+      "tipo": "COMANDO + CIERRE_DOCUMENTAL",
+      "fecha_hora_ejecucion": "2026-07-10T08:52:42-0400",
+      "hito_asociado": "HITO 3B",
+      "objetivo": "Cerrar documentalmente HITO 3B incorporando la verificacion post-interrupcion y trazando que el check inicial fallo por un --run-id invalido, no por una falla estructural del validador.",
+      "archivos_verificados": [
+        {
+          "archivo": "HITO_3B_validador_ire_2026.py",
+          "ruta_relativa": "04_scripts/py/HITO_3B_validador_ire_2026.py",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_validador_ire_2026.py",
+          "existe": true,
+          "hash_sha256": "9cdf6b22bbc112f2bbf55f8cbfbf568e9dce42ce79e010c6b441021e18d50ecf",
+          "hash_esperado": "9cdf6b22bbc112f2bbf55f8cbfbf568e9dce42ce79e010c6b441021e18d50ecf",
+          "hash_coincide": true,
+          "funcion": "Script principal del validador"
+        },
+        {
+          "archivo": "HITO_3B_config_validador_ire_2026.json",
+          "ruta_relativa": "04_scripts/py/HITO_3B_config_validador_ire_2026.json",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_config_validador_ire_2026.json",
+          "existe": true,
+          "hash_sha256": "e5cc3bb2bf4729ba026b3a397c2fc3639e7877e131182c24ac8157cf25e0840a",
+          "hash_esperado": "e5cc3bb2bf4729ba026b3a397c2fc3639e7877e131182c24ac8157cf25e0840a",
+          "hash_coincide": true,
+          "funcion": "Configuracion gobernada del validador"
+        },
+        {
+          "archivo": "HITO_3B_README_VALIDADOR_IRE_2026.md",
+          "ruta_relativa": "04_scripts/py/HITO_3B_README_VALIDADOR_IRE_2026.md",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/04_scripts/py/HITO_3B_README_VALIDADOR_IRE_2026.md",
+          "existe": true,
+          "hash_sha256": "33414dc135fef34f0b9b8acf37dc292078fe69457d1c65de15b197663039f865",
+          "hash_esperado": null,
+          "hash_coincide": null,
+          "funcion": "Documentacion tecnica y uso"
+        },
+        {
+          "archivo": "HITO_3B_MUESTRA_CONTROLADA_IRE_2026_20260710_003623.csv",
+          "ruta_relativa": "05_datos_trabajo/muestras_controladas/HITO_3B_MUESTRA_CONTROLADA_IRE_2026_20260710_003623.csv",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/05_datos_trabajo/muestras_controladas/HITO_3B_MUESTRA_CONTROLADA_IRE_2026_20260710_003623.csv",
+          "existe": true,
+          "hash_sha256": "f4f21b690b8fa841a1059000f58a9c60f7595ea393983ddfca93f004d94c3f4d",
+          "hash_esperado": "f4f21b690b8fa841a1059000f58a9c60f7595ea393983ddfca93f004d94c3f4d",
+          "hash_coincide": true,
+          "funcion": "Muestra artificial controlada; no institucional"
+        },
+        {
+          "archivo": "HITO_3B_RESULTADO_VALIDACION_IRE_2026_20260710_003623.csv",
+          "ruta_relativa": "06_validaciones/contenido/HITO_3B_RESULTADO_VALIDACION_IRE_2026_20260710_003623.csv",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/06_validaciones/contenido/HITO_3B_RESULTADO_VALIDACION_IRE_2026_20260710_003623.csv",
+          "existe": true,
+          "hash_sha256": "dd49678164f778e1bd704207e9d30b35ba01b0a1e00cde485a89967a4bb96f0a",
+          "hash_esperado": null,
+          "hash_coincide": null,
+          "funcion": "Detalle CSV de 19 hallazgos de prueba"
+        },
+        {
+          "archivo": "HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_003623.json",
+          "ruta_relativa": "06_validaciones/contenido/HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_003623.json",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/06_validaciones/contenido/HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_003623.json",
+          "existe": true,
+          "hash_sha256": "70412f0ec431d74ffbf78bc255cc80da9a5dbed93fb02c1bdc2c39a74faccadf",
+          "hash_esperado": null,
+          "hash_coincide": null,
+          "funcion": "Resumen JSON de la prueba principal"
+        },
+        {
+          "archivo": "HITO_3B_LOG_EJECUCION_20260710_003623.txt",
+          "ruta_relativa": "08_logs/ejecuciones/HITO_3B_LOG_EJECUCION_20260710_003623.txt",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/08_logs/ejecuciones/HITO_3B_LOG_EJECUCION_20260710_003623.txt",
+          "existe": true,
+          "hash_sha256": "c33129fef0afc0743f13d43465001d8f354e268373040fa47003aaeff4731f73",
+          "hash_esperado": null,
+          "hash_coincide": null,
+          "funcion": "Log de ejecucion, hashes e integridad"
+        },
+        {
+          "archivo": "MANIFEST_SUBPROYECTO.json",
+          "ruta_relativa": "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/00_gobernanza/MANIFEST_SUBPROYECTO.json",
+          "existe": true,
+          "hash_sha256": null,
+          "hash_esperado": null,
+          "hash_coincide": null,
+          "funcion": "Manifiesto JSON del subproyecto"
+        },
+        {
+          "archivo": "bitacora_decisiones.md",
+          "ruta_relativa": "00_gobernanza/bitacora_decisiones.md",
+          "ruta_absoluta": "/Users/alexi/Documents/GitHub/avance_curricular/infraestructura_recursos_educacionales_2026/00_gobernanza/bitacora_decisiones.md",
+          "existe": true,
+          "hash_sha256": null,
+          "hash_esperado": null,
+          "hash_coincide": null,
+          "funcion": "Bitacora de decisiones"
+        }
+      ],
+      "hashes_verificados": {
+        "script": "9cdf6b22bbc112f2bbf55f8cbfbf568e9dce42ce79e010c6b441021e18d50ecf",
+        "config": "e5cc3bb2bf4729ba026b3a397c2fc3639e7877e131182c24ac8157cf25e0840a",
+        "muestra": "f4f21b690b8fa841a1059000f58a9c60f7595ea393983ddfca93f004d94c3f4d"
+      },
+      "pruebas_realizadas": [
+        {
+          "prueba": "Compilacion Python",
+          "resultado": "OK",
+          "detalle": "python3 -m py_compile"
+        },
+        {
+          "prueba": "Configuracion JSON",
+          "resultado": "OK",
+          "detalle": "python3 -m json.tool"
+        },
+        {
+          "prueba": "Ayuda CLI",
+          "resultado": "OK",
+          "detalle": "El script responde --help"
+        },
+        {
+          "prueba": "Muestra controlada",
+          "resultado": "OK",
+          "detalle": "9 filas totales, 8 datos y 54 columnas"
+        },
+        {
+          "prueba": "Resultado y resumen",
+          "resultado": "OK",
+          "detalle": "19 hallazgos y JSON legible"
+        },
+        {
+          "prueba": "Integridad solo lectura",
+          "resultado": "OK",
+          "detalle": "Hash de muestra antes y despues coincide"
+        }
+      ],
+      "resultado_prueba_principal": {
+        "muestra": "05_datos_trabajo/muestras_controladas/HITO_3B_MUESTRA_CONTROLADA_IRE_2026_20260710_003623.csv",
+        "naturaleza": "MUESTRA_ARTIFICIAL_NO_INSTITUCIONAL",
+        "filas_totales": 9,
+        "filas_datos": 8,
+        "columnas": 54,
+        "total_hallazgos": 19,
+        "hallazgos_por_severidad": {
+          "ADVERTENCIA": 7,
+          "BLOQUEANTE": 6,
+          "INFORMATIVA": 0,
+          "PENDIENTE_CONFIRMACION": 6
+        },
+        "dictamen_tecnico": "NO_APTO_BLOQUEANTES"
+      },
+      "resultado_check_inicial": {
+        "retornos_observados": [
+          1,
+          1
+        ],
+        "mensaje": "NO_EVALUABLE: --run-id debe usar formato YYYYMMDD_HHMMSS.",
+        "parametro_invalido": "DEBUG_NORMAL",
+        "fuente_evidencia": "Evidencia entregada en PROMPT HITO 3B-Z"
+      },
+      "causa_error_check_inicial": "El comando de verificacion uso --run-id DEBUG_NORMAL, que no cumple YYYYMMDD_HHMMSS. No fue una falla estructural del validador.",
+      "resultado_recheck_corregido": {
+        "ejecucion_normal": {
+          "run_id": "20260710_084604",
+          "codigo_retorno": 0,
+          "ruta_resumen": "/private/tmp/hito3b_check_normal_output/HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_084604.json",
+          "dictamen_tecnico": "NO_APTO_BLOQUEANTES",
+          "total_hallazgos": 19,
+          "hallazgos_por_severidad": {
+            "ADVERTENCIA": 7,
+            "BLOQUEANTE": 6,
+            "INFORMATIVA": 0,
+            "PENDIENTE_CONFIRMACION": 6
+          }
+        },
+        "ejecucion_fail_on_blocking": {
+          "run_id": "20260710_084659",
+          "codigo_retorno": 2,
+          "ruta_resumen": "/private/tmp/hito3b_check_normal_output/HITO_3B_RESUMEN_VALIDACION_IRE_2026_20260710_084659.json",
+          "dictamen_tecnico": "NO_APTO_BLOQUEANTES",
+          "total_hallazgos": 19,
+          "hallazgos_por_severidad": {
+            "ADVERTENCIA": 7,
+            "BLOQUEANTE": 6,
+            "INFORMATIVA": 0,
+            "PENDIENTE_CONFIRMACION": 6
+          }
+        },
+        "dictamen_recheck": "OK"
+      },
+      "dictamen_final": "OK",
+      "estado_hito_asociado": "COMPLETADO_CON_OBSERVACIONES",
+      "estado_hito": "COMPLETADO_CON_OBSERVACIONES",
+      "pendientes": [
+        "Confirmar delimitador oficial versus punto y coma observado en la estructura tecnica.",
+        "Confirmar codificacion aceptada por PES.",
+        "Confirmar tratamiento blanco versus cero para campos no aplicables.",
+        "Resolver excepcion de TOTAL_M2_TERRENO.",
+        "Confirmar condicion de UR_DESC_TENENCIA_OTRA.",
+        "Confirmar formato y caracteres de plataformas virtuales.",
+        "Confirmar rol de CODIGO_INSTITUCION.",
+        "Confirmar FECHA_TERMINO para tenencia Otro.",
+        "Probar el validador contra una fuente institucional real cuando sea incorporada por el usuario."
+      ],
+      "proximo_hito_sugerido": "HITO 3C - COMANDO - Prueba del validador contra una fuente institucional o archivo candidato IRE 2026 cuando el usuario incorpore el archivo de datos.",
+      "archivos_salida": [
+        "07_resultados/reportes_auditoria/HITO_3B_Z_CIERRE_DOCUMENTAL_VALIDADOR_IRE_2026_20260710_085242.md",
+        "08_logs/ejecuciones/HITO_3B_Z_CIERRE_VERIFICACION_VALIDADOR_IRE_2026_20260710_085242.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.json",
+        "00_gobernanza/MANIFEST_SUBPROYECTO.md",
+        "00_gobernanza/bitacora_decisiones.md"
+      ]
+    }
+  ],
+  "ultimo_hito_ejecutado": "HITO 3B-Z",
+  "estado_subproyecto": "COMPLETADO_CON_OBSERVACIONES"
+}
