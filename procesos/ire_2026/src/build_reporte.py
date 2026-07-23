@@ -63,6 +63,28 @@ ANOMALIAS = [
         "No hay serie histórica 2023-2024 para este convenio; se reporta desde su primera "
         "aparición en la carga.",
     ),
+    (
+        "Denominador de los indicadores: matricula presencial, no matricula total",
+        "Los indicadores por estudiante usan como denominador la matricula vigente "
+        "de modalidad presencial (jornadas diurna y vespertina), excluyendo la "
+        "matricula de modalidad a distancia. Criterio: el indicador mide uso de "
+        "infraestructura fisica, y la matricula online no ocupa salas, laboratorios "
+        "ni equipamiento del recinto. De los 3110 estudiantes vigentes al corte, "
+        "2420 son de modalidad a distancia y quedan fuera del calculo; el "
+        "denominador aplicado es 690 (193 diurno + 497 vespertino). Cualquier "
+        "comparacion contra ratios calculados sobre matricula total arrojara "
+        "valores sustancialmente menores.",
+    ),
+    (
+        "Comparabilidad de la serie 2023-2025 con el criterio 2026",
+        "El denominador 2026 se calculo explicitamente sobre matricula presencial "
+        "(690). Los valores historicos 2023=220, 2024=160 y 2025=248 provienen del "
+        "archivo institucional de indicadores y no consta si excluian o no la "
+        "modalidad a distancia. El salto de 248 a 690 es coherente con un "
+        "crecimiento de matricula, pero la variacion interanual no debe usarse con "
+        "fines comparativos externos hasta confirmar el criterio de los anios "
+        "anteriores con la direccion academica.",
+    ),
 ]
 
 

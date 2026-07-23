@@ -14,9 +14,28 @@
 # en el log de ejecución y en el anexo del reporte con la leyenda
 # "heredado de 2025, no confirmado para 2026".
 
-# Matrícula jornada principal 2026. Denominador de TODOS los KPI del reporte.
-# Sin este valor no se puede generar el Reporte_KPI. 2025 informó 248.
-matricula_jornada_principal_2026: null
+# ---- PROCEDENCIA DEL DENOMINADOR ----
+# ARCHIVO: PARA_SUBIR_DESKTOP__matricula_unificada_2026_pregrado_PARA_SUBIR.csv
+#   (copia congelada del archivo efectivamente cargado en PES para MU 2026)
+# RUTA_EN_GIT: control/punto_0_carga_principal_mu2026/archivos_congelados/
+# COMMIT_QUE_LO_AGREGO: 4f1108c
+# RAMA: respaldo/ire-2026-sucio-20260722_2259
+#   ADVERTENCIA: esta rama es la unica fuente del archivo. No borrarla.
+#   El archivo no esta en main ni en la rama limpia por contener datos
+#   personales de estudiantes; se cita como evidencia, no se versiona.
+# RECUPERAR CON: git show respaldo/ire-2026-sucio-20260722_2259:<ruta>
+# SHA256: 8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704
+# FECHA_VERIFICACION: 2026-07-22
+# CRITERIO: VIG=1 AND MODALIDAD=1 (presencial) AND JOR IN (1=diurno, 2=vespertino)
+# JUSTIFICACION: el indicador mide uso de infraestructura fisica; la
+#   matricula de modalidad a distancia no ocupa salas, laboratorios ni
+#   equipamiento del recinto.
+# TOTAL_FILAS: 4070 | VIG_1: 3110 | VIG_0: 960
+# PRESENCIAL_DIURNO: 193 | PRESENCIAL_VESPERTINO: 497
+# ONLINE_EXCLUIDOS: 2420
+# NOTA_SERIE: 2023-2025 (220/160/248) sin desglose de modalidad conocido;
+#   comparabilidad interanual aproximada
+matricula_jornada_principal_2026: 690
 
 tenencia:
   # Fecha de inicio de tenencia del inmueble TIPO 1 (casa central), formato AAAA-MM.

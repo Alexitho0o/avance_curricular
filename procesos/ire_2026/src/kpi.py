@@ -67,6 +67,21 @@ SERIE_HISTORICA: Dict[int, Dict] = {
         "videoconferencia": "MICROSOFT TEAMS",
         "razon_social": "INSTITUTO PROFESIONAL SAN SEBASTIAN",
     },
+    2026: {
+        # ---- PROCEDENCIA (registro raw verificado) ----
+        # ARCHIVO: PARA_SUBIR_DESKTOP__matricula_unificada_2026_pregrado_PARA_SUBIR.csv
+        # COMMIT_QUE_LO_AGREGO: 4f1108c
+        # RAMA: respaldo/ire-2026-sucio-20260722_2259  (NO BORRAR: unica fuente)
+        # SHA256: 8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704
+        # FECHA_VERIFICACION: 2026-07-22
+        # CRITERIO: VIG=1 AND MODALIDAD=1 AND JOR IN (1,2)
+        # MODALIDAD: 1=Presencial, 3=A distancia
+        # JOR: 1=Diurno, 2=Vespertino, 4=Virtual (solo con MOD=3)
+        # TOTAL_FILAS: 4070 | VIG_1: 3110 | VIG_0: 960
+        # PRESENCIAL_DIURNO: 193 | PRESENCIAL_VESPERTINO: 497
+        # DENOMINADOR: 690 | ONLINE_EXCLUIDOS: 2420
+        "matricula": 690,
+    },
 }
 
 
