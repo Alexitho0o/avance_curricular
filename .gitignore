@@ -57,3 +57,16 @@ control/backups/**/*.tsv
 
 # General OS files
 .DS_Store
+
+# --- SIES monorepo ---
+procesos/*/output/*
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.DS_Store
+~$*
+!procesos/ire_2026/data/**/*.csv
+!procesos/ire_2026/data/**/*.xlsm
+!procesos/ire_2026/data/**/*.xlsx
+!procesos/*/output/.gitkeep

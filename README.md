@@ -1,3 +1,19 @@
+## Monorepo SIES
+
+Este repositorio también aloja procesos SIES adicionales al de Matrícula Unificada, organizados
+bajo `procesos/<nombre>/`, cada uno aislado con sus propios datos, config, código y tests, y
+compartiendo utilidades transversales vía `common/` (sin lógica específica de ningún proceso).
+
+Procesos activos:
+- **`procesos/ire_2026/`** — Infraestructura y Recursos Educacionales 2026 (ID de carga 16770),
+  Instituto Profesional San Sebastián (COD_IES 162). Ver
+  [`procesos/ire_2026/README.md`](procesos/ire_2026/README.md) para instalación, ejecución y
+  checklist de carga PES.
+
+El contenido histórico de este README (proceso MU 2026 Pregrado) permanece sin cambios debajo.
+
+---
+
 # Avance Curricular — Estructura, Uso y SDD
 
 Repositorio estandarizado bajo Spec-Driven Development (SDD) para la gestión, validación y auditoría de datos curriculares y salida regulatoria MU 2026 Pregrado.
