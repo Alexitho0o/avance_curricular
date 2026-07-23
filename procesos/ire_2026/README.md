@@ -28,9 +28,14 @@ Variantes: genera `_puntoycoma.csv` y `_coma.csv` hasta confirmar cuál acepta P
 
 ## Instalación
 
+Usa el `.venv` en la raíz del monorepo (no el de otros repos del workspace).
+Python 3.13 recomendado: pandas/matplotlib pueden no tener ruedas para 3.14 aún.
+
 ```bash
-cd procesos/ire_2026
-pip install -r ../../requirements.txt
+cd /ruta/al/repo/avance_curricular
+python3.13 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Ejecución
