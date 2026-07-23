@@ -5,17 +5,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import re
-from typing import Optional, Dict
 import unicodedata
+from typing import Optional, Dict, List
 from common.validacion import Regla, Severidad
-from src.schema import (
-    CATALOGO_TIPO_INFRAESTRUCTURA,
-    CATALOGO_SITUACION_TENENCIA,
-    CATALOGO_USO_EXCLUSIVO,
-    CATALOGO_UR_SITUACION_TENENCIA,
-    CATALOGO_VIGENCIA,
-)
+from src.schema import ESPECIFICACION, COLUMNAS
 
+
+# ---------- Helpers de tipo ----------
 
 def es_entero(valor: str) -> bool:
     """Verificar si un valor es un número entero."""
@@ -36,28 +32,41 @@ def es_numero(valor: str) -> bool:
 
 
 def es_fecha_aaaa_mm(valor: str) -> bool:
-    """Verificar formato AAAA-MM."""
+    """Verificar formato AAAA-MM (mes 01-12)."""
     if not valor or not isinstance(valor, str):
         return False
-    match = re.match(r'^\d{4}-\d{2}$', valor.strip())
-    return match is not None
+    return re.match(r'^\d{4}-(0[1-9]|1[0-2])$', valor.strip()) is not None
 
 
 def sin_acentos_ni_especiales(texto: str) -> bool:
-    """Verificar que no tenga acentos ni caracteres no ASCII."""
+    """Verificar que no tenga acentos, ñ ni caracteres no ASCII."""
     if not isinstance(texto, str):
         return False
-    # Normalizar y descomponer
     nfkd = unicodedata.normalize('NFKD', texto)
-    # Verificar que no haya caracteres diacríticos (categoría Mn)
     for c in nfkd:
         if unicodedata.category(c) == 'Mn':
             return False
+    try:
+        texto.encode('ascii')
+    except UnicodeEncodeError:
+        return False
     return True
 
 
-def crear_reglas() -> list:
-    """Crear todas las reglas de validación."""
+def _tipo(fila: Dict) -> Optional[int]:
+    """Obtener TIPO_INFRAESTRUCTURA de la fila como entero, o None si inválido."""
+    valor = fila.get("TIPO_INFRAESTRUCTURA", "")
+    return int(valor) if es_entero(valor) else None
+
+
+def _vacio(fila: Dict, campo: str) -> bool:
+    return not fila.get(campo, "").strip()
+
+
+# ---------- Reglas por fila ----------
+
+def crear_reglas() -> List[Regla]:
+    """Crear todas las reglas de validación por fila (Anexo III)."""
     reglas = []
 
     # ============ TRANSVERSALES ============
@@ -67,8 +76,7 @@ def crear_reglas() -> list:
         descripcion="TIPO_INFRAESTRUCTURA debe estar entre 1 y 6",
         severidad=Severidad.ERROR,
         validar=lambda fila: None if (
-            "TIPO_INFRAESTRUCTURA" in fila and
-            es_entero(fila["TIPO_INFRAESTRUCTURA"]) and
+            es_entero(fila.get("TIPO_INFRAESTRUCTURA", "")) and
             1 <= int(fila["TIPO_INFRAESTRUCTURA"]) <= 6
         ) else "TIPO_INFRAESTRUCTURA fuera de rango [1-6]",
     ))
@@ -78,8 +86,7 @@ def crear_reglas() -> list:
         descripcion="VIGENCIA debe ser 0 o 1",
         severidad=Severidad.ERROR,
         validar=lambda fila: None if (
-            "VIGENCIA" in fila and
-            es_entero(fila["VIGENCIA"]) and
+            es_entero(fila.get("VIGENCIA", "")) and
             int(fila["VIGENCIA"]) in [0, 1]
         ) else "VIGENCIA debe ser 0 o 1",
     ))
@@ -105,11 +112,84 @@ def crear_reglas() -> list:
         validar=lambda fila: None if fila.get("DIRECCION_INMUEBLE", "").strip() else "DIRECCION_INMUEBLE vacío",
     ))
 
+    def validar_comuna_solo_letras(fila: Dict) -> Optional[str]:
+        comuna = fila.get("COMUNA", "").strip()
+        if not comuna:
+            return None
+        if not re.match(r'^[A-Za-z\s]+$', comuna):
+            return f"COMUNA debe contener solo letras y espacios: '{comuna}'"
+        return None
+
+    reglas.append(Regla(
+        id="COMUNA_solo_letras",
+        descripcion="COMUNA solo admite letras y espacios",
+        severidad=Severidad.ERROR,
+        validar=validar_comuna_solo_letras,
+    ))
+
+    # ============ G. Sanidad de caracteres ============
+
+    def validar_sin_delimitador_ni_saltos(fila: Dict) -> Optional[str]:
+        """Ningún valor puede contener ';' ni saltos de línea."""
+        for campo, valor in fila.items():
+            if not isinstance(valor, str):
+                continue
+            if ';' in valor:
+                return f"{campo} contiene ';' (rompe el delimitador del CSV)"
+            if '\n' in valor or '\r' in valor:
+                return f"{campo} contiene salto de línea"
+        return None
+
+    reglas.append(Regla(
+        id="SANIDAD_sin_delimitador_ni_saltos",
+        descripcion="Ningún campo contiene ';' ni saltos de línea",
+        severidad=Severidad.ERROR,
+        validar=validar_sin_delimitador_ni_saltos,
+    ))
+
+    def validar_solo_ascii(fila: Dict) -> Optional[str]:
+        """Todo texto debe ser ASCII: sin acentos, sin ñ, sin caracteres especiales."""
+        for campo, valor in fila.items():
+            if not isinstance(valor, str) or not valor.strip():
+                continue
+            if not sin_acentos_ni_especiales(valor):
+                return f"{campo} contiene acentos, ñ u otro carácter no ASCII: '{valor}'"
+        return None
+
+    reglas.append(Regla(
+        id="SANIDAD_solo_ascii",
+        descripcion="Todo texto debe ser ASCII (sin acentos ni ñ)",
+        severidad=Severidad.ERROR,
+        validar=validar_solo_ascii,
+    ))
+
+    # ============ A. Reglas espejo: campos prohibidos por tipo ============
+
+    def validar_campos_prohibidos(fila: Dict) -> Optional[str]:
+        """Ningún campo que no aplique al TIPO de la fila puede venir con valor."""
+        tipo = _tipo(fila)
+        if tipo is None:
+            return None
+
+        for campo, spec in ESPECIFICACION.items():
+            if tipo in spec["aplica"]:
+                continue
+            valor = fila.get(campo, "")
+            if isinstance(valor, str) and valor.strip():
+                return f"TIPO {tipo}: campo prohibido '{campo}' viene con valor '{valor}'"
+        return None
+
+    reglas.append(Regla(
+        id="CAMPOS_PROHIBIDOS_por_tipo",
+        descripcion="Campos no aplicables al TIPO deben venir vacíos (regla espejo)",
+        severidad=Severidad.ERROR,
+        validar=validar_campos_prohibidos,
+    ))
+
     # ============ TIPO 1 — Inmueble de Uso Permanente ============
 
     def validar_tipo1_obligatorios(fila: Dict) -> Optional[str]:
-        """TIPO 1 requiere campos obligatorios."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "1":
+        if _tipo(fila) != 1:
             return None
 
         campos_obligatorios = [
@@ -123,8 +203,7 @@ def crear_reglas() -> list:
         ]
 
         for campo in campos_obligatorios:
-            valor = fila.get(campo, "").strip()
-            if not valor:
+            if _vacio(fila, campo):
                 return f"TIPO 1: {campo} obligatorio pero vacío"
 
         return None
@@ -137,8 +216,7 @@ def crear_reglas() -> list:
     ))
 
     def validar_tipo1_funciones(fila: Dict) -> Optional[str]:
-        """TIPO 1: al menos una función principal."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "1":
+        if _tipo(fila) != 1:
             return None
 
         funciones = ["FUNCION_DOCENCIA", "FUNCION_INVESTIGACION", "FUNCION_EXTENSION",
@@ -155,12 +233,11 @@ def crear_reglas() -> list:
     ))
 
     def validar_tipo1_funcion_otras(fila: Dict) -> Optional[str]:
-        """TIPO 1: FUNCION_OTRAS ⟺ DESC_OTRAS_FUNCIONES."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "1":
+        if _tipo(fila) != 1:
             return None
 
         tiene_x = fila.get("FUNCION_OTRAS", "").strip() == "X"
-        tiene_desc = fila.get("DESC_OTRAS_FUNCIONES", "").strip()
+        tiene_desc = bool(fila.get("DESC_OTRAS_FUNCIONES", "").strip())
 
         if tiene_x and not tiene_desc:
             return "TIPO 1: FUNCION_OTRAS=X requiere DESC_OTRAS_FUNCIONES"
@@ -176,19 +253,161 @@ def crear_reglas() -> list:
         validar=validar_tipo1_funcion_otras,
     ))
 
+    # ---- B. Condicionales de tenencia (solo TIPO 1) ----
+
+    def validar_tenencia_condicional(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 1:
+            return None
+
+        situacion = fila.get("SITUACION_TENENCIA", "").strip()
+        if not es_entero(situacion):
+            return None  # Ya cubierto por TIPO1_campos_obligatorios
+        situacion = int(situacion)
+
+        fecha_inicio = fila.get("FECHA_INICIO_TENENCIA", "").strip()
+        fecha_termino = fila.get("FECHA_TERMINO", "").strip()
+        desc_otra = fila.get("DESCRIPCION_OTRA_TENENCIA", "").strip()
+
+        if situacion == 1:  # Propio
+            if fecha_inicio or fecha_termino or desc_otra:
+                return "SITUACION_TENENCIA=1 (Propio): FECHA_INICIO_TENENCIA, FECHA_TERMINO y DESCRIPCION_OTRA_TENENCIA deben estar vacíos"
+        elif situacion in (2, 4, 5):  # Arrendado, Usufructo, Leasing
+            if not fecha_termino:
+                return f"SITUACION_TENENCIA={situacion}: FECHA_TERMINO obligatoria"
+            if desc_otra:
+                return f"SITUACION_TENENCIA={situacion}: DESCRIPCION_OTRA_TENENCIA debe estar vacía"
+        elif situacion == 3:  # Comodato
+            if not fecha_inicio:
+                return "SITUACION_TENENCIA=3 (Comodato): FECHA_INICIO_TENENCIA obligatoria"
+            if not fecha_termino:
+                return "SITUACION_TENENCIA=3 (Comodato): FECHA_TERMINO obligatoria"
+            if desc_otra:
+                return "SITUACION_TENENCIA=3 (Comodato): DESCRIPCION_OTRA_TENENCIA debe estar vacía"
+        elif situacion == 6:  # Otro
+            if not desc_otra:
+                return "SITUACION_TENENCIA=6 (Otro): DESCRIPCION_OTRA_TENENCIA obligatoria"
+
+        # Regla general: 2-6 requieren FECHA_INICIO_TENENCIA
+        if situacion in (2, 3, 4, 5, 6) and not fecha_inicio:
+            return f"SITUACION_TENENCIA={situacion}: FECHA_INICIO_TENENCIA obligatoria"
+
+        return None
+
+    reglas.append(Regla(
+        id="TENENCIA_condicional",
+        descripcion="Campos de tenencia condicionales según SITUACION_TENENCIA",
+        severidad=Severidad.ERROR,
+        validar=validar_tenencia_condicional,
+    ))
+
+    # ---- C. Formatos y ventanas de fecha ----
+
+    def validar_formato_fechas(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 1:
+            return None
+
+        for campo in ["FECHA_INICIO_TENENCIA", "FECHA_TERMINO"]:
+            valor = fila.get(campo, "").strip()
+            if valor and not es_fecha_aaaa_mm(valor):
+                return f"{campo} no tiene formato AAAA-MM: '{valor}'"
+        return None
+
+    reglas.append(Regla(
+        id="FECHA_formato_aaaa_mm",
+        descripcion="Fechas de tenencia deben tener formato AAAA-MM",
+        severidad=Severidad.ERROR,
+        validar=validar_formato_fechas,
+    ))
+
+    def validar_ventana_fechas(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 1:
+            return None
+
+        fecha_inicio = fila.get("FECHA_INICIO_TENENCIA", "").strip()
+        fecha_termino = fila.get("FECHA_TERMINO", "").strip()
+
+        if fecha_inicio and es_fecha_aaaa_mm(fecha_inicio):
+            if fecha_inicio >= "2026-07":
+                return f"FECHA_INICIO_TENENCIA debe ser anterior a 2026-07: '{fecha_inicio}'"
+
+        if fecha_termino and es_fecha_aaaa_mm(fecha_termino):
+            if fecha_termino <= "2026-05":
+                return f"FECHA_TERMINO debe ser posterior a 2026-05: '{fecha_termino}'"
+
+        return None
+
+    reglas.append(Regla(
+        id="FECHA_ventana_valida",
+        descripcion="FECHA_INICIO_TENENCIA < 2026-07 y FECHA_TERMINO > 2026-05",
+        severidad=Severidad.ERROR,
+        validar=validar_ventana_fechas,
+    ))
+
+    def validar_anio_inicio_uso(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 1:
+            return None
+
+        valor = fila.get("ANIO_INICIO_USO_INMUEBLE", "").strip()
+        if not valor or not es_entero(valor):
+            return None  # Cubierto por obligatorios
+
+        anio = int(valor)
+        if not (1800 <= anio <= 2026):
+            return f"ANIO_INICIO_USO_INMUEBLE fuera de rango [1800-2026]: {anio}"
+        return None
+
+    reglas.append(Regla(
+        id="ANIO_INICIO_USO_INMUEBLE_rango",
+        descripcion="ANIO_INICIO_USO_INMUEBLE entre 1800 y 2026",
+        severidad=Severidad.ERROR,
+        validar=validar_anio_inicio_uso,
+    ))
+
+    # ---- D. Uso compartido (solo TIPO 1) ----
+
+    def validar_uso_compartido(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 1:
+            return None
+
+        uso_exclusivo = fila.get("USO_EXCLUSIVO", "").strip()
+        if not es_entero(uso_exclusivo):
+            return None  # Cubierto por obligatorios
+
+        uso_exclusivo = int(uso_exclusivo)
+        porcentaje = fila.get("PORCENTAJE_USO", "").strip()
+        institucion = fila.get("NOMBRE_INSTITUCION_COMPARTE", "").strip()
+
+        if uso_exclusivo == 2:  # Compartido
+            if not porcentaje:
+                return "USO_EXCLUSIVO=2 (Compartido): PORCENTAJE_USO obligatorio"
+            if not es_entero(porcentaje) or not (1 <= int(porcentaje) <= 99):
+                return f"PORCENTAJE_USO fuera de rango [1-99]: '{porcentaje}'"
+            if not institucion:
+                return "USO_EXCLUSIVO=2 (Compartido): NOMBRE_INSTITUCION_COMPARTE obligatorio"
+        elif uso_exclusivo == 1:  # Exclusivo
+            if porcentaje or institucion:
+                return "USO_EXCLUSIVO=1 (Exclusivo): PORCENTAJE_USO y NOMBRE_INSTITUCION_COMPARTE deben estar vacíos"
+
+        return None
+
+    reglas.append(Regla(
+        id="USO_EXCLUSIVO_condicional",
+        descripcion="PORCENTAJE_USO y NOMBRE_INSTITUCION_COMPARTE según USO_EXCLUSIVO",
+        severidad=Severidad.ERROR,
+        validar=validar_uso_compartido,
+    ))
+
     # ============ TIPO 2 — Inmueble de Uso Restringido ============
 
     def validar_tipo2_obligatorios(fila: Dict) -> Optional[str]:
-        """TIPO 2 requiere UR_* obligatorios."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "2":
+        if _tipo(fila) != 2:
             return None
 
         campos_obligatorios = ["UR_DESC_ACTIVIDADES", "UR_TOTAL_M2_TERRENO",
                                "UR_TOTAL_M2_CONSTRUIDOS", "UR_SITUACION_TENENCIA"]
 
         for campo in campos_obligatorios:
-            valor = fila.get(campo, "").strip()
-            if not valor:
+            if _vacio(fila, campo):
                 return f"TIPO 2: {campo} obligatorio pero vacío"
 
         return None
@@ -200,11 +419,39 @@ def crear_reglas() -> list:
         validar=validar_tipo2_obligatorios,
     ))
 
+    # ---- E. UR_SITUACION_TENENCIA (TIPO 2) ----
+
+    def validar_ur_situacion_tenencia(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 2:
+            return None
+
+        valor = fila.get("UR_SITUACION_TENENCIA", "").strip()
+        if not valor or not es_entero(valor):
+            return None  # Cubierto por obligatorios
+
+        valor = int(valor)
+        if valor not in (1, 2):
+            return f"UR_SITUACION_TENENCIA debe ser 1 o 2: {valor}"
+
+        desc_otra = fila.get("UR_DESC_TENENCIA_OTRA", "").strip()
+        if valor == 2 and not desc_otra:
+            return "UR_SITUACION_TENENCIA=2 (Otra): UR_DESC_TENENCIA_OTRA obligatoria"
+        if valor == 1 and desc_otra:
+            return "UR_SITUACION_TENENCIA=1 (Arrendado): UR_DESC_TENENCIA_OTRA debe estar vacía"
+
+        return None
+
+    reglas.append(Regla(
+        id="UR_SITUACION_TENENCIA_condicional",
+        descripcion="UR_DESC_TENENCIA_OTRA según UR_SITUACION_TENENCIA",
+        severidad=Severidad.ERROR,
+        validar=validar_ur_situacion_tenencia,
+    ))
+
     # ============ TIPO 3 — Biblioteca ============
 
     def validar_tipo3_obligatorios(fila: Dict) -> Optional[str]:
-        """TIPO 3 requiere campos de biblioteca."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "3":
+        if _tipo(fila) != 3:
             return None
 
         campos_obligatorios = ["TOTAL_M2_BIBLIOTECA", "TOTAL_M2_SALAS_LECTURA",
@@ -213,8 +460,7 @@ def crear_reglas() -> list:
                                "TOTAL_SUSCRIPCIONES_REVISTAS"]
 
         for campo in campos_obligatorios:
-            valor = fila.get(campo, "").strip()
-            if not valor:
+            if _vacio(fila, campo):
                 return f"TIPO 3: {campo} obligatorio pero vacío"
 
         return None
@@ -229,16 +475,14 @@ def crear_reglas() -> list:
     # ============ TIPO 4 — Digital ============
 
     def validar_tipo4_obligatorios(fila: Dict) -> Optional[str]:
-        """TIPO 4 requiere campos digitales."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "4":
+        if _tipo(fila) != 4:
             return None
 
         campos_obligatorios = ["TOTAL_TITULOS_LIBROS_DIGITALES",
                                "TOTAL_SUSCRIPCIONES_DIGITALES", "TOTAL_BASE_DATOS"]
 
         for campo in campos_obligatorios:
-            valor = fila.get(campo, "").strip()
-            if not valor:
+            if _vacio(fila, campo):
                 return f"TIPO 4: {campo} obligatorio pero vacío"
 
         return None
@@ -253,12 +497,10 @@ def crear_reglas() -> list:
     # ============ TIPO 5 — Predio ============
 
     def validar_tipo5_obligatorios(fila: Dict) -> Optional[str]:
-        """TIPO 5 requiere TOTAL_HECTAREAS_PREDIO."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "5":
+        if _tipo(fila) != 5:
             return None
 
-        valor = fila.get("TOTAL_HECTAREAS_PREDIO", "").strip()
-        return None if valor else "TIPO 5: TOTAL_HECTAREAS_PREDIO obligatorio pero vacío"
+        return None if not _vacio(fila, "TOTAL_HECTAREAS_PREDIO") else "TIPO 5: TOTAL_HECTAREAS_PREDIO obligatorio pero vacío"
 
     reglas.append(Regla(
         id="TIPO5_campos_obligatorios",
@@ -270,16 +512,14 @@ def crear_reglas() -> list:
     # ============ TIPO 6 — Plataforma Virtual ============
 
     def validar_tipo6_obligatorios(fila: Dict) -> Optional[str]:
-        """TIPO 6 requiere campos de plataforma."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "6":
+        if _tipo(fila) != 6:
             return None
 
         campos_obligatorios = ["SISTEMA_GESTION_APRENDIZAJES", "SISTEMA_VIDEO_CONFERENCIA",
                                "SISTEMA_APLICACION_EVALUACION", "DESCRIPCION_PLATAFORMA_VIRTUAL"]
 
         for campo in campos_obligatorios:
-            valor = fila.get(campo, "").strip()
-            if not valor:
+            if _vacio(fila, campo):
                 return f"TIPO 6: {campo} obligatorio pero vacío"
 
         return None
@@ -292,8 +532,7 @@ def crear_reglas() -> list:
     ))
 
     def validar_tipo6_descripcion_longitud(fila: Dict) -> Optional[str]:
-        """TIPO 6: DESCRIPCION_PLATAFORMA_VIRTUAL ≤ 1000 caracteres."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "6":
+        if _tipo(fila) != 6:
             return None
 
         desc = fila.get("DESCRIPCION_PLATAFORMA_VIRTUAL", "")
@@ -309,17 +548,15 @@ def crear_reglas() -> list:
         validar=validar_tipo6_descripcion_longitud,
     ))
 
-    # ============ Consistencias aritméticas ============
+    # ============ H. Consistencias aritméticas (ahora ERROR) ============
 
     def validar_aritmética_salas(fila: Dict) -> Optional[str]:
-        """TOTAL_M2_SALAS_CLASES ≤ TOTAL_M2_EDIFICADOS (TIPO 1)."""
-        if fila.get("TIPO_INFRAESTRUCTURA") != "1":
+        if _tipo(fila) != 1:
             return None
 
         try:
-            salas = float(fila.get("TOTAL_M2_SALAS_CLASES", 0) or 0)
-            edificados = float(fila.get("TOTAL_M2_EDIFICADOS", 0) or 0)
-
+            salas = float(fila.get("TOTAL_M2_SALAS_CLASES", "") or 0)
+            edificados = float(fila.get("TOTAL_M2_EDIFICADOS", "") or 0)
             if salas > edificados:
                 return f"M² salas ({salas}) > M² edificados ({edificados})"
         except (ValueError, TypeError):
@@ -328,24 +565,99 @@ def crear_reglas() -> list:
         return None
 
     reglas.append(Regla(
-        id="ARITMÉTICA_salas_vs_edificados",
+        id="ARITMETICA_salas_vs_edificados",
         descripcion="M² salas ≤ M² edificados",
-        severidad=Severidad.ADVERTENCIA,
+        severidad=Severidad.ERROR,
         validar=validar_aritmética_salas,
     ))
 
-    # ============ Identidad (llave única) ============
+    def validar_aritmética_lectura(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 3:
+            return None
+
+        try:
+            lectura = float(fila.get("TOTAL_M2_SALAS_LECTURA", "") or 0)
+            biblioteca = float(fila.get("TOTAL_M2_BIBLIOTECA", "") or 0)
+            if lectura > biblioteca:
+                return f"M² salas de lectura ({lectura}) > M² biblioteca ({biblioteca})"
+        except (ValueError, TypeError):
+            pass
+
+        return None
 
     reglas.append(Regla(
-        id="IDENTIDAD_llave_global",
-        descripcion="Llave única será verificada al nivel de conjunto de filas",
+        id="ARITMETICA_lectura_vs_biblioteca",
+        descripcion="M² salas de lectura ≤ M² biblioteca",
         severidad=Severidad.ERROR,
-        validar=lambda fila: None,  # Verificada post-lectura
+        validar=validar_aritmética_lectura,
+    ))
+
+    def validar_aritmética_titulos(fila: Dict) -> Optional[str]:
+        if _tipo(fila) != 3:
+            return None
+
+        try:
+            titulos = float(fila.get("TOTAL_TITULOS_DISPONIBLES", "") or 0)
+            volumenes = float(fila.get("TOTAL_VOLUMENES_DISPONIBLES", "") or 0)
+            if titulos > volumenes:
+                return f"TOTAL_TITULOS_DISPONIBLES ({titulos}) > TOTAL_VOLUMENES_DISPONIBLES ({volumenes})"
+        except (ValueError, TypeError):
+            pass
+
+        return None
+
+    reglas.append(Regla(
+        id="ARITMETICA_titulos_vs_volumenes",
+        descripcion="TOTAL_TITULOS_DISPONIBLES ≤ TOTAL_VOLUMENES_DISPONIBLES",
+        severidad=Severidad.ERROR,
+        validar=validar_aritmética_titulos,
     ))
 
     return reglas
 
 
-def obtener_reglas() -> list:
-    """Obtener lista de reglas."""
+# ---------- F. Validaciones a nivel de dataset ----------
+
+def validar_dataset(filas: List[Dict]) -> List[str]:
+    """
+    Validar reglas que dependen del conjunto completo de filas.
+
+    Returns:
+        Lista de mensajes de error (vacía si todo OK).
+    """
+    errores = []
+
+    # Llave única: TIPO + NOMBRE_IDENTIFICACION + COMUNA + DIRECCION_INMUEBLE
+    llaves_vistas = {}
+    for i, fila in enumerate(filas):
+        llave = (
+            fila.get("TIPO_INFRAESTRUCTURA", "").strip(),
+            fila.get("NOMBRE_IDENTIFICACION", "").strip(),
+            fila.get("COMUNA", "").strip(),
+            fila.get("DIRECCION_INMUEBLE", "").strip(),
+        )
+        if llave in llaves_vistas:
+            errores.append(
+                f"Llave duplicada en filas {llaves_vistas[llave]} y {i}: {llave}"
+            )
+        else:
+            llaves_vistas[llave] = i
+
+    # Exactamente una fila TIPO 6
+    filas_tipo6 = [i for i, fila in enumerate(filas) if fila.get("TIPO_INFRAESTRUCTURA", "").strip() == "6"]
+    if len(filas_tipo6) == 0:
+        errores.append("Debe existir exactamente una fila TIPO 6 (Plataformas Virtuales); no hay ninguna")
+    elif len(filas_tipo6) > 1:
+        errores.append(f"Debe existir exactamente una fila TIPO 6; se encontraron {len(filas_tipo6)} en filas {filas_tipo6}")
+
+    # Al menos una fila TIPO 1
+    filas_tipo1 = [i for i, fila in enumerate(filas) if fila.get("TIPO_INFRAESTRUCTURA", "").strip() == "1"]
+    if len(filas_tipo1) == 0:
+        errores.append("Debe existir al menos una fila TIPO 1 (Inmueble de Uso Permanente)")
+
+    return errores
+
+
+def obtener_reglas() -> List[Regla]:
+    """Obtener lista de reglas por fila."""
     return crear_reglas()
