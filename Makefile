@@ -30,18 +30,17 @@ validate-oficial:
 run-and-validate-oficial:
 	@INPUT_XLSX='$(INPUT_XLSX)' OUTPUT_DIR='$(OUTPUT_DIR)' bash scripts/run_and_validate_oficial.sh
 
-# --- Proceso SIES: IRE 2026 ---
+# --- Proceso SIES: IRE 2026 (delega al Makefile del proceso) ---
 .PHONY: ire-test ire-validar ire-generar ire-clean
 
 ire-test:
-	cd procesos/ire_2026 && ../../.venv/bin/python -m pytest tests -v
+	cd procesos/ire_2026 && $(MAKE) test
 
 ire-validar:
-	cd procesos/ire_2026 && ../../.venv/bin/python -m pytest tests/test_validators.py -v
+	cd procesos/ire_2026 && $(MAKE) validar
 
 ire-generar:
-	cd procesos/ire_2026 && ../../.venv/bin/python src/build_csv.py && ../../.venv/bin/python src/build_xlsx.py && ../../.venv/bin/python src/build_reporte.py
+	cd procesos/ire_2026 && $(MAKE) generar
 
 ire-clean:
-	rm -rf procesos/ire_2026/output/*
-	find procesos/ire_2026 -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
+	cd procesos/ire_2026 && $(MAKE) clean
