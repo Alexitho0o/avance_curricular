@@ -1,0 +1,86 @@
+# Parámetros IRE 2026 — Instituto Profesional San Sebastián (COD_IES 162)
+#
+# Todas las claves parten en `null`. El pipeline (build_csv.py) FALLA con un mensaje
+# claro si alguna clave requerida sigue en `null` al momento de generar el CSV.
+#
+# Cuatro claves NO admiten herencia de 2025 y detienen el pipeline si quedan en null:
+#   - matricula_jornada_principal_2026
+#   - tenencia.fecha_inicio
+#   - tenencia.fecha_termino
+#   - uso_restringido_uss_vigente
+#
+# El resto de las claves de inmueble_permanente, biblioteca, digital y plataformas
+# SI heredan el valor 2025 si quedan en null, pero cada herencia queda registrada
+# en el log de ejecución y en el anexo del reporte con la leyenda
+# "heredado de 2025, no confirmado para 2026".
+
+# Matrícula jornada principal 2026. Denominador de TODOS los KPI del reporte.
+# Sin este valor no se puede generar el Reporte_KPI. 2025 informó 248.
+matricula_jornada_principal_2026: null
+
+tenencia:
+  # Fecha de inicio de tenencia del inmueble TIPO 1 (casa central), formato AAAA-MM.
+  # 2025 informó 2025-01. No hereda: debe confirmarse explícitamente cada año.
+  fecha_inicio: null
+  # Fecha de término de tenencia, formato AAAA-MM. 2025 informó 2026-12.
+  # No hereda: debe confirmarse explícitamente cada año.
+  fecha_termino: null
+
+# Magnitudes del inmueble de uso permanente (TIPO 1, casa central).
+# null en cualquier clave = "sin cambios respecto de 2025": hereda el valor 2025,
+# dejando traza de la herencia en el log y en el anexo del reporte.
+inmueble_permanente:
+  total_m2_terreno: null            # 2025: 789
+  total_m2_edificados: null         # 2025: 1362
+  total_salas_clases: null          # 2025: 5
+  capacidad_salas_clases: null      # 2025: 141
+  total_m2_salas_clases: null       # 2025: 168.2
+  total_auditorios: null            # 2025: 1
+  capacidad_auditorios: null        # 2025: 85
+  total_m2_auditorios: null         # 2025: 72.1
+  total_laboratorios: null          # 2025: 0
+  total_m2_laboratorios: null       # 2025: 0
+  total_talleres: null              # 2025: 9
+  total_m2_talleres: null           # 2025: 292.1
+  total_pc_nb_disponible: null      # 2025: 252
+  total_m2_casinos_cafeterias: null # 2025: 34.3
+  total_m2_areas_verdes: null       # 2025: 440.9
+
+# Magnitudes de biblioteca (TIPO 3). null = hereda 2025 con traza de herencia.
+biblioteca:
+  total_m2_biblioteca: null              # 2025: 80
+  total_m2_salas_lectura: null           # 2025: 54.3
+  total_profesionales: null              # 2025: 1
+  horas_personal: null                   # 2025: 44
+  total_titulos: null                    # 2025: 705
+  total_volumenes: null                  # 2025: 705
+  total_suscripciones_revistas: null     # 2025: 0
+
+# Magnitudes de libros y bases digitales (TIPO 4). null = hereda 2025 con traza.
+digital:
+  total_titulos_libros_digitales: null   # 2025: 63755
+  total_suscripciones_digitales: null    # 2025: 1
+  total_base_datos: null                 # 2025: 0
+
+# Plataformas virtuales (TIPO 6, línea institucional única). null = hereda 2025.
+plataformas:
+  lms: null            # 2025: MOODLE 4.4.4
+  videoconferencia: null  # 2025: MICROSOFT TEAMS
+  evaluacion: null      # 2025: NO APLICA
+  descripcion: null     # null = reutilizar el texto institucional de 2025
+
+# ¿Sigue vigente el convenio de uso restringido con USS Campus Los Leones (TIPO 2)?
+# true/false. No hereda: debe confirmarse explícitamente cada año, porque determina
+# si la fila TIPO 2 se informa con VIGENCIA=1 o se marca VIGENCIA=0 (eliminar).
+uso_restringido_uss_vigente: null
+
+# Registros TIPO 2 adicionales a incorporar en 2026 (nuevos convenios de uso
+# restringido, distintos del convenio USS Los Leones). Lista vacía por defecto.
+convenios_nuevos: []
+
+# Registros TIPO 5 (Predios). Históricamente vacío para esta institución.
+predios: []
+
+# Llaves de registros a informar con VIGENCIA=0 (eliminar de la carga acumulada).
+# Cada elemento: {tipo_infraestructura, nombre_identificacion, comuna, direccion_inmueble}
+registros_a_eliminar: []
