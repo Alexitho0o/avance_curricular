@@ -643,17 +643,34 @@ def validar_dataset(filas: List[Dict]) -> List[str]:
         else:
             llaves_vistas[llave] = i
 
-    # Exactamente una fila TIPO 6
-    filas_tipo6 = [i for i, fila in enumerate(filas) if fila.get("TIPO_INFRAESTRUCTURA", "").strip() == "6"]
-    if len(filas_tipo6) == 0:
-        errores.append("Debe existir exactamente una fila TIPO 6 (Plataformas Virtuales); no hay ninguna")
-    elif len(filas_tipo6) > 1:
-        errores.append(f"Debe existir exactamente una fila TIPO 6; se encontraron {len(filas_tipo6)} en filas {filas_tipo6}")
+    # Cardinalidad (TIPO 6 exactamente una, TIPO 1 al menos una): se evalúa solo
+    # sobre filas VIGENTES (VIGENCIA=1). La carga es acumulativa (§0): una fila
+    # VIGENCIA=0 es una instrucción de eliminación de un registro histórico
+    # (p. ej. al cambiar de domicilio la casa central), no un segundo registro
+    # activo, y no debe contar para estos límites.
+    def _vigente(fila: Dict) -> bool:
+        return fila.get("VIGENCIA", "").strip() == "1"
 
-    # Al menos una fila TIPO 1
-    filas_tipo1 = [i for i, fila in enumerate(filas) if fila.get("TIPO_INFRAESTRUCTURA", "").strip() == "1"]
-    if len(filas_tipo1) == 0:
-        errores.append("Debe existir al menos una fila TIPO 1 (Inmueble de Uso Permanente)")
+    # Exactamente una fila TIPO 6 vigente
+    filas_tipo6_vigentes = [
+        i for i, fila in enumerate(filas)
+        if fila.get("TIPO_INFRAESTRUCTURA", "").strip() == "6" and _vigente(fila)
+    ]
+    if len(filas_tipo6_vigentes) == 0:
+        errores.append("Debe existir exactamente una fila TIPO 6 vigente (Plataformas Virtuales); no hay ninguna")
+    elif len(filas_tipo6_vigentes) > 1:
+        errores.append(
+            f"Debe existir exactamente una fila TIPO 6 vigente; se encontraron "
+            f"{len(filas_tipo6_vigentes)} en filas {filas_tipo6_vigentes}"
+        )
+
+    # Al menos una fila TIPO 1 vigente
+    filas_tipo1_vigentes = [
+        i for i, fila in enumerate(filas)
+        if fila.get("TIPO_INFRAESTRUCTURA", "").strip() == "1" and _vigente(fila)
+    ]
+    if len(filas_tipo1_vigentes) == 0:
+        errores.append("Debe existir al menos una fila TIPO 1 vigente (Inmueble de Uso Permanente)")
 
     return errores
 

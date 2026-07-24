@@ -180,6 +180,10 @@ def main():
     print(f"\n✓ Generado: {ruta_pyc}")
     print(f"✓ Generado: {ruta_coma}")
 
+    print("\n⚠ ADVERTENCIA: FECHA_TERMINO de Miguel Claro 337 es PROVISIONAL (2027-12).")
+    print("  Reemplazar en config/parametros_2026.yaml antes de subir a PES.")
+    print("  Clave: tenencia.fecha_termino")
+
 
 if __name__ == '__main__':
     main()
