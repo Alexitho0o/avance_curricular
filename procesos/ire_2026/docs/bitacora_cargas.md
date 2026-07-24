@@ -16,3 +16,4 @@ El instructivo de MINEDUC indica "delimitado por comas", pero la estructura ofic
 (`data/estructura/20260706_89535_Estructura_IRE_ID_16770.csv`) viene con `;`. El generador produce
 ambas variantes (`_puntoycoma.csv` y `_coma.csv`). Registrar aquí cuál acepta la plataforma en el
 primer intento real de carga.
+| 2026-07-24 | IRE_2026_carga_20260724_puntoycoma.csv (9 filas) | Finalizado | - | Carga exitosa en PES. Congelada en data/cargas_congeladas/20260724_carga_exitosa/ sha256 1f17a6c2f166 |
