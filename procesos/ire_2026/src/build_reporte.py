@@ -42,50 +42,79 @@ ETIQUETAS_INDICADORES = {
 
 ANOMALIAS = [
     (
-        "Cambio de razón social en 2024 (CIISA → IP San Sebastián)",
-        "Rompe la comparabilidad directa de la serie 2023 vs. 2024-2025: la institución "
-        "informante cambió de identidad legal, no solo de nombre.",
+        "La institución cambió de nombre en 2024",
+        "Hasta 2023 la institución se llamaba Instituto Profesional CIISA. "
+        "Desde 2024 opera como Instituto Profesional San Sebastián. "
+        "Por este motivo, los datos de 2023 corresponden a una institución "
+        "con distinto nombre, lo que limita la comparación directa con años posteriores.",
     ),
     (
-        "Terreno 1280 → 789 m² en 2024, sin variación en m² construidos",
-        "Marcado como anomalía de origen metodológico probable (no como pérdida física de "
-        "terreno). Pendiente de confirmación institucional; no se suaviza ni se corrige "
-        "unilateralmente en este reporte.",
+        "Cambio de recinto en 2026",
+        "Hasta 2025 la institución funcionaba en Av. Libertador Bernardo O'Higgins 2221, "
+        "Santiago. Desde 2026 opera en Miguel Claro 337, Providencia. "
+        "Los datos de 2026 corresponden exclusivamente al nuevo recinto, "
+        "que tiene mayor superficie construida (1.952 m²) y más talleres. "
+        "La comparación con años anteriores refleja este cambio de instalaciones.",
     ),
     (
-        "Matrícula 220 → 160 → 248 (salto en 2024)",
-        "El descenso a 160 en 2024 infla artificialmente todos los indicadores per cápita "
-        "de ese año (denominador más pequeño). Los máximos de 2024 en la tabla de KPI son "
-        "artefactos del denominador, no mejoras reales de infraestructura.",
+        "Los m² por estudiante bajaron respecto de 2025",
+        "En 2025 había 5,49 m² construidos por estudiante. En 2026 son 2,83 m². "
+        "Esta baja no significa que el recinto sea más pequeño: el nuevo edificio "
+        "tiene más metros cuadrados (1.952 vs 1.362). Lo que cambió es que la "
+        "matrícula presencial creció de 248 a 690 estudiantes, principalmente "
+        "porque se distinguió entre estudiantes presenciales y en línea por primera vez.",
     ),
     (
-        "Registro TIPO 2 (convenio USS Los Leones) aparece recién en 2025",
-        "No hay serie histórica 2023-2024 para este convenio; se reporta desde su primera "
-        "aparición en la carga.",
+        "¿Por qué la matrícula subió tanto de 2025 a 2026?",
+        "Los años anteriores (220 en 2023, 160 en 2024, 248 en 2025) incluían "
+        "a todos los estudiantes vigentes sin distinguir si asistían presencialmente "
+        "o estudiaban en línea. En 2026 se contaron solo los estudiantes que "
+        "efectivamente usan las instalaciones físicas: 690 de jornada diurna y "
+        "vespertina. Los estudiantes en línea (2.420 personas) no fueron incluidos "
+        "porque no ocupan salas, talleres ni equipamiento del recinto.",
     ),
     (
-        "Denominador de los indicadores: matricula presencial, no matricula total",
-        "Los indicadores por estudiante usan como denominador la matricula vigente "
-        "de modalidad presencial (jornadas diurna y vespertina), excluyendo la "
-        "matricula de modalidad a distancia. Criterio: el indicador mide uso de "
-        "infraestructura fisica, y la matricula online no ocupa salas, laboratorios "
-        "ni equipamiento del recinto. De los 3110 estudiantes vigentes al corte, "
-        "2420 son de modalidad a distancia y quedan fuera del calculo; el "
-        "denominador aplicado es 690 (193 diurno + 497 vespertino). Cualquier "
-        "comparacion contra ratios calculados sobre matricula total arrojara "
-        "valores sustancialmente menores.",
-    ),
-    (
-        "Comparabilidad de la serie 2023-2025 con el criterio 2026",
-        "El denominador 2026 se calculo explicitamente sobre matricula presencial "
-        "(690). Los valores historicos 2023=220, 2024=160 y 2025=248 provienen del "
-        "archivo institucional de indicadores y no consta si excluian o no la "
-        "modalidad a distancia. El salto de 248 a 690 es coherente con un "
-        "crecimiento de matricula, pero la variacion interanual no debe usarse con "
-        "fines comparativos externos hasta confirmar el criterio de los anios "
-        "anteriores con la direccion academica.",
+        "Datos pendientes de confirmar",
+        "Al momento de generar este informe, algunos datos de 2026 se informaron "
+        "con los valores del año anterior porque aún no se disponía de la "
+        "información actualizada. Estos son: datos de biblioteca (títulos, "
+        "volúmenes, personal), colección digital (e-books, bases de datos) y "
+        "plataformas tecnológicas (versión del sistema LMS). Deben confirmarse "
+        "y actualizarse antes de la próxima revisión.",
     ),
 ]
+
+
+MESES_ES = {
+    1: "enero", 2: "febrero", 3: "marzo", 4: "abril", 5: "mayo", 6: "junio",
+    7: "julio", 8: "agosto", 9: "septiembre", 10: "octubre", 11: "noviembre", 12: "diciembre",
+}
+
+
+def _fecha_espanol(fecha_iso: str) -> str:
+    """Convertir 'AAAA-MM-DD' a '30 de junio de 2026'."""
+    anio, mes, dia = fecha_iso.split("-")
+    return f"{int(dia)} de {MESES_ES[int(mes)]} de {anio}"
+
+
+def _fecha_hora_espanol_actual() -> str:
+    """Fecha y hora actuales en formato natural: '24 de julio de 2026, 12:30'."""
+    ahora = datetime.now()
+    return f"{ahora.day} de {MESES_ES[ahora.month]} de {ahora.year}, {ahora.strftime('%H:%M')}"
+
+
+def construir_ficha(institucion: Dict) -> List[tuple]:
+    """Ficha institucional en lenguaje natural, compartida entre .md y .docx."""
+    # El nombre se almacena en MAYUSCULAS sin tildes (requisito ASCII de la carga
+    # regulatoria); aqui se muestra con grafia correcta ya que este reporte es
+    # de gestion interna y no se sube a PES.
+    return [
+        ("Institución", "Instituto Profesional San Sebastián"),
+        ("Código institución", str(institucion["cod_ies"])),
+        ("Proceso", "Declaración anual de infraestructura al Ministerio de Educación"),
+        ("Fecha de los datos", _fecha_espanol(str(institucion["fecha_corte"]))),
+        ("Generado el", _fecha_hora_espanol_actual()),
+    ]
 
 
 def _acumular(actual, nuevo):
@@ -265,6 +294,29 @@ def generar_graficos(serie_extendida: Dict, indicadores_por_anio: Dict, ruta_dir
     return rutas
 
 
+INTRO_INDICADORES_BASE = (
+    "La siguiente tabla muestra los espacios físicos y recursos con que contaba "
+    "la institución al 30 de junio de cada año. El 2026 corresponde al nuevo "
+    "recinto de Miguel Claro 337 (Providencia), desde donde opera la institución "
+    "desde 2026. Los años anteriores corresponden al recinto de Av. Libertador "
+    "Bernardo O'Higgins 2221 (Santiago)."
+)
+
+INTRO_INDICADORES_DERIVADOS = (
+    "Estos indicadores muestran cuántos recursos tiene disponible cada estudiante "
+    "de jornada presencial. Se calculan dividiendo el total de la infraestructura "
+    "por la matrícula de jornada presencial (690 estudiantes en 2026). No incluye "
+    "a los estudiantes de modalidad en línea, ya que ellos no utilizan las "
+    "dependencias físicas de la institución."
+)
+
+INTRO_GRAFICOS = (
+    "Los siguientes gráficos muestran cómo han cambiado los principales "
+    "indicadores entre 2023 y 2026. El cambio de recinto y el nuevo criterio "
+    "de matrícula explican los saltos visibles entre 2025 y 2026."
+)
+
+
 def generar_reporte_md(
     institucion: Dict,
     serie_extendida: Dict,
@@ -274,31 +326,25 @@ def generar_reporte_md(
     log_herencias: List[str],
     fecha_sufijo: str,
 ) -> str:
-    """Construir el reporte completo en Markdown."""
-    metadata = {
-        "Institución": institucion["razon_social"],
-        "COD_IES": institucion["cod_ies"],
-        "Fecha de corte": institucion["fecha_corte"],
-        "Fecha de generación": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "Responsable": "Generado automáticamente por pipeline IRE 2026",
-        "ID de carga": institucion["id_carga"],
-    }
+    """Construir el reporte completo en Markdown (version tecnica, con anexo)."""
+    metadata = dict(construir_ficha(institucion))
 
     secciones = []
 
     secciones.append({
-        "titulo": "2. Indicadores base 2023-2026",
-        "contenido": construir_tabla_base(serie_extendida),
+        "titulo": "¿Cuánta infraestructura tiene la institución?",
+        "contenido": INTRO_INDICADORES_BASE + "\n\n" + construir_tabla_base(serie_extendida),
     })
 
     secciones.append({
-        "titulo": "3. Indicadores derivados (variación 2025 → 2026)",
-        "contenido": construir_tabla_derivados(indicadores_por_anio),
+        "titulo": "¿Cuánto hay por estudiante?",
+        "contenido": INTRO_INDICADORES_DERIVADOS + "\n\n" + construir_tabla_derivados(indicadores_por_anio),
     })
 
     secciones.append({
-        "titulo": "4. Gráficos de evolución",
+        "titulo": "Evolución en el tiempo",
         "contenido": (
+            INTRO_GRAFICOS + "\n\n"
             "![Evolución de matrícula](grafico_matricula.png)\n\n"
             "![M² construidos por estudiante](grafico_m2_construidos_por_estudiante.png)\n\n"
             "![Computadores por estudiante](grafico_pcs_por_estudiante.png)"
@@ -307,7 +353,7 @@ def generar_reporte_md(
 
     anomalias_texto = "\n\n".join(f"**{titulo}**\n\n{detalle}" for titulo, detalle in ANOMALIAS)
     secciones.append({
-        "titulo": "5. Anomalías y notas metodológicas",
+        "titulo": "Notas importantes para interpretar los datos",
         "contenido": anomalias_texto,
     })
 
@@ -338,7 +384,7 @@ def generar_reporte_md(
 
     from common.reportes import crear_reporte_md
     return crear_reporte_md(
-        titulo="Reporte KPI — Infraestructura y Recursos Educacionales 2026",
+        titulo="Informe de Infraestructura y Recursos Educacionales 2026",
         secciones=secciones,
         metadata=metadata,
     )
@@ -351,25 +397,20 @@ def generar_reporte_docx(
     rutas_graficos: List[Path],
     ruta_salida: Path,
 ) -> None:
-    """Construir el reporte completo en .docx."""
+    """Construir el reporte completo en .docx, en lenguaje simple para lectores sin contexto tecnico."""
     doc = Document()
 
-    doc.add_heading("Reporte KPI — Infraestructura y Recursos Educacionales 2026", level=0)
+    doc.add_heading("Informe de Infraestructura y Recursos Educacionales 2026", level=0)
 
-    doc.add_heading("1. Ficha", level=1)
+    doc.add_heading("Ficha", level=1)
     ficha = doc.add_table(rows=0, cols=2)
-    for etiqueta, valor in [
-        ("Institución", institucion["razon_social"]),
-        ("COD_IES", str(institucion["cod_ies"])),
-        ("Fecha de corte", str(institucion["fecha_corte"])),
-        ("Fecha de generación", datetime.now().strftime("%Y-%m-%d %H:%M")),
-        ("ID de carga", str(institucion["id_carga"])),
-    ]:
+    for etiqueta, valor in construir_ficha(institucion):
         fila = ficha.add_row()
         fila.cells[0].text = etiqueta
         fila.cells[1].text = valor
 
-    doc.add_heading("2. Indicadores base 2023-2026", level=1)
+    doc.add_heading("¿Cuánta infraestructura tiene la institución?", level=1)
+    doc.add_paragraph(INTRO_INDICADORES_BASE)
     conceptos = [
         ("Matrícula jornada principal", "matricula"),
         ("M² construidos", "m2_edificados"),
@@ -385,9 +426,10 @@ def generar_reporte_docx(
         fila[0].text = etiqueta
         for i, anio in enumerate((2023, 2024, 2025, 2026), start=1):
             valor = serie_extendida.get(anio, {}).get(clave)
-            fila[i].text = str(valor) if valor is not None else "—"
+            fila[i].text = _formatear_valor(valor)
 
-    doc.add_heading("3. Indicadores derivados", level=1)
+    doc.add_heading("¿Cuánto hay por estudiante?", level=1)
+    doc.add_paragraph(INTRO_INDICADORES_DERIVADOS)
     tabla2 = doc.add_table(rows=1, cols=3)
     hdr2 = tabla2.rows[0].cells
     for i, h in enumerate(["Indicador", "2025", "2026"]):
@@ -400,17 +442,25 @@ def generar_reporte_docx(
         fila[1].text = str(redondear_presentacion(v2025)) if v2025 is not None else "—"
         fila[2].text = str(redondear_presentacion(v2026)) if v2026 is not None else "—"
 
-    doc.add_heading("4. Gráficos de evolución", level=1)
+    doc.add_heading("Evolución en el tiempo", level=1)
+    doc.add_paragraph(INTRO_GRAFICOS)
     for ruta_grafico in rutas_graficos:
         if ruta_grafico.exists():
             doc.add_picture(str(ruta_grafico), width=Inches(5.5))
 
-    doc.add_heading("5. Anomalías y notas metodológicas", level=1)
+    doc.add_heading("Notas importantes para interpretar los datos", level=1)
     for titulo, detalle in ANOMALIAS:
         p = doc.add_paragraph()
         run = p.add_run(titulo)
         run.bold = True
         doc.add_paragraph(detalle)
+
+    doc.add_heading("Información técnica adicional", level=1)
+    doc.add_paragraph(
+        "Para el equipo técnico: el detalle de las filas cargadas, el resultado "
+        "de las validaciones y el registro de herencias de datos está disponible "
+        "en el archivo Reporte_KPI_Infraestructura_2026.md (versión técnica)."
+    )
 
     doc.save(str(ruta_salida))
 
