@@ -1,0 +1,93 @@
+{
+  "proceso": "Matrícula Unificada 2026",
+  "subprocesos": [
+    "Pregrado",
+    "Posgrado/Postítulo",
+    "Publicación institucional/SIES"
+  ],
+  "fecha_ejecucion": "2026-07-30T22:52:10.282950-04:00",
+  "libro": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_223007.xlsx",
+  "sha256_libro": "8c55013b0ed376283c63d180280f22ba38599b0d34cdc695e74571e6d943b178",
+  "estado_final": "VALIDACION_CON_ERRORES",
+  "controles": {
+    "total": 77,
+    "ok": 75,
+    "advertencias": 1,
+    "errores": 1
+  },
+  "estructura": {
+    "hojas": 25,
+    "tablas": 24,
+    "tablas_con_filtro": 24,
+    "formulas": 21517,
+    "hipervinculos": 47
+  },
+  "totales_recalculados": {
+    "publicacion_pregrado": 3371,
+    "publicacion_posgrado": 54,
+    "publicacion_total": 3425,
+    "institucional_pregrado": 3145,
+    "institucional_posgrado": 54,
+    "institucional_total": 3199,
+    "diferencia_total": 226
+  },
+  "cruce_codigos": {
+    "codigos_union": 66,
+    "coincidentes": 64,
+    "solo_publicacion": {
+      "I162S2C77J1V1": 1,
+      "I162S2C87J4V1": 5
+    },
+    "solo_institucional": {},
+    "diferencias_positivas_cantidad": 46,
+    "diferencias_positivas_suma": 228,
+    "diferencias_negativas_cantidad": 2,
+    "diferencias_negativas_suma": -2,
+    "diferencias_negativas_detalle": {
+      "I162S2C6J4V2": -1,
+      "I162S2C79J2V1": -1
+    }
+  },
+  "raw": {
+    "pregrado": {
+      "estado": "OK",
+      "fila_encabezado": 3,
+      "coincidencias_encabezado": 32,
+      "filas_raw": 4105,
+      "filas_tabla": 4105,
+      "encabezados_iguales": true,
+      "orden_igual": true,
+      "multiconjunto_igual": true,
+      "hash_raw": "feffa73322684596692303dbe86a33f4df860e45bf60911d3fbcc5d59ae2169c",
+      "hash_tabla": "feffa73322684596692303dbe86a33f4df860e45bf60911d3fbcc5d59ae2169c"
+    },
+    "posgrado": {
+      "estado": "OK",
+      "fila_encabezado": 3,
+      "coincidencias_encabezado": 21,
+      "filas_raw": 54,
+      "filas_tabla": 54,
+      "encabezados_iguales": true,
+      "orden_igual": true,
+      "multiconjunto_igual": true,
+      "hash_raw": "bfcf11e862089f5f6f34dad599c2443ef6a092dae166407e386641067d667b79",
+      "hash_tabla": "bfcf11e862089f5f6f34dad599c2443ef6a092dae166407e386641067d667b79"
+    }
+  },
+  "configuracion_calculo": {
+    "calcId": "124519",
+    "calcMode": "auto",
+    "fullCalcOnLoad": "1",
+    "forceFullCalc": "1"
+  },
+  "archivos_generados": [
+    "01_CONTROLES_VALIDACION.csv",
+    "02_RESUMEN_TABLAS.csv",
+    "03_CRUCE_RECALCULADO_POR_CODIGO.csv",
+    "04_DISCREPANCIAS_RESUMEN_CODIGO.csv",
+    "05_CELDAS_ERROR_FORMULA.csv",
+    "06_CONFLICTOS_REGLA_TV.csv",
+    "REPORTE_VALIDACION_CRUCES_MU2026.md",
+    "MANIFEST_VALIDACION_CRUCES_MU2026.json"
+  ]
+}

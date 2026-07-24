@@ -1,0 +1,227 @@
+{
+  "proceso": "Matricula Unificada 2026",
+  "subproyecto": "Matricula de Pregrado 2026",
+  "anio": 2026,
+  "timestamp": "20260730_173940",
+  "publicacion": {
+    "archivo": "publicacion2026.xlsx",
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/publicacion2026.xlsx",
+    "hoja": "Hoja1",
+    "filas_datos": 66,
+    "columnas": 58,
+    "hash": "9312665c74102bef111fa6618a379bfd57170b376ebc8e501ab7c92dba421da2",
+    "fecha_modificacion": "2026-07-30T16:22:12",
+    "hash_logico": "d6dec5ce76fbc52d42a8c8278ee69fae404c0a58e20124f0b5538b764a90c23d",
+    "total_publicacion": 3425,
+    "total_pregrado": 3371,
+    "filas_pregrado": 63,
+    "ofertas_pregrado": 63,
+    "total_posgrado_postitulo": 54,
+    "filas_posgrado_postitulo": 3,
+    "ofertas_posgrado_postitulo": 3,
+    "total_pendiente_nivel": 0
+  },
+  "congelado_actual": {
+    "tipo": "combinado_analitico_gobernado",
+    "componentes": [
+      "Punto 0 PARA_SUBIR",
+      "Complemento 95 V3"
+    ],
+    "filas_historicas": 4165,
+    "vig": {
+      "0": 960,
+      "1": 3205,
+      "2": 0,
+      "otros": 0
+    },
+    "vigente": 3205,
+    "hash_logico": "395e2041d5b23c07531e3f4097bc6ba9745b65c8de2ac0cded2b28c2c1db8093",
+    "hash_fisico_derivado": "7e9b4033a20eb2b7856a11d57990ed0431452046f9b0f12c852b607f44a5e338"
+  },
+  "componentes": {
+    "punto0": {
+      "punto0_hash": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "punto0_delimitador": ";",
+      "punto0_codificacion": "utf-8-sig",
+      "punto0_encabezado_fisico": false,
+      "punto0_filas": 4070,
+      "punto0_columnas": 32,
+      "complemento95_hash": "1940923b7e9f811df9b5af50d0badc8563bc17ed9ce8078fbab054d221c6e1f2",
+      "complemento95_delimitador": ";",
+      "complemento95_codificacion": "utf-8-sig",
+      "complemento95_encabezado_fisico": false,
+      "complemento95_filas": 95,
+      "complemento95_columnas": 32,
+      "congelado_hash_logico": "395e2041d5b23c07531e3f4097bc6ba9745b65c8de2ac0cded2b28c2c1db8093",
+      "congelado_hash_fisico_derivado": "7e9b4033a20eb2b7856a11d57990ed0431452046f9b0f12c852b607f44a5e338",
+      "ruta": "git:4f1108c:control/auditoria_mu2026_punto0_complemento95/archivos_congelados/carga_principal/matricula_unificada_2026_pregrado_PARA_SUBIR.csv"
+    },
+    "complemento95": {
+      "ruta": "git_blob:d4bd44f9d1f11640056b8e990f5e1fcda9aebf7d",
+      "hash": "1940923b7e9f811df9b5af50d0badc8563bc17ed9ce8078fbab054d221c6e1f2",
+      "filas": 95,
+      "columnas": 32
+    }
+  },
+  "posgrado": {
+    "estado": "CONCILIADO_54_VS_54",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/MANIFEST_COMPARACION_INTEGRAL_PUBLICACION2026_PREGRADO_POSGRADO_CON_PES_READY_20260730_172147.json",
+    "hash_manifest": "e915c8c4bf652572299a27e7ff5e9f9ac906a42c37c3cc8265dba97acc84d9d4",
+    "excel_integral": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/COMPARACION_INTEGRAL_PUBLICACION2026_VS_CONGELADOS_PREGRADO_POSGRADO_2026_CON_PES_READY_20260730_172147.xlsx",
+    "hash_excel_integral": "ad7724733b7bbd601acc8cf94947967ef7bc9e3847db1fe8d6468fb5ac9f68c0",
+    "hoja_verificacion": "05_RESUMEN_POR_NIVEL",
+    "total_publicacion_posgrado": 54,
+    "total_congelado_posgrado": 54,
+    "diferencia_posgrado": 0
+  },
+  "candidatos_inventariados": 2780,
+  "candidatos_con_total_3371": [],
+  "resultados": {
+    "publicacion_pregrado": 3371,
+    "congelado_vigente": 3205,
+    "diferencia_inicial": 166,
+    "suma_diferencias_positivas": 186,
+    "suma_absoluta_diferencias_negativas": 20,
+    "diferencia_neta": 166,
+    "diferencia_aritmetica_residual": 0,
+    "diferencia_causal_demostrada": 0,
+    "diferencia_causal_residual": 166,
+    "estado_final": "BLOQUEADO_POR_FALTA_DE_FUENTE"
+  },
+  "duplicados": {
+    "persona_grupos": 94,
+    "persona_registros": 188,
+    "persona_registros_vigentes": 183,
+    "persona_max_registros": 2,
+    "matricula_grupos": 89,
+    "matricula_registros": 178,
+    "matricula_registros_vigentes": 173,
+    "matricula_max_registros": 2,
+    "vigente_original": 3205,
+    "vigente_unico_llave_persona": 3116,
+    "vigente_unico_llave_matricula": 3121,
+    "simulacion_dedupe_persona_diferencia": 89,
+    "simulacion_dedupe_matricula_diferencia": 84
+  },
+  "validaciones": [
+    {
+      "Validacion": "Publicacion pregrado = 3371",
+      "Resultado": true,
+      "Detalle": 3371
+    },
+    {
+      "Validacion": "Congelado vigente actual = 3205",
+      "Resultado": true,
+      "Detalle": 3205
+    },
+    {
+      "Validacion": "Diferencia inicial = 166",
+      "Resultado": true,
+      "Detalle": 166
+    },
+    {
+      "Validacion": "Posgrado separado 54 vs 54",
+      "Resultado": true,
+      "Detalle": {
+        "estado": "CONCILIADO_54_VS_54",
+        "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/MANIFEST_COMPARACION_INTEGRAL_PUBLICACION2026_PREGRADO_POSGRADO_CON_PES_READY_20260730_172147.json",
+        "hash_manifest": "e915c8c4bf652572299a27e7ff5e9f9ac906a42c37c3cc8265dba97acc84d9d4",
+        "excel_integral": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/COMPARACION_INTEGRAL_PUBLICACION2026_VS_CONGELADOS_PREGRADO_POSGRADO_2026_CON_PES_READY_20260730_172147.xlsx",
+        "hash_excel_integral": "ad7724733b7bbd601acc8cf94947967ef7bc9e3847db1fe8d6468fb5ac9f68c0",
+        "hoja_verificacion": "05_RESUMEN_POR_NIVEL",
+        "total_publicacion_posgrado": 54,
+        "total_congelado_posgrado": 54,
+        "diferencia_posgrado": 0
+      }
+    },
+    {
+      "Validacion": "Suma diferencias por oferta = 166",
+      "Resultado": true,
+      "Detalle": 166
+    },
+    {
+      "Validacion": "Suma positiva menos negativa = 166",
+      "Resultado": true,
+      "Detalle": 166
+    },
+    {
+      "Validacion": "Todas las ofertas publicadas clasificadas",
+      "Resultado": true,
+      "Detalle": ""
+    },
+    {
+      "Validacion": "Punto 0 validado",
+      "Resultado": true,
+      "Detalle": 4070
+    },
+    {
+      "Validacion": "Complemento 95 validado",
+      "Resultado": true,
+      "Detalle": 95
+    },
+    {
+      "Validacion": "Historico pregrado = VIG0+VIG1+VIG2",
+      "Resultado": true,
+      "Detalle": {
+        "0": 960,
+        "1": 3205,
+        "2": 0,
+        "otros": 0
+      }
+    },
+    {
+      "Validacion": "VIG0 no incorporado a comparable",
+      "Resultado": true,
+      "Detalle": ""
+    },
+    {
+      "Validacion": "Duplicados no eliminados",
+      "Resultado": true,
+      "Detalle": 4165
+    },
+    {
+      "Validacion": "Originales no modificados por script",
+      "Resultado": true,
+      "Detalle": "solo lectura; salidas en carpeta nueva"
+    },
+    {
+      "Validacion": "Artefactos anteriores no sobrescritos",
+      "Resultado": true,
+      "Detalle": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940"
+    },
+    {
+      "Validacion": "Hashes calculados",
+      "Resultado": true,
+      "Detalle": ""
+    }
+  ],
+  "hashes_logicos": {
+    "RAW_PUBLICACION2026": "d6dec5ce76fbc52d42a8c8278ee69fae404c0a58e20124f0b5538b764a90c23d",
+    "RAW_PREGRADO_CONGELADO_ACTUAL": "395e2041d5b23c07531e3f4097bc6ba9745b65c8de2ac0cded2b28c2c1db8093",
+    "RAW_PUNTO0": "2cfc8ffabe1d58d2f18f73a0c5cb3f95b28ab203f9712408b09ad4afe2cf7192",
+    "RAW_COMPLEMENTO95": "fa450c18bae7276f092c23a83bf1509e7c3ba971aa986ff61ccf645435cc262c"
+  },
+  "archivos_generados": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940/AUDITORIA_DIFERENCIA_166_PUBLICACION2026_VS_CONGELADO_PREGRADO_20260730_173940.xlsx",
+    "reporte": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940/REPORTE_AUDITORIA_DIFERENCIA_166_PREGRADO_20260730_173940.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940/MANIFEST_AUDITORIA_DIFERENCIA_166_PREGRADO_20260730_173940.json"
+  },
+  "excel_abre_correctamente": true,
+  "pendientes": [
+    {
+      "Pendiente": "FUENTE_PUBLICACION_PREGRADO_3371_NO_TRAZADA",
+      "Descripcion": "No se encontro un archivo local/reportes PES que explique materialmente la construccion de los 3371 publicados de pregrado."
+    },
+    {
+      "Pendiente": "SIN_DESCARGA_CONSULTAR_DATOS_PES_POSTERIOR",
+      "Descripcion": "No se encontro una descarga local posterior de Consultar Datos PES con 3371 vigentes de pregrado."
+    },
+    {
+      "Pendiente": "DIFERENCIA_CAUSAL_166",
+      "Descripcion": "La diferencia se descompone aritmeticamente por oferta, pero su causa institucional queda sin fuente material local."
+    }
+  ],
+  "scripts": [
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/auditar_diferencia_166_pregrado.py"
+  ]
+}

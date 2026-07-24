@@ -115,6 +115,23 @@ CATALOGO_VIGENCIA = {
     1: "Mantener",
 }
 
+# Campos de superficie: máximo 1 decimal (regla del instructivo).
+# PES rechaza con "no cumple con estructura" si traen 2+ decimales.
+CAMPOS_UN_DECIMAL = [
+    "TOTAL_M2_TERRENO",
+    "TOTAL_M2_EDIFICADOS",
+    "TOTAL_M2_SALAS_CLASES",
+    "TOTAL_M2_AUDITORIOS",
+    "TOTAL_M2_LABORATORIOS",
+    "TOTAL_M2_TALLERES",
+    "TOTAL_M2_CASINOS_CAFETERIAS",
+    "TOTAL_M2_AREAS_VERDES",
+    "TOTAL_M2_BIBLIOTECA",
+    "TOTAL_M2_SALAS_LECTURA",
+    "UR_TOTAL_M2_TERRENO",
+    "UR_TOTAL_M2_CONSTRUIDOS",
+]
+
 # Especificación: tipo, aplicabilidad, obligatorio
 ESPECIFICACION = {
     "TIPO_INFRAESTRUCTURA": {"tipo": Tipo.NUMERO_ENTERO, "aplica": {1, 2, 3, 4, 5, 6}, "obligatorio": True},

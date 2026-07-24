@@ -1,0 +1,107 @@
+{
+  "proceso": "Matrícula Unificada 2026",
+  "subprocesos": [
+    "Matrícula de Pregrado 2026",
+    "Matrícula de Posgrado y Postítulo 2026"
+  ],
+  "anio": 2026,
+  "publicacion": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/publicacion2026.xlsx",
+    "hoja": "Hoja1",
+    "hash_fisico": "9312665c74102bef111fa6618a379bfd57170b376ebc8e501ab7c92dba421da2",
+    "filas": 66,
+    "columnas": 58,
+    "hash_logico_raw": "41f51469d510dbcf676623f24d4d4c8bbfcad1411f1dbd59607dac69d1edaec3"
+  },
+  "congelado_pregrado": {
+    "tipo": "derivado gobernado",
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/fuentes_derivadas/DERIVADO_PREGRADO_CONGELADO_HISTORICO_4165_SIN_ENCABEZADOS.csv",
+    "hash_fisico": "48a950179066b7beffd31fa46377ab2caaf46ca61edb870796aff0deecfe62e9",
+    "filas": 4165,
+    "columnas": 32,
+    "hash_logico_raw": "0a1f0730afd372a9a49bd6aacbfb07e24ea9873e83f06a30c737dd147b999147"
+  },
+  "congelado_posgrado": {
+    "tipo": "con títulos asociado al PES-ready final",
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/fuentes_derivadas/FUENTE_CONGELADA_POSGRADO_POSTITULO_CON_TITULOS_54.csv",
+    "hash_fisico": "0cd4c6343dbd886e259db5f86ecff70a08840d2b556bc398543711b66a94608a",
+    "filas": 54,
+    "columnas": 21,
+    "hash_logico_raw": "3ec3c2cc709042fd6e98a325d7413f6b40873ddc7487c322ad92f8b6c6074189"
+  },
+  "componentes": {
+    "pregrado": {
+      "punto0_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/fuentes_derivadas/FUENTE_COMPONENTE_PREGRADO_PUNTO0_PARA_SUBIR.csv",
+      "punto0_hash": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "punto0_rows": 4070,
+      "complemento95_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/fuentes_derivadas/FUENTE_COMPONENTE_PREGRADO_COMPLEMENTO95_V3.csv",
+      "complemento95_hash": "1940923b7e9f811df9b5af50d0badc8563bc17ed9ce8078fbab054d221c6e1f2",
+      "complemento95_rows": 95,
+      "historico_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/fuentes_derivadas/DERIVADO_PREGRADO_CONGELADO_HISTORICO_4165_SIN_ENCABEZADOS.csv",
+      "historico_hash": "48a950179066b7beffd31fa46377ab2caaf46ca61edb870796aff0deecfe62e9",
+      "historico_rows": 4165
+    },
+    "posgrado": {
+      "selected_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/fuentes_derivadas/FUENTE_CONGELADA_POSGRADO_POSTITULO_CON_TITULOS_54.csv",
+      "selected_hash": "0cd4c6343dbd886e259db5f86ecff70a08840d2b556bc398543711b66a94608a",
+      "selected_rows": 54,
+      "pes55_bkp_hash": "40d8bdb97623be58ec9af66651e681ee397802143681bbbfb9268d5fe23103ca",
+      "control55_hash": "ec07e354f5617b65fd1b873f17323573ee085df3dd0cbdea65d1a7b92aa7aafc",
+      "reconciliacion_hash": "42ae52a7ea64fd17e8345fbe26fa0b9e68432d73e9c301e31aa04e30a7529192",
+      "trazabilidad_hash": "dd8c99ba6089f99cd4df12bbf7aff18d05fca56ac9a034ee33b395a0c658b27d",
+      "promedios_hash": "5fb9eff7bee0cfeac6943b045c87467b6aa3f6d1d8630729b66db091cc510fd0"
+    }
+  },
+  "filtros": {
+    "pregrado_comparable": "VIG IN (1,2)",
+    "posgrado_comparable": "VIG IN (1,2) según Cuadro N°2 del manual"
+  },
+  "reglas_clasificacion": [
+    "Campo explícito NIVEL GLOBAL",
+    "Cruce exacto CODIGO_UNICO con congelados como respaldo",
+    "Sin coincidencias aproximadas por nombre"
+  ],
+  "totales": {
+    "publicacion_total": 3425,
+    "publicacion_pregrado": 3371,
+    "publicacion_posgrado_postitulo": 54,
+    "publicacion_ambigua": 0,
+    "publicacion_no_clasificada": 0,
+    "pregrado_historico": 4165,
+    "pregrado_vig0": 960,
+    "pregrado_vig1": 3205,
+    "pregrado_vig2": 0,
+    "pregrado_comparable": 3205,
+    "posgrado_historico": 54,
+    "posgrado_comparable": 54
+  },
+  "diferencias": {
+    "pregrado": 166,
+    "posgrado_postitulo": 0,
+    "global": 166,
+    "validacion_220": "HIPOTESIS_NO_CONFIRMADA"
+  },
+  "archivos_generados": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/COMPARACION_INTEGRAL_PUBLICACION2026_VS_CONGELADOS_PREGRADO_POSGRADO_2026_20260730_170627.xlsx",
+    "markdown": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/REPORTE_INTEGRAL_PUBLICACION2026_VS_CONGELADOS_PREGRADO_POSGRADO_2026_20260730_170627.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627/MANIFEST_COMPARACION_INTEGRAL_PUBLICACION2026_PREGRADO_POSGRADO_20260730_170627.json",
+    "directorio": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_170627"
+  },
+  "fecha": "2026-07-30T17:06:36",
+  "estado_analisis_anteriores": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026/20260730_163247",
+      "estado": "SUPERADO",
+      "motivo": "UNIVERSO_HISTORICO_PREGRADO_INCLUÍA_VIG_0"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_corregidas/20260730_164055",
+      "estado": "SUPERADO",
+      "motivo": "SUPERADO POR SEPARACIÓN OBLIGATORIA DE PREGRADO Y POSGRADO"
+    }
+  ],
+  "pendientes": [
+    "No se encontró materializado en el árbol de trabajo actual el CSV PES-ready posgrado sin encabezados de 54 filas; se utilizó el archivo con títulos de 54 filas respaldado por cierre gobernado.",
+    "Dos ofertas publicadas como pregrado aparecen como SOLO_PUBLICACION frente al congelado pregrado vigente/histórico."
+  ]
+}

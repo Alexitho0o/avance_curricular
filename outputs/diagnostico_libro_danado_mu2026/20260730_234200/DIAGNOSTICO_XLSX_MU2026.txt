@@ -1,0 +1,76 @@
+====================================================================================================
+DIAGNÓSTICO ESTRUCTURAL DEL LIBRO MU 2026
+====================================================================================================
+
+Archivo: /Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_223007.xlsx
+Tamaño: 2,431,106 bytes
+SHA-256: 8c55013b0ed376283c63d180280f22ba38599b0d34cdc695e74571e6d943b178
+
+INTEGRIDAD ZIP
+----------------------------------------------------------------------------------------------------
+ZIP físico: OK
+Entradas internas: 81
+
+VALIDACIÓN XML
+----------------------------------------------------------------------------------------------------
+Archivos XML: 55
+Errores de parseo XML: 0
+
+ESTRUCTURA
+----------------------------------------------------------------------------------------------------
+Tablas Excel: 24
+Referencias externas OOXML: 0
+
+FÓRMULAS
+----------------------------------------------------------------------------------------------------
+Fórmulas totales: 21517
+Fórmulas con separador punto y coma: 0
+Fórmulas con separador coma: 21217
+Fórmulas con nombres localizados: 154
+Fórmulas con #REF!: 0
+
+FUNCIONES LOCALIZADAS DETECTADAS
+----------------------------------------------------------------------------------------------------
+ABS: 132
+SUBTOTAL: 22
+
+MUESTRA DE FÓRMULAS POTENCIALMENTE INVÁLIDAS
+----------------------------------------------------------------------------------------------------
+01. xl/worksheets/sheet4.xml | SUBTOTAL(103,tblFuentes[[#Data],[ID_FUENTE]])
+02. xl/worksheets/sheet5.xml | SUBTOTAL(103,tblReglaTV[[#Data],[TV]])
+03. xl/worksheets/sheet6.xml | SUBTOTAL(103,tblDiccionarioCampos[[#Data],[CAMPO]])
+04. xl/worksheets/sheet7.xml | SUBTOTAL(103,tblPublicacion[[#Data],[AUD_FILA_ORIGEN]])
+05. xl/worksheets/sheet8.xml | SUBTOTAL(103,tblPregrado[[#Data],[AUD_FILA_ORIGEN]])
+06. xl/worksheets/sheet9.xml | SUBTOTAL(103,tblPosgrado[[#Data],[AUD_FILA_ORIGEN]])
+07. xl/worksheets/sheet10.xml | SUBTOTAL(103,tblConsolidado[[#Data],[FILA_ORIGEN]])
+08. xl/worksheets/sheet11.xml | SUBTOTAL(103,tblResumenNivel[[#Data],[NIVEL]])
+09. xl/worksheets/sheet12.xml | SUBTOTAL(103,tblResumenCodigo[[#Data],[CODIGO_NORMALIZADO]])
+10. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+11. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+12. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+13. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+14. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+15. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+16. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+17. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+18. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+19. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+20. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+21. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+22. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+23. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+24. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+25. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+26. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+27. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+28. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+29. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+30. xl/worksheets/sheet12.xml | ABS([@DIFERENCIA])
+
+RESULTADO
+----------------------------------------------------------------------------------------------------
+Causa probable: FORMULAS_OOXML_CON_SINTAXIS_LOCALIZADA
+Estado del libro: INVALIDO_NO_ENTREGAR
+Original modificado: NO
+
+La validación de datos y cruces realizada desde las tablas internas sigue siendo evidencia separada del funcionamiento visual del archivo en Microsoft Excel.

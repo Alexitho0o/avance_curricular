@@ -1,0 +1,62 @@
+
+==================================================================================================================================
+VALIDACIÓN INTEGRAL DE CRUCES — MATRÍCULA UNIFICADA 2026
+==================================================================================================================================
+Libro:                         /Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_223007.xlsx
+SHA-256:                       8c55013b0ed376283c63d180280f22ba38599b0d34cdc695e74571e6d943b178
+Estado:                        VALIDACION_CON_ERRORES
+
+TOTALES RECALCULADOS
+----------------------------------------------------------------------------------------------------------------------------------
+Publicación pregrado:         3371
+Publicación posgrado:         54
+Publicación total:             3425
+Institucional pregrado:        3145
+Institucional posgrado:        54
+Institucional total:           3199
+Diferencia neta:               +226
+
+CRUCE POR CÓDIGOS
+----------------------------------------------------------------------------------------------------------------------------------
+Códigos totales:               66
+Códigos coincidentes:          64
+Solo publicación:              2
+Solo institucional:            0
+Diferencias positivas:        46 códigos | suma=+228
+Diferencias negativas:        2 códigos | suma=-2
+Conciliación:                 +228 + (-2) = +226
+
+SOLO PUBLICACIÓN
+----------------------------------------------------------------------------------------------------------------------------------
+I162S2C77J1V1: 1
+I162S2C87J4V1: 5
+
+DIFERENCIAS NEGATIVAS
+----------------------------------------------------------------------------------------------------------------------------------
+I162S2C6J4V2: publicación=45 | institucional=46 | diferencia=-1
+I162S2C79J2V1: publicación=25 | institucional=26 | diferencia=-1
+
+CONTROLES
+----------------------------------------------------------------------------------------------------------------------------------
+Total:                         77
+OK:                            75
+Advertencias:                  1
+Errores:                       1
+
+ERRORES DETECTADOS
+----------------------------------------------------------------------------------------------------------------------------------
+- HOJAS_REQUERIDAS_PRESENTES | esperado=0 | obtenido=1
+
+ADVERTENCIAS
+----------------------------------------------------------------------------------------------------------------------------------
+- DISCREPANCIAS_TABLA_RESUMEN_CODIGO | esperado=0 | obtenido=178
+
+CARPETA DE RESULTADOS
+/Users/alexi/Documents/GitHub/avance_curricular/outputs/validacion_cruces_auditoria_integral_mu2026_corregida/20260730_225204
+
+REVISAR PRIMERO
+/Users/alexi/Documents/GitHub/avance_curricular/outputs/validacion_cruces_auditoria_integral_mu2026_corregida/20260730_225204/REPORTE_VALIDACION_CRUCES_MU2026.md
+/Users/alexi/Documents/GitHub/avance_curricular/outputs/validacion_cruces_auditoria_integral_mu2026_corregida/20260730_225204/01_CONTROLES_VALIDACION.csv
+/Users/alexi/Documents/GitHub/avance_curricular/outputs/validacion_cruces_auditoria_integral_mu2026_corregida/20260730_225204/03_CRUCE_RECALCULADO_POR_CODIGO.csv
+/Users/alexi/Documents/GitHub/avance_curricular/outputs/validacion_cruces_auditoria_integral_mu2026_corregida/20260730_225204/MANIFEST_VALIDACION_CRUCES_MU2026.json
+

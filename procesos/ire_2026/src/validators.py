@@ -8,7 +8,7 @@ import re
 import unicodedata
 from typing import Optional, Dict, List
 from common.validacion import Regla, Severidad
-from src.schema import ESPECIFICACION, COLUMNAS
+from src.schema import ESPECIFICACION, COLUMNAS, CAMPOS_UN_DECIMAL
 
 
 # ---------- Helpers de tipo ----------
@@ -611,6 +611,31 @@ def crear_reglas() -> List[Regla]:
         descripcion="TOTAL_TITULOS_DISPONIBLES ≤ TOTAL_VOLUMENES_DISPONIBLES",
         severidad=Severidad.ERROR,
         validar=validar_aritmética_titulos,
+    ))
+
+    # ============ Superficie: máximo 1 decimal (red de seguridad) ============
+    # normalizar_decimales() en build_csv.py ya redondea antes de llegar aquí;
+    # esta regla es el bloqueo si alguien edita el CSV a mano o cambia el
+    # generador sin pasar por esa normalización.
+
+    def _validar_decimales_superficie(fila: Dict) -> Optional[str]:
+        for campo in CAMPOS_UN_DECIMAL:
+            v = str(fila.get(campo, "")).strip()
+            if not v or "." not in v:
+                continue
+            decimales = v.split(".", 1)[1]
+            if len(decimales) > 1:
+                return (
+                    f"{campo}='{v}' tiene más de un decimal; "
+                    f"PES exige máximo uno (rechaza con 'no cumple con estructura')"
+                )
+        return None
+
+    reglas.append(Regla(
+        id="SUPERFICIE_max_1_decimal",
+        descripcion="Campos de superficie con máximo 1 decimal",
+        severidad=Severidad.ERROR,
+        validar=_validar_decimales_superficie,
     ))
 
     return reglas

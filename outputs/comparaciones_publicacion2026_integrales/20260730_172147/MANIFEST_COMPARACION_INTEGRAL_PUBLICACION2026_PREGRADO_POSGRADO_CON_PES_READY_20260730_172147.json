@@ -1,0 +1,168 @@
+{
+  "proceso": "Matrícula Unificada 2026",
+  "subproyecto": "Matrícula de Posgrado y Postítulo 2026",
+  "archivo_con_titulos": {
+    "ruta": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv",
+    "hash_sha256": "0cd4c6343dbd886e259db5f86ecff70a08840d2b556bc398543711b66a94608a",
+    "filas_fisicas": 55,
+    "registros": 54,
+    "campos": 21
+  },
+  "archivo_pes_ready": {
+    "encontrado_o_reconstruido": "ARCHIVO_ORIGINAL_PES_READY_LOCALIZADO",
+    "ruta_original": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo.csv",
+    "git_blob": "3e44d69adc25cab16958c4317d16306b0e9eab20",
+    "ruta_gobernada": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/congelados_matricula_unificada_2026/posgrado_postitulo/20260730_172147/matricula_unificada_2026_postgrado_postitulo.csv",
+    "hash_sha256": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+    "filas": 54,
+    "campos": 21,
+    "delimitador": ";",
+    "codificacion": "utf-8",
+    "encabezado": "NO",
+    "bom": false,
+    "termina_en_lf": true
+  },
+  "comparacion_con_titulos": {
+    "mismo_orden_filas": true,
+    "mismo_orden_columnas": true,
+    "valores_identicos": true,
+    "diferencias_encontradas": 0
+  },
+  "candidatos": [
+    {
+      "Archivo candidato": "matricula_unificada_2026_postgrado_postitulo.csv",
+      "Ruta": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo.csv (blob 3e44d69adc25cab16958c4317d16306b0e9eab20)",
+      "Filas": 54,
+      "Campos": "21",
+      "Encabezado": "NO",
+      "Delimitador": ";",
+      "Codificación": "utf-8",
+      "SHA-256": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+      "Evidencia": "Reporte generación preliminar y cierre posterior; archivo PES-ready sin encabezado.",
+      "Estado": "SELECCIONADO_PES_READY",
+      "Primera fila": "R;17732202;4;ITURRA;MUNOZ;JAVIER ENRIQUE;H;17/07/1991;38;38;2;53;2;3;1;1;2026;1;2026;1;1",
+      "Última fila": "R;19801993;3;GALVEZ;FLORES;BENJAMIN ANTONIO;H;21/12/1997;38;38;2;70;3;4;1;1;2026;1;2026;1;1",
+      "Mismo orden que cuerpo con títulos": "SI",
+      "Mismo contenido que cuerpo con títulos": "SI",
+      "BOM": "NO",
+      "Termina en LF": "SI"
+    },
+    {
+      "Archivo candidato": "matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv",
+      "Ruta": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv (blob 1c1d4833b5dc5637b0c1670b5823c8aab4683f93)",
+      "Filas": 55,
+      "Campos": "21",
+      "Encabezado": "SI",
+      "Delimitador": ";",
+      "Codificación": "utf-8-sig",
+      "SHA-256": "0cd4c6343dbd886e259db5f86ecff70a08840d2b556bc398543711b66a94608a",
+      "Evidencia": "Archivo con títulos de 54 registros usado como referencia de contenido.",
+      "Estado": "ARCHIVO_CON_TITULOS",
+      "Primera fila": "TIPO_DOC;N_DOC;DV;PRIMER_APELLIDO;SEGUNDO_APELLIDO;NOMBRE;SEXO;FECH_NAC;NAC;PAIS_EST_SEC;COD_SED;COD_CAR;MODALIDAD;JOR;VERSION;FOR_ING_ACT;ANIO_ING_ACT;SEM_ING_ACT;ANIO_ING_ORI;SEM_ING_ORI;VIG",
+      "Última fila": "R;19801993;3;GALVEZ;FLORES;BENJAMIN ANTONIO;H;21/12/1997;38;38;2;70;3;4;1;1;2026;1;2026;1;1",
+      "Mismo orden que cuerpo con títulos": "NO",
+      "Mismo contenido que cuerpo con títulos": "NO",
+      "BOM": "SI",
+      "Termina en LF": "SI"
+    },
+    {
+      "Archivo candidato": "matricula_unificada_2026_postgrado_postitulo_CON_TITULOS_bkp_20260521_213650.csv",
+      "Ruta": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo_CON_TITULOS_bkp_20260521_213650.csv (blob bfb4b20f1b9ef27ef31f3b12a02969d8a63f6631)",
+      "Filas": 56,
+      "Campos": "21",
+      "Encabezado": "SI",
+      "Delimitador": ";",
+      "Codificación": "utf-8-sig",
+      "SHA-256": "660da697b4c0a0e4e4c8855b05e2419a6b3871242ce395dbf27fcd3a179e2ae6",
+      "Evidencia": "Respaldo con títulos previo a exclusión final; contiene 55 registros más encabezado.",
+      "Estado": "ARCHIVO_CON_TITULOS",
+      "Primera fila": "TIPO_DOC;N_DOC;DV;PRIMER_APELLIDO;SEGUNDO_APELLIDO;NOMBRE;SEXO;FECH_NAC;NAC;PAIS_EST_SEC;COD_SED;COD_CAR;MODALIDAD;JOR;VERSION;FOR_ING_ACT;ANIO_ING_ACT;SEM_ING_ACT;ANIO_ING_ORI;SEM_ING_ORI;VIG",
+      "Última fila": "R;19801993;3;GALVEZ;FLORES;BENJAMIN ANTONIO;H;21/12/1997;38;38;2;70;3;4;1;1;2026;1;2026;1;1",
+      "Mismo orden que cuerpo con títulos": "NO",
+      "Mismo contenido que cuerpo con títulos": "NO",
+      "BOM": "SI",
+      "Termina en LF": "SI"
+    },
+    {
+      "Archivo candidato": "matricula_unificada_2026_postgrado_postitulo_PES_READY_FOR_ING_ACT_MODALIDAD_JOR_CORREGIDO_bkp_20260521_213650.csv",
+      "Ruta": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo_PES_READY_FOR_ING_ACT_MODALIDAD_JOR_CORREGIDO_bkp_20260521_213650.csv (blob 78d8f47c9a8774567e8bd8c9722e6dc39bb543d5)",
+      "Filas": 55,
+      "Campos": "21",
+      "Encabezado": "NO",
+      "Delimitador": ";",
+      "Codificación": "utf-8",
+      "SHA-256": "40d8bdb97623be58ec9af66651e681ee397802143681bbbfb9268d5fe23103ca",
+      "Evidencia": "Respaldo PES-ready corregido antes de excluir registro bloqueado; 55 filas.",
+      "Estado": "SUPERADO",
+      "Primera fila": "R;17732202;4;ITURRA;MUNOZ;JAVIER ENRIQUE;H;17/07/1991;38;38;2;53;2;3;1;1;2026;1;2026;1;1",
+      "Última fila": "R;19801993;3;GALVEZ;FLORES;BENJAMIN ANTONIO;H;21/12/1997;38;38;2;70;3;4;1;1;2026;1;2026;1;1",
+      "Mismo orden que cuerpo con títulos": "NO",
+      "Mismo contenido que cuerpo con títulos": "NO",
+      "BOM": "NO",
+      "Termina en LF": "SI"
+    },
+    {
+      "Archivo candidato": "matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv",
+      "Ruta": "git:4f1108c:resultados/matricula_unificada_2026_postgrado_postitulo_CONTROL_FINAL.csv (blob 285ad4aa94ee88026efa19a36b3daec6c788ed30)",
+      "Filas": 56,
+      "Campos": "32",
+      "Encabezado": "NO",
+      "Delimitador": ",",
+      "Codificación": "utf-8-sig",
+      "SHA-256": "ec07e354f5617b65fd1b873f17323573ee085df3dd0cbdea65d1a7b92aa7aafc",
+      "Evidencia": "Control final con columnas de auditoría; no es archivo de carga PES-ready.",
+      "Estado": "NO_CORRESPONDE",
+      "Primera fila": "TIPO_DOC,N_DOC,DV,PRIMER_APELLIDO,SEGUNDO_APELLIDO,NOMBRE,SEXO,FECH_NAC,NAC,PAIS_EST_SEC,COD_SED,COD_CAR,MODALIDAD,JOR,VERSION,FOR_ING_ACT,ANIO_ING_ACT,SEM_ING_ACT,ANIO_ING_ORI,SEM_ING_ORI,VIG,CODCLI,RUT_ORIGEN,NOMBRE_L_ORIGEN,CODCARPR_ORIGEN,ESTADOACADEMICO_ORIGEN,VIASDEADMISION_ORIGEN,NACIONALIDAD_ORIGEN,SEXO_ORIGEN,CODIGO_UNICO,ESTADO_VALIDACION_PES,ERRORES_VALIDACION",
+      "Última fila": "R,19801993,3,GALVEZ,FLORES,BENJAMIN ANTONIO,H,21/12/1997,38,38,2,70,3,4,1,1,2026,1,2026,1,1,20261DREIN022,19801993-3,DIPLOMADO EN REDES INDUSTRIALES,DREIN,VIGENTE,ENSEÑANZA MEDIA  NACIONAL,Chilena,M,I162S2C70J4V1,OK,",
+      "Mismo orden que cuerpo con títulos": "NO",
+      "Mismo contenido que cuerpo con títulos": "NO",
+      "BOM": "SI",
+      "Termina en LF": "SI"
+    },
+    {
+      "Archivo candidato": "reconciliacion_66_a_54_postgrado.csv",
+      "Ruta": "git:4f1108c:resultados/reconciliacion_66_a_54_postgrado.csv (blob 162a103919fb12c27af99f749e3c54776d3424ad)",
+      "Filas": 67,
+      "Campos": "29",
+      "Encabezado": "NO",
+      "Delimitador": ",",
+      "Codificación": "utf-8-sig",
+      "SHA-256": "42ae52a7ea64fd17e8345fbe26fa0b9e68432d73e9c301e31aa04e30a7529192",
+      "Evidencia": "Reconciliación 66 a 54; evidencia derivada, no archivo de carga.",
+      "Estado": "NO_CORRESPONDE",
+      "Primera fila": "CODCLI,RUT,DV,RUT_DV,CODCARPR,CODIGOCARRERA,NOMBRE_L,ANOMATRICULA,PERIODOMATRICULA,ANOINGRESO,PERIODOINGRESO,ESTADOACADEMICO,MATRICULA,ACCION_CARGA,ESTADO_GOBERNANZA,ESTADO_TRAZABILIDAD,ESTADO_VALIDACION_PES,INGRESA_A_PES_READY,MOTIVO_INCLUSION,MOTIVO_EXCLUSION,COD_SED,COD_CAR,MODALIDAD,JOR,VERSION,FOR_ING_ACT,VIG,FUENTE_DECISION,OBSERVACION_AUDITORIA",
+      "Última fila": "20261DREIN022,19801993,3,19801993-3,DREIN,DREIN,DIPLOMADO EN REDES INDUSTRIALES,2026,1,2026,1,VIGENTE,2,INCLUIR,MATCH_NORMALIZADO_NOMBRE,LISTO_PARA_PES_PRELIMINAR,OK,SI,ACCION_CARGA=INCLUIR; ESTADO_VALIDACION_PES=OK; presente en PES-ready final.,,2,70,3,4,1,1,1,trazabilidad + control_final + DatosAlumnos + diccionario + base_datos,",
+      "Mismo orden que cuerpo con títulos": "NO",
+      "Mismo contenido que cuerpo con títulos": "NO",
+      "BOM": "SI",
+      "Termina en LF": "SI"
+    }
+  ],
+  "fuentes_normativas": [
+    "Manual_Matrícula_Unificada_2026.pdf, Cuadro N°2, estructura de carga matrícula postgrado y postítulo.",
+    "diagnosticos/mu2026_postgrado/generacion_pes_postgrado_postitulo_20260508_090807.md",
+    "diagnosticos/mu2026_postgrado/resumen_cierre_rut_invalido_postgrado_20260521_213650 2.json",
+    "diagnosticos/mu2026_postgrado/reconciliacion_66_a_54_postgrado_20260521_215748 2.json"
+  ],
+  "evidencia_git": {
+    "log_path_original": "4f1108cab7bc31a17b15d50e905a6af3f0f6987b\t2026-07-22 22:45:35 -0400\tfeat: esqueleto monorepo SIES con common y procesos/ire_2026"
+  },
+  "archivos_generados": {
+    "copia_gobernada": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/congelados_matricula_unificada_2026/posgrado_postitulo/20260730_172147/matricula_unificada_2026_postgrado_postitulo.csv",
+    "excel_integral": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/COMPARACION_INTEGRAL_PUBLICACION2026_VS_CONGELADOS_PREGRADO_POSGRADO_2026_CON_PES_READY_20260730_172147.xlsx",
+    "reporte": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/REPORTE_INTEGRAL_PUBLICACION2026_VS_CONGELADOS_PREGRADO_POSGRADO_2026_CON_PES_READY_20260730_172147.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/comparaciones_publicacion2026_integrales/20260730_172147/MANIFEST_COMPARACION_INTEGRAL_PUBLICACION2026_PREGRADO_POSGRADO_CON_PES_READY_20260730_172147.json"
+  },
+  "hashes_archivos_generados": {
+    "copia_gobernada": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+    "excel_integral": "ad7724733b7bbd601acc8cf94947967ef7bc9e3847db1fe8d6468fb5ac9f68c0",
+    "reporte": "823f2ed7156963307e9b0283809ffa85fa611424cd87835101809698cf599841",
+    "manifest": "NO_AUTORREFERENCIAL; calcular con shasum externo"
+  },
+  "fecha": "2026-07-30T17:21:49",
+  "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/localizar_pes_ready_posgrado_postitulo_2026.py",
+  "estado_pendiente_anterior": {
+    "antes": "PES_READY_POSGRADO_NO_MATERIALIZADO",
+    "despues": "RESUELTO_ARCHIVO_ORIGINAL_LOCALIZADO"
+  }
+}

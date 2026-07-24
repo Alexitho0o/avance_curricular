@@ -1,0 +1,72 @@
+{
+  "proceso": "Matrícula Unificada SIES 2026",
+  "subprocesos": [
+    "Pregrado",
+    "Posgrado/Postítulo",
+    "Publicación institucional/SIES"
+  ],
+  "anio_proceso": 2026,
+  "anio_referencia_datos": 2026,
+  "fecha_cierre": "2026-07-30T23:34:08.165770-04:00",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "rama": "feature/ire-2026",
+  "commit": "31de72bfcee5a7f4ee0c143315ab9480f89deecc",
+  "estado_git_porcelain": [],
+  "fuente_congelada": {
+    "ruta_original": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_223007.xlsx",
+    "ruta_copia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_gobernado_auditoria_integral_mu2026/20260730_233407/CIERRE_GOBERNADO_AUDITORIA_MU2026_20260730_233407/00_FUENTES_CONGELADAS/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_223007.xlsx",
+    "sha256_original": "8c55013b0ed376283c63d180280f22ba38599b0d34cdc695e74571e6d943b178",
+    "sha256_copia": "8c55013b0ed376283c63d180280f22ba38599b0d34cdc695e74571e6d943b178",
+    "copia_identica": true,
+    "original_modificado": "NO"
+  },
+  "evidencia_validacion": {
+    "ruta_origen": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/lectura_independiente_libro_mu2026/20260730_232242",
+    "estado": "VALIDACION_LECTURA_INDEPENDIENTE_OK",
+    "metodo": "Lectura interna XLSX sin abrir Microsoft Excel",
+    "archivos": [
+      "REPORTE_LECTURA_INDEPENDIENTE.txt",
+      "CRUCE_66_CODIGOS.csv",
+      "INVENTARIO_TABLAS.csv",
+      "INVENTARIO_FORMULAS.csv",
+      "MANIFEST_LECTURA_INDEPENDIENTE.json"
+    ]
+  },
+  "resultados_validados": {
+    "publicacion_pregrado": 3371,
+    "publicacion_posgrado": 54,
+    "publicacion_total": 3425,
+    "institucional_pregrado": 3145,
+    "institucional_posgrado": 54,
+    "institucional_total": 3199,
+    "diferencia_neta": 226,
+    "codigos_totales": 66,
+    "codigos_sin_diferencia": 18,
+    "codigos_diferencia_positiva": 46,
+    "suma_diferencias_positivas": 228,
+    "codigos_diferencia_negativa": 2,
+    "suma_diferencias_negativas": -2,
+    "solo_publicacion": [
+      {
+        "NIVEL": "PREGRADO",
+        "CODIGO": "I162S2C77J1V1",
+        "PUBLICACION": 1,
+        "INSTITUCIONAL": 0,
+        "DIFERENCIA": 1,
+        "ESTADO": "SOLO_PUBLICACION"
+      },
+      {
+        "NIVEL": "PREGRADO",
+        "CODIGO": "I162S2C87J4V1",
+        "PUBLICACION": 5,
+        "INSTITUCIONAL": 0,
+        "DIFERENCIA": 5,
+        "ESTADO": "SOLO_PUBLICACION"
+      }
+    ],
+    "solo_institucional": []
+  },
+  "estado_final": "CIERRE_GOBERNADO_AUDITORIA_CONTENIDO_Y_CRUCES_VALIDADA",
+  "pendiente": "COMPATIBILIDAD_VISUAL_EN_MICROSOFT_EXCEL",
+  "originales_modificados": "NO"
+}

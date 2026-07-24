@@ -1,0 +1,76 @@
+{
+  "proceso": "Matrícula Unificada 2026",
+  "metodo": "Lectura interna XLSX sin abrir Microsoft Excel",
+  "libro": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_223007.xlsx",
+  "sha256": "8c55013b0ed376283c63d180280f22ba38599b0d34cdc695e74571e6d943b178",
+  "original_modificado": "NO",
+  "estado": "VALIDACION_LECTURA_INDEPENDIENTE_OK",
+  "estructura": {
+    "hojas": 25,
+    "tablas": 24,
+    "formulas": 21517,
+    "formula_resumen_codigo": 198
+  },
+  "cache_formulas": {
+    "PUBLICACION": 66,
+    "INSTITUCIONAL": 66,
+    "DIFERENCIA": 66
+  },
+  "totales": {
+    "publicacion_pregrado": 3371,
+    "publicacion_posgrado": 54,
+    "publicacion_total": 3425,
+    "institucional_pregrado": 3145,
+    "institucional_posgrado": 54,
+    "institucional_total": 3199,
+    "diferencia_neta": 226
+  },
+  "cruce": {
+    "codigos": 66,
+    "sin_diferencia": 18,
+    "diferencias_positivas": 46,
+    "suma_positivas": 228,
+    "diferencias_negativas": 2,
+    "suma_negativas": -2,
+    "solo_publicacion": [
+      {
+        "NIVEL": "PREGRADO",
+        "CODIGO": "I162S2C77J1V1",
+        "PUBLICACION": 1,
+        "INSTITUCIONAL": 0,
+        "DIFERENCIA": 1,
+        "ESTADO": "SOLO_PUBLICACION"
+      },
+      {
+        "NIVEL": "PREGRADO",
+        "CODIGO": "I162S2C87J4V1",
+        "PUBLICACION": 5,
+        "INSTITUCIONAL": 0,
+        "DIFERENCIA": 5,
+        "ESTADO": "SOLO_PUBLICACION"
+      }
+    ],
+    "solo_institucional": []
+  },
+  "controles": {
+    "hash_original_ok": true,
+    "hojas": true,
+    "tablas": true,
+    "pregrado_filas": true,
+    "vig_0": true,
+    "vig_1": true,
+    "vig_2": true,
+    "posgrado_filas": true,
+    "publicacion_pregrado": true,
+    "publicacion_posgrado": true,
+    "institucional_pregrado": true,
+    "institucional_posgrado": true,
+    "neto": true,
+    "codigos": true,
+    "positivas": true,
+    "negativas": true,
+    "solo_publicacion": true,
+    "solo_institucional": true
+  },
+  "errores": []
+}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/tmp/validar_cruces_auditoria_integral_mu2026.py", line 800, in <module>
+    lector = LectorXlsx(LIBRO)
+  File "/tmp/validar_cruces_auditoria_integral_mu2026.py", line 375, in __init__
+    self.tablas = self._leer_tablas()
+                  ~~~~~~~~~~~~~~~~~^^
+  File "/tmp/validar_cruces_auditoria_integral_mu2026.py", line 458, in _leer_tablas
+    raiz_hoja = self.xml(ruta_hoja)
+  File "/tmp/validar_cruces_auditoria_integral_mu2026.py", line 384, in xml
+    return ET.fromstring(self.zip.read(ruta))
+                         ~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/zipfile/__init__.py", line 1602, in read
+    with self.open(name, "r", pwd) as fp:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/zipfile/__init__.py", line 1639, in open
+    zinfo = self.getinfo(name)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/zipfile/__init__.py", line 1567, in getinfo
+    raise KeyError(
+        'There is no item named %r in the archive' % name)
+KeyError: "There is no item named '/xl/worksheets/sheet1.xml' in the archive"

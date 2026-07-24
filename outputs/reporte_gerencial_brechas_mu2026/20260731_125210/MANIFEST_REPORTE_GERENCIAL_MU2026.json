@@ -1,0 +1,83 @@
+{
+  "estado": "REPORTE_GERENCIAL_MU2026_CONSTRUIDO_Y_VALIDADO",
+  "proceso": "Matrícula Unificada SIES 2026",
+  "subproyecto": "Auditoría gerencial de diferencias entre publicación e información institucional de Pregrado y Posgrado/Postítulo",
+  "anio_proceso": 2026,
+  "anio_referencia": 2026,
+  "fecha_ejecucion": "2026-07-31T12:52:21",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "rama_git": "feature/ire-2026",
+  "commit_git": "a9a4d4dc8b93cfc3860d5629c522c99c16004a28",
+  "fuente_gobernante": {
+    "ruta": "/Users/alexi/Desktop/AUDITORIA_MATRICULA_UNIFICADA_2026_RECONSTRUIDA_PARA_REVISION_20260731_002214.xlsx",
+    "nombre": "AUDITORIA_MATRICULA_UNIFICADA_2026_RECONSTRUIDA_PARA_REVISION_20260731_002214.xlsx",
+    "tamano_bytes": 1193768,
+    "fecha_modificacion": "2026-07-31T00:22:22",
+    "sha256": "bf53d50ce8cfea6ad3633318f6a2d2846ceafb2ccb32964c430a48cd2cc9c02b"
+  },
+  "hojas_fuente": {
+    "publicacion": "07_PUBLICACION_COMPLETA",
+    "pregrado": "08_PREGRADO_COMPLETO",
+    "posgrado": "09_POSGRADO_COMPLETO",
+    "cruce": "02_CRUCE_66_CODIGOS"
+  },
+  "totales": {
+    "publicacion_pregrado": 3371,
+    "institucional_pregrado": 3145,
+    "diferencia_pregrado": 226,
+    "publicacion_posgrado_postitulo": 54,
+    "institucional_posgrado_postitulo": 54,
+    "diferencia_posgrado_postitulo": 0,
+    "publicacion_total": 3425,
+    "institucional_total": 3199,
+    "diferencia_neta": 226,
+    "vig0": 960,
+    "vig1": 3145,
+    "vig2": 0,
+    "codigos_totales": 66,
+    "codigos_sin_diferencia": 18,
+    "codigos_diferencia_positiva": 46,
+    "suma_diferencias_positivas": 228,
+    "codigos_diferencia_negativa": 2,
+    "suma_diferencias_negativas": -2,
+    "codigos_solo_publicacion": [
+      "I162S2C87J4V1",
+      "I162S2C77J1V1"
+    ],
+    "codigos_solo_institucional": []
+  },
+  "validaciones": {
+    "hojas": [
+      "01_RESUMEN_GERENCIAL",
+      "02_INFORMADO_A_SIES",
+      "03_BRECHA_POR_CARRERA",
+      "04_CONTROL_TRAZABILIDAD"
+    ],
+    "filas_informado_sies": 4105,
+    "columnas_informado_sies": 32,
+    "formula_errors": 0,
+    "xml_errors": 0,
+    "external_rels": 0,
+    "external_hyperlinks": 0,
+    "originales_modificados": "NO",
+    "desktop_hash_igual": true
+  },
+  "archivos_generados": {
+    "excel_repositorio": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reporte_gerencial_brechas_mu2026/20260731_125210/REPORTE_GERENCIAL_BRECHAS_MATRICULA_UNIFICADA_2026_DEFINITIVO_20260731_125210.xlsx",
+    "excel_escritorio": "/Users/alexi/Desktop/REPORTE_GERENCIAL_BRECHAS_MATRICULA_UNIFICADA_2026_DEFINITIVO.xlsx",
+    "desktop_backup_previo": null,
+    "validacion_txt": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reporte_gerencial_brechas_mu2026/20260731_125210/REPORTE_VALIDACION_REPORTE_GERENCIAL_MU2026.txt",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reporte_gerencial_brechas_mu2026/20260731_125210/MANIFEST_REPORTE_GERENCIAL_MU2026.json",
+    "inventario_fuentes_sha256": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reporte_gerencial_brechas_mu2026/20260731_125210/INVENTARIO_FUENTES_SHA256.csv",
+    "sha256_excel_repositorio": "65abfff6776e2f0a1bb16d79b027d3d2226a9640885e61f9569bd22e100c6f6a",
+    "sha256_excel_escritorio": "65abfff6776e2f0a1bb16d79b027d3d2226a9640885e61f9569bd22e100c6f6a"
+  },
+  "limitaciones": [
+    "No existe una nómina de 226 RUT asociada a la diferencia.",
+    "La publicación no contiene identificadores individuales.",
+    "La brecha solo puede localizarse por código de carrera y cantidad.",
+    "No puede atribuirse sexo a los registros de diferencia.",
+    "Los seis CSV históricos son fuentes parciales anteriores y ninguno reproduce el consolidado final.",
+    "La suma de RUT únicos por carrera no equivale necesariamente al total de personas únicas institucionales."
+  ]
+}

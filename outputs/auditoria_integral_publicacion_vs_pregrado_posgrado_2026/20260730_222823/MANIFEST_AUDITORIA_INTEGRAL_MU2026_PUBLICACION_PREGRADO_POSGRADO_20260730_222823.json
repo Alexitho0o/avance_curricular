@@ -1,0 +1,592 @@
+{
+  "proceso": "Matrícula Unificada 2026",
+  "subprocesos": [
+    "Pregrado",
+    "Posgrado/Postítulo",
+    "Publicación institucional/SIES"
+  ],
+  "anio": 2026,
+  "fecha": "20260730_222823",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "rama": "feature/ire-2026",
+  "commit": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+  "fuentes": [
+    {
+      "ID_FUENTE": "PUB2026",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "PUBLICACION",
+      "CLASIFICACION_ARCHIVO": "PUBLICACION_AGREGADA",
+      "NOMBRE": "publicacion2026.xlsx",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/publicacion2026.xlsx",
+      "ORIGEN": "arbol_actual",
+      "FECHA_MODIFICACION": "2026-07-30T16:22:12",
+      "TAMANO_BYTES": 29640,
+      "SHA256": "9312665c74102bef111fa6618a379bfd57170b376ebc8e501ab7c92dba421da2",
+      "FILAS_FISICAS": 67,
+      "FILAS_DATOS": 66,
+      "COLUMNAS": 58,
+      "ENCABEZADO": "SI",
+      "DELIMITADOR": "",
+      "CODIFICACION": "",
+      "BOM": "",
+      "HOJA": "Hoja1",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "Archivo local usado en auditorias previas; contiene NIVEL GLOBAL y TOTAL MATRICULA."
+    },
+    {
+      "ID_FUENTE": "PRE_CSV",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "PREGRADO",
+      "CLASIFICACION_ARCHIVO": "PES_READY_SIN_ENCABEZADOS",
+      "NOMBRE": "MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL.csv",
+      "RUTA": "resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL.csv",
+      "ORIGEN": "historial_git",
+      "FECHA_MODIFICACION": "",
+      "TAMANO_BYTES": 512460,
+      "SHA256": "3d038ae0872a9e06b657c89bb3a1725c9ad2cb14a8fa4b270c737b78ae0839ac",
+      "FILAS_FISICAS": 4105,
+      "FILAS_DATOS": 4105,
+      "COLUMNAS": 32,
+      "ENCABEZADO": "NO",
+      "DELIMITADOR": ";",
+      "CODIFICACION": "utf-8-sig",
+      "BOM": "NO_DETECTADO",
+      "HOJA": "",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "9b2c4628c0357f5ce66debddee8034aa3a8ce54a",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "Hash esperado coincide; 4105 registros, 32 columnas."
+    },
+    {
+      "ID_FUENTE": "PRE_XLSX",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "PREGRADO",
+      "CLASIFICACION_ARCHIVO": "ESTRUCTURA_CON_ENCABEZADOS",
+      "NOMBRE": "MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "RUTA": "resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "ORIGEN": "historial_git",
+      "FECHA_MODIFICACION": "",
+      "TAMANO_BYTES": 570582,
+      "SHA256": "1d554423e4434aa46c18b5234932e9db2eb46f88a726e4636ffb6f3b357ba405",
+      "FILAS_FISICAS": 4106,
+      "FILAS_DATOS": 4105,
+      "COLUMNAS": 32,
+      "ENCABEZADO": "SI",
+      "DELIMITADOR": "",
+      "CODIFICACION": "",
+      "BOM": "",
+      "HOJA": "CONSOLIDADO",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "d14e72505255ffead372ae5d014c0dfc621513f8",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "Cuerpo coincide exactamente con CSV sin encabezado."
+    },
+    {
+      "ID_FUENTE": "POS_CSV",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "POSGRADO_POSTITULO",
+      "CLASIFICACION_ARCHIVO": "PES_READY_SIN_ENCABEZADOS",
+      "NOMBRE": "matricula_unificada_2026_postgrado_postitulo.csv",
+      "RUTA": "resultados/matricula_unificada_2026_postgrado_postitulo.csv",
+      "ORIGEN": "historial_git",
+      "FECHA_MODIFICACION": "",
+      "TAMANO_BYTES": 4944,
+      "SHA256": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+      "FILAS_FISICAS": 54,
+      "FILAS_DATOS": 54,
+      "COLUMNAS": 21,
+      "ENCABEZADO": "NO",
+      "DELIMITADOR": ";",
+      "CODIFICACION": "utf-8",
+      "BOM": "NO",
+      "HOJA": "",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "3e44d69adc25cab16958c4317d16306b0e9eab20",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "Hash esperado coincide; 54 registros, 21 columnas."
+    },
+    {
+      "ID_FUENTE": "POS_TIT",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "POSGRADO_POSTITULO",
+      "CLASIFICACION_ARCHIVO": "ESTRUCTURA_CON_ENCABEZADOS",
+      "NOMBRE": "matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv",
+      "RUTA": "resultados/matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv",
+      "ORIGEN": "historial_git",
+      "FECHA_MODIFICACION": "",
+      "TAMANO_BYTES": 5140,
+      "SHA256": "0cd4c6343dbd886e259db5f86ecff70a08840d2b556bc398543711b66a94608a",
+      "FILAS_FISICAS": 55,
+      "FILAS_DATOS": 54,
+      "COLUMNAS": 21,
+      "ENCABEZADO": "SI",
+      "DELIMITADOR": ";",
+      "CODIFICACION": "utf-8-sig",
+      "BOM": "SI",
+      "HOJA": "",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "1c1d4833b5dc5637b0c1670b5823c8aab4683f93",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "Cuerpo coincide con PES-ready sin encabezado."
+    },
+    {
+      "ID_FUENTE": "CAT_TV",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "CLASIFICACION",
+      "CLASIFICACION_ARCHIVO": "CATALOGO_TV_LOCAL",
+      "NOMBRE": "DURACION_ESTUDIOS.tsv",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "ORIGEN": "arbol_actual",
+      "FECHA_MODIFICACION": "",
+      "TAMANO_BYTES": "",
+      "SHA256": "",
+      "FILAS_FISICAS": 155,
+      "FILAS_DATOS": 154,
+      "COLUMNAS": 26,
+      "ENCABEZADO": "SI",
+      "DELIMITADOR": "TAB",
+      "CODIFICACION": "utf-8",
+      "BOM": "",
+      "HOJA": "",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "CODIGO_UNICO -> NIVEL_GLOBAL."
+    },
+    {
+      "ID_FUENTE": "NIVELES",
+      "PROCESO": "MATRICULA_UNIFICADA_2026",
+      "SUBPROCESO": "CLASIFICACION",
+      "CLASIFICACION_ARCHIVO": "GOBERNANZA_NIVELES",
+      "NOMBRE": "gobernanza_niveles.tsv",
+      "RUTA": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_niveles.tsv",
+      "ORIGEN": "arbol_actual",
+      "FECHA_MODIFICACION": "",
+      "TAMANO_BYTES": "",
+      "SHA256": "",
+      "FILAS_FISICAS": 14,
+      "FILAS_DATOS": 13,
+      "COLUMNAS": 4,
+      "ENCABEZADO": "SI",
+      "DELIMITADOR": "TAB",
+      "CODIFICACION": "utf-8",
+      "BOM": "",
+      "HOJA": "",
+      "COMMIT": "0e03b535d1912ceb9708f83adf314a7f401fe795",
+      "BLOB": "",
+      "ESTADO_VALIDACION": "VALIDADO",
+      "OBSERVACION": "NIVEL_GLOBAL -> descripcion."
+    }
+  ],
+  "reglas_tv": {
+    "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+    "niveles": "/Users/alexi/Documents/GitHub/avance_curricular/gobernanza_niveles.tsv",
+    "codigos": 80,
+    "sin_clasificar": 0
+  },
+  "totales": {
+    "publicacion_pregrado": 3371,
+    "publicacion_posgrado_postitulo": 54,
+    "publicacion_total": 3425,
+    "institucional_pregrado": 3145,
+    "institucional_posgrado_postitulo": 54,
+    "institucional_total": 3199,
+    "diferencia_pregrado": 226,
+    "diferencia_posgrado_postitulo": 0,
+    "diferencia_total": 226
+  },
+  "validaciones": [
+    {
+      "CONTROL": "CSV final de pregrado tiene 4.105 registros",
+      "RESULTADO_ESPERADO": 4105,
+      "RESULTADO_OBTENIDO": 4105,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Pregrado tiene 32 columnas",
+      "RESULTADO_ESPERADO": 32,
+      "RESULTADO_OBTENIDO": 32,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Pregrado CSV no tiene encabezado",
+      "RESULTADO_ESPERADO": "NO",
+      "RESULTADO_OBTENIDO": "NO",
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Hash pregrado CSV coincide",
+      "RESULTADO_ESPERADO": "3d038ae0872a9e06b657c89bb3a1725c9ad2cb14a8fa4b270c737b78ae0839ac",
+      "RESULTADO_OBTENIDO": "3d038ae0872a9e06b657c89bb3a1725c9ad2cb14a8fa4b270c737b78ae0839ac",
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Excel pregrado tiene 4.105 datos mas encabezado",
+      "RESULTADO_ESPERADO": 4106,
+      "RESULTADO_OBTENIDO": 4106,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Cuerpo Excel pregrado coincide con CSV",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Pregrado VIG=0",
+      "RESULTADO_ESPERADO": 960,
+      "RESULTADO_OBTENIDO": 960,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Pregrado VIG=1",
+      "RESULTADO_ESPERADO": 3145,
+      "RESULTADO_OBTENIDO": 3145,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Pregrado VIG=2",
+      "RESULTADO_ESPERADO": 0,
+      "RESULTADO_OBTENIDO": 0,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Posgrado tiene 54 registros",
+      "RESULTADO_ESPERADO": 54,
+      "RESULTADO_OBTENIDO": 54,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Posgrado tiene 21 columnas",
+      "RESULTADO_ESPERADO": 21,
+      "RESULTADO_OBTENIDO": 21,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Hash posgrado CSV coincide",
+      "RESULTADO_ESPERADO": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+      "RESULTADO_OBTENIDO": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Estructura con titulos posgrado coincide",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Regla TV fue encontrada",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Todos los codigos fueron clasificados",
+      "RESULTADO_ESPERADO": 0,
+      "RESULTADO_OBTENIDO": 0,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Publicacion identificada por ruta y hash",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Publicacion clasificada por nivel",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Total publicado recalculado",
+      "RESULTADO_ESPERADO": 3425,
+      "RESULTADO_OBTENIDO": 3425,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Total institucional recalculado",
+      "RESULTADO_ESPERADO": 3199,
+      "RESULTADO_OBTENIDO": 3199,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Suma por nivel cuadra",
+      "RESULTADO_ESPERADO": 3425,
+      "RESULTADO_OBTENIDO": 3425,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Suma por codigo publicacion cuadra",
+      "RESULTADO_ESPERADO": 3425,
+      "RESULTADO_OBTENIDO": 3425,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Diferencias por codigo suman diferencia total",
+      "RESULTADO_ESPERADO": 226,
+      "RESULTADO_OBTENIDO": 226,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "No se mezclaron estructuras 32 y 21",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Hojas RAW completas",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Originales no modificados",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Filtros activos",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Tablas con nombre",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Formulas presentes",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Sin referencias externas",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Sin errores de formula detectados estaticamente",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Hipervinculos creados",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Calculo automatico",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Recalculo al abrir",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Hashes registrados",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Pendientes visibles",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Codigos solo publicacion detallados",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Codigos solo institucional detallados",
+      "RESULTADO_ESPERADO": true,
+      "RESULTADO_OBTENIDO": true,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    },
+    {
+      "CONTROL": "Diferencia integral demostrada",
+      "RESULTADO_ESPERADO": 226,
+      "RESULTADO_OBTENIDO": 226,
+      "ESTADO": "OK",
+      "EVIDENCIA": "Calculo local / fuente validada",
+      "OBSERVACION": ""
+    }
+  ],
+  "pendientes": [
+    {
+      "PENDIENTE": "PUBLICACION_AGREGADA_SIN_RUT",
+      "TIPO": "comparacion no posible por falta de granularidad",
+      "DESCRIPCION": "La publicacion contiene totales por codigo/nivel; no permite cruce individual por RUT.",
+      "ESTADO": "VISIBLE"
+    },
+    {
+      "PENDIENTE": "FUENTES_PREGRADO_POSGRADO_EN_HISTORIAL_GIT",
+      "TIPO": "archivo sin ruta fisica actual",
+      "DESCRIPCION": "Las fuentes prioritarias fueron localizadas como blobs Git con hash esperado; el libro incluye RAW completas.",
+      "ESTADO": "VISIBLE"
+    }
+  ],
+  "estado_final": "AUDITORIA_COMPLETADA_CON_PENDIENTES",
+  "hojas": [
+    "00_PORTADA",
+    "01_GUIA_DE_USO",
+    "02_RESUMEN_EJECUTIVO",
+    "03_FUENTES",
+    "04_REGLA_TV_CLASIFICACION",
+    "05_DICCIONARIO_CAMPOS",
+    "06_PUBLICACION_COMPLETA",
+    "07_PREGRADO_COMPLETO",
+    "08_POSGRADO_COMPLETO",
+    "09_CONSOLIDADO_AUDITORIA",
+    "10_RESUMEN_POR_NIVEL",
+    "11_RESUMEN_POR_CODIGO",
+    "12_CRUCE_PUB_INSTITUCIONAL",
+    "13_SOLO_PUBLICACION",
+    "14_SOLO_INSTITUCIONAL",
+    "15_DIFERENCIAS_POSITIVAS",
+    "16_DIFERENCIAS_NEGATIVAS",
+    "17_DUPLICADOS_Y_MULTIMATRICULA",
+    "18_VALIDACIONES",
+    "19_TRAZABILIDAD",
+    "20_PENDIENTES",
+    "21_MANIFEST",
+    "RAW_PUBLICACION",
+    "RAW_PREGRADO",
+    "RAW_POSGRADO"
+  ],
+  "tablas": [
+    "tblResumenEjecutivo",
+    "tblFuentes",
+    "tblReglaTV",
+    "tblCatalogoCodigos",
+    "tblDiccionarioCampos",
+    "tblPublicacion",
+    "tblPregrado",
+    "tblPosgrado",
+    "tblConsolidado",
+    "tblResumenNivel",
+    "tblResumenCodigo",
+    "tblCruce",
+    "tblSoloPublicacion",
+    "tblSoloInstitucional",
+    "tblDiferenciasPositivas",
+    "tblDiferenciasNegativas",
+    "tblDuplicados",
+    "tblValidaciones",
+    "tblTrazabilidad",
+    "tblPendientes",
+    "tblManifest",
+    "tblRawPublicacion",
+    "tblRawPregrado",
+    "tblRawPosgrado"
+  ],
+  "formulas": {
+    "clasificacion_tv": "VLOOKUP/BUSCARV contra tblReglaTV",
+    "totales_publicacion": "SUMIFS/SUMAR.SI.CONJUNTO",
+    "conteo_institucional": "COUNTIFS/CONTAR.SI.CONJUNTO",
+    "estado_comparacion": "IF/SI estructurado"
+  },
+  "archivos_generados": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_222823/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_222823.xlsx",
+    "desktop_copy": "/Users/alexi/Desktop/AUDITORIA_INTEGRAL_MATRICULA_UNIFICADA_2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_222823.xlsx",
+    "reporte": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_222823/REPORTE_AUDITORIA_INTEGRAL_MU2026_PUBLICACION_VS_PREGRADO_POSGRADO_20260730_222823.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_222823/MANIFEST_AUDITORIA_INTEGRAL_MU2026_PUBLICACION_PREGRADO_POSGRADO_20260730_222823.json"
+  },
+  "hashes_archivos_generados": {
+    "excel": "9c44bea67a503b6e667508e799281c8eac192745862d431603202bd3ffeedeff",
+    "desktop_copy": "9c44bea67a503b6e667508e799281c8eac192745862d431603202bd3ffeedeff",
+    "reporte": "6926ad56807e2bb1c91f81107c0332f2c580e1b920a0ba48952f7f1f53151eb7",
+    "manifest": "a4af46b88f86c1cb970c584bc1d18743058fd95478f14ce5aa86c8e650ee85bd"
+  }
+}

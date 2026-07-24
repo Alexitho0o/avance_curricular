@@ -10,7 +10,7 @@ from typing import List, Dict, Tuple
 
 from common.io_csv import leer_csv, escribir_csv
 from common.validacion import ejecutar, agrupar_por_severidad, Severidad
-from src.schema import COLUMNAS
+from src.schema import COLUMNAS, CAMPOS_UN_DECIMAL
 from src.validators import obtener_reglas, validar_dataset
 from src.config_loader import (
     cargar_institucion,
@@ -31,6 +31,32 @@ RUTA_OUTPUT = RAIZ_PROCESO / "output"
 class ValidacionFallida(Exception):
     """Error accionable: el dataset final no pasa las reglas de validación."""
     pass
+
+
+def normalizar_decimales(fila: Dict) -> List[Tuple[str, str, str]]:
+    """
+    Redondea los campos de superficie (CAMPOS_UN_DECIMAL) a 1 decimal.
+
+    Devuelve la lista de (campo, valor_original, valor_nuevo) que efectivamente
+    cambiaron, para registrarlos en el log. No fuerza un decimal donde no lo
+    había: 789 sigue siendo "789", no "789.0".
+    """
+    cambios = []
+    for campo in CAMPOS_UN_DECIMAL:
+        v = str(fila.get(campo, "")).strip()
+        if not v:
+            continue
+        try:
+            num = float(v)
+        except ValueError:
+            continue  # no es numérico; lo atrapa la validación
+
+        nuevo = f"{round(num, 1):.1f}".rstrip("0").rstrip(".")
+        if nuevo != v:
+            cambios.append((campo, v, nuevo))
+            fila[campo] = nuevo
+
+    return cambios
 
 
 def _limpiar_marcadores_revisar(filas: List[Dict]) -> List[Dict]:
@@ -78,6 +104,11 @@ def construir_dataset(log: List[str] = None) -> List[Dict]:
 
     filas, log_eliminaciones = aplicar_eliminaciones(parametros, filas)
     log.extend(log_eliminaciones)
+
+    for fila in filas:
+        cambios_dec = normalizar_decimales(fila)
+        for campo, viejo, nuevo in cambios_dec:
+            log.append(f"Redondeo a 1 decimal: {campo}: {viejo} -> {nuevo}")
 
     filas = _limpiar_marcadores_revisar(filas)
 

@@ -1,0 +1,226 @@
+{
+  "proceso": "Matricula Unificada 2026",
+  "subproyecto": "Pregrado",
+  "anio": 2026,
+  "fecha": "20260730_175314",
+  "fuentes": {
+    "workbook_base": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940/AUDITORIA_DIFERENCIA_166_PUBLICACION2026_VS_CONGELADO_PREGRADO_20260730_173940.xlsx",
+    "hash_workbook_base": "d871633c977c8908a5cae140c5f56cfc2fb27b9f85d438e6610496a65065893f",
+    "publicacion": "RAW_PUBLICACION2026 desde workbook base",
+    "congelado": "RAW_PREGRADO_CONGELADO desde workbook base",
+    "punto0": "RAW_PUNTO0 desde workbook base",
+    "complemento95": "RAW_COMPLEMENTO95 desde workbook base"
+  },
+  "hashes_logicos": {
+    "base_xlsx": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940/AUDITORIA_DIFERENCIA_166_PUBLICACION2026_VS_CONGELADO_PREGRADO_20260730_173940.xlsx",
+    "base_xlsx_hash": "d871633c977c8908a5cae140c5f56cfc2fb27b9f85d438e6610496a65065893f",
+    "raw_publicacion_hash_logico": "d6dec5ce76fbc52d42a8c8278ee69fae404c0a58e20124f0b5538b764a90c23d",
+    "raw_pregrado_hash_logico": "395e2041d5b23c07531e3f4097bc6ba9745b65c8de2ac0cded2b28c2c1db8093",
+    "raw_punto0_hash_logico": "2cfc8ffabe1d58d2f18f73a0c5cb3f95b28ab203f9712408b09ad4afe2cf7192",
+    "raw_complemento95_hash_logico": "fa450c18bae7276f092c23a83bf1509e7c3ba971aa986ff61ccf645435cc262c"
+  },
+  "filas": {
+    "publicacion_raw": 66,
+    "pregrado_congelado": 4165,
+    "punto0": 4070,
+    "complemento95": 95
+  },
+  "columnas": {
+    "publicacion_raw": 58,
+    "pregrado_congelado": 32,
+    "punto0": 32,
+    "complemento95": 32
+  },
+  "definicion_llaves": {
+    "LLAVE_PERSONA": "TIPO_DOC + N_DOC + DV",
+    "CODIGO_UNICO": "I162S{COD_SED}C{COD_CAR}J{JOR}V{VERSION}",
+    "LLAVE_MATRICULA": "LLAVE_PERSONA + CODIGO_UNICO",
+    "HASH_FILA_32_CAMPOS": "SHA-256 de las 32 columnas oficiales"
+  },
+  "totales": {
+    "publicacion_pregrado": 3371,
+    "congelado_historico": 4165,
+    "vig_0": 960,
+    "vig_1": 3205,
+    "vig_2": 0,
+    "congelado_vigente": 3205,
+    "diferencia_neta": 166,
+    "diferencias_positivas": 186,
+    "diferencias_negativas_abs": 20
+  },
+  "duplicados": {
+    "rut_repetidos_grupos": 94,
+    "registros_rut_repetidos": 188,
+    "matriculas_repetidas_grupos": 0,
+    "registros_matricula_repetida": 0,
+    "duplicados_exactos_grupos": 0,
+    "registros_duplicados_exactos": 0,
+    "personas_multicarrera": 0
+  },
+  "concentracion": {
+    "codigos_para_25pct_positivos": 3,
+    "codigos_para_50pct_positivos": 8,
+    "codigos_para_75pct_positivos": 16,
+    "codigos_para_90pct_positivos": 24,
+    "codigos_para_100pct_positivos": 38,
+    "suma_positivos": 186,
+    "suma_negativos_abs": 20,
+    "neto": 166
+  },
+  "archivos_generados": {
+    "excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado_por_codigo/20260730_175314/AUDITORIA_DIFERENCIA_166_PREGRADO_POR_CODIGO_RUT_VIGENCIA_20260730_175314.xlsx",
+    "reporte": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado_por_codigo/20260730_175314/REPORTE_DIFERENCIA_166_PREGRADO_POR_CODIGO_RUT_VIGENCIA_20260730_175314.md",
+    "manifest": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado_por_codigo/20260730_175314/MANIFEST_DIFERENCIA_166_PREGRADO_POR_CODIGO_20260730_175314.json"
+  },
+  "validaciones": [
+    {
+      "Validación": "Publicación pregrado = 3.371",
+      "Resultado": true,
+      "Detalle": 3371
+    },
+    {
+      "Validación": "Congelado vigente = 3.205",
+      "Resultado": true,
+      "Detalle": 3205
+    },
+    {
+      "Validación": "Diferencia neta = 166",
+      "Resultado": true,
+      "Detalle": 166
+    },
+    {
+      "Validación": "Diferencias positivas = 186",
+      "Resultado": true,
+      "Detalle": 186
+    },
+    {
+      "Validación": "Diferencias negativas absolutas = 20",
+      "Resultado": true,
+      "Detalle": 20
+    },
+    {
+      "Validación": "Todas las ofertas incluidas",
+      "Resultado": true,
+      "Detalle": 63
+    },
+    {
+      "Validación": "Cada código aparece una sola vez",
+      "Resultado": true,
+      "Detalle": 0
+    },
+    {
+      "Validación": "Suma publicada por código = 3.371",
+      "Resultado": true,
+      "Detalle": 3371
+    },
+    {
+      "Validación": "Suma vigente por código = 3.205",
+      "Resultado": true,
+      "Detalle": 3205
+    },
+    {
+      "Validación": "Suma VIG=0 por código = 960",
+      "Resultado": true,
+      "Detalle": 960
+    },
+    {
+      "Validación": "Suma histórica por código = 4.165",
+      "Resultado": true,
+      "Detalle": 4165
+    },
+    {
+      "Validación": "Todos los registros tienen clasificación de repetición",
+      "Resultado": true,
+      "Detalle": ""
+    },
+    {
+      "Validación": "RUT repetidos separados misma/distinta oferta",
+      "Resultado": true,
+      "Detalle": "Clasificaciones en hojas 08-12."
+    },
+    {
+      "Validación": "Duplicados exactos identificados con 32 columnas",
+      "Resultado": true,
+      "Detalle": 0
+    },
+    {
+      "Validación": "VIG=0 no contado como vigente",
+      "Resultado": true,
+      "Detalle": 3205
+    },
+    {
+      "Validación": "Punto 0 y complemento comparados",
+      "Resultado": true,
+      "Detalle": 61
+    },
+    {
+      "Validación": "No se eliminaron registros",
+      "Resultado": true,
+      "Detalle": 4165
+    },
+    {
+      "Validación": "No se modificaron VIG",
+      "Resultado": true,
+      "Detalle": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "Validación": "Originales no modificados",
+      "Resultado": true,
+      "Detalle": "Solo lectura desde workbook base y salidas nuevas."
+    },
+    {
+      "Validación": "RAW completas",
+      "Resultado": true,
+      "Detalle": "pub=66, congelado=4165, p0=4070, comp=95"
+    },
+    {
+      "Validación": "Hashes registrados",
+      "Resultado": true,
+      "Detalle": {
+        "base_xlsx": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado/20260730_173940/AUDITORIA_DIFERENCIA_166_PUBLICACION2026_VS_CONGELADO_PREGRADO_20260730_173940.xlsx",
+        "base_xlsx_hash": "d871633c977c8908a5cae140c5f56cfc2fb27b9f85d438e6610496a65065893f",
+        "raw_publicacion_hash_logico": "d6dec5ce76fbc52d42a8c8278ee69fae404c0a58e20124f0b5538b764a90c23d",
+        "raw_pregrado_hash_logico": "395e2041d5b23c07531e3f4097bc6ba9745b65c8de2ac0cded2b28c2c1db8093",
+        "raw_punto0_hash_logico": "2cfc8ffabe1d58d2f18f73a0c5cb3f95b28ab203f9712408b09ad4afe2cf7192",
+        "raw_complemento95_hash_logico": "fa450c18bae7276f092c23a83bf1509e7c3ba971aa986ff61ccf645435cc262c"
+      }
+    },
+    {
+      "Validación": "Posgrado permanece separado",
+      "Resultado": true,
+      "Detalle": 54
+    },
+    {
+      "Validación": "Simulaciones marcadas como diagnósticas",
+      "Resultado": true,
+      "Detalle": ""
+    },
+    {
+      "Validación": "No se atribuyeron RUT a la publicación",
+      "Resultado": true,
+      "Detalle": "Publicacion solo agregada por oferta."
+    },
+    {
+      "Validación": "El Excel abre correctamente",
+      "Resultado": true,
+      "Detalle": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diferencia_166_pregrado_por_codigo/20260730_175314/AUDITORIA_DIFERENCIA_166_PREGRADO_POR_CODIGO_RUT_VIGENCIA_20260730_175314.xlsx"
+    }
+  ],
+  "pendientes": [
+    {
+      "Pendiente": "PUBLICACION_SIN_RUT",
+      "Descripción": "No es posible identificar que RUT individuales fueron contados en la publicacion agregada."
+    },
+    {
+      "Pendiente": "DIFERENCIA_CAUSAL_166",
+      "Descripción": "La diferencia esta localizada por codigo, pero no se demuestra origen causal sin fuente individual/reportes PES posteriores."
+    },
+    {
+      "Pendiente": "NOMBRES_CARRERA_CONGELADO",
+      "Descripción": "La estructura de 32 campos no contiene nombre de carrera; se conserva nombre desde publicacion cuando existe."
+    }
+  ]
+}

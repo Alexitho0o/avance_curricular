@@ -258,3 +258,22 @@ def test_negativo_comuna_con_numeros(reglas):
     errores = errores_de(reglas, fila)
     assert any("solo letras" in (m or "") for m in errores), \
         f"Se esperaba error de COMUNA con numeros, se obtuvo: {errores}"
+
+
+def test_superficie_dos_decimales_es_error(reglas):
+    """Un m² con 2 decimales debe producir error de validación (PES rechaza)."""
+    fila = fila_tipo1_valida()
+    fila["TOTAL_M2_TALLERES"] = "449.81"
+
+    errores = errores_de(reglas, fila)
+    assert any("decimal" in (m or "").lower() for m in errores), \
+        f"Se esperaba error de mas de 1 decimal en superficie, se obtuvo: {errores}"
+
+
+def test_superficie_un_decimal_no_es_error(reglas):
+    """Un m² con 1 decimal (o entero) no debe disparar la regla de decimales."""
+    fila = fila_tipo1_valida()  # ya trae valores con 1 decimal (168.2, 72.1, etc.)
+
+    errores = errores_de(reglas, fila)
+    assert not any("decimal" in (m or "").lower() for m in errores), \
+        f"No se esperaba error de decimales con valores válidos, se obtuvo: {errores}"
