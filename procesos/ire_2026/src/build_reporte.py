@@ -88,42 +88,65 @@ ANOMALIAS = [
 ]
 
 
+def _acumular(actual, nuevo):
+    """Sumar acumulando; None significa 'aun sin dato', no 'cero'."""
+    if nuevo is None:
+        return actual
+    return nuevo if actual is None else actual + nuevo
+
+
+def _num(fila: Dict, campo: str):
+    v = fila.get(campo, "").strip()
+    try:
+        return float(v) if v else None
+    except ValueError:
+        return None
+
+
 def extraer_datos_2026(filas: List[Dict], matricula_2026: int) -> Dict:
-    """Extraer del dataset 2026 ya construido las magnitudes necesarias para KPI."""
-    datos = {"matricula": matricula_2026}
+    """
+    Extraer del dataset 2026 ya construido las magnitudes necesarias para KPI.
+
+    Ignora filas con VIGENCIA=0 (registros marcados para eliminacion, no forman
+    parte de la infraestructura vigente al corte). Si hay mas de una fila
+    vigente del mismo TIPO (p. ej. dos inmuebles TIPO 1 simultaneos), los
+    valores se suman en vez de sobrescribirse.
+    """
+    datos = {
+        "matricula": matricula_2026,
+        "m2_edificados": None,
+        "m2_areas_verdes": None,
+        "m2_talleres": None,
+        "m2_laboratorios": None,
+        "total_pc_nb_disponible": None,
+        "capacidad_salas_clases": None,
+        "total_volumenes_disponibles": None,
+        "horas_personal_biblioteca": None,
+        "total_titulos_libros_digitales": None,
+    }
 
     for fila in filas:
+        if fila.get("VIGENCIA", "").strip() != "1":
+            continue
+
         tipo = fila.get("TIPO_INFRAESTRUCTURA", "").strip()
 
         if tipo == "1":
-            def num(campo):
-                v = fila.get(campo, "").strip()
-                try:
-                    return float(v) if v else None
-                except ValueError:
-                    return None
-
-            datos["m2_edificados"] = num("TOTAL_M2_EDIFICADOS")
-            datos["m2_areas_verdes"] = num("TOTAL_M2_AREAS_VERDES")
-            datos["m2_talleres"] = num("TOTAL_M2_TALLERES")
-            datos["m2_laboratorios"] = num("TOTAL_M2_LABORATORIOS")
-            datos["total_pc_nb_disponible"] = num("TOTAL_PC_NB_DISPONIBLE")
-            datos["capacidad_salas_clases"] = num("CAPACIDAD_SALAS_CLASES")
+            datos["m2_edificados"] = _acumular(datos["m2_edificados"], _num(fila, "TOTAL_M2_EDIFICADOS"))
+            datos["m2_areas_verdes"] = _acumular(datos["m2_areas_verdes"], _num(fila, "TOTAL_M2_AREAS_VERDES"))
+            datos["m2_talleres"] = _acumular(datos["m2_talleres"], _num(fila, "TOTAL_M2_TALLERES"))
+            datos["m2_laboratorios"] = _acumular(datos["m2_laboratorios"], _num(fila, "TOTAL_M2_LABORATORIOS"))
+            datos["total_pc_nb_disponible"] = _acumular(datos["total_pc_nb_disponible"], _num(fila, "TOTAL_PC_NB_DISPONIBLE"))
+            datos["capacidad_salas_clases"] = _acumular(datos["capacidad_salas_clases"], _num(fila, "CAPACIDAD_SALAS_CLASES"))
 
         elif tipo == "3":
-            def num3(campo):
-                v = fila.get(campo, "").strip()
-                try:
-                    return float(v) if v else None
-                except ValueError:
-                    return None
-
-            datos["total_volumenes_disponibles"] = num3("TOTAL_VOLUMENES_DISPONIBLES")
-            datos["horas_personal_biblioteca"] = num3("HORAS_PERSONAL_BIBLIOTECA")
+            datos["total_volumenes_disponibles"] = _acumular(datos["total_volumenes_disponibles"], _num(fila, "TOTAL_VOLUMENES_DISPONIBLES"))
+            datos["horas_personal_biblioteca"] = _acumular(datos["horas_personal_biblioteca"], _num(fila, "HORAS_PERSONAL_BIBLIOTECA"))
 
         elif tipo == "4":
-            v = fila.get("TOTAL_TITULOS_LIBROS_DIGITALES", "").strip()
-            datos["total_titulos_libros_digitales"] = float(v) if v else None
+            datos["total_titulos_libros_digitales"] = _acumular(
+                datos["total_titulos_libros_digitales"], _num(fila, "TOTAL_TITULOS_LIBROS_DIGITALES")
+            )
 
     return datos
 

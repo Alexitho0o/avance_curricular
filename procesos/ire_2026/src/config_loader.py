@@ -134,6 +134,8 @@ def aplicar_herencias(parametros: Dict, filas: List[Dict]) -> Tuple[List[Dict], 
     """
     log_herencias = []
 
+    casa_central = cargar_institucion()["casa_central"]
+
     tenencia = parametros.get("tenencia", {}) or {}
     fecha_inicio = tenencia.get("fecha_inicio")
     fecha_termino = tenencia.get("fecha_termino")
@@ -158,9 +160,19 @@ def aplicar_herencias(parametros: Dict, filas: List[Dict]) -> Tuple[List[Dict], 
         tipo = fila.get("TIPO_INFRAESTRUCTURA", "").strip()
 
         if tipo == "1":
-            fila["FECHA_INICIO_TENENCIA"] = str(fecha_inicio)
-            fila["FECHA_TERMINO"] = str(fecha_termino)
-            aplicar_grupo(fila, inmueble, MAPEO_INMUEBLE_PERMANENTE, "inmueble_permanente")
+            # Las fechas de tenencia y las magnitudes de inmueble_permanente del
+            # config aplican solo a la casa central (institucion.yaml). Otros
+            # domicilios TIPO 1 conservan sus propias fechas/magnitudes del input;
+            # de lo contrario, con dos inmuebles TIPO 1 vigentes y contratos
+            # distintos, uno sobrescribiria los datos del otro.
+            es_casa_central = (
+                fila.get("COMUNA", "").strip().upper() == casa_central["comuna"].strip().upper()
+                and fila.get("DIRECCION_INMUEBLE", "").strip().upper() == casa_central["direccion"].strip().upper()
+            )
+            if es_casa_central:
+                fila["FECHA_INICIO_TENENCIA"] = str(fecha_inicio)
+                fila["FECHA_TERMINO"] = str(fecha_termino)
+                aplicar_grupo(fila, inmueble, MAPEO_INMUEBLE_PERMANENTE, "inmueble_permanente")
 
         elif tipo == "2":
             # Convenio USS Los Leones: vigente sigue VIGENCIA=1, si no, VIGENCIA=0
