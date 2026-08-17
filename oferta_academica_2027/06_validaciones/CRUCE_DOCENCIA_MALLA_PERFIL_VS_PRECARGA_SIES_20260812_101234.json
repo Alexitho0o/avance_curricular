@@ -1,0 +1,523 @@
+{
+  "proceso": "Oferta Academica Acceso 2027",
+  "subproyecto": "oferta_academica_2027",
+  "fuente_sies": "oferta_academica_2027/02_precarga_pes/reporte_dinamico_5913_2026-08-12_08:22:23.csv",
+  "fuente_docencia": "oferta_academica_2027/03_fuentes_institucionales/Mallas y perfiles de egreso.xlsx",
+  "criterio_cruce": "NOMBRE_CARRERA normalizado + COD_TIPO_PLAN_CARRERA mapeado a TIPO DE PLAN observado",
+  "nota": "Cruce de diagnostico. No genera archivo de carga.",
+  "totales": {
+    "registros_sies": 103,
+    "registros_docencia_hoja1": 51,
+    "matches_sies_docencia": 78,
+    "sin_match_sies_docencia": 25,
+    "duplicados_docencia_por_llave": 1
+  },
+  "duplicados_docencia": [
+    {
+      "llave": [
+        "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+        "NO VIGENTE"
+      ],
+      "registro": {
+        "CARRERA": "INGENIERÍA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+        "TIPO DE PLAN": "NO VIGENTE",
+        "MALLA_CURRICULAR": "",
+        "PERFIL_EGRESO": ""
+      }
+    }
+  ],
+  "sin_match": [
+    {
+      "cod_sede": "2",
+      "cod_carrera": "11",
+      "nombre_carrera_sies": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "11",
+      "nombre_carrera_sies": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "22",
+      "nombre_carrera_sies": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "22",
+      "nombre_carrera_sies": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "2",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PROGRAMACION COMPUTACIONAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "2",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PROGRAMACION COMPUTACIONAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "2",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PROGRAMACION COMPUTACIONAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "35",
+      "nombre_carrera_sies": "TECNICO EN ANALISIS DE SISTEMAS",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN ANALISIS DE SISTEMAS | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "35",
+      "nombre_carrera_sies": "TECNICO EN ANALISIS DE SISTEMAS",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN ANALISIS DE SISTEMAS | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "35",
+      "nombre_carrera_sies": "TECNICO EN ANALISIS DE SISTEMAS",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN ANALISIS DE SISTEMAS | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "48",
+      "nombre_carrera_sies": "TECNICO EN CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "TECNICO EN CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "90",
+      "nombre_carrera_sies": "NATUROPATIA",
+      "version": "1",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "NATUROPATIA | PLAN DE CONTINUIDAD"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "83",
+      "nombre_carrera_sies": "ADMINISTRACION PUBLICA",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "ADMINISTRACION PUBLICA | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "22",
+      "nombre_carrera_sies": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL | PLAN DE CONTINUIDAD"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "90",
+      "nombre_carrera_sies": "NATUROPATIA",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "NATUROPATIA | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "83",
+      "nombre_carrera_sies": "ADMINISTRACION PUBLICA",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "ADMINISTRACION PUBLICA | PLAN DE CONTINUIDAD"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "11",
+      "nombre_carrera_sies": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "22",
+      "nombre_carrera_sies": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL | PLAN DE CONTINUIDAD"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "22",
+      "nombre_carrera_sies": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "2",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PROGRAMACION COMPUTACIONAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "2",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PROGRAMACION COMPUTACIONAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "2",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PROGRAMACION COMPUTACIONAL | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "35",
+      "nombre_carrera_sies": "TECNICO EN ANALISIS DE SISTEMAS",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN ANALISIS DE SISTEMAS | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "35",
+      "nombre_carrera_sies": "TECNICO EN ANALISIS DE SISTEMAS",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN ANALISIS DE SISTEMAS | REGULAR"
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "35",
+      "nombre_carrera_sies": "TECNICO EN ANALISIS DE SISTEMAS",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN ANALISIS DE SISTEMAS | REGULAR"
+    }
+  ],
+  "muestra_matches": [
+    {
+      "cod_sede": "2",
+      "cod_carrera": "10",
+      "nombre_carrera_sies": "TECNICO EN PREVENCION DE RIESGOS",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PREVENCION DE RIESGOS | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-tecnico-en-prevencion-de-riesgos.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "10",
+      "nombre_carrera_sies": "TECNICO EN PREVENCION DE RIESGOS",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN PREVENCION DE RIESGOS | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-tecnico-en-prevencion-de-riesgos.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "111",
+      "nombre_carrera_sies": "INGENIERIA EN FINANZAS",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN FINANZAS | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-ingenieria-en-finanzas.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "112",
+      "nombre_carrera_sies": "INGENIERIA EN MARKETING DIGITAL",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN MARKETING DIGITAL | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-ingenieria-en-marketing-digital.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "113",
+      "nombre_carrera_sies": "INGENIERIA EN RECURSOS HUMANOS",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN RECURSOS HUMANOS | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-ingenieria-en-recursos-humanos.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "124",
+      "nombre_carrera_sies": "INGENIERIA EN PREVENCION DE RIESGOS",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN PREVENCION DE RIESGOS | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-prevencion-de-riesgos.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "125",
+      "nombre_carrera_sies": "INGENIERIA EN SEGURIDAD PRIVADA",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN SEGURIDAD PRIVADA | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-ingenieria-en-seguridad-privada.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "1",
+      "nombre_carrera_sies": "INGENIERIA EN INFORMATICA",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN INFORMATICA | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-informatica.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "1",
+      "nombre_carrera_sies": "INGENIERIA EN INFORMATICA",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN INFORMATICA | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-informatica.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "3",
+      "nombre_carrera_sies": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN CONECTIVIDAD Y REDES | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-conectividad-y-redes.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "6",
+      "nombre_carrera_sies": "TECNICO EN CONECTIVIDAD Y REDES",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "TECNICO EN CONECTIVIDAD Y REDES | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-tecnico-en-conectividad-y-redes.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "77",
+      "nombre_carrera_sies": "INGENIERIA EN LOGISTICA",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN LOGISTICA | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-ingenieria-en-logistica.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "79",
+      "nombre_carrera_sies": "TECNICO EN LOGISTICA",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "TECNICO EN LOGISTICA | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-tecnico-en-logistica.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "86",
+      "nombre_carrera_sies": "AUDITORIA",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "AUDITORIA | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/administracion/ipss-auditoria.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "87",
+      "nombre_carrera_sies": "INGENIERIA INDUSTRIAL",
+      "version": "1",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA INDUSTRIAL | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-industrial.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "88",
+      "nombre_carrera_sies": "INGENIERIA EN CIENCIA DE DATOS",
+      "version": "2",
+      "cod_tipo_plan": "3",
+      "tipo_plan_mapeado": "PLAN DE CONTINUIDAD",
+      "vigencia_carrera": "2",
+      "llave_normalizada": "INGENIERIA EN CIENCIA DE DATOS | PLAN DE CONTINUIDAD",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-ciencia-de-datos.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "57",
+      "nombre_carrera_sies": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "version": "1",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-tecnico-en-programacion-y-analisis-de-sistemas.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "46",
+      "nombre_carrera_sies": "INGENIERIA EN CIBERSEGURIDAD",
+      "version": "3",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN CIBERSEGURIDAD | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-ciberseguridad.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "1",
+      "nombre_carrera_sies": "INGENIERIA EN INFORMATICA",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN INFORMATICA | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-informatica.pdf",
+      "perfil_egreso_presente": true
+    },
+    {
+      "cod_sede": "2",
+      "cod_carrera": "3",
+      "nombre_carrera_sies": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "version": "2",
+      "cod_tipo_plan": "1",
+      "tipo_plan_mapeado": "REGULAR",
+      "vigencia_carrera": "1",
+      "llave_normalizada": "INGENIERIA EN CONECTIVIDAD Y REDES | REGULAR",
+      "malla_curricular": "https://50470370.fs1.hubspotusercontent-na1.net/hubfs/50470370/mallas-carreras/tecnologias/ipss-ingenieria-en-conectividad-y-redes.pdf",
+      "perfil_egreso_presente": true
+    }
+  ]
+}

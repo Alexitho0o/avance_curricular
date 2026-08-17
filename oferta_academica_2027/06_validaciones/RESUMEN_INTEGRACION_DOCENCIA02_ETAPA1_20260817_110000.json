@@ -1,0 +1,45 @@
+{
+  "proceso": "SIES Oferta Academica-Acceso 2027",
+  "etapa": "Etapa 1 - Oferta Academica Vigente Editada",
+  "timestamp": "20260817_110000",
+  "fuentes": {
+    "precarga_sies": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/02_precarga_pes/reporte_dinamico_5913_2026-08-12_08:22:23.csv",
+    "docencia_modificables": "/Users/alexi/Documents/GitHub/avance_curricular/20260815_Etapa_1_excel_kmg.xlsx",
+    "docencia_vacantes": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/12_pendientes/no_aplica.xlsx"
+  },
+  "salidas": {
+    "prefinal_revision_48_columnas_con_encabezado": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/05_datos_trabajo/PREFINAL_ETAPA1_DOCENCIA02_48_COLUMNAS_CON_ENCABEZADO_20260817_110000.csv",
+    "cambios_docencia_vs_precarga": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/CAMBIOS_DOCENCIA02_VS_PRECARGA_SIES_20260817_110000.tsv",
+    "pendientes_bloqueantes": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/12_pendientes/PENDIENTES_BLOQUEANTES_DOCENCIA02_ETAPA1_20260817_110000.tsv"
+  },
+  "criterio": {
+    "base": "Precarga SIES original.",
+    "sobrescritura": "Solo campos modificables de Etapa 1 desde Docencia 02, convertidos a codigos PES cuando corresponde.",
+    "exclusiones_carga": [
+      "CANTIDAD_BENEFICIO_DFE",
+      "CANTIDAD_MATRICULA_DFE",
+      "CODIGO_IES_NUM"
+    ],
+    "advertencia": "No se genera CSV final sin encabezado mientras existan bloqueos."
+  },
+  "totales": {
+    "registros_precarga": 103,
+    "registros_docencia": 103,
+    "columnas_precarga": 51,
+    "columnas_prefinal": 48,
+    "cambios_detectados": 878,
+    "filas_con_faltantes_obligatorios_vigencia_1": 0,
+    "campos_faltantes_vigencia_1": {},
+    "filas_naranjas_revision": 0,
+    "problemas_conversion": 0,
+    "errores_estructura": 0,
+    "carga_bloqueada": false,
+    "vigencia_salida": {
+      "1": 44,
+      "2": 59
+    }
+  },
+  "vacantes_segundo_excel_perfil": {
+    "estado": "no_aplica_en_esta_entrega"
+  }
+}
