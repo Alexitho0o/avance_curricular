@@ -1,0 +1,1899 @@
+{
+  "proceso": "Oferta Académica SIES",
+  "codigo_ies": "162",
+  "fuente": "oferta_academica_2027/06_validaciones/historico_comparativo_sies_162/REGISTROS_HISTORICO_SIES_162_20260817_161944.tsv",
+  "registros": 747,
+  "columnas": [
+    "ACREDITACION_CARRERA_O_PROGRAMA",
+    "ANO",
+    "ANO_INICIO",
+    "ARANCEL_ANUAL",
+    "AREA_ACTUAL_O_AREA_ORIGEN_DEL_PROGRAMA",
+    "AREA_CARRERA_GENERICA",
+    "AREA_DEL_CONOCIMIENTO",
+    "AREA_DESTINO_DE_ADMINISTRACION_DE_EMPRESAS_Y_DERECHO",
+    "AREA_DESTINO_DE_AGRICULTURA_SILVICULTURA_PESCA_Y_VETERINARIA",
+    "AREA_DESTINO_DE_ARTES_Y_HUMANIDADES",
+    "AREA_DESTINO_DE_CIENCIAS_NATURALES_MATEMATICAS_Y_ESTADISTICA",
+    "AREA_DESTINO_DE_CIENCIAS_SOCIALES_PERIODISMO_E_INFORMACION",
+    "AREA_DESTINO_DE_EDUCACION",
+    "AREA_DESTINO_DE_INGENIERIA_INDUSTRIA_Y_CONSTRUCCION",
+    "AREA_DESTINO_DE_SALUD_Y_BIENESTAR",
+    "AREA_DESTINO_DE_SERVICIOS",
+    "AREA_DESTINO_DE_TECNOLOGIA_DE_LA_INFORMACION_Y_LA_COMUNICACION_TIC",
+    "CINE_F_13_AREA",
+    "CINE_F_13_SUBAREA",
+    "CINE_F_97_AREA",
+    "CINE_F_97_SUBAREA",
+    "CODIGO_CARRERA",
+    "CODIGO_IES",
+    "CODIGO_SEDE",
+    "CODIGO_UNICO",
+    "COMUNA_SEDE",
+    "COSTO_CERTIFICADO_DIPLOMA",
+    "COSTO_TITULACION",
+    "DEMRE",
+    "DURACION_ESTUDIOS",
+    "DURACION_FORMAL_DEL_REGIMEN",
+    "DURACION_TITULACION",
+    "DURACION_TOTAL",
+    "ELEGIBILIDAD_BECA_PEDAGOGIA",
+    "FORMATO_VALOR",
+    "GRADO_ACADEMICO",
+    "JORNADA",
+    "MATRICULA_ANUAL",
+    "MODALIDAD",
+    "NIVEL_CARRERA",
+    "NIVEL_GLOBAL",
+    "NOMBRE_CARRERA",
+    "NOMBRE_IES",
+    "NOMBRE_SEDE",
+    "NOMBRE_TITULO",
+    "PEDAGOGIA_MEDICINA_ODONTOLOGIA_OTRO",
+    "PLAN_ESPECIAL",
+    "PONDERACION_CIENCIAS",
+    "PONDERACION_HISTORIA",
+    "PONDERACION_LENGUAJE",
+    "PONDERACION_MATEMATICAS",
+    "PONDERACION_MATEMATICAS_2",
+    "PONDERACION_NOTAS",
+    "PONDERACION_OTROS",
+    "PONDERACION_RANKING_NOTAS",
+    "PROVINCIA_SEDE",
+    "REGIMEN",
+    "REGION_SEDE",
+    "REQUISITO_INGRESO",
+    "SEMESTRES_RECONOCIDOS",
+    "TIPO_CARRERA",
+    "TIPO_DE_INSTITUCION",
+    "TIPO_INSTITUCION_1",
+    "TIPO_INSTITUCION_2",
+    "TIPO_INSTITUCION_3",
+    "VACANTES_SEMESTRE_DOS",
+    "VACANTES_SEMESTRE_UNO",
+    "VERSION",
+    "VIGENCIA",
+    "fila_origen",
+    "hoja_origen"
+  ],
+  "candidatos_por_semantica": {
+    "CODIGO_INSTITUCION": [],
+    "NOMBRE_INSTITUCION": [
+      "NOMBRE_IES",
+      "TIPO_DE_INSTITUCION",
+      "TIPO_INSTITUCION_1",
+      "TIPO_INSTITUCION_2",
+      "TIPO_INSTITUCION_3"
+    ],
+    "PERIODO_OFERTA": [
+      "ANO",
+      "ANO_INICIO"
+    ],
+    "CODIGO_SEDE": [
+      "CODIGO_SEDE"
+    ],
+    "NOMBRE_SEDE": [
+      "CODIGO_SEDE",
+      "COMUNA_SEDE",
+      "NOMBRE_SEDE",
+      "PROVINCIA_SEDE",
+      "REGION_SEDE"
+    ],
+    "CODIGO_CARRERA": [
+      "CODIGO_CARRERA"
+    ],
+    "NOMBRE_CARRERA": [
+      "ACREDITACION_CARRERA_O_PROGRAMA",
+      "AREA_CARRERA_GENERICA",
+      "CODIGO_CARRERA",
+      "NIVEL_CARRERA",
+      "NOMBRE_CARRERA",
+      "TIPO_CARRERA"
+    ],
+    "MODALIDAD": [
+      "MODALIDAD"
+    ],
+    "JORNADA": [
+      "JORNADA"
+    ],
+    "VERSION": [
+      "VERSION"
+    ],
+    "TIPO_PLAN": [
+      "PLAN_ESPECIAL"
+    ],
+    "VIGENCIA": [
+      "VIGENCIA"
+    ],
+    "ANIO_INICIO": [
+      "ANO_INICIO"
+    ],
+    "NOMBRE_TITULO": [
+      "NOMBRE_TITULO"
+    ]
+  },
+  "perfil_columnas": [
+    {
+      "columna": "ANO",
+      "columna_normalizada": "ANO",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 17,
+      "muestra_valores": [
+        {
+          "valor": "OFE_2026",
+          "cantidad": 124
+        },
+        {
+          "valor": "OFE_2025",
+          "cantidad": 102
+        },
+        {
+          "valor": "OFE_2024",
+          "cantidad": 77
+        },
+        {
+          "valor": "OFE_2023",
+          "cantidad": 70
+        },
+        {
+          "valor": "OFE_2022",
+          "cantidad": 61
+        },
+        {
+          "valor": "OFE_2021",
+          "cantidad": 59
+        },
+        {
+          "valor": "OFE_2020",
+          "cantidad": 58
+        },
+        {
+          "valor": "OFE_2019",
+          "cantidad": 53
+        },
+        {
+          "valor": "OFE_2018",
+          "cantidad": 28
+        },
+        {
+          "valor": "OFE_2017",
+          "cantidad": 23
+        }
+      ]
+    },
+    {
+      "columna": "ANO_INICIO",
+      "columna_normalizada": "ANO_INICIO",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 20,
+      "muestra_valores": [
+        {
+          "valor": "2019",
+          "cantidad": 197
+        },
+        {
+          "valor": "2017",
+          "cantidad": 79
+        },
+        {
+          "valor": "2002",
+          "cantidad": 64
+        },
+        {
+          "valor": "2013",
+          "cantidad": 58
+        },
+        {
+          "valor": "1990",
+          "cantidad": 53
+        },
+        {
+          "valor": "2025",
+          "cantidad": 46
+        },
+        {
+          "valor": "2024",
+          "cantidad": 43
+        },
+        {
+          "valor": "2020",
+          "cantidad": 39
+        },
+        {
+          "valor": "2023",
+          "cantidad": 36
+        },
+        {
+          "valor": "2014",
+          "cantidad": 32
+        }
+      ]
+    },
+    {
+      "columna": "ARANCEL_ANUAL",
+      "columna_normalizada": "ARANCEL_ANUAL",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 166,
+      "muestra_valores": [
+        {
+          "valor": "990000",
+          "cantidad": 34
+        },
+        {
+          "valor": "1980000",
+          "cantidad": 32
+        },
+        {
+          "valor": "1550000",
+          "cantidad": 21
+        },
+        {
+          "valor": "1920000",
+          "cantidad": 16
+        },
+        {
+          "valor": "1200000",
+          "cantidad": 15
+        },
+        {
+          "valor": "1650000",
+          "cantidad": 15
+        },
+        {
+          "valor": "960000",
+          "cantidad": 14
+        },
+        {
+          "valor": "1940000",
+          "cantidad": 14
+        },
+        {
+          "valor": "1500000",
+          "cantidad": 14
+        },
+        {
+          "valor": "2060000",
+          "cantidad": 13
+        }
+      ]
+    },
+    {
+      "columna": "AREA_CARRERA_GENERICA",
+      "columna_normalizada": "AREA_CARRERA_GENERICA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 39,
+      "muestra_valores": [
+        {
+          "valor": "Ingeniería en Conectividad y Redes",
+          "cantidad": 125
+        },
+        {
+          "valor": "Ingeniería en Computación e Informática",
+          "cantidad": 92
+        },
+        {
+          "valor": "Técnico en Administración de Redes y Soporte",
+          "cantidad": 91
+        },
+        {
+          "valor": "Técnico en Computación e Informática",
+          "cantidad": 89
+        },
+        {
+          "valor": "Técnico en Análisis de Sistemas",
+          "cantidad": 58
+        },
+        {
+          "valor": "Postítulo en Tecnología",
+          "cantidad": 42
+        },
+        {
+          "valor": "Ingeniería en Automatización, Instrumentación y Control",
+          "cantidad": 41
+        },
+        {
+          "valor": "Técnico en Instrumentación, Automatización y Control Industrial",
+          "cantidad": 37
+        },
+        {
+          "valor": "Técnico en Prevención de Riesgos",
+          "cantidad": 29
+        },
+        {
+          "valor": "Postítulo en Administración y Comercio",
+          "cantidad": 13
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DEL_CONOCIMIENTO",
+      "columna_normalizada": "AREA_DEL_CONOCIMIENTO",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 6,
+      "muestra_valores": [
+        {
+          "valor": "Tecnología",
+          "cantidad": 631
+        },
+        {
+          "valor": "Administración y Comercio",
+          "cantidad": 70
+        },
+        {
+          "valor": "Salud",
+          "cantidad": 18
+        },
+        {
+          "valor": "Educación",
+          "cantidad": 12
+        },
+        {
+          "valor": "Ciencias Sociales",
+          "cantidad": 8
+        },
+        {
+          "valor": "Ciencias Básicas",
+          "cantidad": 8
+        }
+      ]
+    },
+    {
+      "columna": "CINE_F_13_AREA",
+      "columna_normalizada": "CINE_F_13_AREA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 7,
+      "muestra_valores": [
+        {
+          "valor": "Tecnología de la Información y la Comunicación (TIC)",
+          "cantidad": 489
+        },
+        {
+          "valor": "Ingeniería, Industria y Construcción",
+          "cantidad": 105
+        },
+        {
+          "valor": "Administración de Empresas y Derecho",
+          "cantidad": 74
+        },
+        {
+          "valor": "Servicios",
+          "cantidad": 39
+        },
+        {
+          "valor": "Salud y Bienestar",
+          "cantidad": 20
+        },
+        {
+          "valor": "Educación",
+          "cantidad": 12
+        },
+        {
+          "valor": "Ciencias naturales, matemáticas y estadística",
+          "cantidad": 8
+        }
+      ]
+    },
+    {
+      "columna": "CINE_F_13_SUBAREA",
+      "columna_normalizada": "CINE_F_13_SUBAREA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 10,
+      "muestra_valores": [
+        {
+          "valor": "Tecnología de la Información y la Comunicación (TIC)",
+          "cantidad": 489
+        },
+        {
+          "valor": "Ingeniería y Profesiones Afines",
+          "cantidad": 95
+        },
+        {
+          "valor": "Educación Comercial y Administración",
+          "cantidad": 74
+        },
+        {
+          "valor": "Servicios de Higiene y Salud Ocupacional",
+          "cantidad": 33
+        },
+        {
+          "valor": "Salud",
+          "cantidad": 18
+        },
+        {
+          "valor": "Educación",
+          "cantidad": 12
+        },
+        {
+          "valor": "Industria y Producción",
+          "cantidad": 10
+        },
+        {
+          "valor": "Matemáticas y Estadísticas",
+          "cantidad": 8
+        },
+        {
+          "valor": "Servicios de Seguridad",
+          "cantidad": 6
+        },
+        {
+          "valor": "Bienestar",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "columna": "CINE_F_97_AREA",
+      "columna_normalizada": "CINE_F_97_AREA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 6,
+      "muestra_valores": [
+        {
+          "valor": "Ciencias",
+          "cantidad": 497
+        },
+        {
+          "valor": "Ingeniería, Industria y Construcción",
+          "cantidad": 105
+        },
+        {
+          "valor": "Ciencias Sociales, Enseñanza Comercial y Derecho",
+          "cantidad": 74
+        },
+        {
+          "valor": "Servicios",
+          "cantidad": 39
+        },
+        {
+          "valor": "Salud y Servicios Sociales",
+          "cantidad": 20
+        },
+        {
+          "valor": "Educación",
+          "cantidad": 12
+        }
+      ]
+    },
+    {
+      "columna": "CINE_F_97_SUBAREA",
+      "columna_normalizada": "CINE_F_97_SUBAREA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 9,
+      "muestra_valores": [
+        {
+          "valor": "Informática",
+          "cantidad": 489
+        },
+        {
+          "valor": "Ingeniería y Profesiones Afines",
+          "cantidad": 95
+        },
+        {
+          "valor": "Enseñanza Comercial y Administración",
+          "cantidad": 74
+        },
+        {
+          "valor": "Servicios de Seguridad",
+          "cantidad": 39
+        },
+        {
+          "valor": "Medicina",
+          "cantidad": 18
+        },
+        {
+          "valor": "Formación de Personal Docente y Ciencias de la Educación",
+          "cantidad": 12
+        },
+        {
+          "valor": "Industria y Producción",
+          "cantidad": 10
+        },
+        {
+          "valor": "Matemáticas y Estadísticas",
+          "cantidad": 8
+        },
+        {
+          "valor": "Servicios Sociales",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "columna": "CODIGO_CARRERA",
+      "columna_normalizada": "CODIGO_CARRERA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 62,
+      "muestra_valores": [
+        {
+          "valor": "1",
+          "cantidad": 92
+        },
+        {
+          "valor": "3",
+          "cantidad": 89
+        },
+        {
+          "valor": "2",
+          "cantidad": 68
+        },
+        {
+          "valor": "6",
+          "cantidad": 65
+        },
+        {
+          "valor": "35",
+          "cantidad": 58
+        },
+        {
+          "valor": "46",
+          "cantidad": 46
+        },
+        {
+          "valor": "22",
+          "cantidad": 43
+        },
+        {
+          "valor": "11",
+          "cantidad": 33
+        },
+        {
+          "valor": "10",
+          "cantidad": 29
+        },
+        {
+          "valor": "47",
+          "cantidad": 23
+        }
+      ]
+    },
+    {
+      "columna": "CODIGO_IES",
+      "columna_normalizada": "CODIGO_IES",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "162",
+          "cantidad": 747
+        }
+      ]
+    },
+    {
+      "columna": "CODIGO_SEDE",
+      "columna_normalizada": "CODIGO_SEDE",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "2",
+          "cantidad": 744
+        },
+        {
+          "valor": "3",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "columna": "CODIGO_UNICO",
+      "columna_normalizada": "CODIGO_UNICO",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 139,
+      "muestra_valores": [
+        {
+          "valor": "I162S2C1J1V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C1J2V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C2J1V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C2J2V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C3J1V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C3J2V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C6J1V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C6J2V1",
+          "cantidad": 17
+        },
+        {
+          "valor": "I162S2C10J1V1",
+          "cantidad": 14
+        },
+        {
+          "valor": "I162S2C10J2V1",
+          "cantidad": 14
+        }
+      ]
+    },
+    {
+      "columna": "COMUNA_SEDE",
+      "columna_normalizada": "COMUNA_SEDE",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "SANTIAGO",
+          "cantidad": 744
+        },
+        {
+          "valor": "CONCEPCION",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "columna": "DURACION_ESTUDIOS",
+      "columna_normalizada": "DURACION_ESTUDIOS",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 6,
+      "muestra_valores": [
+        {
+          "valor": "5",
+          "cantidad": 314
+        },
+        {
+          "valor": "8",
+          "cantidad": 216
+        },
+        {
+          "valor": "4",
+          "cantidad": 84
+        },
+        {
+          "valor": "1",
+          "cantidad": 64
+        },
+        {
+          "valor": "6",
+          "cantidad": 56
+        },
+        {
+          "valor": "2",
+          "cantidad": 13
+        }
+      ]
+    },
+    {
+      "columna": "DURACION_TITULACION",
+      "columna_normalizada": "DURACION_TITULACION",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 735
+        },
+        {
+          "valor": "1",
+          "cantidad": 12
+        }
+      ]
+    },
+    {
+      "columna": "DURACION_TOTAL",
+      "columna_normalizada": "DURACION_TOTAL",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 6,
+      "muestra_valores": [
+        {
+          "valor": "5",
+          "cantidad": 318
+        },
+        {
+          "valor": "8",
+          "cantidad": 216
+        },
+        {
+          "valor": "4",
+          "cantidad": 80
+        },
+        {
+          "valor": "1",
+          "cantidad": 64
+        },
+        {
+          "valor": "6",
+          "cantidad": 56
+        },
+        {
+          "valor": "2",
+          "cantidad": 13
+        }
+      ]
+    },
+    {
+      "columna": "JORNADA",
+      "columna_normalizada": "JORNADA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 4,
+      "muestra_valores": [
+        {
+          "valor": "Vespertina",
+          "cantidad": 282
+        },
+        {
+          "valor": "A Distancia",
+          "cantidad": 255
+        },
+        {
+          "valor": "Diurna",
+          "cantidad": 202
+        },
+        {
+          "valor": "Semipresencial",
+          "cantidad": 8
+        }
+      ]
+    },
+    {
+      "columna": "MATRICULA_ANUAL",
+      "columna_normalizada": "MATRICULA_ANUAL",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 19,
+      "muestra_valores": [
+        {
+          "valor": "185000",
+          "cantidad": 114
+        },
+        {
+          "valor": "0",
+          "cantidad": 88
+        },
+        {
+          "valor": "177000",
+          "cantidad": 82
+        },
+        {
+          "valor": "170000",
+          "cantidad": 66
+        },
+        {
+          "valor": "145000",
+          "cantidad": 59
+        },
+        {
+          "valor": "130000",
+          "cantidad": 58
+        },
+        {
+          "valor": "140000",
+          "cantidad": 57
+        },
+        {
+          "valor": "160000",
+          "cantidad": 56
+        },
+        {
+          "valor": "105000",
+          "cantidad": 39
+        },
+        {
+          "valor": "100000",
+          "cantidad": 23
+        }
+      ]
+    },
+    {
+      "columna": "NIVEL_CARRERA",
+      "columna_normalizada": "NIVEL_CARRERA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 3,
+      "muestra_valores": [
+        {
+          "valor": "Técnico de Nivel Superior",
+          "cantidad": 346
+        },
+        {
+          "valor": "Profesional Sin Licenciatura",
+          "cantidad": 324
+        },
+        {
+          "valor": "Diplomado (desde un semestre)",
+          "cantidad": 77
+        }
+      ]
+    },
+    {
+      "columna": "NIVEL_GLOBAL",
+      "columna_normalizada": "NIVEL_GLOBAL",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "Pregrado",
+          "cantidad": 670
+        },
+        {
+          "valor": "Postítulo",
+          "cantidad": 77
+        }
+      ]
+    },
+    {
+      "columna": "NOMBRE_CARRERA",
+      "columna_normalizada": "NOMBRE_CARRERA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 75,
+      "muestra_valores": [
+        {
+          "valor": "INGENIERIA EN INFORMATICA",
+          "cantidad": 82
+        },
+        {
+          "valor": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "cantidad": 75
+        },
+        {
+          "valor": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+          "cantidad": 64
+        },
+        {
+          "valor": "TECNICO EN ANALISIS DE SISTEMAS",
+          "cantidad": 56
+        },
+        {
+          "valor": "TECNICO EN CONECTIVIDAD Y REDES",
+          "cantidad": 51
+        },
+        {
+          "valor": "INGENIERIA EN CIBERSEGURIDAD",
+          "cantidad": 46
+        },
+        {
+          "valor": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+          "cantidad": 39
+        },
+        {
+          "valor": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+          "cantidad": 29
+        },
+        {
+          "valor": "TECNICO EN PREVENCION DE RIESGOS",
+          "cantidad": 25
+        },
+        {
+          "valor": "TECNICO EN CIBERSEGURIDAD",
+          "cantidad": 23
+        }
+      ]
+    },
+    {
+      "columna": "NOMBRE_IES",
+      "columna_normalizada": "NOMBRE_IES",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "IP CIISA",
+          "cantidad": 444
+        },
+        {
+          "valor": "IP SAN SEBASTIAN",
+          "cantidad": 303
+        }
+      ]
+    },
+    {
+      "columna": "NOMBRE_SEDE",
+      "columna_normalizada": "NOMBRE_SEDE",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "CASA CENTRAL (SANTIAGO)",
+          "cantidad": 744
+        },
+        {
+          "valor": "SEDE CONCEPCION",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "columna": "NOMBRE_TITULO",
+      "columna_normalizada": "NOMBRE_TITULO",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 75,
+      "muestra_valores": [
+        {
+          "valor": "INGENIERO EN INFORMATICA",
+          "cantidad": 81
+        },
+        {
+          "valor": "INGENIERO EN CONECTIVIDAD Y REDES",
+          "cantidad": 75
+        },
+        {
+          "valor": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+          "cantidad": 60
+        },
+        {
+          "valor": "TECNICO EN ANALISIS DE SISTEMAS",
+          "cantidad": 56
+        },
+        {
+          "valor": "TECNICO EN CONECTIVIDAD Y REDES",
+          "cantidad": 51
+        },
+        {
+          "valor": "INGENIERO EN CIBERSEGURIDAD",
+          "cantidad": 46
+        },
+        {
+          "valor": "INGENIERO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+          "cantidad": 39
+        },
+        {
+          "valor": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+          "cantidad": 29
+        },
+        {
+          "valor": "TECNICO EN PREVENCION DE RIESGOS",
+          "cantidad": 27
+        },
+        {
+          "valor": "TECNICO EN CIBERSEGURIDAD",
+          "cantidad": 23
+        }
+      ]
+    },
+    {
+      "columna": "PLAN_ESPECIAL",
+      "columna_normalizada": "PLAN_ESPECIAL",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "NO APLICA",
+          "cantidad": 745
+        },
+        {
+          "valor": "CONTINUIDAD DE ESTUDIOS PARA TECNICOS",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "columna": "PROVINCIA_SEDE",
+      "columna_normalizada": "PROVINCIA_SEDE",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "SANTIAGO",
+          "cantidad": 744
+        },
+        {
+          "valor": "CONCEPCION",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "columna": "REGION_SEDE",
+      "columna_normalizada": "REGION_SEDE",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "Metropolitana",
+          "cantidad": 744
+        },
+        {
+          "valor": "Biobío",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "columna": "TIPO_CARRERA",
+      "columna_normalizada": "TIPO_CARRERA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "Plan Regular",
+          "cantidad": 639
+        },
+        {
+          "valor": "Plan Regular de Continuidad",
+          "cantidad": 108
+        }
+      ]
+    },
+    {
+      "columna": "TIPO_DE_INSTITUCION",
+      "columna_normalizada": "TIPO_DE_INSTITUCION",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "D",
+          "cantidad": 747
+        }
+      ]
+    },
+    {
+      "columna": "TIPO_INSTITUCION_1",
+      "columna_normalizada": "TIPO_INSTITUCION_1",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "Institutos Profesionales",
+          "cantidad": 747
+        }
+      ]
+    },
+    {
+      "columna": "TIPO_INSTITUCION_2",
+      "columna_normalizada": "TIPO_INSTITUCION_2",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "Institutos Profesionales",
+          "cantidad": 747
+        }
+      ]
+    },
+    {
+      "columna": "TIPO_INSTITUCION_3",
+      "columna_normalizada": "TIPO_INSTITUCION_3",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "Institutos Profesionales",
+          "cantidad": 747
+        }
+      ]
+    },
+    {
+      "columna": "VACANTES_SEMESTRE_DOS",
+      "columna_normalizada": "VACANTES_SEMESTRE_DOS",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 12,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 533
+        },
+        {
+          "valor": "10",
+          "cantidad": 77
+        },
+        {
+          "valor": "25",
+          "cantidad": 61
+        },
+        {
+          "valor": "20",
+          "cantidad": 25
+        },
+        {
+          "valor": "15",
+          "cantidad": 10
+        },
+        {
+          "valor": "40",
+          "cantidad": 10
+        },
+        {
+          "valor": "50",
+          "cantidad": 9
+        },
+        {
+          "valor": "45",
+          "cantidad": 8
+        },
+        {
+          "valor": "30",
+          "cantidad": 8
+        },
+        {
+          "valor": "60",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "columna": "VACANTES_SEMESTRE_UNO",
+      "columna_normalizada": "VACANTES_SEMESTRE_UNO",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 28,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 280
+        },
+        {
+          "valor": "25",
+          "cantidad": 141
+        },
+        {
+          "valor": "20",
+          "cantidad": 85
+        },
+        {
+          "valor": "30",
+          "cantidad": 70
+        },
+        {
+          "valor": "45",
+          "cantidad": 24
+        },
+        {
+          "valor": "50",
+          "cantidad": 24
+        },
+        {
+          "valor": "15",
+          "cantidad": 22
+        },
+        {
+          "valor": "40",
+          "cantidad": 20
+        },
+        {
+          "valor": "90",
+          "cantidad": 12
+        },
+        {
+          "valor": "60",
+          "cantidad": 12
+        }
+      ]
+    },
+    {
+      "columna": "VERSION",
+      "columna_normalizada": "VERSION",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 4,
+      "muestra_valores": [
+        {
+          "valor": "1",
+          "cantidad": 522
+        },
+        {
+          "valor": "2",
+          "cantidad": 161
+        },
+        {
+          "valor": "3",
+          "cantidad": 48
+        },
+        {
+          "valor": "4",
+          "cantidad": 16
+        }
+      ]
+    },
+    {
+      "columna": "VIGENCIA",
+      "columna_normalizada": "VIGENCIA",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "Vigente con estudiantes nuevos",
+          "cantidad": 486
+        },
+        {
+          "valor": "Vigente sin estudiantes nuevos",
+          "cantidad": 261
+        }
+      ]
+    },
+    {
+      "columna": "fila_origen",
+      "columna_normalizada": "FILA_ORIGEN",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 747,
+      "muestra_valores": [
+        {
+          "valor": "26434",
+          "cantidad": 1
+        },
+        {
+          "valor": "26435",
+          "cantidad": 1
+        },
+        {
+          "valor": "26436",
+          "cantidad": 1
+        },
+        {
+          "valor": "26437",
+          "cantidad": 1
+        },
+        {
+          "valor": "26438",
+          "cantidad": 1
+        },
+        {
+          "valor": "26439",
+          "cantidad": 1
+        },
+        {
+          "valor": "26440",
+          "cantidad": 1
+        },
+        {
+          "valor": "26441",
+          "cantidad": 1
+        },
+        {
+          "valor": "26442",
+          "cantidad": 1
+        },
+        {
+          "valor": "26443",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "columna": "hoja_origen",
+      "columna_normalizada": "HOJA_ORIGEN",
+      "registros_no_vacios": 747,
+      "porcentaje_no_vacio": 1.0,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "in",
+          "cantidad": 747
+        }
+      ]
+    },
+    {
+      "columna": "ACREDITACION_CARRERA_O_PROGRAMA",
+      "columna_normalizada": "ACREDITACION_CARRERA_O_PROGRAMA",
+      "registros_no_vacios": 739,
+      "porcentaje_no_vacio": 0.9892904953145917,
+      "valores_distintos_no_vacios": 3,
+      "muestra_valores": [
+        {
+          "valor": "No Acreditada",
+          "cantidad": 634
+        },
+        {
+          "valor": "Acreditada",
+          "cantidad": 79
+        },
+        {
+          "valor": "Sin Información",
+          "cantidad": 26
+        }
+      ]
+    },
+    {
+      "columna": "MODALIDAD",
+      "columna_normalizada": "MODALIDAD",
+      "registros_no_vacios": 739,
+      "porcentaje_no_vacio": 0.9892904953145917,
+      "valores_distintos_no_vacios": 3,
+      "muestra_valores": [
+        {
+          "valor": "Presencial",
+          "cantidad": 466
+        },
+        {
+          "valor": "No Presencial",
+          "cantidad": 255
+        },
+        {
+          "valor": "Semipresencial",
+          "cantidad": 18
+        }
+      ]
+    },
+    {
+      "columna": "COSTO_TITULACION",
+      "columna_normalizada": "COSTO_TITULACION",
+      "registros_no_vacios": 723,
+      "porcentaje_no_vacio": 0.9678714859437751,
+      "valores_distintos_no_vacios": 8,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 655
+        },
+        {
+          "valor": "40000",
+          "cantidad": 36
+        },
+        {
+          "valor": "45000",
+          "cantidad": 18
+        },
+        {
+          "valor": "24000",
+          "cantidad": 4
+        },
+        {
+          "valor": "30145",
+          "cantidad": 4
+        },
+        {
+          "valor": "32450",
+          "cantidad": 2
+        },
+        {
+          "valor": "26910",
+          "cantidad": 2
+        },
+        {
+          "valor": "33815",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "columna": "COSTO_CERTIFICADO_DIPLOMA",
+      "columna_normalizada": "COSTO_CERTIFICADO_DIPLOMA",
+      "registros_no_vacios": 655,
+      "porcentaje_no_vacio": 0.8768406961178046,
+      "valores_distintos_no_vacios": 6,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 216
+        },
+        {
+          "valor": "55000",
+          "cantidad": 155
+        },
+        {
+          "valor": "50000",
+          "cantidad": 122
+        },
+        {
+          "valor": "45000",
+          "cantidad": 82
+        },
+        {
+          "valor": "52000",
+          "cantidad": 52
+        },
+        {
+          "valor": "49500",
+          "cantidad": 28
+        }
+      ]
+    },
+    {
+      "columna": "REQUISITO_INGRESO",
+      "columna_normalizada": "REQUISITO_INGRESO",
+      "registros_no_vacios": 655,
+      "porcentaje_no_vacio": 0.8768406961178046,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "Educación Media",
+          "cantidad": 472
+        },
+        {
+          "valor": "Técnico de Nivel Superior",
+          "cantidad": 183
+        }
+      ]
+    },
+    {
+      "columna": "SEMESTRES_RECONOCIDOS",
+      "columna_normalizada": "SEMESTRES_RECONOCIDOS",
+      "registros_no_vacios": 604,
+      "porcentaje_no_vacio": 0.8085676037483266,
+      "valores_distintos_no_vacios": 3,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 505
+        },
+        {
+          "valor": "4",
+          "cantidad": 77
+        },
+        {
+          "valor": "5",
+          "cantidad": 22
+        }
+      ]
+    },
+    {
+      "columna": "ELEGIBILIDAD_BECA_PEDAGOGIA",
+      "columna_normalizada": "ELEGIBILIDAD_BECA_PEDAGOGIA",
+      "registros_no_vacios": 513,
+      "porcentaje_no_vacio": 0.6867469879518072,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "No Elegible",
+          "cantidad": 513
+        }
+      ]
+    },
+    {
+      "columna": "DURACION_FORMAL_DEL_REGIMEN",
+      "columna_normalizada": "DURACION_FORMAL_DEL_REGIMEN",
+      "registros_no_vacios": 493,
+      "porcentaje_no_vacio": 0.6599732262382865,
+      "valores_distintos_no_vacios": 8,
+      "muestra_valores": [
+        {
+          "valor": "5",
+          "cantidad": 183
+        },
+        {
+          "valor": "8",
+          "cantidad": 125
+        },
+        {
+          "valor": "1",
+          "cantidad": 62
+        },
+        {
+          "valor": "4",
+          "cantidad": 59
+        },
+        {
+          "valor": "6",
+          "cantidad": 41
+        },
+        {
+          "valor": "7",
+          "cantidad": 10
+        },
+        {
+          "valor": "12",
+          "cantidad": 7
+        },
+        {
+          "valor": "2",
+          "cantidad": 6
+        }
+      ]
+    },
+    {
+      "columna": "REGIMEN",
+      "columna_normalizada": "REGIMEN",
+      "registros_no_vacios": 493,
+      "porcentaje_no_vacio": 0.6599732262382865,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "1",
+          "cantidad": 471
+        },
+        {
+          "valor": "2",
+          "cantidad": 22
+        }
+      ]
+    },
+    {
+      "columna": "FORMATO_VALOR",
+      "columna_normalizada": "FORMATO_VALOR",
+      "registros_no_vacios": 434,
+      "porcentaje_no_vacio": 0.5809906291834003,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "Monto en Pesos",
+          "cantidad": 434
+        }
+      ]
+    },
+    {
+      "columna": "DEMRE",
+      "columna_normalizada": "DEMRE",
+      "registros_no_vacios": 315,
+      "porcentaje_no_vacio": 0.42168674698795183,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 315
+        }
+      ]
+    },
+    {
+      "columna": "GRADO_ACADEMICO",
+      "columna_normalizada": "GRADO_ACADEMICO",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "NO OTORGA GRADO",
+          "cantidad": 221
+        },
+        {
+          "valor": "SIN GRADO",
+          "cantidad": 92
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_CIENCIAS",
+      "columna_normalizada": "PONDERACION_CIENCIAS",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 313
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_HISTORIA",
+      "columna_normalizada": "PONDERACION_HISTORIA",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 313
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_LENGUAJE",
+      "columna_normalizada": "PONDERACION_LENGUAJE",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 313
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_MATEMATICAS",
+      "columna_normalizada": "PONDERACION_MATEMATICAS",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 313
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_NOTAS",
+      "columna_normalizada": "PONDERACION_NOTAS",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 313
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_OTROS",
+      "columna_normalizada": "PONDERACION_OTROS",
+      "registros_no_vacios": 313,
+      "porcentaje_no_vacio": 0.4190093708165997,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 313
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_RANKING_NOTAS",
+      "columna_normalizada": "PONDERACION_RANKING_NOTAS",
+      "registros_no_vacios": 275,
+      "porcentaje_no_vacio": 0.36813922356091033,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 275
+        }
+      ]
+    },
+    {
+      "columna": "PEDAGOGIA_MEDICINA_ODONTOLOGIA_OTRO",
+      "columna_normalizada": "PEDAGOGIA_MEDICINA_ODONTOLOGIA_OTRO",
+      "registros_no_vacios": 223,
+      "porcentaje_no_vacio": 0.29852744310575635,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "Otro",
+          "cantidad": 223
+        }
+      ]
+    },
+    {
+      "columna": "AREA_ACTUAL_O_AREA_ORIGEN_DEL_PROGRAMA",
+      "columna_normalizada": "AREA_ACTUAL_O_AREA_ORIGEN_DEL_PROGRAMA",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 7,
+      "muestra_valores": [
+        {
+          "valor": "10",
+          "cantidad": 52
+        },
+        {
+          "valor": "1",
+          "cantidad": 33
+        },
+        {
+          "valor": "8",
+          "cantidad": 13
+        },
+        {
+          "valor": "7",
+          "cantidad": 12
+        },
+        {
+          "valor": "9",
+          "cantidad": 8
+        },
+        {
+          "valor": "4",
+          "cantidad": 4
+        },
+        {
+          "valor": "6",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_ADMINISTRACION_DE_EMPRESAS_Y_DERECHO",
+      "columna_normalizada": "AREA_DESTINO_DE_ADMINISTRACION_DE_EMPRESAS_Y_DERECHO",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 113
+        },
+        {
+          "valor": "1",
+          "cantidad": 11
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_AGRICULTURA_SILVICULTURA_PESCA_Y_VETERINARIA",
+      "columna_normalizada": "AREA_DESTINO_DE_AGRICULTURA_SILVICULTURA_PESCA_Y_VETERINARIA",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 124
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_ARTES_Y_HUMANIDADES",
+      "columna_normalizada": "AREA_DESTINO_DE_ARTES_Y_HUMANIDADES",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 124
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_CIENCIAS_NATURALES_MATEMATICAS_Y_ESTADISTICA",
+      "columna_normalizada": "AREA_DESTINO_DE_CIENCIAS_NATURALES_MATEMATICAS_Y_ESTADISTICA",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 92
+        },
+        {
+          "valor": "1",
+          "cantidad": 32
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_CIENCIAS_SOCIALES_PERIODISMO_E_INFORMACION",
+      "columna_normalizada": "AREA_DESTINO_DE_CIENCIAS_SOCIALES_PERIODISMO_E_INFORMACION",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 116
+        },
+        {
+          "valor": "1",
+          "cantidad": 8
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_EDUCACION",
+      "columna_normalizada": "AREA_DESTINO_DE_EDUCACION",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 1,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 124
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_INGENIERIA_INDUSTRIA_Y_CONSTRUCCION",
+      "columna_normalizada": "AREA_DESTINO_DE_INGENIERIA_INDUSTRIA_Y_CONSTRUCCION",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 104
+        },
+        {
+          "valor": "1",
+          "cantidad": 20
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_SALUD_Y_BIENESTAR",
+      "columna_normalizada": "AREA_DESTINO_DE_SALUD_Y_BIENESTAR",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 106
+        },
+        {
+          "valor": "1",
+          "cantidad": 18
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_SERVICIOS",
+      "columna_normalizada": "AREA_DESTINO_DE_SERVICIOS",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 90
+        },
+        {
+          "valor": "1",
+          "cantidad": 34
+        }
+      ]
+    },
+    {
+      "columna": "AREA_DESTINO_DE_TECNOLOGIA_DE_LA_INFORMACION_Y_LA_COMUNICACION_TIC",
+      "columna_normalizada": "AREA_DESTINO_DE_TECNOLOGIA_DE_LA_INFORMACION_Y_LA_COMUNICACION_TIC",
+      "registros_no_vacios": 124,
+      "porcentaje_no_vacio": 0.16599732262382866,
+      "valores_distintos_no_vacios": 2,
+      "muestra_valores": [
+        {
+          "valor": "0",
+          "cantidad": 91
+        },
+        {
+          "valor": "1",
+          "cantidad": 33
+        }
+      ]
+    },
+    {
+      "columna": "PONDERACION_MATEMATICAS_2",
+      "columna_normalizada": "PONDERACION_MATEMATICAS_2",
+      "registros_no_vacios": 0,
+      "porcentaje_no_vacio": 0.0,
+      "valores_distintos_no_vacios": 0,
+      "muestra_valores": []
+    }
+  ]
+}

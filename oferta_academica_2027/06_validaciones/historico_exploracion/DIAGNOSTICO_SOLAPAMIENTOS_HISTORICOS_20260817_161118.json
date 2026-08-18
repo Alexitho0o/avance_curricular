@@ -1,0 +1,834 @@
+{
+  "proceso": "Oferta Académica SIES",
+  "fecha": "20260817_161118",
+  "resultados": [
+    {
+      "id": "2023_CORTE_TEMPRANO_VS_NOVIEMBRE",
+      "proposito": "Seleccionar corte anual principal 2023.",
+      "archivo_izquierdo": "2022/02-12-2022_Oferta_Académica_Aranceles_TP (oficial) 2023.csv",
+      "archivo_derecho": "2023/Oferta_Académica_TP oficial_30_11.csv",
+      "filas_izquierdo": 70,
+      "filas_derecho": 77,
+      "encabezado_izquierdo": "SI",
+      "encabezado_derecho": "SI",
+      "clave_usada": [
+        "COD_SEDE",
+        "COD_CARRERA",
+        "MODALIDAD",
+        "COD_JORNADA",
+        "VERSION",
+        "COD_TIPO_PLAN_CARRERA"
+      ],
+      "columnas_comunes": 51,
+      "columnas_solo_izquierdo": 9,
+      "columnas_solo_derecho": 0,
+      "claves_izquierdo": 70,
+      "claves_derecho": 77,
+      "claves_compartidas": 64,
+      "claves_solo_izquierdo": 6,
+      "claves_solo_derecho": 13,
+      "solapamiento_izquierdo": 0.9142857142857143,
+      "solapamiento_derecho": 0.8311688311688312,
+      "sugerencia": "SOLAPAMIENTO_PARCIAL: no sumar directamente; requiere consolidación o deduplicación.",
+      "muestra_claves_solo_izquierdo": [
+        [
+          "2",
+          "1",
+          "3",
+          "4",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3",
+          "1",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "3",
+          "3",
+          "4",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "46",
+          "1",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "46",
+          "3",
+          "4",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "6",
+          "3",
+          "4",
+          "1",
+          "1"
+        ]
+      ],
+      "muestra_claves_solo_derecho": [
+        [
+          "2",
+          "22",
+          "3",
+          "4",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "76",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "76",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "76",
+          "3",
+          "4",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "77",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "77",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "77",
+          "3",
+          "4",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "78",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "78",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "78",
+          "3",
+          "4",
+          "1",
+          "1"
+        ]
+      ],
+      "muestra_columnas_solo_izquierdo": [
+        "VACANTES_CUARTO_BIMESTRE",
+        "VACANTES_PRIMER_ANIO",
+        "VACANTES_PRIMER_BIMESTRE",
+        "VACANTES_PRIMER_TRIMESTRE",
+        "VACANTES_QUINTO_BIMESTRE",
+        "VACANTES_SEGUNDO_BIMESTRE",
+        "VACANTES_SEGUNDO_TRIMESTRE",
+        "VACANTES_TERCER_BIMESTRE",
+        "VACANTES_TERCER_TRIMESTRE"
+      ],
+      "muestra_columnas_solo_derecho": []
+    },
+    {
+      "id": "2024_CSV_VS_XLSX",
+      "proposito": "Confirmar si CSV y XLSX son equivalentes.",
+      "archivo_izquierdo": "2024/Oferta Académica 2024.csv",
+      "archivo_derecho": "2024/Oferta Académica 2024.xlsx",
+      "filas_izquierdo": 76,
+      "filas_derecho": 76,
+      "encabezado_izquierdo": "SI",
+      "encabezado_derecho": "SI",
+      "clave_usada": [
+        "COD_SEDE",
+        "COD_CARRERA",
+        "MODALIDAD",
+        "COD_JORNADA",
+        "VERSION",
+        "COD_TIPO_PLAN_CARRERA"
+      ],
+      "columnas_comunes": 50,
+      "columnas_solo_izquierdo": 0,
+      "columnas_solo_derecho": 0,
+      "claves_izquierdo": 76,
+      "claves_derecho": 76,
+      "claves_compartidas": 76,
+      "claves_solo_izquierdo": 0,
+      "claves_solo_derecho": 0,
+      "solapamiento_izquierdo": 1.0,
+      "solapamiento_derecho": 1.0,
+      "sugerencia": "EQUIVALENTES: usar solo una fuente como base; la otra queda como contraste.",
+      "muestra_claves_solo_izquierdo": [],
+      "muestra_claves_solo_derecho": [],
+      "muestra_columnas_solo_izquierdo": [],
+      "muestra_columnas_solo_derecho": []
+    },
+    {
+      "id": "2026_ETAPA2_CSV_VS_XLSX",
+      "proposito": "Confirmar si ambos representan la misma carga de oferta nueva.",
+      "archivo_izquierdo": "2026/ETAPA 2/ETAPA 2.csv",
+      "archivo_derecho": "2026/ETAPA 2/2. IPSS_Etapa2_Carga_Nuevas_Oferta 2026_Nov_2025.xlsx",
+      "filas_izquierdo": 8,
+      "filas_derecho": 8,
+      "encabezado_izquierdo": "NO",
+      "encabezado_derecho": "SI",
+      "clave_usada": [
+        "COD_SEDE",
+        "COD_CARRERA",
+        "MODALIDAD",
+        "COD_JORNADA",
+        "VERSION",
+        "COD_TIPO_PLAN_CARRERA"
+      ],
+      "columnas_comunes": 47,
+      "columnas_solo_izquierdo": 4,
+      "columnas_solo_derecho": 4,
+      "claves_izquierdo": 8,
+      "claves_derecho": 3,
+      "claves_compartidas": 0,
+      "claves_solo_izquierdo": 8,
+      "claves_solo_derecho": 3,
+      "solapamiento_izquierdo": 0.0,
+      "solapamiento_derecho": 0.0,
+      "sugerencia": "SIN_SOLAPAMIENTO: fuentes complementarias o cortes distintos; no sumar sin revisar semántica.",
+      "muestra_claves_solo_izquierdo": [
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN PREVENCION DE RIESGOS",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN PREVENCION DE RIESGOS",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN SEGURIDAD PRIVADA",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN SEGURIDAD PRIVADA",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "TECNICO EN PREVENCION DE RIESGOS",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "SEDE CONCEPCION",
+          "TECNICO EN ENFERMERIA",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "SEDE CONCEPCION",
+          "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "SEDE CONCEPCION",
+          "TECNICO EN FARMACIA",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ]
+      ],
+      "muestra_claves_solo_derecho": [
+        [
+          "2",
+          "",
+          "3",
+          "4",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "",
+          "3",
+          "4",
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "",
+          "1",
+          "2",
+          "1",
+          "1"
+        ]
+      ],
+      "muestra_columnas_solo_izquierdo": [
+        "CANTIDAD_BENEFICIO_DFE",
+        "CANTIDAD_MATRICULA_DFE",
+        "CODIGOIESNUM",
+        "ENLACE_INFO_PROGRAMA"
+      ],
+      "muestra_columnas_solo_derecho": [
+        "MALLA_CURRICULAR",
+        "OTROS_REQUISITOS",
+        "PERFIL_EGRESO",
+        "TEXTO_REQUISITO_INGRESO"
+      ]
+    },
+    {
+      "id": "2027_5913_CSV_VS_XLSX",
+      "proposito": "Confirmar equivalencia entre precarga CSV y libro modificable.",
+      "archivo_izquierdo": "2027/dctos/reporte_dinamico_5913.csv",
+      "archivo_derecho": "2027/reporte_dinamico_5913_2026-08-12_14_52_50 Modificables_lm.xlsx",
+      "filas_izquierdo": 103,
+      "filas_derecho": 103,
+      "encabezado_izquierdo": "SI",
+      "encabezado_derecho": "SI",
+      "clave_usada": [
+        "COD_SEDE",
+        "COD_CARRERA",
+        "MODALIDAD",
+        "COD_JORNADA",
+        "VERSION",
+        "COD_TIPO_PLAN_CARRERA"
+      ],
+      "columnas_comunes": 51,
+      "columnas_solo_izquierdo": 0,
+      "columnas_solo_derecho": 0,
+      "claves_izquierdo": 103,
+      "claves_derecho": 103,
+      "claves_compartidas": 0,
+      "claves_solo_izquierdo": 103,
+      "claves_solo_derecho": 103,
+      "solapamiento_izquierdo": 0.0,
+      "solapamiento_derecho": 0.0,
+      "sugerencia": "SIN_SOLAPAMIENTO: fuentes complementarias o cortes distintos; no sumar sin revisar semántica.",
+      "muestra_claves_solo_izquierdo": [
+        [
+          "2",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "1",
+          "2",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "2",
+          "3",
+          "3"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "2",
+          "4",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "3",
+          "4",
+          "2",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "3",
+          "4",
+          "3",
+          "3"
+        ],
+        [
+          "2",
+          "10",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "10",
+          "1",
+          "2",
+          "1",
+          "1"
+        ]
+      ],
+      "muestra_claves_solo_derecho": [
+        [
+          "2",
+          "1",
+          "NO PRESENCIAL",
+          "A DISTANCIA (ELEARNING)",
+          "2",
+          "PLAN REGULAR"
+        ],
+        [
+          "2",
+          "1",
+          "NO PRESENCIAL",
+          "A DISTANCIA (ELEARNING)",
+          "3",
+          "PLAN REGULAR DE CONTINUIDAD"
+        ],
+        [
+          "2",
+          "1",
+          "PRESENCIAL",
+          "DIURNA",
+          "1",
+          "PLAN REGULAR"
+        ],
+        [
+          "2",
+          "1",
+          "PRESENCIAL",
+          "DIURNA",
+          "2",
+          "PLAN REGULAR"
+        ],
+        [
+          "2",
+          "1",
+          "PRESENCIAL",
+          "VESPERTINA",
+          "1",
+          "PLAN REGULAR"
+        ],
+        [
+          "2",
+          "1",
+          "PRESENCIAL",
+          "VESPERTINA",
+          "2",
+          "PLAN REGULAR DE CONTINUIDAD"
+        ],
+        [
+          "2",
+          "1",
+          "PRESENCIAL",
+          "VESPERTINA",
+          "3",
+          "PLAN REGULAR DE CONTINUIDAD"
+        ],
+        [
+          "2",
+          "1",
+          "PRESENCIAL",
+          "VESPERTINA",
+          "4",
+          "PLAN REGULAR"
+        ],
+        [
+          "2",
+          "10",
+          "NO PRESENCIAL",
+          "A DISTANCIA (ELEARNING)",
+          "1",
+          "PLAN REGULAR"
+        ],
+        [
+          "2",
+          "10",
+          "PRESENCIAL",
+          "DIURNA",
+          "1",
+          "PLAN REGULAR"
+        ]
+      ],
+      "muestra_columnas_solo_izquierdo": [],
+      "muestra_columnas_solo_derecho": []
+    },
+    {
+      "id": "2026_ETAPA1_VS_ETAPA2",
+      "proposito": "Medir solapamiento entre oferta vigente/editada y oferta nueva.",
+      "archivo_izquierdo": "2026/ETAPA 1/20-08-2025_17-09-50_Oferta-Académica-TP-Vigente-Editada-2026.csv",
+      "archivo_derecho": "2026/ETAPA 2/ETAPA 2.csv",
+      "filas_izquierdo": 81,
+      "filas_derecho": 8,
+      "encabezado_izquierdo": "NO",
+      "encabezado_derecho": "NO",
+      "clave_usada": [
+        "COD_SEDE",
+        "COD_CARRERA",
+        "MODALIDAD",
+        "COD_JORNADA",
+        "VERSION",
+        "COD_TIPO_PLAN_CARRERA"
+      ],
+      "columnas_comunes": 51,
+      "columnas_solo_izquierdo": 0,
+      "columnas_solo_derecho": 0,
+      "claves_izquierdo": 81,
+      "claves_derecho": 8,
+      "claves_compartidas": 0,
+      "claves_solo_izquierdo": 81,
+      "claves_solo_derecho": 8,
+      "solapamiento_izquierdo": 0.0,
+      "solapamiento_derecho": 0.0,
+      "sugerencia": "SIN_SOLAPAMIENTO: fuentes complementarias o cortes distintos; no sumar sin revisar semántica.",
+      "muestra_claves_solo_izquierdo": [
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "ADMINISTRACION PUBLICA",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "ADMINISTRACION PUBLICA",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "AUDITORIA",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "AUDITORIA",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "CONTABILIDAD GENERAL",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "1",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+          "1",
+          "1",
+          "1",
+          "NO APLICA"
+        ]
+      ],
+      "muestra_claves_solo_derecho": [
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN PREVENCION DE RIESGOS",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN PREVENCION DE RIESGOS",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN SEGURIDAD PRIVADA",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "INGENIERIA EN SEGURIDAD PRIVADA",
+          "4",
+          "2",
+          "3",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "TECNICO EN PREVENCION DE RIESGOS",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "SEDE CONCEPCION",
+          "TECNICO EN ENFERMERIA",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "SEDE CONCEPCION",
+          "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "SEDE CONCEPCION",
+          "TECNICO EN FARMACIA",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ]
+      ],
+      "muestra_columnas_solo_izquierdo": [],
+      "muestra_columnas_solo_derecho": []
+    },
+    {
+      "id": "2026_ETAPA1_VS_ETAPA3_ARANCELES",
+      "proposito": "Separar oferta base de carga complementaria de aranceles.",
+      "archivo_izquierdo": "2026/ETAPA 1/20-08-2025_17-09-50_Oferta-Académica-TP-Vigente-Editada-2026.csv",
+      "archivo_derecho": "2026/ETAPA 3/Carga_Aranceles_Etapa3_2026.csv",
+      "filas_izquierdo": 81,
+      "filas_derecho": 124,
+      "encabezado_izquierdo": "NO",
+      "encabezado_derecho": "NO",
+      "clave_usada": [
+        "COD_SEDE",
+        "COD_CARRERA",
+        "MODALIDAD",
+        "COD_JORNADA",
+        "VERSION",
+        "COD_TIPO_PLAN_CARRERA"
+      ],
+      "columnas_comunes": 51,
+      "columnas_solo_izquierdo": 0,
+      "columnas_solo_derecho": 0,
+      "claves_izquierdo": 81,
+      "claves_derecho": 124,
+      "claves_compartidas": 81,
+      "claves_solo_izquierdo": 0,
+      "claves_solo_derecho": 43,
+      "solapamiento_izquierdo": 1.0,
+      "solapamiento_derecho": 0.6532258064516129,
+      "sugerencia": "SOLAPAMIENTO_PARCIAL: no sumar directamente; requiere consolidación o deduplicación.",
+      "muestra_claves_solo_izquierdo": [],
+      "muestra_claves_solo_derecho": [
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO ABORDAJE INTEGRAL DE LA VIOLENCIA DE GENERO EN ATENCION PRIMARIA DE SALUD",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN ARQUITECTURA CLOUD",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN BACKEND",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN CIBERSEGURIDAD APLICADA",
+          "3",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN DOCENCIA EN EDUCACION SUPERIOR TECNICO PROFESIONAL",
+          "2",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN FRONTEND",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN FULLSTACK",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN GESTION PUBLICA LOCAL",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN GOBERNANZA DE DATOS",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ],
+        [
+          "CASA CENTRAL (SANTIAGO)",
+          "DIPLOMADO EN HABILIDADES DIRECTIVAS PARA PROFESIONALES STEM",
+          "4",
+          "1",
+          "1",
+          "NO APLICA"
+        ]
+      ],
+      "muestra_columnas_solo_izquierdo": [],
+      "muestra_columnas_solo_derecho": []
+    }
+  ],
+  "errores": []
+}

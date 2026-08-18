@@ -1,0 +1,87 @@
+{
+  "estado": "DIAGNOSTICO_CONTRATO_PRIMERAS_18_COLUMNAS",
+  "archivo_interno": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Oferta académica/2026/ETAPA 3/Carga_Aranceles_Etapa3_2026.csv",
+  "archivo_historico": "oferta_academica_2027/06_validaciones/historico_comparativo_sies_162/REGISTROS_HISTORICO_SIES_162_20260817_161944.tsv",
+  "filas_sies": 124,
+  "filas_internas": 124,
+  "resultados": [
+    {
+      "clave": "CODIGO_SEDE_CODIGO_CARRERA_VERSION",
+      "campos": [
+        "CODIGO_SEDE",
+        "CODIGO_CARRERA",
+        "VERSION"
+      ],
+      "claves_sies": 83,
+      "claves_internas": 83,
+      "claves_compartidas": 83,
+      "filas_sies_cubiertas": 124,
+      "filas_internas_cubiertas": 124,
+      "cobertura_sies": 1.0,
+      "cobertura_interna": 1.0
+    },
+    {
+      "clave": "SEDE_CARRERA_VERSION",
+      "campos": [
+        "NOMBRE_SEDE",
+        "NOMBRE_CARRERA",
+        "VERSION"
+      ],
+      "claves_sies": 83,
+      "claves_internas": 83,
+      "claves_compartidas": 83,
+      "filas_sies_cubiertas": 124,
+      "filas_internas_cubiertas": 124,
+      "cobertura_sies": 1.0,
+      "cobertura_interna": 1.0
+    },
+    {
+      "clave": "CODIGO_SEDE_CODIGO_CARRERA_NOMBRE_TITULO_VERSION",
+      "campos": [
+        "CODIGO_SEDE",
+        "CODIGO_CARRERA",
+        "NOMBRE_TITULO",
+        "VERSION"
+      ],
+      "claves_sies": 83,
+      "claves_internas": 83,
+      "claves_compartidas": 83,
+      "filas_sies_cubiertas": 124,
+      "filas_internas_cubiertas": 124,
+      "cobertura_sies": 1.0,
+      "cobertura_interna": 1.0
+    },
+    {
+      "clave": "CODIGO_SEDE_CODIGO_CARRERA_ANO_INICIO_VERSION",
+      "campos": [
+        "CODIGO_SEDE",
+        "CODIGO_CARRERA",
+        "ANO_INICIO",
+        "VERSION"
+      ],
+      "claves_sies": 95,
+      "claves_internas": 95,
+      "claves_compartidas": 95,
+      "filas_sies_cubiertas": 124,
+      "filas_internas_cubiertas": 124,
+      "cobertura_sies": 1.0,
+      "cobertura_interna": 1.0
+    }
+  ],
+  "mejor_clave": {
+    "clave": "CODIGO_SEDE_CODIGO_CARRERA_ANO_INICIO_VERSION",
+    "campos": [
+      "CODIGO_SEDE",
+      "CODIGO_CARRERA",
+      "ANO_INICIO",
+      "VERSION"
+    ],
+    "claves_sies": 95,
+    "claves_internas": 95,
+    "claves_compartidas": 95,
+    "filas_sies_cubiertas": 124,
+    "filas_internas_cubiertas": 124,
+    "cobertura_sies": 1.0,
+    "cobertura_interna": 1.0
+  }
+}

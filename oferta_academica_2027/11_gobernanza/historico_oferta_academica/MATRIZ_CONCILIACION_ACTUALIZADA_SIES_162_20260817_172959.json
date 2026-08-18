@@ -1,0 +1,70 @@
+{
+  "institucion": {
+    "codigo_sies": "162",
+    "nombre_canonico": "Instituto Profesional San Sebastián",
+    "alias_historico": "IP CIISA"
+  },
+  "fecha_resolucion": "20260817_172959",
+  "regla_precedencia": "Histórico comparativo SIES tiene prioridad para OFE_2010–OFE_2026.",
+  "resolucion_2026": {
+    "estado": "CONCILIADO_100_PORCIENTO",
+    "conteo_sies": 124,
+    "conteo_interno": 124,
+    "clave_validada": "CODIGO_SEDE + CODIGO_CARRERA + ANO_INICIO + VERSION",
+    "cobertura_sies": "100%",
+    "cobertura_interna": "100%",
+    "fuente_interna": "2026/ETAPA 3/Carga_Aranceles_Etapa3_2026.csv"
+  },
+  "matriz": [
+    {
+      "periodo_sies": "OFE_2023",
+      "conteo_sies_prioritario": 70,
+      "conteo_interno_historico": 77,
+      "fuente_interna": "2023/Oferta_Académica_TP oficial_30_11.csv",
+      "rol_fuente": "BASE_INTERNA_CONCILIACION_PARCIAL",
+      "estado": "PENDIENTE_DIFERENCIAS_RESIDUALES",
+      "regla_kpi": "Usar SIES=70 para KPI histórico; mantener fuente interna=77 como evidencia de contraste.",
+      "evidencia": "RESUMEN_CONCILIACION_VALIDA_SIES_162_20260817_172423.tsv"
+    },
+    {
+      "periodo_sies": "OFE_2024",
+      "conteo_sies_prioritario": 77,
+      "conteo_interno_historico": 76,
+      "fuente_interna": "2024/Oferta Académica 2024.csv",
+      "rol_fuente": "BASE_INTERNA_CONCILIACION_PARCIAL",
+      "estado": "PENDIENTE_DIFERENCIAS_RESIDUALES",
+      "regla_kpi": "Usar SIES=77 para KPI histórico; mantener fuente interna=76 como evidencia de contraste.",
+      "evidencia": "RESUMEN_CONCILIACION_VALIDA_SIES_162_20260817_172423.tsv"
+    },
+    {
+      "periodo_sies": "OFE_2025",
+      "conteo_sies_prioritario": 102,
+      "conteo_interno_historico": "",
+      "fuente_interna": "2025/Aranceles Etapa 3.csv",
+      "rol_fuente": "COMPLEMENTO_FINANCIERO_PARCIAL",
+      "estado": "SIN_BASE_INTERNA_ANUAL_COMPLETA",
+      "regla_kpi": "Usar SIES=102 para KPI histórico. No inferir conteo interno anual desde el archivo de aranceles.",
+      "evidencia": "MATRIZ_FINAL_FUENTES_HISTORICAS_20260817_161223.tsv"
+    },
+    {
+      "periodo_sies": "OFE_2026",
+      "conteo_sies_prioritario": 124,
+      "conteo_interno_historico": 124,
+      "fuente_interna": "2026/ETAPA 3/Carga_Aranceles_Etapa3_2026.csv",
+      "rol_fuente": "BASE_ANUAL_COMPLETA_CONCILIADA",
+      "estado": "CONCILIADO_100_PORCIENTO",
+      "regla_kpi": "Usar SIES=124 e interno=124. La Etapa 3 es la base institucional anual completa para 2026.",
+      "evidencia": "CONCILIACION_2026_CORREGIDA_PRIMERAS18_20260817_172858.tsv"
+    },
+    {
+      "periodo_sies": "OFE_2027",
+      "conteo_sies_prioritario": "",
+      "conteo_interno_historico": 103,
+      "fuente_interna": "2027/ETAPA 1/CARGA_ETAPA1_OFERTA_ACADEMICA_2027_FINAL_VIGENCIA_Y_FECHA_CORRECTAS.csv",
+      "rol_fuente": "CARGA_INSTITUCIONAL_CONGELADA",
+      "estado": "PENDIENTE_PUBLICACION_SIES",
+      "regla_kpi": "Usar 103 como KPI interno temporal; conciliar cuando SIES publique OFE_2027.",
+      "evidencia": "CONTROL_CARGA_ETAPA1_2027_VIGENCIA_Y_FECHA_CORRECTAS.xlsx"
+    }
+  ]
+}

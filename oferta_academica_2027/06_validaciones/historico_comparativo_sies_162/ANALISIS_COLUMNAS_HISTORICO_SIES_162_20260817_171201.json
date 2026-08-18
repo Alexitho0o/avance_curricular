@@ -1,0 +1,552 @@
+{
+  "proceso": "Oferta Académica SIES",
+  "codigo_institucion": "162",
+  "fuente_tsv": "oferta_academica_2027/06_validaciones/historico_comparativo_sies_162/REGISTROS_HISTORICO_SIES_162_20260817_161944.tsv",
+  "fecha": "20260817_171201",
+  "registros": 747,
+  "total_columnas": 71,
+  "columnas_periodo_candidatas": [
+    "ANO",
+    "ANO_INICIO",
+    "VIGENCIA"
+  ],
+  "columnas_identidad_candidatas": [
+    "JORNADA",
+    "MODALIDAD",
+    "NOMBRE_CARRERA",
+    "NOMBRE_SEDE",
+    "PLAN_ESPECIAL",
+    "TIPO_DE_INSTITUCION",
+    "TIPO_INSTITUCION_1",
+    "TIPO_INSTITUCION_2",
+    "TIPO_INSTITUCION_3",
+    "VERSION"
+  ],
+  "columnas_relevantes": [
+    "ACREDITACION_CARRERA_O_PROGRAMA",
+    "ANO",
+    "ANO_INICIO",
+    "ARANCEL_ANUAL",
+    "AREA_CARRERA_GENERICA",
+    "CODIGO_CARRERA",
+    "CODIGO_IES",
+    "CODIGO_SEDE",
+    "CODIGO_UNICO",
+    "COMUNA_SEDE",
+    "JORNADA",
+    "MODALIDAD",
+    "NIVEL_CARRERA",
+    "NIVEL_GLOBAL",
+    "NOMBRE_CARRERA",
+    "NOMBRE_IES",
+    "NOMBRE_SEDE",
+    "NOMBRE_TITULO",
+    "PLAN_ESPECIAL",
+    "PROVINCIA_SEDE",
+    "REGION_SEDE",
+    "TIPO_CARRERA",
+    "TIPO_DE_INSTITUCION",
+    "TIPO_INSTITUCION_1",
+    "TIPO_INSTITUCION_2",
+    "TIPO_INSTITUCION_3",
+    "VACANTES_SEMESTRE_DOS",
+    "VACANTES_SEMESTRE_UNO",
+    "VERSION",
+    "VIGENCIA"
+  ],
+  "distribucion_columnas_periodo": {
+    "ANO": {
+      "valores_distintos_no_vacios": 17,
+      "top_30_valores": [
+        {
+          "valor": "OFE_2026",
+          "cantidad": 124
+        },
+        {
+          "valor": "OFE_2025",
+          "cantidad": 102
+        },
+        {
+          "valor": "OFE_2024",
+          "cantidad": 77
+        },
+        {
+          "valor": "OFE_2023",
+          "cantidad": 70
+        },
+        {
+          "valor": "OFE_2022",
+          "cantidad": 61
+        },
+        {
+          "valor": "OFE_2021",
+          "cantidad": 59
+        },
+        {
+          "valor": "OFE_2020",
+          "cantidad": 58
+        },
+        {
+          "valor": "OFE_2019",
+          "cantidad": 53
+        },
+        {
+          "valor": "OFE_2018",
+          "cantidad": 28
+        },
+        {
+          "valor": "OFE_2017",
+          "cantidad": 23
+        },
+        {
+          "valor": "OFE_2014",
+          "cantidad": 20
+        },
+        {
+          "valor": "OFE_2016",
+          "cantidad": 18
+        },
+        {
+          "valor": "OFE_2015",
+          "cantidad": 16
+        },
+        {
+          "valor": "OFE_2013",
+          "cantidad": 14
+        },
+        {
+          "valor": "OFE_2012",
+          "cantidad": 8
+        },
+        {
+          "valor": "OFE_2011",
+          "cantidad": 8
+        },
+        {
+          "valor": "OFE_2010",
+          "cantidad": 8
+        }
+      ]
+    },
+    "ANO_INICIO": {
+      "valores_distintos_no_vacios": 20,
+      "top_30_valores": [
+        {
+          "valor": "2019",
+          "cantidad": 197
+        },
+        {
+          "valor": "2017",
+          "cantidad": 79
+        },
+        {
+          "valor": "2002",
+          "cantidad": 64
+        },
+        {
+          "valor": "2013",
+          "cantidad": 58
+        },
+        {
+          "valor": "1990",
+          "cantidad": 53
+        },
+        {
+          "valor": "2025",
+          "cantidad": 46
+        },
+        {
+          "valor": "2024",
+          "cantidad": 43
+        },
+        {
+          "valor": "2020",
+          "cantidad": 39
+        },
+        {
+          "valor": "2023",
+          "cantidad": 36
+        },
+        {
+          "valor": "2014",
+          "cantidad": 32
+        },
+        {
+          "valor": "2015",
+          "cantidad": 24
+        },
+        {
+          "valor": "2026",
+          "cantidad": 22
+        },
+        {
+          "valor": "2022",
+          "cantidad": 10
+        },
+        {
+          "valor": "1992",
+          "cantidad": 10
+        },
+        {
+          "valor": "1993",
+          "cantidad": 10
+        },
+        {
+          "valor": "0",
+          "cantidad": 8
+        },
+        {
+          "valor": "2004",
+          "cantidad": 7
+        },
+        {
+          "valor": "2021",
+          "cantidad": 6
+        },
+        {
+          "valor": "2016",
+          "cantidad": 2
+        },
+        {
+          "valor": "1991",
+          "cantidad": 1
+        }
+      ]
+    },
+    "VIGENCIA": {
+      "valores_distintos_no_vacios": 2,
+      "top_30_valores": [
+        {
+          "valor": "Vigente con estudiantes nuevos",
+          "cantidad": 486
+        },
+        {
+          "valor": "Vigente sin estudiantes nuevos",
+          "cantidad": 261
+        }
+      ]
+    }
+  },
+  "muestra_registros": [
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2013",
+      "ARANCEL_ANUAL": "1780000",
+      "AREA_CARRERA_GENERICA": "Técnico en Prevención de Riesgos",
+      "CODIGO_CARRERA": "10",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C10J1V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "Diurna",
+      "MODALIDAD": "Presencial",
+      "NIVEL_CARRERA": "Técnico de Nivel Superior",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "TECNICO EN PREVENCION DE RIESGOS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "TECNICO EN PREVENCION DE RIESGOS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "0",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente sin estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2013",
+      "ARANCEL_ANUAL": "1780000",
+      "AREA_CARRERA_GENERICA": "Técnico en Prevención de Riesgos",
+      "CODIGO_CARRERA": "10",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C10J2V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "Vespertina",
+      "MODALIDAD": "Presencial",
+      "NIVEL_CARRERA": "Técnico de Nivel Superior",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "TECNICO EN PREVENCION DE RIESGOS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "TECNICO EN PREVENCION DE RIESGOS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "0",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente sin estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Técnico en Prevención de Riesgos",
+      "CODIGO_CARRERA": "10",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C10J4V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Técnico de Nivel Superior",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "TECNICO EN PREVENCION DE RIESGOS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "TECNICO EN PREVENCION DE RIESGOS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "45",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Ingeniería en Finanzas",
+      "CODIGO_CARRERA": "111",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C111J4V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "INGENIERIA EN FINANZAS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "INGENIERO EN FINANZAS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "25",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Ingeniería en Finanzas",
+      "CODIGO_CARRERA": "111",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C111J4V2",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "INGENIERIA EN FINANZAS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "INGENIERO EN FINANZAS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular de Continuidad",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "5",
+      "VERSION": "2",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Ingeniería en Marketing",
+      "CODIGO_CARRERA": "112",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C112J4V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "INGENIERIA EN MARKETING DIGITAL",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "INGENIERO EN MARKETING DIGITAL",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "55",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Ingeniería en Marketing",
+      "CODIGO_CARRERA": "112",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C112J4V2",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "INGENIERIA EN MARKETING DIGITAL",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "INGENIERO EN MARKETING DIGITAL",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular de Continuidad",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "5",
+      "VERSION": "2",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Ingeniería en Recursos Humanos",
+      "CODIGO_CARRERA": "113",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C113J4V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "INGENIERIA EN RECURSOS HUMANOS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "INGENIERO EN RECURSOS HUMANOS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "90",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1980000",
+      "AREA_CARRERA_GENERICA": "Ingeniería en Recursos Humanos",
+      "CODIGO_CARRERA": "113",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C113J4V2",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "A Distancia",
+      "MODALIDAD": "No Presencial",
+      "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "INGENIERIA EN RECURSOS HUMANOS",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "INGENIERO EN RECURSOS HUMANOS",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular de Continuidad",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "5",
+      "VERSION": "2",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    },
+    {
+      "ACREDITACION_CARRERA_O_PROGRAMA": "No Acreditada",
+      "ANO": "OFE_2026",
+      "ANO_INICIO": "2026",
+      "ARANCEL_ANUAL": "1890000",
+      "AREA_CARRERA_GENERICA": "Técnico en Enfermería",
+      "CODIGO_CARRERA": "114",
+      "CODIGO_IES": "162",
+      "CODIGO_SEDE": "2",
+      "CODIGO_UNICO": "I162S2C114J2V1",
+      "COMUNA_SEDE": "SANTIAGO",
+      "JORNADA": "Vespertina",
+      "MODALIDAD": "Presencial",
+      "NIVEL_CARRERA": "Técnico de Nivel Superior",
+      "NIVEL_GLOBAL": "Pregrado",
+      "NOMBRE_CARRERA": "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+      "NOMBRE_IES": "IP SAN SEBASTIAN",
+      "NOMBRE_SEDE": "CASA CENTRAL (SANTIAGO)",
+      "NOMBRE_TITULO": "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+      "PLAN_ESPECIAL": "NO APLICA",
+      "PROVINCIA_SEDE": "SANTIAGO",
+      "REGION_SEDE": "Metropolitana",
+      "TIPO_CARRERA": "Plan Regular",
+      "TIPO_DE_INSTITUCION": "D",
+      "TIPO_INSTITUCION_1": "Institutos Profesionales",
+      "TIPO_INSTITUCION_2": "Institutos Profesionales",
+      "TIPO_INSTITUCION_3": "Institutos Profesionales",
+      "VACANTES_SEMESTRE_DOS": "0",
+      "VACANTES_SEMESTRE_UNO": "30",
+      "VERSION": "1",
+      "VIGENCIA": "Vigente con estudiantes nuevos"
+    }
+  ]
+}
