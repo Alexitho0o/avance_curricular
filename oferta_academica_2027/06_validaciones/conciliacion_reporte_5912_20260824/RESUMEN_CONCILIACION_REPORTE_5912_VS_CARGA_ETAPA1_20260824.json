@@ -1,0 +1,49 @@
+{
+  "proceso": "SIES Oferta Academica-Acceso 2027",
+  "subproceso": "Etapa 1 - Oferta Academica Vigente Editada TP Adscritas",
+  "fecha_conciliacion": "2026-08-24T12:52:51",
+  "fuente_validada_pes": {
+    "reporte_id": 5912,
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/09_respaldo/reportes_pes_validados/20260824_reporte_5912_etapa1/5912 Oferta Académica Vigente Validada 2027 TP Adscritas.csv",
+    "bytes": 29801,
+    "sha256": "7ef831d18cedc796ce6096e6802accdb6af993b89a76af0f57357c9fa4b07517",
+    "filas_datos": 103,
+    "columnas": 49
+  },
+  "carga_congelada_comparada": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20260817_155153_etapa1_areas_vigencia_fecha/CARGA_ETAPA1_OFERTA_ACADEMICA_2027_FINAL_VIGENCIA_Y_FECHA_CORRECTAS.csv",
+    "bytes": 28477,
+    "sha256": "8e5207cf1d54357af1cb2b7c144c4ba0ca3477569a97a887a6f686f2f76ec743",
+    "filas_datos": 103,
+    "columnas_sin_encabezado": {
+      "48": 103
+    }
+  },
+  "metodo": "Proyeccion del reporte 5912 al orden exacto de las 48 columnas cargables y conciliacion por llave SIES COD_SEDE+COD_CARRERA+MODALIDAD+COD_JORNADA+VERSION.",
+  "estructura_reporte_5912": {
+    "columnas_por_fila": {
+      "49": 103
+    },
+    "columnas_cargables_encontradas": 48,
+    "columnas_faltantes": [],
+    "columnas_adicionales_de_reporte": [
+      "CODIGO_IES_NUM"
+    ],
+    "encabezados_duplicados": []
+  },
+  "resultado": {
+    "estado": "SIN_MODIFICACIONES_SEMANTICAS_CON_DIFERENCIAS_DE_FORMATO",
+    "mismas_filas": true,
+    "llaves_solo_en_reporte_5912": [],
+    "llaves_solo_en_carga": [],
+    "mismos_valores_en_48_columnas_cargadas": false,
+    "mismos_valores_semanticos_en_48_columnas_cargadas": true,
+    "diferencias_celda": 44,
+    "diferencias_semanticas": 0,
+    "diferencias_solo_formato": 44,
+    "filas_con_diferencias": 44,
+    "diferencias_por_campo": {
+      "FECHA_ADMISION_INICIAL": 44
+    }
+  }
+}

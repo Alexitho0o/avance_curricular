@@ -1,0 +1,54 @@
+ADVERTENCIA - ARCHIVO DE PRUEBA, NO OFICIAL, NO VALIDADO
+
+Este CSV se genero a pedido explicito del usuario, exclusivamente para pruebas locales de formato,
+PESE a que el estado de gobernanza de la Etapa 2 (segunda version, rector_v2) sigue siendo NO CARGAR:
+
+- 43 hallazgos BLOQUEANTE, afectando 41 de 49 registros (84%).
+- 18 registros coinciden exactamente con el reporte 5912 (posible duplicado con la Oferta Vigente Validada).
+- Contradiccion no resuelta sobre el tratamiento de VERSION (Instructivo pag.35 vs pag.59/64).
+- Rango de fechas 2027 no confirmado documentalmente (FECHA_ADMISION_INICIAL, ANIO_INICIO).
+- Estructura oficial PES independiente de PES aun no confirmada; el archivo fuente tiene columnas
+  adicionales (columna sin nombre + SECTOR IPSS) que se EXCLUYERON de este CSV por no pertenecer
+  a las 48 columnas oficiales del Anexo2 (pag.35-41), pero eso no valida el resto del contenido.
+
+CORRECCION DE FORMATO (20260828b): el primer CSV de prueba se genero con delimitador coma,
+tal como indica literalmente el texto del instructivo (pag.31: "CSV-UTF8 delimitado por comas").
+Un validador de estructura reporto que las 49 filas tenian "1 campo" en vez de 48. Se inspecciono
+el contenido binario de los CSV que el propio sistema PES/SIES efectivamente genera (reporte 5912
+y 5913, en 02_precarga_pes y 09_respaldo) y se confirmo que esos archivos reales usan PUNTO Y COMA
+(;) como delimitador y salto de linea simple (\n), no coma ni \r\n. Es decir, el texto del
+instructivo y el comportamiento real observado del sistema se contradicen en este punto. Este CSV
+de prueba se regenero usando el delimitador real observado (;) porque es lo que permite que un
+validador de estructura reconozca las 48 columnas. Esta contradiccion (instructivo vs. sistema
+real) queda pendiente de confirmacion formal con SIES antes de cualquier carga oficial.
+
+EXCLUSION 20260828l: se retiraron de este CSV 12 registros (INGENIERIA EN ADMINISTRACION
+DE EMPRESAS, LOGISTICA, CIBERSEGURIDAD, INFORMATICA, CONECTIVIDAD Y REDES) que el
+validador del usuario marca como "La Carrera o Programa que esta ingresando como nueva,
+ya existe en la Oferta Vigente Validada". Se probo incrementar VERSION en 1 y el error
+persistio identico, confirmando que el chequeo no distingue por VERSION. Quedan diferidos
+para consulta a SIES o revision de si algun atributo de jornada/tipo_plan/nivel los hace
+realmente distintos del programa ya vigente. Estan guardados aparte en
+REGISTROS_DIFERIDOS_DUPLICADO_VIGENTE_20260828.tsv, con el archivo institucional
+rector_v2.xlsx sin modificar (los 12 siguen presentes ahi).
+
+Este archivo:
+- Contiene 37 de los 49 registros del archivo institucional (12 diferidos, ver arriba).
+- NO debe subirse a SIES (carga ID 17451) bajo ninguna circunstancia en su estado actual.
+- NO reemplaza ni es equivalente a un archivo de Fase 8 (CSV final de carga) del proceso gobernado.
+- Contiene los valores EXACTAMENTE como estan en el archivo institucional rector_v2, sin corregir,
+  imputar ni inventar ningun dato (incluye vacios, el COD_SEDE faltante en el registro de Farmacia,
+  duraciones inconsistentes, areas incompatibles con el nivel, etc., tal como fueron detectados),
+  CON UNA EXCEPCION AUTORIZADA EXPLICITAMENTE: el registro TECNICO EN FARMACIA (SEDE CONCEPCION)
+  traia COD_SEDE vacio en el archivo institucional rector_v2; el usuario autorizo completarlo con
+  COD_SEDE=3, con base en que el mismo registro en v1 tenia COD_SEDE=3 y en que los otros 9
+  registros de SEDE CONCEPCION en v2 tienen COD_SEDE=3 sin excepcion. El usuario menciono ademas
+  una expectativa de 5 registros en Concepcion que NO coincide con el conteo verificado en el
+  archivo (10 registros con NOMBRE_SEDE=SEDE CONCEPCION, tanto en v1 como en v2) -- discrepancia
+  que queda documentada para que el usuario la revise, sin invalidar el valor COD_SEDE=3 aplicado.
+  El archivo institucional rector_v2.xlsx (fuente) NO fue modificado; el override aplica solo a
+  este CSV de prueba.
+
+Contenido: 37 filas de datos (sin encabezado), 48 columnas, delimitador PUNTO Y COMA (;), UTF-8,
+codigo de institucion excluido, formato DD/MM/AAAA para fechas, segun el procedimiento de carga
+descrito en el instructivo (pag.31-32).

@@ -1,0 +1,57 @@
+{
+  "proceso": "SIES Oferta Academica-Acceso 2027",
+  "etapa": "Etapa 1 - Oferta Academica Vigente Editada TP Adscritas",
+  "reporte_5912": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/09_respaldo/reportes_pes_validados/20260831_reporte_5912_etapa1/reporte_dinamico_5912_2026-08-31_12:34:51.csv",
+    "sha256": "7ae3a0fba6314a35edc60c78d22d50ed3ab71ee77d978999a2022d3a0c9153b3",
+    "filas": 103,
+    "columnas": 49,
+    "columna_extra": [
+      "CODIGO_IES_NUM"
+    ]
+  },
+  "carga_comparada": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20260817_155153_etapa1_areas_vigencia_fecha/CARGA_ETAPA1_OFERTA_ACADEMICA_2027_FINAL_VIGENCIA_Y_FECHA_CORRECTAS.csv",
+    "sha256": "8e5207cf1d54357af1cb2b7c144c4ba0ca3477569a97a887a6f686f2f76ec743",
+    "filas": 103,
+    "columnas": 48
+  },
+  "metodo": "Conciliacion por llave COD_SEDE+COD_CARRERA+MODALIDAD+COD_JORNADA+VERSION; comparacion campo a campo de las 48 columnas cargables.",
+  "resultado": {
+    "llaves_solo_carga": 0,
+    "llaves_solo_5912": 0,
+    "diferencias_celda": 86,
+    "filas_con_diferencias": 51,
+    "diferencias_por_campo": {
+      "VACANTES_PRIMER_SEMESTRE": 12,
+      "VACANTES_SEGUNDO_SEMESTRE": 4,
+      "FECHA_ADMISION_INICIAL": 51,
+      "RECONOCIMIENTOS_APREN_PREVIOS": 5,
+      "ENLACE_INFO_PROGRAMA": 7,
+      "VIGENCIA_CARRERA": 7
+    },
+    "identico": false
+  },
+  "vacantes": {
+    "carga": {
+      "primer_semestre": 1612.0,
+      "segundo_semestre": 687.0,
+      "total": 2299.0
+    },
+    "reporte_5912": {
+      "primer_semestre": 2360.0,
+      "segundo_semestre": 1117.0,
+      "total": 3477.0
+    }
+  },
+  "vigencia": {
+    "carga": {
+      "2": 59,
+      "1": 44
+    },
+    "reporte_5912": {
+      "2": 52,
+      "1": 51
+    }
+  }
+}

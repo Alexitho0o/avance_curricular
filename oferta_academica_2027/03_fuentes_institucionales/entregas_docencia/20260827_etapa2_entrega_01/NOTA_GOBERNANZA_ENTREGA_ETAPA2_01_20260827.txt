@@ -1,0 +1,52 @@
+NOTA DE GOBERNANZA - ENTREGA ETAPA 2 (Oferta Academica Nueva TP Adscritas) - 20260827
+
+Proceso: SIES Oferta Academica-Acceso 2027 (ano proceso 2026, ano referencia oferta 2027).
+Etapa: Etapa 2, Oferta Academica Nueva TP Adscritas.
+Ventana oficial: 21 al 28 de agosto de 2026. Fecha limite: 28 de agosto de 2026.
+Carga PES asociada: "Cargar Datos de la Oferta Academica Nueva TP Adscritas" (ID 17451).
+Reporte posterior validado: "Oferta Academica Nueva Validada TP Adscritas" (ID 5911).
+
+Archivo recibido:
+  Nombre: Oferta 2027 Etapa2_prueba_1.xlsx
+  Ruta de origen: /Users/alexi/Downloads/Oferta 2027 Etapa2_prueba_1.xlsx
+  Fecha de recepcion registrada: 2026-08-27
+  Fecha de modificacion del archivo (preservada en la copia): 2026-08-28 01:51:19
+  Tamano: 19211 bytes
+  SHA-256: b5d716bef36796f5f3c45ddfc703e96153ade4d24a7f1936cae00417674a616e
+  Copia unica encontrada en Descargas (sin duplicados ambiguos con el mismo nombre al momento de la verificacion).
+
+Clasificacion de la fuente:
+  FUENTE_INSTITUCIONAL_PENDIENTE_DE_CONFIRMACION_ESTRUCTURAL
+
+Motivo de la clasificacion:
+  No existe en el repositorio un archivo de estructura oficial de Etapa 2 descargado directamente de PES,
+  independiente del instructivo, contra el cual contrastar las 49 columnas del archivo recibido.
+  Por lo tanto no se declara aun coincidencia exacta con la estructura oficial de carga.
+
+Estado inicial:
+  NO_LISTO_PARA_CARGA. Es una propuesta institucional preliminar (denominada "_prueba_1" por quien la origina),
+  sujeta a perfilamiento, contrato de columnas, conciliacion contra Etapa 1 (reporte 5912) y validacion completa
+  antes de considerar cualquier generacion de CSV de carga.
+
+Jerarquia de fuentes aplicada (de mayor a menor autoridad):
+  1. Instructivo oficial 2027
+  2. Estructura oficial de carga Etapa 2 entregada por SIES (no disponible en este repositorio a la fecha)
+  3. Reportes oficiales PES (5912 Etapa 1 validado; posteriormente 5911)
+  4. Este archivo institucional recibido
+  5. Plantilla preliminar interna de Etapa 2 (solo antecedente de trabajo, no normativa)
+  6. Scripts y validadores
+  7. Resultados de analisis
+  8. Decisiones internas
+  9. Hipotesis o pendientes
+
+Regla de no modificacion:
+  El archivo original en Descargas no fue movido ni modificado. Esta carpeta contiene una copia identica
+  (mismo nombre, tamano, fecha de modificacion y SHA-256), verificada por comparacion de hash tras la copia.
+
+Advertencias registradas en esta entrega (a resolver en fases posteriores, no en esta nota):
+  - El archivo contiene columnas COD_CARRERA y VERSION cuyo tratamiento en Etapa 2 difiere de lo observado
+    (COD_CARRERA debe quedar vacio; VERSION no corresponde segun el manual). No se eliminan columnas ni valores
+    sin confirmar antes la estructura oficial.
+  - Contradiccion de fechas en el bloque de errores del manual (rango 2025-2026 posiblemente del ciclo anterior)
+    frente al proceso admision 2027 vigente. Pendiente de confirmacion documental antes de aplicar cualquier rango
+    a FECHA_ADMISION_INICIAL.

@@ -1,0 +1,604 @@
+REGISTRO DE BLOQUEO - ETAPA 2 OFERTA ACADEMICA NUEVA TP ADSCRITAS - 20260827
+
+Estado: NO CARGAR A SIES. No se genera archivo prefinal ni CSV de carga en esta ejecucion.
+
+=== Bloqueo 1: Estructura oficial no confirmada de forma independiente ===
+Que impide avanzar: no existe en el repositorio un archivo de estructura de carga de Etapa 2
+descargado directamente de PES (independiente del texto del instructivo). El archivo recibido
+tiene 49 columnas; 48 coinciden en nombre y orden con la tabla de estructura del instructivo
+(paginas 35-41), pero la columna 49 ("SECTOR IPSS") no pertenece a esa tabla.
+Registros que afecta: los 50 registros (la totalidad del archivo, por ser un problema estructural).
+Evidencia que falta: archivo de estructura de carga descargado desde la opcion "visualizar la
+estructura de carga" en PES (mencionada en pagina 31 del instructivo), o confirmacion escrita de
+SIES sobre la columna SECTOR IPSS.
+Quien debe responder: Docencia (gestionar la descarga desde PES) y/o SIES (confirmar columna
+SECTOR IPSS y si existe algun campo oficial no documentado en el instructivo vigente).
+Retomar desde: Fase 3 (Contrato de columnas), 04_scripts/generar_contrato_columnas_etapa2_20260827.py
+
+=== Bloqueo 2: Contradiccion interna del instructivo sobre VERSION ===
+Que impide avanzar: la pagina 35 (linea 1203) del instructivo declara VERSION "Obligatorio.
+Modificable"; el Anexo 4 (pagina 59 linea 2008 y pagina 64 linea 2256) declara "La VERSION no
+corresponde." dentro del mismo documento y aplicable al bloque de Oferta Academica Nueva.
+Registros que afecta: 40 de 50 registros tienen VERSION con valor no vacio.
+Evidencia que falta: aclaracion formal de SIES sobre el tratamiento de VERSION en la carga CSV
+de Etapa 2 (¿se carga, se deja vacio, se excluye la columna?).
+Quien debe responder: SIES (consultas.sies@mineduc.cl).
+Retomar desde: Fase 3 y Fase 5 (validacion de VERSION), mismos scripts de Fase 3/5.
+
+=== Bloqueo 3: Rango de fechas 2027 no confirmado (FECHA_ADMISION_INICIAL y ANIO_INICIO) ===
+Que impide avanzar: el instructivo solo documenta el rango 02/10/2025 - 03/04/2026 (o 04/04/2026)
+para FECHA_ADMISION_INICIAL, y "no posterior a 2026" para ANIO_INICIO, sin evidencia de un rango
+actualizado al ciclo de admision 2027 en ningun punto del documento.
+Registros que afecta: 48 registros con VIGENCIA_CARRERA=1 y FECHA_ADMISION_INICIAL informada (marcados
+REVISION_MANUAL, no se valida su vigencia de rango).
+Evidencia que falta: rango de fechas 2027 confirmado por SIES o version actualizada del instructivo.
+Quien debe responder: SIES.
+Retomar desde: Fase 5 (validacion completa), 04_scripts/validar_completa_etapa2_20260827.py
+
+=== Bloqueo 4: Posibles duplicados con la Oferta Vigente Validada (reporte 5912) ===
+Que impide avanzar: 18 de 50 registros coinciden EXACTAMENTE (sede + carrera + modalidad + jornada
++ tipo de plan + nivel + titulo) con un registro ya presente en el reporte 5912 (Etapa 1 validada).
+El instructivo advierte (Anexo4 pag.63): "La Carrera o Programa que esta ingresando como nueva, ya
+existe en la Oferta Vigente Validada."
+Registros que afecta: 18 registros (ver 06_validaciones/CONCILIACION_ETAPA2_VS_REPORTE_5912_20260827.tsv,
+columna clasificacion=POSIBLE_DUPLICADO_ETAPA1).
+Evidencia que falta: confirmacion de Docencia sobre si estos 18 registros son un error de la planilla
+de trabajo, o si corresponden a una intencion distinta (por ejemplo, gestionar vigencia de un programa
+ya cargado, lo cual no corresponde al proceso de Oferta Nueva).
+Quien debe responder: Docencia (area academica que genero el archivo institucional).
+Retomar desde: Fase 4 (conciliacion), 04_scripts/conciliar_etapa2_vs_5912_20260827.py
+
+=== Bloqueo 5: Campos obligatorios vacios / fuera de dominio detectados en Fase 5 ===
+Que impide avanzar: 102 hallazgos BLOQUEANTE distribuidos en el 100% de los registros (50/50),
+principalmente: RECONOCIMIENTOS_APREN_PREVIOS vacio con VIGENCIA_CARRERA=1 (48 filas),
+VACANTES_SEGUNDO_SEMESTRE=0 con VIGENCIA_CARRERA=1 (35 filas), inconsistencias de DURACION_TOTAL
+(7 filas), areas de destino incompatibles con el nivel (6 filas), REGIMEN fuera de dominio 1-4
+(1 fila con valor 8), entre otros. Ver detalle completo en
+06_validaciones/VALIDACION_COMPLETA_ETAPA2_20260827.tsv (columna severidad=BLOQUEANTE).
+Registros que afecta: 50 de 50 registros.
+Evidencia que falta: correccion o confirmacion de Docencia sobre cada campo senalado; no se corrige
+ni imputa ningun valor de forma automatica.
+Quien debe responder: Docencia.
+Retomar desde: Fase 5 (validacion completa) tras recibir una version corregida del archivo institucional.
+
+Instrucciones de reanudacion general:
+1. Resolver los bloqueos 1 a 4 con SIES/Docencia segun corresponda.
+2. Solicitar a Docencia una version corregida del archivo institucional que resuelva los hallazgos
+   BLOQUEANTE listados en el Excel de revision (07_resultados/reportes_pendientes_etapa2/).
+3. Volver a ejecutar Fase 1 (nueva carpeta de entrega versionada, NO sobrescribir esta) con el archivo
+   corregido, y repetir Fases 2 a 6.
+4. Solo cuando no existan hallazgos BLOQUEANTE ni contradicciones sin resolver, proceder a Fase 7
+   (prefinal) y Fase 8 (CSV final).
+
+
+--- ACTUALIZACION 20260828d ---
+Campo COD_SEDE del registro TECNICO EN FARMACIA (SEDE CONCEPCION, fila 49 de rector_v2.xlsx):
+resuelto SOLO para el CSV de prueba, mediante autorizacion explicita del usuario (28/08/2026),
+quien confirmo que corresponde a SEDE CONCEPCION (COD_SEDE=3), consistente con v1 y con los
+otros 9 registros de Concepcion en v2. El usuario senalo una expectativa de 5 registros en
+Concepcion que no coincide con el conteo verificado (10) -- pendiente de que el usuario lo
+revise; no afecta la asignacion COD_SEDE=3 ya autorizada.
+El archivo institucional rector_v2.xlsx sigue SIN modificar (el vacio persiste en la fuente).
+Este campo especifico deja de ser un bloqueante para el CSV de prueba, pero los otros 42
+hallazgos bloqueantes de la validacion completa siguen vigentes: estado general sigue NO CARGAR.
+
+
+--- ACTUALIZACION 20260828e: BRECHA DE COBERTURA DETECTADA EN EL VALIDADOR COMPLETO ---
+Al probar el CSV con un validador de estructura real, aparecieron 2 reglas del instructivo
+que el script validar_completa_etapa2_rector_v2_20260828.py NO estaba verificando (no estan
+en los 243 hallazgos ya reportados):
+
+1. CARACTERISTICAS_TIPO_PLAN debe usar solo MAYUSCULAS A-Z sin acentos, y el valor de reemplazo
+   debe ser literalmente "NO APLICA" (instructivo pag.35 y pag.59-60). El archivo institucional
+   trae "No Aplica" (mayus/minus mixta) en las 49 filas. CORREGIDO en el CSV de prueba mediante
+   normalizacion de mayusculas (mismo significado, no requiere autorizacion adicional).
+
+2. Cuando VIGENCIA_CARRERA=1, ARANCEL_ANUAL debe ser MAYOR A 0 o el sentinel -1 ("sin
+   informacion") (instructivo pag.41 y pag.65). El archivo institucional trae ARANCEL_ANUAL=0
+   (literal cero, no vacio) en las 49 filas -- no cumple "mayor a 0" ni usa el sentinel -1.
+   PENDIENTE: requiere decision del usuario (no se aplico automaticamente por tratarse de un
+   campo monetario con un valor institucional ya presente, aunque no conforme).
+
+Estas 2 reglas deben agregarse al script de validacion completa para que el conteo de
+hallazgos (actualmente 243, 43 bloqueantes) quede completo. No cambia el estado NO CARGAR.
+
+
+--- ACTUALIZACION 20260828f ---
+ARANCEL_ANUAL: confirmado que "Cuando la VIGENCIA_CARRERA es 1, el ARANCEL_ANUAL debe ser
+mayor a 0 o sin informacion (-1)" aplica en Etapa 2 (aparece textualmente en la seccion
+"Errores de carga Oferta Academica Nueva" del instructivo, ademas de en Etapa 1 y Etapa 3).
+El usuario autorizo explicitamente reemplazar ARANCEL_ANUAL=0 por -1 en las 49 filas del
+CSV de prueba (28/08/2026). El archivo institucional rector_v2.xlsx sigue SIN modificar
+(el 0 persiste en la fuente; el arancel real sigue pendiente de que la institucion lo
+defina, probablemente en la etapa de Aranceles). El campo deja de ser bloqueante para el
+CSV de prueba; el resto de los 42 hallazgos bloqueantes de la validacion completa siguen
+vigentes. Estado general sigue NO CARGAR.
+
+
+--- ACTUALIZACION 20260828g ---
+VALOR_MATRICULA_ANUAL: cambiado de 0 a -1 en las 49 filas del CSV de prueba, como
+consecuencia directa de haber marcado ARANCEL_ANUAL=-1 (indefinido). El instructivo lo
+liga explicitamente: "Si la carrera no cuenta con un arancel definido, indicar valor
+matricula como indefinido (-1)". No se pidio autorizacion nueva porque es la misma
+decision ya autorizada por el usuario para ARANCEL_ANUAL, aplicada a su campo companero.
+COSTO_TITULACION y VALOR_CERTIFICADO_DIPLOMA siguen en 0 sin tocar -- el instructivo no
+liga estos dos explicitamente al mismo sentinel -1; si el validador los marca en la
+proxima carga, se revisara la cita exacta antes de tocarlos.
+El archivo institucional rector_v2.xlsx sigue SIN modificar. Estado general sigue NO CARGAR.
+
+
+--- ACTUALIZACION 20260828h/i ---
+AREA_* vs AREA_ACTUAL: corregidas 6 filas con COD_NIVEL_CARRERA=1 (TNS) donde AREA_ACTUAL
+estaba declarado (1 o 10) pero la columna binaria correspondiente (AREA_ADMIN_DERECHO o
+AREA_TECNO_INFO_COMUNICA) seguia en 0. Correccion de consistencia interna del mismo
+registro, sin autorizacion adicional (analoga a CARACTERISTICAS_TIPO_PLAN).
+NOTA DE AUTOCORRECCION: un primer intento aplico el cambio sin filtrar por
+COD_NIVEL_CARRERA y por error toco tambien 21 filas con COD_NIVEL_CARRERA=2, violando
+la regla opuesta del instructivo (pag.60-61: para nivel=2 'las areas de destino deben
+ser 0'). Se detecto de inmediato, se revirtio, y se verifico que las 21 filas nivel=2
+quedaron con las 10 columnas AREA_* en 0. Se documenta para trazabilidad completa.
+
+DUPLICADOS VS OFERTA VIGENTE VALIDADA (18 registros, POSIBLE_DUPLICADO_ETAPA1): se
+reviso el Anexo 5 del instructivo (codigo unificado = Institucion+Sede+Carrera+Jornada+
+Version). Confirmado que estos 18 registros tienen VERSION distinta a la que aparece en
+el reporte 5912 para la misma combinacion sede+carrera+modalidad+jornada+tipo_plan+
+nivel+titulo -- el instructivo explica que un cambio de VERSION corresponde a un
+programa nuevo (Codigo Unificado distinto), y que el procedimiento correcto es dejar el
+programa original como vigencia 2 y el nuevo como vigencia 1 en la plataforma. El
+usuario confirmo que son carreras nuevas con atributo distinto a las vigentes. El CSV
+ya transporta el VERSION real del archivo institucional sin alterarlo -- no hay cambio
+de formato que aplicar aqui. Si el validador local sigue marcando estos registros como
+"ya existe en la Oferta Vigente Validada", es una revision que debe resolverse en la
+plataforma SIES (marcando vigencia=2 al programa anterior) o confirmarse con SIES, no
+es algo que se pueda corregir en el CSV. Se deja reclasificado en la nota de gobernanza
+como "diferencia de VERSION justificada por Anexo5, pendiente de accion en plataforma",
+en lugar de "posible duplicado sin explicar".
+
+
+--- ACTUALIZACION 20260828j: ANIO_INICIO y explicacion final de los 12 "duplicados" ---
+El usuario pregunto si ANIO_INICIO debe ser 2027 o 2026 para las carreras que el
+validador marca como "ya existe en la Oferta Vigente Validada", planteando que podria
+ser el atributo que las distingue como nuevas. Se comparo v2 contra el reporte 5912
+para los 12 registros marcados:
+
+HALLAZGO: en los 12 casos, el ANIO_INICIO de v2 coincide EXACTAMENTE con el ANIO_INICIO
+ya registrado en 5912 para la misma familia de programa (misma carrera, MODALIDAD=3,
+JORNADA=4), y no con 2027. Ejemplos: INGENIERIA EN ADMINISTRACION DE EMPRESAS
+ANIO_INICIO=2024 en v2 y en 5912 (versiones 1 y 2); INGENIERIA EN CIBERSEGURIDAD
+ANIO_INICIO=2021 en v2 y version3=2021 en 5912; INGENIERIA EN CONECTIVIDAD Y REDES
+ANIO_INICIO=2019 en v2 y version2=2019 en 5912 (vigencia=1). Esto confirma que estos 12
+registros son actualizaciones de VERSION de programas YA EXISTENTES desde hace anios
+(2019-2024), no programas nuevos desde cero. No corresponde cambiar su ANIO_INICIO a
+2027 -- seria inventar/alterar un dato que ya esta correcto en la fuente.
+
+EXPLICACION DEL BLOQUEO "ya existe en la Oferta Vigente Validada": el Anexo5 del
+instructivo describe exactamente este escenario -- "Cambio de modalidad, duracion, tipo
+de carrera, nivel programa. En este caso, modifica Version, por lo que modifica Codigo
+Unificado... no se requiere oficio... sino solo operar en la plataforma colocando el
+programa original como vigencia 2 y el nuevo como vigencia 1." En los 12 casos, la
+version anterior de MODALIDAD=3/JORNADA=4 sigue con VIGENCIA_CARRERA=1 en el reporte
+5912 (vigente validada); mientras esa version anterior no se cambie a vigencia=2 en la
+plataforma (accion de Etapa 1, Oferta Academica Vigente Editada), el sistema seguira
+viendo un conflicto al intentar cargar la nueva version como vigencia=1 en Etapa 2. Esta
+NO es una correccion de contenido del CSV -- es una accion operativa previa/paralela en
+la plataforma SIES, fuera del alcance de este archivo. Se documenta como pendiente
+operativo, no como bloqueante de formato.
+
+HALLAZGO NUEVO (requiere atencion aparte): 21 registros del archivo v2 (los que NO
+estan marcados como duplicado) tienen ANIO_INICIO=2027. El instructivo (seccion
+"Errores de carga Oferta Academica Nueva", Etapa 2) dice explicitamente "El campo
+ANIO_INICIO no puede ser posterior a 2026." Esto entra en conflicto directo con esos 21
+registros, y se conecta con la contradiccion de fechas 2025-2026 vs 2027 ya documentada
+como NO_RESUELTA desde el diagnostico original (Fase 1). NO se modifico nada; queda
+registrado para que el usuario lo revise, ya que probablemente el proximo intento de
+carga tambien marque estos 21 registros con un nuevo error de ANIO_INICIO.
+
+
+--- ACTUALIZACION 20260828k: prueba de incremento de VERSION + correccion de mi propia guia anterior ---
+A pedido del usuario, se incremento en 1 el VERSION de las 12 filas marcadas como
+"ya existe en la Oferta Vigente Validada", solo como prueba, sin modificar
+rector_v2.xlsx. Se le advirtio previamente con evidencia (otros registros con VERSION
+ya distinto al vigente siguen marcados) que es poco probable que resuelva el error.
+
+CORRECCION IMPORTANTE a la guia dada en la actualizacion 20260828j: se asumio que las
+12 filas duplicadas estaban todas en MODALIDAD=3/JORNADA=4 (CASA CENTRAL). Al mapear
+las 12 filas exactas para este incremento de VERSION, se detecto que 2 de las 12
+(INGENIERIA EN CIBERSEGURIDAD e INGENIERIA EN ADMINISTRACION DE EMPRESAS, filas_excel
+47 y 48) estan en MODALIDAD=1/JORNADA=2, no en 3/4. Se reviso el 5912 para esa
+combinacion y AMBOS registros existentes ahi (VERSION=1 y VERSION=3 para Ciberseguridad;
+VERSION=1 para Administracion de Empresas) YA estan en VIGENCIA_CARRERA=2 (cerrados),
+no en vigencia=1. Esto significa que el chequeo "ya existe en la Oferta Vigente
+Validada" se dispara incluso cuando NO hay ningun registro vigencia=1 en conflicto --
+es decir, la recomendacion anterior (cerrar la version vigencia=1 en Etapa 1 para
+liberar el error) puede no ser suficiente por si sola para estos 2 casos, porque no hay
+nada que cerrar: el conflicto parece ser con el Codigo Unificado historico (sede+
+carrera+modalidad+jornada), exista o no una version actualmente vigente=1. Pendiente de
+confirmar con SIES si aplica un tratamiento distinto para este caso.
+
+
+--- ACTUALIZACION 20260828l ---
+A pedido del usuario, se excluyeron del CSV de prueba los 12 registros marcados por su
+validador como "ya existe en la Oferta Vigente Validada" (5 carreras: Administracion de
+Empresas, Logistica, Ciberseguridad, Informatica, Conectividad y Redes), tras confirmar
+con la prueba de VERSION+1 (20260828k) que el error no depende de VERSION. Quedan
+diferidos para consulta a SIES u otra resolucion, guardados en
+REGISTROS_DIFERIDOS_DUPLICADO_VIGENTE_20260828.tsv con su motivo y evidencia. El CSV de
+prueba ahora tiene 37 de 49 filas. El archivo institucional rector_v2.xlsx NO se
+modifico -- los 12 registros siguen en la fuente, solo se excluyeron de este CSV de
+prueba. Estado general sigue NO CARGAR (persisten otros hallazgos bloqueantes sobre
+las 37 filas restantes, ademas del pendiente de ANIO_INICIO=2027 en 21 registros).
+
+--- ACTUALIZACION 20260828m ---
+Se preparo un correo de consulta formal a SIES (consultas.sies@mineduc.cl) sobre los 12
+registros diferidos en 20260828l, mas un Excel de respaldo con el detalle fila a fila de
+las 48 columnas oficiales de cada uno de los 12 registros contra su registro exacto
+coincidente en el reporte 5912 (Oferta Vigente Validada). Ambos archivos NO se han enviado
+todavia; quedan en 07_resultados/borradores_prueba_no_oficiales/ y copia en el Escritorio,
+pendientes de revision del usuario (el correo requiere completar nombre/cargo/telefono
+antes de enviarse).
+
+CORRECCION A UNA RECOMENDACION PROPIA ANTERIOR: al construir el Excel de respaldo se uso el
+campo coincidencia_5912 de CONCILIACION_ETAPA2_VS_REPORTE_5912_20260828_rector_v2.json para
+los 12 casos, y se encontro que 7 de los 12 registros coincidentes en el 5912 YA tienen
+VIGENCIA_CARRERA=2 (cerrados), no VIGENCIA_CARRERA=1 como se habia asumido implicitamente en
+una recomendacion anterior de "cerrar la version antigua via Etapa 1 para liberar el
+codigo unificado". Esa recomendacion es insuficiente para al menos 7 de los 12 casos, ya que
+el sistema rechaza el ingreso igual aunque el registro coincidente ya este cerrado. Este
+hallazgo se incorporo como pregunta abierta a SIES (consulta 3 del correo) en lugar de
+presentarse como solucion. No se tomo ninguna accion sobre la fuente institucional
+rector_v2.xlsx.
+
+Archivos generados:
+- 07_resultados/borradores_prueba_no_oficiales/CORREO_CONSULTA_SIES_12_CARRERAS_20260828.md
+- 07_resultados/borradores_prueba_no_oficiales/OFERTA_ACADEMICA_COMPARACION_ETAPA1_VS_ETAPA2_12_CASOS_20260828.xlsx
+  (copia identica, mismo SHA-256, en el Escritorio del usuario)
+
+--- ACTUALIZACION 20260828n ---
+IMPORTANTE: antes de construir el archivo de Etapa 1 (cerrar antiguas a vigencia=2) autorizado
+por el usuario para los 5 casos con coincidencia vigencia=1, se hizo una comparacion columna por
+columna (no solo los 7 campos de la llave diagnostica) entre cada uno de los 12 registros y su
+coincidencia en el 5912, revisando especificamente los campos "estructurales" que segun el Anexo5
+son los que justifican un cambio de VERSION (modalidad, jornada, tipo_plan, duracion_estudios,
+duracion_titulacion, duracion_total, regimen, duracion_regimen, nivel_global, nivel_carrera,
+nombre_titulo, anio_inicio).
+
+Resultado: de los 12 registros, SOLO 4 tienen un cambio estructural real (fila 32, 33, 34, 47:
+Ciberseguridad e Informatica y Conectividad y Redes en mod3/jor4/tipoplan3, y Ciberseguridad en
+mod1/jor2/tipoplan1) -- difieren en REGIMEN, DURACION_REGIMEN y/o ANIO_INICIO. Estos 4 SI son
+coherentes con el criterio del Anexo5 para justificar una VERSION nueva, y los 4 ya estan con
+vigencia=2 en su coincidencia del 5912 (ya cerrados) -- siguen siendo la pregunta abierta a SIES
+(consulta 3 del correo), porque el sistema los rechaza igual estando la antigua ya cerrada.
+
+Los otros 8 registros (fila 30, 31, 36, 37, 39, 42, 43, 48) NO tienen ningun cambio estructural
+respecto a su coincidencia en el 5912 -- modalidad, jornada, tipo_plan, duracion, regimen, nivel,
+titulo y anio_inicio son identicos. La unica "diferencia" superficial encontrada en 4 de ellos
+(36, 37, 39, 42) es una diferencia de mayusculas en CARACTERISTICAS_TIPO_PLAN ("No Aplica" vs
+"NO APLICA"), no un cambio real. En el caso de la fila 43 (Logistica) se verificaron ademas
+diferencias reales pero NO estructurales: VACANTES_PRIMER_SEMESTRE, VACANTES_SEGUNDO_SEMESTRE,
+RECONOCIMIENTOS_APREN_PREVIOS, VALOR_MATRICULA_ANUAL y ARANCEL_ANUAL cambiaron respecto al 5912.
+
+CONCLUSION: estos 8 registros no son "carreras nuevas" ni "nuevas versiones" en el sentido del
+Anexo5 -- son el MISMO programa (mismo Codigo Unificado potencial) con datos operacionales
+actualizados (vacantes, arancel, matricula) a los que la institucion les asigno, aparentemente sin
+justificacion normativa, un numero de VERSION distinto (en el caso de Ciberseguridad fila 39,
+incluso un VERSION MENOR al ya vigente: propuesto 2 vs actual 3). El mensaje de error del sistema
+"ya existe en la Oferta Vigente Validada" es, para estos 8 casos, correcto: tecnicamente ya existen.
+
+Por lo anterior, NO se construyo el archivo de cierre-de-antiguas/apertura-de-nuevas para los 5
+casos autorizados por el usuario (36,37,39,42,43), porque los 5 caen en este grupo de "sin cambio
+estructural real" y aplicarles el patron del Anexo5 (cerrar y reabrir con nueva version) no
+corresponde -- lo que corresponde, si la intencion es actualizar vacantes/arancel/matricula, es
+una edicion por Etapa 1 del registro YA EXISTENTE, manteniendo su VERSION y vigencia originales.
+Se le presento este hallazgo al usuario para que decida como proceder antes de construir nada.
+
+--- ACTUALIZACION 20260828o ---
+Se probo en el validador real del usuario el CSV aislado con SOLO los 4 registros del Grupo A
+(OFERTA_ACADEMICA_ETAPA2_GRUPO_A_4_REGISTROS_PRUEBA_NO_OFICIAL_20260828.csv): Ingenieria en
+Ciberseguridad, Informatica y Conectividad y Redes (no presencial/a distancia/especial) e
+Ingenieria en Ciberseguridad (presencial/vespertina/regular). Los 4 tienen: (a) un cambio
+estructural real respecto a su version anterior (regimen/duracion_regimen/anio_inicio), y
+(b) la version anterior YA esta en vigencia=2 (cerrada) segun el reporte 5912. Es decir,
+cumplen todas las condiciones que el Anexo5 exige para declarar una version nueva.
+
+Resultado: los 4 fueron rechazados de todas formas, con el mismo mensaje "La Carrera o Programa
+que esta ingresando como nueva, ya existe en la Oferta Vigente Validada", uno por cada linea.
+
+CONCLUSION REFORZADA: el chequeo de "ya existe" en Etapa 2 no depende de VERSION ni de
+VIGENCIA_CARRERA de ningun registro existente -- rechaza cualquier combinacion
+sede+carrera+modalidad+jornada+tipo_plan+nivel+titulo que YA haya existido alguna vez en el
+sistema para esta institucion, sin importar si esa version esta abierta, cerrada, o si la
+nueva declara un cambio estructural real. Esto aplica ahora confirmado empiricamente a los 12
+registros originales (5 con antigua abierta, 7 con antigua cerrada -- de los cuales 4 ya se
+probaron aislados y confirmaron el rechazo). Refuerza la hipotesis de la consulta 1 del correo
+a SIES: que este tipo de cambio de version de un programa ya existente probablemente debe
+declararse por Etapa 1 (Cargar Oferta Academica Vigente Editada, carga ID 17449) y no por
+Etapa 2 (Oferta Academica Nueva, carga ID 17451), que parece reservada estrictamente a
+combinaciones sede+carrera+modalidad+jornada+tipo_plan+nivel+titulo sin historial previo.
+
+No se construyo ningun archivo de Etapa 1 todavia -- no se ha confirmado la estructura oficial
+(Anexo1) de esa carga en este proyecto, y no hay evidencia de que sea la via correcta hasta
+tener confirmacion de SIES. Se actualiza el correo de consulta con este resultado antes de
+enviarlo.
+
+--- ACTUALIZACION 20260828p ---
+A pedido del usuario, se cambio el adjunto del correo de consulta a SIES: en vez del Excel de
+comparacion, se generaron dos CSV con los 12 registros diferidos (Grupo A + Grupo B juntos),
+en el formato exacto de Etapa 2 (48 columnas oficiales, delimitador ;, mismas correcciones de
+formato ya aplicadas -- mayusculas, sentinel -1 -- sin cambios de VERSION ni VIGENCIA_CARRERA):
+- OFERTA_ACADEMICA_ETAPA2_12_CASOS_CON_TITULOS_PARA_SIES_20260828.csv (con fila de encabezado)
+- OFERTA_ACADEMICA_ETAPA2_12_CASOS_SIN_TITULOS_PARA_SIES_20260828.csv (formato identico al de carga)
+El Excel de comparacion (OFERTA_ACADEMICA_COMPARACION_ETAPA1_VS_ETAPA2_12_CASOS_20260828.xlsx)
+pasa a ser un documento de uso INTERNO (para que las areas de la institucion entiendan la
+diferencia entre Grupo A y Grupo B), no se envia a SIES. El correo de consulta se actualiza
+para referenciar los dos CSV como adjuntos en vez del Excel.
+
+--- ACTUALIZACION 20260828r: RESPUESTA OFICIAL DE SIES ---
+El usuario recibio respuesta de consultas.sies@mineduc.cl al correo de consulta sobre los 12
+registros. Texto de la respuesta (verbatim, atribuido a SIES):
+
+"1. El hecho de que cambien la version dentro de los programas nuevos no implica que les va a
+permitir cargar.
+2. Los cambios en la duracion de regimen no afectan la version del programa, por ende, no son
+un programa nuevo. Los cambios en duracion de estudios y duracion total si afectan.
+3. La vigencia 2 no significa un programa cerrado, es para los programas que se encuentran
+vigentes, pero sin recibir estudiantes nuevos. La validacion funciona tanto con vigencia 1
+como 2, por lo que dicho programa si querian impartirlo en 2027, se debio reportar con
+vigencia 1 en la primera etapa.
+Por ultimo, para corregir la vigencia de los programas de la etapa 1, deberan enviar un oficio
+solicitando la modificacion y un Excel con la estructura de Oferta Academica con todos los
+campos completos."
+
+INTERPRETACION Y CORRECCIONES A NUESTRO ANALISIS PREVIO:
+
+(a) Confirma lo que ya habiamos verificado empiricamente: VERSION+1 solo no cambia el resultado
+(punto 1 de SIES).
+
+(b) CORRIGE nuestra clasificacion "Grupo A" (20260828n): habiamos considerado como "cambio
+estructural real" que justifica version nueva a diferencias en REGIMEN, DURACION_REGIMEN y/o
+ANIO_INICIO. SIES aclara que SOLO cambios en DURACION_ESTUDIOS o DURACION_TOTAL constituyen un
+programa nuevo -- DURACION_REGIMEN NO cuenta. Revisando los 4 registros del Grupo A (fila 32,
+33, 34, 47), NINGUNO tiene diferencia en DURACION_ESTUDIOS ni DURACION_TOTAL frente a su
+coincidencia en el 5912 (solo difieren en REGIMEN/DURACION_REGIMEN/ANIO_INICIO). CONCLUSION:
+el Grupo A tampoco calificaba como "version nueva" -- el rechazo tambien fue correcto para
+esos 4 casos. Los 12 registros originales, sin excepcion, no son programas nuevos.
+
+(c) CORRIGE nuestra interpretacion de VIGENCIA_CARRERA=2: no significa "programa cerrado/dado
+de baja", sino "programa vigente que no recibe estudiantes nuevos". La validacion de "ya
+existe" aplica igual con vigencia 1 o 2 (confirmado tambien empiricamente en la prueba aislada
+del Grupo A, actualizacion 20260828o).
+
+(d) CAMINO CORRECTO SEGUN SIES: los programas que la institucion queria seguir impartiendo en
+2027 debieron reportarse con VIGENCIA_CARRERA=1 en la Etapa 1 (Cargar Oferta Academica Vigente
+Editada, carga ID 17449), no como "nuevos" en Etapa 2. Para los 7 registros cuya coincidencia
+en el 5912 esta en vigencia=2, corresponde corregir la vigencia via Etapa 1, lo que SIES exige
+respaldar con: (i) un OFICIO formal solicitando la modificacion, y (ii) un Excel con la
+ESTRUCTURA COMPLETA de Oferta Academica (Anexo1, todos los campos, no solo los que cambian).
+
+PENDIENTE: aun no se confirma en este proyecto la estructura oficial del Anexo1 (columnas de
+Etapa 1) ni el formato exacto del Excel que exige SIES para la correccion de vigencia. No se
+construira ningun archivo de Etapa 1 ni el Excel de respaldo hasta confirmar esa estructura
+contra el instructivo, y hasta que el usuario defina el contenido del oficio (quien lo firma,
+a que programas exactos aplica la correccion de vigencia).
+
+--- ACTUALIZACION 20260828s ---
+Se confirmo contra el instructivo (Anexo1, pag.18-19 y estructura final del anexo, pag.23 en
+adelante) que: (a) la estructura de carga de Etapa1 es identica a la de Etapa2 (mismas 48
+columnas oficiales, mismo orden), (b) el oficio de Rectificacion debe dirigirse a Mauricio
+Cornejo (Jefe de Division de Informacion y Acceso, mauricio.cornejo@mineduc.cl) con copia a
+consultas.sies@mineduc.cl y rodrigo.rolando@mineduc.cl, y (c) el instructivo exige que la
+solicitud de Rectificacion se haga "antes del cierre de la primera etapa" (ventana 13-19 agosto
+2026, ya vencida al momento de esta consulta) -- se le informo al usuario esta discrepancia de
+plazo, indicando que la respuesta de SIES del mismo dia sugiere que igual sera procesada.
+
+Se genero el Excel de Rectificacion (RECTIFICACION_ETAPA1_VIGENCIA_7_PROGRAMAS_20260828.xlsx),
+a peticion explicita del usuario de que sea un documento limpio sin notas (va directo a SIES):
+7 registros (los que en el 5912 estan en vigencia=2 y se quiere corregir a vigencia=1), 48
+columnas con encabezado, datos identicos a los ya validados en el 5912, unico cambio aplicado
+VIGENCIA_CARRERA 2->1 con la celda resaltada en amarillo. No se toco ningun otro campo. Fuente
+5912 y rector_v2.xlsx no modificadas -- este Excel es un artefacto nuevo derivado, no una
+edicion de ninguna fuente.
+
+Pendiente: el usuario debe redactar y enviar el oficio a Mauricio Cornejo (con copias) adjuntando
+este Excel. No se ha redactado el oficio todavia -- falta el nombre y cargo de quien lo firma.
+
+--- ACTUALIZACION 20260828u ---
+El usuario observo, con razon, que el Excel de Rectificacion de 7 programas era incompleto: si
+ninguno de los 12 es programa nuevo y todos requieren modificaciones sobre lo ya vigente,
+entonces los 12 deben ir en un solo oficio y un solo Excel. Se hizo el analisis completo de los
+12 registros, campo por campo (48 columnas), clasificando cada diferencia contra el 5912 segun
+la lista de campos MODIFICABLES / NO MODIFICABLES de Etapa 1 (instructivo pag.18-19).
+
+ERROR PROPIO CORREGIDO: en el Excel anterior (de 7 programas) solo se habia corregido
+VIGENCIA_CARRERA, asumiendo que era el unico cambio. El analisis completo mostro que esos
+mismos 7 registros tambien cambian en VACANTES_PRIMER_SEMESTRE (7/7), FECHA_ADMISION_INICIAL
+(vacia en el 5912 -> 02/10/2026), ENLACE_INFO_PROGRAMA (vacio en el 5912 -> link real a la
+malla) y, en 4 de ellos, REGIMEN y DURACION_REGIMEN. El archivo de 7 queda SIN EFECTO.
+
+HALLAZGO RELEVANTE - campos NO MODIFICABLES que rector_v2 traia distintos y que NO se aplican
+(se mantiene el valor del 5912, porque en una rectificacion de Etapa 1 se edita el registro
+existente, no se crea una version nueva):
+ - COD_CARRERA: vacio en rector_v2 en las 12 filas -> se usa el del 5912 (1, 3, 46, 76, 77).
+ - VERSION: rector_v2 traia versiones incrementadas para Etapa 2 en 11 de 12 filas -> se usa la
+   VERSION vigente del 5912.
+ - CARACTERISTICAS_TIPO_PLAN: "No Aplica" vs "NO APLICA" (12/12) -> se usa la del 5912.
+ - ANIO_INICIO: difiere en 2 filas (Ciberseguridad 3/4/3 y 1/2/1) -> no es modificable en
+   Etapa 1, se mantiene la del 5912.
+
+DECISION DEL USUARIO SOBRE MONTOS (autorizada explicitamente): ARANCEL_ANUAL y
+VALOR_MATRICULA_ANUAL vienen en 0 en las 12 de 12 filas de rector_v2 (y en las 49 del archivo
+completo), mientras el 5912 tiene montos reales vigentes (matricula 185000; arancel entre
+1995000 y 2390000 segun carrera). Se determino que el 0 es un campo sin llenar en la planilla
+institucional y no una decision de tarifa. El usuario autorizo MANTENER los montos del 5912.
+No se marcan como celda modificada, porque no cambian.
+
+FORMATO DE FECHA: el instructivo especifica DD/MM/AAAA para FECHA_ADMISION_INICIAL (pag. de
+estructura Anexo1), pero el reporte 5912 que exporta el propio sistema usa DD-MM-AAAA en las 44
+filas que la traen informada. Otra discrepancia instructivo-vs-sistema, del mismo tipo que la ya
+documentada del delimitador. En el Excel se escribio como fecha real de Excel con formato
+DD/MM/YYYY (el del instructivo); para las 5 filas donde el 5912 ya traia la misma fecha en
+DD-MM-AAAA, se normalizo el formato pero NO se marco como cambio, porque la fecha es la misma.
+
+ARCHIVO GENERADO: RECTIFICACION_ETAPA1_12_PROGRAMAS_20260828.xlsx (48 columnas con encabezado,
+12 filas, celdas modificadas marcadas en amarillo, numericos como numero real). Verificado:
+12/12 con VIGENCIA_CARRERA=1, 0 celdas vacias (el instructivo exige todos los campos
+completos), 12 claves unicas COD_CARRERA+MODALIDAD+JORNADA+TIPO_PLAN+VERSION, montos presentes
+en las 12 filas. Fuentes 5912 y rector_v2.xlsx NO modificadas.
+
+PENDIENTE: redactar el oficio a Mauricio Cornejo (mauricio.cornejo@mineduc.cl) con copia a
+consultas.sies@mineduc.cl y rodrigo.rolando@mineduc.cl -- falta el nombre y cargo de quien firma.
+
+--- ACTUALIZACION 20260828v: REVISION DE LOS 37 YA CARGADOS EN ETAPA 2 ---
+El usuario pregunto si la carga de 37 registros (Etapa 2) queda sin necesidad de modificacion.
+Se reviso el CSV efectivamente cargado. Estado:
+
+OK: VIGENCIA_CARRERA=1 en las 37; delimitador, encabezados y estructura correctos; sin las 12
+filas conflictivas.
+
+PENDIENTE 1 - ANIO_INICIO=2027 en 21 de las 37 filas. El instructivo, en la seccion de errores
+de carga de Oferta Academica Nueva (Etapa 2), dice literalmente: "El campo ANIO_INICIO no puede
+ser posterior a 2026." Las 21 filas afectadas son: Ingenieria y Tecnico en Comercio Exterior,
+Tecnico Veterinario en Clinica de Animales (x2), Tecnico en Odontologia, Tecnico en Imagenologia
+(x2), Ingenieria y Tecnico en Construccion (x2 cada uno), Ingenieria y Tecnico en Inteligencia
+Artificial, Ingenieria y Tecnico en Operaciones Mineras, Ingenieria en Arquitectura Cloud (x2),
+Ingenieria y Tecnico en Electricidad (x2 cada uno). Esto conecta con la contradiccion de fechas
+2025-2026-vs-2027 ya documentada desde el diagnostico original y AUN NO RESUELTA. Se le indico
+al usuario que verifique en Historial (Etapa 2) si la carga quedo "Finalizado" o "Con errores de
+datos", porque si el sistema aplica esta validacion, esas 21 filas no habrian entrado.
+
+PENDIENTE 2 - Montos no declarados. En las 37 filas: ARANCEL_ANUAL=-1 y VALOR_MATRICULA_ANUAL=-1
+(sentinel "sin informacion", autorizado por el usuario y valido para Etapa 2), COSTO_TITULACION=0
+y VALOR_CERTIFICADO_DIPLOMA=0. Estos montos NO quedan definidos con la carga de Etapa 2: se
+declaran en la Etapa 3 (Proceso de Definicion de Arancel TP, carga ID 17454), cuya ventana segun
+el instructivo es del 07 al 11 de septiembre de 2026. El instructivo recomienda iniciar esa etapa
+descargando "Oferta Academica Vigente y Nueva Validada", que consolida Etapa 1 + Etapa 2 en un
+solo archivo. Es decir: los 37 programas nuevos quedaran sin arancel ni matricula si no se
+completa la Etapa 3 en esa ventana.
+
+No se modifico ningun archivo en esta revision.
+
+--- ACTUALIZACION 20260828w: CONFIRMACION EMPIRICA DE LA REGLA DE SIES ---
+Revisando las 37 filas cargadas en Etapa 2 contra el 5912, se encontro que 6 de ellas SI
+coinciden con un registro existente en la Oferta Vigente Validada segun la llave diagnostica
+(sede+carrera+modalidad+jornada+tipo_plan+nivel+titulo), y sin embargo el sistema las ACEPTO:
+ - TECNICO EN CONECTIVIDAD Y REDES (3/4/1)
+ - TECNICO EN CIBERSEGURIDAD (3/4/1)
+ - TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS (3/4/1)
+ - TECNICO EN ADMINISTRACION DE EMPRESAS (3/4/1)
+ - TECNICO EN LOGISTICA (3/4/1)
+ - TECNICO EN ADMINISTRACION DE EMPRESAS (1/2/1)
+En las 6, DURACION_ESTUDIOS y DURACION_TOTAL cambian de 5 a 4 semestres respecto del 5912.
+
+Esto CONFIRMA empiricamente, sobre datos reales de la propia institucion, la regla que SIES
+entrego el 28/08/2026: "Los cambios en la duracion de regimen no afectan la version del
+programa... Los cambios en duracion de estudios y duracion total si afectan." El criterio se
+cumple sin excepcion en las 49 filas del archivo:
+ - 6 registros CON cambio en duracion de estudios/total -> aceptados como version nueva.
+ - 12 registros SIN cambio en duracion de estudios/total -> rechazados con "ya existe".
+Queda cerrado el analisis: la clasificacion Grupo A / Grupo B que se habia hecho el 20260828n
+era incorrecta en su criterio (usaba regimen/duracion_regimen/anio_inicio), y la regla correcta
+es exclusivamente duracion de estudios / duracion total.
+
+ANIO_INICIO - CORRECCION A LA ALERTA 20260828v: se habia levantado como pendiente que 21 de las
+37 filas tienen ANIO_INICIO=2027 contra la regla del instructivo ("no puede ser posterior a
+2026", seccion Errores de carga Oferta Academica Nueva, lineas 2021-2275). El usuario informa
+que la carga NO arrojo error, y la definicion del campo en la estructura Anexo2 dice
+"Corresponde al año en que el programa inicio actividades academicas" -- para programas que
+inician en 2027 ese es el valor correcto. Se descarta como hallazgo a corregir y se registra
+como otra discrepancia entre la letra del instructivo y el comportamiento real del sistema, del
+mismo tipo que la del delimitador y la del formato de fecha. NO requiere accion.
+
+MONTOS - confirmado con el usuario: Etapa 2 solo informa el programa; ARANCEL_ANUAL,
+VALOR_MATRICULA_ANUAL, COSTO_TITULACION, VALOR_CERTIFICADO_DIPLOMA y FORMATO_VALOR se declaran
+en la Etapa 3 (Definicion de Arancel TP, carga ID 17454, ventana 07 al 11 de septiembre de
+2026). El -1 cargado en Etapa 2 es valido. NO requiere accion en Etapa 2.
+
+LA CARGA DE ETAPA 2 NO MODIFICO NADA DE ETAPA 1: COD_CARRERA va vacio en las 37 filas (como
+exige el instructivo para esta etapa) y los 6 registros con duracion modificada crean una
+version nueva sin alterar el registro de Etapa 1, que permanece intacto en el 5912.
+
+HUECO DE GOBERNANZA DETECTADO: el proyecto NO tiene descargado ningun reporte de "Oferta
+Academica Nueva Validada" (Etapa 2). El unico reporte validado del sistema que existe en el
+proyecto es el 5912 (Etapa 1). Todo lo afirmado sobre "las 37 cargadas" se baso en el CSV que
+la propia institucion genero y subio (OFERTA_ACADEMICA_ETAPA2_RECTOR_V2_CSV_PRUEBA_NO_OFICIAL_
+20260828.csv), no en la confirmacion del sistema. Se recomienda descargar el reporte de Etapa 2
+validada y gobernarlo en 09_respaldo/reportes_pes_validados/ con manifiesto y SHA-256, igual que
+se hizo con el 5912, para verificar exactamente que registros quedaron efectivamente cargados.
+
+--- ACTUALIZACION 20260828x: ARCHIVO CONGELADO DE LA CARGA ETAPA 2 INCORPORADO AL PROYECTO ---
+El usuario entrego el archivo efectivamente cargado en la Etapa 2 (ID 17451):
+"28-08-2026_13-17-17_Oferta-Académica-TP-Nueva-2027.csv", nombre generado por el sistema.
+
+VERIFICACION DE IDENTIDAD: se compararon tres copias independientes y las tres resultaron byte a
+byte identicas, con SHA-256 afa38755cb5e449011ab226588505238aa41c07acdb65acf31452abc6eb3d38f y
+12548 bytes: (1) el archivo en la carpeta Downloads del usuario, (2) la copia generada por el
+proyecto en 07_resultados/borradores_prueba_no_oficiales/OFERTA_ACADEMICA_ETAPA2_RECTOR_V2_CSV_
+PRUEBA_NO_OFICIAL_20260828.csv, y (3) la copia que el usuario entrego para revision. Es decir, lo
+que se cargo al sistema es exactamente lo que el proyecto genero, sin ediciones intermedias.
+
+VALIDACION ESTRUCTURAL: 37 filas, las 37 con 48 campos exactos; delimitador ';'; UTF-8; salto de
+linea simple sin CRLF; sin encabezado; sin linea final vacia; COD_CARRERA vacio en las 37 (como
+exige el instructivo para esta etapa); VIGENCIA_CARRERA=1 en las 37; DURACION_ESTUDIOS +
+DURACION_TITULACION = DURACION_TOTAL en las 37; SEMESTRES_RECONOCIDOS dentro de 0-14 en las 37;
+ninguna fila con COD_NIVEL_CARRERA=2 tiene AREA_* distinto de 0; toda fila con
+COD_NIVEL_CARRERA=1 tiene en 1 la columna AREA_* de su AREA_ACTUAL. Sedes: COD_SEDE 2 (23 filas),
+3 (10), 4 (4).
+
+AUDITORIA CONTRA LA FUENTE INSTITUCIONAL: comparado campo por campo contra rector_v2.xlsx, las
+unicas diferencias son las cinco correcciones ya documentadas y autorizadas, ninguna otra:
+CARACTERISTICAS_TIPO_PLAN "No Aplica"->"NO APLICA" (37 filas), VALOR_MATRICULA_ANUAL 0->-1 (37),
+ARANCEL_ANUAL 0->-1 (37), AREA_TECNO_INFO_COMUNICA 0->1 (3 filas, todas con AREA_ACTUAL=10),
+AREA_ADMIN_DERECHO 0->1 (3 filas, todas con AREA_ACTUAL=1), COD_SEDE ''->'3' (1 fila, Tecnico en
+Farmacia Concepcion). Se verifico especificamente que las unicas columnas AREA_* que el proyecto
+puso en 1 son esas 6, y que cada una corresponde exactamente al AREA_ACTUAL de su propia fila;
+todas las demas columnas AREA_* en 1 ya venian del archivo institucional.
+
+FALSO POSITIVO DESCARTADO: una revision inicial marco 16 filas por tener mas de una columna
+AREA_* en 1. Se verifico contra el instructivo que la regla es solo unidireccional ("cuando
+AREA_ACTUAL = X, el AREA_<X> debe ser 1") y que las columnas AREA_* declaran areas de destino de
+continuidad del beneficio, donde varias pueden ser 1 legitimamente. La unica restriccion de "todas
+en 0" aplica a COD_NIVEL_CARRERA=2, que se cumple. No es un hallazgo.
+
+UBICACION EN EL PROYECTO: se incorporo en
+09_respaldo/cargas_congeladas/20260828_etapa2_carga_17451/ junto con MANIFIESTO_CARGA_ETAPA2_
+20260828.tsv y README_GOBERNANZA_CARGA_ETAPA2_20260828.md, siguiendo la misma convencion del
+reporte 5912. El archivo original permanece intacto en la carpeta Downloads del usuario.
+
+SIGUE PENDIENTE: descargar el reporte "Oferta Academica Nueva Validada" (Etapa 2) desde el
+sistema y gobernarlo en 09_respaldo/reportes_pes_validados/. El archivo congelado acredita lo que
+se envio; el reporte validado acreditara lo que el sistema efectivamente acepto.
+
+--- ACTUALIZACION 20260828y: MAPA DE ETAPAS, CARGAS Y REPORTES GOBERNADO ---
+A pedido del usuario, se creo un documento de referencia para que las preguntas sobre etapas,
+plazos, IDs de carga y reportes no vuelvan a plantearse sin contexto:
+ - 11_gobernanza/MAPA_ETAPAS_CARGAS_REPORTES_OFERTA_ACADEMICA_2027.md (referencia legible)
+ - 11_gobernanza/MAPA_ETAPAS_CARGAS_REPORTES_OFERTA_ACADEMICA_2027.tsv (legible por maquina)
+
+FECHAS OFICIALES confirmadas en el instructivo (encabezado de cada anexo):
+ - Etapa 1 (Anexo 1, carga ID 17449): 13 al 19 de agosto 2026. CERRADA.
+ - Etapa 2 (Anexo 2, carga ID 17451): 21 al 28 de agosto 2026. Cierra hoy.
+ - Etapa 3 (Anexo 3, carga ID 17454): 07 al 11 de septiembre de 2026.
+
+REPORTES (nomenclatura oficial a usar de aqui en adelante, siempre por numero):
+ - 5913 Oferta Academica Vigente Inicial 2026 TP Adscritas (Etapa 1, punto de partida) - descargado.
+ - 5912 Oferta Academica Vigente Validada 2027 TP Adscritas (Etapa 1, validado) - descargado 24/08.
+ - 5911 Oferta Academica Nueva Validada 2027 TP Adscritas (Etapa 2, validado) - PENDIENTE.
+ - 5910 Oferta Academica Vigente y Nueva Validada 2027 TP Adscritas (consolidado 1+2) - PENDIENTE.
+ - 5909 Oferta Academica Consolidada con Aranceles 2027 TP Adscritas (Etapa 3) - no corresponde aun.
+El instructivo recomienda explicitamente partir la Etapa 3 descargando el 5910.
+
+CORRECCION DE LECTURA DE LA PANTALLA DEL SISTEMA: la captura de Cargas Asociadas muestra
+"Ultima Carga 28/08/2026 13:55:59" con "N. Registros 37". Se verifico con los archivos de la
+carpeta Downloads del usuario que la columna "Ultima Carga" refleja el ULTIMO INTENTO, no la
+ultima carga exitosa. Timeline real de la carga 17451:
+ - 13:12:33 -> intento con 49 registros; rechazadas 12 filas con "ya existe" (reporte de error
+   de 2196 bytes en Downloads).
+ - 13:17:17 -> carga de 37 registros ACEPTADA. Es la carga vigente y la que da el N. Registros=37.
+ - 13:55:59 -> intento aislado del Grupo A con 4 registros; rechazado, las 4 con "ya existe"
+   (reporte de error de 728 bytes, SHA eac4f6e5..., descargado dos veces por el usuario).
+Un intento rechazado no altera lo ya cargado, coherente con la nota del instructivo de que solo
+las cargas "Finalizado" cuentan. Queda documentado para no confundir ese timestamp con la carga
+efectiva.
+
+Con esto queda cerrado el analisis de Etapa 2. Los pendientes reales son: (1) descargar y
+gobernar el reporte 5911, (2) el oficio de Rectificacion con el Excel de los 12, y (3) la Etapa 3
+del 07 al 11 de septiembre.

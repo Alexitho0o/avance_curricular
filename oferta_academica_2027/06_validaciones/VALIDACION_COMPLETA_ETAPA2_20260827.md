@@ -1,0 +1,52 @@
+# Validacion completa - Etapa 2 (Oferta Academica Nueva TP Adscritas)
+
+Filas evaluadas: 50 (filas Excel 2-51)
+Total hallazgos: 309
+
+## Resumen por severidad
+
+- REVISION_MANUAL: 160
+- BLOQUEANTE: 102
+- INFORMATIVO: 47
+
+## Filas con al menos un hallazgo BLOQUEANTE: 50 de 50
+
+Filas Excel afectadas: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+
+## Hallazgos BLOQUEANTES mas frecuentes (agrupados por campo)
+
+- RECONOCIMIENTOS_APREN_PREVIOS: 48 filas
+- VACANTES_SEGUNDO_SEMESTRE: 35 filas
+- DURACION_TOTAL: 7 filas
+- AREA_TECNO_INFO_COMUNICA: 3 filas
+- AREA_ADMIN_DERECHO: 3 filas
+- VIGENCIA_CARRERA: 2 filas
+- SEMESTRES_RECONOCIDOS: 2 filas
+- REGIMEN: 1 filas
+- VACANTES_PRIMER_SEMESTRE: 1 filas
+
+## Hallazgos que requieren revision manual mas frecuentes
+
+- DURACION_REGIMEN: 57 filas
+- FECHA_ADMISION_INICIAL: 48 filas
+- VERSION: 40 filas
+- DURACION_ESTUDIOS, DURACION_REGIMEN: 6 filas
+- DURACION_ESTUDIOS, DURACION_REGIMEN, DURACION_TOTAL: 2 filas
+- COD_CARRERA, COD_SEDE, NOMBRE_CARRERA, NOMBRE_SEDE: 1 filas
+- DURACION_REGIMEN, DURACION_TOTAL: 1 filas
+- COD_CARRERA, COD_SEDE, DURACION_ESTUDIOS, DURACION_REGIMEN, DURACION_TOTAL, NOMBRE_CARRERA, NOMBRE_SEDE: 1 filas
+- COD_CARRERA, COD_SEDE, DURACION_ESTUDIOS, DURACION_REGIMEN, DURACION_TITULACION, DURACION_TOTAL, NOMBRE_CARRERA, NOMBRE_SEDE, REGIMEN, VACANTES_PRIMER_SEMESTRE: 1 filas
+- DURACION_ESTUDIOS, DURACION_REGIMEN, VACANTES_PRIMER_SEMESTRE: 1 filas
+- (fila completa): 1 filas
+- ANIO_INICIO, CARACTERISTICAS_TIPO_PLAN, COD_CARRERA, COD_JORNADA, COD_NIVEL_CARRERA, COD_NIVEL_GLOBAL, COD_TIPO_PLAN_CARRERA, DURACION_ESTUDIOS, DURACION_REGIMEN, DURACION_TITULACION, DURACION_TOTAL, MODALIDAD, NOMBRE_CARRERA, NOMBRE_TITULO, REGIMEN, VACANTES_PRIMER_SEMESTRE, VERSION: 1 filas
+
+## Estado
+
+**NO CARGAR A SIES.** Existen hallazgos BLOQUEANTES sin resolver y contradicciones documentales no resueltas (VERSION, rango de fechas 2027, MALLA_CURRICULAR/PERFIL_EGRESO). No se genera prefinal ni CSV final en esta ejecucion.
+
+## Archivos de esta fase
+
+- JSON completo: 06_validaciones/VALIDACION_COMPLETA_ETAPA2_20260827.json
+- TSV de hallazgos: 06_validaciones/VALIDACION_COMPLETA_ETAPA2_20260827.tsv
+- Markdown ejecutivo: 06_validaciones/VALIDACION_COMPLETA_ETAPA2_20260827.md (este archivo)
+- Excel de revision para Docencia: ver 07_resultados (fase siguiente)

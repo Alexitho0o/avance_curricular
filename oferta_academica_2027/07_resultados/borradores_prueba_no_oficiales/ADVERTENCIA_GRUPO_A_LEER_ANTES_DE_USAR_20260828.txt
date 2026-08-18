@@ -1,0 +1,40 @@
+ADVERTENCIA - ARCHIVO DE PRUEBA, NO OFICIAL, NO VALIDADO
+
+Contiene UNICAMENTE los 4 registros del "Grupo A" (de los 12 originalmente diferidos el
+28/08/2026): Ingenieria en Ciberseguridad, Ingenieria en Informatica e Ingenieria en
+Conectividad y Redes (modalidad No Presencial, jornada A Distancia, tipo de plan Especial),
+e Ingenieria en Ciberseguridad (modalidad Presencial, jornada Vespertina, tipo de plan
+Regular).
+
+Por que estos 4 y no los otros 8: se comparo cada uno de los 12 registros diferidos contra
+su coincidencia exacta en el reporte 5912 (Oferta Vigente Validada), campo por campo, en
+todos los atributos que segun el Anexo5 del instructivo justifican un cambio de VERSION
+(modalidad, jornada, tipo de plan, duracion de estudios/titulacion/total, regimen, duracion
+de regimen, nivel global, nivel de carrera, nombre del titulo, anio de inicio). Solo estos 4
+registros presentan una diferencia real en esos campos (REGIMEN y/o DURACION_REGIMEN y/o
+ANIO_INICIO distintos de su version anterior), y en los 4 la version anterior YA esta en
+VIGENCIA_CARRERA=2 (cerrada) en el 5912 -- es decir, la condicion que exige el Anexo5 para
+declarar una version nueva ya esta cumplida del lado de la version antigua. Aun asi, en la
+prueba real anterior (28/08/2026, incremento de VERSION+1) estos 4 fueron rechazados igual
+con el mensaje "ya existe en la Oferta Vigente Validada". Este archivo aisla unicamente
+estos 4 para volver a probarlos, dado que no hay ninguna otra correccion pendiente de
+nuestro lado para ellos -- si el rechazo persiste, la causa no esta en los datos sino en el
+comportamiento del sistema o en el circuito de carga (Etapa 1 vs Etapa 2), lo cual queda
+consultado a SIES (correo CORREO_CONSULTA_SIES_12_CARRERAS_20260828.md).
+
+Los otros 8 registros de los 12 originales NO tienen ningun cambio estructural real frente
+a su coincidencia en el 5912 (son el mismo programa con datos operacionales actualizados:
+vacantes, arancel, matricula) y por lo tanto NO se incluyen aqui ni se recomienda tratarlos
+como "version nueva" -- ver REGISTRO_BLOQUEO_ETAPA2_20260827.txt, actualizacion 20260828n,
+pendientes de definir con el usuario si se editan por Etapa 1 manteniendo su VERSION actual.
+
+Este archivo:
+- Contiene 4 filas de datos (sin encabezado), 48 columnas, delimitador PUNTO Y COMA (;), UTF-8.
+- Mismas correcciones de formato ya aplicadas al CSV principal (mayusculas en
+  CARACTERISTICAS_TIPO_PLAN, sentinel -1 en ARANCEL_ANUAL/VALOR_MATRICULA_ANUAL si
+  corresponde, sincronizacion AREA_ACTUAL vs columnas AREA_*).
+- NO modifica VIGENCIA_CARRERA de estos registros (ya vienen en 1, como corresponde a un
+  programa nuevo vigente) ni de sus versiones antiguas (esas ya estan en 2 en el sistema,
+  segun el reporte 5912; esto NO es un archivo de Etapa 1, no declara cierre de nada).
+- NO debe subirse a SIES bajo ninguna circunstancia sin revisión previa del usuario.
+- El archivo institucional rector_v2.xlsx (fuente) NO fue modificado.
