@@ -1,0 +1,84 @@
+[
+  {
+    "anio": 2022,
+    "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+    "clasificacion": "fuente institucional granular seleccionada",
+    "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+    "bytes": 148690,
+    "notas": "Archivo CSV granular anual. Trae COD_NIV_GLO y FECH_CAR fuera del esquema rector 2026.",
+    "diagnostico": [
+      {
+        "reader": "utf-8-sig; delimiter=;"
+      }
+    ]
+  },
+  {
+    "anio": 2023,
+    "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+    "clasificacion": "fuente institucional granular seleccionada",
+    "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+    "bytes": 159685,
+    "notas": "Archivo CSV granular anual. No trae COD_NIV_GLO ni COD_IES; trae CARGA y CODIGO CNED fuera del esquema rector.",
+    "diagnostico": [
+      {
+        "reader": "utf-8-sig; delimiter=;"
+      }
+    ]
+  },
+  {
+    "anio": 2024,
+    "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+    "clasificacion": "fuente institucional granular seleccionada",
+    "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+    "bytes": 260525,
+    "notas": "Archivo CSV granular pregrado completo. Se descarta archivo de solo primer anio y columnas finales de analisis.",
+    "diagnostico": [
+      {
+        "reader": "latin-1; delimiter=;"
+      }
+    ]
+  },
+  {
+    "anio": 2025,
+    "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+    "clasificacion": "fuente institucional granular seleccionada",
+    "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+    "bytes": 811353,
+    "notas": "Libro con hoja granular y hoja de tabla dinamica/resumen. Se usa solo la hoja granular.",
+    "diagnostico": [
+      {
+        "sheets": [
+          {
+            "name": "08-05-2025_22-26-22_Matrícula_P",
+            "max_row": 2372,
+            "max_column": 45
+          },
+          {
+            "name": "Hoja1",
+            "max_row": 7,
+            "max_column": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "anio": 2026,
+    "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+    "clasificacion": "fuente institucional granular seleccionada",
+    "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+    "bytes": 582631,
+    "notas": "Fuente gobernada con encabezados; define el esquema rector de 32 columnas.",
+    "diagnostico": [
+      {
+        "sheets": [
+          {
+            "name": "CONSOLIDADO",
+            "max_row": 4106,
+            "max_column": 32
+          }
+        ]
+      }
+    ]
+  }
+]

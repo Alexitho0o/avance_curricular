@@ -1,0 +1,67 @@
+{
+  "estado": "BASE_RETENCION_MU_2022_2026_FORMULAS_RETENCION_AGREGADAS",
+  "timestamp": "20260901_142351",
+  "proceso": "Matricula Unificada SIES",
+  "subproyecto": "Calculo retencion primer anio respecto al anio anterior informado",
+  "fuentes_referencia": [
+    {
+      "archivo": "/Users/alexi/Downloads/Informe-de-Retención-de-1er-Año-de-Pregrado-2026.pdf",
+      "clasificacion": "informe SIES PDF de referencia visual/conceptual",
+      "sha256": "8397404b4f6640ec0ad45e085da45b736e4e9862713271e0af0b8eef5bb601f4"
+    },
+    {
+      "archivo": "/Users/alexi/Downloads/Informe_Retencion_SIES_2026_270702026.xlsx",
+      "clasificacion": "Excel SIES con tablas de comparacion",
+      "sha256": "20af61245ff787aae64e7be53b9667d324df0ddfcc0113e3105916cbfb9e3039"
+    }
+  ],
+  "salidas": {
+    "excel_repositorio": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142351/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_CON_FORMULAS_20260901_142351.xlsx",
+    "excel_escritorio": "/Users/alexi/Desktop/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026.xlsx",
+    "sha256_excel_repositorio": "7f6f9c7faf940bad61d535c1f709e6839506a5c260093dd19b4490ac13f3b8f2",
+    "sha256_excel_escritorio": "7f6f9c7faf940bad61d535c1f709e6839506a5c260093dd19b4490ac13f3b8f2"
+  },
+  "definicion_calculo": {
+    "cohorte": "VIG=1, ANIO_INFORMADO=Y, ANIO_ING_ACT=Y, SEM_ING_ACT=1",
+    "retenido": "Misma persona TIPO_DOC+N_DOC+DV aparece con VIG=1 en ANIO_INFORMADO=Y+1",
+    "tasa": "retenidos / cohorte",
+    "nota": "Calculo tecnico interno sobre Matricula Unificada informada; comparacion SIES usa informe adjunto."
+  },
+  "comparacion_sies_ipss_162": {
+    "2022": 0.6895161290322581,
+    "2023": 0.7057220708446866,
+    "2024": 0.675,
+    "2025": 0.5821152192605331
+  },
+  "validacion_recalculo": "Recalculado con motor de planillas local y validado con data_only=True.",
+  "resultados_calculados": {
+    "2022": {
+      "cohorte": 338,
+      "retenidos": 250,
+      "retencion_interna": 0.739644970414201,
+      "retencion_sies": 0.689516129032258,
+      "brecha_pp": 5.01288413819431
+    },
+    "2023": {
+      "cohorte": 512,
+      "retenidos": 393,
+      "retencion_interna": 0.767578125,
+      "retencion_sies": 0.705722070844687,
+      "brecha_pp": 6.18560541553134
+    },
+    "2024": {
+      "cohorte": 702,
+      "retenidos": 448,
+      "retencion_interna": 0.638176638176638,
+      "retencion_sies": 0.675,
+      "brecha_pp": -3.68233618233619
+    },
+    "2025": {
+      "cohorte": 1504,
+      "retenidos": 954,
+      "retencion_interna": 0.634308510638298,
+      "retencion_sies": 0.582115219260533,
+      "brecha_pp": 5.21932913777647
+    }
+  }
+}

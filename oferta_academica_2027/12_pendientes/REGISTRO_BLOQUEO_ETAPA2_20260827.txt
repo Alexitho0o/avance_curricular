@@ -602,3 +602,103 @@ efectiva.
 Con esto queda cerrado el analisis de Etapa 2. Los pendientes reales son: (1) descargar y
 gobernar el reporte 5911, (2) el oficio de Rectificacion con el Excel de los 12, y (3) la Etapa 3
 del 07 al 11 de septiembre.
+
+--- ACTUALIZACION 20260907: RECTIFICACION DE 12 PROGRAMAS CONFIRMADA CONTRA EL REPORTE 5910 ---
+El usuario informa que el 28/08/2026 se envio la Rectificacion de los 12 programas por oficio y
+quedo gobernada. Se verifico:
+
+1) INTEGRIDAD DEL ENVIO: el archivo que el usuario entrego en Downloads
+   ("RECTIFICACIÓN_ETAPA1_12_PROGRAMAS.xlsx") es identico celda a celda (0 diferencias en 12
+   filas x 48 columnas) al ya gobernado en
+   `07_resultados/borradores_prueba_no_oficiales/RECTIFICACION_ETAPA1_12_PROGRAMAS_20260828.xlsx`.
+   Los hashes SHA-256 difieren (metadata del archivo cambia al descargarlo de nuevo/reenviarlo),
+   pero el contenido es exactamente el mismo.
+
+2) CONCILIACION 1 A 1 CONTRA EL 5910: se cruzaron los 12 programas rectificados (llave
+   COD_SEDE+COD_CARRERA+MODALIDAD+COD_JORNADA+VERSION) contra el reporte 5910 gobernado en
+   `09_respaldo/reportes_pes_validados/20260907_reporte_5910_etapa1_2/`. Los 6 campos que la
+   rectificacion modificaba (VIGENCIA_CARRERA, VACANTES_PRIMER_SEMESTRE, VACANTES_SEGUNDO_
+   SEMESTRE, RECONOCIMIENTOS_APREN_PREVIOS, FECHA_ADMISION_INICIAL, ENLACE_INFO_PROGRAMA)
+   **coinciden en las 12 de 12 carreras**. La rectificacion quedo registrada correctamente.
+
+3) HALLAZGO NUEVO, NO RELACIONADO A ESTA RECTIFICACION: otras 9 carreras de Etapa 1 (codigos
+   111, 112, 113, 124, 125, 86, 87, 88 y 57) cambiaron FECHA_ADMISION_INICIAL de 02/10/2026 a
+   07/10/2026 entre la carga congelada y el 5910. Ninguna de las dos rectificaciones gobernadas
+   (la de 7 programas, sin efecto, ni la de 12) incluye estas 9 carreras. Queda PENDIENTE aclarar
+   con SIES o con el area academica el origen de este cambio antes de usar el 5910 como base de
+   la Etapa 3.
+
+ARCHIVO GENERADO: Excel de cruce con bases de datos raw (carga Etapa 1, carga Etapa 2,
+rectificacion de 12 enviada, reporte 5910) y hojas de verificacion con formulas reales
+(INDEX/MATCH, no valores pegados) en
+`06_validaciones/conciliacion_rectificacion_12_vs_5910_20260907/CRUCE_RECTIFICACION_12_PROGRAMAS_VS_REPORTE_5910_20260907.xlsx`,
+con copia en el Escritorio del usuario. Script: `04_scripts/generar_cruce_rectificacion_12_vs_5910_20260907.py`.
+
+--- ACTUALIZACION 20260907b: TOTALES DE VACANTES CONFIRMADOS Y ARCHIVO DE ETAPA 3 GENERADO ---
+CONFIRMACION FINAL: se verifico que el total de vacantes (4.283 en las cargas congeladas vs
+5.461 en el 5910) calza EXACTO una vez aplicada la rectificacion de 12 programas: 4.283 - 25
+(vacantes originales de esos 12) + 1.203 (vacantes finales segun la rectificacion) = 5.461.
+Las 12 llaves con vacantes distintas son, una a una, exactamente las 12 de la rectificacion (sin
+faltantes ni sobrantes). De las 88 llaves con diferencia semantica en el 5910, 0 quedan sin
+explicar fuera de FECHA_ADMISION_INICIAL (46 casos: 7 de la propia rectificacion, 39 de un
+cambio de fecha ajeno a toda rectificacion gobernada, ya registrado como pendiente informativo).
+
+ETAPA 3 (Definicion de Arancel TP, carga ID 17454, ventana 07-11 septiembre 2026): se genero el
+archivo de carga a partir del 5910 (13 columnas del Anexo 3: COD_SEDE...VIGENCIA_CARRERA). Los
+103 programas de Etapa 1 se dejaron intactos (ya traian arancel real). De los 37 programas
+nuevos de Etapa 2 (todos con ARANCEL_ANUAL=-1 y FECHA_ADMISION_INICIAL=02/10/2026, por lo que
+NINGUNO califica para mantener -1 segun la regla del instructivo pag.5), se completaron 23 con
+confianza ALTA cruzando la tabla de aranceles entregada por el usuario, 10 con confianza MEDIA
+(alias de nombre tipo "IA"/"MINAS" o celda unica asumida para toda la sede) que requieren
+confirmacion visual antes de subir, y 4 quedaron SIN VALOR (no hay cifra en la tabla entregada
+para: Tecnico en Administracion de Empresas sede Santiago vespertino presencial, Ingenieria y
+Tecnico en Electricidad sede Santiago semipresencial, Tecnico en Imagenologia sede Santiago
+semipresencial) -- pendientes de que el usuario aporte el valor antes de cargar.
+
+ARCHIVOS GENERADOS: `07_resultados/etapa3_aranceles_20260907/` (CSV sin encabezado listo para
+subir y XLSX con encabezado + hojas de revision de confianza), con copia en el Escritorio.
+Script: `04_scripts/generar_etapa3_aranceles_20260907.py`.
+
+--- ACTUALIZACION 20260907c: ETAPA 3 SIN PENDIENTES, ARCHIVO FINAL LISTO PARA SUBIR ---
+El usuario confirmo los 4 valores que faltaban y los 10 de confianza MEDIA (los 14 coinciden
+exactamente con lo propuesto). Se agregaron como CONFIRMADOS_USUARIO en el script y se
+regenero el archivo: 140 filas, 0 con ARANCEL_ANUAL=-1, 0 pendientes de revision. Estado final
+en la hoja Resumen del XLSX: "SIN PENDIENTES". Archivo listo para cargar en Oferta Academica
+Aranceles (ID 17454).
+
+--- ACTUALIZACION 20260907d: ERROR GRAVE CORREGIDO - ARANCELES DESACTUALIZADOS EN 25 PROGRAMAS ---
+El usuario detecto que INGENIERIA EN INFORMATICA (Online, COD_CARRERA=1) traia ARANCEL_ANUAL=
+2.240.000 en el archivo generado, pero la tabla de aranceles del usuario indica 2.359.000 para
+esa modalidad. CAUSA RAIZ: el script solo completaba arancel para los 37 programas que venian
+en -1 (los nuevos de Etapa 2), asumiendo que cualquier otro programa "ya tenia el arancel
+correcto". Esa suposicion era incorrecta: el instructivo exige informar arancel para TODOS los
+programas vigentes (VIGENCIA_CARRERA=1), no solo los nuevos.
+
+Se audito el archivo completo contra la tabla de aranceles: de 88 programas vigentes, 25 (no
+solo Ingenieria Informatica) tenian un arancel ya cargado que NO coincidia con la tabla vigente
+del usuario (ej. Ingenieria en Ciberseguridad 2.340.000 -> 2.464.000, Ingenieria en Logistica
+2.060.000 -> 2.169.000, Tecnico en Enfermeria 2.090.000/2.110.000 -> 2.404.000/2.427.000, etc).
+Se corrigio el script para que TODO programa vigente con match en la tabla de aranceles reciba
+el valor de la tabla, sin importar si ya traia un valor cargado. El archivo se regenero: 140
+filas, 0 en -1, 25 valores corregidos (ver hoja `Corregidos_valor_desactualizado` del XLSX),
+0 pendientes. Rutas sin cambio: `07_resultados/etapa3_aranceles_20260907/`, con copia en el
+Escritorio.
+
+--- ACTUALIZACION 20260907e: SEGUNDO ERROR ENCONTRADO POR EL USUARIO - TRANSCRIPCION MANUAL SIN VERIFICACION ---
+El usuario encontro un segundo error (TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA, celda
+Vespertino Santiago faltante en la transcripcion de la tabla de aranceles) y objeto, con razon,
+que la transcripcion de la imagen a un diccionario Python se hizo "a mano" sin un paso de
+verificacion sistematico. El usuario reenvio la imagen completa y legible de la tabla de
+aranceles. Se releyo fila por fila (28 carreras relevantes para los 37+25 programas de esta
+carga) y se confirmo que el UNICO error real era la celda faltante ya mencionada; el resto de
+la transcripcion (27 carreras) coincide exacto con la imagen reenviada. Se corrigio esa celda
+y se regenero el archivo. Se genero ademas un archivo de auditoria con las 62 filas cuyo
+arancel proviene de la tabla (valor original del 5910 + valor aplicado + fuente) para que el
+usuario haga una revision final antes de subir:
+`07_resultados/etapa3_aranceles_20260907/VERIFICACION_FINAL_ARANCELES_APLICADOS_20260907.tsv`
+(con copia en el Escritorio). Los 14 valores que ya habian sido confirmados directamente por el
+usuario (CONFIRMADOS_USUARIO en el script) no dependen de la transcripcion de la tabla y no se
+ven afectados por este tipo de error.
+
+
+

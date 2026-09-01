@@ -1,0 +1,202 @@
+{
+  "proceso": "SIES Oferta Academica-Acceso 2027",
+  "subproceso": "Consolidado Etapa 1 + Etapa 2 (reporte 5910)",
+  "fecha_conciliacion": "2026-09-07T12:19:11",
+  "fuente_validada_pes": {
+    "reporte_id": 5910,
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/09_respaldo/reportes_pes_validados/20260907_reporte_5910_etapa1_2/5910 Oferta Académica Vigente y Nueva Validada 2027 TP Adscritas.csv",
+    "bytes": 43613,
+    "sha256": "9816965a7dd7f6482a2aa48cc64148a971e6936ce3cc657269a98926e33b10a7",
+    "filas_datos": 140,
+    "columnas": 49
+  },
+  "cargas_congeladas_comparadas": {
+    "etapa_1": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20260817_155153_etapa1_areas_vigencia_fecha/CARGA_ETAPA1_OFERTA_ACADEMICA_2027_FINAL_VIGENCIA_Y_FECHA_CORRECTAS.csv",
+      "bytes": 28477,
+      "sha256": "8e5207cf1d54357af1cb2b7c144c4ba0ca3477569a97a887a6f686f2f76ec743",
+      "filas_datos": 103
+    },
+    "etapa_2": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/09_respaldo/cargas_congeladas/20260828_etapa2_carga_17451/28-08-2026_13-17-17_Oferta-Académica-TP-Nueva-2027.csv",
+      "bytes": 12548,
+      "sha256": "afa38755cb5e449011ab226588505238aa41c07acdb65acf31452abc6eb3d38f",
+      "filas_datos": 37
+    },
+    "total_carreras_universo": 140
+  },
+  "metodo": "Proyeccion del reporte 5910 al orden de las 48 columnas cargables (se descarta CODIGO_IES_NUM). Etapa 1 se concilia por llave SIES COD_SEDE+COD_CARRERA+MODALIDAD+COD_JORNADA+VERSION (codigo ya asignado). Etapa 2 se concilia por COD_SEDE+NOMBRE_CARRERA+MODALIDAD+COD_JORNADA+DURACION_TOTAL+REGIMEN porque en la carga congelada el COD_CARRERA aun no existe (SIES lo asigna al validar).",
+  "estructura_reporte_5910": {
+    "columnas_cargables_encontradas": 48,
+    "columnas_faltantes": [],
+    "columnas_adicionales": [],
+    "columnas_duplicadas": []
+  },
+  "cobertura_universo": {
+    "carreras_en_cargas_congeladas": 140,
+    "carreras_en_reporte_5910": 140,
+    "carreras_conciliadas_uno_a_uno": 140,
+    "llaves_duplicadas_en_cargas": [],
+    "llaves_con_match_ambiguo_en_5910": [],
+    "carreras_cargadas_no_encontradas_en_5910": [],
+    "filas_en_5910_sin_origen_en_cargas": 0
+  },
+  "vacantes": {
+    "total_vacantes_cargas_congeladas": 4283,
+    "total_vacantes_reporte_5910": 5461,
+    "totales_coinciden": false,
+    "carreras_con_vacantes_distintas": 12,
+    "detalle_vacantes_distintas": [
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|46|3|4|3",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 5,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 137,
+          "VACANTES_SEGUNDO_SEMESTRE": 127
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|1|3|4|2",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 5,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 117,
+          "VACANTES_SEGUNDO_SEMESTRE": 117
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|3|3|4|2",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 5,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 69,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|76|3|4|1",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 5,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 103,
+          "VACANTES_SEGUNDO_SEMESTRE": 108
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|3|3|4|3",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 73,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|77|3|4|1",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 5,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 64,
+          "VACANTES_SEGUNDO_SEMESTRE": 78
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|1|3|4|3",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 50,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|46|3|4|1",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 50,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|46|1|2|1",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 20,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|77|3|4|2",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 30,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|76|3|4|2",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 30,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      },
+      {
+        "etapa_origen": "ETAPA_1",
+        "llave_sies": "2|76|1|2|1",
+        "vacantes_carga_congelada": {
+          "VACANTES_PRIMER_SEMESTRE": 0,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        },
+        "vacantes_reporte_5910": {
+          "VACANTES_PRIMER_SEMESTRE": 30,
+          "VACANTES_SEGUNDO_SEMESTRE": 0
+        }
+      }
+    ]
+  },
+  "diferencias_de_campos": {
+    "total_diferencias_textuales": 163,
+    "diferencias_semanticas": 121,
+    "diferencias_solo_formato": 42
+  },
+  "estado_conciliacion": "CON_MODIFICACIONES_SEMANTICAS"
+}

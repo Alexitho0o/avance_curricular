@@ -34,7 +34,7 @@ tanto NO hay que re-subir lo ya cargado correctamente.
 | **5913** | Oferta Academica Vigente Inicial 2026 TP Adscritas | 1 | Punto de partida: programas vigentes segun el consolidado final de Oferta Academica 2026. Solo consulta, siempre muestra los datos iniciales | SI - `02_precarga_pes/reporte_dinamico_5913_2026-08-12_08:22:23.csv` |
 | **5912** | Oferta Academica Vigente Validada 2027 TP Adscritas | 1 | Resultado validado por Mineduc de la Etapa 1. Incluye vigencia 1 y 2, excluye los puestos como No Vigente (3) | SI - `09_respaldo/reportes_pes_validados/20260824_reporte_5912_etapa1/` (desc. 24/08/2026) |
 | **5911** | Oferta Academica Nueva Validada 2027 TP Adscritas | 2 | Resultado validado de la Etapa 2. Solo programas Vigentes con estudiantes nuevos | **NO descargado - PENDIENTE** |
-| **5910** | Oferta Academica Vigente y Nueva Validada 2027 TP Adscritas | 1 + 2 | Consolidado de ambas etapas. Es el archivo base recomendado para trabajar la Etapa 3 | **NO descargado - PENDIENTE** |
+| **5910** | Oferta Academica Vigente y Nueva Validada 2027 TP Adscritas | 1 + 2 | Consolidado de ambas etapas. Es el archivo base recomendado para trabajar la Etapa 3 | SI - `09_respaldo/reportes_pes_validados/20260907_reporte_5910_etapa1_2/` (desc. 07/09/2026). Conciliado 1 a 1 contra las cargas congeladas de Etapa 1 y 2: cobertura 140/140 carreras, con hallazgos semanticos pendientes de validar (ver `06_validaciones/conciliacion_reporte_5910_20260907/INFORME_CONCILIACION_5910_20260907.md`) |
 | **5909** | Oferta Academica Consolidada con Aranceles 2027 TP Adscritas | 3 | Consolidado final con los montos ya declarados | **NO descargado** (corresponde despues de Etapa 3) |
 
 > **Regla de uso:** hablar siempre por numero de reporte. "El validado de Etapa 1" es el **5912**;
@@ -127,5 +127,5 @@ SHA-256 `afa38755cb5e449011ab226588505238aa41c07acdb65acf31452abc6eb3d38f`, 12.5
 | Etapa 2 (17451) | 37 registros cargados y aceptados. Ventana cierra hoy 28/08 |
 | 12 registros rechazados | No son programas nuevos. Se tramitan por Rectificacion de Etapa 1 con oficio. Excel listo: `07_resultados/borradores_prueba_no_oficiales/RECTIFICACION_ETAPA1_12_PROGRAMAS_20260828.xlsx`. Falta el oficio (pendiente definir firmante) |
 | Reporte 5911 | **Descargar y gobernar** en `09_respaldo/reportes_pes_validados/` para acreditar que acepto el sistema en Etapa 2 |
-| Reporte 5910 | **Descargar** antes de la Etapa 3; es la base recomendada para armar el archivo de aranceles |
+| Reporte 5910 | Descargado 07/09/2026 y conciliado 1 a 1 contra las cargas congeladas: 140/140 carreras cubiertas. Quedan 84 diferencias semanticas (fechas, vacantes, vigencia, enlace, reconocimiento de aprendizajes previos, version) por validar con el area academica antes de usarlo como base de Etapa 3 |
 | Etapa 3 (17454) | Del 07 al 11 de septiembre. Los 37 programas nuevos tienen arancel y matricula en -1 y costo de titulacion y certificado en 0: **sin la Etapa 3 quedan sin arancel**, lo que afecta gratuidad, becas y creditos |

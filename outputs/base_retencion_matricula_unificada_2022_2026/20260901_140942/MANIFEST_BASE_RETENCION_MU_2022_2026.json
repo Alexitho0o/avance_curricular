@@ -1,0 +1,199 @@
+{
+  "estado": "BASE_RETENCION_MU_2022_2026_CONSTRUIDA_Y_VALIDADA",
+  "timestamp": "20260901_140942",
+  "proceso": "Matricula Unificada SIES",
+  "subproyecto": "Base consolidada para retencion 2022-2026",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "rama": "feature/ire-2026",
+  "esquema_rector": {
+    "anio": 2026,
+    "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+    "hoja": "CONSOLIDADO",
+    "columnas": [
+      "TIPO_DOC",
+      "N_DOC",
+      "DV",
+      "PRIMER_APELLIDO",
+      "SEGUNDO_APELLIDO",
+      "NOMBRE",
+      "SEXO",
+      "FECH_NAC",
+      "NAC",
+      "PAIS_EST_SEC",
+      "COD_SED",
+      "COD_CAR",
+      "MODALIDAD",
+      "JOR",
+      "VERSION",
+      "FOR_ING_ACT",
+      "ANIO_ING_ACT",
+      "SEM_ING_ACT",
+      "ANIO_ING_ORI",
+      "SEM_ING_ORI",
+      "ASI_INS_ANT",
+      "ASI_APR_ANT",
+      "PROM_PRI_SEM",
+      "PROM_SEG_SEM",
+      "ASI_INS_HIS",
+      "ASI_APR_HIS",
+      "NIV_ACA",
+      "SIT_FON_SOL",
+      "SUS_PRE",
+      "FECHA_MATRICULA",
+      "REINCORPORACION",
+      "VIG"
+    ],
+    "diagnostico": [
+      {
+        "sheets": [
+          {
+            "name": "CONSOLIDADO",
+            "max_row": 4106,
+            "max_column": 32
+          }
+        ]
+      }
+    ]
+  },
+  "salidas": {
+    "excel_repositorio": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_140942/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_140942.xlsx",
+    "excel_escritorio": "/Users/alexi/Desktop/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026.xlsx",
+    "sha256_excel_repositorio": "1b8ea5ce1fe10549382bab3587a970e14d7666d24c8674d5d4309221eaba4884",
+    "sha256_excel_escritorio": "1b8ea5ce1fe10549382bab3587a970e14d7666d24c8674d5d4309221eaba4884"
+  },
+  "conteos": [
+    {
+      "anio": 2022,
+      "filas_consolidadas": 1038,
+      "columnas_origen": 33,
+      "columnas_mapeadas_a_2026": 30,
+      "columnas_faltantes_vs_2026": [
+        "FECHA_MATRICULA",
+        "REINCORPORACION"
+      ],
+      "columnas_extra_no_consolidadas": [
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR"
+      ],
+      "alias_equivalentes_usados": {
+        "PRIMER_APELLIDO": "A_PAT",
+        "SEGUNDO_APELLIDO": "A_MAT"
+      },
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2023,
+      "filas_consolidadas": 1145,
+      "columnas_origen": 33,
+      "columnas_mapeadas_a_2026": 30,
+      "columnas_faltantes_vs_2026": [
+        "FECHA_MATRICULA",
+        "REINCORPORACION"
+      ],
+      "columnas_extra_no_consolidadas": [
+        "COD_IES",
+        "CARGA",
+        "CODIGO CNED"
+      ],
+      "alias_equivalentes_usados": {},
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2024,
+      "filas_consolidadas": 1541,
+      "columnas_origen": 38,
+      "columnas_mapeadas_a_2026": 32,
+      "columnas_faltantes_vs_2026": [],
+      "columnas_extra_no_consolidadas": [
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR",
+        "1eraño",
+        "NIVEL",
+        "NIVEL 2"
+      ],
+      "alias_equivalentes_usados": {},
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2025,
+      "filas_consolidadas": 2371,
+      "columnas_origen": 45,
+      "columnas_mapeadas_a_2026": 32,
+      "columnas_faltantes_vs_2026": [],
+      "columnas_extra_no_consolidadas": [
+        "NIVEL_1",
+        "NIVEL_2",
+        "ÁREA",
+        "CARRERA",
+        "CONTINUIDAD",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "MODALIDAD",
+        "JORNADA",
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR"
+      ],
+      "alias_equivalentes_usados": {
+        "VIG": "VIGENCIA"
+      },
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2026,
+      "filas_consolidadas": 4105,
+      "columnas_origen": 32,
+      "columnas_mapeadas_a_2026": 32,
+      "columnas_faltantes_vs_2026": [],
+      "columnas_extra_no_consolidadas": [],
+      "alias_equivalentes_usados": {},
+      "filas_header_repetido_descartadas": 0
+    }
+  ],
+  "duplicados": {
+    "llave_tecnica": [
+      "TIPO_DOC",
+      "N_DOC",
+      "DV",
+      "COD_SED",
+      "COD_CAR",
+      "MODALIDAD",
+      "JOR",
+      "VERSION",
+      "ANIO_ING_ACT",
+      "SEM_ING_ACT"
+    ],
+    "llaves_duplicadas": 2617,
+    "filas_en_llaves_duplicadas": 6023,
+    "nota": "Duplicado tecnico para auditoria, no regla oficial de eliminacion."
+  },
+  "pendientes": [
+    {
+      "anio": 2022,
+      "tipo": "columna_faltante_vs_esquema_2026",
+      "detalle": "FECHA_MATRICULA",
+      "criterio": "No se inventa equivalencia; queda vacia en consolidado."
+    },
+    {
+      "anio": 2022,
+      "tipo": "columna_faltante_vs_esquema_2026",
+      "detalle": "REINCORPORACION",
+      "criterio": "No se inventa equivalencia; queda vacia en consolidado."
+    },
+    {
+      "anio": 2023,
+      "tipo": "columna_faltante_vs_esquema_2026",
+      "detalle": "FECHA_MATRICULA",
+      "criterio": "No se inventa equivalencia; queda vacia en consolidado."
+    },
+    {
+      "anio": 2023,
+      "tipo": "columna_faltante_vs_esquema_2026",
+      "detalle": "REINCORPORACION",
+      "criterio": "No se inventa equivalencia; queda vacia en consolidado."
+    }
+  ]
+}
