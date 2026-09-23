@@ -1,0 +1,380 @@
+{
+ "pes_mu2026": {
+  "filas_08_05": 4070,
+  "filas_11_05": 95,
+  "filas_total": 4165,
+  "SEXO": {
+   "H": 2551,
+   "M": 1610,
+   "NB": 4
+  },
+  "PAIS_EST_SEC": {
+   "38": 4165
+  },
+  "JOR": {
+   "4": 3247,
+   "2": 669,
+   "1": 249
+  },
+  "MODALIDAD": {
+   "3": 3247,
+   "1": 918
+  },
+  "FOR_ING_ACT": {
+   "1": 3614,
+   "2": 382,
+   "3": 95,
+   "11": 67,
+   "6": 7
+  },
+  "SIT_FON_SOL": {
+   "0": 4165
+  },
+  "SUS_PRE": {
+   "0": 4165
+  },
+  "REINCORPORACION": {
+   "0": 4165
+  },
+  "VIG": {
+   "1": 3205,
+   "0": 960
+  },
+  "NAC_distinta_38": 84,
+  "FECH_NAC_1900": 0,
+  "FOR2_ANIO_ORI_1900": 0,
+  "JOR_x_MODALIDAD": {
+   "1|1": 249,
+   "2|1": 669,
+   "4|3": 3247
+  }
+ },
+ "pes_errores_07_05": {
+  "La SITUACIÓN SOCIOECONÓMICA FONDO SOLIDARIO no corresponde para el TIPO INSTITUCIÓN.": 100,
+  "Cuando la FORMA INGRESO CARRERA ACTUAL es 1, 2, 3, 6, 7, 8, 9 o 10, el AÑO INGRESO CARRERA ORIGEN no puede ser 1900.": 17
+ },
+ "uplus_0508": {
+  "filas": 13707,
+  "SEXO": {
+   "M": 10426,
+   "F": 3272,
+   "S": 9
+  },
+  "ESTADOACADEMICO": {
+   "ELIMINADO": 5811,
+   "VIGENTE": 4789,
+   "TITULADO": 2874,
+   "SUSPENDIDO": 150,
+   "EGRESADO": 83
+  },
+  "JORNADA_raw": {
+   "O": 7708,
+   "V": 4650,
+   "D": 1064,
+   "V ": 221,
+   "D ": 64
+  },
+  "PERIODOMATRICULA": {
+   "1": 12326,
+   "2": 1087,
+   "3": 294
+  },
+  "VIASDEADMISION": {
+   "ENSEÑANZA MEDIA NACIONAL": 13362,
+   "PROGRAMA DE EDUCACION CONTINUA": 268,
+   "EXTRANJERO": 60,
+   "nan": 14,
+   "MNP AA": 3
+  },
+  "NACIONALIDAD_por_definir": 4
+ },
+ "ct01": {
+  "filas_pes_rut_con_fila_titulado": 104,
+  "vig_pes_rut_con_fila_titulado": {
+   "1": 99,
+   "0": 5
+  },
+  "filas_pes_rut_solo_titulado": 0,
+  "titulado_anomatricula": {
+   "2025": 311,
+   "2024": 284,
+   "2019": 274,
+   "2022": 271,
+   "2023": 259,
+   "2021": 246,
+   "2015": 215,
+   "2016": 211,
+   "2017": 189,
+   "2018": 179,
+   "2020": 175,
+   "2014": 145,
+   "2013": 114,
+   "2026": 1
+  },
+  "egresado_filas": 83
+ },
+ "ct02": {
+  "uplus_sit_49_27": 145,
+  "pes_for_rut_sit_49_27": {
+   "3": 85,
+   "2": 2
+  },
+  "pes_for3": 95,
+  "situaciones_uplus_de_for3": {
+   "49": 85,
+   "24": 10,
+   "1": 7,
+   "3": 2,
+   "23": 2,
+   "10": 2,
+   "11": 1
+  },
+  "for3_2026_vs_mu2025": {
+   "mismo_COD_CAR_distinta_JOR": 46,
+   "for_2025_1": 83,
+   "mismo_COD_CAR_misma_JOR": 37,
+   "sin_registro_MU2025": 10,
+   "distinto_COD_CAR": 2
+  }
+ },
+ "ct03": {
+  "uplus_filas_continuidad": 693,
+  "programas_continuidad": 16,
+  "pes_for2": 382,
+  "pes_for2_rut_con_programa_continuidad": 382,
+  "continuidad_categoria": {
+   "INGRESO ESPECIAL": 579,
+   "NORMAL": 87,
+   "PROCESO DE TITULO": 27
+  },
+  "continuidad_carrera_anterior_informada": 0.378,
+  "continuidad_institucion_anterior_informada": 0.362,
+  "for2_2026_vs_mu2025": {
+   "for_2025_1": 4,
+   "sin_mismo_programa_MU2025": 214,
+   "for_2025_11": 164
+  },
+  "cod_car_for2_2026": 7,
+  "cod_car_for2_2026_con_for11_2026": 4
+ },
+ "cruces": {
+  "pares_inequivocos": 3175,
+  "SEXO_uplus_x_pes": {
+   "F|M": 1261,
+   "M|H": 1912,
+   "S|NB": 2
+  },
+  "SEDE_uplus_x_pes": {
+   "CO|3": 70,
+   "RE|2": 3105
+  },
+  "JORNADA_uplus_x_pes": {
+   "D|1": 206,
+   "O|2": 2,
+   "O|4": 2442,
+   "V|2": 525
+  },
+  "JORNADA_O_a_2_situacion": {
+   "49": 2
+  },
+  "NACIONALIDAD_valores_con_mas_de_un_codigo": 0,
+  "NACIONALIDAD_valores": 13,
+  "NACIONALIDAD_por_definir_a_38": 1
+ },
+ "ct04": {
+  "uplus_S_filas": 9,
+  "uplus_S_rut": 8,
+  "pes_NB": 4,
+  "pes_NB_con_uplus_S": 4
+ },
+ "escala_notas": {
+  "PROM_PRI_SEM": {
+   "0": 2567,
+   "100_700": 1598,
+   "fuera_rango": 0
+  },
+  "PROM_SEG_SEM": {
+   "0": 2771,
+   "100_700": 1394,
+   "fuera_rango": 0
+  }
+ },
+ "historico": {
+  "2022": {
+   "filas": 1038,
+   "FOR_ING_ACT": {
+    "1": 1007,
+    "3": 31
+   },
+   "VIG": {
+    "1": 1033,
+    "0": 5
+   },
+   "SIT_FON_SOL": {
+    "0": 1038
+   },
+   "SUS_PRE_distinto_0": 17,
+   "PAIS_EST_SEC_38": 1000,
+   "NAC_distinta_38": 38,
+   "PAIS_igual_NAC_entre_extranjeros": 38,
+   "JOR_x_MODALIDAD": {
+    "1|1": 94,
+    "2|1": 224,
+    "4|3": 720
+   }
+  },
+  "2023": {
+   "filas": 1145,
+   "FOR_ING_ACT": {
+    "1": 996,
+    "11": 120,
+    "3": 25,
+    "10": 4
+   },
+   "VIG": {
+    "1": 1142,
+    "0": 3
+   },
+   "SIT_FON_SOL": {
+    "0": 1145
+   },
+   "SUS_PRE_distinto_0": 7,
+   "PAIS_EST_SEC_38": 1111,
+   "NAC_distinta_38": 34,
+   "PAIS_igual_NAC_entre_extranjeros": 34,
+   "JOR_x_MODALIDAD": {
+    "1|1": 43,
+    "2|1": 135,
+    "4|3": 967
+   }
+  },
+  "2024": {
+   "filas": 1541,
+   "FOR_ING_ACT": {
+    "1": 1261,
+    "11": 258,
+    "3": 16,
+    "4": 3,
+    "10": 3
+   },
+   "VIG": {
+    "1": 1455,
+    "0": 86
+   },
+   "SIT_FON_SOL": {
+    "0": 1541
+   },
+   "SUS_PRE_distinto_0": 0,
+   "PAIS_EST_SEC_38": 1511,
+   "NAC_distinta_38": 39,
+   "PAIS_igual_NAC_entre_extranjeros": 28,
+   "JOR_x_MODALIDAD": {
+    "1|1": 73,
+    "2|1": 180,
+    "4|3": 1288
+   }
+  },
+  "2025": {
+   "filas": 2371,
+   "FOR_ING_ACT": {
+    "1": 1971,
+    "11": 369,
+    "6": 25,
+    "3": 2,
+    "4": 2,
+    "10": 2
+   },
+   "VIG": {
+    "1": 2298,
+    "0": 73
+   },
+   "SIT_FON_SOL": {
+    "0": 2371
+   },
+   "SUS_PRE_distinto_0": 0,
+   "PAIS_EST_SEC_38": 2304,
+   "NAC_distinta_38": 74,
+   "PAIS_igual_NAC_entre_extranjeros": 67,
+   "JOR_x_MODALIDAD": {
+    "1|1": 134,
+    "2|1": 248,
+    "4|3": 1989
+   }
+  },
+  "2026": {
+   "filas": 4105,
+   "FOR_ING_ACT": {
+    "1": 3593,
+    "2": 378,
+    "3": 95,
+    "11": 32,
+    "6": 7
+   },
+   "VIG": {
+    "1": 3145,
+    "0": 960
+   },
+   "SIT_FON_SOL": {
+    "0": 4105
+   },
+   "SUS_PRE_distinto_0": 0,
+   "PAIS_EST_SEC_38": 4105,
+   "NAC_distinta_38": 81,
+   "PAIS_igual_NAC_entre_extranjeros": 0,
+   "JOR_x_MODALIDAD": {
+    "1|1": 244,
+    "2|1": 654,
+    "4|3": 3207
+   }
+  }
+ },
+ "puente": {
+  "combinaciones": 161,
+  "ambiguas": 70,
+  "ambiguas_difieren_en": {
+   "S": 0,
+   "C": 0,
+   "J": 0,
+   "V": 70
+  },
+  "J_por_jornada_uplus": {
+   "D": {
+    "1": 22
+   },
+   "O": {
+    "4": 94,
+    "3": 1
+   },
+   "V": {
+    "2": 44
+   }
+  }
+ },
+ "oferta": {
+  "columnas_plantilla_pes": 48,
+  "delimitador_plantilla": ";",
+  "campos_contrato": 52,
+  "campos_contrato_fuera_de_plantilla": [
+   "MALLA_CURRICULAR",
+   "OTROS_REQUISITOS",
+   "PERFIL_EGRESO",
+   "TEXTO_REQUISITO_INGRESO"
+  ]
+ },
+ "extranjeros_1a_carga": {
+  "filas": 81,
+  "SEXO": {
+   "H": 50,
+   "M": 31
+  },
+  "VIGENCIA": {
+   "1": 65,
+   "0": 16
+  },
+  "TIPO_RESIDENCIA": {
+   "0": 81
+  },
+  "PAIS_EST_SEC_igual_NAC": 66,
+  "PAIS_EST_SEC_38": 15
+ }
+}

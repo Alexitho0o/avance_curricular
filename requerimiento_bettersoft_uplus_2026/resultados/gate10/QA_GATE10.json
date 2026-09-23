@@ -1,0 +1,242 @@
+{
+ "xlsx": {
+  "abre": true,
+  "hojas": 25,
+  "hojas_v091_conservadas": true,
+  "hojas_nuevas": [
+   "00_METADATOS_V1",
+   "18_CONFIRMACION_GATE10",
+   "19_PENDIENTES_RESIDUALES",
+   "20_MATRIZ_SOLICITUD_BETTERSOFT",
+   "21_CHANGELOG_V091_V10"
+  ],
+  "hojas_nuevas_esperadas": true,
+  "formulas": 0,
+  "filas_por_hoja_v091_v10": {
+   "00_LEEME": [
+    11,
+    16
+   ],
+   "00_ESTADO_FASES": [
+    9,
+    10
+   ],
+   "01_INVENTARIO_PROCESOS": [
+    15,
+    15
+   ],
+   "02_RESUMEN_POR_PROCESO": [
+    13,
+    13
+   ],
+   "03_PERFIL_UPLUS_DATOSALUMNOS": [
+    67,
+    67
+   ],
+   "03b_PERFIL_UPLUS_HOJA1_NOTAS": [
+    25,
+    25
+   ],
+   "04_MATRIZ_MAESTRA": [
+    261,
+    261
+   ],
+   "05_DICCIONARIO_BETTERSOFT": [
+    66,
+    66
+   ],
+   "06_CATALOGOS_HOMOLOGACIONES": [
+    165,
+    165
+   ],
+   "07_BRECHAS_BETTERSOFT": [
+    27,
+    27
+   ],
+   "08_NO_RESOLUBLE_DESDE_UPLUS": [
+    153,
+    153
+   ],
+   "09_CONTRADICCIONES": [
+    13,
+    13
+   ],
+   "10_DATOS_SENSIBLES": [
+    16,
+    16
+   ],
+   "11_FUENTES_EVIDENCIA": [
+    69,
+    69
+   ],
+   "12_GATE09_RESOLUCION": [
+    13,
+    13
+   ],
+   "13_GATE09_CRUCES": [
+    13,
+    13
+   ],
+   "14_CAMPOS_REQUIEREN_HISTORIAL": [
+    15,
+    15
+   ],
+   "15_CODIGO_UNICO_MANTENCION": [
+    15,
+    15
+   ],
+   "16_SEXO_POR_PROCESO": [
+    5,
+    5
+   ],
+   "17_JORNADA_U_PLUS": [
+    3,
+    3
+   ]
+  },
+  "perdida_de_filas": [],
+  "encabezados_alterados": [],
+  "filtros_perdidos": [],
+  "paneles_alterados": [],
+  "celdas_modificadas": [
+   [
+    "05_DICCIONARIO_BETTERSOFT",
+    "ESTADO",
+    "10"
+   ],
+   [
+    "05_DICCIONARIO_BETTERSOFT",
+    "ESTADO",
+    "31"
+   ],
+   [
+    "05_DICCIONARIO_BETTERSOFT",
+    "ESTADO",
+    66
+   ],
+   [
+    "07_BRECHAS_BETTERSOFT",
+    "PRIORIDAD",
+    "BR-23"
+   ]
+  ],
+  "celdas_modificadas_no_permitidas": [],
+  "metadatos": {
+   "VERSION": "1.0",
+   "ESTADO": "CONGELADO",
+   "FECHA_CONGELACION": "2026-09-23",
+   "GATE_ORIGEN": "GATE09",
+   "GATE_CONGELACION": "GATE10",
+   "BASE": "DICCIONARIO_MAESTRO_UPLUS_SIES_2026_v0.9.1_GATE09.xlsx",
+   "PRINCIPIO": "Bettersoft entrega hechos y atributos del ERP; la institución gobierna la transformación regulatoria SIES."
+  },
+  "metadatos_ok": true,
+  "columnas_bettersoft": 48,
+  "prioridades": {
+   "P2": 19,
+   "P1": 18,
+   "P3": 8,
+   "P4": 3
+  },
+  "P1_PENDIENTES": 0,
+  "matriz_filas": 48,
+  "matriz_coincide_con_diccionario": true,
+  "matriz_campos_obligatorios_vacios": 0,
+  "duplicados_id": 0,
+  "pendientes_residuales": [
+   [
+    "PR-01",
+    "SEXO_U_PLUS = S",
+    "PENDIENTE_CATALOGO_OFICIAL_UPLUS"
+   ],
+   [
+    "PR-02",
+    "PERIODO_U_PLUS = 3",
+    "PENDIENTE_CATALOGO_OFICIAL_UPLUS"
+   ],
+   [
+    "PR-03",
+    "PENDIENTE_EVALUAR_RECTIFICACION_MU2026_C09_02_C09_03",
+    "PENDIENTE_DECISION_INSTITUCIONAL"
+   ],
+   [
+    "PR-04",
+    "Filas de Extranjeros Intercambio en la matriz",
+    "PENDIENTE_REVISION"
+   ],
+   [
+    "PR-05",
+    "Manuales MU 2022 y 2023",
+    "FUENTE_NO_DISPONIBLE"
+   ]
+  ],
+  "pendientes_sexo_periodo_ok": true,
+  "confirmaciones": {
+   "C09-01": "CONFIRMADA",
+   "C09-02": "CONFIRMADA",
+   "C09-03": "CONFIRMADA",
+   "C09-04": "CONFIRMADA",
+   "QA_DOCX_VISUAL v0.9.1": "APROBADO",
+   "QA_DOCX_VISUAL v1.0": "APROBADO"
+  },
+  "posibles_datos_personales": [],
+  "reglas_descartadas_en_vigente": {},
+  "QA_XLSX_V1": "APROBADO"
+ },
+ "docx": {
+  "zip_integro": true,
+  "partes": {
+   "[Content_Types].xml": true,
+   "word/document.xml": true,
+   "word/styles.xml": true,
+   "word/_rels/document.xml.rels": true,
+   "word/numbering.xml": true,
+   "word/footer1.xml": true
+  },
+  "xml_bien_formado": true,
+  "tabla_contenido": true,
+  "secciones_h1": [
+   "1. Objetivo y principio",
+   "2. Alcance",
+   "3. Entidades y extractos",
+   "4. Matriz de solicitud",
+   "5. Datos que deben conservar historia",
+   "6. Datos sin transformar y catálogos",
+   "7. Códigos SIES que U+ puede entregar",
+   "8. Variables que U+ no debe calcular",
+   "9. Reglas de extracción",
+   "10. Validaciones mínimas del reporte",
+   "11. Aclaraciones que Bettersoft debe devolver",
+   "Anexo. Cambios solicitados en U+"
+  ],
+  "secciones_ok": true,
+  "tablas": 9,
+  "secciones_vacias": [],
+  "terminos_internos": [],
+  "posibles_datos_personales": [],
+  "reglas_descartadas": {},
+  "conteo_coherente": true,
+  "matriz_filas_word": 48,
+  "pendientes_como_aclaracion": true,
+  "terminos_criticos_word": {
+   "VIGENCIA": 13,
+   "TITULADO": 0,
+   "CAMBIO INTERNO": 2,
+   "CAMBIO DE JORNADA": 0,
+   "CONTINUIDAD": 5,
+   "FORMA DE INGRESO": 2,
+   "FONDO SOLIDARIO": 1,
+   "PAÍS ESTUDIOS SECUNDARIOS": 3,
+   "JORNADA O": 1,
+   "SEXO S": 5,
+   "PERIODO 3": 5,
+   "CODIGO_UNICO": 20,
+   "VERSION": 16
+  },
+  "QA_DOCX_ESTRUCTURAL_V1": "APROBADO"
+ },
+ "sha256": {
+  "DICCIONARIO_MAESTRO_UPLUS_SIES_2026_v1.0.xlsx": "7f394a121b6cb1a46d14db5f9be9849e578bfc138b9c289392520735713f5689",
+  "REQUERIMIENTO_BETTERSOFT_REPORTE_REGULATORIO_UPLUS_v1.0.docx": "36bc40c5327d57df32fec8f10f4dc42b219a21b3b65480c82470a66a0ad09cc3"
+ }
+}
