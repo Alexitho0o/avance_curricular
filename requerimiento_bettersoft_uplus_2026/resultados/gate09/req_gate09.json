@@ -1,0 +1,1307 @@
+{
+ "dic": [
+  {
+   "ID": "UP-01",
+   "BLOQUE": "Llaves",
+   "CAMPO SOLICITADO": "CODCLI",
+   "DEFINICIÓN FUNCIONAL": "Código U+ que identifica una matrícula de una persona en una carrera/programa (plan). Una fila del reporte = un CODCLI. No debe cambiar en el tiempo.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "CODCLI",
+   "EJEMPLO": "20261ABCD001",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Estable",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Único por fila; no nulo",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-02",
+   "BLOQUE": "Llaves",
+   "CAMPO SOLICITADO": "ID_PERSONA_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Identificador interno estable de la persona en U+, independiente del número de documento, que agrupe todas sus matrículas (CODCLI).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto/Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "(no observado)",
+   "EJEMPLO": "P000123",
+   "PRIORIDAD": "P4",
+   "TEMPORALIDAD": "Estable",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Mismo valor para todos los CODCLI de la persona",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "POR_CONFIRMAR"
+  },
+  {
+   "ID": "UP-03",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "TIPO_DOCUMENTO_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Tipo de documento con que la persona está registrada en U+, con el código original de U+ (por ejemplo RUN, pasaporte u otro).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "RUN",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "No nulo",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "POR_CONFIRMAR"
+  },
+  {
+   "ID": "UP-05",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "NUM_DOCUMENTO",
+   "DEFINICIÓN FUNCIONAL": "Número del documento sin puntos, sin guion y sin dígito verificador (cuerpo del RUN) o número de pasaporte tal como figura en el documento.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "RUT",
+   "EJEMPLO": "12345678",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Si RUN: solo dígitos, sin 0 inicial",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-06",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "DV",
+   "DEFINICIÓN FUNCIONAL": "Dígito verificador del RUN (0-9 o K mayúscula). Vacío si el documento es pasaporte.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto(1)",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "RUT",
+   "EJEMPLO": "K",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Módulo 11 válido",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-07",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "NOMBRES",
+   "DEFINICIÓN FUNCIONAL": "Nombres de pila de la persona, tal como están registrados. Entregar además la versión normalizada SIES (mayúsculas sin tildes, sin espacios dobles ni al inicio/fin).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "NOMBRES",
+   "EJEMPLO": "JOSE ANGEL",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Caracteres permitidos Cuadro N°6",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-08",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "APELLIDO_PATERNO",
+   "DEFINICIÓN FUNCIONAL": "Primer apellido (+ versión normalizada SIES).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "APELLIDO PATERNO",
+   "EJEMPLO": "MUNOZ",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Idem",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-09",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "APELLIDO_MATERNO",
+   "DEFINICIÓN FUNCIONAL": "Segundo apellido (+ versión normalizada SIES). Puede venir vacío.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "APELLIDO MATERNO",
+   "EJEMPLO": "PENA",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Idem",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-10",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "SEXO_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Código de sexo registrado en U+, sin transformar (valores actuales M, F, S). Bettersoft debe documentar el significado de cada código, en particular 'S'.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto(1)",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "SEXO",
+   "EJEMPLO": "F",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Catálogo U+ documentado",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-13",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "FECHA_NACIMIENTO",
+   "DEFINICIÓN FUNCIONAL": "Fecha de nacimiento en formato dd/mm/aaaa.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Fecha",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "FECHANACIMIENTO",
+   "EJEMPLO": "07/04/1995",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": ">= 01/01/1900; edad >= 15",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-14",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "NACIONALIDAD_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Nacionalidad registrada en U+ (texto original).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "NACIONALIDAD",
+   "EJEMPLO": "Peruana",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Sin 'Por definir'",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-16",
+   "BLOQUE": "Identificación",
+   "CAMPO SOLICITADO": "COD_PAIS_ESTUDIOS_SECUNDARIOS",
+   "DEFINICIÓN FUNCIONAL": "País donde la persona completó y aprobó la enseñanza media (licencia de EM), registrado en la admisión. Código 1-197 (Cuadro N°4) o nombre del país.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; Extranjeros; Índices (potencial)",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "192",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho histórico",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "1..197",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-17",
+   "BLOQUE": "Extranjeros",
+   "CAMPO SOLICITADO": "TIPO_RESIDENCIA_ESTUDIANTE",
+   "DEFINICIÓN FUNCIONAL": "Tipo de residencia del estudiante extranjero según el catálogo del instructivo de Estudiantes Extranjeros (códigos 1, 2, 3). Solo para estudiantes con nacionalidad distinta de Chile.",
+   "NIVEL": "PERSONA-AÑO",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "Extranjeros",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "1",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Año de referencia (2025)",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Condicional con PAIS_ORIGEN",
+   "DATO_SENSIBLE": "SI (migratorio)",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-18",
+   "BLOQUE": "Extranjeros",
+   "CAMPO SOLICITADO": "COD_PAIS_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "País de origen del estudiante extranjero (1-197, distinto de 38). Obligatorio cuando TIPO_RESIDENCIA_ESTUDIANTE es 2 o 3; vacío cuando es 1.",
+   "NIVEL": "PERSONA-AÑO",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "Extranjeros",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "41",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Año de referencia",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "<> 38",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-19",
+   "BLOQUE": "Caracterización",
+   "CAMPO SOLICITADO": "ESTADO_CIVIL_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Estado civil registrado en U+ y su código FCU (1 Soltero/a ... 7 Viudo/a). El valor U+ 'CONVIVIENTE' requiere definición: FCU solo reconoce 'Conviviente civil'.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto + Número",
+   "PROCESOS QUE LO UTILIZAN": "FCU",
+   "CAMPO U+ ACTUAL": "ESTADOCIVIL",
+   "EJEMPLO": "1",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "1..7",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-20",
+   "BLOQUE": "Caracterización",
+   "CAMPO SOLICITADO": "DIRECCION_CALLE / DIRECCION_NUMERO / DIRECCION_DEPTO_BLOCK",
+   "DEFINICIÓN FUNCIONAL": "Dirección actual separada en calle, número y departamento/block (hoy es un texto único que se separa por heurística).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "FCU",
+   "CAMPO U+ ACTUAL": "DIRECCIONACTUAL",
+   "EJEMPLO": "LOS ALERCES | 1234 | 502",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Largo 50/10/10",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE (texto único)"
+  },
+  {
+   "ID": "UP-21",
+   "BLOQUE": "Caracterización",
+   "CAMPO SOLICITADO": "COMUNA_RESIDENCIA_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Comuna de residencia actual en texto U+ y su código oficial (Anexo N°5 FCU) con la región correspondiente (Anexo N°4).",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto + Número",
+   "PROCESOS QUE LO UTILIZAN": "FCU; Índices (potencial)",
+   "CAMPO U+ ACTUAL": "COMUNAACTUAL",
+   "EJEMPLO": "13101 / 13",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Comuna existe en Anexo 5",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-22",
+   "BLOQUE": "Caracterización",
+   "CAMPO SOLICITADO": "TELEFONO_CELULAR / CORREO_PERSONAL",
+   "DEFINICIÓN FUNCIONAL": "Celular en formato 569XXXXXXXX y correo personal vigentes.",
+   "NIVEL": "PERSONA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "FCU (precarga)",
+   "CAMPO U+ ACTUAL": "FONOACTUAL; MAIL",
+   "EJEMPLO": "56912345678",
+   "PRIORIDAD": "P4",
+   "TEMPORALIDAD": "Vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Formato",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-23",
+   "BLOQUE": "Oferta de la matrícula",
+   "CAMPO SOLICITADO": "SEDE_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Sede de la matrícula en código U+ (RE, CO) y su código SIES de sede (2 = Casa Central Santiago; 3 = Concepción).",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Texto + Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; FCU",
+   "CAMPO U+ ACTUAL": "SEDE",
+   "EJEMPLO": "CO / 3",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Al período informado",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Coherente con CODIGO_UNICO",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-24",
+   "BLOQUE": "Oferta de la matrícula",
+   "CAMPO SOLICITADO": "CODCARPR + NOMBRE_CARRERA_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Código interno y nombre de la carrera/programa de la matrícula (hoy CODCARPR y NOMBRE_L; eliminar la columna duplicada CODIGOCARRERA).",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; FCU; Extranjeros",
+   "CAMPO U+ ACTUAL": "CODCARPR; NOMBRE_L",
+   "EJEMPLO": "IINF / INGENIERIA EN INFORMATICA",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Al período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "No nulo",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-25",
+   "BLOQUE": "Oferta de la matrícula",
+   "CAMPO SOLICITADO": "JORNADA_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Jornada de la matrícula en código U+ (D, V, O, sin espacios) y en código SIES de Oferta Académica (1 Diurna, 2 Vespertina, 3 Semipresencial, 4 A Distancia, 5 Otra). El código SIES debe tomarse del programa SIES asociado, no solo de la letra U+ (hay un programa 'O' que en SIES es 3).",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Texto + Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; FCU",
+   "CAMPO U+ ACTUAL": "JORNADA",
+   "EJEMPLO": "V / 2",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Al período informado",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Consistencia con MODALIDAD",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-26",
+   "BLOQUE": "Oferta de la matrícula",
+   "CAMPO SOLICITADO": "ATRIBUTOS_OFERTA: MODALIDAD, TIPO_PLAN (regular / especial / regular de continuidad), NIVEL_CARRERA, DURACION_ESTUDIOS",
+   "DEFINICIÓN FUNCIONAL": "Atributos oficiales del programa en la Oferta Académica aceptada por SIES, almacenados junto al CODIGO_UNICO_SIES y con su vigencia.",
+   "NIVEL": "OFERTA",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; IRE (indicador interno)",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "3",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Al período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Coherencia con jornada",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_MAESTRO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-27",
+   "BLOQUE": "Oferta de la matrícula",
+   "CAMPO SOLICITADO": "CODIGO_UNICO_SIES (+ COD_CARRERA_SIES, VERSION_SIES)",
+   "DEFINICIÓN FUNCIONAL": "Código único SIES del programa en que está matriculado el estudiante (formato I162S{sede}C{carrera}J{jornada}V{versión}) y sus componentes numéricos. Debe mantenerse en U+ como atributo de la oferta/plan con vigencia por año y exponerse en cada CODCLI.",
+   "NIVEL": "MATRÍCULA-PERÍODO (atributo de OFERTA/PLAN)",
+   "TIPO": "Texto + Números",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU; Índices",
+   "CAMPO U+ ACTUAL": "(no existe) - hoy se infiere de CODCARPR+JORNADA+NOMBRE",
+   "EJEMPLO": "I162S2C1J1V2",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Vigente al período informado",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Existe en Oferta Académica del año",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_MAESTRO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-28",
+   "BLOQUE": "Plan",
+   "CAMPO SOLICITADO": "PLAN_ESTUDIO_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Código del plan de estudios U+ al que está adscrita la matrícula en el período (hoy solo aparece en el reporte de notas, columna PLAN_DE_ESTUDIO).",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "AC; MU (resolución de versión)",
+   "CAMPO U+ ACTUAL": "Hoja1 PLAN_DE_ESTUDIO",
+   "EJEMPLO": "IINF20241",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Al período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Existe en catálogo de planes",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE (reporte de notas)"
+  },
+  {
+   "ID": "UP-29",
+   "BLOQUE": "Plan",
+   "CAMPO SOLICITADO": "PLAN_ESTUDIOS_SIES",
+   "DEFINICIÓN FUNCIONAL": "Número correlativo del plan dentro del CODIGO_UNICO usado en Avance Curricular (1, 2, ...), según la tabla de planes vigentes acordada por la institución.",
+   "NIVEL": "PLAN",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "AC",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "1",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Plan vigente del año de datos",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Correlativo por CODIGO_UNICO",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_MAESTRO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-30",
+   "BLOQUE": "Plan",
+   "CAMPO SOLICITADO": "REGIMEN_PLAN",
+   "DEFINICIÓN FUNCIONAL": "Régimen académico del plan (semestral, trimestral, anual) con catálogo documentado. Necesario para convertir el nivel U+ a semestre SIES.",
+   "NIVEL": "PLAN",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU (NIV_ACA)",
+   "CAMPO U+ ACTUAL": "Hoja1 REGIMEN",
+   "EJEMPLO": "TRIMESTRAL",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Plan vigente",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Catálogo documentado",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE (reporte de notas)"
+  },
+  {
+   "ID": "UP-31",
+   "BLOQUE": "Ingreso",
+   "CAMPO SOLICITADO": "ANIO_INGRESO_CARRERA_ACTUAL",
+   "DEFINICIÓN FUNCIONAL": "Año calendario en que la persona ingresó a la carrera/programa de este CODCLI.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "ANOINGRESO",
+   "EJEMPLO": "2024",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "1990..año proceso",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-32",
+   "BLOQUE": "Ingreso",
+   "CAMPO SOLICITADO": "PERIODO_INGRESO_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Período de ingreso U+ (1, 2, 3) y semestre SIES (1 o 2). Bettersoft debe documentar qué significa el período 3.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "PERIODOINGRESO",
+   "EJEMPLO": "3 / 2",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "1/2",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-34",
+   "BLOQUE": "Trayectoria",
+   "CAMPO SOLICITADO": "CODCLI_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "CODCLI de la matrícula previa desde la que la persona llegó a esta carrera (cambio interno, continuidad, articulación dentro de la institución). Vacío si no existe.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "20211WXYZ004",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "CODCLI existe y es de la misma persona",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-35",
+   "BLOQUE": "Trayectoria",
+   "CAMPO SOLICITADO": "TIPO_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "Indica de dónde proviene el estudiante: MISMA_INSTITUCION, OTRA_INSTITUCION, SIN_ORIGEN (ingreso directo) o NO_IDENTIFICABLE.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto",
+   "PROCESOS QUE LO UTILIZAN": "MU; Índices (potencial)",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "OTRA_INSTITUCION",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Coherente con FORMA_INGRESO_SIES",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-36",
+   "BLOQUE": "Trayectoria",
+   "CAMPO SOLICITADO": "ANIO_INGRESO_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "Año en que la persona ingresó como estudiante de primer año a la carrera de origen o programa vinculante. 1900 si es externa o no identificable (regla oficial MU).",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "2021",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "<= ANIO_INGRESO_CARRERA_ACTUAL",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-37",
+   "BLOQUE": "Trayectoria",
+   "CAMPO SOLICITADO": "SEM_INGRESO_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "Semestre (1 o 2) de ingreso a la carrera de origen; 0 cuando el año de origen es 1900.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "1",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "0 <=> 1900",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-38",
+   "BLOQUE": "Trayectoria",
+   "CAMPO SOLICITADO": "INSTITUCION_ORIGEN_NOMBRE + COD_PAIS_INSTITUCION_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "Nombre de la institución de educación superior de origen (desde catálogo, no texto libre) y su país (1-197).",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto + Número",
+   "PROCESOS QUE LO UTILIZAN": "Extranjeros; Índices (potencial)",
+   "CAMPO U+ ACTUAL": "NOMBREUNIVERSIDAD (texto libre, 9,3%)",
+   "EJEMPLO": "UNIVERSIDAD X / 192",
+   "PRIORIDAD": "P3",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Se informan juntos",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE (texto libre parcial)"
+  },
+  {
+   "ID": "UP-39",
+   "BLOQUE": "Matrícula del período",
+   "CAMPO SOLICITADO": "FECHA_MATRICULA_PERIODO",
+   "DEFINICIÓN FUNCIONAL": "Fecha en que se formalizó la matrícula del año/período consultado (dd/mm/aaaa). Bettersoft debe documentar si la actual FECHAMATRICULA corresponde a la primera matrícula o a la última renovación.",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Fecha",
+   "PROCESOS QUE LO UTILIZAN": "MU",
+   "CAMPO U+ ACTUAL": "FECHAMATRICULA (temporalidad no documentada)",
+   "EJEMPLO": "26/01/2026",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Por año/período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "No futura",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE (temporalidad no documentada)"
+  },
+  {
+   "ID": "UP-40",
+   "BLOQUE": "Matrícula del período",
+   "CAMPO SOLICITADO": "ANIO_MATRICULA + PERIODO_MATRICULA",
+   "DEFINICIÓN FUNCIONAL": "Año y período de la matrícula informada en la fila (según parámetro de extracción).",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC",
+   "CAMPO U+ ACTUAL": "ANOMATRICULA; PERIODOMATRICULA",
+   "EJEMPLO": "2026 / 1",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Por año/período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "-",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-41",
+   "BLOQUE": "Matrícula del período",
+   "CAMPO SOLICITADO": "NIVEL_ACADEMICO_UPLUS",
+   "DEFINICIÓN FUNCIONAL": "Nivel del estudiante en la fecha de corte, en unidad U+ y convertido a semestre curricular SIES (1..duración). Documentar el significado de NIVEL=20.",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Número",
+   "PROCESOS QUE LO UTILIZAN": "MU",
+   "CAMPO U+ ACTUAL": "NIVEL",
+   "EJEMPLO": "5 / 4",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "A fecha de corte",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "<= duración; <= 2 cohorte nueva",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-42",
+   "BLOQUE": "Estado",
+   "CAMPO SOLICITADO": "ESTADO_ACADEMICO + SITUACION_CODIGO + SITUACION_DESCRIPCION",
+   "DEFINICIÓN FUNCIONAL": "Estado académico y situación de la matrícula (situación separada en código numérico y descripción), sin homologar.",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Texto + Número",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; Índices",
+   "CAMPO U+ ACTUAL": "ESTADOACADEMICO; SITUACION",
+   "EJEMPLO": "VIGENTE | 1 | ALUMNO REGULAR",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "A fecha de corte",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Catálogo U+",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-43",
+   "BLOQUE": "Estado",
+   "CAMPO SOLICITADO": "FECHA_INICIO_SITUACION / FECHA_FIN_SITUACION (historial)",
+   "DEFINICIÓN FUNCIONAL": "Fechas desde/hasta en que rigió cada estado y situación, para poder reconstruir el estado a cualquier fecha (30 de abril, 31 de diciembre, cierre de semestre).",
+   "NIVEL": "MATRÍCULA (historial)",
+   "TIPO": "Fecha",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; Índices",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "01/03/2025 - 15/07/2025",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Histórico",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Sin traslapes",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "POR_CONFIRMAR"
+  },
+  {
+   "ID": "UP-58",
+   "BLOQUE": "Plan",
+   "CAMPO SOLICITADO": "CATALOGO_PLAN: TIPO_UNIDAD_MEDIDA, TOTAL_UNIDADES_PLAN, UNIDADES_ANIO_1..7",
+   "DEFINICIÓN FUNCIONAL": "Por cada plan U+: tipo de unidad (1 asignaturas, 2 créditos, 3 otra + nombre), total de unidades del plan y unidades de cada año curricular (1 a 7). Extracto separado a nivel de plan.",
+   "NIVEL": "PLAN",
+   "TIPO": "Números",
+   "PROCESOS QUE LO UTILIZAN": "AC (Carreras)",
+   "CAMPO U+ ACTUAL": "(no expuesto)",
+   "EJEMPLO": "1 | 40 | 10,10,10,10",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Plan vigente año ref.",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Suma años = total",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_MAESTRO",
+   "DISPONIBILIDAD_UPLUS": "POR_CONFIRMAR"
+  },
+  {
+   "ID": "UP-59",
+   "BLOQUE": "Estado",
+   "CAMPO SOLICITADO": "FECHA_EGRESO",
+   "DEFINICIÓN FUNCIONAL": "Fecha en que la persona completó el plan de estudios (egreso) en esta matrícula.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Fecha",
+   "PROCESOS QUE LO UTILIZAN": "Índices (potencial); MU VIG=2 (apoyo)",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "15/12/2025",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "<= fecha titulación",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-60",
+   "BLOQUE": "Estado",
+   "CAMPO SOLICITADO": "FECHA_TITULACION",
+   "DEFINICIÓN FUNCIONAL": "Fecha de obtención del título/grado de esta matrícula.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Fecha",
+   "PROCESOS QUE LO UTILIZAN": "Índices (potencial)",
+   "CAMPO U+ ACTUAL": "(no existe)",
+   "EJEMPLO": "20/03/2026",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": ">= egreso",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-61",
+   "BLOQUE": "Auditoría",
+   "CAMPO SOLICITADO": "CON_FIRMA + FECHA_FIRMA + MATRICULA",
+   "DEFINICIÓN FUNCIONAL": "Marcas de firma de contrato y el indicador MATRICULA (1/2), con su catálogo documentado (hoy sin significado documentado).",
+   "NIVEL": "MATRÍCULA-PERÍODO",
+   "TIPO": "Texto/Fecha",
+   "PROCESOS QUE LO UTILIZAN": "MU (auxiliar)",
+   "CAMPO U+ ACTUAL": "CON_FIRMA; FECHAFIRMA; MATRICULA",
+   "EJEMPLO": "SI | 10-01-2026 | 2",
+   "PRIORIDAD": "P4",
+   "TEMPORALIDAD": "Por período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "-",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE"
+  },
+  {
+   "ID": "UP-62",
+   "BLOQUE": "Detalle académico",
+   "CAMPO SOLICITADO": "EXTRACTO DETALLE POR ASIGNATURA",
+   "DEFINICIÓN FUNCIONAL": "Extracto por asignatura cursada o reconocida: CODCLI, plan, código de asignatura, año, período, nota final, estado (aprobada/reprobada/inscrita), tipo de registro (cursada / convalidada / homologada / reconocida) y unidades o créditos.",
+   "NIVEL": "ASIGNATURA",
+   "TIPO": "Varios",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC",
+   "CAMPO U+ ACTUAL": "Hoja1 (PROMEDIOSDEALUMNOS)",
+   "EJEMPLO": "-",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Histórico completo",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Sin duplicados CODCLI+CODRAMO+ANO+PERIODO",
+   "DATO_SENSIBLE": "SI",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE (llave RUT+carrera)"
+  },
+  {
+   "ID": "UP-63",
+   "BLOQUE": "Ingreso",
+   "CAMPO SOLICITADO": "VIA_ADMISION_UPLUS + CUPO_ESPECIAL_UTILIZADO",
+   "DEFINICIÓN FUNCIONAL": "Vía de admisión registrada en U+ (código y descripción) y, si corresponde, el cupo especial efectivamente usado para ingresar: PACE, programa de inclusión, cupo para extranjeros, características especiales (deportista, artista, hijo de funcionario, pueblos originarios, diplomático) u otro.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto + código",
+   "PROCESOS QUE LO UTILIZAN": "MU",
+   "CAMPO U+ ACTUAL": "VIASDEADMISION; CATEGORIA (significado no documentado)",
+   "EJEMPLO": "ADMISION REGULAR / SIN CUPO",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho fijo del ingreso",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Catálogo documentado",
+   "DATO_SENSIBLE": "SI (pueblos originarios, inclusión)",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "EXISTE PARCIAL"
+  },
+  {
+   "ID": "UP-64",
+   "BLOQUE": "Trayectoria",
+   "CAMPO SOLICITADO": "TIPO_PROGRAMA_ORIGEN",
+   "DEFINICIÓN FUNCIONAL": "Nivel del programa desde el que la persona llega a esta carrera: plan común / bachillerato / ciclo inicial; técnico de nivel superior; profesional; otro; sin programa previo.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto (catálogo)",
+   "PROCESOS QUE LO UTILIZAN": "MU",
+   "CAMPO U+ ACTUAL": "CARRERARANTERIOR (texto libre, parcial)",
+   "EJEMPLO": "TECNICO_NIVEL_SUPERIOR",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "Coherente con TIPO_ORIGEN",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  },
+  {
+   "ID": "UP-65",
+   "BLOQUE": "Ingreso",
+   "CAMPO SOLICITADO": "RECONOCIMIENTO_COMO_CONDICION_DE_ACCESO",
+   "DEFINICIÓN FUNCIONAL": "Indica si el ingreso se produjo por reconocimiento de aprendizajes previos (RAP) o por reconocimiento de estudios como condición de acceso; distinto de la convalidación de asignaturas.",
+   "NIVEL": "MATRÍCULA",
+   "TIPO": "Texto (catálogo)",
+   "PROCESOS QUE LO UTILIZAN": "MU",
+   "CAMPO U+ ACTUAL": "(no observado)",
+   "EJEMPLO": "RAP",
+   "PRIORIDAD": "P2",
+   "TEMPORALIDAD": "Hecho fijo",
+   "REQUERIMIENTO_HISTORICO": "NO",
+   "VALIDACION": "—",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "POR_CONFIRMAR"
+  },
+  {
+   "ID": "UP-66",
+   "BLOQUE": "Matrícula del período",
+   "CAMPO SOLICITADO": "HISTORIAL_MATRICULA_POR_PERIODO",
+   "DEFINICIÓN FUNCIONAL": "Una fila por CODCLI y año/período con: CODIGO_UNICO_SIES vigente en ese período, jornada U+, sede U+, plan de estudios, nivel, estado de matrícula y fecha de matrícula.",
+   "NIVEL": "MATRÍCULA-PERÍODO (historial)",
+   "TIPO": "Varios",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros",
+   "CAMPO U+ ACTUAL": "(solo valor vigente)",
+   "EJEMPLO": "2025-2 | I162S2C47J1V1 | D | RE | plan | 3 | VIGENTE | 10/01/2025",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Histórico por período",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Sin traslapes por CODCLI",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "POR_CONFIRMAR"
+  },
+  {
+   "ID": "UP-68",
+   "BLOQUE": "Llaves",
+   "CAMPO SOLICITADO": "CATALOGOS_UPLUS_DOCUMENTADOS",
+   "DEFINICIÓN FUNCIONAL": "Tabla entregada por Bettersoft con el significado de cada código de U+ usado en el reporte: SEXO, SEDE, JORNADA, PERIODO (con fechas de inicio y término por régimen), SITUACION, ESTADOACADEMICO, MATRICULA, NIVEL, REGIMEN, CATEGORIA y VIASDEADMISION.",
+   "NIVEL": "CATÁLOGO",
+   "TIPO": "Tabla",
+   "PROCESOS QUE LO UTILIZAN": "MU; AC; Extranjeros; FCU",
+   "CAMPO U+ ACTUAL": "(no documentado)",
+   "EJEMPLO": "SEXO | S | <significado>",
+   "PRIORIDAD": "P1",
+   "TEMPORALIDAD": "Vigente, con cambios fechados",
+   "REQUERIMIENTO_HISTORICO": "SI",
+   "VALIDACION": "Todo código del reporte existe en el catálogo",
+   "DATO_SENSIBLE": "NO",
+   "ACCION_BETTERSOFT": "SOLICITAR_HECHO",
+   "DISPONIBILIDAD_UPLUS": "NO_EXISTE"
+  }
+ ],
+ "br": [
+  {
+   "ID": "BR-01",
+   "CAMPO": "CODIGO_UNICO_SIES / VERSION / COD_CARRERA / MODALIDAD",
+   "SITUACIÓN ACTUAL": "U+ no registra el programa SIES; se infiere por JORNADA+CODCARPR+NOMBRE.",
+   "CAMBIO SOLICITADO": "Almacenar CODIGO_UNICO_SIES como maestro regulatorio historizable con atributos de oferta (UP-26, UP-27); reglas de mantención del Anexo 5 del Instructivo Oferta.",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros; FCU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-02",
+   "CAMPO": "FORMA_INGRESO_SIES",
+   "SITUACIÓN ACTUAL": "No existe; se deduce de VIASDEADMISION, SITUACION y nombre de carrera.",
+   "CAMBIO SOLICITADO": "Ya no se pide la forma de ingreso SIES: se piden hechos (UP-63, UP-64, UP-65 y trayectoria UP-34 a UP-37).",
+   "PROCESOS AFECTADOS": "MU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-03",
+   "CAMPO": "Trayectoria de origen",
+   "SITUACIÓN ACTUAL": "No existe vínculo entre matrícula actual y la de origen.",
+   "CAMBIO SOLICITADO": "Agregar CODCLI_ORIGEN, TIPO_ORIGEN, ANIO_INGRESO_ORIGEN, SEM_INGRESO_ORIGEN e institución de origen catalogada.",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-04",
+   "CAMPO": "Historial de estado/situación",
+   "SITUACIÓN ACTUAL": "DatosAlumnos solo muestra el estado vigente al descargar.",
+   "CAMBIO SOLICITADO": "Historial de estado/situación con fechas (UP-43) e historial de matrícula por período (UP-66).",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros; Índices",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-05",
+   "CAMPO": "Resumen académico MU (ASI_*, PROM_*)",
+   "SITUACIÓN ACTUAL": "Se calcula fuera de U+ desde el reporte de notas (Hoja1) cruzando por RUT+DV+CODCARR.",
+   "CAMBIO SOLICITADO": "Los resúmenes MU se calculan en la institución desde el detalle por asignatura (UP-62, P1).",
+   "PROCESOS AFECTADOS": "MU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-06",
+   "CAMPO": "Avance curricular (CURSO, UNIDADES)",
+   "SITUACIÓN ACTUAL": "Se calcula fuera de U+ desde Hoja1; 51 casos cerrados por decisión interna.",
+   "CAMBIO SOLICITADO": "El avance AC se calcula en la institución desde UP-62 y el catálogo de planes UP-58 (P1).",
+   "PROCESOS AFECTADOS": "AC",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-07",
+   "CAMPO": "TIPO_DOCUMENTO",
+   "SITUACIÓN ACTUAL": "No existe; se asume R.",
+   "CAMBIO SOLICITADO": "Exponer tipo de documento U+ y su código SIES (R/P); separar NUM_DOCUMENTO y DV.",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros; FCU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-08",
+   "CAMPO": "PLAN_ESTUDIO en reporte de matrícula",
+   "SITUACIÓN ACTUAL": "Solo aparece en el reporte de notas.",
+   "CAMBIO SOLICITADO": "Incluir el código de plan U+ vigente en cada CODCLI y el correlativo SIES del plan.",
+   "PROCESOS AFECTADOS": "AC; MU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-09",
+   "CAMPO": "Parámetros de extracción",
+   "SITUACIÓN ACTUAL": "El reporte entrega el universo completo con estado actual (años 2013-2026).",
+   "CAMBIO SOLICITADO": "Permitir filtrar por año/período de matrícula, fecha de corte y nivel global; una fila por CODCLI-período.",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-10",
+   "CAMPO": "Nacionalidad codificada",
+   "SITUACIÓN ACTUAL": "Texto libre con 27 variantes y 'Por definir'.",
+   "CAMBIO SOLICITADO": "Registrar país de nacionalidad con catálogo de países y exponer código SIES 1-197 además del texto.",
+   "PROCESOS AFECTADOS": "MU; Extranjeros; FCU",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-11",
+   "CAMPO": "País de estudios secundarios",
+   "SITUACIÓN ACTUAL": "No existe; se infiere Chile desde comuna del colegio.",
+   "CAMBIO SOLICITADO": "País de estudios secundarios sube a P1: registrar el país donde se obtuvo la licencia de enseñanza media, sin valor por defecto.",
+   "PROCESOS AFECTADOS": "MU; Extranjeros",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-12",
+   "CAMPO": "Residencia y país de origen (extranjeros)",
+   "SITUACIÓN ACTUAL": "No existe.",
+   "CAMBIO SOLICITADO": "Registrar tipo de residencia y país de origen según catálogo del instructivo de Extranjeros, solo para estudiantes extranjeros.",
+   "PROCESOS AFECTADOS": "Extranjeros",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-13",
+   "CAMPO": "Sexo",
+   "SITUACIÓN ACTUAL": "Códigos M/F/S con M = hombre.",
+   "CAMBIO SOLICITADO": "Entregar SEXO sin transformar + catálogo U+ documentado (UP-68); el código SIES lo asigna la institución por proceso.",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-14",
+   "CAMPO": "Jornada",
+   "SITUACIÓN ACTUAL": "D/V/O con espacios finales en 285 filas.",
+   "CAMBIO SOLICITADO": "Entregar JORNADA sin transformar y con historia por período; el código SIES de jornada sale del CODIGO_UNICO.",
+   "PROCESOS AFECTADOS": "MU; FCU",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-15",
+   "CAMPO": "Nivel académico",
+   "SITUACIÓN ACTUAL": "NIVEL administrativo (trimestres en algunos planes; 20 sin definición).",
+   "CAMBIO SOLICITADO": "Entregar nivel a la fecha de corte, régimen del plan y nivel en semestres; documentar el valor 20.",
+   "PROCESOS AFECTADOS": "MU",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-16",
+   "CAMPO": "Suspensiones y reincorporación",
+   "SITUACIÓN ACTUAL": "Se informan constantes 0.",
+   "CAMBIO SOLICITADO": "Suspensiones y reincorporación se calculan desde UP-43.",
+   "PROCESOS AFECTADOS": "MU",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-17",
+   "CAMPO": "Fecha de matrícula",
+   "SITUACIÓN ACTUAL": "FECHAMATRICULA con temporalidad no documentada (coincide con ANOMATRICULA en 76,3%).",
+   "CAMBIO SOLICITADO": "Entregar la fecha de matrícula de cada año/período y documentar su definición.",
+   "PROCESOS AFECTADOS": "MU",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-18",
+   "CAMPO": "Catálogo de planes (unidades)",
+   "SITUACIÓN ACTUAL": "Estructura del plan no expuesta.",
+   "CAMBIO SOLICITADO": "Extracto por plan: tipo de unidad, total de unidades y unidades por año curricular.",
+   "PROCESOS AFECTADOS": "AC",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-19",
+   "CAMPO": "Detalle académico (Hoja1)",
+   "SITUACIÓN ACTUAL": "Reporte 7804 con llave RUT+CODCARR y convalidación como marca ambigua.",
+   "CAMBIO SOLICITADO": "Agregar CODCLI y plan, tipo de reconocimiento explícito (convalidación/homologación/RAP) y unidades de cada asignatura.",
+   "PROCESOS AFECTADOS": "MU; AC",
+   "PRIORIDAD": "P2"
+  },
+  {
+   "ID": "BR-20",
+   "CAMPO": "Caracterización FCU (estado civil, dirección, comuna)",
+   "SITUACIÓN ACTUAL": "Estado civil texto (CONVIVIENTE sin equivalencia); dirección en un solo texto.",
+   "CAMBIO SOLICITADO": "Exponer estado civil con catálogo FCU, dirección desagregada y código de comuna/región oficial.",
+   "PROCESOS AFECTADOS": "FCU",
+   "PRIORIDAD": "P3"
+  },
+  {
+   "ID": "BR-21",
+   "CAMPO": "Nombres normalizados",
+   "SITUACIÓN ACTUAL": "Con tildes y espacios dobles en origen.",
+   "CAMBIO SOLICITADO": "Entregar además versión normalizada SIES de nombres y apellidos.",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros",
+   "PRIORIDAD": "P3"
+  },
+  {
+   "ID": "BR-22",
+   "CAMPO": "Depuración del reporte",
+   "SITUACIÓN ACTUAL": "Columnas redundantes o sin uso SIES demostrado (CODIGOCARRERA duplica CODCARPR; datos laborales, financieros, marketing).",
+   "CAMBIO SOLICITADO": "Excluir del reporte regulatorio las columnas marcadas EXCLUIR en la hoja 03_PERFIL_UPLUS.",
+   "PROCESOS AFECTADOS": "Todos",
+   "PRIORIDAD": "P3"
+  },
+  {
+   "ID": "BR-23",
+   "CAMPO": "Egreso y titulación",
+   "SITUACIÓN ACTUAL": "Solo estado actual EGRESADO/TITULADO.",
+   "CAMBIO SOLICITADO": "Fechas de egreso y titulación suben a P2: se requieren para identificar egresados con matrícula vigente en Matrícula Unificada.",
+   "PROCESOS AFECTADOS": "Índices (potencial)",
+   "PRIORIDAD": "P4"
+  },
+  {
+   "ID": "BR-24",
+   "CAMPO": "Identificador de persona",
+   "SITUACIÓN ACTUAL": "La persona se identifica por RUT.",
+   "CAMBIO SOLICITADO": "Exponer identificador interno estable de persona, si existe en U+.",
+   "PROCESOS AFECTADOS": "Todos",
+   "PRIORIDAD": "P4"
+  },
+  {
+   "ID": "BR-25",
+   "CAMPO": "Catálogos U+",
+   "SITUACIÓN ACTUAL": "Significado de códigos U+ inferido por uso (SEXO, SEDE, JORNADA, PERIODO, SITUACION, etc.).",
+   "CAMBIO SOLICITADO": "Entregar catálogo documentado de cada código (UP-68).",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros; FCU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-26",
+   "CAMPO": "Vía de admisión, cupo y programa de origen",
+   "SITUACIÓN ACTUAL": "VIASDEADMISION/CATEGORIA sin significado; programa anterior en texto libre.",
+   "CAMBIO SOLICITADO": "Registrar vía/cupo (UP-63), tipo de programa de origen (UP-64) y reconocimiento de acceso (UP-65).",
+   "PROCESOS AFECTADOS": "MU",
+   "PRIORIDAD": "P1"
+  },
+  {
+   "ID": "BR-27",
+   "CAMPO": "Historial de matrícula por período",
+   "SITUACIÓN ACTUAL": "Solo valor vigente de jornada, sede, plan, nivel y programa.",
+   "CAMBIO SOLICITADO": "Extracto por CODCLI y período (UP-66).",
+   "PROCESOS AFECTADOS": "MU; AC; Extranjeros",
+   "PRIORIDAD": "P1"
+  }
+ ],
+ "no_calcular": [
+  {
+   "ID": "UP-04",
+   "CAMPO": "TIPO_DOCUMENTO_SIES"
+  },
+  {
+   "ID": "UP-11",
+   "CAMPO": "SEXO_SIES_MU"
+  },
+  {
+   "ID": "UP-15",
+   "CAMPO": "COD_NACIONALIDAD_SIES"
+  },
+  {
+   "ID": "UP-33",
+   "CAMPO": "FORMA_INGRESO_SIES (código SIES de forma de ingreso; los hechos se piden en UP-63 a UP-65)"
+  },
+  {
+   "ID": "UP-44",
+   "CAMPO": "SEMESTRES_SUSPENDIDOS_PREVIOS"
+  },
+  {
+   "ID": "UP-45",
+   "CAMPO": "REINCORPORACION_2DO_SEM"
+  },
+  {
+   "ID": "UP-46",
+   "CAMPO": "ASIG_INSCRITAS_ANIO_REF"
+  },
+  {
+   "ID": "UP-47",
+   "CAMPO": "ASIG_APROBADAS_ANIO_REF"
+  },
+  {
+   "ID": "UP-48",
+   "CAMPO": "PROM_NOTAS_SEM1_ANIO_REF"
+  },
+  {
+   "ID": "UP-49",
+   "CAMPO": "PROM_NOTAS_SEM2_ANIO_REF"
+  },
+  {
+   "ID": "UP-50",
+   "CAMPO": "ASIG_INSCRITAS_HISTORICAS"
+  },
+  {
+   "ID": "UP-51",
+   "CAMPO": "ASIG_APROBADAS_HISTORICAS"
+  },
+  {
+   "ID": "UP-52",
+   "CAMPO": "CURSO_1ER_SEM"
+  },
+  {
+   "ID": "UP-53",
+   "CAMPO": "CURSO_2DO_SEM"
+  },
+  {
+   "ID": "UP-54",
+   "CAMPO": "UNIDADES_CURSADAS_ANIO_REF"
+  },
+  {
+   "ID": "UP-55",
+   "CAMPO": "UNIDADES_APROBADAS_ANIO_REF"
+  },
+  {
+   "ID": "UP-56",
+   "CAMPO": "UNIDADES_CURSADAS_TOTAL"
+  },
+  {
+   "ID": "UP-57",
+   "CAMPO": "UNIDADES_APROBADAS_TOTAL"
+  },
+  {
+   "ID": "",
+   "CAMPO": "VIGENCIA de Matrícula Unificada (VIG 0/1/2): se calcula con UP-39, UP-40, UP-43, UP-59 y UP-60"
+  },
+  {
+   "ID": "",
+   "CAMPO": "Códigos SIES de sede, carrera, jornada, modalidad y versión: se obtienen del código único (UP-26, UP-27)"
+  },
+  {
+   "ID": "",
+   "CAMPO": "Semestre SIES de ingreso y nivel académico en semestres: se calculan con el período y el régimen documentados (UP-32, UP-41, UP-68)"
+  },
+  {
+   "ID": "",
+   "CAMPO": "Situación socioeconómica Fondo Solidario: no se solicita a U+"
+  }
+ ],
+ "codigo_unico": [
+  {
+   "ASPECTO": "Definición oficial",
+   "DETALLE": "Código unificado = institución + sede + carrera + jornada + versión (ISCJV). Usado por Mineduc en todos sus procesos."
+  },
+  {
+   "ASPECTO": "Conclusión",
+   "DETALLE": "CARRERA + SEDE + JORNADA no basta: falta la VERSIÓN, que U+ no registra. La modalidad, duración, tipo de plan y nivel se expresan en la versión."
+  },
+  {
+   "ASPECTO": "REQUERIMIENTO",
+   "DETALLE": "ALMACENAR_CODIGO_UNICO_SIES"
+  },
+  {
+   "ASPECTO": "PRIORIDAD",
+   "DETALLE": "P1"
+  },
+  {
+   "ASPECTO": "TIPO",
+   "DETALLE": "MAESTRO_REGULATORIO"
+  },
+  {
+   "ASPECTO": "GRANULARIDAD",
+   "DETALLE": "OFERTA_ACADEMICA (atributo del programa/plan U+, asignado a cada matrícula por período)"
+  },
+  {
+   "ASPECTO": "HISTORIZABLE",
+   "DETALLE": "SI (vigencia desde/hasta por año de oferta)"
+  },
+  {
+   "ASPECTO": "Mantención: cambio de sede o de jornada",
+   "DETALLE": "Siempre cambia el código unificado (nuevo S o J): nuevo registro en el maestro; el anterior se cierra."
+  },
+  {
+   "ASPECTO": "Mantención: cambio de modalidad, duración, tipo de plan o nivel",
+   "DETALLE": "Cambia la versión (V) y por tanto el código: nuevo registro; el anterior se cierra."
+  },
+  {
+   "ASPECTO": "Mantención: cambio de plan de estudios sin cambio de atributos",
+   "DETALLE": "No cambia el código (cambio curricular); el plan U+ se asocia al mismo código."
+  },
+  {
+   "ASPECTO": "Mantención: cambio de nombre",
+   "DETALLE": "Sujeto a evaluación de SIES (oficio); U+ registra el código que resulte."
+  },
+  {
+   "ASPECTO": "Mantención: estado de la oferta",
+   "DETALLE": "El programa antiguo queda con vigencia 2 y el nuevo con vigencia 1 en Oferta; U+ debe conservar ambos códigos con sus fechas."
+  },
+  {
+   "ASPECTO": "Quién asigna el código",
+   "DETALLE": "La institución, desde la Oferta Académica aceptada por SIES. Bettersoft provee el campo y su historia; no calcula el código."
+  }
+ ],
+ "historial": [
+  {
+   "CAMPO": "VIG (MU)",
+   "CRITERIO": "Estado de la matrícula al 30-04 (pregrado) o 15-05 (posgrado)",
+   "ID": "UP-43, UP-39, UP-40"
+  },
+  {
+   "CAMPO": "Estado académico y situación",
+   "CRITERIO": "A la fecha de corte de cada proceso",
+   "ID": "UP-43"
+  },
+  {
+   "CAMPO": "Matrícula del período",
+   "CRITERIO": "Año/período y fecha de matrícula del período informado",
+   "ID": "UP-39, UP-40, UP-66"
+  },
+  {
+   "CAMPO": "SUS_PRE (MU)",
+   "CRITERIO": "Semestres suspendidos antes del año del proceso",
+   "ID": "UP-43"
+  },
+  {
+   "CAMPO": "REINCORPORACION (MU)",
+   "CRITERIO": "Suspensión en 1er semestre y reincorporación en 2º del año",
+   "ID": "UP-43"
+  },
+  {
+   "CAMPO": "Jornada",
+   "CRITERIO": "Jornada de la matrícula en el período informado",
+   "ID": "UP-25, UP-66"
+  },
+  {
+   "CAMPO": "Carrera / código único",
+   "CRITERIO": "Programa en que estaba matriculado en el período (y el año anterior para cambio interno)",
+   "ID": "UP-27, UP-66"
+  },
+  {
+   "CAMPO": "Sede",
+   "CRITERIO": "Sede del período",
+   "ID": "UP-23, UP-66"
+  },
+  {
+   "CAMPO": "Plan de estudios",
+   "CRITERIO": "Plan vigente en el año de referencia (AC)",
+   "ID": "UP-28, UP-66"
+  },
+  {
+   "CAMPO": "Forma de ingreso",
+   "CRITERIO": "Hecho del ingreso al programa (fijo)",
+   "ID": "UP-63, UP-64, UP-34 a UP-37"
+  },
+  {
+   "CAMPO": "Cambios de carrera",
+   "CRITERIO": "Fecha y programas de origen/destino",
+   "ID": "UP-34, UP-43"
+  },
+  {
+   "CAMPO": "Cambios de jornada",
+   "CRITERIO": "Fecha y jornadas de origen/destino",
+   "ID": "UP-43, UP-66"
+  },
+  {
+   "CAMPO": "Períodos cursados",
+   "CRITERIO": "Semestres con actividad en el año de referencia (AC)",
+   "ID": "UP-62, UP-68"
+  },
+  {
+   "CAMPO": "Nivel académico",
+   "CRITERIO": "Nivel a la fecha de corte",
+   "ID": "UP-41, UP-66"
+  },
+  {
+   "CAMPO": "Egreso y titulación",
+   "CRITERIO": "Fecha de egreso y de titulación (VIG 2)",
+   "ID": "UP-59, UP-60"
+  }
+ ]
+}

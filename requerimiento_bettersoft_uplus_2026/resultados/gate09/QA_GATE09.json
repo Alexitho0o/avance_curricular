@@ -1,0 +1,140 @@
+{
+ "originales_v09_intactos": {
+  "resultados/DICCIONARIO_MAESTRO_UPLUS_SIES_2026.xlsx": true,
+  "resultados/REQUERIMIENTO_BETTERSOFT_REPORTE_REGULATORIO_UPLUS.docx": true,
+  "scripts/generar_diccionario_maestro_uplus_sies.py": true,
+  "scripts/generar_requerimiento_bettersoft_docx.js": true,
+  "README.md": true
+ },
+ "ORIGINALES_MODIFICADOS": "NO",
+ "xlsx": {
+  "hojas": 20,
+  "hojas_v09_conservadas": true,
+  "hojas_nuevas": [
+   "12_GATE09_RESOLUCION",
+   "13_GATE09_CRUCES",
+   "14_CAMPOS_REQUIEREN_HISTORIAL",
+   "15_CODIGO_UNICO_MANTENCION",
+   "16_SEXO_POR_PROCESO",
+   "17_JORNADA_U_PLUS"
+  ],
+  "filas_por_hoja": {
+   "00_LEEME": 11,
+   "00_ESTADO_FASES": 9,
+   "01_INVENTARIO_PROCESOS": 15,
+   "02_RESUMEN_POR_PROCESO": 13,
+   "03_PERFIL_UPLUS_DATOSALUMNOS": 67,
+   "03b_PERFIL_UPLUS_HOJA1_NOTAS": 25,
+   "04_MATRIZ_MAESTRA": 261,
+   "05_DICCIONARIO_BETTERSOFT": 66,
+   "06_CATALOGOS_HOMOLOGACIONES": 165,
+   "07_BRECHAS_BETTERSOFT": 27,
+   "08_NO_RESOLUBLE_DESDE_UPLUS": 153,
+   "09_CONTRADICCIONES": 13,
+   "10_DATOS_SENSIBLES": 16,
+   "11_FUENTES_EVIDENCIA": 69,
+   "12_GATE09_RESOLUCION": 13,
+   "13_GATE09_CRUCES": 13,
+   "14_CAMPOS_REQUIEREN_HISTORIAL": 15,
+   "15_CODIGO_UNICO_MANTENCION": 15,
+   "16_SEXO_POR_PROCESO": 5,
+   "17_JORNADA_U_PLUS": 3
+  },
+  "matriz_filas": 261,
+  "matriz_id_duplicados": 0,
+  "matriz_campo_duplicado_por_subproceso": 0,
+  "matriz_filas_actualizadas_gate09": 46,
+  "diccionario_filas": 66,
+  "diccionario_id_duplicados": 0,
+  "procesos_matriz": [
+   "Avance Curricular",
+   "Estudiantes Extranjeros",
+   "FCU - Ficha de Caracterización Única",
+   "Infraestructura y Recursos Educacionales",
+   "Matrícula Unificada",
+   "Oferta Académica",
+   "Personal Académico",
+   "Índices CNED"
+  ],
+  "prioridades_invalidas": [],
+  "prioridades": {
+   "P2": 19,
+   "P1": 18,
+   "NO_APLICA_BETTERSOFT": 18,
+   "P3": 8,
+   "P4": 3
+  },
+  "acciones": {
+   "SOLICITAR_HECHO": 44,
+   "NO_CALCULAR_EN_UPLUS": 18,
+   "SOLICITAR_MAESTRO": 4
+  },
+  "estados_gate09_invalidos": [],
+  "contradicciones": 13,
+  "contradicciones_por_estado": {
+   "RESUELTA": 10,
+   "PENDIENTE": 2,
+   "NO_APLICA": 1
+  },
+  "contradicciones_por_estado_gate09": {
+   "NO_DETERMINABLE_DESDE_U_PLUS": 3,
+   "RESUELTA_DATO_REAL": 3,
+   "IMPLEMENTACION_HISTORICA_INCORRECTA": 2,
+   "PENDIENTE_FALTA_FUENTE": 2,
+   "RESUELTA_REGLA_OFICIAL": 2,
+   "NO_APLICA_AL_PROCESO": 1
+  },
+  "catalogo_clasificaciones_invalidas": [],
+  "catalogo_clasificaciones": {
+   "OFICIAL": 69,
+   "SIN_REVISION_GATE09": 52,
+   "OBSERVADO": 26,
+   "DESCARTADO_COMO_REGLA": 13,
+   "PENDIENTE": 3,
+   "NO_DETERMINABLE": 1,
+   "DEFAULT_TECNICO_NO_REGLA": 1
+  },
+  "matriz_filas_sin_fuente": 0,
+  "matriz_filas_sin_nivel_respaldo": 0,
+  "diccionario_filas_sin_fuente": 0,
+  "diccionario_filas_sin_nivel_respaldo": 0,
+  "P1_total": 18,
+  "P1_NO_DEMOSTRADOS": 0,
+  "P1_disponibilidad_por_confirmar_o_nueva": 16,
+  "bettersoft_calculados_sin_regla": [],
+  "supuestos_como_regla_oficial": 0,
+  "posibles_datos_personales": [],
+  "QA_XLSX": "APROBADO"
+ },
+ "docx": {
+  "zip_integro": true,
+  "partes_requeridas": true,
+  "xml_bien_formado": true,
+  "tabla_contenido": true,
+  "orientacion_horizontal": true,
+  "secciones_h1": [
+   "1. Objetivo",
+   "2. Alcance",
+   "3. Principio del requerimiento",
+   "4. Extractos solicitados",
+   "5. Campos solicitados",
+   "6. Maestro del código único SIES",
+   "7. Datos históricos",
+   "8. Catálogos de U+",
+   "9. Datos que U+ no debe calcular",
+   "10. Reglas de extracción",
+   "11. Validaciones mínimas del reporte",
+   "12. Consultas a Bettersoft",
+   "Anexo. Cambios solicitados"
+  ],
+  "secciones_esperadas_presentes": true,
+  "tablas": 17,
+  "secciones_vacias": [],
+  "terminos_internos_encontrados": [],
+  "posibles_datos_personales": [],
+  "contradiccion_interna_solicitar_y_no_calcular": [],
+  "conteo_p1_coherente": true,
+  "QA_ESTRUCTURAL_DOCX": "APROBADO",
+  "QA_VISUAL_DOCX": "PENDIENTE_REVISION_HUMANA"
+ }
+}
