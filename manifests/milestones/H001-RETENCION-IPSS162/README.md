@@ -420,3 +420,52 @@ de fórmulas de Excel) antes de construir las fórmulas de Excel — mismos 9 c�
 del usuario, mismo hash verificado.
 
 Verificado por: Claude, 2026-09-30.
+
+## Adenda 4 — vistas ejecutivas (institucional → sector → sede → modalidad → carrera) y corrección del patrón de edad (2026-09-30)
+
+Por solicitud del usuario: reestructuración de la hoja 13 y hoja nueva `14_Vistas_Ejecutivas`.
+
+**Hoja 13 — renombrada y reestructurada.** "Jornada real" se separó en dos columnas: `Jornada` (Diurno/
+Vespertino/Virtual) y `Modalidad` (Presencial/A distancia). "Cohorte interno"/"Retenidos interno" se renombraron
+a `Casos` (estudiantes matriculados de primer año) y `Retenidos`. La columna `Año` de la Sección B se renombró a
+`Cohorte`.
+
+**Hoja 14 — nueva, 7 niveles de vista más ranking y conclusiones**, todo con fórmulas en vivo sobre la hoja 9
+(`CONTAR.SI.CONJUNTO`/`SUMAR.SI.CONJUNTO`/`ÍNDICE-COINCIDIR`), clasificación B:
+1. Institucional (por año + total 2022-2025: 2.379 casos, 1.476 retenidos, 62,04%).
+2. Por Sector (combinado): Tecnologías 65,8%, Administración y Comercio 51,9%, Salud 46,7% (Salud solo tiene
+   datos 2025).
+3. Por Sede — **dato observado: no existe variación.** El 100% de la cohorte (2.379 casos) es Código Sede 2
+   (Casa Central, Santiago). No se construyó tabla porque no aporta desagregación.
+4. Por Modalidad (Presencial vs. A distancia), combinado y por año.
+5. Por Carrera (combinado, ordenado de mayor a menor tasa).
+6. Por Carrera × Modalidad (combinado).
+7. Por Jornada, Sexo y Tramo de Edad (combinado — complementa el detalle por año ya en hoja 12).
+
+**Vista Mejor/Peor %** por cada dimensión (fórmulas `ÍNDICE/COINCIDIR/MAX/MIN` en vivo) — corregido un error de
+fórmula encontrado en verificación (la fila "Modalidad" apuntaba a la columna de Retenidos en vez de Tasa; se
+corrigió a `F28`/`F33` antes de la entrega).
+
+**Corrección importante — el patrón de edad no es el que se planteó inicialmente.** El usuario propuso como
+ejemplo de conclusión "a mayor edad, mejor retención". El dato combinado 2022-2025 muestra lo contrario desde
+el tramo 20-24 en adelante: 20-24 tiene la mejor tasa (70,4%) y baja de forma consistente con la edad hasta
+40+ (56,2%, la peor tasa de todas). Al revisar por año (hoja 12, Sección D): en 2022 el tramo 40+ sí tenía la
+mejor tasa (83,3%), pero en 2024 y 2025 — los años de la caída — el tramo 40+ tiene la peor tasa de todos.
+El patrón se invirtió con el tiempo; no es una relación estable entre edad y retención. Se documentó la
+corrección en la hoja 14 (Conclusiones) y en la hoja 6 (Limitaciones), en vez de reproducir la conclusión
+original sin verificar.
+
+**Otras conclusiones (dato B, ver hoja 14 para el detalle completo):** mejor carrera Ingeniería en Conectividad
+y Redes (71,3%), peor Técnico en Administración de Empresas (44,3%); mejor jornada Presencial-Diurno (71,2%),
+peor Presencial-Vespertino (53,9%); sin diferencia material por sexo (61,9% vs 62,6%); Modalidad sin ventaja
+estructural clara (el orden entre Presencial y A distancia se invirtió entre 2022 y 2025).
+
+**Verificación.** Recálculo LibreOffice headless en el dispositivo del usuario: 0 errores de fórmula en las 15
+hojas. Totales de retenidos cruzados entre Nivel 1 (institucional), Nivel 5 (por carrera) y Nivel 6 (carrera ×
+modalidad) de la hoja 14: los tres coinciden exactamente en 1.476.
+
+**Entrega.** Mismo path de salida, sobrescrito. Nuevo SHA-256:
+`d16a00c7bb38dffb9011731cfa642dbcc2004af74e8968c80165f382bd8653c0`. Copia idéntica entregada en el Escritorio
+del usuario, mismo hash verificado.
+
+Verificado por: Claude, 2026-09-30.
