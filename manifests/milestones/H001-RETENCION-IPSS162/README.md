@@ -147,3 +147,63 @@ Se agotaron dos vías razonables sin forzar explicación: interpretación de reg
 Detalle completo, fila por fila con clasificación A/B/C/D/E, en la hoja `11_DIAGNOSTICO_BRECHAS` del libro `outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx`, actualizado 2026-09-30; SHA-256 `5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3`.
 
 Verificado por: Claude, 2026-09-30, mediante recálculo independiente (LibreOffice headless) en el dispositivo del usuario y comparación fila por fila contra el cruce delegado a Codex.
+
+## Entregable ejecutivo para audiencia no técnica (2026-09-30)
+
+Por solicitud del usuario, se construyó un segundo archivo, separado del diagnóstico técnico, para distribución
+a personal de IPSS que no maneja las reglas de negocio de retención: `RETENCION_IPSS_ANALISIS_2022_2026.xlsx`.
+
+**Objetivo y alcance.** Presentar, en lenguaje simple y con gráficos, la definición de retención, el origen de
+los datos, la explicación del cruce y los resultados — organizados por **sector IPSS** (no por área SIES/CINE-F,
+que el usuario señaló como no reconocible para el personal de IPSS: "no tenemos Ciencias Básicas").
+
+**Fuente de datos.** Extraída y verificada desde `02_COHORTE_ELEGIBILIDAD` y `06_SIES_2025_GRANULAR_OFICIAL` del
+libro `RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx` (SHA-256
+`5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3`), tras recálculo con LibreOffice headless.
+2.379 candidatos incluidos (cohortes 2022-2025), verificado contra el total ya gobernado. Clasificación C,
+derivado de B ya verificado — no es un recálculo independiente de las reglas de elegibilidad, que permanecen
+gobernadas exclusivamente en el archivo técnico.
+
+**Sin datos personales.** El archivo ejecutivo no incluye `BASE_RETENCION_MU` ni ningún identificador de
+estudiante (nombre, RUT, fecha de nacimiento). Solo contiene conteos agregados por año, carrera y bandera de
+retención (1/0). Diseño de privacidad por defecto, consistente con la regla de gobernanza del proyecto.
+
+**Mapeo carrera → sector IPSS (clasificación B-externo).** Sector según la taxonomía propia de IPSS publicada
+en ipss.cl ("Sectores de Estudio"), consultada el 2026-09-30 por instrucción explícita del usuario ("buscalo en
+la pagina web el ipss.cl"). Las 17 carreras presentes en la cohorte 2022-2025 se verificaron una por una contra
+su URL individual en ipss.cl (sin excepciones, sin inferencia por patrón):
+
+| Sector IPSS | Carreras (n=17) |
+|---|---|
+| Tecnologías | Ing. Informática, Ing. Ciberseguridad, Téc. Ciberseguridad, Ing. Conectividad y Redes, Téc. Conectividad y Redes, Téc. Programación y Análisis de Sistemas, Ing. Ciencia de Datos, Téc. Ciencia de Datos |
+| Administración y Comercio | Auditoría, Contabilidad General, Ing. Administración de Empresas, Téc. Administración de Empresas, Ing. Logística, Téc. Logística, Administración Pública, Téc. Administración Pública |
+| Salud | Téc. Enfermería |
+
+URLs de verificación por carrera guardadas en la hoja `8_Mapeo_Sector_IPSS` del propio archivo entregable. El
+sector "Ingeniería" (4º sector de ipss.cl, 9 carreras) no contiene ninguna carrera presente en la cohorte
+2022-2025 — no aplica.
+
+**Hallazgo observado (no un error):** Administración y Comercio solo tiene candidatos desde 2024, y Salud solo
+desde 2025 (dato B, visible en la hoja 4 del entregable). Coincide con la apertura progresiva de esos sectores
+en la oferta de IPSS (Salud se anuncia como "nueva área" en ipss.cl para 2025).
+
+**Comparación con SIES por sector.** Solo es posible a nivel granular para 2025 (única tabla oficial por carrera
+recibida, correo Rodrigo Rolando Meneses 09-09-2026). Brechas 2025: Tecnologías +0,12 pp, Administración y
+Comercio -0,39 pp, Salud 0,00 pp — todas menores, sin necesidad de investigación adicional. Para 2022-2024 solo
+existe comparación a nivel institucional total (ya cerrada como E — causa no establecida, sección anterior de
+este README).
+
+**Estructura del archivo:** Portada; 1-3 explicación (definición SIES, origen de datos, cómo se cruza);
+4 Resultados por sector (2 tablas + 2 gráficos de columnas); 5 Evolución 2022-2026 (gráfico de líneas,
+nivel institucional); 6 Limitaciones; 7 Glosario; hojas 8-10 de soporte técnico (mapeo de sectores, base
+analítica anonimizada, tabla SIES 2025 granular) — todas con fórmulas en vivo (`CONTAR.SI.CONJUNTO`,
+`SUMAR.SI.CONJUNTO`, `BUSCARV`), sin valores pegados a mano.
+
+**Entrega.** `outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20260930_000000/RETENCION_IPSS_ANALISIS_2022_2026.xlsx`
+(SHA-256 `881761ab72b8834344e8097ab2b789f4755d2b5cfecfcfdf4b3090fc432ef23f`), sin datos personales; excluido de
+Git por la regla `*.xlsx` del `.gitignore` del proyecto, igual que el resto de los libros de este hito — la
+trazabilidad queda en este README. Copia adicional entregada en el Escritorio del usuario, mismo hash verificado.
+
+Verificado por: Claude, 2026-09-30, mediante recálculo independiente (LibreOffice headless) en el dispositivo
+del usuario; 0 errores de fórmula, 0 "SIN MAPEO" en las 2.379 filas de la base analítica y las 36 filas de la
+tabla SIES 2025 granular.
