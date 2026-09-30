@@ -115,3 +115,35 @@ Instrucción del usuario: "no deben quedar pendientes". Se cerró la conciliaci�
 El texto `OBSERVACION` de las 53 filas de `PUENTE` que decían "causa no verificada (E)" sin más detalle (45 "brecha", 6 "solo BASE", 2 "solo CSV") fue actualizado para referenciar esta explicación por carrera, sin alterar ningún valor numérico (verificado: 0 diferencias fuera de la columna `OBSERVACION` al comparar la versión anterior y la nueva del CSV, fila por fila). Detalle completo, con fórmulas trazables, en `TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json` (sección `cierre_carrera_2026_09_30`) y en la hoja `RESUMEN_POR_CARRERA` del XLSX.
 
 Única E que permanece, explícita y acotada: la causa metodológica de por qué el corte 2025 incluyó `VIG=0` para 8 carreras y 2022-2024 no. No bloquea el cierre de este artefacto: el patrón está 100% cuantificado (8 carreras, neto 73) y no representa matrícula sin explicar.
+
+
+## Cierre de la investigación de causas — brechas de retención 2022 y 2024 (2026-09-30)
+
+Instrucción del usuario: agotar las reglas de negocio de retención adicionales del correo y del Manual de Procesos: Matrícula Unificada 2026 antes de aceptar las brechas de +4,49 pp (2022) y -9,08 pp (2024) como sin explicación.
+
+### Reglas complementarias del manual — clasificación B/E
+
+Se identificaron y probaron contra los datos reales dos reglas del manual no implementadas en `02_COHORTE_ELEGIBILIDAD`:
+
+- **NIV_ACA<3** (definición de "estudiante de primer año", exige Nivel Académico menor a 3 semestres): el 100% de los candidatos 2022 (305/305) y 2024 (558/558) ya tiene `NIV_ACA=1`. No hay población que excluir; no explica la brecha.
+- **Estudiante transferido** (Cambio Interno=3, Cambio Externo=4, Articulación TNS→Profesional=11 deben excluirse de "primer año" aunque el año de ingreso coincida): el 100% de los candidatos 2022 y 2024 tiene `FOR_ING_ACT=1`. No hay población que excluir; no explica la brecha.
+
+**Corrección registrada:** una primera verificación de esta última regla, dentro de la misma sesión, reportó por error 5 casos `FOR_ING_ACT=3` (2022) y 13 casos `FOR_ING_ACT` en {4,11} (2024). El error fue propio de Claude, no del libro gobernado: el script de verificación usaba un índice desfasado en una fila entre `FILA_RAW` de `02_COHORTE_ELEGIBILIDAD` (que es el número de fila de Excel de `BASE_RETENCION_MU`, no un índice de datos 1-based) y la lista de filas leída en Python. Re-verificado con el índice correcto (0 discrepancias de `ANIO_INFORMADO` al validar la alineación en las 10.200 filas): el hallazgo de transferidos no existe y queda retirado. No se había incorporado a ninguna decisión de gobernanza antes de detectarse el error.
+
+Con esto se agotan las reglas de negocio de retención explícitas del correo SIES y del manual: las tres del correo (duración de programa, exclusión de especiales, inconsistencia de cohorte) ya estaban correctamente implementadas; las dos adicionales del manual están ausentes de la fórmula pero sin efecto material en los datos actuales.
+
+### Cobertura y matching entre años — cruce delegado a Codex, verificado íntegramente por Claude
+
+Descartada la interpretación de reglas como causa, se investigó cobertura/matching de las fuentes RAW entre años. El cruce pesado se delegó a Codex con rutas, hashes y contexto ya gobernado, y Claude verificó cada cifra de forma independiente, trabajando directamente en el dispositivo del usuario y sin exportar identificadores individuales.
+
+**2024 — los 180 casos ausentes de 2025 (de los 232 no retenidos):** verificados exactamente (misma llave `TIPO_DOC+N_DOC+DV`, misma distribución por `COD_CAR/COD_SED/JOR/VERSION/FOR_ING_ACT`, cero diferencias contra el reporte de Codex). Los 180 comparten el lote de carga `FECH_CAR=08-05-2024 18:34` con `NIVEL=1`, `NIVEL 2=NUEVO` y `1eraño=1` en el RAW 2024 — el mismo lote agrupa a 560 de los 636 candidatos totales de la cohorte 2024, por lo que el lote no distingue a los ausentes de los vigentes. Búsqueda directa en la hoja granular del RAW 2025 (2.371 filas), sin pasar por `BASE_RETENCION_MU`: 0 de los 180 encontrados. Esto descarta un error de consolidación RAW→`BASE_RETENCION_MU`: la ausencia es real en el RAW oficial 2025, no un artefacto de proceso interno (B).
+
+**2022 — los 61 registros de diferencia (310 candidatos RAW vs 249 histórico):** verificados exactamente contra RAW 2022 (`2022.csv`, sha256 `08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f`) y la fuente histórica gobernada (`reporte_matricula_ip_san_sebastian.csv`, sha256 `1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6`). La diferencia se concentra en los códigos de carrera 3 (+40) y 46 (+13), que reúnen 53 de los 61. El RAW 2022 no trae una columna "1eraño" equivalente a la de 2024; trae `COD_NIV_GLO=1` en el 100% de las 1.038 filas (sin valor diagnóstico) y `FECH_CAR` con 10 valores distintos, de los cuales 297/310 candidatos comparten uno solo (B).
+
+### Estado final — clasificación E
+
+Se agotaron dos vías razonables sin forzar explicación: interpretación de reglas de negocio (correo + manual, todas verificadas como implementadas o sin población afectada) y cobertura/matching entre años (acotada con precisión, sin artefacto de proceso encontrado). Ninguna vía explica la magnitud de +4,49 pp (2022) ni -9,08 pp (2024). Ambas brechas se cierran como **E — causa no establecida**, sin ajustar la definición de retención ni las tasas calculadas para acercarlas a la publicación SIES.
+
+Detalle completo, fila por fila con clasificación A/B/C/D/E, en la hoja `11_DIAGNOSTICO_BRECHAS` del libro `outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx`, actualizado 2026-09-30; SHA-256 `5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3`.
+
+Verificado por: Claude, 2026-09-30, mediante recálculo independiente (LibreOffice headless) en el dispositivo del usuario y comparación fila por fila contra el cruce delegado a Codex.
