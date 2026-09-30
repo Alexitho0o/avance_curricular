@@ -364,3 +364,59 @@ independiente en Python (fuera de la cadena de fórmulas de Excel) que reproduce
 del usuario, mismo hash verificado.
 
 Verificado por: Claude, 2026-09-30.
+
+## Adenda 3 — retención granular por código único, reconstruida internamente (2026-09-30)
+
+Por solicitud del usuario: el "código único" que SIES usa en sus propios reportes granulares (formato
+`I162S{sede}C{carrera}J{jornada}V{versión}`) se puede reconstruir por completo desde columnas ya gobernadas de
+`BASE_RETENCION_MU` (hoja 11: `COD_SED`, `COD_CAR`, `JOR`, `VERSION`) — sin depender de que SIES envíe ese
+detalle por correo. Se agregaron: columnas V-X en la hoja 9 (Código Sede, Versión, Código Único interno —
+fórmulas `ÍNDICE/COINCIDIR` sobre la hoja 11, mismo patrón que las columnas O-U) y una hoja nueva
+`13_Granular_Codigo_Unico`, con dos secciones, ambas 100% fórmulas en vivo (`CONTAR.SI.CONJUNTO` /
+`SUMAR.SI.CONJUNTO`).
+
+**Sección A — validación 2025 (clasificación A/B, dato real de SIES).** Compara, código por código (36
+códigos), el cálculo interno contra el envío real de Rodrigo Rolando Meneses (hoja 10). Resultado: 27 códigos
+coinciden exactamente. En 9 códigos — 7 de ellos en jornada Virtual — el cálculo interno cuenta 1 o 2 casos
+menos que SIES: Ingeniería en Conectividad y Redes (Vespertino y Virtual), Ingeniería en Ciberseguridad
+(Virtual), Técnico en Programación y Análisis de Sistemas (Diurno y Virtual), Ingeniería en Administración de
+Empresas (Vespertino), Ingeniería en Logística (Virtual), Auditoría (Virtual), Ingeniería en Ciencia de Datos
+(Virtual). Suma de diferencias: 13 casos, 9 retenidos.
+
+La suma de los 36 códigos de SIES (1.163 casos / 677 retenidos / 58,2115%) coincide exactamente con el "Total
+general" que Meneses envió por correo y con la tasa oficial publicada. Esto confirma que los 13 casos
+identificados código por código son la explicación completa y ya cuantificada de la diferencia entre la tasa
+interna 2025 (58,09%, sobre 1.150 casos) y la oficial (58,21%, sobre 1.163 casos) — no queda margen sin
+explicar en 2025.
+
+**Sección B — 2022, 2023 y 2024 (clasificación B, cálculo interno, sin validación externa por código).** SIES
+no envió el desglose granular de esos años, por lo que no existe una Sección A equivalente para validarlos
+código por código. Se aplicó la misma reconstrucción de código único a esos 3 años (85 combinaciones año×código
+en total: 17 en 2022, 8 en 2023, 24 en 2024, 36 en 2025), con Cohorte y Retenidos recalculados por fórmula
+directamente desde la hoja 9. Los totales por año coinciden exactamente con los ya reconciliados en la Adenda 2
+(305/224 en 2022, 366/258 en 2023, 558/326 en 2024, 1.150/668 en 2025) — es una re-exposición a nivel de
+código, no un recálculo distinto.
+
+**Estado de la investigación de brechas 2022-2024.** Este hallazgo no reabre la clasificación E ("diferencia
+sin causa establecida") de la sección "Cierre de la investigación de causas": para 2025 sí se identificó y
+cuantificó una causa concreta (los 13 casos), pero para 2022-2024 no existe el mismo mecanismo de validación
+externa por código — solo el porcentaje agregado publicado por SIES, ya usado en las Adendas anteriores. Si en
+el futuro SIES entrega el detalle granular de esos 3 años, la hoja 13 Sección B ya tiene la estructura lista
+para una Sección A equivalente.
+
+**Contenido nuevo:** hoja 9, columnas V (Código Sede), W (Versión), X (Código Único interno — 2.379 filas, 0 en
+blanco). Hoja nueva `13_Granular_Codigo_Unico`: Sección A (36 filas + resumen) y Sección B (85 filas). Nota
+actualizada en hoja 6 (fila 7, limitación de comparación granular por sector) y nota nueva (fila 11) con el
+hallazgo cuantificado. Portada actualizada.
+
+**Verificación.** Recálculo LibreOffice headless en el dispositivo del usuario: 0 errores de fórmula en las 14
+hojas. Totales de la hoja 13 Sección B verificados contra los totales ya reconciliados de la hoja 9/12 (exacto,
+sin diferencias). Reconciliación Sección A verificada con recálculo independiente en Python (fuera de la cadena
+de fórmulas de Excel) antes de construir las fórmulas de Excel — mismos 9 códigos discrepantes, misma suma de
+13/9.
+
+**Entrega.** Mismo path de salida, sobrescrito. Nuevo SHA-256:
+`1bc8317edb1955b3dd38dfbd1b5fbbb33df7a0a57b658f98a9d348b1e71969b9`. Copia idéntica entregada en el Escritorio
+del usuario, mismo hash verificado.
+
+Verificado por: Claude, 2026-09-30.
