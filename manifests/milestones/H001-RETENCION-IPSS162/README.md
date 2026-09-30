@@ -492,3 +492,74 @@ institucional.
 Estado del hito: pendiente cerrado. No quedan investigaciones de brecha abiertas en H001-RETENCION-IPSS162.
 
 Verificado por: Claude, 2026-09-30.
+
+## Adenda 5 — navegación, semáforos, tablas con filtro y gráficos (2026-09-30)
+
+A pedido del usuario se agregó, sobre el mismo archivo de la Adenda 4, sin tocar ningún valor
+ni fórmula de negocio salvo la corrección puntual indicada abajo:
+
+**1. Menú de navegación (clasificación C, implementación técnica).** En las 15 hojas, columna A
+(reservada: se verificó con una búsqueda exhaustiva de fórmulas que ninguna referencia la columna A
+de ninguna hoja de contenido, por lo que ensancharla y poblarla no rompe nada). Cada hoja muestra un
+índice con hipervínculos a las 15 hojas; la hoja actual queda resaltada en color ámbar. Las hojas 4 y
+14 muestran además sub-enlaces directos a sus tablas internas (3 en hoja 4, 9 en hoja 14, incluida
+Conclusiones). Excepción: la hoja 11 tiene datos reales en la columna A (ANIO_INFORMADO), así que su
+menú se ubicó en la columna AJ (fuera del rango usado por cualquier fórmula), con una nota en A3
+indicando dónde encontrarlo.
+
+Limitación conocida y documentada: en las hojas con tablas cuyo encabezado cae dentro de la franja
+del menú (filas 4-24 aprox.), filtrar esa tabla puede ocultar temporalmente algunas filas del menú
+(comportamiento estándar de Excel: filtrar oculta la fila completa, no solo columnas de la tabla). El
+enlace "🏠 Portada / Índice" siempre está en la fila 5, antes de que empiece cualquier tabla en
+cualquier hoja, por lo que ese enlace nunca se ve afectado — sirve como salida de emergencia
+garantizada. Limpiar el filtro restaura el resto del menú.
+
+**2. Semáforo top-3/peor-3 (o mejor/peor para tablas de 3-4 filas).** Formato condicional aplicado a
+la columna de tasa de retención en 19 tablas (hoja 4: 3 tablas; hoja 5: 1; hoja 12: 4; hoja 13 Sección
+B: 1; hoja 14: 8 niveles/sub-tablas). Verde = mejores tasas, rojo = peores, dentro de cada tabla de
+forma independiente. No se aplicó a la hoja 13 Sección A (tabla de validación SIES, no es el foco de
+ranking) ni a la Vista Mejor/Peor de la hoja 14 (esa tabla ya ES el resumen de mejor/peor, un semáforo
+adicional ahí sería redundante).
+
+**3. Tablas de Excel nativas con filtro (AutoFilter).** 17 tablas convertidas a objetos "Tabla" de
+Excel (con nombre único, estilo con bandas de color) en las hojas 4, 5, 12, 13 (solo Sección B) y 14
+(8 de sus 9 bloques — la Vista Mejor/Peor no se convirtió a Tabla nativa, no aporta valor de filtro).
+No se aplicó a las hojas 8, 9, 10 y 11 (bases de soporte técnico/RAW, no son el objetivo de "todas las
+tablas" en el sentido de análisis ejecutivo) ni a la hoja 13 Sección A (mismo motivo que el semáforo).
+
+**4. Gráficos nuevos en la hoja 14 (8 gráficos; las hojas 4 y 5 ya tenían 2 y 1 gráfico
+respectivamente desde antes, no tocados).** Tipo elegido según el dato de cada nivel, no uno genérico
+repetido: Nivel 1 institucional → línea de evolución 2022-2025; Nivel 2 sector → columnas; Nivel 4
+modalidad → columnas agrupadas Presencial vs. A distancia por año; Nivel 5 carrera (17 carreras) →
+barras horizontales, ya ordenadas de mayor a menor tasa; Nivel 6 carrera×modalidad (27 combinaciones)
+→ barras horizontales con etiqueta combinada "Carrera — Modalidad" (columna auxiliar H, fórmula de
+concatenación, sin afectar ninguna columna usada por otras fórmulas); Nivel 7 → tres columnas
+pequeñas (jornada, sexo, edad).
+
+**5. Corrección de "fórmula inconsistente" (flecha verde de Excel) en hoja 14, Nivel 6 y Nivel 4.**
+Causa raíz identificada: las fórmulas de Casos/Retenidos usaban el código de modalidad ("1"/"3")
+escrito literal en cada fila según correspondiera a esa carrera, en vez de derivarlo de la columna
+Modalidad de la misma fila — Excel compara la forma de las fórmulas de una columna y marca como
+sospechosas las filas cuya fórmula "no seguía el patrón" de sus vecinas. Se reemplazó el literal
+hardcodeado por `IF($C{fila}="Presencial","1","3")` (Nivel 6) e `IF($B{fila}="Presencial","1","3")`
+(Nivel 4), de forma que la fórmula tiene exactamente la misma forma en todas las filas de la columna.
+Verificado: los valores calculados no cambiaron (mismo Casos/Retenidos/Tasa que antes de la
+corrección, contrastado celda por celda tras el recálculo).
+
+**6. Corrección de un defecto introducido por el propio recálculo de LibreOffice.** El recálculo
+headless reescribió los 237 hipervínculos internos del menú como "hipervínculos externos" que
+apuntaban al propio archivo por su nombre de archivo exacto (`RETENCION_IPSS_v8.xlsx`) — frágil ante
+cualquier cambio de nombre del archivo, como el que este mismo proyecto aplica sistemáticamente antes
+de cada entrega. Se corrigió editando directamente el XML del paquete .xlsx (sin volver a pasar por
+LibreOffice, para no perder los valores ya recalculados): se eliminaron las 237 relaciones externas
+espurias y se dejaron los hipervínculos como enlaces internos puros (solo `location`, sin `r:id`).
+Verificado tras la corrección: hipervínculos apuntan a `location` interno sin `target` externo, 0
+errores de fórmula, valores cacheados idénticos a los del recálculo original.
+
+Archivo final: `RETENCION_IPSS_ANALISIS_2022_2026.xlsx`, SHA-256
+`e85b05e6dfeec0bfa1d8a37bc925f727da11b111edcae165713c60b4c371fc16`, 15 hojas, 0 errores de fórmula
+tras recálculo con LibreOffice headless, sin overlaps entre Tablas, hipervínculos internos
+verificados. Copia versionada en
+`outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20260930_140000/`.
+
+Verificado por: Claude, 2026-09-30.
