@@ -207,3 +207,102 @@ trazabilidad queda en este README. Copia adicional entregada en el Escritorio de
 Verificado por: Claude, 2026-09-30, mediante recálculo independiente (LibreOffice headless) en el dispositivo
 del usuario; 0 errores de fórmula, 0 "SIN MAPEO" en las 2.379 filas de la base analítica y las 36 filas de la
 tabla SIES 2025 granular.
+
+## Adenda — inclusión de datos personales, reparación de hipervínculos y correcciones (2026-09-30)
+
+Por instrucción explícita del usuario, se modificó el entregable ejecutivo descrito en la sección anterior.
+El README anterior queda como registro de la primera versión (sin PII); esta adenda documenta los cambios.
+
+**1. Cambio de alcance de privacidad — clasificación D.** El usuario indicó que la audiencia real del archivo
+es gerencia, no personal general de IPSS, y que por lo tanto no es necesario anonimizar: "No es necesario
+anonimizar la información porque se va a entregar a la gerencia... agrega de todas formas la base, el, los RAW,
+porque de igual forma necesitas ver el dato granular en detalle". Se agregó el detalle con identificadores
+completos y la base RAW completa, "con todos los datos sin omitir ni resumir nada" (instrucción literal del
+usuario). El contenido anonimizado/agregado por sector de la versión anterior (hojas 1-8, 10) se conservó sin
+borrar, por instrucción explícita ("no lo borres").
+
+**2. Reparación de hipervínculos de Portada.** Los 7 enlaces de navegación de la Portada no funcionaban
+(reportado por el usuario). Causa raíz: `openpyxl` escribía `cell.hyperlink = "#'Hoja'!A1"` como relación
+externa (`TargetMode="External"`), que además se corrompía en cada recálculo de LibreOffice. Corregido
+usando `Hyperlink(ref=celda, location="'Hoja'!A1")`, que produce un hipervínculo interno real. Verificado tras
+un nuevo recálculo LibreOffice que los 7 enlaces mantienen `location` interno y ningún `target` externo.
+
+**3. Contenido nuevo agregado:**
+- Hoja `9_Base_Analitica_Detalle` (antes `9_Base_Analitica_Anonima`, renombrada): se agregaron 8 columnas
+  (Tipo Doc., N° Documento, DV, Primer Apellido, Segundo Apellido, Nombre, Sexo, Fecha Nac.) a las mismas
+  2.379 filas ya existentes de la cohorte elegible 2022-2025 — mismo orden y conteo, verificado fila por fila
+  contra la extracción original.
+- Hoja nueva `11_BASE_RETENCION_MU_RAW`: copia íntegra y sin modificar de `BASE_RETENCION_MU` completa
+  (10.200 filas × 33 columnas, años 2022-2026), con identificadores de todos los estudiantes informados, no
+  solo de los 2.379 candidatos elegibles. Encabezado con clasificación "USO RESTRINGIDO".
+
+**4. Bug encontrado y corregido durante el proceso.** Al renombrar la hoja 9, las fórmulas
+`CONTAR.SI.CONJUNTO`/`SUMAR.SI.CONJUNTO` de las hojas 4 y 5 (que referenciaban el nombre anterior de la hoja
+como texto literal dentro de la fórmula) quedaron rotas — `openpyxl` no reescribe referencias de fórmula al
+renombrar una hoja. Se corrigieron 38 fórmulas afectadas. Verificado tras recálculo: 0 errores `#NAME?`
+(antes de la corrección había 64), 0 "SIN MAPEO", en las 12 hojas del archivo.
+
+**5. Clasificación de uso.** El archivo pasa de "sin datos personales" a "USO RESTRINGIDO" — contiene
+identificadores de estudiante (nombre, RUT/N° documento, DV, fecha de nacimiento) y su distribución queda
+limitada a gerencia, por decisión explícita del usuario (D). Ya no corresponde su distribución general al
+personal de IPSS bajo el diseño original de privacidad por defecto.
+
+**6. Entrega.** Mismo path de salida
+(`outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20260930_000000/RETENCION_IPSS_ANALISIS_2022_2026.xlsx`),
+sobrescrito. La versión anterior sin PII se archivó en
+`outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20260930_000000/_versiones_previas/RETENCION_IPSS_ANALISIS_2022_2026_sin_PII_20260930.xlsx`
+(SHA-256 `881761ab72b8834344e8097ab2b789f4755d2b5cfecfcfdf4b3090fc432ef23f`). Nuevo SHA-256:
+`90a122726c27ab611ff0765f931c5539743d84552b6f217ae980fb1efd39e39c`. Copia idéntica entregada en el Escritorio
+del usuario, mismo hash verificado. Ambos excluidos de Git por `*.xlsx` en `.gitignore`, igual que el resto de
+los libros de este hito — trazabilidad completa en este README.
+
+**7. Verificación.** Recálculo independiente (LibreOffice headless) en el dispositivo del usuario; 0 errores
+de fórmula y 0 "SIN MAPEO" en las 12 hojas; hoja 9 con 2.379 filas de detalle verificadas (conteo y muestra de
+primera/última fila); hoja 11 con 10.200 filas × 33 columnas verificadas (conteo exacto); los 7 hipervínculos
+de Portada verificados como internos tras el recálculo.
+
+**8. Limpieza de datos personales en el dispositivo.** Los archivos intermedios con identificadores usados
+durante la construcción (`/tmp/base_analitica_identificada.csv`, `/tmp/base_retencion_mu_raw.csv`, y la
+carpeta de trabajo `.claude_scratch_pii/`) se eliminaron del dispositivo del usuario tras confirmar la entrega
+exitosa. Todo el procesamiento de datos con identificadores se realizó exclusivamente en el dispositivo del
+usuario; ningún dato con PII se transfirió al contenedor en la nube, consistente con el diseño de privacidad
+ya documentado en este proyecto.
+
+Verificado por: Claude, 2026-09-30, mediante recálculo independiente (LibreOffice headless) en el dispositivo
+del usuario.
+
+## Pendiente — cifra 2024 y regla del umbral SIES ≥10 casos — sin resolver
+
+El usuario planteó que la regla del correo oficial SIES ("se publican datos... solo cuando tienen desde diez
+casos") debería aplicarse a nuestro propio cálculo institucional, señalando que no aplicarla fue un error a
+corregir, no una decisión interna: "Si lo dice el jefe de SIES que se aplica esa regla... no es una decisión
+mía. Si no la estábamos aplicando era un error que nos dimos cuenta y que estamos solucionando."
+
+Al aplicar el umbral a los datos propios: en 2022 el efecto es 0 pp (sin cambio); en 2024 el efecto es -0,31 pp
+de los -9,08 pp observados (la brecha pasaría a -8,77 pp). No explica la mayor parte de ninguna de las dos
+brechas ya cerradas como E en la sección "Cierre de la investigación de causas" de este README.
+
+Evidencia adicional presentada al usuario, aún sin confirmación explícita de su parte: el propio "Total
+general" que Rodrigo Rolando Meneses (jefe SIES) envió en el correo granular de 2025 (1.163 casos / 677
+retenidos / 58,21%) **no aplica el filtro de ≥10 casos** — incluye los 36 códigos de carrera, 12 de ellos con
+menos de 10 casos — y ese total coincide casi exactamente con la tasa institucional publicada por SIES por
+separado (58,2115%). Filtrando a solo los códigos con ≥10 casos, el total cambia a 1.088 casos / 631 retenidos
+/ 57,9963%, que ya no coincide con la cifra oficial publicada. Esto indica, con la propia evidencia entregada
+por el jefe de SIES, que la regla de "≥10 casos" es una regla de publicación/visualización (qué categorías se
+muestran desglosadas por separado), no una regla de agregación que excluya casos del total institucional.
+
+Estado: no se ha modificado ninguna cifra oficial de este proyecto (este README, hoja 5 y hoja 6 del archivo
+ejecutivo) mientras no exista confirmación final del usuario frente a esta evidencia. Ambos documentos
+mantienen -9,08 pp para la brecha 2024 en esta actualización, sin cambios.
+
+## Nota de precisión — FECHA_MATRICULA sí existe en BASE_RETENCION_MU (dato B)
+
+Corrección a lo documentado previamente en este README, donde se señaló que "el esquema consolidado no
+incluye FECHA_MATRICULA" para 2022-2023 (clasificación E). Al revisar `BASE_RETENCION_MU` completa (columna
+AE) para construir la hoja 11 del entregable ejecutivo, se confirma (dato B, observado directamente) que el
+campo sí existe en la base RAW, con 8.017 de 10.200 filas con valor no nulo — simplemente no fue propagado a
+`02_COHORTE_ELEGIBILIDAD` en el cruce ya gobernado. Por separado, el usuario indicó que la limitación de corte
+"30 de abril" registrada en la hoja 6 (Limitaciones) del archivo ejecutivo no aplica a este análisis, porque
+los documentos revisados corresponden a lo ya informado a SIES — decisión D del usuario, 2026-09-30, que no
+requiere confirmación adicional. Esta nota queda como precisión factual sobre el dato crudo; no reabre el
+análisis de causas ya cerrado.
