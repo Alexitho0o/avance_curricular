@@ -306,3 +306,61 @@ campo sí existe en la base RAW, con 8.017 de 10.200 filas con valor no nulo —
 los documentos revisados corresponden a lo ya informado a SIES — decisión D del usuario, 2026-09-30, que no
 requiere confirmación adicional. Esta nota queda como precisión factual sobre el dato crudo; no reabre el
 análisis de causas ya cerrado.
+
+## Adenda 2 — desglose por carrera, jornada, edad y sexo (2026-09-30)
+
+Por solicitud del usuario, se agregó al entregable ejecutivo un desglose completo por carrera, jornada, edad y
+sexo, con etiquetas en lenguaje simple (no códigos), sobre datos ya gobernados en este mismo proyecto.
+
+**Fuente de las etiquetas de jornada — clasificación C, verificada.** `MODALIDAD` y `JOR` en `BASE_RETENCION_MU`
+son códigos propios de la institución (el Manual de Matrícula Unificada 2026, Anexo 7, dice explícitamente
+"códigos correspondientes a la institución" — no son códigos SIES estándar). El mapeo numérico real está en
+código ya gobernado de este proyecto: `procesos/ire_2026/src/kpi.py` (verificado 2026-07-22, commit `4f1108c`,
+SHA-256 registrado en el propio comentario del código): MODALIDAD 1=Presencial, 3=A distancia; JOR 1=Diurno,
+2=Vespertino, 4=Virtual (solo junto con MOD=3). Se cruzó este mapeo contra los 2.379 casos de la cohorte
+elegible: 100% coincide, sin excepciones — solo existen 3 combinaciones reales en toda la base:
+**Presencial-Diurno, Presencial-Vespertino, Virtual**.
+
+**Bug encontrado y corregido — clave de cruce ambigua (dato B).** El cruce inicial entre la hoja 9 (cohorte,
+identificada por Año+N° Documento+DV) y la hoja 11 (base RAW) usaba una clave de 3 partes. Se detectó que 74
+estudiantes tienen más de una matrícula el mismo año (en carreras distintas), y en 13 de esos casos la
+Modalidad/Jornada difiere entre esas matrículas — la clave de 3 partes no podía distinguir cuál matrícula
+corresponde al candidato de este análisis. Se corrigió agregando el Código de Carrera (`COD_CAR`) a la clave de
+cruce. El Código de Carrera por nombre se verificó 1 a 1 (dato B) usando las 2.305 filas sin ambigüedad de la
+base (donde Año+N° Documento+DV ya identifica una sola fila) — mapeo consistente sin excepciones, documentado en
+la hoja 8 del entregable (columna D). Con la clave de 4 partes, de los 74 casos con matrícula múltiple, 2
+efectivamente cambiaron de jornada respecto a lo que habría tomado la fórmula sin esta corrección. Verificado
+con recálculo independiente en Python (fuera de Excel) que los totales por jornada, sexo y tramo de edad
+coinciden exactamente entre Excel y el cálculo independiente, para los 4 años.
+
+**Bug encontrado y corregido — comparación de texto en `CONTAR.SI.CONJUNTO`.** La etiqueta de tramo de edad
+"<20" se interpretaba en Excel/LibreOffice como el operador de comparación "menor que 20" al usarse como
+criterio de `CONTAR.SI.CONJUNTO`, no como coincidencia de texto literal — daba 0 casos en las cuatro filas
+"<20" aunque el dato sí existía. Corregido renombrando la etiqueta a "Menos de 20" en la hoja 9 y en la hoja 12.
+
+**Contenido nuevo:**
+- Hoja `8_Mapeo_Sector_IPSS`: columna D nueva con el Código de Carrera (`COD_CAR`) por carrera, con nota de
+  verificación.
+- Hoja `9_Base_Analitica_Detalle`: columnas O-U nuevas (Modalidad código, Jornada código, Jornada real, Año
+  Nacimiento, Edad, Tramo Edad, Código Carrera esperado) — todas fórmulas en vivo (`ÍNDICE`/`COINCIDIR` contra la
+  hoja 11, `BUSCARV` contra la hoja 8).
+- Hoja `11_BASE_RETENCION_MU_RAW`: columna AH nueva (clave de cruce de 4 partes), estructural, sin dato nuevo.
+- Hoja nueva `12_Desglose_Jornada_Edad_Sexo`: 4 tablas con fórmulas en vivo (`CONTAR.SI.CONJUNTO`/
+  `SUMAR.SI.CONJUNTO`) — (A) retención por carrera y jornada, 2022-2025 combinado; (B) retención por jornada y
+  año, con composición porcentual; (C) retención por sexo y año; (D) retención por tramo de edad y año.
+
+**Hallazgo (dato B, observado):** la caída de retención entre 2022-2023 y 2024-2025 es pareja en las tres
+jornadas, en los cinco tramos de edad y en ambos sexos — no se concentra en un segmento aislado que sugiera un
+problema de cobertura de datos en un grupo específico. Refuerza la clasificación E ("diferencia sin causa
+establecida") de la sección "Cierre de la investigación de causas" — no la contradice.
+
+**Verificación.** Recálculo independiente (LibreOffice headless) en el dispositivo del usuario tras cada
+corrección; 0 errores de fórmula en las 13 hojas; totales de las secciones B, C y D de la hoja 12 coinciden
+exactamente entre sí (305/366/558/1150 casos por año) y con la hoja 9; verificado además con un script
+independiente en Python (fuera de la cadena de fórmulas de Excel) que reproduce los mismos totales exactos.
+
+**Entrega.** Mismo path de salida, sobrescrito. Nuevo SHA-256:
+`d6e14e9850d10c86be0c02030eeb547a9d293a296e4785d293d3d2dc999d824c`. Copia idéntica entregada en el Escritorio
+del usuario, mismo hash verificado.
+
+Verificado por: Claude, 2026-09-30.
