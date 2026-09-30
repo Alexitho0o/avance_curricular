@@ -43,7 +43,8 @@ Libro de retención de cohortes 2022–2025, fuentes SIES congeladas, fuente int
 
 ## Evidencias
 
-- Libro final: SHA-256 `52ad47d73bf3f6a9bdcb7b0e10bdfa2cfc97ae614376ed2f32b78d8898fb4624`.
+- Libro final anterior: SHA-256 `52ad47d73bf3f6a9bdcb7b0e10bdfa2cfc97ae614376ed2f32b78d8898fb4624` (superada por la versión con diagnóstico incorporado, mismo contenido salvo la sección nueva de la hoja 04).
+- Libro actualizado con diagnóstico: `outputs/retencion_primer_anio_ipss_162/20260929_015725/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_20260929_015725.xlsx`; SHA-256 `d6a014da616e7f8307def42bcbc5e54f996d0b29f135b406b18ddfdd9ba62e81`.
 - Fuente interna previa: SHA-256 `e85d8c15c9fa2eccb25a376ea352f345ddcec91dbcf8176070b1ae3490c5d946`.
 - Informe SIES congelado: SHA-256 `168ac8baea6aee65fa8a40dfca5a269993951142c89cb536805f550b1ac3297b`.
 - Diagnóstico de brechas 2022 y 2024: pendiente de adjuntar como archivo independiente; los hallazgos quedan documentados en la sección siguiente.
@@ -88,3 +89,9 @@ La brecha 2022 de aproximadamente +4,49 puntos porcentuales y la brecha 2024 de 
 ### Llave de cruce individual — clasificación B/E
 
 La RAW institucional identifica personas mediante `TIPO_DOC + N_DOC + DV`, mientras que el extracto histórico utiliza `mrun`. La revisión de los repositorios gobernados, incluida `gobernanza/trazabilidad_mrun/F0_DIAGNOSTICO_FACTIBILIDAD.md`, no encontró una tabla gobernada RUT↔MRUN que demuestre comparabilidad persona a persona. Un diagnóstico de factibilidad previo (16-sep-2026, sobre el cruce RUT interno U+ ↔ MRUN SIES) encontró que el bloqueo determinístico simple deja como máximo ~50% de la población con un match único confiable, y ese máximo solo aplica a la mitad de las personas evaluadas; concluye que la relación RUT↔MRUN no debe reconstruirse post-hoc. Esto refuerza, sin ser prueba directa sobre esta cohorte, que el cruce individual solicitado no cuenta con una llave gobernada confiable (B). Por tanto, no existe llave de cruce directa; el cruce determinístico individual no es posible con las fuentes actualmente gobernadas (B/E). No se realizó aproximación por nombre, fecha de nacimiento ni sexo.
+
+## Decisión de fuente principal de matrícula por carrera — clasificación D
+
+Desde el 29-sep-2026, la fuente principal para cruces y análisis de matrícula por carrera es `Matricula_2007_2026_WEB_10_07_2026.csv`, registrada en `CARACTERIZACIÓN/gobernanza/sies/MATRICULA_2007_2026.manifest.json`. La decisión se adopta porque el archivo cubre `MAT_2007`–`MAT_2026`, tiene grano institución-carrera-sede-jornada-año y contiene dimensiones adicionales para análisis por carrera. Su validación IPSS código 162 para `MAT_2026` entrega 66 filas y total matrícula 3.425, coincidente con el total de publicación SIES ya gobernado (B).
+
+El archivo es un dataset agregado por carrera, no contiene RUT, MRUN, nombres de estudiantes ni filas individuales (B). El uso como fuente principal es una decisión interna de gobernanza (D). Las columnas que no cuentan todavía con mapeo oficial verificado permanecen pendientes (E) y se detallan en su manifiesto. El CSV original del Desktop no se modifica ni se incorpora al repositorio en esta etapa.
