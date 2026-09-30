@@ -469,3 +469,26 @@ modalidad) de la hoja 14: los tres coinciden exactamente en 1.476.
 del usuario, mismo hash verificado.
 
 Verificado por: Claude, 2026-09-30.
+
+## Resolución del pendiente — brechas 2022 y 2024 aceptadas sin ajuste (2026-09-30)
+
+El usuario confirmó explícitamente: "las brechas quedan aceptadas".
+
+Con esta confirmación se cierra el pendiente abierto en la sección "Pendiente — cifra 2024 y regla del umbral
+SIES ≥10 casos — sin resolver": la regla de "≥10 casos" del correo de Rodrigo Rolando Meneses (jefe SIES) se
+confirma como regla de publicación/visualización (qué categorías se muestran desglosadas), no como regla de
+agregación que excluya casos del total institucional — conclusión ya sustentada por la evidencia propia del
+jefe de SIES (su "Total general" 2025 de 1.163 casos/677 retenidos/58,21% no aplica el filtro y sí coincide con
+la cifra oficial publicada; filtrando a ≥10 casos el total deja de coincidir). No se aplica el umbral al cálculo
+institucional.
+
+**Clasificación D — decisión interna del usuario.** No se modifica ninguna cifra oficial de este proyecto
+(README, hoja 5 y hoja 6 del archivo ejecutivo). Las brechas quedan:
+
+- 2022: +4,49 pp — cerrada como E (causa no establecida), sin ajuste.
+- 2024: -9,08 pp — cerrada como E (causa no establecida), sin ajuste. El efecto del umbral ≥10 casos (-8,77 pp)
+  queda documentado como evidencia explorada y descartada como base de ajuste, no como cifra vigente.
+
+Estado del hito: pendiente cerrado. No quedan investigaciones de brecha abiertas en H001-RETENCION-IPSS162.
+
+Verificado por: Claude, 2026-09-30.
