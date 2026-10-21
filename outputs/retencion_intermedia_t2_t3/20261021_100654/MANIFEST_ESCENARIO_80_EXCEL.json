@@ -1,0 +1,169 @@
+{
+  "hito": "H001-RETENCION-IPSS162",
+  "fecha": "2026-10-21T10:06:54.753579-03:00",
+  "clasificacion": "B observaciones agregadas; C fórmulas; D preservación de actuales; E simulación no aprobada",
+  "entrada": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_085902/RETENCION_INTERMEDIA_IPSS_PRESENCIAS_Y_PENDIENTES_20261021_085902.xlsx",
+    "sha256": "340f9a2126973e0ab3a11172eaa525935ab5991c8ad10dcdb321cc721d0b8e69"
+  },
+  "escenario_entrada": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_095123_escenario_80/RESULTADOS_ESCENARIO_AGREGADOS.json",
+    "sha256": "4a4f0f7183d4a1bcff507085399920cbaa3e37c5829bf2d11ced58ef38d0681c"
+  },
+  "salida": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+    "sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d"
+  },
+  "copia_escritorio": {
+    "ruta": "/Users/alexi/Desktop/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+    "sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d"
+  },
+  "hoja_agregada": "Escenario_80",
+  "originales_sin_modificacion": true,
+  "denominadores_actuales": [
+    558,
+    1150,
+    222,
+    124
+  ],
+  "denominadores_simulados_solo_hoja_nueva": [
+    560,
+    1123
+  ],
+  "QA": {
+    "resultado": "OK",
+    "zip_integro": true,
+    "xml_bien_formado": true,
+    "hojas_previas_identicas": [
+      "Resumen",
+      "Por_carrera",
+      "Fuentes_y_alcance",
+      "Bases_por_confirmar"
+    ],
+    "partes_originales_byte_identicas": [
+      "xl/theme/theme1.xml",
+      "xl/sharedStrings.xml",
+      "xl/worksheets/sheet1.xml",
+      "xl/tables/table1.xml",
+      "xl/tables/table2.xml",
+      "xl/worksheets/sheet2.xml",
+      "xl/tables/table3.xml",
+      "xl/worksheets/sheet3.xml",
+      "xl/tables/table4.xml",
+      "xl/tables/table5.xml",
+      "xl/worksheets/sheet4.xml",
+      "xl/tables/table6.xml",
+      "_rels/.rels",
+      "xl/worksheets/_rels/sheet1.xml.rels",
+      "xl/worksheets/_rels/sheet2.xml.rels",
+      "xl/worksheets/_rels/sheet3.xml.rels",
+      "xl/worksheets/_rels/sheet4.xml.rels"
+    ],
+    "errores_formula_en_caches": [],
+    "recalculo": "Artifact Tool; controles numéricos independientes; sensibilidad E36/E33 con restauración antes de exportar",
+    "validacion_visual": "Resumen, entradas/desglose y pendientes/fuentes revisados",
+    "native_excel": "No se realizó apertura automatizada en Excel"
+  },
+  "rama": "feature/ire-2026",
+  "HEAD_antes": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+  "HEAD_despues": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+  "commit": false,
+  "push": false,
+  "datos_individuales_agregados": false,
+  "pendientes": [
+    "Fundamento de la asignación de origen 2025 a ingresos 2024",
+    "Semestre de origen correcto",
+    "78 personas sin fila MU2024",
+    "Cobertura/fecha/estados de cierres T2/T3"
+  ],
+  "scripts": {
+    "build.mjs": "fb45ea1bfb23a35cdb4e7899f19d5bf0071d4952d6322750d872a4231b5753c1",
+    "preserve_and_verify.py": "b0a39c4c2c0eec83bac1505788310c10153f06fea37524f568884598e4cc5866"
+  },
+  "QA_publicacion": {
+    "clasificacion": "C: QA técnico de publicación; D: autorización del usuario para publicar exactamente dos archivos; E: el escenario conserva sus pendientes metodológicos",
+    "fecha": "2026-10-21T10:21:43.116713-03:00",
+    "resultado": "OK",
+    "archivo_sha256_verificado": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d",
+    "integridad_zip_xml": true,
+    "privacidad": {
+      "resultado": "OK",
+      "grano": "agregado por cohorte/programa y observaciones de cobertura",
+      "hojas_revisadas": {
+        "Resumen": {
+          "filas": 37,
+          "columnas": 9
+        },
+        "Por_carrera": {
+          "filas": 45,
+          "columnas": 11
+        },
+        "Fuentes_y_alcance": {
+          "filas": 41,
+          "columnas": 8
+        },
+        "Bases_por_confirmar": {
+          "filas": 18,
+          "columnas": 6
+        },
+        "Escenario_80": {
+          "filas": 88,
+          "columnas": 8
+        }
+      },
+      "campos_identificadores_individuales": 0,
+      "coincidencias_RUT_o_correo": 0,
+      "objetos_adjuntos_externos_o_macros": 0,
+      "sin_datos_individuales": true,
+      "notas": "Nombres de carreras y rutas de procedencia no son nóminas individuales. Se examinaron todas las hojas y partes del paquete."
+    },
+    "preservacion": {
+      "cuatro_hojas_previas_identicas": true,
+      "denominadores_actuales": [
+        558,
+        1150,
+        222,
+        124
+      ],
+      "denominadores_hipoteticos_separados": [
+        560,
+        1123
+      ],
+      "original_xlsx_sin_cambios": true
+    },
+    "formulas": {
+      "errores_en_valores_cacheados": 0,
+      "recalculo_previo_identico_sha256": "Artifact Tool, registrado en QA; no se reescribió el libro para publicación",
+      "controles_independientes_resultados": true,
+      "conciliacion_80": "53 VIG1 + 11 solo VIG0 + 16 ausentes = 80",
+      "controles_conciliacion_E55_E59": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "auditoria_proyecto": {
+      "script_existente": "scripts/auditoria_maestra.py",
+      "aplicabilidad": "Valida salida regulatoria MU2026 de 32 columnas y archivo_listo_para_sies.xlsx; no aplica a este Excel agregado de escenario de retención. No se ejecuta el pipeline regulatorio ni se alteran sus salidas.",
+      "QA_aplicado": "Revisión específica de integridad, privacidad, fórmulas, cifras de control, preservación de fuentes y denominadores, e identidad SHA-256."
+    },
+    "alcance_publicacion": {
+      "repositorio": "Alexitho0o/avance_curricular",
+      "rama_trabajo_original": "feature/ire-2026",
+      "HEAD_trabajo_original": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+      "rama_publicacion": "feature/retencion-escenario-80-20261021",
+      "base_remota": "origin/feature/ire-2026",
+      "HEAD_base_remota": "843873f5ddeff6916032e8ed821776db2a632cfd",
+      "motivo_rama_separada": "Tres commits locales no publicados en la rama de trabajo. No se incluyen en esta publicación autorizada de solo dos archivos.",
+      "archivos_autorizados": [
+        "outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+        "outputs/retencion_intermedia_t2_t3/20261021_100654/MANIFEST_ESCENARIO_80_EXCEL.json"
+      ],
+      "inclusion_excel_ignorado": "Inclusión explícita y exclusiva del XLSX autorizada por el usuario. Se conserva .gitignore sin cambios.",
+      "limite_reproducibilidad": "El Excel contiene los insumos agregados y fórmulas del escenario. Los scripts y entradas individuales/locales referenciados no se publican en este commit; no se declara reproducción del cruce individual exclusivamente desde estos dos archivos."
+    }
+  },
+  "alcance_campos_git_originales": "Los campos commit/push y HEAD de nivel superior describen la creación local del libro. QA_publicacion registra la preparación para el commit posterior autorizado. El commit y la confirmación remota se verifican mediante Git y se entregan en el checkpoint."
+}
