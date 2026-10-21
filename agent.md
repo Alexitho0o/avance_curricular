@@ -27,6 +27,20 @@ Este archivo define las reglas y convenciones que deben seguir los agentes de IA
 - Los cambios deben ser atómicos y fácilmente reversibles.
 - Priorizar la legibilidad y mantenibilidad para humanos y agentes.
 
+## Control de reglas VIG MU2027 (2026-10-21)
+
+- Leer `docs/control_cambios_vig_mu2027.md` y el descriptor común
+  `data/reglas_negocio/mu2027/activo.json` antes de implementar un consumidor MU2027.
+- Consultar mediante `core/mu2027.py` / `common/control_reglas_mu2027.py`.
+  No editar versiones congeladas ni recuperar nóminas de excepción MU2026 como
+  reglas automáticas. Toda nueva versión requiere autorización, responsable,
+  motivo, fecha/hora, hash anterior y alerta. Fijar versión/hash en cada ejecución.
+- Las equivalencias actuales son decisiones D de revisión interna; la pendiente
+  permanece E. No habilitan carga SIES2027 sin su manual y un consumidor validado.
+- Mantener históricos y denominadores intactos. El estudio de envíos 2026 está
+  preservado en `data/reglas_negocio/mu2027/estudio/`; no declara errores académicos.
+
+
 ---
 Última actualización: 2026-04-09
 Responsable: Arquitectura Técnica

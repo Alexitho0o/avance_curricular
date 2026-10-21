@@ -1,0 +1,241 @@
+{
+  "clasificacion": "C",
+  "fecha_hora": "2026-10-21T08:12:05.518834-03:00",
+  "hito": "H001-RETENCION-IPSS162",
+  "dictamen": "OK_CON_ADVERTENCIAS",
+  "alcance": "Publicación del estudio agregado VIG y control de revisión interna MU2027; no carga normativa ni cambio de resultados históricos.",
+  "autorizacion": {
+    "clasificacion": "D",
+    "responsable": "Alexi Marcelo Burgos Flores",
+    "texto": "Deja estos cambios gobernados en GitHub: revisa el QA y haz commit y push solo de este estudio y del control MU2027, sin incluir datos individuales ni otros cambios pendientes."
+  },
+  "git_preparacion": {
+    "rama_local": "feature/ire-2026",
+    "head_local": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+    "base_remota": "843873f5ddeff6916032e8ed821776db2a632cfd",
+    "rama_publicacion": "codex/h001-estudio-vig-mu2027-20261021",
+    "commits_previos_excluidos": [
+      "a75a110",
+      "b8140dc"
+    ],
+    "motivo": "Publicar exclusivamente este alcance, sin enviar los dos commits anteriores pendientes.",
+    "adaptacion_al_remoto": "La base remota carece del descriptor PROYECTO_IPSS.json y de actualizaciones previas de agent.md/docs/README.md. Se excluye ese descriptor del push; el registro propio activo.json permite usar MU2027. En agent.md/docs/README.md solo se agregan el bloque y enlace MU2027. Las versiones locales conservan sus otros contenidos sin publicarlos."
+  },
+  "validaciones": {
+    "pruebas_aisladas": [
+      {
+        "comando": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_control_reglas_mu2027.py",
+          "-q"
+        ],
+        "exit_code": 0,
+        "salida": "ALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: BLOQUEO. Bloqueo: Carga SIES bloqueada: falta validar manual MU2027 y habilitar consumidor aprobado\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: BLOQUEO. Bloqueo: Contenido congelado alterado: reglas.json\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v2; responsable: Responsable sintético QA\nALERTA MU2027: BLOQUEO. Bloqueo: Contenido congelado alterado: autorizacion.json\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: CAMBIO_RECHAZADO. Bloqueo: Falta responsable/ejecutor humano o técnico declarado\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v2; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v2; responsable: Responsable sintético QA\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: CAMBIO_RECHAZADO. Bloqueo: Hash anterior no coincide; cambio concurrente/no autorizado\nALERTA MU2027: VERSION_REGISTRADA. v1; responsable: Responsable sintético QA\nALERTA MU2027: PAREJA_SIN_REGLA. Pareja no catalogada; no se asigna VIG\n----------------------------------------------------------------------\nRan 10 tests in 0.074s\n\nOK\n"
+      },
+      {
+        "comando": [
+          "python3",
+          "core/mu2027.py",
+          "verificar"
+        ],
+        "exit_code": 0,
+        "salida": "{\n  \"resultado\": \"OK_REVISION_INTERNA\",\n  \"version\": \"20261021_v1\",\n  \"manifest_sha256\": \"3d8893a5b8e52623c437ccd9f62b569004f058d3ea71d94b8652726257d8afb3\"\n}\n"
+      },
+      {
+        "comando": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "salida": ""
+      }
+    ],
+    "pruebas_aprobadas": 10,
+    "copias_estudio_identicas_por_sha256": 4,
+    "json_validos": true,
+    "revision_privacidad": "Revisión de contenidos: reglas por estado/situación, conteos agregados, metadatos de fuentes y código. No se incorporan valores identificadores ni filas de estudiantes. Las menciones a RUT/MRUN/N_DOC son nombres de campos/rutas, no registros individuales.",
+    "alcance_qa": "Control técnico y preservación del estudio; no se repite el cruce individual ni se certifica aceptación SIES.",
+    "alcance_indices": "Publicación: 20 archivos; commit local: 21 archivos. Diferencias permitidas exclusivamente en integración documental agent.md/docs/README.md y descriptor PROYECTO_IPSS.json local. Código, reglas y estudio idénticos."
+  },
+  "exclusiones": [
+    "Datos individuales y fuentes XLSX/CSV/ZIP",
+    "outputs/ y Excel de seguimiento T2/T3",
+    "Cambios pendientes de Oferta Académica",
+    "data/reglas_negocio/20261020_estados_umas y su puntero estados_umas_vig_sies en PROYECTO_IPSS.json",
+    "Otros cambios locales y commits previos ajenos"
+  ],
+  "advertencias": [
+    "Las reglas son decisiones internas D; EGRESADO/13 permanece E. Falta manual MU2027 y consumidor de carga validado. El bloqueo de carga se comprueba como comportamiento esperado, no fallo del QA.",
+    "Responsable declarado; el control no autentica identidad ni impide eludirlo editando código. Las alertas se producen al verificar/registrar, no mediante monitoreo continuo.",
+    "El estudio requiere las fuentes sensibles referenciadas, disponibles solo mediante acceso autorizado. Git conserva código, agregados y hashes, no las bases individuales.",
+    "checkpoint.json y qa.json anteriores conservan su estado histórico local. El hash de PROYECTO_IPSS.json en aquel checkpoint incluye un puntero previo excluido; los hashes de esta publicación son los de este inventario.",
+    "Este registro acredita preparación y QA. La publicación se verifica mediante el commit y la referencia remota; no se anticipa un push exitoso."
+  ],
+  "archivos_locales_sha256": [
+    {
+      "ruta": "PROYECTO_IPSS.json",
+      "sha256": "0d6373d948e51b47e8b7bba665eeecd81591ad5685e094f14e99b7c801334d3a"
+    },
+    {
+      "ruta": "agent.md",
+      "sha256": "b4d21397560f0e7095fef24902152060430161d0789a6ee56ceb8449c3df3f2d"
+    },
+    {
+      "ruta": "docs/README.md",
+      "sha256": "a00cb9f0bae9f1908653ef3dd0671afdae3548e5c1285ac44ae5ea451ddacf47"
+    },
+    {
+      "ruta": "docs/control_cambios_vig_mu2027.md",
+      "sha256": "9dd2d4f4b596891bfac8ea764a71d525761443b34f5cf2371f848f26f904c53a"
+    },
+    {
+      "ruta": "common/control_reglas_mu2027.py",
+      "sha256": "d167fc300b96a00817728e6530ae5540e21499135cef0ac2e76e021d3410c475"
+    },
+    {
+      "ruta": "core/mu2027.py",
+      "sha256": "b860f4cee81927d771fcc842de0ad007e4fafa511e3a9532631277f718bf8424"
+    },
+    {
+      "ruta": "tests/test_control_reglas_mu2027.py",
+      "sha256": "ae164d428bd231b38846132d7de7d839b3ccd996fa727c52c95ce1e81e89e362"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/activo.json",
+      "sha256": "7ed72670d300738c99bcbb2b6b0bee63d9dfa366cb32376cea6e3798c014bfe2"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/alertas/d28e3cfa151148d5b02b24a02cbca604.json",
+      "sha256": "b675c7adb76860ba552dc336f956533b299b028cf61b0ef9c3f6584beb6bbb6e"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/checkpoint.json",
+      "sha256": "73b058e7d57af9f5b05c9f4a277c2a077c540beadf728bfc2da7dd5c04c9162b"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/AUDITORIA_VIG_ENVIOS_RETENCION.md",
+      "sha256": "7ccfc88001e7e36ef3299d52dc5f7d6448bce63b995da1aa400634e465774f00"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/MANIFEST.json",
+      "sha256": "a8893104074228e643492a4a63dbc04c85be080b020915d6b15a02313432fd42"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/RESULTADOS_AGREGADOS.json",
+      "sha256": "003c55b57e2aa476a8bd6d9223ec46d4155f59f7311d0183eea24c795226cff0"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/auditar_solo_lectura.py",
+      "sha256": "ba71eea98eebe3627593b613a37897ef6dd4d7b6e39d8a31732771807e0f5f30"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/manifest_preservacion.json",
+      "sha256": "adaa88f8bd975b83a08157267d0a4ca36edfe45563e312ab0dec1f26035e66ee"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/qa.json",
+      "sha256": "d2a96577d2c156d82dd9a7bb2fe71837b381e685cb9445f99d25778a83003b9f"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/alerta.json",
+      "sha256": "7e71414430bafe8a55d037d724f97bed8176898e6884e910e350ff9250614df9"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/autorizacion.json",
+      "sha256": "87baa61289eb56ca241adad80a022a7b2973f9559acbe06af669f99ee9379a07"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/manifest.json",
+      "sha256": "3d8893a5b8e52623c437ccd9f62b569004f058d3ea71d94b8652726257d8afb3"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/reglas.json",
+      "sha256": "5ffa47d537f3ae81cd470ae9c1c9ed75cafb4adb4eb38e980d45fd21a272714e"
+    }
+  ],
+  "archivos_publicacion_sha256": [
+    {
+      "ruta": "agent.md",
+      "sha256": "a44d474f9afd6dc81f3eda0e0c9637c5ffdc40ba63dc51e6e01437317a1a5da3"
+    },
+    {
+      "ruta": "docs/README.md",
+      "sha256": "be9047d37055a4e456d0e917942d137278640c98dba38ad5647c83fbc2a1ee49"
+    },
+    {
+      "ruta": "docs/control_cambios_vig_mu2027.md",
+      "sha256": "9dd2d4f4b596891bfac8ea764a71d525761443b34f5cf2371f848f26f904c53a"
+    },
+    {
+      "ruta": "common/control_reglas_mu2027.py",
+      "sha256": "d167fc300b96a00817728e6530ae5540e21499135cef0ac2e76e021d3410c475"
+    },
+    {
+      "ruta": "core/mu2027.py",
+      "sha256": "b860f4cee81927d771fcc842de0ad007e4fafa511e3a9532631277f718bf8424"
+    },
+    {
+      "ruta": "tests/test_control_reglas_mu2027.py",
+      "sha256": "ae164d428bd231b38846132d7de7d839b3ccd996fa727c52c95ce1e81e89e362"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/activo.json",
+      "sha256": "7ed72670d300738c99bcbb2b6b0bee63d9dfa366cb32376cea6e3798c014bfe2"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/alertas/d28e3cfa151148d5b02b24a02cbca604.json",
+      "sha256": "b675c7adb76860ba552dc336f956533b299b028cf61b0ef9c3f6584beb6bbb6e"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/checkpoint.json",
+      "sha256": "73b058e7d57af9f5b05c9f4a277c2a077c540beadf728bfc2da7dd5c04c9162b"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/AUDITORIA_VIG_ENVIOS_RETENCION.md",
+      "sha256": "7ccfc88001e7e36ef3299d52dc5f7d6448bce63b995da1aa400634e465774f00"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/MANIFEST.json",
+      "sha256": "a8893104074228e643492a4a63dbc04c85be080b020915d6b15a02313432fd42"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/RESULTADOS_AGREGADOS.json",
+      "sha256": "003c55b57e2aa476a8bd6d9223ec46d4155f59f7311d0183eea24c795226cff0"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/auditar_solo_lectura.py",
+      "sha256": "ba71eea98eebe3627593b613a37897ef6dd4d7b6e39d8a31732771807e0f5f30"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/estudio/manifest_preservacion.json",
+      "sha256": "adaa88f8bd975b83a08157267d0a4ca36edfe45563e312ab0dec1f26035e66ee"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/qa.json",
+      "sha256": "d2a96577d2c156d82dd9a7bb2fe71837b381e685cb9445f99d25778a83003b9f"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/alerta.json",
+      "sha256": "7e71414430bafe8a55d037d724f97bed8176898e6884e910e350ff9250614df9"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/autorizacion.json",
+      "sha256": "87baa61289eb56ca241adad80a022a7b2973f9559acbe06af669f99ee9379a07"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/manifest.json",
+      "sha256": "3d8893a5b8e52623c437ccd9f62b569004f058d3ea71d94b8652726257d8afb3"
+    },
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/reglas.json",
+      "sha256": "5ffa47d537f3ae81cd470ae9c1c9ed75cafb4adb4eb38e980d45fd21a272714e"
+    }
+  ]
+}

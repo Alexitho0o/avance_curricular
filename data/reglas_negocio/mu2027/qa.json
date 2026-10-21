@@ -1,0 +1,24 @@
+{
+  "clasificacion": "C",
+  "fecha_hora": "2026-10-21T01:33:30.554782-03:00",
+  "pruebas": 10,
+  "resultado": "OK_CONTROL_INTERNO",
+  "comando": "python3 -m unittest tests.test_control_reglas_mu2027 -q",
+  "validado": [
+    "Alteración directa bloqueada y alerta",
+    "Responsable obligatorio",
+    "Hash anterior obligatorio",
+    "Preservación de versión anterior y reproducción",
+    "Cadena histórica íntegra",
+    "Carga SIES bloqueada",
+    "Pareja exacta; desconocidas pendientes",
+    "NO APLICA no se convierte a cero",
+    "Ejecución con huellas; sin sobrescritura"
+  ],
+  "pendiente_E": "Normativa y motor de carga MU2027; no son parte del OK técnico",
+  "codigo_sha256": {
+    "common/control_reglas_mu2027.py": "d167fc300b96a00817728e6530ae5540e21499135cef0ac2e76e021d3410c475",
+    "core/mu2027.py": "b860f4cee81927d771fcc842de0ad007e4fafa511e3a9532631277f718bf8424",
+    "tests/test_control_reglas_mu2027.py": "ae164d428bd231b38846132d7de7d839b3ccd996fa727c52c95ce1e81e89e362"
+  }
+}
