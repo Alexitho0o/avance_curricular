@@ -1,0 +1,688 @@
+{
+  "schema_version": "1.0",
+  "phase": 4,
+  "review_date": "2026-10-15",
+  "purpose": "Evidencia documental local de temporalidad de asignación de plan UMAS; solo lectura",
+  "conclusion": {
+    "status": "ASIGNACION_OBSERVADA_SIN_VIGENCIA_HISTORICA_ACREDITADA",
+    "promedios_plan_semantics": "NO_DETERMINADO",
+    "may_assert_current_plan_replicated": false,
+    "may_assert_historical_plan_per_period": false,
+    "may_assign_new_equivalences": false
+  },
+  "sources": [
+    {
+      "id": "skill_consultar",
+      "path": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/analisis-institucional-alexi/1.0.9/skills/consultar-fuentes-ipss/SKILL.md",
+      "availability": "DISPONIBLE",
+      "sha256": "df6a83221d2a638f826e3f8e3e7d00ba5c0850b1adeebc53ab653af95c664af7",
+      "size": 8023,
+      "role": "INSTRUCCION_HERRAMIENTA",
+      "locator": "Flujo de selección y límites de fuentes",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "La skill orienta la consulta; no acredita la semántica de una columna UMAS."
+    },
+    {
+      "id": "agent_avance",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/agent.md",
+      "availability": "DISPONIBLE",
+      "sha256": "9a676455a964208aab625c3ac84b7e317c0d1f87559d2cec89d7c2e0a03f3439",
+      "size": 3841,
+      "role": "GOBERNANZA_LOCAL",
+      "locator": "Archivo completo",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "No equivale a diccionario de la base UMAS."
+    },
+    {
+      "id": "agent_worktree",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/agent.md",
+      "availability": "DISPONIBLE",
+      "sha256": "8b0a01d4ccec0c8784fd5a8388fd3ff78f2384080ad9c14377c40fca3fcd1b9a",
+      "size": 1468,
+      "role": "GOBERNANZA_LOCAL",
+      "locator": "Archivo completo",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Se respeta el alcance histórico del worktree."
+    },
+    {
+      "id": "agents_caracterizacion",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/AGENTS.md",
+      "availability": "DISPONIBLE",
+      "sha256": "cb9555258ccdfbfee30416a6b5738017de9ae144da833d612af2469f6f224eac",
+      "size": 13545,
+      "role": "GOBERNANZA_LOCAL",
+      "locator": "Inicio: modo anual, FCU 2026 congelado y fuentes por edición",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "No se aplica configuración 2027 retroactivamente."
+    },
+    {
+      "id": "inventario_h1",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_1_20261015/inventario.json",
+      "availability": "DISPONIBLE",
+      "sha256": "8c0b9f02c013f94b98dc72be1eae9912dadd991ba0e5a3fa7a64da3ef3904ae2",
+      "size": 238588,
+      "role": "INVENTARIO_PREVIO_VERIFICADO",
+      "locator": "sources: umas_*; gaps; domain_findings",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Sus perfiles de datos se citan como evidencia previa; esta tarea no reejecutó motores ni exportó registros de estudiantes."
+    },
+    {
+      "id": "catalogo_uplus_v001",
+      "path": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/analisis-institucional-alexi/1.0.9/skills/consultar-fuentes-ipss/references/fuentes-ipss/catalogo-reportes-ipss-v001.md",
+      "availability": "DISPONIBLE",
+      "sha256": "d830a8378115bc525312e865765e547eafc654eebd3671a90febe1c63bee7e0d",
+      "size": 34129,
+      "role": "CATALOGO_DOCUMENTAL_REPORTES_U_PLUS",
+      "locator": "L1–20 procedencia; L223–234 reportes; L349–362 campos y tablas",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Derivado sanitizado; DOCX original no verificado en esta tarea. Inventario de reportes y tablas, sin SQL ni linaje por campo. Modificación 2026-02-09 no acredita fecha de corte."
+    },
+    {
+      "id": "catalogo_uplus_v001_original_declarado",
+      "path": null,
+      "filename": "Catálogo de Reportes IPSS V001.docx",
+      "availability": "REFERENCIADO_NO_VERIFICADO",
+      "sha256": null,
+      "sha256_declared": "a9d3800c3d3a6b67518a58ae53df067a2dc241cfd31136dd4156ef43264cbe09",
+      "size_declared": 740572,
+      "role": "ORIGINAL_DOCUMENTAL_DECLARADO_POR_DERIVADO",
+      "locator": "catalogo_uplus_v001 L5–8",
+      "limits": "No se iguala una huella declarada con una comprobación local del original."
+    },
+    {
+      "id": "bettersoft_diccionario_solicitado",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/requerimiento_bettersoft_uplus_2026/scripts/generar_diccionario_maestro_uplus_sies.py",
+      "availability": "DISPONIBLE",
+      "sha256": "d156b93fdcdd9ca48f9e0e89b19c84fe6b5600be122f7dadb85fa53fa8e73705",
+      "size": 174000,
+      "role": "ESPECIFICACION_DE_REQUERIMIENTO_DERIVADA",
+      "locator": "L873–880 UP-26 a UP-32; L1009 BR-01; L1016 BR-08; L1017 BR-09",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Código leído estáticamente. UP-28 confirma existencia observada del campo, pero su definición al período es la semántica solicitada; no demuestra cómo se construye actualmente View_promedios_alumnos."
+    },
+    {
+      "id": "bettersoft_gate09",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/requerimiento_bettersoft_uplus_2026/scripts/gate09_generar.py",
+      "availability": "DISPONIBLE",
+      "sha256": "68989554ee61ef1381d026ba83b689d82c075d82fce7f7ec364c97b312e7fbd8",
+      "size": 85136,
+      "role": "ESPECIFICACION_DE_REQUERIMIENTO_DERIVADA",
+      "locator": "L34 INS_OA; L334–348 COD_UNICO y mantención",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Fuente normativa citada es Instructivo Oferta 2027. No es evidencia de migraciones ejecutadas, fechas efectivas o equivalencias históricas 2007–2026. No se aplica retroactivamente."
+    },
+    {
+      "id": "diccionario_promedios_historico",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/07_control/DICCIONARIO_PROMEDIOSDEALUMNOS.tsv",
+      "availability": "DISPONIBLE",
+      "sha256": "a108b8f8da5d291af2fb67e4f89d8d29b7cf8139fbcc86626bb9e3922a578afd",
+      "size": 37023,
+      "role": "PERFIL_HISTORICO_DERIVADO",
+      "locator": "L18–19 ANO/PERIODO; L25–26 PLAN_DE_ESTUDIO",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Marca plan candidato y requiere validación. Perfil antiguo incluso repite el encabezado PLAN_DE_ESTUDIO; no sustituye encabezados del libro actual ni acredita vigencias."
+    },
+    {
+      "id": "matriz_fuentes_historica",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/07_control/MATRIZ_FUENTES_CAMPOS.tsv",
+      "availability": "DISPONIBLE",
+      "sha256": "93289ebcb425060a032d347266a7ca9ea78a0ed4c286f6bfeb14178a4948617a",
+      "size": 14757,
+      "role": "MATRIZ_DE_BRECHAS_DERIVADA",
+      "locator": "FC-001; FC-MU-001; FC-MU-004; FC-LL-002; FC-LL-003",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Declara fuente parcial, cruce por validar y que planes observados no demuestran significado institucional ni catálogo definitivo."
+    },
+    {
+      "id": "gobernanza_plan_matricula",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/03_gobernanza_columnas/matricula/10_PLAN_ESTUDIOS.tsv",
+      "availability": "DISPONIBLE",
+      "sha256": "12e9d1de95bc63d3bc3e1e79b83059f6d87b934a0204da38fa761e9fa552ae33",
+      "size": 2472,
+      "role": "DICCIONARIO_GOBERNADO_DERIVADO",
+      "locator": "L2: definición, fuente candidata, llave y bloqueo",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "PLAN_ESTUDIOS SIES de Avance es correlativo por CODIGO_UNICO; no se identifica con CODPESTUD ni con VERSION SIES. Cita instructivo Avance 2026 para datos 2025; esta tarea no revalidó su original."
+    },
+    {
+      "id": "gobernanza_plan_carreras",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/03_gobernanza_columnas/carreras/02_PLAN_ESTUDIOS.tsv",
+      "availability": "DISPONIBLE",
+      "sha256": "1e663cdac20837cf62a01e414e4eb3b30e3c001d192692acff9922bb8245ce00",
+      "size": 2495,
+      "role": "DICCIONARIO_GOBERNADO_DERIVADO",
+      "locator": "L2: definición, fuente candidata, llave y bloqueo",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Misma separación entre correlativo SIES y código de plan UMAS. Estado documental DEFINIDO_PARCIALMENTE; sin regla general de vigencias históricas."
+    },
+    {
+      "id": "canonico_planes_20260701",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/CANONICO_TODOS_PLANES_ESTUDIO_20260701_140528/00_CONTROL/manifiesto.json",
+      "availability": "DISPONIBLE",
+      "sha256": "fe6b1f28d83a721c69c459aaa2c060c2a0379802f00aaac7e4eefe5b9d951d6a",
+      "size": 1326,
+      "role": "MANIFIESTO_AUDITORIA_HISTORICA",
+      "locator": "fecha_ejecucion; fuente; hash_sha256_fuente; columnas_originales; llave_canonica",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "La llave declarada CODPESTUD+CODRAMO+NIVEL describe malla, no adscripción de matrícula por período. Original fechado ausente; no confundir con libro OneDrive de huella distinta."
+    },
+    {
+      "id": "busqueda_mallas_20260701",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/04_gobernanza_mallas/03_auditorias/BUSQUEDA_FUENTE_SEMESTRE_ANIO_MALLAS_20260701_220323/06_REPORTES/RESUMEN_BUSQUEDA_FUENTE_MALLAS.md",
+      "availability": "DISPONIBLE",
+      "sha256": "13027b3888ab3f3e49d852920496523c5f6fbac1e5e3a6ff3d1f15bbde118d16",
+      "size": 1134,
+      "role": "INFORME_HISTORICO_DERIVADO",
+      "locator": "L3–16",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Búsqueda previa concluyó REQUIERE_SOLICITUD_INSTITUCIONAL para distribución curricular explícita. No prueba inexistencia universal ni define vigencia de asignación de plan."
+    },
+    {
+      "id": "lectura_reco_20260704",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/17_gobernanza_planes_reco_kpi_esperado/LECTURA_GOBERNADA_PLANES_RECO_KPI_ESPERADO_20260704_163111/04_REPORTES/INFORME_LECTURA_GOBERNADA_PLANES_RECO_KPI_ESPERADO.md",
+      "availability": "DISPONIBLE",
+      "sha256": "9682de04f2b94e0c7d98d3084c566aa17ed86a91fde91c072cd84f826610f5c0",
+      "size": 6300,
+      "role": "INFORME_HISTORICO_DERIVADO",
+      "locator": "L13–20; L30–36",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Reporte del libro fechado anterior, no fuente temporal. Detección técnica PLAN=[] no significa ausencia real de CODPESTUD; manifiesto canónico sí enumera esa columna."
+    },
+    {
+      "id": "puente_candidato_reco_20260704",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/18_puente_5810_planes_reco/PUENTE_CANDIDATO_5810_PLANES_RECO_20260704_164116/04_REPORTES/INFORME_PUENTE_CANDIDATO_5810_PLANES_RECO_REQUIERE_VALIDACION.md",
+      "availability": "DISPONIBLE",
+      "sha256": "6c9aaa7f461d7176d88b9dc2926bb77804eb76845ebf1f691af312cb2a6c69d9",
+      "size": 2981,
+      "role": "PUENTE_CANDIDATO_DERIVADO",
+      "locator": "L7; L13–22; L35",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Similitud de nombres; requiere validación. No prueba adscripción individual, migración ni vigencia desde/hasta."
+    },
+    {
+      "id": "busqueda_historial_20260704",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/06_gobernanza_columnas_5809/BUSQUEDA_FUENTES_ALTERNATIVAS_HISTORIAL_146_20260704_014443/04_REPORTES/INFORME_BUSQUEDA_FUENTES_ALTERNATIVAS_HISTORIAL_146_NO_CARGA.md",
+      "availability": "DISPONIBLE",
+      "sha256": "2a2059c2624f0481bbc0e9d01cfafde08065d079c5c9787cb6c649ff3ad97e0b",
+      "size": 1746,
+      "role": "INFORME_HISTORICO_DERIVADO",
+      "locator": "L5–7; resumen y validaciones",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Busca historial por ramo para avance 2025; no asignación de plan en cada período. Candidatos calculables no se promovieron aquí a fuente temporal."
+    },
+    {
+      "id": "caracterizacion_codigo_fcu2026",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado/nucleo_productivo/caracterizacion.py",
+      "availability": "DISPONIBLE",
+      "sha256": "f4ce31edec2603fc2348ec0d270bb4455a0db6f9ca2e94230c0bfe9e4b9cffb8",
+      "size": 1167355,
+      "role": "IMPLEMENTACION_EXISTENTE_LEIDA_ESTATICAMENTE",
+      "locator": "L13938–13990 _fcu2026_build_internal_program_source; L14393–14407",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Conserva PLAN_DE_ESTUDIO si existe junto con año/período de matrícula. Esa copia no demuestra vigencia histórica ni linaje temporal del campo de entrada; no se ejecutó."
+    },
+    {
+      "id": "caracterizacion_integracion_ac",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/docs/INTEGRACION_AVANCE_CURRICULAR_AC.md",
+      "availability": "DISPONIBLE",
+      "sha256": "444c8ec546ebf77336aa6aa888ff481b50a6d90aff379f338d27e578c9bd780a",
+      "size": 5068,
+      "role": "DOCUMENTACION_IMPLEMENTACION",
+      "locator": "Fuente de datos; Columnas generadas; Reglas de cálculo resumidas",
+      "read_scope": "LECTURA_DOCUMENTAL_SELECTIVA",
+      "limits": "Las métricas históricas de asignaturas y el año académico de referencia no forman un historial de asignación de planes. No se ejecutó la integración."
+    },
+    {
+      "id": "umas_planes_re_co",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "availability": "DISPONIBLE",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "size": 1483027,
+      "role": "FUENTE_INSTITUCIONAL_OBSERVADA_INVENTARIADA_H1",
+      "locator": "Inventario H1 sources[id=umas_planes_re_co]",
+      "read_scope": "HASH_Y_METADATA; PERFIL_H1_REUTILIZADO",
+      "limits": "No se leyeron registros en esta tarea. Huella recalculada; perfil y límites se heredan de H1. Sin acreditación de intervalos de asignación de plan.",
+      "sha256_h1": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "hash_matches_h1": true
+    },
+    {
+      "id": "umas_datos_alumnos",
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+      "availability": "DISPONIBLE",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "size": 5465638,
+      "role": "FUENTE_INSTITUCIONAL_OBSERVADA_INVENTARIADA_H1",
+      "locator": "Inventario H1 sources[id=umas_datos_alumnos]",
+      "read_scope": "HASH_Y_METADATA; PERFIL_H1_REUTILIZADO",
+      "limits": "No se leyeron registros en esta tarea. Huella recalculada; perfil y límites se heredan de H1. Sin acreditación de intervalos de asignación de plan.",
+      "sha256_h1": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "hash_matches_h1": true
+    },
+    {
+      "id": "umas_promedios",
+      "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "availability": "DISPONIBLE",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "size": 27787332,
+      "role": "FUENTE_INSTITUCIONAL_OBSERVADA_INVENTARIADA_H1",
+      "locator": "Inventario H1 sources[id=umas_promedios]",
+      "read_scope": "HASH_Y_METADATA; PERFIL_H1_REUTILIZADO",
+      "limits": "No se leyeron registros en esta tarea. Huella recalculada; perfil y límites se heredan de H1. Sin acreditación de intervalos de asignación de plan.",
+      "sha256_h1": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "hash_matches_h1": true
+    },
+    {
+      "id": "umas_planes_dated_original_declared",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/01_fuentes_institucionales/planes_estudio/Listado_Planes_estudio_Sedes_RE_CO_20260701.xlsx",
+      "availability": "NO_LOCALIZADO_EN_RUTA",
+      "sha256": null,
+      "size": null,
+      "role": "FUENTE_HISTORICA_DECLARADA",
+      "locator": "Manifiesto canonico 20260701",
+      "read_scope": "DISPONIBILIDAD",
+      "limits": "No se sustituye por otro archivo solo por nombre/conteos iguales."
+    },
+    {
+      "id": "umas_planes_dated_original_old_worktree",
+      "path": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4/avance_curricular_2026/01_fuentes_institucionales/planes_estudio/Listado_Planes_estudio_Sedes_RE_CO_20260701.xlsx",
+      "availability": "NO_LOCALIZADO_EN_RUTA",
+      "sha256": null,
+      "size": null,
+      "role": "FUENTE_HISTORICA_DECLARADA",
+      "locator": "Manifiesto canonico 20260701",
+      "read_scope": "DISPONIBILIDAD",
+      "limits": "No se sustituye por otro archivo solo por nombre/conteos iguales."
+    },
+    {
+      "id": "archivo_auditoria_plan_completa",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/archive/cleanup/cutoff_2026-04-15/moved 3/resultados/auditoria_plan_estudios_alumno_completa.tsv",
+      "availability": "DISPONIBLE",
+      "sha256": "35aec8d43d89fb45312601cf95c58e1044efb47e2fbd06bbdf309e406df2da21",
+      "size": 871230,
+      "role": "AUDITORIA_DERIVADA",
+      "locator": "Primera línea (encabezado)",
+      "read_scope": "SOLO_ENCABEZADO_Y_HASH",
+      "limits": "Encabezado incluye resolución heurística y confianza; no desde/hasta. Filas personales no inspeccionadas ni exportadas.",
+      "headers": [
+        "CODCLI",
+        "CODCARPR_NORM",
+        "JORNADA_FUENTE",
+        "PLAN_DE_ESTUDIO",
+        "ANIO_ING_ACT",
+        "N_CODES_SIES",
+        "CODIGOS_SIES_POTENCIALES",
+        "CODIGO_CARRERA_SIES_FINAL",
+        "SIES_MATCH_STATUS",
+        "SIES_MATCH_DIAG",
+        "SIES_RESOLUCION_HEURISTICA",
+        "SIES_CONFIANZA_POST",
+        "DURACION_ESTUDIOS_REF",
+        "FLAG_GOBERNANZA_V2",
+        "AMBIGUEDAD_ESTRUCTURAL",
+        "EFECTO_PLAN_ESTUDIOS_ALUMNO",
+        "JUSTIFICACION_AUDITORIA"
+      ]
+    },
+    {
+      "id": "archivo_plan_mock",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/archive/cleanup/cutoff_2026-04-15/moved 3/resultados/plan_estudios_alumno_mock.tsv",
+      "availability": "DISPONIBLE",
+      "sha256": "55ebd8db68b2068c3aa34963f37bdf122cae9630b9a8fc95e8ffa152b1bf2510",
+      "size": 52777,
+      "role": "DATOS_SIMULADOS",
+      "locator": "Primera línea (encabezado)",
+      "read_scope": "SOLO_ENCABEZADO_Y_HASH",
+      "limits": "ORIGEN_MOCK y SIES esperado explícitos; no evidencia de asignación histórica.",
+      "headers": [
+        "CODCLI",
+        "PLAN_ESTUDIOS_ALUMNO",
+        "CODIGO_CARRERA_SIES_ESPERADO",
+        "ORIGEN_MOCK"
+      ]
+    },
+    {
+      "id": "archivo_sugerencia_ies",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/archive/cleanup/cutoff_2026-04-15/moved 3/resultados/sies_asignacion_sugerida_por_ies.csv",
+      "availability": "DISPONIBLE",
+      "sha256": "e7819247232d8aa5d9f9ad7bc64e058eee8a27325b6c3d71a9036b049c79ba5d",
+      "size": 23978,
+      "role": "PROPUESTA_DERIVADA",
+      "locator": "Primera línea (encabezado)",
+      "read_scope": "SOLO_ENCABEZADO_Y_HASH",
+      "limits": "Código sugerido y revisión manual; no prueba de asignación institucional efectiva.",
+      "headers": [
+        "CODCLI",
+        "CODCARPR_NORM",
+        "JORNADA_FUENTE",
+        "NOMBRE_CARRERA_FUENTE",
+        "CODIGO_UNICO_SUGERIDO",
+        "NOMBRE_IES",
+        "REGLA_APLICADA",
+        "NIVEL_CONFIANZA",
+        "REQUIERE_REVISION_MANUAL",
+        "RECOMENDACION_MANUAL",
+        "FUENTE_DECISION"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F4-DOC-01",
+      "status": "DOCUMENTADO",
+      "claim": "V001 define PROMEDIOS como reporte de promedios por estudiante y asignatura, enumera ANO, PERIODO y PLAN_DE_ESTUDIO y las tablas MT_ALUMNO, MT_CLIENT, RA_NOTA y RA_RAMO.",
+      "evidence": [
+        {
+          "source": "catalogo_uplus_v001",
+          "locator": "L223–226; L355–358"
+        }
+      ],
+      "not_established": "No asigna PLAN_DE_ESTUDIO a una tabla concreta ni publica la unión SQL; no especifica si el plan es el actual replicado sobre notas antiguas o el adscrito en cada período."
+    },
+    {
+      "id": "F4-DOC-02",
+      "status": "NO_DETERMINADO",
+      "claim": "La semántica temporal de PLAN_DE_ESTUDIO en el extracto PROMEDIOS no queda acreditada por los documentos revisados.",
+      "evidence": [
+        {
+          "source": "inventario_h1",
+          "locator": "umas_promedios: límites del perfil"
+        },
+        {
+          "source": "diccionario_promedios_historico",
+          "locator": "L25–26"
+        },
+        {
+          "source": "catalogo_uplus_v001",
+          "locator": "L355"
+        }
+      ],
+      "limits": "Un único plan observado por matrícula en el extracto es compatible con varias semánticas; su repetición sobre asignaturas antiguas no identifica cuál se aplicó. No se afirma que sea plan actual ni plan histórico."
+    },
+    {
+      "id": "F4-DOC-03",
+      "status": "REQUERIMIENTO_NO_IMPLEMENTACION_ACREDITADA",
+      "claim": "UP-28 pide plan adscrito al período y BR-08 pide exponer plan vigente por matrícula; UP-27 y BR-01 requieren relación oferta/plan a código SIES con vigencia por año.",
+      "evidence": [
+        {
+          "source": "bettersoft_diccionario_solicitado",
+          "locator": "L874–876; L1009; L1016"
+        }
+      ],
+      "limits": "La etiqueta Confirmado (existe en U+) de UP-28 acredita existencia observada del campo, no la temporalidad de su valor ni entrega de la funcionalidad solicitada."
+    },
+    {
+      "id": "F4-DOC-04",
+      "status": "FUENTE_PARCIAL",
+      "claim": "Catálogo de mallas con CODPESTUD y asignaturas no equivale a tabla de asignaciones temporales por matrícula.",
+      "evidence": [
+        {
+          "source": "canonico_planes_20260701",
+          "locator": "columnas_originales; llave_canonica"
+        },
+        {
+          "source": "umas_planes_re_co",
+          "locator": "perfil H1"
+        }
+      ],
+      "limits": "No interpretar sufijo numérico de CODPESTUD, NIVEL o fechas de modificación como inicio/fin de vigencia. Faltan campos explícitos de adscripción individual temporal."
+    },
+    {
+      "id": "F4-DOC-05",
+      "status": "CANDIDATOS_DOCUMENTALES",
+      "claim": "REGISTRO DE ASIGNATURAS declara historial de inscripción y referencia RA_CARGA_RASTRO; Cumplimiento de notas y Asistencia listan plan, año y período.",
+      "evidence": [
+        {
+          "source": "catalogo_uplus_v001",
+          "locator": "L229–234; L349–354; L361–362"
+        }
+      ],
+      "limits": "Son candidatos para solicitar definición o extracto. Historia de inscripción y fechas de asignatura no prueban vigencia del plan ni migración de malla."
+    },
+    {
+      "id": "F4-DOC-06",
+      "status": "SEPARACION_DE_CONCEPTOS",
+      "claim": "PLAN_ESTUDIOS de Avance Curricular es un correlativo por CODIGO_UNICO según diccionarios derivados; CODPESTUD/PLAN_DE_ESTUDIO UMAS y VERSION SIES deben permanecer campos separados.",
+      "evidence": [
+        {
+          "source": "gobernanza_plan_matricula",
+          "locator": "L2"
+        },
+        {
+          "source": "gobernanza_plan_carreras",
+          "locator": "L2"
+        },
+        {
+          "source": "bettersoft_diccionario_solicitado",
+          "locator": "L876"
+        }
+      ],
+      "limits": "No hay equivalencia numérica directa acreditada entre los tres identificadores."
+    },
+    {
+      "id": "F4-DOC-07",
+      "status": "DERIVADOS_NO_PROMOVIDOS",
+      "claim": "Auditorías, mocks, puentes por similitud y cierres técnicos previos no acreditan fechas de asignación ni migración.",
+      "evidence": [
+        {
+          "source": "puente_candidato_reco_20260704",
+          "locator": "L7; L22; L35"
+        },
+        {
+          "source": "archivo_plan_mock",
+          "locator": "encabezado"
+        },
+        {
+          "source": "matriz_fuentes_historica",
+          "locator": "FC-LL-003"
+        }
+      ],
+      "limits": "Las fuentes son útiles como trazabilidad y preguntas pendientes, no como nuevos vínculos históricos oficiales."
+    },
+    {
+      "id": "F4-DOC-08",
+      "status": "FUERA_DE_EDICION_HISTORICA",
+      "claim": "Las reglas de mantención de código en gate09 citan Oferta Académica 2027.",
+      "evidence": [
+        {
+          "source": "bettersoft_gate09",
+          "locator": "L34; L334–348"
+        }
+      ],
+      "limits": "No se utilizan para asignar vigencias 2007–2026 ni para probar que una migración ocurrió."
+    },
+    {
+      "id": "F4-DOC-09",
+      "status": "SIN_EVIDENCIA_SUFICIENTE_EN_ALCANCE",
+      "claim": "No se localizó en las fuentes documentales seleccionadas un registro primario de asignación de plan con desde/hasta o evento explícito de migración/homologación de plan.",
+      "evidence": [
+        {
+          "source": "catalogo_uplus_v001",
+          "locator": "reportes y tablas revisados"
+        },
+        {
+          "source": "matriz_fuentes_historica",
+          "locator": "FC-001; FC-MU-004; FC-LL-003"
+        },
+        {
+          "source": "caracterizacion_codigo_fcu2026",
+          "locator": "L13938–13990"
+        }
+      ],
+      "limits": "Conclusión limitada a los documentos y encabezados indicados; no es afirmación de inexistencia en U+ ni en todas las carpetas locales."
+    }
+  ],
+  "candidate_sources": [
+    {
+      "id": "C01",
+      "name": "Definición SQL vigente de View_promedios_alumnos",
+      "status": "NO_LOCALIZADA",
+      "locator": "catálogo V001 L223–226 y L355–358",
+      "requested_fields": [
+        "origen exacto de PLAN_DE_ESTUDIO",
+        "condiciones JOIN",
+        "relación de ANO/PERIODO con la asignación del plan",
+        "tratamiento de cambios de plan y notas antiguas"
+      ],
+      "bulk_read": false
+    },
+    {
+      "id": "C02",
+      "name": "Asignación histórica de plan UMAS por matrícula",
+      "status": "FUENTE_REQUERIDA_NO_IDENTIFICADA",
+      "requested_fields": [
+        "clave de matrícula",
+        "CODPESTUD",
+        "desde/hasta o año/período efectivo",
+        "tipo de evento",
+        "plan anterior/nuevo",
+        "fecha de registro",
+        "fuente o resolución"
+      ],
+      "bulk_read": false
+    },
+    {
+      "id": "C03",
+      "name": "View_REGISTRO_DE_ASIGNATURAS / RA_CARGA_RASTRO",
+      "status": "CATALOGADA_SIN_EXTRACTO",
+      "locator": "catálogo V001 L229–234",
+      "limits": "Confirmar primero si conserva plan del evento de inscripción o solo datos de asignatura.",
+      "bulk_read": false
+    },
+    {
+      "id": "C04",
+      "name": "Cumplimiento_ingreso_notas",
+      "status": "CATALOGADA_SIN_EXTRACTO",
+      "locator": "catálogo V001 L349–354",
+      "fields_documented": [
+        "CODIGO_PLAN_ESTUDIO",
+        "Ano",
+        "Periodo",
+        "FECHAINICIO",
+        "FECHAFIN"
+      ],
+      "limits": "Fechas no documentadas como vigencia del plan; pedir linaje.",
+      "bulk_read": false
+    },
+    {
+      "id": "C05",
+      "name": "view_ciisa_reporte_asistencia_da",
+      "status": "CATALOGADA_SIN_EXTRACTO",
+      "locator": "catálogo V001 L361–362",
+      "fields_documented": [
+        "PLANDEESTUDIO",
+        "ANO",
+        "PERIODO",
+        "INICIOASIGNATURA",
+        "FINASIGNATURA"
+      ],
+      "limits": "Grano asignatura-estudiante-sección; no confundir fechas de asignatura con vigencia del plan.",
+      "bulk_read": false
+    },
+    {
+      "id": "C06",
+      "name": "Eventos de migración u homologación de malla",
+      "status": "FUENTE_REQUERIDA_NO_IDENTIFICADA",
+      "limits": "DESCRIPCION_ESTADO=HOMOLOGADO/CONVALIDADO describe resultado de asignatura; no demuestra cambio de plan de matrícula.",
+      "bulk_read": false
+    }
+  ],
+  "search_scope": {
+    "roots": [
+      "/Users/alexi/Documents/GitHub/avance_curricular",
+      "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+      "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4",
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026"
+    ],
+    "filename_inventory": [
+      {
+        "root": "/Users/alexi/Documents/GitHub/avance_curricular",
+        "files_enumerated": 11932,
+        "candidates_by_filename": 44
+      },
+      {
+        "root": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+        "files_enumerated": 25966,
+        "candidates_by_filename": 3
+      },
+      {
+        "root": "/Users/alexi/Documents/GitHub/_worktrees/avance_curricular_personal_academico_siipa_v4",
+        "files_enumerated": 1408,
+        "candidates_by_filename": 57
+      },
+      {
+        "root": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026",
+        "files_enumerated": 57,
+        "candidates_by_filename": 3
+      }
+    ],
+    "filename_filters": "plan|malla|homolog|migrac|historial|asignaci|reportes|diccionario|matriz_fuentes, extensiones documentales/tabulares",
+    "content_read_scope": "Documentos seleccionados enumerados en sources; encabezados de tres derivados antiguos; metadatos H1. Búsqueda rg focalizada en docs/requerimiento Bettersoft y docs/gobernanza de Caracterización; lectura estática del consumidor FCU2026.",
+    "sql_filename_search": "Sin archivos .sql devueltos dentro de avance_curricular, CARACTERIZACIÓN y worktree conocido, excluidos .git, dependencias, .local/.local_restricted según consulta. No prueba ausencia de SQL embebido o de definiciones en el servidor U+.",
+    "aborted_search": "Se interrumpió un barrido textual más amplio de repos antes de completarse; no se usa su ausencia de salida como evidencia.",
+    "missing_search_path": "avance_curricular/config no existe; no incluido como directorio revisado.",
+    "not_searched": [
+      "raíz masiva de OneDrive fuera de Avance Curricular/2026",
+      "bases UMASNET en servidor",
+      "web",
+      "enlaces externos del catálogo",
+      "registros personales de candidatos nuevos"
+    ],
+    "not_performed": [
+      "ejecución de motores",
+      "reescritura de fuentes",
+      "edición de repositorios",
+      "exportación de identidades",
+      "lectura masiva de nuevas bases candidatas"
+    ]
+  },
+  "proposed_temporal_contract": {
+    "state": "PROPUESTA_SIN_ASIGNAR_EQUIVALENCIAS",
+    "assignment_key": [
+      "clave_matricula_umas",
+      "CODPESTUD",
+      "inicio_efectivo",
+      "fin_efectivo",
+      "fuente_evento"
+    ],
+    "alternative_only_if_source_documents_it": [
+      "clave_matricula_umas",
+      "anio_academico",
+      "periodo_academico",
+      "CODPESTUD"
+    ],
+    "provenance": [
+      "source_id",
+      "source_sha256",
+      "sheet_or_table",
+      "source_row_or_event_id",
+      "extraction_timestamp",
+      "documented_field_semantics"
+    ],
+    "separate_dimensions": [
+      "año/período de la asignatura",
+      "año/período de matrícula",
+      "ingreso/cohorte",
+      "inicio y fin efectivo del plan",
+      "fecha de extracción",
+      "CODIGO_UNICO y VERSION SIES",
+      "PLAN_ESTUDIOS correlativo Avance Curricular"
+    ],
+    "validation_requirements": [
+      "No convertir primera/última observación en vigencia",
+      "No elegir mayor versión ni inferir año por sufijo de CODPESTUD",
+      "Conservar solapamientos y conflictos sin resolver",
+      "Acreditar cambios mediante evento o historial del sistema antes de construir intervalos",
+      "No equiparar homologación de asignatura con migración de plan"
+    ]
+  },
+  "privacy": {
+    "contains_person_values": false,
+    "contains_student_identifiers_values": false,
+    "field_names_only": true
+  },
+  "preservation": {
+    "repo_edits": false,
+    "source_edits": false,
+    "temporary_output_only": true
+  }
+}

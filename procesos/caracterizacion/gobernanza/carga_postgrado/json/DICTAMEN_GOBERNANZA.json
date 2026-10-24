@@ -1,0 +1,32 @@
+{
+  "proceso": "CARGA_POSTGRADO",
+  "dictamen": "CARGA_POSTGRADO_LOCALIZADA",
+  "estado": "LOCALIZADA_CON_GOBERNANZA_PROPIA_PENDIENTE",
+  "fecha_hora": "2026-05-13T17:20:32-04:00",
+  "evidencias_copiadas": 65,
+  "evidencias_principales": [
+    "reporte_matricula_ip_san_sebastian.csv",
+    "caracterizacion.py",
+    "CONTRATOS_INVARIANTES.md",
+    "MANUAL_SIES_2007_2025.md",
+    "GUIA_INTERVENCION_SEGURA.md",
+    "MAPA_MAESTRO_CARACTERIZACION.md",
+    "MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md",
+    "README.md",
+    "TVS_BLOQUES.md",
+    "caracterizacion_broken_syntax_20260425_044652.py",
+    "caracterizacion_backup_antes_exclusion_rut_no_encontrado.py",
+    "caracterizacion_backup_antes_fix_de_los_cuales_nuevos_20260430_091229.py",
+    "caracterizacion_backup_antes_ppoo_def_atacameno_lickanantay_20260429_180508.py",
+    "caracterizacion_backup_antes_validacion_incluidos_20260425_012505.py",
+    "caracterizacion_backup_catalogo_obligatorios_esp_exp_sit_fcu_20260429_112852.py",
+    "caracterizacion_backup_corrige_ppoo_def_mapper_real_20260429_180208.py",
+    "caracterizacion_backup_deduplicacion_clave_fcu_20260428_124652.py",
+    "caracterizacion_backup_fase20b_20260505_144435.py",
+    "caracterizacion_backup_fast_fcu_fix_validate_20260425_021458.py",
+    "caracterizacion_backup_fix_5_campos_criticos_fcu_20260425_043007.py"
+  ],
+  "fundamento": "Se buscó postgrado/posgrado/postítulo/diplomados/magíster/doctorado y señales técnicas. Se encontró CSV SIES con 204 registros postítulo/diplomado y script productivo con POSGRADO_DIPLOMADOS.",
+  "accion_recomendada": "Abrir gobernanza propia de carga postgrado/postítulo/diplomados; separar vínculo con SIES y pipeline productivo.",
+  "riesgos": "La clasificación fina inicial marcó 0; se requiere corregir gobernanza para no omitir el frente postgrado."
+}

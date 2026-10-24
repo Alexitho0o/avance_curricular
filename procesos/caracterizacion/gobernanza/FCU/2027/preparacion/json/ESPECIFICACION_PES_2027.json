@@ -1,0 +1,4036 @@
+{
+  "schema_version": 2027,
+  "field_count": 172,
+  "manual_sha256": "9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350",
+  "process_id": "FCU_CARGA_PES_2027",
+  "institutional_question_registry": "gobernanza/FCU/2027/preparacion/json/PREGUNTAS_INSTITUCIONALES_2027.json",
+  "institutional_work_addition_rule": "Version vigente 2026-10-13: Tengo un emprendimiento formalizado es la alternativa INSTITUCIONAL AO05 de G02Q95, no una pregunta independiente. Conservar las cuatro alternativas originales y G02Q20. No inferir ni sustituir SIT_LAB, ni agregar campos PES desde AO05; conservarla para seguimiento institucional y VCM. Registro institucional version 3: G02Q27 es texto mixto de empresa o emprendimiento, no un nombre propio confirmado ni un campo PES.",
+  "frozen_2026_reference": {
+    "ok": true,
+    "checked_files": 51,
+    "issues": [],
+    "baseline_sha256": "85e265f5d317ed6b1f2d595cc9ce415628c9c7aa94822152092052723a67e294"
+  },
+  "enum_reference": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/json/AUDITORIA_ESTRUCTURA_20261007_ce05d9f5ce.json",
+    "sha256": "ab23405a2d3cc7f91b924a33b473b60bd87e71fe126bc6581cb7b6b88b938dc2"
+  },
+  "fields": [
+    {
+      "name": "PROCESO",
+      "position": 1,
+      "type": "integer",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1029,
+      "manual_block": "PROCESO Año Proceso Numéric 4 dígitos No aplica No\nA\no Aplica",
+      "source_requirement": ""
+    },
+    {
+      "name": "TIPO_DOC",
+      "position": 2,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1032,
+      "manual_block": "TIPO_DOC Tipo documento de Numéric [1-3] 1: Cédula de identidad 1\nidentificación o (Carnet)\nB 2: Pasaporte\n3: Identificador provisorio\nescolar (IPE)",
+      "source_requirement": "Documento de identificacion validado; no inferir pasaporte/IPE desde el token."
+    },
+    {
+      "name": "NRO_DOC",
+      "position": 3,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1037,
+      "manual_block": "NRO_DOC N° de documento de Cadena RUN: 8 dígitos No aplica 1.1\nidentificación numéricos más el\ndígito verificador;\nsin puntos y con\nguion.\nPasaporte:\nC alfanumérico, 20\ndígitos.\nIPE: 9 dígitos, sin el\ndígito verificador ni\nel guion.",
+      "source_requirement": "RUT con DV/documento en matricula. El token sin DV no reemplaza este dato."
+    },
+    {
+      "name": "FECHA_NAC",
+      "position": 4,
+      "type": "date",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": "D",
+      "printed_position": 4,
+      "manual_line": 1048,
+      "manual_block": "D FECHA_NAC Fecha de nacimiento Fecha DD/MM/AAAA No aplica 2",
+      "source_requirement": "FECHANACIMIENTO en matricula; fecha validada DD/MM/AAAA."
+    },
+    {
+      "name": "NAC",
+      "position": 5,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 197,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1049,
+      "manual_block": "NAC Nacionalidad Numéric [1-197] Código según Anexo N°2 3\nE\no\n--- Página 50 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "SIT_MIGR",
+      "position": 6,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1053,
+      "manual_block": "SIT_MIGR Situación migratoria Numéric [1-4] 1: Cuento con Residencia 3.1\no Definitiva 2: Cuento con\nResidencia Temporal 3:\nMe encuentro en\nF proceso de regularizar mi\nsituación migratoria 4:\nNinguna de las\nAnteriores",
+      "source_requirement": ""
+    },
+    {
+      "name": "SEXO",
+      "position": 7,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1061,
+      "manual_block": "SEXO Sexo Cadena [H, M, X] H: Hombre 4\nM: Mujer\nG\nX: No binario",
+      "source_requirement": ""
+    },
+    {
+      "name": "GENERO",
+      "position": 8,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1065,
+      "manual_block": "GENERO Identidad de género Numéric [1-4] 1: Masculino 5\no 2: Femenino\n3: No binario\nH\n4: Otro",
+      "source_requirement": ""
+    },
+    {
+      "name": "PPOO",
+      "position": 9,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1070,
+      "manual_block": "PPOO Pueblos originarios Numéric [1-2] 1: Si 6\nI\no 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "PPOO_DEF",
+      "position": 10,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 13,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1073,
+      "manual_block": "PPOO_DEF Pueblos originarios Numéric [1-13] Código según Anexo 6\nJ definición o N°3",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP",
+      "position": 11,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1075,
+      "manual_block": "DISCAP Situación de Numéric [1-2] 1: Sí 7\nK Discapacidad o 2: No\n--- Página 51 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP_FIS",
+      "position": 12,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1078,
+      "manual_block": "DISCAP_FIS Persona en situación de Numéric [0-1] 0: No/False 7.1\nL discapacidad física o o 1: Sí/True\nmotora",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP_AUD",
+      "position": 13,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1081,
+      "manual_block": "DISCAP_AUD Persona en situación de Numéric [0-1] 0: No/False 7.1\nM discapacidad auditiva o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP_VIS",
+      "position": 14,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1083,
+      "manual_block": "DISCAP_VIS Persona en situación de Numéric [0-1] 0: No/False 7.1\nN discapacidad visual o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP_INT",
+      "position": 15,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1085,
+      "manual_block": "DISCAP_INT Persona en situación de Numéric [0-1] 0: No/False 7.1\nO discapacidad intelectual o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP_PSQ",
+      "position": 16,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1087,
+      "manual_block": "DISCAP_PSQ Persona en situación de Numéric [0-1] 0: No/False 7.1\nP discapacidad psíquica o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "DISCAP_REGIS",
+      "position": 17,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1089,
+      "manual_block": "DISCAP_REGIS Registro Discapacidad Numéric [1-4] 1: Sí 7.2\no 2: Está en proceso 3:\nQ No\n4: No tengo conocimiento",
+      "source_requirement": ""
+    },
+    {
+      "name": "CALLE",
+      "position": 18,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": "R",
+      "printed_position": 18,
+      "manual_line": 1093,
+      "manual_block": "R CALLE Calle Cadena 50 caracteres No aplica 8.1",
+      "source_requirement": "Calle estructurada. DIRECCIONACTUAL completa no equivale automaticamente a calle."
+    },
+    {
+      "name": "NRO_CALLE",
+      "position": 19,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": "S",
+      "printed_position": 19,
+      "manual_line": 1094,
+      "manual_block": "S NRO_CALLE Número calle Cadena 10 caracteres No aplica 8.2",
+      "source_requirement": "Numero de direccion estructurado; no extraer por una expresion ambigua."
+    },
+    {
+      "name": "DEPTO_BLOCK",
+      "position": 20,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": "T",
+      "printed_position": 20,
+      "manual_line": 1095,
+      "manual_block": "T DEPTO_BLOCK Departamento/Block Cadena 10 caracteres No aplica 8.3\n--- Página 52 ---",
+      "source_requirement": "Departamento/block estructurado, si existe."
+    },
+    {
+      "name": "REGION",
+      "position": 21,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1097,
+      "manual_block": "REGION Región Numéric [1-16] Código según Anexo N°4 8.4\nU\no",
+      "source_requirement": "Codigo oficial Anexo 4, no nombre ni inferencia desde la sede."
+    },
+    {
+      "name": "COMUNA",
+      "position": 22,
+      "type": "integer",
+      "minimum": 1101,
+      "maximum": 16305,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1100,
+      "manual_block": "COMUNA Comuna Numéric [1101-16305] Código según Anexo N°5 8.5\nV\no",
+      "source_requirement": "Codigo oficial Anexo 5; COMUNAACTUAL requiere catalogo."
+    },
+    {
+      "name": "CAMBIO_CIUDAD",
+      "position": 23,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1103,
+      "manual_block": "CAMBIO_CIUDA Cambio de ciudad Numéric [1-2] 1: Sí 8.6\nW\nD o 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "CEL",
+      "position": 24,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1106,
+      "manual_block": "CEL Teléfono celular Numéric 11 dígitos con No aplica 9\nX o formato\n56912345678",
+      "source_requirement": "FONOACTUAL/CELULAR: validar 11 digitos y prefijo 569."
+    },
+    {
+      "name": "CORREO",
+      "position": 25,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1109,
+      "manual_block": "CORREO Correo personal Cadena xxx@xxxx.xx No aplica 10\nY",
+      "source_requirement": "MAIL personal validado; no sustituir silenciosamente por Mail_Inst."
+    },
+    {
+      "name": "HOGAR_SOLO",
+      "position": 26,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1111,
+      "manual_block": "HOGAR_SOLO Conformación hogar [ Numéric [0-1] 0: No/False 11\nZ\nsolo/a] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_PADRE",
+      "position": 27,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1114,
+      "manual_block": "HOGAR_PADRE Conformación hogar Numéric [0-1] 0: No/False 11\nAA\n[padre/padrastro] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_MADRE",
+      "position": 28,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1117,
+      "manual_block": "HOGAR_MADRE Conformación hogar Numéric [0-1] 0: No/False 11\nAB\n[madre/madrastra] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_HERM",
+      "position": 29,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1120,
+      "manual_block": "HOGAR_HERM Conformación hogar Numéric [0-1] 0: No/False 11\nAC\n[hermanos/as] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_PAREJA",
+      "position": 30,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1123,
+      "manual_block": "HOGAR_PAREJA Conformación hogar Numéric [0-1] 0: No/False 11\nAD\n[pareja o cónyuge] o 1: Sí/True\n--- Página 53 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_MEN12",
+      "position": 31,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1127,
+      "manual_block": "HOGAR_MEN12 Conformación hogar Numéric [0-1] 0: No/False 11\nAE\n[hijos/as <12] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_MAY12",
+      "position": 32,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1130,
+      "manual_block": "HOGAR_MAY12 Conformación hogar Numéric [0-1] 0: No/False 11\nAF\n[hijos/as ≥ 12] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_FAM",
+      "position": 33,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1133,
+      "manual_block": "HOGAR_FAM Conformación hogar Numéric [0-1] 0: No/False 11\nAG\n[otros familiares] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_OTROS",
+      "position": 34,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1136,
+      "manual_block": "HOGAR_OTROS Conformación hogar Numéric [0-1] 0: No/False 11\nAH\n[otras personas] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "HOGAR_CANT",
+      "position": 35,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1139,
+      "manual_block": "HOGAR_CANT Cantidad total personas Numéric [1-10] 1: 1 12\nhogar o 2: 2\n3: 3\n4: 4\n5: 5\nAI\n6: 6\n7: 7\n8: 8\n9: 9\n10: +10",
+      "source_requirement": "Conteos reales de hogar, incluyendo al estudiante; no sumar simples casillas 0/1."
+    },
+    {
+      "name": "JEFE_HOGAR",
+      "position": 36,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1150,
+      "manual_block": "JEFE_HOGAR Jefe/a hogar Numéric [1-2] 1: Sí 13\nAJ\no 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "CUIDADOS",
+      "position": 37,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1153,
+      "manual_block": "CUIDADOS Rol de Cuidado Numéric [1-2] 1: Sí 14\nAK\no 2: No\n--- Página 54 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "CUIDADOS_CANT",
+      "position": 38,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1157,
+      "manual_block": "CUIDADOS_CAN Cantidad de personas a Numéric [1-5] 1: 1 14\nT cuidar o 2: 2\nAL 3: 3\n4: 4\n5: +5",
+      "source_requirement": ""
+    },
+    {
+      "name": "APOYO_CUID",
+      "position": 39,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1162,
+      "manual_block": "APOYO_CUID Apoyo cuidado Numéric [1-2] 1:Sí 14.1\no 2:No\nAM",
+      "source_requirement": ""
+    },
+    {
+      "name": "NIVEL_EDU_PADRE",
+      "position": 40,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1165,
+      "manual_block": "NIVEL_EDU_PA Nivel educacional [padre] Numéric [1-12] Código según Anexo N°7 15\nAN\nDRE o",
+      "source_requirement": ""
+    },
+    {
+      "name": "NIVEL_EDU_MADRE",
+      "position": 41,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1168,
+      "manual_block": "NIVEL_EDU_MA Nivel educacional [madre] Numéric [1-12] Código según Anexo N°7 15\nAO\nDRE o",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_PRO",
+      "position": 42,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1171,
+      "manual_block": "FIN_PRO Financiamiento [propio] Numéric [0-1] 0: No/False 16\nAP\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_PADRES",
+      "position": 43,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1174,
+      "manual_block": "FIN_PADRES Financiamiento [padres] Numéric [0-1] 0: No/False 16\nAQ\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_OFAM",
+      "position": 44,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1177,
+      "manual_block": "FIN_OFAM Financiamiento [otros Numéric [0-1] 0: No/False 16\nAR\nfamiliares] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_OPER",
+      "position": 45,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1180,
+      "manual_block": "FIN_OPER Financiamiento [otras Numéric [0-1] 0: No/False 16\nAS\npersonas] o 1: Sí/True\n--- Página 55 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_GRAT",
+      "position": 46,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1184,
+      "manual_block": "FIN_GRAT Financiamiento [gratuidad] Numéric [0-1] 0: No/False 16\nAT\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_BEC_EST",
+      "position": 47,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1187,
+      "manual_block": "FIN_BEC_EST Financiamiento [becas Numéric [0-1] 0: No/False 16\nAU\nestado] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_BEC_EXT",
+      "position": 48,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1190,
+      "manual_block": "FIN_BEC_EXT Financiamiento [becas Numéric [0-1] 0: No/False 16\nAV\nexternas] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_CAE",
+      "position": 49,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1193,
+      "manual_block": "FIN_CAE Financiamiento [CAE] Numéric [0-1] 0: No/False 16\nAW\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_CRE",
+      "position": 50,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1196,
+      "manual_block": "FIN_CRE Financiamiento [crédito] Numéric [0-1] 0: No/False 16\nAX\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "FIN_EMP",
+      "position": 51,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1199,
+      "manual_block": "FIN_EMP Financiamiento [empres] Numéric [0-1] 0: No/False 16\nAY\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "SIT_LAB",
+      "position": 52,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1202,
+      "manual_block": "SIT_LAB Situación laboral Numéric [1-4] 1: No trabajo actualmente 17\no 2: Trabajo a tiempo\ncompleto\nAZ 3: Trabajo a tiempo parcial\n4: Trabajo\nesporádicamente o en\n“pololos”",
+      "source_requirement": ""
+    },
+    {
+      "name": "TIPO_EST_ESC",
+      "position": 53,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1209,
+      "manual_block": "TIPO_EST_ESC Tipo Establecimiento Numéric [1-3] 1: Público (municipal, 18\nEscolar o administración delegada\nBA o servicio local de\neducación SLEP).\n2: Particular\n--- Página 56 ---\nSubvencionado.\n3: Particular Pagado",
+      "source_requirement": ""
+    },
+    {
+      "name": "ANO_EGRESO",
+      "position": 54,
+      "type": "integer",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1217,
+      "manual_block": "ANO_EGRESO Año Egreso Educación Numéric 4 dígitos: AAAA No aplica 19\nBB\nMedia o",
+      "source_requirement": ""
+    },
+    {
+      "name": "MOD_EM",
+      "position": 55,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1220,
+      "manual_block": "MOD_EM Modalidad Educación Numéric [1-6] 1: Científico Humanista. 20\nMedia o 2: Científico Humanista\n(Educación de Personas\nJóvenes y Adultas)\n3: Técnico Profesional\n4: Técnico Profesional\nBC (Educación de Personas\nJóvenes y Adultas)\n5: Artístico –\nExperimental 6:\nNo cursé mi\nEducación media o\nsecundaria en Chile",
+      "source_requirement": ""
+    },
+    {
+      "name": "ESP_MTP",
+      "position": 56,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 35,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1233,
+      "manual_block": "ESP_MTP Especialidad MTP Numéric [1-35] Código según Anexo N°8 20.1\nBD\no",
+      "source_requirement": ""
+    },
+    {
+      "name": "ESP_MTP_EPJA",
+      "position": 57,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1236,
+      "manual_block": "ESP_MTP_EPJA Especialidad MTP EPJA Numéric [1-24] Código según Anexo N°9 20.2\nBE\no",
+      "source_requirement": ""
+    },
+    {
+      "name": "TIT_MTP",
+      "position": 58,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1239,
+      "manual_block": "TIT_MTP Título MTP Numéric [1-3] 1: Sí 20.3\nBF o 2: Aún no\n3: No\n--- Página 57 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "ARTICULA",
+      "position": 59,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1243,
+      "manual_block": "ARTICULA Articulación Numéric [1-3] 1: Convalidé 20.4\no asignaturas vía\narticulación\n2: No convalidé\nasignaturas, aun cuando\nBG me matriculé en una\ncarrera relacionada a mi\nespecialidad de egreso 3:\nMe matriculé en una\ncarrera NO relacionada\na mi especialidad",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_NO_ARTICULA",
+      "position": 60,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1254,
+      "manual_block": "RAZ_NO_ARTIC Razón no articulación Numéric [1-6] 1: Tuve la posibilidad de 20.5\nULA o convalidar, pero preferí\nno hacerlo porque\nquiero cursar todas las\nasignaturas\n2: Tuve la posibilidad de\nconvalidar, pero preferí\nno hacerlo porque no\nBH\nconfío en mis\naprendizajes de la\nEducación Media\n3: No tuve información al\nrespecto\n4: La institución en la\nque me matriculé no\ntiene articulación\n--- Página 58 ---\n5: Las/os egresadas/os de\nmi liceo no tenían la\nopción de convalidar\n6: No pude convalidar\nporque egresé hace\nmuchos años",
+      "source_requirement": ""
+    },
+    {
+      "name": "EXP_LAB",
+      "position": 61,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1278,
+      "manual_block": "EXP_LAB Experiencia laboral Numéric [1-3] 1: Sí, cuento con 21\nrelacionada a carrera o experiencia laboral\nrelacionada\n2: Sí, cuento con\nBI experiencia laboral,\npero NO está\nrelacionada\n3: No cuento con\nexperiencia laboral",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE",
+      "position": 62,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1287,
+      "manual_block": "EST_PRE Estudios previos Numéric [1-2] 1: Sí 22\nBJ\no 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_FFAA",
+      "position": 63,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1290,
+      "manual_block": "EST_PRE_FFAA Estudios previos [FFAA] Numéric [0-1] 0: No/False 22.1\nBK\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_TPINC",
+      "position": 64,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1293,
+      "manual_block": "EST_PRE_TPINC Estudios previos [TP Numéric [0-1] 0: No/False 22.1\nBL\nincompleto] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_TPCOM",
+      "position": 65,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1296,
+      "manual_block": "EST_PRE_TPCO Estudios previos [TP] Numéric [0-1] 0: No/False 22.1\nBM\nM o 1: Sí/True\n--- Página 59 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_UINC",
+      "position": 66,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1300,
+      "manual_block": "EST_PRE_UINC Estudios previos Numéric [0-1] 0: No/False 22.1\nBN [Universitarios o 1: Sí/True\nincompleto]",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_UCOM",
+      "position": 67,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1303,
+      "manual_block": "EST_PRE_UCOM Estudios previos Numéric [0-1] 0: No/False 22.1\nBO\n[Universitarios] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_PGINC",
+      "position": 68,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1306,
+      "manual_block": "EST_PRE_PGINC Estudios previos Numéric [0-1] 0: No/False 22.1\nBP\n[posgrado incompleto] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_PFCOM",
+      "position": 69,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1309,
+      "manual_block": "EST_PRE_PFCO Estudios previos Numéric [0-1] 0: No/False 22.1\nBQ\nM [posgrado] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_CAPCOM",
+      "position": 70,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1312,
+      "manual_block": "EST_PRE_CAPC Estudios previos Numéric [0-1] 0: No/False 22.1\nBR\nOM [capacitaciones] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_CER",
+      "position": 71,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1315,
+      "manual_block": "EST_PRE_CER Estudios previos Numéric [0-1] 0: No/False 22.1\nBS\n[certificaciones] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_OTRO",
+      "position": 72,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1318,
+      "manual_block": "EST_PRE_OTRO Estudios previos [otros] Numéric [0-1] 0: No/False 22.1\nBT\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "EST_PRE_REL",
+      "position": 73,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1321,
+      "manual_block": "EST_PRE_REL Estudios previos relación Numéric [1-4] 1: No se relacionan nada 22.2\no 2: Se relacionan poco 3:\nBU Se relacionan\nmedianamente\n4: Se relacionan mucho",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAP",
+      "position": 74,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1326,
+      "manual_block": "RAP RAP Numéric [1-2] 1: Sí 22.3\nBV\no 2: No\n--- Página 60 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_NO_RAP",
+      "position": 75,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1330,
+      "manual_block": "RAZ_NO_RAP Razón no RAP Numéric [1-4] 1: Tuve la posibilidad de 22.4\no convalidar, pero preferí\nno hacerlo porque\nquiero cursar todas las\nasignaturas.\n2: Tuve la posibilidad de\nconvalidar, pero preferí\nno hacerlo porque no\nBW confío en mis\naprendizajes previos\n(laborales o educativos) 3:\nNo tuve información al\nrespecto\n4: La institución en la que\nme matriculé no tiene\nReconocimiento de\nAprendizajes Previos",
+      "source_requirement": ""
+    },
+    {
+      "name": "COD_INS",
+      "position": 76,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1347,
+      "manual_block": "COD_INS Código SIES Institución Numéric 3 dígitos Código de 3 dígitos 23\nBX\no asignado por SIES",
+      "source_requirement": "Codigo SIES institucional configurado, no inferido desde texto."
+    },
+    {
+      "name": "COD_CAR",
+      "position": 77,
+      "type": "text",
+      "minimum": null,
+      "maximum": null,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1350,
+      "manual_block": "COD_CAR Código SIES carrera Numéric 25 caracteres Código asignado por SIES 24\nBY o",
+      "source_requirement": "Codigo SIES completo de carrera, no CODCARPR ni CODCLI."
+    },
+    {
+      "name": "RAZ_TP_1",
+      "position": 78,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1352,
+      "manual_block": "RAZ_TP_1 Razón matrícula en Numéric [0-1] 0: No/False 25\nBZ institución TP o 1: Sí/True\n[Desarrollo personal...]\n--- Página 61 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_TP_2",
+      "position": 79,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1356,
+      "manual_block": "RAZ_TP_2 Razón matrícula en Numéric [0-1] 0: No/False 25\nCA institución TP [Mejor o 1: Sí/True\nfuturo laboral]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_TP_3",
+      "position": 80,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1359,
+      "manual_block": "RAZ_TP_3 Razón matrícula en Numéric [0-1] 0: No/False 25\nCB institución TP [Orgullo o 1: Sí/True\nfamiliar]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_TP_4",
+      "position": 81,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1362,
+      "manual_block": "RAZ_TP_4 Razón matrícula en Numéric [0-1] 0: No/False 25\nCC institución TP [Presión o 1: Sí/True\nfamiliar]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_TP_5",
+      "position": 82,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1365,
+      "manual_block": "RAZ_TP_5 Razón matrícula en Numéric [0-1] 0: No/False 25\nCD institución TP [No o 1: Sí/True\npuntaje universidad]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_TP_6",
+      "position": 83,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1368,
+      "manual_block": "RAZ_TP_6 Razón matrícula en Numéric [0-1] 0: No/False 25\nCE institución TP o 1: Sí/True\n[Duración y flexibilidad]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_TP_7",
+      "position": 84,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1371,
+      "manual_block": "RAZ_TP_7 Razón matrícula en Numéric [0-1] 0: No/False 25\nCF\ninstitución TP [Otra] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_1",
+      "position": 85,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1374,
+      "manual_block": "RAZ_INT_1 Razón para Numéric [0-1] 0: No/False 26\nmatricularse en la o 1: Sí/True\nCG\ninstitución [Prestigio\nIES]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_2",
+      "position": 86,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1379,
+      "manual_block": "RAZ_INT_2 Razón para matricularse Numéric [0-1] 0: No/False 26\nCI en la institución [Años o 1: Sí/True\nacreditación]\n--- Página 62 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_3",
+      "position": 87,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1383,
+      "manual_block": "RAZ_INT_3 Razón para matricularse Numéric [0-1] 0: No/False 26\nen la institución o 1: Sí/True\nCJ\n[Ubicación y\naccesibilidad]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_4",
+      "position": 88,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1388,
+      "manual_block": "RAZ_INT_4 Razón para matricularse Numéric [0-1] 0: No/False 26\nen la institución o 1: Sí/True\nCK\n[Infraestructura y\nequipamiento]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_5",
+      "position": 89,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1393,
+      "manual_block": "RAZ_INT_5 Razón para matricularse Numéric [0-1] 0: No/False 26\nen la institución o 1: Sí/True\nCL\n[Modalidades y\njornadas]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_6",
+      "position": 90,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1398,
+      "manual_block": "RAZ_INT_6 Razón para Numéric [0-1] 0: No/False 26\nmatricularse en la o 1: Sí/True\nCM\ninstitución [Adscripción\ngratuidad]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_7",
+      "position": 91,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1403,
+      "manual_block": "RAZ_INT_7 Razón para matricularse Numéric [0-1] 0: No/False 26\nCN en la institución [Becas y o 1: Sí/True\nbeneficios]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_8",
+      "position": 92,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1406,
+      "manual_block": "RAZ_INT_8 Razón para matricularse Numéric [0-1] 0: No/False 26\nen la o 1: Sí/True\nCO\ninstitución [Carrera de\ninterés]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_9",
+      "position": 93,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1411,
+      "manual_block": "RAZ_INT_9 Razón para matricularse Numéric [0-1] 0: No/False 26\nCP en la institución o 1: Sí/True\n[Continuación de\n--- Página 63 ---\nestudios]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_INT_10",
+      "position": 94,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1416,
+      "manual_block": "RAZ_INT_10 Razón para matricularse Numéric [0-1] 0: No/False 26\nCQ en la o 1: Sí/True\ninstitución [Otra razón]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_1",
+      "position": 95,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1419,
+      "manual_block": "RAZ_CAR_1 Razón para matricularse Numéric [0-1] 0: No/False 27\nen la o 1: Sí/True\nCR\ncarrera [Gustos o\nvocación]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_2",
+      "position": 96,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1424,
+      "manual_block": "RAZ_CAR_2 Razón para matricularse Numéric [0-1] 0: No/False 27\nCS en la o 1: Sí/True\ncarrera [Relación trabajo]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_3",
+      "position": 97,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1427,
+      "manual_block": "RAZ_CAR_3 Razón para matricularse Numéric [0-1] 0: No/False 27\nCT en la o 1: Sí/True\ncarrera [Campo laboral]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_4",
+      "position": 98,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1430,
+      "manual_block": "RAZ_CAR_4 Razón para matricularse Numéric [0-1] 0: No/False 27\nCU en la carrera o 1: Sí/True\n[Recomendación]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_5",
+      "position": 99,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1433,
+      "manual_block": "RAZ_CAR_5 Razón para matricularse Numéric [0-1] 0: No/False 27\nCV en la o 1: Sí/True\ncarrera [Jornada]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_6",
+      "position": 100,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1436,
+      "manual_block": "RAZ_CAR_6 Razón para matricularse Numéric [0-1] 0: No/False 27\nCW en la carrera [Malla de o 1: Sí/True\nestudios]\n--- Página 64 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_7",
+      "position": 101,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1440,
+      "manual_block": "RAZ_CAR_7 Razón para matricularse Numéric [0-1] 0: No/False 27\nCX en la o 1: Sí/True\ncarrera [Falta de cupo]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_8",
+      "position": 102,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1443,
+      "manual_block": "RAZ_CAR_8 Razón para matricularse Numéric [0-1] 0: No/False 27\nCY en la carrera [Falta de o 1: Sí/True\nfinanciamiento]",
+      "source_requirement": ""
+    },
+    {
+      "name": "RAZ_CAR_9",
+      "position": 103,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1446,
+      "manual_block": "RAZ_CAR_9 Razón para Numéric [0-1] 0: No/False 27\nCZ matricularse en la carrera o 1: Sí/True\n[Otra razón]",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_1",
+      "position": 104,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1449,
+      "manual_block": "MEDIOS_1 Medio de información Numéric [0-1] 0: No/False 28\nDA\n[Anuncios vía pública] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_2",
+      "position": 105,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1452,
+      "manual_block": "MEDIOS_2 Medio de información Numéric [0-1] 0: No/False 28\nDB\n[Amigos y/o familiares] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_3",
+      "position": 106,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1455,
+      "manual_block": "MEDIOS_3 Medio de información Numéric [0-1] 0: No/False 28\nDC [Profesores u o 1: Sí/True\norientador/a]",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_4",
+      "position": 107,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1458,
+      "manual_block": "MEDIOS_4 Medio de información Numéric [0-1] 0: No/False 28\nDD\n[Visita a la institución] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_5",
+      "position": 108,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1461,
+      "manual_block": "MEDIOS_5 Medio de información Numéric [0-1] 0: No/False 28\nDE [Ferias, exposiciones y/o o 1: Sí/True\ncharlas]",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_6",
+      "position": 109,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1464,
+      "manual_block": "MEDIOS_6 Medio de información Numéric [0-1] 0: No/False 28\nDF\n[TikTok] o 1: Sí/True\n--- Página 65 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_7",
+      "position": 110,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1468,
+      "manual_block": "MEDIOS_7 Medio de información Numéric [0-1] 0: No/False 28\nDG\n[Instagram] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_8",
+      "position": 111,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1471,
+      "manual_block": "MEDIOS_8 Medio de información Numéric [0-1] 0: No/False 28\nDH\n[Facebook] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_9",
+      "position": 112,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1474,
+      "manual_block": "MEDIOS_9 Medio de información Numéric [0-1] 0: No/False 28\nDI\n[Twitter o X] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_10",
+      "position": 113,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1477,
+      "manual_block": "MEDIOS_10 Medio de información Numéric [0-1] 0: No/False 28\nDJ\n[Prensa física o digital] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_11",
+      "position": 114,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1480,
+      "manual_block": "MEDIOS_11 Medio de información Numéric [0-1] 0: No/False 28\nDK [Página web de la o 1: Sí/True\ninstitución]",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_12",
+      "position": 115,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1483,
+      "manual_block": "MEDIOS_12 Medio de información Numéric [0-1] 0: No/False 28\nDL\n[Televisión] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "MEDIOS_13",
+      "position": 116,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1486,
+      "manual_block": "MEDIOS_13 Medio de información Numéric [0-1] 0: No/False 28\nDM\n[Radio] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "CONTACTO",
+      "position": 117,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1489,
+      "manual_block": "CONTACTO Contacto Numéric [1-5] 1: WhatsApp 29\no 2: Llamada telefónica\nDN 3: Correo electrónico\n4: Videollamada\n5: Mensaje de texto",
+      "source_requirement": ""
+    },
+    {
+      "name": "MAT_FAC",
+      "position": 118,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1494,
+      "manual_block": "MAT_FAC Matrícula [fácil] Numéric [1-4] 1: Muy en desacuerdo 2: 30\no En desacuerdo\nDO\n3: De acuerdo\n4: Muy de acuerdo\n--- Página 66 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "MAT_CLARO",
+      "position": 119,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1500,
+      "manual_block": "MAT_CLARO Matrícula [claro] Numéric [1-4] 1: Muy en desacuerdo 2: 30\no En desacuerdo\nDP\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "MAT_RAP",
+      "position": 120,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1505,
+      "manual_block": "MAT_RAP Matrícula [rápido] Numéric [1-4] 1: Muy en desacuerdo 2: 30\no En desacuerdo\nDQ\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "MAT_ATE",
+      "position": 121,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1510,
+      "manual_block": "MAT_ATE Matrícula [atención] Numéric [1-4] 1: Muy en desacuerdo 2: 30\no En desacuerdo\nDR\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "MIN_BEC",
+      "position": 122,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1515,
+      "manual_block": "MIN_BEC Mineduc [becas] Numéric [0-4] 0: No lo utilicé 31\no 1: Muy en desacuerdo 2:\nEn desacuerdo\n3: De acuerdo\nDS\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "MIN_CAL",
+      "position": 123,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1521,
+      "manual_block": "MIN_CAL Mineduc [calendario] Numéric [0-4] 0: No lo utilicé 31\no 1: Muy en desacuerdo 2:\nDT En desacuerdo\n3: De acuerdo\n4: Muy de acuerdo\n--- Página 67 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "MIN_BUS",
+      "position": 124,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1527,
+      "manual_block": "MIN_BUS Mineduc [buscador] Numéric [0-4] 0: No lo utilicé 31\no 1: Muy en desacuerdo 2:\nDU En desacuerdo\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "MIN_FUT",
+      "position": 125,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1532,
+      "manual_block": "MIN_FUT Mineduc [mifuturo] Numéric [0-4] 0: No lo utilicé 31\no 1: Muy en desacuerdo 2:\nDV En desacuerdo\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "MIN_FUAS",
+      "position": 126,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1537,
+      "manual_block": "MIN_FUAS Mineduc [FUAS] Numéric [0-4] 0: No lo utilicé 31\no 1: Muy en desacuerdo 2:\nDW En desacuerdo\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "CON_SAL",
+      "position": 127,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1542,
+      "manual_block": "CON_SAL Condición salud Numéric [1-2] 1: Sí 32\nDX\no 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "ORI_SAL_TIPO",
+      "position": 128,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1545,
+      "manual_block": "ORI_SAL_TIPO Orientación por condición Numéric [1-2] 1: Sí 32.1\nDY\nde salud o 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "BIE_PSC",
+      "position": 129,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1548,
+      "manual_block": "BIE_PSC Bienestar psicológico Numéric [1-5] 1: Muy malo 33\no 2: Malo\nDZ 3: Ni bueno ni malo 4:\nBueno\n5: Muy bueno\n--- Página 68 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "ORI_PSC",
+      "position": 130,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1554,
+      "manual_block": "ORI_PSC Orientación psicológica Numéric [1-2] 1: Sí 34\nEA\no 2: No",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE",
+      "position": 131,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1557,
+      "manual_block": "NEE Presentas actualmente Numéric [1-3] 1: Sí 35\nalguna Necesidad o 2: No\nEB\nEducativa Especial 3: No tengo\n(NEE) conocimiento",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_1",
+      "position": 132,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1562,
+      "manual_block": "NEE_1 NEE [Déficit atencional] Numéric [0-1] 0: No/False 35.1\nEC\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_2",
+      "position": 133,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1565,
+      "manual_block": "NEE_2 NEE [Dislexia] Numéric [0-1] 0: No/False 35.1\nED\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_3",
+      "position": 134,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1568,
+      "manual_block": "NEE_3 NEE [Discalculia] Numéric [0-1] 0: No/False 35.1\nEE\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_4",
+      "position": 135,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1571,
+      "manual_block": "NEE_4 NEE [Disgrafía] Numéric [0-1] 0: No/False 35.1\nEF o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_5",
+      "position": 136,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1573,
+      "manual_block": "NEE_5 NEE [Trastornos del Numéric [0-1] 0: No/False 35.1\nEG lenguaje] o 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_6",
+      "position": 137,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1575,
+      "manual_block": "NEE_6 NEE [Dificultad Numéric [0-1] 0: No/False 35.1\nEH especifica del o 1: Sí/True\naprendizaje (lenguaje)]",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_7",
+      "position": 138,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1578,
+      "manual_block": "NEE_7 NEE [Dificultad Numéric [0-1] 0: No/False 35.1\nespecífica del o 1: Sí/True\nEI\naprendizaje\n(matemática)]\n--- Página 69 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "NEE_8",
+      "position": 139,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1584,
+      "manual_block": "NEE_8 NEE [Otra] Numéric [0-1] 0: No/False 35.1\nEJ\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_1",
+      "position": 140,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1587,
+      "manual_block": "REC_1 Recurso Numéric [1-4] 1: Nunca 36\n[Smartphone] o 2: A veces\nEK 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_2",
+      "position": 141,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1591,
+      "manual_block": "REC_2 Recurso Numéric [1-4] 1: Nunca 36\n[Notebook] o 2: A veces\nEL 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_3",
+      "position": 142,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1595,
+      "manual_block": "REC_3 Recurso Numéric [1-4] 1: Nunca 36\n[Tablet] o 2: A veces\nEM 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_4",
+      "position": 143,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1599,
+      "manual_block": "REC_4 Recurso Numéric [1-4] 1: Nunca 36\n[PC] o 2: A veces\nEN 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_5",
+      "position": 144,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1603,
+      "manual_block": "REC_5 Recurso Numéric [1-4] 1: Nunca 36\n[Internet Wifi] o 2: A veces\nEO\n3: Frecuentemente 4:\nSiempre\n--- Página 70 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_6",
+      "position": 145,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1609,
+      "manual_block": "REC_6 Recurso Numéric [1-4] 1: Nunca 36\n[Internet con datos o 2: A veces\nEP móviles] 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_7",
+      "position": 146,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1613,
+      "manual_block": "REC_7 Recurso Numéric [1-4] 1: Nunca 36\n[Cámara web] o 2: A veces\nEQ 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_8",
+      "position": 147,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1617,
+      "manual_block": "REC_8 Recurso Numéric [1-4] 1: Nunca 36\n[Micrófono] o 2: A veces\nER 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_9",
+      "position": 148,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1621,
+      "manual_block": "REC_9 Recurso Numéric [1-4] 1: Nunca 36\n[Parlantes y/o o 2: A veces\nES audífonos] 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_10",
+      "position": 149,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1625,
+      "manual_block": "REC_10 Recurso Numéric [1-4] 1: Nunca 36\n[Impresora] o 2: A veces\nET\n3: Frecuentemente 4:\nSiempre\n--- Página 71 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "REC_11",
+      "position": 150,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1631,
+      "manual_block": "REC_11 Recurso Numéric [1-4] 1: Nunca 36\n[Espacio] o 2: A veces\nEU 3: Frecuentemente 4:\nSiempre",
+      "source_requirement": ""
+    },
+    {
+      "name": "RED_APO_FAM",
+      "position": 151,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1635,
+      "manual_block": "RED_APO_FAM Red apoyo [familia] Numéric [0-1] 0: No/False 37\nEV\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "RED_APO_PAR",
+      "position": 152,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1638,
+      "manual_block": "RED_APO_PAR Red apoyo [pareja] Numéric [0-1] 0: No/False 37\nEW\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "RED_APO_AMI",
+      "position": 153,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1641,
+      "manual_block": "RED_APO_AMI Red apoyo [amigos] Numéric [0-1] 0: No/False 37\nEX\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "RED_APO_COL",
+      "position": 154,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1644,
+      "manual_block": "RED_APO_COL Red apoyo [colegas] Numéric [0-1] 0: No/False 37\nEY\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "RED_APO_OTR",
+      "position": 155,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1647,
+      "manual_block": "RED_APO_OTR Red apoyo [otros] Numéric [0-1] 0: No/False 37\nEZ\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "RED_APO_NIN",
+      "position": 156,
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1650,
+      "manual_block": "RED_APO_NIN Red apoyo [ninguna] Numéric [0-1] 0: No/False 37\nFA\no 1: Sí/True",
+      "source_requirement": ""
+    },
+    {
+      "name": "TIEMPO_TRAS",
+      "position": 157,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1653,
+      "manual_block": "TIEMPO_TRAS Tiempo traslado Numéric [1-6] 1: Menos de media 38\no hora\nFB\n2: Entre media hora y una\nhora\n--- Página 72 ---\n3: Entre más de una hora\ny una hora y media\n4: Más de una hora y\nmedia\n5: No lo sé\n6: No aplica, estudiaré\nde forma remota",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_1",
+      "position": 158,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1666,
+      "manual_block": "DIS_ES_1 Me esfuerzo por terminar Numéric [1-4] 1: Muy en desacuerdo 2: 39\ntodo lo que empiezo o En desacuerdo\nFC\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_2",
+      "position": 159,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1671,
+      "manual_block": "DIS_ES_2 He superado momentos Numéric [1-4] 1: Muy en desacuerdo 39\ndifíciles para alcanzar una o 2: En desacuerdo\nFD\nmeta importante 3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_3",
+      "position": 160,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": null,
+      "printed_position": null,
+      "manual_line": 1676,
+      "manual_block": "DIS_ES_3 Cuando estoy en un Numéric [1-4] 1: Muy en desacuerdo 39\nentorno educacional o o 2: En desacuerdo\nFE\nlaboral, me siento parte 3: De acuerdo\nde una comunidad 4: Muy de acuerdo\n--- Página 73 ---",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_4",
+      "position": 161,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FG",
+      "printed_position": 163,
+      "manual_line": 1682,
+      "manual_block": "FG DIS_ES_4 Soy capaz de sacrificar el Numéric [1-4] 1: Muy en desacuerdo 39\ndescanso y la diversión o 2: En desacuerdo\npara dedicarme a mis 3: De acuerdo\nestudios 4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_5",
+      "position": 162,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FH",
+      "printed_position": 164,
+      "manual_line": 1686,
+      "manual_block": "FH DIS_ES_5 Pongo mucho esfuerzo en Numéric [1-4] 1: Muy en desacuerdo 39\nmis estudios y actividades o 2: En desacuerdo\nacadémicas 3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_6",
+      "position": 163,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FI",
+      "printed_position": 165,
+      "manual_line": 1690,
+      "manual_block": "FI DIS_ES_6 Realizo mis actividades Numéric [1-4] 1: Muy en desacuerdo 39\nacadémicas con o 2: En desacuerdo\ndedicación y a conciencia 3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_7",
+      "position": 164,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FJ",
+      "printed_position": 166,
+      "manual_line": 1694,
+      "manual_block": "FJ DIS_ES_7 Estoy seguro(a) de que si Numéric [1-4] 1: Muy en desacuerdo 39\nestudio y me organizo, o 2: En desacuerdo\npuedo obtener las notas 3: De acuerdo\nque quiero 4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_8",
+      "position": 165,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FK",
+      "printed_position": 167,
+      "manual_line": 1698,
+      "manual_block": "FK DIS_ES_8 Me siento seguro(a) de la Numéric [1-4] 1: Muy en desacuerdo 39\ncarrera que elegí o 2: En desacuerdo\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_9",
+      "position": 166,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FL",
+      "printed_position": 168,
+      "manual_line": 1702,
+      "manual_block": "FL DIS_ES_9 Tengo dificultades para Numéric [1-4] 1: Muy en desacuerdo 40\nmantener el foco en o 2: En desacuerdo\nproyectos que duran más 3: De acuerdo\nde unos meses 4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_10",
+      "position": 167,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FM",
+      "printed_position": 169,
+      "manual_line": 1706,
+      "manual_block": "FM DIS_ES_10 Cuando me va mal en Numéric [1-4] 1: Muy en desacuerdo 40\nalgo, me cuesta manejar o 2: En desacuerdo\n--- Página 74 ---\nemociones fuertes como 3: De acuerdo\nla rabia, la pena o el 4: Muy de acuerdo\nnerviosismo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_11",
+      "position": 168,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FN",
+      "printed_position": 170,
+      "manual_line": 1712,
+      "manual_block": "FN DIS_ES_11 Dudo que con mis Numéric [1-4] 1: Muy en desacuerdo 40\nhabilidades académicas o 2: En desacuerdo\ntenga un buen desempeño 3: De acuerdo\nen la carrera 4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_12",
+      "position": 169,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FO",
+      "printed_position": 171,
+      "manual_line": 1716,
+      "manual_block": "FO DIS_ES_12 Cuando tengo un desafío Numéric [1-4] 1: Muy en desacuerdo 40\nacadémico, me cuesta o 2: En desacuerdo\norganizarme para 3: De acuerdo\nresolverlo 4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_13",
+      "position": 170,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FP",
+      "printed_position": 172,
+      "manual_line": 1720,
+      "manual_block": "FP DIS_ES_13 Tengo dificultades para Numéric [1-4] 1: Muy en desacuerdo 40\ncomprender los textos que o 2: En desacuerdo\nleo 3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_14",
+      "position": 171,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FQ",
+      "printed_position": 173,
+      "manual_line": 1724,
+      "manual_block": "FQ DIS_ES_14 Se me hace difícil expresar Numéric [1-4] 1: Muy en desacuerdo 40\nmis ideas por escrito o 2: En desacuerdo\n3: De acuerdo\n4: Muy de acuerdo",
+      "source_requirement": ""
+    },
+    {
+      "name": "DIS_ES_15",
+      "position": 172,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "printed_column": "FR",
+      "printed_position": 174,
+      "manual_line": 1728,
+      "manual_block": "FR DIS_ES_15 No me siento tan Numéric [1-4] 1: Muy en desacuerdo 40\nconfiado(a) en que podré o 2: En desacuerdo\ntitularme 3: De acuerdo\n4: Muy de acuerdo\n--- Página 75 ---",
+      "source_requirement": ""
+    }
+  ],
+  "bindings": {
+    "SIT_MIGR": {
+      "question": "G02Q02",
+      "column": "G02Q02",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO06": 2,
+        "AO05": 3,
+        "AO04": 4
+      },
+      "consent": "migration"
+    },
+    "PPOO": {
+      "question": "G01Q75",
+      "column": "G01Q75",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": "ancestry"
+    },
+    "DISCAP": {
+      "question": "G01Q82",
+      "column": "G01Q82",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": "disability"
+    },
+    "DISCAP_REGIS": {
+      "question": "G01Q30",
+      "column": "G01Q30",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": "disability"
+    },
+    "CAMBIO_CIUDAD": {
+      "question": "G01Q33",
+      "column": "G01Q33",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": null
+    },
+    "APOYO_CUID": {
+      "question": "G01Q90",
+      "column": "G01Q90",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": null
+    },
+    "TIPO_EST_ESC": {
+      "question": "G03Q28",
+      "column": "G03Q28",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3
+      },
+      "consent": null
+    },
+    "MOD_EM": {
+      "question": "G03Q31",
+      "column": "G03Q31",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4,
+        "AO06": 5,
+        "AO07": 6
+      },
+      "consent": null
+    },
+    "TIT_MTP": {
+      "question": "G01Q45",
+      "column": "G01Q45",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3
+      },
+      "consent": null
+    },
+    "ARTICULA": {
+      "question": "G03Q46",
+      "column": "G03Q46",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3
+      },
+      "consent": null
+    },
+    "RAZ_NO_ARTICULA": {
+      "question": "G03Q47",
+      "column": "G03Q47",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4,
+        "AO06": 5,
+        "AO07": 6
+      },
+      "consent": null
+    },
+    "EXP_LAB": {
+      "question": "G03Q48",
+      "column": "G03Q48",
+      "subquestion": "",
+      "values": {
+        "AO03": 1,
+        "AO04": 2,
+        "AO05": 3
+      },
+      "consent": null
+    },
+    "EST_PRE": {
+      "question": "G03Q51",
+      "column": "G03Q51",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2
+      },
+      "consent": null
+    },
+    "EST_PRE_REL": {
+      "question": "G03Q55",
+      "column": "G03Q55",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "RAP": {
+      "question": "G03Q56",
+      "column": "G03Q56",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2
+      },
+      "consent": null
+    },
+    "CON_SAL": {
+      "question": "G06Q61",
+      "column": "G06Q61",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": "health"
+    },
+    "ORI_SAL_TIPO": {
+      "question": "G06Q97",
+      "column": "G06Q97",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": "health"
+    },
+    "BIE_PSC": {
+      "question": "G01Q62",
+      "column": "G01Q62",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4,
+        "AO06": 5
+      },
+      "consent": "psychological"
+    },
+    "ORI_PSC": {
+      "question": "G01Q63",
+      "column": "G01Q63",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2
+      },
+      "consent": "psychological"
+    },
+    "NEE": {
+      "question": "G01Q64",
+      "column": "G01Q64",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3
+      },
+      "consent": "nee"
+    },
+    "GENERO": {
+      "question": "G01Q03",
+      "column": "G01Q03",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO03": 2,
+        "AO02": 3,
+        "AO04": null,
+        "-oth-": 4
+      },
+      "consent": "gender"
+    },
+    "CUIDADOS": {
+      "question": "G01Q10",
+      "column": "G01Q10",
+      "subquestion": "",
+      "values": {
+        "AO02": 2,
+        "AO03": 1
+      },
+      "consent": null
+    },
+    "SEXO": {
+      "question": "G00Q02",
+      "column": "G00Q02",
+      "subquestion": "",
+      "values": {
+        "AO01": "H",
+        "AO03": "M",
+        "AO02": "X"
+      },
+      "consent": null
+    },
+    "JEFE_HOGAR": {
+      "question": "G01Q18",
+      "column": "G01Q18",
+      "subquestion": "",
+      "values": {
+        "Y": 1,
+        "N": 2
+      },
+      "consent": null
+    },
+    "HOGAR_SOLO": {
+      "question": "G02Q76",
+      "column": "G02Q76",
+      "subquestion": "",
+      "values": {
+        "AO01": 1,
+        "AO02": 0
+      },
+      "consent": null
+    },
+    "SIT_LAB": {
+      "question": "G02Q20",
+      "column": "G02Q20",
+      "subquestion": "",
+      "values": {
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "RAZ_NO_RAP": {
+      "question": "G03Q57",
+      "column": "G03Q57",
+      "subquestion": "",
+      "values": {
+        "AO04": 1,
+        "AO05": 2,
+        "AO02": 3,
+        "AO03": 4
+      },
+      "consent": null
+    },
+    "ANO_EGRESO": {
+      "question": "G03Q30",
+      "column": "G03Q30",
+      "subquestion": "",
+      "values": {
+        "AO35": 2026,
+        "AO36": 2025,
+        "AO37": 2024,
+        "AO01": 2023,
+        "AO02": 2022,
+        "AO03": 2021,
+        "AO04": 2020,
+        "AO05": 2019,
+        "AO06": 2018,
+        "AO07": 2017,
+        "AO08": 2016,
+        "AO09": 2015,
+        "AO10": 2014,
+        "AO11": 2013,
+        "AO12": 2012,
+        "AO22": 2011,
+        "AO13": 2010,
+        "AO14": 2009,
+        "AO25": 2008,
+        "AO26": 2007,
+        "AO27": 2006,
+        "AO28": 2005,
+        "AO29": 2004,
+        "AO30": 2003,
+        "AO31": 2002,
+        "AO32": 2001,
+        "AO33": 2000,
+        "AO34": null
+      },
+      "consent": null
+    },
+    "CUIDADOS_CANT": {
+      "question": "G02Q88",
+      "column": "G02Q88",
+      "subquestion": "",
+      "values": null,
+      "consent": null
+    },
+    "HOGAR_PADRE": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_MADRE": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_HERM": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_PAREJA": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_MEN12": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_MAY12": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_FAM": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "HOGAR_OTROS": {
+      "question": "G02Q08",
+      "column": "G02Q08[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_PRO": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_PADRES": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_OFAM": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_OPER": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_GRAT": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_BEC_EST": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_BEC_EXT": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_CAE": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_CRE": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "FIN_EMP": {
+      "question": "G01Q19",
+      "column": "G01Q19[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_FFAA": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_TPINC": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_TPCOM": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_UINC": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_UCOM": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_PGINC": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_PFCOM": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_CAPCOM": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_CER": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "EST_PRE_OTRO": {
+      "question": "G03Q54",
+      "column": "G03Q54[SQ012]",
+      "subquestion": "SQ012",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_1": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_2": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_3": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_4": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_5": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_6": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_TP_7": {
+      "question": "G04Q37",
+      "column": "G04Q37[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_1": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_2": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_3": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_4": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_5": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ012]",
+      "subquestion": "SQ012",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_6": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ013]",
+      "subquestion": "SQ013",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_7": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ014]",
+      "subquestion": "SQ014",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_8": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ015]",
+      "subquestion": "SQ015",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_9": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ016]",
+      "subquestion": "SQ016",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_INT_10": {
+      "question": "G04Q39",
+      "column": "G04Q39[SQ017]",
+      "subquestion": "SQ017",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_1": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_2": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_3": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_4": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_5": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_6": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_7": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_8": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RAZ_CAR_9": {
+      "question": "G01Q50",
+      "column": "G01Q50[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_1": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_2": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_3": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_4": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_5": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_6": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_7": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_8": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_9": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_10": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ012]",
+      "subquestion": "SQ012",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_11": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ013]",
+      "subquestion": "SQ013",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_12": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ014]",
+      "subquestion": "SQ014",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "MEDIOS_13": {
+      "question": "G01Q41",
+      "column": "G01Q41[SQ015]",
+      "subquestion": "SQ015",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "NEE_1": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_2": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_3": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_4": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_5": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_6": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_7": {
+      "question": "G01Q65",
+      "column": "G01Q65[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": "nee"
+    },
+    "NEE_8": {
+      "question": "G01Q65",
+      "column": "G01Q65[other]",
+      "subquestion": "other",
+      "values": null,
+      "consent": "nee"
+    },
+    "MAT_FAC": {
+      "question": "G01Q55",
+      "column": "G01Q55[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "MAT_CLARO": {
+      "question": "G01Q55",
+      "column": "G01Q55[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "MAT_RAP": {
+      "question": "G01Q55",
+      "column": "G01Q55[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "MAT_ATE": {
+      "question": "G01Q55",
+      "column": "G01Q55[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "MIN_BEC": {
+      "question": "G01Q84",
+      "column": "G01Q84[SQ001]",
+      "subquestion": "SQ001",
+      "values": {
+        "AO01": 0,
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "MIN_CAL": {
+      "question": "G01Q84",
+      "column": "G01Q84[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "AO01": 0,
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "MIN_BUS": {
+      "question": "G01Q84",
+      "column": "G01Q84[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "AO01": 0,
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "MIN_FUT": {
+      "question": "G01Q84",
+      "column": "G01Q84[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "AO01": 0,
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "MIN_FUAS": {
+      "question": "G01Q84",
+      "column": "G01Q84[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "AO01": 0,
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4
+      },
+      "consent": null
+    },
+    "REC_1": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_2": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_3": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_4": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_5": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_6": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_7": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_8": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_9": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_10": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "REC_11": {
+      "question": "G01Q67",
+      "column": "G01Q67[SQ012]",
+      "subquestion": "SQ012",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "RED_APO_FAM": {
+      "question": "G01Q69",
+      "column": "G01Q69[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null,
+      "additional_column": "G01Q69[SQ004]",
+      "status": "REQUIRES_POLICY_FOR_OTHER_RELATIVES"
+    },
+    "RED_APO_PAR": {
+      "question": "G01Q69",
+      "column": "G01Q69[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RED_APO_AMI": {
+      "question": "G01Q69",
+      "column": "G01Q69[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RED_APO_COL": {
+      "question": "G01Q69",
+      "column": "G01Q69[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RED_APO_OTR": {
+      "question": "G01Q69",
+      "column": "G01Q69[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "RED_APO_NIN": {
+      "question": "G01Q69",
+      "column": "G01Q69[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "Y": 1,
+        "N": 0,
+        "1": 1,
+        "0": 0
+      },
+      "consent": null
+    },
+    "TIEMPO_TRAS": {
+      "question": "G01Q70",
+      "column": "G01Q70",
+      "subquestion": "",
+      "values": {
+        "AO02": 1,
+        "AO03": 2,
+        "AO04": 3,
+        "AO05": 4,
+        "AO06": 5,
+        "AO07": 6
+      },
+      "consent": null
+    },
+    "DIS_ES_1": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_2": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_3": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_4": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_5": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_6": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_7": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_8": {
+      "question": "G07Q71",
+      "column": "G07Q71[SQ011]",
+      "subquestion": "SQ011",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_9": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_10": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_11": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ006]",
+      "subquestion": "SQ006",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_12": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ007]",
+      "subquestion": "SQ007",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_13": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ008]",
+      "subquestion": "SQ008",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_14": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ010]",
+      "subquestion": "SQ010",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DIS_ES_15": {
+      "question": "G01Q72",
+      "column": "G01Q72[SQ009]",
+      "subquestion": "SQ009",
+      "values": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      },
+      "consent": null
+    },
+    "DISCAP_FIS": {
+      "question": "G01Q17",
+      "column": "G01Q17[SQ001]",
+      "subquestion": "SQ001",
+      "values": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "consent": "disability"
+    },
+    "DISCAP_AUD": {
+      "question": "G01Q17",
+      "column": "G01Q17[SQ002]",
+      "subquestion": "SQ002",
+      "values": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "consent": "disability"
+    },
+    "DISCAP_VIS": {
+      "question": "G01Q17",
+      "column": "G01Q17[SQ003]",
+      "subquestion": "SQ003",
+      "values": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "consent": "disability"
+    },
+    "DISCAP_INT": {
+      "question": "G01Q17",
+      "column": "G01Q17[SQ004]",
+      "subquestion": "SQ004",
+      "values": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "consent": "disability"
+    },
+    "DISCAP_PSQ": {
+      "question": "G01Q17",
+      "column": "G01Q17[SQ005]",
+      "subquestion": "SQ005",
+      "values": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "consent": "disability"
+    },
+    "NAC": {
+      "status": "EXTERNAL_CATALOG",
+      "source_requirement": "Nacionalidad UMAS y catalogo Anexo 2. Chile/Otra en LimeSurvey no identifica el pais extranjero."
+    },
+    "PPOO_DEF": {
+      "status": "EXTERNAL_CATALOG",
+      "question": "G01Q05",
+      "source_requirement": "Convertir mediante catalogo oficial, no por posicion de las alternativas.",
+      "consent": "ancestry"
+    },
+    "ESP_MTP": {
+      "status": "EXTERNAL_CATALOG",
+      "question": "G03Q33",
+      "source_requirement": "Convertir mediante catalogo oficial, no por posicion de las alternativas."
+    },
+    "ESP_MTP_EPJA": {
+      "status": "EXTERNAL_CATALOG",
+      "question": "G03Q44",
+      "source_requirement": "Convertir mediante catalogo oficial, no por posicion de las alternativas."
+    },
+    "CONTACTO": {
+      "status": "EXTERNAL_DECISION",
+      "question": "G01Q43",
+      "source_requirement": "Resolver correo institucional/personal al codigo oficial Correo electronico; Web/RRSS no tienen equivalencia oficial automatica."
+    },
+    "NIVEL_EDU_PADRE": {
+      "status": "EXTERNAL_CATALOG",
+      "source_requirement": "Seleccionar rama G00Q12/G02Q15 por familia homoparental y convertir con Anexo 7."
+    },
+    "NIVEL_EDU_MADRE": {
+      "status": "EXTERNAL_CATALOG",
+      "source_requirement": "Seleccionar rama G00Q12/G02Q15 por familia homoparental y convertir con Anexo 7."
+    }
+  },
+  "sources": [
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_643_ANTECEDENTES PERSONALES.lsg",
+      "sha256": "eab0792f480961dbc2c56702a6135b3501fcd08eee9f3125f2a82a72e2ffc954"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_644_ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS.lsg",
+      "sha256": "60d6980a0ba77795ea402c2c10a3b989b9cfa7d38453e68aac386883f0689713"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_645_TRAYECTORIA FORMATIVA Y LABORAL.lsg",
+      "sha256": "beedc52c4421b188804f04f13b8a5df71f8f1b5a79f09cf67ab3701d531a4175"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_646_ANTECEDENTES DE LA INSTITUCIÓN Y PROGRAMA.lsg",
+      "sha256": "db76285c3a7f40baa5ff2a94e9fdb7164af2b8a571023aa099639406fe924164"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_647_ESTILO DE VIDA Y SUSTENTABILIDAD.lsg",
+      "sha256": "ec0b036a97c416701df151bae608b8cc3581bc79eaf22ee3020f593f7f2f369c"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_648_BIENESTAR PARA EL PROCESO EDUCTIVO.lsg",
+      "sha256": "9843d5c4726fa23520a1ee5095a711a74f5a443073428e3adff14d8fc42b90da"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_649_DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR.lsg",
+      "sha256": "bee7e3e3d0c7dc42a301000f92aabd3ebd37f19605fa85c9588ddeb201cd5bf2"
+    }
+  ],
+  "policy": "No positional reuse of the 195-column 2026 file. Catalogs and external sources require validated prepared values.",
+  "printed_column_conflicts": [
+    {
+      "field": "DIS_ES_4",
+      "sequence_position": 161,
+      "printed_column": "FG",
+      "printed_position": 163
+    },
+    {
+      "field": "DIS_ES_5",
+      "sequence_position": 162,
+      "printed_column": "FH",
+      "printed_position": 164
+    },
+    {
+      "field": "DIS_ES_6",
+      "sequence_position": 163,
+      "printed_column": "FI",
+      "printed_position": 165
+    },
+    {
+      "field": "DIS_ES_7",
+      "sequence_position": 164,
+      "printed_column": "FJ",
+      "printed_position": 166
+    },
+    {
+      "field": "DIS_ES_8",
+      "sequence_position": 165,
+      "printed_column": "FK",
+      "printed_position": 167
+    },
+    {
+      "field": "DIS_ES_9",
+      "sequence_position": 166,
+      "printed_column": "FL",
+      "printed_position": 168
+    },
+    {
+      "field": "DIS_ES_10",
+      "sequence_position": 167,
+      "printed_column": "FM",
+      "printed_position": 169
+    },
+    {
+      "field": "DIS_ES_11",
+      "sequence_position": 168,
+      "printed_column": "FN",
+      "printed_position": 170
+    },
+    {
+      "field": "DIS_ES_12",
+      "sequence_position": 169,
+      "printed_column": "FO",
+      "printed_position": 171
+    },
+    {
+      "field": "DIS_ES_13",
+      "sequence_position": 170,
+      "printed_column": "FP",
+      "printed_position": 172
+    },
+    {
+      "field": "DIS_ES_14",
+      "sequence_position": 171,
+      "printed_column": "FQ",
+      "printed_position": 173
+    },
+    {
+      "field": "DIS_ES_15",
+      "sequence_position": 172,
+      "printed_column": "FR",
+      "printed_position": 174
+    }
+  ],
+  "official_load_blocked_reason": "Validate final PES template/column-letter discrepancies, sources and catalogs before official load. Generated CSVs are drafts only.",
+  "production_ready": false
+}

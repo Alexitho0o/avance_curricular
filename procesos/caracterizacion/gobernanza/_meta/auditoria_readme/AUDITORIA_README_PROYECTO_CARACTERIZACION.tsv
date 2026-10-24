@@ -1,0 +1,181 @@
+archivo	ruta_relativa	ruta_absoluta	tamano_bytes	lineas	contiene_fcu	contiene_gobernanza	contiene_postgrado	contiene_datos_sensibles	contiene_matricula_unificada	contiene_analisis_trayectoria	contiene_carga_pes	primeras_lineas
+README.md	README.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/README.md	11403	227	NO	SI	SI	SI	NO	SI	NO	"# CARACTERIZACIÓN
+
+## Propósito
+
+`caracterizacion.py` es el pipeline central del proyecto. Integra matrícula, LimeSurvey, categorías especiales, KPI académicos, analítica longitudinal de pregrado, frente separado de posgrado/diplomados y un frente analítico complementario de cruce con SIES, además de los libros finales consolidados y las salidas operativas vigentes.
+
+Este `README.md` ya no es solo una presentación general. Su función es ser la puerta de entrada práctica al proyecto y el nodo de navegación hacia la documentación rectora.
+
+## Estado operativo actual del entrypoint
+
+El entrypoint previsto del proyecto sigue siendo `run_caracterizacion_fijo.sh`.
+"
+README_GOBERNANZA 2.md	gobernanza/_meta/README_GOBERNANZA 2.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_meta/README_GOBERNANZA 2.md	1454	47	NO	SI	SI	SI	NO	NO	NO	"# README Gobernanza - GOBERNANZA_META
+
+## Nombre del proceso
+
+GOBERNANZA_META
+
+## Alcance
+
+Mapeo, clasificación fina, búsqueda prioritaria de postgrado, índices transversales y control de fases.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA.md	gobernanza/_meta/README_GOBERNANZA.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_meta/README_GOBERNANZA.md	1454	47	NO	SI	SI	SI	NO	NO	NO	"# README Gobernanza - GOBERNANZA_META
+
+## Nombre del proceso
+
+GOBERNANZA_META
+
+## Alcance
+
+Mapeo, clasificación fina, búsqueda prioritaria de postgrado, índices transversales y control de fases.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA.md	gobernanza/analisis_trayectoria/README_GOBERNANZA.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/analisis_trayectoria/README_GOBERNANZA.md	1463	47	NO	SI	NO	SI	NO	SI	NO	"# README Gobernanza - ANALISIS_TRAYECTORIA
+
+## Nombre del proceso
+
+ANALISIS_TRAYECTORIA
+
+## Alcance
+
+Trayectoria, perfil de ingreso, KPI y archivos analíticos derivados.
+
+## Fuente de clasificación
+"
+README.md	gobernanza/analisis_trayectoria/evidencias/README.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/analisis_trayectoria/evidencias/README.md	11403	227	NO	SI	SI	SI	NO	SI	NO	"# CARACTERIZACIÓN
+
+## Propósito
+
+`caracterizacion.py` es el pipeline central del proyecto. Integra matrícula, LimeSurvey, categorías especiales, KPI académicos, analítica longitudinal de pregrado, frente separado de posgrado/diplomados y un frente analítico complementario de cruce con SIES, además de los libros finales consolidados y las salidas operativas vigentes.
+
+Este `README.md` ya no es solo una presentación general. Su función es ser la puerta de entrada práctica al proyecto y el nodo de navegación hacia la documentación rectora.
+
+## Estado operativo actual del entrypoint
+
+El entrypoint previsto del proyecto sigue siendo `run_caracterizacion_fijo.sh`.
+"
+README_GOBERNANZA 2.md	gobernanza/carga_postgrado/README_GOBERNANZA 2.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado/README_GOBERNANZA 2.md	1719	51	NO	SI	SI	SI	NO	NO	NO	"# README Gobernanza - CARGA_POSTGRADO
+
+## Nombre del proceso
+
+CARGA_POSTGRADO
+
+## Alcance
+
+Carga postgrado/postítulo/diplomados si existe evidencia dentro del repositorio.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA.md	gobernanza/carga_postgrado/README_GOBERNANZA.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado/README_GOBERNANZA.md	1719	51	NO	SI	SI	SI	NO	NO	NO	"# README Gobernanza - CARGA_POSTGRADO
+
+## Nombre del proceso
+
+CARGA_POSTGRADO
+
+## Alcance
+
+Carga postgrado/postítulo/diplomados si existe evidencia dentro del repositorio.
+
+## Fuente de clasificación
+"
+README_SENSIBILIDAD_POSTGRADO.md	gobernanza/carga_postgrado/README_SENSIBILIDAD_POSTGRADO.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado/README_SENSIBILIDAD_POSTGRADO.md	1144	27	NO	SI	SI	SI	NO	NO	NO	"# Control de sensibilidad — Carga Postgrado
+
+Fecha: 2026-05-13 17:44:20
+
+## Estado
+
+Se reorganizó la evidencia de `gobernanza/carga_postgrado` para separar núcleo productivo, datos sensibles, documentación, scripts auxiliares y respaldos históricos.
+
+## Estructura
+
+- `nucleo_productivo/`: script vigente principal.
+- `datos_sensibles/`: archivos de datos con posible presencia de RUT u otros identificadores."
+README.md	gobernanza/carga_postgrado/documentacion_apoyo/README.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado/documentacion_apoyo/README.md	11403	227	NO	SI	SI	SI	NO	SI	NO	"# CARACTERIZACIÓN
+
+## Propósito
+
+`caracterizacion.py` es el pipeline central del proyecto. Integra matrícula, LimeSurvey, categorías especiales, KPI académicos, analítica longitudinal de pregrado, frente separado de posgrado/diplomados y un frente analítico complementario de cruce con SIES, además de los libros finales consolidados y las salidas operativas vigentes.
+
+Este `README.md` ya no es solo una presentación general. Su función es ser la puerta de entrada práctica al proyecto y el nodo de navegación hacia la documentación rectora.
+
+## Estado operativo actual del entrypoint
+
+El entrypoint previsto del proyecto sigue siendo `run_caracterizacion_fijo.sh`.
+"
+README_GOBERNANZA 2.md	gobernanza/fcu_analisis_encuesta/README_GOBERNANZA 2.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_analisis_encuesta/README_GOBERNANZA 2.md	1480	47	SI	SI	NO	SI	NO	NO	NO	"# README Gobernanza - FCU_ANALISIS_ENCUESTA
+
+## Nombre del proceso
+
+FCU_ANALISIS_ENCUESTA
+
+## Alcance
+
+Encuesta/LimeSurvey, preguntas no FCU, sustentabilidad, SEP_TODAS y reglas KPI de uso interno.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA.md	gobernanza/fcu_analisis_encuesta/README_GOBERNANZA.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_analisis_encuesta/README_GOBERNANZA.md	1480	47	SI	SI	NO	SI	NO	NO	NO	"# README Gobernanza - FCU_ANALISIS_ENCUESTA
+
+## Nombre del proceso
+
+FCU_ANALISIS_ENCUESTA
+
+## Alcance
+
+Encuesta/LimeSurvey, preguntas no FCU, sustentabilidad, SEP_TODAS y reglas KPI de uso interno.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA 2.md	gobernanza/fcu_carga_pes/README_GOBERNANZA 2.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_carga_pes/README_GOBERNANZA 2.md	1466	47	SI	SI	NO	SI	NO	NO	SI	"# README Gobernanza - FCU_CARGA_PES
+
+## Nombre del proceso
+
+FCU_CARGA_PES
+
+## Alcance
+
+Carga oficial PES FCU 2026 P1, CSV validado, auditorías E2E, localización, hash y dictamen.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA.md	gobernanza/fcu_carga_pes/README_GOBERNANZA.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_carga_pes/README_GOBERNANZA.md	1466	47	SI	SI	NO	SI	NO	NO	SI	"# README Gobernanza - FCU_CARGA_PES
+
+## Nombre del proceso
+
+FCU_CARGA_PES
+
+## Alcance
+
+Carga oficial PES FCU 2026 P1, CSV validado, auditorías E2E, localización, hash y dictamen.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA 2.md	gobernanza/matricula_unificada/README_GOBERNANZA 2.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/matricula_unificada/README_GOBERNANZA 2.md	1485	47	NO	SI	NO	SI	SI	NO	NO	"# README Gobernanza - MATRICULA_UNIFICADA
+
+## Nombre del proceso
+
+MATRICULA_UNIFICADA
+
+## Alcance
+
+Evidencias de Matrícula Unificada y SIES localizadas dentro de CARACTERIZACIÓN.
+
+## Fuente de clasificación
+"
+README_GOBERNANZA.md	gobernanza/matricula_unificada/README_GOBERNANZA.md	/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/matricula_unificada/README_GOBERNANZA.md	1485	47	NO	SI	NO	SI	SI	NO	NO	"# README Gobernanza - MATRICULA_UNIFICADA
+
+## Nombre del proceso
+
+MATRICULA_UNIFICADA
+
+## Alcance
+
+Evidencias de Matrícula Unificada y SIES localizadas dentro de CARACTERIZACIÓN.
+
+## Fuente de clasificación
+"

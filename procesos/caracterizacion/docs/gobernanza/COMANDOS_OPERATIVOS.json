@@ -1,0 +1,50 @@
+{
+  "version": 4,
+  "date": "2026-10-15",
+  "financiamiento": {
+    "anio": 2027,
+    "periodo": 1,
+    "survey_id": "141234",
+    "entrypoint": "procesar_financiamiento_diario.sh",
+    "input_default": "Downloads",
+    "official_fcu_upload": false,
+    "allow_response_free_operations": true,
+    "response_free_authority": "Usuario confirma el 2026-10-09 que 2027 P1 aun no tiene respuestas",
+    "incorporation_policy": "INCORPORACION_2027_P1_CORREO_PENDIENTE-v1",
+    "missing_institutional_email": "INDIVIDUAL_HOLD_CONTINUE_RUN",
+    "report_separation_policy": "COMUNICACION_ANALISIS_AUDITORIA_2027_P1-v1",
+    "target_eligibility_policy": "PRIMER_INGRESO_INSTITUCIONAL_2027-v1",
+    "analysis_folder": "05_ANALISIS",
+    "sede_catalog": "docs/gobernanza/CATALOGO_SEDES_2027.json",
+    "style_reference_environment_variable": "CARACTERIZACION_PLANTILLA_CORREO"
+  },
+  "analisis_anual": {
+    "anio": 2026,
+    "periodos": [
+      1,
+      2,
+      3
+    ],
+    "entrypoint": "procesar_analisis_anual.sh",
+    "input_default": "Downloads",
+    "survey_subdirectory": "caracterizacion 1_2_3",
+    "survey_ids": {
+      "1": "923565",
+      "2": "443299",
+      "3": "967488"
+    },
+    "source_policy": "FUENTES_ACTUALES_POR_ENCUESTA",
+    "shared_administrative_sources": ["RUTA_MATRICULA", "RUTA_PROMEDIOS"],
+    "frozen_p2_reference_only": "docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+    "execution": "PERIOD_STAGES_THEN_INTEGRATED_ANNUAL",
+    "preflight_all_periods": true,
+    "combined_annual_totals": true,
+    "integration_policy": "ANUAL_INTEGRADO_2026-v1",
+    "integration_document": "docs/gobernanza/ANALISIS_ANUAL_INTEGRADO_2026.md",
+    "filter_dimensions": ["periodo", "sector", "modalidad_carrera", "sede", "carrera", "jornada"],
+    "question_pooling": "NO_POOL_WITHOUT_APPROVED_EQUIVALENCE",
+    "desktop_publication": "SINGLE_ANNUAL_FOLDER_AFTER_VALIDATION",
+    "frozen_2026_final_unchanged": true
+  },
+  "rule": "Una entrega anual integrada; etapas y fuentes de cada periodo conservadas como respaldos. No sumar personas repetidas ni porcentajes. No reutilizar exports de P2 en P1/P3 ni usar una encuesta 2026 para 2027."
+}

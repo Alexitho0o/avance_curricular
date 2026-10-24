@@ -1,0 +1,55 @@
+{
+  "audit_sha256": "f786bdbb954f742489764bb1f294dc4a99e52488f4132a370555a1a220984480",
+  "comparison": {
+    "planes_catalogo": {
+      "independiente": 223,
+      "candidata": 223,
+      "igual": true
+    },
+    "planes_promedios": {
+      "independiente": 197,
+      "candidata": 197,
+      "igual": true
+    },
+    "planes_union": {
+      "independiente": 236,
+      "candidata": 236,
+      "igual": true
+    },
+    "filas_promedios": {
+      "independiente": 129493,
+      "candidata": 129493,
+      "igual": true
+    },
+    "identificadores_promedios_distintos": {
+      "independiente": 13068,
+      "candidata": 13068,
+      "igual": true
+    },
+    "filas_datos_alumnos": {
+      "independiente": 15045,
+      "candidata": 15045,
+      "igual": true
+    },
+    "identificadores_datos_alumnos_distintos": {
+      "independiente": 15044,
+      "candidata": 15044,
+      "igual": true
+    },
+    "identificadores_compartidos_promedios_da": {
+      "independiente": 11075,
+      "candidata": 11075,
+      "igual": true
+    }
+  },
+  "independent_additional_coverage": {
+    "planes_con_actividad": 144,
+    "planes_solo_sin_actividad": 53,
+    "catalogo_sin_actividad": 80,
+    "planes_con_actividad_no_catalogados": [
+      "TPCPASO"
+    ]
+  },
+  "all_compared_equal": true,
+  "limits": "Las métricas de ramos/equivalencias no se recalcularon en esta auditoría de asignaciones; se cubre su comportamiento con fixtures sintéticos."
+}

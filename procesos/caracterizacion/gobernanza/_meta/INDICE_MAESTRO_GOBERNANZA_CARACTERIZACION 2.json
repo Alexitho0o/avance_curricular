@@ -1,0 +1,66 @@
+{
+  "fecha_hora": "2026-05-13T17:20:32-04:00",
+  "resultado_postgrado": "CARGA_POSTGRADO_LOCALIZADA",
+  "procesos": [
+    {
+      "proceso": "FCU_CARGA_PES",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_carga_pes",
+      "archivos_detectados": "9",
+      "candidatos_formales": 8,
+      "evidencias_copiadas": 8,
+      "dictamen": "GOBERNANZA_COMPLETA_CARGA_PES",
+      "estado": "COMPLETO",
+      "proxima_accion": "Versionar paquete completo y conservar respaldo del CSV validado y auditorías."
+    },
+    {
+      "proceso": "FCU_ANALISIS_ENCUESTA",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_analisis_encuesta",
+      "archivos_detectados": "2",
+      "candidatos_formales": 2,
+      "evidencias_copiadas": 2,
+      "dictamen": "GOBERNANZA_COMPLETA_ANALISIS_ENCUESTA",
+      "estado": "COMPLETO",
+      "proxima_accion": "Mantener preguntas no FCU y sustentabilidad como análisis interno, fuera de KPI oficial FCU."
+    },
+    {
+      "proceso": "ANALISIS_TRAYECTORIA",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/analisis_trayectoria",
+      "archivos_detectados": "12",
+      "candidatos_formales": 1,
+      "evidencias_copiadas": 1,
+      "dictamen": "GOBERNANZA_PARCIAL_ANALISIS_TRAYECTORIA",
+      "estado": "PARCIAL",
+      "proxima_accion": "Profundizar evidencias principales de trayectoria, perfil de ingreso y consolidado."
+    },
+    {
+      "proceso": "MATRICULA_UNIFICADA",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/matricula_unificada",
+      "archivos_detectados": "31",
+      "candidatos_formales": 1,
+      "evidencias_copiadas": 1,
+      "dictamen": "GOBERNANZA_REFERENCIAL_MATRICULA_UNIFICADA",
+      "estado": "REFERENCIAL",
+      "proxima_accion": "Confirmar repositorio origen o paquete principal del proceso."
+    },
+    {
+      "proceso": "CARGA_POSTGRADO",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado",
+      "archivos_detectados": "0 inicial; 91 hallazgos búsqueda prioritaria",
+      "candidatos_formales": 65,
+      "evidencias_copiadas": 65,
+      "dictamen": "CARGA_POSTGRADO_LOCALIZADA",
+      "estado": "LOCALIZADA_CON_GOBERNANZA_PROPIA_PENDIENTE",
+      "proxima_accion": "Abrir gobernanza propia de carga postgrado/postítulo/diplomados; separar vínculo con SIES y pipeline productivo."
+    },
+    {
+      "proceso": "GOBERNANZA_META",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_meta",
+      "archivos_detectados": "1 (+5430 sin clasificar referenciados)",
+      "candidatos_formales": 8,
+      "evidencias_copiadas": 8,
+      "dictamen": "GOBERNANZA_META_COMPLETA",
+      "estado": "COMPLETO",
+      "proxima_accion": "Versionar mapeo, clasificación fina, búsqueda postgrado e índices transversales."
+    }
+  ]
+}

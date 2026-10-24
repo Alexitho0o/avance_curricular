@@ -1,0 +1,707 @@
+{
+  "paneles_cohorte_documental_mrun": 766,
+  "paneles_con_totales_iguales": 716,
+  "fuentes_academicas": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/seguimiento_titulados_empleabilidad_2026/data/raw/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "lectura": {
+        "sheet": "Hoja1",
+        "headers": [
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "NOMBRE",
+          "PATERNO",
+          "MATERNO",
+          "CODCARR",
+          "CARRERA",
+          "JORNADA",
+          "REGIMEN",
+          "RAMOEQUIV",
+          "CODRAMO",
+          "CODSECC",
+          "ASIGNATURA",
+          "EXAMEN",
+          "NOTA_FINAL",
+          "ANO",
+          "PERIODO",
+          "ESTADO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO",
+          "NIVEL",
+          "ESTADO_ACADEMICO",
+          "PLAN_DE_ESTUDIO"
+        ],
+        "filas_datos": 129493,
+        "columnas_proyectadas": [
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "CODCARR",
+          "ANO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO"
+        ],
+        "fila_encabezado": 1,
+        "valores": "Proyección académica textual; None a vacío, enteros sin .0; claves eliminan padding y excluyen NULL."
+      },
+      "filas": 129493,
+      "anios_reales": {
+        "2025": 24833,
+        "2022": 14494,
+        "2023": 15474,
+        "2024": 21531,
+        "2021": 14721,
+        "2020": 9701,
+        "2019": 9869,
+        "2026": 14659,
+        "": 4211
+      },
+      "estados": {
+        "APROBADO": 80612,
+        "CONVALIDACION": 10656,
+        "": 6726,
+        "REPROBADO": 15853,
+        "HOMOLOGADO": 15646
+      },
+      "clasificacion": {
+        "SIN_EXPEDIENTE_MISMA_CARRERA": 451,
+        "ACTIVIDAD_VERIFICADA": 95997,
+        "CONVALIDACION": 23337,
+        "SIN_RESULTADO_ACADEMICO": 5484,
+        "DOCUMENTO_NO_COMPARABLE": 5,
+        "CONFLICTO_DOCUMENTO": 8,
+        "ANIO_NO_COMPARABLE": 4211
+      }
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/2025/SIES/AVANCE CURRICULAR/original/2020.xlsx",
+      "lectura": {
+        "sheet": "Hoja1",
+        "headers": [
+          "Número",
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "NOMBRE",
+          "PATERNO",
+          "MATERNO",
+          "CODCARR",
+          "CARRERA",
+          "JORNADA",
+          "REGIMEN",
+          "RAMOEQUIV",
+          "CODRAMO",
+          "CODSECC",
+          "ASIGNATURA",
+          "EXAMEN",
+          "NOTA_FINAL",
+          "ANO",
+          "PERIODO",
+          "ESTADO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO",
+          "NIVEL",
+          "ESTADO_ACADEMICO",
+          "PLAN_DE_ESTUDIO"
+        ],
+        "filas_datos": 70000,
+        "columnas_proyectadas": [
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "CODCARR",
+          "ANO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO"
+        ],
+        "fila_encabezado": 1,
+        "valores": "Proyección académica textual; None a vacío, enteros sin .0; claves eliminan padding y excluyen NULL."
+      },
+      "filas": 70000,
+      "anios_reales": {
+        "2021": 10871,
+        "2023": 11481,
+        "2020": 7447,
+        "2025": 13878,
+        "2024": 15746,
+        "2022": 10577
+      },
+      "estados": {
+        "APROBADO": 43798,
+        "REPROBADO": 8740,
+        "": 6785,
+        "HOMOLOGADO": 5708,
+        "CONVALIDACION": 4969
+      },
+      "clasificacion": {
+        "ACTIVIDAD_VERIFICADA": 52397,
+        "SIN_RESULTADO_ACADEMICO": 7344,
+        "CONFLICTO_DOCUMENTO": 60,
+        "CONVALIDACION": 10121,
+        "SIN_EXPEDIENTE_MISMA_CARRERA": 78
+      }
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/2025/SIES/AVANCE CURRICULAR/original/2021.xlsx",
+      "lectura": {
+        "sheet": "Hoja1",
+        "headers": [
+          "Número",
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "NOMBRE",
+          "PATERNO",
+          "MATERNO",
+          "CODCARR",
+          "CARRERA",
+          "JORNADA",
+          "REGIMEN",
+          "RAMOEQUIV",
+          "CODRAMO",
+          "CODSECC",
+          "ASIGNATURA",
+          "EXAMEN",
+          "NOTA_FINAL",
+          "ANO",
+          "PERIODO",
+          "ESTADO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO",
+          "NIVEL",
+          "ESTADO_ACADEMICO",
+          "PLAN_DE_ESTUDIO"
+        ],
+        "filas_datos": 70000,
+        "columnas_proyectadas": [
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "CODCARR",
+          "ANO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO"
+        ],
+        "fila_encabezado": 1,
+        "valores": "Proyección académica textual; None a vacío, enteros sin .0; claves eliminan padding y excluyen NULL."
+      },
+      "filas": 70000,
+      "anios_reales": {
+        "2021": 12279,
+        "2023": 12931,
+        "2025": 14782,
+        "2024": 17902,
+        "2022": 12106
+      },
+      "estados": {
+        "APROBADO": 40234,
+        "REPROBADO": 8332,
+        "": 7025,
+        "HOMOLOGADO": 7672,
+        "CONVALIDACION": 6737
+      },
+      "clasificacion": {
+        "ACTIVIDAD_VERIFICADA": 48435,
+        "SIN_RESULTADO_ACADEMICO": 7682,
+        "CONFLICTO_DOCUMENTO": 58,
+        "SIN_EXPEDIENTE_MISMA_CARRERA": 71,
+        "CONVALIDACION": 13754
+      }
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/2025/SIES/AVANCE CURRICULAR/original/2022.xlsx",
+      "lectura": {
+        "sheet": "Hoja1",
+        "headers": [
+          "Número",
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "NOMBRE",
+          "PATERNO",
+          "MATERNO",
+          "CODCARR",
+          "CARRERA",
+          "JORNADA",
+          "REGIMEN",
+          "RAMOEQUIV",
+          "CODRAMO",
+          "CODSECC",
+          "ASIGNATURA",
+          "EXAMEN",
+          "NOTA_FINAL",
+          "ANO",
+          "PERIODO",
+          "ESTADO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO",
+          "NIVEL",
+          "ESTADO_ACADEMICO",
+          "PLAN_DE_ESTUDIO"
+        ],
+        "filas_datos": 68464,
+        "columnas_proyectadas": [
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "CODCARR",
+          "ANO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO"
+        ],
+        "fila_encabezado": 1,
+        "valores": "Proyección académica textual; None a vacío, enteros sin .0; claves eliminan padding y excluyen NULL."
+      },
+      "filas": 68464,
+      "anios_reales": {
+        "2025": 17218,
+        "2024": 21295,
+        "2022": 14494,
+        "2023": 15457
+      },
+      "estados": {
+        "APROBADO": 37496,
+        "": 8077,
+        "REPROBADO": 7828,
+        "HOMOLOGADO": 9127,
+        "CONVALIDACION": 5936
+      },
+      "clasificacion": {
+        "ACTIVIDAD_VERIFICADA": 45180,
+        "SIN_RESULTADO_ACADEMICO": 8870,
+        "SIN_EXPEDIENTE_MISMA_CARRERA": 74,
+        "CONFLICTO_DOCUMENTO": 69,
+        "CONVALIDACION": 14271
+      }
+    }
+  ],
+  "totales_anuales": [
+    {
+      "anio": 2007,
+      "umas_anomatricula": 0,
+      "umas_actividad": 0,
+      "umas_union": 0,
+      "filas_mrun": 697,
+      "personas_mrun": 693,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2008,
+      "umas_anomatricula": 0,
+      "umas_actividad": 0,
+      "umas_union": 0,
+      "filas_mrun": 705,
+      "personas_mrun": 704,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2009,
+      "umas_anomatricula": 0,
+      "umas_actividad": 0,
+      "umas_union": 0,
+      "filas_mrun": 718,
+      "personas_mrun": 718,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2010,
+      "umas_anomatricula": 0,
+      "umas_actividad": 0,
+      "umas_union": 0,
+      "filas_mrun": 800,
+      "personas_mrun": 797,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2011,
+      "umas_anomatricula": 0,
+      "umas_actividad": 0,
+      "umas_union": 0,
+      "filas_mrun": 829,
+      "personas_mrun": 824,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2012,
+      "umas_anomatricula": 0,
+      "umas_actividad": 0,
+      "umas_union": 0,
+      "filas_mrun": 886,
+      "personas_mrun": 885,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2013,
+      "umas_anomatricula": 482,
+      "umas_actividad": 0,
+      "umas_union": 482,
+      "filas_mrun": 1195,
+      "personas_mrun": 1194,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2014,
+      "umas_anomatricula": 435,
+      "umas_actividad": 0,
+      "umas_union": 435,
+      "filas_mrun": 1180,
+      "personas_mrun": 1179,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2015,
+      "umas_anomatricula": 509,
+      "umas_actividad": 0,
+      "umas_union": 509,
+      "filas_mrun": 1196,
+      "personas_mrun": 1191,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2016,
+      "umas_anomatricula": 483,
+      "umas_actividad": 0,
+      "umas_union": 483,
+      "filas_mrun": 1077,
+      "personas_mrun": 1061,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2017,
+      "umas_anomatricula": 515,
+      "umas_actividad": 0,
+      "umas_union": 515,
+      "filas_mrun": 1204,
+      "personas_mrun": 1192,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2018,
+      "umas_anomatricula": 495,
+      "umas_actividad": 0,
+      "umas_union": 495,
+      "filas_mrun": 1088,
+      "personas_mrun": 1077,
+      "filas_reporte_documental": 1088,
+      "personas_reporte_documental": 1077,
+      "filas_reporte_documento_no_normalizable": 0,
+      "personas_reporte_presentes_datosalumnos": 1074,
+      "reporte_con_presencia_anual_umas": 457,
+      "reporte_sin_presencia_anual_umas": 620,
+      "presencia_umas_fuera_reporte": 38
+    },
+    {
+      "anio": 2019,
+      "umas_anomatricula": 609,
+      "umas_actividad": 1129,
+      "umas_union": 1155,
+      "filas_mrun": 1112,
+      "personas_mrun": 1088,
+      "filas_reporte_documental": 1112,
+      "personas_reporte_documental": 1085,
+      "filas_reporte_documento_no_normalizable": 3,
+      "personas_reporte_presentes_datosalumnos": 1082,
+      "reporte_con_presencia_anual_umas": 1080,
+      "reporte_sin_presencia_anual_umas": 5,
+      "presencia_umas_fuera_reporte": 75
+    },
+    {
+      "anio": 2020,
+      "umas_anomatricula": 487,
+      "umas_actividad": 972,
+      "umas_union": 1057,
+      "filas_mrun": 985,
+      "personas_mrun": 968,
+      "filas_reporte_documental": 985,
+      "personas_reporte_documental": 966,
+      "filas_reporte_documento_no_normalizable": 2,
+      "personas_reporte_presentes_datosalumnos": 963,
+      "reporte_con_presencia_anual_umas": 958,
+      "reporte_sin_presencia_anual_umas": 8,
+      "presencia_umas_fuera_reporte": 99
+    },
+    {
+      "anio": 2021,
+      "umas_anomatricula": 564,
+      "umas_actividad": 1195,
+      "umas_union": 1203,
+      "filas_mrun": 1105,
+      "personas_mrun": 1085,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2022,
+      "umas_anomatricula": 545,
+      "umas_actividad": 1143,
+      "umas_union": 1155,
+      "filas_mrun": 1033,
+      "personas_mrun": 1018,
+      "filas_reporte_documental": 1038,
+      "personas_reporte_documental": 1021,
+      "filas_reporte_documento_no_normalizable": 0,
+      "personas_reporte_presentes_datosalumnos": 1021,
+      "reporte_con_presencia_anual_umas": 1021,
+      "reporte_sin_presencia_anual_umas": 0,
+      "presencia_umas_fuera_reporte": 134
+    },
+    {
+      "anio": 2023,
+      "umas_anomatricula": 584,
+      "umas_actividad": 1250,
+      "umas_union": 1276,
+      "filas_mrun": 1161,
+      "personas_mrun": 1148,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2024,
+      "umas_anomatricula": 1332,
+      "umas_actividad": 1603,
+      "umas_union": 1888,
+      "filas_mrun": 1468,
+      "personas_mrun": 1463,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2025,
+      "umas_anomatricula": 1772,
+      "umas_actividad": 2676,
+      "umas_union": 3030,
+      "filas_mrun": 2522,
+      "personas_mrun": 2515,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    },
+    {
+      "anio": 2026,
+      "umas_anomatricula": 5364,
+      "umas_actividad": 2962,
+      "umas_union": 5397,
+      "filas_mrun": 3425,
+      "personas_mrun": 3401,
+      "filas_reporte_documental": null,
+      "personas_reporte_documental": null,
+      "filas_reporte_documento_no_normalizable": null,
+      "personas_reporte_presentes_datosalumnos": null,
+      "reporte_con_presencia_anual_umas": null,
+      "reporte_sin_presencia_anual_umas": null,
+      "presencia_umas_fuera_reporte": null
+    }
+  ],
+  "grafo_ampliado": {
+    "base": {
+      "personas_anio": 3862,
+      "sin_candidato": 632,
+      "pares_forzados_condicionales": 2220,
+      "maximo_pares": 3120
+    },
+    "cohorte_original": {
+      "personas_anio": 3862,
+      "sin_candidato": 1046,
+      "pares_forzados_condicionales": 2418,
+      "maximo_pares": 2756
+    }
+  },
+  "evaluacion_500": {
+    "base": {
+      "CONCUERDA_CON_REFERENCIA": 305,
+      "SIN_ENLACE_FORZADO": 186,
+      "ENLACE_SIN_REFERENCIA_UNIVOCA": 8,
+      "CONTRADICE_REFERENCIA": 1
+    },
+    "cohorte_original": {
+      "CONCUERDA_CON_REFERENCIA": 362,
+      "SIN_ENLACE_FORZADO": 129,
+      "ENLACE_SIN_REFERENCIA_UNIVOCA": 8,
+      "CONTRADICE_REFERENCIA": 1
+    }
+  },
+  "control_demografico_filas_reporte": {
+    "COINCIDE_NACIMIENTO_SEXO": 3691,
+    "DIFIERE_O_FALTA_NACIMIENTO_SEXO": 46
+  },
+  "cobertura_carrera_reporte": [
+    {
+      "anio": 2018,
+      "estado": "MISMA_FAMILIA_CON_PRESENCIA_ANUAL",
+      "filas": 422
+    },
+    {
+      "anio": 2018,
+      "estado": "MISMA_FAMILIA_SIN_PRESENCIA_ANUAL",
+      "filas": 527
+    },
+    {
+      "anio": 2018,
+      "estado": "PERSONA_AUSENTE_UMAS",
+      "filas": 3
+    },
+    {
+      "anio": 2018,
+      "estado": "PERSONA_SIN_FAMILIA_COMPATIBLE",
+      "filas": 136
+    },
+    {
+      "anio": 2019,
+      "estado": "DOCUMENTO_REPORTE_NO_NORMALIZABLE",
+      "filas": 3
+    },
+    {
+      "anio": 2019,
+      "estado": "MISMA_FAMILIA_CON_PRESENCIA_ANUAL",
+      "filas": 915
+    },
+    {
+      "anio": 2019,
+      "estado": "MISMA_FAMILIA_SIN_PRESENCIA_ANUAL",
+      "filas": 2
+    },
+    {
+      "anio": 2019,
+      "estado": "PERSONA_AUSENTE_UMAS",
+      "filas": 3
+    },
+    {
+      "anio": 2019,
+      "estado": "PERSONA_SIN_FAMILIA_COMPATIBLE",
+      "filas": 189
+    },
+    {
+      "anio": 2020,
+      "estado": "DOCUMENTO_REPORTE_NO_NORMALIZABLE",
+      "filas": 2
+    },
+    {
+      "anio": 2020,
+      "estado": "MISMA_FAMILIA_CON_PRESENCIA_ANUAL",
+      "filas": 874
+    },
+    {
+      "anio": 2020,
+      "estado": "MISMA_FAMILIA_SIN_PRESENCIA_ANUAL",
+      "filas": 5
+    },
+    {
+      "anio": 2020,
+      "estado": "PERSONA_AUSENTE_UMAS",
+      "filas": 3
+    },
+    {
+      "anio": 2020,
+      "estado": "PERSONA_SIN_FAMILIA_COMPATIBLE",
+      "filas": 101
+    },
+    {
+      "anio": 2022,
+      "estado": "MISMA_FAMILIA_CON_PRESENCIA_ANUAL",
+      "filas": 990
+    },
+    {
+      "anio": 2022,
+      "estado": "MISMA_FAMILIA_SIN_PRESENCIA_ANUAL",
+      "filas": 2
+    },
+    {
+      "anio": 2022,
+      "estado": "PERSONA_SIN_FAMILIA_COMPATIBLE",
+      "filas": 46
+    }
+  ],
+  "limites": [
+    "Actividad no equivale a matrícula al corte SIES.",
+    "No hay actividad 2007–2018 acreditada por estas fuentes.",
+    "Atributos de sede/jornada de DatosAlumnos actuales no acreditan invariancia histórica.",
+    "Familias compartidas no certifican la versión ni separación regular/continuidad."
+  ],
+  "identidades_certificadas": 0
+}

@@ -1,0 +1,59 @@
+{
+  "fuente_umas_filas": 15045,
+  "fuente_mrun_filas": 24386,
+  "filas_umas_objetivo": 14726,
+  "etapas": {
+    "A_demografia_anio": {
+      "SIN_CANDIDATO": 463,
+      "CANDIDATO_UNICO": 1462,
+      "VARIOS_CANDIDATOS": 12788,
+      "SIN_DATOS_COMPARABLES": 13
+    },
+    "B_familia_sin_version": {
+      "SIN_CANDIDATO": 3252,
+      "CANDIDATO_UNICO": 7042,
+      "VARIOS_CANDIDATOS": 3475,
+      "SIN_GRUPO_CARRERA": 944,
+      "SIN_DATOS_COMPARABLES": 13
+    },
+    "C_tipo_si_unanime": {
+      "SIN_CANDIDATO": 3703,
+      "CANDIDATO_UNICO": 7060,
+      "VARIOS_CANDIDATOS": 3006,
+      "SIN_GRUPO_CARRERA": 944,
+      "SIN_DATOS_COMPARABLES": 13
+    }
+  },
+  "reciprocidad": {
+    "SIN_CANDIDATO": 3703,
+    "UNICO_RECIPROCO_NO_CERTIFICADO": 6098,
+    "VARIOS_CANDIDATOS": 3006,
+    "UNICO_NO_RECIPROCO": 962,
+    "SIN_GRUPO_CARRERA": 944,
+    "SIN_DATOS_COMPARABLES": 13
+  },
+  "tasa_falsos_enlaces": "NO_ESTIMABLE_SIN_PARES_VALIDADOS",
+  "identidades_certificadas": 0,
+  "cohortes_entre_candidatos_reciprocos": [
+    {
+      "actual": "DIFIERE_ACTUAL",
+      "original": "DIFIERE_ORIGINAL",
+      "filas": 203
+    },
+    {
+      "actual": "DIFIERE_ACTUAL",
+      "original": "IGUAL_ORIGINAL",
+      "filas": 875
+    },
+    {
+      "actual": "IGUAL_ACTUAL",
+      "original": "DIFIERE_ORIGINAL",
+      "filas": 691
+    },
+    {
+      "actual": "IGUAL_ACTUAL",
+      "original": "IGUAL_ORIGINAL",
+      "filas": 4329
+    }
+  ]
+}

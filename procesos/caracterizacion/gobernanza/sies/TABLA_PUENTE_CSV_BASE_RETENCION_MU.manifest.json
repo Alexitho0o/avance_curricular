@@ -1,0 +1,84 @@
+{
+  "recurso": "tabla_puente_csv_historico_base_retencion_mu",
+  "archivo_csv": "TABLA_PUENTE_CSV_BASE_RETENCION_MU.csv",
+  "archivo_xlsx": "TABLA_PUENTE_CSV_BASE_RETENCION_MU.xlsx",
+  "archivo_csv_resumen_carrera": "TABLA_PUENTE_CSV_BASE_RETENCION_MU_RESUMEN_POR_CARRERA.csv",
+  "repositorio_consumidor": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+  "fecha_generacion": "2026-09-29",
+  "fecha_cierre_carrera": "2026-09-30",
+  "fuentes": {
+    "csv_historico": {
+      "ruta": "gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv",
+      "sha256": "4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+      "clasificacion": "B"
+    },
+    "base_retencion_mu": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hoja": "BASE_RETENCION_MU",
+      "clasificacion": "B",
+      "uso": "solo agregados por llave; no se exportan N_DOC, NOMBRE ni FECH_NAC"
+    }
+  },
+  "llave": "ANIO + COD_SED + COD_CAR + JOR + VERSION; código CSV parseado como I{institucion}S{sede}C{carrera}J{jornada}V{version}",
+  "cobertura": "IPSS 162, MAT_2022 a MAT_2026; todos los códigos observados, incluidos Postítulo fuera del alcance de BASE_RETENCION_MU",
+  "hojas": {
+    "PUENTE": "Detalle por código completo (ANIO+COD_SED+COD_CAR+JOR+VERSION), 198 filas. OBSERVACION por fila actualizada el 2026-09-30 para referenciar la explicación de cierre a nivel carrera (hoja RESUMEN_POR_CARRERA) en las 53 filas que antes decían 'causa no verificada (E)' sin más detalle.",
+    "CONTROL": "Totales de control de la hoja PUENTE (fórmulas vivas), sin cambios en esta actualización.",
+    "RESUMEN_POR_CARRERA": "NUEVA (2026-09-30). Agregación por (ANIO, COD_CAR), excluyendo Postítulo (fuera de alcance de BASE_RETENCION_MU), con fórmulas SUMIFS vivas contra PUENTE. 79 combinaciones ANIO+COD_CAR. Cierra a nivel carrera las diferencias de fila-a-fila que en PUENTE aparecían como 'solo BASE', 'solo CSV' o 'brecha' sin causa verificada."
+  },
+  "salidas": {
+    "csv_sha256": "d4f3675d5d63247b0118412f983729cb18924c2971cea1b7d0ef731e6c8e7803",
+    "xlsx_sha256": "b415b066518a84d07656c3d089e89b44b889d5c5a71745b0d4694670b74443f7",
+    "csv_resumen_carrera_sha256": "d17e02be25e979c96dcafac407e7496426b067fbdc4d4f9ee6380923fdd66f00",
+    "filas_puente": 198,
+    "filas_resumen_carrera": 79,
+    "formulas": "El XLSX mantiene fórmulas vivas en PUENTE (DIFERENCIA_VS_TOTAL, DIFERENCIA_VS_VIG1, hoja CONTROL) y en RESUMEN_POR_CARRERA (SUMIFS contra PUENTE, diferencias y controles). Ningún valor numérico fue pegado; los dos CSV son exportaciones de solo lectura de los valores calculados."
+  },
+  "cierre_carrera_2026_09_30": {
+    "metodo": "Se agregaron las 198 filas de PUENTE por (ANIO, COD_CAR), excluyendo NIVEL_GLOBAL=Postítulo (fuera de alcance de BASE_RETENCION_MU, ya clasificado D), sumando TOTAL_MATRICULA_CSV, BASE_TOTAL_FILAS y BASE_VIG1 a través de todas las jornadas y versiones de cada carrera. Resultado: 79 combinaciones ANIO+COD_CAR.",
+    "clasificacion_metodo": "C",
+    "patrones_encontrados": [
+      {
+        "patron": "COINCIDE_VIG1",
+        "combinaciones": 44,
+        "anios": [2022, 2023, 2024, 2025, 2026],
+        "hallazgo": "El total CSV coincide exactamente (diferencia=0) con BASE_RETENCION_MU filtrado a VIG=1, sumado a nivel carrera. Todas las combinaciones de 2022, 2023 y 2024 caen en este patrón (28 de 28); además 11 de 2025 y 5 de 2026.",
+        "clasificacion": "B"
+      },
+      {
+        "patron": "COINCIDE_TOTAL_2025",
+        "combinaciones": 8,
+        "anios": [2025],
+        "hallazgo": "8 carreras de 2025 (de 19 observadas ese año) no coinciden contra VIG=1 pero sí coinciden exactamente (diferencia=0) contra el total de BASE_RETENCION_MU SIN filtrar VIG. Neto agregado 2025 = 73. A diferencia de 2022-2024, en 2025 el corte informado a SIES parece incluir también registros VIG=0 para estas carreras.",
+        "clasificacion": "B",
+        "pendiente": "La causa metodológica de por qué 2025 difiere de 2022-2024 en este aspecto no está documentada en las fuentes disponibles del proyecto. No bloquea el cierre de este artefacto (E, no material: el patrón está completamente cuantificado y no hay matrícula sin explicar)."
+      },
+      {
+        "patron": "BRECHA_GOBERNADA_2026",
+        "combinaciones": 27,
+        "anios": [2026],
+        "hallazgo": "27 carreras de 2026 (de 32 observadas ese año) no coinciden ni contra VIG=1 ni contra el total BASE. La suma de estas diferencias (226 estudiantes) coincide exactamente con la brecha ya gobernada entre la Publicación SIES 2026 (3.425) y la Base Institucional vigente 2026 (3.199), documentada previamente en el hito H001-RETENCION-IPSS162. No es un hallazgo nuevo.",
+        "clasificacion": "B",
+        "referencia": "Brecha Publicación SIES vs Institucional MAT_2026 = 3.425 - 3.199 = 226, ya gobernada en el hito antes de este cruce carrera-por-carrera."
+      }
+    ],
+    "verificacion": "SUMIFS de RESUMEN_POR_CARRERA recalculado con LibreOffice headless (recalculo forzado) y comparado, celda por celda, contra la agregación equivalente calculada de forma independiente en Python sobre los mismos datos crudos de PUENTE. Coincidencia exacta: 44/8/27 combinaciones por patrón, suma diferencia_vs_vig1 2025=73, 2026=226, 2022-2024=0.",
+    "verificado_por": "Claude, vía recálculo independiente (LibreOffice headless) y agregación en Python sobre el contenido real de PUENTE, 2026-09-30"
+  },
+  "clasificaciones": {
+    "A": "No se usa una regla normativa nueva; la llave se deriva de la estructura observada y validada del código SIES.",
+    "B": "Conteos agregados observados en ambas fuentes, coincidencias/no coincidencias reportadas, y los tres patrones de cierre a nivel carrera (COINCIDE_VIG1, COINCIDE_TOTAL_2025, BRECHA_GOBERNADA_2026).",
+    "C": "Parseo del código, agregación por llave, cruce, fórmulas del XLSX (PUENTE y RESUMEN_POR_CARRERA) y método de agregación por carrera.",
+    "D": "Decisión de mantener Postítulo visible como fuera de alcance y no mezclarlo con BASE_RETENCION_MU. Referencia a la brecha ya gobernada Publicación vs Institucional 2026 (226) como explicación del patrón BRECHA_GOBERNADA_2026.",
+    "E": "Única causa que permanece sin evidencia documental: por qué el corte informado a SIES en 2025 incluyó registros VIG=0 para 8 carreras y en 2022-2024 no. Está completamente cuantificada (neto=73, 8 carreras identificadas) y no bloquea el cierre; no se completa con supuestos."
+  },
+  "referencia_hito": "H001-RETENCION-IPSS162",
+  "politica": "Artefacto agregado sin identificadores personales. No modifica las fuentes originales. Toda diferencia permanece visible y no se corrige silenciosamente.",
+  "qa": {
+    "estado": "OK",
+    "detalle": "Cierre completo de los pendientes visibles de este artefacto (instrucción del usuario del 2026-09-30: 'no deben quedar pendientes'). Los 53 casos que en PUENTE decían 'causa no verificada (E)' sin más detalle (45 'brecha', 6 'solo BASE', 2 'solo CSV') fueron explicados en su totalidad mediante la agregación por carrera en la nueva hoja RESUMEN_POR_CARRERA: 100% de las combinaciones ANIO+COD_CAR de 2022-2024 coinciden exactamente contra BASE VIG=1 (las diferencias de fila individual son reclasificación de jornada/versión entre sistemas, no matrícula faltante); el patrón 2025 (8 carreras) coincide exactamente contra el total BASE sin filtrar VIG; y el patrón 2026 (27 carreras, neto 226) corresponde íntegramente a la brecha Publicación-vs-Institucional ya gobernada en este hito, no a un hallazgo nuevo. El texto OBSERVACION de las 53 filas afectadas en PUENTE fue actualizado para referenciar esta explicación en lugar de decir 'no verificada'. La única E que permanece (causa metodológica de la inclusión de VIG=0 en el corte 2025 para 8 carreras) es una pregunta explícita y acotada, no un vacío: el patrón mismo está 100% cuantificado y verificado, y no representa matrícula sin explicar.",
+    "clasificacion": "B",
+    "estado_anterior": "OK_CON_ADVERTENCIAS (2026-09-29), con E abiertas para causas de códigos solo-BASE, solo-CSV y brecha puntual sin agregación por carrera.",
+    "verificado_por": "Claude, vía lectura directa e independiente del CSV/XLSX generado y recálculo con LibreOffice headless, 2026-09-30"
+  }
+}

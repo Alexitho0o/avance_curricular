@@ -1,0 +1,30 @@
+[
+  {
+    "indicador": "Archivos de trayectoria",
+    "valor": 12,
+    "esperado": ">=1 archivo detectado",
+    "cumple": "SI",
+    "observacion": "Clasificación fina detectó archivos asociados al proceso."
+  },
+  {
+    "indicador": "Perfil ingreso",
+    "valor": "DETECTADO_EN_CRITERIO",
+    "esperado": "Referencia a perfil de ingreso",
+    "cumple": "SI",
+    "observacion": "Evidencia por clasificación fina, no por paquete completo."
+  },
+  {
+    "indicador": "KPI",
+    "valor": "DETECTADO_EN_CRITERIO",
+    "esperado": "Referencia KPI",
+    "cumple": "SI",
+    "observacion": "Se mantiene como evidencia parcial."
+  },
+  {
+    "indicador": "Consolidado o documentación asociada",
+    "valor": "README.md copiado",
+    "esperado": "README.md u otra documentación formal",
+    "cumple": "PARCIAL",
+    "observacion": "Solo hay un candidato formal copiado; requiere profundización."
+  }
+]

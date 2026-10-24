@@ -1,0 +1,81 @@
+{
+  "fase": 4,
+  "fecha": "2026-10-15",
+  "estado": "PASS_CON_BRECHAS_TEMPORALES",
+  "pruebas_sinteticas": {
+    "total": 26,
+    "pasaron": 26,
+    "comando": "python3 -m unittest discover -s tests -p 'test_*planes_umas.py' -v",
+    "archivos": {
+      "tests/test_planes_umas.py": "6882ad2c8c57a0ab1c37e340ab1ad4b10b6e2b4331f64ef66174f1f31bd26c26",
+      "tests/test_estructura_planes_umas.py": "2b21629650993f673e3af93df632a960a11412b04651ce6741893f92c68eebf0"
+    }
+  },
+  "conciliacion_independiente": {
+    "filas_promedios": true,
+    "filas_completas": true,
+    "filas_sin_anio": true,
+    "identificadores_promedios": true,
+    "filas_alumnos": true,
+    "identificadores_alumnos": true,
+    "interseccion_identificadores": true,
+    "filas_enlazadas": true,
+    "sin_da": true,
+    "diferencias_carrera_da": true,
+    "diferencias_jornada_da": true,
+    "diferencias_carrera_catalogo": true,
+    "planes_sin_catalogo": true,
+    "planes_sin_promedios": true,
+    "actividad_anterior_patron": true,
+    "planes_con_actividad": true,
+    "planes_sin_actividad_completa": true,
+    "catalogo_sin_actividad_completa": true,
+    "anios_matricula_da": true,
+    "catalogo_planes": true,
+    "catalogo_asignaturas_plan_ramo_nivel": true,
+    "catalogo_filas_catalogo": true,
+    "catalogo_grupos_expandidos": true,
+    "catalogo_exceso_filas_sobre_grano": true,
+    "catalogo_grupos_con_conflicto_atributo_curso": true,
+    "catalogo_pares_comparados_misma_carrera_sede": true,
+    "catalogo_pares_mismos_ramos_niveles": true,
+    "equivalencias_observadas": true,
+    "equivalencias_pendientes": true,
+    "encabezados_no_asignaturas": true
+  },
+  "reproduccion": {
+    "catalogo_planes.json": true,
+    "cobertura_planes.tsv": true,
+    "comparaciones_planes.json": true,
+    "conciliacion_contextos_umas.tsv": true,
+    "diagnostico_patrones_anuales.tsv": true,
+    "duplicados_datos_alumnos.json": true,
+    "ejemplos_academicos.json": true,
+    "esquemas_lectura.json": true,
+    "estructura_asignaturas.json": true,
+    "fuentes.json": true,
+    "observaciones_plan_periodo.tsv": true,
+    "resumen.json": true,
+    "resumen_asociaciones.json": true,
+    "resumen_catalogo.json": true,
+    "manifest.json": true
+  },
+  "archivos_reproducidos": 15,
+  "fuentes_criticas_sin_cambios": 11,
+  "scripts_sha256": {
+    "estructura_planes_umas.py": "9ef46ff6388bbaaf61874b8c5694f597785a7e6116b3ae27e875aefb90ac6b45",
+    "reconstruir_planes_umas.py": "d9eece5531979d2ee2e438ce7f3e843ccc8a8424af5fba14818d96307f8484e1"
+  },
+  "evidencia_sha256": {
+    "auditoria_asignaciones.json": "f786bdbb954f742489764bb1f294dc4a99e52488f4132a370555a1a220984480",
+    "auditoria_catalogo.json": "3b2d4151b94c1da88553ea03e00a78c137d3ac3cec0bdf6b66f20cf2e4169e23",
+    "evidencia_temporal.json": "fc875c934ae0ab62c3f7f5bae91c9a12304b655bec843db56672aee3428c2389",
+    "brechas.json": "64c61d8e900c8db3e98fa6dcec587a33eb935bc5dde5c155ac188d20a7fd9528",
+    "control_fuentes_al_cierre.json": "5984a3c079202cbb46e98ec6877f81f9a3d13e2bb25eb2ceb4a13d65466f5b84",
+    "qa_escritura.json": "0dbd0246e44bfbda7affe6f6270a6a0a273ca9be8dc6b3df69a29efe8dcb727c",
+    "qa_tests.json": "a0216fa216e4daf0150b7dc9bee0e47c05d5ee00a9bd8977c8bc4012ff6de6b5",
+    "comparacion_candidata.json": "ee5ea55e7317bc99a9cfbd4527949d3985f2c97bfe6c8feb022d93993f0e62be"
+  },
+  "correccion_previa_al_cierre": "El conteo de CODCLI compartidos incluye también los que no tuvieran plan; regresión sintética comprobada. Las cifras de fuentes reales no cambiaron. Primera ejecución conservada como candidata temporal.",
+  "limites": "Sin vigencia histórica de asignación acreditada; diferencias y faltantes se conservan. Auditoría de ramos por referencia en catálogo no certifica homologación individual."
+}

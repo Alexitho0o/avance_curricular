@@ -1,0 +1,44 @@
+[
+  {
+    "indicador": "Cantidad de hallazgos",
+    "valor": 91,
+    "esperado": ">=1",
+    "cumple": "SI",
+    "observacion": "Resultado de búsqueda prioritaria."
+  },
+  {
+    "indicador": "Hallazgos ALTA/MEDIA/BAJA",
+    "valor": "2/63/26",
+    "esperado": "Clasificados por confianza",
+    "cumple": "SI",
+    "observacion": "Confianza asignada por contexto documental/local."
+  },
+  {
+    "indicador": "Evidencia copiada",
+    "valor": 65,
+    "esperado": ">=1 evidencia ALTA/MEDIA",
+    "cumple": "SI",
+    "observacion": "Incluye CSV SIES local, script productivo y trazabilidad documental/histórica."
+  },
+  {
+    "indicador": "Estado localizado/parcial/referencial/no localizado",
+    "valor": "CARGA_POSTGRADO_LOCALIZADA",
+    "esperado": "CARGA_POSTGRADO_LOCALIZADA",
+    "cumple": "SI",
+    "observacion": "Hay evidencia real de datos y script dentro del repositorio."
+  },
+  {
+    "indicador": "Registros SIES postítulo/diplomado",
+    "valor": 204,
+    "esperado": ">0",
+    "cumple": "SI",
+    "observacion": "Conteo auditado del CSV copiado sin exponer datos personales."
+  },
+  {
+    "indicador": "Necesidad de gobernanza en otro repositorio",
+    "valor": "NO_DETECTADA_COMO_EXTERNA",
+    "esperado": "Si evidencia real vive fuera del repo",
+    "cumple": "SI",
+    "observacion": "La evidencia real principal está dentro de CARACTERIZACIÓN; requiere gobernanza propia aquí y coordinación con Matrícula Unificada."
+  }
+]

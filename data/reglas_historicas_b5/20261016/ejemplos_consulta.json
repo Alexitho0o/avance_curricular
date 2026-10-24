@@ -1,0 +1,99 @@
+[
+  {
+    "entrada": {
+      "codcarpr": "IECIRE",
+      "sede": "RE",
+      "jornada": "D",
+      "anio": 2018,
+      "ingreso_original": "2018",
+      "primera_observacion": 2018,
+      "planes": [
+        "PLAN_NO_OBSERVADO"
+      ]
+    },
+    "resultado": {
+      "estado": "CORROBORADA_EN_RESERVA",
+      "candidatos": [
+        "I162S2C1J1V1"
+      ],
+      "regla": "B5-K0-0003",
+      "habilitada_para_resolver": false
+    },
+    "personas_construccion": 2,
+    "reserva_coincidente": 1,
+    "reserva_contradictoria": 0
+  },
+  {
+    "entrada": {
+      "codcarpr": "TPCREOL",
+      "sede": "RE",
+      "jornada": "O",
+      "anio": 2020,
+      "ingreso_original": "2020",
+      "primera_observacion": 2020,
+      "planes": [
+        "TPCREOL"
+      ]
+    },
+    "resultado": {
+      "estado": "CONTRADICCION_EN_RESERVA",
+      "candidatos": [
+        "I162S2C2J4V1"
+      ],
+      "regla": "B5-K0-0353",
+      "habilitada_para_resolver": false
+    },
+    "personas_construccion": 3,
+    "reserva_coincidente": 0,
+    "reserva_contradictoria": 1
+  },
+  {
+    "entrada": {
+      "codcarpr": "IECIRE",
+      "sede": "RE",
+      "jornada": "D",
+      "anio": 2019,
+      "ingreso_original": "2018",
+      "primera_observacion": 2019,
+      "planes": [
+        "IECIRE20191"
+      ]
+    },
+    "resultado": {
+      "estado": "CONFLICTO_CONSTRUCCION",
+      "candidatos": [
+        "I162S2C1J1V1",
+        "I162S2C1J1V2"
+      ],
+      "regla": "B5-K0-0009",
+      "habilitada_para_resolver": false
+    },
+    "personas_construccion": 2,
+    "reserva_coincidente": 0,
+    "reserva_contradictoria": 0
+  },
+  {
+    "entrada": {
+      "codcarpr": "IECIRE",
+      "sede": "RE",
+      "jornada": "D",
+      "anio": 2018,
+      "ingreso_original": "2016",
+      "primera_observacion": 2018,
+      "planes": [
+        "PLAN_NO_OBSERVADO"
+      ]
+    },
+    "resultado": {
+      "estado": "OBSERVADA_SIN_RESERVA",
+      "candidatos": [
+        "I162S2C1J1V1"
+      ],
+      "regla": "B5-K0-0001",
+      "habilitada_para_resolver": false
+    },
+    "personas_construccion": 1,
+    "reserva_coincidente": 0,
+    "reserva_contradictoria": 0
+  }
+]

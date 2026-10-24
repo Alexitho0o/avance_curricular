@@ -1,0 +1,74 @@
+[
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "No extrapolar entre años; parámetros literales de B5.",
+    "fuente": "docs/b5_reglas_historicas_20261016.md",
+    "habilita_carga": false,
+    "id": "D3-01",
+    "nombre": "CLAVE_EXACTA_ANUAL"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "Primera observación/ANOINGRESO no acreditan ingreso efectivo a continuidad.",
+    "fuente": "docs/d2_excepciones_20261016.md",
+    "habilita_carga": false,
+    "id": "D3-02",
+    "nombre": "EPISODIO_NO_INFERIDO"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "Solo antiguos en observación no prueba error; conservar discrepancia documentada de ingreso.",
+    "fuente": "data/cierre_d2/20261016/expedientes_16.json",
+    "habilita_carga": false,
+    "id": "D3-03",
+    "nombre": "ADMISION_POR_ANIO"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "No elegir destino ante conflicto o atribución ambigua.",
+    "fuente": "data/cierre_d1/20261016/criterios.json",
+    "habilita_carga": false,
+    "id": "D3-04",
+    "nombre": "CONFLICTO_NO_RESUELTO_POR_FRECUENCIA"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "Sin evidencia o sin regla no hay selección por cercanía.",
+    "fuente": "docs/d1_inventario_criterios_20261016.md",
+    "habilita_carga": false,
+    "id": "D3-05",
+    "nombre": "AUSENCIA_EXPLICITA"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "Plan observado no acredita vigencia curricular; no asignar malla en esta edición.",
+    "fuente": "data/cierre_d2/20261016/revision_fuentes_candidatas.json",
+    "habilita_carga": false,
+    "id": "D3-06",
+    "nombre": "MALLA_REQUIERE_VIGENCIA"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "Preservar nivel de evidencia K0 sin certificar ni revalidar la reserva.",
+    "fuente": "docs/b5_reglas_historicas_20261016.md",
+    "habilita_carga": false,
+    "id": "D3-07",
+    "nombre": "CORROBORACION_OBSERVACIONAL"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "Comparación de tipo/duración de referencia; conservar candidatos y no presumir vigencia histórica.",
+    "fuente": "data/versiones_por_cohorte/20261016/grupos_existentes.json",
+    "habilita_carga": false,
+    "id": "D3-08",
+    "nombre": "PERFIL_SEPARADO"
+  },
+  {
+    "autoridad": "INTERNA_ANALITICA",
+    "condicion": "K1–K3 no superan impedimentos del contexto; dato posterior impide uso histórico.",
+    "fuente": "docs/b5_reglas_historicas_20261016.md",
+    "habilita_carga": false,
+    "id": "D3-09",
+    "nombre": "VARIANTE_NO_EVITA_ABSTENCION"
+  }
+]

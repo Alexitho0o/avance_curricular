@@ -1,0 +1,142 @@
+{
+  "candidate_directory": "/tmp/fase3_cruce_sies_umas/reconstruccion_candidata",
+  "candidate_summary_sha256": "6e7f33fc324de2a5b33a234241bd4ad88d0e0feb5488ec7f3c8b43e2dc44b3d5",
+  "checks": {
+    "all_747_rows_and_69_fields_and_locators_identical": true,
+    "filas_oferta_anual": true,
+    "codigos_oferta": true,
+    "grupos_familia_anio_coexistentes": true,
+    "codigos_oferta_2026": true,
+    "annual_year_coverage": true,
+    "annual_offer_counts": true,
+    "universe_presence": true,
+    "annual_join_states": true,
+    "temporal_change_counts_for_independently_compared_fields": true,
+    "all_coexistence_groups_exact": true,
+    "family_count": true,
+    "multiversion_family_count": true,
+    "multiple_versions_in_first_observation_count": true,
+    "first_observed_family_without_v1": true,
+    "all15_oferta2026_fields_match_independently": true
+  },
+  "all_checks_passed": true,
+  "full_oferta2026_comparison": {
+    "source_path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/oferta 2026.xlsx",
+    "source_sha256": "01652009ed30d19024894ab9a4e7645d7f70074d8109c4a4b30d4cb9ec275bf1",
+    "field_mapping": {
+      "CODIGO_IES_NUM": "CODIGO_IES",
+      "CODIGO_UNICO": "CODIGO_UNICO",
+      "CODIGO_CARRERA": "CODIGO_CARRERA",
+      "NOMBRE_CARRERA": "NOMBRE_CARRERA",
+      "MODALIDAD": "MODALIDAD",
+      "CODIGO_JORNADA": "JORNADA",
+      "VERSION_CARRERA": "VERSION",
+      "CODIGO_TIPO_CARRERA": "TIPO_CARRERA",
+      "CARACT_PLAN_ESPECIAL": "PLAN_ESPECIAL",
+      "DURACION_ESTUDIO": "DURACION_ESTUDIOS",
+      "DURACION_TITULACION": "DURACION_TITULACION",
+      "DURACION_TOTAL": "DURACION_TOTAL",
+      "CODIGO_NIVEL_GLOBAL": "NIVEL_GLOBAL",
+      "CODIGO_NIVEL_CARRERA": "NIVEL_CARRERA",
+      "VIGENCIA": "VIGENCIA"
+    },
+    "category_translation": {
+      "MODALIDAD": {
+        "1": "Presencial",
+        "2": "Semipresencial",
+        "3": "No Presencial"
+      },
+      "CODIGO_JORNADA": {
+        "1": "Diurna",
+        "2": "Vespertina",
+        "3": "Semipresencial",
+        "4": "A Distancia"
+      },
+      "CODIGO_TIPO_CARRERA": {
+        "1": "Plan Regular",
+        "2": "Plan Especial",
+        "3": "Plan Regular de Continuidad"
+      },
+      "CODIGO_NIVEL_GLOBAL": {
+        "1": "Pregrado",
+        "2": "Postgrado",
+        "3": "Postítulo"
+      },
+      "CODIGO_NIVEL_CARRERA": {
+        "1": "Técnico de Nivel Superior",
+        "2": "Profesional Sin Licenciatura",
+        "5": "Diplomado (desde un semestre)"
+      },
+      "VIGENCIA": {
+        "1": "Vigente con estudiantes nuevos",
+        "2": "Vigente sin estudiantes nuevos"
+      }
+    },
+    "comparisons": 1860,
+    "differences": [],
+    "level_domains_observed": {
+      "CODIGO_NIVEL_GLOBAL": [
+        "1",
+        "3"
+      ],
+      "CODIGO_NIVEL_CARRERA": [
+        "1",
+        "2",
+        "5"
+      ]
+    },
+    "semantic_scope": "Códigos del producto histórico según glosario2010–2026; no es validación del instructivo de cargaCFT/IP2026. Solo se prueba equivalencia de los valores observados."
+  },
+  "candidate_correction_pending": {
+    "field": "relacion_inicio_declarado_vs_primera_oferta_por_fila",
+    "current_label": "NO_ENTERO",
+    "expected_label": "VALOR_CERO_SIN_ANIO",
+    "records": 8,
+    "actual_source_years": [
+      "OFE_2011"
+    ],
+    "source_examples": [
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C1J1V1",
+        "source_row": "369895"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C1J2V1",
+        "source_row": "369896"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C2J1V1",
+        "source_row": "369897"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C2J2V1",
+        "source_row": "369898"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C3J1V1",
+        "source_row": "369899"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C3J2V1",
+        "source_row": "369900"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C6J1V1",
+        "source_row": "369901"
+      },
+      {
+        "ANO": "OFE_2011",
+        "code": "I162S2C6J2V1",
+        "source_row": "369902"
+      }
+    ],
+    "note": "Root ya corrigió el generador para la ejecución final; el candidato leído aún contiene la etiqueta anterior."
+  }
+}

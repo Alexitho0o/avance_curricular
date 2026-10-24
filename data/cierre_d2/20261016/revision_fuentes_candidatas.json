@@ -1,0 +1,111 @@
+{
+  "catalogo_planes": {
+    "fuente": {
+      "id_h1": "umas_planes_re_co",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "sheet": "BBDD Bruta"
+    },
+    "copia_completa": "data/cierre_d2/20261016/fuentes/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+    "hoja": "BBDD Bruta",
+    "filas_datos": 11438,
+    "columnas": [
+      "Codcarr",
+      "Nombre_L",
+      "CODPESTUD",
+      "NOMPESTUD",
+      "CODRAMO",
+      "NOMBRE",
+      "REGIMEN",
+      "TIPO",
+      "SESIONES",
+      "PORC_NOTA_PRES",
+      "PORC_NOTA_EXam",
+      "NIVEL",
+      "CREDITO",
+      "Clase",
+      "Orden",
+      "RamoEquiv",
+      "DescRamoEquiv",
+      "RamoReq",
+      "DescRamoReq",
+      "RegimenReq",
+      "TipoReq",
+      "SesionesReq",
+      "Sede",
+      "ORDENRAMO",
+      "HOR_TEO",
+      "HOR_PRAC",
+      "HOR_AYUD",
+      "SIGLA",
+      "NroLinea"
+    ],
+    "filas_cilog": 47,
+    "planes_cilog": [
+      "CILOG20241"
+    ],
+    "fechas_vigencia_explicitamente_localizadas": [],
+    "limite": "Listado de asignaturas y planes; no documento de apertura ni prueba de vigencia histórica por estudiante."
+  },
+  "reporte_4262_2025": {
+    "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/2025 - 1207/4262 MATRICULA 2025 - Reporte con detalle del estado (inicial final) de cada registro de la carga de matrícula.csv",
+    "sha256": "a0cb6a20c342dad20316913287e8771d2cbc70f97978980c3a7c22ae17682d0b",
+    "columnas": [
+      "RUT",
+      "NOMBRE_COMPLETO",
+      "CODIGO_IES_NUM",
+      "NOMBRE_IES",
+      "VIGENCIA_CARGA",
+      "NOMBRE_IES_DUPLICADA",
+      "ESTADO_INICIAL",
+      "RESOLUCION_DUPLICADO",
+      "ACTIVAR_DESACTIVAR",
+      "ESTADO_FINAL",
+      "FECHA_CARGA",
+      "FECHA_MODIFICACION_MANTENEDOR",
+      "NOMBRE_USUARIO_MANTENEDOR"
+    ],
+    "filas": 2535,
+    "lectura": "COMPLETA_EN_MEMORIA_SIN_EXPORTAR_PERSONAS",
+    "conclusion": "NO_CONTIENE_CODIGO_CARRERA_NI_PLAN; no permite atribuir matrícula a CILOG ni resolver versión."
+  },
+  "extracto_11248": {
+    "path": "/Users/alexi/Downloads/2025/DATOSDEALUMNOS_11248.xlsx",
+    "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+    "filas_leidas": 14637,
+    "cilog_filas": 49,
+    "cilog_filas_coincidentes_identidad_expediente_carrera": 49,
+    "transiciones_agregadas": [
+      {
+        "ingreso_11248": "2024",
+        "ingreso_12023": "2024",
+        "matricula_11248": "2024",
+        "matricula_12023": "2024",
+        "filas": 3
+      },
+      {
+        "ingreso_11248": "2025",
+        "ingreso_12023": "2025",
+        "matricula_11248": "2025",
+        "matricula_12023": "2025",
+        "filas": 8
+      },
+      {
+        "ingreso_11248": "2025",
+        "ingreso_12023": "2025",
+        "matricula_11248": "2026",
+        "matricula_12023": "2026",
+        "filas": 11
+      },
+      {
+        "ingreso_11248": "2026",
+        "ingreso_12023": "2026",
+        "matricula_11248": "2026",
+        "matricula_12023": "2026",
+        "filas": 27
+      }
+    ],
+    "corte_temporal": "NO_ACREDITADO_POR_NOMBRE_DE_ARCHIVO",
+    "limite": "Comparación de extractos, no historial certificado; no aporta por sí solo código SIES."
+  }
+}

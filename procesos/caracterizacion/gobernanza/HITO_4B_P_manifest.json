@@ -1,0 +1,63 @@
+{
+  "hito": "HITO 4B-P",
+  "fecha": "2026-07-15",
+  "rama": "main",
+  "head_inicial": "2c35809bf3fc7e2ad05c9dd159881434f04bbe32",
+  "head_final": "2c35809bf3fc7e2ad05c9dd159881434f04bbe32",
+  "archivos_modificados": [
+    "analisis_sectorizado_encuesta_ac.py",
+    "caracterizacion.py"
+  ],
+  "archivos_nuevos": [
+    "caracterizacion_rut.py",
+    "caracterizacion_retencion.py",
+    "scripts/auditar_hito_4b_p.py",
+    "tests/test_hito4b_sectorizado_sies_retencion.py",
+    "gobernanza/HITO_4B_P.md",
+    "gobernanza/HITO_4B_P_manifest.json"
+  ],
+  "pruebas": {
+    "py_compile": "OK",
+    "bash_n": "OK",
+    "pytest": "173 passed, 86 subtests passed",
+    "git_diff_check": "OK",
+    "auditor_hito_4b_p": "OK"
+  },
+  "resultados_regresion": {
+    "run_dir": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_161137",
+    "codigo_salida": 0,
+    "pipeline_completo": "SI",
+    "ultimo_bloque": "BLOQUE 12",
+    "modo_corte": "NINGUNO"
+  },
+  "salidas": {
+    "sectorizado": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_161137/02_SALIDAS/ENCUESTA_CARACTERIZACION_2026_P2_20260715_ANALISIS_SECTORIZADO_AC.xlsx",
+    "auditoria_sectorizado": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_161137/02_SALIDAS/AUDITORIA_CALIDAD_SECTORIZADO_AC_2026_P2_20260715.xlsx",
+    "cruce_sies": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_161137/02_SALIDAS/CRUCE_SIES_2026_P2_20260715.xlsx",
+    "kpi_academicos": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_161137/02_SALIDAS/KPI_ACADEMICOS_2026_P2_20260715.xlsx",
+    "manifest_ejecucion": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_161137/04_AUDITORIA/manifest_ejecucion.json"
+  },
+  "conteos": {
+    "sectorizado_filas": 627,
+    "sectorizado_si": 285,
+    "sectorizado_incompleto": 2,
+    "sectorizado_no": 340,
+    "sectorizado_con_ac": 506,
+    "sectorizado_sin_ac": 121,
+    "sies_filas": 20961,
+    "sies_match_programa_anio": 4228,
+    "sies_sin_match": 16733,
+    "retencion_cohorte_elegible": 117,
+    "retencion_retenidos_institucionales": 0,
+    "retencion_pct": 0.0
+  },
+  "advertencias": [
+    "SIES validado con advertencias: match disponible por programa-año, no por identidad persona.",
+    "Retención 2025 P2 -> 2026 P2 tiene 0 retenidos en cohorte elegible de 117; se registra advertencia de plausibilidad.",
+    "Comparativo de retención global queda NO_COMPARABLE por ausencia de cohorte comparable previa."
+  ],
+  "estado_sectorizado": "VALIDADO",
+  "estado_sies": "VALIDADO_CON_ADVERTENCIAS",
+  "estado_retencion": "VALIDADO_CON_ADVERTENCIAS",
+  "dictamen": "COMPLETADO_CON_OBSERVACIONES"
+}

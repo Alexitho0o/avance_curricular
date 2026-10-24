@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "fecha_revision": "2026-10-15",
+  "institution": "162",
+  "coverage_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "current_year": 2026,
+  "sources": {
+    "historico_xlsx": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/01_fuentes_oficiales/historico_comparativo_sies_162/20260817_161807_sies_historico_2010_2026/Oferta_Academica_2010_al_2026_SIES_05_06_2026_WEB_E.xlsx",
+      "sha256": "94d51a6752b40adb45c8eba65786ee8aad9f6667d15b3d07273a969ec4faed77",
+      "inventario_h1_id": "oferta_OFERTA_HISTORICA_SIES"
+    },
+    "historico_tsv": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/historico_comparativo_sies_162/REGISTROS_HISTORICO_SIES_162_20260817_161944.tsv",
+      "sha256": "c3bc04a39816792c144e846c74da723b2c842627d5724141e1802a82407f455a",
+      "inventario_h1_id": "oferta_OFERTA_HISTORICA_DERIVADO_162"
+    },
+    "oferta_2026": {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/oferta 2026.xlsx",
+      "sha256": "01652009ed30d19024894ab9a4e7645d7f70074d8109c4a4b30d4cb9ec275bf1",
+      "inventario_h1_id": "oferta_OFERTA_2026_USUARIO"
+    },
+    "glosario": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/01_fuentes_oficiales/historico_comparativo_sies_162/20260817_161807_sies_historico_2010_2026/Glosario_Oferta_Academica_2010_al_2026_SIES_WEB_EE-1.pdf",
+      "sha256": "ea7d518b719aa2d494e5a10c77b9144d25496440999fbfe4feec9bd090f7c046",
+      "inventario_h1_id": "oferta_GLOSARIO_OFERTA_HISTORICA"
+    },
+    "mrun_anual": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/historia_codigo_anio.tsv",
+      "sha256": "2c132873c57d65b661d03c22ce62b6c11a45305015b4cfda91a1f8f250658058"
+    },
+    "manifest_fase2": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/manifest.json",
+      "sha256": "466c1990f88a09b590beb7a5b43e16000b9a5b822b489fe047e5b137fccfaded"
+    },
+    "verificacion_extraccion": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/verificacion_original_completa.json",
+      "sha256": "bf8d73ed9b9af58a1ca360d2e8c7f819105eac43423f5d7aec81d618a5107db2"
+    },
+    "busqueda_cobertura": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/busqueda_cobertura.json",
+      "sha256": "24890b5d536f054c09a5fc83b46409a78dc9d627276f254d20fb34bcb113665c"
+    }
+  },
+  "reglas_comparacion": {
+    "oferta_mrun": "Año y Código Único exactos; atributos con originales preservados, comparación sin tildes/caja/espacios repetidos; VIGENCIA alumnos=estudiantes. Vacíos separados.",
+    "oferta2026": "Nombre literal exacto y 15 campos; categorías del esquema de publicación histórica. Nivel Global 3=Postítulo; no valida instructivo de carga CFT/IP2026 que usa2."
+  },
+  "normativa": "Glosario histórico p2/version e inicio; p3-4 niveles, vigencia. Diferencias con instructivo2026 y enlaces primarios en busqueda_cobertura.json."
+}

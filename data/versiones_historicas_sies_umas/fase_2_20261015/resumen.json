@@ -1,0 +1,79 @@
+{
+  "complete_criteria_groups_with_multiple_versions": 66,
+  "complete_observation_keys": 24382,
+  "distinct_mrun_in_memory_only": 11265,
+  "families_first_observed_without_v1": [
+    "I162S2C22J4",
+    "I162S2C90J2"
+  ],
+  "families_with_multiple_versions": 21,
+  "family_years_with_coexisting_versions": 83,
+  "limits": [
+    "No se asigna versión UMAS ni se prueba actualización de malla.",
+    "La causa de cambios SIES, correcciones o continuidad requiere contraste con otras fuentes.",
+    "Primera aparición no prueba inicio real; ausencia no prueba cierre, abandono o reingreso.",
+    "No se enlazaron personas MRUN con RUT/CODCLI de UMAS.",
+    "La unicidad del identificador se evalúa en esta instantánea; no acredita estabilidad entre entregas."
+  ],
+  "milestone": "H2_HISTORIA_OBSERVADA_RECONSTRUIDA",
+  "modern_families": 75,
+  "observations": 24386,
+  "observations_without_mrun": 4,
+  "person_years_with_multiple_programs": 181,
+  "phase": 2,
+  "program_codes": 106,
+  "same_code_pairs_with_any_attribute_change": 4882,
+  "source": {
+    "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+    "row_locator": "registro_csv empieza en2 con encabezado en1; linea_final_csv usa csv.reader.line_num.",
+    "sha256": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd"
+  },
+  "source_year_order_decreases": 1,
+  "transition_counts_all_observed_pairs": {
+    "CAMBIO_CARRERA": 782,
+    "CAMBIO_CARRERA_Y_JORNADA": 352,
+    "CAMBIO_CON_CODIGO_HEREDADO": 380,
+    "CAMBIO_JORNADA": 646,
+    "CAMBIO_SEDE_Y_CARRERA_Y_JORNADA": 1,
+    "CAMBIO_VERSION_AUMENTA": 598,
+    "CAMBIO_VERSION_DISMINUYE": 80,
+    "CONJUNTOS_CON_MULTIMATRICULA_SIN_EMPAREJAR": 287,
+    "MISMO_CODIGO": 9810
+  },
+  "transition_counts_contiguous_years": {
+    "CAMBIO_CARRERA": 521,
+    "CAMBIO_CARRERA_Y_JORNADA": 107,
+    "CAMBIO_CON_CODIGO_HEREDADO": 339,
+    "CAMBIO_JORNADA": 560,
+    "CAMBIO_SEDE_Y_CARRERA_Y_JORNADA": 1,
+    "CAMBIO_VERSION_AUMENTA": 553,
+    "CAMBIO_VERSION_DISMINUYE": 78,
+    "CONJUNTOS_CON_MULTIMATRICULA_SIN_EMPAREJAR": 275,
+    "MISMO_CODIGO": 9488
+  },
+  "transitions_between_observed_years": 12936,
+  "transitions_with_unobserved_years_between": 1014,
+  "units": "Observaciones=filas de matrícula; códigos y familias=programas; transiciones=pares de años observados de una máscara. Unidades no sumables.",
+  "years_observed": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

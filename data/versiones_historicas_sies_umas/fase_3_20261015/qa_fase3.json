@@ -1,0 +1,57 @@
+{
+  "fase": 3,
+  "fecha": "2026-10-15",
+  "estado": "PASS_CON_BRECHA_COBERTURA_2007_2009",
+  "pruebas_sinteticas": {
+    "total": 19,
+    "pasaron": 19,
+    "comando": "python3 -m unittest discover -s tests -p test_oferta_historica_sies.py -v",
+    "script": "/Users/alexi/Documents/GitHub/avance_curricular/tests/test_oferta_historica_sies.py",
+    "sha256": "7fc44b88a7d4c6670fd6070bc0dc1208228efb62ff3406a965463284fa8c1171"
+  },
+  "conciliacion_independiente_final": {
+    "filas_oferta": true,
+    "codigos_oferta": true,
+    "coexistencias": true,
+    "claves_compartidas": true,
+    "solo_oferta_anual": true,
+    "fuera_cobertura_anual": true,
+    "solo_oferta_codigos": true,
+    "sin_contradicciones_mrun": true,
+    "oferta2026_15_campos": true,
+    "inicio_cero_no_fecha": true,
+    "inicio_cero_2011": true,
+    "solo_oferta_por_nivel": true
+  },
+  "reproduccion_archivos": {
+    "cambios_atributos.json": true,
+    "cobertura_codigos.tsv": true,
+    "coexistencias.json": true,
+    "comparacion_atributos_mrun.tsv": true,
+    "comparacion_oferta_2026.tsv": true,
+    "cruce_oferta_mrun_anual.tsv": true,
+    "ejemplos_academicos.json": true,
+    "fuentes.json": true,
+    "historia_codigos.json": true,
+    "inicio_declarado_vs_observado.json": true,
+    "oferta_codigo_anio.tsv": true,
+    "resumen.json": true,
+    "versiones_por_familia.json": true,
+    "manifest.json": true
+  },
+  "cantidad_archivos_reproducidos": 14,
+  "hashes_verificados": true,
+  "artefactos_auditoria": {
+    "verificacion_original_completa.json": "bf8d73ed9b9af58a1ca360d2e8c7f819105eac43423f5d7aec81d618a5107db2",
+    "auditoria_independiente.json": "d809ff8bbecec3edbf43231f970658797d6b05e572822817cedf31e205e33ac9",
+    "qa_candidato.json": "6316970b64e424eb166a6d5fdb928260feca3dfee825f115fbbc1ca93d4f7962",
+    "busqueda_cobertura.json": "24890b5d536f054c09a5fc83b46409a78dc9d627276f254d20fb34bcb113665c",
+    "control_fuentes_al_cierre.json": "e0031d2030e5a989211a6441034aa1b72c56be89bcf0c3cef02f540cd95b2d05"
+  },
+  "scripts": {
+    "scripts/verificar_extraccion_oferta_sies.py": "5f30d6871ba41246fda9f7680cce4775fe587f1a47b8ab698ce81d15caad5e47",
+    "scripts/reconstruir_oferta_historica_sies.py": "8603e87b92e459f3f3ef7e627ca6f0100f1ba1225d41c7f6ad3c629a247cdb76"
+  },
+  "correccion_candidato": "La etiqueta NO_ENTERO para inicio0 fue reemplazada por VALOR_CERO_SIN_ANIO; se verifica OFE_2011. qa_candidato.json se conserva como antecedente, no estado de la salida final.",
+  "limite": "H3 reconstruye oferta2010–2026. Oferta2007–2009 no localizada; plan/asignaciónUMAS y equivalencias siguen pendientes en fases4/5."
+}

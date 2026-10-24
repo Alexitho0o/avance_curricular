@@ -1,0 +1,819 @@
+{
+  "schema_version": "1.0",
+  "fase": 6,
+  "fecha_revision": "2026-10-15",
+  "estado": "PASS",
+  "alcance": "Consultas SIES exactas sobre unión anual de oferta_anual y mrun_anual de H5; no consulta de asignación UMAS ni enlace individual.",
+  "metodo": "Índices independientes por año+código literal y suma de filas_matricula; cada una de767claves se consulta mediante consultar_sies y se compara con el índice. Módulo auxiliar importado sin escritura de bytecode; ningún motor institucional ejecutado.",
+  "fuentes": [
+    {
+      "id": "maestro_h5",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+      "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+    },
+    {
+      "id": "manifest_h5",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/manifest.json",
+      "sha256": "ac2d0426ac80bd3b0b83d75b9be375273fc9937c68cbdfee850bf9bbfc0b7247"
+    },
+    {
+      "id": "resolvedor_h5",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/common/equivalencias_historicas.py",
+      "sha256": "990d23bab02c4f3b842d8e24ed860330f597324527258ddc9a48a29280c655ae"
+    },
+    {
+      "id": "contrato_h5",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_5_maestro_equivalencias.md",
+      "sha256": "4aa3f050e26d304e7d6d305b39398b2cc028ca36dd18fc3b660ae1a909873799"
+    },
+    {
+      "id": "contrato_h6",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_6_piloto_validacion_universo.md",
+      "sha256": "8a9b818bca4b1d34398cb4ed3422d95770850e0ef3f2706ff75465b87cada3dd"
+    }
+  ],
+  "unidades": {
+    "claves_anuales": "Número de pares año+código; cada par se consulta una vez.",
+    "codigos": "Códigos distintos en todo el período; no se suman con claves anuales.",
+    "registros_mrun_ponderados": "Suma de filas_matricula de los agregados; observaciones anuales de matrícula, NO personas únicas.",
+    "personas": "No calculadas ni exportadas; no se accedió a MRUN individual."
+  },
+  "cobertura": {
+    "anios_objetivo": [
+      2007,
+      2026
+    ],
+    "anios_oferta": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "anios_sin_cobertura_oferta": [
+      2007,
+      2008,
+      2009
+    ],
+    "claves_oferta": 747,
+    "claves_mrun": 472,
+    "claves_union": 767,
+    "claves_por_presencia": {
+      "MRUN_FUERA_COBERTURA_OFERTA": 20,
+      "AMBAS_FUENTES": 452,
+      "SOLO_OFERTA": 295
+    },
+    "registros_mrun_por_presencia": {
+      "MRUN_FUERA_COBERTURA_OFERTA": 2120,
+      "AMBAS_FUENTES": 22266,
+      "SOLO_OFERTA": 0
+    },
+    "consultas_por_estado": {
+      "SIN_OFERTA_ANUAL": 20,
+      "OFERTA_ANUAL_LOCALIZADA": 747
+    },
+    "registros_mrun_por_estado_consulta": {
+      "SIN_OFERTA_ANUAL": 2120,
+      "OFERTA_ANUAL_LOCALIZADA": 22266
+    },
+    "por_anio": [
+      {
+        "anio": 2007,
+        "claves_anuales": 4,
+        "cobertura": {
+          "MRUN_FUERA_COBERTURA_OFERTA": 4
+        },
+        "estados_consulta": {
+          "SIN_OFERTA_ANUAL": 4
+        },
+        "registros_mrun_por_estado": {
+          "SIN_OFERTA_ANUAL": 697
+        }
+      },
+      {
+        "anio": 2008,
+        "claves_anuales": 8,
+        "cobertura": {
+          "MRUN_FUERA_COBERTURA_OFERTA": 8
+        },
+        "estados_consulta": {
+          "SIN_OFERTA_ANUAL": 8
+        },
+        "registros_mrun_por_estado": {
+          "SIN_OFERTA_ANUAL": 705
+        }
+      },
+      {
+        "anio": 2009,
+        "claves_anuales": 8,
+        "cobertura": {
+          "MRUN_FUERA_COBERTURA_OFERTA": 8
+        },
+        "estados_consulta": {
+          "SIN_OFERTA_ANUAL": 8
+        },
+        "registros_mrun_por_estado": {
+          "SIN_OFERTA_ANUAL": 718
+        }
+      },
+      {
+        "anio": 2010,
+        "claves_anuales": 8,
+        "cobertura": {
+          "AMBAS_FUENTES": 8
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 8
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 800
+        }
+      },
+      {
+        "anio": 2011,
+        "claves_anuales": 8,
+        "cobertura": {
+          "AMBAS_FUENTES": 8
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 8
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 829
+        }
+      },
+      {
+        "anio": 2012,
+        "claves_anuales": 8,
+        "cobertura": {
+          "AMBAS_FUENTES": 8
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 8
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 886
+        }
+      },
+      {
+        "anio": 2013,
+        "claves_anuales": 14,
+        "cobertura": {
+          "AMBAS_FUENTES": 12,
+          "SOLO_OFERTA": 2
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 14
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1195
+        }
+      },
+      {
+        "anio": 2014,
+        "claves_anuales": 20,
+        "cobertura": {
+          "SOLO_OFERTA": 7,
+          "AMBAS_FUENTES": 13
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 20
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1180
+        }
+      },
+      {
+        "anio": 2015,
+        "claves_anuales": 16,
+        "cobertura": {
+          "SOLO_OFERTA": 2,
+          "AMBAS_FUENTES": 14
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 16
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1196
+        }
+      },
+      {
+        "anio": 2016,
+        "claves_anuales": 18,
+        "cobertura": {
+          "SOLO_OFERTA": 2,
+          "AMBAS_FUENTES": 16
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 18
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1077
+        }
+      },
+      {
+        "anio": 2017,
+        "claves_anuales": 23,
+        "cobertura": {
+          "SOLO_OFERTA": 5,
+          "AMBAS_FUENTES": 18
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 23
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1204
+        }
+      },
+      {
+        "anio": 2018,
+        "claves_anuales": 28,
+        "cobertura": {
+          "SOLO_OFERTA": 4,
+          "AMBAS_FUENTES": 24
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 28
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1088
+        }
+      },
+      {
+        "anio": 2019,
+        "claves_anuales": 53,
+        "cobertura": {
+          "SOLO_OFERTA": 8,
+          "AMBAS_FUENTES": 45
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 53
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1112
+        }
+      },
+      {
+        "anio": 2020,
+        "claves_anuales": 58,
+        "cobertura": {
+          "SOLO_OFERTA": 10,
+          "AMBAS_FUENTES": 48
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 58
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 985
+        }
+      },
+      {
+        "anio": 2021,
+        "claves_anuales": 59,
+        "cobertura": {
+          "SOLO_OFERTA": 13,
+          "AMBAS_FUENTES": 46
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 59
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1105
+        }
+      },
+      {
+        "anio": 2022,
+        "claves_anuales": 61,
+        "cobertura": {
+          "SOLO_OFERTA": 35,
+          "AMBAS_FUENTES": 26
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 61
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1033
+        }
+      },
+      {
+        "anio": 2023,
+        "claves_anuales": 70,
+        "cobertura": {
+          "SOLO_OFERTA": 48,
+          "AMBAS_FUENTES": 22
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 70
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1161
+        }
+      },
+      {
+        "anio": 2024,
+        "claves_anuales": 77,
+        "cobertura": {
+          "SOLO_OFERTA": 49,
+          "AMBAS_FUENTES": 28
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 77
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 1468
+        }
+      },
+      {
+        "anio": 2025,
+        "claves_anuales": 102,
+        "cobertura": {
+          "SOLO_OFERTA": 52,
+          "AMBAS_FUENTES": 50
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 102
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 2522
+        }
+      },
+      {
+        "anio": 2026,
+        "claves_anuales": 124,
+        "cobertura": {
+          "SOLO_OFERTA": 58,
+          "AMBAS_FUENTES": 66
+        },
+        "estados_consulta": {
+          "OFERTA_ANUAL_LOCALIZADA": 124
+        },
+        "registros_mrun_por_estado": {
+          "OFERTA_ANUAL_LOCALIZADA": 3425
+        }
+      }
+    ]
+  },
+  "universos_codigo": {
+    "union": 141,
+    "oferta": 139,
+    "mrun": 106,
+    "solo_oferta_count": 35,
+    "solo_oferta": [
+      "I162S2C101J4V1",
+      "I162S2C102J4V1",
+      "I162S2C103J4V1",
+      "I162S2C104J4V1",
+      "I162S2C105J4V1",
+      "I162S2C111J4V2",
+      "I162S2C112J4V2",
+      "I162S2C113J4V2",
+      "I162S2C11J4V1",
+      "I162S2C124J4V2",
+      "I162S2C125J4V2",
+      "I162S2C13J1V1",
+      "I162S2C13J2V1",
+      "I162S2C21J1V1",
+      "I162S2C21J2V1",
+      "I162S2C22J4V1",
+      "I162S2C23J1V1",
+      "I162S2C23J2V1",
+      "I162S2C24J1V1",
+      "I162S2C24J2V1",
+      "I162S2C3J1V2",
+      "I162S2C40J2V1",
+      "I162S2C41J2V1",
+      "I162S2C48J4V1",
+      "I162S2C64J4V1",
+      "I162S2C65J4V1",
+      "I162S2C69J4V1",
+      "I162S2C79J1V1",
+      "I162S2C86J4V2",
+      "I162S2C88J4V2",
+      "I162S2C90J2V1",
+      "I162S2C96J4V1",
+      "I162S2C97J4V1",
+      "I162S2C98J4V1",
+      "I162S2C99J4V1"
+    ],
+    "solo_mrun_count": 2,
+    "solo_mrun": [
+      "I162M2008N1",
+      "I162M2008N3"
+    ],
+    "heredados_count": 2,
+    "heredados": [
+      "I162M2008N1",
+      "I162M2008N3"
+    ],
+    "oferta_historica_sin2026_count": 15,
+    "oferta_historica_sin2026": [
+      "I162S2C13J1V1",
+      "I162S2C13J2V1",
+      "I162S2C1J4V1",
+      "I162S2C21J1V1",
+      "I162S2C21J2V1",
+      "I162S2C23J1V1",
+      "I162S2C23J2V1",
+      "I162S2C24J1V1",
+      "I162S2C24J2V1",
+      "I162S2C3J2V2",
+      "I162S2C3J4V1",
+      "I162S2C41J2V1",
+      "I162S2C46J2V2",
+      "I162S2C46J4V2",
+      "I162S2C6J4V1"
+    ],
+    "union_sin_oferta2026_count": 17,
+    "union_sin_oferta2026": [
+      "I162M2008N1",
+      "I162M2008N3",
+      "I162S2C13J1V1",
+      "I162S2C13J2V1",
+      "I162S2C1J4V1",
+      "I162S2C21J1V1",
+      "I162S2C21J2V1",
+      "I162S2C23J1V1",
+      "I162S2C23J2V1",
+      "I162S2C24J1V1",
+      "I162S2C24J2V1",
+      "I162S2C3J2V2",
+      "I162S2C3J4V1",
+      "I162S2C41J2V1",
+      "I162S2C46J2V2",
+      "I162S2C46J4V2",
+      "I162S2C6J4V1"
+    ],
+    "limite": "Sin oferta2026 describe ausencia en el corte; no prueba cierre ni retirada formal. Solo oferta significa sin matrícula en este extractoMRUN, no inexistencia de estudiantes."
+  },
+  "comprobacion_atributos": {
+    "consultas_oferta_con_nombre_historico_y2026_preservados": 747,
+    "modalidad_ausente_preservada": 8,
+    "sector_no_usado_para_resolver": true
+  },
+  "checks": {
+    "maestro_corresponde_manifest": true,
+    "modulo_corresponde_manifest": true,
+    "oferta_claves_unicas": true,
+    "mrun_claves_unicas": true,
+    "universo_anual_preservado": true,
+    "consultas_exactas_sin_fallos": true,
+    "observaciones_ponderadas_reconciliadas": true,
+    "nombres_y_atributos_oficiales_preservados": true,
+    "sin_clasificacion_umas_acreditada": true,
+    "casos_fuera_union_y_negativos_correctos": true,
+    "maestro_no_mutado_en_memoria": true,
+    "fuentes_maestro_modulo_sin_escritura": true
+  },
+  "fallos": [],
+  "ejemplos_estratificados": [
+    {
+      "estrato": "OFERTA_Y_MRUN_2026",
+      "entrada": {
+        "anio": 2026,
+        "codigo_unico": "I162S2C77J4V2"
+      },
+      "estado": "OFERTA_ANUAL_LOCALIZADA",
+      "motivo": null,
+      "codigo_unico_devuelto": "I162S2C77J4V2",
+      "oferta": {
+        "anio": 2026,
+        "codigo_unico": "I162S2C77J4V2",
+        "componentes_sies": {
+          "carrera": "77",
+          "institucion": "162",
+          "jornada": "4",
+          "sede": "2",
+          "version": "2"
+        },
+        "duracion_estudios": "4",
+        "duracion_total": "4",
+        "fuente": {
+          "fila_original": 26512,
+          "hoja": "in",
+          "id": "oferta_anual",
+          "localizador": "fila TSV 719",
+          "original_id": "historico_xlsx"
+        },
+        "jornada": "A Distancia",
+        "modalidad": "No Presencial",
+        "modalidad_literal": "No Presencial",
+        "nivel_global": "Pregrado",
+        "nombre_carrera": "INGENIERIA EN LOGISTICA",
+        "nombre_oferta_2026": "INGENIERIA EN LOGISTICA",
+        "plan_especial": "NO APLICA",
+        "tipo_plan_sies": "Plan Regular de Continuidad",
+        "vigencia": "Vigente sin estudiantes nuevos"
+      },
+      "registros_mrun": 32,
+      "localizadores_mrun_ejemplo": [
+        "20998"
+      ],
+      "acredita_asignacion_individual": false,
+      "acredita_equivalencia_umas": false
+    },
+    {
+      "estrato": "SOLO_OFERTA_CONTINUIDAD",
+      "entrada": {
+        "anio": 2026,
+        "codigo_unico": "I162S2C90J2V1"
+      },
+      "estado": "OFERTA_ANUAL_LOCALIZADA",
+      "motivo": null,
+      "codigo_unico_devuelto": "I162S2C90J2V1",
+      "oferta": {
+        "anio": 2026,
+        "codigo_unico": "I162S2C90J2V1",
+        "componentes_sies": {
+          "carrera": "90",
+          "institucion": "162",
+          "jornada": "2",
+          "sede": "2",
+          "version": "1"
+        },
+        "duracion_estudios": "4",
+        "duracion_total": "4",
+        "fuente": {
+          "fila_original": 26530,
+          "hoja": "in",
+          "id": "oferta_anual",
+          "localizador": "fila TSV 737",
+          "original_id": "historico_xlsx"
+        },
+        "jornada": "Vespertina",
+        "modalidad": "Presencial",
+        "modalidad_literal": "Presencial",
+        "nivel_global": "Pregrado",
+        "nombre_carrera": "NATUROPATIA",
+        "nombre_oferta_2026": "NATUROPATIA",
+        "plan_especial": "NO APLICA",
+        "tipo_plan_sies": "Plan Regular de Continuidad",
+        "vigencia": "Vigente sin estudiantes nuevos"
+      },
+      "registros_mrun": 0,
+      "localizadores_mrun_ejemplo": [],
+      "acredita_asignacion_individual": false,
+      "acredita_equivalencia_umas": false
+    },
+    {
+      "estrato": "HISTORICO_SIN_NOMBRE2026",
+      "entrada": {
+        "anio": 2020,
+        "codigo_unico": "I162S2C46J2V2"
+      },
+      "estado": "OFERTA_ANUAL_LOCALIZADA",
+      "motivo": null,
+      "codigo_unico_devuelto": "I162S2C46J2V2",
+      "oferta": {
+        "anio": 2020,
+        "codigo_unico": "I162S2C46J2V2",
+        "componentes_sies": {
+          "carrera": "46",
+          "institucion": "162",
+          "jornada": "2",
+          "sede": "2",
+          "version": "2"
+        },
+        "duracion_estudios": "5",
+        "duracion_total": "5",
+        "fuente": {
+          "fila_original": 179472,
+          "hoja": "in",
+          "id": "oferta_anual",
+          "localizador": "fila TSV 238",
+          "original_id": "historico_xlsx"
+        },
+        "jornada": "Vespertina",
+        "modalidad": "Presencial",
+        "modalidad_literal": "Presencial",
+        "nivel_global": "Pregrado",
+        "nombre_carrera": "INGENIERIA EN CIBERSEGURIDAD",
+        "nombre_oferta_2026": null,
+        "plan_especial": "NO APLICA",
+        "tipo_plan_sies": "Plan Regular de Continuidad",
+        "vigencia": "Vigente con estudiantes nuevos"
+      },
+      "registros_mrun": 22,
+      "localizadores_mrun_ejemplo": [
+        "12039"
+      ],
+      "acredita_asignacion_individual": false,
+      "acredita_equivalencia_umas": false
+    },
+    {
+      "estrato": "HEREDADO_SIN_COBERTURA",
+      "entrada": {
+        "anio": 2008,
+        "codigo_unico": "I162M2008N1"
+      },
+      "estado": "SIN_OFERTA_ANUAL",
+      "motivo": "SIN_COBERTURA_ANUAL",
+      "codigo_unico_devuelto": null,
+      "oferta": null,
+      "registros_mrun": 69,
+      "localizadores_mrun_ejemplo": [
+        "11"
+      ],
+      "acredita_asignacion_individual": false,
+      "acredita_equivalencia_umas": false
+    },
+    {
+      "estrato": "MODERNO_MRUN_SIN_COBERTURA",
+      "entrada": {
+        "anio": 2007,
+        "codigo_unico": "I162S2C1J2V1"
+      },
+      "estado": "SIN_OFERTA_ANUAL",
+      "motivo": "SIN_COBERTURA_ANUAL",
+      "codigo_unico_devuelto": null,
+      "oferta": null,
+      "registros_mrun": 158,
+      "localizadores_mrun_ejemplo": [
+        "20266"
+      ],
+      "acredita_asignacion_individual": false,
+      "acredita_equivalencia_umas": false
+    },
+    {
+      "estrato": "MODALIDAD2010_AUSENTE",
+      "entrada": {
+        "anio": 2010,
+        "codigo_unico": "I162S2C1J1V1"
+      },
+      "estado": "OFERTA_ANUAL_LOCALIZADA",
+      "motivo": null,
+      "codigo_unico_devuelto": "I162S2C1J1V1",
+      "oferta": {
+        "anio": 2010,
+        "codigo_unico": "I162S2C1J1V1",
+        "componentes_sies": {
+          "carrera": "1",
+          "institucion": "162",
+          "jornada": "1",
+          "sede": "2",
+          "version": "1"
+        },
+        "duracion_estudios": "8",
+        "duracion_total": "8",
+        "fuente": {
+          "fila_original": 388347,
+          "hoja": "in",
+          "id": "oferta_anual",
+          "localizador": "fila TSV 2",
+          "original_id": "historico_xlsx"
+        },
+        "jornada": "Diurna",
+        "modalidad": null,
+        "modalidad_literal": "",
+        "nivel_global": "Pregrado",
+        "nombre_carrera": "INGENIERIA DE EJECUCION EN COMPUTACION E INFORMATICA",
+        "nombre_oferta_2026": "INGENIERIA EN INFORMATICA",
+        "plan_especial": "NO APLICA",
+        "tipo_plan_sies": "Plan Regular",
+        "vigencia": "Vigente con estudiantes nuevos"
+      },
+      "registros_mrun": 26,
+      "localizadores_mrun_ejemplo": [
+        "1440"
+      ],
+      "acredita_asignacion_individual": false,
+      "acredita_equivalencia_umas": false
+    }
+  ],
+  "consultas_adversas": [
+    {
+      "entrada": {
+        "anio": 2026,
+        "codigo_unico": "I162S2C46J2V2"
+      },
+      "estado_obtenido": "SIN_OFERTA_ANUAL",
+      "motivo_obtenido": "CODIGO_NO_OBSERVADO",
+      "estado_esperado": "SIN_OFERTA_ANUAL",
+      "motivo_esperado": "CODIGO_NO_OBSERVADO",
+      "pass": true
+    },
+    {
+      "entrada": {
+        "anio": 2008,
+        "codigo_unico": "I162S2C77J4V2"
+      },
+      "estado_obtenido": "SIN_OFERTA_ANUAL",
+      "motivo_obtenido": "SIN_COBERTURA_ANUAL",
+      "estado_esperado": "SIN_OFERTA_ANUAL",
+      "motivo_esperado": "SIN_COBERTURA_ANUAL",
+      "pass": true
+    },
+    {
+      "entrada": {
+        "anio": 2027,
+        "codigo_unico": "I162S2C77J4V2"
+      },
+      "estado_obtenido": "FUERA_AMBITO",
+      "motivo_obtenido": null,
+      "estado_esperado": "FUERA_AMBITO",
+      "motivo_esperado": null,
+      "pass": true
+    },
+    {
+      "entrada": {
+        "anio": 2026,
+        "codigo_unico": ""
+      },
+      "estado_obtenido": "ENTRADA_INCOMPLETA",
+      "motivo_obtenido": null,
+      "estado_esperado": "ENTRADA_INCOMPLETA",
+      "motivo_esperado": null,
+      "pass": true
+    },
+    {
+      "entrada": {
+        "anio": "2026",
+        "codigo_unico": "I162S2C77J4V2"
+      },
+      "estado_obtenido": "ENTRADA_INCOMPLETA",
+      "motivo_obtenido": null,
+      "estado_esperado": "ENTRADA_INCOMPLETA",
+      "motivo_esperado": null,
+      "pass": true
+    },
+    {
+      "entrada": {
+        "anio": true,
+        "codigo_unico": "I162S2C77J4V2"
+      },
+      "estado_obtenido": "ENTRADA_INCOMPLETA",
+      "motivo_obtenido": null,
+      "estado_esperado": "ENTRADA_INCOMPLETA",
+      "motivo_esperado": null,
+      "pass": true
+    },
+    {
+      "entrada": {
+        "anio": null,
+        "codigo_unico": "I162S2C77J4V2"
+      },
+      "estado_obtenido": "ENTRADA_INCOMPLETA",
+      "motivo_obtenido": null,
+      "estado_esperado": "ENTRADA_INCOMPLETA",
+      "motivo_esperado": null,
+      "pass": true
+    }
+  ],
+  "criterios_aceptacion_h6_sies": [
+    "Todas las 767 claves devuelven estado coherente con la oferta exacta del año, preservan el subconjunto MRUN y no acreditan equivalencia UMAS.",
+    "Las 747 filas oficiales devuelven todos sus atributos sin cambiar nombre histórico, nombre 2026, modalidad, jornada, tipo de plan, duración, vigencia o procedencia.",
+    "Distinguir ausencia de cobertura 2007–2009 de código no observado dentro de cobertura.",
+    "No extrapolar códigos de 2026 a otros años y conservar registros MRUN cuando no hay oferta.",
+    "Separar claves, programas y observaciones; no llamarlos personas o matrícula oficial.",
+    "Conservar las 24.386 observaciones MRUN por suma de pesos, incluidas las 2.120 fuera de cobertura de oferta.",
+    "Pasar casos de año fuera de ámbito, tipos inválidos y campos vacíos.",
+    "La aceptación técnica del piloto no habilita certificación de equivalencias ni asignación individual; registro efectivo H5 vacío."
+  ],
+  "condiciones_h7": {
+    "integracion_tecnica_posible": [
+      "Consumidor usa ruta/snapshot/manifest explícitos y mantiene contrato de estados.",
+      "ConsultaSIESexacta se integra como lectura de oferta, con límite acredita_equivalencia_umas=False.",
+      "El consumidor conserva motivo de ausencia, fila de origen, hash y año, sin inferir códigos para2007–2009.",
+      "Si existen fuentes futuras, nueva edición y pruebas; nunca fallback silencioso al catálogo activo."
+    ],
+    "certificacion_equivalencias_no_habilitada": [
+      "H5 tiene0reglas efectivas; éxito de consultaSIES no acredita planUMAS→SIES.",
+      "Asignación individual histórica sigue sin fuente temporal; el consumidor no puede promover candidatos.",
+      "Integrar técnicamente funciones no autoriza modificar motorescongelados ni regenerarExcelantesdeH7/H8 autorizadas."
+    ]
+  },
+  "contrato_h6": {
+    "estado": "REVISADO_COHERENTE_CON_AUDITORIA_SIES",
+    "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_6_piloto_validacion_universo.md",
+    "sha256": "8a9b818bca4b1d34398cb4ed3422d95770850e0ef3f2706ff75465b87cada3dd",
+    "sections_reviewed": [
+      "Alcance y unidades",
+      "Estados, controles y ejemplos",
+      "Entregables y aceptación H6"
+    ],
+    "assessment": "La unión anual exacta, preservación literal de atributos, pesos MRUN y separación de equivalencia coinciden con los controles independientes; no hay discrepancia de denominadores.",
+    "not_yet_verified": "Resultados reales del auxiliar H6 y sus distribuciones UMAS se revisarán cuando estén generados; esta auditoría acredita únicamente el eje SIES de la consulta H5."
+  },
+  "privacidad": {
+    "identidades_exportadas": false,
+    "notas_individuales_exportadas": false,
+    "solo_dimensiones_y_conteos": true
+  },
+  "preservacion": {
+    "maestro_h5_modificado": false,
+    "modulos_modificados": false,
+    "motores_institucionales_ejecutados": false,
+    "excel_escrito": false
+  }
+}

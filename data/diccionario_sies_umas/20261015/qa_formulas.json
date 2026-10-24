@@ -1,0 +1,80 @@
+[
+  {
+    "test": "Nombre literal oferta",
+    "cell": "B7",
+    "expected": "INGENIERIA EN LOGISTICA",
+    "actual": "INGENIERIA EN LOGISTICA"
+  },
+  {
+    "test": "CILOG ambiguo sin versión",
+    "cell": "B29",
+    "expected": 2,
+    "actual": 2
+  },
+  {
+    "test": "No seleccionar ambiguo",
+    "cell": "B31",
+    "expected": "",
+    "actual": ""
+  },
+  {
+    "test": "Versión explícita 1",
+    "cell": "B31",
+    "expected": "I162S2C77J4V1",
+    "actual": "I162S2C77J4V1"
+  },
+  {
+    "test": "Versión explícita 2",
+    "cell": "B31",
+    "expected": "I162S2C77J4V2",
+    "actual": "I162S2C77J4V2"
+  },
+  {
+    "test": "ILOG candidato único",
+    "cell": "B29",
+    "expected": 1,
+    "actual": 1
+  },
+  {
+    "test": "ILOG versión del puente",
+    "cell": "B31",
+    "expected": "I162S2C77J4V1",
+    "actual": "I162S2C77J4V1"
+  },
+  {
+    "test": "No extrapolar a 2025",
+    "cell": "B31",
+    "expected": "",
+    "actual": ""
+  },
+  {
+    "test": "Llave inexistente",
+    "cell": "B29",
+    "expected": 0,
+    "actual": 0
+  },
+  {
+    "test": "No inventar equivalencia",
+    "cell": "B31",
+    "expected": "",
+    "actual": ""
+  },
+  {
+    "test": "Campo pendiente",
+    "cell": "B30",
+    "expected": "Complete los cuatro campos UMAS",
+    "actual": "Complete los cuatro campos UMAS"
+  },
+  {
+    "test": "Código histórico fuera catálogo actual",
+    "cell": "B6",
+    "expected": 1,
+    "actual": 1
+  },
+  {
+    "test": "Código SIES inexistente",
+    "cell": "B6",
+    "expected": 0,
+    "actual": 0
+  }
+]

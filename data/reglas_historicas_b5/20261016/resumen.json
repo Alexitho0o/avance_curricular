@@ -1,0 +1,122 @@
+{
+  "hito": "B5",
+  "estado": "REGLAS_OBSERVADAS_Y_VALIDACION_EJECUTADAS",
+  "personas_construccion": 1876,
+  "personas_reserva": 474,
+  "observaciones_etiquetadas": 3116,
+  "exclusiones_observaciones": {
+    "SIN_ETIQUETA_DOCUMENTAL": 15928,
+    "SIN_GRUPO": 1124
+  },
+  "hipotesis": {
+    "K0": {
+      "reglas_construidas": 424,
+      "evaluacion_reserva": {
+        "SIN_REGLA": 42,
+        "COINCIDE": 560,
+        "CONFLICTO_CONSTRUCCION": 17,
+        "CONTRADICE": 1,
+        "OBSERVACIONES_RESERVA_SIN_CLAVE": 0
+      },
+      "estados_reglas": {
+        "OBSERVADA_SIN_RESERVA": 211,
+        "CORROBORADA_EN_RESERVA": 197,
+        "CONFLICTO_CONSTRUCCION": 15,
+        "CONTRADICCION_EN_RESERVA": 1
+      }
+    },
+    "K1": {
+      "reglas_construidas": 467,
+      "evaluacion_reserva": {
+        "SIN_REGLA": 50,
+        "COINCIDE": 553,
+        "CONFLICTO_CONSTRUCCION": 16,
+        "CONTRADICE": 1,
+        "OBSERVACIONES_RESERVA_SIN_CLAVE": 0
+      },
+      "estados_reglas": {
+        "OBSERVADA_SIN_RESERVA": 244,
+        "CORROBORADA_EN_RESERVA": 207,
+        "CONFLICTO_CONSTRUCCION": 15,
+        "CONTRADICCION_EN_RESERVA": 1
+      }
+    },
+    "K2": {
+      "reglas_construidas": 704,
+      "evaluacion_reserva": {
+        "SIN_REGLA": 86,
+        "COINCIDE": 521,
+        "CONTRADICE": 2,
+        "CONFLICTO_CONSTRUCCION": 11,
+        "OBSERVACIONES_RESERVA_SIN_CLAVE": 0
+      },
+      "estados_reglas": {
+        "OBSERVADA_SIN_RESERVA": 205,
+        "CORROBORADA_EN_RESERVA": 144,
+        "DATO_POSTERIOR_AL_CONTEXTO": 344,
+        "CONFLICTO_CONSTRUCCION": 9,
+        "CONTRADICCION_EN_RESERVA": 2
+      }
+    },
+    "K3": {
+      "reglas_construidas": 754,
+      "evaluacion_reserva": {
+        "SIN_REGLA": 99,
+        "COINCIDE": 508,
+        "CONTRADICE": 2,
+        "CONFLICTO_CONSTRUCCION": 11,
+        "OBSERVACIONES_RESERVA_SIN_CLAVE": 0
+      },
+      "estados_reglas": {
+        "OBSERVADA_SIN_RESERVA": 238,
+        "CORROBORADA_EN_RESERVA": 141,
+        "DATO_POSTERIOR_AL_CONTEXTO": 365,
+        "CONFLICTO_CONSTRUCCION": 8,
+        "CONTRADICCION_EN_RESERVA": 2
+      }
+    }
+  },
+  "transporte_2018_2020_a_2022": {
+    "K0": {
+      "COINCIDE": 152,
+      "SIN_REGLA": 720,
+      "CONTRADICE": 59,
+      "CONFLICTO_CONSTRUCCION": 6
+    },
+    "K1": {
+      "SIN_REGLA": 752,
+      "COINCIDE": 136,
+      "CONTRADICE": 43,
+      "CONFLICTO_CONSTRUCCION": 6
+    },
+    "K2": {
+      "COINCIDE": 140,
+      "SIN_REGLA": 741,
+      "CONTRADICE": 52,
+      "CONFLICTO_CONSTRUCCION": 4
+    },
+    "K3": {
+      "SIN_REGLA": 760,
+      "CONTRADICE": 45,
+      "COINCIDE": 128,
+      "CONFLICTO_CONSTRUCCION": 4
+    }
+  },
+  "contextos_multiples_b4": 16,
+  "contextos_sin_multiplicidad_tras_particion": {
+    "K0": 0,
+    "PERIODOINGRESO_UMAS": 0,
+    "MATRICULA_UMAS": 4,
+    "K3_UMAS": 5,
+    "SEM_ORIGINAL_SIES": 0,
+    "INGRESO_ACTUAL_SIES": 1,
+    "INGRESOS_SIES_COMPLETOS": 2
+  },
+  "reglas_efectivas_h5_promovidas": 0,
+  "modelo_seleccionado_para_produccion": null,
+  "limites": [
+    "Reserva por persona comparte fuentes institucionales; no es certificación formal.",
+    "Primera observación y etiqueta de plan no acreditan vigencia histórica.",
+    "Conservar todas las hipótesis evita elegir con la reserva y reutilizarla como prueba independiente."
+  ]
+}

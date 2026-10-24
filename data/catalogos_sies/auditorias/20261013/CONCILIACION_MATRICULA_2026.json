@@ -1,0 +1,79 @@
+{
+  "alcance": "Consolidado institucional reconstruido y copia aportada de publicacion; no certifica cadena de cargas aceptadas",
+  "anio": 2026,
+  "diferencia_publicacion_menos_institucional": {
+    "postitulo": 0,
+    "pregrado": 226,
+    "total": 226
+  },
+  "estado": "DISCREPANCIA_NO_EXPLICADA",
+  "fecha_verificacion": "2026-10-13",
+  "fuentes": {
+    "postitulo": {
+      "archivo": "matricula_unificada_2026_postgrado_postitulo.csv",
+      "sha256": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111"
+    },
+    "pregrado": {
+      "archivo": "MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7"
+    },
+    "publicacion": {
+      "archivo": "Informe_Matricula_Educacion_Superior_2026_SIES.xlsx",
+      "sha256": "f2dfb4db7528e9f220137730a15f2d65417d96b485356febd9888fdf5540a37c"
+    }
+  },
+  "limitaciones": [
+    "La diferencia agregada no identifica personas faltantes ni demuestra una causa",
+    "Posgrado vacio se conserva como null, no se publica como cero observado",
+    "El glosario adjunto OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf corresponde a 2025; no es manual 2026",
+    "No demuestra cobertura del puente CODCARPR ni habilita MU2027"
+  ],
+  "postitulo_institucional": {
+    "matriculas_adicionales_respecto_personas": 0,
+    "matriculas_comparables": 54,
+    "matriculas_por_modalidad": {
+      "2": 17,
+      "3": 37
+    },
+    "matriculas_por_sede": {
+      "2": 54
+    },
+    "personas_comparables": 54,
+    "registros": 54,
+    "vig": {
+      "0": 0,
+      "1": 54,
+      "2": 0
+    }
+  },
+  "pregrado_institucional": {
+    "matriculas_adicionales_respecto_personas": 34,
+    "matriculas_comparables": 3145,
+    "matriculas_por_modalidad": {
+      "1": 701,
+      "3": 2444
+    },
+    "matriculas_por_sede": {
+      "2": 3080,
+      "3": 65
+    },
+    "personas_comparables": 3111,
+    "registros": 4105,
+    "vig": {
+      "0": 960,
+      "1": 3145,
+      "2": 0
+    }
+  },
+  "publicacion": {
+    "celda_posgrado_vacia": true,
+    "hoja": "Listado de instituciones 2026",
+    "localizador": "B67:F67",
+    "posgrado": null,
+    "postitulo": 54,
+    "pregrado": 3371,
+    "total": 3425
+  },
+  "regla": "Comparar matriculas VIG=1/2, no personas; VIG=0 solo control historico",
+  "schema_version": 1
+}

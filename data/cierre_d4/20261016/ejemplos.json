@@ -1,0 +1,65 @@
+[
+  [
+    "E01",
+    "CILOG frente a ILOG",
+    "I162S2C77J4V1 / I162S2C77J4V2",
+    "2024–2026",
+    "V1 regular, 8 semestres, oferta desde 2024. V2 continuidad, 4 semestres, desde 2025.",
+    "Usar el nombre literal INGENIERIA EN LOGISTICA y separar tipo de plan/modalidad. No trasladar el inicio regular a continuidad.",
+    "data/cierre_d2/20261016/logistica_oferta_anual.json"
+  ],
+  [
+    "E02",
+    "CILOG antes de primera oferta",
+    "B4-00138 a B4-00145; estrato 2024",
+    "2024",
+    "Tres filas UMAS eliminadas por retiro/retracto, sin actividad verificada ni plan observado.",
+    "No acreditan una malla impartida en 2024 ni autorizan asignar V1 regular.",
+    "data/cierre_d2/20261016/cilog.json"
+  ],
+  [
+    "E03",
+    "CILOG y admisión",
+    "I162S2C77J4V2",
+    "2026",
+    "Oferta declara solo antiguos; MRUN contiene 11 registros con ingreso actual 2025 y 21 con ingreso actual 2026.",
+    "Conciliar oferta y matrícula declarada por corte. Los 21 registros MRUN no se atribuyen individualmente a UMAS.",
+    "data/cierre_d2/20261016/logistica_mrun_cohortes.json"
+  ],
+  [
+    "E04",
+    "CILOG: episodio y estado",
+    "49 expedientes, 47 personas en corte ANOMATRICULA ≤ 2026",
+    "Corte D2",
+    "37 filas vigentes, 11 eliminadas y una suspendida. El nombre del plan CILOG20241 no acredita vigencia inicial 2024.",
+    "Revisar ingreso por expediente; ausencia de técnico interno localizado no acredita origen externo.",
+    "data/cierre_d2/20261016/cilog.json"
+  ],
+  [
+    "E05",
+    "Informática regular",
+    "B4-00362 / IECIRE / RE / D",
+    "2019",
+    "V1 solo antiguos y V2 nuevos coexisten con el mismo ingreso SIES 2018; se observa IECIRE20191.",
+    "Año de ingreso y plan observado no separan los destinos. Mantener conflicto.",
+    "data/cierre_d2/20261016/expedientes_16.json"
+  ],
+  [
+    "E06",
+    "IETMREOL: campos SIES distintos",
+    "B4-00844",
+    "2020",
+    "Ingreso original SIES 2013 frente a 2019 distingue destinos; el contexto UMAS conserva ingreso original 2019.",
+    "No trasladar el campo SIES como si fuera una entrada UMAS equivalente ya disponible.",
+    "data/cierre_d2/20261016/expedientes_16.json"
+  ],
+  [
+    "E07",
+    "TPCREOL: ambos códigos solo antiguos",
+    "B4-01748",
+    "2020",
+    "Los dos destinos declaran solo antiguos; hay ingreso actual 2020 en V1 e ingreso 2016 en V2 sin oferta localizada ese año.",
+    "La columna de admisión ayuda a detectar discrepancias, pero no elige el código correcto.",
+    "data/cierre_d2/20261016/expedientes_16.json"
+  ]
+]

@@ -1,0 +1,15 @@
+{
+  "comando": "python3 -m unittest discover -s tests -p test_dictamen_d3.py -v",
+  "pruebas_aprobadas": 7,
+  "resultado": "OK",
+  "limite": "Regresión técnica D3; no nueva validación independiente de equivalencias.",
+  "casos": [
+    "clave_sin_extrapolacion_y_entradas",
+    "conflicto_no_se_sanea_con_modelo",
+    "mutabilidad_y_multiejecucion",
+    "nombres_y_sectores_c1",
+    "paridad_completa_y_regresion_b5",
+    "perfiles_cilog_sin_fallback_regular",
+    "portable_integridad_y_aislamiento"
+  ]
+}

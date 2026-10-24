@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "scope": "FCU 2027: informes, guias y auditorias de estructura",
+  "authority": "Decision expresa del usuario en este chat",
+  "user_decision": "No voy a configurar cambios de Obligatoria Si/No ni ajustes formales Relevancia = 1. Omitir estas solicitudes en futuras revisiones.",
+  "excluded_recommendations": [
+    {"check_id": "mandatory_setting", "reason": "El usuario conserva la obligatoriedad elegida por la institucion."},
+    {"check_id": "explicit_always_relevance", "observed_values": ["", "1"], "reason": "No exigir sustituir relevancia vacia por 1 ni reiterar ajustes equivalentes."}
+  ],
+  "preserve_checks": ["functional_filters", "broken_dependencies", "transfer_consent", "response_integrity", "scale_and_codes", "origin_and_crosswalk"],
+  "reporting": "Guardar observaciones excluidas fuera de pending_checks. No considerarlas completadas ni declararlas equivalentes al manual. No reiterar recomendaciones excluidas al usuario.",
+  "source_exports_unchanged": true
+}

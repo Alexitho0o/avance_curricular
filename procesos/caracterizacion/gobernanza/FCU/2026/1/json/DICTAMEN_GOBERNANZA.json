@@ -1,0 +1,20 @@
+{
+  "proceso": "FCU_CARGA_PES",
+  "dictamen": "GOBERNANZA_COMPLETA_CARGA_PES",
+  "estado": "COMPLETO",
+  "fecha_hora": "2026-05-13T17:20:32-04:00",
+  "evidencias_copiadas": 8,
+  "evidencias_principales": [
+    "AUDITORIA_E2E_CARGA_FCU_PES_2026.xlsx",
+    "AUDITORIA_LOCALIZACION_CARGA_FCU_2026.xlsx",
+    "ORDENAMIENTO_POST_FCU_20260505.md",
+    "MANIFIESTO_CIERRE_FCU_2026_P1.md",
+    "FCU_2026_CARGA_2026_P1_LOCALIZADO_ORIGINAL.csv",
+    "FCU_2026_CARGA_2026_P1_VALIDADO_E2E.csv",
+    "HASH_FCU_2026_CARGA_VALIDADO_E2E.txt",
+    "REPORTE_RESGUARDO_CSV_FINAL_FCU_2026.xlsx"
+  ],
+  "fundamento": "CSV validado: 1.371 x 195; separador ;; hash fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461; sustentabilidad no presente en CSV final.",
+  "accion_recomendada": "Versionar paquete completo y conservar respaldo del CSV validado y auditorías.",
+  "riesgos": "Bajo, mientras el hash esperado se conserve y el CSV final no sea modificado."
+}

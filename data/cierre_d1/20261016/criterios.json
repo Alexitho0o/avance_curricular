@@ -1,0 +1,146 @@
+[
+  {
+    "id": "CONFLICTO",
+    "fuente_necesaria": "Reportes institucionales por año y oferta anual por código; trayectoria de la carrera y expediente en el corte correspondiente.",
+    "accion": "Identificar origen de destinos diferentes sin elegir por frecuencia.",
+    "criterio_salida": "Explicación documentada por episodio o mantener destinos incompatibles sin asignación.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "AMBIGUEDAD",
+    "fuente_necesaria": "Reporte con atribución a carrera concreta; historial de expediente y correspondencia de programa.",
+    "accion": "Separar evidencia unívoca de candidaturas ambiguas.",
+    "criterio_salida": "Atribución sustentada o ambigüedad explícita.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_CONTRASTE_RESERVADO",
+    "fuente_necesaria": "Reporte/episodio académico adicional no usado para ajustar la regla.",
+    "accion": "Contrastar la regla fijada; la reserva B5 ya revisada solo sirve de regresión.",
+    "criterio_salida": "Contraste nuevo documentado o declarar que falta validación adicional.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_REGLA_K0",
+    "fuente_necesaria": "Etiquetas documentales y entradas académicas completas en el año observado.",
+    "accion": "Explicar por qué el contexto no tiene regla K0 sin completar campos por inferencia.",
+    "criterio_salida": "Regla evaluable o motivo preciso de ausencia.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_EVIDENCIA_EN_ANIOS_EVALUADOS",
+    "fuente_necesaria": "Reportes institucionales y expediente/carrera/año dentro de 2018, 2019, 2020 o 2022.",
+    "accion": "Revisar cobertura, corte y atribución sin igualar artificialmente totales.",
+    "criterio_salida": "Relación documentada o ausencia de atribución explicada.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "FUERA_COBERTURA_PERSONAL",
+    "fuente_necesaria": "Reporte institucional del año faltante y registros históricos UMAS de esa carrera.",
+    "accion": "Localizar evidencia del año; no extrapolar desde los años evaluados.",
+    "criterio_salida": "Nueva evidencia de ese año o brecha de fuente registrada.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_PLAN_OBSERVADO",
+    "fuente_necesaria": "Historial CODPESTUD por expediente/carrera y catálogo de planes con vigencia.",
+    "accion": "Limitar resultado actual a programa/contexto hasta identificar malla.",
+    "criterio_salida": "Plan documentado o relación que permanece solo a nivel programa.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "VARIOS_PLANES_OBSERVADOS",
+    "fuente_necesaria": "Historial de cambios de plan con fecha y matrícula/carrera.",
+    "accion": "Distinguir cambio real, coexistencia y registros de notas de planes distintos.",
+    "criterio_salida": "Delimitación temporal por plan o conjunto indeterminado.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "VIGENCIA_MALLA_NO_ACREDITADA",
+    "fuente_necesaria": "Catálogo curricular, acto de vigencia/cambio de plan o historial equivalente con fecha y programa.",
+    "accion": "Verificar alcance del plan observado, sin deducirlo del nombre/año incrustado.",
+    "criterio_salida": "Vigencia respaldada o limitación expresa.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "PRIMERA_OBSERVACION_NO_ES_INGRESO",
+    "fuente_necesaria": "Historial de ingreso a la carrera específica y cobertura anterior de los extractos.",
+    "accion": "Separar ANOINGRESO heredado, primera presencia disponible e ingreso al episodio.",
+    "criterio_salida": "Inicio de episodio sustentado o límite de observación explícito.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SEDE_JORNADA_HISTORICAS_NO_ACREDITADAS",
+    "fuente_necesaria": "Historial de sede/jornada por expediente y fecha.",
+    "accion": "Contrastar valores del extracto actual frente al corte histórico.",
+    "criterio_salida": "Sede/jornada históricas sustentadas o limitación de la clave.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_OFERTA",
+    "fuente_necesaria": "Oferta del código/año o antecedentes archivados de su declaración.",
+    "accion": "Buscar registro por Código Único completo, manteniendo identificadores históricos.",
+    "criterio_salida": "Oferta localizada o sin cobertura declarada.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "OFERTA_EN_LIMITE_2010",
+    "fuente_necesaria": "Oferta anterior a 2010 o antecedentes de declaración del mismo Código Único.",
+    "accion": "No confundir primer año disponible con primera declaración real.",
+    "criterio_salida": "Primera declaración documentada o inicio censurado a la izquierda.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SOLO_CANDIDATURA_H5",
+    "fuente_necesaria": "Evidencia histórica por programa/código; H5 corresponde a candidatura de ámbito 2026.",
+    "accion": "Revisar relación existente sin convertir candidato 2026 en regla histórica.",
+    "criterio_salida": "Relación por contexto respaldada o candidatura pendiente.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_RELACION_UMAS",
+    "fuente_necesaria": "Catálogo histórico de programas UMAS y oferta/reportes de ese código.",
+    "accion": "Localizar identidad de programa sin forzar similitud nominal.",
+    "criterio_salida": "Relación sustentada o código sin correspondencia identificable.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_ACTIVIDAD_OBSERVADA",
+    "fuente_necesaria": "Catálogo de planes y extractos históricos de actividad del programa.",
+    "accion": "Distinguir falta de observación, plan sin matrícula y falta de cobertura.",
+    "criterio_salida": "Causa documentada; conservar plan aun sin alumnos.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "SIN_RELACION_PLAN",
+    "fuente_necesaria": "Reporte y plan por carrera/contexto, más historial curricular.",
+    "accion": "Investigar actividad observada sin atribución de código.",
+    "criterio_salida": "Relación sustentada o motivo de ausencia.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  },
+  {
+    "id": "CORROBORACION_NO_ACREDITACION",
+    "fuente_necesaria": "Evidencia de alcance curricular y contraste adicional distinto del ya utilizado.",
+    "accion": "Mantener corroboración interna como tal.",
+    "criterio_salida": "Alcance demostrado o resultado observacional limitado.",
+    "autoridad": "CRITERIO_INTERNO_ANALISIS_D1",
+    "habilita_asignacion": false
+  }
+]

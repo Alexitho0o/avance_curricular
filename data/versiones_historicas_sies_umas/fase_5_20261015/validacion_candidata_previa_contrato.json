@@ -1,0 +1,531 @@
+{
+  "schema_version": "1.0",
+  "phase": 5,
+  "review_date": "2026-10-15",
+  "status": "PENDIENTE_REGENERAR_MANIFIESTO_CODIGO_FINAL",
+  "candidate_path": "/tmp/fase5_cruce_sies_umas/candidata_final",
+  "candidate_manifest_sha256": "97e1607992fdbe5f8651ccbfdda73ab3a15b663367a23c7d5cddc5adb863c793",
+  "candidate_master_sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+  "method": "Auditoría independiente por lectura y comparación de artefactos JSON/TSV; sin importar ni ejecutar builder/resolvedor/motores, sin modificar fuentes.",
+  "checks": [
+    {
+      "id": "outputs_hashes",
+      "pass": true,
+      "detail": {
+        "verified": 11,
+        "file_count_including_manifest": 12
+      }
+    },
+    {
+      "id": "input_sources_hashes",
+      "pass": true,
+      "detail": {
+        "verified": 17
+      }
+    },
+    {
+      "id": "source_registry_unchanged",
+      "pass": true,
+      "detail": "Maestro conserva descriptors de las17fuentes del contrato."
+    },
+    {
+      "id": "annual_offer_keyset",
+      "pass": true,
+      "detail": "747claves año+código, mismas que H3, sin duplicados."
+    },
+    {
+      "id": "offer_attributes_literal_h3",
+      "pass": true,
+      "detail": {
+        "attributes_compared": 6723,
+        "modality_null_and_original_locators_checked": 747,
+        "errors": []
+      }
+    },
+    {
+      "id": "missing_2010_modality_preserved",
+      "pass": true,
+      "detail": "8modalidades no informadas2010: null y literal vacío, sin inferencia desde jornada."
+    },
+    {
+      "id": "names2026_exact_user_source_evidence",
+      "pass": true,
+      "detail": {
+        "124_source_names": true,
+        "errors": [],
+        "evidence_path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/comparacion_oferta_2026.tsv",
+        "evidence_sha256": "d08656fb32a9be498fe5a3e4718f1e7b38a377c286ec1fc73c61d90254602ddc",
+        "method": "Comparación literal contra valores_usuario H3, huella oferta2026 original revalidada; no se reabre workbook."
+      }
+    },
+    {
+      "id": "sies_universe_preserved",
+      "pass": true,
+      "detail": {
+        "count": 141,
+        "presence": {
+          "SOLO_MRUN": 2,
+          "SOLO_OFERTA": 35,
+          "OFERTA_Y_MRUN": 104
+        }
+      }
+    },
+    {
+      "id": "sies_coverage_fields_preserved",
+      "pass": true,
+      "detail": {
+        "errors": []
+      }
+    },
+    {
+      "id": "mrun_annual_preserved",
+      "pass": true,
+      "detail": {
+        "rows": 472,
+        "identities": "Solo agregados H2; no se leyó CSVindividual."
+      }
+    },
+    {
+      "id": "plan_universe_preserved",
+      "pass": true,
+      "detail": {
+        "presence": {
+          "CATALOGO_Y_PROMEDIOS": 184,
+          "SOLO_PROMEDIOS": 13,
+          "SOLO_CATALOGO": 39
+        }
+      }
+    },
+    {
+      "id": "plan_h4_fields_preserved",
+      "pass": true,
+      "detail": {
+        "errors": []
+      }
+    },
+    {
+      "id": "plans_without_activity_kept",
+      "pass": true,
+      "detail": {
+        "catalog_without_complete_activity": 80,
+        "catalog_only": 39
+      }
+    },
+    {
+      "id": "no_temporal_assignment_promoted",
+      "pass": true,
+      "detail": "0reglas efectivas; fechas/asignacionesH4 vacías/no acreditadas."
+    },
+    {
+      "id": "candidates_never_enabled",
+      "pass": true,
+      "detail": {
+        "candidates": 513
+      }
+    },
+    {
+      "id": "candidate_keys_unique",
+      "pass": true,
+      "detail": "513claves candidatas sin duplicados."
+    },
+    {
+      "id": "candidate_presence_annual_truth",
+      "pass": true,
+      "detail": {
+        "candidates_without_offer2026": 76
+      }
+    },
+    {
+      "id": "program_relations_not_effective",
+      "pass": true,
+      "detail": {
+        "relations": 257
+      }
+    },
+    {
+      "id": "j3_preserved_without_invented_umas",
+      "pass": true,
+      "detail": {
+        "candidate_ids": [
+          "CP-69a6fd03b035ef9ee38fc8ac"
+        ],
+        "code": [
+          "I162S2C53J3V1"
+        ]
+      }
+    },
+    {
+      "id": "sector_not_evaluated",
+      "pass": true,
+      "detail": "Sector separado,141valores nulos con estado explícito."
+    },
+    {
+      "id": "operational_differences_exact",
+      "pass": true,
+      "detail": {
+        "count": 41,
+        "fields": {
+          "vigencia": 41
+        }
+      }
+    },
+    {
+      "id": "official_vigencia_not_overwritten",
+      "pass": true,
+      "detail": "LogísticaV2 conserva vigencia de H3, no1 del catálogooperativo."
+    },
+    {
+      "id": "consultation_examples_semantics",
+      "pass": true,
+      "detail": {
+        "errors": [],
+        "examples": [
+          {
+            "index": 0,
+            "entrada": {
+              "anio": 2026,
+              "codcarpr": "ILOG",
+              "jornada_umas": "O",
+              "nombre_interno": "INGENIERIA EN LOGISTICA",
+              "periodo": "1",
+              "plan_umas": "ILOG20241",
+              "regimen": "TRIMESTRAL",
+              "sede_umas": "RE"
+            },
+            "estado": "PENDIENTE_EVIDENCIA",
+            "motivo": null,
+            "codigo_unico": null,
+            "candidate_count": 1
+          },
+          {
+            "index": 1,
+            "entrada": {
+              "anio": 2026,
+              "codcarpr": "CILOG",
+              "jornada_umas": "O",
+              "nombre_interno": "INGENIERIA EN LOGISTICA",
+              "periodo": "1",
+              "plan_umas": "CILOG20241",
+              "regimen": "TRIMESTRAL",
+              "sede_umas": "RE"
+            },
+            "estado": "PENDIENTE_EVIDENCIA",
+            "motivo": null,
+            "codigo_unico": null,
+            "candidate_count": 2
+          },
+          {
+            "index": 2,
+            "entrada": {
+              "anio": 2026,
+              "codcarpr": "NATP",
+              "jornada_umas": "V",
+              "nombre_interno": "NATUROPATIA",
+              "periodo": "1",
+              "plan_umas": "NATP20251",
+              "regimen": "TRIMESTRAL",
+              "sede_umas": "RE"
+            },
+            "estado": "PENDIENTE_EVIDENCIA",
+            "motivo": null,
+            "codigo_unico": null,
+            "candidate_count": 2
+          },
+          {
+            "index": 3,
+            "entrada": {
+              "anio": 2019,
+              "codcarpr": "IECIRE",
+              "jornada_umas": "V",
+              "nombre_interno": "INGENIERIA DE EJECUCION EN COMPUTACION E INFORMATICA",
+              "periodo": "1",
+              "plan_umas": "IECIRE20211",
+              "regimen": "SEMESTRAL",
+              "sede_umas": "RE"
+            },
+            "estado": "SIN_EQUIVALENCIA",
+            "motivo": null,
+            "codigo_unico": null,
+            "candidate_count": 0
+          },
+          {
+            "index": 4,
+            "entrada": {
+              "anio": 2026,
+              "codcarpr": "ASREOL",
+              "jornada_umas": "O",
+              "nombre_interno": "TECNICO EN ANALISIS DE SISTEMA",
+              "periodo": "1",
+              "plan_umas": "ASREOL",
+              "regimen": "SEMESTRAL",
+              "sede_umas": "RE"
+            },
+            "estado": "SIN_EQUIVALENCIA",
+            "motivo": null,
+            "codigo_unico": null,
+            "candidate_count": 0
+          },
+          {
+            "index": 5,
+            "entrada": {
+              "anio": 2026,
+              "codigo_unico": "I162S2C77J4V2"
+            },
+            "estado": "OFERTA_ANUAL_LOCALIZADA",
+            "motivo": null,
+            "codigo_unico": "I162S2C77J4V2",
+            "candidate_count": 0
+          },
+          {
+            "index": 6,
+            "entrada": {
+              "anio": 2026,
+              "codigo_unico": "I162S2C90J2V1"
+            },
+            "estado": "OFERTA_ANUAL_LOCALIZADA",
+            "motivo": null,
+            "codigo_unico": "I162S2C90J2V1",
+            "candidate_count": 0
+          },
+          {
+            "index": 7,
+            "entrada": {
+              "anio": 2020,
+              "codigo_unico": "I162S2C46J2V2"
+            },
+            "estado": "OFERTA_ANUAL_LOCALIZADA",
+            "motivo": null,
+            "codigo_unico": "I162S2C46J2V2",
+            "candidate_count": 0
+          },
+          {
+            "index": 8,
+            "entrada": {
+              "anio": 2008,
+              "codigo_unico": "I162M2008N1"
+            },
+            "estado": "SIN_OFERTA_ANUAL",
+            "motivo": "SIN_COBERTURA_ANUAL",
+            "codigo_unico": null,
+            "candidate_count": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "literal_historical_name_separate",
+      "pass": true,
+      "detail": "Ejemplo Informática2010 mantiene ambos nombres sin sustitución."
+    },
+    {
+      "id": "no_identity_fields_in_master",
+      "pass": true,
+      "detail": {
+        "forbidden_fields_found": [],
+        "scope": "Esquema y valores inspeccionados de proyecciones académicas; no se reabrieron fuentes personales."
+      }
+    },
+    {
+      "id": "current_script_hashes_match_manifest",
+      "pass": false,
+      "detail": [
+        {
+          "file": "common/equivalencias_historicas.py",
+          "sha256_declared": "3450a7309b971d0fe5e3693c63c11a13dfca2b68ee330ed2d849c2d92c198b0b",
+          "sha256_current": "990d23bab02c4f3b842d8e24ed860330f597324527258ddc9a48a29280c655ae",
+          "matches": false
+        },
+        {
+          "file": "scripts/construir_maestro_equivalencias.py",
+          "sha256_declared": "fb6bb68e45325842141aaa123d81a9cbfd0e0a0c81aea032a4ebc78186a831dc",
+          "sha256_current": "fb6bb68e45325842141aaa123d81a9cbfd0e0a0c81aea032a4ebc78186a831dc",
+          "matches": true
+        },
+        {
+          "file": "scripts/consultar_equivalencias_historicas.py",
+          "sha256_declared": "1a3602d97db14a66b10fcb1630dac26b703885dda7aa0c8cc8636750c3160710",
+          "sha256_current": "1a3602d97db14a66b10fcb1630dac26b703885dda7aa0c8cc8636750c3160710",
+          "matches": true
+        }
+      ]
+    }
+  ],
+  "manifest_verification": [
+    {
+      "file": "candidatos_plan_sies.tsv",
+      "sha256": "29902da4a13f0b5e708ce9bd1b3c8bd3c14e2546c8f0503ae4472b912b6671c9",
+      "declared": "29902da4a13f0b5e708ce9bd1b3c8bd3c14e2546c8f0503ae4472b912b6671c9"
+    },
+    {
+      "file": "cobertura_planes.tsv",
+      "sha256": "e95528b1d5f74c42f39adac5a86aeada6165593fdee45512f39e7803dfd8b95b",
+      "declared": "e95528b1d5f74c42f39adac5a86aeada6165593fdee45512f39e7803dfd8b95b"
+    },
+    {
+      "file": "cobertura_sies.tsv",
+      "sha256": "a13011c9602ce1490e49f3680f77100438e22bee48e45fa124f5cf1de35df729",
+      "declared": "a13011c9602ce1490e49f3680f77100438e22bee48e45fa124f5cf1de35df729"
+    },
+    {
+      "file": "diferencias_catalogo_operativo.tsv",
+      "sha256": "16213ca8ad0ccdb14a29236392aa0b022b25be8bcd8e1b7fc7fdfc5f84d08314",
+      "declared": "16213ca8ad0ccdb14a29236392aa0b022b25be8bcd8e1b7fc7fdfc5f84d08314"
+    },
+    {
+      "file": "ejemplos_consulta.json",
+      "sha256": "b5c7d82265027c295e8acb3747d678639fafd8af3e51ea163a21ba55707e817e",
+      "declared": "b5c7d82265027c295e8acb3747d678639fafd8af3e51ea163a21ba55707e817e"
+    },
+    {
+      "file": "equivalencias_programa_2026.tsv",
+      "sha256": "8639ef4205ae222e80733fca27f8fa7184234d101b26b6f9e1d9abe62cea8553",
+      "declared": "8639ef4205ae222e80733fca27f8fa7184234d101b26b6f9e1d9abe62cea8553"
+    },
+    {
+      "file": "excepciones.json",
+      "sha256": "e46c0e3d64b07f29c9589f8e3f0b826a3608bb8f55f0d6991b339a14ce7f8ce4",
+      "declared": "e46c0e3d64b07f29c9589f8e3f0b826a3608bb8f55f0d6991b339a14ce7f8ce4"
+    },
+    {
+      "file": "fuentes.json",
+      "sha256": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330",
+      "declared": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330"
+    },
+    {
+      "file": "maestro.json",
+      "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+      "declared": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+    },
+    {
+      "file": "reglas_efectivas.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "declared": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "resumen.json",
+      "sha256": "18ddd501ca56569d5e13c73135b196e156768f871bf08aa344249037d473f53e",
+      "declared": "18ddd501ca56569d5e13c73135b196e156768f871bf08aa344249037d473f53e"
+    }
+  ],
+  "source_verification": [
+    {
+      "id": "catalogo_planes",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/catalogo_planes.json",
+      "sha256": "68ff1b1907dc211b3f2315db39f0ad55a13bdaec244c8bdd08b0573c0a2eceea",
+      "matches_declared": true
+    },
+    {
+      "id": "cobertura_planes",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/cobertura_planes.tsv",
+      "sha256": "53cc56a7ba59253f2c078445fa8f126c3c472474a09d0184ccfc1a54a8e07e89",
+      "matches_declared": true
+    },
+    {
+      "id": "cobertura_sies",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/cobertura_codigos.tsv",
+      "sha256": "5ed18a52390be1e7c7a8fd97aec431c26426c42d890a78e0b5e49f91e8053ef2",
+      "matches_declared": true
+    },
+    {
+      "id": "duracion",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e",
+      "matches_declared": true
+    },
+    {
+      "id": "evidencia_temporal",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/evidencia_temporal.json",
+      "sha256": "fc875c934ae0ab62c3f7f5bae91c9a12304b655bec843db56672aee3428c2389",
+      "matches_declared": true
+    },
+    {
+      "id": "historico_xlsx",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/01_fuentes_oficiales/historico_comparativo_sies_162/20260817_161807_sies_historico_2010_2026/Oferta_Academica_2010_al_2026_SIES_05_06_2026_WEB_E.xlsx",
+      "sha256": "94d51a6752b40adb45c8eba65786ee8aad9f6667d15b3d07273a969ec4faed77",
+      "matches_declared": true
+    },
+    {
+      "id": "manifest_fase2",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/manifest.json",
+      "sha256": "466c1990f88a09b590beb7a5b43e16000b9a5b822b489fe047e5b137fccfaded",
+      "matches_declared": true
+    },
+    {
+      "id": "manifest_fase3",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/manifest.json",
+      "sha256": "7dd64c7326a8b8e4e0c4b539c41ec036277d6c9fc43bba57a34c67e274308317",
+      "matches_declared": true
+    },
+    {
+      "id": "manifest_fase4",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/manifest.json",
+      "sha256": "be570c99cccaf039b0a5a48eac9f8ce9fcf01b51606c4e3b41dbdce4d109a2af",
+      "matches_declared": true
+    },
+    {
+      "id": "mrun_anual",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/historia_codigo_anio.tsv",
+      "sha256": "2c132873c57d65b661d03c22ce62b6c11a45305015b4cfda91a1f8f250658058",
+      "matches_declared": true
+    },
+    {
+      "id": "observaciones_planes",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/observaciones_plan_periodo.tsv",
+      "sha256": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840",
+      "matches_declared": true
+    },
+    {
+      "id": "oferta_2026",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/oferta 2026.xlsx",
+      "sha256": "01652009ed30d19024894ab9a4e7645d7f70074d8109c4a4b30d4cb9ec275bf1",
+      "matches_declared": true
+    },
+    {
+      "id": "oferta_anual",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/oferta_codigo_anio.tsv",
+      "sha256": "dc028a6790244dc9b73a8c3b48f5ced672d0db330545fc09c48f0f24f2f46909",
+      "matches_declared": true
+    },
+    {
+      "id": "puente_compilado",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/control/catalogos/PUENTE_SIES_COMPILADO.tsv",
+      "sha256": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0",
+      "matches_declared": true
+    },
+    {
+      "id": "registro_reglas",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/registro_reglas_efectivas.json",
+      "sha256": "7a820e1e806abb667c3b3aef372bc6dd1d34f56167865c5a4956a83ccf13e19a",
+      "matches_declared": true
+    },
+    {
+      "id": "snapshot_2026",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogos_sies/2026/mu2026_20261013/catalogo.json",
+      "sha256": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a",
+      "matches_declared": true
+    },
+    {
+      "id": "verificacion_extraccion",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/verificacion_original_completa.json",
+      "sha256": "bf8d73ed9b9af58a1ca360d2e8c7f819105eac43423f5d7aec81d618a5107db2",
+      "matches_declared": true
+    }
+  ],
+  "limitations": [
+    "La semántica documental de una futura correspondencia sede/jornada UMAS↔SIES requiere revisión de evidencia. Una validación estructural de campos/hashes no sustituye esa acreditación. Hoy no hay reglas efectivas, por lo que no se habilita esa asignación.",
+    "No se reejecutó pilotoH6 ni se integraron consumidores.",
+    "Verificación nombre2026 usa valores literales extraídos y verificados H3, cuyo manifiesto se mantiene y cuyo originalhash se volvió a comprobar; no se modificó ni reabrió workbook.",
+    "Oferta2007–2009 sigue sin cobertura completa; asignación temporal UMAS pendiente."
+  ],
+  "preservation": {
+    "source_edits": false,
+    "repo_edits": false,
+    "engine_runs": false,
+    "excel_writes": false
+  },
+  "privacy": {
+    "personal_identity_values_exported": false,
+    "academic_examples_only": true
+  },
+  "data_checks_status": "PASS"
+}

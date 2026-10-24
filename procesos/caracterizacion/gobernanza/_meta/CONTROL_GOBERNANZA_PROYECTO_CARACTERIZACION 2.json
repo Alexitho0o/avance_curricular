@@ -1,0 +1,107 @@
+{
+  "fecha_hora": "2026-05-13T17:15:58-04:00",
+  "repositorio": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+  "validaciones_iniciales": {
+    "repositorio_existe": true,
+    "clasificacion_fina_tsv_existe": true,
+    "clasificacion_fina_xlsx_existe": true,
+    "mapeo_base_tsv_existe": true
+  },
+  "fuente_clasificacion_fina": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_clasificacion_fina/CLASIFICACION_FINA_PROCESOS_CARACTERIZACION.tsv",
+  "fuente_clasificacion_fina_excel_respaldo": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_clasificacion_fina/CLASIFICACION_FINA_PROCESOS_CARACTERIZACION.xlsx",
+  "fuente_mapeo_base": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_mapeo_proyecto/MAPEO_ARCHIVOS_PROYECTO_CARACTERIZACION.tsv",
+  "total_archivos_clasificados": 5503,
+  "total_candidatos_formales": 20,
+  "procesos_detectados": [
+    {
+      "proceso": "FCU_CARGA_PES",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_carga_pes",
+      "archivos_detectados_clasificacion": 9,
+      "candidatos_formales_clasificacion": 8
+    },
+    {
+      "proceso": "FCU_ANALISIS_ENCUESTA",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/fcu_analisis_encuesta",
+      "archivos_detectados_clasificacion": 2,
+      "candidatos_formales_clasificacion": 2
+    },
+    {
+      "proceso": "ANALISIS_TRAYECTORIA",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/analisis_trayectoria",
+      "archivos_detectados_clasificacion": 12,
+      "candidatos_formales_clasificacion": 1
+    },
+    {
+      "proceso": "MATRICULA_UNIFICADA",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/matricula_unificada",
+      "archivos_detectados_clasificacion": 31,
+      "candidatos_formales_clasificacion": 1
+    },
+    {
+      "proceso": "CARGA_POSTGRADO",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/carga_postgrado",
+      "archivos_detectados_clasificacion": 0,
+      "candidatos_formales_clasificacion": 0
+    },
+    {
+      "proceso": "GOBERNANZA_META",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_meta",
+      "archivos_detectados_clasificacion": 1,
+      "candidatos_formales_clasificacion": 1
+    },
+    {
+      "proceso": "SIN_CLASIFICAR_ASIGNADO_A_META",
+      "carpeta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_meta",
+      "archivos_detectados_clasificacion": 5430,
+      "candidatos_formales_clasificacion": 7
+    }
+  ],
+  "estado_busqueda_postgrado": "EVIDENCIA_REAL_LOCALIZADA",
+  "dictamen_postgrado_preliminar": "CARGA_POSTGRADO_LOCALIZADA",
+  "hallazgos_postgrado": {
+    "POSTGRADO_REAL": 2,
+    "MATRICULA_UNIFICADA_POSTGRADO": 1,
+    "DIPLOMADO_REAL": 52,
+    "POSTGRADO_REFERENCIAL": 12,
+    "POSIBLE_POSTGRADO": 4,
+    "NO_CONCLUYENTE": 20
+  },
+  "fases_completadas": [
+    "FASE_0",
+    "FASE_1",
+    "FASE_2",
+    "FASE_3",
+    "FASE_4",
+    "FASE_5",
+    "FASE_6",
+    "FASE_7",
+    "FASE_8",
+    "FASE_9",
+    "FASE_10"
+  ],
+  "estado_inicial_git": "",
+  "estado_final": "COMPLETADO_CON_OBSERVACIONES",
+  "proxima_accion": "Revisar diferencias Git, validar política de versionamiento de evidencias pesadas y preparar commit.",
+  "dictamen_general": "GOBERNANZA_PROYECTO_COMPLETA_CON_OBSERVACIONES",
+  "git_status_final": "?? gobernanza/_meta/\n?? gobernanza/analisis_trayectoria/\n?? gobernanza/carga_postgrado/\n?? gobernanza/fcu_analisis_encuesta/\n?? gobernanza/fcu_carga_pes/\n?? gobernanza/matricula_unificada/",
+  "cantidad_total_evidencias_copiadas": 82,
+  "cantidad_total_hashes": 82,
+  "cantidad_total_json": 41,
+  "cantidad_total_tsv": 34,
+  "cantidad_total_md": 37,
+  "cantidad_total_sha256": 82,
+  "procesos_completos": [
+    "FCU_CARGA_PES",
+    "FCU_ANALISIS_ENCUESTA",
+    "GOBERNANZA_META"
+  ],
+  "procesos_parciales": [
+    "ANALISIS_TRAYECTORIA",
+    "MATRICULA_UNIFICADA",
+    "CARGA_POSTGRADO"
+  ],
+  "procesos_no_localizados": [],
+  "resultado_final_postgrado": "CARGA_POSTGRADO_LOCALIZADA",
+  "recomendacion_commit": "Revisar tamaño de evidencias copiadas y luego commit sugerido: git add gobernanza && git commit -m \"Formaliza gobernanza por procesos caracterizacion\"",
+  "fecha_hora_actualizacion_conteos": "2026-05-13T17:22:39-04:00"
+}

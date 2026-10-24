@@ -1,0 +1,184 @@
+{
+  "fecha": "2026-10-15",
+  "alcance": "Lectura de gobernanza CARACTERIZACIÓN y puente vigente; sin identificadores personales; no ejecuta pipelines ni conciliacion de identidad.",
+  "fuentes": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/caracterizacion_catalogo_sies_2027.py",
+      "sha256": "c56202c0ed9157f6b83ba7fc1f756c221935d2aa126ee351ef146c01b7382494"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/docs/gobernanza/CATALOGO_SIES_ANUAL_2027.md",
+      "sha256": "98693b079e87a6ea9a70ab5d2ee4daa1b28817829ef9d66c459e3321d73b4e8a"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/diagnosticos/CRUCE_UPLUS_SIES_CNED_2026_v0.1.md",
+      "sha256": "9919230c20319f368cf4d3ff8cc41870296912e072b1f9b84aa9f1c8a620ae84"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/diagnosticos/PUENTES_REQUERIDOS_v0.1.md",
+      "sha256": "bf4e561b50cae15953233fdc0067d58d7b07f567e6694ce550c63aba705ea1f7"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/trazabilidad_mrun/MANIFIESTO_TRAZABILIDAD_MRUN.md",
+      "sha256": "20c9d7fae9f8a770f73d49c7c51f3738b66f65ae2f3a7fb3b0e4333b7676474d"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/trazabilidad_mrun/F0_DIAGNOSTICO_FACTIBILIDAD.md",
+      "sha256": "9a1fdae308fa24c87f5907f47cbb223c322a582f5381fa3ec29a9d6500461cd7"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/control/catalogos/PUENTE_SIES_COMPILADO.tsv",
+      "sha256": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogos_sies/2026/mu2026_20261013/catalogo.json",
+      "sha256": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/anual/ACTIVO_2027.json",
+      "sha256": "291a45604bc17d919807e6063444485bba277e3a57094d9084d4c868879134c5"
+    }
+  ],
+  "puente_actual": {
+    "filas": 161,
+    "estados": {
+      "UNICO": 91,
+      "AMBIGUO": 70
+    },
+    "campos_condicion_temporal": [
+      "CODIGO_CARRERA_SIES_1_CONDICION_ANIO_INGRESO",
+      "CODIGO_CARRERA_SIES_1_ANIO_INGRESO_MIN",
+      "CODIGO_CARRERA_SIES_1_ANIO_INGRESO_MAX",
+      "CODIGO_CARRERA_SIES_2_CONDICION_ANIO_INGRESO",
+      "CODIGO_CARRERA_SIES_2_ANIO_INGRESO_MIN",
+      "CODIGO_CARRERA_SIES_2_ANIO_INGRESO_MAX",
+      "CODIGO_CARRERA_SIES_3_CONDICION_ANIO_INGRESO",
+      "CODIGO_CARRERA_SIES_3_ANIO_INGRESO_MIN",
+      "CODIGO_CARRERA_SIES_3_ANIO_INGRESO_MAX",
+      "CODIGO_CARRERA_SIES_4_CONDICION_ANIO_INGRESO",
+      "CODIGO_CARRERA_SIES_4_ANIO_INGRESO_MIN",
+      "CODIGO_CARRERA_SIES_4_ANIO_INGRESO_MAX",
+      "CODIGO_CARRERA_SIES_5_CONDICION_ANIO_INGRESO",
+      "CODIGO_CARRERA_SIES_5_ANIO_INGRESO_MIN",
+      "CODIGO_CARRERA_SIES_5_ANIO_INGRESO_MAX"
+    ],
+    "celdas_temporales_no_vacias": 0,
+    "reglas_aplicadas_no_vacias": 0,
+    "nombres_l_distintos": 52,
+    "codcarpr_distintos": 93
+  },
+  "reglas_confirmadas": [
+    {
+      "regla": "NOMBRE_L es el nombre interno del programa; CODCARPR/CODIGOCARRERA son códigos internos.",
+      "fuente": "caracterizacion.py:16562-16617"
+    },
+    {
+      "regla": "ANOMATRICULA/PERIODOMATRICULA son el periodo de observacion/matricula; ANOINGRESO/PERIODOINGRESO identifican cohorte. No igualar esos campos.",
+      "fuente": "caracterizacion.py:1956,2101 y diagnosticos/CRUCE_UPLUS_SIES_CNED_2026_v0.1.md:139-141"
+    },
+    {
+      "regla": "VERSION SIES no está en el extracto UMAS diagnosticado. El año matrícula no reemplaza V. Una vigencia temporal requiere tabla maestra que pruebe unicidad por intervalo.",
+      "fuente": "diagnosticos/CRUCE_UPLUS_SIES_CNED_2026_v0.1.md:139-141"
+    },
+    {
+      "regla": "Enriquecimiento anual actual exige ANOMATRICULA y PERIODOMATRICULA exactos del año/periodo solicitado; solo 2027; rechaza historicos mezclados.",
+      "fuente": "caracterizacion_catalogo_sies_2027.py:44-51"
+    },
+    {
+      "regla": "Resolver CODCARPR + SEDE + JORNADA; restringe por NOMBRE_L exacto cuando hay ambiguedad; VERSION es parametro explicito y nunca se elige maxima/primera.",
+      "fuente": "caracterizacion_catalogo_sies_2027.py:59-68; gobernanza/sies/anual/2027/5910_20260907_6047_20261013_modalidad_v2/resolutor.py:80-119"
+    },
+    {
+      "regla": "MODALIDAD UMAS es escolar. Modalidad carrera viene del campo explicitamente respaldado de oferta; no inferir por sufijo SP o jornada.",
+      "fuente": "AGENTS.md:37-39 y docs/gobernanza/CATALOGO_SIES_ANUAL_2027.md:113-125"
+    },
+    {
+      "regla": "El historico MRUN no proporciona CODCARPR ni puente RUT-MRUN. No asignar identidad por similitud; para este diccionario tomar solo dimensiones de programa y años observados.",
+      "fuente": "gobernanza/trazabilidad_mrun/F0_DIAGNOSTICO_FACTIBILIDAD.md"
+    },
+    {
+      "regla": "FCU2026 build_equivalencia usa similitud nominal y puede elegir primera fila si COD_CAR único aunque CODIGO_UNICO tenga versiones: no reutilizar ese algoritmo como equivalencia historica completa/versionada.",
+      "fuente": "caracterizacion.py:17247-17331"
+    },
+    {
+      "regla": "PERIODO=3 como segundo semestre y anio_ref-1 pertenecen a métricas de avance, no seleccionan VERSION SIES.",
+      "fuente": "integracion_avance_curricular.py:49-50,90-95"
+    }
+  ],
+  "equivalencias_manual_fcu2026": {
+    "fuente": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/caracterizacion.py",
+    "lineas": "16400-16408",
+    "alcance": "Excepciones internas gobernadas FCU2026, no equivalencia retroactiva 2007-2025 ni nombre oficial oferta2026.",
+    "filas": [
+      {
+        "CODIGO_INTERNO": "CIINF",
+        "CODCARPR": "CIINF",
+        "NOMBRE_L": "CONTINUIDAD INGENIERIA INFORMATICA",
+        "JORNADA": "O",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C1J4V3"
+      },
+      {
+        "CODIGO_INTERNO": "CILOG",
+        "CODCARPR": "CILOG",
+        "NOMBRE_L": "CONTINUIDAD INGENIERIA LOGISTICA",
+        "JORNADA": "O",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C77J4V2"
+      },
+      {
+        "CODIGO_INTERNO": "IFIN",
+        "CODCARPR": "IFIN",
+        "NOMBRE_L": "INGENIERIA EN FINANZAS",
+        "JORNADA": "O",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C111J4V1"
+      },
+      {
+        "CODIGO_INTERNO": "IMDI",
+        "CODCARPR": "IMDI",
+        "NOMBRE_L": "INGENIERIA EN MARKETING DIGITAL",
+        "JORNADA": "O",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C112J4V1"
+      },
+      {
+        "CODIGO_INTERNO": "IRHU",
+        "CODCARPR": "IRHU",
+        "NOMBRE_L": "INGENIERIA EN RECURSOS HUMANOS",
+        "JORNADA": "O",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C113J4V1"
+      },
+      {
+        "CODIGO_INTERNO": "ISEP",
+        "CODCARPR": "ISEP",
+        "NOMBRE_L": "INGENIERIA EN SEGURIDAD PRIVADA",
+        "JORNADA": "O",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C125J4V1"
+      },
+      {
+        "CODIGO_INTERNO": "NATP",
+        "CODCARPR": "NATP",
+        "NOMBRE_L": "NATUROPATIA",
+        "JORNADA": "V",
+        "SEDE": "RE",
+        "CODIGO_UNICO_SIES": "I162S2C90J2V2"
+      }
+    ]
+  },
+  "recomendacion_diccionario": {
+    "anio_observacion": "Año de matrícula cursada (cat_periodo SIES / ANOMATRICULA UMAS), conservar por separado del año de ingreso/cohorte y VERSION SIES.",
+    "nombres": "Preservar literal NOMBRE_L UMAS y literal NOMBRE_CARRERA oferta2026 en columnas diferentes; no agregar marcas editoriales al nombre oficial.",
+    "ambiguedad": "Mostrar todos candidatos/equivalencias con estado y fuente; no extender equivalencias2026 a otras versiones históricas por similitud o código carrera solamente."
+  }
+}

@@ -1,5 +1,29 @@
 # Gobernanza del Repositorio — avance_curricular
 
+## Adenda de alcance: 2026-10-13
+
+La validación funcional histórica descrita abajo no certifica conciliación con
+la publicación SIES ni habilita el proceso 2027. La revisión actual confirma
+una diferencia de 226 matrículas de pregrado sin causa demostrada.
+
+La nueva [capa anual](CATALOGOS_SIES_POR_ANIO.md) usa `data/catalogos_sies/` y
+`common/catalogos_sies.py`. Los scripts de generación, consulta y conciliación
+son auxiliares, no un reemplazo del flujo MU2026. No ejecutar el motor para
+actualizar estos catálogos ni modificar los congelados.
+
+La oferta 2027 tiene 140 códigos y 35 equivalencias internas pendientes tras
+completar 17 de las 52 iniciales. No declarar el puente completamente resuelto.
+La [revisión 6047](REVISION_EQUIVALENCIAS_6047_20261013.md) habilita una copia
+portable para el análisis interno de Caracterización 2027, no para cambiar
+elegibilidad, cargas PES ni el proceso 2026. El
+[estado inicial](ESTADO_CATALOGOS_Y_CONCILIACION_20261013.md) se conserva como
+antecedente; su cifra de 52 no describe la revisión activa.
+
+La [revisión modalidad_v2](RESOLUCION_MODALIDAD_INDEPENDIENTE_2027.md) mantiene
+los códigos y separa resolución de modalidad y código exacto. En 2027 permite
+informar modalidad unánime entre candidatos sin escoger versión SIES. La regla
+2026 y las auditorías de versiones anteriores se conservan.
+
 ## 1. Estado operativo actual
 
 El repositorio `avance_curricular` se encuentra validado funcionalmente.  

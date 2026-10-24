@@ -1,0 +1,37 @@
+{
+  "recurso": "retencion_primer_anio_sies_ipss_162_granular_2025",
+  "archivo": "RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.tsv",
+  "archivo_regla_oficial": "REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+  "fuente_canonica": "correo electrónico: Rodrigo Rolando Meneses, MINEDUC/SIES, a Karla Muñoz Gajardo/IPSS; 2026-09-09; asunto «RV: Matrícula de 1er año»",
+  "repositorio_fuente": "correo electrónico MINEDUC/SIES; transcripción completa verificada por el usuario",
+  "repositorio_consumidor": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+  "fecha_congelamiento": "2026-09-28T21:39:37-03:00",
+  "fecha_cotejo_directo_regla": "2026-09-30",
+  "sha256": "1e1e4872c8aa54ba97c1c4749d1fa509e13a4c11f498e933c9efddbb92b24c61",
+  "sha256_regla_oficial": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8",
+  "politica": "La ruta original en OneDrive o el correo puede cambiar o dejar de existir. Esta copia congelada en el repositorio es la fuente de verdad para auditoría futura. No se sobrescribe: una actualización exige nuevo archivo versionado y manifest.",
+  "clasificacion": "A: fuente oficial declarada por el usuario (definición de retención y reglas de cálculo, texto del correo); B: valores de la tabla transcritos y verificados por el usuario",
+  "derivado_desde": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260928_170822/RETENCION_PRIMER_ANIO_IPSS_162_CONCILIACION_20260928_170822.xlsx#06_SIES_2025_GRANULAR_OFICIAL!A1:G38",
+  "filas_datos": 37,
+  "columnas": 7,
+  "control_totales": {
+    "retenidos": 677,
+    "desertores": 486,
+    "no_considerar": 92,
+    "casos": 1163
+  },
+  "sin_datos_personales": true,
+  "cotejo_directo_20260930": {
+    "estado": "OK",
+    "detalle": "El 2026-09-30 el usuario reenvió la imagen original del correo. Se transcribieron las 38 filas (36 códigos únicos + encabezado + Total general) y se compararon programáticamente, celda por celda, contra el TSV ya congelado el 2026-09-28: 0 diferencias en las 38 filas. Adicionalmente se verificó de forma independiente que las columnas ret_1_retenido, ret_1_desertor y ret_1_no_considerar de la transcripción suman exactamente 677, 486 y 92 respectivamente, coincidiendo con la fila 'Total general' de la imagen. Esto cierra la advertencia E 'captura para cotejo directo pendiente' registrada en 00_FUENTES del libro RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_20260929_015725.xlsx: la TABLA de datos queda B verificado.",
+    "hallazgo_nuevo": "El texto definitorio de la regla (el párrafo de la Tasa de Retención de 1er año, con sus criterios de duración de programa, exclusión de programas especiales, exclusión de casos con inconsistencia de cohorte de origen, umbral de publicación de 10 casos y fecha de referencia 30 de abril) NO estaba transcrito en ningún artefacto gobernado hasta esta fecha; solo la tabla de datos lo estaba. Se transcribe y congela ahora en REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt (clasificación A).",
+    "verificado_por": "Claude, comparación programática fila a fila y suma de control independiente, 2026-09-30"
+  },
+  "reglas_clave_para_2022_2024": {
+    "duracion_programa": "Se consideran programas regulares desde 4 semestres (técnicas, bachillerato, ciclo inicial o plan común), 6 semestres (profesionales sin licenciatura) y 8 semestres (profesionales con licenciatura y licenciaturas no conducentes a título). Programas especiales quedan excluidos (A).",
+    "exclusion_no_considerar": "Se eliminan excepcionalmente casos específicos de estudiantes con inconsistencias de cohorte de origen de un año a otro. Estos casos NO cuentan como retenido ni como desertor, y NO forman parte de 'N° de casos' (verificado: casos = retenido + desertor, sin incluir no_considerar, en las 36 filas y en el total 2025) (A/C).",
+    "umbral_publicacion": "Se publican datos por categoría (carrera) solo cuando la categoría tiene desde diez casos de la cohorte de origen. Esto afecta solo qué filas se muestran desagregadas, no el total general (A).",
+    "fecha_referencia": "La fecha de referencia de la matrícula de cada año es el 30 de abril del año respectivo (A). Ya documentado como E para 2022-2023 en 00_FUENTES por no existir FECHA_MATRICULA en el esquema consolidado para esos años; sigue como E, esta transcripción no lo resuelve.",
+    "pendiente": "No se ha verificado todavía si el cálculo interno para 2022 y 2024 aplica correctamente la exclusión 'no_considerar' por inconsistencia de cohorte de origen, ni el filtro de duración de programa. Es la hipótesis principal a investigar para las brechas de +4,49 pp (2022) y -9,08 pp (2024) documentadas en 04_RESUMEN_EJECUTIVO_BRECHA del libro DIAGNOSTICO. No se afirma que esto explique las brechas sin verificarlo contra los datos (E, pendiente de investigación, no de supuesto)."
+  }
+}

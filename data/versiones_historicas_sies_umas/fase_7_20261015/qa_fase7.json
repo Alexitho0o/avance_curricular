@@ -1,0 +1,80 @@
+{
+  "commit_push_realizados": false,
+  "consulta_cli_real": {
+    "codigo_salida_ambos": 2,
+    "estado": "PENDIENTE_EVIDENCIA",
+    "resultados_identicos": true
+  },
+  "consumidor_documentacion": {
+    "README.md": {
+      "path": "README.md",
+      "sha256": "6f43b2168fbb3c9fbceab04b8c23f41028e1b08e73b48a2a72f179307c5bc746"
+    },
+    "docs/gobernanza/CONSULTA_HISTORICA_SIES_UMAS.md": {
+      "path": "docs/gobernanza/CONSULTA_HISTORICA_SIES_UMAS.md",
+      "sha256": "216490487144643cc8423af0d85a73b90e785b6b637ae6917b8dd8aafebc8217"
+    }
+  },
+  "controles": {
+    "control_referencias.json": {
+      "path": "control_referencias.json",
+      "sha256": "580b7826643cc3eeaa76ddd06794cebe55dc28edd85ae2ed0576219fe0cfeff4"
+    },
+    "ejemplo_cli_continuidad.json": {
+      "path": "ejemplo_cli_continuidad.json",
+      "sha256": "e7253c00d36013481134347d516755a1eeef334d853f1cd7cec5b2d6482c4e87"
+    },
+    "instalacion.json": {
+      "path": "instalacion.json",
+      "sha256": "91d5904bade6c5a997f539c607c802e45e3b547c3805919066301e28bf1b677e"
+    },
+    "qa_fcu.json": {
+      "path": "qa_fcu.json",
+      "sha256": "f02261c65076cef1dee31b04d39dcc4c9c898befb5732da012fb07bd9a105bd5"
+    }
+  },
+  "documentacion": {
+    "data/versiones_historicas_sies_umas/estado_fases.json": {
+      "path": "data/versiones_historicas_sies_umas/estado_fases.json",
+      "sha256": "a9ad8d366374227c75ac639d41ccc6673322707df44249c02bcc14411e51810c"
+    },
+    "docs/README.md": {
+      "path": "docs/README.md",
+      "sha256": "2274061514fc1db154cd33889d4686ffbd47aa68b1a5099a84b4c09c991ff264"
+    },
+    "docs/fase_7_integracion_consumidores.md": {
+      "path": "docs/fase_7_integracion_consumidores.md",
+      "sha256": "be4a0eb5d3db56ea365336d11cc8b1164ab440a5e7ae45b7e5c655df53df2b46"
+    }
+  },
+  "estado": "INTEGRACION_CONSULTAS_APROBADA_CON_LIMITES",
+  "excel_modificado": false,
+  "fase": 7,
+  "fecha_revision": "2026-10-15",
+  "limites": [
+    "Cero reglas efectivas acreditadas de plan/período a Código Único",
+    "Sin asignación individual histórica acreditada",
+    "No se sustituyeron los procesos operativos anuales",
+    "Excel definitivo H8 pendiente"
+  ],
+  "manifest_sha256": "f747011cbc887c51d452b98ba0a7fdb961613b8f548379894874e60088bf0dbc",
+  "pipelines_operativos_ejecutados": false,
+  "portabilidad": {
+    "carpeta_aislada": true,
+    "dependencia_del_repositorio_origen": false,
+    "python_modo_aislado": true,
+    "windows_probado": false
+  },
+  "pruebas": {
+    "cantidad": 18,
+    "log": "pruebas_h7.log",
+    "resultado": "OK",
+    "script_sha256": "e31f17ebb50646699de25fec10f1d4afaa5a030efd8d1df8bc6a9e53e229e07e",
+    "sha256": "c57b249a9b9837439081b99edc6670413d67f49ac070ca48855faea7f729a818"
+  },
+  "reproduccion": {
+    "archivos": 3,
+    "comparacion": "ejecución candidata frente a entrega final",
+    "identicos": true
+  }
+}

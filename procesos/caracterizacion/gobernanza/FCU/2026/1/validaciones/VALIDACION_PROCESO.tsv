@@ -1,0 +1,8 @@
+indicador	valor	esperado	cumple	observacion
+CSV validado	FCU_2026_CARGA_2026_P1_VALIDADO_E2E.csv	FCU_2026_CARGA_2026_P1_VALIDADO_E2E.csv	SI	Evidencia principal de carga FCU/PES.
+Auditoría E2E	LOCALIZADA	AUDITORIA_E2E_CARGA_FCU_PES_2026.xlsx	SI	Auditoría E2E copiada como evidencia formal.
+Auditoría localización	LOCALIZADA	AUDITORIA_LOCALIZACION_CARGA_FCU_2026.xlsx	SI	Auditoría de localización copiada.
+Hash esperado	fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461	fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461	SI	Comparación SHA256 sobre la copia gobernada del CSV validado.
+1.371 x 195	1371 x 195	1371 filas físicas incluyendo encabezado x 195 columnas	SI	La cifra 1.371 x 195 se registra como dimensión física del CSV gobernado; equivale a 1370 registros de datos más encabezado.
+Separador ;	USADO	;	SI	Lectura con delimitador punto y coma.
+Sustentabilidad no presente en CSV final	NO_PRESENTE	NO_PRESENTE	SI	Revisión de nombres de columnas del CSV final.

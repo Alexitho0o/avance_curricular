@@ -1,0 +1,75 @@
+{
+  "hito": "HITO_4C_Z",
+  "version_institucional": "CARACTERIZACION v1.0.0",
+  "fecha": "2026-07-15",
+  "rama": "main",
+  "head_inicial": "2c35809bf3fc7e2ad05c9dd159881434f04bbe32",
+  "estado_pre_commit": "APTO_PARA_COMMIT_Y_PUSH",
+  "hitos_incluidos": [
+    "HITO_4A_P",
+    "HITO_4B_P",
+    "HITO_4C_P",
+    "HITO_4C_Z"
+  ],
+  "arquitectura": {
+    "caracterizacion": "DINAMICA_POR_PERIODO_SIN_LONGITUDINAL",
+    "sies": "HISTORICO_VERSIONADO_SOLO_LECTURA_AGREGADO_REUTILIZABLE",
+    "longitudinal": "MODULO_INDEPENDIENTE_OPT_IN",
+    "declaracion": "CARACTERIZACION -> usa -> SIES VERSIONADA -> NO RECONSTRUIDA -> NO DINAMICA"
+  },
+  "sies": {
+    "version_utilizada": "SIES_2007_2025_v1",
+    "reconstruida_en_pipeline": false,
+    "dinamica": false,
+    "nivel_analisis": "AGREGADO_PROGRAMA_ANIO"
+  },
+  "ejecucion_funcional_validada": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK",
+    "estado": "OK",
+    "codigo_salida": 0,
+    "pipeline_completo": true,
+    "ultimo_bloque_completado": "BLOQUE 12",
+    "modo_corte": "NINGUNO",
+    "pipeline_recalculado_en_hito_4c_z": false
+  },
+  "conteos_principales": {
+    "vigentes": 627,
+    "sectorizado_filas": 627,
+    "sectorizado_codcli_duplicados": 0,
+    "respuesta_completa": 285,
+    "respuesta_incompleta": 2,
+    "no_respuesta": 340,
+    "con_datos_ac": 506,
+    "sin_datos_ac": 121
+  },
+  "auditoria_working_tree": {
+    "archivos_modificados_iniciales": 4,
+    "entradas_nuevas_intencionales_iniciales": 15,
+    "temporales_no_rastreados": 0,
+    "excel_nuevos_no_rastreados": 0,
+    "salidas_onedrive_en_git": false,
+    "caches_reproducibles_limpiados": true
+  },
+  "qa": {
+    "py_compile": "OK",
+    "pytest": "180 passed, 96 subtests passed",
+    "bash_n": "OK",
+    "git_diff_check": "OK"
+  },
+  "artefactos_funcionales_sha256": {
+    "manifest_ejecucion": "75e2d76ed870df3b0ae6fee31a672c0edb72d8078753993ddf02adcb0e67abe4",
+    "sectorizado_ac": "561c0efdf9bf38ef95e22e8be1b35424040beae2f25da82530bb89b59100c99c",
+    "cruce_sies": "c403372fbcbeb1d12d8ef6bfeb8a2dd4df0120d86814df6fb39da403dc6b6eb7",
+    "trayectoria_pregrado": "85286a861c0f39e9a9a8d686d0faf8d9cdca1923be9bef44e250e61c2fef964b"
+  },
+  "restricciones_cumplidas": {
+    "reglas_negocio_modificadas_en_hito_4c_z": false,
+    "kpi_alterados_en_hito_4c_z": false,
+    "universo_alterado_en_hito_4c_z": false,
+    "sies_recalculado_en_hito_4c_z": false,
+    "longitudinal_recalculado_en_hito_4c_z": false,
+    "merge": false,
+    "rebase": false
+  },
+  "dictamen_pre_publicacion": "APROBADO_PARA_CONGELAMIENTO"
+}

@@ -1,0 +1,2653 @@
+
+--- Página 1 ---
+MANUAL DE APLICACIÓN
+FICHA DE CARACTERIZACIÓN ÚNICA (FCU)
+EN PLATAFORMAS INSTITUCIONALES
+SUBSECRETARÍA DE EDUCACIÓN SUPERIOR
+ADMISIÓN 2026
+--- Página 2 ---
+Tabla de contenido
+1. PRESENTACIÓN ............................................................................................................. 2
+2. MARCO NORMATIVO .................................................................................................... 3
+3. CONSENTIMIENTOS....................................................................................................... 4
+4. CALENDARIO DE APLICACIÓN ......................................................................................... 5
+5. APLICACIÓN DE LA FCU .................................................................................................. 5
+5.1 Glosario de términos .................................................................................................... 5
+5.2 Instrucciones para la aplicación ..................................................................................... 7
+5.3 FCU en Plataformas Propias .......................................................................................... 8
+5.4 Cambios en la FCU 2026 ............................................................................................. 37
+5.5 Esquema relacional de preguntas condicionales ............................................................ 40
+6. CARGA DE DATOS ........................................................................................................... 46
+6.1 Plataforma de Educación Superior (PES) ....................................................................... 46
+6.2 Estructura de variables ............................................................................................... 47
+ANEXOS ............................................................................................................................ 74
+Anexo N°1: Modelo de Protocolo de Manejo de Datos ........................................................ 74
+Anexo N°2: Países ........................................................................................................... 76
+Anexo N°3: Pueblos Originarios ........................................................................................ 81
+Anexo N°4: Regiones ....................................................................................................... 82
+Anexo N°5: Comuna ........................................................................................................ 83
+Anexo N°6: Tooltip nacionalidad ....................................................................................... 91
+Anexo N°7: Nivel Educacional padres ................................................................................ 92
+Anexo N°8: Especialidad Educación Media TP ..................................................................... 93
+Anexo N°9: Especialidad Educación Media TP EPJA .............................................................. 94
+1
+--- Página 3 ---
+1. PRESENTACIÓN
+Este manual tiene por objetivo orientar el montaje de la Ficha de Caracterización Única
+(FCU) para aquellas instituciones adscritas al Sistema de Acceso que aplicarán el
+instrumento en sus propias plataformas.
+La FCU es un instrumento de caracterización, cuyo objetivo es recabar información
+estandarizada de los/as estudiantes que se matriculen a 1er año en alguna de las
+instituciones adscritas del Subsistema Técnico Profesional. La información recabada
+permitirá apoyar la toma de decisiones por parte de los actores públicos y privados del
+subsistema TP, con especial énfasis en la creación o fortalecimiento de programas, iniciativas
+o mecanismo de acompañamiento y retención, que pueda la institución implementar en
+apoyo a sus estudiantes de inicio. Además, la información recabada permitirá realizar
+investigaciones académicas que requieran el uso de estos datos, para lo cual los datos serán
+anonimizados (sin RUN, nombres o datos de contacto) y resultados con información
+agregada, asegurando que no se pueda individualizar a personas o casos específicos.
+El presente documento contiene el marco normativo de la FCU, los consentimientos que las
+instituciones deben aplicar, el calendario de aplicación, las preguntas del cuestionario, el
+esquema relacional de las preguntas y la estructura de la base de datos que posteriormente
+deberán cargar a la Plataforma de Educación Superior (PES).
+Para la Admisión 2026, la Subsecretaría de Educación Superior dispondrá de espacios de
+revisión del montaje del instrumento para las instituciones que requieran apoyo para
+asegurar la correcta implementación de la encuesta.
+Agradecemos a todas las instituciones que participan activamente en iniciativas
+ministeriales que buscan el mejoramiento continuo de la educación superior TP y el
+bienestar de los/as estudiantes que acuden a ella.
+2
+--- Página 4 ---
+2. MARCO NORMATIVO
+La Subsecretaría de Educación Superior, conforme a lo establecido en la Ley N°21.091 sobre
+Educación Superior, artículo 7°, actúa como “colaboradora directa del Ministro de Educación
+en la elaboración, coordinación, ejecución y evaluación de políticas y programas para la
+educación superior, especialmente en materias destinadas a su desarrollo, promoción,
+internacionalización y mejoramiento continuo, tanto en el subsistema universitario como en
+el técnico profesional”.
+En este marco, se crea la Ficha de Caracterización Única (FCU), regulada por la Resolución
+Exenta N°7.990 (2024), la cual en su numeral 5 establece los lineamientos para su
+implementación anual, definiendo sus objetivos, dimensiones, período de aplicación y
+universo destinatario.
+La resolución dispone, además, que la Subsecretaría habilitará una plataforma digital para
+que los/as estudiantes completen la FCU durante el proceso de matrícula. Las instituciones
+de educación superior podrán optar por utilizar esta plataforma o integrar el instrumento
+en sus propios sistemas, debiendo en este último caso remitir la información a la
+Subsecretaría mediante la plataforma PES.
+De igual forma, cada institución deberá garantizar las condiciones necesarias para que sus
+estudiantes completen la FCU de acuerdo con los criterios que anualmente defina el Comité
+Técnico de Acceso.
+Por último, la Resolución Exenta N°7.990 establece que la información obtenida por las
+instituciones a partir de la aplicación de la FCU solo podrá ser utilizada como herramienta
+para acompañar a los/as estudiantes y favorecer su permanencia, progreso y titulación,
+conforme a los convenios de transferencia de datos suscritos con la Subsecretaría de
+Educación Superior. En ningún caso esta información podrá ser compartida con otras
+3
+--- Página 5 ---
+instituciones o terceros, ni empleada para incurrir en actos de discriminación arbitraria,
+exclusión o restricción hacia los/as estudiantes.
+3. CONSENTIMIENTOS
+La Ficha de Caracterización Única se encuentra regulada por la Ley N°19.628 y sus
+modificaciones, sobre Protección de la Vida Privada. El artículo 1° de dicha norma establece
+que el tratamiento de datos personales en registros o bancos de datos, tanto por organismos
+públicos como por particulares, debe ajustarse a sus disposiciones, salvo cuando dicho
+tratamiento se realice en ejercicio de la libertad de emitir opinión e informar. Asimismo, la
+ley permite efectuar el tratamiento de datos personales siempre que lo haga conforme a las
+finalidades autorizadas y en respeto de los derechos fundamentales de los titulares de los
+datos. Por su parte, el artículo 4° dispone que el tratamiento de datos personales solo podrá
+realizarse cuando exista autorización legal o consentimiento expreso y por escrito del titular.
+En este último caso, la persona debe ser informada de manera clara sobre la finalidad del
+almacenamiento de sus datos y la eventual comunicación de estos al público.
+Para dar efecto a lo señalado, las instituciones deberán aplicar un consentimiento expreso
+al estudiantado antes de comenzar la encuesta. El consentimiento deberá explicitar el
+propósito de la FCU y pedir expresamente la autorización del titular para almacenar los
+datos consultados y transferirlos al Ministerio de Educación. Para brindar apoyo a las
+instituciones, se les compartirá un modelo en el Anexo N°1.
+Cabe señalar que la FCU es una encuesta voluntaria, por lo que las instituciones no podrán
+obligar a los/as estudiantes a completarla, ni condicionar su matrícula a ello. Sin embargo,
+se recomienda fomentar e incentivar la respuesta del estudiantado por distintos medios, a
+través de dar a conocer los beneficios de responder, proporcionar asistencia para quienes
+lo requieran y entregar facilidades, tanto de horarios como de espacios físicos, para facilitar
+el proceso de llenado.
+4
+--- Página 6 ---
+4. CALENDARIO DE APLICACIÓN
+Fecha Hito
+29 de agosto de 2025 Puesta en marcha FCU 2026
+09 de septiembre de 2025 Capacitación aplicación FCU
+02 de octubre de 2025 Inicio de aplicación FCU Admisión 2025
+30 de abril de 2026 Cierre de aplicación FCU Admisión 2025
+30 de abril de 2026 Carga de datos en PES
+5. APLICACIÓN DE LA FCU
+5.1 Glosario de términos
+Instrumento: técnica específica que se utiliza para recopilar información de la realidad
+social. En este caso, la FCU es un instrumento de tipo cuantitativo.
+Consentimiento: es el instrumento mediante el cual se consagra el acuerdo explícito de
+quien contesta el instrumento para compartir la información consultada de manera
+fidedigna, solamente para los usos y alcances explícitamente referidos. La existencia de este
+paso dentro del cuestionario es de suma importancia, ya que tiene implicancias normativas
+y jurídicas.
+Cuestionario: conjunto organizado de preguntas que apuntan a recopilar información de
+manera estandarizada.
+Condicionalidad simple: es la relación lógica existente entre dos preguntas, donde la
+respuesta en una pregunta condiciona la aparición de otra pregunta. Al ser una lógica
+simple, significa que se considera sólo la respuesta de una pregunta, para la aparición o
+despliegue de la pregunta condicional.
+5
+--- Página 7 ---
+Condicionalidad compleja: es la relación lógica existente entre varias preguntas, donde la
+respuesta de dos o más preguntas condiciona la aparición de otra. Al ser una lógica
+compleja, significa que se consideran dos o más preguntas, y la respuesta de ellas, para la
+aparición o despliegue de la pregunta condicional.
+Tooltip [T]: es un mensaje emergente que aparece al pasar el cursor por un botón con un
+signo de interrogación (“?”), y su función es proporcionar más información para ayudar a
+responder la pregunta, ya sea entregando una definición o un ejemplo. Las preguntas que
+deben contener un tooltip o mensaje emergente están indicadas con una [T] de color verde
+en la posición donde debe ir el botón.
+Pregunta obligatoria (*): las preguntas obligatorias son aquellas preguntas que el/la
+encuestado/a no puede dejar de responder. Estas son indicadas con un asterisco de color
+rojo al final de una pregunta. Por definición, todas las preguntas de la FCU son obligatorias
+de contestar, a excepción de las preguntas que consideren datos sensibles.
+Datos sensibles: según lo dispuesto bajo la Ley N°19.628, son aquellos “datos personales
+que se refieren a las características físicas o morales de las personas o a hechos o
+circunstancias de su vida privada o intimidad, tales como los hábitos personales, el origen
+racial, las ideologías y opiniones políticas, las creencias o convicciones religiosas, los estados
+de salud físicos o psíquicos y la vida sexual”. Las preguntas que contengan datos sensibles
+no podrán consultarse bajo ninguna obligatoriedad. Estas son:
+- Situación migratoria
+- Identidad de género
+- Pertenencia a pueblos originarios
+- Situación de discapacidad
+- Condición de salud
+- Bienestar psicológico y emocional
+- Necesidad Educativa Especial (NEE)
+6
+--- Página 8 ---
+5.2 Instrucciones para la aplicación
+Cada pregunta contendrá instrucciones para su aplicación, respecto a su obligatoriedad,
+condicionalidad con otra pregunta o si debe llevar algún mensaje emergente o tooltip. Estas
+instrucciones estarán contenidas en corchetes de color azul [xxxx], y son solo indicaciones
+para la institución, por lo que no deben ser visible para los/as encuestados.
+La FCU 2026 incorpora modificaciones respecto de su versión anterior, en coherencia con
+las sugerencias realizadas por las instituciones y los resultados de las pruebas psicométricas
+aplicadas tras el cierre de la FCU 2025.
+Cada pregunta que presente un cambio estará identificada con el siguiente símbolo: [C], e
+irá acompañado de una nota explicativa del cambio en la sección “5.4 Cambios en la FCU
+2026”.
+7
+--- Página 9 ---
+5.3 FCU en Plataformas Propias
+[La FCU debe iniciar con la siguiente presentación y consentimiento]
+C
+Nota 1
+PRESENTACIÓN
+La Ficha de Caracterización Única (FCU) busca conocer las características de los/as
+estudiantes que ingresan a la educación superior técnico profesional, con el fin de poder
+brindarles apoyo en su proceso formativo a través de programas de acompañamiento y
+orientación. Por ello es fundamental que respondas cada una de las preguntas a conciencia
+(podrás guardar todas las veces que quieras) y con la información más veraz y actualizada
+posible. La encuesta sólo te tomará alrededor de 20 minutos.
+La información que respondas no tendrá ningún impacto en los beneficios que otorga
+el Estado; ni educacionales, ni de subsidios o ayudas estatales, ni en tu situación
+migratoria, de tu familia y/o cercanos.
+Toda la información proporcionada es confidencial y será resguardada con altos estándares
+de seguridad. Esta sólo será compartida con el Ministerio de Educación. Además, ante cada
+pregunta que pueda abordar temas sensibles, se te solicitará nuevamente tu autorización
+expresa para compartir esa información al Ministerio.
+CONSENTIMIENTO
+꙱ Autorizo a la institución a compartir mi información al MINEDUC, resguardando mi opción
+frente a las preguntas consideradas sensibles.
+꙱ He leído y acepto el protocolo de manejo de datos [Consentimiento obligatorio para
+completar la FCU. Se recomienda hipervincular el modelo de protocolo de manejo de datos
+entregado por la Subsecretaría de Educación Superior en el Anexo N°1]
+8
+--- Página 10 ---
+I. ANTECEDENTES PERSONALES
+1. NOMBRE(S) *
+[Pregunta obligatoria. Pregunta tipo abierta con formato de texto]
+2. PRIMER APELLIDO *
+[Pregunta obligatoria. Pregunta tipo abierta con formato de texto]
+3. SEGUNDO APELLIDO *
+꙱ No poseo segundo apellido
+[Pregunta obligatoria. Pregunta tipo abierta con formato de texto. Al marcar la caja
+de “No poseo segundo apellido”, la respuesta de este campo deja de ser obligatoria]
+4. DOCUMENTO DE IDENTIFICACIÓN *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Cédula de identidad (Carnet)
+⃝ Pasaporte
+⃝ Identificador provisorio escolar (IPE)
+4.1 NÚMERO DEL DOCUMENTO * (RUN sin puntos y con guion, número de Pasaporte o
+IPE)
+[Pregunta obligatoria con condicionalidad simple a la P4. Respuesta con formato de
+validación según respuesta anterior:
+- RUN: 8 dígitos numéricos más el dígito verificador; sin puntos y con guion.
+9
+--- Página 11 ---
+- Pasaporte: alfanumérico, máximo 20 dígitos.
+- IPE: 9 dígitos numéricos más el dígito verificador; sin puntos y con guion.]
+5. FECHA DE NACIMIENTO*
+[Pregunta obligatoria. Respuesta con formato tipo calendario: DD/MM/AAAA]
+6. NACIONALIDAD [T] *
+[Pregunta obligatoria. Respuesta con barra desplegable con opción “Chile” como
+primera opción y el resto de los países por orden alfabético, donde “Chile” debe estar
+nuevamente en el orden que le corresponda. Listado de países en Anexo N°2]
+[T: imagen en Anexo N°6]
+Chile
+Argentina
+Belice
+Brasil
+Canadá
+Chile
+Colombia
+… (Listado en Anexo N° 2)
+6.1 [CONDICIONALIDAD SIMPLE] ¿Cuál es tu situación migratoria actualmente?
+[Pregunta condicional a la P6. Pregunta tipo selección múltiple. La P6.1 se despliega
+si la respuesta anterior fue distinta a “Chile”]
+Selecciona una opción
+⃝ Cuento con Residencia Definitiva
+⃝ Cuento con Residencia Temporal
+⃝ Me encuentro en proceso de regularizar mi situación migratoria
+⃝ Ninguna de las anteriores
+10
+--- Página 12 ---
+Acepto que estos datos sean compartidos al Ministerio de Educación
+⃝ Sí
+⃝ No
+7. ESTADO CIVIL *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Soltero/a
+⃝ Casado/a
+⃝ Conviviente civil
+⃝ Separado/a
+⃝ Divorciado/a
+⃝ Anulado/a
+⃝ Viudo/a
+8. ¿Cuál es tu sexo biológico? Marca la opción que aparece en tu documento de
+identidad. *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+C
+⃝ H (hombre) Nota 2
+⃝ M (mujer)
+⃝ X (No binario)
+9. La identidad de género hace referencia a cómo las personas se identifican respecto
+de su género, el que puede concordar o no con su sexo registral, es decir, con el
+sexo que se encuentra informado en el Registro Civil.
+A partir de lo anterior, ¿con cuál género te identificas?
+11
+--- Página 13 ---
+[Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Masculino
+C
+⃝ Femenino Nota 3
+⃝ No binario
+⃝ Otro
+Acepto que estos datos sean compartidos al Ministerio de Educación
+⃝ Sí
+⃝ No
+9.1 [CONDICIONALIDAD COMPLEJA] ¿Deseas registrar un nombre social?
+[Pregunta tipo abierta con formato de texto. Pregunta condicional a P8 y P9.
+Pregunta 9.1 se despliega si el sexo registral “H” de P8 no coincide con la opción 1
+(“Masculino”) de P9; si el sexo registral “M” de P.8 no coindice con la opción 2
+(“Femenino”) de P9; o si en P9 se selecciona 3 (“No binario”) o 4 (“Otro”)].
+10. ¿Perteneces a o eres descendiente directo/a de algún pueblo originario?
+[Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Sí [barra desplegable con opciones del Anexo N°3]
+⃝ No
+Acepto que estos datos sean compartidos con el Ministerio de Educación
+⃝ Sí
+⃝ No
+12
+--- Página 14 ---
+10.1 [CONDICIONALIDAD SIMPLE] Tu calidad de persona indígena ¿se encuentra
+acreditada ante la Corporación Nacional de Desarrollo Indígena (CONADI)?
+[Pregunta tipo selección múltiple. Pregunta condicional a P10. Pregunta P10.1 se
+despliega si en P10 la respuesta fue todas menos la opción 10 (“Selk´nam”), 12
+(“Pueblo tribal afrodescendiente”) o 13 (“Otra”)]
+Selecciona una opción
+⃝ Sí
+⃝ Está en proceso
+⃝ No
+⃝ No tengo conocimiento
+10.2 [CONDICIONALIDAD SIMPLE] ¿Deseas recibir orientación para acreditar tu calidad de
+persona indígena?
+[Pregunta tipo selección múltiple. Pregunta condicional a P10.1. Pregunta 10.2 se
+despliega si en P10.1, la respuesta fue la opción 3 (“No”) o 4 (“No tengo
+conocimiento”)]
+Selecciona una opción
+⃝ Sí
+⃝ No
+11. Persona en situación de discapacidad es aquella que presenta características físicas,
+mentales, psíquicas o intelectuales, o sensoriales, de carácter temporal o
+permanente, y que, al interactuar con diversas barreras presentes en el entorno, ve
+impedida o restringida su participación plena y efectiva en la sociedad, en igualdad
+de condiciones con las demás.
+De acuerdo con la definición anterior, ¿presentas actualmente alguna discapacidad?
+[Pregunta tipo selección múltiple]
+13
+--- Página 15 ---
+Selecciona una opción
+C
+⃝ Sí Nota 4
+⃝ No
+11.1 ¿Cuál/les de estos tipos de discapacidad presentas? Si tienes alguna duda respecto
+a la definición de cada discapacidad, acerca el cursor al signo de pregunta al lado de
+cada opción donde encontrarás la definición de cada una de ellas.
+C
+[Pregunta tipo caja de verificación]
+Nota 5
+Marca todas las opciones que correspondan
+꙱ Sí, discapacidad física o motora. [T: Se considera la disminución o ausencia de las
+funciones motoras o físicas en el cuerpo, por ej. Problemas de movilidad o falta de
+una parte del cuerpo]
+꙱ Sí, discapacidad auditiva. [T: Se considera el déficit total o parcial en la percepción
+auditiva que afecta a las funciones sensoriales como el oído y estructuras
+relacionadas]
+꙱ Sí, discapacidad visual. [T: No se considera la necesidad de usar lentes ópticos. Sí
+se considera afecciones de la vista como baja visión, limitación visual, agudeza visual,
+impedimento visual, percepción visual y ceguera]
+꙱ Sí, discapacidad intelectual. [T: Se considera las limitaciones en las habilidades
+cognitivas diarias que una persona requiere y que le sirven para responder a distintas
+situaciones en la vida]
+꙱ Sí, discapacidad psíquica. [T: Se considera las alteraciones de la conducta o del
+comportamiento adaptativo, generalmente derivadas del padecimiento de algún
+tipo de trastorno mental]
+Acepto que estos datos sean compartidos con el Ministerio de Educación.
+⃝ Sí
+⃝ No
+14
+--- Página 16 ---
+11.2 [CONDICIONALIDAD SIMPLE] ¿Estás inscrito/a en el Registro Nacional de
+Discapacidad?
+[Pregunta tipo selección múltiple. Pregunta condicional a P11.1. Pregunta 11.2 se
+despliega si en la P11.1 alguna respuesta fue 1 (“Sí”)]
+Selecciona una opción
+⃝ Sí
+⃝ Estoy en proceso
+⃝ No
+⃝ No tengo conocimiento
+11.3 [CONDICIONALIDAD SIMPLE] ¿Deseas recibir orientación y apoyo para inscribirte en
+el Registro Nacional de Discapacidad?
+[Pregunta tipo selección múltiple. Pregunta condicional a P11.2. Pregunta 11.3 se
+despliega si en P11.2 la respuesta fue 3 (“No”) o 4 (“No tengo conocimiento”)]
+Selecciona una opción
+⃝ Sí
+⃝ No
+12. DOMICILIO ACTUAL
+Dirección de tu vivienda actual o donde vivirás durante tus estudios superiores.
+12.1 Calle* [Pregunta obligatoria. Pregunta tipo abierta]
+12.2 Número* [Pregunta obligatoria. Pregunta tipo abierta]
+12.3 Departamento/Block [ Pregunta tipo abierta]
+12.4 Región* [Pregunta obligatoria y con respuestas en barra desplegable según Anexo
+N°4]
+12.5 Comuna* [Pregunta obligatoria y con respuestas en barra desplegable según Anexo
+N°5]
+12.6 ¿Tuviste que cambiarte de ciudad para cursar tus estudios superiores? *
+15
+--- Página 17 ---
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Sí
+⃝ No
+13. CÉLULAR DE CONTACTO*
+[Pregunta obligatoria. Pregunta tipo abierta con formato numérico de 8 dígitos]
+C
++569
+Nota 6
+14. CORREO ELECTRÓNICO
+[Pregunta obligatoria. Pregunta tipo abierta con formato de correo xxxx@xxx.xxx]
+C
+Nota 7
+II. ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS
+Para responder las siguientes preguntas, considera las condiciones que tendrás
+mientras estudias en la educación superior.
+15. ¿Quién/es conforman tu hogar? *
+El hogar puede estar constituido por una o más personas, que unidas o no por
+vínculos de parentesco, residen en una misma vivienda o parte de ella. Además, se
+deben beneficiar de un mismo presupuesto, principalmente para alimentación.
+[Pregunta obligatoria. Pregunta tipo caja de verificación]
+Marca todas las opciones que correspondan
+꙱ Vivo solo/a [Se desactivan otras opciones]
+꙱ Padre o padrastro
+16
+--- Página 18 ---
+꙱ Madre o madrastra
+꙱ Hermanos/as
+꙱ Pareja o cónyuge
+꙱ Hijos/as menores o igual a 12 años
+꙱ Hijos/as mayores de 12 años
+꙱ Otros familiares
+꙱ Otras personas
+C
+16. ¿Cuántas personas conforman tu hogar incluyéndote? * Nota 8
+[Pregunta obligatoria. Pregunta tipo barra desplegable: 1,2,3,4,5,6,7,8,9,+10]
+17. ¿Eres responsable del cuidado de otra/s personas/s? Considera personas que
+dependen de ti para sus cuidados, como hijos/as menores, personas adultas
+mayores, postradas, en situación de discapacidad, o con alguna condición de salud
+de larga duración [T]. *
+[Pregunta obligatoria. Pregunta de selección múltiple y con respuesta en barra
+desplegable]
+[T: “Una condición de salud de larga duración es aquella que se mantiene en el
+tiempo. Puede desarrollarse lenta o rápidamente, puede ser crónica o no,
+dependiendo del tipo de condición, y en general requiere cuidados y tratamientos
+especiales”]
+Selecciona una opción
+C
+⃝ Sí, ¿cuántas? [Barra desplegable: 1,2,3,4,+5]
+Nota 9
+⃝ No, ninguna
+17.1 [CONDICIONALIDAD SIMPLE] ¿Cuentas con apoyo para el cuidado de esa/a persona/s
+mientras estudias? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple. Pregunta condicional a P17.
+Pregunta 17.1 se despliega si en P17, la respuesta fue 1 (“Sí”)]
+C
+Nota 101 7
+--- Página 19 ---
+Selecciona una opción
+⃝ Sí
+⃝ No
+17.2 [CONDICIONALIDAD SIMPLE] ¿Quién/es te apoyan en el cuidado de esa/s
+persona/s?*
+[Pregunta obligatoria. Pregunta tipo caja de verificación. Pregunta condicional a
+17.1. Pregunta 17.2 se despliega si en la P17.1 la respuesta fue 1 (“Sí”)]
+Marca todas las opciones que correspondan
+꙱ Mi madre o madrastra
+C
+꙱ Mi padre o padrastro Nota 11
+꙱ Mi pareja o cónyuge
+꙱ Otro familiar
+꙱ Una institución de cuidados (sala cuna, jardín, guardería, escuela)
+꙱ Un servicio de cuidado en casa (servicio doméstico, enfermera, etc.)
+꙱ Amistades o vecinos/as
+18. ¿Cuál es el máximo nivel educacional alcanzado por tu padre/padrastro y
+madre/madrastra? *
+꙱ Pertenezco a una familiar homoparental [Cambia la visualización de la tabla por
+Padre/Madre 1 y Padre/Madre 2].
+C
+[Pregunta obligatoria]
+Nota 12
+Selecciona una opción para cada uno
+Nivel de educación Padre o padrastro* Madre o madrastra*
+(Padre/madre 1) (Padre/madre 2)
+Sin educación formal ● ●
+Educación Básica incompleta ● ●
+Educación Básica completa ● ●
+Educación Media/Humanidades incompleta ● ●
+18
+--- Página 20 ---
+Educación Media/ Humanidades completa ● ●
+Educación Superior Técnica-Profesional (CFT o ● ●
+IP) incompleta
+Educación Superior Técnica-Profesional (CFT o ● ●
+IP) completa
+Educación Universitaria incompleta ● ●
+Educación Universitaria completa ● ●
+Educación de posgrado (magíster, doctorado) ● ●
+Incompleta
+Educación de posgrado (magíster, doctorado) ● ●
+Completa
+No tengo información ● ●
+19. ¿Cuál es el ingreso mensual total de tu hogar? Recuerda que esta información se
+utilizará solo para fines estadísticos y no incidirá en tus beneficios estatales. *
+Nota: Considera para este cálculo los ingresos formales como sueldo bruto (sin
+descuentos previsionales), honorarios, pensiones, retiro, aportes de parientes,
+dividendos u otros, e ingresos por actividades no formales o como independiente.
+Si en tu hogar tienen ingresos variables cada mes, ingresa el promedio mensual de
+los últimos 12 meses. [T]
+[Pregunta obligatoria. Pregunta de selección múltiple]
+[T: “Ejemplo: Mi hogar se compone de 4 personas: mi madre, mi abuela, mi hermano
+y yo. Para obtener el ingreso total mensual de mi hogar debo sumar: $530.000
+(sueldo bruto de mi madre) + $150.000 (pensión de mi abuela) + $90.000 (pensión
+alimenticia que aporta mi padre), lo que resulta en un ingreso total mensual de
+$770.000.”]
+Selecciona una opción
+⃝ Menos de $250.000
+⃝ Entre $250.001 y $500.000
+⃝ Entre $500.001 y $750.000
+⃝ Entre $750.001 y $1.000.000
+⃝ Entre $1.000.001 y $1.250.000
+⃝ Entre $1.250.001 y $1.500.000
+⃝ Entre $1.500.001 y $1.750.000
+19
+--- Página 21 ---
+⃝ Más de $1.750.001
+20. ¿Quién es el/la jefe/a de tu hogar? *
+El jefe/a de hogar es aquel miembro (hombre o mujer) considerado como tal por
+las otras personas del hogar, ya sea por razones de dependencia económica,
+parentesco, edad, autoridad o respeto. En todos los hogares se identifica un/a
+solo/a jefe/a.
+[Pregunta obligatoria. Pregunta de selección múltiple]
+C
+Selecciona una opción Nota 13
+⃝ Yo soy el o la jefe/a de hogar
+⃝ Mi madre o madrastra
+⃝ Mi padre o padrastro
+⃝ Mi cónyuge o pareja
+⃝ Otra persona de mi familia
+⃝ Otro/a adulto/a del hogar
+21. ¿Cómo vas a financiar tus estudios?*
+[Pregunta obligatoria. Pregunta tipo caja de verificación]
+C
+Marca todas las opciones que correspondan Nota 14
+꙱ Ingresos propios
+꙱ Ingresos de mi padre/padrastro o madre/madrastra
+꙱ Ingresos de otros familiares
+꙱ Ingresos de otras personas
+꙱ Gratuidad
+꙱ Otras becas del Estado
+꙱ Becas externas
+꙱ Crédito con Aval del Estado (CAE)
+20
+--- Página 22 ---
+꙱ Crédito bancario o similares
+꙱ Mi empleador o empresa
+22. ¿Qué opción describe mejor tu situación laboral actual? *
+C
+[Pregunta obligatoria. Pregunta tipo selección múltiple] Nota 15
+Selecciona una opción
+⃝ No trabajo actualmente
+⃝ Trabajo a tiempo completo
+⃝ Trabajo a tiempo parcial
+⃝ Trabajo esporádicamente o en “pololos”
+III. TRAYECTORIA FORMATIVA Y LABORAL
+23. ¿De qué tipo de establecimiento escolar egresaste? [T] *
+[Pregunta obligatoria. Pregunta de selección múltiple]
+[T: “Si cursaste tu escolaridad en el extranjero, selecciona la opción que más se acerque”]
+Selecciona una opción
+⃝ Público (municipal, administración delegada o servicio local de educación SLEP)
+⃝ Particular Subvencionado
+⃝ Particular Pagado
+24. ¿En qué año egresaste de la Educación media o secundaria? *
+[Pregunta obligatoria. Pregunta selección múltiple, respuesta en barra desplegable con los
+años]
+25. ¿De qué tipo de formación egresaste en Educación media? *
+C
+[Pregunta obligatoria. Pregunta tipo selección múltiple] Nota 16
+21
+--- Página 23 ---
+Selecciona una opción
+⃝ Científico Humanista
+⃝ Científico Humanista (Educación de Personas Jóvenes y Adultas)
+⃝ Técnico Profesional
+⃝ Técnico Profesional (Educación de Personas Jóvenes y Adultas)
+⃝ Artístico – Experimental
+⃝ No cursé mi Educación media o secundaria en Chile
+25.1 [CONDICIONALIDAD SIMPLE] ¿Cuál es el área de tu especialidad Técnico Profesional
+cursada durante la Educación media? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple, con respuesta en barra desplegable
+según Anexo N°8. Pregunta condicional a P25. Pregunta 25.1 se despliega si en P25 la
+respuesta fue 3 (“Técnico profesional”)]
+25.2 [CONDICIONALIDAD SIMPLE] ¿Cuál es el área de tu especialidad Técnico Profesional
+cursada durante la Educación media? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple, con respuesta en barra desplegable
+según Anexo N°9.Pregunta condicional a P25. Pregunta 25.2 se despliega si en P25 la
+respuesta fue 4 (“Técnico profesional (Educación de Personas Jóvenes y Adultas)”)]
+25.3 [CONDICIONALIDAD SIMPLE] En relación con la especialidad cursada en la Educación
+media, ¿obtuviste el título técnico-profesional de nivel medio? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple. Pregunta condicional a P25.
+Pregunta 25.3 se despliega si en P25 la respuesta fue 3 (“Técnico profesional) o 4 (“Técnico
+Profesional (Educación para Personas Jóvenes y Adultas)”)]
+Selecciona una opción
+⃝ Sí
+⃝ Aún no
+⃝ No
+22
+--- Página 24 ---
+C
+Nota 17
+25.4 [CONDICIONALIDAD SIMPLE] La Articulación es un mecanismo que reconoce los
+aprendizajes de la Educación Media TP y permite convalidar asignaturas en Institutos
+Profesionales o Centros de Formación Técnica, siempre que la especialidad esté relacionada
+a la carrera de la educación superior.
+Según lo anterior, ¿cuál de las siguientes afirmaciones describe mejor tu situación ante la
+Articulación? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple. Pregunta condicional a P25.
+Pregunta 25.4 se despliega si en P25 la respuesta fue 3 (“Técnico profesional) o 4 (“Técnico
+Profesional (Educación para Personas Jóvenes y Adultas)”)]
+Selecciona una opción
+⃝ Convalidé asignaturas vía Articulación
+⃝ No convalidé asignaturas, aun cuando me matriculé en una carrera relacionada a mi
+especialidad de egreso
+⃝ Me matriculé en una carrera NO relacionada a mi especialidad
+25.5 [CONDICIONALIDAD SIMPLE] Indica la razón por la que no realizaste articulación. *
+[Pregunta obligatoria. Pregunta tipo selección múltiple. Pregunta condicional a P25.4.
+Pregunta 25.5 se despliega si en P25.4 la respuesta fue 2 (“No convalidé asignaturas, aun
+cuando me matriculé en una carrera relacionada a mi especialidad de egreso”).]
+Selecciona la opción que más te represente
+⃝ Tuve la posibilidad de convalidar, pero preferí no hacerlo porque quiero cursar todas las
+asignaturas
+⃝ Tuve la posibilidad de convalidar, pero preferí no hacerlo porque no confío en mis
+aprendizajes de la Educación Media
+⃝ No tuve información al respecto
+C
+⃝ La institución en la que me matriculé no tiene articulación Nota 18
+⃝ Las/os egresadas/os de mi liceo no tenían la opción de convalidar
+⃝ No pude convalidar porque egresé hace muchos años
+23
+--- Página 25 ---
+26. ¿Tu experiencia laboral está relacionada a la carrera en la que te matriculaste? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+C
+Selecciona la opción que más te represente Nota 19
+⃝ Sí, cuento con experiencia laboral relacionada
+⃝ Sí, cuento con experiencia laboral, pero NO está relacionada
+⃝ No cuento con experiencia laboral
+27. ¿Tienes algún tipo de formación posterior a tu Educación Media, ya sea formal
+(estudios en otra institución de educación superior) o no formal (como certificaciones o
+capacitaciones laborales)? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Sí
+⃝ No
+27.1 [CONDICIONALIDAD SIMPLE] ¿Qué tipo de formación posterior a la Educación Media
+tienes? [T] *
+[Pregunta obligatoria. Pregunta tipo caja de verificación. Pregunta condicional a P27.
+Pregunta 27.1 se despliega si en P27 la respuesta fue 1 (“Sí”)]
+[T: “Si tienes una certificación en el extranjero marca “Otro””]
+Marca todas las opciones que correspondan
+꙱ Formación en Fuerzas Armadas y de Orden público
+꙱ Educación superior técnica profesional (IP y CFT) incompleta
+꙱ Educación superior técnica profesional completa
+꙱ Educación universitaria incompleta
+24
+--- Página 26 ---
+꙱ Educación universitaria completa
+C
+꙱ Educación de posgrado incompleta Nota 20
+꙱ Educación de posgrado completa
+꙱ Capacitación en oficios completa
+꙱ Certificación de competencias laborales (ChileValora) completa
+꙱ Otro
+27.2 [CONDICIONALIDAD SIMPLE] ¿Cuánto se relaciona tu educación previa con la carrera
+en que te matriculaste? *
+[Pregunta obligatoria. Pregunta selección múltiple. Pregunta condicional a P27. Pregunta
+27.2 se despliega si en P27, la respuesta fue 1 (“Sí”)]
+Selecciona una opción
+⃝ No se relacionan nada
+⃝ Se relacionan poco
+⃝ Se relacionan medianamente
+⃝ Se relacionan mucho
+27.3 [CONDICIONALIDAD COMPEJA] El Reconocimiento de Aprendizajes Previos (RAP) es
+un proceso que permite evaluar y reconocer formalmente las competencias adquiridas en
+contextos formales, no formales o laborales. Los aprendizajes previamente desarrollados
+de los/as estudiantes pueden ser convalidados por asignaturas en la educación superior.
+Si tus estudios post secundarios o tu experiencia laboral se relacionan a la carrera en que te
+matriculaste, ¿hiciste algún proceso de RAP para convalidarlos? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple. Pregunta condicional a P26 y P27.2.
+Pregunta 27.3 se despliega si en P26, la respuesta es 1 (“Sí, cuento con experiencia laboral
+relacionada”) y/o si en P27.2, la respuesta es 3 (“Se relacionan medianamente”) o 4 (“Se
+relacionan mucho”)]
+C
+Nota 21
+25
+--- Página 27 ---
+Selecciona una opción
+⃝ Sí
+⃝ No
+27.4 [CONDICIONALIDAD SIMPLE] Indica la razón por la cual no hiciste el Reconocimiento
+de tus Aprendizajes Previos (RAP). *
+[Pregunta obligatoria. Pregunta tipo selección múltiple. Pregunta condicional a P27.3.
+Pregunta 27.4 se despliega si en P27.3, la respuesta fue 2 (“No”)]
+C
+Selecciona una opción
+Nota 22
+⃝ Tuve la posibilidad de convalidar, pero preferí no hacerlo porque quiero cursar todas las
+asignaturas.
+⃝ Tuve la posibilidad de convalidar, pero preferí no hacerlo porque no confío en mis
+aprendizajes previos (laborales o educativos).
+⃝ No tuve información al respecto
+⃝ La institución en la que me matriculé no tiene Reconocimiento de Aprendizajes Previos.
+IV. ANTECEDENTES DE LA INSTITUCIÓN Y PROGRAMA
+28. ¿En qué institución te matriculaste? *
+[Pregunta deberá estar precargada por la institución que la aplica]
+29. [CONDICIONALIDAD SIMPLE] ¿En qué carrera te matriculaste? *
+Nota: En caso de haberte matriculado en dos carreras distintas, selecciona solo una.
+[Pregunta obligatoria. Barra desplegable asociada a la Oferta Académica de la institución]
+30. ¿Cuál de las siguientes razones te motivaron a ingresar a la educación superior
+técnico profesional este año? *
+26
+--- Página 28 ---
+[Pregunta obligatoria. Pregunta tipo caja de verificación con límite de 3 respuestas]
+Marca hasta tres afirmaciones que te representen
+꙱ Porque me interesa desarrollarme como persona
+꙱ Por un mejor futuro laboral y calidad de vida
+꙱ Para que mi familia se sienta orgullosa de mí
+꙱ Porque mi familia me presionó para estudiar
+꙱ Porque no obtuve el puntaje para ingresar a la Universidad
+꙱ Por la duración y flexibilidad de las carreras
+C
+꙱ Otra Nota 23
+31. ¿Por qué escogiste esta institución? *
+[Pregunta obligatoria. Pregunta tipo caja de verificación con límite de 3 respuestas]
+Marca hasta tres afirmaciones que te representen
+꙱ Por el prestigio o imagen de la Institución
+꙱ Por la cantidad de años de acreditación de la Institución
+꙱ Por la ubicación y accesibilidad de sus sedes
+꙱ Por la infraestructura y/o equipamiento
+C
+꙱ Por las modalidades y/o jornadas que ofrece
+Nota 24
+꙱ Por estar adscrita a la gratuidad
+꙱ Por las becas y/o beneficios que ofrece
+꙱ Porque tiene la carrera de mi interés
+꙱ Por la posibilidad de continuidad de estudios que ofrece
+꙱ Otra razón
+C
+32. ¿Cuál/es son las principales razones por la que elegiste tu carrera? * Nota 25
+[Pregunta obligatoria. Pregunta tipo caja de verificación con límite de 3 respuestas]
+27
+--- Página 29 ---
+Marca hasta tres afirmaciones que te representen
+꙱ Porque se relaciona con mis gustos o vocación
+꙱ Porque se relaciona con mi trabajo
+꙱ Por tener buen campo laboral y expectativas de sueldo al egresar
+꙱ Por recomendación de mi entorno (familia, amistades, colegas, etc.)
+꙱ Porque se imparte en una jornada que me acomoda
+꙱ Por la malla de estudios
+꙱ Porque no había cupos en la carrera de mi preferencia
+꙱ Porque no puedo financiar mi carrera de preferencia
+꙱ Otra razón
+33. ¿Por cuál de los siguientes medios te informaste sobre la institución y/o carrera?*
+[Pregunta obligatoria. Pregunta tipo caja de verificación]
+Marca todas las opciones que correspondan
+꙱ Visitando personalmente la institución
+꙱ Amigos y/o familiares
+꙱ Profesores u orientador/a de mi colegio
+꙱ Anuncios en la vía pública
+꙱ En ferias o exposiciones educativas
+꙱ En una charla realizada en mi colegio o liceo
+꙱ TikTok
+꙱ Instagram
+꙱ Facebook
+꙱ Twitter o X
+꙱ Prensa (diarios físicos)
+꙱ Prensa digital
+28
+--- Página 30 ---
+꙱ Página web de la institución
+꙱ Televisión
+꙱ Radio
+34. En caso de que la institución necesite contactarte, ¿cuál sería tu medio de
+comunicación de preferencia? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ WhatsApp
+⃝ Llamada telefónica
+⃝ Correo electrónico
+⃝ Videollamada
+⃝ Mensaje de texto
+35. ¿Cómo evalúas el proceso de matrícula en la institución? *
+[Pregunta obligatoria. Pregunta tipo escala likert]
+(1) Muy en (2) En (3) Ni de (4) De (5) Muy de
+desacuerdo Desacuerdo acuerdo ni en acuerdo acuerdo
+desacuerdo
+Me pareció fácil ⃝ ⃝ ⃝ ⃝ ⃝
+Me pareció claro ⃝ ⃝ ⃝ ⃝ ⃝
+Me pareció rápido ⃝ ⃝ ⃝ ⃝ ⃝
+Me dieron una buena ⃝ ⃝ ⃝ ⃝ ⃝
+atención
+29
+--- Página 31 ---
+36. ¿Qué tan de acuerdo estas respecto a las siguientes afirmaciones sobre la
+información entregada por el Ministerio de Educación– MINEDUC en su página web? *
+C
+[Pregunta obligatoria. Pregunta tipo escala likert] Nota 26
+No lo utilicé (1) Muy en (2) En (3) Ni de (4) De (5) Muy de
+[desactiva desacuerdo desacuerdo acuerdo ni en Acuerdo acuerdo
+Otras desacuerdo
+opciones]
+La información sobre ⃝ ⃝ ⃝ ⃝ ⃝ ⃝
+gratuidad, becas y beneficios
+fue clara.
+El calendario de postulación y ⃝ ⃝ ⃝ ⃝ ⃝ ⃝
+matrícula era fácil de
+encontrar.
+El buscador de carreras de ⃝ ⃝ ⃝ ⃝ ⃝ ⃝
+acceso.mineduc.cl fue útil
+El buscador de carreras de ⃝ ⃝ ⃝ ⃝ ⃝ ⃝
+mifuturo.cl fue útil
+El proceso de llenado del FUAS ⃝ ⃝ ⃝ ⃝ ⃝ ⃝
+(Formulario Único de
+Acreditación
+Socioeconómica) fue fácil
+de hacer.
+V. BIENESTAR PARA EL PROCESO EDUCATIVO
+37. Una condición de salud de larga duración se refiere a enfermedades crónicas,
+trastornos psicológicos diagnosticados, trastorno del espectro autista (TEA) [T],
+enfermedades autoinmunes, enfermedad GES, entre otras.
+¿Tienes algún tipo de condición de salud de larga duración diagnosticada por algún
+profesional que pueda incidir en tu proceso educativo?
+[Pregunta tipo selección múltiple]
+[T: “Según lo dispuesto en artículo 2 de la ley N°21.545, éste corresponde a una condición
+de diferencia o diversidad en el neurodesarrollo típico y deberá contar con un diagnóstico
+médico”]
+Selecciona una opción
+⃝ Sí
+⃝ No
+30
+--- Página 32 ---
+Acepto compartir esta información con el Ministerio de Educación
+⃝ Sí
+⃝ No
+37.1 [CONDICIONALIDAD SIMPLE] En caso de que la institución requiera más información
+sobre tu condición de salud, ¿te gustaría ser contactado/a? (Esto no asegura la entrega de
+facilidades o ajustes).
+[Pregunta tipo selección múltiple. Pregunta condicional a P37. Pregunta 37.1 se despliega si
+en P37, la respuesta fue 1 (“Sí”)]
+Selecciona una opción
+⃝ Sí
+⃝ No
+38. Con relación a tu bienestar psicológico y emocional, ¿cómo lo percibes actualmente?
+[Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Muy malo
+⃝ Malo
+⃝ Ni bueno ni malo
+⃝ Bueno
+⃝ Muy bueno
+39. En caso de que la institución cuente con algún programa de apoyo psicológico,
+emocional y/o de orientación, ¿te gustaría ser contactado/a? (Importante: Esto no asegura
+la participación en estos programas).
+[Pregunta tipo selección múltiple]
+31
+--- Página 33 ---
+Selecciona una opción
+⃝ Sí
+⃝ No
+40. ¿Presentas actualmente alguna Necesidad Educativa Especial (NEE) transitoria
+diagnosticada por algún profesional?
+[Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Sí
+⃝ No
+⃝ No tengo conocimiento
+Acepto que estos datos sean compartidos con el Ministerio de Educación.
+⃝ Sí
+⃝ No
+40.1 [CONDICIONALIDAD SIMPLE] ¿Con cuál de estas dificultades está asociada a tu
+necesidad educativa especial (NEE)?
+[Pregunta tipo caja de verificación. Pregunta condicional a P40. Pregunta 40.1 se despliega
+si en P40, la respuesta fue 1(“Sí”)]
+Marca todas las opciones que correspondan
+꙱ Asociada a Déficit atencional
+꙱ Asociada a Dislexia
+꙱ Asociada a Discalculia
+꙱ Asociada a Disgrafía
+꙱ Asociada a trastornos del lenguaje
+꙱ Asociado a dificultad especifica del aprendizaje (lenguaje)
+32
+--- Página 34 ---
+꙱ Asociado a dificultad específica del aprendizaje (matemática)
+C
+꙱ Otra Nota 27
+40.2 [CONDICIONALIDAD COMPLEJA] En tu período escolar, ¿participaste en el Programa
+de Integración Escolar (PIE)?
+[Pregunta tipo selección múltiple. Pregunta condicional a P11 y P40. Pregunta 40.2 se
+despliega si en P11 la respuesta fue diferente a “No” y/o en P40 la respuesta fue 1 (“Sí”)]
+Selecciona una opción
+⃝ Sí
+⃝ No
+⃝ No aplica
+41. ¿Cuentas con acceso a alguno de los siguientes recursos tecnológicos? *
+[Pregunta obligatoria. Pregunta tipo caja de verificación]
+Marca todos los que correspondan
+꙱ Teléfono inteligente o smartphone
+꙱ Notebook o computador portátil
+꙱ Tablet
+꙱ Computador de escritorio (PC)
+꙱ Internet Wifi
+꙱ Internet con plan de datos móviles en tu teléfono móvil
+꙱ Cámara web (integrada a un dispositivo o externa)
+꙱ Micrófono (integrado a un dispositivo o externo)
+꙱ Parlantes y/o audífonos
+꙱ Impresora
+33
+--- Página 35 ---
+42. En tu lugar de residencia, ¿cuentas con un espacio iluminado, cómodo, libre de
+ruidos molestos y distracciones para estudiar? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Sí, cuento con un espacio de esas características siempre
+⃝ Cuento con un espacio de esas características, pero no siempre lo puedo ocupar
+⃝ No cuento con un espacio de esas características para estudiar
+43. ¿A quiénes considerarías como tu red de apoyo emocional durante tus estudios en
+la educación superior?
+[Pregunta obligatoria. Pregunta tipo caja de verificación] C
+Nota 28
+Marca todas las opciones que correspondan
+꙱ Familia nuclear (padres y/o hermanos/as.)
+꙱ Pareja o cónyuge
+꙱ Otros familiares
+꙱ Amigos/as
+꙱ Compañeros/as de trabajo
+꙱ Otras redes
+44. ¿Cuánto tiempo estimas que te demoras desde tu lugar de origen (casa o trabajo)
+al lugar donde estudiarás? *
+[Pregunta obligatoria. Pregunta tipo selección múltiple]
+Selecciona una opción
+⃝ Menos de media hora
+⃝ Entre media hora y una hora
+⃝ Entre más de una hora y una hora y media
+⃝ Más de una hora y media
+34
+--- Página 36 ---
+⃝ No lo sé
+⃝ No aplica, estudiaré de forma remota
+VI. DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR
+45. Señala tu grado de acuerdo con las siguientes afirmaciones (1/3)*
+[Preguntas obligatorias]
+(1)Muy en (2) En (3) Ni de (4)De (5) Muy de
+desacuerdo desacuerdo acuerdo ni en acuerdo acuerdo
+desacuerdo
+Me gusta participar de actividades
+⃝ ⃝ ⃝ ⃝ ⃝
+extraprogramáticas, como talleres, voluntariados
+u otros.
+Me gusta leer y tengo el hábito de hacerlo. ⃝ ⃝ ⃝ ⃝ ⃝
+Tengo dificultad para comprender un texto
+⃝ ⃝ ⃝ ⃝ ⃝
+escrito o expresarme a través de la escritura.
+Termino todo lo que empiezo ⃝ ⃝ ⃝ ⃝ ⃝
+Tengo dificultades para mantener el foco en
+⃝ ⃝ ⃝ ⃝ ⃝
+proyectos
+que duran más de unos meses.
+He superado momentos difíciles para conquistar
+⃝ ⃝ ⃝ ⃝ ⃝
+una meta importante.
+Señala tu grado de acuerdo con las siguientes afirmaciones (2/3) *
+(1)Muy en (2) En (3) Ni de (4)De (5) Muy de
+desacuerdo desacuerdo acuerdo ni en acuerdo acuerdo
+desacuerdo
+No me siento cómodo(a) conociendo personas ⃝ ⃝ ⃝ ⃝ ⃝
+nuevas.
+Cuando tengo un conflicto con otras personas,
+⃝ ⃝ ⃝ ⃝ ⃝
+busco considerar todos los puntos de vista.
+Cuando estoy en entornos educacionales o
+⃝ ⃝ ⃝ ⃝ ⃝
+laborales, tiendo a sentirme parte de una
+comunidad
+Cuando me va mal en algo, me cuesta manejar
+⃝ ⃝ ⃝ ⃝ ⃝
+emociones fuertes como la rabia o la pena
+Soy capaz de sacrificar la diversión para dedicarme
+⃝ ⃝ ⃝ ⃝ ⃝
+a mis estudios
+Pongo mucho esfuerzo en mis estudios y
+⃝ ⃝ ⃝ ⃝ ⃝
+actividades académicas.
+35
+--- Página 37 ---
+Señala tu grado de acuerdo con las siguientes afirmaciones (3/3) *
+[Preguntas obligatorias]
+(1)Muy en (2) En (3) Ni de acuerdo (4)De (5) Muy de
+desacuerdo desacuerdo ni en desacuerdo acuerdo acuerdo
+Dudo que con mis habilidades académicas tenga un
+⃝ ⃝ ⃝ ⃝ ⃝
+buen desempeño en mi carrera.
+Cuando estudio o tengo actividades académicas, lo
+⃝ ⃝ ⃝ ⃝ ⃝
+hago a conciencia y dedicadamente.
+Estoy seguro/a de que si estudio y me organizo puedo
+⃝ ⃝ ⃝ ⃝ ⃝
+obtener las notas que deseo.
+Cuando no entendía algo o no me iba bien en el
+⃝ ⃝ ⃝ ⃝ ⃝
+colegio, buscaba ayuda para que me explicaran lo
+que no sabía
+No me siento tan confiado/a en que terminaré mis
+⃝ ⃝ ⃝ ⃝ ⃝
+estudios y me titularé
+Cuando tengo que enfrentar un desafío académico,
+me cuesta organizarme y resolver los problemas que
+⃝ ⃝ ⃝ ⃝ ⃝
+aparecen.
+Me siento seguro/a de la decisión que tomé al elegir
+⃝ ⃝ ⃝ ⃝ ⃝
+mi carrera e institución
+36
+--- Página 38 ---
+5.4 Cambios en la FCU 2026
+La FCU contempla 28 cambios. La mayoría (17) corresponden a ajustes de texto en el
+enunciado de la pregunta o en alguna de sus alternativas (sacar, agregar o reemplazar una
+palabra). Estos cambios no alteran el sentido de la pregunta, ni la estructura de la encuesta,
+y tienen como propósito simplificar la redacción y facilitar la comprensión por parte del
+estudiantado. Se recomienda copiar el texto integramente, ya que algunos cambios puedes
+ser imperceptibles.
+Por otra parte, existen 11 cambios que implican modificaciones en la estructura de las
+variables, por lo que se recomienda revisar cada una de ellas contrastando con la estructura
+de variables contenida en la sección 6.2.
+Finalmente, indicar que se eliminaron 3 campos: “Teléfono fijo” (Pregunta 13.2), “Correo
+laboral” (14.2) y “Correo de alguna persona cercana” (Pregunta 14.3).
+N° Nota N° Pregunta Cambio
+1 Presentación Cambio de texto.
+2 8 Cambio de texto en el enunciado, se agrega “biológico”. No
+modifica la estructura de variables.
+3 9 Se elimina la opción “Prefiero no decirlo”, ya que la pregunta
+no es obligatoria.
+4 11 Se simplifica el formato de la pregunta a tipo selección
+múltiple con respuestas Sí/No.
+5 11.1 Se agrega pregunta para consultar por los tipos de
+discapacidad. A su vez, las definiciones de cada discapacidad
+se incorporarán a través de un tooltip o mensaje emergente.
+6 13 Cambio de texto en el enunciado. Se reemplaza “Teléfono”
+por “Celular”. Se elimina pregunta 13.1
+7 14 Se mantiene pregunta 14 y se elimina pregunta 14.2 y 14.3
+8 16 Cambio de texto en el enunciado, se agrega “incluyéndote”.
+No modifica la estructura de variables.
+37
+--- Página 39 ---
+9 17 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+10 17.1 Se simplifica el formato de la pregunta a tipo selección
+múltiple con respuestas Sí/No.
+11 17.2 Se agrega pregunta para consultar quienes apoyan con los
+cuidados.
+12 18 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+13 20 Se separa una de las alternativas, quedando una opción para
+madre/madrastra y otra para padre/padrastro.
+14 21 Cambio de texto de la segunda opción, quedando “Ingresos
+de mi padre/padrastro o madre/madrastra”. No modifica la
+estructura de variables.
+15 22 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+16 25 Cambio de texto en el enunciado, se saca “diferenciada”. No
+modifica la estructura de variables.
+17 25.4 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+18 25.5 Cambio de texto en la primera opción, quedando “Tuve la
+posibilidad de convalidar, pero preferí no hacerlo porque
+quiero cursar todas las asignaturas”. No modifica la
+estructura de variables.
+19 26 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+20 27.1 Se elimina la opción "Capacitación en oficios incompleta”
+21 27.3 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+22 27.4 Cambio de texto en la primera opción, quedando “Tuve la
+posibilidad de convalidar, pero preferí no hacerlo porque
+quiero cursar todas las asignaturas”. No modifica la
+estructura de variables.
+23 30 Se suprime la caja abierta para completar “Otra”
+38
+--- Página 40 ---
+24 31 Cambio de texto en la quinta opción, queda “Por las
+modalidades y/o jornadas que ofrece”. No modifica la
+estructura de variables.
+25 32 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+26 36 Cambio de texto en el enunciado. No modifica la estructura
+de variables.
+27 40.1 Se suprime caja abierta para completar “otra”
+28 43 Se suprime la obligatoriedad y se elimina la opción “No
+cuento con redes de apoyo”
+39
+--- Página 41 ---
+5.5 Esquema relacional de preguntas condicionales
+A continuación, se presenta el esquema relacional de las preguntas condicionales de la FCU. Es muy importante que la institución pueda
+implementar estas reglas lógicas de manera correcta, debido a que afectan directamente a la calidad de la información recogida.
+40
+--- Página 42 ---
+41
+--- Página 43 ---
+42
+--- Página 44 ---
+43
+--- Página 45 ---
+44
+--- Página 46 ---
+45
+--- Página 47 ---
+6. CARGA DE DATOS
+6.1 Plataforma de Educación Superior (PES)
+Las instituciones deberán cargar las respuestas de la Ficha de Caracterización Única (FCU)
+contestadas por estudiantes de primer año para la admisión 2026, a través del portal
+https://pes.mineduc.cl hasta el 30 de abril de 2026. Para hacer este procedimiento el/la
+representante de la institución deberá ingresar con el nombre de usuario y clave asignado,
+y cargar el archivo en formato CSV UTF8 (delimitado por comas) (*.csv), con la estructura y
+formato de variables que se indica en el siguiente numeral.
+En marzo de 2026, se enviará un instructivo indicando el ID de la carga, en conjunto con una
+capacitación que realizará sobre este proceso.
+46
+--- Página 48 ---
+6.2 Estructura de variables
+Columna Nombre campo Descripción campo Tipo dato Valores Códigos N° Pre
+permitidos gunta
+FCU
+A ANO_PRO Año Proceso Numérico 4 dígitos No aplica No
+aplica
+B NOMBRE Nombre(s) Cadena 50 caracteres No aplica 1
+C APELLIDO_1 Primer apellido Cadena 50 caracteres No aplica 2
+D APELLIDO_2 Segundo apellido Cadena 50 caracteres No aplica 3
+E TIPO_DOC Tipo documento de Numérico [1-3] 1: Cédula de identidad 4
+identificación (Carnet)
+2: Pasaporte
+3: Identificador
+provisorio escolar (IPE)
+F NRO_DOC N° de documento de Cadena RUN: 8 dígitos No aplica 4.1
+identificación numéricos más el
+dígito verificador;
+sin puntos y con
+guion.
+Pasaporte:
+alfanumérico, 20
+dígitos.
+IPE: 9 dígitos
+numéricos más el
+dígito verificador;
+sin puntos y con
+guion.
+G FECHA_NAC Fecha de nacimiento Fecha DD/MM/AAA No aplica 5
+H NAC Nacionalidad Numérico [1-197] Código según Anexo N°2 6
+47
+--- Página 49 ---
+I SIT_MIGR Situación migratoria Numérico [1-4] 1: Cuento con 6.1
+Residencia Definitiva
+2: Cuento con
+Residencia Temporal
+3: Me encuentro en
+proceso de regularizar
+mi situación migratoria
+4: Ninguna de las
+Anteriores
+J ESTADO_CIVIL Estado civil Numérico [1-7] 1: Soltero/a 7
+2: Casado/a
+3: Conviviente civil
+4: Separado/a
+5: Divorciado/a
+6: Anulado/a
+7: Viudo/a
+K SEXO Sexo Cadena [H, M, X] H: Hombre 8
+M: Mujer
+X: No binario
+L GENERO Identidad de género Numérico [1-5] 1: Masculino 9
+2: Femenino
+3: No binario
+4: Otro
+M NOMBRE_SOCIAL Nombre social Cadena 50 caracteres No aplica 9.1
+48
+--- Página 50 ---
+N PPOO Pueblos originarios Numérico [1-2] 1: Si 10
+2: No
+O PPOO_DEF Pueblos originarios Numérico [1-13] Código según 10
+definición Anexo N°3
+P CONADI_ACRED Acreditación CONADI Numérico [1-4] 1: Sí 10.1
+2: Está en proceso
+3: No
+4: No tengo
+conocimiento
+Q CONADI_ORIENT Orientación CONADI Numérico [1-2] 1: Sí 10.2
+2: No
+R DISCAP Situación de Numérico [1-2] 1: Sí 11
+Discapacidad 2: No
+S DISCAP_FIS Persona en situación Numérico [0-1] 0: No/False 11.1
+de discapacidad física o 1: Sí/True
+motora
+T DISCAP_AUD Persona en situación Numérico [0-1] 0: No/False 11.1
+de discapacidad 1: Sí/True
+auditiva
+U DISCAP_VIS Persona en situación Numérico [0-1] 0: No/False 11.1
+de discapacidad visual 1: Sí/True
+V DISCAP_INT Persona en situación Numérico [0-1] 0: No/False 11.1
+de discapacidad 1: Sí/True
+intelectual
+49
+--- Página 51 ---
+W DISCAP_PSQ Persona en situación Numérico [0-1] 0: No/False 11.1
+de discapacidad 1: Sí/True
+psíquica
+X DISCAP_REGIS Registro Discapacidad Numérico [1-4] 1: Sí 11.2
+2: Está en proceso
+3: No
+4: No tengo
+conocimiento
+Y DISCAP_ORIENT Orientación Registro Numérico [1-2] 1: Sí 11.3
+Discapacidad 2: No
+Z CALLE Calle Cadena 50 caracteres No aplica 12.1
+AA NRO_CALLE Número calle Cadena 10 caracteres No aplica 12.2
+AB DEPTO_BLOCK Departamento/Block Cadena 10 caracteres No aplica 12.3
+AC REGION Región Numérico [1-16] Código según Anexo N°4 12.4
+AD COMUNA Comuna Numérico [1101-16305] Código según Anexo N°5 12.5
+AE CAMBIO_CIUDAD Cambio de ciudad Numérico [1-2] 1: Sí 12.6
+2: No
+AF CEL Teléfono celular Numérico 11 dígitos con No aplica 13
+formato
+56912345678
+AG CORREO Correo personal Cadena xxx@xxxx.xx No aplica 14
+AH HOGAR_SOLO Conformación hogar [ Numérico [0-1] 0: No/False 15
+solo/a] 1: Sí/True
+AI HOGAR_PADRE Conformación hogar Numérico [0-1] 0: No/False 15
+[padre/padrastro] 1: Sí/True
+50
+--- Página 52 ---
+AJ HOGAR_MADRE Conformación hogar Numérico [0-1] 0: No/False 15
+[madre/madrastra] 1: Sí/True
+AK HOGAR_HERM Conformación hogar Numérico [0-1] 0: No/False 15
+[hermanos/as] 1: Sí/True
+AL HOGAR_PAREJA Conformación hogar Numérico [0-1] 0: No/False 15
+[pareja o cónyuge] 1: Sí/True
+AM HOGAR_MEN12 Conformación hogar Numérico [0-1] 0: No/False 15
+[hijos/as <12] 1: Sí/True
+AN HOGAR_MAY12 Conformación hogar Numérico [0-1] 0: No/False 15
+[hijos/as ≥ 12] 1: Sí/True
+AO HOGAR_FAM Conformación hogar Numérico [0-1] 0: No/False 15
+[otros familiares] 1: Sí/True
+AP HOGAR_OTROS Conformación hogar Numérico [0-1] 0: No/False 15
+[otras personas] 1: Sí/True
+AQ HOGAR_CANT Cantidad total Numérico [1-10] 1: 1 16
+personas hogar 2: 2
+3: 3
+4: 4
+5: 5
+6: 6
+7: 7
+8: 8
+9: 9
+10: +10
+AR CUIDADOS Rol de Cuidado Numérico [1-2] 1: Sí 17
+2: No
+51
+--- Página 53 ---
+AS CUIDADOS_CANT Cantidad de personas a Numérico [1-5] 1: 1 17
+cuidar 2: 2
+3: 3
+4: 4
+5: +5
+AT APOYO_CUID Recibe apoyo en Numérico [1-2] 1: Sí 17.1
+cuidados 2: No
+AU APO_CUI_MADRE Apoyo cuidados [madre Numérico [0-1] 0: No/False 17.2
+omadrastra] 1: Sí/True
+AV APO_CUI_PADRE Apoyo cuidados [padre Numérico [0-1] 0: No/False 17.2
+opadrastro] 1: Sí/True
+AW APO_CUI_PAR Apoyo cuidados [pareja Numérico [0-1] 0: No/False 17.2
+ofamiliar] 1: Sí/True
+AX APO_CUI_FAM Apoyo cuidados Numérico [0-1] 0: No/False 17.2
+[otro familiar] 1: Sí/True
+AY APO_CUI_INST Apoyo cuidados Numérico [0-1] 0: No/False 17.2
+[institución] 1: Sí/True
+AZ APO_CUI_CASA Apoyo cuidados Numérico [0-1] 0: No/False 17.2
+[casa] 1: Sí/True
+BA APO_CUI_AMI Apoyo cuidados Numérico [0-1] 0: No/False 17.2
+[amistades] 1: Sí/True
+BB NIVEL_EDU_PADRE Nivel educacional Numérico [1-12] Código según Anexo N°7 18
+[padre]
+BC NIVEL_EDU_MADRE Nivel educacional Numérico [1-12] Código según Anexo N°7 18
+[madre]
+52
+--- Página 54 ---
+BD INGRESO Ingreso mensual del Numérico [1-8] 1: Menos de $250.000 19
+hogar 2: Entre $250.001 y
+$500.000
+3: Entre $500.001 y
+$750.000
+4: Entre $750.001 y
+$1.000.000
+5: Entre $1.000.001 y
+$1.250.000
+6: Entre $1.250.001 y
+$1.500.000
+7: Entre $1.500.001 y
+$1.750.000
+8: Más de $1.750.001
+BE JEFE_HOGAR Jefe/a hogar Numérico [1-5] 1: Yo soy el o la jefe/a 20
+de hogar
+2: Mi madre o
+madrastra
+3: Mi padre o
+padrastro
+4: Mi cónyuge o pareja
+5: Otra persona de mi
+familia
+6: Otro/a adulto/a del
+Hogar
+BF FIN_PRO Financiamiento [propio] Numérico [0-1] 0: No/False 21
+1: Sí/True
+BG FIN_PADRES Financiamiento [padres] Numérico [0-1] 0: No/False 21
+1: Sí/True
+53
+--- Página 55 ---
+BH FIN_OFAM Financiamiento [otros Numérico [0-1] 0: No/False 21
+familiares] 1: Sí/True
+BI FIN_OPER Financiamiento [otras Numérico [0-1] 0: No/False 21
+personas] 1: Sí/True
+BJ FIN_GRAT Financiamiento Numérico [0-1] 0: No/False 21
+[gratuidad] 1: Sí/True
+BK FIN_BEC_EST Financiamiento [becas Numérico [0-1] 0: No/False 21
+estado] 1: Sí/True
+BL FIN_BEC_EXT Financiamiento [becas Numérico [0-1] 0: No/False 21
+externas] 1: Sí/True
+BM FIN_CAE Financiamiento [CAE] Numérico [0-1] 0: No/False 21
+1: Sí/True
+BN FIN_CRE Financiamiento [crédito] Numérico [0-1] 0: No/False 21
+1: Sí/True
+BO FIN_EMP Financiamiento Numérico [0-1] 0: No/False 21
+[empres] 1: Sí/True
+BP SIT_LAB Situación laboral Numérico [1-4] 1: No trabajo 22
+actualmente
+2: Trabajo a tiempo
+completo
+3: Trabajo a tiempo
+parcial
+4: Trabajo
+esporádicamente o en
+“pololos”
+54
+--- Página 56 ---
+BQ TIPO_EST_ESC Tipo Establecimiento Numérico [1-3] 1: Público (municipal, 23
+Escolar administración
+delegada o servicio
+local de educación
+SLEP).
+2: Particular
+Subvencionado.
+3: Particular Pagado
+BR ANO_EGRESO Año Egreso Educación Numérico 4 dígitos: AAAA No aplica 24
+Media
+BS MOD_EM Modalidad Educación Cadena [1-6] 1: Científico Humanista. 25
+Media 2: Científico Humanista
+(Educación de Personas
+Jóvenes y Adultas)
+3: Técnico Profesional
+4: Técnico Profesional
+(Educación de Personas
+Jóvenes y Adultas)
+5: Artístico –
+Experimental
+6: No cursé mi
+Educación media o
+secundaria en Chile
+BT ESP_MTP Especialidad MTP Numérico [1-35] Código según Anexo N°8 25.1
+BU ESP_MTP_EPJA Especialidad MTP EPJA Numérico [1-24] Código según Anexo N°9 25.2
+BV TIT_MTP Título MTP Numérico [1-3] 1: Sí 25.3
+2: Aún no
+3: No
+55
+--- Página 57 ---
+BW ARTICULA Articulación Numérico [1-3] 1: Convalidé 25.4
+asignaturas vía
+articulación
+2: No convalidé
+asignaturas, aun
+cuando me matriculé
+en una carrera
+relacionada a mi
+especialidad de egreso
+3: Me matriculé en una
+carrera NO relacionada
+a mi especialidad
+BX RAZ_NO_ARTICULA Razón no articulación Numérico [1-6] 1: Tuve la posibilidad 25.5
+de convalidar, pero
+preferí no hacerlo
+porque quiero cursar
+todas las
+asignaturas
+2: Tuve la posibilidad
+de convalidar, pero
+preferí no hacerlo
+porque no confío en
+mis
+aprendizajes de la
+Educación Media
+3: No tuve información
+al respecto
+4: La institución en la
+que me matriculé no
+tiene articulación
+5: Las/os egresadas/os
+56
+--- Página 58 ---
+de mi liceo no tenían la
+opción de convalidar
+6: No pude convalidar
+porque egresé hace
+muchos años
+BY EXP_LAB Experiencia laboral Numérico [1-3] 1: Sí, cuento con 26
+relacionada a carrera experiencia laboral
+relacionada
+2: Sí, cuento con
+experiencia laboral,
+pero NO está
+relacionada
+3: No cuento con
+experiencia laboral
+BZ EST_PRE Estudios previos Numérico [1-2] 1: Sí 27
+2: No
+CA EST_PRE_FFAA Estudios previos [FFAA] Numérico [0-1] 0: No/False 27.1
+1: Sí/True
+CB EST_PRE_TPINC Estudios previos [TP Numérico [0-1] 0: No/False 27.1
+incompleto] 1: Sí/True
+CC EST_PRE_TPCOM Estudios previos [TP] Numérico [0-1] 0: No/False 27.1
+1: Sí/True
+CD EST_PRE_UINC Estudios previos Numérico [0-1] 0: No/False 27.1
+[Universitarios 1: Sí/True
+incompleto]
+CE EST_PRE_UCOM Estudios previos Numérico [0-1] 0: No/False 27.1
+[Universitarios] 1: Sí/True
+57
+--- Página 59 ---
+CF EST_PRE_PGINC Estudios previos Numérico [0-1] 0: No/False 27.1
+[posgrado incompleto] 1: Sí/True
+CG EST_PRE_PFCOM Estudios previos Numérico [0-1] 0: No/False 27.1
+[posgrado] 1: Sí/True
+CH EST_PRE_CAPCOM Estudios previos Numérico [0-1] 0: No/False 27.1
+[capacitaciones] 1: Sí/True
+CI EST_PRE_CER Estudios previos Numérico [0-1] 0: No/False 27.1
+[certificaciones] 1: Sí/True
+CJ EST_PRE_OTRO Estudios previos [otros] Numérico [0-1] 0: No/False 27.1
+1: Sí/True
+CK EST_PRE_REL Estudios previos Numérico [1-4] 1: No se relacionan 27.2
+relación nada
+2: Se relacionan poco
+3: Se relacionan
+medianamente
+4: Se relacionan mucho
+CL RAP RAP Numérico [1-2] 1: Sí 27.3
+2: No
+CM RAZ_NO_RAP Razón no RAP Numérico [1-4] 1: Tuve la posibilidad 27.4
+de convalidar, pero
+preferí no hacerlo
+porque quiero cursar
+todas las asignaturas.
+2: Tuve la posibilidad
+de convalidar, pero
+preferí no hacerlo
+porque no confío en
+mis
+58
+--- Página 60 ---
+aprendizajes previos
+(laborales o educativos)
+3: No tuve información
+al respecto
+4: La institución en la
+que me matriculé no
+tiene Reconocimiento
+de Aprendizajes Previos
+CN COD_INS Código SIES Institución Numérico 3 dígitos Código de 3 dígitos 28
+asignado por SIES
+CO COD_CAR Código SIES carrera Numérico 25 caracteres Código asignado por 29
+SIES
+CP RAZ_TP_1 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP 1: Sí/True
+[Desarrollo personal...]
+CQ RAZ_TP_2 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP [Mejor 1: Sí/True
+futuro laboral]
+CR RAZ_TP_3 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP [Orgullo 1: Sí/True
+familiar]
+CS RAZ_TP_4 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP [Presión 1: Sí/True
+familiar]
+CT RAZ_TP_5 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP [No 1: Sí/True
+puntaje universidad]
+CU RAZ_TP_6 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP 1: Sí/True
+[Duración y flexibilidad]
+59
+--- Página 61 ---
+CV RAZ_TP_7 Razón matrícula en Numérico [0-1] 0: No/False 30
+institución TP [Otra] 1: Sí/True
+CW RAZ_INT_1 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución [Prestigio
+IES]
+CX RAZ_INT_2 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución [Años
+acreditación]
+CY RAZ_INT_3 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución [Ubicación y
+accesibilidad]
+CZ RAZ_INT_4 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución
+[Infraestructura y
+equipamiento]
+DA RAZ_INT_5 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución
+[Modalidades y
+jornadas]
+DB RAZ_INT_6 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución [Adscripción
+gratuidad]
+DC RAZ_INT_7 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+60
+--- Página 62 ---
+institución [Becas y
+beneficios]
+DD RAZ_INT_8 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución [Carrera de
+interés]
+DE RAZ_INT_9 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución
+[Continuación de
+estudios]
+DF RAZ_INT_10 Razón para Numérico [0-1] 0: No/False 31
+matricularse en la 1: Sí/True
+institución [Otra razón]
+DG RAZ_CAR_1 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Gustos o
+vocación]
+DH RAZ_CAR_2 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Relación
+trabajo]
+DI RAZ_CAR_3 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Campo laboral]
+DJ RAZ_CAR_4 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera
+[Recomendación]
+61
+--- Página 63 ---
+DK RAZ_CAR_5 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Jornada]
+DL RAZ_CAR_6 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Malla de
+estudios]
+DM RAZ_CAR_7 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Falta de cupo]
+DN RAZ_CAR_8 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Falta de
+financiamiento]
+DO RAZ_CAR_9 Razón para Numérico [0-1] 0: No/False 32
+matricularse en la 1: Sí/True
+carrera [Otra razón]
+DP MEDIOS_1 Medio de información Numérico [0-1] 0: No/False 33
+[Visita a la institución] 1: Sí/True
+DQ MEDIOS_2 Medio de información Numérico [0-1] 0: No/False 33
+[Amigos y/o familiares] 1: Sí/True
+DR MEDIOS_3 Medio de información Numérico [0-1] 0: No/False 33
+[Profesores u 1: Sí/True
+orientador/a]
+DS MEDIOS_4 Medio de información Numérico [0-1] 0: No/False 33
+[Anuncios vía pública] 1: Sí/True
+DT MEDIOS_5 Medio de información Numérico [0-1] 0: No/False 33
+[Ferias o exposiciones] 1: Sí/True
+62
+--- Página 64 ---
+DU MEDIOS_6 Medio de información Numérico [0-1] 0: No/False 33
+[Charla en colegio o 1: Sí/True
+liceo]
+DV MEDIOS_7 Medio de información Numérico [0-1] 0: No/False 33
+[TikTok] 1: Sí/True
+DW MEDIOS_8 Medio de información Numérico [0-1] 0: No/False 33
+[Instagram] 1: Sí/True
+DX MEDIOS_9 Medio de información Numérico [0-1] 0: No/False 33
+[Facebook] 1: Sí/True
+DY MEDIOS_10 Medio de información Numérico [0-1] 0: No/False 33
+[Twitter o X] 1: Sí/True
+DZ MEDIOS_11 Medio de información Numérico [0-1] 0: No/False 33
+[Prensa física] 1: Sí/True
+EA MEDIOS_12 Medio de información Numérico [0-1] 0: No/False 33
+[Prensa digital] 1: Sí/True
+EB MEDIOS_13 Medio de información Numérico [0-1] 0: No/False 33
+[Página web de la 1: Sí/True
+institución]
+EC MEDIOS_14 Medio de información Numérico [0-1] 0: No/False 33
+[Televisión] 1: Sí/True
+ED MEDIOS_15 Medio de información Numérico [0-1] 0: No/False 33
+[Radio] 1: Sí/True
+EE CONTACTO Contacto Numérico [1-5] 1: WhatsApp 34
+2: Llamada telefónica
+3: Correo electrónico
+4: Videollamada
+5: Mensaje de texto
+63
+--- Página 65 ---
+EF MAT_FAC Matrícula [fácil] Numérico [1-5] 1: Muy en desacuerdo 35
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EG MAT_CLARO Matrícula [claro] Numérico [1-5] 1: Muy en desacuerdo 35
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EH MAT_RAP Matrícula [rápido] Numérico [1-5] 1: Muy en desacuerdo 35
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EI MAT_ATE Matrícula [atención] Numérico [1-5] 1: Muy en desacuerdo 35
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EJ MIN_BEC Mineduc [becas] Numérico [0-5] 0: No lo utilicé 36
+1: Muy en desacuerdo
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+64
+--- Página 66 ---
+EK MIN_CAL Mineduc [calendario] Numérico [0-5] 0: No lo utilicé 36
+1: Muy en desacuerdo
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EL MIN_BUS Mineduc [buscador] Numérico [0-5] 0: No lo utilicé 36
+1: Muy en desacuerdo
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EM MIN_FUT Mineduc [mifuturo] Numérico [0-5] 0: No lo utilicé 36
+1: Muy en desacuerdo
+2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+EN MIN_FUAS Mineduc [FUAS] Numérico [0-5] 0: No lo utilicé 36
+1: Muy en desacuerdo
+2: En desacuerdo
+3: Ni de acuerdo ni en
+EO CON_SAL Condición salud Numérico [1-2] 1: Sí 37
+2: No
+EP ORI_SAL_TIPO Orientación por Numérico [1-2] 1: Sí 37.1
+condición de salud 2: No
+65
+--- Página 67 ---
+EQ BIE_PSC Bienestar psicológico Numérico [1-5] 1: Muy malo 38
+2: Malo
+3: Ni bueno ni malo
+4: Bueno
+5: Muy bueno
+ER ORI_PSC Orientación psicológica Numérico [1-2] 1: Sí 39
+2: No
+ES NEE Presentas actualmente Numérico [1-3] 1: Sí 40
+alguna Necesidad 2: No
+Educativa Especial 3: No tengo
+(NEE) conocimiento
+ET NEE_1 NEE [Déficit atencional] Numérico [0-1] 0: No/False 40.1
+1: Sí/True
+EU NEE_2 NEE [Dislexia] Numérico [0-1] 0: No/False 40.1
+1: Sí/True
+EV NEE_3 NEE [Discalculia] Numérico [0-1] 0: No/False 40.1
+1: Sí/True
+EW NEE_4 NEE [Disgrafía] Numérico [0-1] 0: No/False 40.1
+1: Sí/True
+EX NEE_5 NEE [Trastornos del Numérico [0-1] 0: No/False 40.1
+lenguaje] 1: Sí/True
+EY NEE_6 NEE [Dificultad Numérico [0-1] 0: No/False 40.1
+especifica del 1: Sí/True
+aprendizaje (lenguaje)]
+EZ NEE_7 NEE [Dificultad Numérico [0-1] 0: No/False 40.1
+específica del 1: Sí/True
+aprendizaje
+(matemática)]
+66
+--- Página 68 ---
+FA NEE_8 NEE [Otra] Numérico [0-1] 0: No/False 40.1
+1: Sí/True
+FB PIE PIE Numérico [1-3] 1: Sí 40.2
+2: No
+3: No aplica
+FC REC_TEC_1 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Smartphone] 1: Sí/True
+FD REC_TEC_2 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Notebook] 1: Sí/True
+FE REC_TEC_3 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Tablet] 1: Sí/True
+FF REC_TEC_4 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[PC] 1: Sí/True
+FG REC_TEC_5 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Internet Wifi] 1: Sí/True
+FH REC_TEC_6 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Internet con datos 1: Sí/True
+móviles]
+FI REC_TEC_7 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Cámara web] 1: Sí/True
+FJ REC_TEC_8 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Micrófono] 1: Sí/True
+FK REC_TEC_9 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Parlantes y/o 1: Sí/True
+audífonos]
+67
+--- Página 69 ---
+FL REC_TEC_10 Recurso tecnológico Numérico [0-1] 0: No/False 41
+[Impresora] 1: Sí/True
+FM ESP_EST Espacio para estudiar Numérico [1-3] 1: Sí, cuento con un 42
+espacio de esas
+características siempre
+2: Cuento con un
+espacio de esas
+características, pero no
+siempre lo puedo
+ocupar
+3: No cuento con un
+espacio de esas
+características para
+estudiar
+FN RED_APO_FAM Red apoyo [familia] Numérico [0-1] 0: No/False 43
+1: Sí/True
+FO RED_APO_PAR Red apoyo [pareja] Numérico [0-1] 0: No/False 43
+1: Sí/True
+FP RED_APO_OFAM Red apoyo [otros Numérico [0-1] 0: No/False 43
+familiares] 1: Sí/True
+FQ RED_APO_AMI Red apoyo [amigos] Numérico [0-1] 0: No/False 43
+1: Sí/True
+FR RED_APO_COL Red apoyo [colegas] Numérico [0-1] 0: No/False 43
+1: Sí/True
+FS RED_APO_OTR Red apoyo [otros] Numérico [0-1] 0: No/False 43
+1: Sí/True
+68
+--- Página 70 ---
+FT TIEMPO_TRAS Tiempo traslado Numérico [1-6] 1: Menos de media 44
+hora
+2: Entre media hora y
+una hora
+3: Entre más de una
+hora y una hora y
+media
+4: Más de una hora y
+media
+5: No lo sé
+6: No aplica, estudiaré
+de forma remota
+FU DIS_ES_1 Me gusta participar de Numérico [1-5] 1: Muy en desacuerdo 45
+actividades 2: En desacuerdo
+extraprogramáticas, 3: Ni de acuerdo ni en
+como talleres, desacuerdo
+voluntariados u otros. 4: De acuerdo
+5: Muy de acuerdo
+FV DIS_ES_2 Me gusta leer y tengo el Numérico [1-5] 1: Muy en desacuerdo 45
+hábito de hacerlo. 2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+FW DIS_ES_3 Tengo dificultad para Numérico [1-5] 1: Muy en desacuerdo 45
+comprender un texto 2: En desacuerdo
+escrito o expresarme a 3: Ni de acuerdo ni en
+través de la escritura. desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+69
+--- Página 71 ---
+FX DIS_ES_4 Termino todo lo que Numérico [1-5] 1: Muy en desacuerdo 45
+empiezo 2: En desacuerdo
+3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+FY DIS_ES_5 Tengo dificultades para Numérico [1-5] 1: Muy en desacuerdo 45
+mantener el foco en 2: En desacuerdo
+proyectos que duran 3: Ni de acuerdo ni en
+más de unos meses. desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+FZ DIS_ES_6 He superado momentos Numérico [1-5] 1: Muy en desacuerdo 45
+difíciles para conquistar 2: En desacuerdo
+una meta importante. 3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GA DIS_ES_7 No me siento Numérico [1-5] 1: Muy en desacuerdo 45
+cómodo(a) conociendo 2: En desacuerdo
+personas nuevas. 3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GB DIS_ES_8 Cuando tengo un Numérico [1-5] 1: Muy en desacuerdo 45
+conflicto con otras 2: En desacuerdo
+personas, busco 3: Ni de acuerdo ni en
+considerar todos los desacuerdo
+puntos de vista. 4: De acuerdo
+5: Muy de acuerdo
+70
+--- Página 72 ---
+GC DIS_ES_9 Cuando estoy en Numérico [1-5] 1: Muy en desacuerdo 45
+entornos 2: En desacuerdo
+educacionales o 3: Ni de acuerdo ni en
+laborales, tiendo a desacuerdo
+sentirme parte de una 4: De acuerdo
+comunidad 5: Muy de acuerdo
+GD DIS_ES_10 Cuando me va mal en Numérico [1-5] 1: Muy en desacuerdo 45
+algo, me cuesta 2: En desacuerdo
+manejar emociones 3: Ni de acuerdo ni en
+fuertes como la rabia o desacuerdo
+la pena 4: De acuerdo
+5: Muy de acuerdo
+GE DIS_ES_11 Soy capaz de sacrificar la Numérico [1-5] 1: Muy en desacuerdo 45
+diversión para 2: En desacuerdo
+dedicarme a mis 3: Ni de acuerdo ni en
+estudios desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GF DIS_ES_12 Pongo mucho esfuerzo Numérico [1-5] 1: Muy en desacuerdo 45
+en mis estudios y 2: En desacuerdo
+actividades académicas. 3: Ni de acuerdo ni en
+desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GG DIS_ES_13 Dudo que con mis Numérico [1-5] 1: Muy en desacuerdo 45
+habilidades académicas 2: En desacuerdo
+tenga un buen 3: Ni de acuerdo ni en
+desempeño en mi desacuerdo
+carrera. 4: De acuerdo
+5: Muy de acuerdo
+71
+--- Página 73 ---
+GH DIS_ES_14 Cuando estudio o tengo Numérico [1-5] 1: Muy en desacuerdo 45
+actividades académicas, 2: En desacuerdo
+lo hago a conciencia y 3: Ni de acuerdo ni en
+dedicadamente. desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GI DIS_ES_15 Estoy seguro/a de que si Numérico [1-5] 1: Muy en desacuerdo 45
+estudio y me organizo 2: En desacuerdo
+puedo obtener las 3: Ni de acuerdo ni en
+notas que deseo. desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GJ DIS_ES_16 Cuando no entendía Numérico [1-5] 1: Muy en desacuerdo 45
+algo o no me iba bien 2: En desacuerdo
+en el colegio, buscaba 3: Ni de acuerdo ni en
+ayuda para que me desacuerdo
+explicaran lo que no 4: De acuerdo
+sabía 5: Muy de acuerdo
+GK DIS_ES_17 No me siento tan Numérico [1-5] 1: Muy en desacuerdo 45
+confiado/a en que 2: En desacuerdo
+terminaré mis estudios 3: Ni de acuerdo ni en
+y me titularé desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+GL DIS_ES_18 Cuando tengo que Numérico [1-5] 1: Muy en desacuerdo 45
+enfrentar un desafío 2: En desacuerdo
+académico, me cuesta 3: Ni de acuerdo ni en
+organizarme y resolver desacuerdo
+los problemas que 4: De acuerdo
+aparecen. 5: Muy de acuerdo
+72
+--- Página 74 ---
+GM DIS_ES_19 Me siento seguro/a de Numérico [1-5] 1: Muy en desacuerdo 45
+la decisión que tomé al 2: En desacuerdo
+elegir mi carrera e 3: Ni de acuerdo ni en
+institución desacuerdo
+4: De acuerdo
+5: Muy de acuerdo
+73
+--- Página 75 ---
+ANEXOS
+Anexo N°1: Modelo de Protocolo de Manejo de Datos
+CONSENTIMIENTO INFORMADO FICHA DE CARACTERIZACIÓN ÚNICA
+Objetivo: La “Ficha de Caracterización Única” o FCU es un instrumento de caracterización
+para los/as estudiantes que se matriculen por primera vez en alguna de las instituciones TP
+adscritas al Sistema de Acceso. Esta encuesta busca conocer las características de los/as
+estudiantes que ingresan a la educación superior técnico profesional, con el fin de poder
+brindarles apoyo en su proceso formativo.
+Fines y usos de la información: El tratamiento de los datos personales contenidos en la
+“Ficha de Caracterización Única” se encuentra resguardado de acuerdo con lo dispuesto en
+la Ley Nº19.628 sobre “Protección de la Vida Privada” y serán utilizados exclusivamente para
+fines asociados a la caracterización de los/as estudiantes matriculados en primer año en las
+instituciones TP adscritas al Sistema de Acceso, así como para futuras investigaciones que
+permitan seguir fortaleciendo la educación superior en nuestro país (estas investigaciones
+consideran los datos anonimizados). Dichos fines incluyen la transferencia de datos
+personales de las/os estudiantes al Ministerio de Educación a través de la Subsecretaría de
+Educación Superior conforme al convenio correspondiente, a excepción de aquellos datos
+considerados como sensibles y que no autoricen a compartir.
+Cabe destacar que esta información permitirá diseñar y crear políticas y programas sociales
+como también ajustar las ya existentes, logrando así fortalecer el subsistema técnico
+profesional de educación superior.
+Finalmente, la información recabada permitirá realizar investigaciones académicas que
+requieran el uso de estos datos. Para ello, la transferencia de los mismos será de manera
+anónima. No obstante a lo anterior, el Ministerio de Educación declara que los datos
+personales que registre y procese para el análisis estadístico serán anonimizados y tendrán
+74
+--- Página 76 ---
+un tratamiento automatizado, siendo incorporados a ficheros de su propiedad no accesibles
+a terceros.
+Impacto de la información: La información registrada por los/as estudiantes en la “Ficha de
+Caracterización Única” no tendrá ningún impacto en los beneficios que otorga el Estado; ni
+educacionales, ni de subsidios o ayudas estatales, ni en su situación migratoria, de su familia
+y/o cercanos.
+La información registrada por los/as estudiantes en la “Ficha de Caracterización Única”, su
+veracidad y la oportuna respuesta dentro de los plazos, son de su exclusiva responsabilidad.
+En consecuencia, a través del presente consentimiento, autorizo a la Institución a recolectar
+los datos y realizar las acciones señaladas en esta declaración, con los fines en ella descritos.
+75
+--- Página 77 ---
+Anexo N°2: Países
+COD_PAIS NOMBRE_PAIS
+1 AFGANISTÁN
+2 ALBANIA
+3 ALEMANIA
+4 ANDORRA
+5 ANGOLA
+6 ANTIGUA Y BARBUDA
+7 ARABIA SAUDITA
+8 ARGELIA
+9 ARGENTINA
+10 ARMENIA
+11 AUSTRALIA
+12 AUSTRIA
+13 AZERBAIYÁN
+14 BAHAMAS
+15 BANGLADÉS
+16 BARBADOS
+17 BARÉIN
+18 BÉLGICA
+19 BELICE
+20 BENÍN
+21 BIELORRUSIA
+22 BIRMANIA
+23 BOLIVIA
+24 BOSNIA- HERZEGOVINA
+25 BOTSUANA
+26 BRASIL
+27 BRUNÉI
+28 BULGARIA
+29 BURKINA FASO
+30 BURUNDI
+31 BUTÁN
+32 CABO VERDE
+33 CAMBOYA
+34 CAMERÚN
+35 CANADÁ
+36 CATAR
+37 CHAD
+38 CHILE
+39 CHINA
+40 CHIPRE
+41 COLOMBIA
+42 COMORAS
+43 CONGO
+44 COREA DEL NORTE
+45 COREA DEL SUR
+46 COSTA DE MARFIL
+76
+--- Página 78 ---
+47 COSTA RICA
+48 CROACIA
+49 CUBA
+50 DINAMARCA
+51 DOMINICA
+52 ECUADOR
+53 EGIPTO
+54 EL SALVADOR
+55 EMIRATOS ÁRABES UNIDOS
+56 ERITREA
+57 ESLOVAQUIA
+58 ESLOVENIA
+59 ESPAÑA
+60 ESTADOS UNIDOS
+61 ESTONIA
+62 ETIOPÍA
+63 FILIPINAS
+64 FINLANDIA
+65 FIYI
+66 FRANCIA
+67 GABÓN
+68 GAMBIA
+69 GEORGIA
+70 GHANA
+71 GRANADA
+72 GRECIA
+73 GUATEMALA
+74 GUINEA
+75 GUINEA ECUATORIAL
+76 GUINEA-BISÁU
+77 GUYANA
+78 HAITÍ
+79 HONDURAS
+80 HUNGRÍA
+81 INDIA
+82 INDONESIA
+83 IRAK
+84 IRÁN
+85 IRLANDA
+86 ISLANDIA
+87 ISLAS MARSHALL
+88 ISLAS SALOMÓN
+89 ISRAEL
+90 ITALIA
+91 JAMAICA
+92 JAPÓN
+93 JORDANIA
+94 KAZAJISTÁN
+95 KENIA
+77
+--- Página 79 ---
+96 KIRGUISTÁN
+97 KIRIBATI
+98 KOSOVO
+99 KUWAIT
+100 LAOS
+101 LESOTO
+102 LETONIA
+103 LÍBANO
+104 LIBERIA
+105 LIBIA
+106 LIECHTENSTEIN
+107 LITUANIA
+108 LUXEMBURGO
+109 MACEDONIA
+110 MADAGASCAR
+111 MALASIA
+112 MALAUI
+113 MALDIVAS
+114 MALÍ
+115 MALTA
+116 MARRUECOS
+117 MAURICIO
+118 MAURITANIA
+119 MÉXICO
+120 MICRONESIA
+121 MOLDAVIA
+122 MÓNACO
+123 MONGOLIA
+124 MONTENEGRO
+125 MOZAMBIQUE
+126 NAMIBIA
+127 NAURU
+128 NEPAL
+129 NICARAGUA
+130 NÍGER
+131 NIGERIA
+132 NORUEGA
+133 NUEVA ZELANDA
+134 OMÁN
+135 PAÍSES BAJOS
+136 PAKISTÁN
+137 PALAOS
+138 PALESTINA
+139 PANAMÁ
+140 PAPÚA NUEVA GUINEA
+141 PARAGUAY
+142 PERÚ
+143 POLONIA
+144 PORTUGAL
+78
+--- Página 80 ---
+145 REINO UNIDO
+146 REPÚBLICA CENTROAFRICANA
+147 REPÚBLICA CHECA
+148 REPÚBLICA DEMOCRÁTICA DEL CONGO
+149 REPÚBLICA DOMINICANA
+150 RUANDA
+151 RUMANIA
+152 RUSIA
+153 SAMOA
+154 SAN CRISTÓBAL Y NIEVES
+155 SAN MARINO
+156 SAN VICENTE Y LAS GRANADINAS
+157 SANTA LUCÍA
+158 SANTO TOMÉ Y PRÍNCIPE
+159 SENEGAL
+160 SERBIA
+161 SEYCHELLES
+162 SIERRA LEONA
+163 SINGAPUR
+164 SIRIA
+165 SOMALIA
+166 SRI LANKA
+167 SUAZILANDIA
+168 SUDÁFRICA
+169 SUDÁN
+170 SUDÁN DEL SUR
+171 SUECIA
+172 SUIZA
+173 SURINAM
+174 TAILANDIA
+175 TAIWÁN
+176 TANZANIA
+177 TAYIKISTÁN
+178 TIMOR ORIENTAL
+179 TOGO
+180 TONGA
+181 TRINIDAD Y TOBAGO
+182 TÚNEZ
+183 TURKMENISTÁN
+184 TURQUÍA
+185 TUVALU
+186 UCRANIA
+187 UGANDA
+188 URUGUAY
+189 UZBEKISTÁN
+190 VANUATU
+191 VATICANO
+192 VENEZUELA
+193 VIETNAM
+79
+--- Página 81 ---
+194 YEMEN
+195 YIBUTI
+196 ZAMBIA
+197 ZIMBABUE
+80
+--- Página 82 ---
+Anexo N°3: Pueblos Originarios
+COD_PPOO NOMBRE_PPOO
+1 Atacameño o Lickanantay
+2 Aymara
+3 Colla
+4 Chango
+5 Diaguita
+6 Kawésqar
+7 Mapuche
+8 Quechua
+9 Rapa-Nui
+10 Selk’nam
+11 Yámana o Yagán
+12 Pueblo tribal afrodescendiente
+13 Otra
+81
+--- Página 83 ---
+Anexo N°4: Regiones
+COD_REGION NOMBRE_REGION
+1 Región De Tarapacá
+2 Región De Antofagasta
+3 Región De Atacama
+4 Región De Coquimbo
+5 Región De Valparaíso
+6 Región Del Lib. B. O'Higgins
+7 Región Del Maule
+8 Región Del Biobío
+16 Región De Ñuble
+9 Región De La Araucanía
+10 Región De Los Lagos
+11 Región De Aysén Del G. C. Ibañez
+12 Región De Magallanes Y La Antártica
+13 Región Metropolitana
+15 Región De Arica Y Parinacota
+14 Región De Los Ríos
+82
+--- Página 84 ---
+Anexo N°5: Comuna
+COD_COMUNA NOMBRE_COMUNA COD_REGIÓN NOMBRE_REGIÓN
+1101 IQUIQUE 1 Región De Tarapacá
+1107 ALTO HOSPICIO 1 Región De Tarapacá
+2101 ANTOFAGASTA 2 Región De Antofagasta
+2102 MEJILLONES 2 Región De Antofagasta
+2103 SIERRA GORDA 2 Región De Antofagasta
+2104 TALTAL 2 Región De Antofagasta
+2201 CALAMA 2 Región De Antofagasta
+2202 OLLAGÜE 2 Región De Antofagasta
+2203 SAN PEDRO DE ATACAMA 2 Región De Antofagasta
+2301 TOCOPILLA 2 Región De Antofagasta
+2302 MARÍA ELENA 2 Región De Antofagasta
+3101 COPIAPÓ 3 Región De Atacama
+3102 CALDERA 3 Región De Atacama
+3103 TIERRA AMARILLA 3 Región De Atacama
+3201 CHAÑARAL 3 Región De Atacama
+3202 DIEGO DE ALMAGRO 3 Región De Atacama
+3301 VALLENAR 3 Región De Atacama
+3302 ALTO DEL CARMEN 3 Región De Atacama
+3303 FREIRINA 3 Región De Atacama
+3304 HUASCO 3 Región De Atacama
+4101 LA SERENA 4 Región De Coquimbo
+4102 COQUIMBO 4 Región De Coquimbo
+4103 ANDACOLLO 4 Región De Coquimbo
+4104 LA HIGUERA 4 Región De Coquimbo
+4105 PAIHUANO 4 Región De Coquimbo
+4106 VICUÑA 4 Región De Coquimbo
+4201 ILLAPEL 4 Región De Coquimbo
+4202 CANELA 4 Región De Coquimbo
+4203 LOS VILOS 4 Región De Coquimbo
+4204 SALAMANCA 4 Región De Coquimbo
+4301 OVALLE 4 Región De Coquimbo
+4302 COMBARBALÁ 4 Región De Coquimbo
+4303 MONTE PATRIA 4 Región De Coquimbo
+4304 PUNITAQUI 4 Región De Coquimbo
+4305 RÍO HURTADO 4 Región De Coquimbo
+5101 VALPARAÍSO 5 Región De Valparaíso
+5102 CASABLANCA 5 Región De Valparaíso
+5103 CONCÓN 5 Región De Valparaíso
+5104 JUAN FERNÁNDEZ 5 Región De Valparaíso
+5105 PUCHUNCAVÍ 5 Región De Valparaíso
+5801 QUILPUÉ 5 Región De Valparaíso
+5107 QUINTERO 5 Región De Valparaíso
+5804 VILLA ALEMANA 5 Región De Valparaíso
+5109 VIÑA DEL MAR 5 Región De Valparaíso
+5201 ISLA DE PASCUA 5 Región De Valparaíso
+5301 LOS ANDES 5 Región De Valparaíso
+83
+--- Página 85 ---
+5604 EL QUISCO 5 Región De Valparaíso
+5605 EL TABO 5 Región De Valparaíso
+5606 SANTO DOMINGO 5 Región De Valparaíso
+5701 SAN FELIPE 5 Región De Valparaíso
+5702 CATEMU 5 Región De Valparaíso
+5703 LLAILLAY 5 Región De Valparaíso
+5704 PANQUEHUE 5 Región De Valparaíso
+5705 PUTAENDO 5 Región De Valparaíso
+5706 SANTA MARÍA 5 Región De Valparaíso
+6101 RANCAGUA 6 Región Del Lib. B. O'Higgins
+6102 CODEGUA 6 Región Del Lib. B. O'Higgins
+6103 COINCO 6 Región Del Lib. B. O'Higgins
+6104 COLTAUCO 6 Región Del Lib. B. O'Higgins
+6105 DOÑIHUE 6 Región Del Lib. B. O'Higgins
+6106 GRANEROS 6 Región Del Lib. B. O'Higgins
+6107 LAS CABRAS 6 Región Del Lib. B. O'Higgins
+6108 MACHALÍ 6 Región Del Lib. B. O'Higgins
+6109 MALLOA 6 Región Del Lib. B. O'Higgins
+6110 MOSTAZAL 6 Región Del Lib. B. O'Higgins
+6111 OLIVAR 6 Región Del Lib. B. O'Higgins
+6112 PEUMO 6 Región Del Lib. B. O'Higgins
+6113 PICHIDEGUA 6 Región Del Lib. B. O'Higgins
+6114 QUINTA DE TILCOCO 6 Región Del Lib. B. O'Higgins
+6115 RENGO 6 Región Del Lib. B. O'Higgins
+6116 REQUÍNOA 6 Región Del Lib. B. O'Higgins
+6117 SAN VICENTE 6 Región Del Lib. B. O'Higgins
+6201 PICHILEMU 6 Región Del Lib. B. O'Higgins
+6202 LA ESTRELLA 6 Región Del Lib. B. O'Higgins
+6203 LITUECHE 6 Región Del Lib. B. O'Higgins
+6204 MARCHIHUE 6 Región Del Lib. B. O'Higgins
+6205 NAVIDAD 6 Región Del Lib. B. O'Higgins
+6206 PAREDONES 6 Región Del Lib. B. O'Higgins
+6301 SAN FERNANDO 6 Región Del Lib. B. O'Higgins
+6302 CHÉPICA 6 Región Del Lib. B. O'Higgins
+6303 CHIMBARONGO 6 Región Del Lib. B. O'Higgins
+6304 LOLOL 6 Región Del Lib. B. O'Higgins
+6305 NANCAGUA 6 Región Del Lib. B. O'Higgins
+6306 PALMILLA 6 Región Del Lib. B. O'Higgins
+6307 PERALILLO 6 Región Del Lib. B. O'Higgins
+6308 PLACILLA 6 Región Del Lib. B. O'Higgins
+6309 PUMANQUE 6 Región Del Lib. B. O'Higgins
+6310 SANTA CRUZ 6 Región Del Lib. B. O'Higgins
+7101 TALCA 7 Región Del Maule
+7102 CONSTITUCIÓN 7 Región Del Maule
+7103 CUREPTO 7 Región Del Maule
+7104 EMPEDRADO 7 Región Del Maule
+7105 MAULE 7 Región Del Maule
+7106 PELARCO 7 Región Del Maule
+7107 PENCAHUE 7 Región Del Maule
+84
+--- Página 86 ---
+7108 RÍO CLARO 7 Región Del Maule
+7109 SAN CLEMENTE 7 Región Del Maule
+7110 SAN RAFAEL 7 Región Del Maule
+7201 CAUQUENES 7 Región Del Maule
+7202 CHANCO 7 Región Del Maule
+7203 PELLUHUE 7 Región Del Maule
+5302 CALLE LARGA 5 Región De Valparaíso
+5303 RINCONADA 5 Región De Valparaíso
+5304 SAN ESTEBAN 5 Región De Valparaíso
+5401 LA LIGUA 5 Región De Valparaíso
+5402 CABILDO 5 Región De Valparaíso
+5403 PAPUDO 5 Región De Valparaíso
+5404 PETORCA 5 Región De Valparaíso
+5405 ZAPALLAR 5 Región De Valparaíso
+5501 QUILLOTA 5 Región De Valparaíso
+5502 LA CALERA 5 Región De Valparaíso
+5503 HIJUELAS 5 Región De Valparaíso
+5504 LA CRUZ 5 Región De Valparaíso
+5802 LIMACHE 5 Región De Valparaíso
+5506 NOGALES 5 Región De Valparaíso
+5803 OLMUÉ 5 Región De Valparaíso
+5601 SAN ANTONIO 5 Región De Valparaíso
+5602 ALGARROBO 5 Región De Valparaíso
+5603 CARTAGENA 5 Región De Valparaíso
+7301 CURICÓ 7 Región Del Maule
+7302 HUALAÑÉ 7 Región Del Maule
+7303 LICANTÉN 7 Región Del Maule
+7304 MOLINA 7 Región Del Maule
+7305 RAUCO 7 Región Del Maule
+7306 ROMERAL 7 Región Del Maule
+7307 SAGRADA FAMILIA 7 Región Del Maule
+7308 TENO 7 Región Del Maule
+7309 VICHUQUÉN 7 Región Del Maule
+7401 LINARES 7 Región Del Maule
+7402 COLBÚN 7 Región Del Maule
+7403 LONGAVÍ 7 Región Del Maule
+7404 PARRAL 7 Región Del Maule
+7405 RETIRO 7 Región Del Maule
+7406 SAN JAVIER 7 Región Del Maule
+7407 VILLA ALEGRE 7 Región Del Maule
+7408 YERBAS BUENAS 7 Región Del Maule
+8101 CONCEPCIÓN 8 Región Del Biobío
+8102 CORONEL 8 Región Del Biobío
+8103 CHIGUAYANTE 8 Región Del Biobío
+8104 FLORIDA 8 Región Del Biobío
+8105 HUALQUI 8 Región Del Biobío
+8106 LOTA 8 Región Del Biobío
+8107 PENCO 8 Región Del Biobío
+8108 SAN PEDRO DE LA PAZ 8 Región Del Biobío
+85
+--- Página 87 ---
+8109 SANTA JUANA 8 Región Del Biobío
+8110 TALCAHUANO 8 Región Del Biobío
+8111 TOMÉ 8 Región Del Biobío
+8112 HUALPÉN 8 Región Del Biobío
+8201 LEBU 8 Región Del Biobío
+8202 ARAUCO 8 Región Del Biobío
+8203 CAÑETE 8 Región Del Biobío
+8204 CONTULMO 8 Región Del Biobío
+8205 CURANILAHUE 8 Región Del Biobío
+8206 LOS ÁLAMOS 8 Región Del Biobío
+8207 TIRÚA 8 Región Del Biobío
+8301 LOS ÁNGELES 8 Región Del Biobío
+8302 ANTUCO 8 Región Del Biobío
+8303 CABRERO 8 Región Del Biobío
+8304 LAJA 8 Región Del Biobío
+8305 MULCHÉN 8 Región Del Biobío
+8306 NACIMIENTO 8 Región Del Biobío
+8307 NEGRETE 8 Región Del Biobío
+8308 QUILACO 8 Región Del Biobío
+8309 QUILLECO 8 Región Del Biobío
+8310 SAN ROSENDO 8 Región Del Biobío
+8311 SANTA BÁRBARA 8 Región Del Biobío
+8312 TUCAPEL 8 Región Del Biobío
+8313 YUMBEL 8 Región Del Biobío
+8314 ALTO BIOBÍO 8 Región Del Biobío
+16101 CHILLÁN 16 Región De Ñuble
+16102 BULNES 16 Región De Ñuble
+16301 SAN CARLOS 16 Región De Ñuble
+16302 COIHUECO 16 Región De Ñuble
+16201 QUIRIHUE 16 Región De Ñuble
+16103 CHILLÁN VIEJO 16 Región De Ñuble
+16104 EL CARMEN 16 Región De Ñuble
+16303 ÑIQUÉN 16 Región De Ñuble
+16202 COBQUECURA 16 Región De Ñuble
+16105 PEMUCO 16 Región De Ñuble
+16106 PINTO 16 Región De Ñuble
+16304 SAN FABIÁN 16 Región De Ñuble
+16107 QUILLÓN 16 Región De Ñuble
+16305 SAN NICOLÁS 16 Región De Ñuble
+16206 RÁNQUIL 16 Región De Ñuble
+16203 COELEMU 16 Región De Ñuble
+16204 NINHUE 16 Región De Ñuble
+16108 SAN IGNACIO 16 Región De Ñuble
+16205 PORTEZUELO 16 Región De Ñuble
+16207 TREGUACO 16 Región De Ñuble
+16109 YUNGAY 16 Región De Ñuble
+9101 TEMUCO 9 Región De La Araucanía
+9102 CARAHUE 9 Región De La Araucanía
+9103 CUNCO 9 Región De La Araucanía
+86
+--- Página 88 ---
+9106 GALVARINO 9 Región De La Araucanía
+9108 LAUTARO 9 Región De La Araucanía
+9110 MELIPEUCO 9 Región De La Araucanía
+9111 NUEVA IMPERIAL 9 Región De La Araucanía
+9113 PERQUENCO 9 Región De La Araucanía
+9116 SAAVEDRA 9 Región De La Araucanía
+9119 VILCÚN 9 Región De La Araucanía
+9121 CHOLCHOL 9 Región De La Araucanía
+9104 CURARREHUE 9 Región De La Araucanía
+9105 FREIRE 9 Región De La Araucanía
+9107 GORBEA 9 Región De La Araucanía
+9109 LONCOCHE 9 Región De La Araucanía
+9112 PADRE LAS CASAS 9 Región De La Araucanía
+9114 PITRUFQUÉN 9 Región De La Araucanía
+9115 PUCÓN 9 Región De La Araucanía
+9117 TEODORO SCHMIDT 9 Región De La Araucanía
+9118 TOLTÉN 9 Región De La Araucanía
+9120 VILLARRICA 9 Región De La Araucanía
+9201 ANGOL 9 Región De La Araucanía
+9202 COLLIPULLI 9 Región De La Araucanía
+9203 CURACAUTÍN 9 Región De La Araucanía
+9204 ERCILLA 9 Región De La Araucanía
+9205 LONQUIMAY 9 Región De La Araucanía
+9206 LOS SAUCES 9 Región De La Araucanía
+9207 LUMACO 9 Región De La Araucanía
+9208 PURÉN 9 Región De La Araucanía
+9209 RENAICO 9 Región De La Araucanía
+9210 TRAIGUÉN 9 Región De La Araucanía
+9211 VICTORIA 9 Región De La Araucanía
+10101 PUERTO MONTT 10 Región De Los Lagos
+10102 CALBUCO 10 Región De Los Lagos
+10103 COCHAMÓ 10 Región De Los Lagos
+10104 FRESIA 10 Región De Los Lagos
+10105 FRUTILLAR 10 Región De Los Lagos
+10106 LOS MUERMOS 10 Región De Los Lagos
+10107 LLANQUIHUE 10 Región De Los Lagos
+10108 MAULLÍN 10 Región De Los Lagos
+10109 PUERTO VARAS 10 Región De Los Lagos
+10201 CASTRO 10 Región De Los Lagos
+10202 ANCUD 10 Región De Los Lagos
+10203 CHONCHI 10 Región De Los Lagos
+10204 CURACO DE VÉLEZ 10 Región De Los Lagos
+10205 DALCAHUE 10 Región De Los Lagos
+10206 PUQUELDÓN 10 Región De Los Lagos
+10207 QUEILÉN 10 Región De Los Lagos
+10208 QUELLÓN 10 Región De Los Lagos
+10209 QUEMCHI 10 Región De Los Lagos
+10210 QUINCHAO 10 Región De Los Lagos
+10301 OSORNO 10 Región De Los Lagos
+87
+--- Página 89 ---
+10302 PUERTO OCTAY 10 Región De Los Lagos
+10303 PURRANQUE 10 Región De Los Lagos
+10304 PUYEHUE 10 Región De Los Lagos
+10305 RÍO NEGRO 10 Región De Los Lagos
+10306 SAN JUAN DE LA COSTA 10 Región De Los Lagos
+10307 SAN PABLO 10 Región De Los Lagos
+10403 HUALAIHUÉ 10 Región De Los Lagos
+10401 CHAITÉN 10 Región De Los Lagos
+10402 FUTALEUFÚ 10 Región De Los Lagos
+10404 PALENA 10 Región De Los Lagos
+11101 COYHAIQUE 11 Región De Aysén Del G. C. Ibañez
+11102 LAGO VERDE 11 Región De Aysén Del G. C. Ibañez
+11201 AYSÉN 11 Región De Aysén Del G. C. Ibañez
+11202 CISNES 11 Región De Aysén Del G. C. Ibañez
+11203 GUAITECAS 11 Región De Aysén Del G. C. Ibañez
+11301 COCHRANE 11 Región De Aysén Del G. C. Ibañez
+11302 O'HIGGINS 11 Región De Aysén Del G. C. Ibañez
+11303 TORTEL 11 Región De Aysén Del G. C. Ibañez
+11401 CHILE CHICO 11 Región De Aysén Del G. C. Ibañez
+11402 RÍO IBÁÑEZ 11 Región De Aysén Del G. C. Ibañez
+12101 PUNTA ARENAS 12 Región De Magallanes Y La Antártica
+12102 LAGUNA BLANCA 12 Región De Magallanes Y La Antártica
+12103 RÍO VERDE 12 Región De Magallanes Y La Antártica
+12104 SAN GREGORIO 12 Región De Magallanes Y La Antártica
+12201 CABO DE HORNOS 12 Región De Magallanes Y La Antártica
+12202 ANTÁRTICA 12 Región De Magallanes Y La Antártica
+12301 PORVENIR 12 Región De Magallanes Y La Antártica
+12302 PRIMAVERA 12 Región De Magallanes Y La Antártica
+12303 TIMAUKEL 12 Región De Magallanes Y La Antártica
+12401 NATALES 12 Región De Magallanes Y La Antártica
+12402 TORRES DEL PAINE 12 Región De Magallanes Y La Antártica
+13101 SANTIAGO 13 Región Metropolitana
+13121 PEDRO AGUIRRE CERDA 13 Región Metropolitana
+13129 SAN JOAQUÍN 13 Región Metropolitana
+13130 SAN MIGUEL 13 Región Metropolitana
+13105 EL BOSQUE 13 Región Metropolitana
+13109 LA CISTERNA 13 Región Metropolitana
+13111 LA GRANJA 13 Región Metropolitana
+13116 LO ESPEJO 13 Región Metropolitana
+13131 SAN RAMÓN 13 Región Metropolitana
+13113 LA REINA 13 Región Metropolitana
+13114 LAS CONDES 13 Región Metropolitana
+13115 LO BARNECHEA 13 Región Metropolitana
+13118 MACUL 13 Región Metropolitana
+13120 ÑUÑOA 13 Región Metropolitana
+13122 PEÑALOLÉN 13 Región Metropolitana
+13123 PROVIDENCIA 13 Región Metropolitana
+13132 VITACURA 13 Región Metropolitana
+13102 CERRILLOS 13 Región Metropolitana
+88
+--- Página 90 ---
+13103 CERRO NAVIA 13 Región Metropolitana
+13106 ESTACIÓN CENTRAL 13 Región Metropolitana
+13117 LO PRADO 13 Región Metropolitana
+13119 MAIPÚ 13 Región Metropolitana
+13124 PUDAHUEL 13 Región Metropolitana
+13126 QUINTA NORMAL 13 Región Metropolitana
+13128 RENCA 13 Región Metropolitana
+13110 LA FLORIDA 13 Región Metropolitana
+13112 LA PINTANA 13 Región Metropolitana
+13104 CONCHALÍ 13 Región Metropolitana
+13107 HUECHURABA 13 Región Metropolitana
+13108 INDEPENDENCIA 13 Región Metropolitana
+13125 QUILICURA 13 Región Metropolitana
+13127 RECOLETA 13 Región Metropolitana
+13201 PUENTE ALTO 13 Región Metropolitana
+13202 PIRQUE 13 Región Metropolitana
+13203 SAN JOSÉ DE MAIPO 13 Región Metropolitana
+13301 COLINA 13 Región Metropolitana
+13302 LAMPA 13 Región Metropolitana
+13303 TILTIL 13 Región Metropolitana
+13401 SAN BERNARDO 13 Región Metropolitana
+13402 BUIN 13 Región Metropolitana
+13403 CALERA DE TANGO 13 Región Metropolitana
+13404 PAINE 13 Región Metropolitana
+13501 MELIPILLA 13 Región Metropolitana
+13502 ALHUÉ 13 Región Metropolitana
+13503 CURACAVÍ 13 Región Metropolitana
+13504 MARÍA PINTO 13 Región Metropolitana
+13505 SAN PEDRO 13 Región Metropolitana
+13601 TALAGANTE 13 Región Metropolitana
+13602 EL MONTE 13 Región Metropolitana
+13603 ISLA DE MAIPO 13 Región Metropolitana
+13604 PADRE HURTADO 13 Región Metropolitana
+13605 PEÑAFLOR 13 Región Metropolitana
+1402 CAMIÑA 1 Región De Tarapacá
+1403 COLCHANE 1 Región De Tarapacá
+1404 HUARA 1 Región De Tarapacá
+1405 PICA 1 Región De Tarapacá
+1401 POZO ALMONTE 1 Región De Tarapacá
+15101 ARICA 15 Región De Arica Y Parinacota
+15102 CAMARONES 15 Región De Arica Y Parinacota
+15201 PUTRE 15 Región De Arica Y Parinacota
+15202 GENERAL LAGOS 15 Región De Arica Y Parinacota
+14101 VALDIVIA 14 Región De Los Ríos
+14102 CORRAL 14 Región De Los Ríos
+14103 LANCO 14 Región De Los Ríos
+14104 LOS LAGOS 14 Región De Los Ríos
+14105 MÁFIL 14 Región De Los Ríos
+14106 MARIQUINA 14 Región De Los Ríos
+89
+--- Página 91 ---
+14107 PAILLACO 14 Región De Los Ríos
+14108 PANGUIPULLI 14 Región De Los Ríos
+14201 LA UNIÓN 14 Región De Los Ríos
+14202 FUTRONO 14 Región De Los Ríos
+14203 LAGO RANCO 14 Región De Los Ríos
+14204 RÍO BUENO 14 Región De Los Ríos
+90
+--- Página 92 ---
+Anexo N°6: Tooltip nacionalidad
+91
+--- Página 93 ---
+Anexo N°7: Nivel Educacional padres
+COD_NIVEL_EDU NIVEL_EDUCACIONAL
+1 Sin educación formal
+2 Educación Básica incompleta
+3 Educación Básica completa
+4 Educación Media/Humanidades incompleta
+5 Educación Media/ Humanidades completa
+6
+E
+in
+d
+c
+u
+o
+c
+m
+ac
+p
+i
+l
+ó
+e
+n
+ta
+S uperior Técnica-Profesional (CFT o IP)
+7 Educación Superior Técnica-Profesional (CFT o IP) completa
+8 Educación Universitaria incompleta
+9 Educación Universitaria completa
+10 Educación de posgrado (magíster, doctorado) Incompleta
+11 Educación de posgrado (magíster, doctorado) Completa
+12 No tengo información
+92
+--- Página 94 ---
+Anexo N°8: Especialidad Educación Media TP
+COD_ESP_MTP NOMBRE_ESP_EMT
+1 Acuicultura
+2 Administración
+3 Agropecuaria
+4 Asistencia en geología
+5 Atención de enfermería
+6 Atención de párvulos
+7 Conectividad y redes
+8 Construcción
+9 Construcciones metálicas
+10 Contabilidad
+11 Dibujo técnico
+12 Elaboración industrial de alimentos
+13 Electricidad
+14 Electrónica
+15 Explotación minera
+16 Forestal
+17 Gastronomía
+18 Gráfica
+19 Instalaciones sanitarias
+20 Mecánica automotriz
+21 Mecánica de mantención de aeronaves
+22 Mecánica Industrial
+23 Metalurgia extractiva
+24 Montaje industrial
+25 Muebles y terminaciones en madera
+26 Operaciones portuarias
+27 Pesquería
+28 Programación
+29 Química industrial
+30 Refrigeración y climatización
+31 Servicios de hotelería
+32 Servicios de turismo
+33 Telecomunicaciones
+34 Tripulación de naves mercantes y especiales
+35 Vestuario y confección textil
+93
+--- Página 95 ---
+Anexo N°9: Especialidad Educación Media TP EPJA
+COD_ESP_MTP_EPJA NOMBRE_ESP_EMT_EPJA
+1 Administración
+2 Atención de adultos mayores
+3 Atención de enfermería
+4 Atención de párvulos
+5 Atención social y recreativa
+6 Construcciones metálicas
+7 Contabilidad
+8 Edificación
+9 Elaboración industrial de alimentos
+10 Electricidad
+11 Electrónica
+12 Forestal
+13 Gráfica
+14 Instalaciones sanitarias
+15 Mecánica automotriz
+16 Mecánica industrial
+17 Operaciones portuarias
+18 Productos de la madera
+19 Refrigeración y climatización
+20 Secretariado
+21 Servicio de alimentación colectiva
+22 Servicios hoteleros
+23 Ventas
+24 Vestuario y confección textil
+94

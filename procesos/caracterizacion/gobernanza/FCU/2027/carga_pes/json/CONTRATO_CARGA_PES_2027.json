@@ -1,0 +1,94 @@
+{
+  "process_id": "FCU_CARGA_PES_2027",
+  "version": 3,
+  "date": "2026-10-13",
+  "status": "PREPARACION_NO_LIBERADA",
+  "historical_reference": {
+    "year": 2026,
+    "mode": "READ_ONLY_FROZEN",
+    "manifest": "gobernanza/FCU/2027/carga_pes/json/REFERENCIA_2026_CONGELADA.json"
+  },
+  "instrument_origins": [
+    "FCU",
+    "INSTITUCIONAL"
+  ],
+  "institutional_question_registry": "gobernanza/FCU/2027/preparacion/json/PREGUNTAS_INSTITUCIONALES_2027.json",
+  "institutional_work_addition_rule": "Emprendimiento formalizado es la alternativa institucional AO05 de G02Q95, confirmada por la exportacion 141234 y el registro version 3. Sustituye la instruccion inicial de pregunta independiente pendiente. Conservar las cuatro alternativas originales y G02Q20. No usar AO05 para SIT_LAB ni agregar columnas PES; conservar respuestas para analisis institucional y VCM sin inferir No desde faltantes u otra opcion elegida. G02Q27 es texto institucional mixto de empresa o emprendimiento; no confirma nombre propio ni aporta campos oficiales.",
+  "allowed_reuse": [
+    "workflow_order",
+    "QA_principles",
+    "identity_and_consent_controls",
+    "documented_algorithm_reference"
+  ],
+  "prohibited_reuse": [
+    "195_column_layout",
+    "2026_column_positions",
+    "old_question_code_meanings_without_content_crosswalk",
+    "2026_likert_five_point_values_for_2027_four_point_scales",
+    "2026_response_files_as_2027_data"
+  ],
+  "cohort": {
+    "admission_year": 2027,
+    "enrollment_year": 2027,
+    "allowed_periods": [
+      1,
+      2,
+      3
+    ],
+    "eligibility_source": "institutional_governed_filter"
+  },
+  "schema": {
+    "specification": "gobernanza/FCU/2027/preparacion/json/ESPECIFICACION_PES_2027.json",
+    "identified_fields": 172,
+    "final_template_approved": false
+  },
+  "transport_reference_2026": {
+    "delimiter": ";",
+    "encoding": "UTF-8",
+    "header": false,
+    "trailing_newline": false,
+    "rows": 1371,
+    "fields": 195,
+    "activate_for_2027_automatically": false
+  },
+  "review_policy": "gobernanza/FCU/2027/preparacion/json/POLITICA_REVISION_FCU_2027.json",
+  "user_confirmations": "gobernanza/FCU/2027/preparacion/json/CONFIRMACIONES_USUARIO_FCU_2027.json",
+  "data_provenance_per_field": [
+    "source_file_sha256",
+    "source_column_or_question_code",
+    "subquestion_code_if_any",
+    "conversion_rule",
+    "catalog_version",
+    "consent_rule",
+    "QA_result"
+  ],
+  "run_manifest_required": [
+    "process_version",
+    "instrument_version",
+    "source_hashes",
+    "year_period",
+    "universe_counts",
+    "included_excluded_counts_and_reasons",
+    "QA_summary",
+    "output_filename",
+    "output_sha256",
+    "format_profile",
+    "release_decision"
+  ],
+  "release_gates": {
+    "frozen_reference_verified": true,
+    "complete_mapping_approved": false,
+    "administrative_sources_validated": false,
+    "catalogs_validated": false,
+    "conditional_rules_validated_with_real_data": false,
+    "final_template_and_format_approved": false,
+    "record_and_aggregate_QA_passed": false,
+    "official_release_authorized": false
+  },
+  "official_output_enabled": false,
+  "automatic_upload_enabled": false,
+  "student_data_default_directory": ".local/FCU/2027/",
+  "git_publication_state": "CODIGO_PUBLICADO_EN_GITHUB_CARGA_PES_NO_LIBERADA",
+  "rule": "Keep 2026 immutable. Preparation, draft generation, official release and platform acceptance are different states.",
+  "git_publication_manifest": "docs/gobernanza/PUBLICACION_GITHUB_2027_P1_20261013.json"
+}

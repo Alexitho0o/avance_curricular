@@ -1,0 +1,71 @@
+{
+  "muestra_personas": 500,
+  "paridad_ensayo_anterior": true,
+  "calidad_campos_filas": {
+    "UMAS_nacimiento": {
+      "VALIDO": 15070,
+      "INVALIDO": 2
+    },
+    "UMAS_sexo": {
+      "VALIDO": 15061,
+      "NO_HOMOLOGADO": 11
+    },
+    "MRUN_nacimiento": {
+      "VALIDO": 24386
+    },
+    "MRUN_sexo": {
+      "VALIDO": 24386
+    }
+  },
+  "personas_umas_documento_normalizable": 12944,
+  "mrun_historicos_distintos": 11265,
+  "conflictos_entre_expedientes_umas": {
+    "birth": 0,
+    "sex": 0
+  },
+  "conflictos_longitudinales_mrun": {
+    "birth": 0,
+    "sex": 1
+  },
+  "contraste_persona_anio_documental": {
+    "COINCIDE_AMBOS": 4090,
+    "REQUIERE_REVISION": 50,
+    "PERSONA_AUSENTE_UMAS": 9
+  },
+  "calidad_muestra_500": {
+    "COINCIDENCIA_DOCUMENTAL": 492,
+    "RETENIDO_CONTRADICCION_DOCUMENTAL": 8
+  },
+  "evaluacion_500": {
+    "base": {
+      "CONCUERDA_CON_REFERENCIA": 362,
+      "SIN_ENLACE_FORZADO": 129,
+      "ENLACE_SIN_REFERENCIA_UNIVOCA": 8,
+      "CONTRADICE_REFERENCIA": 1
+    },
+    "calidad_interna": {
+      "CONCUERDA_CON_REFERENCIA": 362,
+      "SIN_ENLACE_FORZADO": 129,
+      "ENLACE_SIN_REFERENCIA_UNIVOCA": 8,
+      "CONTRADICE_REFERENCIA": 1
+    },
+    "contraste_documental": {
+      "CONCUERDA_CON_REFERENCIA": 362,
+      "SIN_ENLACE_FORZADO": 130,
+      "ENLACE_SIN_REFERENCIA_UNIVOCA": 8
+    }
+  },
+  "enlaces_retenidos_muestra": {
+    "contraste_documental": {
+      "CONTRADICE_REFERENCIA": 1
+    }
+  },
+  "calidad_propuestas_universo": {
+    "COINCIDENCIA_DOCUMENTAL": 2411,
+    "RETENIDO_CONTRADICCION_DOCUMENTAL": 3,
+    "SIN_CONTRASTE_DOCUMENTAL": 3,
+    "RETENIDO_CALIDAD_INTERNA": 1
+  },
+  "advertencia": "La puerta documental comparte reportes con la referencia: no constituye validación independiente. Solo retiene propuestas; no las corrige ni crea nuevas.",
+  "identidades_certificadas": 0
+}

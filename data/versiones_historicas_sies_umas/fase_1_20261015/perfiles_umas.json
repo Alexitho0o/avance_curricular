@@ -1,0 +1,3108 @@
+[
+  {
+    "id": "planes_re_co",
+    "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+    "size": 1483027,
+    "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+    "availability": "available_readable",
+    "sheets": [
+      {
+        "name": "BBDD Bruta",
+        "data_rows": 11438,
+        "physical_columns": 29,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "Codcarr"
+          },
+          {
+            "position_1_based": 2,
+            "name": "Nombre_L"
+          },
+          {
+            "position_1_based": 3,
+            "name": "CODPESTUD"
+          },
+          {
+            "position_1_based": 4,
+            "name": "NOMPESTUD"
+          },
+          {
+            "position_1_based": 5,
+            "name": "CODRAMO"
+          },
+          {
+            "position_1_based": 6,
+            "name": "NOMBRE"
+          },
+          {
+            "position_1_based": 7,
+            "name": "REGIMEN"
+          },
+          {
+            "position_1_based": 8,
+            "name": "TIPO"
+          },
+          {
+            "position_1_based": 9,
+            "name": "SESIONES"
+          },
+          {
+            "position_1_based": 10,
+            "name": "PORC_NOTA_PRES"
+          },
+          {
+            "position_1_based": 11,
+            "name": "PORC_NOTA_EXam"
+          },
+          {
+            "position_1_based": 12,
+            "name": "NIVEL"
+          },
+          {
+            "position_1_based": 13,
+            "name": "CREDITO"
+          },
+          {
+            "position_1_based": 14,
+            "name": "Clase"
+          },
+          {
+            "position_1_based": 15,
+            "name": "Orden"
+          },
+          {
+            "position_1_based": 16,
+            "name": "RamoEquiv"
+          },
+          {
+            "position_1_based": 17,
+            "name": "DescRamoEquiv"
+          },
+          {
+            "position_1_based": 18,
+            "name": "RamoReq"
+          },
+          {
+            "position_1_based": 19,
+            "name": "DescRamoReq"
+          },
+          {
+            "position_1_based": 20,
+            "name": "RegimenReq"
+          },
+          {
+            "position_1_based": 21,
+            "name": "TipoReq"
+          },
+          {
+            "position_1_based": 22,
+            "name": "SesionesReq"
+          },
+          {
+            "position_1_based": 23,
+            "name": "Sede"
+          },
+          {
+            "position_1_based": 24,
+            "name": "ORDENRAMO"
+          },
+          {
+            "position_1_based": 25,
+            "name": "HOR_TEO"
+          },
+          {
+            "position_1_based": 26,
+            "name": "HOR_PRAC"
+          },
+          {
+            "position_1_based": 27,
+            "name": "HOR_AYUD"
+          },
+          {
+            "position_1_based": 28,
+            "name": "SIGLA"
+          },
+          {
+            "position_1_based": 29,
+            "name": "NroLinea"
+          }
+        ],
+        "dimensions_reported": "A1:AC11439",
+        "keys": [
+          {
+            "fields": [
+              "CODPESTUD"
+            ],
+            "nonblank_rows": 11438,
+            "unique_keys": 223,
+            "duplicate_key_groups": 193,
+            "excess_rows": 11215,
+            "max_rows_per_key": 159
+          },
+          {
+            "fields": [
+              "Codcarr",
+              "Sede",
+              "CODPESTUD"
+            ],
+            "nonblank_rows": 11438,
+            "unique_keys": 223,
+            "duplicate_key_groups": 193,
+            "excess_rows": 11215,
+            "max_rows_per_key": 159
+          },
+          {
+            "fields": [
+              "CODPESTUD",
+              "CODRAMO",
+              "NIVEL"
+            ],
+            "nonblank_rows": 11438,
+            "unique_keys": 4854,
+            "duplicate_key_groups": 3065,
+            "excess_rows": 6584,
+            "max_rows_per_key": 27
+          },
+          {
+            "fields": [
+              "Codcarr",
+              "Sede",
+              "CODPESTUD",
+              "CODRAMO",
+              "NIVEL"
+            ],
+            "nonblank_rows": 11438,
+            "unique_keys": 4854,
+            "duplicate_key_groups": 3065,
+            "excess_rows": 6584,
+            "max_rows_per_key": 27
+          },
+          {
+            "fields": [
+              "Codcarr",
+              "Sede",
+              "CODPESTUD",
+              "CODRAMO",
+              "NIVEL",
+              "RamoEquiv",
+              "RamoReq"
+            ],
+            "nonblank_rows": 0,
+            "unique_keys": 0,
+            "duplicate_key_groups": 0,
+            "excess_rows": 0,
+            "max_rows_per_key": 0
+          },
+          {
+            "fields": [
+              "CODPESTUD",
+              "CODRAMO",
+              "NIVEL",
+              "Sede",
+              "NroLinea"
+            ],
+            "nonblank_rows": 11438,
+            "unique_keys": 4854,
+            "duplicate_key_groups": 3065,
+            "excess_rows": 6584,
+            "max_rows_per_key": 27
+          }
+        ],
+        "fields": {
+          "Codcarr@1": {
+            "position_1_based": 1,
+            "nonblank_rows": 11438,
+            "distinct": 127,
+            "value_counts": {
+              "ADMP": 65,
+              "ASRE": 225,
+              "ASREOL": 219,
+              "AUDT": 63,
+              "CADMP": 44,
+              "CAUDT": 43,
+              "CIACI": 40,
+              "CIADM": 50,
+              "CICDA": 44,
+              "CICIB": 48,
+              "CICRE": 51,
+              "CIFIN": 46,
+              "CIIND": 45,
+              "CIINF": 54,
+              "CILOG": 47,
+              "CIMDI": 44,
+              "CIPRE": 52,
+              "CIRHU": 44,
+              "CISEP": 46,
+              "CNATP": 42,
+              "CONG": 50,
+              "COPCOM": 16,
+              "COTEIQ": 43,
+              "COTENS": 38,
+              "COTFAR": 38,
+              "CRPYA": 1,
+              "CRPYB": 1,
+              "DACD": 8,
+              "DAPB": 5,
+              "DCBS": 6,
+              "DCID": 6,
+              "DCSARE": 6,
+              "DCSI": 4,
+              "DDASC": 5,
+              "DDSC": 5,
+              "DDSS": 4,
+              "DFSCK": 4,
+              "DFSK": 4,
+              "DGAS": 5,
+              "DGDA": 5,
+              "DHDEI": 4,
+              "DHDS": 4,
+              "DHIAD": 4,
+              "DIAR": 7,
+              "DICD": 9,
+              "DIIFC": 4,
+              "DISOF": 4,
+              "DLEMS": 4,
+              "DQAS": 7,
+              "DREIN": 3,
+              "DRID": 3,
+              "DSCM": 6,
+              "DSFA": 7,
+              "DSOE": 4,
+              "DSOF": 4,
+              "DTECE": 4,
+              "ECCGCVE": 1,
+              "ECCURYDP": 70,
+              "IACI": 105,
+              "IADM": 80,
+              "ICDA": 64,
+              "ICIB": 102,
+              "ICRE": 103,
+              "IEACREOL": 44,
+              "IECIRE": 853,
+              "IECIREOL": 407,
+              "IECSRE": 213,
+              "IECSREOL": 75,
+              "IEMORE": 480,
+              "IETMRE": 741,
+              "IETMREOL": 345,
+              "IFIN": 65,
+              "IIND": 63,
+              "IINF": 106,
+              "ILOG": 81,
+              "IMDI": 63,
+              "IPRE": 75,
+              "IRHU": 68,
+              "ISEP": 69,
+              "NATP": 68,
+              "NAUTRE": 107,
+              "NCONRE": 58,
+              "NCONREOL": 63,
+              "NECIRE": 390,
+              "NETMRE": 208,
+              "NICCRE": 62,
+              "NICCREOL": 22,
+              "NICIRE": 386,
+              "NINFRE": 80,
+              "NINFREOL": 38,
+              "NITMRE": 205,
+              "NTCCRE": 93,
+              "NTCCREOL": 41,
+              "OTECURSOS": 3,
+              "PCOM": 18,
+              "PCOMS": 16,
+              "PRUEBAOTEC": 2,
+              "TACI": 120,
+              "TACREOL": 28,
+              "TADP": 54,
+              "TAMD": 109,
+              "TCDA": 48,
+              "TCIB": 117,
+              "TCIOL": 49,
+              "TCRE": 111,
+              "TCSRE": 112,
+              "TCSREOL": 133,
+              "TEIQ": 44,
+              "TENS": 38,
+              "TFAR": 38,
+              "TFIN": 52,
+              "TICL": 37,
+              "TIND": 50,
+              "TLOG": 108,
+              "TMDI": 50,
+              "TMIRE": 373,
+              "TNTP": 60,
+              "TPARE": 116,
+              "TPAREOL": 122,
+              "TPAS": 124,
+              "TPCRE": 474,
+              "TPCREOL": 170,
+              "TPRE": 46,
+              "TPRRE": 81,
+              "TRHU": 51,
+              "TTMRE": 521,
+              "TTMREOL": 225
+            }
+          },
+          "CODPESTUD@3": {
+            "position_1_based": 3,
+            "nonblank_rows": 11438,
+            "distinct": 223,
+            "value_counts": {
+              "ADMP20251": 65,
+              "ASRE20151": 111,
+              "ASREOL": 112,
+              "AUDT20251": 63,
+              "CADMP20251": 44,
+              "CAUDT20251": 43,
+              "CIACI20241": 40,
+              "CIADM20241": 50,
+              "CICDA20251": 44,
+              "CICIB20241": 48,
+              "CICRE20241": 51,
+              "CIFIN20261": 46,
+              "CIIND20251": 45,
+              "CIINF20241": 54,
+              "CILOG20241": 47,
+              "CIMDI20261": 44,
+              "CIPRE20261": 52,
+              "CIRHU20261": 44,
+              "CISEP20261": 46,
+              "CNATP20251": 42,
+              "CONG20251": 50,
+              "COPCOM20261": 16,
+              "COTEIQ20261": 43,
+              "COTENS20261": 38,
+              "COTFAR20261": 38,
+              "CRPYA20261": 1,
+              "CRPYB20261": 1,
+              "DACD20251": 8,
+              "DAPB": 5,
+              "DCBS20251": 6,
+              "DCID20262": 6,
+              "DCSARE20191": 6,
+              "DCSI20251": 4,
+              "DDASC": 5,
+              "DDSC20251": 5,
+              "DDSS": 4,
+              "DFSCK20261": 4,
+              "DFSK20251": 4,
+              "DGAS": 5,
+              "DGDA": 5,
+              "DHDEI20262": 4,
+              "DHDS20251": 4,
+              "DHIAD20261": 4,
+              "DIAR20251": 7,
+              "DICD": 9,
+              "DIIFC": 4,
+              "DISOF": 4,
+              "DLEMS20261": 4,
+              "DQAS": 7,
+              "DREIN20261": 3,
+              "DRID": 3,
+              "DSCM20251": 6,
+              "DSFA20251": 7,
+              "DSOE20262": 4,
+              "DSOF20251": 4,
+              "DTECE": 4,
+              "ECCACFAR12025": 1,
+              "ECCACFAR2025": 1,
+              "ECCAPP2025": 1,
+              "ECCAPP20251": 1,
+              "ECCCE2026": 1,
+              "ECCCIBERSEG2024": 1,
+              "ECCDATAS2024": 1,
+              "ECCFUNCIB2024": 1,
+              "ECCGCVE2026": 1,
+              "ECCIA2025": 1,
+              "ECCIAP2026": 1,
+              "ECCIAPL20261": 1,
+              "ECCMRS2026": 1,
+              "ECCPGC2026": 1,
+              "ECCPIAT2026": 1,
+              "ECCPOWERBI2024": 1,
+              "ECCPYA2026": 1,
+              "ECCPYB2024": 1,
+              "ECCRECL2025": 1,
+              "ECCSQLBASICO2024": 1,
+              "ECDARQCLOUD2024": 6,
+              "ECDCIBER2024": 1,
+              "ECDCIBER2024V2": 6,
+              "ECDCIBIND2024": 4,
+              "ECDDATASC2024": 5,
+              "ECDFRONT2024": 1,
+              "ECDFULLSTACK2024": 1,
+              "ECDFULLSTACK2024V2": 4,
+              "ECDINFCLOUD2024": 1,
+              "ECDINFCLOUD2024V2": 7,
+              "ECDQA2024": 1,
+              "ECDQA2024V2": 7,
+              "ECDREDIND2024": 1,
+              "ECDREDIND2024V2": 3,
+              "ECDSEGOFEN2024": 1,
+              "ECDSEGOFEN2024V2": 4,
+              "IACI20241": 105,
+              "IADM20241": 80,
+              "ICDA20251": 64,
+              "ICIB20241": 102,
+              "ICRE20241": 103,
+              "IEACREOL": 44,
+              "IECIRE20081": 143,
+              "IECIRE20101": 150,
+              "IECIRE20121": 135,
+              "IECIRE20151": 136,
+              "IECIRE20191": 154,
+              "IECIRE2020": 81,
+              "IECIRE20211": 54,
+              "IECIREOL": 138,
+              "IECIREOL20191": 133,
+              "IECIREOL20201": 72,
+              "IECIREOL20211": 64,
+              "IECSRE20191": 101,
+              "IECSRE20211": 112,
+              "IECSREOL20211": 75,
+              "IEMORE20141": 134,
+              "IEMORE20151": 132,
+              "IEMORE20171": 107,
+              "IEMORE20201": 53,
+              "IEMORE20211": 54,
+              "IETMRE20091": 136,
+              "IETMRE20101": 159,
+              "IETMRE20121": 134,
+              "IETMRE20161": 112,
+              "IETMRE20191": 142,
+              "IETMRE20211": 58,
+              "IETMREOL": 111,
+              "IETMREOL20191": 138,
+              "IETMREOL20211": 96,
+              "IFIN20261": 65,
+              "IIND20251": 63,
+              "IINF20241": 106,
+              "ILOG20241": 81,
+              "IMDI20261": 63,
+              "IPRE20261": 75,
+              "IRHU20261": 68,
+              "ISEP20261": 69,
+              "NATP20251": 68,
+              "NAUTRE": 60,
+              "NAUTRE2020": 47,
+              "NCONRE": 58,
+              "NCONREOL2019": 63,
+              "NECIRE20091": 93,
+              "NECIRE20101": 95,
+              "NECIRE20121": 97,
+              "NECIRE20151": 105,
+              "NETMRE20091": 40,
+              "NETMRE20101": 82,
+              "NETMRE20121": 86,
+              "NICCRE20191": 32,
+              "NICCRE2020": 30,
+              "NICCREOL2020": 22,
+              "NICIRE20091": 93,
+              "NICIRE20101": 93,
+              "NICIRE20121": 95,
+              "NICIRE20151": 105,
+              "NINFRE": 80,
+              "NINFREOL2019": 38,
+              "NITMRE20091": 30,
+              "NITMRE20101": 87,
+              "NITMRE20121": 88,
+              "NTCCRE20191": 48,
+              "NTCCRE2020": 45,
+              "NTCCREOL2020": 41,
+              "OTEC2024": 1,
+              "OTEC2026": 2,
+              "PCOM20241": 18,
+              "PCOMS20261": 16,
+              "TACI20241": 120,
+              "TACREOL": 28,
+              "TADP20251": 54,
+              "TAMD20241": 109,
+              "TASRE20191": 114,
+              "TASREOL20191": 107,
+              "TCDA20251": 48,
+              "TCIB20241": 117,
+              "TCIREOL20191": 23,
+              "TCIREOL20211": 26,
+              "TCRE20241": 111,
+              "TCSRE20191": 60,
+              "TCSRE20211": 52,
+              "TCSREOL2020": 46,
+              "TCSREOL20211": 48,
+              "TCSREOL20231": 39,
+              "TEIQ20261": 44,
+              "TENS20251": 38,
+              "TFAR20261": 38,
+              "TFIN20261": 52,
+              "TICL20261": 37,
+              "TIND20251": 50,
+              "TLOG20241": 108,
+              "TMDI20261": 50,
+              "TMIRE20131": 84,
+              "TMIRE20151": 92,
+              "TMIRE20171": 98,
+              "TMIRE2020": 49,
+              "TMIRE20211": 50,
+              "TNTP": 60,
+              "TPARE2020": 61,
+              "TPARE20211": 55,
+              "TPAREOL2020": 49,
+              "TPAREOL20211": 47,
+              "TPAREOL20231": 26,
+              "TPAS20241": 124,
+              "TPCRE20081": 67,
+              "TPCRE20101": 74,
+              "TPCRE20121": 82,
+              "TPCRE20121V2": 81,
+              "TPCRE20151": 85,
+              "TPCRE20191": 85,
+              "TPCREOL": 85,
+              "TPCREOL20191": 85,
+              "TPRE20261": 46,
+              "TPRRE20131": 81,
+              "TRHU20261": 51,
+              "TTMRE20091": 67,
+              "TTMRE20101": 77,
+              "TTMRE20121": 89,
+              "TTMRE20121V2": 88,
+              "TTMRE20161": 80,
+              "TTMRE20191": 75,
+              "TTMRE20211": 45,
+              "TTMREOL": 74,
+              "TTMREOL20191": 73,
+              "TTMREOL20211": 46,
+              "TTMREOL20231": 32
+            }
+          },
+          "REGIMEN@7": {
+            "position_1_based": 7,
+            "nonblank_rows": 11438,
+            "distinct": 2,
+            "value_counts": {
+              "A": 210,
+              "S": 11228
+            }
+          },
+          "TIPO@8": {
+            "position_1_based": 8,
+            "nonblank_rows": 11438,
+            "distinct": 2,
+            "value_counts": {
+              "OPC": 25,
+              "Obl": 11413
+            }
+          },
+          "NIVEL@12": {
+            "position_1_based": 12,
+            "nonblank_rows": 11438,
+            "distinct": 20,
+            "value_counts": {
+              "1": 1233,
+              "10": 270,
+              "11": 232,
+              "12": 113,
+              "13": 69,
+              "14": 43,
+              "15": 42,
+              "16": 41,
+              "17": 47,
+              "18": 55,
+              "19": 55,
+              "2": 1689,
+              "20": 58,
+              "3": 1683,
+              "4": 1780,
+              "5": 1420,
+              "6": 853,
+              "7": 945,
+              "8": 554,
+              "9": 256
+            }
+          },
+          "Sede@23": {
+            "position_1_based": 23,
+            "nonblank_rows": 11438,
+            "distinct": 2,
+            "value_counts": {
+              "CO": 135,
+              "RE": 11303
+            }
+          }
+        },
+        "full_row_unique_count": 11438,
+        "academic_key_allowing_blank_equiv_req": {
+          "fields": [
+            "Codcarr",
+            "Sede",
+            "CODPESTUD",
+            "CODRAMO",
+            "NIVEL",
+            "RamoEquiv",
+            "RamoReq"
+          ],
+          "nonblank_rows": 0,
+          "unique_keys": 0,
+          "duplicate_key_groups": 0,
+          "excess_rows": 0,
+          "max_rows_per_key": 0
+        },
+        "date_or_validity_or_sies_fields": []
+      }
+    ]
+  },
+  {
+    "id": "datos_alumnos",
+    "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+    "size": 5465638,
+    "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+    "availability": "available_readable",
+    "sheets": [
+      {
+        "name": "Hoja1",
+        "data_rows": 15045,
+        "physical_columns": 67,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "Número"
+          },
+          {
+            "position_1_based": 2,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 3,
+            "name": "CODCARPR"
+          },
+          {
+            "position_1_based": 4,
+            "name": "NOMBRE_L"
+          },
+          {
+            "position_1_based": 5,
+            "name": "ANOMATRICULA"
+          },
+          {
+            "position_1_based": 6,
+            "name": "PERIODOMATRICULA"
+          },
+          {
+            "position_1_based": 7,
+            "name": "ANOINGRESO"
+          },
+          {
+            "position_1_based": 8,
+            "name": "PERIODOINGRESO"
+          },
+          {
+            "position_1_based": 9,
+            "name": "FECHAMATRICULA"
+          },
+          {
+            "position_1_based": 10,
+            "name": "JORNADA"
+          },
+          {
+            "position_1_based": 11,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 12,
+            "name": "NOMBRE"
+          },
+          {
+            "position_1_based": 13,
+            "name": "SEXO"
+          },
+          {
+            "position_1_based": 14,
+            "name": "ESTADOCIVIL"
+          },
+          {
+            "position_1_based": 15,
+            "name": "FECHANACIMIENTO"
+          },
+          {
+            "position_1_based": 16,
+            "name": "DIRECCIONPROCEDENCIA"
+          },
+          {
+            "position_1_based": 17,
+            "name": "CIUDADPROCEDENCIA"
+          },
+          {
+            "position_1_based": 18,
+            "name": "COMUNAPROCEDENCIA"
+          },
+          {
+            "position_1_based": 19,
+            "name": "FONOPROCEDENCIA"
+          },
+          {
+            "position_1_based": 20,
+            "name": "DIRECCIONACTUAL"
+          },
+          {
+            "position_1_based": 21,
+            "name": "CIUDADACTUAL"
+          },
+          {
+            "position_1_based": 22,
+            "name": "COMUNAACTUAL"
+          },
+          {
+            "position_1_based": 23,
+            "name": "FONOACTUAL"
+          },
+          {
+            "position_1_based": 24,
+            "name": "MAIL"
+          },
+          {
+            "position_1_based": 25,
+            "name": "Mail_Inst"
+          },
+          {
+            "position_1_based": 26,
+            "name": "NACIONALIDAD"
+          },
+          {
+            "position_1_based": 27,
+            "name": "EMERGENCIA"
+          },
+          {
+            "position_1_based": 28,
+            "name": "FONOEMERGENCIA"
+          },
+          {
+            "position_1_based": 29,
+            "name": "CODIGOCOLEGIO"
+          },
+          {
+            "position_1_based": 30,
+            "name": "COLEGIO"
+          },
+          {
+            "position_1_based": 31,
+            "name": "MODALIDAD"
+          },
+          {
+            "position_1_based": 32,
+            "name": "DESCRIPCION"
+          },
+          {
+            "position_1_based": 33,
+            "name": "CIUDADCOLEGIO"
+          },
+          {
+            "position_1_based": 34,
+            "name": "COMUNACOLEGIO"
+          },
+          {
+            "position_1_based": 35,
+            "name": "CATEGORIA"
+          },
+          {
+            "position_1_based": 36,
+            "name": "VIASDEADMISION"
+          },
+          {
+            "position_1_based": 37,
+            "name": "MOTIVODESELECCION"
+          },
+          {
+            "position_1_based": 38,
+            "name": "MEDIOSDEINFORMACION"
+          },
+          {
+            "position_1_based": 39,
+            "name": "VIACONSULTA"
+          },
+          {
+            "position_1_based": 40,
+            "name": "NOMBREUNIVERSIDAD"
+          },
+          {
+            "position_1_based": 41,
+            "name": "CARRERARANTERIOR"
+          },
+          {
+            "position_1_based": 42,
+            "name": "RUTRESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 43,
+            "name": "NOMBRERESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 44,
+            "name": "CODIGOCARRERA"
+          },
+          {
+            "position_1_based": 45,
+            "name": "EMPRESA"
+          },
+          {
+            "position_1_based": 46,
+            "name": "ACTIVIDAD"
+          },
+          {
+            "position_1_based": 47,
+            "name": "DIRECCION_EMPRESA"
+          },
+          {
+            "position_1_based": 48,
+            "name": "CIUDAD_EMPRESA"
+          },
+          {
+            "position_1_based": 49,
+            "name": "COMUNA_EMPRESA"
+          },
+          {
+            "position_1_based": 50,
+            "name": "CANTIDADDEHIJOS"
+          },
+          {
+            "position_1_based": 51,
+            "name": "TRAMODERENTA"
+          },
+          {
+            "position_1_based": 52,
+            "name": "NOMBREEMPRESA"
+          },
+          {
+            "position_1_based": 53,
+            "name": "ANOEGRESOENSENANZAMEDIA"
+          },
+          {
+            "position_1_based": 54,
+            "name": "NOTAENSENANZAMEDIA"
+          },
+          {
+            "position_1_based": 55,
+            "name": "RUT EJECUTIVO"
+          },
+          {
+            "position_1_based": 56,
+            "name": "NOMBRE EJECUTIVO"
+          },
+          {
+            "position_1_based": 57,
+            "name": "ESTADOACADEMICO"
+          },
+          {
+            "position_1_based": 58,
+            "name": "SITUACION"
+          },
+          {
+            "position_1_based": 59,
+            "name": "MATRICULA"
+          },
+          {
+            "position_1_based": 60,
+            "name": "NIVEL"
+          },
+          {
+            "position_1_based": 61,
+            "name": "ARANCELREAL"
+          },
+          {
+            "position_1_based": 62,
+            "name": "CON_FIRMA"
+          },
+          {
+            "position_1_based": 63,
+            "name": "FECHAFIRMA"
+          },
+          {
+            "position_1_based": 64,
+            "name": "SEDE"
+          },
+          {
+            "position_1_based": 65,
+            "name": "NOMBRES"
+          },
+          {
+            "position_1_based": 66,
+            "name": "APELLIDO PATERNO"
+          },
+          {
+            "position_1_based": 67,
+            "name": "APELLIDO MATERNO"
+          }
+        ],
+        "dimensions_reported": "A1:BO15046",
+        "keys": [
+          {
+            "fields": [
+              "CODCLI"
+            ],
+            "nonblank_rows": 15045,
+            "unique_keys": 15044,
+            "duplicate_key_groups": 1,
+            "excess_rows": 1,
+            "max_rows_per_key": 2
+          },
+          {
+            "fields": [
+              "RUT"
+            ],
+            "nonblank_rows": 15045,
+            "unique_keys": 12927,
+            "duplicate_key_groups": 1793,
+            "excess_rows": 2118,
+            "max_rows_per_key": 5
+          },
+          {
+            "fields": [
+              "RUT",
+              "CODCARPR"
+            ],
+            "nonblank_rows": 15045,
+            "unique_keys": 14969,
+            "duplicate_key_groups": 76,
+            "excess_rows": 76,
+            "max_rows_per_key": 2
+          },
+          {
+            "fields": [
+              "CODCLI",
+              "CODCARPR"
+            ],
+            "nonblank_rows": 15045,
+            "unique_keys": 15044,
+            "duplicate_key_groups": 1,
+            "excess_rows": 1,
+            "max_rows_per_key": 2
+          }
+        ],
+        "fields": {
+          "CODCARPR@3": {
+            "position_1_based": 3,
+            "nonblank_rows": 15045,
+            "distinct": 138,
+            "value_counts": {
+              "ADMP": 217,
+              "ASRE": 185,
+              "ASREOL": 69,
+              "AUDT": 157,
+              "CADMP": 11,
+              "CAUDT": 4,
+              "CIACI": 2,
+              "CIADM": 37,
+              "CICDA": 4,
+              "CICIB": 165,
+              "CICRE": 212,
+              "CIFIN": 2,
+              "CIIND": 72,
+              "CIINF": 139,
+              "CILOG": 56,
+              "CIMDI": 6,
+              "CIPRE": 7,
+              "CIRHU": 7,
+              "CISEP": 9,
+              "CNATP": 1,
+              "COICONSSP": 1,
+              "CONG": 136,
+              "COTEIQ": 56,
+              "COTELECSP": 2,
+              "COTENS": 32,
+              "COTENSSP": 2,
+              "COTFAR": 28,
+              "COTIMAGSP": 1,
+              "COTVETSP": 6,
+              "DACD": 29,
+              "DAPB": 2,
+              "DCBS": 42,
+              "DCID": 2,
+              "DCPTS": 4,
+              "DCSARE": 30,
+              "DCSI": 5,
+              "DDASC": 11,
+              "DDSC": 9,
+              "DDSS": 2,
+              "DECAV": 5,
+              "DEIAG": 5,
+              "DEUIA": 1,
+              "DFSCK": 15,
+              "DFSK": 40,
+              "DGAS": 2,
+              "DGDA": 3,
+              "DHDS": 4,
+              "DHIAD": 4,
+              "DIAR": 5,
+              "DICD": 7,
+              "DLEMS": 2,
+              "DQAS": 5,
+              "DREIN": 22,
+              "DRID": 44,
+              "DSCM": 3,
+              "DSFA": 1,
+              "DSOE": 3,
+              "DSOF": 1,
+              "ECCURYDP": 223,
+              "IACI": 1,
+              "IADM": 466,
+              "ICDA": 97,
+              "ICEX": 1,
+              "ICIB": 684,
+              "ICONSSP": 5,
+              "ICRE": 307,
+              "IECIRE": 547,
+              "IECIREOL": 346,
+              "IECSRE": 110,
+              "IECSREOL": 256,
+              "IELECSP": 2,
+              "IEMORE": 82,
+              "IETMRE": 447,
+              "IETMREOL": 366,
+              "IFIN": 51,
+              "IIART": 5,
+              "IIND": 235,
+              "IINF": 638,
+              "ILOG": 329,
+              "IMDI": 159,
+              "IOPMI": 3,
+              "IPRE": 42,
+              "IRHU": 68,
+              "ISEP": 42,
+              "NATP": 40,
+              "NAUTRE": 8,
+              "NCONRE": 130,
+              "NCONREOL": 65,
+              "NECIRE": 93,
+              "NETMRE": 319,
+              "NICCRE": 11,
+              "NICCREOL": 13,
+              "NICIRE": 43,
+              "NINFRE": 57,
+              "NINFREOL": 22,
+              "NITMRE": 177,
+              "NTCCRE": 50,
+              "NTCCREOL": 20,
+              "PMTEIQ": 4,
+              "PMTENS": 2,
+              "PMTFAR": 1,
+              "TACI": 2,
+              "TADP": 61,
+              "TAMD": 366,
+              "TCDA": 65,
+              "TCEX": 1,
+              "TCIB": 419,
+              "TCIOL": 1,
+              "TCONSSP": 3,
+              "TCRE": 147,
+              "TCSRE": 79,
+              "TCSREOL": 218,
+              "TEIQ": 308,
+              "TELECSP": 9,
+              "TENS": 530,
+              "TENSSP": 7,
+              "TFAR": 58,
+              "TFARSP": 25,
+              "TFIN": 41,
+              "TGEIN": 1,
+              "TIART": 3,
+              "TICL": 24,
+              "TIMAGSP": 1,
+              "TLOG": 310,
+              "TMDI": 181,
+              "TMIRE": 226,
+              "TOPMI": 5,
+              "TPARE": 124,
+              "TPAREOL": 426,
+              "TPAS": 707,
+              "TPCRE": 685,
+              "TPCREOL": 76,
+              "TPRE": 36,
+              "TPRRE": 45,
+              "TRHU": 91,
+              "TTMRE": 1023,
+              "TTMREOL": 227,
+              "TVETSP": 13
+            }
+          },
+          "ANOMATRICULA@5": {
+            "position_1_based": 5,
+            "nonblank_rows": 15045,
+            "distinct": 15,
+            "value_counts": {
+              "2013": 483,
+              "2014": 442,
+              "2015": 514,
+              "2016": 485,
+              "2017": 525,
+              "2018": 503,
+              "2019": 628,
+              "2020": 500,
+              "2021": 572,
+              "2022": 568,
+              "2023": 602,
+              "2024": 1460,
+              "2025": 1832,
+              "2026": 5612,
+              "2027": 319
+            }
+          },
+          "ANOINGRESO@7": {
+            "position_1_based": 7,
+            "nonblank_rows": 15045,
+            "distinct": 28,
+            "value_counts": {
+              "1989": 1,
+              "2000": 3,
+              "2002": 3,
+              "2003": 5,
+              "2004": 3,
+              "2005": 8,
+              "2006": 14,
+              "2007": 14,
+              "2008": 28,
+              "2009": 47,
+              "2010": 70,
+              "2011": 138,
+              "2012": 228,
+              "2013": 652,
+              "2014": 523,
+              "2015": 429,
+              "2016": 411,
+              "2017": 573,
+              "2018": 505,
+              "2019": 540,
+              "2020": 536,
+              "2021": 656,
+              "2022": 593,
+              "2023": 982,
+              "2024": 1204,
+              "2025": 2239,
+              "2026": 4321,
+              "2027": 319
+            }
+          },
+          "PERIODOINGRESO@8": {
+            "position_1_based": 8,
+            "nonblank_rows": 15045,
+            "distinct": 3,
+            "value_counts": {
+              "1": 12222,
+              "2": 1998,
+              "3": 825
+            }
+          },
+          "FECHAMATRICULA@9": {
+            "position_1_based": 9,
+            "nonblank_rows": 15045,
+            "distinct": 2410,
+            "min_observed": "01-01-2022",
+            "max_observed": "31-12-2025"
+          },
+          "JORNADA@10": {
+            "position_1_based": 10,
+            "nonblank_rows": 15045,
+            "distinct": 3,
+            "value_counts": {
+              "D": 1137,
+              "O": 8703,
+              "V": 5205
+            }
+          },
+          "FECHANACIMIENTO@15": {
+            "position_1_based": 15,
+            "nonblank_rows": 15045,
+            "distinct": 7611,
+            "min_observed": "01-01-1900",
+            "max_observed": "31-12-2008"
+          },
+          "NIVEL@60": {
+            "position_1_based": 60,
+            "nonblank_rows": 14836,
+            "distinct": 19,
+            "value_counts": {
+              "1": 6364,
+              "10": 76,
+              "11": 529,
+              "12": 11,
+              "13": 46,
+              "14": 14,
+              "15": 1,
+              "16": 4,
+              "18": 8,
+              "19": 26,
+              "2": 1513,
+              "20": 426,
+              "3": 1611,
+              "4": 541,
+              "5": 1909,
+              "6": 1007,
+              "7": 86,
+              "8": 443,
+              "9": 221
+            }
+          },
+          "FECHAFIRMA@63": {
+            "position_1_based": 63,
+            "nonblank_rows": 5228,
+            "distinct": 767,
+            "min_observed": "01-01-2024",
+            "max_observed": "31-12-2025"
+          },
+          "SEDE@64": {
+            "position_1_based": 64,
+            "nonblank_rows": 15045,
+            "distinct": 3,
+            "value_counts": {
+              "CO": 128,
+              "PTG": 7,
+              "RE": 14910
+            }
+          }
+        },
+        "plan_or_mrun_fields": []
+      }
+    ]
+  },
+  {
+    "id": "promedios",
+    "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+    "size": 27787332,
+    "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "availability": "available_readable",
+    "sheets": [
+      {
+        "name": "Hoja1",
+        "data_rows": 129493,
+        "physical_columns": 24,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 2,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 3,
+            "name": "DIG"
+          },
+          {
+            "position_1_based": 4,
+            "name": "NOMBRE"
+          },
+          {
+            "position_1_based": 5,
+            "name": "PATERNO"
+          },
+          {
+            "position_1_based": 6,
+            "name": "MATERNO"
+          },
+          {
+            "position_1_based": 7,
+            "name": "CODCARR"
+          },
+          {
+            "position_1_based": 8,
+            "name": "CARRERA"
+          },
+          {
+            "position_1_based": 9,
+            "name": "JORNADA"
+          },
+          {
+            "position_1_based": 10,
+            "name": "REGIMEN"
+          },
+          {
+            "position_1_based": 11,
+            "name": "RAMOEQUIV"
+          },
+          {
+            "position_1_based": 12,
+            "name": "CODRAMO"
+          },
+          {
+            "position_1_based": 13,
+            "name": "CODSECC"
+          },
+          {
+            "position_1_based": 14,
+            "name": "ASIGNATURA"
+          },
+          {
+            "position_1_based": 15,
+            "name": "EXAMEN"
+          },
+          {
+            "position_1_based": 16,
+            "name": "NOTA_FINAL"
+          },
+          {
+            "position_1_based": 17,
+            "name": "ANO"
+          },
+          {
+            "position_1_based": 18,
+            "name": "PERIODO"
+          },
+          {
+            "position_1_based": 19,
+            "name": "ESTADO"
+          },
+          {
+            "position_1_based": 20,
+            "name": "DESCRIPCION_ESTADO"
+          },
+          {
+            "position_1_based": 21,
+            "name": "CONVALIDADO"
+          },
+          {
+            "position_1_based": 22,
+            "name": "NIVEL"
+          },
+          {
+            "position_1_based": 23,
+            "name": "ESTADO_ACADEMICO"
+          },
+          {
+            "position_1_based": 24,
+            "name": "PLAN_DE_ESTUDIO"
+          }
+        ],
+        "dimensions_reported": "A1:X129494",
+        "keys": [
+          {
+            "fields": [
+              "CODCLI"
+            ],
+            "nonblank_rows": 129493,
+            "unique_keys": 13068,
+            "duplicate_key_groups": 8545,
+            "excess_rows": 116425,
+            "max_rows_per_key": 84
+          },
+          {
+            "fields": [
+              "CODCLI",
+              "CODCARR",
+              "ANO",
+              "PERIODO",
+              "CODRAMO"
+            ],
+            "nonblank_rows": 129493,
+            "unique_keys": 129493,
+            "duplicate_key_groups": 0,
+            "excess_rows": 0,
+            "max_rows_per_key": 1
+          },
+          {
+            "fields": [
+              "CODCLI",
+              "ANO",
+              "PERIODO",
+              "CODRAMO"
+            ],
+            "nonblank_rows": 129493,
+            "unique_keys": 129493,
+            "duplicate_key_groups": 0,
+            "excess_rows": 0,
+            "max_rows_per_key": 1
+          }
+        ],
+        "fields": {
+          "CODCARR@7": {
+            "position_1_based": 7,
+            "nonblank_rows": 129493,
+            "distinct": 87,
+            "value_counts": {
+              "ADMP": 1063,
+              "ASRE": 766,
+              "ASREOL": 982,
+              "AUDT": 679,
+              "CADMP": 28,
+              "CIADM": 278,
+              "CICIB": 1845,
+              "CICRE": 2359,
+              "CIIND": 494,
+              "CIINF": 1592,
+              "CILOG": 305,
+              "CONG": 507,
+              "COTEIQ": 337,
+              "COTENS": 68,
+              "COTFAR": 90,
+              "DACD": 140,
+              "DCBS": 294,
+              "DCSARE": 156,
+              "DDASC": 50,
+              "DDSC": 50,
+              "DFSCK": 56,
+              "DFSK": 128,
+              "DHIAD": 16,
+              "DIAR": 35,
+              "DICD": 81,
+              "DREIN": 66,
+              "DRID": 42,
+              "ECCURYDP": 660,
+              "IADM": 2000,
+              "ICDA": 595,
+              "ICIB": 8264,
+              "ICRE": 5173,
+              "IECIRE": 3957,
+              "IECIREOL": 9069,
+              "IECSRE": 2359,
+              "IECSREOL": 6547,
+              "IEMORE": 1640,
+              "IETMRE": 3834,
+              "IETMREOL": 11267,
+              "IFIN": 115,
+              "IIND": 609,
+              "IINF": 7339,
+              "ILOG": 1540,
+              "IMDI": 283,
+              "IPRE": 107,
+              "IRHU": 128,
+              "ISEP": 67,
+              "NATP": 89,
+              "NAUTRE": 114,
+              "NCONRE": 1595,
+              "NCONREOL": 1171,
+              "NECIRE": 92,
+              "NETMRE": 155,
+              "NICCRE": 173,
+              "NICCREOL": 219,
+              "NICIRE": 66,
+              "NINFRE": 538,
+              "NINFREOL": 291,
+              "NITMRE": 61,
+              "NTCCRE": 1122,
+              "NTCCREOL": 493,
+              "NULL": 4211,
+              "TADP": 268,
+              "TAMD": 1392,
+              "TCDA": 325,
+              "TCIB": 3734,
+              "TCRE": 1503,
+              "TCSRE": 1270,
+              "TCSREOL": 3027,
+              "TEIQ": 347,
+              "TENS": 1748,
+              "TFAR": 107,
+              "TFIN": 107,
+              "TICL": 57,
+              "TLOG": 1451,
+              "TMDI": 285,
+              "TMIRE": 818,
+              "TPARE": 2103,
+              "TPAREOL": 6590,
+              "TPAS": 8193,
+              "TPCRE": 1380,
+              "TPCREOL": 743,
+              "TPRE": 78,
+              "TPRRE": 3,
+              "TRHU": 119,
+              "TTMRE": 2434,
+              "TTMREOL": 2961
+            }
+          },
+          "JORNADA@9": {
+            "position_1_based": 9,
+            "nonblank_rows": 129493,
+            "distinct": 3,
+            "value_counts": {
+              "D": 7627,
+              "O": 93440,
+              "V": 28426
+            }
+          },
+          "REGIMEN@10": {
+            "position_1_based": 10,
+            "nonblank_rows": 129493,
+            "distinct": 4,
+            "value_counts": {
+              "ANUAL": 1713,
+              "BIMESTRAL": 43567,
+              "SEMESTRAL": 26447,
+              "TRIMESTRAL": 57766
+            }
+          },
+          "ANO@17": {
+            "position_1_based": 17,
+            "nonblank_rows": 129493,
+            "distinct": 9,
+            "value_counts": {
+              "2019": 9869,
+              "2020": 9701,
+              "2021": 14721,
+              "2022": 14494,
+              "2023": 15474,
+              "2024": 21531,
+              "2025": 24833,
+              "2026": 14659,
+              "NULL": 4211
+            }
+          },
+          "PERIODO@18": {
+            "position_1_based": 18,
+            "nonblank_rows": 129493,
+            "distinct": 6,
+            "value_counts": {
+              "1": 66745,
+              "2": 27345,
+              "3": 17992,
+              "4": 6990,
+              "5": 6210,
+              "NULL": 4211
+            }
+          },
+          "NIVEL@22": {
+            "position_1_based": 22,
+            "nonblank_rows": 129493,
+            "distinct": 21,
+            "value_counts": {
+              "1": 32909,
+              "10": 2837,
+              "11": 2202,
+              "12": 1565,
+              "13": 1164,
+              "14": 1032,
+              "15": 1011,
+              "16": 953,
+              "17": 944,
+              "18": 1389,
+              "19": 887,
+              "2": 18423,
+              "20": 1461,
+              "3": 15639,
+              "4": 13689,
+              "5": 9247,
+              "6": 6635,
+              "7": 5611,
+              "8": 4283,
+              "9": 2868,
+              "NULL": 4744
+            }
+          },
+          "PLAN_DE_ESTUDIO@24": {
+            "position_1_based": 24,
+            "nonblank_rows": 129493,
+            "distinct": 197,
+            "value_counts": {
+              "ADMP20251": 1123,
+              "ASRE20151": 368,
+              "ASREOL": 599,
+              "ASREPASO": 4,
+              "AUDT20251": 736,
+              "CADMP20251": 32,
+              "CAUDT20251": 4,
+              "CIACI20241": 2,
+              "CIADM20241": 288,
+              "CICDA20251": 3,
+              "CICIB20241": 1866,
+              "CICRE20241": 2383,
+              "CIFIN20261": 1,
+              "CIIND20251": 507,
+              "CIINF20241": 1607,
+              "CILOG20241": 316,
+              "CIMDI20261": 3,
+              "CIPRE20261": 5,
+              "CIRHU20261": 7,
+              "CISEP20261": 7,
+              "CNATP20251": 1,
+              "CONG20251": 553,
+              "COTEIQ20261": 351,
+              "COTENS20261": 82,
+              "COTFAR20261": 99,
+              "DACD20251": 146,
+              "DAPB": 2,
+              "DCBS20251": 305,
+              "DCSARE20191": 161,
+              "DCSI20251": 5,
+              "DDASC": 51,
+              "DDSC20251": 53,
+              "DDSS": 2,
+              "DFSCK20261": 57,
+              "DFSK20251": 139,
+              "DGAS": 2,
+              "DGDA": 3,
+              "DHDS20251": 4,
+              "DHIAD20261": 16,
+              "DIAR20251": 35,
+              "DICD": 86,
+              "DIIFC": 1,
+              "DISOF": 4,
+              "DLEMS20261": 2,
+              "DQAS": 5,
+              "DREIN20261": 66,
+              "DRID": 56,
+              "DSCM20251": 3,
+              "DSFA20251": 1,
+              "DSOF20251": 1,
+              "ECCACFAR12025": 2,
+              "ECCAPP20251": 8,
+              "ECCGCVE2026": 1,
+              "ECCIA2025": 4,
+              "ECCPOWERBI2024": 11,
+              "ECCPYB2024": 22,
+              "ECCRECL2025": 3,
+              "ECDARQCLOUD2024": 48,
+              "ECDCIBER2024": 32,
+              "ECDCIBER2024V2": 81,
+              "ECDDATASC2024": 60,
+              "ECDFULLSTACK2024": 11,
+              "ECDFULLSTACK2024V2": 89,
+              "ECDINFCLOUD2024": 25,
+              "ECDINFCLOUD2024V2": 84,
+              "ECDQA2024": 10,
+              "ECDQA2024V2": 55,
+              "ECDREDIND2024": 10,
+              "ECDREDIND2024V2": 80,
+              "ECDSEGOFEN2024V2": 32,
+              "IACI20241": 1,
+              "IADM20241": 2143,
+              "ICDA20251": 615,
+              "ICIB20241": 8400,
+              "ICRE20241": 5212,
+              "IECIPASO": 610,
+              "IECIRE20101": 2,
+              "IECIRE20121": 32,
+              "IECIRE20151": 1213,
+              "IECIRE20191": 987,
+              "IECIRE2020": 550,
+              "IECIRE20211": 1197,
+              "IECIREOL": 1019,
+              "IECIREOL20191": 709,
+              "IECIREOL20201": 607,
+              "IECIREOL20211": 6739,
+              "IECSRE20191": 745,
+              "IECSRE20211": 1630,
+              "IECSREOL20211": 6551,
+              "IEMORE20141": 1,
+              "IEMORE20151": 4,
+              "IEMORE20171": 381,
+              "IEMORE20201": 290,
+              "IEMORE20211": 974,
+              "IETMPASO": 141,
+              "IETMRE20101": 1,
+              "IETMRE20121": 67,
+              "IETMRE20161": 949,
+              "IETMRE20191": 901,
+              "IETMRE20211": 1943,
+              "IETMREOL": 638,
+              "IETMREOL20191": 794,
+              "IETMREOL20211": 9844,
+              "IFIN20261": 132,
+              "IIND20251": 677,
+              "IINF20241": 7446,
+              "ILOG20241": 1646,
+              "IMDI20261": 328,
+              "IPRE20261": 121,
+              "IRHU20261": 158,
+              "ISEP20261": 78,
+              "NATP20251": 102,
+              "NAUTRE": 64,
+              "NAUTRE2020": 50,
+              "NCONRE": 1604,
+              "NCONREOL2019": 1171,
+              "NECIRE20091": 10,
+              "NECIRE20101": 29,
+              "NECIRE20121": 19,
+              "NECIRE20151": 74,
+              "NETMRE20091": 1,
+              "NETMRE20121": 159,
+              "NICCRE20191": 133,
+              "NICCRE2020": 42,
+              "NICCREOL2020": 219,
+              "NICIRE20091": 1,
+              "NICIRE20121": 8,
+              "NICIRE20151": 59,
+              "NINFRE": 541,
+              "NINFREOL2019": 295,
+              "NITMPASO": 1,
+              "NITMRE20091": 1,
+              "NITMRE20121": 57,
+              "NTCCRE20191": 662,
+              "NTCCRE2020": 463,
+              "NTCCREOL2020": 493,
+              "TACI20241": 2,
+              "TADP20251": 286,
+              "TAMD20241": 1516,
+              "TASRE20191": 412,
+              "TASREOL20191": 383,
+              "TCDA20251": 339,
+              "TCIB20241": 3815,
+              "TCIBPASO": 12,
+              "TCIREOL20211": 1,
+              "TCRE20241": 1536,
+              "TCREPASO": 5,
+              "TCSRE20191": 663,
+              "TCSRE20211": 608,
+              "TCSREOL2020": 649,
+              "TCSREOL20211": 1704,
+              "TCSREOL20231": 683,
+              "TCSREOLPASO": 8,
+              "TEIQ20261": 465,
+              "TENS20251": 1960,
+              "TFAR20261": 139,
+              "TFIN20261": 116,
+              "TICL20261": 65,
+              "TLOG20241": 1555,
+              "TMDI20261": 352,
+              "TMIRE20131": 4,
+              "TMIRE20151": 2,
+              "TMIRE20171": 525,
+              "TMIRE2020": 135,
+              "TMIRE20211": 163,
+              "TPAPASO": 8,
+              "TPARE2020": 819,
+              "TPARE20211": 1288,
+              "TPAREOL2020": 734,
+              "TPAREOL20211": 4293,
+              "TPAREOL20231": 1572,
+              "TPAS20241": 8304,
+              "TPASPASO": 7,
+              "TPCPASO": 433,
+              "TPCRE20081": 2,
+              "TPCRE20101": 5,
+              "TPCRE20121": 5,
+              "TPCRE20151": 593,
+              "TPCRE20191": 805,
+              "TPCREOL": 424,
+              "TPCREOL20191": 321,
+              "TPRE20261": 90,
+              "TPRPASO": 1,
+              "TPRRE20131": 6,
+              "TRHU20261": 167,
+              "TTMPASO": 515,
+              "TTMRE20081": 8,
+              "TTMRE20091": 1,
+              "TTMRE20101": 4,
+              "TTMRE20121": 29,
+              "TTMRE20161": 590,
+              "TTMRE20191": 1462,
+              "TTMRE20211": 385,
+              "TTMREOL": 243,
+              "TTMREOL20191": 810,
+              "TTMREOL20211": 1601,
+              "TTMREOL20231": 310
+            }
+          }
+        },
+        "identity_and_plan_field_positions": [
+          {
+            "position_1_based": 1,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 2,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 7,
+            "name": "CODCARR"
+          },
+          {
+            "position_1_based": 24,
+            "name": "PLAN_DE_ESTUDIO"
+          }
+        ]
+      },
+      {
+        "name": "DatosAlumnos",
+        "data_rows": 13707,
+        "physical_columns": 74,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "Número"
+          },
+          {
+            "position_1_based": 2,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 3,
+            "name": "CODCARPR"
+          },
+          {
+            "position_1_based": 4,
+            "name": "NOMBRE_L"
+          },
+          {
+            "position_1_based": 5,
+            "name": "ANOMATRICULA"
+          },
+          {
+            "position_1_based": 6,
+            "name": "PERIODOMATRICULA"
+          },
+          {
+            "position_1_based": 7,
+            "name": "ANOINGRESO"
+          },
+          {
+            "position_1_based": 8,
+            "name": "PERIODOINGRESO"
+          },
+          {
+            "position_1_based": 9,
+            "name": "FECHAMATRICULA"
+          },
+          {
+            "position_1_based": 10,
+            "name": "JORNADA"
+          },
+          {
+            "position_1_based": 11,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 12,
+            "name": "NOMBRE"
+          },
+          {
+            "position_1_based": 13,
+            "name": "SEXO"
+          },
+          {
+            "position_1_based": 14,
+            "name": "ESTADOCIVIL"
+          },
+          {
+            "position_1_based": 15,
+            "name": "FECHANACIMIENTO"
+          },
+          {
+            "position_1_based": 16,
+            "name": "DIRECCIONPROCEDENCIA"
+          },
+          {
+            "position_1_based": 17,
+            "name": "CIUDADPROCEDENCIA"
+          },
+          {
+            "position_1_based": 18,
+            "name": "COMUNAPROCEDENCIA"
+          },
+          {
+            "position_1_based": 19,
+            "name": "FONOPROCEDENCIA"
+          },
+          {
+            "position_1_based": 20,
+            "name": "DIRECCIONACTUAL"
+          },
+          {
+            "position_1_based": 21,
+            "name": "CIUDADACTUAL"
+          },
+          {
+            "position_1_based": 22,
+            "name": "COMUNAACTUAL"
+          },
+          {
+            "position_1_based": 23,
+            "name": "FONOACTUAL"
+          },
+          {
+            "position_1_based": 24,
+            "name": "MAIL"
+          },
+          {
+            "position_1_based": 25,
+            "name": "Mail_Inst"
+          },
+          {
+            "position_1_based": 26,
+            "name": "NACIONALIDAD"
+          },
+          {
+            "position_1_based": 27,
+            "name": "EMERGENCIA"
+          },
+          {
+            "position_1_based": 28,
+            "name": "FONOEMERGENCIA"
+          },
+          {
+            "position_1_based": 29,
+            "name": "CODIGOCOLEGIO"
+          },
+          {
+            "position_1_based": 30,
+            "name": "COLEGIO"
+          },
+          {
+            "position_1_based": 31,
+            "name": "MODALIDAD"
+          },
+          {
+            "position_1_based": 32,
+            "name": "DESCRIPCION"
+          },
+          {
+            "position_1_based": 33,
+            "name": "CIUDADCOLEGIO"
+          },
+          {
+            "position_1_based": 34,
+            "name": "COMUNACOLEGIO"
+          },
+          {
+            "position_1_based": 35,
+            "name": "CATEGORIA"
+          },
+          {
+            "position_1_based": 36,
+            "name": "VIASDEADMISION"
+          },
+          {
+            "position_1_based": 37,
+            "name": "MOTIVODESELECCION"
+          },
+          {
+            "position_1_based": 38,
+            "name": "MEDIOSDEINFORMACION"
+          },
+          {
+            "position_1_based": 39,
+            "name": "VIACONSULTA"
+          },
+          {
+            "position_1_based": 40,
+            "name": "NOMBREUNIVERSIDAD"
+          },
+          {
+            "position_1_based": 41,
+            "name": "CARRERARANTERIOR"
+          },
+          {
+            "position_1_based": 42,
+            "name": "RUTRESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 43,
+            "name": "NOMBRERESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 44,
+            "name": "CODIGOCARRERA"
+          },
+          {
+            "position_1_based": 45,
+            "name": "EMPRESA"
+          },
+          {
+            "position_1_based": 46,
+            "name": "ACTIVIDAD"
+          },
+          {
+            "position_1_based": 47,
+            "name": "DIRECCION_EMPRESA"
+          },
+          {
+            "position_1_based": 48,
+            "name": "CIUDAD_EMPRESA"
+          },
+          {
+            "position_1_based": 49,
+            "name": "COMUNA_EMPRESA"
+          },
+          {
+            "position_1_based": 50,
+            "name": "CANTIDADDEHIJOS"
+          },
+          {
+            "position_1_based": 51,
+            "name": "TRAMODERENTA"
+          },
+          {
+            "position_1_based": 52,
+            "name": "NOMBREEMPRESA"
+          },
+          {
+            "position_1_based": 53,
+            "name": "ANOEGRESOENSENANZAMEDIA"
+          },
+          {
+            "position_1_based": 54,
+            "name": "NOTAENSENANZAMEDIA"
+          },
+          {
+            "position_1_based": 55,
+            "name": "RUT EJECUTIVO"
+          },
+          {
+            "position_1_based": 56,
+            "name": "NOMBRE EJECUTIVO"
+          },
+          {
+            "position_1_based": 57,
+            "name": "ESTADOACADEMICO"
+          },
+          {
+            "position_1_based": 58,
+            "name": "SITUACION"
+          },
+          {
+            "position_1_based": 59,
+            "name": "MATRICULA"
+          },
+          {
+            "position_1_based": 60,
+            "name": "NIVEL"
+          },
+          {
+            "position_1_based": 61,
+            "name": "ARANCELREAL"
+          },
+          {
+            "position_1_based": 62,
+            "name": "CON_FIRMA"
+          },
+          {
+            "position_1_based": 63,
+            "name": "FECHAFIRMA"
+          },
+          {
+            "position_1_based": 64,
+            "name": "SEDE"
+          },
+          {
+            "position_1_based": 65,
+            "name": "NOMBRES"
+          },
+          {
+            "position_1_based": 66,
+            "name": "APELLIDO PATERNO"
+          },
+          {
+            "position_1_based": 67,
+            "name": "APELLIDO MATERNO"
+          },
+          {
+            "position_1_based": 68,
+            "name": ""
+          },
+          {
+            "position_1_based": 69,
+            "name": ""
+          },
+          {
+            "position_1_based": 70,
+            "name": ""
+          },
+          {
+            "position_1_based": 71,
+            "name": ""
+          },
+          {
+            "position_1_based": 72,
+            "name": ""
+          },
+          {
+            "position_1_based": 73,
+            "name": ""
+          },
+          {
+            "position_1_based": 74,
+            "name": ""
+          }
+        ],
+        "dimensions_reported": "A1:BV13708",
+        "keys": [
+          {
+            "fields": [
+              "CODCLI"
+            ],
+            "nonblank_rows": 13706,
+            "unique_keys": 13704,
+            "duplicate_key_groups": 2,
+            "excess_rows": 2,
+            "max_rows_per_key": 2
+          }
+        ],
+        "fields": {
+          "CODCARPR@3": {
+            "position_1_based": 3,
+            "nonblank_rows": 13707,
+            "distinct": 109,
+            "value_counts": {
+              "ADMP": 208,
+              "ASRE": 185,
+              "ASREOL": 69,
+              "AUDT": 138,
+              "CADMP": 11,
+              "CAUDT": 4,
+              "CIACI": 2,
+              "CIADM": 37,
+              "CICDA": 3,
+              "CICIB": 156,
+              "CICRE": 204,
+              "CIFIN": 1,
+              "CIIND": 69,
+              "CIINF": 134,
+              "CILOG": 49,
+              "CIMDI": 3,
+              "CIPRE": 5,
+              "CIRHU": 7,
+              "CISEP": 7,
+              "CNATP": 1,
+              "CONG": 110,
+              "COTEIQ": 48,
+              "COTENS": 29,
+              "COTFAR": 28,
+              "DACD": 13,
+              "DAPB": 2,
+              "DCBS": 34,
+              "DCSARE": 31,
+              "DCSI": 5,
+              "DDASC": 11,
+              "DDSC": 13,
+              "DDSS": 2,
+              "DFSCK": 15,
+              "DFSK": 19,
+              "DGAS": 2,
+              "DGDA": 3,
+              "DHDS": 4,
+              "DHIAD": 4,
+              "DIAR": 5,
+              "DICD": 11,
+              "DLEMS": 2,
+              "DQAS": 5,
+              "DREIN": 22,
+              "DRID": 17,
+              "DSCM": 3,
+              "DSFA": 1,
+              "DSOF": 1,
+              "ECCURYDP": 237,
+              "IACI": 1,
+              "IADM": 385,
+              "ICDA": 95,
+              "ICIB": 605,
+              "ICRE": 301,
+              "IECIRE": 547,
+              "IECIREOL": 346,
+              "IECSRE": 110,
+              "IECSREOL": 256,
+              "IEMORE": 82,
+              "IETMRE": 447,
+              "IETMREOL": 366,
+              "IFIN": 43,
+              "IIND": 160,
+              "IINF": 566,
+              "ILOG": 265,
+              "IMDI": 93,
+              "IPRE": 38,
+              "IRHU": 57,
+              "ISEP": 31,
+              "NATP": 35,
+              "NAUTRE": 8,
+              "NCONRE": 130,
+              "NCONREOL": 65,
+              "NECIRE": 93,
+              "NETMRE": 319,
+              "NICCRE": 11,
+              "NICCREOL": 13,
+              "NICIRE": 43,
+              "NINFRE": 57,
+              "NINFREOL": 22,
+              "NITMRE": 177,
+              "NTCCRE": 50,
+              "NTCCREOL": 20,
+              "TACI": 2,
+              "TADP": 58,
+              "TAMD": 296,
+              "TCDA": 62,
+              "TCIB": 365,
+              "TCIOL": 1,
+              "TCRE": 144,
+              "TCSRE": 79,
+              "TCSREOL": 218,
+              "TEIQ": 163,
+              "TENS": 424,
+              "TFAR": 58,
+              "TFIN": 38,
+              "TICL": 21,
+              "TLOG": 261,
+              "TMDI": 120,
+              "TMIRE": 226,
+              "TPARE": 124,
+              "TPAREOL": 426,
+              "TPAS": 655,
+              "TPCRE": 685,
+              "TPCREOL": 76,
+              "TPRE": 34,
+              "TPRRE": 45,
+              "TRHU": 69,
+              "TTMRE": 1023,
+              "TTMREOL": 227
+            }
+          },
+          "ANOMATRICULA@5": {
+            "position_1_based": 5,
+            "nonblank_rows": 13707,
+            "distinct": 14,
+            "value_counts": {
+              "2013": 483,
+              "2014": 442,
+              "2015": 514,
+              "2016": 485,
+              "2017": 525,
+              "2018": 503,
+              "2019": 629,
+              "2020": 500,
+              "2021": 572,
+              "2022": 568,
+              "2023": 602,
+              "2024": 1528,
+              "2025": 2038,
+              "2026": 4318
+            }
+          },
+          "ANOINGRESO@7": {
+            "position_1_based": 7,
+            "nonblank_rows": 13707,
+            "distinct": 27,
+            "value_counts": {
+              "1989": 1,
+              "2000": 3,
+              "2002": 3,
+              "2003": 5,
+              "2004": 3,
+              "2005": 8,
+              "2006": 14,
+              "2007": 14,
+              "2008": 28,
+              "2009": 47,
+              "2010": 70,
+              "2011": 138,
+              "2012": 228,
+              "2013": 652,
+              "2014": 523,
+              "2015": 429,
+              "2016": 411,
+              "2017": 573,
+              "2018": 505,
+              "2019": 541,
+              "2020": 536,
+              "2021": 656,
+              "2022": 593,
+              "2023": 982,
+              "2024": 1269,
+              "2025": 2288,
+              "2026": 3187
+            }
+          },
+          "PERIODOINGRESO@8": {
+            "position_1_based": 8,
+            "nonblank_rows": 13707,
+            "distinct": 3,
+            "value_counts": {
+              "1": 11921,
+              "2": 1496,
+              "3": 290
+            }
+          },
+          "FECHAMATRICULA@9": {
+            "position_1_based": 9,
+            "nonblank_rows": 13707,
+            "distinct": 2270,
+            "min_observed": "01-01-2022",
+            "max_observed": "31-12-2025"
+          },
+          "JORNADA@10": {
+            "position_1_based": 10,
+            "nonblank_rows": 13707,
+            "distinct": 3,
+            "value_counts": {
+              "D": 1128,
+              "O": 7708,
+              "V": 4871
+            }
+          },
+          "FECHANACIMIENTO@15": {
+            "position_1_based": 15,
+            "nonblank_rows": 13707,
+            "distinct": 7124,
+            "min_observed": "01-01-1900",
+            "max_observed": "31-12-2007"
+          },
+          "NIVEL@60": {
+            "position_1_based": 60,
+            "nonblank_rows": 13706,
+            "distinct": 19,
+            "value_counts": {
+              "1": 6843,
+              "10": 131,
+              "11": 412,
+              "12": 66,
+              "13": 46,
+              "14": 14,
+              "15": 1,
+              "16": 4,
+              "18": 11,
+              "19": 26,
+              "2": 1058,
+              "20": 423,
+              "3": 671,
+              "4": 1018,
+              "5": 1707,
+              "6": 328,
+              "7": 480,
+              "8": 424,
+              "9": 43
+            }
+          },
+          "FECHAFIRMA@63": {
+            "position_1_based": 63,
+            "nonblank_rows": 4981,
+            "distinct": 726,
+            "min_observed": "01-01-2024",
+            "max_observed": "31-12-2025"
+          },
+          "SEDE@64": {
+            "position_1_based": 64,
+            "nonblank_rows": 13706,
+            "distinct": 2,
+            "value_counts": {
+              "CO": 105,
+              "RE": 13601
+            }
+          }
+        },
+        "identity_and_plan_field_positions": [
+          {
+            "position_1_based": 2,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 11,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 42,
+            "name": "RUTRESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 55,
+            "name": "RUT EJECUTIVO"
+          }
+        ]
+      },
+      {
+        "name": "Matricula_2025",
+        "data_rows": 14055,
+        "physical_columns": 67,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "Número"
+          },
+          {
+            "position_1_based": 2,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 3,
+            "name": "CODCARPR"
+          },
+          {
+            "position_1_based": 4,
+            "name": "NOMBRE_L"
+          },
+          {
+            "position_1_based": 5,
+            "name": "ANOMATRICULA"
+          },
+          {
+            "position_1_based": 6,
+            "name": "PERIODOMATRICULA"
+          },
+          {
+            "position_1_based": 7,
+            "name": "ANOINGRESO"
+          },
+          {
+            "position_1_based": 8,
+            "name": "PERIODOINGRESO"
+          },
+          {
+            "position_1_based": 9,
+            "name": "FECHAMATRICULA"
+          },
+          {
+            "position_1_based": 10,
+            "name": "JORNADA"
+          },
+          {
+            "position_1_based": 11,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 12,
+            "name": "NOMBRE"
+          },
+          {
+            "position_1_based": 13,
+            "name": "SEXO"
+          },
+          {
+            "position_1_based": 14,
+            "name": "ESTADOCIVIL"
+          },
+          {
+            "position_1_based": 15,
+            "name": "FECHANACIMIENTO"
+          },
+          {
+            "position_1_based": 16,
+            "name": "DIRECCIONPROCEDENCIA"
+          },
+          {
+            "position_1_based": 17,
+            "name": "CIUDADPROCEDENCIA"
+          },
+          {
+            "position_1_based": 18,
+            "name": "COMUNAPROCEDENCIA"
+          },
+          {
+            "position_1_based": 19,
+            "name": "FONOPROCEDENCIA"
+          },
+          {
+            "position_1_based": 20,
+            "name": "DIRECCIONACTUAL"
+          },
+          {
+            "position_1_based": 21,
+            "name": "CIUDADACTUAL"
+          },
+          {
+            "position_1_based": 22,
+            "name": "COMUNAACTUAL"
+          },
+          {
+            "position_1_based": 23,
+            "name": "FONOACTUAL"
+          },
+          {
+            "position_1_based": 24,
+            "name": "MAIL"
+          },
+          {
+            "position_1_based": 25,
+            "name": "Mail_Inst"
+          },
+          {
+            "position_1_based": 26,
+            "name": "NACIONALIDAD"
+          },
+          {
+            "position_1_based": 27,
+            "name": "EMERGENCIA"
+          },
+          {
+            "position_1_based": 28,
+            "name": "FONOEMERGENCIA"
+          },
+          {
+            "position_1_based": 29,
+            "name": "CODIGOCOLEGIO"
+          },
+          {
+            "position_1_based": 30,
+            "name": "COLEGIO"
+          },
+          {
+            "position_1_based": 31,
+            "name": "MODALIDAD"
+          },
+          {
+            "position_1_based": 32,
+            "name": "DESCRIPCION"
+          },
+          {
+            "position_1_based": 33,
+            "name": "CIUDADCOLEGIO"
+          },
+          {
+            "position_1_based": 34,
+            "name": "COMUNACOLEGIO"
+          },
+          {
+            "position_1_based": 35,
+            "name": "CATEGORIA"
+          },
+          {
+            "position_1_based": 36,
+            "name": "VIASDEADMISION"
+          },
+          {
+            "position_1_based": 37,
+            "name": "MOTIVODESELECCION"
+          },
+          {
+            "position_1_based": 38,
+            "name": "MEDIOSDEINFORMACION"
+          },
+          {
+            "position_1_based": 39,
+            "name": "VIACONSULTA"
+          },
+          {
+            "position_1_based": 40,
+            "name": "NOMBREUNIVERSIDAD"
+          },
+          {
+            "position_1_based": 41,
+            "name": "CARRERARANTERIOR"
+          },
+          {
+            "position_1_based": 42,
+            "name": "RUTRESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 43,
+            "name": "NOMBRERESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 44,
+            "name": "CODIGOCARRERA"
+          },
+          {
+            "position_1_based": 45,
+            "name": "EMPRESA"
+          },
+          {
+            "position_1_based": 46,
+            "name": "ACTIVIDAD"
+          },
+          {
+            "position_1_based": 47,
+            "name": "DIRECCION_EMPRESA"
+          },
+          {
+            "position_1_based": 48,
+            "name": "CIUDAD_EMPRESA"
+          },
+          {
+            "position_1_based": 49,
+            "name": "COMUNA_EMPRESA"
+          },
+          {
+            "position_1_based": 50,
+            "name": "CANTIDADDEHIJOS"
+          },
+          {
+            "position_1_based": 51,
+            "name": "TRAMODERENTA"
+          },
+          {
+            "position_1_based": 52,
+            "name": "NOMBREEMPRESA"
+          },
+          {
+            "position_1_based": 53,
+            "name": "ANOEGRESOENSENANZAMEDIA"
+          },
+          {
+            "position_1_based": 54,
+            "name": "NOTAENSENANZAMEDIA"
+          },
+          {
+            "position_1_based": 55,
+            "name": "RUT EJECUTIVO"
+          },
+          {
+            "position_1_based": 56,
+            "name": "NOMBRE EJECUTIVO"
+          },
+          {
+            "position_1_based": 57,
+            "name": "ESTADOACADEMICO"
+          },
+          {
+            "position_1_based": 58,
+            "name": "SITUACION"
+          },
+          {
+            "position_1_based": 59,
+            "name": "MATRICULA"
+          },
+          {
+            "position_1_based": 60,
+            "name": "NIVEL"
+          },
+          {
+            "position_1_based": 61,
+            "name": "ARANCELREAL"
+          },
+          {
+            "position_1_based": 62,
+            "name": "CON_FIRMA"
+          },
+          {
+            "position_1_based": 63,
+            "name": "FECHAFIRMA"
+          },
+          {
+            "position_1_based": 64,
+            "name": "SEDE"
+          },
+          {
+            "position_1_based": 65,
+            "name": "NOMBRES"
+          },
+          {
+            "position_1_based": 66,
+            "name": "APELLIDO PATERNO"
+          },
+          {
+            "position_1_based": 67,
+            "name": "APELLIDO MATERNO"
+          }
+        ],
+        "dimensions_reported": "A1:BO14056",
+        "keys": [
+          {
+            "fields": [
+              "CODCLI"
+            ],
+            "nonblank_rows": 14055,
+            "unique_keys": 14054,
+            "duplicate_key_groups": 1,
+            "excess_rows": 1,
+            "max_rows_per_key": 2
+          }
+        ],
+        "fields": {
+          "CODCARPR@3": {
+            "position_1_based": 3,
+            "nonblank_rows": 14055,
+            "distinct": 109,
+            "value_counts": {
+              "ADMP": 215,
+              "ASRE": 185,
+              "ASREOL": 69,
+              "AUDT": 149,
+              "CADMP": 11,
+              "CAUDT": 4,
+              "CIACI": 2,
+              "CIADM": 37,
+              "CICDA": 3,
+              "CICIB": 156,
+              "CICRE": 204,
+              "CIFIN": 1,
+              "CIIND": 69,
+              "CIINF": 135,
+              "CILOG": 49,
+              "CIMDI": 3,
+              "CIPRE": 5,
+              "CIRHU": 7,
+              "CISEP": 7,
+              "CNATP": 1,
+              "CONG": 127,
+              "COTEIQ": 52,
+              "COTENS": 31,
+              "COTFAR": 28,
+              "DACD": 20,
+              "DAPB": 2,
+              "DCBS": 36,
+              "DCSARE": 31,
+              "DCSI": 5,
+              "DDASC": 11,
+              "DDSC": 9,
+              "DDSS": 2,
+              "DFSCK": 15,
+              "DFSK": 29,
+              "DGAS": 2,
+              "DGDA": 3,
+              "DHDS": 4,
+              "DHIAD": 4,
+              "DIAR": 5,
+              "DICD": 5,
+              "DLEMS": 2,
+              "DQAS": 5,
+              "DREIN": 22,
+              "DRID": 31,
+              "DSCM": 3,
+              "DSFA": 1,
+              "DSOF": 1,
+              "ECCURYDP": 175,
+              "IACI": 1,
+              "IADM": 417,
+              "ICDA": 95,
+              "ICIB": 627,
+              "ICRE": 301,
+              "IECIRE": 547,
+              "IECIREOL": 346,
+              "IECSRE": 110,
+              "IECSREOL": 256,
+              "IEMORE": 82,
+              "IETMRE": 447,
+              "IETMREOL": 366,
+              "IFIN": 43,
+              "IIND": 185,
+              "IINF": 589,
+              "ILOG": 288,
+              "IMDI": 115,
+              "IPRE": 38,
+              "IRHU": 64,
+              "ISEP": 31,
+              "NATP": 35,
+              "NAUTRE": 8,
+              "NCONRE": 130,
+              "NCONREOL": 65,
+              "NECIRE": 93,
+              "NETMRE": 319,
+              "NICCRE": 11,
+              "NICCREOL": 13,
+              "NICIRE": 43,
+              "NINFRE": 57,
+              "NINFREOL": 22,
+              "NITMRE": 177,
+              "NTCCRE": 50,
+              "NTCCREOL": 20,
+              "TACI": 2,
+              "TADP": 58,
+              "TAMD": 318,
+              "TCDA": 62,
+              "TCIB": 379,
+              "TCIOL": 1,
+              "TCRE": 144,
+              "TCSRE": 79,
+              "TCSREOL": 218,
+              "TEIQ": 220,
+              "TENS": 460,
+              "TFAR": 58,
+              "TFIN": 38,
+              "TICL": 21,
+              "TLOG": 273,
+              "TMDI": 140,
+              "TMIRE": 226,
+              "TPARE": 124,
+              "TPAREOL": 426,
+              "TPAS": 673,
+              "TPCRE": 685,
+              "TPCREOL": 76,
+              "TPRE": 34,
+              "TPRRE": 45,
+              "TRHU": 81,
+              "TTMRE": 1023,
+              "TTMREOL": 227
+            }
+          },
+          "ANOMATRICULA@5": {
+            "position_1_based": 5,
+            "nonblank_rows": 14055,
+            "distinct": 14,
+            "value_counts": {
+              "2013": 483,
+              "2014": 442,
+              "2015": 514,
+              "2016": 485,
+              "2017": 525,
+              "2018": 503,
+              "2019": 629,
+              "2020": 500,
+              "2021": 572,
+              "2022": 568,
+              "2023": 602,
+              "2024": 1461,
+              "2025": 1902,
+              "2026": 4869
+            }
+          },
+          "ANOINGRESO@7": {
+            "position_1_based": 7,
+            "nonblank_rows": 14055,
+            "distinct": 27,
+            "value_counts": {
+              "1989": 1,
+              "2000": 3,
+              "2002": 3,
+              "2003": 5,
+              "2004": 3,
+              "2005": 8,
+              "2006": 14,
+              "2007": 14,
+              "2008": 28,
+              "2009": 47,
+              "2010": 70,
+              "2011": 138,
+              "2012": 228,
+              "2013": 652,
+              "2014": 523,
+              "2015": 429,
+              "2016": 411,
+              "2017": 573,
+              "2018": 505,
+              "2019": 541,
+              "2020": 536,
+              "2021": 656,
+              "2022": 593,
+              "2023": 982,
+              "2024": 1204,
+              "2025": 2239,
+              "2026": 3649
+            }
+          },
+          "PERIODOINGRESO@8": {
+            "position_1_based": 8,
+            "nonblank_rows": 14055,
+            "distinct": 3,
+            "value_counts": {
+              "1": 11856,
+              "2": 1911,
+              "3": 288
+            }
+          },
+          "FECHAMATRICULA@9": {
+            "position_1_based": 9,
+            "nonblank_rows": 14055,
+            "distinct": 2309,
+            "min_observed": "01-01-2022",
+            "max_observed": "31-12-2025"
+          },
+          "JORNADA@10": {
+            "position_1_based": 10,
+            "nonblank_rows": 14055,
+            "distinct": 3,
+            "value_counts": {
+              "D": 1128,
+              "O": 7962,
+              "V": 4965
+            }
+          },
+          "FECHANACIMIENTO@15": {
+            "position_1_based": 15,
+            "nonblank_rows": 14055,
+            "distinct": 7247,
+            "min_observed": "01-01-1900",
+            "max_observed": "31-12-2008"
+          },
+          "NIVEL@60": {
+            "position_1_based": 60,
+            "nonblank_rows": 14055,
+            "distinct": 19,
+            "value_counts": {
+              "1": 5925,
+              "10": 74,
+              "11": 461,
+              "12": 78,
+              "13": 46,
+              "14": 14,
+              "15": 1,
+              "16": 4,
+              "18": 9,
+              "19": 26,
+              "2": 2251,
+              "20": 425,
+              "3": 602,
+              "4": 589,
+              "5": 2240,
+              "6": 317,
+              "7": 354,
+              "8": 595,
+              "9": 44
+            }
+          },
+          "FECHAFIRMA@63": {
+            "position_1_based": 63,
+            "nonblank_rows": 4876,
+            "distinct": 750,
+            "min_observed": "01-01-2024",
+            "max_observed": "31-12-2025"
+          },
+          "SEDE@64": {
+            "position_1_based": 64,
+            "nonblank_rows": 14055,
+            "distinct": 2,
+            "value_counts": {
+              "CO": 111,
+              "RE": 13944
+            }
+          }
+        },
+        "identity_and_plan_field_positions": [
+          {
+            "position_1_based": 2,
+            "name": "CODCLI"
+          },
+          {
+            "position_1_based": 11,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 42,
+            "name": "RUTRESPONSABLEFINANCIERO"
+          },
+          {
+            "position_1_based": 55,
+            "name": "RUT EJECUTIVO"
+          }
+        ]
+      },
+      {
+        "name": "matriz",
+        "data_rows": 139,
+        "physical_columns": 19,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "CODIGO_IES_NUM"
+          },
+          {
+            "position_1_based": 2,
+            "name": "CODIGO_UNICO"
+          },
+          {
+            "position_1_based": 3,
+            "name": "NOMBRE_IES"
+          },
+          {
+            "position_1_based": 4,
+            "name": "COD_SEDE"
+          },
+          {
+            "position_1_based": 5,
+            "name": "NOMBRE_SEDE"
+          },
+          {
+            "position_1_based": 6,
+            "name": "NOMBRE_CARRERA"
+          },
+          {
+            "position_1_based": 7,
+            "name": "MODALIDAD"
+          },
+          {
+            "position_1_based": 8,
+            "name": "JORNADA"
+          },
+          {
+            "position_1_based": 9,
+            "name": "TIPO_PLAN_CARRERA"
+          },
+          {
+            "position_1_based": 10,
+            "name": "CARACT_PLAN_ESPECIAL"
+          },
+          {
+            "position_1_based": 11,
+            "name": "DURACION_ESTUDIOS"
+          },
+          {
+            "position_1_based": 12,
+            "name": "DURACION_TITULACION"
+          },
+          {
+            "position_1_based": 13,
+            "name": "DURACION_TOTAL"
+          },
+          {
+            "position_1_based": 14,
+            "name": "COMUNA_SEDE"
+          },
+          {
+            "position_1_based": 15,
+            "name": "PROVINCIA_SEDE"
+          },
+          {
+            "position_1_based": 16,
+            "name": "REGION_SEDE"
+          },
+          {
+            "position_1_based": 17,
+            "name": "NIVEL_GLOBAL"
+          },
+          {
+            "position_1_based": 18,
+            "name": "NIVEL_CARRERA"
+          },
+          {
+            "position_1_based": 19,
+            "name": "VIGENCIA"
+          }
+        ],
+        "dimensions_reported": "A1:S140",
+        "keys": [],
+        "fields": {
+          "JORNADA@8": {
+            "position_1_based": 8,
+            "nonblank_rows": 139,
+            "distinct": 4,
+            "value_counts": {
+              "1": 25,
+              "2": 41,
+              "3": 1,
+              "4": 72
+            }
+          },
+          "VIGENCIA@19": {
+            "position_1_based": 19,
+            "nonblank_rows": 139,
+            "distinct": 1,
+            "min_observed": "1",
+            "max_observed": "1"
+          }
+        },
+        "identity_and_plan_field_positions": [
+          {
+            "position_1_based": 9,
+            "name": "TIPO_PLAN_CARRERA"
+          },
+          {
+            "position_1_based": 10,
+            "name": "CARACT_PLAN_ESPECIAL"
+          }
+        ]
+      },
+      {
+        "name": "base_datos",
+        "data_rows": 72,
+        "physical_columns": 3,
+        "headers": [
+          {
+            "position_1_based": 1,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 2,
+            "name": "DV"
+          },
+          {
+            "position_1_based": 3,
+            "name": "CODCLI"
+          }
+        ],
+        "dimensions_reported": "A1:C73",
+        "keys": [
+          {
+            "fields": [
+              "CODCLI"
+            ],
+            "nonblank_rows": 66,
+            "unique_keys": 66,
+            "duplicate_key_groups": 0,
+            "excess_rows": 0,
+            "max_rows_per_key": 1
+          }
+        ],
+        "fields": {},
+        "identity_and_plan_field_positions": [
+          {
+            "position_1_based": 1,
+            "name": "RUT"
+          },
+          {
+            "position_1_based": 3,
+            "name": "CODCLI"
+          }
+        ]
+      }
+    ]
+  }
+]

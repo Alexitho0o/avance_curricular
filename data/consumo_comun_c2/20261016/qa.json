@@ -1,0 +1,36 @@
+{
+  "estado": "VERIFICADO",
+  "paridad_claves_b5": 2349,
+  "consultas_productivas_habilitadas": 0,
+  "controles": [
+    {
+      "prueba": "test_diccionario_c2.py",
+      "salida": 0,
+      "detalle": "test_fronteras_y_aislamiento (test_diccionario_c2.TestC2.test_fronteras_y_aislamiento) ... ok\ntest_paridad_completa_comandos_y_c1 (test_diccionario_c2.TestC2.test_paridad_completa_comandos_y_c1) ... ok\ntest_portabilidad_integridad_y_rutas (test_diccionario_c2.TestC2.test_portabilidad_integridad_y_rutas) ... ok\ntest_preservacion_reversion (test_diccionario_c2.TestC2.test_preservacion_reversion) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 1.000s\n\nOK\n"
+    },
+    {
+      "prueba": "test_reglas_historicas_b5.py",
+      "salida": 0,
+      "detalle": "test_campos_obligatorios (test_reglas_historicas_b5.TestReglas.test_campos_obligatorios) ... ok\ntest_clave_anual_no_extrapola (test_reglas_historicas_b5.TestReglas.test_clave_anual_no_extrapola) ... ok\ntest_conflicto_y_reserva (test_reglas_historicas_b5.TestReglas.test_conflicto_y_reserva) ... ok\ntest_dato_posterior_no_gobierna_historia (test_reglas_historicas_b5.TestReglas.test_dato_posterior_no_gobierna_historia) ... ok\ntest_no_habilita (test_reglas_historicas_b5.TestReglas.test_no_habilita) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "prueba": "test_unificacion_proyectos.py",
+      "salida": 0,
+      "detalle": "test_ejecutor_conserva_directorio_y_argumentos (test_unificacion_proyectos.UnificacionTests.test_ejecutor_conserva_directorio_y_argumentos) ... ok\ntest_ejecutor_rechaza_modulo_no_registrado (test_unificacion_proyectos.UnificacionTests.test_ejecutor_rechaza_modulo_no_registrado) ... ok\ntest_recursos_funcionan_en_otra_ubicacion (test_unificacion_proyectos.UnificacionTests.test_recursos_funcionan_en_otra_ubicacion)\nUna copia aislada no puede depender del antiguo repo ni de su ruta. ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 1.065s\n\nOK\n"
+    },
+    {
+      "prueba": "referencias_fcu",
+      "salida": 0,
+      "detalle": "{\n  \"ok\": true,\n  \"checked_files\": 51,\n  \"issues\": [],\n  \"baseline_sha256\": \"85e265f5d317ed6b1f2d595cc9ce415628c9c7aa94822152092052723a67e294\"\n}\n"
+    }
+  ],
+  "archivos_sha256": {
+    "common/diccionario_c2.py": "fabadfcde387878b78c67def3f94b428151dd12ac5c4569ab179191285424f36",
+    "scripts/consultar_diccionario_c2.py": "71f460a26c9ec952d8c1a05490d11bb3bba4275707e5d5dcac93a2ff16c524b5",
+    "procesos/caracterizacion/scripts/consultar_diccionario_c2.py": "6411410db40946dbb0057e3b238f0ce6df9bf8d4e78f13ef2d7df3a8d0326721",
+    "tests/test_diccionario_c2.py": "b116e2531f03c9daff9988e792a51f8aaa2a0e428c3cd7afa00ed08e2394d7e9",
+    "scripts/validar_consumo_c2.py": "0395a06cae62adc1145dd1f86aeeb51bf18f9b82e1aee9d2c4fac734ec4b9799",
+    "PROYECTO_IPSS.json": "234a5306479e5dad738114a6c40ff9a7e4c642d1d02fabbdf2179d63c8d935c2",
+    "data/consumo_comun_c2/20261016/descriptor.json": "fb83093e85483471417606fae13258002975e5adf3229000e6fe8444ffa520bf"
+  }
+}

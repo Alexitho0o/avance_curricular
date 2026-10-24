@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-09",
+  "commands_document": "docs/gobernanza/COMANDOS_MAC_WINDOWS.md",
+  "profile": "docs/gobernanza/COMANDOS_OPERATIVOS.json",
+  "platform_verified": "macOS",
+  "windows_execution_verified": false,
+  "pipeline_executed": false,
+  "tests": [
+    {"command": "python3 -m unittest discover -s tests -p test_comandos_operativos.py", "count": 7, "result": "OK"},
+    {"command": "python3 -m unittest discover -s tests -p test_h044_fuentes_congeladas_p2.py", "count": 20, "result": "OK"}
+  ],
+  "shell_syntax": "OK: procesar_financiamiento_diario.sh, run_caracterizacion_fijo.sh y procesar_analisis_anual.sh",
+  "frozen_2026": {"checked_files": 51, "ok": true},
+  "real_inputs_preflight": {
+    "financiamiento_2027_P1": "BLOQUEADO: faltan tokens/resultados de encuesta 141234 en Descargas",
+    "analisis_2026_P1": "BLOQUEADO: falta pareja por periodo en Descargas/Caracterizacion_2026/P1",
+    "analisis_2026_P2": "FUENTES_CONGELADAS_VALIDADAS",
+    "analisis_2026_P3": "BLOQUEADO: falta pareja por periodo en Descargas/Caracterizacion_2026/P3"
+  },
+  "git_publication": "Cambios locales; no se realizo commit ni push."
+}

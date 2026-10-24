@@ -1,0 +1,174 @@
+{
+  "phase": 6,
+  "status": "APROBADO",
+  "scope": "Comparación independiente del piloto UMAS agregado; no ejecución adicional de motores/resolvedor ni lectura de identidades.",
+  "candidate_path": "/tmp/fase6_cruce_sies_umas/candidata",
+  "independent_audit": {
+    "path": "/tmp/fase6_cruce_sies_umas/auditoria_universos.json",
+    "sha256": "6d4d1f3ac0d08da0891e994ce6e3e01ddae23a7dd4e3d1c3146dbe9f452b0267"
+  },
+  "checks": {
+    "candidate_output_hashes_match_manifest": true,
+    "generator_hash_matches_manifest": true,
+    "candidate_config_hash_matches": true,
+    "declared_h6_sources_hashes_match": true,
+    "h5_frozen_master_and_resolver_match": true,
+    "1349_queries_and_keys_exact": true,
+    "all_query_parameters_weights_states_candidates_locators_match": true,
+    "5176_contexts_preserved_without_duplicates": true,
+    "all_context_fields_results_and_localizers_match": true,
+    "all_report_weights_preserved": true,
+    "nonconsultable_rows_not_sent_to_h5": true,
+    "all_236_plans_preserved": true,
+    "plan_coverage_counts_exact": true,
+    "87_plans_without_candidates_preserved": true,
+    "no_nonadditive_identifiers_exported_or_summed": true,
+    "historical_promedios_verified_only_in_explicit_backup": true,
+    "other_10_frozen_references_unchanged": true,
+    "independent_audit_unchanged": true,
+    "candidate_files_unchanged_during_review": true,
+    "h5_inputs_unchanged_during_review": true
+  },
+  "failed_checks": [],
+  "query_differences": [],
+  "context_differences": [],
+  "coverage_differences": [],
+  "metrics": {
+    "context_rows": 5176,
+    "query_rows": 1349,
+    "plan_rows": 236,
+    "query_field_checks": 14839,
+    "source_context_field_comparisons": 139752,
+    "weighted_report_rows": 129493,
+    "weighted_consultable_rows": 125264,
+    "weighted_not_queried_rows": 4229
+  },
+  "hashes": {
+    "candidate_outputs": {
+      "aceptacion_h6.json": "b027ca6eb3150b6e8222ee2ab2e50eaf5e149730da465a6e4b2938166b19bfb2",
+      "brechas_priorizadas.json": "0d013dc66fc50ff5084cf64204962efe05284c5a184dabede9b02424b904d99a",
+      "cobertura_codigos_piloto.tsv": "f96f4f2bdadf9d861932e6fbfe8bd69041debd9beb8c937cfb24b7bf4e4b8eca",
+      "cobertura_planes_piloto.tsv": "ceb21bc976224cf3598ee70d44b7afc17b903d50e6bf94e519816874ac580163",
+      "consultas_sies_anuales.tsv": "dfd3585ce059902ecf1fba0f4f9065a9e2b0080b9a47bc20e843ae353ce51a18",
+      "consultas_umas.tsv": "5a86fd7fe3c9a166c78502eafa1b5e49e74d04646a16d26b1a44b16081f82121",
+      "controles_contextos_umas.tsv": "509a26c4ee1c499c078dccdc7576345304b497db7be21909f43e5a91e679d9bf",
+      "distribucion_anual_umas.tsv": "c20e04a05fb19f4b8ddfb2e168106abce248cc81db44d4399c8c49efebafa725",
+      "ejemplos_piloto.json": "fab56168d0bd8dab9830de4511f541f1be9f6c26c2f7f0e8734e2c6d5716cf61",
+      "fuentes.json": "2cc9710041d47673d4b63a53bf6e97d0a7cdef11829574ceafa995608a0f3c87",
+      "resultados_contextos_umas.tsv": "fd2ebd912b1c9d8efc80f245c68045786f43b343450210ecfb064b2a5597ef96",
+      "resumen.json": "9a611f1b0c48d226828a77f6a73dc080c7128ee8e42c2192d7163adb963533ed"
+    },
+    "sources_h6": {
+      "contextos_h4": "4bef34392dcd7e4d9de2d35840f5fee5c0137f2e22fa777379d99afbb8211a69",
+      "fuentes_h5": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330",
+      "maestro_h5": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+      "manifest_h4": "be570c99cccaf039b0a5a48eac9f8ce9fcf01b51606c4e3b41dbdce4d109a2af",
+      "manifest_h5": "ac2d0426ac80bd3b0b83d75b9be375273fc9937c68cbdfee850bf9bbfc0b7247",
+      "observaciones_h4": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840",
+      "resolver_h5": "990d23bab02c4f3b842d8e24ed860330f597324527258ddc9a48a29280c655ae",
+      "respaldo_promedios_historico": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "utilidades_h5": "fb6bb68e45325842141aaa123d81a9cbfd0e0a0c81aea032a4ebc78186a831dc"
+    },
+    "generator": "61ef9a4b873e704f0042cf9973469e1b84fb7bc46c11d8bd944eb14bd8a6a9b7"
+  },
+  "historical_source_relocation": [
+    {
+      "original_path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "original_current_sha256": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71",
+      "historical_sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "backup_path": "/Users/alexi/Documents/GitHub/seguimiento_titulados_empleabilidad_2026/data/raw/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "backup_sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "historical_backup_exact": true,
+      "original_current_matches_historical": false,
+      "claim": "El respaldo verifica la edición histórica. No se afirma que la copia actual de Descargas conserve contenido ni hash."
+    }
+  ],
+  "other_frozen_references": [
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/DICCIONARIO_CRUCE_SIES_UMAS_2007_2026.xlsx",
+      "sha256": "4e325f7ffc601aaae7d3d6da6d41896b440839e4fa38e02dd7c0642d7a6f46dd",
+      "expected_sha256": "4e325f7ffc601aaae7d3d6da6d41896b440839e4fa38e02dd7c0642d7a6f46dd",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/MATRÍCULA UNIFICADA 2026.xlsx",
+      "sha256": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1",
+      "expected_sha256": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+      "sha256": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd",
+      "expected_sha256": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "expected_sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "expected_sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e",
+      "expected_sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/control/catalogos/PUENTE_SIES_COMPILADO.tsv",
+      "sha256": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0",
+      "expected_sha256": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py",
+      "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d",
+      "expected_sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187",
+      "expected_sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187",
+      "matches": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/analisis_sectorizado_encuesta_ac.py",
+      "sha256": "0e6ec23d0ea21c62af91f46c7bdfe35277ba98baa316638dd5dd171661beb624",
+      "expected_sha256": "0e6ec23d0ea21c62af91f46c7bdfe35277ba98baa316638dd5dd171661beb624",
+      "matches": true
+    }
+  ],
+  "code_review": [
+    {
+      "component": "adaptar_contexto",
+      "finding": "Precedencia y ocho parámetros respetados. SEDE_LISTADO corroborada con catálogo; discrepancia de carrera bloquea consulta. Solo strip y tokens ausentes, sin corregir nombres ni códigos."
+    },
+    {
+      "component": "ejecutar_umas",
+      "finding": "Usa resolvedor H5 real, deduplica claves de consulta y reintegra resultado sin expandir filas. Clave serial H6 ordena nombre octavo; comparación independiente reordena por significado, sin pérdida de las ocho dimensiones."
+    },
+    {
+      "component": "verify",
+      "finding": "Reubicación solo en descriptor leído en memoria; exige mismo hash histórico y respaldo declarado. No modifica fuentes H5 ni presume igualdad de la copia de Descargas."
+    },
+    {
+      "component": "coverage",
+      "finding": "Conserva todos los planes, DA y estado de ramo como diagnósticos separados. No suma identificadores ni usa presencia de candidato para afirmar asignación."
+    }
+  ],
+  "limits": [
+    "Aprobación técnica no acredita equivalencias curriculares ni asignación individual histórica.",
+    "El contenido de la copia actual de Descargas no fue conciliado celda a celda; solo se registra su hash distinto."
+  ],
+  "reproducibility": {
+    "script": "/tmp/fase6_cruce_sies_umas/validar_candidata_umas.py",
+    "sha256": "67f02de2af3c08cc863688e4bf3302384b603d5a386585890a8222e6e7300dbd"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "phase": 2,
+  "checks": {
+    "coexistencias_independientes": true,
+    "claves_completas_independientes": true,
+    "pares_observados_independientes": true,
+    "pares_con_brecha_independientes": true,
+    "multimatricula_independiente": true,
+    "incrementos_version_independientes": true,
+    "descensos_version_independientes": true,
+    "ambiguedades_cohortes_completas_independientes": true,
+    "fuentes_hash_igual": true,
+    "reproduccion_bytes_identicos": true,
+    "sha256_salidas_coinciden": true,
+    "ejemplo_informatica_2019_verificado": true
+  },
+  "synthetic_tests": {
+    "count": 8,
+    "passed": 8,
+    "command": "python3 -m unittest discover -s tests -p test_historia_mrun.py -v"
+  },
+  "reproduced_files": [
+    "coexistencias.json",
+    "cohortes_observadas.tsv",
+    "criterios_insuficientes.json",
+    "ejemplos_academicos.json",
+    "excepciones.json",
+    "historia_codigo_anio.tsv",
+    "historia_codigos.json",
+    "manifest.json",
+    "resumen.json",
+    "transiciones_observadas.tsv",
+    "versiones_por_familia.json"
+  ],
+  "independent_audit_sha256": "f5ddf86af14ff52ed180d32397dbd6497e5e6fe5e5c9ed170b25f8334ec845da",
+  "scope": "Hechos observados MRUN; no validación del maestro SIES–UMAS ni causalidad curricular."
+}

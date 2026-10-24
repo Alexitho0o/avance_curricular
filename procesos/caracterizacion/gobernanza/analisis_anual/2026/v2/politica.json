@@ -1,0 +1,50 @@
+{
+  "version": "ANUAL_INTEGRADO_2026-v2",
+  "anio": 2026,
+  "revision": "2026-10-15-dashboard-exportacion-incremental",
+  "presentacion": {
+    "contrato": "docs/gobernanza/DASHBOARD_ANUAL_2026.md",
+    "paneles": ["Panel ejecutivo", "Cobertura", "Explorador preguntas", "Panel financiamiento", "Panel rendimiento", "Panel sectorial"],
+    "alineacion_horizontal": "center",
+    "alineacion_vertical": "center",
+    "decimales_medias": 1,
+    "redondear_datos_fuente": false,
+    "preservar_salidas_por_periodo": true,
+    "verificar_visibilidad_finder": true,
+    "fuentes_literales": "Escritura incremental en las mismas hojas Respuestas P1/P2/P3; verificacion final celda a celda",
+    "indices_explorador": "Compartidos en hoja Indices panel; no repetir busquedas por celda",
+    "incidente_memoria": "docs/gobernanza/INCIDENTE_MEMORIA_EXPORTACION_ANUAL_20261015.md"
+  },
+  "modalidad_por_jornada": {
+    "V": "Presencial"
+  },
+  "respaldo_modalidad_por_jornada": "Confirmacion expresa del usuario 2026-10-15: si JORNADA es V es presencial. Solo capa anual 2026; conservar modalidad del catalogo y discrepancias en auditoria. No asigna codigo SIES ni se extrapola a D/O u otros anos.",
+  "decision": "2026-10-15: autorizacion del usuario para enriquecer solo el analisis anual; instrumento comun confirmado para P1/P2/P3.",
+  "encuestas": {"1": "923565", "2": "443299", "3": "967488"},
+  "catalogo": {
+    "path": "gobernanza/analisis_anual/2026/v2/catalogo_sies.json",
+    "sha256": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a",
+    "origen": "avance_curricular/data/catalogos_sies/2026/mu2026_20261013/catalogo.json"
+  },
+  "instrumento": {
+    "columnas_path": "gobernanza/analisis_anual/2026/v2/columnas_instrumento.json",
+    "path": "gobernanza/instrumentos_limesurvey/2026/P2/443299_20261009_01fc90a59b0e/inventory.json",
+    "sha256": "a75db06387678af00b11b50dad2bdb0658bf7a52a4b937195b8061b6f28cf274",
+    "columnas": 242,
+    "encabezados_sha256": "2b9e2063587be29b8d864cda2d4a4e4e1e8b3fe78d582a3de86ab80289d4db08",
+    "evidencia": "Confirmacion del usuario y cotejo de los 242 codigos/textos de las tres exportaciones. No se atribuyen IDs XML de P2 a P1/P3 ni se acredita identidad tecnica de sus filtros.",
+    "fuente_encabezados_sha256": "ce0d6ba79821b13c83e199483e21a750becc2391a9a4ad5673ee6edf9c03440b"
+  },
+  "sectores": [
+    {"codigo": "CADMP", "nombre": "CONTINUIDAD INGENIERIA ADMINISTRACION PUBLICA", "sector": "Administración y Comercio", "respaldo": "Equivalencias CADMP-Administracion Publica del catalogo MU2026 y sector institucional de Administracion Publica."},
+    {"codigo": "TFARSP", "nombre": "TECNICO EN FARMACIA SP", "sector": "Salud", "respaldo": "Nombre explicito en DatosAlumnos y sector institucional de Tecnico en Farmacia. No acredita modalidad ni codigo SIES."}
+  ],
+  "notas": {
+    "anio": 2026,
+    "periodos": [1, 2, 3],
+    "minimo": 1,
+    "maximo": 7,
+    "estados": ["APROBADO", "REPROBADO"],
+    "regla": "Promedio aritmetico de notas finales validas por CODCLI y carrera, del ano 2026 disponible en la fuente. Excluir transferencias, notas fuera de escala y conflictos de intento; colapsar duplicados exactos. No promediar promedios semestrales. No confundir periodo de ingreso con periodo de asignatura. No rellenar ausentes con cero."
+  }
+}

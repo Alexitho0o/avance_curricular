@@ -1,0 +1,65 @@
+[
+  {
+    "indicador": "Manual FCU 2027 presente",
+    "valor": "Manual_de_Aplicacion_FCU_2027.txt",
+    "esperado": "Manual_de_Aplicacion_FCU_2027.txt",
+    "cumple": "SI",
+    "observacion": "Evidencia primaria del dictamen de actualizacion."
+  },
+  {
+    "indicador": "Hash Manual FCU 2027",
+    "valor": "9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350",
+    "esperado": "9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350",
+    "cumple": "SI",
+    "observacion": "Comparacion SHA256 sobre la copia gobernada del manual."
+  },
+  {
+    "indicador": "Libro de control trazable incorporado",
+    "valor": "Control_trazable_actualizacion_FCU_2027.xlsx",
+    "esperado": "Referenciado en docs/DICTAMEN_GOBERNANZA.md",
+    "cumple": "SI",
+    "observacion": "Incorporado como evidencia el 2026-10-01; previamente solo referenciado, no archivado."
+  },
+  {
+    "indicador": "Hash libro de control",
+    "valor": "4616e5e658b0c433b52a31870e6711bd01f7a848ce49a6f797ec0b0782616beb",
+    "esperado": "4616e5e658b0c433b52a31870e6711bd01f7a848ce49a6f797ec0b0782616beb",
+    "cumple": "SI",
+    "observacion": "Comparacion SHA256 sobre la copia gobernada del libro de control."
+  },
+  {
+    "indicador": "Cambio de campos declarado",
+    "valor": "195 a 172",
+    "esperado": "Confirmado en Manual 2027",
+    "cumple": "SI",
+    "observacion": "Reduccion de 195 (2026) a 172 (2027) campos declarados; posiciones 2026 no reutilizables."
+  },
+  {
+    "indicador": "Scaffolding gobernanza completo (README/docs/tablas/json/validaciones)",
+    "valor": "COMPLETADO_2026-10-01",
+    "esperado": "Igual estructura que FCU_CARGA_PES y FCU_ANALISIS_ENCUESTA",
+    "cumple": "SI",
+    "observacion": "Generado manualmente en esta sesion; no existe script automatizado de clasificacion fina ejecutado para este paquete especifico."
+  },
+  {
+    "indicador": "Derivado clasificacion preguntas encuesta 2026 (insumo actualizacion 2027)",
+    "valor": "Resumen_clasificacion_preguntas_FCU_2026.xlsx (6 hojas: Resumen, Institucionales, Manual FCU, Criterio y fuentes, Opciones 2026, Codigo_x_Manual)",
+    "esperado": "Reclasificado desde FCU/2026/preparacion_encuesta el 2026-10-02",
+    "cumple": "SI",
+    "observacion": "Las cifras de clasificacion (73 preguntas oficiales, 45 P1-P45, 28 subpreguntas decimales, correccion G00Q91-94) quedan en C/E, pendientes de conciliacion contra la plataforma. La hoja Codigo_x_Manual contiene un cruce semantico inferido, no autoritativo."
+  },
+  {
+    "indicador": "Cruce Codigo LimeSurvey x Manual construido",
+    "valor": "Hoja Codigo_x_Manual (103 filas: 53 cruzadas con Manual FCU, 46 institucionales sin correspondencia, 4 consentimiento MINEDUC ambiguo)",
+    "esperado": "Cruce semantico por lectura del asistente, no por similitud de texto (la similitud de texto puro fallo en varios casos verificados)",
+    "cumple": "OK_CON_ADVERTENCIAS",
+    "observacion": "81 pares en confianza ALTA, 11 en MEDIA (posibles duplicados por rama condicional del mismo codigo de grupo G0x), 11 en BAJA (sin P-numero propio evidente o ambiguedad entre Consentimiento/Consentimiento sensible). Clasificacion D-IA: inferencia del asistente, pendiente de validacion fila por fila contra la plataforma LimeSurvey antes de usarse para eliminar o modificar preguntas en la FCU 2027."
+  },
+  {
+    "indicador": "Matriz plana pregunta/subpregunta FCU 2027",
+    "valor": "Matriz_codigos_LimeSurvey_acciones_FCU_2027.xlsx (81 filas de contenido; 18 columnas; una hoja, sin estilos ni celdas combinadas)",
+    "esperado": "Código pregunta y clave subpregunta separados, texto 2026, acción, requisito SIES, campo PES y certeza",
+    "cumple": "OK_CON_ADVERTENCIAS",
+    "observacion": "SHA-256 87613b9e545bf78c3e49c08bb50635063ba6b4c8fc61d3062b4cd7ee282f1ed1. Los códigos proceden de una clasificación 2026 y no se confirmaron contra LimeSurvey activo; requiere exportación de pregunta, subpreguntas, opciones y condiciones antes de modificar producción."
+  }
+]

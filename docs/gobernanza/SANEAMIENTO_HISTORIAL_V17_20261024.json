@@ -1,0 +1,1881 @@
+{
+  "clasificacion": "C",
+  "fecha": "2026-10-24",
+  "decision": "D: usuario autoriza historial sin datos individuales con respaldo original local",
+  "origen_head": "c2b9f46dfe0f6bbbbb3735bd8060e59a20012365",
+  "base_publicada": "fab392de7fa1c4c3ef7daaa7690b4582def42d0c",
+  "politica": "No se alteran ni eliminan originales locales; los archivos excluidos siguen en sus rutas y en respaldo Git local. Exclusión no significa que todos contengan datos personales: motivos E quedan expresos. No publicar rama de respaldo.",
+  "limite_reproducibilidad": "Git contiene solo parte publicable. Pipelines y pruebas que dependan de fuentes/código histórico reservado requieren los originales privados. No se ejecutaron cargas ni se cambiaron reglas académicas.",
+  "v17_sha256": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+  "excluidos": {
+    "data/capa_demografica/20261016/casos_500.json": {
+      "sha256": "f15c5367ffb784409b3d299772ff7cdda14eeee5cd831d2f38cede5e377fafb4",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/cierre_d1/20261016/fuentes/glosario_oferta_2010_2026.pdf": {
+      "sha256": "ea7d518b719aa2d494e5a10c77b9144d25496440999fbfe4feec9bd090f7c046",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d1/20261016/inventario.json": {
+      "sha256": "1fdeae9b3d23ec394f5b56cf280b4ae01b3c7aa06369a93f5ac5b682a8804157",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "data/cierre_d4/20261016/agenda_acciones.png": {
+      "sha256": "ceeefa56f24fece296df49aa083ab77c0f572c2627d498d9fbcc6a76f3142eb1",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/agenda_d4.png": {
+      "sha256": "8e5ad8906192dbfac0c418f18f84001538f155485c7d76a2a2fa7f0a0e7fdfe2",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/antes_consulta.png": {
+      "sha256": "9d3b56348c3a244a7db60429820f5b96785dbc976731f49859572b4a89ee3590",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/antes_sectores.png": {
+      "sha256": "dd6ac405a6c2b279fd5573cbd2930a6cf088892dfe02f11f81db829624b0df32",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/cierre_balance.png": {
+      "sha256": "b388f133e85a101a3f85bdbc562f11047993309e1ce3b21868f91d10c33ebc6e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/cierre_consulta.png": {
+      "sha256": "59d6e65af9236b7327f94896b65e9dbfb975346f0e5159e0b5c7c6344f96e36e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/codigos_d3.png": {
+      "sha256": "6ee980ea9ae5cc011b7bb21929d70679f6cd8e6e81721cf77bd3d81914535e07",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/dictamenes_d3.png": {
+      "sha256": "02dfd111d77417d46b2c562196aa707c8f08f44b5e26b023903eb23fb182d6af",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/ejemplos_d4.png": {
+      "sha256": "a3d36466898dffe33a8fd62a433dfdff01f2da044397368828e70e09b4157ebe",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/ejemplos_limites.png": {
+      "sha256": "78384eb92b5c1f32b31ecca6c27cfa55323f956617c3605664dd9a25acfda24e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/errores.ndjson": {
+      "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/guia_d4.png": {
+      "sha256": "9e35deea609abda0e20c8c46e0efce86baf7cdd4ab95b2a8a5c876d2d06cba80",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/hipotesis_d4.png": {
+      "sha256": "6d4bf4713b8c869a9ce64ad33e71a0f7ceb78f41eb4b94282e01d4d20dca20c7",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/hipotesis_limites.png": {
+      "sha256": "914a1ae0a813f6ada491d81c3023bd7ed9c044a7e5ae03cb20eba5621f29a515",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/matriz_resultados.json": {
+      "sha256": "a0effafae4b8dd6eb71ac42c9dd97d357412c655ca0df2d18cc0118c448f9f88",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "data/cierre_d4/20261016/navegacion_d4.png": {
+      "sha256": "be7e37baf4cdae267d23cff416f6ee60c7c1a71b6e3ceaa14012cee01fd93d1b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/planes_d3.png": {
+      "sha256": "d2c13ffdf7480c1404735ecdfbab0dec00eacbbc159a5f52d7ca1692420a858c",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/revision_evidencia.png": {
+      "sha256": "0c1ebff5fd54081a527711c62cdc07aa294f3a9cf32e8e23ca8059870cd11766",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/revision_ids_codigos.png": {
+      "sha256": "23f497bf62c463adf3333d57dd4c5cdea38a0d4b872ceaa478da9d1e7c018ba8",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/revision_ids_planes.png": {
+      "sha256": "7253eb0a15af38517f2026168e245c7caa57897f229ef149f542c241e6b1e5e7",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/cierre_d4/20261016/sectores_d4.png": {
+      "sha256": "b864c31056397c19b2f6719f8b4beb33acce4834de14806c51eb8bdb631b539b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/Cobertura SIES.png": {
+      "sha256": "ee015062e281371642766891c7a0c9af5b24ce5283e7119b3e22808cffc1546b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/Cobertura planes.png": {
+      "sha256": "d1c47dfdcb591fe2bbd7dc5b62a08e608d16de975f7e2206780da60aed0143c5",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/Matriz B4.png": {
+      "sha256": "52b03bde0a3e7333b905f2448bae0df47d1d0f7ba87ad32709686507641aa02b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/Reglas B5.png": {
+      "sha256": "e86062a69c6ebc3960281fae4c5119c1cdee77db64f1ab13f683e28fcf849a83",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/antes_consulta.png": {
+      "sha256": "9d3b56348c3a244a7db60429820f5b96785dbc976731f49859572b4a89ee3590",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/antes_sectores.png": {
+      "sha256": "b3a92013fa264668ca381e6819601aa3e4746f3ac1b265f15f70a65a48f6c2cb",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/consulta_b5.png": {
+      "sha256": "e06dd0fc9b6556647524ed5996c17076a70cf1bc8414433304d160d3edf2f0b5",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/errores.ndjson": {
+      "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/estados_b5.png": {
+      "sha256": "131f81554f60f90dfa2c83e2901855f814ddc77b13e9e80d6d50b1388c7c468a",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/guia_c1.png": {
+      "sha256": "ece4bea602abe4d0b299bb0812e34a935a4d2608dff13ee9e256afda94b01a56",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/navegacion_c1.png": {
+      "sha256": "e0a25f9a23b11bed0230f935a9c0c1e91c1aa88adc0457ae036f7d2c6e5bacce",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/resumen_b5.png": {
+      "sha256": "0fb26ddcadfc38cfb441fe69b3f4f70e710d5885b6c8bf1b453bd186eb3d64cd",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_c1/20261016/sectores_c1.png": {
+      "sha256": "b3a92013fa264668ca381e6819601aa3e4746f3ac1b265f15f70a65a48f6c2cb",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/diccionario_sies_umas/20261015/evidencia/reglas_version.json": {
+      "sha256": "2d6c1d00b3e3b420759ac3f2260e58c66feb33c0a040f6f9d539f29cc4f2c1b6",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/hipotesis_enlace_conjunto/20261016/casos_500.json": {
+      "sha256": "cba30ef71440946cd886f0a9f555875ad493676df46ffeae5e4f3b8b7aa71e11",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/presencia_anual/20261016/casos_500.json": {
+      "sha256": "7cb43147bef2beaab009f35679f63442724b8462d11799bf0393d71a2da28616",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/prueba_500_enlaces_historicos/20261016/casos_500_sin_identificadores.json": {
+      "sha256": "7c2afbe3dad7cb5770dec20b6263e6e54c945492d8e9ede46e45565d32131a47",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/recuperacion_cruce_mrun_umas/20261016/ER_Matricula_Educacion_Superior_2007_2026_PUBL_MRUN.pdf": {
+      "sha256": "49c372368a93810d6cd8137d37cfcf77c6b4d34671f1850b605afea6dd89f064",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/recuperacion_oferta_6047/20261016/reporte_dinamico_6047_20261016.csv.gz": {
+      "sha256": "c67f89bf2ed7b67e3ae8841f3a4d985f6fa536cf102d0650735b6a5d0125b051",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/reglas_negocio/20261015/fuentes/20251125_85582_Instructivo_Oferta_Academica_2026_CFT_E_IP_DFE.pdf": {
+      "sha256": "af8289f9292848fa16d2939ad730b8105c9d4605904a6af3974fc00ec9febbe2",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/reglas_negocio/20261015/fuentes/Oferta_Academica_2010_al_2026_SIES_12_01_2026_WEB_E.csv.gz": {
+      "sha256": "0f051c2274810edaf73f2fa783b05f2ed7ded51ff7e0208b8fbb026bdcacc469",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "data/reglas_negocio/20261015/fuentes/reporte_5910_20260907_validado.csv.gz": {
+      "sha256": "57cf3fd45921d54dc3fc07b5bb2fda8676b2c6c7a4b6eb7e2509c29aca9e3f6f",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/antes_d4.png": {
+      "sha256": "59d6e65af9236b7327f94896b65e9dbfb975346f0e5159e0b5c7c6344f96e36e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/columnas_oferta.png": {
+      "sha256": "2fa848046ec515ee382e96f6f1aad8b3e695b8399ff1b4dc1c9213dc578077db",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/columnas_umas.png": {
+      "sha256": "19dc40288cf38c716b8c026cca1fdb659e031e924c50a4c62935b4be46c8dfaa",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/errores.ndjson": {
+      "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/grafico_planes.png": {
+      "sha256": "23b1ddb894af95856dc30a606d7a108dc05e9e6c048a6ebeb9b25d6ca92d7f8c",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/oferta.png": {
+      "sha256": "9c2187722a9999688c485ac0fe116327e02bc62cf2824c602901d68a7ab2fa8a",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/resumen.png": {
+      "sha256": "0dfbc6c5f33a6831e47a11d9c25ea307f9c99813ff0ea332307264eb0972c59f",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/serie.png": {
+      "sha256": "a9bf7d6db0b6f356b755293a05e294a4d69594a561a262ac227a3ed4274edf96",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/resumen_oferta_2027/20261016/umas.png": {
+      "sha256": "6c4b1163c60021e3d619747c6161bd1035c9653a6381e427b924ca2201a605ad",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/validacion_d3/20261016/dictamenes.json": {
+      "sha256": "365a3e4d475280456dc7b4ac3fff1ccc823290378051f008406f8207cf5d044a",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_2_20261015/ejemplos_academicos.json": {
+      "sha256": "4b1cc1ded71abc2140ec16fc986c2ed2838cc5bda5e0455ec244a92e878032b2",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_4_20261015/estructura_asignaturas.json": {
+      "sha256": "29ce1e42276cd2e67de56cc5ba74422a5c818dca2f089937fa08976961916422",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_5_20261015/qa_tests.log": {
+      "sha256": "4c2f3b54973e851168cccbb7b375bccfcc5f19b54e9d2c7d0d1df4ea144720c4",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_6_20261015/auditoria_universos.json": {
+      "sha256": "6d4d1f3ac0d08da0891e994ce6e3e01ddae23a7dd4e3d1c3146dbe9f452b0267",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_6_20261015/ejemplos_piloto.json": {
+      "sha256": "fab56168d0bd8dab9830de4511f541f1be9f6c26c2f7f0e8734e2c6d5716cf61",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_6_20261015/qa_fase6.json": {
+      "sha256": "95c19325c855f4434ea506cd20cf5948ae097cacab69f727d74ce6e8750cbf39",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_6_20261015/qa_tests.log": {
+      "sha256": "8216227ffdffba2c3fe56fff4dcb48b4b4c1c4815ea2d12b84cb95e95c866788",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_6_20261015/validacion_candidata_sies.json": {
+      "sha256": "604d363cc91827a9a26a66881c47ffe59e9a46b832fd7426f11bd3b1ca6bcdec",
+      "razones": [
+        "B: registro de casos individuales/pseudonimizados; no agregado"
+      ]
+    },
+    "data/versiones_historicas_sies_umas/fase_7_20261015/pruebas_h7.log": {
+      "sha256": "c57b249a9b9837439081b99edc6670413d67f49ac070ca48855faea7f729a818",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "governanza/marca/Manual_de_Marca_IP_San_Sebastian.pdf": {
+      "sha256": "78b3ec0c8b1a55276ee00d961bf8e6800757de8ac5b3903c15ae93294d513a47",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "governanza/marca/logo_ipss_horizontal.png": {
+      "sha256": "2b2674995aceaef53180f2b77ec9bb6226d8fc04020706414f7935cc2d70ad77",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "outputs/diccionario_c1_20261016/DICCIONARIO_CRUCE_SIES_UMAS_2007_2026_C1.xlsx.inspect.ndjson": {
+      "sha256": "24e89b362b59139ddbd9c4e31f36330005f6a3667a2b056f2645c2d68aba8e79",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "outputs/diccionario_d4_20261016/DICCIONARIO_CRUCE_SIES_UMAS_2007_2026_D4.xlsx.inspect.ndjson": {
+      "sha256": "d27f4e305a35fee6cb45e984d00ee66291be9d207bfb9e307fb68b65bbbfc8fe",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "outputs/diccionario_ejecutivo_2027_20261016/DICCIONARIO_SIES_UMAS_RESUMEN_2027.xlsx.inspect.ndjson": {
+      "sha256": "cc8c1fd9fa5fd21868769e42fbf99ed6a28be3a56b263de7ee4ec19f1f0ca56d",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "procesos/caracterizacion/AUDITORIA_CONFIRMACION_GOBERNANZA_FCU_2026_P1.xlsx": {
+      "sha256": "d50eb50ed415f0aabeb2be90a767ffb7b3f24152b3cef72712a929f722fc4eab",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/AUDITORIA_E2E_CARGA_FCU_PES_2026.xlsx": {
+      "sha256": "d3fbaee3bb5ed479deab698ed5ed60c8bec7b15abfdb0d92fc236d819d99e0fe",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/AUDITORIA_LOCALIZACION_CARGA_FCU_2026.xlsx": {
+      "sha256": "8576101c510bd1f1f217996f7c2c652d31793264c587522e7259ccf20819d11e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/AUDITORIA_PREGUNTAS_NO_FCU_ENCUESTA_2026.xlsx": {
+      "sha256": "57d625c1535a740e106ac5183eaa2aeebdbcc79f3583f66a408df4abc7b48a73",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/AUDITORIA_UNIVERSO.md": {
+      "sha256": "6d829229009eb37efb971c41e834e1facec45e95655babf89b20c56d1fe37b1f",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/Conciliacion_Oficial_IPSS_162.xlsx": {
+      "sha256": "1e82c232f592649ad6698202e919436a59c0ebd18744eac9322d2da52c135d1b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/Consolidado_Conciliacion_Metodologica_IPSS_162.xlsx": {
+      "sha256": "02870e7de7703bdee17293a922c9c7ec6cec63974c375235cf1f621088705ff1",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/Consolidado_Final_IPSS_162.xlsx": {
+      "sha256": "46edb83ab1a5b388faef3358330f9697f233d18cb9e8fc07824cd8a760d68a1d",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/Consolidado_Retencion_Trazable_Completo.xlsx": {
+      "sha256": "82437539197333f211bc1a7069e776ace758e79c61aca64167e8c6a5748a5c09",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/Informe_Retencion_SIES_2025.xlsx": {
+      "sha256": "e5b21fd4194725ed57a21c7e6511aa90c58cdab298d97a51ccf430861638f82d",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/Consolidado_Retencion_Trazable.xlsx": {
+      "sha256": "0700a3ad70bd3a81e07488eec084604e139a740b297aca71f3375c3716afab19",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/Consolidado_Retencion_Trazable_Completo.xlsx": {
+      "sha256": "60f049d713ae846da7fb581b1f771b1d5b6902233c3546546c1055caa3a51023",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/diagnostico_estructura_csv.csv": {
+      "sha256": "7e65e40e2d0be9067d69cfa681355ffe40948629c9160d4a421b576d0dd6e4c7",
+      "razones": [
+        "E: muestras de contenido de fuentes individuales"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/diagnostico_estructura_csv.json": {
+      "sha256": "85ce31c76f9a668c687f31497f4506acda412f41c938ff1006de1d7c9484c18c",
+      "razones": [
+        "E: muestras de contenido de fuentes individuales"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/reporte_filtrado.xlsx": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/reporte_matricula_ip_san_sebastian.csv": {
+      "sha256": "1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/salida/reporte_matricula_ip_san_sebastian_ORIGINAL.csv": {
+      "sha256": "1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6",
+      "razones": [
+        "E: artefacto voluminoso pendiente de certificación de privacidad"
+      ]
+    },
+    "procesos/caracterizacion/archive/caracterizacion_broken_syntax_20260425_044652.py": {
+      "sha256": "80792ca8a53c902bf2a73c70ca1b6589b90358deea120b7f1040a81603594b65",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/archive/cleanup_2026-04-16/deleted_dirs.txt": {
+      "sha256": "befad55cc039d3f770da9c89448dceaaf7fad65a59b07cadc1c097d5cb2bff53",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/archive/cleanup_2026-04-16/deleted_dirs_post_smoke.txt": {
+      "sha256": "0b376422ca02b788199d8ce6bc01f6e8367594d9f274aa33472ea0f2ed0f373c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/archive/cleanup_2026-04-16/deleted_files.txt": {
+      "sha256": "aad60c60eab58e2813d3f829e90181108053b574682ab467c9b8a648ae7ce1c6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/archive/cleanup_2026-04-16/deleted_files_post_smoke.txt": {
+      "sha256": "46647a3f57d2dbbfca312750769c269dee6e923fbf233e3ab820d26aeaa25d1b",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/archive/cleanup_2026-04-16/moved_paths.txt": {
+      "sha256": "c72b89f6b4a0db1219ccf547e913c16d4619b6beb9ad18222a1da9b0770551e5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/auditoria_universo.py": {
+      "sha256": "c49a92fffa3a30f7cc99de211753444e59685c134d8f590af3881e14cf80a19d",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/caracterizacion.py": {
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código",
+        "B: excepciones históricas por documento y token, mantener fuente original local sin alterar reglas"
+      ]
+    },
+    "procesos/caracterizacion/caracterizacion_backup_antes_fix_ventana_diaria_20260707_101724.py": {
+      "sha256": "b5323940b41aa0016e67e5c19f71917c123be5f8c8b7b83364b463298d99e2fe",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código",
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2026/1/evidencias/AUDITORIA_E2E_CARGA_FCU_PES_2026.xlsx": {
+      "sha256": "d3fbaee3bb5ed479deab698ed5ed60c8bec7b15abfdb0d92fc236d819d99e0fe",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2026/1/evidencias/AUDITORIA_LOCALIZACION_CARGA_FCU_2026.xlsx": {
+      "sha256": "8576101c510bd1f1f217996f7c2c652d31793264c587522e7259ccf20819d11e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2026/1/evidencias/FCU_2026_CARGA_2026_P1_LOCALIZADO_ORIGINAL.csv": {
+      "sha256": "fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2026/1/evidencias/FCU_2026_CARGA_2026_P1_VALIDADO_E2E.csv": {
+      "sha256": "fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2026/1/evidencias/REPORTE_RESGUARDO_CSV_FINAL_FCU_2026.xlsx": {
+      "sha256": "a6cde04c7cf04d0ee9090542c315d687877fed8feab79c77e4af5452e8868e4a",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2026/preparacion_encuesta/evidencias/AUDITORIA_PREGUNTAS_NO_FCU_ENCUESTA_2026.xlsx": {
+      "sha256": "57d625c1535a740e106ac5183eaa2aeebdbcc79f3583f66a408df4abc7b48a73",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/carga_pes/evidencias/versiones_codigo/831e8488ca7c/scripts/test_fcu_pes_2027.py": {
+      "sha256": "e9906f621555032435e62579e88fe8d4983e83d75e9fcf09700ecf6be7819eba",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Control_trazable_actualizacion_FCU_2027.xlsx": {
+      "sha256": "4616e5e658b0c433b52a31870e6711bd01f7a848ce49a6f797ec0b0782616beb",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_CON_RESUMEN_20261005.xlsx": {
+      "sha256": "07366325552fbdae8e60b6fb0cc6463d3c80ba6ad5ae16473de544fcfc180351",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_CON_RESUMEN_20261005.xlsx.inspect.ndjson": {
+      "sha256": "8f48bda167034030c08ea9d232fe1efe6762943bc8c685e8a883390a112aedb7",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261006.xlsx": {
+      "sha256": "280f3499b915c23bc4719328f809a2f02260b242de089fe0339076c7c8e5ce5e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261006.xlsx.inspect.ndjson": {
+      "sha256": "9b93cfeb3c01b7d97cbbde2182c895af99ec7b1db5555e0c09f6732d940d0a36",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx": {
+      "sha256": "ab53ecb3223ac423d78c738d34e3d2ecab636e6633d00fb72e260f222e260dd2",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx.inspect.ndjson": {
+      "sha256": "112f47c33877be09669a6ea10f3a8b3a92370af90e5195d54b9e4bd0d1602eb3",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Matriz_codigos_LimeSurvey_acciones_FCU_2027.xlsx": {
+      "sha256": "87613b9e545bf78c3e49c08bb50635063ba6b4c8fc61d3062b4cd7ee282f1ed1",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Observaciones_FCU_2027_trazadas_20261008.xlsx": {
+      "sha256": "35cbc2828217e86cff823965c293b1ee97ef445423d333372229340293b6ab21",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/Resumen_clasificacion_preguntas_FCU_2026.xlsx": {
+      "sha256": "4a52e2930bd02620c637bc679a0a0db9ce07bc7f9b9f35c3aa9da6b9200e0e59",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/historico/guia_antes_conciliacion_94456b915d/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx": {
+      "sha256": "94456b915d033cb50f055fd866110392b3e0dc76fea734b80c0b51163298ca13",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/historico/guia_antes_emprendimiento_d70b86e4a2a1/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx": {
+      "sha256": "d70b86e4a2a19cdee3f8cb43afafa5234c8b4d161a97fac85ed625614d07b033",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/historico/guia_antes_emprendimiento_f3bc2b3b9ce0/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx": {
+      "sha256": "f3bc2b3b9ce00fa6950c078463cd22e6f7670ed15131f5511abfbea3330dff2a",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/historico/guia_antes_politica_8929e3afe5/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx": {
+      "sha256": "8929e3afe50d8ab3cb40e64b921a66d4a04bc6278c91a8fb6505c5b3f246da58",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/FCU/2027/preparacion/evidencias/historico/observaciones_antes_emprendimiento_13dfbbf4037d/Observaciones_FCU_2027_trazadas_20261008.xlsx": {
+      "sha256": "13dfbbf4037d237028d4b822bdc8e0e4c393be2f77ca589a81b80bfdc44a8901",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_clasificacion_fina/CLASIFICACION_FINA_PROCESOS_CARACTERIZACION.tsv": {
+      "sha256": "47b0ad8ee68b79d78c66cf483ed1aaa97aae1d9d00d306414a43683b560fffae",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_clasificacion_fina/CLASIFICACION_FINA_PROCESOS_CARACTERIZACION.xlsx": {
+      "sha256": "88d14073d490613b5073b47bb9d4d13bc00efd07628f49c2cc0f25f7dbeb1bda",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_mapeo_proyecto/MAPEO_ARCHIVOS_PROYECTO_CARACTERIZACION 2.tsv": {
+      "sha256": "7bf9b4fa6ba35a77fb922d5f01878f0e985ce9b6ed124d41aaf36320444fa098",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_mapeo_proyecto/MAPEO_ARCHIVOS_PROYECTO_CARACTERIZACION.tsv": {
+      "sha256": "7bf9b4fa6ba35a77fb922d5f01878f0e985ce9b6ed124d41aaf36320444fa098",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_mapeo_proyecto/MAPEO_COMPLETO_PROYECTO_CARACTERIZACION 2.xlsx": {
+      "sha256": "4d8b8f79e6d54b72a5b0b689f48da31a8ad1d87cb1e7b55e119dd8073e0a291b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_mapeo_proyecto/MAPEO_COMPLETO_PROYECTO_CARACTERIZACION.xlsx": {
+      "sha256": "4d8b8f79e6d54b72a5b0b689f48da31a8ad1d87cb1e7b55e119dd8073e0a291b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente",
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_meta/AUDITORIA_ORDEN_GOBERNANZA_PROCESOS_CARACTERIZACION 2.xlsx": {
+      "sha256": "ef1064f564fc5f1282245b4d20bdc0329940a8f8a59913753945c0ac4bf2f74d",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_meta/AUDITORIA_ORDEN_GOBERNANZA_PROCESOS_CARACTERIZACION.xlsx": {
+      "sha256": "ef1064f564fc5f1282245b4d20bdc0329940a8f8a59913753945c0ac4bf2f74d",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_meta/auditoria_readme/AUDITORIA_README_PROYECTO_CARACTERIZACION.xlsx": {
+      "sha256": "4f7e72cc133bb9b9568d825626aa2e53b99eed8e142b00c99959162175d9e45e",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_meta/busqueda_postgrado_prioritaria/BUSQUEDA_PRIORITARIA_CARGA_POSTGRADO.xlsx": {
+      "sha256": "975a0a6d17c80ca3acd8c59de68133de5613a152bcfdee3d6a1b8ab104a8ecf5",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/_meta/evidencias/AUDITORIA_CONFIRMACION_GOBERNANZA_FCU_2026_P1.xlsx": {
+      "sha256": "d50eb50ed415f0aabeb2be90a767ffb7b3f24152b3cef72712a929f722fc4eab",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/_refinamiento_postgrado/AUDITORIA_REFINAMIENTO_CARGA_POSTGRADO 2.xlsx": {
+      "sha256": "281e6ad4975547a21927cf598f8422295da5d0d6fbfe695ba5ff4b90f4a56d45",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/_refinamiento_postgrado/AUDITORIA_REFINAMIENTO_CARGA_POSTGRADO.xlsx": {
+      "sha256": "281e6ad4975547a21927cf598f8422295da5d0d6fbfe695ba5ff4b90f4a56d45",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_exclusion_rut_no_encontrado.py 2.sha256": {
+      "sha256": "a6bfa321ec27870d5ae1ace45580fcb053f45ada6331c9e8488288f5d364e704",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_exclusion_rut_no_encontrado.py.sha256": {
+      "sha256": "a6bfa321ec27870d5ae1ace45580fcb053f45ada6331c9e8488288f5d364e704",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_fix_de_los_cuales_nuevos_20260430_091229.py 2.sha256": {
+      "sha256": "e24f70f1af8b21352233eac8c668341144543b9b6f5996ce689c9c62ed417e39",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_fix_de_los_cuales_nuevos_20260430_091229.py.sha256": {
+      "sha256": "e24f70f1af8b21352233eac8c668341144543b9b6f5996ce689c9c62ed417e39",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_ppoo_def_atacameno_lickanantay_20260429_180508.py 2.sha256": {
+      "sha256": "86a4ac8fade79d8f6296acb7ea4690b6f36e48cfa9432db23fc41840436b1995",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_ppoo_def_atacameno_lickanantay_20260429_180508.py.sha256": {
+      "sha256": "86a4ac8fade79d8f6296acb7ea4690b6f36e48cfa9432db23fc41840436b1995",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_validacion_incluidos_20260425_012505.py 2.sha256": {
+      "sha256": "281b8733db23137f32da6fa9d5633679bc826b706fe6c431bd279512744b402f",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_antes_validacion_incluidos_20260425_012505.py.sha256": {
+      "sha256": "281b8733db23137f32da6fa9d5633679bc826b706fe6c431bd279512744b402f",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_catalogo_obligatorios_esp_exp_sit_fcu_20260429_112852.py 2.sha256": {
+      "sha256": "91541f0a786de4165c5bea3e004423e27e36164289f2ea98998d9a6c0d5eb228",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_catalogo_obligatorios_esp_exp_sit_fcu_20260429_112852.py.sha256": {
+      "sha256": "91541f0a786de4165c5bea3e004423e27e36164289f2ea98998d9a6c0d5eb228",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_corrige_ppoo_def_mapper_real_20260429_180208.py 2.sha256": {
+      "sha256": "3397ae215a1065367d0aec29c30a80d044c875815d469f6835ddb1bbaeb1682d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_corrige_ppoo_def_mapper_real_20260429_180208.py.sha256": {
+      "sha256": "3397ae215a1065367d0aec29c30a80d044c875815d469f6835ddb1bbaeb1682d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_deduplicacion_clave_fcu_20260428_124652.py 2.sha256": {
+      "sha256": "b077609390600f5f4b344c1faab4189972bab7368af84f85d6867bbc4191a903",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_deduplicacion_clave_fcu_20260428_124652.py.sha256": {
+      "sha256": "b077609390600f5f4b344c1faab4189972bab7368af84f85d6867bbc4191a903",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fase20b_20260505_144435.py 2.sha256": {
+      "sha256": "93cae1b905eda93d2fa1468f6fa15890d71a791bc92b4f7e042515f39c9e938a",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fase20b_20260505_144435.py.sha256": {
+      "sha256": "93cae1b905eda93d2fa1468f6fa15890d71a791bc92b4f7e042515f39c9e938a",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fast_fcu_fix_validate_20260425_021458.py 2.sha256": {
+      "sha256": "5c9381646fc4ca78986e1d9b636886017a9303c08bfaf11a912a18c40ee814b9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fast_fcu_fix_validate_20260425_021458.py.sha256": {
+      "sha256": "5c9381646fc4ca78986e1d9b636886017a9303c08bfaf11a912a18c40ee814b9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_5_campos_criticos_fcu_20260425_043007.py 2.sha256": {
+      "sha256": "25c91e73f99ccf98a007661bf0c15272881ceae19bfd037abe29d36e4c080fd6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_5_campos_criticos_fcu_20260425_043007.py.sha256": {
+      "sha256": "25c91e73f99ccf98a007661bf0c15272881ceae19bfd037abe29d36e4c080fd6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_apellido2_gobernado_20260425_043353.py 2.sha256": {
+      "sha256": "7d5829acb97aa61d1196a9fe475fba5337e221d34d226c8181ce501347a40302",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_apellido2_gobernado_20260425_043353.py.sha256": {
+      "sha256": "7d5829acb97aa61d1196a9fe475fba5337e221d34d226c8181ce501347a40302",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_call_comuna_results_20260425_032530.py 2.sha256": {
+      "sha256": "f2680aea7795a71fcfe6b7e85548b68bc3212ccf6f3dd35a4ab637c4872b0ff7",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_call_comuna_results_20260425_032530.py.sha256": {
+      "sha256": "f2680aea7795a71fcfe6b7e85548b68bc3212ccf6f3dd35a4ab637c4872b0ff7",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_codcli_scope_20260425_005939.py 2.sha256": {
+      "sha256": "94b722c2e011795e9fca9f9a991734795bb67539f0dad629ea5e76fc39b99972",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_codcli_scope_20260425_005939.py.sha256": {
+      "sha256": "94b722c2e011795e9fca9f9a991734795bb67539f0dad629ea5e76fc39b99972",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_codcli_datosalumnos_20260425_035359.py 2.sha256": {
+      "sha256": "3ef1047e2f2c6c23f59a43f1785a3a4781fb44d3d64e9ef203c3290b055d1d85",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_codcli_datosalumnos_20260425_035359.py.sha256": {
+      "sha256": "3ef1047e2f2c6c23f59a43f1785a3a4781fb44d3d64e9ef203c3290b055d1d85",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_propagacion_precarga_20260425_033909.py 2.sha256": {
+      "sha256": "69fd49028dd27017aa6b0bbdf60cccc942d0f0dbee9ba50dfd6f2eaef2f08580",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_propagacion_precarga_20260425_033909.py.sha256": {
+      "sha256": "69fd49028dd27017aa6b0bbdf60cccc942d0f0dbee9ba50dfd6f2eaef2f08580",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_results_integral_20260425_032915.py 2.sha256": {
+      "sha256": "d546d82f8c3fea6eecbb80c49e514c01865c0154dc6f62c3d39f007e749b11b5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_results_integral_20260425_032915.py.sha256": {
+      "sha256": "d546d82f8c3fea6eecbb80c49e514c01865c0154dc6f62c3d39f007e749b11b5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_results_parcial_20260425_032226.py 2.sha256": {
+      "sha256": "07f321c9f2d02c86b880ae74a71af977dcbf5557890954174be1d9730c216c1e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_comuna_results_parcial_20260425_032226.py.sha256": {
+      "sha256": "07f321c9f2d02c86b880ae74a71af977dcbf5557890954174be1d9730c216c1e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_critical_incluir_fcu_20260425_014752.py 2.sha256": {
+      "sha256": "d86ff08088ff9e5dffd42d426801aa8cba694489ede838f91f92229ef41a4434",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_critical_incluir_fcu_20260425_014752.py.sha256": {
+      "sha256": "d86ff08088ff9e5dffd42d426801aa8cba694489ede838f91f92229ef41a4434",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_csv_exportable_baja_certeza_warn_20260425_043905.py 2.sha256": {
+      "sha256": "cef5931e41441e8ba42201a42621aeb4f75ebf29885855dabb1da7d23860342d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_csv_exportable_baja_certeza_warn_20260425_043905.py.sha256": {
+      "sha256": "cef5931e41441e8ba42201a42621aeb4f75ebf29885855dabb1da7d23860342d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_csv_fcu_sin_auxiliares_20260425_045657.py 2.sha256": {
+      "sha256": "09af0aadb5f41a6ddb8512820a7cdeefa2d507b58f21b6d7fe4e168baa199ab5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_csv_fcu_sin_auxiliares_20260425_045657.py.sha256": {
+      "sha256": "09af0aadb5f41a6ddb8512820a7cdeefa2d507b58f21b6d7fe4e168baa199ab5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_exportacion_fisica_fcu_20260425_044229.py 2.sha256": {
+      "sha256": "aa4ea29daae47a6a4c605311bf99be1ea9539680ace702babbe1dba1eebf57e2",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_exportacion_fisica_fcu_20260425_044229.py.sha256": {
+      "sha256": "aa4ea29daae47a6a4c605311bf99be1ea9539680ace702babbe1dba1eebf57e2",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_fast_return_20260425_021533.py 2.sha256": {
+      "sha256": "1ff9a3ff2bfc0adca0f04a9ae4d011225a06d7219843d2f05d033d7bc7ed8a3b",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_fast_return_20260425_021533.py.sha256": {
+      "sha256": "1ff9a3ff2bfc0adca0f04a9ae4d011225a06d7219843d2f05d033d7bc7ed8a3b",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_hogar_cant_fcu_20260425_031016.py 2.sha256": {
+      "sha256": "9885b6af5130a4e2a595a478e7d2ed1a738d587e8bbc8d43d2fd24c950dda387",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_hogar_cant_fcu_20260425_031016.py.sha256": {
+      "sha256": "9885b6af5130a4e2a595a478e7d2ed1a738d587e8bbc8d43d2fd24c950dda387",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_indent_20260425_003554.py 2.sha256": {
+      "sha256": "bb9496e2af878bf1a77e8494fbcb076117de635170d1db3adb64e16510d652d6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_indent_20260425_003554.py.sha256": {
+      "sha256": "bb9496e2af878bf1a77e8494fbcb076117de635170d1db3adb64e16510d652d6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_normalizar_token_serie_20260425_035915.py 2.sha256": {
+      "sha256": "6f96ad6152cdb8cc7ea2d4b2f2319bda6290aa218b0543d9a6ddb875336abb6c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_normalizar_token_serie_20260425_035915.py.sha256": {
+      "sha256": "6f96ad6152cdb8cc7ea2d4b2f2319bda6290aa218b0543d9a6ddb875336abb6c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_region_desde_comuna_gobernada_20260425_041123.py 2.sha256": {
+      "sha256": "a550ee95e2971727f05150feebd7cfbc0543ab6b61ee054bf6a12bedf1071967",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_region_desde_comuna_gobernada_20260425_041123.py.sha256": {
+      "sha256": "a550ee95e2971727f05150feebd7cfbc0543ab6b61ee054bf6a12bedf1071967",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_region_remanente_gobernada_20260425_041554.py 2.sha256": {
+      "sha256": "d03c49d943d68df0997e5b6b7f4ee6c0568a382df4c91917ff369f661ac7bb4e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_region_remanente_gobernada_20260425_041554.py.sha256": {
+      "sha256": "d03c49d943d68df0997e5b6b7f4ee6c0568a382df4c91917ff369f661ac7bb4e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_strip_accents_20260425_033202.py 2.sha256": {
+      "sha256": "ea58d4e1fe65e6be96b32ad612ef743018da7f64fe017cba89a26698bac01e11",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_strip_accents_20260425_033202.py.sha256": {
+      "sha256": "ea58d4e1fe65e6be96b32ad612ef743018da7f64fe017cba89a26698bac01e11",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_strip_accents_global_20260425_033508.py 2.sha256": {
+      "sha256": "8d953302bb6ddeafa9b2c0db1b97a95412f5515e167d2ea59ae14af029ff5fa3",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_strip_accents_global_20260425_033508.py.sha256": {
+      "sha256": "8d953302bb6ddeafa9b2c0db1b97a95412f5515e167d2ea59ae14af029ff5fa3",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_token_comuna_codcli_20260425_040303.py 2.sha256": {
+      "sha256": "46796fbe49d849f31ef371cdd9f699c69887558bc89822c2f2238c91b67fbf5d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_token_comuna_codcli_20260425_040303.py.sha256": {
+      "sha256": "46796fbe49d849f31ef371cdd9f699c69887558bc89822c2f2238c91b67fbf5d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_universe_after_exclusion_20260425_024142.py 2.sha256": {
+      "sha256": "60d6606dc79a6fabe826b16c8b2ef804c0ff4b51d93eb3e180a0455ffb349169",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_universe_after_exclusion_20260425_024142.py.sha256": {
+      "sha256": "60d6606dc79a6fabe826b16c8b2ef804c0ff4b51d93eb3e180a0455ffb349169",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_universe_patch_location_20260425_024449.py 2.sha256": {
+      "sha256": "da8ad46b1e20cf2c8aa1341bf4c96fa5d69aa63220866fb434485de3f4f9d890",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_universe_patch_location_20260425_024449.py.sha256": {
+      "sha256": "da8ad46b1e20cf2c8aa1341bf4c96fa5d69aa63220866fb434485de3f4f9d890",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validacion_token_first_20260425_022958.py 2.sha256": {
+      "sha256": "5ac1ad31cd21c359feef6bed1a8c112c052436472216b2ca2549c2accf8ebd57",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validacion_token_first_20260425_022958.py.sha256": {
+      "sha256": "5ac1ad31cd21c359feef6bed1a8c112c052436472216b2ca2549c2accf8ebd57",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validacion_token_first_real_20260425_023111.py 2.sha256": {
+      "sha256": "6136a0e681d5bb4716bc98e7df91536e2193649e1128ab012a25ded3483d1dbc",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validacion_token_first_real_20260425_023111.py.sha256": {
+      "sha256": "6136a0e681d5bb4716bc98e7df91536e2193649e1128ab012a25ded3483d1dbc",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validate_call_20260425_012549.py 2.sha256": {
+      "sha256": "205c2240d68f8e5ffee60d9514a2a4786a92b8eef75e66b81aacccb0195caba4",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validate_call_20260425_012549.py.sha256": {
+      "sha256": "205c2240d68f8e5ffee60d9514a2a4786a92b8eef75e66b81aacccb0195caba4",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validate_critical_final_20260425_021915.py 2.sha256": {
+      "sha256": "92a8d9a3caa80e0973461f3cd3d50b7bff67bc3b0084d95dc037056699c07684",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validate_critical_final_20260425_021915.py.sha256": {
+      "sha256": "92a8d9a3caa80e0973461f3cd3d50b7bff67bc3b0084d95dc037056699c07684",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validate_critical_inside_function_20260425_021312.py 2.sha256": {
+      "sha256": "095e53ae909ab05347dc373e022289f87bb182ab4f8283880295de0b19f9edc5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validate_critical_inside_function_20260425_021312.py.sha256": {
+      "sha256": "095e53ae909ab05347dc373e022289f87bb182ab4f8283880295de0b19f9edc5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validation_force_universe_20260425_022322.py 2.sha256": {
+      "sha256": "3fedca0151bf21ea16541646597089cf5d7dfc7ddc7ad79456a653110d42249c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validation_force_universe_20260425_022322.py.sha256": {
+      "sha256": "3fedca0151bf21ea16541646597089cf5d7dfc7ddc7ad79456a653110d42249c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validation_token_aux_20260425_025019.py 2.sha256": {
+      "sha256": "1860632c7227bc3e22c493abf432de09a68152c5787554e1132bcecefbcc0ba3",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_fix_validation_token_aux_20260425_025019.py.sha256": {
+      "sha256": "1860632c7227bc3e22c493abf432de09a68152c5787554e1132bcecefbcc0ba3",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_force_csv_fcu_si_validacion_ok_20260425_044600.py 2.sha256": {
+      "sha256": "9e07fa91ca0633ed8935882e574618fd5102339eede1b299669199064e43b97d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_force_csv_fcu_si_validacion_ok_20260425_044600.py.sha256": {
+      "sha256": "9e07fa91ca0633ed8935882e574618fd5102339eede1b299669199064e43b97d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_hogar_cant_esp_mtp_condicional_20260429_154826.py 2.sha256": {
+      "sha256": "45ce918e6faeebae028d5a9c7f6c631ddb5cd273dd89eb12b7fae67bae5edce9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_hogar_cant_esp_mtp_condicional_20260429_154826.py.sha256": {
+      "sha256": "45ce918e6faeebae028d5a9c7f6c631ddb5cd273dd89eb12b7fae67bae5edce9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_jefe_hogar_otro_a_adulto_a_20260429_170505.py 2.sha256": {
+      "sha256": "6b3286b550fdcd3be4b6f128f178aa0c0d19082ff2556ad1da0d53f81063c59e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_jefe_hogar_otro_a_adulto_a_20260429_170505.py.sha256": {
+      "sha256": "6b3286b550fdcd3be4b6f128f178aa0c0d19082ff2556ad1da0d53f81063c59e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_jefe_hogar_otro_adulto_20260429_170355.py 2.sha256": {
+      "sha256": "9a112b8bfef741601f0eac5be154fde7b95258c7cd6941dc0a36fa47f0f2495d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_jefe_hogar_otro_adulto_20260429_170355.py.sha256": {
+      "sha256": "9a112b8bfef741601f0eac5be154fde7b95258c7cd6941dc0a36fa47f0f2495d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_normalizacion_final_codigos_fcu_20260428_091551.py 2.sha256": {
+      "sha256": "e905c6cf6dd5efa6ceee6bd9d0226a104c9acd4ac76a744519e2e40ae460ffb4",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_normalizacion_final_codigos_fcu_20260428_091551.py.sha256": {
+      "sha256": "e905c6cf6dd5efa6ceee6bd9d0226a104c9acd4ac76a744519e2e40ae460ffb4",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_obligatoriedad_carga_real_fcu_20260429_093850.py 2.sha256": {
+      "sha256": "7d73fd5ded0f7975ea9af6612907af5cb6b6537786a6720bd827ab67e004bc93",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_obligatoriedad_carga_real_fcu_20260429_093850.py.sha256": {
+      "sha256": "7d73fd5ded0f7975ea9af6612907af5cb6b6537786a6720bd827ab67e004bc93",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_patch_estado_civil_fcu_20260428_090750.py 2.sha256": {
+      "sha256": "e9f11a39f2eff4f92f3c185bb2a6bc3b99258e5db505257427f64e2787f3d926",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_patch_estado_civil_fcu_20260428_090750.py.sha256": {
+      "sha256": "e9f11a39f2eff4f92f3c185bb2a6bc3b99258e5db505257427f64e2787f3d926",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_ppoo_def_contenido_20260429_180112.py 2.sha256": {
+      "sha256": "b27b599ec3ce412dc5fb7229396b8be449ae4557b91bdc77919d7022a235f8f9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_ppoo_def_contenido_20260429_180112.py.sha256": {
+      "sha256": "b27b599ec3ce412dc5fb7229396b8be449ae4557b91bdc77919d7022a235f8f9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_ppoo_def_forzado_20260429_175621.py 2.sha256": {
+      "sha256": "da9a1c6523af1ff7ed193b4fbd5bb1188758fda61b9b40155cc87d5328c8ca5c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_ppoo_def_forzado_20260429_175621.py.sha256": {
+      "sha256": "da9a1c6523af1ff7ed193b4fbd5bb1188758fda61b9b40155cc87d5328c8ca5c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_sync_exportable_final_20260425_044804.py 2.sha256": {
+      "sha256": "9077075226246546512713605ac4829fd26db7cc051e4ffd7de0667cfc9de1e9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_sync_exportable_final_20260425_044804.py.sha256": {
+      "sha256": "9077075226246546512713605ac4829fd26db7cc051e4ffd7de0667cfc9de1e9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_sync_resumen_csv_final_exportable_20260425_045142.py 2.sha256": {
+      "sha256": "7d1a3b07902a405887a5f5eaba30bb9eeb21f1762a702f85b5f2e14913049036",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/hashes/caracterizacion_backup_sync_resumen_csv_final_exportable_20260425_045142.py.sha256": {
+      "sha256": "7d1a3b07902a405887a5f5eaba30bb9eeb21f1762a702f85b5f2e14913049036",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_antes_exclusion_rut_no_encontrado.py": {
+      "sha256": "da54edb5fb029f84e22f1fe93825ebd36e947e1bcdbe4583340d5cd18f5785b9",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_antes_fix_de_los_cuales_nuevos_20260430_091229.py": {
+      "sha256": "163973154ec4c6c8ed4188ff299f751db3074f8dd690f8dfa711ad3bebfcfbd1",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_antes_ppoo_def_atacameno_lickanantay_20260429_180508.py": {
+      "sha256": "dcf8296cc362ef79a65469192905dedd511a99429661392260092e5d1b8a0e14",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_antes_validacion_incluidos_20260425_012505.py": {
+      "sha256": "434aa207ca0db82f2d6f4f2f1322f115caac2ab6d6f154ecfc3951b3a40bc1cc",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_catalogo_obligatorios_esp_exp_sit_fcu_20260429_112852.py": {
+      "sha256": "ca3cc3693ec62557ddb4dd291184cf6c9f5575c457643102e581f7efe9ad6bdd",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_corrige_ppoo_def_mapper_real_20260429_180208.py": {
+      "sha256": "dcf8296cc362ef79a65469192905dedd511a99429661392260092e5d1b8a0e14",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_deduplicacion_clave_fcu_20260428_124652.py": {
+      "sha256": "bee65c12607d275706718810b6b7afbadfced9e6e8ef18130477f18eed13d047",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fase20b_20260505_144435.py": {
+      "sha256": "54f59b30ca901df69b671a41520ad5db7cdf243af1ee1ea6678398208dcf5f18",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fast_fcu_fix_validate_20260425_021458.py": {
+      "sha256": "e1b5af11ab446d309d7189bcdd00d9c6c6321d7652d0965a9a77a958f8d78182",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_5_campos_criticos_fcu_20260425_043007.py": {
+      "sha256": "e29641e5ead25f655bb68e4cbfdf97cd431320eb3001dc37eda3cad42ecb8779",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_apellido2_gobernado_20260425_043353.py": {
+      "sha256": "8a2ff3654f8a1b2dd549c0cbfd6740488787a7a4ae20ee7de4555da2e8709220",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_call_comuna_results_20260425_032530.py": {
+      "sha256": "c9ea7cfeb09b7427332a7c9fcad8260331937cedf18e5c1c9a80210422f48f89",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_codcli_scope_20260425_005939.py": {
+      "sha256": "01a1341cef30a55285ee96622798410b26497a4b8c5ab69c232b7517569202f4",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_comuna_codcli_datosalumnos_20260425_035359.py": {
+      "sha256": "1d380bdc3e460042133f4083a1e54fdc22c2fcc7cb004df9fec7fe7f69cec535",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_comuna_propagacion_precarga_20260425_033909.py": {
+      "sha256": "5f0c85dfa335636a463e68b8b7ae69f2d1c73ecab5c9b34eb5486c4a00f828d7",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_comuna_results_integral_20260425_032915.py": {
+      "sha256": "c9ea7cfeb09b7427332a7c9fcad8260331937cedf18e5c1c9a80210422f48f89",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_comuna_results_parcial_20260425_032226.py": {
+      "sha256": "c9ea7cfeb09b7427332a7c9fcad8260331937cedf18e5c1c9a80210422f48f89",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_critical_incluir_fcu_20260425_014752.py": {
+      "sha256": "e1b5af11ab446d309d7189bcdd00d9c6c6321d7652d0965a9a77a958f8d78182",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_csv_exportable_baja_certeza_warn_20260425_043905.py": {
+      "sha256": "4be7d5bfda54baf03a2a034f318d0530ae8255463b076ef6ca193f6837848a53",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_csv_fcu_sin_auxiliares_20260425_045657.py": {
+      "sha256": "129e73fcd3fa7b73793e2257e58d462f0ef6cf966dae7e4f0d73aeca6e8ce82e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_exportacion_fisica_fcu_20260425_044229.py": {
+      "sha256": "321faf9062559dee6e98f1d7600cd6a14b5507c97da7d65cf65684dd49714330",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_fast_return_20260425_021533.py": {
+      "sha256": "7cb186198cfb58167e0539c9692152a46c0c498f021a34d64a2d2b8da063463d",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_hogar_cant_fcu_20260425_031016.py": {
+      "sha256": "10fb429cbfa458087a0f6aa7585cf680d8074e628ae914b697edf1b7ebf18807",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_indent_20260425_003554.py": {
+      "sha256": "6333ab76a8ed04f521b016e5cb466b6d952e2186acaff5f20d3a151b259c74d1",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_normalizar_token_serie_20260425_035915.py": {
+      "sha256": "148019f049ae2d55da11f83aebc03213304359b77d6801bf08d5931fea1718b5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_region_desde_comuna_gobernada_20260425_041123.py": {
+      "sha256": "a09ca70f300808d8eb88d656d9a1ce17ba98f31be762243751bebb51e49fd3f0",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_region_remanente_gobernada_20260425_041554.py": {
+      "sha256": "c279aa967ac1b032fb6f27a7391682abc702185178e75dbed04fd3583abde455",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_strip_accents_20260425_033202.py": {
+      "sha256": "cf7c1d607e068e9834e29a2d79b2fd334421097820254d202b10421000352857",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_strip_accents_global_20260425_033508.py": {
+      "sha256": "cf7c1d607e068e9834e29a2d79b2fd334421097820254d202b10421000352857",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_token_comuna_codcli_20260425_040303.py": {
+      "sha256": "80a3191bc9184a1d1962bff18100442815a09fb6c205ecfb6cecb8fe9dc6daf2",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_universe_after_exclusion_20260425_024142.py": {
+      "sha256": "e0ce215cf0f5a1fe736835f774a65af824306c358f4e4fb59cb702cf4473bc38",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_universe_patch_location_20260425_024449.py": {
+      "sha256": "a86e516ed7189508c162749a8b91b4bc372f0abc9cb223f00c7008a153040b09",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validacion_token_first_20260425_022958.py": {
+      "sha256": "8bb911913b4a9f47864d5c8208323557d8518b64e36c05ac3c0a51c3389bff6c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validacion_token_first_real_20260425_023111.py": {
+      "sha256": "8bb911913b4a9f47864d5c8208323557d8518b64e36c05ac3c0a51c3389bff6c",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validate_call_20260425_012549.py": {
+      "sha256": "434aa207ca0db82f2d6f4f2f1322f115caac2ab6d6f154ecfc3951b3a40bc1cc",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validate_critical_final_20260425_021915.py": {
+      "sha256": "39ba1023445cea6d7878c2c792faee48865d3d5615edb9bd84e3ec0fd749af58",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validate_critical_inside_function_20260425_021312.py": {
+      "sha256": "e1b5af11ab446d309d7189bcdd00d9c6c6321d7652d0965a9a77a958f8d78182",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validation_force_universe_20260425_022322.py": {
+      "sha256": "589d4f8cf5804785bcf164b2577bffd5d0dc4aa773f2bf872e27d7b3859f772e",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_fix_validation_token_aux_20260425_025019.py": {
+      "sha256": "c3005e51381924b758d34e3f6ea48608368003e50b04ad18d4ba29a4020f8ff8",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_force_csv_fcu_si_validacion_ok_20260425_044600.py": {
+      "sha256": "a9e197b19a476af1b4eb3fd44641ec4f96301f8c21c5d685740b42a582c4b49a",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_hogar_cant_esp_mtp_condicional_20260429_154826.py": {
+      "sha256": "0cb865f83b2fc4e3f10f573346dbb85de10c395040dafb4c082d270223014fd5",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_jefe_hogar_otro_a_adulto_a_20260429_170505.py": {
+      "sha256": "7a5d4dcd6e7d05d7bfd1ae33557caefd03f48ccd7903a13a36df9a53c8cc63e6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_jefe_hogar_otro_adulto_20260429_170355.py": {
+      "sha256": "7a5d4dcd6e7d05d7bfd1ae33557caefd03f48ccd7903a13a36df9a53c8cc63e6",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_normalizacion_final_codigos_fcu_20260428_091551.py": {
+      "sha256": "777a23ab0a2fba17e758f9f9a5f3595e73e7a1edaabdb0d65a4d833e558ee880",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_obligatoriedad_carga_real_fcu_20260429_093850.py": {
+      "sha256": "178109ed04d618ac79710558ce984c5802fd887cdef419cac74ac5e7c8f527ff",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_patch_estado_civil_fcu_20260428_090750.py": {
+      "sha256": "48ca1bbe7b27430b00f8517dd4d70e4979b08706fbad4b0c275a69f4e7498413",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_ppoo_def_contenido_20260429_180112.py": {
+      "sha256": "66abeb8c2ddde1e2997eae2a96a5be083605858abc54e8058f4e56c2c3141a33",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_ppoo_def_forzado_20260429_175621.py": {
+      "sha256": "66abeb8c2ddde1e2997eae2a96a5be083605858abc54e8058f4e56c2c3141a33",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_sync_exportable_final_20260425_044804.py": {
+      "sha256": "a9e197b19a476af1b4eb3fd44641ec4f96301f8c21c5d685740b42a582c4b49a",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_backup_sync_resumen_csv_final_exportable_20260425_045142.py": {
+      "sha256": "0d033b334dbf05596ad09eb230201372c3996e192a41b1f300d80d2323d7c30f",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_broken_syntax_20260425_044652.py": {
+      "sha256": "80792ca8a53c902bf2a73c70ca1b6589b90358deea120b7f1040a81603594b65",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/historico_backups/caracterizacion_pre_fase22b_20260505_145835.py": {
+      "sha256": "baed9162fb21b414c3136db4dca33746cb4c62af310ccddff8116dbf8fc355ed",
+      "razones": [
+        "E: respaldo de código histórico con posibles excepciones personales; conservar privado sin editar"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/carga_postgrado/nucleo_productivo/caracterizacion.py": {
+      "sha256": "f4ce31edec2603fc2348ec0d270bb4455a0db6f9ca2e94230c0bfe9e4b9cffb8",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2026/P2/443299_20261009_01fc90a59b0e/excel/Preguntas_y_respuestas_LimeSurvey_2026_P2_20261009.xlsx": {
+      "sha256": "e1ebb59949bef71f7f4d5d467127f48d9c1a3b4ec7e83ea1f29cd3d280da35ea",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2026/P2/443299_20261009_01fc90a59b0e/export_inspect.ndjson": {
+      "sha256": "45f1f0741c63ec5bbbb299c4f1efc094a6cd77f2bf5e7ad151bde4853a6e9b6b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2026/P2/443299_20261009_01fc90a59b0e/previews/Detalle.png": {
+      "sha256": "9ceec1aba00f4f116307ce404d6877038de8c0fe5eced2fbdb4b0631b7f2f5ec",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2026/P2/443299_20261009_01fc90a59b0e/previews/Preguntas.png": {
+      "sha256": "d7068dbebd5f8480b7a58a94bc661194363b8ad36b699e80973769660c852b15",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2027/P1/141234_20261009_406d959cedfd/excel/Preguntas_y_respuestas_LimeSurvey_2027_P1_20261009.xlsx": {
+      "sha256": "f6a2fad1b02f9f2b4c7cdaba5a5f5e92a682692710910cceefdc625e62478931",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2027/P1/141234_20261009_406d959cedfd/export_inspect.ndjson": {
+      "sha256": "9982b17a39d4f901c761ce56ef290644d7f98e1192695f9eff0dccbe222ecf90",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2027/P1/141234_20261009_406d959cedfd/previews/Detalle.png": {
+      "sha256": "9ceec1aba00f4f116307ce404d6877038de8c0fe5eced2fbdb4b0631b7f2f5ec",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/instrumentos_limesurvey/2027/P1/141234_20261009_406d959cedfd/previews/Preguntas.png": {
+      "sha256": "533ff1f49619668048e842bd5fa55f11ca2bc1b72ff4b182a1346b6c7c051246",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv": {
+      "sha256": "8f73e024a59b478a74703ec1bfb3b1c8ad1c90986548068f9206b2be1d6cbe38",
+      "razones": [
+        "E: objeto LFS no disponible en servidor; no publicar puntero sin respaldo portable"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/sies/RETENCION/Informe_Retencion_1er_Anio_Pregrado_2026.pdf": {
+      "sha256": "8397404b4f6640ec0ad45e085da45b736e4e9862713271e0af0b8eef5bb601f4",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/sies/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx": {
+      "sha256": "168ac8baea6aee65fa8a40dfca5a269993951142c89cb536805f550b1ac3297b",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/sies/RETENCION/Retencion_ipss_2022_2024_GRANULAR.xlsx": {
+      "sha256": "e85d8c15c9fa2eccb25a376ea352f345ddcec91dbcf8176070b1ae3490c5d946",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.xlsx": {
+      "sha256": "b415b066518a84d07656c3d089e89b44b889d5c5a71745b0d4694670b74443f7",
+      "razones": [
+        "E: evidencia binaria/comprimida o volcado histórico no certificada para publicación; original conservado localmente"
+      ]
+    },
+    "procesos/caracterizacion/gobernanza/trazabilidad_mrun/MANIFIESTO_TRAZABILIDAD_MRUN.md": {
+      "sha256": "20c9d7fae9f8a770f73d49c7c51f3738b66f65ae2f3a7fb3b0e4333b7676474d",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/scripts/test_fcu_pes_2027.py": {
+      "sha256": "62ad2a7f76fcf8f8652549eabf40ef4744a37c1e79872698c18963082014a7dd",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_analisis_anual_integrado.py": {
+      "sha256": "6c6da4da1ba9f4d866548206aff951832d03068e6c266e64adc4f56b9e2ac0e5",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_auditoria_universo.py": {
+      "sha256": "b348092a60075a747c979ad41746af0abcbdf8c293a9fe33d1736f9e0551389e",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_correos_institucionales.py": {
+      "sha256": "f1297cdc292e36abdcecb0efb1418318149f7be61697b45bf3b9bbf2da24d544",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_h042_csv_acumulado_limesurvey.py": {
+      "sha256": "fecdcc1eddbc61db11697cfb1a3d4b515b1c2705e3523a3b7d3ad2ea66eac520",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_hito4b_sectorizado_sies_retencion.py": {
+      "sha256": "3435a4960171625d62a1bdfc286d80208b4352e1b68024722aae3d978245c2f5",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_incorporacion_2027.py": {
+      "sha256": "00a0846892d89e6c8443bbb15fc8c16205a769bf0959f827089285a18c7ad8d8",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_multimatricula_2027.py": {
+      "sha256": "57d33b5438c4e6ce397eed473fed3089319cc44c1ace6ee1f92f20333034795b",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_separacion_2027.py": {
+      "sha256": "a700f1a30aae8ad074acef183dc266c2399f8627c0ba5ce0f99a7bfd328c0664",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_sin_respuestas.py": {
+      "sha256": "f4ce7bbcff3da2af4630284363acdace3a3f7c23657ea823f78324168955a90c",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "procesos/caracterizacion/tests/test_trayectorias_2027.py": {
+      "sha256": "2a5946044b9b92a2c3a71b833b08f68b808a77d6522b8e4275faab57d9964df8",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    },
+    "tests/test_presencia_anual.py": {
+      "sha256": "a51fb1add7891102089e6d37b4af45a76b7bd28c4c409282515f2fb4fddcf688",
+      "razones": [
+        "B: contiene literales con formato de documento/CODCLI; no publicar sin separar datos y código"
+      ]
+    }
+  }
+}

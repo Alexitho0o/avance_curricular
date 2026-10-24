@@ -1,0 +1,164 @@
+{
+  "auditorias": {
+    "auditoria_contrato.json": {
+      "path": "auditoria_contrato.json",
+      "sha256": "8a76c9a5f5d12d7c77703d9d8050fc70a27c018f6ec7559d2fdc0e62219109c7"
+    },
+    "auditoria_maestro.json": {
+      "path": "auditoria_maestro.json",
+      "sha256": "16d5b0e8e99a8db98c87176b94cc61e5361f9dd6abdbf8aaee077acc4b7afede"
+    },
+    "auditoria_puentes.json": {
+      "path": "auditoria_puentes.json",
+      "sha256": "66c2335ffaf4a93e4762d5aa6fec6b649d1688d232886b6bb47843c1f52e9977"
+    },
+    "validacion_entrega_contrato.json": {
+      "path": "validacion_entrega_contrato.json",
+      "sha256": "bd1d1d2e60953553b27f44f3a03c3e6619f9e3e51d52c71ff67e026a45112339"
+    },
+    "validacion_entrega_maestro.json": {
+      "path": "validacion_entrega_maestro.json",
+      "sha256": "47e96d029fe0846a7c655ffbe591e10f35e03010b31aca659fe3edbf9b9b648e"
+    }
+  },
+  "candidata_previa": {
+    "datos_identicos": {
+      "candidatos_plan_sies.tsv": true,
+      "cobertura_planes.tsv": true,
+      "cobertura_sies.tsv": true,
+      "diferencias_catalogo_operativo.tsv": true,
+      "ejemplos_consulta.json": true,
+      "equivalencias_programa_2026.tsv": true,
+      "excepciones.json": true,
+      "fuentes.json": true,
+      "maestro.json": true,
+      "reglas_efectivas.json": true,
+      "resumen.json": true
+    },
+    "diferencia": "Solo manifest: se regeneró tras endurecer validación J3; candidata anterior preservada en /tmp."
+  },
+  "codigo_manifest_coincide": {
+    "common/equivalencias_historicas.py": true,
+    "scripts/construir_maestro_equivalencias.py": true,
+    "scripts/consultar_equivalencias_historicas.py": true
+  },
+  "consultas_reales_cli": [
+    {
+      "argumentos": [
+        "--anio",
+        "2026",
+        "--codigo-unico",
+        "I162S2C77J4V2"
+      ],
+      "candidatos": 0,
+      "codigo_unico": "I162S2C77J4V2",
+      "estado": "OFERTA_ANUAL_LOCALIZADA",
+      "exit_code": 0,
+      "observaciones_mrun": 1
+    },
+    {
+      "argumentos": [
+        "--anio",
+        "2026",
+        "--codcarpr",
+        "CILOG",
+        "--nombre-interno",
+        "INGENIERIA EN LOGISTICA",
+        "--plan-umas",
+        "CILOG20241",
+        "--sede-umas",
+        "RE",
+        "--jornada-umas",
+        "O",
+        "--periodo",
+        "1",
+        "--regimen",
+        "TRIMESTRAL"
+      ],
+      "candidatos": 2,
+      "codigo_unico": null,
+      "estado": "PENDIENTE_EVIDENCIA",
+      "exit_code": 2,
+      "observaciones_mrun": 0
+    },
+    {
+      "argumentos": [
+        "--anio",
+        "2008",
+        "--codigo-unico",
+        "I162M2008N1"
+      ],
+      "candidatos": 0,
+      "codigo_unico": null,
+      "estado": "SIN_OFERTA_ANUAL",
+      "exit_code": 2,
+      "observaciones_mrun": 1
+    },
+    {
+      "argumentos": [
+        "--anio",
+        "2027",
+        "--codigo-unico",
+        "I162S2C77J4V2"
+      ],
+      "candidatos": 0,
+      "codigo_unico": null,
+      "estado": "FUERA_AMBITO",
+      "exit_code": 2,
+      "observaciones_mrun": 0
+    }
+  ],
+  "documentacion": {
+    "data/versiones_historicas_sies_umas/estado_fases.json": "11071e4d8b61854206a40f54468df9619841e51aea2e592d000149dff6d5e4e1",
+    "docs/README.md": "664c6bca7a99247c1d41dcd9ae1caa1f6b4bbadd7ceb5a530c94cf43eaa4cc5f",
+    "docs/fase_5_maestro_equivalencias.md": "4aa3f050e26d304e7d6d305b39398b2cc028ca36dd18fc3b660ae1a909873799"
+  },
+  "estado": "APROBADA_IMPLEMENTACION_CON_EQUIVALENCIAS_PENDIENTES",
+  "fase": 5,
+  "fuentes_congeladas_intactas": true,
+  "manifest_sha256": "ac2d0426ac80bd3b0b83d75b9be375273fc9937c68cbdfee850bf9bbfc0b7247",
+  "nota": "Cierre técnico H5; no acredita equivalencias históricas sin documentos. H6–H8 pendientes.",
+  "privacidad": {
+    "campos_personales_en_maestro": [],
+    "limite": "Auditorías, proyecciones académicas y conteos; sin identidades ni notas individuales."
+  },
+  "pruebas_negativas_cli": {
+    "hash_incorrecto": {
+      "exit_code": 2,
+      "sin_escrituras": true
+    },
+    "salida_distinta": {
+      "exit_code": 2,
+      "sin_escritura_parcial": true
+    }
+  },
+  "pruebas_sinteticas": {
+    "cantidad": 32,
+    "log_path": "qa_tests.log",
+    "log_sha256": "4c2f3b54973e851168cccbb7b375bccfcc5f19b54e9d2c7d0d1df4ea144720c4",
+    "resultado": "OK"
+  },
+  "reglas_acreditadas": 0,
+  "reproduccion": {
+    "archivos": {
+      "candidatos_plan_sies.tsv": true,
+      "cobertura_planes.tsv": true,
+      "cobertura_sies.tsv": true,
+      "diferencias_catalogo_operativo.tsv": true,
+      "ejemplos_consulta.json": true,
+      "equivalencias_programa_2026.tsv": true,
+      "excepciones.json": true,
+      "fuentes.json": true,
+      "maestro.json": true,
+      "manifest.json": true,
+      "reglas_efectivas.json": true,
+      "resumen.json": true
+    },
+    "todos_identicos": true,
+    "total": 12
+  },
+  "tests_sha256": {
+    "tests/test_equivalencias_historicas.py": "19d7348644fb2b08883c4c4b8eb7fb82bcbbc74c99fd88a9c04c9a4825e84cc3",
+    "tests/test_maestro_equivalencias.py": "5a0910ee2d4e6e73f35d0e4d5419325ec33400942228b81e7c64e02dcff8dc10"
+  }
+}

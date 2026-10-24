@@ -1,0 +1,60 @@
+{
+  "planes": {
+    "rows": 11438,
+    "keys_including_blank_members": {
+      "CODPESTUD+CODRAMO+NIVEL+RamoEquiv+RamoReq": {
+        "unique": 11438,
+        "duplicate_groups": 0,
+        "duplicate_excess": 0
+      },
+      "all_columns": {
+        "unique": 11438,
+        "duplicate_groups": 0,
+        "duplicate_excess": 0
+      }
+    },
+    "nonempty_RamoEquiv": 2480,
+    "nonempty_RamoReq": 4104,
+    "codcarr_sede_pairs": 127,
+    "no_date_validity_sies_fields": true
+  },
+  "promedios": {
+    "rows": 129493,
+    "null_like_policy": [
+      "Python None",
+      "empty string",
+      "literal NULL/NONE/NAN case insensitive"
+    ],
+    "null_like_counts": {
+      "CODCARR": 4211,
+      "ANO": 4211,
+      "PERIODO": 4211,
+      "CODRAMO": 4211
+    },
+    "year_observation_counts": {
+      "2019": 9869,
+      "2020": 9701,
+      "2021": 14721,
+      "2022": 14494,
+      "2023": 15474,
+      "2024": 21531,
+      "2025": 24833,
+      "2026": 14659,
+      "NULL": 4211
+    },
+    "distinct_nonnull_plans": 197,
+    "codcli_with_nonnull_plan": 13068,
+    "codcli_with_multiple_observed_plans": 0,
+    "max_plans_per_codcli": 1,
+    "codcli_year_with_multiple_observed_plans": 0,
+    "assignment_interpretation": "PLAN_DE_ESTUDIO observed per academic course record; ANO/PERIODO belong to that record, not proof of effective-from/to plan assignment; plan changes not reconstructed."
+  },
+  "join_coverage_current_codcli_notes": {
+    "current_distinct_codcli": 15044,
+    "notes_distinct_nonnull_codcli": 13068,
+    "exact_intersection": 11075,
+    "current_not_in_notes": 3969,
+    "notes_not_in_current": 1993,
+    "interpretation": "Technical exact-key availability only. No person trajectory or effective plan assigned."
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "proceso": "MU",
+  "anio": 2027,
+  "modo": "REVISION_INTERNA",
+  "clasificacion": "D/E",
+  "fuente_decisiones": {
+    "ruta": "outputs/estados_umas_vig_sies/20261021_000040_equivalencias_simples/EQUIVALENCIAS_UMAS_SIES_3_COLUMNAS_20261021.xlsx",
+    "sha256": "9317e1ab9871849bb42a49447c122c1038447aeb54d9e57705471116c95f5a00",
+    "tabla": "A1:C33"
+  },
+  "condicion": "Estado y situación de la misma matrícula/período; no propagar a todas las matrículas de una persona.",
+  "normativa_2027": "E: pendiente de manual MU2027; no sustituir por Oferta2027 o MU2026",
+  "politica": "No alterar históricos ni denominadores. NO APLICA y PENDIENTE no son códigos de carga.",
+  "equivalencias": [
+    {
+      "estado_umas": "EGRESADO",
+      "situacion_umas": "13 - EGRESO",
+      "resultado": "PENDIENTE",
+      "clasificacion": "E"
+    },
+    {
+      "estado_umas": "EGRESADO",
+      "situacion_umas": "14 - APRUEBA PROGRAMA EC",
+      "resultado": "NO APLICA",
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "1 - ALUMNO REGULAR",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "10 - ACTUALIZACIÓN DE PLAN DE ESTUDIO 2024",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "100 - TITULACIÓN INTERMEDIA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "101 - TITULO INTERMEDIO 2",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "11 - RENUNCIA POST INICIO CLASES",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "12 - ELIMINADO MATRICULA SIN FIRMA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "15 - REPRUEBA PROGRAMA EC",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "16 - EXPULSION (MALAS PRACTICAS)",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "2 - SUSPENSIÓN TEMPORAL",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "20 - VIGENTE SIN ACTIVIDAD ACADEMICA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "23 - RETIRO - RETRACTO",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "24 - CAMBIO DE CARRERA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "27 - CAMBIO PLAN OTRA JORNADA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "3 - ELIMINACION AUTOMATICA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "38 - REINCORPORACION DE ACTIVIDADES",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "41 - RETIRO SIN AVISO ",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "49 - CAMBIO DE JORNADA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "5 - RENUNCIA ENTRE PERIODOS",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "7 - NO RENUEVA MATRICULA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "8 - ELIMINADO SIN ACTIVIDAD ACADÉMICA",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "9 - RECHAZO ACTUALIZACION DE PLAN 2024",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "ELIMINADO",
+      "situacion_umas": "95 - DEFUNCIÓN",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "SUSPENDIDO",
+      "situacion_umas": "2 - SUSPENSIÓN TEMPORAL",
+      "resultado": 0,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "TITULADO",
+      "situacion_umas": "31 - TITULADO APROBADO",
+      "resultado": "NO APLICA",
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "TITULADO",
+      "situacion_umas": "42 - TITULACIÓN PRÁCTICA PROFESIONAL",
+      "resultado": "NO APLICA",
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "VIGENTE",
+      "situacion_umas": "1 - ALUMNO REGULAR",
+      "resultado": 1,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "VIGENTE",
+      "situacion_umas": "100 - TITULACIÓN INTERMEDIA",
+      "resultado": 1,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "VIGENTE",
+      "situacion_umas": "20 - VIGENTE SIN ACTIVIDAD ACADEMICA",
+      "resultado": 1,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "VIGENTE",
+      "situacion_umas": "38 - REINCORPORACION DE ACTIVIDADES",
+      "resultado": 1,
+      "clasificacion": "D"
+    },
+    {
+      "estado_umas": "VIGENTE",
+      "situacion_umas": "49 - CAMBIO DE JORNADA",
+      "resultado": 1,
+      "clasificacion": "D"
+    }
+  ]
+}

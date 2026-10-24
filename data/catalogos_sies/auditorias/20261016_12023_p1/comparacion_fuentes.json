@@ -1,0 +1,347 @@
+{
+  "fuentes": {
+    "reporte_actual": {
+      "path": "/Users/alexi/Downloads/reporte_dinamico_6047_2026-10-16_10:54:00.csv",
+      "sha256": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62",
+      "identico_reporte_gobernado": {
+        "archivo": "reporte_dinamico_6047_2026-10-13_18:28:03.csv",
+        "sha256": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62"
+      },
+      "filas": 161,
+      "columnas": 51
+    },
+    "alumnos_actual": {
+      "archivo": "DATOSDEALUMNOS_12023.xlsx",
+      "columnas": [
+        "CODCARPR",
+        "NOMBRE_L",
+        "SEDE",
+        "JORNADA",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA"
+      ],
+      "hoja": "Hoja1",
+      "sha256": "331f73f352a3df5075126feaadc66566b09d77cb3527220bd185d1c432eb73a4"
+    },
+    "antecedente_alumnos": "data/matriz_academica_b4/20261016/manifest.json"
+  },
+  "catalogo_activo": "5910_20260907_6047_20261013_modalidad_v2",
+  "oferta_catalogada": 140,
+  "oferta_adicional_no_incorporada": 21,
+  "baseline": {
+    "fuente": "procesos/caracterizacion/docs/gobernanza/COBERTURA_CATALOGO_SIES_2027_P1_11941_20261013_MODALIDAD_V2.json",
+    "registros": 271,
+    "estados_codigo_sies": {
+      "AMBIGUO": 131,
+      "RESUELTO": 88,
+      "SIN_EQUIVALENCIA": 52
+    }
+  },
+  "actual": {
+    "registros": 346,
+    "estados_codigo_sies": {
+      "AMBIGUO": 159,
+      "RESUELTO": 114,
+      "SIN_EQUIVALENCIA": 73
+    },
+    "estados_modalidad": {
+      "RESUELTA_CODIGO_UNICO": 114,
+      "RESUELTA_COINCIDENCIA_CANDIDATOS": 159,
+      "SIN_EQUIVALENCIA": 73
+    },
+    "modalidades": {
+      "No determinada": 73,
+      "No presencial": 208,
+      "Presencial": 65
+    }
+  },
+  "delta_registros": 75,
+  "codcarpr_no_presentes_en_filtro_anterior": [
+    "ADMP",
+    "CICDA",
+    "COIELECSP",
+    "COTCONSSP",
+    "COTENS",
+    "IMDI",
+    "TCEX"
+  ],
+  "pendientes": [
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COICONSSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "INGENIERIA EN CONSTRUCCION SP",
+      "SEDE": "CO",
+      "registros": 2,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COIELECSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "INGENIERIA EN ELECTRICIDAD SP",
+      "SEDE": "CO",
+      "registros": 1,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COTCONSSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN CONSTRUCCION SP",
+      "SEDE": "CO",
+      "registros": 1,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COTELECSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN ELECTRICIDAD SP",
+      "SEDE": "CO",
+      "registros": 2,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COTENS",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "D",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN ENFERMERIA",
+      "SEDE": "CO",
+      "registros": 1,
+      "candidatos_nombre_sede_jornada_exactos": [
+        "I162S3C91J1V1"
+      ],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COTENSSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN ENFERMERIA SP",
+      "SEDE": "CO",
+      "registros": 2,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COTIMAGSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN IMAGENOLOGIA SP",
+      "SEDE": "CO",
+      "registros": 1,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "COTVETSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO VETERINARIO SP",
+      "SEDE": "CO",
+      "registros": 8,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "ICONSSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "INGENIERIA EN CONSTRUCCION SP",
+      "SEDE": "RE",
+      "registros": 5,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "IELECSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "INGENIERIA EN ELECTRICIDAD SP",
+      "SEDE": "RE",
+      "registros": 2,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TCEX",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "O",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN COMERCIO EXTERIOR",
+      "SEDE": "RE",
+      "registros": 2,
+      "candidatos_nombre_sede_jornada_exactos": [
+        "I162S2C136J4V1"
+      ],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TCONSSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN CONSTRUCCION SP",
+      "SEDE": "RE",
+      "registros": 3,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TELECSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN ELECTRICIDAD SP",
+      "SEDE": "RE",
+      "registros": 9,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TENSSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN ENFERMERIA SP",
+      "SEDE": "RE",
+      "registros": 8,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TFARSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN FARMACIA SP",
+      "SEDE": "RE",
+      "registros": 7,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TGEIN",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "O",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN GESTION INDUSTRIAL",
+      "SEDE": "RE",
+      "registros": 1,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TIMAGSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO EN IMAGENOLOGIA SP",
+      "SEDE": "RE",
+      "registros": 1,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    },
+    {
+      "CANDIDATOS_SIES": "",
+      "CODCARPR": "TVETSP",
+      "CODIGO_UNICO_SIES": "",
+      "ESTADO_CODIGO_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_CRUCE_SIES": "SIN_EQUIVALENCIA",
+      "ESTADO_MODALIDAD": "SIN_EQUIVALENCIA",
+      "JORNADA": "V",
+      "MODALIDAD_CARRERA": "No determinada",
+      "NOMBRE_L": "TECNICO VETERINARIO SP",
+      "SEDE": "RE",
+      "registros": 17,
+      "candidatos_nombre_sede_jornada_exactos": [],
+      "promovido": false
+    }
+  ],
+  "limite_nuevos_codcarpr": "Nuevos en el filtro 2027 P1 de esta comparación; no demuestra creación de carrera ni ingreso nuevo.",
+  "nuevas_equivalencias_promovidas": 0,
+  "registros_con_candidato_exacto_nuevo_no_promovido": 3
+}

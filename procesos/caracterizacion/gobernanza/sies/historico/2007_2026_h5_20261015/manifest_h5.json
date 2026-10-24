@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "catalogo_planes_preservado": true,
+    "cobertura_sies_preservada": true,
+    "fuentes_sin_cambios": true
+  },
+  "config_sha256": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330",
+  "fase": 5,
+  "outputs": {
+    "candidatos_plan_sies.tsv": "29902da4a13f0b5e708ce9bd1b3c8bd3c14e2546c8f0503ae4472b912b6671c9",
+    "cobertura_planes.tsv": "e95528b1d5f74c42f39adac5a86aeada6165593fdee45512f39e7803dfd8b95b",
+    "cobertura_sies.tsv": "a13011c9602ce1490e49f3680f77100438e22bee48e45fa124f5cf1de35df729",
+    "diferencias_catalogo_operativo.tsv": "16213ca8ad0ccdb14a29236392aa0b022b25be8bcd8e1b7fc7fdfc5f84d08314",
+    "ejemplos_consulta.json": "b5c7d82265027c295e8acb3747d678639fafd8af3e51ea163a21ba55707e817e",
+    "equivalencias_programa_2026.tsv": "8639ef4205ae222e80733fca27f8fa7184234d101b26b6f9e1d9abe62cea8553",
+    "excepciones.json": "e46c0e3d64b07f29c9589f8e3f0b826a3608bb8f55f0d6991b339a14ce7f8ce4",
+    "fuentes.json": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330",
+    "maestro.json": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+    "reglas_efectivas.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "resumen.json": "18ddd501ca56569d5e13c73135b196e156768f871bf08aa344249037d473f53e"
+  },
+  "privacidad": "Dimensiones académicas; sin identidades ni notas individuales.",
+  "schema_version": 1,
+  "scripts_sha256": {
+    "common/equivalencias_historicas.py": "990d23bab02c4f3b842d8e24ed860330f597324527258ddc9a48a29280c655ae",
+    "scripts/construir_maestro_equivalencias.py": "fb6bb68e45325842141aaa123d81a9cbfd0e0a0c81aea032a4ebc78186a831dc",
+    "scripts/consultar_equivalencias_historicas.py": "1a3602d97db14a66b10fcb1630dac26b703885dda7aa0c8cc8636750c3160710"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "proyecto": "Encuesta de Caracterización",
+  "proceso": "Congelamiento de fuentes reproducibles",
+  "anio": 2026,
+  "periodo": 2,
+  "version_fuentes": "2026_P2_20260721_161905",
+  "estado": "CONGELADO",
+  "tipo": "LINEA_BASE_REPRODUCIBLE",
+  "fecha_congelamiento": "2026-07-22T11:03:28.160591-04:00",
+  "corrida_origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-21/2026_P2_161905",
+  "corrida_origen_estado": "OK",
+  "commit_codigo": "f4a564a6247b4c13ee6bef25e2f7d3c54c3cfb88",
+  "survey_id": "443299",
+  "ruta_local_restringida": ".local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905",
+  "archivos_crudos_en_git": false,
+  "politica": {
+    "datos_crudos": "Almacenados en .local y excluidos de Git",
+    "metadatos_publicables": "Manifiesto, nombres, tamaños y SHA-256",
+    "modificacion_archivos": "Prohibida",
+    "reemplazo": "Una nueva fuente debe congelarse como una nueva versión; no se sobrescribe esta línea base"
+  },
+  "archivos": [
+    {
+      "rol": "matricula_oficial",
+      "nombre": "DATOSDEALUMNOS_10246.xlsx",
+      "ruta_relativa_restringida": ".local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "tamano_bytes": 5183704,
+      "publicable_en_git": false,
+      "contiene_datos_personales": true
+    },
+    {
+      "rol": "inscritos_limesurvey",
+      "nombre": "tokens_443299.csv",
+      "ruta_relativa_restringida": ".local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/tokens_443299.csv",
+      "sha256": "01b585d551314ffd67347e5748c7dd822c9ca350f51f68af82a463112826ff7c",
+      "tamano_bytes": 86809,
+      "survey_id": "443299",
+      "publicable_en_git": false,
+      "contiene_datos_personales": true
+    },
+    {
+      "rol": "resultados_limesurvey",
+      "nombre": "results-survey443299.xlsx",
+      "ruta_relativa_restringida": ".local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/results-survey443299.xlsx",
+      "sha256": "90a34e639be1f1b3a92f6c0563bdd3536666090b71b9af715ecd96e59639f6f7",
+      "tamano_bytes": 478641,
+      "survey_id": "443299",
+      "publicable_en_git": false,
+      "contiene_datos_personales_sensibles": true
+    },
+    {
+      "rol": "promedios_academicos_auxiliar",
+      "nombre": "PROMEDIOSDEALUMNOS_7804.xlsx",
+      "ruta_relativa_restringida": ".local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "tamano_bytes": 27787332,
+      "publicable_en_git": false,
+      "contiene_datos_personales": true,
+      "uso": "Fuente auxiliar de contexto académico y avance curricular",
+      "trazabilidad_ejecucion": "Copiada como RAW a 01_ENTRADAS con etiqueta promedios_auxiliar"
+    }
+  ]
+}

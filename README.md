@@ -1,5 +1,22 @@
 ## Monorepo SIES
 
+### Catálogos por año y revisión de matrícula (13-10-2026)
+
+La oferta 2027 se consulta en una capa separada, sin reemplazar los catálogos ni
+las entregas de MU2026. Ver [contrato anual](docs/CATALOGOS_SIES_POR_ANIO.md) y
+[estado verificado](docs/ESTADO_CATALOGOS_Y_CONCILIACION_20261013.md).
+
+- Oferta 2027: 140 códigos únicos; 105 con alguna equivalencia interna y 35 pendientes.
+- [Revisión 6047 y DatosAlumnos](docs/REVISION_EQUIVALENCIAS_6047_20261013.md):
+  17 de las 52 pendientes iniciales completadas; 6 ambiguas y 29 sin cruce exacto.
+- Consulta 2027: modalidad por coincidencia unanime entre candidatos respaldados;
+  codigo SIES solo con candidato unico. [Regla vigente](docs/RESOLUCION_MODALIDAD_INDEPENDIENTE_2027.md).
+- La conciliación de matrícula 2026 conserva una diferencia no explicada de 226.
+- Esta capa no habilita cargas MU2027. Caracterización recibe una copia gobernada
+  para enriquecer el análisis interno 2027, sin cambiar elegibilidad ni el flujo 2026.
+- Las instrucciones históricas siguientes de recompilación MU2026 no autorizan
+  incorporar oferta 2027 en `DURACION_ESTUDIOS.tsv` ni sobrescribir congelados.
+
 Este repositorio también aloja procesos SIES adicionales al de Matrícula Unificada, organizados
 bajo `procesos/<nombre>/`, cada uno aislado con sus propios datos, config, código y tests, y
 compartiendo utilidades transversales vía `common/` (sin lógica específica de ningún proceso).

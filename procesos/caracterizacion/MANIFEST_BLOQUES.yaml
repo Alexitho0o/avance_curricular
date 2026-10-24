@@ -1,0 +1,789 @@
+version: 2
+project: CARACTERIZACION
+document_type: manifest_estructural_alineado_al_mapa_maestro
+scope: flujo_principal_caracterizacion_py
+role_in_documentation: indice_estructurado_subordinado_a_documentos_rectores
+primary_entrypoints:
+  - caracterizacion.py
+  - run_caracterizacion_fijo.sh
+governance_documents:
+  structural_root:
+    file: MAPA_MAESTRO_CARACTERIZACION.md
+    role: documento_rector_estructural
+  kpi_governance_root:
+    file: MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md
+    role: documento_rector_de_kpi_y_niveles_analiticos
+navigation_documents:
+  - README.md
+  - TVS_BLOQUES.md
+  - CONTRATOS_INVARIANTES.md
+  - GUIA_INTERVENCION_SEGURA.md
+reading_order:
+  - README.md
+  - MAPA_MAESTRO_CARACTERIZACION.md
+  - MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md
+  - MANIFEST_BLOQUES.yaml
+  - TVS_BLOQUES.md
+  - CONTRATOS_INVARIANTES.md
+  - GUIA_INTERVENCION_SEGURA.md
+support_directories:
+  backups:
+    role: respaldos_historicos_fuera_del_flujo_vigente
+    active_flow: false
+  diagnosticos:
+    role: utilidades_de_revision_puntual
+    active_flow: false
+  docs:
+    role: documentacion_auxiliar_no_rectora
+    active_flow: false
+  cuarentena_revision_manual:
+    role: artefactos_dudosos_o_vacios_pendientes_de_confirmacion
+    active_flow: false
+  archive:
+    role: historico_conservable
+    active_flow: false
+current_analytic_outputs:
+  - PREGRADO_TRAYECTORIA_CARACTERIZACION_*.xlsx
+  - POSGRADO_DIPLOMADOS_*.xlsx
+  - ENCUESTA_CARACTERIZACION_*.xlsx
+complementary_analytic_outputs:
+  - CRUCE_SIES_*.xlsx
+analytic_levels:
+  - RUT
+  - CODCLI
+  - CODCLI_PERIODO
+  - REGISTRO
+global_rules:
+  - La trayectoria principal de pregrado se gobierna por CODCLI.
+  - Los análisis personales complementarios pueden vivir a nivel RUT, pero deben declarar explícitamente ese nivel.
+  - El análisis puro del instrumento LimeSurvey no debe mezclarse con la longitudinal de matrícula.
+  - Diplomados y posgrado se mantienen fuera del libro longitudinal principal de pregrado.
+  - Los dashboards analíticos ya no salen como libros independientes; hoy están absorbidos en PREGRADO_TRAYECTORIA_CARACTERIZACION.
+  - Los campos sensibles como RUT, RUT_NORMALIZADO, FONO y CODCLI requieren tratamiento seguro para exportación Excel.
+  - CRUCE_SIES se reconoce como salida analítica complementaria real; no reemplaza ni amplía el set de tres libros finales troncales.
+shared_technical_layers:
+  - id: H10x
+    name: Helpers_longitudinales_posgrado_promedios
+    role: capa_helper_transversal_no_funcional
+    purpose: Normalización de estados, integración de promedios, blindaje de columnas sensibles en Excel y postprocesamiento visual compartido.
+    serves_blocks:
+      - B10bis
+      - B10ter
+      - B10quater
+      - B11
+      - B12
+    notes:
+      - No tratar como bloque funcional autónomo.
+      - Declarar su impacto cuando cambie contratos, salidas o dependencias compartidas.
+blocks:
+  - id: B0
+    name: Entorno, dependencias y utilidades
+    type: bootstrap
+    purpose: Preparar entorno, inputs, helpers, normalización y exportación común.
+    fronts:
+      - transversal
+    dominant_keys: []
+    inputs:
+      files: []
+      env_vars:
+        - AUTO_INSTALL_DEPS
+        - LOCAL_DEPS_DIR
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+        - VERBOSIDAD
+        - RUTA_MATRICULA
+        - RUTA_INSCRITOS
+        - RUTA_RESULTADOS
+        - RUTA_PROMEDIOS
+      in_memory: []
+    produces:
+      in_memory:
+        - helpers_fecha_y_tz
+        - helpers_normalizacion_rut_token_fono
+        - helpers_resolucion_archivos
+        - validar_archivo
+        - exportar_excel
+        - exportar_excel_rico
+        - validar_layout_matricula
+      files: []
+    depends_on: []
+    enables:
+      - B1
+      - B2
+      - B3
+      - B4
+      - B5
+      - B6
+      - B7
+      - B8
+      - B9
+      - B10
+      - B10bis
+      - B10ter
+      - B11
+      - B12
+    risk_level: alto
+    intervention_notes:
+      - No duplicar helpers ya existentes.
+      - Cambios aquí tienen efecto sistémico en todo el pipeline.
+
+  - id: B1
+    name: Matricula
+    type: fuente_base
+    purpose: Construir universo académico del período y universos auxiliares de reporte.
+    fronts:
+      - operativo
+      - academico_base
+    dominant_keys:
+      - RUT
+      - RUT_NORMALIZADO
+      - CODCLI
+    inputs:
+      files:
+        - DATOSDEALUMNOS_*
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+        - VERBOSIDAD
+        - COHORTE_TXT
+      in_memory:
+        - helpers_B0
+    produces:
+      in_memory:
+        - df_matricula
+        - df_vigentes
+        - df_eliminados
+        - df_eliminados_total
+        - df_eliminados_reporte_total
+        - df_titulados
+        - indices_posicionales_matricula
+      files:
+        - Estudiantes_matriculados_Periodo_*.xlsx
+        - Consolidado_eliminados_reporte_*.xlsx
+        - Conflictos_tokens_duplicados_vigentes_*.xlsx
+    depends_on:
+      - B0
+    enables:
+      - B2
+      - B3
+      - B4
+      - B5
+      - B6
+      - B7
+      - B10bis
+      - B10ter
+      - B11
+    risk_level: alto
+    intervention_notes:
+      - El layout posicional del archivo de matrícula es una dependencia dura.
+      - Cambios en exclusiones o cohortes impactan múltiples frentes.
+
+  - id: B2
+    name: Validacion_LimeSurvey_Local
+    type: integracion_fuentes
+    purpose: Validar tokens y resultados LimeSurvey y clasificar estado de respuesta.
+    fronts:
+      - operativo
+      - encuesta
+    dominant_keys:
+      - TOKEN
+    inputs:
+      files:
+        - tokens_923565*
+        - results-survey923565*
+        - PROMEDIOSDEALUMNOS_*
+      env_vars:
+        - RUTA_INSCRITOS
+        - RUTA_RESULTADOS
+        - RUTA_PROMEDIOS
+      in_memory:
+        - df_vigentes
+        - token_match_rut
+        - validar_archivo
+    produces:
+      in_memory:
+        - df_inscritos
+        - df_resultados
+        - estado_respuesta_por_token
+        - ruta_promedios
+      files:
+        - + Nuevos inscritos hoy_*.csv
+    depends_on:
+      - B0
+      - B1
+    enables:
+      - B3
+      - B4
+      - B5
+      - B6
+      - B8
+      - B11
+    risk_level: alto
+    intervention_notes:
+      - La clasificación SI/INCOMPLETO/NO depende de submitdate y del matching de token.
+      - No mezclar esta lógica con CODCLI sin explicitar el cruce.
+
+  - id: B3
+    name: Categorias_y_Word
+    type: salida_operativa
+    purpose: Generar informe Word de categorías especiales y resúmenes asociados.
+    fronts:
+      - operativo
+      - bienestar_apoyo
+    dominant_keys:
+      - RUT
+      - TOKEN
+    inputs:
+      files: []
+      env_vars: []
+      in_memory:
+        - df_resultados
+        - df_inscritos
+        - df_vigentes
+        - df_eliminados
+    produces:
+      in_memory:
+        - estructuras_categorias_especiales
+      files:
+        - Informe_Categorias_*.docx
+    depends_on:
+      - B1
+      - B2
+    enables:
+      - B6
+    risk_level: medio
+    intervention_notes:
+      - Comparte semántica con el frente de categorías del bloque 6.
+
+  - id: B4
+    name: Pendientes
+    type: salida_operativa
+    purpose: Exportar base de estudiantes pendientes para seguimiento.
+    fronts:
+      - operativo
+    dominant_keys:
+      - RUT
+      - TOKEN
+    inputs:
+      files: []
+      env_vars: []
+      in_memory:
+        - df_vigentes
+        - estado_respuesta_por_token
+    produces:
+      in_memory: []
+      files:
+        - Estudiantes_pendientes_*.xlsx
+    depends_on:
+      - B1
+      - B2
+    enables: []
+    risk_level: medio
+    intervention_notes:
+      - Es una salida operativa; no debe contaminar el frente analítico.
+
+  - id: B5
+    name: BD_Comunicaciones
+    type: salida_operativa
+    purpose: Construir bases de contacto general y por sede, incorporando enriquecimiento operativo de situación laboral cuando la fuente LimeSurvey lo permite.
+    fronts:
+      - operativo
+      - comunicaciones
+    dominant_keys:
+      - RUT
+      - TOKEN
+    inputs:
+      files: []
+      env_vars: []
+      in_memory:
+        - df_vigentes
+        - df_resultados
+        - estado_respuesta_por_token
+    produces:
+      in_memory: []
+      files:
+        - BD_Comunicaciones_*.xlsx
+        - BD_Comunicaciones_Santiago_*.xlsx
+        - BD_Comunicaciones_Concepcion_*.xlsx
+    depends_on:
+      - B1
+      - B2
+    enables: []
+    risk_level: medio
+    intervention_notes:
+      - Sensible a campos de contacto, sede y estado de respuesta.
+
+  - id: B6
+    name: Categorias_Especiales_Vigentes
+    type: salida_focalizada
+    purpose: Construir la lista maestra de categorías especiales para estudiantes vigentes a partir de respuestas LimeSurvey.
+    fronts:
+      - operativo_focalizado
+      - apoyo_estudiantil
+    dominant_keys:
+      - TOKEN
+      - RUT
+      - REGISTRO
+    inputs:
+      files: []
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - df_resultados
+        - df_vigentes
+        - reglas_categorias_especiales
+        - helpers_B0
+        - soporte_B3
+    produces:
+      in_memory:
+        - df_categorias_si_vig
+      files:
+        - Lista_tokens_categorias_SI_*.xlsx
+    depends_on:
+      - B1
+      - B2
+      - B3
+    enables:
+      - B6bis
+    risk_level: medio
+    intervention_notes:
+      - Mantener trazabilidad entre la base maestra de categorías y cualquier salida derivada.
+      - Cambios de esquema en df_categorias_si_vig deben validarse contra B6bis.
+
+  - id: B6bis
+    name: Financiamiento_Gratuidad
+    type: salida_focalizada_derivada
+    purpose: Materializar la salida específica de financiamiento/gratuidad a partir de la base maestra consolidada por B6, sin recalcular categorías.
+    fronts:
+      - operativo_focalizado
+      - apoyo_estudiantil
+    dominant_keys:
+      - TOKEN
+      - RUT
+      - REGISTRO
+    inputs:
+      files: []
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - df_categorias_si_vig
+        - helpers_B0
+    produces:
+      in_memory:
+        - df_financiamiento
+      files:
+        - financiamiento_*.xlsx
+    depends_on:
+      - B6
+    enables: []
+    risk_level: medio
+    intervention_notes:
+      - No recalcular lógica de categorías especiales en este bloque.
+      - Mantener correspondencia 1:1 con la salida maestra de B6.
+
+  - id: B7
+    name: KPI_Academicos
+    type: salida_operativa
+    purpose: Generar KPI académicos del período y dashboard operativo Excel.
+    fronts:
+      - operativo
+      - academico
+    dominant_keys:
+      - CODCLI
+      - cohorte
+      - agregados_academicos
+    inputs:
+      files: []
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - df_matricula
+        - df_vigentes
+        - df_titulados
+        - universos_historicos
+    produces:
+      in_memory:
+        - tablas_kpi_historicas
+      files:
+        - KPI_ACADEMICOS_*.xlsx
+    depends_on:
+      - B1
+    enables: []
+    risk_level: medio
+    intervention_notes:
+      - No confundir este dashboard con el dashboard absorbido en el libro de pregrado.
+
+  - id: B8
+    name: Analitica_Integral_Encuesta
+    type: analitica_base
+    purpose: Analizar el instrumento LimeSurvey como encuesta pura.
+    fronts:
+      - encuesta
+    dominant_keys:
+      - TOKEN
+      - pregunta
+      - subpregunta
+      - categoria
+    inputs:
+      files:
+        - results-survey923565*
+      env_vars: []
+      in_memory:
+        - df_resultados
+    produces:
+      in_memory:
+        - resultado_b8
+        - catalogo_preguntas
+        - resumen_preguntas
+        - analisis_respuestas
+        - indice_categorias
+        - temporalidad_respuestas
+        - panel_ejecutivo_encuesta
+      files: []
+    depends_on:
+      - B2
+    enables:
+      - B9
+      - B10
+    risk_level: alto
+    intervention_notes:
+      - Mantener separado del frente longitudinal de matrícula.
+      - Es una zona crítica para la estabilidad del análisis puro del instrumento.
+
+  - id: B9
+    name: Exportacion_Encuesta_Enriquecida
+    type: exportador_analitico
+    purpose: Exportar a Excel el análisis puro de encuesta con formato enriquecido.
+    fronts:
+      - encuesta
+    dominant_keys:
+      - TOKEN
+      - pregunta
+      - categoria
+    inputs:
+      files: []
+      env_vars: []
+      in_memory:
+        - resultado_b8
+    produces:
+      in_memory:
+        - resultado_b9
+      files:
+        - libro_encuesta_enriquecido_temporal
+    depends_on:
+      - B8
+    enables:
+      - B10
+    risk_level: alto
+    intervention_notes:
+      - El orden y naming de hojas es parte del contrato visible del frente encuesta.
+
+  - id: B10
+    name: Integracion_Analisis_Encuesta
+    type: orquestador_analitico
+    purpose: Orquestar B8 y B9 y producir el libro final ENCUESTA_CARACTERIZACION.
+    fronts:
+      - encuesta
+    dominant_keys:
+      - TOKEN
+    inputs:
+      files: []
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - resultado_b8
+        - resultado_b9
+    produces:
+      in_memory: []
+      files:
+        - ENCUESTA_CARACTERIZACION_*.xlsx
+    depends_on:
+      - B8
+      - B9
+    enables: []
+    risk_level: medio
+    intervention_notes:
+      - No reintroducir libros redundantes de encuesta.
+
+  - id: B10bis
+    name: Trayectoria_Longitudinal_Pregrado
+    type: analitica_maestra
+    purpose: Construir el libro maestro longitudinal de pregrado.
+    fronts:
+      - pregrado
+      - longitudinal
+    dominant_keys:
+      - CODCLI
+      - CODCLI+ANIO+PERIODO
+      - RUT
+    inputs:
+      files:
+        - DATOSDEALUMNOS_*
+        - PROMEDIOSDEALUMNOS_*
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - df_matricula
+        - df_resultados
+        - contexto_promedios
+    produces:
+      in_memory:
+        - df_codcli
+        - df_tray
+        - df_persona
+        - df_continuidad
+        - df_retencion_corte
+        - df_kpi_trayectoria
+      files:
+        - PREGRADO_TRAYECTORIA_CARACTERIZACION_*.xlsx
+    depends_on:
+      - B1
+      - B2
+    enables:
+      - B10quater
+      - B11
+      - B12
+    risk_level: muy_alto
+    intervention_notes:
+      - La trayectoria principal de pregrado se gobierna por CODCLI.
+      - No reintroducir diplomados en este universo.
+      - Declarar explícitamente cualquier análisis por RUT.
+
+  - id: B10ter
+    name: Posgrado_Diplomados
+    type: analitica_maestra
+    purpose: Construir el libro analítico separado de posgrado y diplomados.
+    fronts:
+      - posgrado
+      - diplomados
+    dominant_keys:
+      - RUT
+      - CODCLI
+    inputs:
+      files:
+        - DATOSDEALUMNOS_*
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - df_matricula
+        - helpers_estado_academico
+    produces:
+      in_memory:
+        - df_pg_rut
+        - df_pg_periodo
+        - df_kpi_pg
+      files:
+        - POSGRADO_DIPLOMADOS_*.xlsx
+    depends_on:
+      - B1
+    enables:
+      - B10quater
+    risk_level: alto
+    intervention_notes:
+      - No mezclar este frente con el longitudinal principal de pregrado.
+
+  - id: B10quater
+    name: Cruce_SIES
+    type: analitica_complementaria
+    purpose: Cruzar el reporte SIES filtrado institucionalmente contra las bases históricas internas de pregrado y diplomados, usando SIES como universo base.
+    fronts:
+      - analitica_complementaria
+      - validacion_externa
+    dominant_keys:
+      - REGISTRO
+      - RUT
+      - CODCLI
+    inputs:
+      files:
+        - EXTRACCION_MATRICULA_SIES*/salida/reporte_matricula_ip_san_sebastian.csv
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - CRUCE_SIES_BASE_HIST_PREGRADO
+        - CRUCE_SIES_BASE_HIST_DIPLOMADOS
+        - helpers_B0
+        - helpers_H10x
+    produces:
+      in_memory:
+        - RUTA_CRUCE_SIES_ANALITICO
+        - NOMBRE_CRUCE_SIES_ANALITICO
+      files:
+        - CRUCE_SIES_*.xlsx
+    depends_on:
+      - B10bis
+      - B10ter
+    enables: []
+    risk_level: alto
+    intervention_notes:
+      - Tratar SIES como universo base del cruce.
+      - No forzar el cruce si falta el reporte SIES filtrado.
+      - Validar consistencia con las bases históricas internas producidas por B10bis y B10ter.
+
+  - id: B11
+    name: Analitica_Integrada_Pregrado
+    type: analitica_complementaria
+    purpose: Construir base analítica integrada matrícula + encuesta + rendimiento y anexarla al libro final de pregrado.
+    fronts:
+      - pregrado
+      - integracion
+    dominant_keys:
+      - CODCLI
+      - TOKEN
+      - segmentos_agregados
+    inputs:
+      files:
+        - PROMEDIOSDEALUMNOS_*
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - df_vigentes
+        - df_resultados
+        - contexto_promedios
+        - RUTA_PREGRADO_ANALITICO
+    produces:
+      in_memory:
+        - base_analitica
+        - resumen_general
+        - res_sede
+        - res_jornada
+        - df_prioridades
+        - tabla_contactabilidad
+        - CTX_B11_B12
+      files:
+        - hojas_absorbidas_en_PREGRADO_TRAYECTORIA_CARACTERIZACION
+    depends_on:
+      - B1
+      - B2
+      - B10bis
+    enables:
+      - B12
+    risk_level: alto
+    intervention_notes:
+      - Hoy no debe generar un libro final separado.
+      - Mantener el contrato explícito hacia B12.
+
+  - id: B12
+    name: Dashboard_Integrado_Pregrado
+    type: dashboard_absorbido
+    purpose: Construir el dashboard gráfico ejecutivo y absorberlo dentro del libro final de pregrado.
+    fronts:
+      - pregrado
+      - dashboard
+    dominant_keys:
+      - agregados_ejecutivos
+    inputs:
+      files: []
+      env_vars:
+        - ANIO_ANALISIS
+        - PERIODO_ANALISIS
+      in_memory:
+        - CTX_B11_B12
+        - RUTA_PREGRADO_ANALITICO
+    produces:
+      in_memory: []
+      files:
+        - dashboard_absorbido_en_PREGRADO_TRAYECTORIA_CARACTERIZACION
+    depends_on:
+      - B11
+    enables: []
+    risk_level: alto
+    intervention_notes:
+      - No recrear libros separados de dashboard.
+      - Mantener compatibilidad con el workbook final de pregrado y su limpieza de artefactos obsoletos.
+document_relations:
+  README.md:
+    role: puerta_de_entrada_y_navegacion
+  MAPA_MAESTRO_CARACTERIZACION.md:
+    role: documento_rector_estructural
+  MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md:
+    role: documento_rector_de_kpi_y_niveles_analiticos
+  MANIFEST_BLOQUES.yaml:
+    role: indice_estructurado_del_sistema
+  TVS_BLOQUES.md:
+    role: lectura_tecnica_por_bloque
+  CONTRATOS_INVARIANTES.md:
+    role: capa_dura_de_reglas_e_invariantes
+  GUIA_INTERVENCION_SEGURA.md:
+    role: manual_operativo_de_cambio
+block_document_guidance:
+  B0:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION.md
+      - CONTRATOS_INVARIANTES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B1:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION.md
+      - CONTRATOS_INVARIANTES.md
+      - TVS_BLOQUES.md
+  B2:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION.md
+      - CONTRATOS_INVARIANTES.md
+  B3:
+    read_before:
+      - TVS_BLOQUES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B4:
+    read_before:
+      - TVS_BLOQUES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B5:
+    read_before:
+      - TVS_BLOQUES.md
+      - CONTRATOS_INVARIANTES.md
+  B6:
+    read_before:
+      - TVS_BLOQUES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B7:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md
+      - TVS_BLOQUES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B8:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION.md
+      - MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md
+      - TVS_BLOQUES.md
+  B9:
+    read_before:
+      - CONTRATOS_INVARIANTES.md
+      - TVS_BLOQUES.md
+  B10:
+    read_before:
+      - TVS_BLOQUES.md
+      - CONTRATOS_INVARIANTES.md
+  B10bis:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION.md
+      - MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md
+      - CONTRATOS_INVARIANTES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B10ter:
+    read_before:
+      - MAPA_MAESTRO_CARACTERIZACION.md
+      - MAPA_MAESTRO_CARACTERIZACION_KPI_GOBERNANZA.md
+      - TVS_BLOQUES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B11:
+    read_before:
+      - MANIFEST_BLOQUES.yaml
+      - CONTRATOS_INVARIANTES.md
+      - GUIA_INTERVENCION_SEGURA.md
+  B12:
+    read_before:
+      - MANIFEST_BLOQUES.yaml
+      - CONTRATOS_INVARIANTES.md
+      - GUIA_INTERVENCION_SEGURA.md
+maintenance_note:
+  - El manifest no reemplaza al mapa maestro ni a la gobernanza KPI.
+  - Su valor está en indexar bloques, dependencias y lectura previa recomendada.

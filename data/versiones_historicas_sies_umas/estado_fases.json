@@ -1,0 +1,170 @@
+{
+  "fases": [
+    {
+      "estado": "COMPLETADA",
+      "evidencia": "fase_1_20261015/inventario.json",
+      "fase": 1,
+      "hito": "H1: fuentes verificadas y brechas explícitas",
+      "nombre": "Inventario de fuentes, cobertura y claves"
+    },
+    {
+      "estado": "COMPLETADA",
+      "evidencia": "fase_2_20261015/resumen.json",
+      "fase": 2,
+      "hito": "H2: códigos, cohortes, coexistencias y cambios trazables",
+      "nombre": "Historia observada MRUN"
+    },
+    {
+      "cobertura": {
+        "anios_objetivo": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "anios_oferta_pendiente": [
+          2007,
+          2008,
+          2009
+        ],
+        "anios_oferta_reconstruida": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ]
+      },
+      "estado": "COMPLETADA_CON_BRECHA_COBERTURA",
+      "evidencia": "fase_3_20261015/resumen.json",
+      "fase": 3,
+      "hito": "H3: oferta2010–2026 reconstruida y contrastada; brecha de oferta2007–2009 explícita",
+      "nombre": "Reconstrucción de oferta histórica SIES",
+      "validacion": "fase_3_20261015/qa_fase3.json"
+    },
+    {
+      "brechas": "fase_4_20261015/brechas.json",
+      "cobertura": {
+        "anios_actividad_completa": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "historia_asignacion_efectiva": "NO_ACREDITADA",
+        "planes_catalogo": 223,
+        "planes_con_anio_y_claves": 144,
+        "planes_observados_promedios": 197
+      },
+      "estado": "COMPLETADA_CON_BRECHAS_TEMPORALES",
+      "evidencia": "fase_4_20261015/resumen.json",
+      "fase": 4,
+      "hito": "H4: catálogo y asociaciones UMAS reconstruidos; asignación efectiva histórica pendiente de evidencia",
+      "nombre": "Planes UMAS y asignaciones históricas",
+      "validacion": "fase_4_20261015/qa_fase4.json"
+    },
+    {
+      "cobertura": {
+        "candidatos_plan_sies": 513,
+        "codigos_sies": 141,
+        "planes_con_candidatos": 149,
+        "planes_umas": 236,
+        "reglas_efectivas_acreditadas": 0
+      },
+      "estado": "COMPLETADA_CON_EQUIVALENCIAS_PENDIENTES",
+      "evidencia": "fase_5_20261015/resumen.json",
+      "fase": 5,
+      "hito": "H5: maestro reproducible y reglas deterministas implementadas; certificación histórica pendiente de evidencia",
+      "limite": "Candidato no equivale a regla efectiva ni a asignación individual. No integración de motores ni modificación de Excel.",
+      "nombre": "Maestro de equivalencias gobernadas",
+      "validacion": "fase_5_20261015/qa_fase5.json"
+    },
+    {
+      "cobertura": {
+        "codigos_sies": 141,
+        "consultas_anuales_sies": 767,
+        "consultas_distintas_umas": 1349,
+        "contextos_umas": 5176,
+        "filas_consultables_umas": 125264,
+        "filas_reporte_umas": 129493,
+        "planes_umas": 236,
+        "reglas_efectivas_acreditadas": 0
+      },
+      "estado": "COMPLETADA_CON_EXCEPCIONES",
+      "evidencia": "fase_6_20261015/resumen.json",
+      "fase": 6,
+      "hito": "H6: comprobación repetible y excepciones trazadas; asignación automática de versiones históricas no habilitada",
+      "limite": "Validación técnica completada; equivalencias plan/período y asignación individual histórica no certificadas. Fases 7 y 8 pendientes.",
+      "nombre": "Piloto y validación del universo",
+      "validacion": "fase_6_20261015/qa_fase6.json"
+    },
+    {
+      "cobertura": {
+        "codigos_sies": 141,
+        "consultas_anuales_sies": 767,
+        "consultas_umas": 1349,
+        "diferencias": 0,
+        "planes_umas": 236,
+        "reglas_efectivas_acreditadas": 0
+      },
+      "estado": "COMPLETADA_CON_LIMITES",
+      "evidencia": "fase_7_20261015/resumen.json",
+      "fase": 7,
+      "hito": "H7: mismos resultados con iguales entradas y ámbito en ambos consumidores; paquete portable verificado",
+      "limite": "Integración de consulta histórica. No asignación automática de versiones, no sustitución de pipelines operativos ni regeneración de Excel.",
+      "nombre": "Integración entre proyectos",
+      "validacion": "fase_7_20261015/qa_fase7.json"
+    },
+    {
+      "cobertura": {
+        "candidatos_plan_sies": 513,
+        "codigos_sies": 141,
+        "hojas": 9,
+        "planes_umas": 236,
+        "reglas_efectivas_acreditadas": 0
+      },
+      "estado": "COMPLETADA_CON_LIMITES_DE_EVIDENCIA",
+      "evidencia": "fase_8_20261015/entrega.json",
+      "fase": 8,
+      "hito": "H8: diccionario Excel entregado con respaldo, trazabilidad y reproducción semántica verificada",
+      "limite": "Entrega completa del diccionario. Equivalencias históricas y asignación individual siguen sin acreditarse; Sector IPSS respaldado solo en 61 claves de referencia 2026.",
+      "nombre": "Excel definitivo y control de cambios",
+      "validacion": "fase_8_20261015/qa_fase8.json"
+    }
+  ],
+  "fecha_revision": "2026-10-15",
+  "nota": "H1–H8 completados con límites documentados. Diccionario Excel actualizado y respaldado en la carpeta solicitada; búsqueda gobernada por ocho parámetros UMAS, oferta anual y candidatos separados. Ninguna equivalencia plan/período ni asignación individual histórica acreditada. Sector IPSS 2026 conservado solo en 61 claves respaldadas.",
+  "secuencia": "1 → (2,3,4) → 5 → 6 → 7 → 8"
+}

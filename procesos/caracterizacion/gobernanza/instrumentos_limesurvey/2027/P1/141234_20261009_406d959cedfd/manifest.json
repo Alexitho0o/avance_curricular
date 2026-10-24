@@ -1,0 +1,33 @@
+{
+  "year": 2027,
+  "period": 1,
+  "survey_id": "141234",
+  "recorded_on": "20261009",
+  "counts": {
+    "groups": 7,
+    "questions": 91,
+    "subquestions": 138,
+    "explicit_options": 525
+  },
+  "output": "excel/Preguntas_y_respuestas_LimeSurvey_2027_P1_20261009.xlsx",
+  "output_sha256": "f6a2fad1b02f9f2b4c7cdaba5a5f5e92a682692710910cceefdc625e62478931",
+  "status": "INVENTARIO_ARCHIVADO",
+  "scope": "Definiciones del instrumento, no respuestas ni datos de estudiantes. No modifica cierre FCU 2026.",
+  "reproduction": "Ejecutar exportar_instrumento_limesurvey.py con --archivos fuentes/*.lsg y el ano/periodo registrado. El modelo portable permite construir el Excel directamente con el builder MJS archivado y Artifact Tool. Igualdad de contenido no implica identidad binaria de XLSX regenerados.",
+  "files": {
+    "excel/Preguntas_y_respuestas_LimeSurvey_2027_P1_20261009.xlsx": "f6a2fad1b02f9f2b4c7cdaba5a5f5e92a682692710910cceefdc625e62478931",
+    "export_inspect.ndjson": "9982b17a39d4f901c761ce56ef290644d7f98e1192695f9eff0dccbe222ecf90",
+    "fuentes/limesurvey_group_643.lsg": "771c42b288f244b4b40f2085bd0f192b454324d671d819b372ef57083bcedfb7",
+    "fuentes/limesurvey_group_644.lsg": "755eada0010ff379688797efcba161a2dca95a465a831918b20f464acaf3043d",
+    "fuentes/limesurvey_group_645.lsg": "beedc52c4421b188804f04f13b8a5df71f8f1b5a79f09cf67ab3701d531a4175",
+    "fuentes/limesurvey_group_646.lsg": "9f7e5033a936fb8050b8b89ede70f1f40a9b6e956fdf592b55cd75b9601c978c",
+    "fuentes/limesurvey_group_647.lsg": "ec0b036a97c416701df151bae608b8cc3581bc79eaf22ee3020f593f7f2f369c",
+    "fuentes/limesurvey_group_648.lsg": "c542de81e38c6761f40551602047ce9412aed422c871ea3f441e02e836feb93e",
+    "fuentes/limesurvey_group_649.lsg": "0c593c6297fe51b673f49f2b10d9e74e9fdac28801a82ba1e7df9cc6cb7e116a",
+    "inventory.json": "781abe1658acc14d9d787570003b7da2500ca820c3913e08871c801513b15508",
+    "previews/Detalle.png": "9ceec1aba00f4f116307ce404d6877038de8c0fe5eced2fbdb4b0631b7f2f5ec",
+    "previews/Preguntas.png": "533ff1f49619668048e842bd5fa55f11ca2bc1b72ff4b182a1346b6c7c051246",
+    "versiones_codigo/exportar_instrumento_limesurvey.mjs": "dfc3a7c3204551c308bd44bb2fce591166366ac04fcfba6fe60c5dd6b6494f4d",
+    "versiones_codigo/exportar_instrumento_limesurvey.py": "ab693cae7249224527df83f6a78939e582343c0037511d7338a4a17d483c8606"
+  }
+}

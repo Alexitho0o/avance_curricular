@@ -1,0 +1,155 @@
+{
+  "fase": 5,
+  "fecha_revision": "2026-10-15",
+  "periodo_objetivo": [
+    2007,
+    2026
+  ],
+  "referencias_congeladas": [
+    {
+      "id": "oferta_DICCIONARIO_ENTREGADO",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/DICCIONARIO_CRUCE_SIES_UMAS_2007_2026.xlsx",
+      "sha256": "4e325f7ffc601aaae7d3d6da6d41896b440839e4fa38e02dd7c0642d7a6f46dd"
+    },
+    {
+      "id": "oferta_MATRICULA_LIBRO_ANALITICO",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/MATRÍCULA UNIFICADA 2026.xlsx",
+      "sha256": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1"
+    },
+    {
+      "id": "mrun_MRUN01",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+      "sha256": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd"
+    },
+    {
+      "id": "umas_planes_re_co",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+    },
+    {
+      "id": "umas_datos_alumnos",
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    {
+      "id": "umas_promedios",
+      "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    },
+    {
+      "id": "reglas_duracion_mu2026",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    },
+    {
+      "id": "reglas_puente_compilado",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/control/catalogos/PUENTE_SIES_COMPILADO.tsv",
+      "sha256": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0"
+    },
+    {
+      "id": "reglas_motor_mu2026",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py",
+      "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+    },
+    {
+      "id": "reglas_motor_fcu2026",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187"
+    },
+    {
+      "id": "reglas_sector_ipss_motor",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/analisis_sectorizado_encuesta_ac.py",
+      "sha256": "0e6ec23d0ea21c62af91f46c7bdfe35277ba98baa316638dd5dd171661beb624"
+    }
+  ],
+  "schema_version": 1,
+  "sources": {
+    "catalogo_planes": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/catalogo_planes.json",
+      "role": "catalogo_planes",
+      "sha256": "68ff1b1907dc211b3f2315db39f0ad55a13bdaec244c8bdd08b0573c0a2eceea"
+    },
+    "cobertura_planes": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/cobertura_planes.tsv",
+      "role": "cobertura_planes",
+      "sha256": "53cc56a7ba59253f2c078445fa8f126c3c472474a09d0184ccfc1a54a8e07e89"
+    },
+    "cobertura_sies": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/cobertura_codigos.tsv",
+      "role": "cobertura_sies",
+      "sha256": "5ed18a52390be1e7c7a8fd97aec431c26426c42d890a78e0b5e49f91e8053ef2"
+    },
+    "duracion": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "role": "duracion",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    },
+    "evidencia_temporal": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/evidencia_temporal.json",
+      "role": "evidencia_temporal",
+      "sha256": "fc875c934ae0ab62c3f7f5bae91c9a12304b655bec843db56672aee3428c2389"
+    },
+    "historico_xlsx": {
+      "inventario_h1_id": "oferta_OFERTA_HISTORICA_SIES",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/01_fuentes_oficiales/historico_comparativo_sies_162/20260817_161807_sies_historico_2010_2026/Oferta_Academica_2010_al_2026_SIES_05_06_2026_WEB_E.xlsx",
+      "role": "historico_xlsx",
+      "sha256": "94d51a6752b40adb45c8eba65786ee8aad9f6667d15b3d07273a969ec4faed77"
+    },
+    "manifest_fase2": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/manifest.json",
+      "role": "manifest_fase2",
+      "sha256": "466c1990f88a09b590beb7a5b43e16000b9a5b822b489fe047e5b137fccfaded"
+    },
+    "manifest_fase3": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/manifest.json",
+      "role": "manifest_fase3",
+      "sha256": "7dd64c7326a8b8e4e0c4b539c41ec036277d6c9fc43bba57a34c67e274308317"
+    },
+    "manifest_fase4": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/manifest.json",
+      "role": "manifest_fase4",
+      "sha256": "be570c99cccaf039b0a5a48eac9f8ce9fcf01b51606c4e3b41dbdce4d109a2af"
+    },
+    "mrun_anual": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/historia_codigo_anio.tsv",
+      "role": "mrun_anual",
+      "sha256": "2c132873c57d65b661d03c22ce62b6c11a45305015b4cfda91a1f8f250658058"
+    },
+    "observaciones_planes": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/observaciones_plan_periodo.tsv",
+      "role": "observaciones_planes",
+      "sha256": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840"
+    },
+    "oferta_2026": {
+      "inventario_h1_id": "oferta_OFERTA_2026_USUARIO",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/oferta 2026.xlsx",
+      "role": "oferta_2026",
+      "sha256": "01652009ed30d19024894ab9a4e7645d7f70074d8109c4a4b30d4cb9ec275bf1"
+    },
+    "oferta_anual": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/oferta_codigo_anio.tsv",
+      "role": "oferta_anual",
+      "sha256": "dc028a6790244dc9b73a8c3b48f5ced672d0db330545fc09c48f0f24f2f46909"
+    },
+    "puente_compilado": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/control/catalogos/PUENTE_SIES_COMPILADO.tsv",
+      "role": "puente_compilado",
+      "sha256": "8980e15624d3724d8d12842721d8473a33f989e0a5edf0f776e0f9929ea9a2b0"
+    },
+    "registro_reglas": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/registro_reglas_efectivas.json",
+      "role": "registro_reglas",
+      "sha256": "7a820e1e806abb667c3b3aef372bc6dd1d34f56167865c5a4956a83ccf13e19a"
+    },
+    "snapshot_2026": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogos_sies/2026/mu2026_20261013/catalogo.json",
+      "role": "snapshot_2026",
+      "sha256": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a"
+    },
+    "verificacion_extraccion": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/verificacion_original_completa.json",
+      "role": "verificacion_extraccion",
+      "sha256": "bf8d73ed9b9af58a1ca360d2e8c7f819105eac43423f5d7aec81d618a5107db2"
+    }
+  }
+}

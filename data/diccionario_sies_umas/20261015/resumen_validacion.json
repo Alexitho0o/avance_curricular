@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "fecha": "2026-10-15",
+  "summary": {
+    "codigos": 141,
+    "codigos_sies_parseables": 139,
+    "identificadores_historicos_sin_componentes": [
+      "I162M2008N1",
+      "I162M2008N3"
+    ],
+    "oferta_2026": 124,
+    "catalogo_2026": 137,
+    "codigos_observados_mrun": 106,
+    "equivalencias": 257,
+    "historico_oferta": 747,
+    "historico_mrun": 472,
+    "historico_anual": 1219,
+    "ejemplos_umas": 159,
+    "estados_ejemplos": {
+      "AMBIGUO": 26,
+      "Sin catálogo anual verificado": 64,
+      "RESUELTO": 52,
+      "SIN_EQUIVALENCIA": 17
+    },
+    "codigos_con_equivalencia_sin_ejemplo_umas": [
+      "I162S2C53J3V1",
+      "I162S2C66J4V1",
+      "I162S2C69J4V1",
+      "I162S2C70J4V1"
+    ],
+    "fuentes": 23,
+    "reglas": 35
+  },
+  "validation": {
+    "union_completa": true,
+    "codigos_unicos": true,
+    "nombres_literales_oferta_preservados": true,
+    "equivalencias_sin_duplicados": true,
+    "componentes_historicos_no_inventados": true,
+    "anios_ejemplos_2007_2026": true,
+    "sin_identificadores_personales_en_esquema": true,
+    "condiciones_ingreso_vacias_reales": true,
+    "sin_ejemplos_inventados": true,
+    "modalidad_y_tipo_plan_codificados_desde_campos_explicitos": true,
+    "consulta_ambigua_CILOG": [
+      "I162S2C77J4V1",
+      "I162S2C77J4V2"
+    ],
+    "consulta_unica_ILOG": [
+      "I162S2C77J4V1"
+    ]
+  },
+  "evidencia_json": [
+    {
+      "archivo": "oferta2026.json",
+      "sha256": "8d784fd5f67713cd3af7f1d1ac1f19b1a118a6468eead17a140d6e4f051110b3"
+    },
+    {
+      "archivo": "oferta_historica.json",
+      "sha256": "7b81966f17ec42dad073e5a1fb0391822b525be8065dd37cc0f0256c1b4d86e4"
+    },
+    {
+      "archivo": "mrun_programas.json",
+      "sha256": "2a679aa09e2850824a2af0ba59c6f3093b385b42bd00c32c2816e762ceef1ac4"
+    },
+    {
+      "archivo": "puente_expandido.json",
+      "sha256": "609ffeec6e57935adc80577010e9b111865a911655c2f0d55cc73ed4dfeccf83"
+    },
+    {
+      "archivo": "ejemplos_umas.json",
+      "sha256": "4ee37fdf03da5971c316f9b6881c53d41b7dbcacf8ede11cea7d0c12d06e7c34"
+    },
+    {
+      "archivo": "reglas_version.json",
+      "sha256": "2d6c1d00b3e3b420759ac3f2260e58c66feb33c0a040f6f9d539f29cc4f2c1b6"
+    },
+    {
+      "archivo": "caracterizacion_reglas_y_fuentes.json",
+      "sha256": "49150a4829060f1356311771e3e621ed251b17796ccd3fc88217c5b08403d03b"
+    }
+  ]
+}

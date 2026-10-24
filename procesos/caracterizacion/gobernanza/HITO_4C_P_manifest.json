@@ -1,0 +1,114 @@
+{
+  "hito": "HITO 4C-P",
+  "fecha": "2026-07-15",
+  "rama": "main",
+  "head_inicial": "2c35809bf3fc7e2ad05c9dd159881434f04bbe32",
+  "head_final": "2c35809bf3fc7e2ad05c9dd159881434f04bbe32",
+  "arquitectura": {
+    "caracterizacion": "proceso dinamico del periodo en ejecucion",
+    "sies": "historico versionado, solo lectura, no dinamico",
+    "longitudinal": "modulo independiente por opt-in",
+    "declaracion": "CARACTERIZACION -> usa -> SIES VERSIONADA -> NO RECONSTRUIDA -> NO DINAMICA"
+  },
+  "sies": {
+    "version_utilizada": "SIES_2007_2025_v1",
+    "anio_inicio_historico": 2007,
+    "anio_fin_historico": 2025,
+    "total_registros": 20961,
+    "total_carreras": 83,
+    "total_filas_agregadas": 406,
+    "estado": "VIGENTE",
+    "archivo_origen_sha256": "1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6"
+  },
+  "estado_componentes": {
+    "caracterizacion": "OK",
+    "sies_versionada": "OK",
+    "longitudinal_desacoplado": "OK",
+    "sectorizado_ac": "OK"
+  },
+  "archivos_modificados_o_nuevos": [
+    "analisis_sectorizado_encuesta_ac.py",
+    "caracterizacion.py",
+    "caracterizacion_runtime.py",
+    "caracterizacion_retencion.py",
+    "caracterizacion_longitudinal.py",
+    "caracterizacion_sies_historico.py",
+    "gobernanza/sies/HISTORICO_SIES_MANIFEST.json",
+    "gobernanza/sies/HISTORICO_SIES_AGREGADOS.csv",
+    "scripts/auditar_hito_4c_p.py",
+    "tests/test_hito4c_separacion_dominios.py",
+    "tests/test_caracterizacion_runtime.py",
+    "gobernanza/HITO_4C_P.md",
+    "gobernanza/HITO_4C_P_manifest.json",
+    "gobernanza/HITO_4C_P_auditoria.json"
+  ],
+  "pruebas": {
+    "py_compile": "OK",
+    "pytest": "180 passed, 96 subtests passed",
+    "auditor_hito_4c_p": "OK",
+    "bash_n": "OK",
+    "git_diff_check": "OK"
+  },
+  "resultados_regresion": {
+    "run_dir": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK",
+    "log": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK/03_LOGS/run_financiamiento_2026_P2_20260715_172021_HITO4C_OK.log",
+    "manifest_ejecucion": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK/04_AUDITORIA/manifest_ejecucion.json",
+    "estado": "OK",
+    "codigo_salida": 0,
+    "pipeline_completo": true,
+    "ultimo_bloque": "BLOQUE 12",
+    "modo_corte": "NINGUNO",
+    "vigentes": 627,
+    "respuesta_si": 285,
+    "respuesta_incompleta": 2,
+    "respuesta_no": 340,
+    "sectorizado_filas": 627,
+    "sectorizado_codcli_duplicados": 0,
+    "ac_con_datos": 506,
+    "ac_sin_datos": 121,
+    "futurewarning_detectado": false,
+    "traceback_detectado": false
+  },
+  "salidas": {
+    "sectorizado_ac": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK/02_SALIDAS/ENCUESTA_CARACTERIZACION_2026_P2_20260715_ANALISIS_SECTORIZADO_AC.xlsx",
+    "auditoria_sectorizado_ac": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK/02_SALIDAS/AUDITORIA_CALIDAD_SECTORIZADO_AC_2026_P2_20260715.xlsx",
+    "cruce_sies_versionado": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK/02_SALIDAS/CRUCE_SIES_2026_P2_20260715.xlsx",
+    "pregrado_trayectoria": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-15/2026_P2_172021_HITO4C_OK/02_SALIDAS/PREGRADO_TRAYECTORIA_CARACTERIZACION_2026_P2_20260715.xlsx",
+    "auditoria_hito_4c": "gobernanza/HITO_4C_P_auditoria.json"
+  },
+  "validaciones_funcionales": {
+    "caracterizacion_sin_retencion": true,
+    "caracterizacion_sin_recalcular_sies": true,
+    "historico_sies_estable_p1_p2_p3": true,
+    "pipeline_bloque_12": true,
+    "sectorizado_generado": true,
+    "sectorizado_universo_627": true,
+    "sies_sin_cruces_individuales": true,
+    "longitudinal_no_exportado_por_defecto": true,
+    "manifest_declara_sies_versionada": true
+  },
+  "advertencias": [
+    "La trayectoria academica interna se conserva para antecedentes AC/Sectorizado, pero no se exportan productos de continuidad o retencion sin opt-in.",
+    "La actualizacion de SIES debe realizarse solo con nueva fuente oficial y accion explicita."
+  ],
+  "hashes_sha256": {
+    "analisis_sectorizado_encuesta_ac.py": "a23636794a4fb3000dc18c16c7d8de067eb3fcd5956e1a4829a9135bd6ee1c59",
+    "caracterizacion.py": "16c2be56c7029b230ea91d7b280ce45e5156d32dac38f2536c77535eea38af28",
+    "caracterizacion_runtime.py": "2032b3124323a0908b4841b768760ae29d8b4d90b0759089a6c74d45980d9de6",
+    "caracterizacion_sies_historico.py": "1aa524f4f1f68a6c0cac37e5ca3ef7311367b068661f4f4548bb9f26d97bdeb4",
+    "gobernanza/sies/HISTORICO_SIES_MANIFEST.json": "241e3c688e519725ef2893ba5ba71f3a7798c8e427b7bd6bf438fc3485ab31f6",
+    "gobernanza/sies/HISTORICO_SIES_AGREGADOS.csv": "ce150371224daadbef430041b4a60d34427a3158f6ccd9fe9c5d2df17b31a848",
+    "scripts/auditar_hito_4c_p.py": "38a577673f6ee4beb0dad25ae9dcdb9f9201e8fb033a32508a0293229d908613"
+  },
+  "git": {
+    "sin_git_add": true,
+    "sin_commit": true,
+    "sin_push": true,
+    "sin_pull": true,
+    "sin_merge": true,
+    "sin_rebase": true,
+    "sin_reset_hard": true,
+    "sin_clean": true
+  },
+  "dictamen": "HITO 4C-P: RESUELTO"
+}

@@ -1,0 +1,80 @@
+{
+  "fecha_exploracion": "2026-05-04T14:53:56",
+  "ruta_proyecto": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+  "archivo_explorado": "/Users/alexi/Desktop/ENCUESTA_CARACTERIZACION_2026_P1_20260504.xlsx",
+  "hoja_explorada": "Analisis_respuestas",
+  "filas_dataframe": 5359,
+  "columnas_dataframe": 13,
+  "columnas_detectadas": [
+    "ANÁLISIS_DE_RESPUESTAS",
+    "Unnamed:_1",
+    "Unnamed:_2",
+    "Unnamed:_3",
+    "Unnamed:_4",
+    "Unnamed:_5",
+    "Unnamed:_6",
+    "Unnamed:_7",
+    "Unnamed:_8",
+    "Unnamed:_9",
+    "Unnamed:_10",
+    "Unnamed:_11",
+    "Unnamed:_12"
+  ],
+  "columnas_numericas": [],
+  "columnas_categoricas": [
+    "ANÁLISIS_DE_RESPUESTAS",
+    "Unnamed:_1",
+    "Unnamed:_2",
+    "Unnamed:_3",
+    "Unnamed:_4",
+    "Unnamed:_5",
+    "Unnamed:_6",
+    "Unnamed:_7",
+    "Unnamed:_8",
+    "Unnamed:_9",
+    "Unnamed:_10",
+    "Unnamed:_11",
+    "Unnamed:_12"
+  ],
+  "columnas_fecha": [],
+  "columnas_nulos_altos": [
+    "Unnamed:_4",
+    "Unnamed:_8"
+  ],
+  "columnas_alta_cardinalidad_o_problematicas": [
+    "Unnamed:_4: alto_nulo(79.51%)",
+    "Unnamed:_7: texto_largo",
+    "Unnamed:_8: alto_nulo(79.51%)"
+  ],
+  "columnas_excluidas_sugeridas": [
+    "Unnamed:_7: texto_largo"
+  ],
+  "ruta_html_generado": null,
+  "criterios_seleccion": {
+    "excel": "forzado_por_parametro_cli",
+    "hoja": {
+      "ruta_excel": "/Users/alexi/Desktop/ENCUESTA_CARACTERIZACION_2026_P1_20260504.xlsx",
+      "hoja_seleccionada": "Analisis_respuestas",
+      "criterio_seleccion": "auto",
+      "filas_originales": 5360,
+      "columnas_originales": 13,
+      "filas_cargadas": 5359,
+      "columnas_cargadas": 13,
+      "advertencias": []
+    },
+    "candidatos_excel": [
+      {
+        "ruta": "/Users/alexi/Desktop/ENCUESTA_CARACTERIZACION_2026_P1_20260504.xlsx",
+        "nombre": "ENCUESTA_CARACTERIZACION_2026_P1_20260504.xlsx",
+        "puntaje": null
+      }
+    ]
+  },
+  "advertencias": [],
+  "errores_controlados": [],
+  "proximos_pasos_sugeridos": [
+    "Revisar combinaciones de columnas de segmentación y métricas numéricas.",
+    "Usar hallazgos para fortalecer gráficos del Excel final institucional.",
+    "No sustituir reportes productivos por salidas PyGWalker."
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "ID": "H-D4-01",
+    "Hipótesis": "Primera oferta del Código Único completo define el inicio del diccionario.",
+    "Conclusión": "REGLA_INTERNA_SUSTENTADA_CON_LIMITE_DE_COBERTURA",
+    "Evidencia": "Se aplica por código, sin exigir matrícula o quórum. Hay oferta para 139 de 141 códigos; ocho aparecen ya en 2010.",
+    "Límite de uso": "2010 es límite de la fuente, no nacimiento probado. Dos códigos sin oferta mantienen inicio vacío. No sustituye Año Inicio formal.",
+    "Fuente en proyecto": "docs/unificacion_proyectos_y_reglas_negocio_20261015.md; data/reglas_negocio/20261015/inicios_por_codigo.json"
+  },
+  {
+    "ID": "H-D4-02",
+    "Hipótesis": "Regular y continuidad se pueden separar por perfil, tipo y duración.",
+    "Conclusión": "SUSTENTADA_EN_PERFILES_GOBERNADOS",
+    "Evidencia": "Logística J4 V1 regular: 8 semestres, primera oferta 2024; V2 continuidad: 4 semestres, primera oferta 2025.",
+    "Límite de uso": "Son programas distintos aunque el nombre literal coincida. La referencia 2026 no acredita por sí sola el perfil histórico.",
+    "Fuente en proyecto": "data/cierre_d2/20261016/logistica_oferta_anual.json"
+  },
+  {
+    "ID": "H-D4-03",
+    "Hipótesis": "Cada versión SIES equivale obligatoriamente a una malla UMAS.",
+    "Conclusión": "REFUTADA_COMO_REGLA_GENERAL",
+    "Evidencia": "Manual Oferta-Acceso 2027, Anexo 5, pp. 65–66, permite cambios curriculares sin alterar los atributos protegidos del código.",
+    "Límite de uso": "No igualar V, orden de primera oferta y número de malla. Requiere catálogo y vigencia curricular por episodio; no aplicar manual 2027 retroactivamente.",
+    "Fuente en proyecto": "docs/unificacion_proyectos_y_reglas_negocio_20261015.md; data/reglas_negocio/20261015/fuentes.json"
+  },
+  {
+    "ID": "H-D4-04",
+    "Hipótesis": "Cambiar solo régimen semestral a trimestral exige siempre nuevo código.",
+    "Conclusión": "REFUTADA_COMO_REGLA_GENERAL",
+    "Evidencia": "34 de 103 códigos comunes 2026–2027 cambian régimen manteniendo código y duraciones formales. Manuales distinguen régimen y duración en semestres.",
+    "Límite de uso": "No deducir conversión universal. I162S2C35J4V1 cambia duración 2018–2019 sin código nuevo: causa histórica pendiente.",
+    "Fuente en proyecto": "data/reglas_negocio/20261015/comparacion_regimen_2026_2027.json; docs/unificacion_proyectos_y_reglas_negocio_20261015.md"
+  },
+  {
+    "ID": "H-D4-05",
+    "Hipótesis": "Solo antiguos permite ordenar admisión y delimitar automáticamente cada cohorte UMAS.",
+    "Conclusión": "UTILIDAD_ANUAL_SUSTENTADA_ASIGNACION_AUTOMATICA_NO_DEMOSTRADA",
+    "Evidencia": "14 de 16 conflictos presentan coexistencia nuevos/antiguos; dos solo antiguos. Cinco contienen discrepancias de ingreso documentadas.",
+    "Límite de uso": "Se consulta el año exacto; I162S2C1J4V1 declara solo antiguos en 2020 y nuevos en 2022. No es cierre irreversible ni fecha de ingreso UMAS.",
+    "Fuente en proyecto": "data/cierre_d2/20261016/expedientes_16.json"
+  },
+  {
+    "ID": "H-D4-06",
+    "Hipótesis": "ANOINGRESO o la primera presencia disponible identifica el ingreso a continuidad.",
+    "Conclusión": "INSUFICIENTE_COMO_REGLA_UNICA",
+    "Evidencia": "La regla interna advierte ingreso heredado del técnico. CILOG contiene episodios nuevos con presencia anterior de la misma persona/carrera.",
+    "Límite de uso": "Separar persona, expediente, carrera e ingreso del episodio. Ausencia de técnico en un extracto no demuestra procedencia externa.",
+    "Fuente en proyecto": "data/cierre_d2/20261016/cilog.json"
+  },
+  {
+    "ID": "H-D4-07",
+    "Hipótesis": "MRUN y demografía permiten certificar identidad y versión usando sexo, nacimiento y totales.",
+    "Conclusión": "UTILIDAD_PARA_CANDIDATURAS_SIN_CERTIFICACION",
+    "Evidencia": "La capa demográfica acota candidatos y permite contraste conjunto; B5 reserva personas separadas de construcción.",
+    "Límite de uso": "No existe certificación individual ni nueva validación independiente D3. Igualdad de totales no obliga una biyección ni demuestra vigencia de malla.",
+    "Fuente en proyecto": "docs/capa_demografica_20261016.md; docs/b5_reglas_historicas_20261016.md; data/validacion_d3/20261016/resumen.json"
+  },
+  {
+    "ID": "H-D4-08",
+    "Hipótesis": "Una regla corroborada puede transportarse automáticamente a otros años.",
+    "Conclusión": "REFUTADA_POR_EL_ENSAYO_DE_TRANSPORTE",
+    "Evidencia": "Ensayo 2018–2020 hacia 2022: 152 coincidencias, 59 contradicciones, seis conflictos y 720 sin regla sobre 937 consultas.",
+    "Límite de uso": "Conservar año exacto y condiciones completas. No escoger K1–K3 caso a caso para superar un conflicto K0.",
+    "Fuente en proyecto": "docs/b5_reglas_historicas_20261016.md"
+  },
+  {
+    "ID": "H-D4-09",
+    "Hipótesis": "Las discrepancias de admisión se explican porque los estudiantes fueron eliminados.",
+    "Conclusión": "NO_DEMOSTRADA",
+    "Evidencia": "En cinco contextos hay seis observaciones persona/estrato: cuatro con estado actual eliminado y dos titulado.",
+    "Límite de uso": "El estado actual no prueba el estado al informar SIES ni explica la causa. No sumar observaciones como personas únicas.",
+    "Fuente en proyecto": "data/cierre_d2/20261016/cierre.json"
+  }
+]

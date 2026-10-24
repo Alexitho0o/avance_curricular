@@ -563,3 +563,182 @@ verificados. Copia versionada en
 `outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20260930_140000/`.
 
 Verificado por: Claude, 2026-09-30.
+
+## Adenda 6 — corrección del menú fijo, rediseño de hoja 4, gobernanza de color e índice consolidado (2026-09-30)
+
+El usuario reportó, con el archivo abierto en Excel, que la columna de índice (columna A) "se pierde"
+al desplazarse hacia abajo en cualquier hoja, e instruyó revisar visualmente el archivo abierto y
+completar el resto de lo pendiente sin más intervención suya. Verificado en vivo (captura del archivo
+realmente abierto del usuario, no una copia) antes de corregir.
+
+**1. Corrección del error reportado (clasificación C).** Causa raíz: `freeze_panes="B1"` (Adenda 5)
+solo inmoviliza la columna A horizontalmente; no inmoviliza ninguna fila, así que el contenido de la
+columna A sigue desplazándose verticalmente con el resto de la hoja. La fórmula correcta para dejar
+fijo un bloque columna+filas es `freeze_panes="B{N+1}"`, donde N es la última fila ocupada por el
+menú — inmoviliza columna A y las filas 1..N como una sola región en "L". Aplicado en las 14 hojas que
+usan el menú estándar (todas excepto la hoja 11, que conserva su propio menú lateral en la columna AJ,
+ya documentado y aceptado por el usuario en la Adenda 5).
+
+**2. Menú "siempre abierto" (clasificación C), en reemplazo del menú contextual de la Adenda 5.** El
+menú anterior solo expandía los sub-enlaces de hoja 4 o hoja 14 al estar parado en esa hoja; ahora las
+15 (16 desde el punto 7) hojas muestran el índice completo con los 27 ítems siempre visibles (15/16
+hojas principales + 3 sub-enlaces de hoja 4 + 9 sub-enlaces de hoja 14), resaltando en ámbar la hoja
+actual. El bloque del menú ahora ocupa las filas 4-31 (antes 4-24 aprox.), por lo que
+`freeze_panes` quedó en `B32` (antes `B25` aprox.) en las hojas con el menú estándar.
+
+**3. Reconstrucción completa de la hoja 4 (Resultados por sector) (clasificación C).** Mismo patrón
+cursor "tabla → gráfico → conclusión" ya usado en la hoja 14 (Adenda 4): Tabla A (sector × año) y
+Tabla B (interna vs. SIES 2025) con su gráfico reubicado inmediatamente debajo de cada tabla (antes
+los gráficos estaban desalineados de sus tablas), tamaño uniforme 6×15 cm en ambos, etiquetas de dato
+visibles, texto de las tablas centrado, y un bloque de conclusión (clasificación B, dato observado)
+después de cada tabla. Conclusión de la Tabla A: Tecnologías es el único sector con serie completa
+2022-2025 sin discontinuidades. Conclusión de la Tabla B: la brecha interna vs. SIES 2025 es menor a
+0,4 pp en los tres sectores (Tecnologías 0,12 pp; Administración y Comercio −0,39 pp; Salud 0 pp).
+
+**4. Gobernanza de color institucional (clasificación A, aplicada; ver
+`governanza/marca/PALETA_INSTITUCIONAL_IPSS.md`, creado en sesión previa).** El color "navy"
+`#1E2761` usado de forma aproximada en todo el libro (menú, títulos, pestañas, gráficos) no es ningún
+color oficial del manual de marca. Se reemplazó en todo el archivo por Azul Institucional real
+`#102B42`: estilos, colores de pestaña de las 15/16 hojas y series de gráficos. Además se detectó y
+corrigió un caso adicional no cubierto por el reemplazo global: el gráfico original de la hoja 4
+(construido por una versión anterior del script, antes de existir la gobernanza de color) usaba
+`#028090` (teal) y `#B85042` (terracota) para Administración y Comercio y Salud — no son colores
+institucionales. Se corrigieron a `#CFB47C` (Dorado Institucional) y `#0077B6` (Azul Medio)
+respectivamente, según la asignación por dimensión ya gobernada en la sección B de ese archivo.
+
+**5. Logotipo institucional en Portada (clasificación C).** Insertado `logo_ipss_horizontal.png`
+(entregado por el usuario en sesión previa, gobernado en `governanza/marca/`), redimensionado a
+340×79 px, anclado sobre el título existente. No requirió recálculo de LibreOffice (inserción pura
+vía openpyxl, sin tocar fórmulas).
+
+**6. Corrección de un dato desactualizado (clasificación B, dato observado; afecta a un texto
+introducido en la Adenda 4).** El texto de conclusión de "Nivel 6 — Carrera × Modalidad" (hoja 14)
+indicaba como peor combinación "Ingeniería en Administración de Empresas — Presencial (35,0%, 20
+casos)". Al recalcular las fórmulas vigentes (posteriores a la corrección de fórmula inconsistente de
+la Adenda 5) se confirmó que el mínimo real es "Técnico en Administración de Empresas — Presencial"
+(31,25 %, 16 casos, 5 retenidos); la combinación de Ingeniería es la segunda peor, no la peor. Se
+corrigió el texto en el bloque de Nivel 6 y en la lista de Conclusiones generales.
+
+**7. Nueva hoja 15 "Tablas ejecutivas consolidadas" (clasificación C), a pedido explícito del
+usuario ("que quede todo en una hoja con todas las columnas hacia la derecha... menos la 11... ni la
+9 tampoco").** 16 bloques de tabla colocados uno al lado del otro mediante fórmulas en vivo (referencia
+celda a celda a la hoja de origen, sin copiar valores): hoja 4 (Tablas A y B), hoja 5 (evolución
+institucional), hoja 12 (las 4 sub-tablas A/B/C/D) y hoja 14 (los 9 bloques de Nivel 1 a Vista). Se
+excluyeron la hoja 9 (base analítica, demasiado granular) y la hoja 11 (base RAW) por instrucción
+directa del usuario. Cada bloque conserva formato de número propio (porcentaje, entero o brecha en pp,
+según su encabezado) y se convirtió en Tabla nativa de Excel con nombre único (`T_CONS_*`) para poder
+filtrar/ordenar cada bloque de forma independiente. El menú de navegación se actualizó a 16 hojas y se
+agregó como último ítem del índice en las 15 hojas existentes (excepto hoja 11).
+
+**8. Archivos de gobernanza de marca, comiteados en esta adenda.** `logo_ipss_horizontal.png`,
+`Manual_de_Marca_IP_San_Sebastian.pdf` y `PALETA_INSTITUCIONAL_IPSS.md` (los tres en
+`governanza/marca/`) existían en el repositorio desde una sesión previa pero no habían sido agregados
+a git todavía. `git status`/`git diff`/`git ls-files -m` fallan sistemáticamente en este repositorio
+con "Bus error" (código de salida 135) al ejecutarse a través del puente al equipo del usuario —
+reproducido en múltiples intentos, no es transitorio; reportado al usuario como limitación del entorno,
+no del repositorio. Se usó `git ls-files --others --exclude-standard` (no falla) para confirmar que
+estos tres archivos eran, en efecto, los únicos no rastreados antes de agregarlos.
+
+**Pendiente:** confirmación del usuario de que la corrección del punto 1 resuelve el error reportado
+al cerrar sin guardar y reabrir el archivo; verificación visual de la hoja 15 (recién creada, sin
+revisión visual todavía, solo estructural); recálculo/QA final si se agregan más cambios sobre esta
+misma versión.
+
+Archivo final: `RETENCION_IPSS_ANALISIS_2022_2026.xlsx`, SHA-256
+`270dbb7a28c9f0fa04d19a607412bdc8d7e9933d4f2dad850f7ee0250cfc6cc6`, 16 hojas, 11 gráficos preservados,
+0 errores de fórmula tras recálculo con LibreOffice headless, hipervínculos internos verificados
+(0 relaciones externas espurias tras la corrección del defecto de recálculo descrito en la Adenda 5).
+
+Verificado por: Claude, 2026-09-30.
+
+## Adenda 7 — rediseño lado a lado de hoja 4, 5 y 14 (patrón hoja 15), eliminación del menú fijo y fixes globales (2026-09-30)
+
+**Motivación (decisión del usuario, clasificación D).** El menú fijo con `freeze_panes` (vertical,
+Adenda 2, y un intento posterior horizontal en fila 4, no comiteado) se descartó por completo: el
+usuario reportó que cualquier fila/columna congelada compartida por todo el libro queda distorsionada
+por el ancho natural de alguna columna de datos (ej. "Tasa SIES publicada" en hoja 5 ensanchando la
+celda del menú en F4). Decisión explícita: "no más experimentos de índice fijo, ni vertical ni
+horizontal, ni macro". Además, el usuario pidió replicar el patrón visual de la hoja 15
+(tabla → gráfico 8,8×4,3 cm debajo → conclusión debajo del gráfico, bloques lado a lado) en las hojas
+4, 5 y 14, confirmando explícitamente "lado a lado como la hoja 15 literalmente" al descartar mi
+propuesta alternativa de apilado vertical con ancho uniforme.
+
+**1. Hoja 4 (Resultados por sector) — reconstrucción completa (clasificación C).** Tabla A
+(sector × cohorte, `B6:F18`) y Tabla B (interna vs. SIES 2025, `H6:O9`) lado a lado, cada una con su
+gráfico 8,8×4,3 cm inmediatamente debajo y su conclusión debajo del gráfico. Encabezado "Año"
+renombrado a "Cohorte" (ver punto 5). Corregidos los formatos de celda que faltaban: `F7` sin
+porcentaje y las columnas E/H/I de la Tabla B sin formato (quedaron en `General`) — ahora todas usan
+el formato de porcentaje gobernado (ver punto 6).
+
+**2. Hoja 5 (Evolución institucional) — reconstrucción completa (clasificación C).** Mismo patrón,
+un solo bloque (`B6:G10`), gráfico de líneas interna vs. SIES publicada. Encabezado "Año" renombrado
+a "Cohorte". Corregido el separador de miles chileno faltante en Casos/Retenidos internos (ej. "1150"
+→ "1.150", formato `#,##0`).
+
+**3. Hoja 14 (Vistas ejecutivas) — reconstrucción completa de los 9 bloques (clasificación C).**
+Niveles 1, 2, 4, 5, 6, 7 (Jornada/Sexo/Edad) y Vista (mejor/peor por dimensión) reubicados lado a lado,
+cada uno con su tabla nativa, gráfico 8,8×4,3 cm debajo (en Nivel 5 y 6 el alto se multiplicó ×2,4 y
+×3,6 respectivamente por la cantidad de categorías) y conclusión debajo del gráfico.
+
+Al mover cada bloque de columna se detectó y corrigió un error real de relocalización de fórmulas
+(clasificación C, defecto propio de esta sesión, no del dato): el método inicial solo desplazaba el
+número de fila dentro de cada fórmula, no la letra de columna. Como los 9 bloques vivían originalmente
+todos en las mismas columnas B-F (diseño apilado verticalmente), sus fórmulas usaban referencias
+propias como `$B30`, `D30/C30` asumiendo esas columnas; al reubicar un bloque a, por ejemplo,
+columnas G-J, esas referencias propias seguían apuntando a B-F (el bloque de Nivel 1), no a las
+columnas nuevas del propio bloque. Se corrigió antes de guardar cualquier versión entregada: la
+función de relocalización ahora desplaza columna y fila juntas para toda referencia local a la propia
+hoja, y protege explícitamente (sin tocar) los rangos fijos calificados con nombre de hoja
+(`9_Base_Analitica_Detalle!$B$7:$B$2385` y similares), que no son relativos al bloque. Verificado
+celda por celda (primera y última fila de cada uno de los 9 bloques) contra las fórmulas originales
+antes de continuar.
+
+El bloque "Vista" (comparación mejor/peor por dimensión) depende de las celdas de los otros 8 bloques
+ya reubicados; se reconstruyó en un segundo paso, una vez conocidas las posiciones finales de cada
+bloque, preservando el texto literal de las conclusiones (dato B, observado) ya redactadas en
+adendas previas.
+
+**4. Hoja 15 (Tablas ejecutivas consolidadas) — reconstruida referenciando las nuevas posiciones
+(clasificación C).** Los 16 bloques de fórmulas en vivo (hoja 4 A/B, hoja 5, hoja 12 A-D, hoja 14
+Niveles 1 a Vista) se actualizaron para apuntar a las celdas nuevas de hoja 4/5/14 tras el rediseño.
+Sin cambios de alcance respecto a la Adenda 6 (mismos 16 bloques, misma exclusión de hoja 9 y hoja 11).
+
+**5. "Año" → "Cohorte" (clasificación A, aplicada; definición ya confirmada en hoja 3 — "¿Cómo se
+hace el cruce?").** Un estudiante entra al cálculo del año X cuando su año de ingreso es igual a X:
+es, por definición, una cohorte (grupo que ingresó el mismo año), no un año calendario suelto.
+Renombrado en hoja 4 Tabla A, hoja 5, y hoja 12 Tablas B/C/D (3 encabezados). Hoja 14 ya usaba
+"Cohorte" correctamente desde una adenda previa.
+
+**6. Regla de formato: 100 % sin decimal (clasificación D, decisión explícita del usuario — "cuando
+el porcentaje es 100% no es 100,0% es 100%, porque el 100 es absoluto para este contexto").** Formato
+de número nuevo `[=1]0%;0.0%`: la sección `[=1]` se aplica cuando el valor subyacente es exactamente 1
+(100 %) y lo muestra sin decimales; cualquier otro valor usa un decimal, como antes. Aplicado en todas
+las celdas que antes usaban `0.0%`, en todo el libro (273 celdas).
+
+**7. Navegación — eliminación completa del menú fijo, enlace único suelto (clasificación D, decisión
+explícita del usuario, "opción 2: dejar un único enlace 🏠 suelto, sin congelar").** Se quitó
+`freeze_panes` de las 15 hojas que lo tenían (hoja 11 conserva el suyo propio, `A5`, sin relación con
+este menú) y se eliminó todo el contenido del menú de 27 ítems en la columna A. En su lugar, cada una
+de las 15 hojas (todas excepto hoja 11) tiene un único hipervínculo interno "🏠 Portada / Índice" sin
+congelar, ubicado en `A1` (hojas donde A1 estaba libre: Portada, 1-10, 15) o `A3` (hojas 12, 13, 14,
+donde A1 ya tiene el título propio de la hoja).
+
+**8. Otros fixes globales pendientes de adendas anteriores, resueltos en esta (clasificación C).**
+`N° Documento` (hoja 9, columna H, 2.379 celdas) y `N_DOC` (hoja 11, columna C, 10.200 celdas)
+convertidos de texto a número (ya no muestran el triángulo de advertencia "número almacenado como
+texto"; se verificó primero que el 100 % de los valores en ambas columnas son dígitos puros, sin
+excepciones). Centrado aplicado a hoja 12 (las 4 tablas A-D, 560 celdas) y hoja 13 (sección A y
+sección B, 1.084 celdas), que no habían quedado centradas en adendas previas.
+
+**Pendiente:** verificación visual del usuario del nuevo diseño lado a lado en hoja 4, 5 y 14 (recién
+entregado, sin revisión visual todavía — solo verificación estructural: fórmulas, tablas nativas,
+tamaño de gráfico en EMU, formatos de número).
+
+Archivo final: `RETENCION_IPSS_ANALISIS_2022_2026.xlsx`, SHA-256
+`dd6e1f3799da5e9d08a18e0b50c5acdea75d4f82b34a5876d8daf109e603b0d4`, 16 hojas, 11 gráficos preservados
+(mismos gráficos de la Adenda 6, solo reubicados — 2 en hoja 4, 1 en hoja 5, 8 en hoja 14), sin
+`freeze_panes` residual en las 15 hojas rediseñadas, sin relaciones externas espurias en los
+hipervínculos internos tras el recálculo con LibreOffice headless, SHA-256 verificado directamente en
+el equipo del usuario tras la entrega (coincide exacto).
+
+Verificado por: Claude, 2026-09-30.

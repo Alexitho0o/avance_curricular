@@ -1,0 +1,4711 @@
+{
+  "phase": 4,
+  "scope": "Auditoría independiente de asociaciones internas UMAS, sin equivalencias con SIES ni vigencias de malla inferidas.",
+  "sources": {
+    "umas_planes_re_co": {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "size": 1483027,
+      "sha256_after": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+    },
+    "umas_datos_alumnos": {
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "size": 5465638,
+      "sha256_after": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    "umas_promedios": {
+      "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "size": 27787332,
+      "sha256_after": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    }
+  },
+  "methodology": {
+    "units": {
+      "DatosAlumnos11998": "Fila de inscripción/ficha del reporte; CODCLI no es estrictamente único. ANOMATRICULA y ANOINGRESO son atributos de esa fila, no años de extracción de cortes independientes.",
+      "PROMEDIOS7804_Hoja1": "Fila de actividad académica por CODCLI/CODCARR/ANO/PERIODO/CODRAMO cuando las claves están completas. PLAN_DE_ESTUDIO es etiqueta observada en este archivo; no acredita por sí sola asignación efectiva en el año de la actividad.",
+      "Listado_planes_RE_CO": "Estructura de plan/ramo/nivel expandida por equivalencias y requisitos. No convertir11.438filas en asignaturas distintas."
+    },
+    "key_reading": "Claves comparadas como texto tras retirar espacios periféricos y representar enteros Excel sin .0. No se quitan prefijos/sufijos ni SP, ni se traduce código de carrera por semejanza.",
+    "null_policy": "None, vacío, NULL/NONE/NAN (sin distinguir mayúsculas) no forman claves completas. No se unen claves ausentes.",
+    "internal_join": "CODCLI entre reportes. Duplicados del maestro se conservan y no se elige una fila ni se expande por ella. PLAN_DE_ESTUDIO se compara literalmente con CODPESTUD; carrera, jornada y sede se contrastan por separado.",
+    "person_denominators": "Solo esta auditoría usa RUT+DIG en memoria para agrupar el reporte PROMEDIOS; la raíz usa CODCLI y no lo llama persona. No se exporta identificador ni sustituto. Los conteos RUT+DIG no se mezclan con CODCLI ni con filas.",
+    "year_semantics": "ANO/PERIODO de PROMEDIOS describe el registro de actividad; ANOMATRICULA/ANOINGRESO viene del reporte DatosAlumnos. Los períodos 1–5 no se convierten en semestres SIES.",
+    "plan_year_diagnostic": "Se busca únicamente un patrón textual de cuatro dígitos 19xx/20xx. No se usa como vigencia, cohorte, fecha de creación, versión SIES ni regla de asignación.",
+    "snapshot_limit": "Que cada CODCLI tenga un plan repetido en sus actividades es compatible con una etiqueta del corte, pero sin consulta de origen o historial efectivo no prueba si el campo fue contemporáneo a la actividad.",
+    "cut_dates": "Los nombres 11998/7804, hojas y rutas 2026 no acreditan fecha de extracción real. No se denomina Matricula_2025 a un corte 2025: esa hoja incluye 2026.",
+    "sede_limit": "PROMEDIOS no contiene sede explícita en Hoja1; la sede añadida proviene del catálogo o del reporte actual y se identifica como tal, no como sede histórica de la actividad.",
+    "out_of_period": "319 filas Datos11998 tienen matrícula 2027 y permanecen fuera del objetivo 2007–2026.",
+    "privacy": "Se exportan solo atributos académicos, conteos y filas de localización. Se omiten CODCLI/RUT/MRUN, nombres personales, datos de contacto, fechas de nacimiento y notas individuales."
+  },
+  "denominators": {
+    "promedios_all_rows": 129493,
+    "promedios_complete_activity_rows": 125282,
+    "promedios_rows_without_activity_keys": 4211,
+    "promedios_distinct_codcli_all": 13068,
+    "promedios_codcli_with_nonempty_career": 8857,
+    "promedios_person_groups_exact_RUT_DIG_all": 11241,
+    "promedios_person_groups_exact_RUT_DIG_with_valid_activity": 7669,
+    "datosalumnos_rows": 15045,
+    "datosalumnos_distinct_codcli": 15044,
+    "exact_codcli_intersection": 11075,
+    "notes_rows_linked_to_unique_current_row": 126782,
+    "complete_activity_rows_linked_to_unique_current_row": 124405
+  },
+  "metrics": {
+    "source_inventory": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_1_20261015/inventario.json",
+    "sources": {
+      "umas_planes_re_co": {
+        "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+        "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+        "size": 1483027,
+        "sha256_after": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+      },
+      "umas_datos_alumnos": {
+        "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+        "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+        "size": 5465638,
+        "sha256_after": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+      },
+      "umas_promedios": {
+        "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+        "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+        "size": 27787332,
+        "sha256_after": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+      }
+    },
+    "current_students": {
+      "rows": 15045,
+      "key": {
+        "fields": [
+          "CODCLI"
+        ],
+        "complete_rows": 15045,
+        "incomplete_rows": 0,
+        "distinct_keys": 15044,
+        "duplicate_groups": 1,
+        "duplicate_excess": 1,
+        "maximum_multiplicity": 2
+      },
+      "academic_duplicate_examples": [
+        {
+          "rows": [
+            {
+              "source_row": 1006,
+              "CODCARPR": "TPCRE",
+              "NOMBRE_L": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "JORNADA": "D",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2014",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2014",
+              "PERIODOINGRESO": "1"
+            },
+            {
+              "source_row": 1007,
+              "CODCARPR": "TPCRE",
+              "NOMBRE_L": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "JORNADA": "D",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2014",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2014",
+              "PERIODOINGRESO": "1"
+            }
+          ],
+          "distinct_academic_profiles": 1
+        }
+      ],
+      "year_fields": {
+        "ANOMATRICULA": {
+          "2013": 483,
+          "2017": 525,
+          "2014": 442,
+          "2015": 514,
+          "2016": 485,
+          "2019": 628,
+          "2021": 572,
+          "2018": 503,
+          "2023": 602,
+          "2020": 500,
+          "2026": 5612,
+          "2022": 568,
+          "2025": 1832,
+          "2024": 1460,
+          "2027": 319
+        },
+        "ANOINGRESO": {
+          "1989": 1,
+          "2000": 3,
+          "2002": 3,
+          "2003": 5,
+          "2004": 3,
+          "2005": 8,
+          "2008": 28,
+          "2006": 14,
+          "2012": 228,
+          "2007": 14,
+          "2009": 47,
+          "2010": 70,
+          "2011": 138,
+          "2013": 652,
+          "2014": 523,
+          "2015": 429,
+          "2016": 411,
+          "2017": 573,
+          "2018": 505,
+          "2019": 540,
+          "2020": 536,
+          "2021": 656,
+          "2022": 593,
+          "2023": 982,
+          "2024": 1204,
+          "2025": 2239,
+          "2026": 4321,
+          "2027": 319
+        }
+      },
+      "jornada_domain": {
+        "V": 5205,
+        "D": 1137,
+        "O": 8703
+      },
+      "sede_domain": {
+        "RE": 14910,
+        "CO": 128,
+        "PTG": 7
+      },
+      "rows_ANOMATRICULA_after_2026": 319
+    },
+    "notes": {
+      "rows": 129493,
+      "key_profiles": [
+        {
+          "fields": [
+            "CODCLI"
+          ],
+          "complete_rows": 129493,
+          "incomplete_rows": 0,
+          "distinct_keys": 13068,
+          "duplicate_groups": 8545,
+          "duplicate_excess": 116425,
+          "maximum_multiplicity": 84
+        },
+        {
+          "fields": [
+            "CODCLI",
+            "CODCARR",
+            "ANO",
+            "PERIODO",
+            "CODRAMO"
+          ],
+          "complete_rows": 125282,
+          "incomplete_rows": 4211,
+          "distinct_keys": 125282,
+          "duplicate_groups": 0,
+          "duplicate_excess": 0,
+          "maximum_multiplicity": 1
+        },
+        {
+          "fields": [
+            "CODCLI",
+            "ANO",
+            "PERIODO",
+            "CODRAMO"
+          ],
+          "complete_rows": 125282,
+          "incomplete_rows": 4211,
+          "distinct_keys": 125282,
+          "duplicate_groups": 0,
+          "duplicate_excess": 0,
+          "maximum_multiplicity": 1
+        }
+      ],
+      "year_counts": {
+        "2025": 24833,
+        "2022": 14494,
+        "2023": 15474,
+        "2024": 21531,
+        "2021": 14721,
+        "2020": 9701,
+        "2019": 9869,
+        "2026": 14659,
+        "NULL": 4211
+      },
+      "period_counts": {
+        "1": 66745,
+        "3": 17992,
+        "5": 6210,
+        "2": 27345,
+        "4": 6990,
+        "NULL": 4211
+      },
+      "jornada_domain": {
+        "O": 93440,
+        "V": 28426,
+        "D": 7627
+      },
+      "plans_per_codcli": {
+        "groups": 13068,
+        "groups_with_multiple_values": 0,
+        "maximum_values": 1,
+        "value_count_distribution": {
+          "1": 13068
+        }
+      },
+      "plans_per_codcli_year": {
+        "groups": 13869,
+        "groups_with_multiple_values": 0,
+        "maximum_values": 1,
+        "value_count_distribution": {
+          "1": 13869
+        }
+      },
+      "career_per_codcli": {
+        "groups": 8857,
+        "groups_with_multiple_values": 4,
+        "maximum_values": 2,
+        "value_count_distribution": {
+          "1": 8853,
+          "2": 4
+        }
+      },
+      "plans_per_person_within_notes_exact_RUT_DIG": {
+        "groups": 11241,
+        "groups_with_multiple_values": 1462,
+        "maximum_values": 5,
+        "value_count_distribution": {
+          "1": 9779,
+          "2": 1199,
+          "3": 231,
+          "4": 31,
+          "5": 1
+        }
+      },
+      "person_key_missing_rows": 0,
+      "plans_per_person_with_valid_activity_year": {
+        "groups": 7669,
+        "groups_with_multiple_values": 1034,
+        "maximum_values": 4,
+        "value_count_distribution": {
+          "1": 6635,
+          "2": 891,
+          "3": 136,
+          "4": 7
+        }
+      },
+      "plans_per_person_year_with_valid_activity_year": {
+        "groups": 13532,
+        "groups_with_multiple_values": 331,
+        "maximum_values": 3,
+        "value_count_distribution": {
+          "1": 13201,
+          "2": 326,
+          "3": 5
+        }
+      },
+      "embedded_sheets_not_used_as_current_snapshot": {
+        "DatosAlumnos": {
+          "rows": 13707,
+          "codcli_key": {
+            "fields": [
+              "CODCLI"
+            ],
+            "complete_rows": 13706,
+            "incomplete_rows": 1,
+            "distinct_keys": 13704,
+            "duplicate_groups": 2,
+            "duplicate_excess": 2,
+            "maximum_multiplicity": 2
+          },
+          "ANOMATRICULA": {
+            "2013": 483,
+            "2017": 525,
+            "2014": 442,
+            "2015": 514,
+            "2016": 485,
+            "2019": 629,
+            "2021": 572,
+            "2018": 503,
+            "2023": 602,
+            "2020": 500,
+            "2026": 4318,
+            "2022": 568,
+            "2025": 2038,
+            "2024": 1528
+          },
+          "ANOINGRESO": {
+            "1989": 1,
+            "2000": 3,
+            "2002": 3,
+            "2003": 5,
+            "2004": 3,
+            "2005": 8,
+            "2008": 28,
+            "2006": 14,
+            "2012": 228,
+            "2007": 14,
+            "2009": 47,
+            "2010": 70,
+            "2011": 138,
+            "2013": 652,
+            "2014": 523,
+            "2015": 429,
+            "2016": 411,
+            "2017": 573,
+            "2018": 505,
+            "2019": 541,
+            "2020": 536,
+            "2021": 656,
+            "2022": 593,
+            "2023": 982,
+            "2024": 1269,
+            "2025": 2288,
+            "2026": 3187
+          }
+        },
+        "Matricula_2025": {
+          "rows": 14055,
+          "codcli_key": {
+            "fields": [
+              "CODCLI"
+            ],
+            "complete_rows": 14055,
+            "incomplete_rows": 0,
+            "distinct_keys": 14054,
+            "duplicate_groups": 1,
+            "duplicate_excess": 1,
+            "maximum_multiplicity": 2
+          },
+          "ANOMATRICULA": {
+            "2026": 4869,
+            "2025": 1902,
+            "2024": 1461,
+            "2023": 602,
+            "2022": 568,
+            "2021": 572,
+            "2020": 500,
+            "2016": 485,
+            "2015": 514,
+            "2019": 629,
+            "2018": 503,
+            "2017": 525,
+            "2014": 442,
+            "2013": 483
+          },
+          "ANOINGRESO": {
+            "2024": 1204,
+            "2023": 982,
+            "2022": 593,
+            "2025": 2239,
+            "2026": 3649,
+            "2019": 541,
+            "2020": 536,
+            "2021": 656,
+            "2017": 573,
+            "2018": 505,
+            "2014": 523,
+            "2013": 652,
+            "2016": 411,
+            "2015": 429,
+            "2009": 47,
+            "2012": 228,
+            "2004": 3,
+            "2005": 8,
+            "2010": 70,
+            "2003": 5,
+            "2011": 138,
+            "2008": 28,
+            "2007": 14,
+            "2000": 3,
+            "1989": 1,
+            "2006": 14,
+            "2002": 3
+          }
+        }
+      }
+    },
+    "catalog": {
+      "rows": 11438,
+      "distinct_plans": 223,
+      "distinct_career_sede": 127,
+      "plan_mapping_multiplicity": {
+        "groups": 223,
+        "groups_with_multiple_values": 0,
+        "maximum_values": 1,
+        "value_count_distribution": {
+          "1": 223
+        }
+      },
+      "course_level_key": {
+        "fields": [
+          "CODPESTUD",
+          "CODRAMO",
+          "NIVEL"
+        ],
+        "complete_rows": 11438,
+        "incomplete_rows": 0,
+        "distinct_keys": 4854,
+        "duplicate_groups": 3065,
+        "duplicate_excess": 6584,
+        "maximum_multiplicity": 27
+      },
+      "expanded_key_including_empty_equivalence_and_prerequisite": {
+        "distinct_keys": 11438,
+        "duplicate_groups": 0
+      }
+    },
+    "notes_to_current_exact_codcli": {
+      "distinct_current_codcli": 15044,
+      "distinct_note_codcli": 13068,
+      "intersection": 11075,
+      "current_only": 3969,
+      "notes_only": 1993,
+      "codcli_status_counts": {
+        "no_current_codcli": 1993,
+        "single_current_row": 11075
+      },
+      "note_row_status_counts": {
+        "no_current_codcli": 2711,
+        "single_current_row": 126782
+      },
+      "activity_row_status_counts": [
+        {
+          "join_state": "no_current_codcli",
+          "activity": "with_activity_year",
+          "rows": 877
+        },
+        {
+          "join_state": "no_current_codcli",
+          "activity": "without_activity_year",
+          "rows": 1834
+        },
+        {
+          "join_state": "single_current_row",
+          "activity": "with_activity_year",
+          "rows": 124405
+        },
+        {
+          "join_state": "single_current_row",
+          "activity": "without_activity_year",
+          "rows": 2377
+        }
+      ],
+      "mismatching_codcli_counts": {
+        "career": 4,
+        "jornada": 32
+      },
+      "mismatching_note_row_counts": {
+        "career": 11,
+        "jornada": 356
+      },
+      "academic_mismatch_examples": {
+        "career": [
+          {
+            "note": {
+              "source_row": 102756,
+              "CODCARR": "TPAREOL",
+              "CARRERA": "INGENIERIA EN INFORMATICA",
+              "JORNADA": "O",
+              "ANO": "2022",
+              "PERIODO": "2",
+              "CODRAMO": "IC402IECIREOL",
+              "PLAN_DE_ESTUDIO": "IECIREOL20211"
+            },
+            "current": {
+              "source_row": 4797,
+              "CODCARPR": "IECIREOL",
+              "NOMBRE_L": "INGENIERIA EN INFORMATICA",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2022",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "2"
+            }
+          },
+          {
+            "note": {
+              "source_row": 7371,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "2",
+              "CODRAMO": "AG101IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "current": {
+              "source_row": 6070,
+              "CODCARPR": "IETMREOL",
+              "NOMBRE_L": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "2",
+              "ANOINGRESO": "2023",
+              "PERIODOINGRESO": "2"
+            }
+          },
+          {
+            "note": {
+              "source_row": 9962,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "3",
+              "CODRAMO": "AG102IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "current": {
+              "source_row": 6070,
+              "CODCARPR": "IETMREOL",
+              "NOMBRE_L": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "2",
+              "ANOINGRESO": "2023",
+              "PERIODOINGRESO": "2"
+            }
+          },
+          {
+            "note": {
+              "source_row": 24325,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "1",
+              "CODRAMO": "AS101IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "current": {
+              "source_row": 6070,
+              "CODCARPR": "IETMREOL",
+              "NOMBRE_L": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "2",
+              "ANOINGRESO": "2023",
+              "PERIODOINGRESO": "2"
+            }
+          },
+          {
+            "note": {
+              "source_row": 91724,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "1",
+              "CODRAMO": "IC101IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "current": {
+              "source_row": 6070,
+              "CODCARPR": "IETMREOL",
+              "NOMBRE_L": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "2",
+              "ANOINGRESO": "2023",
+              "PERIODOINGRESO": "2"
+            }
+          },
+          {
+            "note": {
+              "source_row": 92121,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "1",
+              "CODRAMO": "IC102IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "current": {
+              "source_row": 6070,
+              "CODCARPR": "IETMREOL",
+              "NOMBRE_L": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "2",
+              "ANOINGRESO": "2023",
+              "PERIODOINGRESO": "2"
+            }
+          }
+        ],
+        "jornada": [
+          {
+            "note": {
+              "source_row": 3469,
+              "CODCARR": "IADM",
+              "CARRERA": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "V",
+              "ANO": "2025",
+              "PERIODO": "1",
+              "CODRAMO": "AE101IADM",
+              "PLAN_DE_ESTUDIO": "IADM20241"
+            },
+            "current": {
+              "source_row": 8272,
+              "CODCARPR": "IADM",
+              "NOMBRE_L": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2026",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2025",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 4347,
+              "CODCARR": "IADM",
+              "CARRERA": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "V",
+              "ANO": "2025",
+              "PERIODO": "1",
+              "CODRAMO": "AE100IADM",
+              "PLAN_DE_ESTUDIO": "IADM20241"
+            },
+            "current": {
+              "source_row": 8272,
+              "CODCARPR": "IADM",
+              "NOMBRE_L": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2026",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2025",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 4800,
+              "CODCARR": "IADM",
+              "CARRERA": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "V",
+              "ANO": "2025",
+              "PERIODO": "2",
+              "CODRAMO": "AE103IADM",
+              "PLAN_DE_ESTUDIO": "IADM20241"
+            },
+            "current": {
+              "source_row": 8272,
+              "CODCARPR": "IADM",
+              "NOMBRE_L": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2026",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2025",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 7704,
+              "CODCARR": "IADM",
+              "CARRERA": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "V",
+              "ANO": "2025",
+              "PERIODO": "2",
+              "CODRAMO": "AE104IADM",
+              "PLAN_DE_ESTUDIO": "IADM20241"
+            },
+            "current": {
+              "source_row": 8272,
+              "CODCARPR": "IADM",
+              "NOMBRE_L": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2026",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2025",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 7751,
+              "CODCARR": "IADM",
+              "CARRERA": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "V",
+              "ANO": "2025",
+              "PERIODO": "1",
+              "CODRAMO": "AE200IADM",
+              "PLAN_DE_ESTUDIO": "IADM20241"
+            },
+            "current": {
+              "source_row": 8272,
+              "CODCARPR": "IADM",
+              "NOMBRE_L": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2026",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2025",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 7874,
+              "CODCARR": "IADM",
+              "CARRERA": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "V",
+              "ANO": "2025",
+              "PERIODO": "1",
+              "CODRAMO": "AE102IADM",
+              "PLAN_DE_ESTUDIO": "IADM20241"
+            },
+            "current": {
+              "source_row": 8272,
+              "CODCARPR": "IADM",
+              "NOMBRE_L": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2026",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2025",
+              "PERIODOINGRESO": "1"
+            }
+          }
+        ]
+      },
+      "plans_per_current_person_using_only_unique_exact_codcli_join": {
+        "groups": 9553,
+        "groups_with_multiple_values": 1273,
+        "maximum_values": 5,
+        "value_count_distribution": {
+          "1": 8280,
+          "2": 1080,
+          "3": 177,
+          "4": 15,
+          "5": 1
+        }
+      },
+      "activity_year_vs_current_report_year_fields": [
+        {
+          "current_field": "ANOINGRESO",
+          "relation_of_activity_year": "after",
+          "rows": 51892
+        },
+        {
+          "current_field": "ANOINGRESO",
+          "relation_of_activity_year": "before",
+          "rows": 895
+        },
+        {
+          "current_field": "ANOINGRESO",
+          "relation_of_activity_year": "same",
+          "rows": 71618
+        },
+        {
+          "current_field": "ANOMATRICULA",
+          "relation_of_activity_year": "after",
+          "rows": 386
+        },
+        {
+          "current_field": "ANOMATRICULA",
+          "relation_of_activity_year": "before",
+          "rows": 71550
+        },
+        {
+          "current_field": "ANOMATRICULA",
+          "relation_of_activity_year": "same",
+          "rows": 52469
+        }
+      ],
+      "academic_examples_activity_before_current_year_fields": {
+        "ANOMATRICULA": [
+          {
+            "note": {
+              "source_row": 4,
+              "CODCARR": "TCSREOL",
+              "CARRERA": "TECNICO EN CIBERSEGURIDAD",
+              "JORNADA": "O",
+              "ANO": "2022",
+              "PERIODO": "3",
+              "CODRAMO": "AC21TCSREOL",
+              "PLAN_DE_ESTUDIO": "TCSREOL20211"
+            },
+            "current": {
+              "source_row": 4565,
+              "CODCARPR": "TCSREOL",
+              "NOMBRE_L": "TECNICO EN CIBERSEGURIDAD",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 10515,
+              "CODCARR": "TCSREOL",
+              "CARRERA": "TECNICO EN CIBERSEGURIDAD",
+              "JORNADA": "O",
+              "ANO": "2021",
+              "PERIODO": "1",
+              "CODRAMO": "AG11TCSREOL",
+              "PLAN_DE_ESTUDIO": "TCSREOL20211"
+            },
+            "current": {
+              "source_row": 4565,
+              "CODCARPR": "TCSREOL",
+              "NOMBRE_L": "TECNICO EN CIBERSEGURIDAD",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 11442,
+              "CODCARR": "TCSREOL",
+              "CARRERA": "TECNICO EN CIBERSEGURIDAD",
+              "JORNADA": "O",
+              "ANO": "2021",
+              "PERIODO": "3",
+              "CODRAMO": "AG12TCSREOL",
+              "PLAN_DE_ESTUDIO": "TCSREOL20211"
+            },
+            "current": {
+              "source_row": 4565,
+              "CODCARPR": "TCSREOL",
+              "NOMBRE_L": "TECNICO EN CIBERSEGURIDAD",
+              "JORNADA": "O",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "1"
+            }
+          }
+        ],
+        "ANOINGRESO": [
+          {
+            "note": {
+              "source_row": 1515,
+              "CODCARR": "IECSRE",
+              "CARRERA": "INGENIERIA EN CIBERSEGURIDAD",
+              "JORNADA": "V",
+              "ANO": "2020",
+              "PERIODO": "2",
+              "CODRAMO": "AC201IECSRE",
+              "PLAN_DE_ESTUDIO": "IECSRE20211"
+            },
+            "current": {
+              "source_row": 4348,
+              "CODCARPR": "IECSRE",
+              "NOMBRE_L": "INGENIERIA EN CIBERSEGURIDAD",
+              "JORNADA": "V",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 6983,
+              "CODCARR": "IECSRE",
+              "CARRERA": "INGENIERIA EN CIBERSEGURIDAD",
+              "JORNADA": "V",
+              "ANO": "2020",
+              "PERIODO": "2",
+              "CODRAMO": "AG101IECSRE",
+              "PLAN_DE_ESTUDIO": "IECSRE20211"
+            },
+            "current": {
+              "source_row": 4348,
+              "CODCARPR": "IECSRE",
+              "NOMBRE_L": "INGENIERIA EN CIBERSEGURIDAD",
+              "JORNADA": "V",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "1"
+            }
+          },
+          {
+            "note": {
+              "source_row": 9954,
+              "CODCARR": "IECSRE",
+              "CARRERA": "INGENIERIA EN CIBERSEGURIDAD",
+              "JORNADA": "V",
+              "ANO": "2020",
+              "PERIODO": "2",
+              "CODRAMO": "AG102IECSRE",
+              "PLAN_DE_ESTUDIO": "IECSRE20211"
+            },
+            "current": {
+              "source_row": 4348,
+              "CODCARPR": "IECSRE",
+              "NOMBRE_L": "INGENIERIA EN CIBERSEGURIDAD",
+              "JORNADA": "V",
+              "SEDE": "RE",
+              "ANOMATRICULA": "2023",
+              "PERIODOMATRICULA": "1",
+              "ANOINGRESO": "2021",
+              "PERIODOINGRESO": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notes_to_plan_catalog": {
+      "row_states": {
+        "plan_and_career_match": 125264,
+        "plan_found_career_differs": 17,
+        "plan_not_in_catalog": 1753,
+        "catalog_plan_found_but_note_career_missing": 2459
+      },
+      "distinct_plans_by_state": {
+        "plan_and_career_match": 143,
+        "plan_found_career_differs": 5,
+        "plan_not_in_catalog": 13,
+        "catalog_plan_found_but_note_career_missing": 148
+      },
+      "plans_in_notes_not_catalog": [
+        "ASREPASO",
+        "IECIPASO",
+        "IETMPASO",
+        "NITMPASO",
+        "TCIBPASO",
+        "TCREPASO",
+        "TCSREOLPASO",
+        "TPAPASO",
+        "TPASPASO",
+        "TPCPASO",
+        "TPRPASO",
+        "TTMPASO",
+        "TTMRE20081"
+      ],
+      "catalog_plans_not_in_notes": [
+        "COPCOM20261",
+        "CRPYA20261",
+        "CRPYB20261",
+        "DCID20262",
+        "DHDEI20262",
+        "DSOE20262",
+        "DTECE",
+        "ECCACFAR2025",
+        "ECCAPP2025",
+        "ECCCE2026",
+        "ECCCIBERSEG2024",
+        "ECCDATAS2024",
+        "ECCFUNCIB2024",
+        "ECCIAP2026",
+        "ECCIAPL20261",
+        "ECCMRS2026",
+        "ECCPGC2026",
+        "ECCPIAT2026",
+        "ECCPYA2026",
+        "ECCSQLBASICO2024",
+        "ECDCIBIND2024",
+        "ECDFRONT2024",
+        "ECDSEGOFEN2024",
+        "IEACREOL",
+        "IECIRE20081",
+        "IETMRE20091",
+        "NETMRE20101",
+        "NICIRE20101",
+        "NITMRE20101",
+        "OTEC2024",
+        "OTEC2026",
+        "PCOM20241",
+        "PCOMS20261",
+        "TACREOL",
+        "TCIREOL20191",
+        "TIND20251",
+        "TNTP",
+        "TPCRE20121V2",
+        "TTMRE20121V2"
+      ],
+      "academic_examples": {
+        "plan_found_career_differs": [
+          {
+            "note": {
+              "source_row": 7371,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "2",
+              "CODRAMO": "AG101IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "catalog_career_sede": [
+              [
+                "IETMREOL",
+                "RE"
+              ]
+            ]
+          },
+          {
+            "note": {
+              "source_row": 9962,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "3",
+              "CODRAMO": "AG102IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "catalog_career_sede": [
+              [
+                "IETMREOL",
+                "RE"
+              ]
+            ]
+          },
+          {
+            "note": {
+              "source_row": 24325,
+              "CODCARR": "IECIREOL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "O",
+              "ANO": "2023",
+              "PERIODO": "1",
+              "CODRAMO": "AS101IECIREOL",
+              "PLAN_DE_ESTUDIO": "IETMREOL20211"
+            },
+            "catalog_career_sede": [
+              [
+                "IETMREOL",
+                "RE"
+              ]
+            ]
+          },
+          {
+            "note": {
+              "source_row": 51708,
+              "CODCARR": "NITMRE",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "V",
+              "ANO": "2019",
+              "PERIODO": "1",
+              "CODRAMO": "CA405NITMRE",
+              "PLAN_DE_ESTUDIO": "NCONRE"
+            },
+            "catalog_career_sede": [
+              [
+                "NCONRE",
+                "RE"
+              ]
+            ]
+          },
+          {
+            "note": {
+              "source_row": 51870,
+              "CODCARR": "NITMRE",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "V",
+              "ANO": "2019",
+              "PERIODO": "1",
+              "CODRAMO": "CA406NITMRE",
+              "PLAN_DE_ESTUDIO": "NCONRE"
+            },
+            "catalog_career_sede": [
+              [
+                "NCONRE",
+                "RE"
+              ]
+            ]
+          },
+          {
+            "note": {
+              "source_row": 65428,
+              "CODCARR": "IEMORE",
+              "CARRERA": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "JORNADA": "V",
+              "ANO": "2019",
+              "PERIODO": "1",
+              "CODRAMO": "CI14TMIRE",
+              "PLAN_DE_ESTUDIO": "TMIRE20171"
+            },
+            "catalog_career_sede": [
+              [
+                "TMIRE",
+                "RE"
+              ]
+            ]
+          }
+        ],
+        "plan_not_in_catalog": [
+          {
+            "note": {
+              "source_row": 12525,
+              "CODCARR": "TTMREOL",
+              "CARRERA": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "JORNADA": "D",
+              "ANO": "2023",
+              "PERIODO": "1",
+              "CODRAMO": "AG12TTMREOL",
+              "PLAN_DE_ESTUDIO": "TPCPASO"
+            },
+            "catalog_career_sede": []
+          },
+          {
+            "note": {
+              "source_row": 124547,
+              "CODCARR": "NULL",
+              "CARRERA": "TECNICO EN CONECTIVIDAD Y REDES",
+              "JORNADA": "D",
+              "ANO": "NULL",
+              "PERIODO": "NULL",
+              "CODRAMO": "NULL",
+              "PLAN_DE_ESTUDIO": "TTMPASO"
+            },
+            "catalog_career_sede": []
+          },
+          {
+            "note": {
+              "source_row": 124548,
+              "CODCARR": "NULL",
+              "CARRERA": "TECNICO EN CONECTIVIDAD Y REDES",
+              "JORNADA": "D",
+              "ANO": "NULL",
+              "PERIODO": "NULL",
+              "CODRAMO": "NULL",
+              "PLAN_DE_ESTUDIO": "TTMPASO"
+            },
+            "catalog_career_sede": []
+          },
+          {
+            "note": {
+              "source_row": 124549,
+              "CODCARR": "NULL",
+              "CARRERA": "TECNICO EN CONECTIVIDAD Y REDES",
+              "JORNADA": "V",
+              "ANO": "NULL",
+              "PERIODO": "NULL",
+              "CODRAMO": "NULL",
+              "PLAN_DE_ESTUDIO": "TTMPASO"
+            },
+            "catalog_career_sede": []
+          },
+          {
+            "note": {
+              "source_row": 124550,
+              "CODCARR": "NULL",
+              "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "JORNADA": "D",
+              "ANO": "NULL",
+              "PERIODO": "NULL",
+              "CODRAMO": "NULL",
+              "PLAN_DE_ESTUDIO": "IETMPASO"
+            },
+            "catalog_career_sede": []
+          },
+          {
+            "note": {
+              "source_row": 124551,
+              "CODCARR": "NULL",
+              "CARRERA": "TECNICO EN CONECTIVIDAD Y REDES",
+              "JORNADA": "D",
+              "ANO": "NULL",
+              "PERIODO": "NULL",
+              "CODRAMO": "NULL",
+              "PLAN_DE_ESTUDIO": "TTMPASO"
+            },
+            "catalog_career_sede": []
+          }
+        ]
+      },
+      "unique_joined_codcli_plan_vs_current_career_sede": {
+        "current_career_sede_matches_catalog": 11074,
+        "current_career_sede_differs_from_catalog": 1
+      },
+      "current_career_sede_vs_catalog_mismatch_examples": [
+        {
+          "current": {
+            "source_row": 2667,
+            "CODCARPR": "NITMRE",
+            "NOMBRE_L": "INGENIERIA EN CONECTIVIDAD Y REDES",
+            "JORNADA": "V",
+            "SEDE": "RE",
+            "ANOMATRICULA": "2019",
+            "PERIODOMATRICULA": "1",
+            "ANOINGRESO": "2017",
+            "PERIODOINGRESO": "2"
+          },
+          "plan": "NCONRE",
+          "catalog_career_sede": [
+            [
+              "NCONRE",
+              "RE"
+            ]
+          ],
+          "note_example": {
+            "source_row": 51708,
+            "CODCARR": "NITMRE",
+            "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+            "JORNADA": "V",
+            "ANO": "2019",
+            "PERIODO": "1",
+            "CODRAMO": "CA405NITMRE",
+            "PLAN_DE_ESTUDIO": "NCONRE"
+          }
+        }
+      ]
+    },
+    "plan_label_year_vs_activity": {
+      "regex_used_only_for_diagnostic": "(?:19|20)\\d{2}",
+      "label_distinct_year_count_distribution": {
+        "1": 167,
+        "0": 30
+      },
+      "row_relation_counts": {
+        "activity_same_label_year": 42744,
+        "activity_after_label_year": 76551,
+        "activity_before_label_year": 689,
+        "no_four_digit_year_in_plan_label": 5298,
+        "activity_year_missing": 4211
+      },
+      "distinct_codcli_by_relation": {
+        "activity_same_label_year": 4185,
+        "activity_after_label_year": 6150,
+        "activity_before_label_year": 46,
+        "no_four_digit_year_in_plan_label": 346,
+        "activity_year_missing": 4211
+      },
+      "academic_examples_activity_before_label_year": [
+        {
+          "source_row": 660,
+          "CODCARR": "ICIB",
+          "CARRERA": "INGENIERIA EN CIBERSEGURIDAD",
+          "JORNADA": "O",
+          "ANO": "2020",
+          "PERIODO": "1",
+          "CODRAMO": "AC201IECSRE",
+          "PLAN_DE_ESTUDIO": "ICIB20241"
+        },
+        {
+          "source_row": 33347,
+          "CODCARR": "ICRE",
+          "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "JORNADA": "O",
+          "ANO": "2023",
+          "PERIODO": "1",
+          "CODRAMO": "AT100ICRE",
+          "PLAN_DE_ESTUDIO": "ICRE20241"
+        },
+        {
+          "source_row": 9146,
+          "CODCARR": "IECIRE",
+          "CARRERA": "INGENIERIA EN  INFORMATICA",
+          "JORNADA": "V",
+          "ANO": "2019",
+          "PERIODO": "1",
+          "CODRAMO": "AG102IECIRE",
+          "PLAN_DE_ESTUDIO": "IECIRE2020"
+        },
+        {
+          "source_row": 7051,
+          "CODCARR": "IECIRE",
+          "CARRERA": "INGENIERIA EN  INFORMATICA",
+          "JORNADA": "V",
+          "ANO": "2020",
+          "PERIODO": "1",
+          "CODRAMO": "AG101IECIRE",
+          "PLAN_DE_ESTUDIO": "IECIRE20211"
+        },
+        {
+          "source_row": 6772,
+          "CODCARR": "IECIREOL",
+          "CARRERA": "INGENIERIA EN INFORMATICA",
+          "JORNADA": "O",
+          "ANO": "2019",
+          "PERIODO": "2",
+          "CODRAMO": "AG101IECIREOL",
+          "PLAN_DE_ESTUDIO": "IECIREOL20201"
+        },
+        {
+          "source_row": 62155,
+          "CODCARR": "IECIREOL",
+          "CARRERA": "INGENIERIA EN INFORMATICA",
+          "JORNADA": "O",
+          "ANO": "2019",
+          "PERIODO": "3",
+          "CODRAMO": "CI205IECIREOL",
+          "PLAN_DE_ESTUDIO": "IECIREOL20211"
+        },
+        {
+          "source_row": 1515,
+          "CODCARR": "IECSRE",
+          "CARRERA": "INGENIERIA EN CIBERSEGURIDAD",
+          "JORNADA": "V",
+          "ANO": "2020",
+          "PERIODO": "2",
+          "CODRAMO": "AC201IECSRE",
+          "PLAN_DE_ESTUDIO": "IECSRE20211"
+        },
+        {
+          "source_row": 277,
+          "CODCARR": "IECSREOL",
+          "CARRERA": "INGENIERIA EN CIBERSEGURIDAD",
+          "JORNADA": "O",
+          "ANO": "2020",
+          "PERIODO": "2",
+          "CODRAMO": "AC201IECSREOL",
+          "PLAN_DE_ESTUDIO": "IECSREOL20211"
+        },
+        {
+          "source_row": 49176,
+          "CODCARR": "IEMORE",
+          "CARRERA": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+          "JORNADA": "V",
+          "ANO": "2019",
+          "PERIODO": "1",
+          "CODRAMO": "AU105IEMORE",
+          "PLAN_DE_ESTUDIO": "IEMORE20211"
+        },
+        {
+          "source_row": 1810,
+          "CODCARR": "IETMRE",
+          "CARRERA": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "JORNADA": "V",
+          "ANO": "2020",
+          "PERIODO": "2",
+          "CODRAMO": "AC201IETMRE",
+          "PLAN_DE_ESTUDIO": "IETMRE20211"
+        },
+        {
+          "source_row": 21515,
+          "CODCARR": "IINF",
+          "CARRERA": "INGENIERIA EN INFORMATICA",
+          "JORNADA": "O",
+          "ANO": "2022",
+          "PERIODO": "1",
+          "CODRAMO": "AS100IINF",
+          "PLAN_DE_ESTUDIO": "IINF20241"
+        },
+        {
+          "source_row": 34081,
+          "CODCARR": "IMDI",
+          "CARRERA": "INGENIERIA EN MARKETING DIGITAL",
+          "JORNADA": "O",
+          "ANO": "2025",
+          "PERIODO": "3",
+          "CODRAMO": "AT100IMDI",
+          "PLAN_DE_ESTUDIO": "IMDI20261"
+        },
+        {
+          "source_row": 12106,
+          "CODCARR": "TPARE",
+          "CARRERA": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+          "JORNADA": "V",
+          "ANO": "2019",
+          "PERIODO": "1",
+          "CODRAMO": "AG12TPARE",
+          "PLAN_DE_ESTUDIO": "TPARE2020"
+        },
+        {
+          "source_row": 22028,
+          "CODCARR": "TPAS",
+          "CARRERA": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+          "JORNADA": "O",
+          "ANO": "2023",
+          "PERIODO": "5",
+          "CODRAMO": "AS100TPAS",
+          "PLAN_DE_ESTUDIO": "TPAS20241"
+        },
+        {
+          "source_row": 1611,
+          "CODCARR": "TTMRE",
+          "CARRERA": "TECNICO EN CONECTIVIDAD Y REDES",
+          "JORNADA": "V",
+          "ANO": "2020",
+          "PERIODO": "2",
+          "CODRAMO": "AC21TTMRE",
+          "PLAN_DE_ESTUDIO": "TTMRE20211"
+        },
+        {
+          "source_row": 11962,
+          "CODCARR": "TTMREOL",
+          "CARRERA": "TECNICO EN CONECTIVIDAD Y REDES",
+          "JORNADA": "O",
+          "ANO": "2022",
+          "PERIODO": "4",
+          "CODRAMO": "AG11TTMREOL",
+          "PLAN_DE_ESTUDIO": "TTMREOL20231"
+        }
+      ],
+      "interpretation": "A four-digit token is only a string pattern. An older activity year is a counterexample to treating that token as a mandatory effective-start date; it does not prove a data error or actual retroactive plan assignment."
+    },
+    "plan_activity_profiles": [
+      {
+        "plan": "ADMP20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 732,
+          "2026": 331,
+          "NULL": 60
+        },
+        "career_codes": [
+          "ADMP"
+        ],
+        "example_source_rows": [
+          18212
+        ]
+      },
+      {
+        "plan": "ASRE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "2019": 297,
+          "2020": 60,
+          "NULL": 10,
+          "2021": 1
+        },
+        "career_codes": [
+          "ASRE"
+        ],
+        "example_source_rows": [
+          51109
+        ]
+      },
+      {
+        "plan": "ASREOL",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2020": 327,
+          "2019": 245,
+          "2021": 21,
+          "2022": 6
+        },
+        "career_codes": [
+          "ASREOL"
+        ],
+        "example_source_rows": [
+          50917
+        ]
+      },
+      {
+        "plan": "ASREPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125675
+        ]
+      },
+      {
+        "plan": "AUDT20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 473,
+          "2026": 206,
+          "NULL": 57
+        },
+        "career_codes": [
+          "AUDT"
+        ],
+        "example_source_rows": [
+          1786
+        ]
+      },
+      {
+        "plan": "CADMP20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2026": 28,
+          "NULL": 4
+        },
+        "career_codes": [
+          "CADMP"
+        ],
+        "example_source_rows": [
+          22138
+        ]
+      },
+      {
+        "plan": "CAUDT20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125883
+        ]
+      },
+      {
+        "plan": "CIACI20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124976
+        ]
+      },
+      {
+        "plan": "CIADM20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2026": 95,
+          "2025": 183,
+          "NULL": 10
+        },
+        "career_codes": [
+          "CIADM"
+        ],
+        "example_source_rows": [
+          6994
+        ]
+      },
+      {
+        "plan": "CICDA20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 3
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124637
+        ]
+      },
+      {
+        "plan": "CICIB20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 509,
+          "2025": 1013,
+          "2026": 323,
+          "NULL": 21
+        },
+        "career_codes": [
+          "CICIB"
+        ],
+        "example_source_rows": [
+          27330
+        ]
+      },
+      {
+        "plan": "CICRE20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 661,
+          "2025": 1236,
+          "2026": 462,
+          "NULL": 24
+        },
+        "career_codes": [
+          "CICRE"
+        ],
+        "example_source_rows": [
+          27107
+        ]
+      },
+      {
+        "plan": "CIFIN20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125427
+        ]
+      },
+      {
+        "plan": "CIIND20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 345,
+          "2026": 149,
+          "NULL": 13
+        },
+        "career_codes": [
+          "CIIND"
+        ],
+        "example_source_rows": [
+          27459
+        ]
+      },
+      {
+        "plan": "CIINF20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 362,
+          "2025": 885,
+          "2026": 345,
+          "NULL": 15
+        },
+        "career_codes": [
+          "CIINF"
+        ],
+        "example_source_rows": [
+          27478
+        ]
+      },
+      {
+        "plan": "CILOG20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2025": 177,
+          "2026": 128,
+          "NULL": 11
+        },
+        "career_codes": [
+          "CILOG"
+        ],
+        "example_source_rows": [
+          29278
+        ]
+      },
+      {
+        "plan": "CIMDI20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 3
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125429
+        ]
+      },
+      {
+        "plan": "CIPRE20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 5
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125059
+        ]
+      },
+      {
+        "plan": "CIRHU20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 7
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125384
+        ]
+      },
+      {
+        "plan": "CISEP20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 7
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125567
+        ]
+      },
+      {
+        "plan": "CNATP20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          129036
+        ]
+      },
+      {
+        "plan": "CONG20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 307,
+          "2026": 200,
+          "NULL": 46
+        },
+        "career_codes": [
+          "CONG"
+        ],
+        "example_source_rows": [
+          1984
+        ]
+      },
+      {
+        "plan": "COTEIQ20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 337,
+          "NULL": 14
+        },
+        "career_codes": [
+          "COTEIQ"
+        ],
+        "example_source_rows": [
+          21650
+        ]
+      },
+      {
+        "plan": "COTENS20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 68,
+          "NULL": 14
+        },
+        "career_codes": [
+          "COTENS"
+        ],
+        "example_source_rows": [
+          33516
+        ]
+      },
+      {
+        "plan": "COTFAR20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 90,
+          "NULL": 9
+        },
+        "career_codes": [
+          "COTFAR"
+        ],
+        "example_source_rows": [
+          34108
+        ]
+      },
+      {
+        "plan": "DACD20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 140,
+          "NULL": 6
+        },
+        "career_codes": [
+          "DACD"
+        ],
+        "example_source_rows": [
+          2
+        ]
+      },
+      {
+        "plan": "DAPB",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125926
+        ]
+      },
+      {
+        "plan": "DCBS20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 198,
+          "2026": 96,
+          "NULL": 11
+        },
+        "career_codes": [
+          "DCBS"
+        ],
+        "example_source_rows": [
+          51511
+        ]
+      },
+      {
+        "plan": "DCSARE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2019": 156,
+          "NULL": 5
+        },
+        "career_codes": [
+          "DCSARE"
+        ],
+        "example_source_rows": [
+          81007
+        ]
+      },
+      {
+        "plan": "DCSI20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 5
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124937
+        ]
+      },
+      {
+        "plan": "DDASC",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2026": 50,
+          "NULL": 1
+        },
+        "career_codes": [
+          "DDASC"
+        ],
+        "example_source_rows": [
+          86155
+        ]
+      },
+      {
+        "plan": "DDSC20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 50,
+          "NULL": 3
+        },
+        "career_codes": [
+          "DDSC"
+        ],
+        "example_source_rows": [
+          87086
+        ]
+      },
+      {
+        "plan": "DDSS",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125798
+        ]
+      },
+      {
+        "plan": "DFSCK20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 56,
+          "NULL": 1
+        },
+        "career_codes": [
+          "DFSCK"
+        ],
+        "example_source_rows": [
+          91616
+        ]
+      },
+      {
+        "plan": "DFSK20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 128,
+          "NULL": 11
+        },
+        "career_codes": [
+          "DFSK"
+        ],
+        "example_source_rows": [
+          91111
+        ]
+      },
+      {
+        "plan": "DGAS",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          126646
+        ]
+      },
+      {
+        "plan": "DGDA",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 3
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          126662
+        ]
+      },
+      {
+        "plan": "DHDS20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125420
+        ]
+      },
+      {
+        "plan": "DHIAD20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 16
+        },
+        "career_codes": [
+          "DHIAD"
+        ],
+        "example_source_rows": [
+          85846
+        ]
+      },
+      {
+        "plan": "DIAR20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 35
+        },
+        "career_codes": [
+          "DIAR"
+        ],
+        "example_source_rows": [
+          91789
+        ]
+      },
+      {
+        "plan": "DICD",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2025": 81,
+          "NULL": 5
+        },
+        "career_codes": [
+          "DICD"
+        ],
+        "example_source_rows": [
+          91359
+        ]
+      },
+      {
+        "plan": "DIIFC",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          127714
+        ]
+      },
+      {
+        "plan": "DISOF",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125164
+        ]
+      },
+      {
+        "plan": "DLEMS20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          126780
+        ]
+      },
+      {
+        "plan": "DQAS",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 5
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125550
+        ]
+      },
+      {
+        "plan": "DREIN20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 66
+        },
+        "career_codes": [
+          "DREIN"
+        ],
+        "example_source_rows": [
+          86896
+        ]
+      },
+      {
+        "plan": "DRID",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2025": 42,
+          "NULL": 14
+        },
+        "career_codes": [
+          "DRID"
+        ],
+        "example_source_rows": [
+          117333
+        ]
+      },
+      {
+        "plan": "DSCM20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 3
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124569
+        ]
+      },
+      {
+        "plan": "DSFA20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125132
+        ]
+      },
+      {
+        "plan": "DSOF20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          128127
+        ]
+      },
+      {
+        "plan": "ECCACFAR12025",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 2
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          89381
+        ]
+      },
+      {
+        "plan": "ECCAPP20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 8
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          88058
+        ]
+      },
+      {
+        "plan": "ECCGCVE2026",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124840
+        ]
+      },
+      {
+        "plan": "ECCIA2025",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 4
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          88250
+        ]
+      },
+      {
+        "plan": "ECCPOWERBI2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 11
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          88170
+        ]
+      },
+      {
+        "plan": "ECCPYB2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 22
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87291
+        ]
+      },
+      {
+        "plan": "ECCRECL2025",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 3
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          88737
+        ]
+      },
+      {
+        "plan": "ECDARQCLOUD2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 48
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87204
+        ]
+      },
+      {
+        "plan": "ECDCIBER2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 32
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87286
+        ]
+      },
+      {
+        "plan": "ECDCIBER2024V2",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 78,
+          "NULL": 3
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87936
+        ]
+      },
+      {
+        "plan": "ECDDATASC2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 60
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          88403
+        ]
+      },
+      {
+        "plan": "ECDFULLSTACK2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 9,
+          "NULL": 2
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          86985
+        ]
+      },
+      {
+        "plan": "ECDFULLSTACK2024V2",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 88,
+          "NULL": 1
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          85930
+        ]
+      },
+      {
+        "plan": "ECDINFCLOUD2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 25
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87087
+        ]
+      },
+      {
+        "plan": "ECDINFCLOUD2024V2",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 84
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87438
+        ]
+      },
+      {
+        "plan": "ECDQA2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 10
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87756
+        ]
+      },
+      {
+        "plan": "ECDQA2024V2",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 54,
+          "NULL": 1
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87509
+        ]
+      },
+      {
+        "plan": "ECDREDIND2024",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 10
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87177
+        ]
+      },
+      {
+        "plan": "ECDREDIND2024V2",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 62,
+          "2025": 18
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87358
+        ]
+      },
+      {
+        "plan": "ECDSEGOFEN2024V2",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 32
+        },
+        "career_codes": [
+          "ECCURYDP"
+        ],
+        "example_source_rows": [
+          87111
+        ]
+      },
+      {
+        "plan": "IACI20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          128661
+        ]
+      },
+      {
+        "plan": "IADM20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 212,
+          "2025": 1172,
+          "2026": 616,
+          "NULL": 143
+        },
+        "career_codes": [
+          "IADM"
+        ],
+        "example_source_rows": [
+          3221
+        ]
+      },
+      {
+        "plan": "ICDA20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 391,
+          "2026": 204,
+          "NULL": 20
+        },
+        "career_codes": [
+          "ICDA"
+        ],
+        "example_source_rows": [
+          20980
+        ]
+      },
+      {
+        "plan": "ICIB20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2020": 9,
+          "2019": 10,
+          "2021": 8,
+          "2024": 3524,
+          "2025": 2877,
+          "2026": 1824,
+          "2023": 12,
+          "NULL": 136
+        },
+        "career_codes": [
+          "ICIB"
+        ],
+        "example_source_rows": [
+          660
+        ]
+      },
+      {
+        "plan": "ICRE20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 2567,
+          "2025": 1746,
+          "2026": 852,
+          "2023": 8,
+          "NULL": 39
+        },
+        "career_codes": [
+          "ICRE"
+        ],
+        "example_source_rows": [
+          20138
+        ]
+      },
+      {
+        "plan": "IECIPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 610
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124568
+        ]
+      },
+      {
+        "plan": "IECIRE20101",
+        "label_year_tokens": [
+          2010
+        ],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          126561
+        ]
+      },
+      {
+        "plan": "IECIRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 8,
+          "2021": 22,
+          "NULL": 2
+        },
+        "career_codes": [
+          "IECIRE"
+        ],
+        "example_source_rows": [
+          51395
+        ]
+      },
+      {
+        "plan": "IECIRE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "2019": 820,
+          "2020": 316,
+          "2021": 69,
+          "2026": 1,
+          "NULL": 7
+        },
+        "career_codes": [
+          "IECIRE"
+        ],
+        "example_source_rows": [
+          8022
+        ]
+      },
+      {
+        "plan": "IECIRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2021": 192,
+          "2020": 331,
+          "2022": 107,
+          "2023": 11,
+          "2019": 346
+        },
+        "career_codes": [
+          "IECIRE"
+        ],
+        "example_source_rows": [
+          369
+        ]
+      },
+      {
+        "plan": "IECIRE2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2020": 231,
+          "2021": 132,
+          "2022": 85,
+          "2023": 58,
+          "2024": 11,
+          "2019": 29,
+          "NULL": 4
+        },
+        "career_codes": [
+          "IECIRE"
+        ],
+        "example_source_rows": [
+          996
+        ]
+      },
+      {
+        "plan": "IECIRE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 354,
+          "2023": 296,
+          "2021": 453,
+          "2024": 67,
+          "2020": 10,
+          "2019": 8,
+          "NULL": 9
+        },
+        "career_codes": [
+          "IECIRE"
+        ],
+        "example_source_rows": [
+          458
+        ]
+      },
+      {
+        "plan": "IECIREOL",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2019": 230,
+          "2021": 376,
+          "2020": 367,
+          "2022": 40,
+          "2023": 4,
+          "2024": 2
+        },
+        "career_codes": [
+          "IECIREOL"
+        ],
+        "example_source_rows": [
+          50397
+        ]
+      },
+      {
+        "plan": "IECIREOL20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 195,
+          "2021": 135,
+          "2022": 150,
+          "2023": 11,
+          "2024": 4,
+          "2019": 212,
+          "NULL": 2
+        },
+        "career_codes": [
+          "IECIREOL"
+        ],
+        "example_source_rows": [
+          352
+        ]
+      },
+      {
+        "plan": "IECIREOL20201",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 119,
+          "2022": 139,
+          "2024": 52,
+          "2023": 82,
+          "2020": 205,
+          "2019": 9,
+          "NULL": 1
+        },
+        "career_codes": [
+          "IECIREOL"
+        ],
+        "example_source_rows": [
+          353
+        ]
+      },
+      {
+        "plan": "IECIREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 1884,
+          "2024": 772,
+          "2023": 2792,
+          "2021": 1135,
+          "2025": 129,
+          "2019": 10,
+          "2020": 9,
+          "NULL": 8
+        },
+        "career_codes": [
+          "IECIREOL",
+          "TPAREOL"
+        ],
+        "example_source_rows": [
+          6
+        ]
+      },
+      {
+        "plan": "IECSRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2019": 143,
+          "2021": 183,
+          "2020": 223,
+          "2022": 106,
+          "2023": 84,
+          "NULL": 6
+        },
+        "career_codes": [
+          "IECSRE"
+        ],
+        "example_source_rows": [
+          613
+        ]
+      },
+      {
+        "plan": "IECSRE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 506,
+          "2023": 490,
+          "2024": 114,
+          "2021": 421,
+          "2020": 60,
+          "2025": 29,
+          "NULL": 10
+        },
+        "career_codes": [
+          "IECSRE"
+        ],
+        "example_source_rows": [
+          76
+        ]
+      },
+      {
+        "plan": "IECSREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2023": 2642,
+          "2021": 933,
+          "2022": 2107,
+          "2024": 625,
+          "2020": 115,
+          "2025": 125,
+          "NULL": 4
+        },
+        "career_codes": [
+          "IECSREOL"
+        ],
+        "example_source_rows": [
+          75
+        ]
+      },
+      {
+        "plan": "IEMORE20141",
+        "label_year_tokens": [
+          2014
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          128523
+        ]
+      },
+      {
+        "plan": "IEMORE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          126126
+        ]
+      },
+      {
+        "plan": "IEMORE20171",
+        "label_year_tokens": [
+          2017
+        ],
+        "activity_year_counts": {
+          "2019": 304,
+          "2020": 57,
+          "2021": 15,
+          "NULL": 5
+        },
+        "career_codes": [
+          "IEMORE"
+        ],
+        "example_source_rows": [
+          48672
+        ]
+      },
+      {
+        "plan": "IEMORE20201",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2020": 203,
+          "2021": 87
+        },
+        "career_codes": [
+          "IEMORE"
+        ],
+        "example_source_rows": [
+          803
+        ]
+      },
+      {
+        "plan": "IEMORE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 271,
+          "2021": 665,
+          "2019": 37,
+          "NULL": 1
+        },
+        "career_codes": [
+          "IEMORE"
+        ],
+        "example_source_rows": [
+          161
+        ]
+      },
+      {
+        "plan": "IETMPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 141
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124550
+        ]
+      },
+      {
+        "plan": "IETMRE20101",
+        "label_year_tokens": [
+          2010
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125635
+        ]
+      },
+      {
+        "plan": "IETMRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 49,
+          "2021": 6,
+          "2023": 3,
+          "2020": 3,
+          "NULL": 6
+        },
+        "career_codes": [
+          "IETMRE"
+        ],
+        "example_source_rows": [
+          51168
+        ]
+      },
+      {
+        "plan": "IETMRE20161",
+        "label_year_tokens": [
+          2016
+        ],
+        "activity_year_counts": {
+          "2019": 490,
+          "2020": 330,
+          "2021": 110,
+          "2022": 7,
+          "2023": 3,
+          "NULL": 9
+        },
+        "career_codes": [
+          "IETMRE"
+        ],
+        "example_source_rows": [
+          50968
+        ]
+      },
+      {
+        "plan": "IETMRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2022": 87,
+          "2023": 48,
+          "2021": 144,
+          "2020": 378,
+          "2019": 241,
+          "NULL": 3
+        },
+        "career_codes": [
+          "IETMRE"
+        ],
+        "example_source_rows": [
+          366
+        ]
+      },
+      {
+        "plan": "IETMRE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2021": 609,
+          "2022": 538,
+          "2023": 424,
+          "2024": 159,
+          "2020": 200,
+          "2025": 5,
+          "NULL": 8
+        },
+        "career_codes": [
+          "IETMRE"
+        ],
+        "example_source_rows": [
+          204
+        ]
+      },
+      {
+        "plan": "IETMREOL",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2021": 219,
+          "2019": 123,
+          "2020": 289,
+          "2022": 7
+        },
+        "career_codes": [
+          "IETMREOL"
+        ],
+        "example_source_rows": [
+          3485
+        ]
+      },
+      {
+        "plan": "IETMREOL20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2022": 153,
+          "2023": 103,
+          "2021": 167,
+          "2020": 220,
+          "2024": 5,
+          "2019": 140,
+          "2025": 6
+        },
+        "career_codes": [
+          "IETMREOL"
+        ],
+        "example_source_rows": [
+          806
+        ]
+      },
+      {
+        "plan": "IETMREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 3096,
+          "2023": 3662,
+          "2021": 2070,
+          "2024": 913,
+          "2025": 101,
+          "NULL": 2
+        },
+        "career_codes": [
+          "IECIREOL",
+          "IETMREOL"
+        ],
+        "example_source_rows": [
+          206
+        ]
+      },
+      {
+        "plan": "IFIN20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 115,
+          "NULL": 17
+        },
+        "career_codes": [
+          "IFIN"
+        ],
+        "example_source_rows": [
+          33513
+        ]
+      },
+      {
+        "plan": "IIND20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2026": 372,
+          "2025": 237,
+          "NULL": 68
+        },
+        "career_codes": [
+          "IIND"
+        ],
+        "example_source_rows": [
+          21481
+        ]
+      },
+      {
+        "plan": "IINF20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 2969,
+          "2025": 2956,
+          "2022": 12,
+          "2026": 1359,
+          "2023": 41,
+          "NULL": 109
+        },
+        "career_codes": [
+          "IINF"
+        ],
+        "example_source_rows": [
+          21179
+        ]
+      },
+      {
+        "plan": "ILOG20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 144,
+          "2025": 854,
+          "2026": 542,
+          "NULL": 106
+        },
+        "career_codes": [
+          "ILOG"
+        ],
+        "example_source_rows": [
+          22056
+        ]
+      },
+      {
+        "plan": "IMDI20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2025": 4,
+          "2026": 279,
+          "NULL": 45
+        },
+        "career_codes": [
+          "IMDI"
+        ],
+        "example_source_rows": [
+          34081
+        ]
+      },
+      {
+        "plan": "IPRE20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 107,
+          "NULL": 14
+        },
+        "career_codes": [
+          "IPRE"
+        ],
+        "example_source_rows": [
+          34062
+        ]
+      },
+      {
+        "plan": "IRHU20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 128,
+          "NULL": 30
+        },
+        "career_codes": [
+          "IRHU"
+        ],
+        "example_source_rows": [
+          34391
+        ]
+      },
+      {
+        "plan": "ISEP20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 67,
+          "NULL": 11
+        },
+        "career_codes": [
+          "ISEP"
+        ],
+        "example_source_rows": [
+          34435
+        ]
+      },
+      {
+        "plan": "NATP20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2026": 89,
+          "NULL": 13
+        },
+        "career_codes": [
+          "NATP"
+        ],
+        "example_source_rows": [
+          34836
+        ]
+      },
+      {
+        "plan": "NAUTRE",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2019": 51,
+          "2020": 11,
+          "2021": 2
+        },
+        "career_codes": [
+          "NAUTRE"
+        ],
+        "example_source_rows": [
+          49156
+        ]
+      },
+      {
+        "plan": "NAUTRE2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 26,
+          "2020": 24
+        },
+        "career_codes": [
+          "NAUTRE"
+        ],
+        "example_source_rows": [
+          1316
+        ]
+      },
+      {
+        "plan": "NCONRE",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2019": 928,
+          "2020": 473,
+          "2021": 196,
+          "2022": 4,
+          "NULL": 3
+        },
+        "career_codes": [
+          "NCONRE",
+          "NITMRE"
+        ],
+        "example_source_rows": [
+          51193
+        ]
+      },
+      {
+        "plan": "NCONREOL2019",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2019": 153,
+          "2020": 552,
+          "2021": 428,
+          "2022": 38
+        },
+        "career_codes": [
+          "NCONREOL"
+        ],
+        "example_source_rows": [
+          50922
+        ]
+      },
+      {
+        "plan": "NECIRE20091",
+        "label_year_tokens": [
+          2009
+        ],
+        "activity_year_counts": {
+          "2019": 1,
+          "NULL": 9
+        },
+        "career_codes": [
+          "NECIRE"
+        ],
+        "example_source_rows": [
+          124449
+        ]
+      },
+      {
+        "plan": "NECIRE20101",
+        "label_year_tokens": [
+          2010
+        ],
+        "activity_year_counts": {
+          "NULL": 29
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124769
+        ]
+      },
+      {
+        "plan": "NECIRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 18,
+          "NULL": 1
+        },
+        "career_codes": [
+          "NECIRE"
+        ],
+        "example_source_rows": [
+          123789
+        ]
+      },
+      {
+        "plan": "NECIRE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "2019": 50,
+          "2020": 9,
+          "2021": 12,
+          "2022": 2,
+          "NULL": 1
+        },
+        "career_codes": [
+          "NECIRE"
+        ],
+        "example_source_rows": [
+          51192
+        ]
+      },
+      {
+        "plan": "NETMRE20091",
+        "label_year_tokens": [
+          2009
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125771
+        ]
+      },
+      {
+        "plan": "NETMRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 147,
+          "2022": 2,
+          "2026": 1,
+          "2020": 3,
+          "2025": 2,
+          "NULL": 4
+        },
+        "career_codes": [
+          "NETMRE"
+        ],
+        "example_source_rows": [
+          52933
+        ]
+      },
+      {
+        "plan": "NICCRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2019": 69,
+          "2020": 42,
+          "2021": 20,
+          "NULL": 2
+        },
+        "career_codes": [
+          "NICCRE"
+        ],
+        "example_source_rows": [
+          2132
+        ]
+      },
+      {
+        "plan": "NICCRE2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2020": 18,
+          "2021": 24
+        },
+        "career_codes": [
+          "NICCRE"
+        ],
+        "example_source_rows": [
+          1940
+        ]
+      },
+      {
+        "plan": "NICCREOL2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 109,
+          "2020": 110
+        },
+        "career_codes": [
+          "NICCREOL"
+        ],
+        "example_source_rows": [
+          2660
+        ]
+      },
+      {
+        "plan": "NICIRE20091",
+        "label_year_tokens": [
+          2009
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125488
+        ]
+      },
+      {
+        "plan": "NICIRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 5,
+          "2020": 3
+        },
+        "career_codes": [
+          "NICIRE"
+        ],
+        "example_source_rows": [
+          64169
+        ]
+      },
+      {
+        "plan": "NICIRE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "2019": 55,
+          "2020": 3,
+          "NULL": 1
+        },
+        "career_codes": [
+          "NICIRE"
+        ],
+        "example_source_rows": [
+          58946
+        ]
+      },
+      {
+        "plan": "NINFRE",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2019": 342,
+          "2020": 137,
+          "2021": 59,
+          "NULL": 3
+        },
+        "career_codes": [
+          "NINFRE"
+        ],
+        "example_source_rows": [
+          51181
+        ]
+      },
+      {
+        "plan": "NINFREOL2019",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 139,
+          "2019": 64,
+          "2021": 86,
+          "2022": 2,
+          "NULL": 4
+        },
+        "career_codes": [
+          "NINFREOL"
+        ],
+        "example_source_rows": [
+          51299
+        ]
+      },
+      {
+        "plan": "NITMPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          127078
+        ]
+      },
+      {
+        "plan": "NITMRE20091",
+        "label_year_tokens": [
+          2009
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          128068
+        ]
+      },
+      {
+        "plan": "NITMRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 45,
+          "2020": 4,
+          "2021": 3,
+          "2025": 3,
+          "NULL": 2
+        },
+        "career_codes": [
+          "NITMRE"
+        ],
+        "example_source_rows": [
+          121495
+        ]
+      },
+      {
+        "plan": "NTCCRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 215,
+          "2021": 142,
+          "2019": 301,
+          "2022": 4
+        },
+        "career_codes": [
+          "NTCCRE"
+        ],
+        "example_source_rows": [
+          1464
+        ]
+      },
+      {
+        "plan": "NTCCRE2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 190,
+          "2022": 70,
+          "2020": 200,
+          "NULL": 3
+        },
+        "career_codes": [
+          "NTCCRE"
+        ],
+        "example_source_rows": [
+          2388
+        ]
+      },
+      {
+        "plan": "NTCCREOL2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 184,
+          "2022": 154,
+          "2020": 155
+        },
+        "career_codes": [
+          "NTCCREOL"
+        ],
+        "example_source_rows": [
+          612
+        ]
+      },
+      {
+        "plan": "TACI20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125072
+        ]
+      },
+      {
+        "plan": "TADP20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 163,
+          "2026": 105,
+          "NULL": 18
+        },
+        "career_codes": [
+          "TADP"
+        ],
+        "example_source_rows": [
+          18488
+        ]
+      },
+      {
+        "plan": "TAMD20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 153,
+          "2025": 698,
+          "2026": 541,
+          "NULL": 124
+        },
+        "career_codes": [
+          "TAMD"
+        ],
+        "example_source_rows": [
+          4255
+        ]
+      },
+      {
+        "plan": "TASRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 95,
+          "2021": 30,
+          "2019": 283,
+          "NULL": 4
+        },
+        "career_codes": [
+          "ASRE"
+        ],
+        "example_source_rows": [
+          454
+        ]
+      },
+      {
+        "plan": "TASREOL20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 130,
+          "2021": 103,
+          "2022": 7,
+          "2019": 143
+        },
+        "career_codes": [
+          "ASREOL"
+        ],
+        "example_source_rows": [
+          47
+        ]
+      },
+      {
+        "plan": "TCDA20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2025": 194,
+          "2026": 131,
+          "NULL": 14
+        },
+        "career_codes": [
+          "TCDA"
+        ],
+        "example_source_rows": [
+          22063
+        ]
+      },
+      {
+        "plan": "TCIB20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 1681,
+          "2025": 1423,
+          "2026": 630,
+          "NULL": 81
+        },
+        "career_codes": [
+          "TCIB"
+        ],
+        "example_source_rows": [
+          21632
+        ]
+      },
+      {
+        "plan": "TCIBPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 12
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125632
+        ]
+      },
+      {
+        "plan": "TCIREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125974
+        ]
+      },
+      {
+        "plan": "TCRE20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 750,
+          "2025": 563,
+          "2026": 190,
+          "NULL": 33
+        },
+        "career_codes": [
+          "TCRE"
+        ],
+        "example_source_rows": [
+          22029
+        ]
+      },
+      {
+        "plan": "TCREPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 5
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125325
+        ]
+      },
+      {
+        "plan": "TCSRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2021": 173,
+          "2020": 306,
+          "2019": 162,
+          "2022": 19,
+          "2023": 2,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TCSRE"
+        ],
+        "example_source_rows": [
+          1521
+        ]
+      },
+      {
+        "plan": "TCSRE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 283,
+          "2023": 126,
+          "2021": 173,
+          "2024": 23,
+          "2025": 3
+        },
+        "career_codes": [
+          "TCSRE"
+        ],
+        "example_source_rows": [
+          679
+        ]
+      },
+      {
+        "plan": "TCSREOL2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 240,
+          "2020": 313,
+          "2022": 90,
+          "2023": 4,
+          "NULL": 2
+        },
+        "career_codes": [
+          "TCSREOL"
+        ],
+        "example_source_rows": [
+          163
+        ]
+      },
+      {
+        "plan": "TCSREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 720,
+          "2023": 381,
+          "2021": 552,
+          "2024": 48,
+          "2025": 1,
+          "NULL": 2
+        },
+        "career_codes": [
+          "TCSREOL"
+        ],
+        "example_source_rows": [
+          4
+        ]
+      },
+      {
+        "plan": "TCSREOL20231",
+        "label_year_tokens": [
+          2023
+        ],
+        "activity_year_counts": {
+          "2023": 627,
+          "2024": 39,
+          "2025": 12,
+          "NULL": 5
+        },
+        "career_codes": [
+          "TCSREOL"
+        ],
+        "example_source_rows": [
+          9024
+        ]
+      },
+      {
+        "plan": "TCSREOLPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 8
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124718
+        ]
+      },
+      {
+        "plan": "TEIQ20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 347,
+          "NULL": 118
+        },
+        "career_codes": [
+          "TEIQ"
+        ],
+        "example_source_rows": [
+          36946
+        ]
+      },
+      {
+        "plan": "TENS20251",
+        "label_year_tokens": [
+          2025
+        ],
+        "activity_year_counts": {
+          "2026": 798,
+          "2025": 950,
+          "NULL": 212
+        },
+        "career_codes": [
+          "TENS"
+        ],
+        "example_source_rows": [
+          22792
+        ]
+      },
+      {
+        "plan": "TFAR20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 107,
+          "NULL": 32
+        },
+        "career_codes": [
+          "TFAR"
+        ],
+        "example_source_rows": [
+          36389
+        ]
+      },
+      {
+        "plan": "TFIN20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 107,
+          "NULL": 9
+        },
+        "career_codes": [
+          "TFIN"
+        ],
+        "example_source_rows": [
+          36329
+        ]
+      },
+      {
+        "plan": "TICL20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 57,
+          "NULL": 8
+        },
+        "career_codes": [
+          "TICL"
+        ],
+        "example_source_rows": [
+          27259
+        ]
+      },
+      {
+        "plan": "TLOG20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2025": 856,
+          "2024": 183,
+          "2026": 412,
+          "NULL": 104
+        },
+        "career_codes": [
+          "TLOG"
+        ],
+        "example_source_rows": [
+          22221
+        ]
+      },
+      {
+        "plan": "TMDI20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 285,
+          "NULL": 67
+        },
+        "career_codes": [
+          "TMDI"
+        ],
+        "example_source_rows": [
+          34429
+        ]
+      },
+      {
+        "plan": "TMIRE20131",
+        "label_year_tokens": [
+          2013
+        ],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          126481
+        ]
+      },
+      {
+        "plan": "TMIRE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          127506
+        ]
+      },
+      {
+        "plan": "TMIRE20171",
+        "label_year_tokens": [
+          2017
+        ],
+        "activity_year_counts": {
+          "2020": 150,
+          "2019": 326,
+          "2021": 37,
+          "2025": 3,
+          "2022": 6,
+          "NULL": 3
+        },
+        "career_codes": [
+          "IEMORE",
+          "TMIRE"
+        ],
+        "example_source_rows": [
+          49092
+        ]
+      },
+      {
+        "plan": "TMIRE2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2020": 65,
+          "2021": 61,
+          "2022": 6,
+          "2023": 3
+        },
+        "career_codes": [
+          "TMIRE"
+        ],
+        "example_source_rows": [
+          556
+        ]
+      },
+      {
+        "plan": "TMIRE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2021": 114,
+          "2022": 43,
+          "2023": 5,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TMIRE"
+        ],
+        "example_source_rows": [
+          258
+        ]
+      },
+      {
+        "plan": "TPAPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 8
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125110
+        ]
+      },
+      {
+        "plan": "TPARE2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2021": 281,
+          "2020": 449,
+          "2019": 1,
+          "2023": 13,
+          "2022": 73,
+          "2024": 1,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TPARE"
+        ],
+        "example_source_rows": [
+          589
+        ]
+      },
+      {
+        "plan": "TPARE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2022": 525,
+          "2021": 483,
+          "2023": 221,
+          "2024": 53,
+          "2025": 3,
+          "NULL": 3
+        },
+        "career_codes": [
+          "TPARE"
+        ],
+        "example_source_rows": [
+          592
+        ]
+      },
+      {
+        "plan": "TPAREOL2020",
+        "label_year_tokens": [
+          2020
+        ],
+        "activity_year_counts": {
+          "2022": 107,
+          "2021": 285,
+          "2023": 33,
+          "2020": 302,
+          "2024": 5,
+          "NULL": 2
+        },
+        "career_codes": [
+          "TPAREOL"
+        ],
+        "example_source_rows": [
+          159
+        ]
+      },
+      {
+        "plan": "TPAREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2021": 1215,
+          "2023": 1107,
+          "2022": 1705,
+          "2024": 261,
+          "2025": 3,
+          "NULL": 2
+        },
+        "career_codes": [
+          "TPAREOL"
+        ],
+        "example_source_rows": [
+          620
+        ]
+      },
+      {
+        "plan": "TPAREOL20231",
+        "label_year_tokens": [
+          2023
+        ],
+        "activity_year_counts": {
+          "2023": 1423,
+          "2024": 118,
+          "2025": 25,
+          "NULL": 6
+        },
+        "career_codes": [
+          "TPAREOL"
+        ],
+        "example_source_rows": [
+          9395
+        ]
+      },
+      {
+        "plan": "TPAS20241",
+        "label_year_tokens": [
+          2024
+        ],
+        "activity_year_counts": {
+          "2024": 3797,
+          "2025": 3221,
+          "2026": 1148,
+          "2023": 15,
+          "2021": 10,
+          "2022": 4,
+          "NULL": 109
+        },
+        "career_codes": [
+          "IINF",
+          "TPAS"
+        ],
+        "example_source_rows": [
+          20035
+        ]
+      },
+      {
+        "plan": "TPASPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 7
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125888
+        ]
+      },
+      {
+        "plan": "TPCPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2023": 1,
+          "NULL": 432
+        },
+        "career_codes": [
+          "TTMREOL"
+        ],
+        "example_source_rows": [
+          12525
+        ]
+      },
+      {
+        "plan": "TPCRE20081",
+        "label_year_tokens": [
+          2008
+        ],
+        "activity_year_counts": {
+          "NULL": 2
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          127290
+        ]
+      },
+      {
+        "plan": "TPCRE20101",
+        "label_year_tokens": [
+          2010
+        ],
+        "activity_year_counts": {
+          "NULL": 5
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125546
+        ]
+      },
+      {
+        "plan": "TPCRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "NULL": 5
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          125474
+        ]
+      },
+      {
+        "plan": "TPCRE20151",
+        "label_year_tokens": [
+          2015
+        ],
+        "activity_year_counts": {
+          "2019": 474,
+          "2020": 87,
+          "2021": 15,
+          "2023": 3,
+          "2022": 4,
+          "NULL": 10
+        },
+        "career_codes": [
+          "TPCRE"
+        ],
+        "example_source_rows": [
+          50672
+        ]
+      },
+      {
+        "plan": "TPCRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 232,
+          "2021": 52,
+          "2019": 510,
+          "2022": 3,
+          "NULL": 8
+        },
+        "career_codes": [
+          "TPCRE"
+        ],
+        "example_source_rows": [
+          1465
+        ]
+      },
+      {
+        "plan": "TPCREOL",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2020": 152,
+          "2019": 251,
+          "2021": 17,
+          "2022": 3,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TPCREOL"
+        ],
+        "example_source_rows": [
+          10882
+        ]
+      },
+      {
+        "plan": "TPCREOL20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2021": 44,
+          "2020": 132,
+          "2019": 140,
+          "2022": 4,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TPCREOL"
+        ],
+        "example_source_rows": [
+          1793
+        ]
+      },
+      {
+        "plan": "TPRE20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 78,
+          "NULL": 12
+        },
+        "career_codes": [
+          "TPRE"
+        ],
+        "example_source_rows": [
+          38594
+        ]
+      },
+      {
+        "plan": "TPRPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          127422
+        ]
+      },
+      {
+        "plan": "TPRRE20131",
+        "label_year_tokens": [
+          2013
+        ],
+        "activity_year_counts": {
+          "2019": 3,
+          "NULL": 3
+        },
+        "career_codes": [
+          "TPRRE"
+        ],
+        "example_source_rows": [
+          117341
+        ]
+      },
+      {
+        "plan": "TRHU20261",
+        "label_year_tokens": [
+          2026
+        ],
+        "activity_year_counts": {
+          "2026": 119,
+          "NULL": 48
+        },
+        "career_codes": [
+          "TRHU"
+        ],
+        "example_source_rows": [
+          35043
+        ]
+      },
+      {
+        "plan": "TTMPASO",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "NULL": 515
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124547
+        ]
+      },
+      {
+        "plan": "TTMRE20081",
+        "label_year_tokens": [
+          2008
+        ],
+        "activity_year_counts": {
+          "NULL": 8
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124997
+        ]
+      },
+      {
+        "plan": "TTMRE20091",
+        "label_year_tokens": [
+          2009
+        ],
+        "activity_year_counts": {
+          "NULL": 1
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          128784
+        ]
+      },
+      {
+        "plan": "TTMRE20101",
+        "label_year_tokens": [
+          2010
+        ],
+        "activity_year_counts": {
+          "NULL": 4
+        },
+        "career_codes": [],
+        "example_source_rows": [
+          124996
+        ]
+      },
+      {
+        "plan": "TTMRE20121",
+        "label_year_tokens": [
+          2012
+        ],
+        "activity_year_counts": {
+          "2019": 11,
+          "2021": 6,
+          "2020": 3,
+          "NULL": 9
+        },
+        "career_codes": [
+          "TTMRE"
+        ],
+        "example_source_rows": [
+          67645
+        ]
+      },
+      {
+        "plan": "TTMRE20161",
+        "label_year_tokens": [
+          2016
+        ],
+        "activity_year_counts": {
+          "2019": 490,
+          "2020": 76,
+          "2021": 5,
+          "2024": 3,
+          "2023": 3,
+          "2022": 1,
+          "NULL": 12
+        },
+        "career_codes": [
+          "TTMRE"
+        ],
+        "example_source_rows": [
+          62130
+        ]
+      },
+      {
+        "plan": "TTMRE20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2020": 600,
+          "2021": 293,
+          "2022": 61,
+          "2019": 488,
+          "2023": 8,
+          "2024": 4,
+          "2026": 2,
+          "NULL": 6
+        },
+        "career_codes": [
+          "TTMRE"
+        ],
+        "example_source_rows": [
+          789
+        ]
+      },
+      {
+        "plan": "TTMRE20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2023": 60,
+          "2022": 110,
+          "2020": 61,
+          "2021": 139,
+          "2024": 10,
+          "NULL": 5
+        },
+        "career_codes": [
+          "TTMRE"
+        ],
+        "example_source_rows": [
+          753
+        ]
+      },
+      {
+        "plan": "TTMREOL",
+        "label_year_tokens": [],
+        "activity_year_counts": {
+          "2023": 23,
+          "2019": 190,
+          "2020": 26,
+          "2024": 3,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TTMREOL"
+        ],
+        "example_source_rows": [
+          62162
+        ]
+      },
+      {
+        "plan": "TTMREOL20191",
+        "label_year_tokens": [
+          2019
+        ],
+        "activity_year_counts": {
+          "2021": 173,
+          "2020": 286,
+          "2022": 54,
+          "2023": 25,
+          "2019": 261,
+          "2024": 6,
+          "2025": 5
+        },
+        "career_codes": [
+          "TTMREOL"
+        ],
+        "example_source_rows": [
+          1518
+        ]
+      },
+      {
+        "plan": "TTMREOL20211",
+        "label_year_tokens": [
+          2021
+        ],
+        "activity_year_counts": {
+          "2023": 345,
+          "2021": 447,
+          "2022": 728,
+          "2024": 76,
+          "2025": 3,
+          "NULL": 2
+        },
+        "career_codes": [
+          "TTMREOL"
+        ],
+        "example_source_rows": [
+          800
+        ]
+      },
+      {
+        "plan": "TTMREOL20231",
+        "label_year_tokens": [
+          2023
+        ],
+        "activity_year_counts": {
+          "2023": 272,
+          "2022": 7,
+          "2024": 20,
+          "2025": 10,
+          "NULL": 1
+        },
+        "career_codes": [
+          "TTMREOL"
+        ],
+        "example_source_rows": [
+          10440
+        ]
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "U01",
+      "statement": "Los tres hashes coinciden con H1 y no cambian durante la lectura. No se ejecutó ningún motor ni se editó fuente o Excel."
+    },
+    {
+      "id": "U02",
+      "statement": "PROMEDIOS contiene 129493 filas, de las cuales 125282 tienen año 2019–2026 y claves académicas completas únicas; 4211 tienen NULL literal en año/carrera/período/ramo. No son 129493 actividades fechadas."
+    },
+    {
+      "id": "U03",
+      "statement": "Los 13068 CODCLI tienen un solo plan observado cada uno. A nivel de RUT+DIG, 1462 grupos tienen varios planes en todo el reporte; restringiendo a actividad fechada, 1034 de 7669 grupos tienen varios. Esto no fecha una migración entre planes."
+    },
+    {
+      "id": "U04",
+      "statement": "El join exacto comparte 11075 CODCLI. Sus 126782 filas de PROMEDIOS corresponden a 124405 actividades fechadas y 2377 filas sin año. Se conservan 1993 CODCLI de PROMEDIOS sin coincidencia actual."
+    },
+    {
+      "id": "U05",
+      "statement": "En el join único se observan 11 filas de 4 CODCLI con carrera distinta y 356 filas de 32 CODCLI con jornada distinta. Son diferencias entre campos/reportes, no errores ni cambios administrativos fechados demostrados."
+    },
+    {
+      "id": "U06",
+      "statement": "DatosAlumnos contiene un CODCLI repetido en filas 1006/1007, con contexto académico idéntico. Ese identificador no está en PROMEDIOS; no afecta la unión observada, pero el generador debe conservar la ambigüedad si aparece."
+    },
+    {
+      "id": "U07",
+      "statement": "Los 223 planes del catálogo tienen un único contexto carrera+sede cada uno. PROMEDIOS observa 197 etiquetas: 184 coinciden con catálogo, 13 no; 39 planes del catálogo carecen de observación en PROMEDIOS."
+    },
+    {
+      "id": "U08",
+      "statement": "125264 filas tienen plan y carrera coincidentes con catálogo; 17 filas tienen plan localizado pero carrera distinta. 1753 filas usan 13 etiquetas sin catálogo, de ellas solo una tiene actividad fechada. 2459 filas tienen plan localizado pero CODCARR ausente."
+    },
+    {
+      "id": "U09",
+      "statement": "689 actividades de 46 CODCLI son anteriores al patrón de año incluido en el nombre de plan. Por ejemplo ICIB20241 figura con actividad 2020, fila 660. No usar el patrón como fecha obligatoria de vigencia ni clasificar automáticamente el registro como error."
+    },
+    {
+      "id": "U10",
+      "statement": "No se encontró fecha desde/hasta de asignación efectiva en estas tres fuentes. El cruce acredita asociación observada de identificadores y contrastes de contexto; no reconstruye la malla histórica de cada persona."
+    }
+  ],
+  "limits": [
+    "Los conteos de CODCLI son inscripciones/identificadores internos, no personas únicas institucionales.",
+    "La asociación de un plan a una actividad antigua puede proceder del corte actual; esta auditoría no afirma cómo fue construido el reporte sin evidencia de origen.",
+    "Las 13 etiquetas sin catálogo se conservan literalmente, incluidas las que terminan en PASO. El sufijo no se interpreta como estado administrativo.",
+    "Diferencias de carrera, jornada o sede se reportan por separado; no se resuelven por similitud de nombre ni por el año del plan.",
+    "No se realizó cruce MRUN↔RUT, ni se asignó VERSION SIES a planes UMAS.",
+    "La cobertura disponible de actividad válida comienza en 2019; no se reconstruye actividad 2007–2018 desde cohortes o códigos de plan."
+  ],
+  "instructions_read": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/agent.md",
+      "sha256": "9a676455a964208aab625c3ac84b7e317c0d1f87559d2cec89d7c2e0a03f3439"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/GOBERNANZA_REPOSITORIO.md",
+      "sha256": "59169b356b4e1e695cc8bde93a89dd44dc666f34b95287590fb7f69510ec7c7a"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_1_inventario_versiones_historicas.md",
+      "sha256": "de3e8a30d9a0dffb38714f12811407e8875f5cff792ee0fcaac10cd2ea1c5f0c"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_4_planes_asignaciones_umas.md",
+      "sha256": "960ddafa466296bc1942fe0848f4d2020935dc5bae8c464e10fa75d6884040bf"
+    }
+  ],
+  "reproducibility": {
+    "script": "/tmp/fase4_cruce_sies_umas/auditar_asignaciones.py",
+    "sha256": "b16700608b2683f2a73b2a3874ef3864a65145b5c6e35b594112ff2eddd9ef1b",
+    "python": "/Users/alexi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "command": "python3 -B /tmp/fase4_cruce_sies_umas/auditar_asignaciones.py",
+    "calculation_output": "/tmp/fase4_cruce_sies_umas/calculos_asignaciones.json"
+  }
+}

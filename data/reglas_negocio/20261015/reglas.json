@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "version": "20261015",
+  "fuentes": "fuentes.json",
+  "politica": "Reglas por autoridad/proceso/edición. Documentada no implica activada en motor.",
+  "reglas": [
+    {
+      "id": "INT-OFERTA-INICIO-001",
+      "clase": "INTERNA",
+      "estado": "IMPLEMENTADA_AISLADA",
+      "proceso": "Diccionario histórico",
+      "edicion": "Decisión Alexi 2026-10-15",
+      "regla": "Inicio del programa para el diccionario = primer año de oferta del Código Único completo. No filtrar por matrícula, quórum ni vigencia actual. No sustituye Año Inicio de la carga formal.",
+      "fuentes": [
+        "Usuario: mensaje 2026-10-15"
+      ],
+      "campos": [
+        "codigo_unico",
+        "anio"
+      ],
+      "consumidores": [
+        "common/reglas_negocio.py"
+      ]
+    },
+    {
+      "id": "INT-IDENTIDAD-001",
+      "clase": "INTERNA",
+      "estado": "GOBERNADA",
+      "proceso": "Diccionario histórico",
+      "edicion": "Decisión Alexi 2026-10-15",
+      "regla": "Separar programas regulares y de continuidad y sus inicios. No agrupar sus fechas por nombre o componente C. Preservar nombre literal SIES con tipo de plan en columna aparte.",
+      "fuentes": [
+        "Usuario: mensaje 2026-10-15"
+      ],
+      "campos": [
+        "CODIGO_UNICO",
+        "CODCARPR",
+        "CODPESTUD",
+        "TIPO_CARRERA"
+      ],
+      "consumidores": [
+        "Diccionario histórico"
+      ]
+    },
+    {
+      "id": "FOR-OA27-IDENTIDAD-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta-Acceso",
+      "edicion": "2027",
+      "regla": "Cambio de institución, sede registrada, jornada o nombre significativo modifica el componente correspondiente de ISCJV.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_acceso_2027",
+          "paginas_fisicas": [
+            65,
+            66
+          ]
+        }
+      ],
+      "campos": [
+        "institucion",
+        "sede",
+        "carrera",
+        "jornada"
+      ],
+      "consumidores": [
+        "Validación de oferta; no altera códigos históricos"
+      ]
+    },
+    {
+      "id": "FOR-OA27-VERSION-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta-Acceso",
+      "edicion": "2027",
+      "regla": "Cambio de modalidad, duración de estudios/total, tipo de plan o nivel exige nueva versión y Código Único. Original vigencia 2 y nuevo vigencia 1 según Anexo 5.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_acceso_2027",
+          "paginas_fisicas": [
+            19,
+            66
+          ]
+        }
+      ],
+      "campos": [
+        "MODALIDAD",
+        "DURACION_ESTUDIOS",
+        "DURACION_TOTAL",
+        "COD_TIPO_PLAN_CARRERA",
+        "COD_NIVEL_CARRERA"
+      ],
+      "consumidores": [
+        "Validación de oferta"
+      ]
+    },
+    {
+      "id": "FOR-OA27-CURRICULO-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta-Acceso",
+      "edicion": "2027",
+      "regla": "Cambios curriculares, perfiles o admisión pueden mantener código si no alteran nombre, métrica de duración ni clasificación de áreas, según condiciones del Anexo 5. No usar ordinal SIES como ordinal universal de malla UMAS.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_acceso_2027",
+          "paginas_fisicas": [
+            66
+          ]
+        }
+      ],
+      "campos": [
+        "malla",
+        "nombre",
+        "duracion",
+        "areas"
+      ],
+      "consumidores": [
+        "Diccionario de versiones"
+      ]
+    },
+    {
+      "id": "FOR-OA27-NOMBRE-001",
+      "clase": "FORMAL",
+      "estado": "REQUIERE_EVALUACION_MINISTERIAL",
+      "proceso": "Oferta-Acceso",
+      "edicion": "2027",
+      "regla": "Cambio de nombre sin cambio de código requiere oficio y evaluación SIES/Acceso/DFE. Los criterios del manual no autorizan alias automáticos por semejanza.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_acceso_2027",
+          "paginas_fisicas": [
+            66
+          ]
+        }
+      ],
+      "campos": [
+        "NOMBRE_CARRERA",
+        "COD_CARRERA",
+        "areas"
+      ],
+      "consumidores": [
+        "Oferta; equivalencias"
+      ]
+    },
+    {
+      "id": "FOR-OA2026-REGIMEN-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta académica",
+      "edicion": "2026",
+      "regla": "Régimen y duración del régimen son editables en oferta vigente; no son las duraciones formales de estudios/total. Cambio exclusivo de representación no demuestra nuevo código.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_2026",
+          "paginas_fisicas": [
+            15,
+            16,
+            17
+          ]
+        }
+      ],
+      "campos": [
+        "REGIMEN",
+        "DURACION_REGIMEN"
+      ],
+      "consumidores": [
+        "Oferta"
+      ]
+    },
+    {
+      "id": "FOR-OA2026-UNIDADES-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta académica",
+      "edicion": "2026",
+      "regla": "Duraciones de estudios, titulación y total en semestres; duración del régimen en unidad del régimen. Año Inicio formal refiere inicio de actividades con ingreso de estudiantes del código específico.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_2026",
+          "paginas_fisicas": [
+            7,
+            8
+          ]
+        }
+      ],
+      "campos": [
+        "DURACION_ESTUDIOS",
+        "DURACION_TITULACION",
+        "DURACION_TOTAL",
+        "REGIMEN",
+        "DURACION_REGIMEN",
+        "ANIO_INICIO"
+      ],
+      "consumidores": [
+        "Oferta; transformaciones"
+      ]
+    },
+    {
+      "id": "FOR-OA2027-REGIMEN-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta-Acceso",
+      "edicion": "2027",
+      "regla": "Régimen y duración del régimen son editables en oferta vigente; no son las duraciones formales de estudios/total. Cambio exclusivo de representación no demuestra nuevo código.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_acceso_2027",
+          "paginas_fisicas": [
+            18,
+            19,
+            24
+          ]
+        }
+      ],
+      "campos": [
+        "REGIMEN",
+        "DURACION_REGIMEN"
+      ],
+      "consumidores": [
+        "Oferta"
+      ]
+    },
+    {
+      "id": "FOR-OA2027-UNIDADES-001",
+      "clase": "FORMAL",
+      "estado": "DOCUMENTADA",
+      "proceso": "Oferta-Acceso",
+      "edicion": "2027",
+      "regla": "Duraciones de estudios, titulación y total en semestres; duración del régimen en unidad del régimen. Año Inicio formal refiere inicio de actividades con ingreso de estudiantes del código específico.",
+      "fuentes": [
+        {
+          "id_fuente": "manual_oferta_acceso_2027",
+          "paginas_fisicas": [
+            8
+          ]
+        }
+      ],
+      "campos": [
+        "DURACION_ESTUDIOS",
+        "DURACION_TITULACION",
+        "DURACION_TOTAL",
+        "REGIMEN",
+        "DURACION_REGIMEN",
+        "ANIO_INICIO"
+      ],
+      "consumidores": [
+        "Oferta; transformaciones"
+      ]
+    },
+    {
+      "id": "TRA-DURACION-001",
+      "clase": "TRANSFORMACION",
+      "estado": "PENDIENTE_FORMULA_Y_PRECISION",
+      "proceso": "UMAS a reporte formal",
+      "edicion": "Por proceso y año",
+      "regla": "Conservar duración/unidad interna y formal. No deducir regla universal de redondeo. La evidencia 5910 presenta 12 trimestres/8 semestres, 6/4 y 7/5. Validar definición de NIVEL y régimen de asignatura frente a régimen de programa.",
+      "fuentes": [
+        "reporte_5910_2027"
+      ],
+      "campos": [
+        "CODPESTUD",
+        "NIVEL",
+        "REGIMEN",
+        "DURACION_REGIMEN",
+        "DURACION_ESTUDIOS"
+      ],
+      "consumidores": [
+        "UMAS; Oferta; Matrícula"
+      ]
+    },
+    {
+      "id": "INT-ESTADOS-001",
+      "clase": "INTERNA",
+      "estado": "INVENTARIADA_SIN_CAMBIAR",
+      "proceso": "Estados académicos",
+      "edicion": "Según proceso consumidor",
+      "regla": "Clasificación estado/situación tiene diccionario propio. Vigente de programa SIES no es vigente de estudiante UMAS. Preservar excepciones por año/proceso.",
+      "fuentes": [
+        "gobernanza_catalogos/gob_datosalumnos_estadoacademico_situacion.tsv",
+        "procesos/caracterizacion/caracterizacion_estado_kpi.py",
+        "procesos/caracterizacion/caracterizacion_trayectorias_2027.py"
+      ],
+      "campos": [
+        "ESTADOACADEMICO",
+        "SITUACION"
+      ],
+      "consumidores": [
+        "Caracterización; matrícula"
+      ]
+    },
+    {
+      "id": "MET-RETENCION-001",
+      "clase": "FORMAL_E_INTERNA",
+      "estado": "INVENTARIADA_PENDIENTE_AUDITORIA_DEFINICION",
+      "proceso": "Retención",
+      "edicion": "Por cohorte y edición",
+      "regla": "Identificar universo, cohorte, continuidad institucional/carrera, exclusiones y corte de cada método. No sustituir fórmula por compartir campos de oferta.",
+      "fuentes": [
+        "scripts/construir_base_retencion_mu_2022_2026.py"
+      ],
+      "campos": [
+        "cohorte",
+        "año observación",
+        "institución",
+        "programa"
+      ],
+      "consumidores": [
+        "Retención"
+      ]
+    },
+    {
+      "id": "MET-TITULACION-001",
+      "clase": "FORMAL_E_INTERNA",
+      "estado": "PENDIENTE_LOCALIZAR_CONTRATO_COMPLETO",
+      "proceso": "Titulación oportuna",
+      "edicion": "Por cohorte y edición",
+      "regla": "Gobernar cohorte, ingreso, duración formal aplicable, ventana y evento de titulación. No inferir fórmula ni equiparar automáticamente un estado interno con cumplimiento formal.",
+      "fuentes": [],
+      "campos": [
+        "cohorte",
+        "duración",
+        "fecha titulación"
+      ],
+      "consumidores": [
+        "Titulación; procesos futuros"
+      ]
+    }
+  ]
+}

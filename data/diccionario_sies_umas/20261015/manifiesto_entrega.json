@@ -1,0 +1,58 @@
+{
+  "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/DICCIONARIO_CRUCE_SIES_UMAS_2007_2026.xlsx",
+  "sha256": "29f085165171d65514efe8663faa71a4a6fe01101d8de09a57729eab2652789d",
+  "payload_sha256": "c3bc23af6ed5baf16d859374484fb7dbf936bfc54a81a6df9115eaa799296f90",
+  "autor": "Artifact Tool",
+  "summary": {
+    "codigos": 141,
+    "codigos_sies_parseables": 139,
+    "identificadores_historicos_sin_componentes": [
+      "I162M2008N1",
+      "I162M2008N3"
+    ],
+    "oferta_2026": 124,
+    "catalogo_2026": 137,
+    "codigos_observados_mrun": 106,
+    "equivalencias": 257,
+    "historico_oferta": 747,
+    "historico_mrun": 472,
+    "historico_anual": 1219,
+    "ejemplos_umas": 159,
+    "estados_ejemplos": {
+      "AMBIGUO": 26,
+      "Sin catálogo anual verificado": 64,
+      "RESUELTO": 52,
+      "SIN_EQUIVALENCIA": 17
+    },
+    "codigos_con_equivalencia_sin_ejemplo_umas": [
+      "I162S2C53J3V1",
+      "I162S2C66J4V1",
+      "I162S2C69J4V1",
+      "I162S2C70J4V1"
+    ],
+    "fuentes": 23,
+    "reglas": 35
+  },
+  "validation": {
+    "union_completa": true,
+    "codigos_unicos": true,
+    "nombres_literales_oferta_preservados": true,
+    "equivalencias_sin_duplicados": true,
+    "componentes_historicos_no_inventados": true,
+    "anios_ejemplos_2007_2026": true,
+    "sin_identificadores_personales_en_esquema": true,
+    "condiciones_ingreso_vacias_reales": true,
+    "sin_ejemplos_inventados": true,
+    "modalidad_y_tipo_plan_codificados_desde_campos_explicitos": true,
+    "consulta_ambigua_CILOG": [
+      "I162S2C77J4V1",
+      "I162S2C77J4V2"
+    ],
+    "consulta_unica_ILOG": [
+      "I162S2C77J4V1"
+    ]
+  },
+  "recalculo_nativo_excel": false,
+  "pruebas_interactivas_artifact": 13,
+  "datos_personales_incluidos": false
+}

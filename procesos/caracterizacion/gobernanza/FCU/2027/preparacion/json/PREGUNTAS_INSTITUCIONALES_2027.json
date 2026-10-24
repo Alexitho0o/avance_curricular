@@ -1,0 +1,81 @@
+{
+  "version": 3,
+  "date": "2026-10-13",
+  "authority": "Decision expresa del usuario en este chat",
+  "scope": "Instrumento, carga PES, estudios, KPI y comparaciones historicas FCU 2027",
+  "protected_work_questions": {
+    "G02Q95": {
+      "type": "L",
+      "text": "De las siguientes afirmaciones ¿Cuál describe mejor tu situación laboral actual?",
+      "answers": {
+        "AO01": "Tengo un trabajo en el campo laboral de la carrera en que me matriculé",
+        "AO02": "Tengo un trabajo que NO se relaciona con la carrera en que me matriculé",
+        "AO03": "No he encontrado un trabajo aún, pero lo estoy buscando",
+        "AO04": "No tengo pensado trabajar por ahora"
+      }
+    },
+    "G02Q20": {
+      "type": "L",
+      "text": "En relación a la pregunta anterior ¿En cuál de las siguientes situaciones se encuentra laboralmente?",
+      "answers": {
+        "AO03": "Trabajo a tiempo completo",
+        "AO04": "Trabajo a tiempo parcial",
+        "AO05": "Trabajo esporádicamente o en \"pololos\""
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "INST_EMPRENDIMIENTO_FORMALIZADO_2027",
+      "origin": "INSTITUCIONAL",
+      "kind": "INSTITUTIONAL_ANSWER_EXTENSION",
+      "group": "ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS",
+      "text": "Tengo un emprendimiento formalizado",
+      "limesurvey_code": "G02Q95",
+      "answer_code": "AO05",
+      "status": "OPCION_VERIFICADA_EN_EXPORTACION",
+      "deployment_evidence": "El LSG 644 de la encuesta 141234 archivado el 2026-10-09 contiene AO05: Tengo un emprendimiento formalizado. results-survey141234.xlsx registra respuestas literales seleccionadas. El usuario confirma el seguimiento de esta opcion para VCM el 2026-10-13.",
+      "source": "gobernanza/instrumentos_limesurvey/2027/P1/141234_20261009_406d959cedfd/fuentes/limesurvey_group_644.lsg",
+      "related_questions": ["G02Q95", "G02Q20"],
+      "decision": "Conservar la opcion institucional AO05 observada dentro de G02Q95 y seguirla separadamente para VCM. Las cuatro alternativas originales y G02Q20 siguen protegidas. AO05 no es una subpregunta ni un campo oficial PES; no se modifica LimeSurvey.",
+      "supersedes": "La decision inicial del 2026-10-09 de una pregunta independiente con codigo pendiente se sustituye por la implementacion efectivamente observada y la instruccion del usuario del 2026-10-13. Se conserva la version anterior en el respaldo de esta actualizacion.",
+      "official_pes_fields": [],
+      "must_not_infer": ["SIT_LAB", "employment_status", "employment_hours", "income", "institutional_eligibility", "business_name_from_G02Q27", "ownership_of_employer"],
+      "analysis": {
+        "variable_id": "INST_EMPRENDIMIENTO_FORMALIZADO",
+        "literal_response_required": true,
+        "response_codes": {"selected": "AO05", "selected_label": "Tengo un emprendimiento formalizado"},
+        "preserve_original_response": true,
+        "missing_is_negative": false,
+        "historical_equivalence": null,
+        "population": "Estudiantes elegibles de la version 2027 que hayan seleccionado esta alternativa institucional",
+        "rule": "Informar version, pregunta G02Q95, alternativa AO05, respuesta literal, acumulado, Hoy por submitdate y cobertura. Otra alternativa significa NO_SELECCIONADA, no prueba inexistencia de un emprendimiento. Ausencia no significa No. No combinar con SIT_LAB ni reconstruir historicos."
+      }
+    }
+  ],
+  "company_name_followup": {
+    "limesurvey_code": "G02Q27",
+    "origin": "INSTITUCIONAL",
+    "group": "ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS",
+    "position_in_group": 26,
+    "type": "S",
+    "text": "¿En qué empresa trabajas o como se llama tu emprendimiento?",
+    "answer_options": [],
+    "response_type": "Texto libre, sin alternativas ni subpreguntas",
+    "observed_relevance": "((G02Q95.NAOK == \"AO01\" or G02Q95.NAOK == \"AO02\"))",
+    "formal_venture_option_enables_question": false,
+    "output_field": "EMPRESA_O_EMPRENDIMIENTO_DECLARADO",
+    "retired_misleading_output_field": "NOMBRE_EMPRENDIMIENTO",
+    "status_field": "ESTADO_NOMBRE_EMPRENDIMIENTO",
+    "statuses": {
+      "NO_CONFIRMADO_PREGUNTA_MIXTA": "Hay texto literal, pero la pregunta no distingue empresa empleadora de emprendimiento propio.",
+      "SIN_RESPUESTA_G02Q27": "La columna existe sin respuesta valida. No afirmar que no tiene nombre ni que se nego a responder.",
+      "COLUMNA_AUSENTE": "No se encontro G02Q27 en la fuente; no equivale a respuesta negativa."
+    },
+    "official_pes_fields": [],
+    "manual_reference": "Manual FCU 2027, P17, paginas PDF 21-22 y SIT_LAB en pagina PDF 55: solo situacion laboral. No solicita nombre de empresa ni emprendimiento.",
+    "rule": "Preservar G02Q27 literal en detalle y Respuestas fuente. No poblar NOMBRE_EMPRENDIMIENTO ni atribuir propiedad. AO05 identifica seleccion de emprendimiento formalizado, no prueba a que se refiere el texto mixto. No inferir formalizacion desde G01Q25/AO04. El filtro observado excluye AO05 y no acredita exposicion del estudiante a la pregunta. No modificar el formulario ni reconstruir nombres historicos."
+  },
+  "baseline_source": "gobernanza/FCU/2027/preparacion/json/AUDITORIA_ESTRUCTURA_20261007_ea9138c666_50cb0a91_19245f3e.json",
+  "rule": "El ID institucional no es una columna LimeSurvey. G02Q95 es la pregunta y AO05 su alternativa institucional; G02Q95[AO05] no es una subpregunta fisica. La carga PES contiene exclusivamente los campos oficiales y no deriva SIT_LAB desde AO05."
+}

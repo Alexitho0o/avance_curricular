@@ -1,0 +1,41 @@
+{
+  "fecha_exploracion": "2026-05-04T14:28:17",
+  "ruta_proyecto": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+  "archivo_explorado": null,
+  "hoja_explorada": "PRUEBA_MINIMA",
+  "filas_dataframe": 4,
+  "columnas_dataframe": 3,
+  "columnas_detectadas": [
+    "CATEGORIA",
+    "VALOR",
+    "FECHA_TXT"
+  ],
+  "columnas_numericas": [
+    "VALOR"
+  ],
+  "columnas_categoricas": [
+    "CATEGORIA",
+    "FECHA_TXT"
+  ],
+  "columnas_fecha": [],
+  "columnas_nulos_altos": [],
+  "columnas_alta_cardinalidad_o_problematicas": [
+    "FECHA_TXT: alta_cardinalidad"
+  ],
+  "columnas_excluidas_sugeridas": [
+    "FECHA_TXT: alta_cardinalidad"
+  ],
+  "ruta_html_generado": null,
+  "criterios_seleccion": {
+    "modo": "prueba_minima_sin_excel_real"
+  },
+  "advertencias": [
+    "Prueba controlada sin Excel final real"
+  ],
+  "errores_controlados": [],
+  "proximos_pasos_sugeridos": [
+    "Revisar combinaciones de columnas de segmentación y métricas numéricas.",
+    "Usar hallazgos para fortalecer gráficos del Excel final institucional.",
+    "No sustituir reportes productivos por salidas PyGWalker."
+  ]
+}

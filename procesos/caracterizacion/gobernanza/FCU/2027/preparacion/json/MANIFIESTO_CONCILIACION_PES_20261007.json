@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-07",
+  "scope": "Reconciliation of 25 historical rows and guarded standalone 2027 draft adapter. No live survey edits or production-2026 changes.",
+  "tests_passed": 29,
+  "schema_fields": 172,
+  "generic_unresolved_crosswalk_rows": 0,
+  "external_source_validations": 13,
+  "production_ready": false,
+  "official_csv_created": false,
+  "remaining_load_validation": "External sources, catalogs, other-relatives equivalence, and inconsistent printed column letters versus final PES template.",
+  "sq008_status": "Confirmed visually by user. XML observation preserved.",
+  "git_state": "Local files, no commit or push performed.",
+  "artifacts": [
+    {
+      "path": "gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx",
+      "sha256": "d70b86e4a2a19cdee3f8cb43afafa5234c8b4d161a97fac85ed625614d07b033"
+    },
+    {
+      "path": "gobernanza/FCU/2027/preparacion/json/CONFIRMACIONES_USUARIO_FCU_2027.json",
+      "sha256": "19245f3e4847f9b05e3e329e06bc31a65381686591c709a26976841aa052c133"
+    },
+    {
+      "path": "gobernanza/FCU/2027/preparacion/json/ESPECIFICACION_PES_2027.json",
+      "sha256": "0c5d5d62c96d00a6b6ac7db5a86118b21e978daab1d4ec742c6c320c15fd7a52"
+    },
+    {
+      "path": "gobernanza/FCU/2027/preparacion/json/AUDITORIA_ESTRUCTURA_20261007_ea9138c666_50cb0a91_19245f3e.json",
+      "sha256": "b477574bbd5204c80401466fd2dc7b01d809680adb800408df02724be3403709"
+    },
+    {
+      "path": "scripts/fcu_pes_2027.py",
+      "sha256": "d7a4d815ad792bbd656ceee8a6838c769765c7eb661abe57214976845852cada"
+    },
+    {
+      "path": "scripts/test_fcu_pes_2027.py",
+      "sha256": "e9906f621555032435e62579e88fe8d4983e83d75e9fcf09700ecf6be7819eba"
+    },
+    {
+      "path": "scripts/gobernanza/auditar_grupos_fcu_2027.py",
+      "sha256": "5855ff5a2de9b919726b70af711a28b466b97f840565efa84adf3b20996a26a0"
+    },
+    {
+      "path": "scripts/gobernanza/actualizar_cruce_fcu_2027.py",
+      "sha256": "817ad8dbfa205c238ea2e4e729b53c6e6606b21dbed81d9ac55b63c3370e1993"
+    },
+    {
+      "path": "scripts/gobernanza/actualizar_guia_fcu_2027.mjs",
+      "sha256": "b85ae665ac6221ba3e1804cc00705911a9c049218a623ec474904a1e2d169345"
+    },
+    {
+      "path": "scripts/gobernanza/normalizar_visibilidad_guia_fcu.py",
+      "sha256": "abeec7a733309c97fa4a7ce695e9fa1bcacddb8b7076ad4b0e7200b16db35bd2"
+    },
+    {
+      "path": "scripts/gobernanza/test_normalizar_visibilidad_guia_fcu.py",
+      "sha256": "d9886f4aa07c2612b3c14cfef288910876da6ac4ac70b95375582d438f7db5bf"
+    }
+  ],
+  "guide_all_rows_visible": true,
+  "guide_retired_labels_are_historical_not_edit_orders": true
+}

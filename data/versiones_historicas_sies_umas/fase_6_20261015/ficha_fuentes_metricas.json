@@ -1,0 +1,914 @@
+{
+  "schema_version": "1.0",
+  "fase": 6,
+  "review_date": "2026-10-15",
+  "status": "VERIFICADO_EN_EXTRACTOS_FIJADOS_CON_REUBICACION_EXPLICITA",
+  "purpose": "Ficha de unidades, denominadores y fuentes para informar cobertura técnica H6.",
+  "skill_applied": {
+    "name": "analisis-institucional-alexi:ipss-verificacion-cifras-matricula",
+    "path": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/analisis-institucional-alexi/1.0.9/skills/ipss-verificacion-cifras-matricula/SKILL.md",
+    "sha256": "94cf49c198d779b14045099ba033c2c49feb961cb5636441529e6a16739bfb4e"
+  },
+  "web_scope": "No se investigan cifras oficiales actuales; se verifica una extracción histórica fijada y artefactos H2–H5. No se afirma cotejo web ni total oficial institucional.",
+  "sources": [
+    {
+      "id": "H5",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+      "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+      "role": "Maestro académico derivado congelado",
+      "temporal_scope_and_cut": "Snapshot gobernado 2026-10-15; años observados y publicados preservados en campos separados."
+    },
+    {
+      "id": "H2_ANUAL",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/historia_codigo_anio.tsv",
+      "sha256": "2c132873c57d65b661d03c22ce62b6c11a45305015b4cfda91a1f8f250658058",
+      "role": "Agregados de observaciones del extracto MRUN fijado",
+      "temporal_scope_and_cut": "Años de observación 2007–2026. No se certifica aquí fecha real de extracción a partir del nombre del CSV."
+    },
+    {
+      "id": "H3_OFERTA",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/oferta_codigo_anio.tsv",
+      "sha256": "dc028a6790244dc9b73a8c3b48f5ced672d0db330545fc09c48f0f24f2f46909",
+      "role": "Oferta histórica publicada, proyección institucional verificada",
+      "temporal_scope_and_cut": "Oferta 2010–2026; cobertura 2007–2009 no acreditada. Puede armonizar atributos de años anteriores."
+    },
+    {
+      "id": "H3_NOMBRE_2026",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/comparacion_oferta_2026.tsv",
+      "sha256": "d08656fb32a9be498fe5a3e4718f1e7b38a377c286ec1fc73c61d90254602ddc",
+      "role": "Comparación literal con oferta 2026 del usuario",
+      "temporal_scope_and_cut": "124 códigos de oferta 2026; no todos los códigos históricos tienen nombre en ese corte."
+    },
+    {
+      "id": "H4_CONTEXTOS",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/conciliacion_contextos_umas.tsv",
+      "sha256": "4bef34392dcd7e4d9de2d35840f5fee5c0137f2e22fa777379d99afbb8211a69",
+      "role": "Contextos agregados del reporte PROMEDIOS",
+      "temporal_scope_and_cut": "Actividad completa observada 2019–2026; 4.211 filas con año no válido. Fecha real de extracción UMAS no acreditada."
+    },
+    {
+      "id": "H4_OBSERVACIONES",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/observaciones_plan_periodo.tsv",
+      "sha256": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840",
+      "role": "Proyección agregada alternativa del mismo reporte PROMEDIOS",
+      "temporal_scope_and_cut": "Mismo reporte y mismos 129.493 registros que H4_CONTEXTOS; no se suma como fuente disjunta."
+    },
+    {
+      "id": "H4_PLANES",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/cobertura_planes.tsv",
+      "sha256": "53cc56a7ba59253f2c078445fa8f126c3c472474a09d0184ccfc1a54a8e07e89",
+      "role": "Unión de catálogo de planes y etiquetas observadas en PROMEDIOS",
+      "temporal_scope_and_cut": "No acredita intervalos de vigencia ni asignación efectiva de cada plan."
+    },
+    {
+      "id": "PROMEDIOS_HISTORICO_REUBICADO",
+      "path": "/Users/alexi/Documents/GitHub/seguimiento_titulados_empleabilidad_2026/data/raw/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "role": "Copia idéntica por hash de la edición que originó H4/H5; ruta autorizada expresamente en H6",
+      "temporal_scope_and_cut": "Misma edición histórica H1–H5; fecha real de extracción UMAS no acreditada. La reubicación no crea un nuevo corte de datos."
+    },
+    {
+      "id": "PROMEDIOS_DESCARGAS_MODIFICADO",
+      "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71",
+      "role": "Desviación registrada; NO utilizado como sustituto de la edición histórica",
+      "temporal_scope_and_cut": "Contenido actual distinto por bytes; no se certifica igualdad de valores ni se fija extracción por nombre o mtime."
+    },
+    {
+      "id": "H6_SIES",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015/consultas_sies_anuales.tsv",
+      "sha256": "dfd3585ce059902ecf1fba0f4f9065a9e2b0080b9a47bc20e843ae353ce51a18",
+      "role": "Resultados reales del piloto, verificados contra unión exacta H5",
+      "temporal_scope_and_cut": "Años de observación/ oferta 2007–2026 con cobertura de oferta desde 2010."
+    },
+    {
+      "id": "H6_COBERTURA",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015/cobertura_codigos_piloto.tsv",
+      "sha256": "f96f4f2bdadf9d861932e6fbfe8bd69041debd9beb8c937cfb24b7bf4e4b8eca",
+      "role": "Cobertura de códigos del piloto",
+      "temporal_scope_and_cut": "141 códigos históricos; 15 códigos de oferta histórica sin corte 2026 y 2 heredados MRUN separados."
+    },
+    {
+      "id": "H6_ACEPTACION",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015/aceptacion_h6.json",
+      "sha256": "b027ca6eb3150b6e8222ee2ab2e50eaf5e149730da465a6e4b2938166b19bfb2",
+      "role": "Aceptación técnica declarada; no habilita asignación automática",
+      "temporal_scope_and_cut": "Piloto H6 del snapshot congelado; cero reglas efectivas acreditadas."
+    },
+    {
+      "id": "H6_RESUMEN",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015/resumen.json",
+      "sha256": "9a611f1b0c48d226828a77f6a73dc080c7128ee8e42c2192d7163adb963533ed",
+      "role": "Resumen de resultados reales del piloto; conciliado con filas de contextos",
+      "temporal_scope_and_cut": "Piloto técnico H6 sobre proyecciones históricas H4/H5 fijadas; actividad completa 2019–2026 y excepciones. Fecha real de extracción UMAS no acreditada."
+    },
+    {
+      "id": "H6_RESULTADOS_UMAS",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015/resultados_contextos_umas.tsv",
+      "sha256": "fd2ebd912b1c9d8efc80f245c68045786f43b343450210ecfb064b2a5597ef96",
+      "role": "Resultados por contexto de PROMEDIOS, con peso filas_reporte y localizador de H4",
+      "temporal_scope_and_cut": "Piloto técnico H6 sobre proyecciones históricas H4/H5 fijadas; actividad completa 2019–2026 y excepciones. Fecha real de extracción UMAS no acreditada."
+    },
+    {
+      "id": "H6_CONSULTAS_UMAS",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015/consultas_umas.tsv",
+      "sha256": "5a86fd7fe3c9a166c78502eafa1b5e49e74d04646a16d26b1a44b16081f82121",
+      "role": "Consultas únicas por clave completa de ocho dimensiones; no deduplicación de personas",
+      "temporal_scope_and_cut": "Piloto técnico H6 sobre proyecciones históricas H4/H5 fijadas; actividad completa 2019–2026 y excepciones. Fecha real de extracción UMAS no acreditada."
+    }
+  ],
+  "metrics": [
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S01",
+      "indicator": "Claves anuales de consulta SIES",
+      "value": 767,
+      "unit": "pares año + Código Único",
+      "source_ids": [
+        "H5"
+      ],
+      "locator": "oferta_anual ∪ mrun_anual por año y código completo",
+      "definition": "Cardinalidad de la unión exacta; una consulta por clave.",
+      "numerator_or_count": 767,
+      "denominator": {
+        "type": "No aplica a conteo; universo para partición",
+        "value": 767
+      },
+      "observation_years": "2007–2026",
+      "restrictions": "No completar años ni sumar claves repetidas entre fuentes."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S02",
+      "indicator": "Claves con oferta y MRUN",
+      "value": 452,
+      "unit": "claves anuales",
+      "source_ids": [
+        "H5",
+        "H2_ANUAL",
+        "H3_OFERTA"
+      ],
+      "locator": "Intersección anual exacta",
+      "definition": "Claves presentes en ambas fuentes para el mismo año.",
+      "numerator_or_count": 452,
+      "denominator": {
+        "type": "Partición de claves S01",
+        "value": 767
+      },
+      "observation_years": "2010–2026",
+      "restrictions": "No cuenta personas ni registros individuales."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S03",
+      "indicator": "Claves solo oferta",
+      "value": 295,
+      "unit": "claves anuales",
+      "source_ids": [
+        "H5",
+        "H3_OFERTA"
+      ],
+      "locator": "Oferta menos MRUN, mismo año",
+      "definition": "Oferta publicada sin observación MRUN del mismo año en este extracto.",
+      "numerator_or_count": 295,
+      "denominator": {
+        "type": "Partición de claves S01",
+        "value": 767
+      },
+      "observation_years": "2010–2026",
+      "restrictions": "No significa que nunca hubo estudiantes ni que el programa esté inactivo."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S04",
+      "indicator": "Claves MRUN fuera de cobertura de oferta",
+      "value": 20,
+      "unit": "claves anuales",
+      "source_ids": [
+        "H5",
+        "H2_ANUAL"
+      ],
+      "locator": "MRUN sin oferta; años sin publicación disponible",
+      "definition": "Claves MRUN de 2007–2009, cuya oferta completa no está acreditada.",
+      "numerator_or_count": 20,
+      "denominator": {
+        "type": "Partición de claves S01",
+        "value": 767
+      },
+      "observation_years": "2007–2009",
+      "restrictions": "Ausencia de fuente, no contradicción ni código inválido."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S05",
+      "indicator": "Registros MRUN representados",
+      "value": 24386,
+      "unit": "observaciones de matrícula informada",
+      "source_ids": [
+        "H2_ANUAL",
+        "H5"
+      ],
+      "locator": "SUM(mrun_anual.filas_matricula)",
+      "definition": "Peso agregado de filas del extracto histórico.",
+      "numerator_or_count": 24386,
+      "denominator": {
+        "type": "No aplica a conteo; universo para partición",
+        "value": 24386
+      },
+      "observation_years": "2007–2026",
+      "restrictions": "La misma persona puede aparecer en varios años o programas; no es personas únicas ni matrícula de un año."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S06",
+      "indicator": "Registros MRUN con oferta anual localizada",
+      "value": 22266,
+      "unit": "observaciones MRUN ponderadas",
+      "source_ids": [
+        "H2_ANUAL",
+        "H5"
+      ],
+      "locator": "SUM(filas_matricula) con consulta OFERTA_ANUAL_LOCALIZADA",
+      "definition": "Suma de pesos de las claves MRUN cuya oferta existe en el mismo año.",
+      "numerator_or_count": 22266,
+      "denominator": {
+        "type": "Partición de registros S05",
+        "value": 24386
+      },
+      "observation_years": "2010–2026",
+      "restrictions": "Éxito de consulta de oferta no acredita equivalencia UMAS ni asignación individual."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S07",
+      "indicator": "Registros MRUN sin cobertura de oferta",
+      "value": 2120,
+      "unit": "observaciones MRUN ponderadas",
+      "source_ids": [
+        "H2_ANUAL",
+        "H5"
+      ],
+      "locator": "SUM(filas_matricula) con SIN_OFERTA_ANUAL/SIN_COBERTURA_ANUAL",
+      "definition": "Suma de pesos MRUN de 2007–2009.",
+      "numerator_or_count": 2120,
+      "denominator": {
+        "type": "Partición de registros S05",
+        "value": 24386
+      },
+      "observation_years": "2007–2009",
+      "restrictions": "Se conservan; no se imputan códigos/oferta de otros años."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S08",
+      "indicator": "Códigos SIES distintos de la unión",
+      "value": 141,
+      "unit": "códigos completos literales",
+      "source_ids": [
+        "H5"
+      ],
+      "locator": "universo_sies.codigo_unico",
+      "definition": "Unión histórica de códigos; 139 de oferta y dos heredados solo MRUN.",
+      "numerator_or_count": 141,
+      "denominator": {
+        "type": "No aplica a conteo",
+        "value": null
+      },
+      "observation_years": "2007–2026",
+      "restrictions": "No son 141 carreras únicas: diferentes sedes, jornadas o versiones producen códigos diferentes."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S09",
+      "indicator": "Códigos solo oferta en todo el extracto",
+      "value": 35,
+      "unit": "códigos completos distintos",
+      "source_ids": [
+        "H5"
+      ],
+      "locator": "Códigos oferta menos códigos MRUN",
+      "definition": "21 códigos de pregrado y 14 de postítulo sin MRUN observado en este extracto.",
+      "numerator_or_count": 35,
+      "denominator": {
+        "type": "Subconjunto de códigos S08",
+        "value": 141
+      },
+      "observation_years": "2010–2026",
+      "restrictions": "La comparación es global al período, distinta de las 295 claves anuales solo oferta."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S10",
+      "indicator": "Códigos de oferta histórica sin oferta 2026",
+      "value": 15,
+      "unit": "códigos completos distintos",
+      "source_ids": [
+        "H5"
+      ],
+      "locator": "Códigos históricos de oferta menos códigos de oferta 2026",
+      "definition": "Ausentes del corte 2026, conservados en oferta histórica.",
+      "numerator_or_count": 15,
+      "denominator": {
+        "type": "Universo de códigos de oferta",
+        "value": 139
+      },
+      "observation_years": "Historia 2010–2026 frente a corte 2026",
+      "restrictions": "No acredita retiro o cierre formal."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "S11",
+      "indicator": "Códigos de la unión sin oferta 2026",
+      "value": 17,
+      "unit": "códigos completos distintos",
+      "source_ids": [
+        "H5"
+      ],
+      "locator": "universo_sies menos códigos de oferta 2026",
+      "definition": "Los 15 códigos de oferta histórica más dos heredados MRUN.",
+      "numerator_or_count": 17,
+      "denominator": {
+        "type": "Universo de códigos S08",
+        "value": 141
+      },
+      "observation_years": "Historia 2007–2026 frente a corte 2026",
+      "restrictions": "No confundir este denominador con S10."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U01",
+      "indicator": "Contextos agregados UMAS",
+      "value": 5176,
+      "unit": "filas de contextos agregados",
+      "source_ids": [
+        "H4_CONTEXTOS"
+      ],
+      "locator": "Todas las filas de conciliacion_contextos_umas.tsv",
+      "definition": "Partición del reporte por dimensiones académicas y estados de contraste.",
+      "numerator_or_count": 5176,
+      "denominator": {
+        "type": "No aplica a conteo",
+        "value": null
+      },
+      "observation_years": "Actividad disponible 2019–2026 más excepciones de año",
+      "restrictions": "No son estudiantes, matrículas ni asignaturas aprobadas."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U02",
+      "indicator": "Filas de PROMEDIOS representadas",
+      "value": 129493,
+      "unit": "registros del reporte",
+      "source_ids": [
+        "H4_CONTEXTOS",
+        "H4_OBSERVACIONES"
+      ],
+      "locator": "SUM(filas_reporte) en cada proyección por separado",
+      "definition": "Ambas proyecciones reconcilian el mismo total.",
+      "numerator_or_count": 129493,
+      "denominator": {
+        "type": "Universo para partición de adaptación H6",
+        "value": 129493
+      },
+      "observation_years": "Actividad 2019–2026 y filas sin año válido",
+      "restrictions": "Nunca sumar las dos proyecciones ni identificadores_internos_distintos de grupos."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U03",
+      "indicator": "Grupos de observación plan/período",
+      "value": 1581,
+      "unit": "grupos académicos",
+      "source_ids": [
+        "H4_OBSERVACIONES"
+      ],
+      "locator": "Todas las filas de observaciones_plan_periodo.tsv",
+      "definition": "Proyección más compacta de los mismos registros del reporte.",
+      "numerator_or_count": 1581,
+      "denominator": {
+        "type": "No aplica a conteo",
+        "value": null
+      },
+      "observation_years": "Actividad 2019–2026 y excepciones",
+      "restrictions": "1581 grupos no son un universo adicional a los 5176 contextos."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U04",
+      "indicator": "Planes y etiquetas de plan en unión UMAS",
+      "value": 236,
+      "unit": "identificadores de plan literales",
+      "source_ids": [
+        "H4_PLANES",
+        "H5"
+      ],
+      "locator": "CODPESTUD en cobertura de planes",
+      "definition": "223 códigos catalogados y 13 etiquetas observadas solo en PROMEDIOS.",
+      "numerator_or_count": 236,
+      "denominator": {
+        "type": "No aplica a conteo",
+        "value": null
+      },
+      "observation_years": "Corte disponible sin vigencia temporal acreditada",
+      "restrictions": "No equivale a 236 mallas curricularmente distintas ni a planes vigentes en un año."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U05",
+      "indicator": "Filas del reporte con contexto consultable",
+      "value": 125264,
+      "unit": "registros ponderados de PROMEDIOS",
+      "source_ids": [
+        "H6_RESULTADOS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "SUM(filas_reporte) WHERE estado_adaptacion=CONSULTABLE; resumen.umas.filas_consultables",
+      "definition": "Filas representadas por contextos completos y concordantes que se enviaron al resolvedor.",
+      "numerator_or_count": 125264,
+      "denominator": {
+        "type": "Partición del reporte U02",
+        "value": 129493
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "Consultable significa entrada suficiente; no acredita equivalencia, matrícula ni asignación individual."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U06",
+      "indicator": "Filas del reporte no consultadas",
+      "value": 4229,
+      "unit": "registros ponderados de PROMEDIOS",
+      "source_ids": [
+        "H6_RESULTADOS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "SUM(filas_reporte) WHERE estado_adaptacion<>CONSULTABLE; resumen.umas.filas_no_consultadas",
+      "definition": "Partición excluyente retenida por falta de año o contexto compatible.",
+      "numerator_or_count": 4229,
+      "denominator": {
+        "type": "Partición del reporte U02",
+        "value": 129493
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "Se conservan todas las filas; no son estudiantes descartados ni matrículas inválidas.",
+      "components": [
+        {
+          "estado_adaptacion": "ANIO_NO_VALIDO",
+          "value": 4211,
+          "unit": "registros del reporte",
+          "locator": "estado_adaptacion=ANIO_NO_VALIDO"
+        },
+        {
+          "estado_adaptacion": "CARRERA_PLAN_DISCREPANTE",
+          "value": 17,
+          "unit": "registros del reporte",
+          "locator": "estado_adaptacion=CARRERA_PLAN_DISCREPANTE"
+        },
+        {
+          "estado_adaptacion": "PLAN_SIN_CONTEXTO_UNICO",
+          "value": 1,
+          "unit": "registro del reporte",
+          "locator": "estado_adaptacion=PLAN_SIN_CONTEXTO_UNICO"
+        }
+      ]
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U07",
+      "indicator": "Consultas UMAS únicas ejecutadas",
+      "value": 1349,
+      "unit": "claves completas de consulta",
+      "source_ids": [
+        "H6_CONSULTAS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "COUNT(filas consultas_umas.tsv); resumen.umas.consultas_unicas",
+      "definition": "Claves distintas de ocho parámetros tras deduplicar consultas iguales y conservar sus pesos y filas fuente.",
+      "numerator_or_count": 1349,
+      "denominator": {
+        "type": "No aplica a conteo de consultas",
+        "value": null
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "No es número de personas, planes ni registros PROMEDIOS. Las consultas vuelven a sus contextos sin expansión."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U08",
+      "indicator": "Filas consultadas pendientes de evidencia",
+      "value": 13879,
+      "unit": "registros ponderados de PROMEDIOS",
+      "source_ids": [
+        "H6_RESULTADOS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "SUM(filas_reporte) WHERE estado_resolucion=PENDIENTE_EVIDENCIA; resumen.umas.resolucion",
+      "definition": "Filas con uno o varios destinos candidatos informativos, sin regla efectiva acreditada.",
+      "numerator_or_count": 13879,
+      "denominator": {
+        "type": "Partición de filas consultables U05",
+        "value": 125264
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "La existencia de candidatos no permite asignar versiones automáticamente.",
+      "components": [
+        {
+          "numero_destinos_candidatos": 1,
+          "value": 9938,
+          "unit": "registros del reporte",
+          "locator": "estado_resolucion=PENDIENTE_EVIDENCIA AND numero_destinos_candidatos=1"
+        },
+        {
+          "numero_destinos_candidatos": 2,
+          "value": 2987,
+          "unit": "registros del reporte",
+          "locator": "estado_resolucion=PENDIENTE_EVIDENCIA AND numero_destinos_candidatos=2"
+        },
+        {
+          "numero_destinos_candidatos": 3,
+          "value": 800,
+          "unit": "registros del reporte",
+          "locator": "estado_resolucion=PENDIENTE_EVIDENCIA AND numero_destinos_candidatos=3"
+        },
+        {
+          "numero_destinos_candidatos": 4,
+          "value": 154,
+          "unit": "registros del reporte",
+          "locator": "estado_resolucion=PENDIENTE_EVIDENCIA AND numero_destinos_candidatos=4"
+        }
+      ]
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U09",
+      "indicator": "Filas con un único candidato sin acreditar",
+      "value": 9938,
+      "unit": "registros ponderados de PROMEDIOS",
+      "source_ids": [
+        "H6_RESULTADOS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "SUM(filas_reporte) WHERE diagnostico=CANDIDATO_UNICO_SIN_ACREDITAR",
+      "definition": "Subconjunto pendiente con exactamente un destino candidato, no una equivalencia aprobada.",
+      "numerator_or_count": 9938,
+      "denominator": {
+        "type": "Subconjunto de pendientes U08",
+        "value": 13879
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "Candidato único no equivale a plan/período acreditado ni asignación histórica individual."
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U10",
+      "indicator": "Filas consultadas sin equivalencia acreditada ni candidato aplicable",
+      "value": 111385,
+      "unit": "registros ponderados de PROMEDIOS",
+      "source_ids": [
+        "H6_RESULTADOS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "SUM(filas_reporte) WHERE estado_resolucion=SIN_EQUIVALENCIA; resumen.umas.resolucion",
+      "definition": "Resultado sin equivalencia para la clave completa y el ámbito consultado.",
+      "numerator_or_count": 111385,
+      "denominator": {
+        "type": "Partición de filas consultables U05",
+        "value": 125264
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "SIN_EQUIVALENCIA es estado del resolvedor; no prueba inexistencia de equivalencia en la institución.",
+      "components": [
+        {
+          "diagnostico": "SIN_REGLA_HISTORICA_ACREDITADA",
+          "value": 110605,
+          "unit": "registros del reporte",
+          "locator": "diagnostico=SIN_REGLA_HISTORICA_ACREDITADA"
+        },
+        {
+          "diagnostico": "SIN_CANDIDATO_EXACTO_2026",
+          "value": 779,
+          "unit": "registros del reporte",
+          "locator": "diagnostico=SIN_CANDIDATO_EXACTO_2026"
+        },
+        {
+          "diagnostico": "NOMBRE_DISTINTO_SIN_ALIAS",
+          "value": 1,
+          "unit": "registro del reporte",
+          "locator": "diagnostico=NOMBRE_DISTINTO_SIN_ALIAS"
+        }
+      ]
+    },
+    {
+      "institution": "Instituto Profesional San Sebastián / histórico CIISA según fuente",
+      "institution_code": "162",
+      "cohort_filter": "Sin selección de cohorte; no es indicador de retención o ingreso.",
+      "total_technical_professional": "Universo disponible sin filtro por nivel; no presentar como total institucional de matrícula ni como segmento técnico/profesional.",
+      "rounding": "Conteos enteros exactos; sin redondeo ni tasa calculada.",
+      "consultation_date": "2026-10-15",
+      "status": "VERIFICADO",
+      "verification_scope": "Conteo técnico de los archivos fijados por SHA-256; no certificación oficial de matrícula.",
+      "id": "U11",
+      "indicator": "Filas con equivalencia plan/período acreditada",
+      "value": 0,
+      "unit": "registros ponderados de PROMEDIOS",
+      "source_ids": [
+        "H6_RESULTADOS_UMAS",
+        "H6_RESUMEN"
+      ],
+      "locator": "SUM(filas_reporte) WHERE estado_resolucion=EQUIVALENCIA_ACREDITADA; resumen.umas.filas_con_codigo_acreditado",
+      "definition": "Ninguna fila resuelve un código mediante regla efectiva acreditada en este snapshot.",
+      "numerator_or_count": 0,
+      "denominator": {
+        "type": "Partición de filas consultables U05",
+        "value": 125264
+      },
+      "observation_years": "2019–2026 para actividad con año válido; las excepciones sin año se conservan aparte.",
+      "restrictions": "Cero resulta del registro efectivo H5 vacío; no es una tasa institucional de validación ni un error del piloto. Asignación automática histórica continúa no habilitada."
+    }
+  ],
+  "partition_checks": [
+    {
+      "equation": "452 + 295 + 20 = 767",
+      "unit": "claves anuales",
+      "pass": true
+    },
+    {
+      "equation": "22266 + 2120 = 24386",
+      "unit": "registros MRUN ponderados",
+      "pass": true
+    },
+    {
+      "equation": "SUM(contextos.filas_reporte) = SUM(observaciones.filas_reporte) = 129493",
+      "unit": "registros PROMEDIOS, mismo universo",
+      "pass": true
+    },
+    {
+      "equation": "184 + 39 + 13 = 236",
+      "unit": "etiquetas de plan en unión",
+      "pass": true
+    },
+    {
+      "scope": "RESULTADOS_UMAS_H6",
+      "equation": "125264 + 4229 = 129493",
+      "unit": "registros ponderados del reporte",
+      "pass": true
+    },
+    {
+      "scope": "RESULTADOS_UMAS_H6",
+      "equation": "4211 + 17 + 1 = 4229",
+      "unit": "registros no consultados, partición excluyente",
+      "pass": true
+    },
+    {
+      "scope": "RESULTADOS_UMAS_H6",
+      "equation": "9938 + 2987 + 800 + 154 = 13879",
+      "unit": "registros pendientes por número de destinos candidatos",
+      "pass": true
+    },
+    {
+      "scope": "RESULTADOS_UMAS_H6",
+      "equation": "110605 + 779 + 1 = 111385",
+      "unit": "registros sin equivalencia por diagnóstico",
+      "pass": true
+    },
+    {
+      "scope": "RESULTADOS_UMAS_H6",
+      "equation": "13879 + 111385 + 0 = 125264",
+      "unit": "registros consultables por estado de resolución",
+      "pass": true
+    }
+  ],
+  "excluded_claims": [
+    "Total institucional de estudiantes",
+    "Matrícula oficial vigente de IPSS",
+    "Personas únicas históricas",
+    "Tasa de cobertura de estudiantes",
+    "Retención, persistencia o abandono",
+    "Equivalencia plan/versión o asignación individual certificada"
+  ],
+  "h6_contract_review": {
+    "estado": "REVISADO_COHERENTE_CON_AUDITORIA_SIES",
+    "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_6_piloto_validacion_universo.md",
+    "sha256": "581096e8ad76b3ca32016eff1e9094fae3152d39396ca08654aacec32e1e877d",
+    "sections_reviewed": [
+      "Alcance y unidades",
+      "Estados, controles y ejemplos",
+      "Entregables y aceptación H6"
+    ],
+    "assessment": "La unión anual exacta, preservación literal de atributos, pesos MRUN y separación de equivalencia coinciden con los controles independientes; no hay discrepancia de denominadores.",
+    "not_yet_verified": "Esta ficha verifica ejes y denominadores indicados; no sustituye la auditoría metodológica integral de adaptación UMAS ni certifica equivalencias."
+  },
+  "pending_real_h6_outputs": "Comparación de salidas reales completada para SIES, ejemplos y métricas agregadas UMAS de esta ficha; la validación metodológica integral de adaptación UMAS consta en su auditoría separada.",
+  "privacy": "Solo dimensiones académicas, fuentes, conteos y denominadores; sin identidades.",
+  "source_preservation_event": {
+    "original_path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+    "original_path_current_sha256": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71",
+    "historical_sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "historical_descriptor_h5": {
+      "id": "umas_promedios",
+      "path": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    },
+    "backup_path": "/Users/alexi/Documents/GitHub/seguimiento_titulados_empleabilidad_2026/data/raw/PROMEDIOSDEALUMNOS_7804.xlsx",
+    "backup_sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "configured_relocation_sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "original_path_status": "MODIFICADA_RESPECTO_A_H1_H5",
+    "historical_source_status": "PRESERVADA_EN_COPIA_IDENTICA_POR_SHA256",
+    "values_of_current_downloads_certified_equal": false,
+    "method": "Solo hashes de bytes; no lectura de valores personales ni afirmación de cambios solo en metadata."
+  },
+  "technical_vs_certification": {
+    "technical_validation": "APROBADA en entrega H6; eje SIES y métricas agregadas UMAS verificados independientemente en esta ficha.",
+    "historical_assignment_automation": false,
+    "curricular_equivalences_certified": 0,
+    "requirement_before_automation": "Evidencia plan/período→SIES y asignación individual, revisada y versionada; integración H7 debe propagar estados."
+  },
+  "official_h6_result_metric_validation": {
+    "status": "VERIFICADO",
+    "delivery_path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_6_20261015",
+    "reproduction_path": "/tmp/fase6_cruce_sies_umas/reproduccion_final",
+    "files": [
+      {
+        "file": "resumen.json",
+        "official_sha256": "9a611f1b0c48d226828a77f6a73dc080c7128ee8e42c2192d7163adb963533ed",
+        "reproduction_sha256": "9a611f1b0c48d226828a77f6a73dc080c7128ee8e42c2192d7163adb963533ed"
+      },
+      {
+        "file": "resultados_contextos_umas.tsv",
+        "official_sha256": "fd2ebd912b1c9d8efc80f245c68045786f43b343450210ecfb064b2a5597ef96",
+        "reproduction_sha256": "fd2ebd912b1c9d8efc80f245c68045786f43b343450210ecfb064b2a5597ef96"
+      },
+      {
+        "file": "consultas_umas.tsv",
+        "official_sha256": "5a86fd7fe3c9a166c78502eafa1b5e49e74d04646a16d26b1a44b16081f82121",
+        "reproduction_sha256": "5a86fd7fe3c9a166c78502eafa1b5e49e74d04646a16d26b1a44b16081f82121"
+      },
+      {
+        "file": "aceptacion_h6.json",
+        "official_sha256": "b027ca6eb3150b6e8222ee2ab2e50eaf5e149730da465a6e4b2938166b19bfb2",
+        "reproduction_sha256": "b027ca6eb3150b6e8222ee2ab2e50eaf5e149730da465a6e4b2938166b19bfb2"
+      },
+      {
+        "file": "consultas_sies_anuales.tsv",
+        "official_sha256": "dfd3585ce059902ecf1fba0f4f9065a9e2b0080b9a47bc20e843ae353ce51a18",
+        "reproduction_sha256": "dfd3585ce059902ecf1fba0f4f9065a9e2b0080b9a47bc20e843ae353ce51a18"
+      },
+      {
+        "file": "cobertura_codigos_piloto.tsv",
+        "official_sha256": "f96f4f2bdadf9d861932e6fbfe8bd69041debd9beb8c937cfb24b7bf4e4b8eca",
+        "reproduction_sha256": "f96f4f2bdadf9d861932e6fbfe8bd69041debd9beb8c937cfb24b7bf4e4b8eca"
+      }
+    ],
+    "method": "Recálculo independiente de sumas filas_reporte por estado_adaptacion, estado_resolucion, diagnostico y número de destinos; conteo de filas de consultas únicas. Comparación de archivos usados contra reproducción final.",
+    "preserved_previous_cards": 15,
+    "new_result_cards": 7,
+    "total_cards": 22
+  }
+}

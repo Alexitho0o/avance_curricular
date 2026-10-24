@@ -1,0 +1,14 @@
+{
+  "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+  "dictamen": "ACTUALIZACION_FCU_2027_REQUIERE_AJUSTE_DE_FORMULARIO_Y_MAPEO_PES",
+  "estado": "COMPLETO",
+  "fecha_hora": "2026-10-01T20:14:00-03:00",
+  "evidencias_copiadas": 2,
+  "evidencias_principales": [
+    "Manual_de_Aplicacion_FCU_2027.txt",
+    "Control_trazable_actualizacion_FCU_2027.xlsx"
+  ],
+  "fundamento": "Manual FCU 2027 declara 17 cambios respecto de 2026; estructura del CSV PES pasa de 195 a 172 campos declarados; hash manual 9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350; hash libro de control 4616e5e658b0c433b52a31870e6711bd01f7a848ce49a6f797ec0b0782616beb.",
+  "accion_recomendada": "Implementar y verificar la carga PES 2027 contra el Manual 2027 y el libro de control, sin reutilizar posiciones del CSV 2026.",
+  "riesgos": "Medio: no implementar la carga PES 2027 sin verificar previamente cada campo contra el Manual 2027 y el libro de control."
+}

@@ -1,0 +1,61 @@
+{
+  "fase": 4,
+  "brechas": [
+    {
+      "id": "H4-B01",
+      "estado": "PENDIENTE",
+      "tema": "Asignación efectiva del plan por matrícula y período",
+      "evidencia": "evidencia_temporal.json/F4-DOC-01 a03; fuentes PROMEDIOS y DatosAlumnos sin desde/hasta",
+      "necesario": "Definición del campo PLAN_DE_ESTUDIO y extracción del plan asignado por matrícula y período, o eventos con inicio/fin efectivo, fuente y fecha de extracción.",
+      "consecuencia": "No reconstruir intervalos desde año de notas, ingreso ni sufijo del plan."
+    },
+    {
+      "id": "H4-B02",
+      "estado": "PENDIENTE_COBERTURA",
+      "tema": "Actividad UMAS2007–2018",
+      "evidencia": "PROMEDIOS contiene años completos2019–2026; catálogo conserva planes antiguos sin fecha acreditada.",
+      "necesario": "Extractos históricos compatibles o historial de asignación certificado.",
+      "consecuencia": "No declarar historia individual completa2007–2026."
+    },
+    {
+      "id": "H4-B03",
+      "estado": "PENDIENTE_CATALOGO",
+      "tema": "13 etiquetas de plan de PROMEDIOS sin listado de estructura",
+      "evidencia": "cobertura_planes.tsv: SOLO_PROMEDIOS; solo TPCPASO tiene una fila con año y claves.",
+      "necesario": "Definición institucional de etiquetas PASO y TTMRE20081; estructura o condición transitoria acreditada.",
+      "consecuencia": "No quitar PASO ni reconstruir automáticamente el plan por prefijo."
+    },
+    {
+      "id": "H4-B04",
+      "estado": "DISCREPANCIAS_OBSERVADAS",
+      "tema": "Carrera y jornada entre reportes",
+      "evidencia": "conciliacion_contextos_umas.tsv:17 filas carrera PROM/listado,11 carrera PROM/DA,356 jornada PROM/DA distintas.",
+      "necesario": "Corte y semántica de campos; historial de cambios si corresponde.",
+      "consecuencia": "No afirmar errores ni migraciones por comparación de snapshots."
+    },
+    {
+      "id": "H4-B05",
+      "estado": "REFERENCIAS_POR_REVISAR",
+      "tema": "Tres referencias de equivalencia no localizadas en plan destino",
+      "evidencia": "estructura_asignaturas.json/equivalencias_detalle/estado_destino; filas503,6663,6776 del listado",
+      "necesario": "Catálogo o evidencia complementaria del ramo en el plan destino.",
+      "consecuencia": "No crear relaciones por semejanza ni aplicar homologación individual."
+    },
+    {
+      "id": "H4-B06",
+      "estado": "PENDIENTE_IDENTIDAD",
+      "tema": "Puente MRUN–UMAS",
+      "evidencia": "H1 U06 y documentación de trazabilidad; MRUN no es CODCLI/RUT",
+      "necesario": "Puente explícito autorizado y validado si se pretende una trayectoria individual entre sistemas.",
+      "consecuencia": "Mantener historias independientes; el catálogo de programas no sustituye identidad."
+    },
+    {
+      "id": "H4-B07",
+      "estado": "PENDIENTE_EQUIVALENCIA",
+      "tema": "Plan UMAS frente a VERSION SIES",
+      "evidencia": "H3 variantes coexistentes; H4 planes con distinta estructura nominal y sin vigencia acreditada",
+      "necesario": "Regla documentada de carrera, sede, jornada, plan y período; evidencia de relación con Código Único.",
+      "consecuencia": "Se resolverá en fase5 únicamente cuando la evidencia sea suficiente."
+    }
+  ]
+}

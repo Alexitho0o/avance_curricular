@@ -1,0 +1,110 @@
+{
+  "estado": "VALIDADO",
+  "xlsx_sha256": "29f085165171d65514efe8663faa71a4a6fe01101d8de09a57729eab2652789d",
+  "payload_sha256": "c3bc23af6ed5baf16d859374484fb7dbf936bfc54a81a6df9115eaa799296f90",
+  "sheets": [
+    {
+      "name": "Diccionario SIES",
+      "rows_verified": 141,
+      "columns_verified": 24,
+      "payload_mismatches": 0,
+      "expected_table_ref": "A4:X145"
+    },
+    {
+      "name": "Equivalencias UMAS",
+      "rows_verified": 257,
+      "columns_verified": 24,
+      "payload_mismatches": 0,
+      "expected_table_ref": "A4:X261"
+    },
+    {
+      "name": "Historico anual",
+      "rows_verified": 1219,
+      "columns_verified": 15,
+      "payload_mismatches": 0,
+      "expected_table_ref": "A4:O1223"
+    },
+    {
+      "name": "Ejemplos UMAS",
+      "rows_verified": 159,
+      "columns_verified": 19,
+      "payload_mismatches": 0,
+      "expected_table_ref": "A4:S163"
+    },
+    {
+      "name": "Fuentes",
+      "rows_verified": 23,
+      "columns_verified": 5,
+      "payload_mismatches": 0,
+      "expected_table_ref": "A4:E27"
+    },
+    {
+      "name": "Reglas",
+      "rows_verified": 35,
+      "columns_verified": 8,
+      "payload_mismatches": 0,
+      "expected_table_ref": "A4:H39"
+    }
+  ],
+  "defects": [],
+  "blank_string_to_empty_cell": 286,
+  "formula_error_cells": [],
+  "formula_count": 20,
+  "consulta_cache_checks": 20,
+  "consulta_cache_mismatches": [],
+  "zip_integrity": true,
+  "all_xml_parseable": true,
+  "native_tables": [
+    {
+      "name": "DiccionarioTabla1",
+      "ref": "A4:X145",
+      "autofilter": "A4:X145",
+      "column_count": 24
+    },
+    {
+      "name": "DiccionarioTabla2",
+      "ref": "A4:X261",
+      "autofilter": "A4:X261",
+      "column_count": 24
+    },
+    {
+      "name": "DiccionarioTabla3",
+      "ref": "A4:O1223",
+      "autofilter": "A4:O1223",
+      "column_count": 15
+    },
+    {
+      "name": "DiccionarioTabla4",
+      "ref": "A4:S163",
+      "autofilter": "A4:S163",
+      "column_count": 19
+    },
+    {
+      "name": "DiccionarioTabla5",
+      "ref": "A4:E27",
+      "autofilter": "A4:E27",
+      "column_count": 5
+    },
+    {
+      "name": "DiccionarioTabla6",
+      "ref": "A4:H39",
+      "autofilter": "A4:H39",
+      "column_count": 8
+    }
+  ],
+  "consulta_pane": {
+    "ySplit": "4",
+    "topLeftCell": "A5",
+    "activePane": "bottomLeft",
+    "state": "frozen"
+  },
+  "broken_package_relationships": [],
+  "inputs_unchanged_during_QA": true,
+  "consulta_caches_no_vacios_presentes": 17,
+  "consulta_resultados_vacios_sin_elemento_v": [
+    "B31",
+    "B32",
+    "B34"
+  ],
+  "consulta_resultados_vacios_verificados": "Las tres fórmulas deben devolver cadena vacía con la consulta ambigua predeterminada; t=str sin v representa la salida vacía, sin discrepancia funcional observada."
+}

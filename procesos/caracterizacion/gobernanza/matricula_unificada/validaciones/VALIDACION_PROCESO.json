@@ -1,0 +1,30 @@
+[
+  {
+    "indicador": "Archivos MU",
+    "valor": 31,
+    "esperado": ">=1 archivo detectado",
+    "cumple": "SI",
+    "observacion": "Clasificación fina detectó evidencia relacionada con matrícula/SIES."
+  },
+  {
+    "indicador": "SIES",
+    "valor": "DETECTADO",
+    "esperado": "Referencias o archivos SIES",
+    "cumple": "SI",
+    "observacion": "Incluye readme y archivos SIES detectados dentro de CARACTERIZACIÓN."
+  },
+  {
+    "indicador": "PES_READY",
+    "valor": "NO_LOCALIZADO_EN_CANDIDATOS",
+    "esperado": "Si aplica",
+    "cumple": "NO",
+    "observacion": "No aparece como evidencia formal de este paquete."
+  },
+  {
+    "indicador": "Referencias a otro repositorio",
+    "valor": "REQUIERE_REVISION",
+    "esperado": "Posible avance_curricular según alcance del encargo",
+    "cumple": "PARCIAL",
+    "observacion": "No se verifica fuera del repositorio por restricción; se documenta como referencia."
+  }
+]

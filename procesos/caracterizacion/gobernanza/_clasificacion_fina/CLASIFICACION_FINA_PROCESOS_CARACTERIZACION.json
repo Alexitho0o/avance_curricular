@@ -1,0 +1,282 @@
+{
+  "fecha": "2026-05-13 16:10:15",
+  "input_tsv": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_mapeo_proyecto/MAPEO_ARCHIVOS_PROYECTO_CARACTERIZACION.tsv",
+  "output_xlsx": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_clasificacion_fina/CLASIFICACION_FINA_PROCESOS_CARACTERIZACION.xlsx",
+  "output_tsv": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_clasificacion_fina/CLASIFICACION_FINA_PROCESOS_CARACTERIZACION.tsv",
+  "output_md": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_clasificacion_fina/RESUMEN_CLASIFICACION_FINA_PROCESOS.md",
+  "resumen_general": [
+    {
+      "indicador": "fecha_clasificacion",
+      "valor": "2026-05-13 16:10:15"
+    },
+    {
+      "indicador": "input_tsv",
+      "valor": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/_mapeo_proyecto/MAPEO_ARCHIVOS_PROYECTO_CARACTERIZACION.tsv"
+    },
+    {
+      "indicador": "total_archivos_mapeados",
+      "valor": 5503
+    },
+    {
+      "indicador": "procesos_finos_detectados",
+      "valor": "ANALISIS_TRAYECTORIA | FCU_ANALISIS_ENCUESTA | FCU_CARGA_PES | FCU_SCRIPT_AUXILIAR | GOBERNANZA_META | MATRICULA_UNIFICADA | SIN_CLASIFICAR"
+    },
+    {
+      "indicador": "candidatos_gobernanza_formal",
+      "valor": 20
+    }
+  ],
+  "propuesta_paquetes": [
+    {
+      "proceso": "FCU_CARGA_PES",
+      "carpeta_sugerida": "gobernanza/fcu_carga_pes",
+      "alcance": "Carga oficial PES, CSV validado, auditorías E2E, hash, dictamen.",
+      "archivos_detectados": 9,
+      "candidatos_formales": 8,
+      "scripts": 1,
+      "excel": 3,
+      "csv_tsv": 2,
+      "json": 0,
+      "md_txt": 3,
+      "hash": 0,
+      "recomendacion": "CREAR_PAQUETE_GOBERNANZA"
+    },
+    {
+      "proceso": "FCU_ANALISIS_ENCUESTA",
+      "carpeta_sugerida": "gobernanza/fcu_analisis_encuesta",
+      "alcance": "Encuesta/LimeSurvey, SEP_TODAS, preguntas no FCU, sustentabilidad, reglas KPI.",
+      "archivos_detectados": 2,
+      "candidatos_formales": 2,
+      "scripts": 0,
+      "excel": 1,
+      "csv_tsv": 0,
+      "json": 0,
+      "md_txt": 1,
+      "hash": 0,
+      "recomendacion": "CREAR_PAQUETE_GOBERNANZA"
+    },
+    {
+      "proceso": "ANALISIS_TRAYECTORIA",
+      "carpeta_sugerida": "gobernanza/analisis_trayectoria",
+      "alcance": "Trayectoria, perfil de ingreso, KPI y archivos analíticos derivados.",
+      "archivos_detectados": 12,
+      "candidatos_formales": 1,
+      "scripts": 6,
+      "excel": 0,
+      "csv_tsv": 0,
+      "json": 0,
+      "md_txt": 5,
+      "hash": 0,
+      "recomendacion": "CREAR_PAQUETE_GOBERNANZA"
+    },
+    {
+      "proceso": "MATRICULA_UNIFICADA",
+      "carpeta_sugerida": "gobernanza/matricula_unificada",
+      "alcance": "Solo evidencias de MU si corresponden a este repositorio.",
+      "archivos_detectados": 31,
+      "candidatos_formales": 1,
+      "scripts": 10,
+      "excel": 1,
+      "csv_tsv": 3,
+      "json": 5,
+      "md_txt": 12,
+      "hash": 0,
+      "recomendacion": "CREAR_PAQUETE_GOBERNANZA"
+    },
+    {
+      "proceso": "CARGA_POSTGRADO",
+      "carpeta_sugerida": "gobernanza/carga_postgrado",
+      "alcance": "Solo si existen evidencias reales dentro del repositorio.",
+      "archivos_detectados": 0,
+      "candidatos_formales": 0,
+      "scripts": 0,
+      "excel": 0,
+      "csv_tsv": 0,
+      "json": 0,
+      "md_txt": 0,
+      "hash": 0,
+      "recomendacion": "DOCUMENTAR_COMO_NO_LOCALIZADO_O_REVISAR"
+    },
+    {
+      "proceso": "GOBERNANZA_META",
+      "carpeta_sugerida": "gobernanza/_meta",
+      "alcance": "Mapeos, clasificación fina, auditorías de gobernanza transversal.",
+      "archivos_detectados": 1,
+      "candidatos_formales": 1,
+      "scripts": 0,
+      "excel": 1,
+      "csv_tsv": 0,
+      "json": 0,
+      "md_txt": 0,
+      "hash": 0,
+      "recomendacion": "CREAR_PAQUETE_GOBERNANZA"
+    }
+  ],
+  "resumen_proceso": [
+    {
+      "proceso_fino": "ANALISIS_TRAYECTORIA",
+      "tipo": "SCRIPT_CODIGO",
+      "cantidad": 6
+    },
+    {
+      "proceso_fino": "ANALISIS_TRAYECTORIA",
+      "tipo": "DOCUMENTACION",
+      "cantidad": 5
+    },
+    {
+      "proceso_fino": "ANALISIS_TRAYECTORIA",
+      "tipo": "CONFIG",
+      "cantidad": 1
+    },
+    {
+      "proceso_fino": "FCU_ANALISIS_ENCUESTA",
+      "tipo": "DOCUMENTACION",
+      "cantidad": 1
+    },
+    {
+      "proceso_fino": "FCU_ANALISIS_ENCUESTA",
+      "tipo": "EXCEL",
+      "cantidad": 1
+    },
+    {
+      "proceso_fino": "FCU_CARGA_PES",
+      "tipo": "DOCUMENTACION",
+      "cantidad": 3
+    },
+    {
+      "proceso_fino": "FCU_CARGA_PES",
+      "tipo": "EXCEL",
+      "cantidad": 3
+    },
+    {
+      "proceso_fino": "FCU_CARGA_PES",
+      "tipo": "TABLA_PLANA",
+      "cantidad": 2
+    },
+    {
+      "proceso_fino": "FCU_CARGA_PES",
+      "tipo": "SCRIPT_CODIGO",
+      "cantidad": 1
+    },
+    {
+      "proceso_fino": "FCU_SCRIPT_AUXILIAR",
+      "tipo": "SCRIPT_CODIGO",
+      "cantidad": 18
+    },
+    {
+      "proceso_fino": "GOBERNANZA_META",
+      "tipo": "EXCEL",
+      "cantidad": 1
+    },
+    {
+      "proceso_fino": "MATRICULA_UNIFICADA",
+      "tipo": "DOCUMENTACION",
+      "cantidad": 12
+    },
+    {
+      "proceso_fino": "MATRICULA_UNIFICADA",
+      "tipo": "SCRIPT_CODIGO",
+      "cantidad": 10
+    },
+    {
+      "proceso_fino": "MATRICULA_UNIFICADA",
+      "tipo": "JSON",
+      "cantidad": 5
+    },
+    {
+      "proceso_fino": "MATRICULA_UNIFICADA",
+      "tipo": "TABLA_PLANA",
+      "cantidad": 3
+    },
+    {
+      "proceso_fino": "MATRICULA_UNIFICADA",
+      "tipo": "EXCEL",
+      "cantidad": 1
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "SCRIPT_CODIGO",
+      "cantidad": 5202
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "DOCUMENTACION",
+      "cantidad": 98
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "TABLA_PLANA",
+      "cantidad": 60
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "OTRO",
+      "cantidad": 54
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "JSON",
+      "cantidad": 10
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "CONFIG",
+      "cantidad": 3
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "tipo": "WORD",
+      "cantidad": 3
+    }
+  ],
+  "resumen_prioridad": [
+    {
+      "proceso_fino": "FCU_CARGA_PES",
+      "prioridad_gobernanza": "ALTA",
+      "accion_sugerida": "GOBERNAR_PRIORIDAD_ALTA",
+      "cantidad": 9
+    },
+    {
+      "proceso_fino": "FCU_ANALISIS_ENCUESTA",
+      "prioridad_gobernanza": "ALTA",
+      "accion_sugerida": "GOBERNAR_PRIORIDAD_ALTA",
+      "cantidad": 2
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "prioridad_gobernanza": "BAJA",
+      "accion_sugerida": "REVISAR",
+      "cantidad": 5420
+    },
+    {
+      "proceso_fino": "FCU_SCRIPT_AUXILIAR",
+      "prioridad_gobernanza": "BAJA",
+      "accion_sugerida": "REVISAR",
+      "cantidad": 18
+    },
+    {
+      "proceso_fino": "MATRICULA_UNIFICADA",
+      "prioridad_gobernanza": "MEDIA",
+      "accion_sugerida": "GOBERNAR_SOLO_SI_CORRESPONDE_A_ESTE_REPO",
+      "cantidad": 31
+    },
+    {
+      "proceso_fino": "ANALISIS_TRAYECTORIA",
+      "prioridad_gobernanza": "MEDIA",
+      "accion_sugerida": "GOBERNAR_PRIORIDAD_MEDIA",
+      "cantidad": 12
+    },
+    {
+      "proceso_fino": "SIN_CLASIFICAR",
+      "prioridad_gobernanza": "MEDIA",
+      "accion_sugerida": "REVISAR",
+      "cantidad": 10
+    },
+    {
+      "proceso_fino": "GOBERNANZA_META",
+      "prioridad_gobernanza": "MEDIA",
+      "accion_sugerida": "RESPALDAR_EN_GOBERNANZA_META",
+      "cantidad": 1
+    }
+  ]
+}

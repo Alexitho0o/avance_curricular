@@ -1,0 +1,149 @@
+{
+  "recurso": "matricula_sies_historica_2007_2026_por_carrera",
+  "archivo": "Matricula_2007_2026_WEB_10_07_2026.csv",
+  "fuente_canonica": "/Users/alexi/Desktop/Matricula_2007_2026_WEB_10_07_2026.csv",
+  "repositorio_fuente": "Desktop del usuario; archivo público SIES descargado el 10-07-2026",
+  "repositorio_consumidor": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+  "fecha_version_archivo": "2026-07-10",
+  "fecha_registro": "2026-09-29",
+  "sha256": "4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+  "estructura": {
+    "filas_datos": 280160,
+    "columnas": 58,
+    "delimitador": ";",
+    "encoding_verificado": "Latin-1/ISO-8859-1; UTF-8 y CP1252 no decodifican todo el archivo",
+    "campo_periodo": "AÑO",
+    "rango_periodos": "MAT_2007–MAT_2026",
+    "grano": "institución-carrera-sede-jornada-año",
+    "identificadores_individuales": false
+  },
+  "validacion_ipss_162_mat_2026": {
+    "codigo_institucion": 162,
+    "filas": 66,
+    "nombre_institucion": "IP SAN SEBASTIAN",
+    "total_matricula": 3425,
+    "total_matricula_primer_anio": 1753
+  },
+  "decision_gobernanza": {
+    "clasificacion": "D",
+    "texto": "Desde 2026-09-29, este archivo se establece como fuente principal para cruces y análisis de matrícula por carrera. Reemplaza el uso de fuentes agregadas cuando se requiera detalle por carrera, porque cubre 2007–2026 y contiene dimensiones de carrera, sede, jornada y variables adicionales.",
+    "motivo": [
+      "Cobertura temporal MAT_2007–MAT_2026.",
+      "Desglose por institución, carrera, sede, jornada y año.",
+      "Incluye dimensiones aún no gobernadas en el proyecto: jornada, modalidad, tipo de plan, duración, edad, TES, acreditación y clasificaciones CINE."
+    ]
+  },
+  "politica_uso": "El CSV original del Desktop no se modifica. A partir de 2026-09-29 existe ademas una copia congelada en el repositorio (gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv), autorizada explicitamente por Alexi. Esa copia no se modifica; cualquier actualizacion futura del dataset publico SIES se congela como una nueva version con su propio manifiesto, sin sobrescribir esta.",
+  "clasificacion": "B: dataset público SIES agregado por carrera; D: decisión interna de fuente principal; E: columnas pendientes de mapeo cuando no exista definición oficial verificada.",
+  "mapeo_glosario": {
+    "con_definicion_oficial_a_verificar": [
+      {
+        "columna": "JORNADA",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 3: \"Jornada en que se imparte la carrera o programa\"."
+      },
+      {
+        "columna": "MODALIDAD",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 3: \"Modalidad en que se imparte la carrera o programa\"."
+      },
+      {
+        "columna": "TIPO DE PLAN DE LA CARRERA",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 3: distinción por tipo de plan; incluye Plan regular, Plan regular de continuidad y Plan especial."
+      },
+      {
+        "columna": "DURACIÓN ESTUDIO CARRERA",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 3: duración en semestres del plan regular, sin proceso de titulación adicional."
+      },
+      {
+        "columna": "DURACIÓN TOTAL DE CARRERA",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 3: duración teórica total desde primer año hasta título o grado terminal."
+      },
+      {
+        "columna": "RANGOS DE EDAD",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: total y rangos 15–19, 20–24, 25–29, 30–34, 35–39, 40 y más, sin información."
+      },
+      {
+        "columna": "TES",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: campos TES Municipal, Particular Subvencionado, Particular Pagado, Corporación de Administración Delegada y Servicio Local de Educación."
+      },
+      {
+        "columna": "% COBERTURA TES",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: porcentaje identificado en base de establecimientos secundarios, TOTAL TES/TOTAL MATRICULADOS por carrera."
+      },
+      {
+        "columna": "ACREDITACIÓN CARRERA",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: acreditación informada por la institución en oferta académica de diciembre del año anterior."
+      },
+      {
+        "columna": "ACREDITACIÓN INSTITUCIONAL",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 1: acreditación institucional obtenida al 30 de abril según año del proceso."
+      },
+      {
+        "columna": "CINE-F 1997",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 2: CINE-F 1997 Área y Subárea, clasificación UNESCO."
+      },
+      {
+        "columna": "CINE-F 2013",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 2–3: CINE-F 2013 Área y Subárea, clasificación UNESCO."
+      },
+      {
+        "columna": "CLASIFICACIÓN INSTITUCIÓN NIVEL 1–3",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 1: niveles 1, 2 y 3 de clasificación institucional."
+      },
+      {
+        "columna": "CARRERA CLASIFICACIÓN NIVEL 1–2",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 3: niveles 1 y 2 de clasificación de carrera/programa."
+      },
+      {
+        "columna": "TIPO ESTABLECIMIENTO HC/TP",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: tipo de enseñanza Científico Humanista y Técnico Profesional."
+      },
+      {
+        "columna": "CLAS_EST ADULTO",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: cantidad de estudiantes adultos provenientes de enseñanza secundaria."
+      },
+      {
+        "columna": "CLAS_EST JOVEN",
+        "clasificacion": "A",
+        "cita": "OFICIAL_GLOSARIO_MATRICULA_WEB_E.pdf, p. 4: cantidad de estudiantes jóvenes provenientes de enseñanza secundaria."
+      }
+    ],
+    "pendientes_e": [],
+    "regla": "No se renombrarán, fusionarán ni reinterpretarán categorías hasta contrastarlas con el glosario oficial SIES aplicable.",
+    "nota": "Las 17 columnas fueron verificadas contra el PDF oficial; se conservan los nombres originales del CSV y no se fusionan categorías."
+  },
+  "decision_incorporacion_repo": {
+    "clasificacion": "D",
+    "opcion_elegida": "a) Congelar el CSV completo en el repositorio",
+    "fecha_decision": "2026-09-29",
+    "archivo_congelado": "gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv",
+    "sha256_copia_repo": "4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+    "verificacion": "El hash de la copia en el repositorio coincide exactamente con el hash del archivo original del Desktop registrado en este manifiesto (sha256 raiz). Copia byte a byte confirmada.",
+    "motivo": "Autorizado explicitamente por Alexi el 2026-09-29 tras evaluar tamano (156.101.706 bytes) y ausencia de identificadores individuales.",
+    "almacenamiento": {
+      "clasificacion": "C",
+      "mecanismo": "Git LFS",
+      "motivo": "GitHub rechaza archivos git normales sobre 100 MB; el CSV pesa 156.101.706 bytes (148,87 MB como blob). El push inicial (commit f74b01c) fue rechazado por GitHub (pre-receive hook, GH001) antes de llegar a existir en el remoto.",
+      "fecha_migracion": "2026-09-29",
+      "accion": "Se ejecuto git lfs migrate import sobre los 3 commits locales no pusheados que tocaban este archivo (glosario, freeze CSV, tabla puente), convirtiendo el blob a un puntero LFS (.gitattributes: gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv filter=lfs diff=lfs merge=lfs -text). Los 3 commits cambiaron de hash como consecuencia (reescritura de historia local, ninguno de los 3 habia sido pusheado).",
+      "oid_lfs": "sha256:4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+      "tamano_bytes": 156101706,
+      "verificacion": "El objeto LFS local (.git/lfs/objects/4c/63/...) fue verificado byte a byte contra el sha256 raiz de este manifiesto: coincide exactamente."
+    }
+  }
+}

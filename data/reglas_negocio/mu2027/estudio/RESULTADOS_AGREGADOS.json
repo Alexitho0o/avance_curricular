@@ -1,0 +1,568 @@
+{
+  "envios": {
+    "08-05-2026_23-21-16_Matrícula-Pregrado-2026.csv_orig.zip": {
+      "registros": 4070,
+      "personas": 4070,
+      "VIG": {
+        "1": 3110,
+        "0": 960
+      }
+    },
+    "11-05-2026_12-12-47_Matrícula-Pregrado-2026.csv_orig.zip": {
+      "registros": 95,
+      "personas": 95,
+      "VIG": {
+        "1": 95
+      }
+    }
+  },
+  "base_por_anio": {
+    "2022": {
+      "registros": 1038,
+      "personas": 1021,
+      "VIG": {
+        "1": 1033,
+        "0": 5
+      }
+    },
+    "2023": {
+      "registros": 1145,
+      "personas": 1133,
+      "VIG": {
+        "1": 1142,
+        "0": 3
+      }
+    },
+    "2024": {
+      "registros": 1541,
+      "personas": 1531,
+      "VIG": {
+        "1": 1455,
+        "0": 86
+      }
+    },
+    "2025": {
+      "registros": 2371,
+      "personas": 2370,
+      "VIG": {
+        "1": 2298,
+        "0": 73
+      }
+    },
+    "2026": {
+      "registros": 4105,
+      "personas": 4071,
+      "VIG": {
+        "1": 3145,
+        "0": 960
+      }
+    }
+  },
+  "titulados": {
+    "filas_snapshot": 2874,
+    "personas_snapshot": 2579,
+    "pes_con_historial_titulado": {
+      "registros": 104,
+      "personas": 101,
+      "VIG": {
+        "1": 99,
+        "0": 5
+      }
+    },
+    "pes_solo_titulado": {
+      "registros": 0,
+      "personas": 0,
+      "VIG": {}
+    },
+    "base2026_con_historial_titulado": {
+      "registros": 101,
+      "personas": 101,
+      "VIG": {
+        "1": 96,
+        "0": 5
+      }
+    },
+    "base2026_solo_titulado": {
+      "registros": 0,
+      "personas": 0,
+      "VIG": {}
+    }
+  },
+  "match_persona_unica_UMAS2026": {
+    "filas_match": 3175,
+    "ambiguas": 201,
+    "sin_fila_umas2026": 789,
+    "estado_vig": [
+      {
+        "estado": "ELIMINADO",
+        "VIG": "0",
+        "filas": 78,
+        "personas": 78
+      },
+      {
+        "estado": "SUSPENDIDO",
+        "VIG": "0",
+        "filas": 2,
+        "personas": 2
+      },
+      {
+        "estado": "VIGENTE",
+        "VIG": "0",
+        "filas": 442,
+        "personas": 442
+      },
+      {
+        "estado": "VIGENTE",
+        "VIG": "1",
+        "filas": 2653,
+        "personas": 2653
+      }
+    ],
+    "personas": 3175
+  },
+  "comparacion_pes_base": {
+    "llave": [
+      "TIPO_DOC",
+      "N_DOC",
+      "DV",
+      "COD_SED",
+      "COD_CAR",
+      "MODALIDAD",
+      "JOR",
+      "VERSION",
+      "ANIO_ING_ACT",
+      "SEM_ING_ACT",
+      "ANIO_ING_ORI",
+      "SEM_ING_ORI"
+    ],
+    "coincidencias_univocas": 4018,
+    "claves_comunes_no_univocas": 57,
+    "vig_diferente": 0,
+    "solo_pes_registros": 33,
+    "solo_base_registros": 30,
+    "solo_pes_personas": 0,
+    "solo_base_personas": 0,
+    "personas_vig_positivo_diferente": 5
+  },
+  "T2_T3": {
+    "2": {
+      "denominador": 222,
+      "base": {
+        "encontrados": 80,
+        "vig1": 74,
+        "solo_vig0": 6,
+        "ausentes": 142
+      },
+      "pes": {
+        "encontrados": 80,
+        "vig1": 74,
+        "solo_vig0": 6,
+        "ausentes": 142
+      },
+      "con_historial_titulado_snapshot_mayo": 0,
+      "solo_vig0_base_con_historial_titulado": 0,
+      "solo_vig0_base_estados_2026_snapshot": {
+        "SIN FILA UMAS2026": 6
+      }
+    },
+    "3": {
+      "denominador": 124,
+      "base": {
+        "encontrados": 50,
+        "vig1": 48,
+        "solo_vig0": 2,
+        "ausentes": 74
+      },
+      "pes": {
+        "encontrados": 50,
+        "vig1": 48,
+        "solo_vig0": 2,
+        "ausentes": 74
+      },
+      "con_historial_titulado_snapshot_mayo": 0,
+      "solo_vig0_base_con_historial_titulado": 0,
+      "solo_vig0_base_estados_2026_snapshot": {
+        "VIGENTE": 2
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/requerimiento_bettersoft_uplus_2026/gate09_evidencia/matricula_unificada_2026/08-05-2026_23-21-16_Matrícula-Pregrado-2026.csv_orig.zip",
+      "sha256": "5368eb33a0431deebea50b382a5f187249f3fb437e67f533fed05bf202c3b9ef",
+      "expected": "5368eb33a0431deebea50b382a5f187249f3fb437e67f533fed05bf202c3b9ef",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/requerimiento_bettersoft_uplus_2026/gate09_evidencia/matricula_unificada_2026/11-05-2026_12-12-47_Matrícula-Pregrado-2026.csv_orig.zip",
+      "sha256": "18731c93e288ad5feb4357579a015f87eba4180a06eb9d85bda27d0323fa29b4",
+      "expected": "18731c93e288ad5feb4357579a015f87eba4180a06eb9d85bda27d0323fa29b4",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/QUINTA SUBIDA +95/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "1e383ea54a679aff32bffc9f4673fee3162784ba3dce80ac2c0cb09dee188ce6",
+      "expected": "1e383ea54a679aff32bffc9f4673fee3162784ba3dce80ac2c0cb09dee188ce6",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "expected": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "expected": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "expected": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "expected": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "expected": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "expected": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "expected": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "expected": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "hash_ok": true
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/procesamiento código/auditoria_ruts_forzados_vigencia_0.csv",
+      "sha256": "a6eb8d0aac58e5016f1e633fdf4ed9e76b53f2d70ccd3f3e74ce8e09b97818fc",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/procesamiento código/auditoria_vigencia_0_codcli_mu2026_20260508_230520.csv",
+      "sha256": "ec8d7ca55d82cbb50fac210d0cccf1e0ba44a1bf8965ff5fe2a8e20642be1458",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/procesamiento código/auditoria_correcciones_pes_ready_20260508_230900.csv",
+      "sha256": "783113916d2b2a9d73e19e2e10f06ede3c2b1423cb61415b092d2d78d61e41d5",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/procesamiento código/matricula_unificada_2026_pregrado_PES_READY.csv",
+      "sha256": "8ac3d58613d000534bf4053a5b9e42d13eee5db488f00d62d3f6d035c4df2704",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/MU2026_CIERRE_AUDITORIA_SUBIDAS_REALIZADAS_4165_TRAZABILIDAD.xlsx",
+      "sha256": "8b05e58189f79247fd0684327c3cc3afac9e65a91c45d964d7498a434935fea4",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/procesamiento código/reporte_matricula.json",
+      "sha256": "c5e8498430061cac95b9adf6bb6fa4710acfe8c39fdba5015627584a9e672924",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/procesamiento código/resumen_pes_ready_20260508_230900.md",
+      "sha256": "78e9bee5d119bc6e0cdf40d9eb9c0e551f9db87b466a14da609d8af9a497db13",
+      "expected": null,
+      "hash_ok": null
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/KPI_Matricula_Unificada_2026.xlsx",
+      "sha256": "cd0472766514a7ef945cba043961ca1496d4d0bc68db34e9b21abb55f8ca790a",
+      "expected": null,
+      "hash_ok": null
+    }
+  ],
+  "fuentes_anuales_vig": {
+    "2022": {
+      "filas_origen": 1038,
+      "filas_base": 1038,
+      "vig_identico_fila_a_fila": true,
+      "cambios_vig": 0,
+      "columna_origen": "VIG"
+    },
+    "2023": {
+      "filas_origen": 1145,
+      "filas_base": 1145,
+      "vig_identico_fila_a_fila": true,
+      "cambios_vig": 0,
+      "columna_origen": "VIG"
+    },
+    "2024": {
+      "filas_origen": 1541,
+      "filas_base": 1541,
+      "vig_identico_fila_a_fila": true,
+      "cambios_vig": 0,
+      "columna_origen": "VIG"
+    },
+    "2025": {
+      "filas_origen": 2371,
+      "filas_base": 2371,
+      "vig_identico_fila_a_fila": true,
+      "cambios_vig": 0,
+      "columna_origen": "VIGENCIA"
+    },
+    "2026": {
+      "filas_origen": 4105,
+      "filas_base": 4105,
+      "vig_identico_fila_a_fila": true,
+      "cambios_vig": 0,
+      "columna_origen": "VIG"
+    }
+  },
+  "raw_diagnostico_igual_base": true,
+  "anual_control": {
+    "2022": {
+      "denominador": 305,
+      "retenidos": 224,
+      "tasa": 0.7344262295081967
+    },
+    "2023": {
+      "denominador": 366,
+      "retenidos": 258,
+      "tasa": 0.7049180327868853
+    },
+    "2024": {
+      "denominador": 558,
+      "retenidos": 326,
+      "tasa": 0.5842293906810035
+    },
+    "2025": {
+      "denominador": 1150,
+      "retenidos": 668,
+      "tasa": 0.5808695652173913
+    }
+  },
+  "anual_con_titulo_snapshot_mayo": {
+    "2022": {
+      "personas_con_historial_titulo_mayo2026": 176,
+      "retenidos": 173,
+      "no_retenidos": 3,
+      "nota": "Estado en mayo2026 no acredita estado histórico al corte; NO errores confirmados."
+    },
+    "2023": {
+      "personas_con_historial_titulo_mayo2026": 86,
+      "retenidos": 85,
+      "no_retenidos": 1,
+      "nota": "Estado en mayo2026 no acredita estado histórico al corte; NO errores confirmados."
+    },
+    "2024": {
+      "personas_con_historial_titulo_mayo2026": 8,
+      "retenidos": 5,
+      "no_retenidos": 3,
+      "nota": "Estado en mayo2026 no acredita estado histórico al corte; NO errores confirmados."
+    },
+    "2025": {
+      "personas_con_historial_titulo_mayo2026": 9,
+      "retenidos": 2,
+      "no_retenidos": 7,
+      "nota": "Estado en mayo2026 no acredita estado histórico al corte; NO errores confirmados."
+    }
+  },
+  "qa_anual": true,
+  "sensibilidad_pes_sin_modificar_denominador": {
+    "denominador_fijo": 1150,
+    "retenidos_base": 668,
+    "retenidos_en_pes_misma_cohorte": 668,
+    "cambio_individual_marca_retenido": 0,
+    "cinco_personas_cambio_vig_en_cohorte2025": 0,
+    "nota": "Comparación diagnóstica a denominador fijo; no sustituye base ni resultados oficiales."
+  },
+  "cinco_personas_distribucion": {
+    "base_vig1": 0,
+    "pes_vig1": 5,
+    "cohortes_origen_base": {
+      "2026|1": 5
+    },
+    "con_historial_titulado": 0
+  },
+  "cinco_vig0_con_historial_titulado": {
+    "personas": 5,
+    "estado_2026_snapshot_por_persona": {
+      "ELIMINADO": 1,
+      "SIN FILA UMAS2026": 3,
+      "VIGENTE": 1
+    },
+    "cohorte_origen_en_pes": {
+      "2025|2": 2,
+      "2025|1": 2,
+      "2020|1": 1
+    },
+    "incluidos_retencion_anual_2025": 3,
+    "titulados_sin_otro_estado": 0
+  },
+  "vigente_umas_con_vig0_pes": {
+    "personas": 442,
+    "periodomatricula_snapshot": {
+      "1": 441,
+      "2": 1
+    },
+    "situacion_snapshot": {
+      "1 - ALUMNO REGULAR": 440,
+      "49 - CAMBIO DE JORNADA": 2
+    },
+    "incluidos_retencion2025": 4,
+    "no_retenidos_retencion2025": 4,
+    "nota": "Discrepancia de etiquetas entre fuentes; no prueba error de VIG al 30 de abril."
+  },
+  "auditoria_nominas": {
+    "por_rut": {
+      "filas": 754,
+      "acciones": {
+        "FORZADO_A_VIG_0": 289,
+        "YA_ESTABA_VIG_0": 463,
+        "NO_ENCONTRADO_EN_ARCHIVO": 2
+      },
+      "personas_cambiadas_1_a_0": 289
+    },
+    "por_codcli": {
+      "filas": 494,
+      "vig_antes": {
+        "1": 448,
+        "0": 46
+      },
+      "motivos": {
+        "CONTROL_VIGENCIA_0_CODCLI": 494
+      },
+      "personas_cambiadas_identificadas": 448,
+      "codcli_sin_match": 0,
+      "codcli_ambiguos": 0,
+      "anio_periodo": {
+        "2026|1": 494
+      }
+    },
+    "personas_solapadas_entre_nominas": 0,
+    "personas_union_cambios": 737,
+    "reglas_correcciones": {
+      "REGLA_3_FOR_23_ORIGEN_1900": 942,
+      "REGLA_4_FOR_23_ASI_INS_HIS": 10,
+      "REGLA_5_ASI_INS_ANT_CERO": 2
+    }
+  },
+  "impacto_nominas": {
+    "RUT": {
+      "personas": 289,
+      "en_pes": 289,
+      "solo_vig0_pes": 289,
+      "con_alguna_vig1_pes": 0,
+      "en_base2026": 289,
+      "con_historial_titulado": 0,
+      "en_retencion_anual2025": 288,
+      "no_retenidos_anual2025": 288,
+      "con_misma_cohorte_en_base2026_no_retenidos": 276,
+      "T2_personas": 2,
+      "T3_personas": 0
+    },
+    "CODCLI": {
+      "personas": 448,
+      "en_pes": 445,
+      "solo_vig0_pes": 440,
+      "con_alguna_vig1_pes": 5,
+      "en_base2026": 445,
+      "con_historial_titulado": 1,
+      "en_retencion_anual2025": 3,
+      "no_retenidos_anual2025": 3,
+      "con_misma_cohorte_en_base2026_no_retenidos": 0,
+      "T2_personas": 0,
+      "T3_personas": 2
+    },
+    "UNION": {
+      "personas": 737,
+      "en_pes": 734,
+      "solo_vig0_pes": 729,
+      "con_alguna_vig1_pes": 5,
+      "en_base2026": 734,
+      "con_historial_titulado": 1,
+      "en_retencion_anual2025": 291,
+      "no_retenidos_anual2025": 291,
+      "con_misma_cohorte_en_base2026_no_retenidos": 276,
+      "T2_personas": 2,
+      "T3_personas": 2
+    }
+  },
+  "cadena_archivo_subido": {
+    "para_subir_igual_orig": true,
+    "pes_ready_igual_orig": true,
+    "rows_para_subir": 4070,
+    "rows_pes_ready": 4070,
+    "cierre_4165_igual_orig": true
+  },
+  "trazabilidad_envio": {
+    "estado_trazabilidad": {
+      "TRAZADO_PARCIAL": 4165
+    },
+    "regla_consolidacion": {
+      "CARGA_SECUENCIAL_4165": 4070,
+      "COMPLEMENTO_95_VIG1_POSTERIOR": 95
+    },
+    "motivo_inclusion": {
+      "PUNTO_0_CARGA_PRINCIPAL_MU2026": 4070,
+      "COMPLEMENTO_95_V3_REGULARIZACION": 95
+    },
+    "fuente_vig": {
+      "PIPELINE_MU2026_CARGA_PRINCIPAL": 4070,
+      "CONFIRMADO_VIGENTE_2026_1_DATOSALUMNOS": 95
+    }
+  },
+  "control_git": {
+    "commit": "77bdc686ca66fabfe9ef8e6402027aa989b49e5a",
+    "path": "control/vigencia_0_codcli_mu2026.tsv",
+    "sha256_blob": "fb2b13d8d4d0c64cd0428e92747d43eb8bc832dbf1993997baa5d7fc3175399d",
+    "filas": 494,
+    "codcli_identicos_auditoria": true,
+    "motivos": {
+      "CONTROL_VIGENCIA_0_CODCLI": 494
+    },
+    "nomina_rut_no_encontrada_en_commit": true
+  },
+  "qa": {
+    "hashes_de_fuentes_esperados_coinciden": true,
+    "fuentes_sin_cambios_al_cierre": true,
+    "control_git_494_coincide": true,
+    "auditorias_personas_cambio_sin_solapamiento": true,
+    "balance_737": true,
+    "reproduce_retencion_anual": true,
+    "cadenas_final_csv_orig": true
+  }
+}

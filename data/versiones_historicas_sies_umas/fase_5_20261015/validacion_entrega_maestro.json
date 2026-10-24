@@ -1,0 +1,111 @@
+{
+  "phase": 5,
+  "status": "APROBADO",
+  "delivery": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015",
+  "reproduction": "/tmp/fase5_cruce_sies_umas/reproduccion_final",
+  "prior_discarded_candidate": {
+    "path": "/tmp/fase5_cruce_sies_umas/candidata_final",
+    "qa_path": "/tmp/fase5_cruce_sies_umas/validacion_final_maestro.json",
+    "qa_sha256": "78f8eca812fe36dfd754955391fe4a1827fa80bef6fd7fadfc048c65ab8336c5",
+    "reason": "Manifiesto anterior fijaba el módulo antes del guard final de jornada J3."
+  },
+  "independent_audit": {
+    "path": "/tmp/fase5_cruce_sies_umas/auditoria_maestro.json",
+    "sha256": "16d5b0e8e99a8db98c87176b94cc61e5361f9dd6abdbf8aaee077acc4b7afede"
+  },
+  "checks": {
+    "previous_candidate_rejection_is_preserved": true,
+    "prior_data_checks_were_successful": true,
+    "official_all_11_output_hashes_match_manifest": true,
+    "all_11_data_outputs_identical_to_audited_candidate": true,
+    "all_11_outputs_identically_reproduced": true,
+    "official_and_reproduced_manifests_identical": true,
+    "official_manifest_matches_current_final_code": true,
+    "config_hash_matches": true,
+    "academic_sources_unchanged_since_independent_validation": true,
+    "effective_rule_register_remains_empty": true,
+    "no_candidate_enabled_for_resolution": true,
+    "independent_audit_preserved": true,
+    "discarded_candidate_qa_preserved": true,
+    "official_files_unchanged_during_validation": true,
+    "final_code_unchanged_during_validation": true
+  },
+  "failed_checks": [],
+  "data_outputs_identical_to_previous_candidate": {
+    "candidatos_plan_sies.tsv": true,
+    "cobertura_planes.tsv": true,
+    "cobertura_sies.tsv": true,
+    "diferencias_catalogo_operativo.tsv": true,
+    "ejemplos_consulta.json": true,
+    "equivalencias_programa_2026.tsv": true,
+    "excepciones.json": true,
+    "fuentes.json": true,
+    "maestro.json": true,
+    "reglas_efectivas.json": true,
+    "resumen.json": true
+  },
+  "data_outputs_identically_reproduced": {
+    "candidatos_plan_sies.tsv": true,
+    "cobertura_planes.tsv": true,
+    "cobertura_sies.tsv": true,
+    "diferencias_catalogo_operativo.tsv": true,
+    "ejemplos_consulta.json": true,
+    "equivalencias_programa_2026.tsv": true,
+    "excepciones.json": true,
+    "fuentes.json": true,
+    "maestro.json": true,
+    "reglas_efectivas.json": true,
+    "resumen.json": true
+  },
+  "official_output_sha256": {
+    "candidatos_plan_sies.tsv": "29902da4a13f0b5e708ce9bd1b3c8bd3c14e2546c8f0503ae4472b912b6671c9",
+    "cobertura_planes.tsv": "e95528b1d5f74c42f39adac5a86aeada6165593fdee45512f39e7803dfd8b95b",
+    "cobertura_sies.tsv": "a13011c9602ce1490e49f3680f77100438e22bee48e45fa124f5cf1de35df729",
+    "diferencias_catalogo_operativo.tsv": "16213ca8ad0ccdb14a29236392aa0b022b25be8bcd8e1b7fc7fdfc5f84d08314",
+    "ejemplos_consulta.json": "b5c7d82265027c295e8acb3747d678639fafd8af3e51ea163a21ba55707e817e",
+    "equivalencias_programa_2026.tsv": "8639ef4205ae222e80733fca27f8fa7184234d101b26b6f9e1d9abe62cea8553",
+    "excepciones.json": "e46c0e3d64b07f29c9589f8e3f0b826a3608bb8f55f0d6991b339a14ce7f8ce4",
+    "fuentes.json": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330",
+    "maestro.json": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+    "reglas_efectivas.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "resumen.json": "18ddd501ca56569d5e13c73135b196e156768f871bf08aa344249037d473f53e"
+  },
+  "official_manifest_sha256": "ac2d0426ac80bd3b0b83d75b9be375273fc9937c68cbdfee850bf9bbfc0b7247",
+  "current_final_code_sha256": {
+    "common/equivalencias_historicas.py": "990d23bab02c4f3b842d8e24ed860330f597324527258ddc9a48a29280c655ae",
+    "scripts/construir_maestro_equivalencias.py": "fb6bb68e45325842141aaa123d81a9cbfd0e0a0c81aea032a4ebc78186a831dc",
+    "scripts/consultar_equivalencias_historicas.py": "1a3602d97db14a66b10fcb1630dac26b703885dda7aa0c8cc8636750c3160710"
+  },
+  "source_sha256": {
+    "snapshot_2026": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a",
+    "catalogo_planes": "68ff1b1907dc211b3f2315db39f0ad55a13bdaec244c8bdd08b0573c0a2eceea",
+    "cobertura_planes": "53cc56a7ba59253f2c078445fa8f126c3c472474a09d0184ccfc1a54a8e07e89",
+    "observaciones_planes": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840",
+    "oferta_anual": "dc028a6790244dc9b73a8c3b48f5ced672d0db330545fc09c48f0f24f2f46909",
+    "registro_reglas": "7a820e1e806abb667c3b3aef372bc6dd1d34f56167865c5a4956a83ccf13e19a",
+    "mrun_anual": "2c132873c57d65b661d03c22ce62b6c11a45305015b4cfda91a1f8f250658058",
+    "cobertura_sies": "5ed18a52390be1e7c7a8fd97aec431c26426c42d890a78e0b5e49f91e8053ef2",
+    "duracion": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+  },
+  "validated_metrics": {
+    "candidate_keys": 513,
+    "candidate_fields_compared": 5130,
+    "candidate_localizers_compared": 513,
+    "plans": 236,
+    "outside_catalog_plans": 13,
+    "unmapped_j3": 1,
+    "differences_by_field": {
+      "vigencia": 41
+    },
+    "historic_null_modalities": 8
+  },
+  "conclusion": "Las 513 claves, 5130 campos, actividad y localizadores de los 513 candidatos conservan el resultado independiente. Cobertura de 236 planes, 13 sin catálogo y J3 sin mapa preservada. Diferencias: 41 vigencia y 0 modalidad. Ocho modalidades históricas nulas conservan literal vacío.",
+  "limits": [
+    "No se acreditan reglas efectivas ni asignaciones individuales.",
+    "Validación de estructura y evidencia disponible; no certifica el significado de documentos futuros."
+  ],
+  "reproducibility": {
+    "script": "/tmp/fase5_cruce_sies_umas/validar_entrega_maestro.py",
+    "sha256": "70da57775d67222689e739711daadf08c07e37b67c938e5364e9884a2d5aa5da"
+  }
+}

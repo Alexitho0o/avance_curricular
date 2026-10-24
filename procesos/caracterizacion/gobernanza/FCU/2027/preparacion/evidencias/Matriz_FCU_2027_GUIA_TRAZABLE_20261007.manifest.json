@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-07",
+  "output": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx",
+  "sha256": "ab53ecb3223ac423d78c738d34e3d2ecab636e6633d00fb72e260f222e260dd2",
+  "source_workbook": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261006.xlsx",
+  "visibility": {
+    "guide_hidden_rows_cleared": 274,
+    "guide_filters_cleared": 0,
+    "cell_values_and_formulas_preserved": true,
+    "other_worksheets_preserved": true
+  },
+  "source_sha256": "280f3499b915c23bc4719328f809a2f02260b242de089fe0339076c7c8e5ce5e",
+  "sources": [
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_643_ANTECEDENTES PERSONALES.lsg",
+      "sha256": "eab0792f480961dbc2c56702a6135b3501fcd08eee9f3125f2a82a72e2ffc954",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_643_ANTECEDENTES PERSONALES.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_644_ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS.lsg",
+      "sha256": "60d6980a0ba77795ea402c2c10a3b989b9cfa7d38453e68aac386883f0689713",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_644_ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_645_TRAYECTORIA FORMATIVA Y LABORAL.lsg",
+      "sha256": "beedc52c4421b188804f04f13b8a5df71f8f1b5a79f09cf67ab3701d531a4175",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_645_TRAYECTORIA FORMATIVA Y LABORAL.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_646_ANTECEDENTES DE LA INSTITUCIÓN Y PROGRAMA.lsg",
+      "sha256": "db76285c3a7f40baa5ff2a94e9fdb7164af2b8a571023aa099639406fe924164",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_646_ANTECEDENTES DE LA INSTITUCIÓN Y PROGRAMA.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_647_ESTILO DE VIDA Y SUSTENTABILIDAD.lsg",
+      "sha256": "ec0b036a97c416701df151bae608b8cc3581bc79eaf22ee3020f593f7f2f369c",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_647_ESTILO DE VIDA Y SUSTENTABILIDAD.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_648_BIENESTAR PARA EL PROCESO EDUCTIVO.lsg",
+      "sha256": "9843d5c4726fa23520a1ee5095a711a74f5a443073428e3adff14d8fc42b90da",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_648_BIENESTAR PARA EL PROCESO EDUCTIVO.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_649_DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR.lsg",
+      "sha256": "bee7e3e3d0c7dc42a301000f92aabd3ebd37f19605fa85c9588ddeb201cd5bf2",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_649_DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR.lsg"
+    }
+  ],
+  "status_counts": {
+    "PRESENTE": 232,
+    "RETIRADO": 12,
+    "RETIRO HISTORICO": 12,
+    "RETIRO INSTITUCIONAL HISTORICO": 4,
+    "CONFIRMADO POR USUARIO": 1,
+    "RETIRADO DEL MANUAL 2027": 4,
+    "FUENTE DE CARGA POR VALIDAR": 13,
+    "ENCABEZADO DEL MANUAL": 1
+  },
+  "origins": {
+    "FCU": 59,
+    "INSTITUCIONAL": 32
+  },
+  "mapping_scope": "15 disposition and 5 disability fields. Partial non-production PES mapping only.",
+  "schema_2027": "json/ESPECIFICACION_PES_2027.json: 172 fields. Separate draft-only adapter scripts/fcu_pes_2027.py.",
+  "settings_confirmed": true,
+  "pes_ready": false,
+  "review_policy": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/json/POLITICA_REVISION_FCU_2027.json",
+    "version": 1,
+    "sha256": "50cb0a91041772b33b2156e6a0260a228103b85bb9013e50e722d8217d610595"
+  },
+  "excluded_checks_count": 14,
+  "confirmed_by_user": [
+    {
+      "date": "2026-10-07",
+      "code": "G01Q69",
+      "check_id": "Opcion exclusiva",
+      "expected": "SQ008",
+      "subquestion_text": "No cuento con red de apoyo",
+      "evidence": "El usuario confirmo que configuro SQ008 y verifico visualmente el funcionamiento en la vista previa.",
+      "source": "Confirmacion directa del usuario en este chat, posterior a la captura de las 14:06",
+      "confirmed": true
+    }
+  ],
+  "review_scope": "Only active checks under the recorded policy produce editing recommendations. Excluded observations are not represented as corrected settings.",
+  "raw_sheets_preserved": [
+    "RAW FCU 2026",
+    "RAW FCU 2027",
+    "RAW Institucionales"
+  ],
+  "updated_date": "2026-10-09",
+  "previous_version": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/historico/guia_antes_emprendimiento_f3bc2b3b9ce0/Matriz_FCU_2027_GUIA_TRAZABLE_20261007.xlsx",
+    "sha256": "f3bc2b3b9ce00fa6950c078463cd22e6f7670ed15131f5511abfbea3330dff2a"
+  },
+  "institutional_questions": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/json/PREGUNTAS_INSTITUCIONALES_2027.json",
+    "sha256": "5619875dc052fd552aeb706fd6f04cf70968f5248b7bb1c2874225c491f67d90",
+    "id": "INST_EMPRENDIMIENTO_FORMALIZADO_2027",
+    "status": "DECISION_REGISTRADA_CODIGO_LIME_PENDIENTE",
+    "code": null,
+    "decision": "Agregar una pregunta institucional nueva. Mantener G02Q95 y el bloque FCU sin modificar. No agregar esta frase como alternativa o subpregunta de G02Q95."
+  },
+  "institutional_decision_rows": 1
+}

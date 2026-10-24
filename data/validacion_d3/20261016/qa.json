@@ -1,0 +1,25 @@
+{
+  "fase": "D3",
+  "estado": "H7_H8_H9_EJECUTADOS_CON_LIMITES",
+  "pruebas_aprobadas": 7,
+  "log_pruebas": "test_clave_sin_extrapolacion_y_entradas (test_dictamen_d3.TestD3.test_clave_sin_extrapolacion_y_entradas) ... ok\ntest_conflicto_no_se_sanea_con_modelo (test_dictamen_d3.TestD3.test_conflicto_no_se_sanea_con_modelo) ... ok\ntest_mutabilidad_y_multiejecucion (test_dictamen_d3.TestD3.test_mutabilidad_y_multiejecucion) ... ok\ntest_nombres_y_sectores_c1 (test_dictamen_d3.TestD3.test_nombres_y_sectores_c1) ... ok\ntest_paridad_completa_y_regresion_b5 (test_dictamen_d3.TestD3.test_paridad_completa_y_regresion_b5) ... ok\ntest_perfiles_cilog_sin_fallback_regular (test_dictamen_d3.TestD3.test_perfiles_cilog_sin_fallback_regular) ... ok\ntest_portable_integridad_y_aislamiento (test_dictamen_d3.TestD3.test_portable_integridad_y_aislamiento) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 2.482s\n\nOK\n",
+  "consultas_paridad": {
+    "B5": 2349,
+    "contextos": 1986,
+    "codigos": 141,
+    "planes": 236,
+    "total": 4712
+  },
+  "reproduccion_archivos_identicos": 5,
+  "referencias_protegidas": 137,
+  "fcu": {
+    "ok": true,
+    "checked_files": 51,
+    "issues": [],
+    "baseline_sha256": "85e265f5d317ed6b1f2d595cc9ce415628c9c7aa94822152092052723a67e294"
+  },
+  "c1_c2_d1_d2_preservados": true,
+  "excel_original_intacto": true,
+  "contraste_independiente_nuevo": false,
+  "asignaciones_activadas": 0
+}

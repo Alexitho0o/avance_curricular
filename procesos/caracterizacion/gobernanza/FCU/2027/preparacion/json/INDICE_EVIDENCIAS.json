@@ -1,0 +1,80 @@
+[
+  {
+    "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+    "archivo": "Manual_de_Aplicacion_FCU_2027.txt",
+    "ruta_origen": "NO_REGISTRADO_EN_REPOSITORIO (fuente externa no versionada)",
+    "ruta_gobernanza": "/sessions/rcw-01ayp4v4cvgfnrf37lojlmku/mnt/CARACTERIZACIÓN/gobernanza/FCU/2027/actualizacion_manual/evidencias/Manual_de_Aplicacion_FCU_2027.txt",
+    "existe_origen": "NO_VERIFICABLE",
+    "copiado": "SI",
+    "sha256": "9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350",
+    "tamano_bytes": 94297,
+    "tipo": "DOCUMENTACION",
+    "prioridad": "ALTA",
+    "observacion": "Copia controlada; origen externo no versionado en el repositorio."
+  },
+  {
+    "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+    "archivo": "Control_trazable_actualizacion_FCU_2027.xlsx",
+    "ruta_origen": "/Users/alexi/Desktop/Control_trazable_actualizacion_FCU_2027.xlsx",
+    "ruta_gobernanza": "/sessions/rcw-01ayp4v4cvgfnrf37lojlmku/mnt/CARACTERIZACIÓN/gobernanza/FCU/2027/actualizacion_manual/evidencias/Control_trazable_actualizacion_FCU_2027.xlsx",
+    "existe_origen": "SI",
+    "copiado": "SI",
+    "sha256": "4616e5e658b0c433b52a31870e6711bd01f7a848ce49a6f797ec0b0782616beb",
+    "tamano_bytes": 19289,
+    "tipo": "EXCEL",
+    "prioridad": "ALTA",
+    "observacion": "Copia controlada creada desde fuente original."
+  },
+  {
+    "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+    "archivo": "Resumen_clasificacion_preguntas_FCU_2026.xlsx",
+    "ruta_origen": "/Users/alexi/Desktop/Resumen_clasificacion_preguntas_FCU_2026.xlsx",
+    "ruta_gobernanza": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/Resumen_clasificacion_preguntas_FCU_2026.xlsx",
+    "existe_origen": "SI",
+    "copiado": "SI",
+    "sha256": "4a52e2930bd02620c637bc679a0a0db9ce07bc7f9b9f35c3aa9da6b9200e0e59",
+    "tamano_bytes": "55144",
+    "tipo": "EXCEL",
+    "prioridad": "ALTA",
+    "observacion": "Derivado de AUDITORIA_PREGUNTAS_NO_FCU_ENCUESTA_2026.xlsx + Manual_de_Aplicacion_FCU_2026.txt (evidencias de FCU/2026/preparacion_encuesta); clasifica preguntas de la encuesta 2026 para informar que preguntas deben actualizarse en la FCU 2027. Reclasificado 2026-10-02 desde FCU/2026/preparacion_encuesta (ex analisis_encuesta); ver addendum alli."
+  },
+  {
+    "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+    "archivo": "Matriz_codigos_LimeSurvey_acciones_FCU_2027.xlsx",
+    "ruta_origen": "GENERADO_EN_REPOSITORIO_DESDE_EVIDENCIAS_GOBERNADAS",
+    "ruta_gobernanza": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/Matriz_codigos_LimeSurvey_acciones_FCU_2027.xlsx",
+    "existe_origen": "NO_APLICA",
+    "copiado": "SI",
+    "sha256": "87613b9e545bf78c3e49c08bb50635063ba6b4c8fc61d3062b4cd7ee282f1ed1",
+    "tamano_bytes": 25654,
+    "tipo": "EXCEL_DERIVADO",
+    "prioridad": "ALTA",
+    "observacion": "Matriz estructural, sin respuestas individuales. 81 filas planas con código pregunta y subpregunta separado. Cruce de códigos inferido desde clasificación 2026; pendiente validar contra LimeSurvey activo."
+  },
+  {
+    "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+    "archivo": "Matriz_FCU_2027_GUIA_TRAZABLE_20261006.xlsx",
+    "ruta_origen": "DERIVADO_DE_FUENTES_CONTROLADAS",
+    "ruta_gobernanza": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261006.xlsx",
+    "existe_origen": "NO_APLICA",
+    "copiado": "NO_APLICA",
+    "sha256": "c2c75497f5cf1d1b5fce31e494b22a5e855d06538b6c32ab55fab90c6c63ea19",
+    "tamano_bytes": 106423,
+    "tipo": "EXCEL_DERIVADO",
+    "prioridad": "ALTA",
+    "observacion": "Guía reconstruida desde tres hojas raw y cruces; categorías obtenidas de evidencia literal. Casos pendientes no autorizan eliminar."
+  },
+  {
+    "proceso": "FCU_ACTUALIZACION_MANUAL_2027",
+    "archivo": "LimeSurvey_141234_grupo_643_20261006.lsg",
+    "ruta_origen": "/Users/alexi/Downloads/limesurvey_group_643.lsg",
+    "ruta_gobernanza": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/LimeSurvey_141234_grupo_643_20261006.lsg",
+    "existe_origen": "SI",
+    "copiado": "SI",
+    "sha256": "8a78a85f5ddc0f4f094c9a64d519a094f9718014b843a908ddd5e7690548c7bc",
+    "tamano_bytes": 206027,
+    "tipo": "ESTRUCTURA_LIMESURVEY",
+    "prioridad": "ALTA",
+    "observacion": "Exportación estructural del grupo 643; sin respuestas de estudiantes. Fuente del vínculo G01Q74 -> G07Q04."
+  }
+]

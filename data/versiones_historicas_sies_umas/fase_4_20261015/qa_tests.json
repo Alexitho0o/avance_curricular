@@ -1,0 +1,14 @@
+{
+  "suite": "tests/test_planes_umas.py",
+  "tests": 17,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Solo analyze sintético; sin motores ni fuentes reales. Única edición repo autorizada: test_planes_umas.py.",
+  "sha256": {
+    "tests/test_planes_umas.py": "6882ad2c8c57a0ab1c37e340ab1ad4b10b6e2b4331f64ef66174f1f31bd26c26",
+    "scripts/reconstruir_planes_umas.py": "d9eece5531979d2ee2e438ce7f3e843ccc8a8424af5fba14818d96307f8484e1"
+  },
+  "audit_sha256": "f786bdbb954f742489764bb1f294dc4a99e52488f4132a370555a1a220984480",
+  "state": "APROBADO",
+  "regression": "Intersección CODCLI preservada con PLAN_DE_ESTUDIO vacío/NULL, sin inventar coincidencia de plan."
+}

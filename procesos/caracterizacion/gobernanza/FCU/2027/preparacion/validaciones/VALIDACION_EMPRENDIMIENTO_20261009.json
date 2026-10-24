@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-09",
+  "decision_id": "INST_EMPRENDIMIENTO_FORMALIZADO_2027",
+  "registry": "gobernanza/FCU/2027/preparacion/json/PREGUNTAS_INSTITUCIONALES_2027.json",
+  "artifact_manifest": "gobernanza/FCU/2027/preparacion/json/MANIFIESTO_EMPRENDIMIENTO_20261009.json",
+  "tests": [
+    {"command": "python3 -m unittest discover -s scripts/gobernanza -p test_auditar_grupos_fcu_2027.py", "count": 15, "result": "OK"},
+    {"command": "python3 -m unittest discover -s scripts -p test_fcu_pes_2027.py", "count": 18, "result": "OK"}
+  ],
+  "checks": {
+    "new_option_in_G02Q95_or_G02Q20_rejected": true,
+    "independent_question_classified_institutional": true,
+    "institutional_binding_to_PES_rejected": true,
+    "institutional_answer_does_not_change_SIT_LAB": true,
+    "institutional_answer_does_not_fill_missing_SIT_LAB": true,
+    "official_schema_fields": 172,
+    "future_crosswalk_has_separate_institutional_row": true,
+    "new_question_code_invented": false,
+    "guide_added_row": 281,
+    "existing_guide_cell_changes": ["Cruces!M80", "Cruces!W80"],
+    "raw_sheets_values_and_formulas_unchanged": ["RAW FCU 2026", "RAW FCU 2027", "RAW Institucionales"],
+    "artifact_hashes_and_external_copy_verified": true,
+    "frozen_2026_files_verified": 51,
+    "frozen_2026_ok": true,
+    "visual_review_of_changed_views": true,
+    "git_diff_check": "OK"
+  },
+  "deployment": "Decision registrada; codigo nuevo y opciones aun no identificados por exportacion. No se modifico LimeSurvey.",
+  "publication": "Cambios locales. No se realizo commit ni push."
+}

@@ -1,0 +1,66 @@
+{
+  "fase": 6,
+  "fecha_extraccion_umas": "NO_VERIFICADA",
+  "fecha_revision": "2026-10-15",
+  "periodo_objetivo": [
+    2007,
+    2026
+  ],
+  "reubicaciones_fuentes": {
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_7804.xlsx": {
+      "motivo": "Ruta original de Descargas cambió; se conserva edición histórica por coincidencia exacta de bytes",
+      "path": "/Users/alexi/Documents/GitHub/seguimiento_titulados_empleabilidad_2026/data/raw/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    }
+  },
+  "schema_version": 1,
+  "sources": {
+    "contextos_h4": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/conciliacion_contextos_umas.tsv",
+      "role": "Contextos agregados y pesos de PROMEDIOS, catálogo y contraste DA",
+      "sha256": "4bef34392dcd7e4d9de2d35840f5fee5c0137f2e22fa777379d99afbb8211a69"
+    },
+    "fuentes_h5": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/fuentes.json",
+      "role": "Referencias primarias y congelados H5",
+      "sha256": "18575ace94fcf5ad9a681f005f87dfc2a2a9382abf7ceaac588591466060d330"
+    },
+    "maestro_h5": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+      "role": "Snapshot académico H5; reglas efectivas separadas de candidatos",
+      "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+    },
+    "manifest_h4": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/manifest.json",
+      "role": "Manifiesto de reconstrucción H4",
+      "sha256": "be570c99cccaf039b0a5a48eac9f8ce9fcf01b51606c4e3b41dbdce4d109a2af"
+    },
+    "manifest_h5": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/manifest.json",
+      "role": "Manifiesto H5",
+      "sha256": "ac2d0426ac80bd3b0b83d75b9be375273fc9937c68cbdfee850bf9bbfc0b7247"
+    },
+    "observaciones_h4": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/observaciones_plan_periodo.tsv",
+      "role": "Proyección independiente del mismo reporte por dimensiones académicas",
+      "sha256": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840"
+    },
+    "resolver_h5": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/common/equivalencias_historicas.py",
+      "role": "Resolvedor H5 real, congelado",
+      "sha256": "990d23bab02c4f3b842d8e24ed860330f597324527258ddc9a48a29280c655ae"
+    },
+    "respaldo_promedios_historico": {
+      "path": "/Users/alexi/Documents/GitHub/seguimiento_titulados_empleabilidad_2026/data/raw/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "role": "Copia idéntica por SHA-256 de la fuente H1–H5, sin sustituir la ruta histórica",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    },
+    "utilidades_h5": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/construir_maestro_equivalencias.py",
+      "role": "IO inmutable y verificación de fuentes H5",
+      "sha256": "fb6bb68e45325842141aaa123d81a9cbfd0e0a0c81aea032a4ebc78186a831dc"
+    }
+  },
+  "unidad_mrun": "registros observados por año/código; no personas únicas",
+  "unidad_umas": "filas del reporte PROMEDIOS y contextos académicos; no estudiantes ni matrículas"
+}

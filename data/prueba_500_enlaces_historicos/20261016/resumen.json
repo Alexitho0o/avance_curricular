@@ -1,0 +1,100 @@
+{
+  "personas_elegibles_documentables": 1829,
+  "personas_muestra": 500,
+  "anios": {
+    "2018": 125,
+    "2019": 125,
+    "2020": 125,
+    "2022": 125
+  },
+  "causas_exclusion_referencia": {
+    "FAMILIA_EXISTENTE_EXCLUYE_REFERENCIA": 8,
+    "TIPO_PLAN_DEL_GRUPO_EXCLUYE_REFERENCIA": 39,
+    "SIN_AGRUPACION_UMAS": 36,
+    "DIFERENCIA_DEMOGRAFICA": 8
+  },
+  "referencias_no_resueltas": {
+    "AMBIGUA_O_NO_RECIPROCA": 29,
+    "SIN_COINCIDENCIA_COMPLETA": 19
+  },
+  "respaldo_documental_y_otro_anio": 190,
+  "longitudinal_enlace_documental": {
+    "SIN_OTRO_ANIO_RESUELTO": 215,
+    "MISMO_MRUN_EN_OTRO_ANIO": 237,
+    "SIN_REFERENCIA_ANCLA": 48
+  },
+  "estado_inicial": {
+    "UNICO": 312,
+    "SIN_CANDIDATO": 51,
+    "MULTIPLE": 101,
+    "SIN_GRUPO": 36
+  },
+  "validacion_documental": {
+    "UNICO_RESPALDADO_POR_REPORTE": 291,
+    "REPORTE_IDENTIFICA_CANDIDATO_AUSENTE_EN_BLOQUEO": 80,
+    "REFERENCIA_NO_UNIVOCA": 48,
+    "AMBIGUEDAD_RESUELTA_POR_REPORTE": 70,
+    "PROPUESTA_NO_COINCIDE_CON_REPORTE": 11
+  },
+  "validacion_longitudinal": {
+    "SIN_OTRO_ANIO_RESUELTO": 191,
+    "MISMO_MRUN_EN_OTRO_ANIO": 190,
+    "SIN_ENLACE_EVALUABLE": 118,
+    "MRUN_DIFIERE_ENTRE_ANIOS": 1
+  },
+  "control_alternativas": {
+    "alternativos_iniciales": 93,
+    "alternativos_compatibles_campos_reservados": 0
+  },
+  "reportes": [
+    {
+      "year": 2018,
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2018.xlsx",
+      "rows": 1088,
+      "sheet": "MAT_2018",
+      "format": "Reporte institucional con documento y Código Único"
+    },
+    {
+      "year": 2019,
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2019.xlsx",
+      "rows": 1112,
+      "sheet": "MAT_2019",
+      "format": "Reporte institucional con documento y Código Único"
+    },
+    {
+      "year": 2020,
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2020.xlsx",
+      "rows": 985,
+      "sheet": "MAT_2020",
+      "format": "Reporte institucional con documento y Código Único"
+    },
+    {
+      "year": 2022,
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "rows": 1038,
+      "format": "CSV enviado; no aceptación acreditada",
+      "encoding": "utf-8-sig"
+    }
+  ],
+  "calidad_referencias": {
+    "2018": {
+      "COMPLETO": 1088
+    },
+    "2019": {
+      "COMPLETO": 1109,
+      "INCOMPLETO": 3
+    },
+    "2020": {
+      "COMPLETO": 983,
+      "INCOMPLETO": 2
+    },
+    "2022": {
+      "COMPLETO": 1038
+    }
+  },
+  "filas_mrun_historico": 24386,
+  "filas_umas": 15045,
+  "fuente_identidad_oficial_rut_mrun": false,
+  "tasa_falsos_enlaces": "NO_ESTIMABLE: evidencia documental indirecta y longitudinal; sin tabla oficial RUT–MRUN",
+  "limitacion": "Muestra de personas presentes en ambos sistemas; no extrapolar a personas sin reporte o sin historia UMAS."
+}

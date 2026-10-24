@@ -1,0 +1,89 @@
+{
+  "alcance_busqueda": "Fuentes gobernadas H4/H5 y documentación local consultada; no se acredita acceso a SQL UMAS.",
+  "definiciones": {
+    "B-DUR-01": "Definición de NIVEL y duración del plan UMAS; regla por proceso/edición para convertir a duración formal, incluyendo precisión y redondeo.",
+    "B-EQ-01": "Tabla o resolución que vincule explícitamente CODCARPR + CODPESTUD + sede + jornada con Código Único. Un alias de programa sin plan no basta.",
+    "B-MAPAS-01": "Vigencia histórica de correspondencias de sede y jornada; los mapas H5 están limitados a candidatos 2026.",
+    "B-NOMBRE-01": "Alias documentado entre nombre del candidato y nombre interno del plan. Conservar ambos literales mientras se revisa.",
+    "B-OFERTA-01": "Oferta del código y año faltantes, o evidencia de la relación aplicable sin oferta observada. No completar por otro año.",
+    "B-PERFIL-01": "Catálogo UMAS con tipo de plan, modalidad del programa y nivel, junto con definiciones. No inferirlos del nombre, prefijo o MODALIDAD escolar.",
+    "B-SIN-CANDIDATO": "Relación de programa/plan no cubierta por candidatos H5; requiere evidencia explícita y no coincidencia nominal automática.",
+    "B-TEMP-01": "Años/períodos efectivos de la equivalencia plan–SIES. Para asignación individual, además historial de plan por matrícula o linaje SQL que acredite su temporalidad."
+  },
+  "equivalencia_programa_no_es_asignacion_individual": true,
+  "fuentes_temporales_por_localizar": [
+    {
+      "bulk_read": false,
+      "id": "C01",
+      "locator": "catálogo V001 L223–226 y L355–358",
+      "name": "Definición SQL vigente de View_promedios_alumnos",
+      "requested_fields": [
+        "origen exacto de PLAN_DE_ESTUDIO",
+        "condiciones JOIN",
+        "relación de ANO/PERIODO con la asignación del plan",
+        "tratamiento de cambios de plan y notas antiguas"
+      ],
+      "status": "NO_LOCALIZADA"
+    },
+    {
+      "bulk_read": false,
+      "id": "C02",
+      "name": "Asignación histórica de plan UMAS por matrícula",
+      "requested_fields": [
+        "clave de matrícula",
+        "CODPESTUD",
+        "desde/hasta o año/período efectivo",
+        "tipo de evento",
+        "plan anterior/nuevo",
+        "fecha de registro",
+        "fuente o resolución"
+      ],
+      "status": "FUENTE_REQUERIDA_NO_IDENTIFICADA"
+    },
+    {
+      "bulk_read": false,
+      "id": "C03",
+      "limits": "Confirmar primero si conserva plan del evento de inscripción o solo datos de asignatura.",
+      "locator": "catálogo V001 L229–234",
+      "name": "View_REGISTRO_DE_ASIGNATURAS / RA_CARGA_RASTRO",
+      "status": "CATALOGADA_SIN_EXTRACTO"
+    },
+    {
+      "bulk_read": false,
+      "fields_documented": [
+        "CODIGO_PLAN_ESTUDIO",
+        "Ano",
+        "Periodo",
+        "FECHAINICIO",
+        "FECHAFIN"
+      ],
+      "id": "C04",
+      "limits": "Fechas no documentadas como vigencia del plan; pedir linaje.",
+      "locator": "catálogo V001 L349–354",
+      "name": "Cumplimiento_ingreso_notas",
+      "status": "CATALOGADA_SIN_EXTRACTO"
+    },
+    {
+      "bulk_read": false,
+      "fields_documented": [
+        "PLANDEESTUDIO",
+        "ANO",
+        "PERIODO",
+        "INICIOASIGNATURA",
+        "FINASIGNATURA"
+      ],
+      "id": "C05",
+      "limits": "Grano asignatura-estudiante-sección; no confundir fechas de asignatura con vigencia del plan.",
+      "locator": "catálogo V001 L361–362",
+      "name": "view_ciisa_reporte_asistencia_da",
+      "status": "CATALOGADA_SIN_EXTRACTO"
+    },
+    {
+      "bulk_read": false,
+      "id": "C06",
+      "limits": "DESCRIPCION_ESTADO=HOMOLOGADO/CONVALIDADO describe resultado de asignatura; no demuestra cambio de plan de matrícula.",
+      "name": "Eventos de migración u homologación de malla",
+      "status": "FUENTE_REQUERIDA_NO_IDENTIFICADA"
+    }
+  ]
+}

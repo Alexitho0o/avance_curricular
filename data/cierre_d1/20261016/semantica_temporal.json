@@ -1,0 +1,110 @@
+[
+  {
+    "campo": "anio_oferta",
+    "origen": "Oferta académica, Año",
+    "significado": "año del proceso de oferta",
+    "localizador": "Glosario oferta 2010–2026, página 1",
+    "limites": "No equivale a año de ingreso del estudiante.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "primera_oferta_observada",
+    "origen": "inicios_por_codigo.json, anio_inicio_diccionario",
+    "significado": "mínimo año disponible del Código Único completo",
+    "localizador": "Regla interna INT-OFERTA-INICIO-001; docs/unificacion_proyectos_y_reglas_negocio_20261015.md",
+    "limites": "Oferta disponible 2010–2026; límite inferior no acredita ausencia anterior ni sustituye Año Inicio formal.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "anio_inicio_formal",
+    "origen": "Oferta académica, Año Inicio",
+    "significado": "inicio de actividades con ingreso de estudiantes en la sede informada",
+    "localizador": "Glosario oferta 2010–2026, página 2",
+    "limites": "Campo distinto de primera aparición del código; su declaración no prueba equivalencia de malla.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "vigencia_oferta",
+    "origen": "oferta_anual_referencia.json, vigencia",
+    "significado": "declaración anual con estudiantes nuevos o solo antiguos",
+    "localizador": "Glosario oferta 2010–2026, página 4; disponibilidad por año páginas 5–6",
+    "limites": "No determina por sí sola el código de una persona ni fecha efectiva de ingreso; revisar episodios y cortes en D2.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "ingreso_original_declarado",
+    "origen": "UMAS ANOINGRESO; B4 ingreso_original_declarado",
+    "significado": "ingreso original conservado en extracto",
+    "localizador": "Regla interna del usuario; docs/reconstruccion_presencia_anual_20261016.md y plan D2 H5",
+    "limites": "En continuidad puede heredar técnico; no es año cero de la nueva carrera.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "primer_anio_observado_en_carrera",
+    "origen": "B4 primer_anio_observado_en_carrera",
+    "significado": "mínimo de presencias disponibles en la carrera",
+    "localizador": "docs/reconstruccion_presencia_anual_20261016.md, Contrato",
+    "limites": "Límite de observación, no ingreso acreditado. Actividad disponible 2019–2026; no interpolar años.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "anio_observado",
+    "origen": "B4 anio_observado",
+    "significado": "año del contexto de presencia",
+    "localizador": "docs/reconstruccion_presencia_anual_20261016.md, Contrato",
+    "limites": "Actividad y ANOMATRICULA no equivalen a matrícula SIES al corte.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "anomatricula",
+    "origen": "UMAS ANOMATRICULA; B5 entrada.anomatricula",
+    "significado": "año de matrícula declarado en extracto actual",
+    "localizador": "docs/b5_reglas_historicas_20261016.md, Control temporal",
+    "limites": "Si es posterior al contexto no acredita una regla históricamente disponible.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "periodo_ingreso_y_matricula",
+    "origen": "UMAS PERIODOINGRESO y PERIODOMATRICULA",
+    "significado": "períodos literales de UMAS",
+    "localizador": "docs/b5_reglas_historicas_20261016.md, Hipótesis",
+    "limites": "No convertir automáticamente en semestre SIES o período de notas.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "actividad_academica",
+    "origen": "PROMEDIOS y extractos 2020–2022; B4 evidencia_presencia",
+    "significado": "actividad APROBADO/REPROBADO no convalidada por expediente/carrera/año",
+    "localizador": "docs/reconstruccion_presencia_anual_20261016.md, Contrato y Resultados",
+    "limites": "No trasladar notas entre carreras por compartir RUT; estado actual no es estado histórico.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "plan_observado",
+    "origen": "PROMEDIOS CODPESTUD; B4 planes_observados",
+    "significado": "identificador de plan presente en las fuentes de actividad",
+    "localizador": "docs/b5_reglas_historicas_20261016.md, Registro base K0",
+    "limites": "No deducir vigencia del año del nombre; sin plan limita alcance a programa/contexto.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  },
+  {
+    "campo": "sede_jornada",
+    "origen": "DatosAlumnos SEDE/JORNADA; B4 sede_umas/jornada_umas",
+    "significado": "atributos disponibles del expediente",
+    "localizador": "docs/reconstruccion_presencia_anual_20261016.md, Qué queda resuelto",
+    "limites": "Sede/jornada actuales no acreditan su vigencia histórica; requieren contraste por corte.",
+    "corte_analisis": "B4/B5 20261016",
+    "verificacion": "DEFINICION_Y_CONTRATO_LEIDOS_NO_RELECTURA_DE_MICRODATOS"
+  }
+]

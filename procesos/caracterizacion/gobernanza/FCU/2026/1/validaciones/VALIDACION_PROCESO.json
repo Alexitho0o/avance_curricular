@@ -1,0 +1,51 @@
+[
+  {
+    "indicador": "CSV validado",
+    "valor": "FCU_2026_CARGA_2026_P1_VALIDADO_E2E.csv",
+    "esperado": "FCU_2026_CARGA_2026_P1_VALIDADO_E2E.csv",
+    "cumple": "SI",
+    "observacion": "Evidencia principal de carga FCU/PES."
+  },
+  {
+    "indicador": "Auditoría E2E",
+    "valor": "LOCALIZADA",
+    "esperado": "AUDITORIA_E2E_CARGA_FCU_PES_2026.xlsx",
+    "cumple": "SI",
+    "observacion": "Auditoría E2E copiada como evidencia formal."
+  },
+  {
+    "indicador": "Auditoría localización",
+    "valor": "LOCALIZADA",
+    "esperado": "AUDITORIA_LOCALIZACION_CARGA_FCU_2026.xlsx",
+    "cumple": "SI",
+    "observacion": "Auditoría de localización copiada."
+  },
+  {
+    "indicador": "Hash esperado",
+    "valor": "fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461",
+    "esperado": "fc3f9849b89ca9eb21c6fd0eedf7237b67c3c71fcad48853d1c04471e7609461",
+    "cumple": "SI",
+    "observacion": "Comparación SHA256 sobre la copia gobernada del CSV validado."
+  },
+  {
+    "indicador": "1.371 x 195",
+    "valor": "1371 x 195",
+    "esperado": "1371 filas físicas incluyendo encabezado x 195 columnas",
+    "cumple": "SI",
+    "observacion": "La cifra 1.371 x 195 se registra como dimensión física del CSV gobernado; equivale a 1370 registros de datos más encabezado."
+  },
+  {
+    "indicador": "Separador ;",
+    "valor": "USADO",
+    "esperado": ";",
+    "cumple": "SI",
+    "observacion": "Lectura con delimitador punto y coma."
+  },
+  {
+    "indicador": "Sustentabilidad no presente en CSV final",
+    "valor": "NO_PRESENTE",
+    "esperado": "NO_PRESENTE",
+    "cumple": "SI",
+    "observacion": "Revisión de nombres de columnas del CSV final."
+  }
+]

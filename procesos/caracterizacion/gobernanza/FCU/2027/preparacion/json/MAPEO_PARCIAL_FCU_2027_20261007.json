@@ -1,0 +1,384 @@
+{
+  "date": "2026-10-07",
+  "survey": 141234,
+  "sources": [
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_643_ANTECEDENTES PERSONALES.lsg",
+      "sha256": "eab0792f480961dbc2c56702a6135b3501fcd08eee9f3125f2a82a72e2ffc954",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_643_ANTECEDENTES PERSONALES.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_644_ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS.lsg",
+      "sha256": "60d6980a0ba77795ea402c2c10a3b989b9cfa7d38453e68aac386883f0689713",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_644_ANTECEDENTES FAMILIARES Y SOCIOECONÓMICOS.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_645_TRAYECTORIA FORMATIVA Y LABORAL.lsg",
+      "sha256": "beedc52c4421b188804f04f13b8a5df71f8f1b5a79f09cf67ab3701d531a4175",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_645_TRAYECTORIA FORMATIVA Y LABORAL.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_646_ANTECEDENTES DE LA INSTITUCIÓN Y PROGRAMA.lsg",
+      "sha256": "db76285c3a7f40baa5ff2a94e9fdb7164af2b8a571023aa099639406fe924164",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_646_ANTECEDENTES DE LA INSTITUCIÓN Y PROGRAMA.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_647_ESTILO DE VIDA Y SUSTENTABILIDAD.lsg",
+      "sha256": "ec0b036a97c416701df151bae608b8cc3581bc79eaf22ee3020f593f7f2f369c",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_647_ESTILO DE VIDA Y SUSTENTABILIDAD.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_648_BIENESTAR PARA EL PROCESO EDUCTIVO.lsg",
+      "sha256": "9843d5c4726fa23520a1ee5095a711a74f5a443073428e3adff14d8fc42b90da",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_648_BIENESTAR PARA EL PROCESO EDUCTIVO.lsg"
+    },
+    {
+      "path": "/Users/alexi/Downloads/limesurvey_group_649_DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR.lsg",
+      "sha256": "bee7e3e3d0c7dc42a301000f92aabd3ebd37f19605fa85c9588ddeb201cd5bf2",
+      "snapshot": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/encuesta_141234_20261007_ea9138c666/limesurvey_group_649_DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR.lsg"
+    }
+  ],
+  "manual_sha256": "9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350",
+  "status": "PARCIAL_NO_PRODUCTIVO",
+  "pes_ready": false,
+  "scope": "Partial mapping: 15 disposition and 5 disability fields. Readiness refers only to active checks under the recorded user policy, not full manual compliance or a complete PES 172-field adapter. Global consent and gate-no policies require integration tests.",
+  "review_policy": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/json/POLITICA_REVISION_FCU_2027.json",
+    "version": 1,
+    "sha256": "50cb0a91041772b33b2156e6a0260a228103b85bb9013e50e722d8217d610595"
+  },
+  "disposition": [
+    {
+      "pes_field": "DIS_ES_1",
+      "manual_id": "DIS2027.1",
+      "question": "G07Q71",
+      "subquestion": "SQ004",
+      "column": "G07Q71[SQ004]",
+      "text": "Me esfuerzo por terminar todo lo que empiezo",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_2",
+      "manual_id": "DIS2027.2",
+      "question": "G07Q71",
+      "subquestion": "SQ005",
+      "column": "G07Q71[SQ005]",
+      "text": "He superado momentos difíciles para alcanzar una meta importante",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_3",
+      "manual_id": "DIS2027.3",
+      "question": "G07Q71",
+      "subquestion": "SQ006",
+      "column": "G07Q71[SQ006]",
+      "text": "Cuando estoy en un entorno educacional o laboral, me siento parte de una comunidad",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_4",
+      "manual_id": "DIS2027.4",
+      "question": "G07Q71",
+      "subquestion": "SQ007",
+      "column": "G07Q71[SQ007]",
+      "text": "Soy capaz de sacrificar el descanso y la diversión para dedicarme a mis estudios.",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_5",
+      "manual_id": "DIS2027.5",
+      "question": "G07Q71",
+      "subquestion": "SQ008",
+      "column": "G07Q71[SQ008]",
+      "text": "Pongo mucho esfuerzo en mis estudios y actividades académicas",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_6",
+      "manual_id": "DIS2027.6",
+      "question": "G07Q71",
+      "subquestion": "SQ009",
+      "column": "G07Q71[SQ009]",
+      "text": "Realizo mis actividades académicas con dedicación y a conciencia.",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_7",
+      "manual_id": "DIS2027.7",
+      "question": "G07Q71",
+      "subquestion": "SQ010",
+      "column": "G07Q71[SQ010]",
+      "text": "Estoy seguro(a) de que si estudio y me organizo, puedo obtener las notas que quiero",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_8",
+      "manual_id": "DIS2027.8",
+      "question": "G07Q71",
+      "subquestion": "SQ011",
+      "column": "G07Q71[SQ011]",
+      "text": "Me siento seguro(a) de la carrera que elegí",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_9",
+      "manual_id": "DIS2027.9",
+      "question": "G01Q72",
+      "subquestion": "SQ004",
+      "column": "G01Q72[SQ004]",
+      "text": "Tengo dificultades para mantener el foco en proyectos que duran más de unos meses",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_10",
+      "manual_id": "DIS2027.10",
+      "question": "G01Q72",
+      "subquestion": "SQ005",
+      "column": "G01Q72[SQ005]",
+      "text": "Cuando me va mal en algo, me cuesta manejar emociones fuertes como la rabia, la pena o el nerviosismo.",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_11",
+      "manual_id": "DIS2027.11",
+      "question": "G01Q72",
+      "subquestion": "SQ006",
+      "column": "G01Q72[SQ006]",
+      "text": "Dudo que con mis habilidades académicas tenga un buen desempeño en la carrera.",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_12",
+      "manual_id": "DIS2027.12",
+      "question": "G01Q72",
+      "subquestion": "SQ007",
+      "column": "G01Q72[SQ007]",
+      "text": "Cuando tengo un desafío académico, me cuesta organizarme para resolverlo.",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_13",
+      "manual_id": "DIS2027.13",
+      "question": "G01Q72",
+      "subquestion": "SQ008",
+      "column": "G01Q72[SQ008]",
+      "text": "Tengo dificultades para comprender los textos que leo",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_14",
+      "manual_id": "DIS2027.14",
+      "question": "G01Q72",
+      "subquestion": "SQ010",
+      "column": "G01Q72[SQ010]",
+      "text": "Se me hace difícil expresar mis ideas por escrito.",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    },
+    {
+      "pes_field": "DIS_ES_15",
+      "manual_id": "DIS2027.15",
+      "question": "G01Q72",
+      "subquestion": "SQ009",
+      "column": "G01Q72[SQ009]",
+      "text": "No me siento tan confiado(a) en que podré titularme",
+      "group": "DISPOSICIÓN HACIA LA EDUCACIÓN SUPERIOR",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 2,
+        "AO03": 3,
+        "AO04": 4
+      }
+    }
+  ],
+  "disability": [
+    {
+      "pes_field": "DISCAP_FIS",
+      "question": "G01Q17",
+      "subquestion": "SQ001",
+      "column": "G01Q17[SQ001]",
+      "text": "Sí, discapacidad física o motora (disminución o ausencia de las funciones motoras o físicas en el cuerpo, por ej. Problemas de movilidad o falta de una parte del cuerpo)",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "transfer_consent_question": "G00Q94",
+      "transfer_consent_accepted_codes": [
+        "AO01"
+      ],
+      "missing_or_denied": null,
+      "unknown_response": "error",
+      "original_severity_preserved": true,
+      "gate_no_policy": "Not implemented. Do not infer transfer consent from a missing answer."
+    },
+    {
+      "pes_field": "DISCAP_AUD",
+      "question": "G01Q17",
+      "subquestion": "SQ002",
+      "column": "G01Q17[SQ002]",
+      "text": "Sí, discapacidad auditiva (déficit total o parcial en la percepción auditiva que afecta a las funciones sensoriales como el oído y estructuras relacionadas)",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "transfer_consent_question": "G00Q94",
+      "transfer_consent_accepted_codes": [
+        "AO01"
+      ],
+      "missing_or_denied": null,
+      "unknown_response": "error",
+      "original_severity_preserved": true,
+      "gate_no_policy": "Not implemented. Do not infer transfer consent from a missing answer."
+    },
+    {
+      "pes_field": "DISCAP_VIS",
+      "question": "G01Q17",
+      "subquestion": "SQ003",
+      "column": "G01Q17[SQ003]",
+      "text": "Sí, discapacidad visual (afecciones de la vista como baja visión, limitación visual, agudeza visual, impedimento visual, percepción visual y ceguera. No se considera la necesidad de usar lentes ópticos)",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "transfer_consent_question": "G00Q94",
+      "transfer_consent_accepted_codes": [
+        "AO01"
+      ],
+      "missing_or_denied": null,
+      "unknown_response": "error",
+      "original_severity_preserved": true,
+      "gate_no_policy": "Not implemented. Do not infer transfer consent from a missing answer."
+    },
+    {
+      "pes_field": "DISCAP_INT",
+      "question": "G01Q17",
+      "subquestion": "SQ004",
+      "column": "G01Q17[SQ004]",
+      "text": "Sí, discapacidad intelectual (limitaciones en las habilidades cognitivas diarias que una persona requiere y que le sirven para responder a distintas situaciones en la vida)",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "transfer_consent_question": "G00Q94",
+      "transfer_consent_accepted_codes": [
+        "AO01"
+      ],
+      "missing_or_denied": null,
+      "unknown_response": "error",
+      "original_severity_preserved": true,
+      "gate_no_policy": "Not implemented. Do not infer transfer consent from a missing answer."
+    },
+    {
+      "pes_field": "DISCAP_PSQ",
+      "question": "G01Q17",
+      "subquestion": "SQ005",
+      "column": "G01Q17[SQ005]",
+      "text": "Sí, discapacidad psíquica (alteraciones de la conducta o del comportamiento adaptativo, generalmente derivadas del padecimiento de algún tipo de trastorno mental)",
+      "code_to_value": {
+        "AO01": 1,
+        "AO02": 1,
+        "AO03": 1,
+        "AO04": 0
+      },
+      "transfer_consent_question": "G00Q94",
+      "transfer_consent_accepted_codes": [
+        "AO01"
+      ],
+      "missing_or_denied": null,
+      "unknown_response": "error",
+      "original_severity_preserved": true,
+      "gate_no_policy": "Not implemented. Do not infer transfer consent from a missing answer."
+    }
+  ]
+}

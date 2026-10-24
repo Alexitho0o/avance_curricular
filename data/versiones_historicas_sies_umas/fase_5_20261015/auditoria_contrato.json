@@ -1,0 +1,1287 @@
+{
+  "schema_version": "1.0",
+  "phase": 5,
+  "review_date": "2026-10-15",
+  "status": "CONTRATO_H5_REVISADO_CON_AJUSTES_PROPUESTOS",
+  "contract_received": true,
+  "scope": "Revisión independiente de artefactos persistidos H2–H4 y contratos existentes; sin implementación de maestro/resolvedor, sin motores ni Excel.",
+  "sources": [
+    {
+      "id": "h2_contract",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_2_historia_observada_mrun.md",
+      "sha256": "8af37546d8d659b1b5304f834ec3be59d7c84db8c79c4932103808851e3daeb2",
+      "size": 10195
+    },
+    {
+      "id": "h3_contract",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_3_oferta_historica_sies.md",
+      "sha256": "2b4898fa4adbb192eccbe147c8c7c5d8a504dadb850de475c00650ef7d3d80c2",
+      "size": 13771
+    },
+    {
+      "id": "h4_contract",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_4_planes_asignaciones_umas.md",
+      "sha256": "4f4ece1ea5e70fd906de0327d26222c342210a9f35cf457c5cd5b03a08a3f40e",
+      "size": 15619
+    },
+    {
+      "id": "annual_contract",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/CATALOGOS_SIES_POR_ANIO.md",
+      "sha256": "206b164b03c7d8d4f2abee96d1a57668bdda1f8c8b329f1223dd754db5500960",
+      "size": 8133
+    },
+    {
+      "id": "name_sector_contract",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ENRIQUECIMIENTO_CARRERA_SECTOR_MU2026.md",
+      "sha256": "1019ee6dbdff0d7b350771dd8da2f2625a514b26e4ad3c8e2449f8702b672310",
+      "size": 10582
+    },
+    {
+      "id": "h2_examples",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/ejemplos_academicos.json",
+      "sha256": "4b1cc1ded71abc2140ec16fc986c2ed2838cc5bda5e0455ec244a92e878032b2",
+      "size": 10362
+    },
+    {
+      "id": "h3_examples",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/ejemplos_academicos.json",
+      "sha256": "df789bf46f8427e8ad14d8b460a6fb1c7f48cc3873efb7a02dcce940e72895fa",
+      "size": 56444
+    },
+    {
+      "id": "h3_annual",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/oferta_codigo_anio.tsv",
+      "sha256": "dc028a6790244dc9b73a8c3b48f5ced672d0db330545fc09c48f0f24f2f46909",
+      "size": 512773
+    },
+    {
+      "id": "h3_cross",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/cruce_oferta_mrun_anual.tsv",
+      "sha256": "27ee3fa910422bb9ec6487de5deb0fcccd6598d2dd6e7d1a6bef8f58badedeea",
+      "size": 37775
+    },
+    {
+      "id": "h3_codes",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/cobertura_codigos.tsv",
+      "sha256": "5ed18a52390be1e7c7a8fd97aec431c26426c42d890a78e0b5e49f91e8053ef2",
+      "size": 26565
+    },
+    {
+      "id": "h4_plans",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/cobertura_planes.tsv",
+      "sha256": "53cc56a7ba59253f2c078445fa8f126c3c472474a09d0184ccfc1a54a8e07e89",
+      "size": 45022
+    },
+    {
+      "id": "h4_examples",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/ejemplos_academicos.json",
+      "sha256": "911356598702e9df9c22f68aa51e92f8327d3c9c1cb2780963820271041d2873",
+      "size": 66870
+    },
+    {
+      "id": "h4_temporal",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/evidencia_temporal.json",
+      "sha256": "fc875c934ae0ab62c3f7f5bae91c9a12304b655bec843db56672aee3428c2389",
+      "size": 32883
+    },
+    {
+      "id": "h4_periods",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/observaciones_plan_periodo.tsv",
+      "sha256": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840",
+      "size": 161068
+    },
+    {
+      "id": "h4_contexts",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/conciliacion_contextos_umas.tsv",
+      "sha256": "4bef34392dcd7e4d9de2d35840f5fee5c0137f2e22fa777379d99afbb8211a69",
+      "size": 1248720
+    },
+    {
+      "id": "catalog_2026",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogos_sies/2026/mu2026_20261013/catalogo.json",
+      "sha256": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a",
+      "size": 162381
+    },
+    {
+      "id": "name_sector_2026",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/enriquecimiento_mu2026/20261015_oferta_literal/catalogo_carrera_sector_2026.json",
+      "sha256": "cdfaf46841c58d00c55f3f85da072e4778eda590d0ca3b9f210a051f38619f6c",
+      "size": 214166
+    },
+    {
+      "id": "h5_contract_reviewed",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/fase_5_maestro_equivalencias.md",
+      "sha256": "8e100885e63e18541fc74b3ef13a613863dffaf85e63ec2cadf9cba29e6b36a7",
+      "size": 6001,
+      "note": "Huella de la versión leída durante revisión; ajustes del autor pueden producir una revisión posterior."
+    }
+  ],
+  "manifest_verification": [
+    {
+      "phase": 2,
+      "manifest_path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_2_20261015/manifest.json",
+      "manifest_sha256": "466c1990f88a09b590beb7a5b43e16000b9a5b822b489fe047e5b137fccfaded",
+      "outputs_verified": 10,
+      "all_hashes_match": true,
+      "checks": [
+        {
+          "file": "coexistencias.json",
+          "sha256": "cacdd6562a318049035c99a5398b0184f0766ba3dec3569f0a78780cea2576d4",
+          "matches_manifest": true
+        },
+        {
+          "file": "cohortes_observadas.tsv",
+          "sha256": "18ffd1121e64e9c396196debeb73513107fe06b87269e308195db577a8f9a840",
+          "matches_manifest": true
+        },
+        {
+          "file": "criterios_insuficientes.json",
+          "sha256": "ef23dfeec2c25478ae2a948a5482b95e6577867b84e8ea4030a0c63496fbed5f",
+          "matches_manifest": true
+        },
+        {
+          "file": "ejemplos_academicos.json",
+          "sha256": "4b1cc1ded71abc2140ec16fc986c2ed2838cc5bda5e0455ec244a92e878032b2",
+          "matches_manifest": true
+        },
+        {
+          "file": "excepciones.json",
+          "sha256": "beab39c039ecf9c78047691255aadb32a73c11c08337fc050c0f39dbded841e2",
+          "matches_manifest": true
+        },
+        {
+          "file": "historia_codigo_anio.tsv",
+          "sha256": "2c132873c57d65b661d03c22ce62b6c11a45305015b4cfda91a1f8f250658058",
+          "matches_manifest": true
+        },
+        {
+          "file": "historia_codigos.json",
+          "sha256": "7de0d337dc18771f3d3b18329f588a6adc645c74603739da7ebf63470b5c5de5",
+          "matches_manifest": true
+        },
+        {
+          "file": "resumen.json",
+          "sha256": "391144ac2ec7a32060c496fa90182606e6c773cf729214375c5258789af4d06b",
+          "matches_manifest": true
+        },
+        {
+          "file": "transiciones_observadas.tsv",
+          "sha256": "dcc26bed6a2ed280893a5071f7b954fce7c57368a83b1655e017716a8491ac8c",
+          "matches_manifest": true
+        },
+        {
+          "file": "versiones_por_familia.json",
+          "sha256": "85d3c3b4812d827b0b6070e4c2486329b7abf57b4d2ce0b5a6f64d3dce4b1e81",
+          "matches_manifest": true
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "manifest_path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_3_20261015/manifest.json",
+      "manifest_sha256": "7dd64c7326a8b8e4e0c4b539c41ec036277d6c9fc43bba57a34c67e274308317",
+      "outputs_verified": 13,
+      "all_hashes_match": true,
+      "checks": [
+        {
+          "file": "cambios_atributos.json",
+          "sha256": "e76ad0221a089fe906f0c815f157069cdf35bb2392c04fb7bf3592179108a442",
+          "matches_manifest": true
+        },
+        {
+          "file": "cobertura_codigos.tsv",
+          "sha256": "5ed18a52390be1e7c7a8fd97aec431c26426c42d890a78e0b5e49f91e8053ef2",
+          "matches_manifest": true
+        },
+        {
+          "file": "coexistencias.json",
+          "sha256": "d9f49f27fd129347947f54efb90faa078427156d55590f958598002af55e1055",
+          "matches_manifest": true
+        },
+        {
+          "file": "comparacion_atributos_mrun.tsv",
+          "sha256": "c01e4e56a6e3d7fa4c882d248df714f02296d656ddd6521d3b03a41b15a408a9",
+          "matches_manifest": true
+        },
+        {
+          "file": "comparacion_oferta_2026.tsv",
+          "sha256": "d08656fb32a9be498fe5a3e4718f1e7b38a377c286ec1fc73c61d90254602ddc",
+          "matches_manifest": true
+        },
+        {
+          "file": "cruce_oferta_mrun_anual.tsv",
+          "sha256": "27ee3fa910422bb9ec6487de5deb0fcccd6598d2dd6e7d1a6bef8f58badedeea",
+          "matches_manifest": true
+        },
+        {
+          "file": "ejemplos_academicos.json",
+          "sha256": "df789bf46f8427e8ad14d8b460a6fb1c7f48cc3873efb7a02dcce940e72895fa",
+          "matches_manifest": true
+        },
+        {
+          "file": "fuentes.json",
+          "sha256": "a26909974350a87a2aa757044f5cddf74121bdbffdf35adad7b9d4d46b8f4e34",
+          "matches_manifest": true
+        },
+        {
+          "file": "historia_codigos.json",
+          "sha256": "eca71ab63a011df22af761f6269d3eb155a8c5d8a12a9f973c8e19fde03e728a",
+          "matches_manifest": true
+        },
+        {
+          "file": "inicio_declarado_vs_observado.json",
+          "sha256": "07fae1a6154c62956fbb14d50c99b9971f00c70113a4d2eeedd31f2c1faf4a5c",
+          "matches_manifest": true
+        },
+        {
+          "file": "oferta_codigo_anio.tsv",
+          "sha256": "dc028a6790244dc9b73a8c3b48f5ced672d0db330545fc09c48f0f24f2f46909",
+          "matches_manifest": true
+        },
+        {
+          "file": "resumen.json",
+          "sha256": "8f1001cc0b54dd2d7132bc199d56ce551fb03c528fb0786ba2569fa875766cc2",
+          "matches_manifest": true
+        },
+        {
+          "file": "versiones_por_familia.json",
+          "sha256": "55a30159099d1edc1aa7896df545183d7fad1962ffbec9274679fa78680d2649",
+          "matches_manifest": true
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "manifest_path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/manifest.json",
+      "manifest_sha256": "be570c99cccaf039b0a5a48eac9f8ce9fcf01b51606c4e3b41dbdce4d109a2af",
+      "outputs_verified": 14,
+      "all_hashes_match": true,
+      "checks": [
+        {
+          "file": "catalogo_planes.json",
+          "sha256": "68ff1b1907dc211b3f2315db39f0ad55a13bdaec244c8bdd08b0573c0a2eceea",
+          "matches_manifest": true
+        },
+        {
+          "file": "cobertura_planes.tsv",
+          "sha256": "53cc56a7ba59253f2c078445fa8f126c3c472474a09d0184ccfc1a54a8e07e89",
+          "matches_manifest": true
+        },
+        {
+          "file": "comparaciones_planes.json",
+          "sha256": "1fa9b83ab030703f696e22c377cf67d90d5f51689f1ef1c9ff110daf3d4310e9",
+          "matches_manifest": true
+        },
+        {
+          "file": "conciliacion_contextos_umas.tsv",
+          "sha256": "4bef34392dcd7e4d9de2d35840f5fee5c0137f2e22fa777379d99afbb8211a69",
+          "matches_manifest": true
+        },
+        {
+          "file": "diagnostico_patrones_anuales.tsv",
+          "sha256": "7c8cb31a0045e033d669ca5c9c55196becbcbff944c25ca37bbe6165999d875a",
+          "matches_manifest": true
+        },
+        {
+          "file": "duplicados_datos_alumnos.json",
+          "sha256": "b8931962548635fd75b46d9363f4a7be39d0fb7cd86fda35d4571d151c644af3",
+          "matches_manifest": true
+        },
+        {
+          "file": "ejemplos_academicos.json",
+          "sha256": "911356598702e9df9c22f68aa51e92f8327d3c9c1cb2780963820271041d2873",
+          "matches_manifest": true
+        },
+        {
+          "file": "esquemas_lectura.json",
+          "sha256": "00df8e404cb65a073b2d7470383f83b7e4f1b171368fb43c2cd3f58ba47c390a",
+          "matches_manifest": true
+        },
+        {
+          "file": "estructura_asignaturas.json",
+          "sha256": "29ce1e42276cd2e67de56cc5ba74422a5c818dca2f089937fa08976961916422",
+          "matches_manifest": true
+        },
+        {
+          "file": "fuentes.json",
+          "sha256": "8255566e980d12b880f9c417a9ccd2fe6054e32c8339a28a470fe7886e94f582",
+          "matches_manifest": true
+        },
+        {
+          "file": "observaciones_plan_periodo.tsv",
+          "sha256": "a007683026285739f513bca6b5bb94713a9af46fd7d83743d8913e8e15128840",
+          "matches_manifest": true
+        },
+        {
+          "file": "resumen.json",
+          "sha256": "2e9952bed9505267ceae26280c2887c0c139fa85d82fb5e34fc63f0f755adfb0",
+          "matches_manifest": true
+        },
+        {
+          "file": "resumen_asociaciones.json",
+          "sha256": "8343bf8061ddddd1d3104a5e9d3dc6d3f1c8b22fdb3b62bcefa1d25b24edf79f",
+          "matches_manifest": true
+        },
+        {
+          "file": "resumen_catalogo.json",
+          "sha256": "ade21e8a8da2e435285a648ab7b5303e7fb96feaf2918c5b30aefadae019147c",
+          "matches_manifest": true
+        }
+      ]
+    }
+  ],
+  "observed_invariants": {
+    "oferta_anual_rows": 747,
+    "oferta_anual_unique_keys": 747,
+    "sies_code_union": 141,
+    "sies_code_unique": 141,
+    "sies_presence": {
+      "SOLO_MRUN": 2,
+      "SOLO_OFERTA": 35,
+      "OFERTA_Y_MRUN": 104
+    },
+    "cross_year_states": {
+      "MRUN_FUERA_COBERTURA_OFERTA": 20,
+      "AMBAS_FUENTES": 452,
+      "SOLO_OFERTA": 295
+    },
+    "plan_union": 236,
+    "plan_unique": 236,
+    "plan_presence": {
+      "CATALOGO_Y_PROMEDIOS": 184,
+      "SOLO_PROMEDIOS": 13,
+      "SOLO_CATALOGO": 39
+    },
+    "catalog_plans_without_complete_activity": 80,
+    "plans_with_accredited_assignment": 0,
+    "plan_effective_dates_nonempty": 0
+  },
+  "requirements": [
+    {
+      "id": "H5-01",
+      "area": "identidad",
+      "severity": "BLOQUEANTE",
+      "requirement": "Separar código completo, familia I/S/C/J, V y atributos publicados.",
+      "acceptance": "Clave por código literal; componentes solo si la clave moderna es descomponible y coherente. Las dos claves heredadas permanecen sin S/C/J/V inventados.",
+      "evidence": [
+        "h2_contract",
+        "h3_contract"
+      ]
+    },
+    {
+      "id": "H5-02",
+      "area": "temporalidad",
+      "severity": "BLOQUEANTE",
+      "requirement": "Exigir año explícito en consulta anual; sin año solo consulta histórica declarada.",
+      "acceptance": "No usar fecha actual, catálogo más reciente, año del nombre del archivo ni sufijo de CODPESTUD. Preservar ANO=OFE_YYYY junto a año normalizado por regla explícita.",
+      "evidence": [
+        "h3_annual",
+        "annual_contract"
+      ]
+    },
+    {
+      "id": "H5-03",
+      "area": "clave_anual",
+      "severity": "BLOQUEANTE",
+      "requirement": "Unir oferta y MRUN por año exacto más código único.",
+      "acceptance": "No usar existencia de un código en otro año para rellenar oferta ausente; clave anual única y ausencia conservada.",
+      "evidence": [
+        "h3_contract",
+        "h3_cross"
+      ]
+    },
+    {
+      "id": "H5-04",
+      "area": "universo",
+      "severity": "BLOQUEANTE",
+      "requirement": "Mantener la unión de fuentes sin exigir matrícula ni actividad.",
+      "acceptance": "141 códigos SIES; 35 solo oferta; dos solo MRUN heredados; 236 etiquetas de plan con 223 en catálogo y 13 solo PROMEDIOS.",
+      "evidence": [
+        "h3_codes",
+        "h4_plans"
+      ]
+    },
+    {
+      "id": "H5-05",
+      "area": "cobertura",
+      "severity": "BLOQUEANTE",
+      "requirement": "Distinguir ausencia fuera de cobertura, ausencia dentro de cobertura y ausencia de observaciones.",
+      "acceptance": "2007–2009 MRUN_FUERA_COBERTURA_OFERTA; SOLO_OFERTA no se convierte en cierre ni programa inválido.",
+      "evidence": [
+        "h3_cross"
+      ]
+    },
+    {
+      "id": "H5-06",
+      "area": "plan_sin_actividad",
+      "severity": "BLOQUEANTE",
+      "requirement": "Conservar planes sin actividad completa o sin aparición en PROMEDIOS.",
+      "acceptance": "No eliminar los 39 solo catálogo ni los 80 de catálogo sin año/claves completos; etiquetar ambas condiciones por separado.",
+      "evidence": [
+        "h4_contract",
+        "h4_plans"
+      ]
+    },
+    {
+      "id": "H5-07",
+      "area": "temporalidad_plan",
+      "severity": "BLOQUEANTE",
+      "requirement": "Separar actividad, matrícula, cohortes, extracción y vigencia efectiva.",
+      "acceptance": "Todas las vigencias/asignaciones históricas H4 permanecen no acreditadas. No interpolar intervalos entre mínimo/máximo observado.",
+      "evidence": [
+        "h4_contract",
+        "h4_temporal"
+      ]
+    },
+    {
+      "id": "H5-08",
+      "area": "resolucion",
+      "severity": "BLOQUEANTE",
+      "requirement": "Separar consulta de código, candidatos UMAS y asignación histórica acreditada.",
+      "acceptance": "Un código existente o candidato único no cambia asignacion_temporal a acreditada. El resultado debe informar por separado qué clave se consultó y qué equivalencia se probó.",
+      "evidence": [
+        "h2_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-09",
+      "area": "resolucion",
+      "severity": "BLOQUEANTE",
+      "requirement": "No seleccionar mayor V, primera fila, V inicial, año máximo ni modalidad mayoritaria.",
+      "acceptance": "Conservar todos los candidatos y estado ambiguo; mismas cohortes, duración y nombre pueden dejar V1/V2.",
+      "evidence": [
+        "h2_examples",
+        "h3_examples"
+      ]
+    },
+    {
+      "id": "H5-10",
+      "area": "evidencia_equivalencia",
+      "severity": "BLOQUEANTE",
+      "requirement": "Equivalencias deben tener fuente, año de aplicación documentado, llave UMAS completa y código SIES exacto.",
+      "acceptance": "La evidencia operativa 2026 sirve solo dentro del alcance anual declarado; no retropropagar a años anteriores por igual nombre/carrera.",
+      "evidence": [
+        "annual_contract",
+        "catalog_2026"
+      ]
+    },
+    {
+      "id": "H5-11",
+      "area": "contextos",
+      "severity": "BLOQUEANTE",
+      "requirement": "Conservar discrepancias de carrera, sede y jornada entre plan, notas y DatosAlumnos.",
+      "acceptance": "No priorizar una fuente silenciosamente ni usar primera fila de clave duplicada; datos de matrícula 2027 se marcan fuera de ámbito.",
+      "evidence": [
+        "h4_contract",
+        "h4_contexts"
+      ]
+    },
+    {
+      "id": "H5-12",
+      "area": "identidad_privada",
+      "severity": "BLOQUEANTE",
+      "requirement": "No enlazar MRUN con UMAS sin correspondencia individual acreditada.",
+      "acceptance": "Maestro y resolvedor público trabajan con dimensiones académicas y evidencia; no exportan RUT, MRUN, CODCLI ni hashes sustitutivos de identidad.",
+      "evidence": [
+        "h2_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-13",
+      "area": "jornada_modalidad",
+      "severity": "BLOQUEANTE",
+      "requirement": "Mantener jornada y modalidad separadas.",
+      "acceptance": "No inferir modalidad de O/D/V, de MODALIDAD escolar o del nombre; J3 y J4 distintos. Toda excepción de O debe tener evidencia explícita del programa.",
+      "evidence": [
+        "annual_contract",
+        "h3_contract"
+      ]
+    },
+    {
+      "id": "H5-14",
+      "area": "nombres",
+      "severity": "BLOQUEANTE",
+      "requirement": "Preservar nombre literal histórico por fuente/año y nombre literal oferta2026 separado.",
+      "acceptance": "No sustituir nombre histórico, corregir caja/acentos ni añadir Continuidad/Online/Diurno/Vespertino a NOMBRE_CARRERA. Si no hay oferta2026, nombre2026 nulo con estado.",
+      "evidence": [
+        "h3_contract",
+        "name_sector_contract"
+      ]
+    },
+    {
+      "id": "H5-15",
+      "area": "precedencia_fuentes",
+      "severity": "BLOQUEANTE",
+      "requirement": "Conservar atributos de oferta anual separados de atributos del catálogo operativo 2026.",
+      "acceptance": "El catálogo congelado aporta alias/equivalencias con procedencia, no sobrescribe vigencia/tipo plan/duración/nombre de oferta oficial H3. Mostrar discrepancias de fuentes.",
+      "evidence": [
+        "h3_annual",
+        "catalog_2026"
+      ]
+    },
+    {
+      "id": "H5-16",
+      "area": "sector_ipss",
+      "severity": "BLOQUEANTE",
+      "requirement": "Sector IPSS permanece separado y NO_EVALUADO_EN_H5 según alcance autorizado.",
+      "acceptance": "No clasificar sectores nuevos ni copiar sector2026 para resolver versión. El catálogo anterior se conserva solo como evidencia de una fase previa; futura clasificación exige su propio contrato.",
+      "evidence": [
+        "name_sector_2026",
+        "name_sector_contract"
+      ]
+    },
+    {
+      "id": "H5-17",
+      "area": "sector_temporal",
+      "severity": "BLOQUEANTE",
+      "requirement": "No presentar clasificación sectorial2026 como sector histórico acreditado.",
+      "acceptance": "Si se incorpora posteriormente clasificación, indicar año/snapshot y cobertura; H5 actual mantiene NO_EVALUADO_EN_H5.",
+      "evidence": [
+        "name_sector_2026"
+      ]
+    },
+    {
+      "id": "H5-18",
+      "area": "planes",
+      "severity": "BLOQUEANTE",
+      "requirement": "Separar CODPESTUD/PLAN_DE_ESTUDIO, VERSION SIES y correlativo PLAN_ESTUDIOS de Avance.",
+      "acceptance": "No convertir numéricamente ni por sufijo unos identificadores en otros.",
+      "evidence": [
+        "h4_contract",
+        "h4_temporal"
+      ]
+    },
+    {
+      "id": "H5-19",
+      "area": "estructura",
+      "severity": "BLOQUEANTE",
+      "requirement": "No contar filas expandidas de requisitos/equivalencias como asignaturas.",
+      "acceptance": "Conservar 4854 grupos plan/ramo/nivel del catálogo, relaciones separadas y tres destinos de equivalencias pendientes sin corrección por semejanza.",
+      "evidence": [
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-20",
+      "area": "homologaciones",
+      "severity": "BLOQUEANTE",
+      "requirement": "No interpretar equivalencia de catálogo como homologación individual ni cambio de plan.",
+      "acceptance": "Cambios de estructura o coincidencia de ramo no asignan V ni fecha efectiva; notas ausentes del plan se conservan para revisión.",
+      "evidence": [
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-21",
+      "area": "valores_faltantes",
+      "severity": "BLOQUEANTE",
+      "requirement": "Vacío, NULL, cero especial y conflicto son estados distintos.",
+      "acceptance": "Inicio0 no es año; modalidad vacía2010 no se completa; NULL en actividad no se transforma en año; 0candidatos no equivale a conflicto entrevalores.",
+      "evidence": [
+        "h3_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-22",
+      "area": "ediciones",
+      "severity": "BLOQUEANTE",
+      "requirement": "Atributos/códigos se interpretan con esquema y edición explícitos.",
+      "acceptance": "Normas2027 no se aplican retroactivamente; NivelGlobal histórico/oferta usuario1/3 no se confunde con carga CFT/IP2026 1/2.",
+      "evidence": [
+        "h3_contract",
+        "annual_contract",
+        "h4_temporal"
+      ]
+    },
+    {
+      "id": "H5-23",
+      "area": "proveniencia",
+      "severity": "BLOQUEANTE",
+      "requirement": "Fijar fuentes y salidas por SHA256 y localizadores.",
+      "acceptance": "Verificar manifiestos antes de construir maestro; cada valor conserva origen; hashincorrecto/salidaexistente distinta bloquea antes de escribir.",
+      "evidence": [
+        "h2_contract",
+        "h3_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-24",
+      "area": "contrato_consulta",
+      "severity": "BLOQUEANTE",
+      "requirement": "Devolver criterios solicitados, criterios aplicados, candidatos descartados con motivo y pendientes.",
+      "acceptance": "Ningún parámetro ignorado silenciosamente; VERSION explícita filtra candidatos pero no prueba plan individual; criterios contradictorios generan estado propio.",
+      "evidence": [
+        "annual_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-25",
+      "area": "preservacion",
+      "severity": "BLOQUEANTE",
+      "requirement": "Mantener congelados motores, puente, duraciones y libros entregados.",
+      "acceptance": "Capa histórica auxiliar sin promover reglas al motor MU2026, sin Excel writing ni cambio de fuentes.",
+      "evidence": [
+        "annual_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-26",
+      "area": "pruebas",
+      "severity": "BLOQUEANTE",
+      "requirement": "Requerir controles de invariantes y casos adversos antes de aceptar maestro.",
+      "acceptance": "Repetibilidad byte a byte, unicidad de llaves, preservación de universos, ambigüedad, cobertura y estados independientes; la ejecución exitosa no significa equivalencias completas.",
+      "evidence": [
+        "h2_contract",
+        "h3_contract",
+        "h4_contract"
+      ]
+    },
+    {
+      "id": "H5-27",
+      "area": "alcance_acreditacion",
+      "severity": "BLOQUEANTE",
+      "requirement": "EQUIVALENCIA_ACREDITADA futura acredita relación plan/período→SIES, no adscripción individual de matrícula al plan.",
+      "acceptance": "Respuesta conserva asignacion_individual=NO_EVALUADA o equivalente; consumidor exige evidencia adicional. Con reglas efectivas vacías no hay consultas UMAS resueltas.",
+      "evidence": [
+        "h5_contract_reviewed",
+        "h4_contract"
+      ]
+    }
+  ],
+  "proposed_keys": [
+    {
+      "entity": "programa_sies",
+      "key": [
+        "codigo_unico_literal"
+      ],
+      "note": "Familia y componentes son derivados de clave moderna; versión se conserva informada."
+    },
+    {
+      "entity": "oferta_anual",
+      "key": [
+        "fuente_id",
+        "anio_oferta",
+        "codigo_unico_literal"
+      ],
+      "note": "La vista canónica fija una fuente/edición; preservar ANO literal y no unir entre años."
+    },
+    {
+      "entity": "observacion_mrun_academica",
+      "key": [
+        "fuente_id",
+        "anio_observado",
+        "codigo_unico_literal",
+        "perfil_atributos_observados"
+      ],
+      "note": "Mantener variaciones dentro del año; agregados no sustituyen llave individual ni enlazan UMAS."
+    },
+    {
+      "entity": "plan_catalogado",
+      "key": [
+        "fuente_id",
+        "CODPESTUD_literal"
+      ],
+      "note": "Carrera y sede son contexto contrastado; si múltiples valores, conservar conflicto."
+    },
+    {
+      "entity": "estructura_plan",
+      "key": [
+        "fuente_id",
+        "CODPESTUD",
+        "CODRAMO",
+        "NIVEL"
+      ],
+      "note": "Equivalencias/requisitos en relaciones separadas."
+    },
+    {
+      "entity": "equivalencia_programatica",
+      "key": [
+        "evidencia_id",
+        "anio_aplicacion_documentado",
+        "CODCARPR",
+        "sede_umas",
+        "jornada_umas",
+        "nombre_interno_documentado",
+        "codigo_unico_sies"
+      ],
+      "note": "Puede ser multivaluada; no obliga a elegir. Plan UMAS solo si evidencia lo vincula expresamente."
+    },
+    {
+      "entity": "asignacion_historica_plan",
+      "key": [
+        "identificador_interno_restringido",
+        "intervalo_o_periodo_efectivo",
+        "CODPESTUD",
+        "fuente_evento"
+      ],
+      "note": "Esquema futuro, aún sin fuente suficiente. No materializar con observaciones H4 ni exportar identificador."
+    }
+  ],
+  "proposed_state_dimensions": {
+    "consulta_sies": [
+      "CODIGO_LOCALIZADO_ANIO",
+      "CODIGO_LOCALIZADO_HISTORIA",
+      "CODIGO_NO_OBSERVADO_ANIO",
+      "CODIGO_NO_LOCALIZADO",
+      "CLAVE_HEREDADA_NO_DESCOMPONIBLE"
+    ],
+    "cobertura_oferta": [
+      "AMBAS_FUENTES",
+      "SOLO_OFERTA",
+      "MRUN_FUERA_COBERTURA_OFERTA",
+      "MRUN_SIN_OFERTA_DENTRO_COBERTURA"
+    ],
+    "candidatos_umas_sies": [
+      "CANDIDATO_UNICO_EN_EVIDENCIA_DECLARADA",
+      "MULTIPLES_CANDIDATOS",
+      "SIN_EQUIVALENCIA_DOCUMENTADA",
+      "CRITERIOS_INCOMPLETOS",
+      "CRITERIOS_CONTRADICTORIOS",
+      "FUERA_ALCANCE_ANUAL"
+    ],
+    "asignacion_temporal": [
+      "NO_ACREDITADA",
+      "ACREDITADA_POR_FUENTE_TEMPORAL",
+      "CONFLICTO_TEMPORAL"
+    ],
+    "presencia_plan": [
+      "CATALOGO_Y_PROMEDIOS",
+      "SOLO_CATALOGO",
+      "SOLO_PROMEDIOS"
+    ],
+    "actividad_plan": [
+      "CON_ANIO_Y_CLAVES",
+      "SOLO_OBSERVACIONES_INCOMPLETAS",
+      "SIN_OBSERVACION_EN_EXTRACTO"
+    ],
+    "nombre_oferta_2026": [
+      "LITERAL_OFERTA_2026",
+      "SIN_OFERTA_2026",
+      "CONFLICTO_DE_FUENTE"
+    ],
+    "sector_ipss": [
+      "NO_EVALUADO_EN_H5"
+    ]
+  },
+  "state_constraints": [
+    "No usar un único RESUELTO para colapsar dimensiones.",
+    "CANDIDATO_UNICO_EN_EVIDENCIA_DECLARADA no implica ACREDITADA_POR_FUENTE_TEMPORAL.",
+    "Sector y nombre no resuelven versión.",
+    "Cobertura sin oferta no significa código inválido.",
+    "Sin actividad observada no significa plan no vigente."
+  ],
+  "verifiable_examples": [
+    {
+      "id": "EX01",
+      "case": "Informática: ambos ingresos no resuelven V",
+      "source_id": "h2_examples",
+      "locator": "familia=I162S2C1J1; contraejemplo_criterios_completos",
+      "observed": {
+        "anio_ing_carr_act": "2018",
+        "anio_ing_carr_ori": "2018",
+        "cat_periodo": "2019",
+        "codigos_observados": [
+          "I162S2C1J1V1",
+          "I162S2C1J1V2"
+        ],
+        "dur_estudio_carr": "8",
+        "dur_proceso_tit": "0",
+        "dur_total_carr": "8",
+        "familia": "I162S2C1J1",
+        "interpretacion": "Mismos criterios observados dejan varias versiones; causa curricular no demostrada.",
+        "jornada": "Diurna",
+        "modalidad": "Presencial",
+        "nomb_carrera": "INGENIERIA EN INFORMATICA",
+        "registros_ejemplo_por_codigo": {
+          "I162S2C1J1V1": 10891,
+          "I162S2C1J1V2": 11439
+        },
+        "sem_ing_carr_act": "1",
+        "sem_ing_carr_ori": "1",
+        "tipo_plan_carr": "Plan Regular"
+      },
+      "expected_contract_behavior": "Conservar I162S2C1J1V1 y V2; no resolver por año/cohorte/duración/nombre."
+    },
+    {
+      "id": "EX02",
+      "case": "Logística: variantes coexistentes con inicio declarado igual",
+      "source_id": "h3_examples",
+      "locator": "clave I162S2C77J4; anio=2026",
+      "observed": [
+        {
+          "ANO_INICIO": "2024",
+          "DURACION_ESTUDIOS": "8",
+          "DURACION_TITULACION": "0",
+          "DURACION_TOTAL": "8",
+          "JORNADA": "A Distancia",
+          "MODALIDAD": "No Presencial",
+          "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+          "NIVEL_GLOBAL": "Pregrado",
+          "NOMBRE_CARRERA": "INGENIERIA EN LOGISTICA",
+          "PLAN_ESPECIAL": "NO APLICA",
+          "TIPO_CARRERA": "Plan Regular",
+          "VERSION": "1",
+          "VIGENCIA": "Vigente con estudiantes nuevos",
+          "anio": 2026,
+          "codigo_unico": "I162S2C77J4V1",
+          "localizador": {
+            "fila": 26511,
+            "hoja": "in"
+          }
+        },
+        {
+          "ANO_INICIO": "2024",
+          "DURACION_ESTUDIOS": "4",
+          "DURACION_TITULACION": "0",
+          "DURACION_TOTAL": "4",
+          "JORNADA": "A Distancia",
+          "MODALIDAD": "No Presencial",
+          "NIVEL_CARRERA": "Profesional Sin Licenciatura",
+          "NIVEL_GLOBAL": "Pregrado",
+          "NOMBRE_CARRERA": "INGENIERIA EN LOGISTICA",
+          "PLAN_ESPECIAL": "NO APLICA",
+          "TIPO_CARRERA": "Plan Regular de Continuidad",
+          "VERSION": "2",
+          "VIGENCIA": "Vigente sin estudiantes nuevos",
+          "anio": 2026,
+          "codigo_unico": "I162S2C77J4V2",
+          "localizador": {
+            "fila": 26512,
+            "hoja": "in"
+          }
+        }
+      ],
+      "expected_contract_behavior": "Preservar V1 regular8 y V2 continuidad4; ANO_INICIO2024 no elige versión. Vigente sin estudiantes nuevos sigue vigente."
+    },
+    {
+      "id": "EX03",
+      "case": "Código heredado sin oferta2008",
+      "source_id": "h3_cross",
+      "locator": "registros TSV 6",
+      "observed": [
+        {
+          "anio": "2008",
+          "codigo_unico": "I162M2008N1",
+          "estado": "MRUN_FUERA_COBERTURA_OFERTA",
+          "fila_oferta": "",
+          "registro_mrun_ejemplo": "11",
+          "atributos_diferentes": "0",
+          "atributos_sin_dato": "0"
+        }
+      ],
+      "expected_contract_behavior": "Mantener clave literal y estado fuera de cobertura; componentes nulos, no inválido ni oferta inventada."
+    },
+    {
+      "id": "EX04",
+      "case": "Naturopatía ofertada sin MRUN",
+      "source_id": "h3_cross",
+      "locator": "registros TSV 637,757",
+      "observed": [
+        {
+          "anio": "2025",
+          "codigo_unico": "I162S2C90J2V1",
+          "estado": "SOLO_OFERTA",
+          "fila_oferta": "54316",
+          "registro_mrun_ejemplo": "",
+          "atributos_diferentes": "0",
+          "atributos_sin_dato": "0"
+        },
+        {
+          "anio": "2026",
+          "codigo_unico": "I162S2C90J2V1",
+          "estado": "SOLO_OFERTA",
+          "fila_oferta": "26530",
+          "registro_mrun_ejemplo": "",
+          "atributos_diferentes": "0",
+          "atributos_sin_dato": "0"
+        }
+      ],
+      "expected_contract_behavior": "Conservar programa y oferta2025/2026, sin inferir falta histórica de estudiantes ni cierre."
+    },
+    {
+      "id": "EX05",
+      "case": "Plan con aparición sin actividad completa",
+      "source_id": "h4_plans",
+      "locator": "registro TSV 22",
+      "observed": {
+        "CODPESTUD": "CNATP20251",
+        "presencia": "CATALOGO_Y_PROMEDIOS",
+        "contextos_catalogo": "[{\"Codcarr\": \"CNATP\", \"Sede\": \"RE\"}]",
+        "carreras_promedios": "[\"NULL\"]",
+        "anios_actividad_observada": "[]",
+        "filas_con_anio_y_claves": "0",
+        "fila_plan_ejemplo": "370",
+        "fila_promedios_ejemplo": "129036",
+        "vigencia_desde_acreditada": "",
+        "vigencia_hasta_acreditada": "",
+        "asignacion_temporal_acreditada": "False"
+      },
+      "expected_contract_behavior": "Preservar plan catálogo y etiqueta PROMEDIOS; actividad temporal no acreditada, no fecha2025 deducida."
+    },
+    {
+      "id": "EX06",
+      "case": "Etiqueta con actividad sin catálogo",
+      "source_id": "h4_plans",
+      "locator": "registro TSV 212",
+      "observed": {
+        "CODPESTUD": "TPCPASO",
+        "presencia": "SOLO_PROMEDIOS",
+        "contextos_catalogo": "[]",
+        "carreras_promedios": "[\"NULL\", \"TTMREOL\"]",
+        "anios_actividad_observada": "[\"2023\"]",
+        "filas_con_anio_y_claves": "1",
+        "fila_plan_ejemplo": "",
+        "fila_promedios_ejemplo": "12525",
+        "vigencia_desde_acreditada": "",
+        "vigencia_hasta_acreditada": "",
+        "asignacion_temporal_acreditada": "False"
+      },
+      "expected_contract_behavior": "Mantener literal TPCPASO; no retirar PASO ni forzar equivalencia por sufijo."
+    },
+    {
+      "id": "EX07",
+      "case": "Notas anteriores al patrón anual del plan",
+      "source_id": "h4_plans",
+      "locator": "registro TSV 108",
+      "observed": {
+        "CODPESTUD": "IECIRE20211",
+        "presencia": "CATALOGO_Y_PROMEDIOS",
+        "contextos_catalogo": "[{\"Codcarr\": \"IECIRE\", \"Sede\": \"RE\"}]",
+        "carreras_promedios": "[\"IECIRE\", \"NULL\"]",
+        "anios_actividad_observada": "[\"2019\", \"2020\", \"2021\", \"2022\", \"2023\", \"2024\"]",
+        "filas_con_anio_y_claves": "1188",
+        "fila_plan_ejemplo": "972",
+        "fila_promedios_ejemplo": "458",
+        "vigencia_desde_acreditada": "",
+        "vigencia_hasta_acreditada": "",
+        "asignacion_temporal_acreditada": "False"
+      },
+      "expected_contract_behavior": "Conservar actividad2019–2024 y patrón2021 como texto; vigencia/asignación histórica no acreditada."
+    },
+    {
+      "id": "EX08",
+      "case": "Nombre histórico y modalidad ausente",
+      "source_id": "h3_annual",
+      "locator": "registros TSV 2,652",
+      "observed": [
+        {
+          "ANO": "OFE_2010",
+          "CODIGO_UNICO": "I162S2C1J1V1",
+          "NOMBRE_CARRERA": "INGENIERIA DE EJECUCION EN COMPUTACION E INFORMATICA",
+          "JORNADA": "Diurna",
+          "MODALIDAD": "",
+          "DURACION_ESTUDIOS": "8",
+          "VERSION": "1",
+          "fila_origen": "388347",
+          "hoja_origen": "in"
+        },
+        {
+          "ANO": "OFE_2026",
+          "CODIGO_UNICO": "I162S2C1J1V1",
+          "NOMBRE_CARRERA": "INGENIERIA EN INFORMATICA",
+          "JORNADA": "Diurna",
+          "MODALIDAD": "Presencial",
+          "DURACION_ESTUDIOS": "8",
+          "VERSION": "1",
+          "fila_origen": "26456",
+          "hoja_origen": "in"
+        }
+      ],
+      "expected_contract_behavior": "Mantener nombre2010 distinto de2026; modalidad2010 vacía sin inferencia desde J1 o modalidad2026."
+    },
+    {
+      "id": "EX09",
+      "case": "Duración cambia sin cambiar V1",
+      "source_id": "h3_annual",
+      "locator": "registros TSV 134,171",
+      "observed": [
+        {
+          "ANO": "OFE_2018",
+          "CODIGO_UNICO": "I162S2C35J4V1",
+          "NOMBRE_CARRERA": "TECNICO EN ANALISIS DE SISTEMAS",
+          "JORNADA": "A Distancia",
+          "MODALIDAD": "No Presencial",
+          "DURACION_ESTUDIOS": "5",
+          "VERSION": "1",
+          "fila_origen": "225053",
+          "hoja_origen": "in"
+        },
+        {
+          "ANO": "OFE_2019",
+          "CODIGO_UNICO": "I162S2C35J4V1",
+          "NOMBRE_CARRERA": "TECNICO EN ANALISIS DE SISTEMAS",
+          "JORNADA": "A Distancia",
+          "MODALIDAD": "No Presencial",
+          "DURACION_ESTUDIOS": "6",
+          "VERSION": "1",
+          "fila_origen": "202492",
+          "hoja_origen": "in"
+        }
+      ],
+      "expected_contract_behavior": "Preservar duración5/6 por año; no inventar V2 ni fecha de reforma curricular."
+    },
+    {
+      "id": "EX10",
+      "case": "ILOG y CILOG: alcance operativo2026",
+      "source_id": "catalog_2026",
+      "locator": "oferta[codigo_unico=I162S2C77J4V1/V2]",
+      "observed": [
+        {
+          "codigo_unico": "I162S2C77J4V1",
+          "jornada": "4",
+          "sede": "2",
+          "version": "1",
+          "vigencia": "1",
+          "equivalencias": [
+            {
+              "codcarpr": "CILOG",
+              "fila_fuente": 110,
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "metodo": "CATALOGO_MU2026",
+              "nombre_interno": "INGENIERIA EN LOGISTICA"
+            },
+            {
+              "codcarpr": "ILOG",
+              "fila_fuente": 110,
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "metodo": "CATALOGO_MU2026",
+              "nombre_interno": "INGENIERIA EN LOGISTICA"
+            },
+            {
+              "codcarpr": "CILOG",
+              "fila_fuente": 151,
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "metodo": "CATALOGO_MU2026",
+              "nombre_interno": "CONTINUIDAD INGENIERIA LOGISTICA"
+            },
+            {
+              "codcarpr": "ILOG",
+              "fila_fuente": 151,
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "metodo": "CATALOGO_MU2026",
+              "nombre_interno": "CONTINUIDAD INGENIERIA LOGISTICA"
+            }
+          ]
+        },
+        {
+          "codigo_unico": "I162S2C77J4V2",
+          "jornada": "4",
+          "sede": "2",
+          "version": "2",
+          "vigencia": "1",
+          "equivalencias": [
+            {
+              "codcarpr": "CILOG",
+              "fila_fuente": 111,
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "metodo": "CATALOGO_MU2026",
+              "nombre_interno": "INGENIERIA EN LOGISTICA"
+            },
+            {
+              "codcarpr": "CILOG",
+              "fila_fuente": 152,
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "metodo": "CATALOGO_MU2026",
+              "nombre_interno": "CONTINUIDAD INGENIERIA LOGISTICA"
+            }
+          ]
+        }
+      ],
+      "expected_contract_behavior": "ILOG exacto permite solo V1 en este catálogo; CILOG permite V1/V2. Esto acredita candidatos operativos2026, no asignación histórica del plan. No extender alias a otros años."
+    },
+    {
+      "id": "EX11",
+      "case": "Sector por alias institucional sin sustituir nombre literal",
+      "source_id": "name_sector_2026",
+      "locator": "por_codigo_unico.I162S2C22J4V2",
+      "observed": {
+        "codigo_unico": "I162S2C22J4V2",
+        "nombre_oferta_literal": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+        "hoja_oferta_literal": "Hoja1",
+        "fila_oferta_literal": 72,
+        "sector_ipss": "Tecnología",
+        "evidencia_sector": {
+          "sector": "Tecnología",
+          "nombre_clasificado": "CONTINUIDAD INGENIERIA INDUSTRIAL",
+          "regla": "MATCH_OFICIAL_CONTINUIDAD",
+          "evidencia_primaria": {
+            "nombre": "CONTINUIDAD INGENIERIA INDUSTRIAL",
+            "tipo": "nombres_fuente_catalogo_2026",
+            "filas": [
+              46,
+              150
+            ],
+            "sector": "Tecnología",
+            "regla": "MATCH_OFICIAL_CONTINUIDAD"
+          },
+          "coincidencias_respaldadas": [
+            {
+              "nombre": "CONTINUIDAD INGENIERIA INDUSTRIAL",
+              "tipo": "nombres_fuente_catalogo_2026",
+              "filas": [
+                46,
+                150
+              ],
+              "sector": "Tecnología",
+              "regla": "MATCH_OFICIAL_CONTINUIDAD"
+            },
+            {
+              "nombre": "CONTINUIDAD INGENIERIA INDUSTRIAL",
+              "tipo": "equivalencia_interna_catalogo_2026",
+              "filas": [
+                150
+              ],
+              "codcarpr": "CIACI",
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "sector": "Tecnología",
+              "regla": "MATCH_OFICIAL_CONTINUIDAD"
+            },
+            {
+              "nombre": "CONTINUIDAD INGENIERIA INDUSTRIAL",
+              "tipo": "equivalencia_interna_catalogo_2026",
+              "filas": [
+                150
+              ],
+              "codcarpr": "CIIND",
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "sector": "Tecnología",
+              "regla": "MATCH_OFICIAL_CONTINUIDAD"
+            },
+            {
+              "nombre": "CONTINUIDAD INGENIERIA INDUSTRIAL",
+              "tipo": "equivalencia_interna_catalogo_2026",
+              "filas": [
+                150
+              ],
+              "codcarpr": "IACI",
+              "fuente": {
+                "path": "DURACION_ESTUDIOS.tsv",
+                "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+              },
+              "sector": "Tecnología",
+              "regla": "MATCH_OFICIAL_CONTINUIDAD"
+            }
+          ],
+          "nombre_oficial": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL"
+        }
+      },
+      "expected_contract_behavior": "Mostrar literal INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL. Sector Tecnología puede usar alias documentado CONTINUIDAD INGENIERIA INDUSTRIAL; no usar nombre_legible antiguo con descriptores."
+    },
+    {
+      "id": "EX12",
+      "case": "Vigencia difiere entre catálogo operativo y oferta anual",
+      "source_id": "catalog_2026",
+      "locator": "oferta[codigo_unico=I162S2C77J4V2].vigencia",
+      "observed": {
+        "codigo_unico": "I162S2C77J4V2",
+        "vigencia_catalogo_operativo_2026": "1",
+        "vigencia_oferta_h3_2026": "Vigente sin estudiantes nuevos",
+        "secondary_evidence": {
+          "source_id": "h3_examples",
+          "locator": "I162S2C77J4; anio=2026; codigo=I162S2C77J4V2; fila original26512"
+        }
+      },
+      "expected_contract_behavior": "No sobrescribir oferta H3 con catálogo congelado; conservar discrepancia y procedencias. No corregir el motor antiguo durante H5."
+    }
+  ],
+  "known_limits": [
+    "H3 carece de oferta completa2007–2009.",
+    "H4 no acredita asignaciones temporales efectivas ni enlace individual MRUN–UMAS.",
+    "El catálogo2026 operativo es evidencia de alias/equivalencias de ese snapshot; no es maestro histórico de vigencias.",
+    "Sector2026 materializado cubre61 claves y no acredita cobertura de141 ni sector histórico.",
+    "Contrato H5 recibido y revisado; implementación todavía no revisada. Los estados/llaves propuestos iniciales se interpretan junto con contract_review, no como especificación superior al contrato vigente."
+  ],
+  "privacy": {
+    "contains_personal_values": false,
+    "contains_identity_hashes": false,
+    "examples_are_academic_dimensions_and_source_locators": true
+  },
+  "preservation": {
+    "repo_edits": false,
+    "engine_runs": false,
+    "excel_writes": false,
+    "new_equivalences_assigned": false,
+    "output_only": "/tmp/fase5_cruce_sies_umas/auditoria_contrato.json"
+  },
+  "contract_review": {
+    "assessment": "Diseño adecuado: tres niveles de evidencia separados, consulta SIES directa independiente, candidatos informativos, reglas efectivas inicialmente vacías y ámbito2026 limitado.",
+    "implementation_reviewed": false,
+    "blocking_design_defects_observed": false,
+    "clarifications": [
+      {
+        "id": "CR-01",
+        "location": "Esquema y estados: SIN_OFERTA_ANUAL",
+        "issue": "El nombre de estado solo no distingue ausencia fuera de cobertura2007–2009 de ausencia de un código dentro de cobertura2010–2026.",
+        "requested": "Añadir estado_cobertura o subdividir estados; conservar la distinción H3.",
+        "severity": "PRECISAR_ANTES_DE_ACEPTAR"
+      },
+      {
+        "id": "CR-02",
+        "location": "Uniones y claves4; nombre interno obligatorio",
+        "issue": "Nombre obligatorio restringe consulta pero no aparece en la clave estructurada enumerada.",
+        "requested": "Explicitar si nombre forma parte de clave efectiva o de predicado adicional; conflictos se evalúan entre todas las reglas aplicables a la misma entrada completa.",
+        "severity": "PRECISAR_ANTES_DE_ACEPTAR"
+      },
+      {
+        "id": "CR-03",
+        "location": "Normalización de jornada; O=4 en ámbito2026",
+        "issue": "Conservar relaciones de snapshot con J3 aun cuando no exista conversión UMAS predeterminada; la excepción O/J3 no puede borrarse ni convertirse en J4.",
+        "requested": "Preservar jornada SIES literal en candidatos y marcar correspondencia UMAS pendiente cuando no acreditada; reglas futuras admiten correspondencia excepcional solo con evidencia.",
+        "severity": "CONTROL_DE_COBERTURA"
+      },
+      {
+        "id": "CR-04",
+        "location": "Uniones2–3: nombre de equivalencia2026",
+        "issue": "nombre_interno del snapshot proviene del catálogo operativo y no prueba el NOMBRE_L vigente de DatosAlumnos.",
+        "requested": "Campo con procedencia explícita nombre_heredado_snapshot y contraste observado separado; diferencia de nombre no crea alias ni elimina candidatos por similitud.",
+        "severity": "PRECISION_DE_PROCEDENCIA"
+      },
+      {
+        "id": "CR-05",
+        "location": "Nombre oficial y Sector IPSS",
+        "issue": "La decisión comunicada excluye nueva clasificación sectorial de H5.",
+        "requested": "Sector debe quedar NO_EVALUADO_EN_H5 y no usar etiquetas editoriales heredadas como nombre mostrado.",
+        "severity": "ALINEACION_CON_ALCANCE",
+        "decision_parent": "Aceptado por alcance indicado por root; verificar implementación futura."
+      }
+    ],
+    "future_audit_focus": [
+      "Conteos y conservación de los universos141códigos/236planes",
+      "Cardinalidad y deduplicación de candidatos por contenido, preservando evidencias",
+      "Ningún candidato/promedios genera regla efectiva",
+      "Precedencia de atributos H3 frente al snapshotoperativo2026",
+      "Todas consultas con reglas vacías devuelven estado sin equivalencia acreditada; consultaSIESdirecta usa estado separado",
+      "Contrato distingue equivalencia de plan/período y asignación individual del plan"
+    ]
+  }
+}

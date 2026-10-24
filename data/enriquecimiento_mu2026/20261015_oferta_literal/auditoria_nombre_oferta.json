@@ -1,0 +1,128 @@
+{
+  "anio": 2026,
+  "calcChain_formulas_retiradas": 0,
+  "control": {
+    "celdas_ajenas_verificadas": 192413,
+    "claves_modalidad_oferta_concordantes": true,
+    "cobertura_nombre_sector_completa": true,
+    "multiset_A_P_vigentes_mas_no_vigentes_igual_total": true,
+    "partes_no_afectadas_identicas": true,
+    "valores_formulas_estilos_ajenos_identicos": true,
+    "xml_celdas_ajenas_identico": true
+  },
+  "entrada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/respaldos/20261015_antes_nombre_oferta_literal/MATRÍCULA UNIFICADA 2026.xlsx",
+  "estado": "VALIDADO",
+  "fuentes": {
+    "catalogo": {
+      "fuente_original": {
+        "estado_fuente": "CATALOGO_OPERATIVO_MU2026_CONGELADO",
+        "path": "DURACION_ESTUDIOS.tsv",
+        "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e",
+        "version": "mu2026_20261013"
+      },
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogos_sies/2026/mu2026_20261013/catalogo.json",
+      "sha256": "585f9bd95319ba4fc6bda3aeca4c8f98243978af9ac20d8c8d98581c3ee0093a",
+      "version": "mu2026_20261013"
+    },
+    "oferta_literal": {
+      "columna_clave": "CODIGO_UNICO",
+      "columna_nombre": "NOMBRE_CARRERA",
+      "columna_nombre_excel": "D",
+      "hoja": "Hoja1",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/oferta 2026.xlsx",
+      "prioridad": "Fuente literal expresamente indicada por el usuario para Carrera",
+      "sha256": "01652009ed30d19024894ab9a4e7645d7f70074d8109c4a4b30d4cb9ec275bf1"
+    },
+    "publicacion": {
+      "columna_clave": "CÓDIGO CARRERA",
+      "columna_nombre": "NOMBRE CARRERA",
+      "columna_plan": "TIPO DE PLAN DE LA CARRERA",
+      "hoja": "Hoja1",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/publicacion2026.xlsx",
+      "sha256": "9312665c74102bef111fa6618a379bfd57170b376ebc8e501ab7c92dba421da2"
+    },
+    "sector": {
+      "lineas_catalogo": "162-215",
+      "lineas_clasificador": "1617-1663",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/analisis_sectorizado_encuesta_ac.py",
+      "procedencia_declarada": "OFICIAL_IMAGEN_OFERTA_ACADEMICA_FASE_15B; FASE_16B_TECNICO_EN_PROGRAMACION_COMPUTACIONAL_TECNOLOGIA",
+      "sha256": "0e6ec23d0ea21c62af91f46c7bdfe35277ba98baa316638dd5dd171661beb624"
+    }
+  },
+  "hashes": {
+    "columnas_artifact_sha256": "1e234d7d79f526ee01bb259356d098166c409592364a4cecd24ca5a0c0400362",
+    "diccionario_sha256": "cdfaf46841c58d00c55f3f85da072e4778eda590d0ca3b9f210a051f38619f6c",
+    "entrada_sha256": "4b7320cd84223507bac4ea39d2e73dfd7d525624324d96fe186778036d3bbc10",
+    "salida_sha256": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1"
+  },
+  "hojas": {
+    "04_DETALLE_VIGENTES": {
+      "claves": 61,
+      "filas": 3145,
+      "jornada": {
+        "Diurno": 197,
+        "Online": 2444,
+        "Vespertino": 504
+      },
+      "sector_ipss": {
+        "Administración y Comercio": 1011,
+        "Salud": 342,
+        "Tecnología": 1792
+      }
+    },
+    "05_DETALLE_NO_VIGENTES": {
+      "claves": 58,
+      "filas": 960,
+      "jornada": {
+        "Diurno": 47,
+        "Online": 763,
+        "Vespertino": 150
+      },
+      "sector_ipss": {
+        "Administración y Comercio": 488,
+        "Salud": 106,
+        "Tecnología": 366
+      }
+    },
+    "06_DETALLE_TOTAL": {
+      "claves": 61,
+      "filas": 4105,
+      "jornada": {
+        "Diurno": 244,
+        "Online": 3207,
+        "Vespertino": 654
+      },
+      "sector_ipss": {
+        "Administración y Comercio": 1499,
+        "Salud": 448,
+        "Tecnología": 2158
+      }
+    }
+  },
+  "partes_modificadas": [
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/sheet7.xml",
+    "xl/worksheets/sheet8.xml"
+  ],
+  "salida": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/MATRÍCULA UNIFICADA 2026.xlsx",
+  "schema_version": 1,
+  "visibilidad": {
+    "04_DETALLE_VIGENTES": {
+      "filas_desocultadas_por_filtro": 0,
+      "filtro_sector_limpiado": false
+    },
+    "05_DETALLE_NO_VIGENTES": {
+      "filas_desocultadas_por_filtro": 0,
+      "filtro_sector_limpiado": false
+    },
+    "06_DETALLE_TOTAL": {
+      "filas_desocultadas_por_filtro": 0,
+      "filtro_sector_limpiado": false
+    }
+  },
+  "instalacion": {
+    "original_verificado_antes_de_reemplazar": true,
+    "respaldo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/respaldos/20261015_antes_nombre_oferta_literal/MATRÍCULA UNIFICADA 2026.xlsx",
+    "sha256_instalado": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1"
+  }
+}

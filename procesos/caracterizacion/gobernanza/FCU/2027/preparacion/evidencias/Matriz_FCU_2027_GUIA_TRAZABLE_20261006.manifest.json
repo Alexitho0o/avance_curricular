@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-06",
+  "output": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/Matriz_FCU_2027_GUIA_TRAZABLE_20261006.xlsx",
+  "sha256": "c2c75497f5cf1d1b5fce31e494b22a5e855d06538b6c32ab55fab90c6c63ea19",
+  "sources": [
+    {
+      "path": "docs/Manual_de_Aplicacion_FCU_2026.txt",
+      "sha256": "ec02e8161ef29427c4dfcc71230153a35fc30d3e468bccdb843bee098adbe770"
+    },
+    {
+      "path": "gobernanza/FCU/2027/preparacion/evidencias/Manual_de_Aplicacion_FCU_2027.txt",
+      "sha256": "9b88255dc3467bf684fd8d248b91c919dd4e156a99856d6fede48b3dba74e350"
+    },
+    {
+      "path": "gobernanza/FCU/2027/preparacion/evidencias/Resumen_clasificacion_preguntas_FCU_2026.xlsx",
+      "sha256": "4a52e2930bd02620c637bc679a0a0db9ce07bc7f9b9f35c3aa9da6b9200e0e59"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/FCU/2027/preparacion/evidencias/LimeSurvey_141234_grupo_643_20261006.lsg",
+      "sha256": "8a78a85f5ddc0f4f094c9a64d519a094f9718014b843a908ddd5e7690548c7bc"
+    }
+  ],
+  "method": "Manual literal antes de decisiones; el raw institucional preserva la clasificación heredada, los errores se resuelven en Cruces. Los IDs DIS/P..O son identificadores documentales, no códigos LimeSurvey. La actualización de nombres/campos PES no autoriza eliminar opciones presentes en el Manual 2027.",
+  "sheetRows": {
+    "RAW FCU 2026": 135,
+    "RAW FCU 2027": 118,
+    "RAW Institucionales": 46,
+    "Cruces": 279,
+    "Guía para editar": 279
+  },
+  "categories": {
+    "CONSERVAR FCU": 103,
+    "MODIFICAR FCU": 65,
+    "ELIMINAR FCU": 20,
+    "VERIFICAR ORIGEN": 63,
+    "CONSERVAR INSTITUCIONAL": 28
+  },
+  "scripts": [
+    "scripts/gobernanza/preparar_guia_fcu_2027.py",
+    "scripts/gobernanza/generar_guia_fcu_2027.mjs"
+  ],
+  "validation": {
+    "all_103_codes_present": true,
+    "source_items_checked_against_manual_text": true,
+    "removals_require_official_2026_reference": true,
+    "guide_linked_to_crosswalk": true,
+    "full_live_survey_export_available": false
+  }
+}

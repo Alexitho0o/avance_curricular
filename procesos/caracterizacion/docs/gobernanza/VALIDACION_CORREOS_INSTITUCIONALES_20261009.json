@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-09",
+  "year": 2027,
+  "period": 1,
+  "run": "2027_P1_134921",
+  "desktop_copy": "Caracterizacion_2026-10-09_2027_P1_134928",
+  "reason": "El modo sin respuestas priorizaba MAIL personal; el usuario requiere exclusivamente Mail_Inst para incorporacion a LimeSurvey.",
+  "email_source": "Mail_Inst",
+  "personal_email_fallback": false,
+  "verified": {
+    "daily_csv_rows": 17,
+    "backlog_csv_rows": 219,
+    "rows_with_email_equal_to_source_Mail_Inst": 236,
+    "eligible_students": 240,
+    "eligible_missing_institutional_email": 0,
+    "institutional_domain": "estudiante.ipss.cl",
+    "enrollment_records": 243,
+    "eliminated_records": 3,
+    "eligible_pending_signature": 0,
+    "today_enrollments_outside_daily_window": 4,
+    "email_summary_generated": true,
+    "email_summary_response_and_financing_sections_omitted": true,
+    "frozen_2026_files_checked": 51,
+    "frozen_2026_unchanged": true
+  },
+  "rules": {
+    "empty_or_invalid_Mail_Inst": "BLOCK_EXPORT_NO_PERSONAL_FALLBACK",
+    "normal_2027_P1_flow": "Validate institutional contacts before invoking the historical pipeline",
+    "historical_2026": "Preserved unchanged"
+  },
+  "publication": "Local project changes; no commit or push."
+}

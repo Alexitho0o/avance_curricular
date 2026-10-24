@@ -1,0 +1,47 @@
+[
+  {
+    "brecha": "EQUIVALENCIA_PLAN_SIES_POR_PERIODO",
+    "evidencia_requerida": [
+      "CODCARPR",
+      "CODPESTUD",
+      "nombre interno aprobado",
+      "sede UMAS/SIES",
+      "jornada UMAS/SIES",
+      "Código Único SIES",
+      "año/período/régimen o intervalo efectivo documentado",
+      "fuente/hash/localizador"
+    ],
+    "limite": "Un candidato único no acredita la equivalencia.",
+    "prioridad": 1
+  },
+  {
+    "brecha": "ASIGNACION_INDIVIDUAL_HISTORICA_PLAN",
+    "evidencia_requerida": [
+      "Matrícula interna",
+      "plan asignado",
+      "inicio/fin efectivo o período garantizado",
+      "evento de cambio",
+      "linaje del campo PLAN_DE_ESTUDIO"
+    ],
+    "limite": "No pedir ni publicar identidades en salidas académicas; tratamiento solo en fuente autorizada.",
+    "prioridad": 2
+  },
+  {
+    "brecha": "CONTEXTOS_Y_NOMBRES_PENDIENTES",
+    "evidencia_requerida": [
+      "Catálogo para las etiquetas de plan faltantes",
+      "explicación documentada de discrepancias de carrera/jornada",
+      "alias nominal explícito si corresponde"
+    ],
+    "limite": "No quitar espacios internos, prefijos o PASO para forzar coincidencias.",
+    "prioridad": 3
+  },
+  {
+    "brecha": "COBERTURA_OFERTA_2007_2009",
+    "evidencia_requerida": [
+      "Oferta anual completa de esas ediciones o respaldo oficial equivalente"
+    ],
+    "limite": "MRUN acredita observación de matrícula, no oferta completa ni vigencia de malla.",
+    "prioridad": 4
+  }
+]

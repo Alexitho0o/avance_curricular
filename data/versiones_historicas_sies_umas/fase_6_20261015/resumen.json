@@ -1,0 +1,142 @@
+{
+  "estado": "PILOTO_COMPLETADO_CON_EXCEPCIONES",
+  "fase": 6,
+  "limite": "Validación del universo disponible; no certificación de mallas históricas ni integración de consumidores.",
+  "reglas_efectivas_acreditadas": 0,
+  "sies": {
+    "claves_consultadas": 767,
+    "codigos_cubiertos": 141,
+    "filas_oferta_verificadas": 747,
+    "por_estado": [
+      {
+        "claves_anuales": 452,
+        "estado_consulta": "OFERTA_ANUAL_LOCALIZADA",
+        "motivo": null,
+        "presencia": "OFERTA_Y_MRUN",
+        "registros_mrun": 22266
+      },
+      {
+        "claves_anuales": 20,
+        "estado_consulta": "SIN_OFERTA_ANUAL",
+        "motivo": "SIN_COBERTURA_ANUAL",
+        "presencia": "SOLO_MRUN",
+        "registros_mrun": 2120
+      },
+      {
+        "claves_anuales": 295,
+        "estado_consulta": "OFERTA_ANUAL_LOCALIZADA",
+        "motivo": null,
+        "presencia": "SOLO_OFERTA",
+        "registros_mrun": 0
+      }
+    ],
+    "registros_mrun": 24386,
+    "unidad": "claves anuales y registros observados MRUN; no personas únicas"
+  },
+  "umas": {
+    "consultas_unicas": 1349,
+    "contextos_entrada": 5176,
+    "filas_con_codigo_acreditado": 0,
+    "filas_consultables": 125264,
+    "filas_no_consultadas": 4229,
+    "filas_reporte": 129493,
+    "particion_adaptacion": [
+      {
+        "contextos": 370,
+        "estado_adaptacion": "ANIO_NO_VALIDO",
+        "filas_reporte": 4211
+      },
+      {
+        "contextos": 10,
+        "estado_adaptacion": "CARRERA_PLAN_DISCREPANTE",
+        "filas_reporte": 17
+      },
+      {
+        "contextos": 4795,
+        "estado_adaptacion": "CONSULTABLE",
+        "filas_reporte": 125264
+      },
+      {
+        "contextos": 1,
+        "estado_adaptacion": "PLAN_SIN_CONTEXTO_UNICO",
+        "filas_reporte": 1
+      }
+    ],
+    "planes_cubiertos": 236,
+    "planes_observados_reporte": 197,
+    "planes_sin_observacion_reporte": 39,
+    "resolucion": [
+      {
+        "contextos": 370,
+        "diagnostico": "ANIO_NO_VALIDO",
+        "estado_resolucion": "NO_CONSULTADO",
+        "filas_reporte": 4211,
+        "numero_destinos_candidatos": "0"
+      },
+      {
+        "contextos": 10,
+        "diagnostico": "CARRERA_PLAN_DISCREPANTE",
+        "estado_resolucion": "NO_CONSULTADO",
+        "filas_reporte": 17,
+        "numero_destinos_candidatos": "0"
+      },
+      {
+        "contextos": 1,
+        "diagnostico": "PLAN_SIN_CONTEXTO_UNICO",
+        "estado_resolucion": "NO_CONSULTADO",
+        "filas_reporte": 1,
+        "numero_destinos_candidatos": "0"
+      },
+      {
+        "contextos": 126,
+        "diagnostico": "CANDIDATO_UNICO_SIN_ACREDITAR",
+        "estado_resolucion": "PENDIENTE_EVIDENCIA",
+        "filas_reporte": 9938,
+        "numero_destinos_candidatos": "1"
+      },
+      {
+        "contextos": 35,
+        "diagnostico": "MULTIPLES_CANDIDATOS_SIN_ACREDITAR",
+        "estado_resolucion": "PENDIENTE_EVIDENCIA",
+        "filas_reporte": 2987,
+        "numero_destinos_candidatos": "2"
+      },
+      {
+        "contextos": 6,
+        "diagnostico": "MULTIPLES_CANDIDATOS_SIN_ACREDITAR",
+        "estado_resolucion": "PENDIENTE_EVIDENCIA",
+        "filas_reporte": 800,
+        "numero_destinos_candidatos": "3"
+      },
+      {
+        "contextos": 4,
+        "diagnostico": "MULTIPLES_CANDIDATOS_SIN_ACREDITAR",
+        "estado_resolucion": "PENDIENTE_EVIDENCIA",
+        "filas_reporte": 154,
+        "numero_destinos_candidatos": "4"
+      },
+      {
+        "contextos": 1,
+        "diagnostico": "NOMBRE_DISTINTO_SIN_ALIAS",
+        "estado_resolucion": "SIN_EQUIVALENCIA",
+        "filas_reporte": 1,
+        "numero_destinos_candidatos": "0"
+      },
+      {
+        "contextos": 8,
+        "diagnostico": "SIN_CANDIDATO_EXACTO_2026",
+        "estado_resolucion": "SIN_EQUIVALENCIA",
+        "filas_reporte": 779,
+        "numero_destinos_candidatos": "0"
+      },
+      {
+        "contextos": 4615,
+        "diagnostico": "SIN_REGLA_HISTORICA_ACREDITADA",
+        "estado_resolucion": "SIN_EQUIVALENCIA",
+        "filas_reporte": 110605,
+        "numero_destinos_candidatos": "0"
+      }
+    ],
+    "unidad": "filas de PROMEDIOS y contextos agregados; no personas ni matrículas"
+  }
+}
