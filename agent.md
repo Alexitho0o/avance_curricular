@@ -84,6 +84,17 @@ Este archivo define las reglas y convenciones que deben seguir los agentes de IA
 - Mantener históricos y denominadores intactos. El estudio de envíos 2026 está
   preservado en `data/reglas_negocio/mu2027/estudio/`; no declara errores académicos.
 
+## Código SIES personal para seguimiento (2026-10-23)
+
+- Consultar `PROYECTO_IPSS.json → recursos_comunes → diccionario_sies_seguimiento`
+  y `docs/DICCIONARIO_SIES_SEGUIMIENTO.md` antes de reconstruir una versión para
+  seguimiento T1/T2/T3. No copiar diccionarios ni elegir versiones por totales.
+- Reutilizar el código documental anual atribuido o la correspondencia interna
+  aprobada solo en su contexto; conservar ambos respaldos separados. Revisar
+  únicamente las excepciones y cambios de contexto, sin extrapolar versiones.
+- Este servicio no cambia motores de carga, vigencia, cohortes ni denominadores.
+  Identificadores y respuestas individuales permanecen fuera de Git.
+
 ---
 Última actualización: 2026-04-09
 Responsable: Arquitectura Técnica

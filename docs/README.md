@@ -102,3 +102,7 @@ Son auxiliares: no sustituyen los comandos ni el motor oficial MU2026.
 - [Recuperación íntegra del CSV 6047 y corrección del registro de respaldo](recuperacion_oferta_6047_20261016.md): resuelve la falta de copia completa registrada en la entrega ejecutiva; conserva las 161 filas y 51 columnas originales.
 
 - [Control de cambios de VIG MU2027 y estudio de envíos 2026](control_cambios_vig_mu2027.md): versiones, responsable, fecha/hora, alertas y revisión interna con bloqueo de carga normativa pendiente.
+
+## Consulta común de códigos SIES para seguimiento (2026-10-23)
+
+[Códigos por persona, expediente y período](DICCIONARIO_SIES_SEGUIMIENTO.md): reutiliza evidencia MU y decisiones aprobadas; excepciones separadas, sin cambiar motores ni denominadores.
