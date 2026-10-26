@@ -169,3 +169,13 @@ C — QA: 24.774 consultas comparadas con v8, exactamente 21 distintas (E → D)
 **D.** Alexi aprobó la regla de herencia del §6 en su variante estricta **solo como control**, no como regla de asignación: si un contexto conserva plan, carrera, CODCLI, sede, jornada, modalidad y duración, está en el año de T1 o el siguiente y no hay otra versión de la familia en la oferta del año, su código documental debe ser el de T1. Las diferencias se revisan; nunca se corrigen automáticamente. Respeta `NO_PROPAGAR_VERSION_ENTRE_CONTEXTOS`.
 
 C — Prueba retrospectiva: 933/933 aciertos; la variante laxa queda descartada (6 contraejemplos en IINF20241). No resuelve ninguno de los 78 pendientes. Ejecutar `outputs/regla_herencia_t1_20261026/control_consistencia_herencia_t1.py` tras cada nueva edición o vista; primera ejecución sobre v9: 0 diferencias.
+
+## Edición v10: 27 contextos T2/T3 2025 respaldados por la MU 2026 (26-10-2026)
+
+**D/C.** Alexi aprobó (decisión corregida de 31 a 27) integrar como correspondencia interna 27 contextos T2/T3 2025 con cambio de jornada o de carrera posterior a la MU 2025: ICIB C46J2V1 (12), ICIB C46J4V3 (4), IINF C1J4V2 (5), IADM C76J4V1 (2), ICRE C3J4V2 (2), ILOG C77J4V1 (2). Criterio: único candidato; sede 2; jornada del código igual a la del contexto; oferta 2025 vigente; actividad en PROMEDIOS; un solo plan; la MU 2026 trae solo ese código; el mismo CODCLI tiene ese código documental en 2026; y **el año de ingreso a la carrera en la MU 2026 no es posterior a 2025** (control obligatorio: excluyó 14 casos con ingreso 2026, en que SIES informaba a la persona en el técnico durante 2025).
+
+B/C — Histórico: 21.569 documentales, 212 internos aprobados, 2.993 pendientes sobre 24.774. Seguimiento T1→T2/T3: pendientes de código 78 → 51. Las 149 excepciones respecto del ancla T1 no cambian.
+
+**E.** La matrícula SIES es anual: no existe registro documental 2025 del contexto posterior al cambio; atribución documental y aceptación SIES pendientes. Los 21 pendientes de 2026 esperan la MU 2027.
+
+C — QA: 24.774 consultas vs v9, exactamente 27 distintas (E → D); tres consumidores iguales; base alterada rechazada; 12 pruebas; control de consistencia T1 sin diferencias. Descriptor con rutas del Mac (corrige la errata de v9). Reversión: `ACTIVO_ANTERIOR.json`. Sin commit/push. Base privada en `~/.local/share/ipss/v10_candidata_27_20261026/`.

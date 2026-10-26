@@ -1,0 +1,26 @@
+{
+  "estado": "OK",
+  "fecha_hora": "2026-10-26T14:55:43.104283+00:00",
+  "clasificacion": "C validación; B resultados; E pendientes conservados",
+  "consultas_v9_vs_v10": 24774,
+  "consultas_distintas": 27,
+  "cambios": {
+    "E_PENDIENTE|D_CORRESPONDENCIA_INTERNA_APROBADA": 27
+  },
+  "tres_consumidores_misma_respuesta": true,
+  "integridad_alterada_rechazada": true,
+  "pruebas_unitarias": "OK (12 pruebas)",
+  "control_consistencia_T1": {
+    "consistente": 933,
+    "sin_documental_no_aplica": 112,
+    "documental_no_cumple_condiciones": 1809
+  },
+  "control_consistencia_T1_estado": "OK",
+  "procedencia": "114 de 117 fuentes coinciden; 3 distintos son activo.json citado antes de cada promoción y un LEEME modificado tras citarlo",
+  "aplicar_adjudicaciones_reproduce_candidata": true,
+  "rutas_descriptor": "todas del Mac (errata de v9 corregida)",
+  "entorno": "Ejecutado en espejo con componentes idénticos (hash) y la misma base privada.",
+  "denominadores_modificados": false,
+  "identificadores_en_salidas_publicas": false,
+  "commit_push": false
+}
