@@ -1,0 +1,45 @@
+{
+  "recurso": "retencion_foto_intertrimestral_ipss162",
+  "fecha": "2026-10-22",
+  "clasificacion": "C/D",
+  "salida_referencia": {
+    "archivo": "RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022.xlsx",
+    "ruta_local": "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022.xlsx",
+    "sha256": "0dd4ff265aeae39f25d8fc76fff13d192d4881ee2a9b00c43beff12ffa2e7d87",
+    "hojas": 26,
+    "hojas_originales": "1-17",
+    "hojas_nuevas": "18-25",
+    "nota_privacidad": "Las hojas 20, 24 y 25 contienen identificadores y no se incorporan a Git."
+  },
+  "fuentes": [
+    {"rol":"Matrícula Unificada período 1","ruta":"/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx","clasificacion":"B/D","uso":"grupo T1 y base anual; validar hash al ejecutar"},
+    {"rol":"Corte T2 2025","ruta":"/Users/alexi/Downloads/Matrícula T2_2025 2.xlsx","sha256":"ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3","clasificacion":"B","uso":"snapshot de cierre"},
+    {"rol":"Corte T3 2025","ruta":"/Users/alexi/Downloads/Matrícula T3_2025 2.xlsx","sha256":"68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc","clasificacion":"B","uso":"snapshot de cierre"},
+    {"rol":"Corte T2 2026","ruta":"/Users/alexi/Downloads/Matrícula T_2_13_07_2026.xlsx","sha256":"7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769","clasificacion":"B/E","uso":"snapshot; estado individual ausente en la fuente"},
+    {"rol":"Corte T3 2026","ruta":"/Users/alexi/Downloads/Matrícula_T3_02_10_2026.xlsx","sha256":"de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae","clasificacion":"B","uso":"snapshot de cierre"},
+    {"rol":"Catálogo y sector","ruta":"/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx","clasificacion":"B/C","uso":"códigos, carreras y sector"}
+  ],
+  "hojas_nuevas": {
+    "18_Foto_Intertrimestral": "resumen institucional, sector y tipo de carrera",
+    "19_Foto_Carrera": "detalle por carrera y control de umbral",
+    "20_Foto_BBDD": "base individual de cálculo; restringida",
+    "21_Foto_Reglas_VIG": "diccionario de estados y reglas de vigencia",
+    "22_Foto_DICC_Carrera": "diccionario de carrera y sector",
+    "23_Foto_Renuncias_T2_2026": "control específico de renuncias",
+    "24_Foto_Corte_T3_2025": "detalle de corte; restringido",
+    "25_Foto_Corte_T3_2026": "detalle de corte; restringido"
+  },
+  "controles": [
+    "Las hojas 1-17 deben conservar sus nombres y conteos estructurales.",
+    "Las fórmulas de las hojas nuevas deben recalcular sin errores.",
+    "Una persona cuenta una vez por corte.",
+    "No se cambia ningún denominador sin decisión D registrada.",
+    "La ausencia de match no se clasifica automáticamente como deserción.",
+    "El resultado agregado no contiene RUT, N_DOC, DV ni CODCLI."
+  ],
+  "pendientes": [
+    "Recalcular y validar con las copias locales actuales de las fuentes.",
+    "Confirmar cobertura temporal exacta de cada snapshot T2/T3.",
+    "Mantener fuera de Git las hojas individuales y el libro integrado completo."
+  ]
+}
