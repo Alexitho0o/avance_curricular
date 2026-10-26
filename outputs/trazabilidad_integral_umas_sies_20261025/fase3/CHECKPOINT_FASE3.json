@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-10-25T15:54:08.515391-03:00",
+  "fase": "3/6",
+  "estado": "EJECUTADA_CON_PENDIENTES_VISIBLES",
+  "clasificacion": "B/C/D/E",
+  "hitos": [
+    {
+      "hito": "1/3",
+      "fuente": "descriptor v8 y ORIGENES_T1.json",
+      "accion": "Reutilizar anclas T1",
+      "resultado": "3179 orígenes conservados; 14 con respaldo MU literal fuera del índice API",
+      "archivo": "RESULTADOS_FASE3.json",
+      "pendiente": "14 anclas requieren completar índice, no excluir personas"
+    },
+    {
+      "hito": "2/3",
+      "fuente": "API común y PROMEDIOSDEALUMNOS_12166.xlsx/Hoja1",
+      "accion": "Seguir contextos y revisar excepciones",
+      "resultado": "2718 mismo código;37 otro respaldado;99 pendientes;352 filas comprobadas",
+      "archivo": "EXCEPCIONES_AGREGADAS.csv",
+      "pendiente": "99 códigos de destino;26 sin plan T1 comparable;3520 posiciones sin contexto; cifras no aditivas"
+    },
+    {
+      "hito": "3/3",
+      "fuente": "salidas y hashes de fuentes",
+      "accion": "QA y documentación",
+      "resultado": "20 controles correctos, originales y denominadores conservados",
+      "archivo": "QA_FASE3.json",
+      "pendiente": "No recalculado Excel; no cierre de cobertura ni aceptación SIES"
+    }
+  ],
+  "siguiente": "Fase 4 según autorización y plan vigente; reutilizar vista y excepciones, no adjudicar nuevas versiones automáticamente.",
+  "no_repetir": [
+    "Conciliación anual completa de fase 2",
+    "Recálculo de tasas cerradas",
+    "Búsquedas aproximadas de identidad",
+    "Inferencia individual por totales agregados"
+  ],
+  "commit": false,
+  "push": false
+}

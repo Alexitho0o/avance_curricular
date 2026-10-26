@@ -1,0 +1,181 @@
+{
+  "alcance": "Inventario existente, sin nuevos cruces ni recálculo anual",
+  "evidencias": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/INVENTARIO_FUENTES_SHA256.json",
+      "sha256_recalculado": "a5b5f4e393c51b0dcfb6a34c4f796c94e396c903679950d246dc36eaba719e1b"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/MANIFEST_BASE_RETENCION_MU_2022_2026.json",
+      "sha256_recalculado": "746539ed62a3a3a051da14fd7f32b90fc6fd30a426304386d54e19c203d74145"
+    }
+  ],
+  "fuentes": [
+    {
+      "anio": 2022,
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "clasificacion": "fuente institucional granular seleccionada",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "bytes": 148690,
+      "notas": "Archivo CSV granular anual. Trae COD_NIV_GLO y FECH_CAR fuera del esquema rector 2026.",
+      "diagnostico": [
+        {
+          "reader": "utf-8-sig; delimiter=;"
+        }
+      ],
+      "filas_consolidadas_reportadas": 1038,
+      "fecha_corte_efectiva_acreditada_en_inventario": "No consta; no deducida de nombre/carpeta",
+      "estatus_procedencia": "Fuente institucional granular seleccionada; no prueba individual de recepción/aceptación SIES",
+      "sha256_estado": "Hash reportado por inventario previo; fuente individual no releída en esta fase",
+      "columnas_faltantes_en_consolidado": [
+        "FECHA_MATRICULA",
+        "REINCORPORACION"
+      ],
+      "columnas_extra_no_consolidadas": [
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR"
+      ],
+      "clasificacion_evidencia": "B inventario; E corte efectivo no acreditado aquí"
+    },
+    {
+      "anio": 2023,
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "clasificacion": "fuente institucional granular seleccionada",
+      "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "bytes": 159685,
+      "notas": "Archivo CSV granular anual. No trae COD_NIV_GLO ni COD_IES; trae CARGA y CODIGO CNED fuera del esquema rector.",
+      "diagnostico": [
+        {
+          "reader": "utf-8-sig; delimiter=;"
+        }
+      ],
+      "filas_consolidadas_reportadas": 1145,
+      "fecha_corte_efectiva_acreditada_en_inventario": "No consta; no deducida de nombre/carpeta",
+      "estatus_procedencia": "Fuente institucional granular seleccionada; no prueba individual de recepción/aceptación SIES",
+      "sha256_estado": "Hash reportado por inventario previo; fuente individual no releída en esta fase",
+      "columnas_faltantes_en_consolidado": [
+        "FECHA_MATRICULA",
+        "REINCORPORACION"
+      ],
+      "columnas_extra_no_consolidadas": [
+        "COD_IES",
+        "CARGA",
+        "CODIGO CNED"
+      ],
+      "clasificacion_evidencia": "B inventario; E corte efectivo no acreditado aquí"
+    },
+    {
+      "anio": 2024,
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "clasificacion": "fuente institucional granular seleccionada",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "bytes": 260525,
+      "notas": "Archivo CSV granular pregrado completo. Se descarta archivo de solo primer anio y columnas finales de analisis.",
+      "diagnostico": [
+        {
+          "reader": "latin-1; delimiter=;"
+        }
+      ],
+      "filas_consolidadas_reportadas": 1541,
+      "fecha_corte_efectiva_acreditada_en_inventario": "No consta; no deducida de nombre/carpeta",
+      "estatus_procedencia": "Fuente institucional granular seleccionada; no prueba individual de recepción/aceptación SIES",
+      "sha256_estado": "Hash reportado por inventario previo; fuente individual no releída en esta fase",
+      "columnas_faltantes_en_consolidado": [],
+      "columnas_extra_no_consolidadas": [
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR",
+        "1eraño",
+        "NIVEL",
+        "NIVEL 2"
+      ],
+      "clasificacion_evidencia": "B inventario; E corte efectivo no acreditado aquí"
+    },
+    {
+      "anio": 2025,
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "clasificacion": "fuente institucional granular seleccionada",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "bytes": 811353,
+      "notas": "Libro con hoja granular y hoja de tabla dinamica/resumen. Se usa solo la hoja granular.",
+      "diagnostico": [
+        {
+          "sheets": [
+            {
+              "name": "08-05-2025_22-26-22_Matrícula_P",
+              "max_row": 2372,
+              "max_column": 45
+            },
+            {
+              "name": "Hoja1",
+              "max_row": 7,
+              "max_column": 5
+            }
+          ]
+        }
+      ],
+      "filas_consolidadas_reportadas": 2371,
+      "fecha_corte_efectiva_acreditada_en_inventario": "No consta; no deducida de nombre/carpeta",
+      "estatus_procedencia": "Fuente institucional granular seleccionada; no prueba individual de recepción/aceptación SIES",
+      "sha256_estado": "Hash reportado por inventario previo; fuente individual no releída en esta fase",
+      "columnas_faltantes_en_consolidado": [],
+      "columnas_extra_no_consolidadas": [
+        "NIVEL_1",
+        "NIVEL_2",
+        "ÁREA",
+        "CARRERA",
+        "CONTINUIDAD",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "MODALIDAD",
+        "JORNADA",
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR"
+      ],
+      "clasificacion_evidencia": "B inventario; E corte efectivo no acreditado aquí"
+    },
+    {
+      "anio": 2026,
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "clasificacion": "fuente institucional granular seleccionada",
+      "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "bytes": 582631,
+      "notas": "Fuente gobernada con encabezados; define el esquema rector de 32 columnas.",
+      "diagnostico": [
+        {
+          "sheets": [
+            {
+              "name": "CONSOLIDADO",
+              "max_row": 4106,
+              "max_column": 32
+            }
+          ]
+        }
+      ],
+      "filas_consolidadas_reportadas": 4105,
+      "fecha_corte_efectiva_acreditada_en_inventario": "No consta; no deducida de nombre/carpeta",
+      "estatus_procedencia": "Fuente institucional granular seleccionada; no prueba individual de recepción/aceptación SIES",
+      "sha256_estado": "Hash reportado por inventario previo; fuente individual no releída en esta fase",
+      "columnas_faltantes_en_consolidado": [],
+      "columnas_extra_no_consolidadas": [],
+      "clasificacion_evidencia": "B inventario; E corte efectivo no acreditado aquí"
+    }
+  ],
+  "componentes_codigo_presentes": [
+    "COD_SED",
+    "COD_CAR",
+    "JOR",
+    "VERSION"
+  ],
+  "institucion": "Contexto IPSS162 del proceso; no completar otra institución por supuesto",
+  "consolidado": {
+    "excel_repositorio": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+    "excel_escritorio": "/Users/alexi/Desktop/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026.xlsx",
+    "sha256_excel_repositorio": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+    "sha256_excel_escritorio": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+  },
+  "advertencia": "Matrícula total, cohorte elegible de retención y titulaciones son universos distintos; no imponer igualdad entre sus totales."
+}

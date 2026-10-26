@@ -1,0 +1,36 @@
+{
+ "fecha_hora": "2026-10-26T02:53:49.439024+00:00",
+ "estado": "CANDIDATA_NO_ACTIVA",
+ "clasificacion": "D pendiente de autorización de promoción; C construcción y QA",
+ "edicion_base": {
+  "descriptor": "data/diccionario_sies_seguimiento/v8_20261025_ocho_p/descriptor.json",
+  "sha256": "701519d757779b3deaa618836bf862df29b9c0ef3e82dc45e5ec9c9b614764ef",
+  "base_privada": "/Users/alexi/.local/share/ipss/fase3_candidata_20261025/DICCIONARIO_SIES_CANDIDATO.sqlite",
+  "base_sha256": "0f073554722a4c0ca9ffc11222aab2c83cd478a10f3bf31aefa8affeeae72c6b"
+ },
+ "candidata": {
+  "base_privada": "/Users/alexi/.local/share/ipss/v9_candidata_21_20261025/DICCIONARIO_SIES_CANDIDATO_V9.sqlite",
+  "sha256": "ca1db3627b631f0ee29747f7185ab6bd0e6445d5950aff002b16b18d14924872",
+  "copia_final_identica": true
+ },
+ "operaciones": {
+  "ruta_privada": "/Users/alexi/.local/share/ipss/v9_candidata_21_20261025/OPERACIONES_V9.json",
+  "sha256": "560ef1baa225044d44aa0280e68a5fbb71b9755da13ec6bf5c7adc4619576d39",
+  "n": 21,
+  "regla": "V3_TLOG_TAMD_TPAS_TCIB_2024_RE_O_J4V1_APROBADO_20261025",
+  "estado": "CORRESPONDENCIA_INTERNA_CUATRO_PLANES_V3_APROBADA"
+ },
+ "evidencia_revision_v3": "outputs/conciliacion_programas_cierres_20261025_v3 (LEEME, revisar_fuentes.py, evidencia_temporal_historica.json)",
+ "script": {
+  "ruta": "outputs/diccionario_v9_candidata_21_20261025/construir_candidata_v9.py",
+  "sha256": "810cf3a5e13deb3e12c82b8cfff2877b7188f3584cb42cd08625eda63d51f894"
+ },
+ "qa": {
+  "ruta": "QA_CANDIDATA.json",
+  "sha256": "77d3c60b110928057e5e601fca8bda290150e9d8dead0f28029d27ac0fda239f",
+  "todos_ok": true
+ },
+ "activo_json_modificado": false,
+ "commit_push": false,
+ "denominadores_alterados": false
+}

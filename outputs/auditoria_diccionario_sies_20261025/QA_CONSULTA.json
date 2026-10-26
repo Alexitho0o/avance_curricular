@@ -1,0 +1,502 @@
+{
+  "clasificacion": "B/C",
+  "edicion": "v7_20261023_inf35_03_t3",
+  "tres_consumidores": 3,
+  "contextos_por_consumidor": 3,
+  "paridad_consumidores": true,
+  "permisos_temporales": [
+    "0o600",
+    "0o600",
+    "0o600"
+  ],
+  "pruebas_sinteticas_codigo_salida": 0,
+  "pruebas_sinteticas_resumen": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.003s\n\nOK\n",
+  "fuentes_descriptor": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/MANIFEST.json",
+      "esperado": "95822e4932d2b6e1867e3d6315c0982497907195f1b9cc7ee7bd0979737df20e",
+      "observado": "95822e4932d2b6e1867e3d6315c0982497907195f1b9cc7ee7bd0979737df20e",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/MANIFEST.json",
+      "esperado": "ef83614063ce5ae8b9e29d39703f4e7847793007bc0166e5f1fbc4e57bf4c59a",
+      "observado": "ef83614063ce5ae8b9e29d39703f4e7847793007bc0166e5f1fbc4e57bf4c59a",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/clasificacion_tcre_siguiente_bloque_20261023_095113/MANIFEST.json",
+      "esperado": "d55a6aae4cc091e5a1567b26e11b6a6e939803de816d6039d75effe8d3504fbc",
+      "observado": "d55a6aae4cc091e5a1567b26e11b6a6e939803de816d6039d75effe8d3504fbc",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/clasificacion_tcre_siguiente_bloque_20261023_095113/PROGRAMACION_24_PREVALIDACION.json",
+      "esperado": "ca3755592f6f1612a4e7010d67c8afcc8d10f4c39ed3a816c01e03ac68dd713f",
+      "observado": "ca3755592f6f1612a4e7010d67c8afcc8d10f4c39ed3a816c01e03ac68dd713f",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/reproduccion_puente_20261023_004044/OBSERVACIONES_PRIVADAS.json",
+      "esperado": "feb7945555440ad761f8ef6e4c61f587103d02c6995f059b08cbd6672780ff67",
+      "observado": "feb7945555440ad761f8ef6e4c61f587103d02c6995f059b08cbd6672780ff67",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/historico_rechazo_tcre_20261023_093127/CONFIG.json",
+      "esperado": "86d44c2c6083e5f1a13cc5ddb74e239bbf16de6d30c57c96fb52d8b5d1393bef",
+      "observado": "86d44c2c6083e5f1a13cc5ddb74e239bbf16de6d30c57c96fb52d8b5d1393bef",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/MATRÍCULA UNIFICADA/DATOSDEALUMNOS ORIGEN DE LOS DATOS2025.xlsx",
+      "esperado": "63c5cbc05494e4ac36b97041656ded478cf8deab2f562223e851d1cb2a2ef2f1",
+      "observado": "63c5cbc05494e4ac36b97041656ded478cf8deab2f562223e851d1cb2a2ef2f1",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/2025/SIES/DATOSDEALUMNOS_2176.xlsx",
+      "esperado": "a74f38b6ab4f02dd6dac0f5a2ed268d74d1a7487672b7c3c98f06eb5fcd548cc",
+      "observado": "a74f38b6ab4f02dd6dac0f5a2ed268d74d1a7487672b7c3c98f06eb5fcd548cc",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Archivos de chat de Microsoft Teams/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "esperado": "d59e0f31fd5f5954afd279bcd86840e3a416249cba90af28f5d2764ec6072736",
+      "observado": "d59e0f31fd5f5954afd279bcd86840e3a416249cba90af28f5d2764ec6072736",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.3 Encuestas/1.2.3.6 Perfil de ingreso (caracterización)/2025/DATOSDEALUMNOS.xlsx",
+      "esperado": "5a907e70a1a62324761095d1149e7b2bb7bc8ecc3234bd9d843e025c62876557",
+      "observado": "5a907e70a1a62324761095d1149e7b2bb7bc8ecc3234bd9d843e025c62876557",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.3 Encuestas/1.2.3.6 Perfil de ingreso (caracterización)/2025/crudo 2025/DATOSDEALUMNOS_4094.xlsx",
+      "esperado": "20c3f044b4f7a945382d56bb3730a8e14e9acc0c79cf35305cd0f3c87a49b8c4",
+      "observado": "20c3f044b4f7a945382d56bb3730a8e14e9acc0c79cf35305cd0f3c87a49b8c4",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "esperado": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65",
+      "observado": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/Cumplimiento Ingreso de Notas.xlsx",
+      "esperado": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80",
+      "observado": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+      "esperado": "97c0fc4fbe4dd9a24be611d0960f4ad6c1559db907a9d86d12a039bc89110fa6",
+      "observado": "97c0fc4fbe4dd9a24be611d0960f4ad6c1559db907a9d86d12a039bc89110fa6",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Imágenes/DATOSDEALUMNOS_3194.xlsx",
+      "esperado": "7d271316194db816b592a68e9fea8573c2e878556acaf884935b8e0d03f5dea0",
+      "observado": "7d271316194db816b592a68e9fea8573c2e878556acaf884935b8e0d03f5dea0",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "esperado": "64d955975c6b613a205a6d98a1d5589b418d5e4c463362a4b7e212b4722e9c09",
+      "observado": "64d955975c6b613a205a6d98a1d5589b418d5e4c463362a4b7e212b4722e9c09",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL.xlsx",
+      "esperado": "65fd5a665849b0df3ca32ea23bba69f5c1b1a760c250b1788a6886a2dd20effd",
+      "observado": "65fd5a665849b0df3ca32ea23bba69f5c1b1a760c250b1788a6886a2dd20effd",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "esperado": "57da408869681bdaa7eb18ee13ea482bad377ea9c58dc10afdb5ff34aeebbd09",
+      "observado": "57da408869681bdaa7eb18ee13ea482bad377ea9c58dc10afdb5ff34aeebbd09",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_367_.xlsx",
+      "esperado": "cf4e65ef85d144cf6f591aa1c9e861d61f56ed7cf1ecc30ef68ac63bf277fa59",
+      "observado": "cf4e65ef85d144cf6f591aa1c9e861d61f56ed7cf1ecc30ef68ac63bf277fa59",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "esperado": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "observado": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/DATOSDEALUMNOS_4490.xlsx",
+      "esperado": "191a5ca6a839dd1ff4c5bf8e1d2181c2fcf94e2426b3a91d9767220852dc5258",
+      "observado": "191a5ca6a839dd1ff4c5bf8e1d2181c2fcf94e2426b3a91d9767220852dc5258",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/DATOSDEALUMNOS_4649.xlsx",
+      "esperado": "ef5b44ca59b6d3697f0d4299e36b7e284f5305964c6a0aa9c3691ffb728bddb5",
+      "observado": "ef5b44ca59b6d3697f0d4299e36b7e284f5305964c6a0aa9c3691ffb728bddb5",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/PROMEDIOSDEALUMNOS_3233.xlsx",
+      "esperado": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+      "observado": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/2025/DATOSDEALUMNOS_11248.xlsx",
+      "esperado": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+      "observado": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+      "esperado": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9",
+      "observado": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "esperado": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "observado": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "esperado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "observado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "esperado": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "observado": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/clasificacion_tcre_siguiente_bloque_20261023_095113/ADJUDICACIONES_ACUMULADAS.json",
+      "esperado": "fd9e68bf619173ad1c104cad0ac117064dfbb88f689c9e241d7010a43ca9b6f7",
+      "observado": "fd9e68bf619173ad1c104cad0ac117064dfbb88f689c9e241d7010a43ca9b6f7",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_por_cohorte/20261016/historias_oferta.json",
+      "esperado": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5",
+      "observado": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/revisar_programacion_12_20261023.py",
+      "esperado": "dba838b5d631686b10d71911d762110157c60bfd5d8b9563aa20531489ba1095",
+      "observado": "dba838b5d631686b10d71911d762110157c60bfd5d8b9563aa20531489ba1095",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cerrar_revision_programacion_12_20261023.py",
+      "esperado": "292aa489a4ef7474dd1097d6ff070f3a05359237bc37e1ac427ce360663133bb",
+      "observado": "292aa489a4ef7474dd1097d6ff070f3a05359237bc37e1ac427ce360663133bb",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_REVISION_PROGRAMACION_12_20261023.md",
+      "esperado": "3ff883680ec682b61ebebca6e5e3e20820d5b885b6c3b0df6ec1def6274bdaf0",
+      "observado": "3ff883680ec682b61ebebca6e5e3e20820d5b885b6c3b0df6ec1def6274bdaf0",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/INFORME.md",
+      "esperado": "a7e34adb0c2f5e8ab796b75fa91276474c03b5abdbd6850d8fc5b5faa5c4ca07",
+      "observado": "a7e34adb0c2f5e8ab796b75fa91276474c03b5abdbd6850d8fc5b5faa5c4ca07",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/CONTROL_OTRAS_PERSONAS.json",
+      "esperado": "e936eeb05d9ed21d4be42921d5e5da5c6e1eb4dfdc1a5eac130bebb431a46f90",
+      "observado": "e936eeb05d9ed21d4be42921d5e5da5c6e1eb4dfdc1a5eac130bebb431a46f90",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/INVENTARIO.json",
+      "esperado": "c921d767779283ea17e556575f84f89cfd44ae017cf64bb1c6b0cdb637f7b2b7",
+      "observado": "c921d767779283ea17e556575f84f89cfd44ae017cf64bb1c6b0cdb637f7b2b7",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/FUENTES_HASHES.json",
+      "esperado": "dc4858026dad9fe1a783786ce4c0d00478de4dbb33a7fbf55f3c458a1ab8f49f",
+      "observado": "dc4858026dad9fe1a783786ce4c0d00478de4dbb33a7fbf55f3c458a1ab8f49f",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/QA.json",
+      "esperado": "8a351f532fa3b3cc712ba284cdaeeb4e452edf62f772e6572768095a1878cd92",
+      "observado": "8a351f532fa3b3cc712ba284cdaeeb4e452edf62f772e6572768095a1878cd92",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/CONFIG.json",
+      "esperado": "e69604757e5a106c1b1d1081594495cd1eefbf02e45294ba6d011fcc3f0058c0",
+      "observado": "e69604757e5a106c1b1d1081594495cd1eefbf02e45294ba6d011fcc3f0058c0",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/ERRORES.json",
+      "esperado": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "observado": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/CONTROL_OFERTA.json",
+      "esperado": "46ae793612cc7d5dfb799c4dc4997d5a72676ce13d62554c8055cbe8fbe239a4",
+      "observado": "46ae793612cc7d5dfb799c4dc4997d5a72676ce13d62554c8055cbe8fbe239a4",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/CHECKPOINT.md",
+      "esperado": "e459addd4b6c92bb85562e349884c56b638fb91acc29e1d1074902229504bd4e",
+      "observado": "e459addd4b6c92bb85562e349884c56b638fb91acc29e1d1074902229504bd4e",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/GIT_DESPUES.json",
+      "esperado": "094a37db287b3dadaa921bc9c2cd1376b97bdb3d338eb0f569fc54a917e8c04f",
+      "observado": "094a37db287b3dadaa921bc9c2cd1376b97bdb3d338eb0f569fc54a917e8c04f",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/GIT_ANTES.json",
+      "esperado": "2b1cbbc55d6203229c89608df743799664186eeac12b242fd7df7e196027720f",
+      "observado": "2b1cbbc55d6203229c89608df743799664186eeac12b242fd7df7e196027720f",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/RESULTADOS.json",
+      "esperado": "b4e7cc1a8fd629a85f752f1184b460b09548aefc4f05af5e9e18c7df77781649",
+      "observado": "b4e7cc1a8fd629a85f752f1184b460b09548aefc4f05af5e9e18c7df77781649",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/revision_programacion_12_20261023_095818/VERIFICACION_INDEPENDIENTE.json",
+      "esperado": "06728a87655c60a3b14d1ccac37bbfd54927af4553bd98185da8ea32d074c7de",
+      "observado": "06728a87655c60a3b14d1ccac37bbfd54927af4553bd98185da8ea32d074c7de",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/FOCO_12.json",
+      "esperado": "2f225d289c1d5a08e04cff7750ee27a2bbc817ab9509aed64293af61d80f0b61",
+      "observado": "2f225d289c1d5a08e04cff7750ee27a2bbc817ab9509aed64293af61d80f0b61",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/REVISION_12_POR_OBSERVACION.json",
+      "esperado": "b71d105d77d74d7d342f98c9b3963513660536364d7ff8a78bcbe360da539af9",
+      "observado": "b71d105d77d74d7d342f98c9b3963513660536364d7ff8a78bcbe360da539af9",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/ETIQUETAS.json",
+      "esperado": "612d88e27034beff9489c997c66967249b6fb2554b95f3f28ebaec193ff09ffa",
+      "observado": "612d88e27034beff9489c997c66967249b6fb2554b95f3f28ebaec193ff09ffa",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/MU_PERSONAS.json",
+      "esperado": "bcc92f676c48d2bbe6ef8e51585ff9e3615479087d826e16256dbcef3d4f072c",
+      "observado": "bcc92f676c48d2bbe6ef8e51585ff9e3615479087d826e16256dbcef3d4f072c",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/CRONOLOGIAS_7_PERSONAS.json",
+      "esperado": "c58b57a4f489dfd568fd21b9f0a1addb7f157a5a92dbfa6fb32b8661c7589179",
+      "observado": "c58b57a4f489dfd568fd21b9f0a1addb7f157a5a92dbfa6fb32b8661c7589179",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/FILAS_HISTORICAS.json",
+      "esperado": "5bb10f4f5c5146cb152e1a855c3fc941b2cf0265ebcad6ecceacfd36eccff4b5",
+      "observado": "5bb10f4f5c5146cb152e1a855c3fc941b2cf0265ebcad6ecceacfd36eccff4b5",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/ALERTAS_IDENTIDAD.json",
+      "esperado": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "observado": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/revision_programacion_12_20261023_095818/CONTEXTO_OBSERVACIONES.json",
+      "esperado": "13d53100e3e0efc8333c54ea8b5e68b46013da462853d89b40cec5325510c4af",
+      "observado": "13d53100e3e0efc8333c54ea8b5e68b46013da462853d89b40cec5325510c4af",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cerrar_siete_v1_programacion_20261023.py",
+      "esperado": "996a18c96a1c0ad3727d12d8093d61e12e94da6711b017f909fa81494adf6acd",
+      "observado": "996a18c96a1c0ad3727d12d8093d61e12e94da6711b017f909fa81494adf6acd",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_CIERRE_SIETE_V1_PROGRAMACION_20261023.md",
+      "esperado": "754fce9867f78e92b195b87a36ff06c32b54ebcca3adcd814cdf73ec09595263",
+      "observado": "754fce9867f78e92b195b87a36ff06c32b54ebcca3adcd814cdf73ec09595263",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/INFORME.md",
+      "esperado": "d119143be52ad17e0f05e633077d963fd957864784cb26fdff7d092be5aa8691",
+      "observado": "d119143be52ad17e0f05e633077d963fd957864784cb26fdff7d092be5aa8691",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/FUENTES_HASHES.json",
+      "esperado": "0fcd6cfc704a59c75c68719645530656eb9775d0539f14c70be5e397af8270b4",
+      "observado": "0fcd6cfc704a59c75c68719645530656eb9775d0539f14c70be5e397af8270b4",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/QA.json",
+      "esperado": "a325c5dfa2c2de968c2ff26088243b4d254a5b8ba36878fdce7457d6352ac5f1",
+      "observado": "a325c5dfa2c2de968c2ff26088243b4d254a5b8ba36878fdce7457d6352ac5f1",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/CHECKPOINT.md",
+      "esperado": "7b22221ee4f516912646e41b67f8f096d3ac937c1c3ee747be8dcc87b145380e",
+      "observado": "7b22221ee4f516912646e41b67f8f096d3ac937c1c3ee747be8dcc87b145380e",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/GIT_DESPUES.json",
+      "esperado": "8f2155a077e9c7cc398726b7f9a1335933881d0595f351cd3c4b349aa1d98ac3",
+      "observado": "8f2155a077e9c7cc398726b7f9a1335933881d0595f351cd3c4b349aa1d98ac3",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/CRITERIO_COMPLEMENTARIO_PROPUESTO.json",
+      "esperado": "808656d63d2287ea8a6d552b52d7cd0054b2e4a7559171154e01a8e11934a314",
+      "observado": "808656d63d2287ea8a6d552b52d7cd0054b2e4a7559171154e01a8e11934a314",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/PRUEBAS_CONTROLES.json",
+      "esperado": "9099ed2de2154569ae787eb54b2b6a63d87b2b1355b0f4eeac92feffc4f1b442",
+      "observado": "9099ed2de2154569ae787eb54b2b6a63d87b2b1355b0f4eeac92feffc4f1b442",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/DECISION_APROBADA.json",
+      "esperado": "078b5ad35b6618975fc5f08e617c4ecf06b36ad28351d20a30253535641e3fb1",
+      "observado": "078b5ad35b6618975fc5f08e617c4ecf06b36ad28351d20a30253535641e3fb1",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/GIT_ANTES.json",
+      "esperado": "eacd2d4cc927db637b1e7d0549c4272de00e11a0cd297e137f13352d1fb95fae",
+      "observado": "eacd2d4cc927db637b1e7d0549c4272de00e11a0cd297e137f13352d1fb95fae",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/RESULTADOS.json",
+      "esperado": "eb670a04ff1d0acb58496d32dc01337ce1789a2d93680cdb9b9cf3815ddc3161",
+      "observado": "eb670a04ff1d0acb58496d32dc01337ce1789a2d93680cdb9b9cf3815ddc3161",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_siete_v1_programacion_20261023_105611/VERIFICACION_INDEPENDIENTE.json",
+      "esperado": "f80c922e2533f76aa7c564bac74a0055b77d33fd6c7c76eaf67dc9a30f0f4b8d",
+      "observado": "f80c922e2533f76aa7c564bac74a0055b77d33fd6c7c76eaf67dc9a30f0f4b8d",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_siete_v1_programacion_20261023_105611/ADJUDICACIONES_ACUMULADAS.json",
+      "esperado": "d7cb86a45a7e6caf836659939b912977cb363a6b5a7c71a665d0b3198dc76d74",
+      "observado": "d7cb86a45a7e6caf836659939b912977cb363a6b5a7c71a665d0b3198dc76d74",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_siete_v1_programacion_20261023_105611/SIETE_DESPUES.json",
+      "esperado": "0bccec5b1050591764174c0bce34d7000097597a757a2125cbd20e014e32e627",
+      "observado": "0bccec5b1050591764174c0bce34d7000097597a757a2125cbd20e014e32e627",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_siete_v1_programacion_20261023_105611/ADJUDICACIONES_SIETE_V1.json",
+      "esperado": "a22e6d61572a1095ad7501e372a18ccb6a74269aff20b4d664a108411b28f868",
+      "observado": "a22e6d61572a1095ad7501e372a18ccb6a74269aff20b4d664a108411b28f868",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_siete_v1_programacion_20261023_105611/CINCO_CRITERIO_COMPLEMENTARIO.json",
+      "esperado": "858e1e29dfd61ea2cbcb379c837c3b1790c3faf9901495d122eb8f7413c04de9",
+      "observado": "858e1e29dfd61ea2cbcb379c837c3b1790c3faf9901495d122eb8f7413c04de9",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cerrar_cinco_v1_programacion_20261023.py",
+      "esperado": "a4a5999d419957b27495a09ba33ff8bba54fcf2beb0e54c7f0352a29af450254",
+      "observado": "a4a5999d419957b27495a09ba33ff8bba54fcf2beb0e54c7f0352a29af450254",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_CIERRE_CINCO_V1_PROGRAMACION_20261023.md",
+      "esperado": "dc5d0e07a2b5ee25129c96d5afaa9e879241db54bad72ee63884e84ed88bda14",
+      "observado": "dc5d0e07a2b5ee25129c96d5afaa9e879241db54bad72ee63884e84ed88bda14",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_cinco_v1_programacion_20261023_111235/MANIFEST.json",
+      "esperado": "9389173ac08b83743fad201d8ffd24ea47ae0a3f550bc53bed25ec83992558ef",
+      "observado": "9389173ac08b83743fad201d8ffd24ea47ae0a3f550bc53bed25ec83992558ef",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_cinco_v1_programacion_20261023_111235/CINCO_DESPUES.json",
+      "esperado": "cb4fe9360d50b735a476c78c8904e76251e1ab163f74f3523717f67245b8aef8",
+      "observado": "cb4fe9360d50b735a476c78c8904e76251e1ab163f74f3523717f67245b8aef8",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_cinco_v1_programacion_20261023_111235/ADJUDICACIONES_CINCO_V1.json",
+      "esperado": "13a3a18d4e10d33ed59431e5b7c15b8b36d8740c1ea96f3fbcd381520b4cca35",
+      "observado": "13a3a18d4e10d33ed59431e5b7c15b8b36d8740c1ea96f3fbcd381520b4cca35",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_cinco_v1_programacion_20261023_111235/EVIDENCIAS_CINCO_APROBADAS.json",
+      "esperado": "858e1e29dfd61ea2cbcb379c837c3b1790c3faf9901495d122eb8f7413c04de9",
+      "observado": "858e1e29dfd61ea2cbcb379c837c3b1790c3faf9901495d122eb8f7413c04de9",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_cinco_v1_programacion_20261023_111235/ADJUDICACIONES_ACUMULADAS.json",
+      "esperado": "450788583d87e84fc55355998ec4be7d3fbdc4db7cbffcc3a7c42904d1d863dc",
+      "observado": "450788583d87e84fc55355998ec4be7d3fbdc4db7cbffcc3a7c42904d1d863dc",
+      "estado": "COINCIDE"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/MANIFEST_BASE_RETENCION_MU_2022_2026.json",
+      "esperado": "746539ed62a3a3a051da14fd7f32b90fc6fd30a426304386d54e19c203d74145",
+      "observado": "746539ed62a3a3a051da14fd7f32b90fc6fd30a426304386d54e19c203d74145",
+      "estado": "COINCIDE"
+    }
+  ],
+  "fuentes_coincidentes": 79,
+  "fuentes_con_diferencia": 0,
+  "fuentes_no_leibles": 0,
+  "v17_escritorio_sha256": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+  "head": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "cambios_previos_sha256": {
+    "PROYECTO_IPSS.json": "afac5dea027deb118f33188fc839e5b1f085ee14f60f74ed0479ddb3c69616b2",
+    "agent.md": "bd2e8e51fabed44e8f3908164a2d12f5b8263e9790cf30e935aa8b529a84926e",
+    "docs/README.md": "59d183afeab8466553e55eea7d810a8530202f76de9d73c2310566ebde795875"
+  },
+  "bases_modificadas": false,
+  "denominadores_modificados": false
+}

@@ -1,0 +1,89 @@
+{
+  "clasificacion": "C",
+  "fecha_hora": "2026-10-25T14:06:15.464661-03:00",
+  "estado": "CANDIDATA_VERIFICADA_NO_PROMOVIDA",
+  "head_antes": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "head_despues": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "commit": false,
+  "push": false,
+  "edicion_activa": "v7_20261023_inf35_03_t3",
+  "edicion_candidata": "v8_candidata_20261025_ocho_p",
+  "salida_excel": {
+    "clasificacion": "C",
+    "estado": "QA_ESTRUCTURAL_Y_RECALCULO_AFECTADO_CORRECTO",
+    "archivo": "/Users/alexi/.local/share/ipss/fase3_candidata_20261025/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx",
+    "escritorio": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx",
+    "sha256": "2bd21ca31d391b59f4bd2c56d4876becd12aae05cb9673a7e069b5542ed66b01",
+    "hojas": 55,
+    "hojas_bytes_conservados": 53,
+    "graficos_bytes_conservados": 13,
+    "tablas_bytes_conservadas": 35,
+    "estilos_originales_conservados": true,
+    "formulas_originales_conservadas": true,
+    "tasas_y_denominadores_conservados": true,
+    "controles_aritmeticos": 28,
+    "partes_cambiadas": [
+      "xl/worksheets/sheet52.xml",
+      "xl/worksheets/sheet54.xml"
+    ],
+    "celdas52_actualizadas": [
+      "A1",
+      "F19",
+      "H19",
+      "F20",
+      "H20",
+      "F24",
+      "H24",
+      "A27",
+      "A28",
+      "A32",
+      "A33"
+    ],
+    "errores_hojas_afectadas": [],
+    "recálculo": "Artifact Tool, dependencias agregadas afectadas; demás caches conservados",
+    "limite": "No prueba apertura ni recálculo completo en Excel nativo. La copia hereda las hojas individuales ya presentes: no publicar el XLSX en Git."
+  },
+  "diccionario_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase3_candidata_20261025/DICCIONARIO_SIES_CANDIDATO.sqlite",
+    "sha256": "0f073554722a4c0ca9ffc11222aab2c83cd478a10f3bf31aefa8affeeae72c6b"
+  },
+  "documentacion_sin_identificadores": true,
+  "fuentes": {
+    "fase2_manifest": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diccionario_sies_20261025/fase2_20261025/MANIFEST_FASE2.json",
+      "sha256": "269d298b7c3e65f6fd5a2ff70130c2b4c3f77b4206df9c644ff20e26a1418754"
+    },
+    "operaciones": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase2_historico_20261025/OPERACIONES_CANDIDATAS.json",
+      "sha256": "50d43b07767fcb3b4a93b2216c1e7e0dfdaed9d53a8ca76885508223b8dde698"
+    }
+  },
+  "archivos": {
+    "finalizar.py": "8376de7f6a0a8817a1a9aac78eb7304e40cf155054492039bc8a265704c244f0",
+    "consolidar.py": "54cb3cdb7d653556dcd2749b06e7284dc7c99565cd6e935a12aa40413720eda8",
+    "QA_DICCIONARIO.json": "63b6d94614aa535a71f17ece2274906d40ed2a9dd5b436a59b70019f62d79558",
+    "ENTRADAS_EXCEL.json": "cc55985deef50da4639aaec5fbf39d93798affca0ddba8501ada04d9e7dbf4eb",
+    "QA_CONSUMIDORES.json": "90c81be3b234da9c50210c4e1c015e339a270578eb8be64091b9b24ae87315d1",
+    "QA_EXCEL.json": "1a3057e8e91b82f4586d4d948590bc553be4684226ae8f8bb6697f8db315e5b0",
+    "ESPECIFICACION.md": "bb10252363d444b58b012e396ac05ef895e5cf8251fb1a5dd1cba12d2f414b9e",
+    "descriptor_candidato.json": "4b3aff6a8e4822ead0c5b176dc3c3bef7e6c4830a93cc556797f63ce6fa87640",
+    "NOTAS_EXCEL.json": "d503c3352a3f859454f14bcee813c75450c7871b9803c98bfd759ce24a54fa05",
+    "INFORME_FASE3.md": "267eca14b2f6890b2034ff2a86a9570b6ae1a904eb3238265ac38a9d37d20afc",
+    "build.mjs": "5dccc44d0ae902ad24f1ad605f904926888979536b762994e8d958bb5f9e4949",
+    "ensamblar.py": "d0d470767b12d73ab2d9fb00e416582ea28a4ce09aab73cd1026652c2ccdfef5",
+    "qa_consumidores.py": "6c749e0736ea8e50831e626f416a702ae92135d37e4f1f7e5fc139afb7bd2bc8"
+  },
+  "preservacion_hashes": {
+    "PROYECTO_IPSS.json": "afac5dea027deb118f33188fc839e5b1f085ee14f60f74ed0479ddb3c69616b2",
+    "agent.md": "bd2e8e51fabed44e8f3908164a2d12f5b8263e9790cf30e935aa8b529a84926e",
+    "docs/README.md": "59d183afeab8466553e55eea7d810a8530202f76de9d73c2310566ebde795875",
+    "data/diccionario_sies_seguimiento/activo.json": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497"
+  },
+  "pendientes": [
+    "Promoción de edición candidata",
+    "16 propuestas internas y 12 criterios de continuidad sin adoptar",
+    "3.041 observaciones históricas y 99 contextos del Excel pendientes",
+    "24 pendientes del foco multiversión del Excel sin reducción",
+    "Apertura y recálculo global en Excel nativo no realizados"
+  ]
+}

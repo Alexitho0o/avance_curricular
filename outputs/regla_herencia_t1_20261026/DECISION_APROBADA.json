@@ -1,0 +1,32 @@
+{
+ "clasificacion": "D decisión del usuario",
+ "estado": "APROBADA",
+ "opcion": "A",
+ "responsable_aprobacion": "Alexi, usuario de este chat",
+ "responsable_preparacion": "Claude",
+ "fecha_aprobacion": "2026-10-26T09:52:00-03:00",
+ "autorizacion": "Respuesta explícita «a vamos con a»",
+ "decision": "La regla de herencia del código T1 (§6), en su variante ESTRICTA, se adopta solo como control de consistencia. No es regla de asignación: no hereda ni propaga códigos.",
+ "funcionamiento": "Si un contexto cumple todas las condiciones estrictas y tiene código documental, ese código debe ser el de T1; toda diferencia se marca para revisión humana y no se corrige automáticamente.",
+ "variante_laxa": "Descartada: 6 contraejemplos en IINF20241.",
+ "evidencia": {
+  "prueba_retrospectiva": "933/933 aciertos, 0 contraejemplos (estricta)",
+  "impacto_pendientes": "0 de 78",
+  "primera_ejecucion": "CONTROL_v9_20261026_cuatro_planes_v3.json: 933 consistentes, 0 diferencias"
+ },
+ "compatibilidad": "Respeta NO_PROPAGAR_VERSION_ENTRE_CONTEXTOS y CONSERVAR_CODIGO_COHORTE_SEPARADO_DEL_DESTINO.",
+ "hashes": {
+  "evaluar_regla_herencia.py": "1cd852a00d459a3da8b09377444c5a6d47c0902a4585f69ceea24fffb5732bd6",
+  "RESULTADO.json": "44c9e7737581977220ad34fd746d54a19a87faa872753ef2b3ac2bc95bbd4cb0",
+  "MANIFEST.json": "b704e59771843daf7f4b50e23731922e9a867b49842a2eb68ff72eb982563655",
+  "PENDIENTES_POR_CONDICION.csv": "9a951a80152d72ed55dfce9e34ddcd59c29cff3aab3daa0f15b83a562c4f3eef",
+  "control_consistencia_herencia_t1.py": "124772d780774dbf82d960f34c2167fff228dd414c78654e69f661b62d7cfcda",
+  "CONTROL_v9_20261026_cuatro_planes_v3.json": "b08a56ee00a399dd23b6944d63f37f2f3215089975f474675cc30d691844798d"
+ },
+ "no_autoriza": [
+  "modificar el diccionario o el módulo común",
+  "nueva edición",
+  "commit/push"
+ ],
+ "uso": "Ejecutar control_consistencia_herencia_t1.py tras cada nueva edición del diccionario o nueva vista de seguimiento."
+}

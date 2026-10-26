@@ -1,0 +1,279 @@
+{
+  "clasificacion": "C",
+  "tipo": "checkpoint_fase3_candidata_verificada",
+  "fecha_hora": "2026-10-25T14:06:15.464661-03:00",
+  "repositorio": "/Users/alexi/Documents/GitHub/avance_curricular",
+  "rama": "feature/ire-2026",
+  "head": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "plan": {
+    "archivo": "PLAN_CIERRE_100_POR_CIENTO.md",
+    "sha256": "b275c3824cc652b9680a08dae2330b6f6615cc2dbf6b51a107b4654c77dc9c47"
+  },
+  "alcances": [
+    {
+      "nombre": "V17_contextos_localizados",
+      "observaciones": 2854,
+      "codigos_reutilizables": 2750,
+      "pendientes": 104,
+      "combinaciones": 26,
+      "combinaciones_con_pendientes": 16
+    },
+    {
+      "nombre": "historico_2019_2026",
+      "observaciones": 24774,
+      "codigos_reutilizables": 21725,
+      "pendientes": 3049,
+      "combinaciones": 93,
+      "combinaciones_con_pendientes": 63
+    }
+  ],
+  "fuentes_agregadas": [
+    {
+      "archivo": "MANIFEST.json",
+      "sha256": "5f62d45d03848fee950fb3b7d583b65f92075d61a9b4c64c5a7b86773fa2a507"
+    },
+    {
+      "archivo": "QA_ENTREGA.json",
+      "sha256": "928b3809f426889c648ea4dbb2046ec88b96d549c00f55886811eae1f90d66e7"
+    }
+  ],
+  "fases": [
+    {
+      "fase": 1,
+      "nombre": "Completar evidencia faltante V17",
+      "estado": "REVISION_EJECUTADA_CON_PROMOCION_Y_DECISIONES_PENDIENTES",
+      "hitos": [
+        {
+          "hito": 1,
+          "estado": "COMPLETO_104_EVIDENCIAS_CONSULTADAS",
+          "evidencia": "fase1_20261025/INFORME_FASE1.md"
+        },
+        {
+          "hito": 2,
+          "estado": "COMPLETO_REVISION_FOCALIZADA_104",
+          "evidencia": "fase1_20261025/INFORME_FASE1.md"
+        },
+        {
+          "hito": 3,
+          "estado": "CAMBIOS_C_REGISTRADOS_Y_PROPUESTAS_D_PENDIENTES",
+          "evidencia": "fase1_20261025/INFORME_FASE1.md"
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "nombre": "Extender soluciones al historico pendiente",
+      "estado": "EXTENSION_VERIFICADA_CON_PENDIENTES",
+      "hitos": [
+        {
+          "hito": 1,
+          "estado": "BUSQUEDA_INCREMENTAL_COMPLETA",
+          "evidencia": "fase2_20261025/INFORME_FASE2.md"
+        },
+        {
+          "hito": 2,
+          "estado": "OCHO_RECUPERACIONES_VALIDAS_TRES_NUEVAS",
+          "evidencia": "fase2_20261025/INFORME_FASE2.md"
+        },
+        {
+          "hito": 3,
+          "estado": "RESIDUAL_DELIMITADO_SIN_REPETIR_BUSQUEDAS",
+          "evidencia": "fase2_20261025/INFORME_FASE2.md"
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "nombre": "Consolidar y validar una entrega",
+      "estado": "CANDIDATA_VERIFICADA_NO_PROMOVIDA",
+      "hitos": [
+        {
+          "hito": 1,
+          "estado": "OCHO_OPERACIONES_CONSOLIDADAS_EN_CANDIDATA",
+          "evidencia": "fase3_20261025/INFORME_FASE3.md"
+        },
+        {
+          "hito": 2,
+          "estado": "QA_GLOBAL_Y_CONSUMIDORES_CORRECTOS",
+          "evidencia": "fase3_20261025/INFORME_FASE3.md"
+        },
+        {
+          "hito": 3,
+          "estado": "V18_CANDIDATA_GENERADA_QA_NO_NATIVO",
+          "evidencia": "fase3_20261025/INFORME_FASE3.md"
+        }
+      ]
+    },
+    {
+      "fase": 4,
+      "nombre": "Publicar y conectar servicio existente",
+      "estado": "PENDIENTE_DE_EJECUCION_INCREMENTAL",
+      "hitos": [
+        {
+          "hito": 1,
+          "estado": "NO_EJECUTADO_EN_ESTA_REVISION"
+        },
+        {
+          "hito": 2,
+          "estado": "NO_EJECUTADO_EN_ESTA_REVISION"
+        },
+        {
+          "hito": 3,
+          "estado": "NO_EJECUTADO_EN_ESTA_REVISION"
+        }
+      ]
+    }
+  ],
+  "siguiente": "Fase4: revisar y autorizar promoción/publicación de código y agregados sin datos individuales; pendientes D permanecen separados.",
+  "cierres_nuevos_en_esta_entrega": 0,
+  "restricciones": [
+    "No modificar fuentes, denominadores, V17 ni edicion activa durante la preparacion del plan.",
+    "Nuevos criterios internos requieren aprobacion aplicable; no repetir autorizaciones ya vigentes.",
+    "Commit, push y actualizacion remota pendientes de autorizacion especifica.",
+    "Las 104 pendientes de V17 estan incluidas en las 3049 historicas; no sumarlas.",
+    "100% es meta respaldada, no promesa; candidatos calculados no son cierres."
+  ],
+  "version_plan": 2,
+  "version_anterior": {
+    "plan": "historial_plan/v1/PLAN_CIERRE_100_POR_CIENTO.md",
+    "plan_sha256": "4264513f703d97ec62f9558fc0f7e5a2f2cfab1832cf1ab9d536d73a92239ef0",
+    "checkpoint": "historial_plan/v1/CHECKPOINT_CIERRE.json",
+    "checkpoint_sha256": "8df002e50fac231dad245fa6f2e2f5acd89875f648afe14377f20a7541b668a5"
+  },
+  "evidencia_heredada": {
+    "estado": "REUTILIZAR_QA_DE_EDICION_SIN_REEJECUTAR",
+    "edicion": "v7_20261023_inf35_03_t3",
+    "referencias": [
+      "LEEME.md",
+      "QA_CONSULTA.json",
+      "QA_ENTREGA.json",
+      "insumos/resumen.json",
+      "insumos/capas.json"
+    ],
+    "consultas_historicas_ya_verificadas": 24774,
+    "consultas_v17_ya_verificadas": 2854,
+    "entradas_ya_verificadas": 79,
+    "pruebas_sinteticas_ya_correctas": 12,
+    "consumidores_ya_concordantes": 3,
+    "limite": "Son resultados previos fechados. Esta revision no ejecuta otra vez esos controles."
+  },
+  "comprobaciones_puntuales_esta_revision": {
+    "head_conservado": true,
+    "descriptor_activo_hash_coincide": true,
+    "tres_modificaciones_previas_conservadas": true,
+    "manifiesto_y_qa_entrega_conservados": true,
+    "fases": 4,
+    "hitos": 12,
+    "fuentes_raw_releidas": 0,
+    "cruces_recalculados": 0,
+    "excel_regenerados": 0
+  },
+  "reglas_eficiencia": [
+    "No reinventariar ni repetir QA integral por lote.",
+    "Agrupar evidencia y reglas comunes; hasta diez observaciones revisadas por lote.",
+    "Reutilizar aprobaciones dentro de su alcance, sin extender decisiones nominativas.",
+    "No repetir una busqueda agotada sin fuente, variable o criterio nuevo.",
+    "QA incremental por cambio; QA global en edicion de entrega o cambio transversal.",
+    "Una bitacora y checkpoint; Excel solo al preparar entrega."
+  ],
+  "publicacion": {
+    "v7_servicio_descriptor_documentacion_en_HEAD": false,
+    "complemento_remoto_reconsultado_en_esta_revision": false,
+    "limite": "Reutiliza la auditoria anterior del remoto; preparacion del plan no autoriza publicar."
+  },
+  "checkpoint_anterior": {
+    "archivo": "historial_plan/v2/CHECKPOINT_ANTES_FASE3.json",
+    "sha256": "d403642412847fe250f094d2c05935697fb6b7d7a224d1a4318b63584ad1a547"
+  },
+  "fase1_resultado": {
+    "PENDIENTE_EVIDENCIA_O_CRITERIO": 71,
+    "CRITERIO_CONTINUIDAD_PENDIENTE": 12,
+    "PROPUESTA_INTERNA_LISTA": 16,
+    "RECUPERACION_C_VALIDADA_NO_PROMOVIDA": 5
+  },
+  "operaciones_C_validadas_no_promovidas": 8,
+  "evidencia_fase1": {
+    "carpeta": "fase1_20261025",
+    "resultado_sha256": "8880de7376c1cb09987a6f4681b427f4c23eb86dcd1f2a09938c0a469ce9c484",
+    "detalle_privado": "/Users/alexi/.local/share/ipss/fase1_cierre_104_20261025",
+    "estado_activo": "v7 sin cambios"
+  },
+  "alcances_despues_de_incorporar_cinco_no_ejecutado": {
+    "v17": {
+      "observaciones": 2854,
+      "con_codigo_antes": 2750,
+      "con_codigo_despues": 2755,
+      "pendientes_antes": 104,
+      "pendientes_despues": 99
+    },
+    "historico": {
+      "observaciones": 24774,
+      "con_codigo_antes": 21725,
+      "con_codigo_despues": 21730,
+      "pendientes_antes": 3049,
+      "pendientes_despues": 3044
+    }
+  },
+  "fase2_resultado": {
+    "clasificacion": "B/C",
+    "pendientes_revisados_por_indice": 3049,
+    "contextos_con_puente_2025": 14,
+    "personas_con_puente": 6,
+    "recuperables_union_fases_1_2": 8,
+    "recuperables_nuevos": 3,
+    "recuperables_previos": 5,
+    "sin_familia_anual_del_contexto": 6,
+    "resto_sin_este_puente": 3035,
+    "cambios_activo": 0,
+    "por_carrera": {
+      "TPAS": {
+        "previamente_validadas": 2,
+        "nuevas": 1,
+        "pendientes": 0
+      },
+      "TLOG": {
+        "previamente_validadas": 0,
+        "nuevas": 0,
+        "pendientes": 3
+      },
+      "TAMD": {
+        "previamente_validadas": 3,
+        "nuevas": 2,
+        "pendientes": 0
+      },
+      "IADM": {
+        "previamente_validadas": 0,
+        "nuevas": 0,
+        "pendientes": 3
+      }
+    },
+    "escenario_no_aplicado": {
+      "historico": {
+        "total": 24774,
+        "con_codigo": 21733,
+        "pendientes": 3041
+      },
+      "V17": {
+        "total": 2854,
+        "con_codigo": 2755,
+        "pendientes": 99
+      }
+    },
+    "limites": [
+      "No prueba aceptación SIES ni fecha administrativa de cambio.",
+      "La reparación solo se valida para el año 2025 de la hoja puente; no se propaga a otros años.",
+      "Las 16 propuestas internas y los 12 criterios de continuidad de fase1 siguen pendientes de aprobación/validación.",
+      "Los otros pendientes conservan la matriz y diagnóstico previos; no se repitieron búsquedas sin evidencia nueva."
+    ]
+  },
+  "fase3_resultado": {
+    "descriptor": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diccionario_sies_20261025/fase3_20261025/descriptor_candidato.json",
+    "sha256": "4b3aff6a8e4822ead0c5b176dc3c3bef7e6c4830a93cc556797f63ce6fa87640",
+    "excel": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx",
+    "excel_sha256": "2bd21ca31d391b59f4bd2c56d4876becd12aae05cb9673a7e069b5542ed66b01",
+    "promocion_activo": false,
+    "historico_pendientes_candidata": 3041,
+    "v17_contextos_pendientes_candidata": 99,
+    "multiversion_excel_pendientes": 24
+  }
+}

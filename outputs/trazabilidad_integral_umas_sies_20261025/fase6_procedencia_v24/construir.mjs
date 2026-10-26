@@ -1,0 +1,38 @@
+import fs from 'node:fs/promises';
+import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
+const dir='/Users/alexi/.local/share/ipss/procedencia_v24_20261025';
+const slots=JSON.parse(await fs.readFile('/Users/alexi/.local/share/ipss/trazabilidad_integral_fase3_20261025/VISTA_T1_T2_T3.json','utf8'));
+const wb=Workbook.create(), s=wb.worksheets.add('Procedencia');
+const labels=['Código SIES heredado de T1','Código SIES confirmado por matrícula histórica','Correspondencia interna aprobada','Código SIES pendiente de atribución'];
+s.getRange('AC5:AF5').values=[['Procedencia del código destino','Continuidad T1 corroborada (1/0)','Evidencia o condición pendiente','Clase de respaldo']];
+const rows=[], formulas=[], inputs=[], counts={};
+for(const slot of slots) for(const c of slot.contextos.length?slot.contextos:[null]) {
+ const eligible=!!(c && c.codigo_destino===slot.codigo_origen_T1 && c.mismo_expediente_T1_atribuido && c.comparacion_plan==='MISMO_PLAN_OBSERVADO' && c.comparacion_carrera_umas==='MISMA_CARRERA_UMAS_OBSERVADA' && !c.dimensiones_contexto_distintas_origen.length);
+ const state=c?.respaldo_destino??'SIN_CONTEXTO';
+ const cls=!c?.codigo_destino?'E':state.startsWith('B/C')?'B/C':'D';
+ const reason=!c?'Sin contexto de destino localizado; no implica abandono.':eligible?'Mismo código ya respaldado; mismo expediente, carrera, plan, sede y jornada.':c.codigo_destino?'Se conserva la atribución y su regla previa; consultar O, V, X e Y.':c.dimensiones_contexto_distintas_origen.length?'Jornada distinta: no corresponde heredar el código completo.':!c.mismo_expediente_T1_atribuido?'Falta atribuir el expediente T1 al código de origen.':'Falta comprobar continuidad del plan y contexto.';
+ const r=rows.length+6;
+ inputs.push([slot.codigo_origen_T1,c?.codigo_destino??'Pendiente']);
+ rows.push([eligible?1:0,reason,cls]);
+ formulas.push([`=IF(N${r}="Pendiente","${labels[3]}",IF(AD${r}=1,"${labels[0]}",IF(AF${r}="D","${labels[2]}","${labels[1]}")))`]);
+ const label=!c?.codigo_destino?labels[3]:eligible?labels[0]:cls==='D'?labels[2]:labels[1]; counts[label]=(counts[label]??0)+1;
+}
+const end=rows.length+5;
+s.getRange(`M6:N${end}`).values=inputs;
+s.getRange(`AD6:AF${end}`).values=rows;
+s.getRange(`AC6:AC${end}`).formulas=formulas;
+s.getRange(`AC5:AF${end}`).format.font={name:'Calibri',size:10};
+s.getRange('AC5:AF5').format={fill:'#17365D',font:{name:'Calibri',size:10,bold:true,color:'#FFFFFF'},rowHeight:34,wrapText:true};
+s.getRange(`AC6:AF${end}`).format.rowHeight=42;
+s.getRange(`AC5:AC${end}`).format.columnWidth=48;
+s.getRange(`AD5:AD${end}`).format.columnWidth=20;
+s.getRange(`AE5:AE${end}`).format.columnWidth=68;
+s.getRange(`AF5:AF${end}`).format.columnWidth=14;
+s.getRange(`AC6:AF${end}`).format.wrapText=true;
+wb.recalculate();
+await fs.mkdir(dir,{recursive:true,mode:0o700});
+await (await SpreadsheetFile.exportXlsx(wb)).save(dir+'/fragment.xlsx');
+const png=await wb.render({sheetName:'Procedencia',range:'AC5:AF9',scale:1.4});
+await fs.writeFile(dir+'/preview.png',new Uint8Array(await png.arrayBuffer()));
+await fs.writeFile(dir+'/counts.json',JSON.stringify(counts,null,2));
+console.log(JSON.stringify({rows:rows.length,counts}));

@@ -1,0 +1,250 @@
+{
+  "classification": "B/C",
+  "main_head": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "main_remote_head": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "descriptor": {
+    "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json",
+    "sha256": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8",
+    "pointer_matches": true,
+    "edition": "v7_20261023_inf35_03_t3"
+  },
+  "components": [
+    {
+      "path": "common/diccionario_sies_seguimiento.py",
+      "exists": true,
+      "sha256": "1420f2686aaeb45f01a0c973e7769e93a4bf3aa4484dd9388445c6de78abce33",
+      "expected_sha256": "1420f2686aaeb45f01a0c973e7769e93a4bf3aa4484dd9388445c6de78abce33",
+      "tracked": false,
+      "in_head": false
+    },
+    {
+      "path": "scripts/consultar_diccionario_sies_seguimiento.py",
+      "exists": true,
+      "sha256": "66b26862ceb41a80d457ab0897e692000188ad4a9b9fd1e88b2d5c4e3c602e9d",
+      "expected_sha256": "66b26862ceb41a80d457ab0897e692000188ad4a9b9fd1e88b2d5c4e3c602e9d",
+      "tracked": false,
+      "in_head": false
+    },
+    {
+      "path": "scripts/retencion_intermedia_t2_t3/consultar_codigos_sies.py",
+      "exists": true,
+      "sha256": "166b5a43257bc3c5befdcd2dafcd015a72fdddc823e4ee21923612bb20284173",
+      "expected_sha256": "166b5a43257bc3c5befdcd2dafcd015a72fdddc823e4ee21923612bb20284173",
+      "tracked": false,
+      "in_head": false
+    },
+    {
+      "path": "procesos/caracterizacion/scripts/consultar_diccionario_sies_seguimiento.py",
+      "exists": true,
+      "sha256": "3e520914e21cb02960b7c07692b0fb85eaab9df39495168328d55de48f111a48",
+      "expected_sha256": "3e520914e21cb02960b7c07692b0fb85eaab9df39495168328d55de48f111a48",
+      "tracked": false,
+      "in_head": false
+    }
+  ],
+  "remote_plugin": {
+    "name": "analisis-institucional-alexi",
+    "version": "1.1.3",
+    "release": "pluginrel_6ad8ac3a43ac8191ac0b2d173b4e9130",
+    "release_created_at": "2026-10-21T12:12:42.264463Z",
+    "archive_sha256": "5191ea61db26f43a5b01d96a27af6300a83651a1e4eabf339cdfe9aaac62ce4c",
+    "text_files_checked": 1317,
+    "service_reference_matches": [],
+    "installed_cache_mismatches": [
+      "skills/cruce-encuestas-institucionales/SKILL.md"
+    ],
+    "focus": {
+      "references/coordinacion.md": {
+        "sha256": "3aa5322c489f9243e0be8389dae5da3de92f75759a81165aa1471e477bd3d9cb",
+        "bytes": 6596,
+        "exists_installed": true,
+        "same_installed": true,
+        "snapshot_warning": false
+      },
+      "references/entorno.md": {
+        "sha256": "ff80f052d28ce3c4a9d045493b4bd34801ad7ea18743ac748183522e05de1459",
+        "bytes": 3314,
+        "exists_installed": true,
+        "same_installed": true,
+        "snapshot_warning": false
+      },
+      "skills/consultar-fuentes-ipss/SKILL.md": {
+        "sha256": "ff23097fce6b14ce33512a5983678d647434efd5ed75d0144880ebecba4e6de1",
+        "bytes": 10117,
+        "exists_installed": true,
+        "same_installed": true,
+        "snapshot_warning": true
+      },
+      "skills/ipss-verificacion-cifras-matricula/SKILL.md": {
+        "sha256": "0530f79952e9e8edf987b9994cc21ad4a02e855d002036d3180d97da7e266689",
+        "bytes": 9896,
+        "exists_installed": true,
+        "same_installed": true,
+        "snapshot_warning": true
+      }
+    }
+  },
+  "governance_files": [
+    {
+      "path": "PROYECTO_IPSS.json",
+      "sha256": "afac5dea027deb118f33188fc839e5b1f085ee14f60f74ed0479ddb3c69616b2",
+      "in_head": true,
+      "same_head": false,
+      "git_status": "M PROYECTO_IPSS.json"
+    },
+    {
+      "path": "agent.md",
+      "sha256": "bd2e8e51fabed44e8f3908164a2d12f5b8263e9790cf30e935aa8b529a84926e",
+      "in_head": true,
+      "same_head": false,
+      "git_status": "M agent.md"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "59d183afeab8466553e55eea7d810a8530202f76de9d73c2310566ebde795875",
+      "in_head": true,
+      "same_head": false,
+      "git_status": "M docs/README.md"
+    },
+    {
+      "path": "data/diccionario_sies_seguimiento/activo.json",
+      "sha256": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497",
+      "in_head": false,
+      "same_head": false,
+      "git_status": "?? data/diccionario_sies_seguimiento/activo.json"
+    },
+    {
+      "path": "docs/DICCIONARIO_SIES_SEGUIMIENTO.md",
+      "sha256": "7056f908cc82a75e36411b51a3b292d846d9f92554e4f56aaca49bf80e9020cf",
+      "in_head": false,
+      "same_head": false,
+      "git_status": "?? docs/DICCIONARIO_SIES_SEGUIMIENTO.md"
+    },
+    {
+      "path": "data/consumo_comun_c2/20261016/descriptor.json",
+      "sha256": "fb83093e85483471417606fae13258002975e5adf3229000e6fe8444ffa520bf",
+      "in_head": true,
+      "same_head": true,
+      "git_status": ""
+    },
+    {
+      "path": "common/diccionario_c2.py",
+      "sha256": "fabadfcde387878b78c67def3f94b428151dd12ac5c4569ab179191285424f36",
+      "in_head": true,
+      "same_head": true,
+      "git_status": ""
+    }
+  ],
+  "project_pointer": {
+    "local": "data/diccionario_sies_seguimiento/activo.json",
+    "head": null,
+    "published_historical_c2": "data/consumo_comun_c2/20261016/descriptor.json"
+  },
+  "local_skill": [
+    {
+      "name": "ipss-verificacion-cifras-matricula",
+      "path": "/Users/alexi/.codex/skills/ipss-verificacion-cifras-matricula/SKILL.md",
+      "realpath": "/Users/alexi/Documents/Codex/2026-10-09/skill-creator-users-alexi-codex-skills/outputs/analisis-institucional-alexi/skills/ipss-verificacion-cifras-matricula/SKILL.md",
+      "sha256": "cc8a4da4a914223f133cefdd6fe03228c5f05bd4f3fbb3a690eab605225b64fc",
+      "reference_to_service": false
+    },
+    {
+      "name": "github-artifact-governance",
+      "path": "/Users/alexi/.codex/skills/github-artifact-governance/SKILL.md",
+      "realpath": "/Users/alexi/.codex/skills/github-artifact-governance/SKILL.md",
+      "sha256": "614f8a8c5713c6745cd9fe7bb1563530e2c5d966c692ac91b04d106ac3a37d53",
+      "reference_to_service": false
+    },
+    {
+      "name": "gpt-95342949a909aa42e4c5ddcf9ff4f772",
+      "version": "0.7.7",
+      "path": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/gpt-95342949a909aa42e4c5ddcf9ff4f772/0.7.7",
+      "text_files_checked": 41,
+      "reference_to_service": false,
+      "matching_paths": [],
+      "remote_current_status": "NO_VERIFICADO; caché instalada inspeccionada"
+    },
+    {
+      "name": "gpt-e7c862f047bdaeec036e86c07d43face",
+      "version": "0.17.11",
+      "path": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/gpt-e7c862f047bdaeec036e86c07d43face/0.17.11",
+      "text_files_checked": 1237,
+      "reference_to_service": false,
+      "matching_paths": [],
+      "remote_current_status": "NO_VERIFICADO; caché instalada inspeccionada"
+    },
+    {
+      "name": "gpt-f1a60967c700a4822a91d5b9c7b152f1",
+      "version": "0.7.4",
+      "path": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/gpt-f1a60967c700a4822a91d5b9c7b152f1/0.7.4",
+      "text_files_checked": 14,
+      "reference_to_service": false,
+      "matching_paths": [],
+      "remote_current_status": "NO_VERIFICADO; caché instalada inspeccionada"
+    }
+  ],
+  "service_readonly_open": {
+    "success": true,
+    "edition": "v7_20261023_inf35_03_t3",
+    "sqlite_query_only": 1
+  },
+  "reference_repo": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+    "branch": "main",
+    "local_head": "aba337784ccde0537fc21b2977b351170ed335e8",
+    "remote_head_observed": "f46dcf8822014b368f1499cce56831efce60c34c",
+    "same_head": false,
+    "active_module": "avance_curricular/procesos/caracterizacion",
+    "original_repo_role": "respaldo según contrato de unificación; no consumidor del nuevo servicio localizado"
+  },
+  "executive_rows": [
+    {
+      "capa": "Diccionario personal v7 local",
+      "estado": "IMPLEMENTADO LOCAL",
+      "clasificacion": "B/C/D",
+      "evidencia": "Puntero, descriptor, cuatro componentes y base privada pasan integridad; apertura SQLite solo lectura correcta.",
+      "falta": "Resolver cobertura pendiente; publicar componentes no personales y contrato con autorización."
+    },
+    {
+      "capa": "GitHub avance_curricular",
+      "estado": "V7 NO PUBLICADO",
+      "clasificacion": "B",
+      "evidencia": "HEAD local/remoto 55e3b709 coinciden. Servicio, tres consumidores, activo y documentación v7 figuran ??; la clave del proyecto solo existe en modificación local.",
+      "falta": "Incorporar explícitamente el contrato y código agregado, tras QA; mantener SQLite individual fuera de Git."
+    },
+    {
+      "capa": "Catálogos históricos C2 publicados",
+      "estado": "PUBLICADO, ALCANCE DISTINTO",
+      "clasificacion": "B/C",
+      "evidencia": "HEAD incluye common/diccionario_c2.py y descriptor C2_20261016. descriptor declara asignacion_productiva=false.",
+      "falta": "No sustituye al servicio personal por expediente, año y período."
+    },
+    {
+      "capa": "Caracterización integrada",
+      "estado": "ADAPTADOR LOCAL COMÚN",
+      "clasificacion": "B/C",
+      "evidencia": "procesos/caracterizacion/scripts/consultar_diccionario_sies_seguimiento.py delega al mismo consumidor del contenedor. No tiene seguimiento Git.",
+      "falta": "Publicar adaptador y punto de entrada; no duplicar el diccionario en repositorio histórico."
+    },
+    {
+      "capa": "Complemento Análisis institucional de Alexi remoto",
+      "estado": "NO CONECTADO EXPLÍCITAMENTE A V7",
+      "clasificacion": "B/E",
+      "evidencia": "Release vigente 1.1.3 del 21-10-2026; 1.317 archivos de texto inspeccionados: cero referencias al servicio personal o su consumidor.",
+      "falta": "Actualizar referencias al puntero y contrato; prueba de consulta local; no empaquetar datos individuales."
+    },
+    {
+      "capa": "Skills locales y cachés relevantes",
+      "estado": "CONEXIÓN V7 NO LOCALIZADA",
+      "clasificacion": "B/E",
+      "evidencia": "Skill local de cifras y cachés DATOS ALUMNOS KPI, Gestor Académico y Experto Matrícula no incluyen referencias al servicio. Skills IPSS declaran instantáneas sin sincronización automática.",
+      "falta": "Unificar el punto de consulta y versionado. Remoto actual de los tres complementos GPT heredados no comprobado."
+    }
+  ],
+  "limitations": [
+    "La ausencia de referencia explícita no impide que un agente descubra manualmente el repositorio; no demuestra consumo automático común.",
+    "Solo se comprobó el remoto vigente del complemento Análisis institucional de Alexi; los GPT heredados se inspeccionaron en caché instalada.",
+    "Se observó una diferencia local/remota de la skill cruce-encuestas-institucionales sobre FECHAFIRMA 2027; es ajena al código SIES y no fue modificada.",
+    "No se ejecutaron pipelines ni se modificaron bases, reglas, denominadores o Git."
+  ]
+}

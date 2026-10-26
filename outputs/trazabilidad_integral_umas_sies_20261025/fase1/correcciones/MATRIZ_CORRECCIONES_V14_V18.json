@@ -1,0 +1,4374 @@
+{
+  "fecha_generacion": "2026-10-25T14:49:02.732248-03:00",
+  "alcance": "Fase1 H1/H3: correcciones que debe conservar una restauración posterior de fórmulas. No se modifica ningún libro.",
+  "clasificacion": "B lectura de evidencia; C registro técnico; D decisiones previas identificadas; E límites. No nuevas reglas A.",
+  "matriz": [
+    {
+      "version": "V14",
+      "hoja_celdas": "26_Avance_Curricular_Resumen!D1852,E1852,F1852,H1852; 18_Foto_Intertrimestral!E8,F8; 52_Codigos_SIES_Revision!E8,G8,I8",
+      "regla_anterior": "600 VIGENTE y 680 presencias literales, algoritmo original no localizado.",
+      "regla_a_conservar": "Cruce exacto de documentos R y P; puente explícito 2025_carga J/BU/BV. 694 presencias; 611 actividad período2 y estado VIGENTE. E1852 suma grupos de hoja53; hoja18 enlaza E1852.",
+      "numerador": 611,
+      "denominador": 1150,
+      "tasa": 0.5313043478260869,
+      "tipo": "fórmula + agregado + nota",
+      "estado": "Aprobado/conservado; la exigencia histórica exacta fue sustituida por D de V15. Algoritmo original600 sigue E.",
+      "clasificacion": "B/C/D/E",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/MANIFEST_CORRECCION.json",
+        "sha256_recalculado": "4ea0af16a5494509c317f8784afcb03b376f8fb5fd74763593b4d5a39964efc0"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja_celdas": "53_Codigos_T1_Confirmados!G54:G124,I54:I124,J54:J124 SOLO filas pares; 28_QA_Matematica!C11:F12,H11",
+      "regla_anterior": "Grupos con numeradores previos.",
+      "regla_a_conservar": "36 grupos actualizados (G numerador; I tasa; J explicación). No cambiar denominadores H. 28!C11:F11 y C12:F12 cotejan611 y611/1150.",
+      "numerador": 611,
+      "denominador": 1150,
+      "tipo": "agregados + fórmulas + controles",
+      "estado": "Conservar. G tiene conteos literales reproducibles por script, no fórmulas individuales. Restaurar fórmulas no convierte estos agregados en prueba personal.",
+      "clasificacion": "B/C",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/MANIFEST_CORRECCION.json",
+        "sha256_recalculado": "4ea0af16a5494509c317f8784afcb03b376f8fb5fd74763593b4d5a39964efc0"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja_celdas": "26_Avance_Curricular_Resumen!D1853,E1853,F1853,H1853,A1857:H1861; 18_Foto_Intertrimestral!B82; 28_QA_Matematica!A18,A19; 52_Codigos_SIES_Revision!A1,A14,A32",
+      "regla_anterior": "535 VIGENTE,582 presencias; foto matrícula T3 ya1023.",
+      "regla_a_conservar": "596 presencias=582R+14P;546 VIGENTE=535R+11P. Fórmulas SUM del bloque1859:1860. Criterio interno aprobado: actividad del período y VIGENTE del extracto sin exigir fecha exacta del estado. La foto de matrícula1023/1150 sigue siendo otro indicador.",
+      "numerador": 546,
+      "denominador": 1150,
+      "tasa": 0.4747826086956522,
+      "tipo": "fórmula + nota",
+      "estado": "Aprobado/conservado; mecanismo original535 E, sin impedir nuevo cálculo reproducible.",
+      "clasificacion": "B/C/D/E",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/MANIFEST_CORRECCION.json",
+        "sha256_recalculado": "1a82de7f94cecb8395c193546153a19cd2cf79b05a01fd9fbf130a7046ad1d62"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja_celdas": "xl/styles.xml (sin cambio de valor en celdas)",
+      "regla_anterior": "Tres extensiones de estilos con referencias huérfanas producían reparación.",
+      "regla_a_conservar": "Retiro exclusivo de tres extensiones;315 estilos y22dxf conservados. No reintroducir OOXML previo al reparar fórmulas.",
+      "numerador": null,
+      "denominador": null,
+      "tipo": "esquema/compatibilidad",
+      "estado": "QA histórico: apertura Excel nativa sin reparación. Este registro no ejecutó apertura nueva.",
+      "clasificacion": "B/C",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/evidencia/QA_ESTILOS.json",
+        "sha256_recalculado": "ce79c5e0d682038023c69b2fa0d7a59309644ca01a4114d3524412f6e946e224"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja_celdas": "18_Foto_Intertrimestral!H11,H93; D93:G93; B96",
+      "regla_anterior": "Misma tasa almacenada sin la base visible para entenderla.",
+      "regla_a_conservar": "1360/(1471−4)=1360/1467; cuatro exclusiones internas titulados documentadas. H11 referencia H93; denominador F93 deriva de hoja53.",
+      "numerador": 1360,
+      "denominador": 1467,
+      "tasa": 0.9270620313565099,
+      "tipo": "fórmula + nota",
+      "estado": "Conservar decisión interna ya documentada; no elevarla a regla oficial SIES.",
+      "clasificacion": "B/C/D",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/MANIFEST_TASAS_2026_V16.json",
+        "sha256_recalculado": "d5abc95698866c61aa2757dc5df1c0713edfd4428095d4386dd8ad4841547a2b"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja_celdas": "18_Foto_Intertrimestral!F12,H94; D94,F94,G94; B97",
+      "regla_anterior": "462/528; presentación podía confundirse con527 personas.",
+      "regla_a_conservar": "462/528 matrículas; F94=SUM(23_Foto_Renuncias_T2_2026!C6:C24). 527 personas no reemplaza528 matrículas.66 renuncias agregadas sin nómina de origen.",
+      "numerador": 462,
+      "denominador": 528,
+      "tasa": 0.875,
+      "tipo": "fórmula + nota",
+      "estado": "Resultado de matrículas conservado; tasa por personas E.",
+      "clasificacion": "B/C/E",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/MANIFEST_TASAS_2026_V16.json",
+        "sha256_recalculado": "d5abc95698866c61aa2757dc5df1c0713edfd4428095d4386dd8ad4841547a2b"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja_celdas": "18_Foto_Intertrimestral!H14,H95; D95:G95; B96",
+      "regla_anterior": "Mismo valor de tasa almacenado.",
+      "regla_a_conservar": "2290/(2523−4)=2290/2519; cuatro exclusiones internas documentadas. H14 referencia H95.",
+      "numerador": 2290,
+      "denominador": 2519,
+      "tasa": 0.9090909090909091,
+      "tipo": "fórmula + nota",
+      "estado": "Conservar; no sustituir población por suma de subgrupos con duplicados.",
+      "clasificacion": "B/C/D",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/MANIFEST_TASAS_2026_V16.json",
+        "sha256_recalculado": "d5abc95698866c61aa2757dc5df1c0713edfd4428095d4386dd8ad4841547a2b"
+      }
+    },
+    {
+      "version": "V17",
+      "hoja_celdas": "55_Pendientes_entrega!A1:D18 (celdas pobladas exactas en JSON)",
+      "regla_anterior": "Aclaraciones dispersas.",
+      "regla_a_conservar": "Hoja informativa:66 renuncias sin respaldo individual; diferencia actividad/matrícula; fotos faltantes; tasa anual tresperíodos pendiente; cuatro exclusiones; promedio ponderado; límites QA.",
+      "numerador": null,
+      "denominador": null,
+      "tipo": "nota/esquema",
+      "estado": "Conservar; B11=104 pendientes describe V17 y debe armonizarse con99 deV18 en una futura edición, no borrarse silenciosamente.",
+      "clasificacion": "B/C/D/E",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/pendientes_entrega_20261024_v17/QA_Y_MANIFEST.json",
+        "sha256_recalculado": "dca094f6234ecd3db711d58e30169134ea7e199887fedee02abf59f7fd45acc0"
+      }
+    },
+    {
+      "version": "V18",
+      "hoja_celdas": "52_Codigos_SIES_Revision!F19,H19,F20,H20,F24,H24 (solo cachés); A1,A27,A28,A32,A33 (notas); 54_Contextos_y_Pendientes!A1,A6:O228",
+      "regla_anterior": "2737 documentales+13 internos+104 pendientes=2854 contextos.",
+      "regla_a_conservar": "2742 documentales+13 internos+99 pendientes=2854. Cinco recuperaciones enExcel; foco multiversión1040documentales+13internos+24pendientes=1077. No cambia tasa. Hoja54:221filas en6:226;227:228vacías; tabla conserva228. Fórmulas52 preservadas.",
+      "numerador": 2755,
+      "denominador": 2854,
+      "tipo": "caché + agregado + nota",
+      "estado": "Edición v8 posteriormente promovida en fase4; A32 aún menciona activo v7 y debe actualizarse en edición futura. No cambiar V18 aquí.",
+      "clasificacion": "B/C/D/E",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diccionario_sies_20261025/fase3_20261025/QA_EXCEL.json",
+        "sha256_recalculado": "1a3057e8e91b82f4586d4d948590bc553be4684226ae8f8bb6697f8db315e5b0"
+      }
+    }
+  ],
+  "celdas_V14_V16": [
+    {
+      "version": "V14",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "D1852",
+      "contenido_anterior": 680,
+      "contenido_actualizado": 694,
+      "resultado_esperado": 694,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "E1852",
+      "contenido_anterior": 600,
+      "contenido_actualizado": "=SUMIFS('53_Codigos_T1_Confirmados'!$G$6:$G$223,'53_Codigos_T1_Confirmados'!$A$6:$A$223,2025,'53_Codigos_T1_Confirmados'!$C$6:$C$223,2)",
+      "resultado_esperado": 611,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "F1852",
+      "contenido_anterior": "=IF(C1852=0,\"\",E1852/C1852)",
+      "contenido_actualizado": "=IF(C1852=0,\"\",E1852/C1852)",
+      "resultado_esperado": 0.5313043478260869,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "H1852",
+      "contenido_anterior": "Proxy de actividad/estado; no es foto de cierre SIES",
+      "contenido_actualizado": "C · Incluye R/P; proxy, no foto de cierre.",
+      "resultado_esperado": "C · Incluye R/P; proxy, no foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "E8",
+      "contenido_anterior": 600,
+      "contenido_actualizado": "='26_Avance_Curricular_Resumen'!E1852",
+      "resultado_esperado": 611,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "F8",
+      "contenido_anterior": 0.521739130434783,
+      "contenido_actualizado": "=IF(D8=0,\"\",E8/D8)",
+      "resultado_esperado": 0.5313043478260869,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "C11",
+      "contenido_anterior": 600,
+      "contenido_actualizado": 611,
+      "resultado_esperado": 611,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "D11",
+      "contenido_anterior": 600,
+      "contenido_actualizado": "='26_Avance_Curricular_Resumen'!E1852",
+      "resultado_esperado": 611,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "E11",
+      "contenido_anterior": 600,
+      "contenido_actualizado": "=D11",
+      "resultado_esperado": 611,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "F11",
+      "contenido_anterior": "OK",
+      "contenido_actualizado": "=IF(C11=E11,\"OK\",\"FALLIDO\")",
+      "resultado_esperado": "OK",
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "H11",
+      "contenido_anterior": "Personas únicas con VIGENTE",
+      "contenido_actualizado": "C · RUT+DV y puente P: 600 R + 11 P.",
+      "resultado_esperado": "C · RUT+DV y puente P: 600 R + 11 P.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "C12",
+      "contenido_anterior": 0.5217391304,
+      "contenido_actualizado": 0.5313043478260869,
+      "resultado_esperado": 0.5313043478260869,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "D12",
+      "contenido_anterior": 0.521739130434783,
+      "contenido_actualizado": "='26_Avance_Curricular_Resumen'!F1852",
+      "resultado_esperado": 0.5313043478260869,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "E12",
+      "contenido_anterior": 0.521739130434783,
+      "contenido_actualizado": "=D12",
+      "resultado_esperado": 0.5313043478260869,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "28_QA_Matematica",
+      "celda": "F12",
+      "contenido_anterior": "OK",
+      "contenido_actualizado": "=IF(ROUND(C12,10)=ROUND(E12,10),\"OK\",\"FALLIDO\")",
+      "resultado_esperado": "OK",
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "A1",
+      "contenido_anterior": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se reutiliza el código T1 documentado. Bases, población, numeradores y denominadores existentes se conservan. Este resumen separa seguimiento académico de revisión del código SIES.",
+      "contenido_actualizado": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES.",
+      "resultado_esperado": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "E8",
+      "contenido_anterior": "='18_Foto_Intertrimestral'!E8",
+      "contenido_actualizado": "='18_Foto_Intertrimestral'!E8",
+      "resultado_esperado": 611,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "G8",
+      "contenido_anterior": "=IF(F8>0,E8/F8,\"Pendiente\")",
+      "contenido_actualizado": "=IF(F8>0,E8/F8,\"Pendiente\")",
+      "resultado_esperado": 0.5313043478260869,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "I8",
+      "contenido_anterior": "E · Desglose por código pendiente; total conservado de hoja 18 E8",
+      "contenido_actualizado": "B/C · 611 por cruce R/P; desglose conciliado con hoja 53",
+      "resultado_esperado": "B/C · 611 por cruce R/P; desglose conciliado con hoja 53",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "A14",
+      "contenido_anterior": "E · El proxy usa actividad y estado académico del extracto PROMEDIOS; no acredita vigencia histórica al cierre. T2-2025 conserva 600/1.150: la reproducción con documentos R y P obtiene 611. Falta justificar los 11 de diferencia antes de desglosar ese total.",
+      "contenido_actualizado": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre.",
+      "resultado_esperado": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "A32",
+      "contenido_anterior": "C · Esta edición consulta el diccionario v7 y limita la revisión a los períodos 2 y 3 del calendario indicado. V12 revisaba el mismo año de origen y todos los períodos: sus pendientes no son directamente comparables. Las hojas 1–51 y sus 13 gráficos se conservan exactamente.",
+      "contenido_actualizado": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan.",
+      "resultado_esperado": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G54",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 3,
+      "resultado_esperado": 3,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I54",
+      "contenido_anterior": "=IF(ISNUMBER(G54),IF(H54>0,G54/H54,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G54),IF(H54>0,G54/H54,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 1.0,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J54",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G56",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 8,
+      "resultado_esperado": 8,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I56",
+      "contenido_anterior": "=IF(ISNUMBER(G56),IF(H56>0,G56/H56,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G56),IF(H56>0,G56/H56,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.7272727272727273,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J56",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G58",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 3,
+      "resultado_esperado": 3,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I58",
+      "contenido_anterior": "=IF(ISNUMBER(G58),IF(H58>0,G58/H58,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G58),IF(H58>0,G58/H58,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.75,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J58",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G60",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 5,
+      "resultado_esperado": 5,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I60",
+      "contenido_anterior": "=IF(ISNUMBER(G60),IF(H60>0,G60/H60,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G60),IF(H60>0,G60/H60,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5555555555555556,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J60",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G62",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 53,
+      "resultado_esperado": 53,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I62",
+      "contenido_anterior": "=IF(ISNUMBER(G62),IF(H62>0,G62/H62,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G62),IF(H62>0,G62/H62,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5824175824175825,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J62",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G64",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 1,
+      "resultado_esperado": 1,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I64",
+      "contenido_anterior": "=IF(ISNUMBER(G64),IF(H64>0,G64/H64,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G64),IF(H64>0,G64/H64,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.3333333333333333,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J64",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G66",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 6,
+      "resultado_esperado": 6,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I66",
+      "contenido_anterior": "=IF(ISNUMBER(G66),IF(H66>0,G66/H66,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G66),IF(H66>0,G66/H66,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 1.0,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J66",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G68",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 37,
+      "resultado_esperado": 37,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I68",
+      "contenido_anterior": "=IF(ISNUMBER(G68),IF(H68>0,G68/H68,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G68),IF(H68>0,G68/H68,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.6851851851851852,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J68",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G70",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 16,
+      "resultado_esperado": 16,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I70",
+      "contenido_anterior": "=IF(ISNUMBER(G70),IF(H70>0,G70/H70,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G70),IF(H70>0,G70/H70,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.8888888888888888,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J70",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G72",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 3,
+      "resultado_esperado": 3,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I72",
+      "contenido_anterior": "=IF(ISNUMBER(G72),IF(H72>0,G72/H72,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G72),IF(H72>0,G72/H72,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.2727272727272727,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J72",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G74",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 40,
+      "resultado_esperado": 40,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I74",
+      "contenido_anterior": "=IF(ISNUMBER(G74),IF(H74>0,G74/H74,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G74),IF(H74>0,G74/H74,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.547945205479452,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J74",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G76",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 6,
+      "resultado_esperado": 6,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I76",
+      "contenido_anterior": "=IF(ISNUMBER(G76),IF(H76>0,G76/H76,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G76),IF(H76>0,G76/H76,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.75,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J76",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G78",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 5,
+      "resultado_esperado": 5,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I78",
+      "contenido_anterior": "=IF(ISNUMBER(G78),IF(H78>0,G78/H78,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G78),IF(H78>0,G78/H78,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.7142857142857143,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J78",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G80",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 36,
+      "resultado_esperado": 36,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I80",
+      "contenido_anterior": "=IF(ISNUMBER(G80),IF(H80>0,G80/H80,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G80),IF(H80>0,G80/H80,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5538461538461539,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J80",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G82",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 9,
+      "resultado_esperado": 9,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I82",
+      "contenido_anterior": "=IF(ISNUMBER(G82),IF(H82>0,G82/H82,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G82),IF(H82>0,G82/H82,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.6,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J82",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G84",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 3,
+      "resultado_esperado": 3,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I84",
+      "contenido_anterior": "=IF(ISNUMBER(G84),IF(H84>0,G84/H84,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G84),IF(H84>0,G84/H84,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.3333333333333333,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J84",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G86",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 59,
+      "resultado_esperado": 59,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I86",
+      "contenido_anterior": "=IF(ISNUMBER(G86),IF(H86>0,G86/H86,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G86),IF(H86>0,G86/H86,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5566037735849056,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J86",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G88",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 1,
+      "resultado_esperado": 1,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I88",
+      "contenido_anterior": "=IF(ISNUMBER(G88),IF(H88>0,G88/H88,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G88),IF(H88>0,G88/H88,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J88",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G90",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 2,
+      "resultado_esperado": 2,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I90",
+      "contenido_anterior": "=IF(ISNUMBER(G90),IF(H90>0,G90/H90,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G90),IF(H90>0,G90/H90,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.4,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J90",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G92",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 20,
+      "resultado_esperado": 20,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I92",
+      "contenido_anterior": "=IF(ISNUMBER(G92),IF(H92>0,G92/H92,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G92),IF(H92>0,G92/H92,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5714285714285714,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J92",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G94",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 8,
+      "resultado_esperado": 8,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I94",
+      "contenido_anterior": "=IF(ISNUMBER(G94),IF(H94>0,G94/H94,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G94),IF(H94>0,G94/H94,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.42105263157894735,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J94",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G96",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 36,
+      "resultado_esperado": 36,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I96",
+      "contenido_anterior": "=IF(ISNUMBER(G96),IF(H96>0,G96/H96,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G96),IF(H96>0,G96/H96,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J96",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G98",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 3,
+      "resultado_esperado": 3,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I98",
+      "contenido_anterior": "=IF(ISNUMBER(G98),IF(H98>0,G98/H98,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G98),IF(H98>0,G98/H98,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.3333333333333333,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J98",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G100",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 32,
+      "resultado_esperado": 32,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I100",
+      "contenido_anterior": "=IF(ISNUMBER(G100),IF(H100>0,G100/H100,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G100),IF(H100>0,G100/H100,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.6153846153846154,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J100",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G102",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 6,
+      "resultado_esperado": 6,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I102",
+      "contenido_anterior": "=IF(ISNUMBER(G102),IF(H102>0,G102/H102,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G102),IF(H102>0,G102/H102,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.6666666666666666,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J102",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G104",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 26,
+      "resultado_esperado": 26,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I104",
+      "contenido_anterior": "=IF(ISNUMBER(G104),IF(H104>0,G104/H104,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G104),IF(H104>0,G104/H104,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.40625,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J104",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G106",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 6,
+      "resultado_esperado": 6,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I106",
+      "contenido_anterior": "=IF(ISNUMBER(G106),IF(H106>0,G106/H106,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G106),IF(H106>0,G106/H106,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.35294117647058826,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J106",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G108",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 38,
+      "resultado_esperado": 38,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I108",
+      "contenido_anterior": "=IF(ISNUMBER(G108),IF(H108>0,G108/H108,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G108),IF(H108>0,G108/H108,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5846153846153846,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J108",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G110",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 23,
+      "resultado_esperado": 23,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I110",
+      "contenido_anterior": "=IF(ISNUMBER(G110),IF(H110>0,G110/H110,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G110),IF(H110>0,G110/H110,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.32857142857142857,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J110",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G112",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 9,
+      "resultado_esperado": 9,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I112",
+      "contenido_anterior": "=IF(ISNUMBER(G112),IF(H112>0,G112/H112,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G112),IF(H112>0,G112/H112,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.4090909090909091,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J112",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G114",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 20,
+      "resultado_esperado": 20,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I114",
+      "contenido_anterior": "=IF(ISNUMBER(G114),IF(H114>0,G114/H114,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G114),IF(H114>0,G114/H114,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5263157894736842,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J114",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G116",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 21,
+      "resultado_esperado": 21,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I116",
+      "contenido_anterior": "=IF(ISNUMBER(G116),IF(H116>0,G116/H116,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G116),IF(H116>0,G116/H116,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.525,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J116",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G118",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 20,
+      "resultado_esperado": 20,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I118",
+      "contenido_anterior": "=IF(ISNUMBER(G118),IF(H118>0,G118/H118,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G118),IF(H118>0,G118/H118,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J118",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G120",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 11,
+      "resultado_esperado": 11,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I120",
+      "contenido_anterior": "=IF(ISNUMBER(G120),IF(H120>0,G120/H120,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G120),IF(H120>0,G120/H120,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.4782608695652174,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J120",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G122",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 20,
+      "resultado_esperado": 20,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I122",
+      "contenido_anterior": "=IF(ISNUMBER(G122),IF(H122>0,G122/H122,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G122),IF(H122>0,G122/H122,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.5882352941176471,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J122",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "G124",
+      "contenido_anterior": "Pendiente",
+      "contenido_actualizado": 16,
+      "resultado_esperado": 16,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "I124",
+      "contenido_anterior": "=IF(ISNUMBER(G124),IF(H124>0,G124/H124,\"No aplica\"),\"Pendiente\")",
+      "contenido_actualizado": "=IF(ISNUMBER(G124),IF(H124>0,G124/H124,\"No aplica\"),\"Pendiente\")",
+      "resultado_esperado": 0.3902439024390244,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V14",
+      "hoja": "53_Codigos_T1_Confirmados",
+      "celda": "J124",
+      "contenido_anterior": "Pendiente de linaje del proxy",
+      "contenido_actualizado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "resultado_esperado": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json",
+        "sha256_recalculado": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "D1853",
+      "contenido_anterior": 582,
+      "contenido_actualizado": "=SUM(D1859:D1860)",
+      "resultado_esperado": 596,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "E1853",
+      "contenido_anterior": 535,
+      "contenido_actualizado": "=SUM(E1859:E1860)",
+      "resultado_esperado": 546,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "F1853",
+      "contenido_anterior": "=IF(C1853=0,\"\",E1853/C1853)",
+      "contenido_actualizado": "=IF(C1853=0,\"\",E1853/C1853)",
+      "resultado_esperado": 0.4747826086956522,
+      "tipo": "caché de fórmula conservada",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "H1853",
+      "contenido_anterior": "Proxy de actividad/estado; no es foto de cierre SIES",
+      "contenido_actualizado": "C · R/P incluidos; detalle debajo.",
+      "resultado_esperado": "C · R/P incluidos; detalle debajo.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "A1857",
+      "contenido_anterior": null,
+      "contenido_actualizado": "T3-2025 · R/P",
+      "resultado_esperado": "T3-2025 · R/P",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "A1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Grupo T1",
+      "resultado_esperado": "Grupo T1",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "B1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Documento",
+      "resultado_esperado": "Documento",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "C1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Personas cohorte",
+      "resultado_esperado": "Personas cohorte",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "D1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Con registro T3",
+      "resultado_esperado": "Con registro T3",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "E1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "VIGENTE T3",
+      "resultado_esperado": "VIGENTE T3",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "F1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Tasa en grupo",
+      "resultado_esperado": "Tasa en grupo",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "G1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Fuente",
+      "resultado_esperado": "Fuente",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "H1858",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Método",
+      "resultado_esperado": "Método",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "A1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": "2025",
+      "resultado_esperado": "2025",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "B1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": "R",
+      "resultado_esperado": "R",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "C1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": 1130,
+      "resultado_esperado": 1130,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "D1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": 582,
+      "resultado_esperado": 582,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "E1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": 535,
+      "resultado_esperado": 535,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "F1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=IF(C1859=0,\"\",E1859/C1859)",
+      "resultado_esperado": 0.47345132743362833,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "G1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": "PROMEDIOS / Hoja1",
+      "resultado_esperado": "PROMEDIOS / Hoja1",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "H1859",
+      "contenido_anterior": null,
+      "contenido_actualizado": "RUT + DIG",
+      "resultado_esperado": "RUT + DIG",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "A1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": "2025",
+      "resultado_esperado": "2025",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "B1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": "P",
+      "resultado_esperado": "P",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "C1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": 20,
+      "resultado_esperado": 20,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "D1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": 14,
+      "resultado_esperado": 14,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "E1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": 11,
+      "resultado_esperado": 11,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "F1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=IF(C1860=0,\"\",E1860/C1860)",
+      "resultado_esperado": 0.55,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "G1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": "IPSS_Procesamiento",
+      "resultado_esperado": "IPSS_Procesamiento",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "H1860",
+      "contenido_anterior": null,
+      "contenido_actualizado": "2025_carga: J / BU / BV",
+      "resultado_esperado": "2025_carga: J / BU / BV",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "A1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "2025",
+      "resultado_esperado": "2025",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "B1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Total",
+      "resultado_esperado": "Total",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "C1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=SUM(C1859:C1860)",
+      "resultado_esperado": 1150,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "D1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=SUM(D1859:D1860)",
+      "resultado_esperado": 596,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "E1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=SUM(E1859:E1860)",
+      "resultado_esperado": 546,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "F1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=IF(C1861=0,\"\",E1861/C1861)",
+      "resultado_esperado": 0.4747826086956522,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "G1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "ANO=2025; PERIODO=3",
+      "resultado_esperado": "ANO=2025; PERIODO=3",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "26_Avance_Curricular_Resumen",
+      "celda": "H1861",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Una persona, un conteo",
+      "resultado_esperado": "Una persona, un conteo",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "A1",
+      "contenido_anterior": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES.",
+      "contenido_actualizado": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V15 completa los auxiliares PROMEDIOS de 2025 con documentos R/P. La revisión del código SIES permanece separada.",
+      "resultado_esperado": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V15 completa los auxiliares PROMEDIOS de 2025 con documentos R/P. La revisión del código SIES permanece separada.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "A14",
+      "contenido_anterior": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre.",
+      "contenido_actualizado": "C · PROMEDIOS 2025: T2=611/1.150 y T3=546/1.150 (hoja 26). D · Actividad del período + estado VIGENTE del extracto; no se exige fecha histórica para este análisis interno. Foto de matrícula T3: 1.023/1.150.",
+      "resultado_esperado": "C · PROMEDIOS 2025: T2=611/1.150 y T3=546/1.150 (hoja 26). D · Actividad del período + estado VIGENTE del extracto; no se exige fecha histórica para este análisis interno. Foto de matrícula T3: 1.023/1.150.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "52_Codigos_SIES_Revision",
+      "celda": "A32",
+      "contenido_anterior": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan.",
+      "contenido_actualizado": "C · V15 conserva diccionario v7, denominadores, tablas y gráficos. Corrige el auxiliar T3-2025 mediante el puente R/P y normaliza los estilos que Excel reparaba. La foto T3 no cambia.",
+      "resultado_esperado": "C · V15 conserva diccionario v7, denominadores, tablas y gráficos. Corrige el auxiliar T3-2025 mediante el puente R/P y normaliza los estilos que Excel reparaba. La foto T3 no cambia.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B82",
+      "contenido_anterior": "B · Cierre T3: 2025 = Matrícula T3_2025 2.xlsx, hoja T3_2025 (hoja 24); 2026 = DATOSDEALUMNOS_12159 al 22-10-2026, T3 en curso (hoja 25). Cierre T2 del grupo 1: sin foto completa (las fotos T2 solo traen la matrícula del periodo 2).",
+      "contenido_actualizado": "B · Foto T3: 2025 = Matrícula T3_2025 2.xlsx (hoja 24); 2026 = DATOSDEALUMNOS_12159 al 22-10-2026, T3 en curso (hoja 25). C/D · T2 del grupo 1 usa actividad del período y estado VIGENTE de PROMEDIOS como seguimiento interno.",
+      "resultado_esperado": "B · Foto T3: 2025 = Matrícula T3_2025 2.xlsx (hoja 24); 2026 = DATOSDEALUMNOS_12159 al 22-10-2026, T3 en curso (hoja 25). C/D · T2 del grupo 1 usa actividad del período y estado VIGENTE de PROMEDIOS como seguimiento interno.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "28_QA_Matematica",
+      "celda": "A18",
+      "contenido_anterior": "Pendientes explícitos",
+      "contenido_actualizado": "Alcance del cálculo interno",
+      "resultado_esperado": "Alcance del cálculo interno",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V15",
+      "hoja": "28_QA_Matematica",
+      "celda": "A19",
+      "contenido_anterior": "Los proxies completan vacíos de T1 con avance académico; no prueban una foto de matrícula al cierre. El estado académico se observa por persona y período, pero la fuente tiene múltiples filas por asignatura.",
+      "contenido_actualizado": "C/D · Para el seguimiento interno se cuenta una persona con actividad del período y estado VIGENTE en PROMEDIOS, sin exigir fecha histórica del estado. Se deduplican las filas por asignatura. La foto de matrícula T3 mantiene su fuente y cálculo separados.",
+      "resultado_esperado": "C/D · Para el seguimiento interno se cuenta una persona con actividad del período y estado VIGENTE en PROMEDIOS, sin exigir fecha histórica del estado. Se deduplican las filas por asignatura. La foto de matrícula T3 mantiene su fuente y cálculo separados.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json",
+        "sha256_recalculado": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B91",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Bases de cálculo de las tasas 2026",
+      "resultado_esperado": "Bases de cálculo de las tasas 2026",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Medida",
+      "resultado_esperado": "Medida",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "D92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Personas del grupo",
+      "resultado_esperado": "Personas del grupo",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "E92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Titulados excluidos",
+      "resultado_esperado": "Titulados excluidos",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "F92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Base de la tasa",
+      "resultado_esperado": "Base de la tasa",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "G92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Vigentes",
+      "resultado_esperado": "Vigentes",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "H92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Tasa",
+      "resultado_esperado": "Tasa",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "I92",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Unidad de la tasa",
+      "resultado_esperado": "Unidad de la tasa",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "T1 · cierre T3",
+      "resultado_esperado": "T1 · cierre T3",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "I93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Personas",
+      "resultado_esperado": "Personas",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Ingreso T2 · cierre T2",
+      "resultado_esperado": "Ingreso T2 · cierre T2",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "I94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Matrículas",
+      "resultado_esperado": "Matrículas",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B95",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Total único · cierre T3",
+      "resultado_esperado": "Total único · cierre T3",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "I95",
+      "contenido_anterior": null,
+      "contenido_actualizado": "Personas",
+      "resultado_esperado": "Personas",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "D93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=D11",
+      "resultado_esperado": 1471,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "F93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=SUMIFS('53_Codigos_T1_Confirmados'!$H$6:$H$223,'53_Codigos_T1_Confirmados'!$A$6:$A$223,2026,'53_Codigos_T1_Confirmados'!$B$6:$B$223,2026,'53_Codigos_T1_Confirmados'!$C$6:$C$223,3)",
+      "resultado_esperado": 1467,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "E93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=D93-F93",
+      "resultado_esperado": 4,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "G93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=G11",
+      "resultado_esperado": 1360,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "D94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=D12",
+      "resultado_esperado": 527,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "F94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=SUM('23_Foto_Renuncias_T2_2026'!$C$6:$C$24)",
+      "resultado_esperado": 528,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "G94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=E12",
+      "resultado_esperado": 462,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "D95",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=D14",
+      "resultado_esperado": 2523,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "F95",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=D95-E95",
+      "resultado_esperado": 2519,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "G95",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=G14",
+      "resultado_esperado": 2290,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "E94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "No aplica",
+      "resultado_esperado": "No aplica",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "E95",
+      "contenido_anterior": null,
+      "contenido_actualizado": 4,
+      "resultado_esperado": 4,
+      "tipo": "valor agregado",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "H93",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=IF(F93>0,G93/F93,\"—\")",
+      "resultado_esperado": 0.9270620313565099,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "H94",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=IF(F94>0,G94/F94,\"—\")",
+      "resultado_esperado": 0.875,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "H95",
+      "contenido_anterior": null,
+      "contenido_actualizado": "=IF(F95>0,G95/F95,\"—\")",
+      "resultado_esperado": 0.9090909090909091,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "H11",
+      "contenido_anterior": 0.92706203135651,
+      "contenido_actualizado": "=H93",
+      "resultado_esperado": 0.9270620313565099,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "F12",
+      "contenido_anterior": 0.875,
+      "contenido_actualizado": "=H94",
+      "resultado_esperado": 0.875,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "H14",
+      "contenido_anterior": 0.909090909090909,
+      "contenido_actualizado": "=H95",
+      "resultado_esperado": 0.9090909090909091,
+      "tipo": "fórmula",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B96",
+      "contenido_anterior": null,
+      "contenido_actualizado": "B/C/D · T3 excluye a cuatro TITULADO / 31 - TITULADO APROBADO. Se conserva la regla interna de la hoja 21. Fuente: original auditado 22-10-2026, hoja 20 (P/Q/R/T); T1 conciliado con hoja 53.",
+      "resultado_esperado": "B/C/D · T3 excluye a cuatro TITULADO / 31 - TITULADO APROBADO. Se conserva la regla interna de la hoja 21. Fuente: original auditado 22-10-2026, hoja 20 (P/Q/R/T); T1 conciliado con hoja 53.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    },
+    {
+      "version": "V16",
+      "hoja": "18_Foto_Intertrimestral",
+      "celda": "B97",
+      "contenido_anterior": null,
+      "contenido_actualizado": "B/C · T2: 528 matrículas de 527 personas; 66 renuncias agregadas. 462/528 mide matrículas (hoja 23). E · Para una tasa de personas faltan las renuncias individuales; no se divide 462/527.",
+      "resultado_esperado": "B/C · T2: 528 matrículas de 527 personas; 66 renuncias agregadas. 462/528 mide matrículas (hoja 23). E · Para una tasa de personas faltan las renuncias individuales; no se divide 462/527.",
+      "tipo": "nota/etiqueta",
+      "clasificacion": "B/C; D para criterio interno; no A",
+      "estado": "Corrección documentada; conservar salvo supersesión posterior explícita",
+      "evidencia": {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json",
+        "sha256_recalculado": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f"
+      }
+    }
+  ],
+  "V17_celdas_nuevas_con_contenido": [
+    "A1",
+    "A2",
+    "A4",
+    "B4",
+    "C4",
+    "D4",
+    "A5",
+    "B5",
+    "C5",
+    "D5",
+    "A6",
+    "B6",
+    "C6",
+    "D6",
+    "A7",
+    "B7",
+    "C7",
+    "D7",
+    "A8",
+    "B8",
+    "C8",
+    "D8",
+    "A9",
+    "B9",
+    "C9",
+    "D9",
+    "A10",
+    "B10",
+    "C10",
+    "D10",
+    "A11",
+    "B11",
+    "C11",
+    "D11",
+    "A12",
+    "B12",
+    "C12",
+    "D12",
+    "A13",
+    "B13",
+    "C13",
+    "D13",
+    "A14",
+    "B14",
+    "C14",
+    "D14",
+    "A16",
+    "A18"
+  ],
+  "V18_deltas_releidos_de_libros": {
+    "52": {
+      "celdas_contenido_o_cache_cambiado": [
+        "A1",
+        "A27",
+        "A28",
+        "A32",
+        "A33",
+        "F19",
+        "F20",
+        "F24",
+        "H19",
+        "H20",
+        "H24"
+      ],
+      "celdas_estilo_cambiado": []
+    },
+    "54": {
+      "celdas_contenido_o_cache_cambiado": [
+        "A1",
+        "A143",
+        "A144",
+        "A227",
+        "A228",
+        "B143",
+        "B144",
+        "B227",
+        "B228",
+        "C113",
+        "C143",
+        "C144",
+        "C186",
+        "C187",
+        "C227",
+        "C228",
+        "D103",
+        "D104",
+        "D108",
+        "D110",
+        "D113",
+        "D114",
+        "D115",
+        "D117",
+        "D119",
+        "D120",
+        "D123",
+        "D130",
+        "D131",
+        "D133",
+        "D134",
+        "D135",
+        "D138",
+        "D139",
+        "D140",
+        "D141",
+        "D143",
+        "D144",
+        "D145",
+        "D146",
+        "D147",
+        "D148",
+        "D149",
+        "D150",
+        "D155",
+        "D156",
+        "D157",
+        "D158",
+        "D160",
+        "D161",
+        "D162",
+        "D166",
+        "D167",
+        "D168",
+        "D169",
+        "D171",
+        "D172",
+        "D173",
+        "D174",
+        "D175",
+        "D176",
+        "D178",
+        "D179",
+        "D180",
+        "D181",
+        "D182",
+        "D183",
+        "D184",
+        "D186",
+        "D187",
+        "D188",
+        "D189",
+        "D190",
+        "D191",
+        "D192",
+        "D193",
+        "D197",
+        "D198",
+        "D199",
+        "D201",
+        "D202",
+        "D203",
+        "D204",
+        "D208",
+        "D209",
+        "D210",
+        "D211",
+        "D213",
+        "D214",
+        "D215",
+        "D216",
+        "D217",
+        "D218",
+        "D220",
+        "D221",
+        "D222",
+        "D223",
+        "D224",
+        "D225",
+        "D227",
+        "D228",
+        "E103",
+        "E104",
+        "E108",
+        "E110",
+        "E113",
+        "E114",
+        "E115",
+        "E117",
+        "E119",
+        "E120",
+        "E123",
+        "E130",
+        "E131",
+        "E133",
+        "E134",
+        "E135",
+        "E138",
+        "E139",
+        "E140",
+        "E141",
+        "E143",
+        "E144",
+        "E145",
+        "E146",
+        "E147",
+        "E148",
+        "E149",
+        "E150",
+        "E154",
+        "E155",
+        "E156",
+        "E157",
+        "E158",
+        "E159",
+        "E160",
+        "E161",
+        "E162",
+        "E166",
+        "E167",
+        "E168",
+        "E169",
+        "E170",
+        "E171",
+        "E172",
+        "E173",
+        "E174",
+        "E175",
+        "E176",
+        "E178",
+        "E179",
+        "E180",
+        "E181",
+        "E182",
+        "E183",
+        "E184",
+        "E185",
+        "E186",
+        "E187",
+        "E188",
+        "E189",
+        "E190",
+        "E191",
+        "E192",
+        "E193",
+        "E197",
+        "E198",
+        "E199",
+        "E200",
+        "E201",
+        "E202",
+        "E203",
+        "E204",
+        "E208",
+        "E209",
+        "E210",
+        "E211",
+        "E212",
+        "E213",
+        "E214",
+        "E215",
+        "E216",
+        "E217",
+        "E218",
+        "E220",
+        "E221",
+        "E222",
+        "E223",
+        "E224",
+        "E225",
+        "E226",
+        "E227",
+        "E228",
+        "F103",
+        "F104",
+        "F108",
+        "F110",
+        "F113",
+        "F114",
+        "F115",
+        "F117",
+        "F119",
+        "F120",
+        "F123",
+        "F130",
+        "F131",
+        "F133",
+        "F134",
+        "F135",
+        "F138",
+        "F139",
+        "F140",
+        "F141",
+        "F143",
+        "F144",
+        "F145",
+        "F146",
+        "F147",
+        "F148",
+        "F149",
+        "F150",
+        "F154",
+        "F155",
+        "F156",
+        "F157",
+        "F158",
+        "F159",
+        "F160",
+        "F161",
+        "F162",
+        "F166",
+        "F167",
+        "F168",
+        "F169",
+        "F170",
+        "F171",
+        "F172",
+        "F173",
+        "F174",
+        "F175",
+        "F176",
+        "F178",
+        "F179",
+        "F180",
+        "F181",
+        "F182",
+        "F183",
+        "F184",
+        "F185",
+        "F186",
+        "F187",
+        "F188",
+        "F189",
+        "F190",
+        "F191",
+        "F192",
+        "F193",
+        "F197",
+        "F198",
+        "F199",
+        "F200",
+        "F201",
+        "F202",
+        "F203",
+        "F204",
+        "F208",
+        "F209",
+        "F210",
+        "F211",
+        "F212",
+        "F213",
+        "F214",
+        "F215",
+        "F216",
+        "F217",
+        "F218",
+        "F220",
+        "F221",
+        "F222",
+        "F223",
+        "F224",
+        "F225",
+        "F226",
+        "F227",
+        "F228",
+        "G102",
+        "G103",
+        "G104",
+        "G105",
+        "G106",
+        "G108",
+        "G109",
+        "G110",
+        "G111",
+        "G113",
+        "G114",
+        "G115",
+        "G116",
+        "G117",
+        "G118",
+        "G119",
+        "G120",
+        "G121",
+        "G122",
+        "G123",
+        "G124",
+        "G126",
+        "G127",
+        "G129",
+        "G130",
+        "G131",
+        "G132",
+        "G133",
+        "G134",
+        "G135",
+        "G136",
+        "G137",
+        "G138",
+        "G139",
+        "G140",
+        "G141",
+        "G142",
+        "G143",
+        "G144",
+        "G145",
+        "G146",
+        "G147",
+        "G148",
+        "G149",
+        "G150",
+        "G151",
+        "G152",
+        "G153",
+        "G155",
+        "G156",
+        "G157",
+        "G158",
+        "G160",
+        "G161",
+        "G162",
+        "G163",
+        "G164",
+        "G165",
+        "G166",
+        "G167",
+        "G168",
+        "G169",
+        "G171",
+        "G172",
+        "G173",
+        "G174",
+        "G175",
+        "G176",
+        "G177",
+        "G178",
+        "G179",
+        "G180",
+        "G181",
+        "G182",
+        "G183",
+        "G184",
+        "G186",
+        "G187",
+        "G188",
+        "G189",
+        "G190",
+        "G191",
+        "G192",
+        "G193",
+        "G194",
+        "G195",
+        "G196",
+        "G197",
+        "G198",
+        "G199",
+        "G201",
+        "G202",
+        "G203",
+        "G204",
+        "G205",
+        "G206",
+        "G207",
+        "G208",
+        "G209",
+        "G210",
+        "G211",
+        "G213",
+        "G214",
+        "G215",
+        "G216",
+        "G217",
+        "G218",
+        "G219",
+        "G220",
+        "G221",
+        "G222",
+        "G223",
+        "G224",
+        "G225",
+        "G227",
+        "G228",
+        "H102",
+        "H103",
+        "H104",
+        "H105",
+        "H106",
+        "H108",
+        "H109",
+        "H110",
+        "H111",
+        "H113",
+        "H114",
+        "H115",
+        "H116",
+        "H117",
+        "H118",
+        "H119",
+        "H120",
+        "H121",
+        "H122",
+        "H123",
+        "H124",
+        "H126",
+        "H127",
+        "H129",
+        "H130",
+        "H131",
+        "H132",
+        "H133",
+        "H134",
+        "H135",
+        "H136",
+        "H137",
+        "H138",
+        "H139",
+        "H141",
+        "H142",
+        "H143",
+        "H144",
+        "H145",
+        "H146",
+        "H148",
+        "H150",
+        "H152",
+        "H154",
+        "H155",
+        "H156",
+        "H157",
+        "H158",
+        "H159",
+        "H160",
+        "H161",
+        "H162",
+        "H163",
+        "H165",
+        "H166",
+        "H167",
+        "H169",
+        "H170",
+        "H171",
+        "H172",
+        "H173",
+        "H174",
+        "H175",
+        "H176",
+        "H177",
+        "H178",
+        "H179",
+        "H180",
+        "H181",
+        "H182",
+        "H183",
+        "H184",
+        "H185",
+        "H186",
+        "H187",
+        "H188",
+        "H189",
+        "H191",
+        "H193",
+        "H195",
+        "H197",
+        "H199",
+        "H200",
+        "H201",
+        "H202",
+        "H203",
+        "H204",
+        "H205",
+        "H206",
+        "H207",
+        "H208",
+        "H209",
+        "H211",
+        "H212",
+        "H213",
+        "H214",
+        "H215",
+        "H216",
+        "H217",
+        "H218",
+        "H219",
+        "H220",
+        "H221",
+        "H222",
+        "H223",
+        "H224",
+        "H225",
+        "H226",
+        "H227",
+        "H228",
+        "I102",
+        "I108",
+        "I109",
+        "I110",
+        "I111",
+        "I113",
+        "I115",
+        "I116",
+        "I125",
+        "I126",
+        "I128",
+        "I129",
+        "I133",
+        "I138",
+        "I142",
+        "I144",
+        "I145",
+        "I154",
+        "I155",
+        "I156",
+        "I157",
+        "I159",
+        "I161",
+        "I162",
+        "I164",
+        "I165",
+        "I166",
+        "I167",
+        "I170",
+        "I176",
+        "I178",
+        "I179",
+        "I181",
+        "I182",
+        "I183",
+        "I184",
+        "I185",
+        "I188",
+        "I200",
+        "I201",
+        "I202",
+        "I203",
+        "I204",
+        "I208",
+        "I212",
+        "I218",
+        "I220",
+        "I223",
+        "I224",
+        "I225",
+        "I226",
+        "I227",
+        "I228",
+        "J102",
+        "J108",
+        "J109",
+        "J110",
+        "J111",
+        "J113",
+        "J115",
+        "J116",
+        "J133",
+        "J138",
+        "J142",
+        "J144",
+        "J145",
+        "J147",
+        "J154",
+        "J155",
+        "J156",
+        "J157",
+        "J159",
+        "J161",
+        "J162",
+        "J164",
+        "J166",
+        "J168",
+        "J170",
+        "J176",
+        "J178",
+        "J179",
+        "J181",
+        "J182",
+        "J183",
+        "J184",
+        "J185",
+        "J188",
+        "J190",
+        "J198",
+        "J200",
+        "J201",
+        "J202",
+        "J203",
+        "J204",
+        "J208",
+        "J210",
+        "J212",
+        "J218",
+        "J220",
+        "J223",
+        "J224",
+        "J225",
+        "J226",
+        "J227",
+        "J228",
+        "K107",
+        "K108",
+        "K112",
+        "K113",
+        "K137",
+        "K139",
+        "K142",
+        "K144",
+        "K154",
+        "K157",
+        "K158",
+        "K161",
+        "K168",
+        "K172",
+        "K182",
+        "K183",
+        "K184",
+        "K187",
+        "K198",
+        "K201",
+        "K202",
+        "K203",
+        "K210",
+        "K214",
+        "K223",
+        "K224",
+        "K225",
+        "K227",
+        "K228",
+        "L108",
+        "L109",
+        "L110",
+        "L111",
+        "L115",
+        "L116",
+        "L128",
+        "L129",
+        "L138",
+        "L142",
+        "L147",
+        "L155",
+        "L162",
+        "L164",
+        "L165",
+        "L166",
+        "L167",
+        "L168",
+        "L176",
+        "L178",
+        "L190",
+        "L198",
+        "L204",
+        "L210",
+        "L218",
+        "L220",
+        "L227",
+        "L228",
+        "M104",
+        "M108",
+        "M117",
+        "M119",
+        "M120",
+        "M130",
+        "M134",
+        "M135",
+        "M138",
+        "M139",
+        "M150",
+        "M151",
+        "M155",
+        "M156",
+        "M157",
+        "M158",
+        "M160",
+        "M162",
+        "M166",
+        "M167",
+        "M179",
+        "M180",
+        "M181",
+        "M182",
+        "M193",
+        "M194",
+        "M197",
+        "M199",
+        "M201",
+        "M202",
+        "M203",
+        "M204",
+        "M208",
+        "M209",
+        "M221",
+        "M223",
+        "M227",
+        "M228",
+        "N101",
+        "N102",
+        "N103",
+        "N104",
+        "N106",
+        "N107",
+        "N108",
+        "N109",
+        "N110",
+        "N111",
+        "N112",
+        "N113",
+        "N114",
+        "N115",
+        "N116",
+        "N117",
+        "N118",
+        "N119",
+        "N120",
+        "N121",
+        "N122",
+        "N123",
+        "N124",
+        "N125",
+        "N126",
+        "N127",
+        "N128",
+        "N129",
+        "N130",
+        "N131",
+        "N132",
+        "N133",
+        "N134",
+        "N135",
+        "N136",
+        "N137",
+        "N138",
+        "N139",
+        "N140",
+        "N141",
+        "N143",
+        "N144",
+        "N145",
+        "N146",
+        "N148",
+        "N150",
+        "N151",
+        "N152",
+        "N153",
+        "N154",
+        "N155",
+        "N157",
+        "N158",
+        "N160",
+        "N161",
+        "N162",
+        "N163",
+        "N164",
+        "N165",
+        "N166",
+        "N167",
+        "N169",
+        "N171",
+        "N172",
+        "N173",
+        "N174",
+        "N175",
+        "N176",
+        "N177",
+        "N178",
+        "N179",
+        "N180",
+        "N181",
+        "N182",
+        "N183",
+        "N184",
+        "N186",
+        "N187",
+        "N188",
+        "N189",
+        "N191",
+        "N193",
+        "N194",
+        "N195",
+        "N196",
+        "N197",
+        "N199",
+        "N201",
+        "N202",
+        "N203",
+        "N204",
+        "N205",
+        "N207",
+        "N209",
+        "N211",
+        "N213",
+        "N214",
+        "N215",
+        "N216",
+        "N217",
+        "N218",
+        "N219",
+        "N220",
+        "N221",
+        "N222",
+        "N223",
+        "N224",
+        "N225",
+        "N227",
+        "N228",
+        "O102",
+        "O108",
+        "O109",
+        "O110",
+        "O111",
+        "O113",
+        "O115",
+        "O116",
+        "O125",
+        "O126",
+        "O128",
+        "O129",
+        "O133",
+        "O138",
+        "O142",
+        "O144",
+        "O145",
+        "O154",
+        "O155",
+        "O156",
+        "O157",
+        "O159",
+        "O161",
+        "O162",
+        "O164",
+        "O165",
+        "O166",
+        "O167",
+        "O170",
+        "O176",
+        "O178",
+        "O179",
+        "O181",
+        "O182",
+        "O183",
+        "O184",
+        "O185",
+        "O188",
+        "O200",
+        "O201",
+        "O202",
+        "O203",
+        "O204",
+        "O208",
+        "O212",
+        "O218",
+        "O220",
+        "O223",
+        "O224",
+        "O225",
+        "O226",
+        "O227",
+        "O228"
+      ],
+      "celdas_estilo_cambiado": [
+        "H102",
+        "H108",
+        "H109",
+        "H110",
+        "H111",
+        "H113",
+        "H115",
+        "H116",
+        "H125",
+        "H126",
+        "H128",
+        "H129",
+        "H133",
+        "H138",
+        "H142",
+        "H144",
+        "H145",
+        "H154",
+        "H155",
+        "H156",
+        "H157",
+        "H159",
+        "H161",
+        "H162",
+        "H164",
+        "H165",
+        "H166",
+        "H167",
+        "H170",
+        "H176",
+        "H178",
+        "H179",
+        "H181",
+        "H182",
+        "H183",
+        "H184",
+        "H185",
+        "H188",
+        "H200",
+        "H201",
+        "H202",
+        "H203",
+        "H204",
+        "H208",
+        "H212",
+        "H218",
+        "H220",
+        "H223",
+        "H224",
+        "H225",
+        "H226",
+        "I102",
+        "I108",
+        "I109",
+        "I110",
+        "I111",
+        "I113",
+        "I115",
+        "I116",
+        "I125",
+        "I126",
+        "I128",
+        "I129",
+        "I133",
+        "I138",
+        "I142",
+        "I144",
+        "I145",
+        "I154",
+        "I155",
+        "I156",
+        "I157",
+        "I159",
+        "I161",
+        "I162",
+        "I164",
+        "I165",
+        "I166",
+        "I167",
+        "I170",
+        "I176",
+        "I178",
+        "I179",
+        "I181",
+        "I182",
+        "I183",
+        "I184",
+        "I185",
+        "I188",
+        "I200",
+        "I201",
+        "I202",
+        "I203",
+        "I204",
+        "I208",
+        "I212",
+        "I218",
+        "I220",
+        "I223",
+        "I224",
+        "I225",
+        "I226",
+        "J102",
+        "J108",
+        "J109",
+        "J110",
+        "J111",
+        "J113",
+        "J115",
+        "J116",
+        "J125",
+        "J126",
+        "J128",
+        "J129",
+        "J133",
+        "J138",
+        "J142",
+        "J144",
+        "J145",
+        "J154",
+        "J155",
+        "J156",
+        "J157",
+        "J159",
+        "J161",
+        "J162",
+        "J164",
+        "J165",
+        "J166",
+        "J167",
+        "J170",
+        "J176",
+        "J178",
+        "J179",
+        "J181",
+        "J182",
+        "J183",
+        "J184",
+        "J185",
+        "J188",
+        "J200",
+        "J201",
+        "J202",
+        "J203",
+        "J204",
+        "J208",
+        "J212",
+        "J218",
+        "J220",
+        "J223",
+        "J224",
+        "J225",
+        "J226"
+      ]
+    }
+  },
+  "libros_verificados_por_hash": [
+    {
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261024_V17.xlsx",
+      "sha256": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+      "coincide_manifiesto": true
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx",
+      "sha256": "2bd21ca31d391b59f4bd2c56d4876becd12aae05cb9673a7e069b5542ed66b01",
+      "coincide_manifiesto": true
+    }
+  ],
+  "estado_actual_diccionario": {
+    "puntero": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json",
+      "sha256_recalculado": "49b290ff206cb6071429b1e683aaca4cb42b14d036640ca1045f93a26fe67002"
+    },
+    "contenido": {
+      "descriptor": "data/diccionario_sies_seguimiento/v8_20261025_ocho_p/descriptor.json",
+      "sha256": "701519d757779b3deaa618836bf862df29b9c0ef3e82dc45e5ec9c9b614764ef"
+    },
+    "activacion_y_publicacion": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diccionario_sies_20261025/fase4_20261025/INFORME_FASE4.md",
+      "sha256_recalculado": "3f1b8fc2df22f20924b3a796025d9516d0691602ed5f4f02bdcba5bac9957bd3"
+    }
+  },
+  "limites": [
+    "Se reutilizan QA históricos, no se ejecutan nuevamente cruces individuales ni cálculos anuales.",
+    "Se preservan fórmula y valor observado como tipos distintos; la existencia de un literal no implica error si tiene fuente/script trazables.",
+    "Libro original22oct no es referencia numérica actual: V14/V15 corrigen600→611 y535→546.",
+    "V18 no fue reabierto/recalculado en Excel nativo en esta fase.",
+    "99 pendientes Excel no equivalen a24 pendientes multiversión ni a3041 observaciones históricas.",
+    "No se incorpora ningún identificador estudiantil. Las diferencias hoja54 se listan por coordenada, sin copiar contenido de contexto."
+  ]
+}

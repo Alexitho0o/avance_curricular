@@ -1,0 +1,73 @@
+{
+  "clasificacion": "C/D/E",
+  "fecha": "2026-10-25T14:52:53.039629-03:00",
+  "fase": "1/6",
+  "estado": "EJECUTADA_CON_PENDIENTES_DE_ALCANCE",
+  "hitos": [
+    {
+      "id": "H1",
+      "estado": "VERIFICADO",
+      "evidencia": "CADENA_Y_FUENTES.json",
+      "resultado": "10 fuentes y maqueta formularia verificadas"
+    },
+    {
+      "id": "H2",
+      "estado": "REPRODUCIDO_CON_E",
+      "evidencia": "universos/RESULTADOS_UNIVERSOS.json",
+      "resultado": "Padrones recuperados sin cambiar denominadores; etiqueta545/490, unidades y calendario explícitos"
+    },
+    {
+      "id": "H3",
+      "estado": "VERIFICADO_EN_UNIVERSO_ANUAL",
+      "evidencia": "llaves/QA.json",
+      "resultado": "2379 enlaces únicos, 0 discrepancias; 5 llaves múltiples fuera de ese universo"
+    }
+  ],
+  "no_autorizado_en_esta_fase": [
+    "cambiar bases",
+    "cambiar denominadores",
+    "cambiar libros",
+    "adjudicar códigos nuevos",
+    "commit",
+    "push"
+  ],
+  "pendientes": [
+    {
+      "id": "E01",
+      "tema": "Alcance545grupo3-2026",
+      "detalle": "TodoBase545personas vs ingreso2026-3 490. Mantener545; decidir etiqueta/alcance antes de cualquier redefinición."
+    },
+    {
+      "id": "E02",
+      "tema": "UnidadT2-2026",
+      "detalle": "528matrículas vs527personas;66renuncias sin nómina de origen. No convertir silenciosamente la tasa."
+    },
+    {
+      "id": "E03",
+      "tema": "Calendario",
+      "detalle": "6358posiciones son períodos nativos;2024se observa2025. No homologar cierres sin evidencia."
+    },
+    {
+      "id": "E04",
+      "tema": "Expedientes y atribución",
+      "detalle": "Hoja20no tieneCODCLI;3520posiciones sin contexto no equivalen a deserción. Resolver enlaces en fases2–3."
+    },
+    {
+      "id": "E05",
+      "tema": "Cinco llavesMU2026",
+      "detalle": "Diezfilas con códigos diferentes, fuera de2379cohortes auditadas. Conservar alternativas."
+    },
+    {
+      "id": "E06",
+      "tema": "Notas heredadas",
+      "detalle": "55!B11:104vs99;52!A32:v7vsv8. Actualizar en futura edición sin tocar cifras."
+    },
+    {
+      "id": "E07",
+      "tema": "Fuente primaria y retorno",
+      "detalle": "Fase2 debe conectar envío/retorno y rol de cada fuente; coincidencia de componentes no es prueba de aceptación."
+    }
+  ],
+  "siguiente": "Fase2/6 H1: enlace anual UMAS/expediente/MU y evidencia primaria; reutilizar los enlaces verificados. No ejecutada.",
+  "HEAD": "8e2fb85bb8703758d6878681c9e2a29016e60c63"
+}

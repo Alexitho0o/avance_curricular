@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "repositorio": "avance_curricular",
+  "decision": "Usuario 2026-10-15: un solo repositorio con procesos separados en módulos",
+  "modulos": {
+    "avance_curricular": {
+      "path": ".",
+      "conservar_comandos_existentes": true
+    },
+    "caracterizacion": {
+      "path": "procesos/caracterizacion",
+      "conservar_comandos_existentes": true
+    }
+  },
+  "recursos_comunes": {
+    "sies_historico": "gobernanza/sies/historico",
+    "sies_anual_2027": "gobernanza/sies/anual",
+    "catalogo_sies_2026": "data/catalogos_sies/2026/mu2026_20261013/catalogo.json",
+    "reglas_negocio": "data/reglas_negocio/20261015/reglas.json",
+    "versiones_por_cohorte": "data/versiones_por_cohorte/20261016",
+    "continuidad_trayectoria": "data/continuidad_trayectoria/20261016",
+    "trazabilidad_mrun_antecedente": "procesos/caracterizacion/gobernanza/trazabilidad_mrun",
+    "diagnostico_candidatos_mrun_umas": "data/recuperacion_cruce_mrun_umas/20261016",
+    "prueba_500_enlaces_historicos": "data/prueba_500_enlaces_historicos/20261016",
+    "hipotesis_enlace_conjunto": "data/hipotesis_enlace_conjunto/20261016",
+    "presencia_anual": "data/presencia_anual/20261016",
+    "capa_demografica": "data/capa_demografica/20261016",
+    "matriz_academica_b4": "data/matriz_academica_b4/20261016",
+    "reglas_historicas_b5": "data/reglas_historicas_b5/20261016",
+    "diccionario_c1": "data/diccionario_c1/20261016",
+    "diccionario_c2": "data/consumo_comun_c2/20261016/descriptor.json",
+    "reglas_vig_mu2027": "data/reglas_negocio/mu2027/activo.json",
+    "estudio_envios_vig_mu2026": "data/reglas_negocio/mu2027/estudio/manifest_preservacion.json",
+    "diccionario_sies_seguimiento": "data/diccionario_sies_seguimiento/activo.json"
+  },
+  "seguimiento_plan": "docs/estado_plan_diccionario_20261016.md"
+}

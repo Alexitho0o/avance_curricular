@@ -1,0 +1,53 @@
+{
+  "clasificacion": "C",
+  "fecha": "2026-10-25T13:55:25.326413-03:00",
+  "head": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+  "rama": "feature/ire-2026",
+  "fuentes": {
+    "revision_104": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase1_cierre_104_20261025/REVISION_104.json",
+      "sha256": "2a6fffdb5b59c623e84435ebf7c8e768bb28cc55f6599689884ba3314185a01a"
+    },
+    "origenes_T1": {
+      "ruta": "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json",
+      "sha256": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0"
+    },
+    "manifest_puente": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_115156_llaves_20_codcli/MANIFEST_DIAGNOSTICO.json",
+      "sha256": "9a6b012f49a960f2c1544a1ed36f5523bfeeefc43b9d472d9995d143d4bbeaca"
+    },
+    "puente": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "hoja": "2025_carga!J (RUT), BU (N_DOC), BV (DV)",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    "MU": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    "extraccion_promedios": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase1_cierre_104_20261025/PROMEDIOS_FILAS_104.json",
+      "sha256": "2148409c4fb03824b04570bfa134040a4b910f0f9bbfd6cba882c46251aef0bf",
+      "original": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "original_sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+    }
+  },
+  "regla": "IDENTIDAD_FAMILIA_ANIO_CONTEXTO_DA_NO_MULTIPLE",
+  "privado_fuera_git": true,
+  "archivos_publicos": {
+    "RESULTADOS_AGREGADOS.json": "8ee7a4c2c82d2ca6d24b4facf26c76dc0d14441d0828ea15af28b5140d6ec683",
+    "INFORME_FASE2.md": "1e0d0dd3a9427561709d723dd89403468085416a0ae164d6a3cb53bf1e48adc1",
+    "QA_FASE2.json": "2a015a38c38234104f3d21f4eaa39156390a86a84281af6ddd4a309ac45b408b"
+  },
+  "archivos_privados_no_publicar": {
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/extender.py": "74efe903babd242a0c361dc8ca64756db285aafcb7d6c08be2e6db5cc926e86c",
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/validar.py": "ce03c43eed732cbd95deed91b1fca237f5cdcd1ffda06b5c870f1f26c7168f08",
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/cerrar.py": "138a017406b18bdb2d4ea6697b4d7d37759d4da0f9a884e2708a9da8a42d47bd",
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/REGLA_ANUAL_EXTENSION_VERIFICADA.json": "b897d914930415ba3fce1393bac7537bf4bde5082ba50a9f4b65aa1a0510fa2a",
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/REVISION_PUENTES_DOCUMENTALES.json": "793de8ec800316e4014ae603ab754c23f0a7e552f5b6b286b2008337694294ba",
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/PENDIENTES_ORIGINALES.json": "642747c15a6e9c8037b52f3b1585a56379774b79f51c569bb46fae8b30a90518",
+    "/Users/alexi/.local/share/ipss/fase2_historico_20261025/OPERACIONES_CANDIDATAS.json": "50d43b07767fcb3b4a93b2216c1e7e0dfdaed9d53a8ca76885508223b8dde698"
+  },
+  "commit_push": false
+}

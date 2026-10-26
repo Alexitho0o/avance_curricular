@@ -1,0 +1,169 @@
+{
+  "fecha_hora": "2026-10-25T13:42:22.151060-03:00",
+  "clasificacion": "B evidencia; C revisión y reparación; D decisiones existentes; E propuestas y pendientes",
+  "alcance": "104 observaciones pendientes del seguimiento V17, no una nueva cohorte",
+  "observaciones": 104,
+  "personas": 58,
+  "carreras_UMAS": 12,
+  "resultado_exclusivo": {
+    "PENDIENTE_EVIDENCIA_O_CRITERIO": 71,
+    "CRITERIO_CONTINUIDAD_PENDIENTE": 12,
+    "PROPUESTA_INTERNA_LISTA": 16,
+    "RECUPERACION_C_VALIDADA_NO_PROMOVIDA": 5
+  },
+  "por_carrera": [
+    {
+      "carrera_UMAS": "AUDT",
+      "observaciones": 1,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 1
+    },
+    {
+      "carrera_UMAS": "IADM",
+      "observaciones": 11,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 9,
+      "CRITERIO_CONTINUIDAD_PENDIENTE": 1,
+      "PROPUESTA_INTERNA_LISTA": 1
+    },
+    {
+      "carrera_UMAS": "ICDA",
+      "observaciones": 2,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 2
+    },
+    {
+      "carrera_UMAS": "ICIB",
+      "observaciones": 29,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 13,
+      "CRITERIO_CONTINUIDAD_PENDIENTE": 8,
+      "PROPUESTA_INTERNA_LISTA": 8
+    },
+    {
+      "carrera_UMAS": "ICRE",
+      "observaciones": 3,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 3
+    },
+    {
+      "carrera_UMAS": "IINF",
+      "observaciones": 25,
+      "PROPUESTA_INTERNA_LISTA": 4,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 21
+    },
+    {
+      "carrera_UMAS": "ILOG",
+      "observaciones": 6,
+      "CRITERIO_CONTINUIDAD_PENDIENTE": 1,
+      "PROPUESTA_INTERNA_LISTA": 1,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 4
+    },
+    {
+      "carrera_UMAS": "TAMD",
+      "observaciones": 9,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 6,
+      "RECUPERACION_C_VALIDADA_NO_PROMOVIDA": 3
+    },
+    {
+      "carrera_UMAS": "TCIB",
+      "observaciones": 2,
+      "CRITERIO_CONTINUIDAD_PENDIENTE": 1,
+      "PROPUESTA_INTERNA_LISTA": 1
+    },
+    {
+      "carrera_UMAS": "TCRE",
+      "observaciones": 1,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 1
+    },
+    {
+      "carrera_UMAS": "TLOG",
+      "observaciones": 6,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 6
+    },
+    {
+      "carrera_UMAS": "TPAS",
+      "observaciones": 9,
+      "PENDIENTE_EVIDENCIA_O_CRITERIO": 5,
+      "CRITERIO_CONTINUIDAD_PENDIENTE": 1,
+      "PROPUESTA_INTERNA_LISTA": 1,
+      "RECUPERACION_C_VALIDADA_NO_PROMOVIDA": 2
+    }
+  ],
+  "por_subgrupo_jornada": {
+    "T2_CAMBIO_POR_UBICAR": 10,
+    "T3_IDENTIDAD_MU_FUERA_ADAPTADOR": 2,
+    "T3_JORNADA_CONFIRMADA_VERSION_SOLO_POSTERIOR": 8,
+    "T2_DOS_ANCLAS_CONCORDANTES": 12,
+    "T3_ANCLA_ANUAL_Y_FOTO_CONCORDANTES": 13,
+    "SIN_FOTO_APLICABLE": 17,
+    "T3_JORNADA_FOTO_Y_MU_MISMO_ANIO": 1
+  },
+  "operaciones_previas_verificadas": 46,
+  "cierres_previos_olvidados_en_bloque_revisado": 0,
+  "puente_documental_recuperado": {
+    "personas": 5,
+    "observaciones": 9,
+    "limite": "No sumar a los104; cinco cumplen regla anual, cuatro requieren jornada por período."
+  },
+  "homologaciones_anteriores_al_ingreso_declarado": 19,
+  "recuperaciones_por_codigo": [
+    {
+      "codigo": "I162S2C57J4V1",
+      "observaciones": 2
+    },
+    {
+      "codigo": "I162S2C78J2V1",
+      "observaciones": 3
+    }
+  ],
+  "propuestas_internas": {
+    "T3_foto_y_MU_del_mismo_ano": 14,
+    "IINF_2025_actividad_foto_y_codigo_2026": 2
+  },
+  "activo_conservado": {
+    "edicion": "v7_20261023_inf35_03_t3",
+    "V17_con_codigo": 2750,
+    "V17_pendientes": 104,
+    "historico_con_codigo": 21725,
+    "historico_pendientes": 3049
+  },
+  "impacto_cinco_si_se_incorporan": {
+    "v17": {
+      "observaciones": 2854,
+      "con_codigo_antes": 2750,
+      "con_codigo_despues": 2755,
+      "pendientes_antes": 104,
+      "pendientes_despues": 99
+    },
+    "historico": {
+      "observaciones": 24774,
+      "con_codigo_antes": 21725,
+      "con_codigo_despues": 21730,
+      "pendientes_antes": 3049,
+      "pendientes_despues": 3044
+    }
+  },
+  "sin_modificar": [
+    "fuentes originales",
+    "bases",
+    "denominadores",
+    "reglas de retención",
+    "V17",
+    "diccionario activo"
+  ],
+  "proxima_accion": "Incorporar las cinco reparaciones C en edición candidata durante consolidación; decidir por separado las16 propuestas internas. Las12 T2 no comparten automáticamente ese criterio.",
+  "qa": {
+    "cobertura_revision": "104/104",
+    "duplicados": 0,
+    "observaciones_perdidas": 0,
+    "sumas_correctas": true,
+    "filas_PROMEDIOS_compartidas": 269,
+    "filas_DA_compartidas": 58,
+    "campos_fuera_alcance_en_cinco_operaciones": 0,
+    "nuevas_asignaciones_activas": 0,
+    "recalculo_Excel_ejecutado": false
+  },
+  "limites": [
+    "Una foto de T3 no prueba automáticamente jornada de T2.",
+    "JORNADA de PROMEDIOS no está acreditada como historizada por asignatura.",
+    "El período de una homologación no acredita fecha de reconocimiento ni ingreso efectivo al plan destino.",
+    "No se ejecutaron nuevamente24774 consultas ni se verificó publicación remota.",
+    "Códigos anuales atribuidos no acreditan envío/aceptación SIES ni fecha efectiva de cambio."
+  ]
+}

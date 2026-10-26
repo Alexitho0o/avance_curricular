@@ -1,0 +1,128 @@
+{
+  "fecha": "2026-10-24T09:42:51.155091-03:00",
+  "proceso": "Retención intertrimestral IPSS162",
+  "periodo": "2026/P2",
+  "alcance": "14 carreras discordantes; 19 carreras conservadas como control. No se cambia V16.",
+  "clasificaciones": "B observado; C cruce y cálculo; D conservar bases/denominadores; E atribución a nómina66 no acreditada",
+  "fuentes": {
+    "T2": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia_t2_t3/20261022_fuentes/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769"
+    },
+    "T3": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia_t2_t3/20261022_fuentes/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae"
+    },
+    "DA10246": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    "DA11998": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    "DA12159": {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    },
+    "MANIFEST_ORIGEN": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/retencion_intermedia_t2_t3/MANIFEST_RETENCION_FOTO_INTERTRIMESTRAL_20261022.json",
+      "sha256": "3fa3c725d0bc21564d29c8415e01add40064fac3aa2eedb669990d420fddd541"
+    },
+    "MANIFEST_10246": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "sha256": "bda8a15c0f0689bf013f94882a20cdb6fac25107888641af69c9210bc663f588"
+    },
+    "MANIFEST_12159": {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "ef41ab72060b70bca2e3756ee97f9469ce108f27feeca9e6892b920f94054a84"
+    },
+    "V16": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+    },
+    "V16_ESCRITORIO": {
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+    }
+  },
+  "fuentes_temporales": [
+    {
+      "id": "manifest_uso_11998",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "c0f23e85071dd0c319d1bd1bff05f22a49d898a7ba6d67bc4882595113690c8a",
+      "fechas_de_uso_o_congelamiento": {
+        "fecha_inicio": "2026-10-15T14:18:42.932040-03:00",
+        "fecha_termino": "2026-10-15T14:20:42.180679-03:00"
+      },
+      "clase": "B; E fecha efectiva del estado no acreditada"
+    },
+    {
+      "id": "manifest_uso_12159",
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "ef41ab72060b70bca2e3756ee97f9469ce108f27feeca9e6892b920f94054a84",
+      "fechas_de_uso_o_congelamiento": {
+        "fecha_inicio": "2026-10-22T08:41:06.988496-03:00",
+        "fecha_termino": "2026-10-22T08:42:18.935250-03:00"
+      },
+      "clase": "B; E fecha efectiva del estado no acreditada"
+    },
+    {
+      "id": "manifest_congelamiento_10246",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "sha256": "bda8a15c0f0689bf013f94882a20cdb6fac25107888641af69c9210bc663f588",
+      "fechas_de_uso_o_congelamiento": {
+        "fecha_congelamiento": "2026-07-22T11:03:28.160591-04:00"
+      },
+      "clase": "B; E fecha efectiva del estado no acreditada"
+    },
+    {
+      "id": "manifest_uso_10246",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-07-21/2026_P2_161905/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "5435cb437a5ace571e4956e2b302ece09a28b1bae62bc3cae498eda461a27cef",
+      "fechas_de_uso_o_congelamiento": {
+        "fecha_inicio": "2026-07-21T16:19:05.062487-04:00",
+        "fecha_termino": "2026-07-21T16:20:45.229205-04:00"
+      },
+      "clase": "B; E fecha efectiva del estado no acreditada"
+    }
+  ],
+  "antecedente": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/renuncias_t2_2026_personas_20261023/EVIDENCIA_AGREGADA.json",
+    "sha256": "d287b50754ac381d0bcb38714ce047448762d6aaa55e2e8c42116673082b09c3"
+  },
+  "archivos_creados": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_CRUCE_14_CARRERAS_T2_20261024.md",
+      "sha256": "8a916a64bfad5165b8b1c3385c5663179f9a5c3fdf3d9eff9cd5c265931f910f"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/conciliar_14_carreras_t2_20261024.py",
+      "sha256": "8d0fef91c2ea6fd287d63cd5af02dcfd1d25522371a042f9b3d09746444a8d4d"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_14_carreras_t2_20261024/INFORME.md",
+      "sha256": "4f564844998e04758bd9ed309dc6bb37de558f3c6818191cce9c1fa6ff31d78c"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_14_carreras_t2_20261024/COMPARACION_19_CARRERAS.csv",
+      "sha256": "7c8c0c2bc79661f42946b42f90c91e7afece6951a2def240f2dfe655c7c783b2"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_14_carreras_t2_20261024/EVIDENCIA_AGREGADA.json",
+      "sha256": "a96c0f30a24a5c66fa5a25f2797c4a487cf28697c78817590798e2afc78d2cd2"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_14_carreras_t2_20261024/QA.json",
+      "sha256": "ee5c6c732f7e4a20d4444c8e6164d82d04e8a03f41a9535225d7e470afb08e3e"
+    }
+  ],
+  "qa": "QA.json",
+  "git": {
+    "rama": "feature/ire-2026",
+    "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "identificadores_exportados": false,
+  "commit_push": false,
+  "pendiente": "No se identifica la nómina de66 del resumen; no se modifica la tasa actual."
+}

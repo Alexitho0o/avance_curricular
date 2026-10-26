@@ -1,0 +1,67 @@
+{
+ "clasificacion": "C evaluación; E regla propuesta no adoptada",
+ "resultado": {
+  "estricta": {
+   "prueba_documental": {
+    "cumple_acierta": 933,
+    "no_cumple": 1809
+   },
+   "contraejemplos": {},
+   "pendientes_diccionario_activo": 78,
+   "impacto": {
+    "no_resolveria": 78
+   },
+   "condiciones_no_cumplidas_en_pendientes": {
+    "plan_carrera_expediente": 21,
+    "plan_carrera_expediente + jornada": 32,
+    "plan_carrera_expediente + jornada + sin_otra_version": 11,
+    "jornada + sin_otra_version": 5,
+    "plan_carrera_expediente + sin_otra_version": 9
+   }
+  },
+  "laxa": {
+   "prueba_documental": {
+    "cumple_acierta": 2212,
+    "no_cumple": 524,
+    "cumple_falla": 6
+   },
+   "contraejemplos": {
+    "IINF20241|T1 I162S2C1J2V4|documental I162S2C1J2V1": 4,
+    "IINF20241|T1 I162S2C1J1V2|documental I162S2C1J1V1": 2
+   },
+   "pendientes_diccionario_activo": 78,
+   "impacto": {
+    "no_resolveria": 78
+   },
+   "condiciones_no_cumplidas_en_pendientes": {
+    "plan_carrera_expediente": 27,
+    "plan_carrera_expediente + jornada": 43,
+    "jornada": 5,
+    "plan_carrera_expediente + sin_otra_version": 3
+   }
+  }
+ },
+ "qa": [
+  {
+   "control": "Universo contextos = 2.854",
+   "ok": true
+  },
+  {
+   "control": "Documentales en prueba = 2.742",
+   "ok": true
+  },
+  {
+   "control": "Pendientes con diccionario activo = 78",
+   "ok": true
+  },
+  {
+   "control": "Pendientes activos = 99 de Fase 3 − 21 de v9",
+   "ok": true
+  },
+  {
+   "control": "Edición activa v9",
+   "ok": true
+  }
+ ],
+ "todos_ok": true
+}

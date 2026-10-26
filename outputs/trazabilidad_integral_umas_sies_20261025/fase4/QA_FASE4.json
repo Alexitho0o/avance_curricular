@@ -1,0 +1,169 @@
+{
+  "fecha": "2026-10-25T16:16:08.824466-03:00",
+  "clasificacion": "C",
+  "estado": "PASA_ESTRUCTURAL_CON_RECALCULO_INTEGRAL_PENDIENTE",
+  "controles": [
+    {
+      "control": "ZIP íntegro",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Todos los XML parseables",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "57 hojas,13 gráficos,37 tablas",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Partes de gráficos y dibujos idénticas a V18",
+      "resultado": "PASA",
+      "detalle": 70
+    },
+    {
+      "control": "Hoja individual original 26: valores y fórmulas preservados",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Hoja individual original 21: valores y fórmulas preservados",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Hoja individual original 25: valores y fórmulas preservados",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Hoja individual original 10: valores y fórmulas preservados",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Hoja individual original 12: valores y fórmulas preservados",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Cifras numéricas históricas V18 conservadas",
+      "resultado": "PASA",
+      "detalle": []
+    },
+    {
+      "control": "Fórmulas vigentes V18 conservadas",
+      "resultado": "PASA",
+      "detalle": []
+    },
+    {
+      "control": "Todas las fórmulas originales recuperadas o sustituidas por corrección vigente",
+      "resultado": "PASA",
+      "detalle": []
+    },
+    {
+      "control": "Sin celdas duplicadas ni fórmulas compartidas huérfanas",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Sin errores de fórmula en nuevas hojas",
+      "resultado": "PASA",
+      "detalle": []
+    },
+    {
+      "control": "Relaciones internas con destino existente",
+      "resultado": "PASA",
+      "detalle": []
+    },
+    {
+      "control": "IDs y nombres de tablas únicos",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 5",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 6",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 13",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 14",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 15",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 16",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 17",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Validaciones/filtros de maqueta hoja 18",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "13 fuentes protegidas sin modificaciones",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "HEAD y cambio previo preservados",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Sin staging",
+      "resultado": "PASA",
+      "detalle": null
+    },
+    {
+      "control": "Libro individual fuera de Git",
+      "resultado": "PASA",
+      "detalle": null
+    }
+  ],
+  "total": 28,
+  "errores_cache_existentes": [],
+  "suplemento": {
+    "recalculo": "Artifact Tool",
+    "resumen": [
+      6358,
+      2838,
+      3520,
+      2742,
+      13,
+      99
+    ],
+    "grupos54": 221,
+    "controles53": 654,
+    "prueba_dependencia": "13/99 ->14/98 ->13/99; restaurado",
+    "limite": "No es recálculo integral ni prueba de Excel nativo"
+  },
+  "limites": [
+    "Recálculo integral y apertura Excel nativo corresponden a fase5, no ejecutados.",
+    "Preservar cachés y fórmulas no certifica todas las funciones en Excel.",
+    "Fuentes materializadas permanecen identificadas; no se inventa un dato individual a partir de un conteo."
+  ]
+}

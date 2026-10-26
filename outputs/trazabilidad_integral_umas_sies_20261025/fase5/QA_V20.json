@@ -1,0 +1,37 @@
+{
+  "archivo": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V20.xlsx",
+  "sha256": "b9dd851da572d48635815ddb0649bf20d92b14e42cec3509898dff6a53d132f7",
+  "zip_integrity": "PASS",
+  "clean_reopen": "PASS",
+  "charts_sheet14": 8,
+  "chart_reference_ranges": {
+    "chart4": "DA2:DB5",
+    "chart5": "DD2:DE4",
+    "chart6": "DG2:DG5 + DH2:DH5 + DI2:DI5",
+    "chart7": "DK2:DL18",
+    "chart8": "DN2:DO28",
+    "chart9": "DQ2:DR4",
+    "chart10": "DT2:DU4",
+    "chart11": "DW2:DX6"
+  },
+  "aggregation_controls": {"checks": 1976, "differences": 0},
+  "filter_cases_certified_before_v20": 4,
+  "filter_cases_certified": [
+    {"selectors": "Acumulado 2022-2025 / Todos / Todas", "students": 2379, "retained": 1476, "rate": 0.620428751576},
+    {"selectors": "Cohorte 2024 / Tecnologías / Todas", "students": 497, "retained": 299, "rate": 0.601609657947},
+    {"selectors": "Acumulado 2022-2025 / Administración y Comercio / Administracion Publica", "students": 70, "retained": 33, "rate": 0.471428571429},
+    {"selectors": "Cohortes 2022 + 2023 / Todos / Todas", "students": 671, "retained": 482, "rate": 0.718330849478}
+  ],
+  "bases_and_denominators_changed": false,
+  "filter_suite_v20_attempt": "PASS",
+  "filter_cases_v20": 77,
+  "filter_cases_mismatches": 0,
+  "qa_status": "PASS_WITH_SCOPE",
+  "qa_status_v21": "PASS_WITH_SCOPE",
+  "qa_status_v22": "PASS",
+  "v22_file": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V22.xlsx",
+  "v22_sha256": "2923ddd26f3fbd17c8588ce220367f3b363d3ecc31b169d839f7db0dd49e1518",
+  "v21_file": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V21.xlsx",
+  "v21_sha256": "70c24d895dfecb2f8ad2211ad888d823338e06cbdba8be712b16ff43b37341f5",
+  "qa_note": "V21 completa los rangos auxiliares mediante fórmulas nativas en el libro, sin editar XML. V22 ajusta únicamente las etiquetas de datos de las ocho gráficas a formato porcentaje con un decimal (0,0%), manteniendo las referencias y los valores. El ZIP abre sin reparación; los 77 filtros siguen pasando y las gráficas conservan sus rangos dinámicos."
+}

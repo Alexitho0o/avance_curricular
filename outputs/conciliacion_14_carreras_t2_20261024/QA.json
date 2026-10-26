@@ -1,0 +1,38 @@
+{
+  "controles": {
+    "fuentes_hash_antes_despues": "OK",
+    "reproduce_14_de_19": "OK",
+    "universo_528_matriculas_527_personas": "OK",
+    "cruce_unico_sin_discordancias": "OK",
+    "conciliacion_transiciones_528": "OK",
+    "suma_carreras_y_compensacion_13_menos_13": "OK",
+    "V16_y_originales_intactos": "OK",
+    "cambios_previos_conservados": "OK"
+  },
+  "tasa_por_personas_cierre_T2": "PENDIENTE; no se adjudica nómina66",
+  "datos_individuales_exportados": false,
+  "git_antes_despues": {
+    "rama": "feature/ire-2026",
+    "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "commit_push": false,
+  "verificacion_independiente": {
+    "metodo": "Segundo agente releyó los cuatro XLSX, hashes, CODCLI, identidad, contexto y transiciones sin editar archivos.",
+    "resultado": "COINCIDE",
+    "controles": {
+      "matches_10246": 527,
+      "matches_11998": 526,
+      "matches_12159": 526,
+      "transiciones_vigente_eliminado_total": 56,
+      "transiciones_vigente_eliminado_14": 47,
+      "desglose_14_situaciones_11_23_24": [
+        43,
+        1,
+        3
+      ],
+      "exceso_6_carreras": 13,
+      "deficit_8_carreras": 13,
+      "discordancias_identidad": 0
+    }
+  }
+}

@@ -1,0 +1,1251 @@
+{
+  "clasificacion": "B/C",
+  "fecha": "2026-10-25T14:44:17.091563-03:00",
+  "hito": "Fase1/6 H1/3",
+  "estado": "FUENTES_SELECCIONADAS_VERIFICADAS",
+  "rama": "feature/ire-2026",
+  "HEAD": "8e2fb85bb8703758d6878681c9e2a29016e60c63",
+  "edicion": "v8_20261025_ocho_p",
+  "fuentes": [
+    {
+      "id": "maqueta_formularia",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx",
+      "rol": "Resultado de cálculo interno con detalle; maqueta, no referencia de últimas correcciones",
+      "sha256_esperado": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+      "disponible": true,
+      "sha256_observado": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+      "bytes": 6914057,
+      "hash_coincide": true
+    },
+    {
+      "id": "V17",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261024_V17.xlsx",
+      "rol": "Resultado agregado con correcciones y pendientes vigentes al cierreV17",
+      "sha256_esperado": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+      "disponible": true,
+      "sha256_observado": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+      "bytes": 603293,
+      "hash_coincide": true
+    },
+    {
+      "id": "V18",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx",
+      "rol": "Candidata agregada V18; diccionario promovido después, notas históricas no actualizadas",
+      "sha256_esperado": "2bd21ca31d391b59f4bd2c56d4876becd12aae05cb9673a7e069b5542ed66b01",
+      "disponible": true,
+      "sha256_observado": "2bd21ca31d391b59f4bd2c56d4876becd12aae05cb9673a7e069b5542ed66b01",
+      "bytes": 602925,
+      "hash_coincide": true
+    },
+    {
+      "id": "MU_derivada",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "rol": "Base derivada granular anual2022–2026, no padrón de elegibles",
+      "sha256_esperado": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "disponible": true,
+      "sha256_observado": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "bytes": 1475920,
+      "hash_coincide": true
+    },
+    {
+      "id": "diccionario_activo",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/.local/share/ipss/fase3_candidata_20261025/DICCIONARIO_SIES_CANDIDATO.sqlite",
+      "rol": "Indice privado de códigos por contexto; no motor de retención",
+      "sha256_esperado": "0f073554722a4c0ca9ffc11222aab2c83cd478a10f3bf31aefa8affeeae72c6b",
+      "disponible": true,
+      "sha256_observado": "0f073554722a4c0ca9ffc11222aab2c83cd478a10f3bf31aefa8affeeae72c6b",
+      "bytes": 121958400,
+      "hash_coincide": true
+    },
+    {
+      "id": "MU_original_2022",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "rol": "fuente institucional granular seleccionada; rol de envío/retorno no acreditado por nombre de ruta",
+      "sha256_esperado": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "disponible": true,
+      "sha256_observado": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "bytes": 148690,
+      "hash_coincide": true
+    },
+    {
+      "id": "MU_original_2023",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "rol": "fuente institucional granular seleccionada; rol de envío/retorno no acreditado por nombre de ruta",
+      "sha256_esperado": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "disponible": true,
+      "sha256_observado": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "bytes": 159685,
+      "hash_coincide": true
+    },
+    {
+      "id": "MU_original_2024",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "rol": "fuente institucional granular seleccionada; rol de envío/retorno no acreditado por nombre de ruta",
+      "sha256_esperado": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "disponible": true,
+      "sha256_observado": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "bytes": 260525,
+      "hash_coincide": true
+    },
+    {
+      "id": "MU_original_2025",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "rol": "fuente institucional granular seleccionada; rol de envío/retorno no acreditado por nombre de ruta",
+      "sha256_esperado": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "disponible": true,
+      "sha256_observado": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "bytes": 811353,
+      "hash_coincide": true
+    },
+    {
+      "id": "MU_original_2026",
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "rol": "fuente institucional granular seleccionada; rol de envío/retorno no acreditado por nombre de ruta",
+      "sha256_esperado": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "disponible": true,
+      "sha256_observado": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "bytes": 582631,
+      "hash_coincide": true
+    }
+  ],
+  "estructuras": [
+    {
+      "id": "maqueta_formularia",
+      "clasificacion": "B/C",
+      "ruta": "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx",
+      "hojas": [
+        {
+          "hoja": "Portada",
+          "parte": "xl/worksheets/sheet1.xml",
+          "dimension": "A1:F40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "1_Que_es_Retencion",
+          "parte": "xl/worksheets/sheet2.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "2_Origen_Datos",
+          "parte": "xl/worksheets/sheet3.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "3_Como_se_Cruza",
+          "parte": "xl/worksheets/sheet4.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "4_Resultados_Sector",
+          "parte": "xl/worksheets/sheet5.xml",
+          "dimension": "A1:T100",
+          "formulas": 69,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "5_Evolucion",
+          "parte": "xl/worksheets/sheet6.xml",
+          "dimension": "A1:T40",
+          "formulas": 16,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "6_Limitaciones",
+          "parte": "xl/worksheets/sheet7.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "7_Glosario",
+          "parte": "xl/worksheets/sheet8.xml",
+          "dimension": "A1:C40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "8_Mapeo_Sector_IPSS",
+          "parte": "xl/worksheets/sheet9.xml",
+          "dimension": "A1:E40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "9_Base_Analitica_Detalle",
+          "parte": "xl/worksheets/sheet10.xml",
+          "dimension": "A1:Y2385",
+          "formulas": 28548,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "10_SIES_2025_Granular",
+          "parte": "xl/worksheets/sheet11.xml",
+          "dimension": "A1:F42",
+          "formulas": 36,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "11_BASE_RETENCION_MU_RAW",
+          "parte": "xl/worksheets/sheet12.xml",
+          "dimension": "A1:AJ10204",
+          "formulas": 10200,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "12_Desglose_Jornada_Edad_Sexo",
+          "parte": "xl/worksheets/sheet13.xml",
+          "dimension": "A1:H113",
+          "formulas": 408,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "13_Granular_Codigo_Unico",
+          "parte": "xl/worksheets/sheet14.xml",
+          "dimension": "A1:L183",
+          "formulas": 1253,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "14_Vistas_Ejecutivas",
+          "parte": "xl/worksheets/sheet15.xml",
+          "dimension": "A1:GR260",
+          "formulas": 701,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "15_Tablas_Ejecutivas",
+          "parte": "xl/worksheets/sheet16.xml",
+          "dimension": "A1:CS57",
+          "formulas": 1027,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "16_Comparacion_Nacional_SIES",
+          "parte": "xl/worksheets/sheet17.xml",
+          "dimension": "B1:U127",
+          "formulas": 511,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "17_Fuentes_Comparacion_SIES",
+          "parte": "xl/worksheets/sheet18.xml",
+          "dimension": "A1:Q328",
+          "formulas": 255,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "18_Foto_Intertrimestral",
+          "parte": "xl/worksheets/sheet19.xml",
+          "dimension": "A1:I89",
+          "formulas": 178,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "19_Foto_Carrera",
+          "parte": "xl/worksheets/sheet20.xml",
+          "dimension": "A1:L110",
+          "formulas": 487,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "20_Foto_BBDD",
+          "parte": "xl/worksheets/sheet21.xml",
+          "dimension": "A1:V4478",
+          "formulas": 63036,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "21_Foto_Reglas_VIG",
+          "parte": "xl/worksheets/sheet22.xml",
+          "dimension": "A1:E37",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "22_Foto_DICC_Carrera",
+          "parte": "xl/worksheets/sheet23.xml",
+          "dimension": "A1:F58",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "23_Foto_Renuncias_T2_2026",
+          "parte": "xl/worksheets/sheet24.xml",
+          "dimension": "A1:F25",
+          "formulas": 41,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "24_Foto_Corte_T3_2025",
+          "parte": "xl/worksheets/sheet25.xml",
+          "dimension": "A1:R3086",
+          "formulas": 21567,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "25_Foto_Corte_T3_2026",
+          "parte": "xl/worksheets/sheet26.xml",
+          "dimension": "A1:R15190",
+          "formulas": 106295,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "26_Avance_Curricular_Resumen",
+          "parte": "xl/worksheets/sheet27.xml",
+          "dimension": "A1:H1855",
+          "formulas": 1847,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "27_Guia_Hojas",
+          "parte": "xl/worksheets/sheet28.xml",
+          "dimension": "A1:G32",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "28_QA_Matematica",
+          "parte": "xl/worksheets/sheet29.xml",
+          "dimension": "A1:H19",
+          "formulas": 35,
+          "errores_cache": 0
+        }
+      ],
+      "graficos": 13,
+      "tablas": 33
+    },
+    {
+      "id": "V17",
+      "clasificacion": "B/C",
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261024_V17.xlsx",
+      "hojas": [
+        {
+          "hoja": "Portada",
+          "parte": "xl/worksheets/sheet1.xml",
+          "dimension": "A1:F40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "1_Que_es_Retencion",
+          "parte": "xl/worksheets/sheet2.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "2_Origen_Datos",
+          "parte": "xl/worksheets/sheet3.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "3_Como_se_Cruza",
+          "parte": "xl/worksheets/sheet4.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "4_Resultados_Sector",
+          "parte": "xl/worksheets/sheet5.xml",
+          "dimension": "A1:T100",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "5_Evolucion",
+          "parte": "xl/worksheets/sheet6.xml",
+          "dimension": "A1:T40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "6_Limitaciones",
+          "parte": "xl/worksheets/sheet7.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "7_Glosario",
+          "parte": "xl/worksheets/sheet8.xml",
+          "dimension": "A1:C40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "8_Mapeo_Sector_IPSS",
+          "parte": "xl/worksheets/sheet9.xml",
+          "dimension": "A1:E40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "9_Base_Analitica_Detalle",
+          "parte": "xl/worksheets/sheet10.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "10_SIES_2025_Granular",
+          "parte": "xl/worksheets/sheet11.xml",
+          "dimension": "A1:F42",
+          "formulas": 36,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "11_BASE_RETENCION_MU_RAW",
+          "parte": "xl/worksheets/sheet12.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "12_Desglose_Jornada_Edad_Sexo",
+          "parte": "xl/worksheets/sheet13.xml",
+          "dimension": "A1:H113",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "13_Granular_Codigo_Unico",
+          "parte": "xl/worksheets/sheet14.xml",
+          "dimension": "A1:L183",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "14_Vistas_Ejecutivas",
+          "parte": "xl/worksheets/sheet15.xml",
+          "dimension": "A1:GR260",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "15_Tablas_Ejecutivas",
+          "parte": "xl/worksheets/sheet16.xml",
+          "dimension": "A1:CS57",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "16_Comparacion_Nacional_SIES",
+          "parte": "xl/worksheets/sheet17.xml",
+          "dimension": "B1:U127",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "17_Fuentes_Comparacion_SIES",
+          "parte": "xl/worksheets/sheet18.xml",
+          "dimension": "A1:Q328",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "18_Foto_Intertrimestral",
+          "parte": "xl/worksheets/sheet19.xml",
+          "dimension": "A1:I97",
+          "formulas": 18,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "19_Foto_Carrera",
+          "parte": "xl/worksheets/sheet20.xml",
+          "dimension": "A1:L110",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "20_Foto_BBDD",
+          "parte": "xl/worksheets/sheet21.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "21_Foto_Reglas_VIG",
+          "parte": "xl/worksheets/sheet22.xml",
+          "dimension": "A1:E37",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "22_Foto_DICC_Carrera",
+          "parte": "xl/worksheets/sheet23.xml",
+          "dimension": "A1:F58",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "23_Foto_Renuncias_T2_2026",
+          "parte": "xl/worksheets/sheet24.xml",
+          "dimension": "A1:F25",
+          "formulas": 41,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "24_Foto_Corte_T3_2025",
+          "parte": "xl/worksheets/sheet25.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "25_Foto_Corte_T3_2026",
+          "parte": "xl/worksheets/sheet26.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "26_Avance_Curricular_Resumen",
+          "parte": "xl/worksheets/sheet27.xml",
+          "dimension": "A1:H1861",
+          "formulas": 1856,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "27_Guia_Hojas",
+          "parte": "xl/worksheets/sheet28.xml",
+          "dimension": "A1:G32",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "28_QA_Matematica",
+          "parte": "xl/worksheets/sheet29.xml",
+          "dimension": "A1:H19",
+          "formulas": 6,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "29_Actualizacion_Provisional",
+          "parte": "xl/worksheets/sheet30.xml",
+          "dimension": null,
+          "formulas": 10,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "30_Puente_63_Dimensiones",
+          "parte": "xl/worksheets/sheet31.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "31_Comparacion_Historica",
+          "parte": "xl/worksheets/sheet32.xml",
+          "dimension": null,
+          "formulas": 63,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "32_Fuentes_y_Exclusiones",
+          "parte": "xl/worksheets/sheet33.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "33_Ejecucion_y_Pendientes",
+          "parte": "xl/worksheets/sheet34.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "34_Contexto_V3",
+          "parte": "xl/worksheets/sheet35.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "35_Correccion_Metodologica",
+          "parte": "xl/worksheets/sheet36.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "36_Cobertura_SIES_V5",
+          "parte": "xl/worksheets/sheet37.xml",
+          "dimension": null,
+          "formulas": 8,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "37_Inventario_Cobertura",
+          "parte": "xl/worksheets/sheet38.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "38_Contraste_63_V6",
+          "parte": "xl/worksheets/sheet39.xml",
+          "dimension": null,
+          "formulas": 13,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "39_Dimensiones_Contraste",
+          "parte": "xl/worksheets/sheet40.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "41_Conciliacion_Individual",
+          "parte": "xl/worksheets/sheet41.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "42_Casos_Carrera_Ano_Jornada",
+          "parte": "xl/worksheets/sheet42.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "43_Cruce_Historico_Pendientes",
+          "parte": "xl/worksheets/sheet43.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "44_Perfiles_Por_Carrera",
+          "parte": "xl/worksheets/sheet44.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "45_Validacion_Separada",
+          "parte": "xl/worksheets/sheet45.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "46_Validacion_Por_Carrera",
+          "parte": "xl/worksheets/sheet46.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "47_Cohorte_Original",
+          "parte": "xl/worksheets/sheet47.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "48_Prueba_Retrospectiva",
+          "parte": "xl/worksheets/sheet48.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "49_Reproduccion_V10",
+          "parte": "xl/worksheets/sheet49.xml",
+          "dimension": null,
+          "formulas": 18,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "50_Prueba_Personas",
+          "parte": "xl/worksheets/sheet50.xml",
+          "dimension": null,
+          "formulas": 12,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "51_Evidencias_Releidas",
+          "parte": "xl/worksheets/sheet51.xml",
+          "dimension": null,
+          "formulas": 2,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "52_Codigos_SIES_Revision",
+          "parte": "xl/worksheets/sheet52.xml",
+          "dimension": null,
+          "formulas": 84,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "53_Codigos_T1_Confirmados",
+          "parte": "xl/worksheets/sheet53.xml",
+          "dimension": null,
+          "formulas": 218,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "54_Contextos_y_Pendientes",
+          "parte": "xl/worksheets/sheet54.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "55_Pendientes_entrega",
+          "parte": "xl/worksheets/sheet55.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        }
+      ],
+      "graficos": 13,
+      "tablas": 35
+    },
+    {
+      "id": "V18",
+      "clasificacion": "B/C",
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx",
+      "hojas": [
+        {
+          "hoja": "Portada",
+          "parte": "xl/worksheets/sheet1.xml",
+          "dimension": "A1:F40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "1_Que_es_Retencion",
+          "parte": "xl/worksheets/sheet2.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "2_Origen_Datos",
+          "parte": "xl/worksheets/sheet3.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "3_Como_se_Cruza",
+          "parte": "xl/worksheets/sheet4.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "4_Resultados_Sector",
+          "parte": "xl/worksheets/sheet5.xml",
+          "dimension": "A1:T100",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "5_Evolucion",
+          "parte": "xl/worksheets/sheet6.xml",
+          "dimension": "A1:T40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "6_Limitaciones",
+          "parte": "xl/worksheets/sheet7.xml",
+          "dimension": "A1:B40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "7_Glosario",
+          "parte": "xl/worksheets/sheet8.xml",
+          "dimension": "A1:C40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "8_Mapeo_Sector_IPSS",
+          "parte": "xl/worksheets/sheet9.xml",
+          "dimension": "A1:E40",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "9_Base_Analitica_Detalle",
+          "parte": "xl/worksheets/sheet10.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "10_SIES_2025_Granular",
+          "parte": "xl/worksheets/sheet11.xml",
+          "dimension": "A1:F42",
+          "formulas": 36,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "11_BASE_RETENCION_MU_RAW",
+          "parte": "xl/worksheets/sheet12.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "12_Desglose_Jornada_Edad_Sexo",
+          "parte": "xl/worksheets/sheet13.xml",
+          "dimension": "A1:H113",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "13_Granular_Codigo_Unico",
+          "parte": "xl/worksheets/sheet14.xml",
+          "dimension": "A1:L183",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "14_Vistas_Ejecutivas",
+          "parte": "xl/worksheets/sheet15.xml",
+          "dimension": "A1:GR260",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "15_Tablas_Ejecutivas",
+          "parte": "xl/worksheets/sheet16.xml",
+          "dimension": "A1:CS57",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "16_Comparacion_Nacional_SIES",
+          "parte": "xl/worksheets/sheet17.xml",
+          "dimension": "B1:U127",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "17_Fuentes_Comparacion_SIES",
+          "parte": "xl/worksheets/sheet18.xml",
+          "dimension": "A1:Q328",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "18_Foto_Intertrimestral",
+          "parte": "xl/worksheets/sheet19.xml",
+          "dimension": "A1:I97",
+          "formulas": 18,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "19_Foto_Carrera",
+          "parte": "xl/worksheets/sheet20.xml",
+          "dimension": "A1:L110",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "20_Foto_BBDD",
+          "parte": "xl/worksheets/sheet21.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "21_Foto_Reglas_VIG",
+          "parte": "xl/worksheets/sheet22.xml",
+          "dimension": "A1:E37",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "22_Foto_DICC_Carrera",
+          "parte": "xl/worksheets/sheet23.xml",
+          "dimension": "A1:F58",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "23_Foto_Renuncias_T2_2026",
+          "parte": "xl/worksheets/sheet24.xml",
+          "dimension": "A1:F25",
+          "formulas": 41,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "24_Foto_Corte_T3_2025",
+          "parte": "xl/worksheets/sheet25.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "25_Foto_Corte_T3_2026",
+          "parte": "xl/worksheets/sheet26.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "26_Avance_Curricular_Resumen",
+          "parte": "xl/worksheets/sheet27.xml",
+          "dimension": "A1:H1861",
+          "formulas": 1856,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "27_Guia_Hojas",
+          "parte": "xl/worksheets/sheet28.xml",
+          "dimension": "A1:G32",
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "28_QA_Matematica",
+          "parte": "xl/worksheets/sheet29.xml",
+          "dimension": "A1:H19",
+          "formulas": 6,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "29_Actualizacion_Provisional",
+          "parte": "xl/worksheets/sheet30.xml",
+          "dimension": null,
+          "formulas": 10,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "30_Puente_63_Dimensiones",
+          "parte": "xl/worksheets/sheet31.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "31_Comparacion_Historica",
+          "parte": "xl/worksheets/sheet32.xml",
+          "dimension": null,
+          "formulas": 63,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "32_Fuentes_y_Exclusiones",
+          "parte": "xl/worksheets/sheet33.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "33_Ejecucion_y_Pendientes",
+          "parte": "xl/worksheets/sheet34.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "34_Contexto_V3",
+          "parte": "xl/worksheets/sheet35.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "35_Correccion_Metodologica",
+          "parte": "xl/worksheets/sheet36.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "36_Cobertura_SIES_V5",
+          "parte": "xl/worksheets/sheet37.xml",
+          "dimension": null,
+          "formulas": 8,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "37_Inventario_Cobertura",
+          "parte": "xl/worksheets/sheet38.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "38_Contraste_63_V6",
+          "parte": "xl/worksheets/sheet39.xml",
+          "dimension": null,
+          "formulas": 13,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "39_Dimensiones_Contraste",
+          "parte": "xl/worksheets/sheet40.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "41_Conciliacion_Individual",
+          "parte": "xl/worksheets/sheet41.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "42_Casos_Carrera_Ano_Jornada",
+          "parte": "xl/worksheets/sheet42.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "43_Cruce_Historico_Pendientes",
+          "parte": "xl/worksheets/sheet43.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "44_Perfiles_Por_Carrera",
+          "parte": "xl/worksheets/sheet44.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "45_Validacion_Separada",
+          "parte": "xl/worksheets/sheet45.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "46_Validacion_Por_Carrera",
+          "parte": "xl/worksheets/sheet46.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "47_Cohorte_Original",
+          "parte": "xl/worksheets/sheet47.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "48_Prueba_Retrospectiva",
+          "parte": "xl/worksheets/sheet48.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "49_Reproduccion_V10",
+          "parte": "xl/worksheets/sheet49.xml",
+          "dimension": null,
+          "formulas": 18,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "50_Prueba_Personas",
+          "parte": "xl/worksheets/sheet50.xml",
+          "dimension": null,
+          "formulas": 12,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "51_Evidencias_Releidas",
+          "parte": "xl/worksheets/sheet51.xml",
+          "dimension": null,
+          "formulas": 2,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "52_Codigos_SIES_Revision",
+          "parte": "xl/worksheets/sheet52.xml",
+          "dimension": null,
+          "formulas": 84,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "53_Codigos_T1_Confirmados",
+          "parte": "xl/worksheets/sheet53.xml",
+          "dimension": null,
+          "formulas": 218,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "54_Contextos_y_Pendientes",
+          "parte": "xl/worksheets/sheet54.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        },
+        {
+          "hoja": "55_Pendientes_entrega",
+          "parte": "xl/worksheets/sheet55.xml",
+          "dimension": null,
+          "formulas": 0,
+          "errores_cache": 0
+        }
+      ],
+      "graficos": 13,
+      "tablas": 35
+    },
+    {
+      "id": "MU_derivada",
+      "clasificacion": "B/C",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hojas": [
+        {
+          "hoja": "BASE_RETENCION_MU",
+          "parte": "xl/worksheets/sheet1.xml",
+          "dimension": "A1:AG10201",
+          "formulas": 0,
+          "errores_cache": 0
+        }
+      ],
+      "graficos": 0,
+      "tablas": 0
+    }
+  ],
+  "conteos_mu_declarados_en_manifiesto": [
+    {
+      "anio": 2022,
+      "filas_consolidadas": 1038,
+      "columnas_origen": 33,
+      "columnas_mapeadas_a_2026": 30,
+      "columnas_faltantes_vs_2026": [
+        "FECHA_MATRICULA",
+        "REINCORPORACION"
+      ],
+      "columnas_extra_no_consolidadas": [
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR"
+      ],
+      "alias_equivalentes_usados": {
+        "PRIMER_APELLIDO": "A_PAT",
+        "SEGUNDO_APELLIDO": "A_MAT"
+      },
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2023,
+      "filas_consolidadas": 1145,
+      "columnas_origen": 33,
+      "columnas_mapeadas_a_2026": 30,
+      "columnas_faltantes_vs_2026": [
+        "FECHA_MATRICULA",
+        "REINCORPORACION"
+      ],
+      "columnas_extra_no_consolidadas": [
+        "COD_IES",
+        "CARGA",
+        "CODIGO CNED"
+      ],
+      "alias_equivalentes_usados": {},
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2024,
+      "filas_consolidadas": 1541,
+      "columnas_origen": 38,
+      "columnas_mapeadas_a_2026": 32,
+      "columnas_faltantes_vs_2026": [],
+      "columnas_extra_no_consolidadas": [
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR",
+        "1eraño",
+        "NIVEL",
+        "NIVEL 2"
+      ],
+      "alias_equivalentes_usados": {},
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2025,
+      "filas_consolidadas": 2371,
+      "columnas_origen": 45,
+      "columnas_mapeadas_a_2026": 32,
+      "columnas_faltantes_vs_2026": [],
+      "columnas_extra_no_consolidadas": [
+        "NIVEL_1",
+        "NIVEL_2",
+        "ÁREA",
+        "CARRERA",
+        "CONTINUIDAD",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "MODALIDAD",
+        "JORNADA",
+        "COD_NIV_GLO",
+        "COD_IES",
+        "FECH_CAR"
+      ],
+      "alias_equivalentes_usados": {
+        "VIG": "VIGENCIA"
+      },
+      "filas_header_repetido_descartadas": 0
+    },
+    {
+      "anio": 2026,
+      "filas_consolidadas": 4105,
+      "columnas_origen": 32,
+      "columnas_mapeadas_a_2026": 32,
+      "columnas_faltantes_vs_2026": [],
+      "columnas_extra_no_consolidadas": [],
+      "alias_equivalentes_usados": {},
+      "filas_header_repetido_descartadas": 0
+    }
+  ],
+  "limites": [
+    "Conteos anuales provienen del manifiesto leído; esta rutina no reproduce las reglas de elegibilidad.",
+    "Sin recálculo/apertura en Excel nativo.",
+    "No se presume aceptación SIES de las fuentes por estar en Enviados."
+  ],
+  "preservacion": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/PROYECTO_IPSS.json": "afac5dea027deb118f33188fc839e5b1f085ee14f60f74ed0479ddb3c69616b2",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json": "49b290ff206cb6071429b1e683aaca4cb42b14d036640ca1045f93a26fe67002",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v8_20261025_ocho_p/descriptor.json": "701519d757779b3deaa618836bf862df29b9c0ef3e82dc45e5ec9c9b614764ef",
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+    "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261024_V17.xlsx": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+    "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V18_CANDIDATA.xlsx": "2bd21ca31d391b59f4bd2c56d4876becd12aae05cb9673a7e069b5542ed66b01",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+    "/Users/alexi/.local/share/ipss/fase3_candidata_20261025/DICCIONARIO_SIES_CANDIDATO.sqlite": "0f073554722a4c0ca9ffc11222aab2c83cd478a10f3bf31aefa8affeeae72c6b",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7"
+  }
+}

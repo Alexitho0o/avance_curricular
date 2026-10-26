@@ -1,0 +1,164 @@
+{
+  "fecha": "2026-10-25T15:36:43.844210-03:00",
+  "fase": "2/6",
+  "alcance": "Solo conciliación agregada2026; sin adjudicaciones individuales",
+  "clasificacion": "B observación; C agregación/QA; D alcance previo conservado; E causas no acreditadas. Sin nueva regla A.",
+  "ecuaciones": {
+    "base_pregrado": "4105 =3145 VIG1+960 VIG0+0 VIG2+0 otros",
+    "publicacion": "3425 =3371 Pregrado+54 Postítulo",
+    "institucional_comparable_julio": "3199 =3145 Pregrado VIG1o2+54 Posgrado/Postítulo",
+    "brecha_comparable": "226 =3371−3145 =3425−3199 =228−2",
+    "puente_total_sin_postitulo_institucional": "280 =3425−3145 =226+54 fuera del alcance de BASE pregrado",
+    "comparar_publicacion_con_todas_filas_mu": "−734 =3371−4105 =226−960; no es la brecha entre vigentes comparables"
+  },
+  "totales": {
+    "mu_pregrado_total": 4105,
+    "mu_vig0": 960,
+    "mu_vig1": 3145,
+    "mu_vig2": 0,
+    "mu_otros": 0,
+    "publicacion_pregrado": 3371,
+    "publicacion_postitulo": 54,
+    "publicacion_total": 3425,
+    "institucional_postitulo_julio": 54,
+    "institucional_comparable_julio": 3199,
+    "brecha_comparable": 226,
+    "codigos_union": 66,
+    "codigos_pregrado": 63,
+    "codigos_postitulo": 3,
+    "codigos_con_brecha": 48,
+    "positivos": 46,
+    "suma_positiva": 228,
+    "negativos": 2,
+    "suma_negativa": -2,
+    "carreras_pregrado": 32,
+    "carreras_brecha_neta": 27
+  },
+  "hallazgos": [
+    {
+      "clase": "B/C",
+      "hallazgo": "MU pregrado 2026 contiene4105 filas:3145 VIG1+960 VIG0; VIG2 y otros son0.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/DETALLE_CONCILIACION.csv",
+      "localizador": "ANIO=2026; suma MU_TOTAL_FILAS/MU_VIG0_FILAS/MU_VIG1_FILAS/MU_VIG2_FILAS"
+    },
+    {
+      "clase": "C",
+      "hallazgo": "El comparador de julio acepta VIG1 o2; como no hay VIG2, coincide con filtrar VIG1. No implica equivalencia universal de ambos criterios.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/lectura_independiente_libro_mu2026/20260730_232242/INVENTARIO_FORMULAS.csv",
+      "localizador": "07_PREGRADO_COMPLETO!AM7; 11_RESUMEN_POR_CODIGO!L5"
+    },
+    {
+      "clase": "B/C",
+      "hallazgo": "Los66 códigos reproducen publicación de julio;63 pregrado reproducen institucional exactamente. No es solo igualdad del neto226.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/lectura_independiente_libro_mu2026/20260730_232242/CRUCE_66_CODIGOS.csv",
+      "localizador": "Todas las66 filas comparadas por CODIGO con puente y conciliación actual"
+    },
+    {
+      "clase": "B/C",
+      "hallazgo": "Tres Postítulos suman54; el cierre usa fuente propia de21 columnas. Los ceros en BASE pregrado son ausencia de alcance, no54 estudiantes faltantes.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/MANIFEST_AUDITORIA_INTEGRAL_MU2026_PUBLICACION_PREGRADO_POSGRADO_20260730_223007.json",
+      "localizador": "fuentes POS_CSV/POS_TIT; CRUCE códigos C53J3V1,C66J4V1,C70J4V1"
+    },
+    {
+      "clase": "B/C",
+      "hallazgo": "48 códigos pregrado difieren:46 positivos suman228 y2 negativos suman−2; neto226.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/lectura_independiente_libro_mu2026/20260730_232242/CRUCE_66_CODIGOS.csv",
+      "localizador": "DIFERENCIA; niveles PREGRADO"
+    },
+    {
+      "clase": "B/C/E",
+      "hallazgo": "27 de32 carreras tienen diferencia neta; cinco neto0, pero C6 yC79 contienen diferencias compensadas. Igualar carrera no acredita cambios personales de jornada/versión.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.csv",
+      "localizador": "ANIO2026; COD_CAR6 y79; agregado por COD_CAR"
+    },
+    {
+      "clase": "E",
+      "hallazgo": "La causa individual de las48 diferencias no queda demostrada por la conciliación. No se puede distribuir personas para forzar los totales.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/MANIFEST_AUDITORIA_INTEGRAL_MU2026_PUBLICACION_PREGRADO_POSGRADO_20260730_223007.json",
+      "localizador": "pendientes PUBLICACION_AGREGADA_SIN_RUT"
+    },
+    {
+      "clase": "E",
+      "hallazgo": "El manifiesto puente septiembre describe causas cerradas por agregación. Se conservan sus conteos comprobados, pero esa conclusión causal excede la evidencia agregada. No se modifica el manifiesto histórico.",
+      "evidencia": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json",
+      "localizador": "cierre_carrera_2026_09_30.patrones_encontrados; qa.detalle"
+    }
+  ],
+  "fuentes_julio": [
+    {
+      "id": "PUB2026",
+      "ruta_o_referencia": "/Users/alexi/Documents/GitHub/avance_curricular/publicacion2026.xlsx",
+      "origen": "arbol_actual",
+      "sha256_reportado_manifest_julio": "9312665c74102bef111fa6618a379bfd57170b376ebc8e501ab7c92dba421da2",
+      "blob_si_corresponde": "",
+      "hoja": "Hoja1",
+      "filas": 66,
+      "columnas": 58,
+      "verificacion_actual": "Se reutiliza manifiesto y cruce agregados; no se relee ni materializa fuente individual histórica."
+    },
+    {
+      "id": "PRE_CSV",
+      "ruta_o_referencia": "resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL.csv",
+      "origen": "historial_git",
+      "sha256_reportado_manifest_julio": "3d038ae0872a9e06b657c89bb3a1725c9ad2cb14a8fa4b270c737b78ae0839ac",
+      "blob_si_corresponde": "9b2c4628c0357f5ce66debddee8034aa3a8ce54a",
+      "hoja": "",
+      "filas": 4105,
+      "columnas": 32,
+      "verificacion_actual": "Se reutiliza manifiesto y cruce agregados; no se relee ni materializa fuente individual histórica."
+    },
+    {
+      "id": "PRE_XLSX",
+      "ruta_o_referencia": "resultados/auditoria_multicodcli_mu2026_reconstruida_desde_cero/05_cierre_controlado/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "origen": "historial_git",
+      "sha256_reportado_manifest_julio": "1d554423e4434aa46c18b5234932e9db2eb46f88a726e4636ffb6f3b357ba405",
+      "blob_si_corresponde": "d14e72505255ffead372ae5d014c0dfc621513f8",
+      "hoja": "CONSOLIDADO",
+      "filas": 4105,
+      "columnas": 32,
+      "verificacion_actual": "Se reutiliza manifiesto y cruce agregados; no se relee ni materializa fuente individual histórica."
+    },
+    {
+      "id": "POS_CSV",
+      "ruta_o_referencia": "resultados/matricula_unificada_2026_postgrado_postitulo.csv",
+      "origen": "historial_git",
+      "sha256_reportado_manifest_julio": "a0dbff084d6b448d3443bbd68c5efd45c77b499e5ef91bb145dc8ba0d9b80111",
+      "blob_si_corresponde": "3e44d69adc25cab16958c4317d16306b0e9eab20",
+      "hoja": "",
+      "filas": 54,
+      "columnas": 21,
+      "verificacion_actual": "Se reutiliza manifiesto y cruce agregados; no se relee ni materializa fuente individual histórica."
+    },
+    {
+      "id": "POS_TIT",
+      "ruta_o_referencia": "resultados/matricula_unificada_2026_postgrado_postitulo_CON_TITULOS.csv",
+      "origen": "historial_git",
+      "sha256_reportado_manifest_julio": "0cd4c6343dbd886e259db5f86ecff70a08840d2b556bc398543711b66a94608a",
+      "blob_si_corresponde": "1c1d4833b5dc5637b0c1670b5823c8aab4683f93",
+      "hoja": "",
+      "filas": 54,
+      "columnas": 21,
+      "verificacion_actual": "Se reutiliza manifiesto y cruce agregados; no se relee ni materializa fuente individual histórica."
+    }
+  ],
+  "fuentes_sha256_recalculados": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.csv": "d4f3675d5d63247b0118412f983729cb18924c2971cea1b7d0ef731e6c8e7803",
+    "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json": "c205fed8061bc02ea2623eea8d789ffc1bc1355e41f82bb1298d319bd76b08ad",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/lectura_independiente_libro_mu2026/20260730_232242/CRUCE_66_CODIGOS.csv": "e25c76fdc1a394518a9a7ac26aee1f980d22fcb36b5285538aa26dec7a26ea10",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/lectura_independiente_libro_mu2026/20260730_232242/INVENTARIO_FORMULAS.csv": "ea71013d51f3511360be56f575a8857995b363ee65484ebd6f0abf4f2d738f52",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_integral_publicacion_vs_pregrado_posgrado_2026/20260730_223007/MANIFEST_AUDITORIA_INTEGRAL_MU2026_PUBLICACION_PREGRADO_POSGRADO_20260730_223007.json": "be48eb6e54e06b6b00408083f6c1f353dd90de4e32c86466cabfe06257b86521",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_gobernado_auditoria_integral_mu2026/20260730_233407/CIERRE_GOBERNADO_AUDITORIA_MU2026_20260730_233407/02_CONTROL_Y_TRAZABILIDAD/ACTA_CIERRE_GOBERNADO_MU2026.txt": "485cb107dcfb7d05daa19b8ef6f8bae96ea8174a9307564f93d4797c067963bd",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cierre_gobernado_auditoria_integral_mu2026/20260730_233407/CIERRE_GOBERNADO_AUDITORIA_MU2026_20260730_233407/02_CONTROL_Y_TRAZABILIDAD/MANIFEST_CIERRE_GOBERNADO_MU2026.json": "612a2b6cff7e80608e37c57ca488b643fbcf3e3863dd33a73213a08c2eb06b38",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/DETALLE_CONCILIACION.csv": "f60b2e327f016ca1abeb8f26f65d11b4b9ebdbaff785a9a4912c40bb21235eaa",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json": "3bc390117918e72438557435b8d031fbf71f152b00bf9abf452bab82282e1005",
+    "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/MATRICULA_2007_2026.manifest.json": "dcf5a3400b4f0335cd8ba3eb3bd255c08713e0f9fff472e7043100a8b58b64cc"
+  },
+  "limites": [
+    "No se releyeron fuentes individuales históricas de julio; se reutilizan sus manifiestos, fórmula inventariada y cruce agregado.",
+    "La conciliación actual de MU/CSV fue producida en fase2/conciliacion; aquí se verifican sus agregados y hashes.",
+    "Coincidencia de conteos por código no prueba igualdad de identidades o aceptación individual SIES.",
+    "Los archivos XLSX PRE_XLSX julio y fuente rector2026 tienen hashes distintos. La igualdad observada es agregada por código, no identidad binaria ni de filas.",
+    "No se modifica el cierre previo ni se consideran resueltas causas por igualdad neta.",
+    "No se modifica ningún dato, código, libro, denominador o tasa de retención."
+  ]
+}

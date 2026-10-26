@@ -1,0 +1,49 @@
+{
+  "recurso": "Auditoría ejecutiva UMAS a código único SIES",
+  "fecha": "2026-10-25",
+  "fuente_activa": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json",
+  "edicion": "v7_20261023_inf35_03_t3",
+  "inputs_agregados_sha256": {
+    "insumos/anios.json": "810e5e572158ed2ced15fc5157ea8fa3156963b436033ead9fd0101bd1835612",
+    "insumos/capas.json": "ab3b09b5594fd9e2eadbf592bb8b98ed976f1c1942ed2c36dc5287dee8fa4f8d",
+    "insumos/carreras.json": "936d83913be40e4df6775459c983fb8dde6fbdcadf7d4520edd57af11d400c06",
+    "insumos/combinaciones.json": "1349fd65ed455a39fa1bae7c80378e814babbea9043816d2730c4e084faf8ee1",
+    "insumos/combinaciones_periodo.json": "5da92e272e9dfb1497ba7a06559c35745a3240689e00044c73cb6ba47e93c4c6",
+    "insumos/gobierno.json": "547c8464ee301ca5763f62b4d58fc9f13f5642cf485e13ec09e8e7030757ee94",
+    "insumos/motivos.json": "7f1d1c8d6436a53fbf205b632b9fccfded6546211ffd34a1f10c761f9fce9b68",
+    "insumos/nombres_catalogo.json": "f72f48ef41e739d06b0f1e6c6e7dabd8b9e4e74f3926d56d94fd61fed3675b7a",
+    "insumos/requisitos.json": "59ecd9618b50b0b71b3478909fd0f3fc1ab6ade8bab1e7c68af6581e37918cde",
+    "insumos/resumen.json": "05620305416a13dcca4e72a49602d00f94e359d7c9c1c295f53000c0bc7c7324"
+  },
+  "archivos_salida": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diccionario_sies_20261025/DICCIONARIO_UMAS_SIES_RESUMEN_VERIFICADO_20261025.xlsx": "6dff28b6084ab6ebf9c0878019bd3c0c43cd203e92185ec9e71561b4a3c1b818",
+    "/Users/alexi/Desktop/DICCIONARIO_UMAS_SIES_RESUMEN_VERIFICADO_20261025.xlsx": "6dff28b6084ab6ebf9c0878019bd3c0c43cd203e92185ec9e71561b4a3c1b818"
+  },
+  "codigos_documentados": 21561,
+  "correspondencias_internas": 164,
+  "pendientes": 3049,
+  "combinaciones_historicas": {
+    "definicion": "carrera+plan+sede+jornada",
+    "total": 93,
+    "completas": 30,
+    "parciales": 59,
+    "sin_resolver": 4
+  },
+  "v17": {
+    "contextos": 2854,
+    "con_codigo": 2750,
+    "pendientes": 104,
+    "combinaciones": 26,
+    "combinaciones_con_pendiente": 16
+  },
+  "clasificacion": "B fuentes y estados; C cálculos/QA; D decisiones conservadas; E pendientes. A solo paleta de marca.",
+  "politica": "Solo agregados, sin identificadores. Fuentes individuales permanecen fuera de Git. No modifica el diccionario ni los denominadores.",
+  "estado_git": {
+    "rama": "feature/ire-2026",
+    "head": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+    "publicado": false,
+    "commit_push": false
+  },
+  "reproducibilidad": "auditar_cobertura.py y auditar_capas.py leen fuentes locales en modo lectura; verificar_consulta.py valida consumidores y hashes; build.mjs crea el reporte desde agregados; validar_entrega.py verifica y copia. Se necesita acceso local a las fuentes privadas; no se empaquetan.",
+  "qa": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_diccionario_sies_20261025/QA_ENTREGA.json"
+}

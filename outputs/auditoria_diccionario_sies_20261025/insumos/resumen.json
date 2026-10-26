@@ -1,0 +1,164 @@
+{
+  "clasificacion": "B/C observado y recalculado; D cierres internos autorizados; E pendientes",
+  "edicion": "v7_20261023_inf35_03_t3",
+  "descriptor": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json",
+  "base_privada_sha256": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e",
+  "universo": {
+    "observaciones": 24774,
+    "documentadas": 21561,
+    "solo_internas": 164,
+    "pendientes": 3049,
+    "personas": 5901,
+    "personas_con_pendiente": 1746,
+    "estados_pendientes": {
+      "SIN_EVIDENCIA_ANUAL_APLICABLE": 2966,
+      "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 15,
+      "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 67,
+      "HOMOLOGACION_EN_PLAN_RECHAZADO_SIN_VERSION": 1
+    }
+  },
+  "personas_estado_interno": {
+    "Completa": 4155,
+    "Sin resolver": 1042,
+    "Parcial": 704
+  },
+  "personas_estado_documental": {
+    "Completa": 4063,
+    "Sin resolver": 1139,
+    "Parcial": 699
+  },
+  "expedientes_estado_interno": {
+    "Completa": 4831,
+    "Sin resolver": 1193,
+    "Parcial": 598
+  },
+  "combinacion_definicion": [
+    "carrera",
+    "plan",
+    "sede_dimension",
+    "jornada_sies"
+  ],
+  "combinaciones": 93,
+  "combinaciones_estado": {
+    "Parcial": 59,
+    "Completa": 30,
+    "Sin resolver": 4
+  },
+  "combinaciones_estado_documental": {
+    "Parcial": 63,
+    "Completa": 26,
+    "Sin resolver": 4
+  },
+  "combinaciones_varias_versiones_respaldadas": 30,
+  "combinaciones_con_mas_un_codigo": 30,
+  "combinaciones_con_mas_un_codigo_mismo_periodo": 17,
+  "combinaciones_completas_con_mas_un_codigo_mismo_periodo": 3,
+  "combinaciones_completas_con_mas_un_codigo_historia": 7,
+  "combinaciones_periodo": 846,
+  "combinaciones_periodo_estado": {
+    "Parcial": 329,
+    "Completa": 457,
+    "Sin resolver": 60
+  },
+  "combinaciones_periodo_con_mas_un_codigo": 55,
+  "combinaciones_periodo_varias_versiones_respaldadas": 49,
+  "codigos_carrera_umas": 46,
+  "carreras_con_pendientes": 33,
+  "planes_distintos": 72,
+  "anios": [
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ],
+  "periodos_nativos": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "familias_multiversion_en_evidencia": 19,
+  "foco_multiversion": {
+    "observaciones": 16823,
+    "documentadas": 14951,
+    "solo_internas": 33,
+    "pendientes": 1839,
+    "personas": 3909,
+    "personas_con_pendiente": 1082,
+    "estados_pendientes": {
+      "SIN_EVIDENCIA_ANUAL_APLICABLE": 1784,
+      "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 15,
+      "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 39,
+      "HOMOLOGACION_EN_PLAN_RECHAZADO_SIN_VERSION": 1
+    }
+  },
+  "foco_multiversion_combinaciones": 71,
+  "foco_multiversion_combinaciones_con_pendientes": 46,
+  "indice_mu_filas": 12203,
+  "qa_consultas": {
+    "total": 24774,
+    "respuestas": {
+      "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 21561,
+      "E_PENDIENTE": 3049,
+      "D_CORRESPONDENCIA_INTERNA_APROBADA": 164
+    },
+    "diferencias": 0,
+    "conflictos_doc_interno": 0,
+    "integridad_sqlite": "ok",
+    "identificadores_observacion_unicos": true,
+    "contextos_unicos": true
+  },
+  "campos_respaldo": {
+    "aceptacion_SIES": {
+      "NO_ACREDITADA": 24774
+    },
+    "fecha_efectiva_plan": {
+      "": 24774
+    },
+    "cambio_plan_efectivo_acreditado": {
+      "False": 24774
+    },
+    "estado_documental": {
+      "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO": 18304,
+      "SIN_EVIDENCIA_ANUAL_APLICABLE": 3112,
+      "DIFIERE_CODIGO_PROPUESTO_OBSERVADO": 1760,
+      "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA": 1497,
+      "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 15,
+      "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 86
+    },
+    "estado_interno": {
+      "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO": 18304,
+      "SIN_EVIDENCIA_ANUAL_APLICABLE": 2966,
+      "CORRESPONDENCIA_INTERNA_REGLA_VIGENTE": 119,
+      "PUENTE_DOCUMENTAL_P_RUT_APROBADO": 6,
+      "DIFIERE_CODIGO_PROPUESTO_OBSERVADO": 1760,
+      "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA": 1497,
+      "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 15,
+      "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 67,
+      "RESUELTO_INTERNO_CONTINUIDAD_CONTEXTUAL_APROBADA": 2,
+      "HOMOLOGACION_EN_PLAN_RECHAZADO_SIN_VERSION": 1,
+      "RESUELTO_INTERNO_DECISION_AUTORIZADA_F02": 1,
+      "RESUELTO_INTERNO_CONTINUIDAD_CONTEXTUAL_F02_APROBADA": 3,
+      "CORRESPONDENCIA_INTERNA_APROBADA": 12,
+      "ANCLA_T1_HISTORICA_APROBADA": 8,
+      "CORRESPONDENCIA_INTERNA_SIETE_JORNADAS_APROBADA": 7,
+      "CORRESPONDENCIA_INTERNA_T3_FOTO_JORNADA_APROBADA": 1,
+      "CORRESPONDENCIA_INTERNA_INF35_03_T3_APROBADA": 1,
+      "CORRESPONDENCIA_INTERNA_DOS_JORNADAS_APROBADA": 2,
+      "CORRESPONDENCIA_INTERNA_INF35_12_APROBADA": 2
+    }
+  },
+  "pendientes_por_estado_propuesta": {
+    "UNICO": 2651,
+    "FECHA_AUSENTE_O_MULTIPLE": 32,
+    "SIN_PERFIL": 202,
+    "EMPATE_NUEVOS": 94,
+    "SIN_GRUPO": 51,
+    "SIN_OFERTA_NUEVOS_COMPATIBLE": 19
+  }
+}

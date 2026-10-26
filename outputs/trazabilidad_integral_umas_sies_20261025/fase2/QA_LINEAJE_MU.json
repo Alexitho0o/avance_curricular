@@ -1,0 +1,278 @@
+{
+  "clasificacion": "B/C",
+  "fecha": "2026-10-25T15:33:18.197037-03:00",
+  "metodo": "Comparación independiente en memoria de identidad, sede, carrera, jornada, versión y vigencia, por año, como multiconjunto y en orden original. Números enteros se normalizan solo para comparar; entradas intactas. VIGENCIA 2025: Vigente -> 1 y No vigente -> 0, transformación existente en scripts/construir_base_retencion_mu_2022_2026.py:typed_value.",
+  "incidencia_del_lector_resuelta_c": "La primera prueba detectó 2371 diferencias de representación VIGENCIA textual frente a VIG numérica en 2025. Relectura: Vigente=2298 y No vigente=73. Se incorporó al lector de auditoría la transformación existente del constructor y se repitió el control; no se modificó ninguna base.",
+  "base": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+  "hoja_base": "BASE_RETENCION_MU",
+  "sha256_base": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+  "filas_totales": 10200,
+  "controles": [
+    {
+      "clasificacion": "B/C",
+      "anio": 2022,
+      "fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "hoja": "CSV con encabezado",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "hash_coincide_inventario": true,
+      "filas_fuente": 1038,
+      "filas_base": 1038,
+      "rango_filas_fuente": [
+        2,
+        1039
+      ],
+      "rango_filas_base": [
+        2,
+        1039
+      ],
+      "columnas_comparadas": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_SED",
+        "COD_CAR",
+        "JOR",
+        "VERSION",
+        "VIG"
+      ],
+      "diferencias_por_columna_mismo_orden": {
+        "TIPO_DOC": 0,
+        "N_DOC": 0,
+        "DV": 0,
+        "COD_SED": 0,
+        "COD_CAR": 0,
+        "JOR": 0,
+        "VERSION": 0,
+        "VIG": 0
+      },
+      "faltantes_multiconjunto": 0,
+      "adicionales_multiconjunto": 0,
+      "mismo_orden_y_valores": true,
+      "COD_IES_observados": {
+        "162": 1038
+      },
+      "estado": "PASA"
+    },
+    {
+      "clasificacion": "B/C",
+      "anio": 2023,
+      "fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "hoja": "CSV con encabezado",
+      "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "hash_coincide_inventario": true,
+      "filas_fuente": 1145,
+      "filas_base": 1145,
+      "rango_filas_fuente": [
+        2,
+        1146
+      ],
+      "rango_filas_base": [
+        1040,
+        2184
+      ],
+      "columnas_comparadas": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_SED",
+        "COD_CAR",
+        "JOR",
+        "VERSION",
+        "VIG"
+      ],
+      "diferencias_por_columna_mismo_orden": {
+        "TIPO_DOC": 0,
+        "N_DOC": 0,
+        "DV": 0,
+        "COD_SED": 0,
+        "COD_CAR": 0,
+        "JOR": 0,
+        "VERSION": 0,
+        "VIG": 0
+      },
+      "faltantes_multiconjunto": 0,
+      "adicionales_multiconjunto": 0,
+      "mismo_orden_y_valores": true,
+      "COD_IES_observados": {
+        "162": 1145
+      },
+      "estado": "PASA"
+    },
+    {
+      "clasificacion": "B/C",
+      "anio": 2024,
+      "fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "hoja": "CSV con encabezado",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "hash_coincide_inventario": true,
+      "filas_fuente": 1541,
+      "filas_base": 1541,
+      "rango_filas_fuente": [
+        2,
+        1542
+      ],
+      "rango_filas_base": [
+        2185,
+        3725
+      ],
+      "columnas_comparadas": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_SED",
+        "COD_CAR",
+        "JOR",
+        "VERSION",
+        "VIG"
+      ],
+      "diferencias_por_columna_mismo_orden": {
+        "TIPO_DOC": 0,
+        "N_DOC": 0,
+        "DV": 0,
+        "COD_SED": 0,
+        "COD_CAR": 0,
+        "JOR": 0,
+        "VERSION": 0,
+        "VIG": 0
+      },
+      "faltantes_multiconjunto": 0,
+      "adicionales_multiconjunto": 0,
+      "mismo_orden_y_valores": true,
+      "COD_IES_observados": {
+        "162": 1541
+      },
+      "estado": "PASA"
+    },
+    {
+      "clasificacion": "B/C",
+      "anio": 2025,
+      "fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "hoja": "08-05-2025_22-26-22_Matrícula_P",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "hash_coincide_inventario": true,
+      "filas_fuente": 2371,
+      "filas_base": 2371,
+      "rango_filas_fuente": [
+        2,
+        2372
+      ],
+      "rango_filas_base": [
+        3726,
+        6096
+      ],
+      "columnas_comparadas": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_SED",
+        "COD_CAR",
+        "JOR",
+        "VERSION",
+        "VIG"
+      ],
+      "diferencias_por_columna_mismo_orden": {
+        "TIPO_DOC": 0,
+        "N_DOC": 0,
+        "DV": 0,
+        "COD_SED": 0,
+        "COD_CAR": 0,
+        "JOR": 0,
+        "VERSION": 0,
+        "VIG": 0
+      },
+      "faltantes_multiconjunto": 0,
+      "adicionales_multiconjunto": 0,
+      "mismo_orden_y_valores": true,
+      "COD_IES_observados": {
+        "162": 2371
+      },
+      "estado": "PASA"
+    },
+    {
+      "clasificacion": "B/C",
+      "anio": 2026,
+      "fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "hoja": "CONSOLIDADO",
+      "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "hash_coincide_inventario": true,
+      "filas_fuente": 4105,
+      "filas_base": 4105,
+      "rango_filas_fuente": [
+        2,
+        4106
+      ],
+      "rango_filas_base": [
+        6097,
+        10201
+      ],
+      "columnas_comparadas": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_SED",
+        "COD_CAR",
+        "JOR",
+        "VERSION",
+        "VIG"
+      ],
+      "diferencias_por_columna_mismo_orden": {
+        "TIPO_DOC": 0,
+        "N_DOC": 0,
+        "DV": 0,
+        "COD_SED": 0,
+        "COD_CAR": 0,
+        "JOR": 0,
+        "VERSION": 0,
+        "VIG": 0
+      },
+      "faltantes_multiconjunto": 0,
+      "adicionales_multiconjunto": 0,
+      "mismo_orden_y_valores": true,
+      "COD_IES_observados": "No existe columna: alcance IPSS documentado en inventario",
+      "estado": "PASA"
+    }
+  ],
+  "preservacion": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "sin_cambios": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/INVENTARIO_FUENTES_SHA256.json",
+      "sha256": "a5b5f4e393c51b0dcfb6a34c4f796c94e396c903679950d246dc36eaba719e1b",
+      "sin_cambios": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+      "sin_cambios": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35",
+      "sin_cambios": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+      "sin_cambios": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+      "sin_cambios": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "sin_cambios": true
+    }
+  ],
+  "limites_e": [
+    "No acredita recepción/aceptación SIES.",
+    "No verifica CODCLI ni asigna una versión nueva.",
+    "No verifica las demás 24 columnas del esquema rector ni recalcula elegibilidad/retención."
+  ],
+  "qa": "PASA"
+}

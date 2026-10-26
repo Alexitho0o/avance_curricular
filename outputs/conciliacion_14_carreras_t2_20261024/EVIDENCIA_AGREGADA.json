@@ -1,0 +1,1157 @@
+{
+  "fecha": "2026-10-24T09:39:30.030509-03:00",
+  "proceso": "Seguimiento interno IPSS162, ingresos 2026/P2",
+  "universo_inmutable": {
+    "matriculas": 528,
+    "personas": 527,
+    "renuncias_agregadas": 66
+  },
+  "clasificacion": "B datos; C cruces/cálculos; E atribución a nómina original",
+  "cruce": {
+    "metodo": "CODCLI exacto; concordancia RUT+CODCARPR+ANOMATRICULA+PERIODOMATRICULA",
+    "cardinalidad": {
+      "DA10246": {
+        "1": 527,
+        "0": 1
+      },
+      "DA11998": {
+        "1": 526,
+        "0": 2
+      },
+      "DA12159": {
+        "1": 526,
+        "0": 2
+      }
+    },
+    "discordancias_identidad_contexto": 0
+  },
+  "transiciones_528": [
+    {
+      "estados": [
+        "ELIMINADO",
+        "ELIMINADO",
+        "ELIMINADO"
+      ],
+      "matriculas": 7
+    },
+    {
+      "estados": [
+        "NO_LOCALIZADO_POR_CODCLI",
+        "NO_LOCALIZADO_POR_CODCLI",
+        "NO_LOCALIZADO_POR_CODCLI"
+      ],
+      "matriculas": 1
+    },
+    {
+      "estados": [
+        "VIGENTE",
+        "ELIMINADO",
+        "ELIMINADO"
+      ],
+      "matriculas": 56
+    },
+    {
+      "estados": [
+        "VIGENTE",
+        "NO_LOCALIZADO_POR_CODCLI",
+        "NO_LOCALIZADO_POR_CODCLI"
+      ],
+      "matriculas": 1
+    },
+    {
+      "estados": [
+        "VIGENTE",
+        "VIGENTE",
+        "SUSPENDIDO"
+      ],
+      "matriculas": 1
+    },
+    {
+      "estados": [
+        "VIGENTE",
+        "VIGENTE",
+        "VIGENTE"
+      ],
+      "matriculas": 462
+    }
+  ],
+  "totales": {
+    "19_carreras": {
+      "matriculas_originales": 528,
+      "renuncias_resumen": 66,
+      "eliminados_12159": 63,
+      "suspendidos_12159": 1,
+      "codcli_no_localizados_12159": 2,
+      "vigentes_12159": 462,
+      "complemento_12159": 66,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 56,
+      "nueva_situacion11": 51,
+      "nueva_situacion23": 2,
+      "nueva_situacion24": 3,
+      "pasan_vigente_ausente": 1,
+      "pasan_vigente_suspendido": 1
+    },
+    "14_carreras": {
+      "matriculas_originales": 420,
+      "renuncias_resumen": 55,
+      "eliminados_12159": 53,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 2,
+      "vigentes_12159": 365,
+      "complemento_12159": 55,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 47,
+      "nueva_situacion11": 43,
+      "nueva_situacion23": 1,
+      "nueva_situacion24": 3,
+      "pasan_vigente_ausente": 1,
+      "pasan_vigente_suspendido": 0
+    }
+  },
+  "carreras": [
+    {
+      "clasificacion": "B/C",
+      "carrera": "ADMINISTRACION PUBLICA",
+      "codigos_carrera": "ADMP",
+      "matriculas_originales": 20,
+      "renuncias_resumen": 2,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 1,
+      "eliminados_12159": 1,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 19,
+      "complemento_12159": 1,
+      "diferencia_vs_resumen": -1,
+      "pasan_vigente_eliminado": 1,
+      "nueva_situacion11": 1,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 19,
+        "11 - RENUNCIA POST INICIO CLASES": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 19
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "AUDITORIA",
+      "codigos_carrera": "AUDT",
+      "matriculas_originales": 15,
+      "renuncias_resumen": 2,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 1,
+      "eliminados_12159": 1,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 14,
+      "complemento_12159": 1,
+      "diferencia_vs_resumen": -1,
+      "pasan_vigente_eliminado": 1,
+      "nueva_situacion11": 1,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 14,
+        "11 - RENUNCIA POST INICIO CLASES": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 14
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "CONTABILIDAD GENERAL",
+      "codigos_carrera": "CONG",
+      "matriculas_originales": 25,
+      "renuncias_resumen": 2,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 2,
+      "eliminados_12159": 2,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 23,
+      "complemento_12159": 2,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 2,
+      "nueva_situacion11": 2,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": false,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 23,
+        "11 - RENUNCIA POST INICIO CLASES": 2
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 2
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 23
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "CONTINUIDAD INGENIERIA INFORMATICA",
+      "codigos_carrera": "CIINF",
+      "matriculas_originales": 3,
+      "renuncias_resumen": 0,
+      "renuncias_celda_vacia": true,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 0,
+      "eliminados_12159": 0,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 3,
+      "complemento_12159": 0,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 0,
+      "nueva_situacion11": 0,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": false,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 3
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 3
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+      "codigos_carrera": "IADM",
+      "matriculas_originales": 36,
+      "renuncias_resumen": 6,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 4,
+      "eliminados_12159": 4,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 32,
+      "complemento_12159": 4,
+      "diferencia_vs_resumen": -2,
+      "pasan_vigente_eliminado": 3,
+      "nueva_situacion11": 3,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 32,
+        "11 - RENUNCIA POST INICIO CLASES": 4
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 3
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 32
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+      "codigos_carrera": "TAMD",
+      "matriculas_originales": 33,
+      "renuncias_resumen": 4,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 3,
+      "eliminados_12159": 3,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 30,
+      "complemento_12159": 3,
+      "diferencia_vs_resumen": -1,
+      "pasan_vigente_eliminado": 3,
+      "nueva_situacion11": 3,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 30,
+        "11 - RENUNCIA POST INICIO CLASES": 3
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 3
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 30
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "codigos_carrera": "ICIB",
+      "matriculas_originales": 30,
+      "renuncias_resumen": 0,
+      "renuncias_celda_vacia": true,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 0,
+      "eliminados_12159": 0,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 30,
+      "complemento_12159": 0,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 0,
+      "nueva_situacion11": 0,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": false,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 30
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 30
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "codigos_carrera": "TCIB",
+      "matriculas_originales": 16,
+      "renuncias_resumen": 3,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 2,
+      "eliminados_12159": 2,
+      "suspendidos_12159": 1,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 13,
+      "complemento_12159": 3,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 2,
+      "nueva_situacion11": 1,
+      "nueva_situacion23": 1,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 1,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": false,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 13,
+        "23 - RETIRO - RETRACTO": 1,
+        "2 - SUSPENSIÓN TEMPORAL": 1,
+        "11 - RENUNCIA POST INICIO CLASES": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 2
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "SUSPENDIDO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 13
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "codigos_carrera": "IINF",
+      "matriculas_originales": 33,
+      "renuncias_resumen": 2,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 4,
+      "eliminados_12159": 4,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 29,
+      "complemento_12159": 4,
+      "diferencia_vs_resumen": 2,
+      "pasan_vigente_eliminado": 4,
+      "nueva_situacion11": 3,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 1,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 29,
+        "11 - RENUNCIA POST INICIO CLASES": 3,
+        "24 - CAMBIO DE CARRERA": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 4
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 29
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "codigos_carrera": "TPAS",
+      "matriculas_originales": 26,
+      "renuncias_resumen": 0,
+      "renuncias_celda_vacia": true,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 3,
+      "eliminados_12159": 3,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 23,
+      "complemento_12159": 3,
+      "diferencia_vs_resumen": 3,
+      "pasan_vigente_eliminado": 2,
+      "nueva_situacion11": 0,
+      "nueva_situacion23": 1,
+      "nueva_situacion24": 1,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 23,
+        "11 - RENUNCIA POST INICIO CLASES": 1,
+        "23 - RETIRO - RETRACTO": 1,
+        "24 - CAMBIO DE CARRERA": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 2
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 23
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA EN LOGISTICA",
+      "codigos_carrera": "ILOG",
+      "matriculas_originales": 34,
+      "renuncias_resumen": 6,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 6,
+      "eliminados_12159": 6,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 28,
+      "complemento_12159": 6,
+      "diferencia_vs_resumen": 0,
+      "pasan_vigente_eliminado": 5,
+      "nueva_situacion11": 5,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": false,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 28,
+        "11 - RENUNCIA POST INICIO CLASES": 6
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 5
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 28
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN LOGISTICA",
+      "codigos_carrera": "TLOG",
+      "matriculas_originales": 21,
+      "renuncias_resumen": 3,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 2,
+      "eliminados_12159": 1,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 1,
+      "vigentes_12159": 19,
+      "complemento_12159": 2,
+      "diferencia_vs_resumen": -1,
+      "pasan_vigente_eliminado": 0,
+      "nueva_situacion11": 0,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 1,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 19,
+        "": 1,
+        "11 - RENUNCIA POST INICIO CLASES": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "NO_LOCALIZADO_POR_CODCLI",
+            "NO_LOCALIZADO_POR_CODCLI"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 19
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA EN MARKETING DIGITAL",
+      "codigos_carrera": "IMDI",
+      "matriculas_originales": 33,
+      "renuncias_resumen": 2,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 0,
+      "eliminados_12159": 0,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 33,
+      "complemento_12159": 0,
+      "diferencia_vs_resumen": -2,
+      "pasan_vigente_eliminado": 0,
+      "nueva_situacion11": 0,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 2,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 31,
+        "38 - REINCORPORACION DE ACTIVIDADES": 2
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 33
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN MARKETING DIGITAL",
+      "codigos_carrera": "TMDI",
+      "matriculas_originales": 28,
+      "renuncias_resumen": 5,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 4,
+      "eliminados_12159": 4,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 24,
+      "complemento_12159": 4,
+      "diferencia_vs_resumen": -1,
+      "pasan_vigente_eliminado": 3,
+      "nueva_situacion11": 3,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 24,
+        "11 - RENUNCIA POST INICIO CLASES": 4
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 3
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 24
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA EN RECURSOS HUMANOS",
+      "codigos_carrera": "IRHU",
+      "matriculas_originales": 6,
+      "renuncias_resumen": 0,
+      "renuncias_celda_vacia": true,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 1,
+      "eliminados_12159": 0,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 1,
+      "vigentes_12159": 5,
+      "complemento_12159": 1,
+      "diferencia_vs_resumen": 1,
+      "pasan_vigente_eliminado": 0,
+      "nueva_situacion11": 0,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 1,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "": 1,
+        "38 - REINCORPORACION DE ACTIVIDADES": 1,
+        "1 - ALUMNO REGULAR": 4
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "NO_LOCALIZADO_POR_CODCLI",
+            "NO_LOCALIZADO_POR_CODCLI",
+            "NO_LOCALIZADO_POR_CODCLI"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 5
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN RECURSOS HUMANOS",
+      "codigos_carrera": "TRHU",
+      "matriculas_originales": 18,
+      "renuncias_resumen": 0,
+      "renuncias_celda_vacia": true,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 5,
+      "eliminados_12159": 5,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 13,
+      "complemento_12159": 5,
+      "diferencia_vs_resumen": 5,
+      "pasan_vigente_eliminado": 5,
+      "nueva_situacion11": 5,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "11 - RENUNCIA POST INICIO CLASES": 5,
+        "1 - ALUMNO REGULAR": 13
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 5
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 13
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "INGENIERIA INDUSTRIAL",
+      "codigos_carrera": "IIND",
+      "matriculas_originales": 26,
+      "renuncias_resumen": 0,
+      "renuncias_celda_vacia": true,
+      "no_vigentes_o_no_localizados_10246": 0,
+      "no_vigentes_o_no_localizados_11998": 1,
+      "eliminados_12159": 1,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 25,
+      "complemento_12159": 1,
+      "diferencia_vs_resumen": 1,
+      "pasan_vigente_eliminado": 1,
+      "nueva_situacion11": 1,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 25,
+        "11 - RENUNCIA POST INICIO CLASES": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 25
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN ENFERMERIA",
+      "codigos_carrera": "COTENS, TENS",
+      "matriculas_originales": 60,
+      "renuncias_resumen": 11,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 12,
+      "eliminados_12159": 12,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 48,
+      "complemento_12159": 12,
+      "diferencia_vs_resumen": 1,
+      "pasan_vigente_eliminado": 11,
+      "nueva_situacion11": 11,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 0,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 1,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 47,
+        "11 - RENUNCIA POST INICIO CLASES": 11,
+        "38 - REINCORPORACION DE ACTIVIDADES": 1,
+        "24 - CAMBIO DE CARRERA": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 11
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 48
+        }
+      ]
+    },
+    {
+      "clasificacion": "B/C",
+      "carrera": "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+      "codigos_carrera": "COTEIQ, TEIQ",
+      "matriculas_originales": 65,
+      "renuncias_resumen": 18,
+      "renuncias_celda_vacia": false,
+      "no_vigentes_o_no_localizados_10246": 1,
+      "no_vigentes_o_no_localizados_11998": 14,
+      "eliminados_12159": 14,
+      "suspendidos_12159": 0,
+      "codcli_no_localizados_12159": 0,
+      "vigentes_12159": 51,
+      "complemento_12159": 14,
+      "diferencia_vs_resumen": -4,
+      "pasan_vigente_eliminado": 13,
+      "nueva_situacion11": 12,
+      "nueva_situacion23": 0,
+      "nueva_situacion24": 1,
+      "pasan_vigente_ausente": 0,
+      "pasan_vigente_suspendido": 0,
+      "vigentes_situacion38_12159": 0,
+      "es_carrera_discordante": true,
+      "situaciones_finales": {
+        "1 - ALUMNO REGULAR": 51,
+        "23 - RETIRO - RETRACTO": 1,
+        "11 - RENUNCIA POST INICIO CLASES": 12,
+        "24 - CAMBIO DE CARRERA": 1
+      },
+      "transiciones": [
+        {
+          "estados": [
+            "ELIMINADO",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 1
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "ELIMINADO",
+            "ELIMINADO"
+          ],
+          "matriculas": 13
+        },
+        {
+          "estados": [
+            "VIGENTE",
+            "VIGENTE",
+            "VIGENTE"
+          ],
+          "matriculas": 51
+        }
+      ]
+    }
+  ],
+  "alternativas_sin_atribucion": [
+    {
+      "fuente": "DA10246",
+      "carrera_origen": "IRHU",
+      "carrera_otro_codcli": "TRHU",
+      "periodo_origen": "2",
+      "periodo_otro_codcli": "2",
+      "anio_otro_codcli": "2026",
+      "jornada_concordante": true,
+      "fecha_matricula_concordante": false,
+      "estado_otro_codcli": "VIGENTE",
+      "situacion_otro_codcli": "1 - ALUMNO REGULAR",
+      "fecha_firma_disponible": true,
+      "clase": "B; E atribución al expediente original no demostrada"
+    },
+    {
+      "fuente": "DA11998",
+      "carrera_origen": "IRHU",
+      "carrera_otro_codcli": "TRHU",
+      "periodo_origen": "2",
+      "periodo_otro_codcli": "2",
+      "anio_otro_codcli": "2026",
+      "jornada_concordante": true,
+      "fecha_matricula_concordante": false,
+      "estado_otro_codcli": "ELIMINADO",
+      "situacion_otro_codcli": "11 - RENUNCIA POST INICIO CLASES",
+      "fecha_firma_disponible": false,
+      "clase": "B; E atribución al expediente original no demostrada"
+    },
+    {
+      "fuente": "DA12159",
+      "carrera_origen": "IRHU",
+      "carrera_otro_codcli": "TRHU",
+      "periodo_origen": "2",
+      "periodo_otro_codcli": "2",
+      "anio_otro_codcli": "2026",
+      "jornada_concordante": true,
+      "fecha_matricula_concordante": false,
+      "estado_otro_codcli": "ELIMINADO",
+      "situacion_otro_codcli": "11 - RENUNCIA POST INICIO CLASES",
+      "fecha_firma_disponible": false,
+      "clase": "B; E atribución al expediente original no demostrada"
+    },
+    {
+      "fuente": "DA11998",
+      "carrera_origen": "TLOG",
+      "carrera_otro_codcli": "TLOG",
+      "periodo_origen": "2",
+      "periodo_otro_codcli": "3",
+      "anio_otro_codcli": "2026",
+      "jornada_concordante": true,
+      "fecha_matricula_concordante": false,
+      "estado_otro_codcli": "VIGENTE",
+      "situacion_otro_codcli": "1 - ALUMNO REGULAR",
+      "fecha_firma_disponible": true,
+      "clase": "B; E atribución al expediente original no demostrada"
+    },
+    {
+      "fuente": "DA12159",
+      "carrera_origen": "TLOG",
+      "carrera_otro_codcli": "TLOG",
+      "periodo_origen": "2",
+      "periodo_otro_codcli": "3",
+      "anio_otro_codcli": "2026",
+      "jornada_concordante": true,
+      "fecha_matricula_concordante": false,
+      "estado_otro_codcli": "VIGENTE",
+      "situacion_otro_codcli": "1 - ALUMNO REGULAR",
+      "fecha_firma_disponible": true,
+      "clase": "B; E atribución al expediente original no demostrada"
+    }
+  ],
+  "limites": [
+    "Los cambios son observados entre respaldos, no fechas efectivas acreditadas.",
+    "Otro CODCLI del mismo RUT no reemplaza ni determina el estado del expediente original.",
+    "No existe lista identificable del agregado66 en las fuentes revisadas.",
+    "26 es suma de diferencias absolutas de conteos por carrera, no personas identificadas."
+  ],
+  "fuentes": {
+    "T2": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia_t2_t3/20261022_fuentes/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769"
+    },
+    "T3": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia_t2_t3/20261022_fuentes/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae"
+    },
+    "DA10246": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    "DA11998": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    "DA12159": {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    },
+    "MANIFEST_ORIGEN": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/retencion_intermedia_t2_t3/MANIFEST_RETENCION_FOTO_INTERTRIMESTRAL_20261022.json",
+      "sha256": "3fa3c725d0bc21564d29c8415e01add40064fac3aa2eedb669990d420fddd541"
+    },
+    "MANIFEST_10246": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "sha256": "bda8a15c0f0689bf013f94882a20cdb6fac25107888641af69c9210bc663f588"
+    },
+    "MANIFEST_12159": {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "ef41ab72060b70bca2e3756ee97f9469ce108f27feeca9e6892b920f94054a84"
+    },
+    "V16": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+    },
+    "V16_ESCRITORIO": {
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+    }
+  }
+}

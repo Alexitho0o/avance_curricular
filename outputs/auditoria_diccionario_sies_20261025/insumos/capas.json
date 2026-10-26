@@ -1,0 +1,3452 @@
+{
+  "clasificacion": "B observado; C recálculo agregado; D decisiones conservadas; E pendientes",
+  "fuentes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/RESUMEN.json": "a790ea2ad272b0990becc08f1601db47d5d68bbdd7d3b935444fbc7d9a6e7151",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/consumo_comun_c2/20261016/descriptor.json": "fb83093e85483471417606fae13258002975e5adf3229000e6fe8444ffa520bf",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_historicas_b5/20261016/reglas_observadas.json": "03b943fc913573e6d2b29f49657d167beade4c59f8507c2ede37d8acf232e41e",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_c1/20261016/entrega.json": "58345a8138b8c0cedfe4985fb2947459a041797b1f93017c158d7717ef2ffc83",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_por_cohorte/20261016/resumen.json": "41e55e8d1b94cf0c5817638e3c0f533aba758bcce5056a2c01072aea41150ddf",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/seguimiento_t1_hasta_2026_20261023_v13/MANIFEST_SEGUIMIENTO.json": "d9b9557ddc31cc9029fc4bd222b850539b92fdac0a98af056bf6f45014c12abc",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/seguimiento_t1_hasta_2026_20261023_v13/TABLAS_SEGUIMIENTO.json": "b7aa2e7b60911a4fb8701afe110f5b372d73bdac8d80b9e27792c13bf1019b11",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/seguimiento_t1_hasta_2026_20261023_v13/FOCO_MULTIVERSION.json": "9cbf3710cf068082b0af3af73c72aaf4ecc153937d41001d59822c50685d1df8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/pendientes_entrega_20261024_v17/QA_Y_MANIFEST.json": "dca094f6234ecd3db711d58e30169134ea7e199887fedee02abf59f7fd45acc0",
+    "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261024_V17.xlsx": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+    "/Users/alexi/.local/share/ipss/destinos_calendario_v7_20261023/CONTEXTOS_POR_ORIGEN_PERIODO.json": "82a12e4dbbd9d3ea751f2601d6b4a2f4ffe6485cb7c1f53268015169dba585ca"
+  },
+  "c2": {
+    "reglas": 2349,
+    "habilitadas": 0,
+    "estados": {
+      "OBSERVADA_SIN_RESERVA": 898,
+      "CORROBORADA_EN_RESERVA": 689,
+      "CONFLICTO_CONSTRUCCION": 47,
+      "CONTRADICCION_EN_RESERVA": 6,
+      "DATO_POSTERIOR_AL_CONTEXTO": 709
+    },
+    "asignacion_productiva": false,
+    "edicion": "C2_20261016"
+  },
+  "cohorte_oferta_20261016": {
+    "codigos_sies_preservados": 141,
+    "combinaciones_datosalumnos": 1825,
+    "criterio_anoingreso": "Cohorte de carrera de DatosAlumnos; no año de matrícula ni de notas",
+    "equivalencias_previas_preservadas": 257,
+    "estados": {
+      "AMBIGUEDAD_PERFIL_DURACION": 14,
+      "COHORTE_ANTERIOR_COBERTURA_OFERTA": 46,
+      "COHORTE_ANTERIOR_INICIO_OFERTA": 21,
+      "COINCIDENCIA_INICIO": 240,
+      "FUERA_AMBITO_2007_2026": 102,
+      "INTERVALO_PROPUESTO": 969,
+      "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 287,
+      "SIN_AGRUPACION_EXISTENTE": 146
+    },
+    "fecha": "2026-10-16",
+    "fuente_datosalumnos": {
+      "columnas": {
+        "ANOINGRESO": 7,
+        "ANOMATRICULA": 5,
+        "CODCARPR": 3,
+        "JORNADA": 10,
+        "NOMBRE_L": 4,
+        "PERIODOINGRESO": 8,
+        "SEDE": 64
+      },
+      "detalle": "Corte vigente disponible en Descargas. 11941 no estaba presente en las ubicaciones consultadas; se utiliza11998 y se preserva su procedencia.",
+      "fila_encabezados": 1,
+      "hoja": "Hoja1",
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    "grupos_existentes": 132,
+    "intervalo_es_hipotesis_explicita": true,
+    "motor_oficial_modificado": false,
+    "nombre_es_filtro": false,
+    "perfiles_por_fuente": {
+      "CODCARPR_CANONICO": 49,
+      "MANUAL_FCU2026": 7,
+      "PERFIL_NO_UNIVOCO": 17,
+      "PERFIL_UNANIME_GRUPO_EXISTENTE": 59
+    },
+    "registros_personales_exportados": false
+  },
+  "v17": {
+    "sha256": "8b461d53f75ac26e2e38aa46d0aae921736d21ac2a64034cfd26c08495756a52",
+    "hojas": 55,
+    "contextos_filas_agregadas": 223,
+    "tabla54_identica_a_tablas_v13": true,
+    "diccionario_origen": "v7_20261023_inf35_03_t3",
+    "contextos": 2854,
+    "estados": {
+      "B/C Documental anual": 2737,
+      "D Interno aprobado": 13,
+      "E Pendiente": 104
+    },
+    "foco_multiversion": {
+      "clasificacion": "B/C conteo sobre contextos existentes; sin reejecución de diccionario",
+      "contextos_calendario_total": 2854,
+      "definicion_multiversion": "Bandera multiple heredada de ORIGENES_T1 V12: familia SIES con más de una versión en evidencia del diccionario al construir V12; no se recalcula ni se asume catálogo actual.",
+      "foco_multiversion_total": 1077,
+      "estados": {
+        "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 1040,
+        "E_PENDIENTE": 24,
+        "D_CORRESPONDENCIA_INTERNA_APROBADA": 13
+      },
+      "por_familia": [
+        {
+          "familia_origen": "I162S2C1J1",
+          "documentales": 55,
+          "internos_aprobados": 6,
+          "pendientes": 4,
+          "total": 65,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C1J2",
+          "documentales": 44,
+          "internos_aprobados": 3,
+          "pendientes": 1,
+          "total": 48,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C1J4",
+          "documentales": 313,
+          "internos_aprobados": 2,
+          "pendientes": 2,
+          "total": 317,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C3J2",
+          "documentales": 22,
+          "internos_aprobados": 0,
+          "pendientes": 2,
+          "total": 24,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C3J4",
+          "documentales": 220,
+          "internos_aprobados": 2,
+          "pendientes": 2,
+          "total": 224,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C46J2",
+          "documentales": 40,
+          "internos_aprobados": 0,
+          "pendientes": 6,
+          "total": 46,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C46J4",
+          "documentales": 277,
+          "internos_aprobados": 0,
+          "pendientes": 4,
+          "total": 281,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C6J2",
+          "documentales": 7,
+          "internos_aprobados": 0,
+          "pendientes": 1,
+          "total": 8,
+          "clasificacion": "B/C; internos D; pendientes E"
+        },
+        {
+          "familia_origen": "I162S2C6J4",
+          "documentales": 62,
+          "internos_aprobados": 0,
+          "pendientes": 2,
+          "total": 64,
+          "clasificacion": "B/C; internos D; pendientes E"
+        }
+      ],
+      "por_anio_periodo_familia": [
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C1J1"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 7,
+            "E_PENDIENTE": 2
+          },
+          "total": 9
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C1J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 6
+          },
+          "total": 6
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C1J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 41,
+            "E_PENDIENTE": 1
+          },
+          "total": 42
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C3J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 3,
+            "E_PENDIENTE": 1
+          },
+          "total": 4
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C3J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 35
+          },
+          "total": 35
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C46J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8,
+            "E_PENDIENTE": 1
+          },
+          "total": 9
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C46J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 22
+          },
+          "total": 22
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "2",
+            "I162S2C6J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 6,
+            "E_PENDIENTE": 1
+          },
+          "total": 7
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C1J1"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 9,
+            "E_PENDIENTE": 2
+          },
+          "total": 11
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C1J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 6,
+            "E_PENDIENTE": 1
+          },
+          "total": 7
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C1J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 44,
+            "E_PENDIENTE": 1
+          },
+          "total": 45
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C3J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 3,
+            "E_PENDIENTE": 1
+          },
+          "total": 4
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C3J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 38
+          },
+          "total": 38
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C46J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8,
+            "E_PENDIENTE": 1
+          },
+          "total": 9
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C46J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 22
+          },
+          "total": 22
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C6J2"
+          ],
+          "estados": {
+            "E_PENDIENTE": 1
+          },
+          "total": 1
+        },
+        {
+          "clave": [
+            2024,
+            2025,
+            "3",
+            "I162S2C6J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 6
+          },
+          "total": 6
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C1J1"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 9,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 2
+          },
+          "total": 11
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C1J2"
+          ],
+          "estados": {
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 2,
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8
+          },
+          "total": 10
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C1J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 58
+          },
+          "total": 58
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C3J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8
+          },
+          "total": 8
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C3J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 40
+          },
+          "total": 40
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C46J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 3
+          },
+          "total": 3
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C46J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 47,
+            "E_PENDIENTE": 1
+          },
+          "total": 48
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C6J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 4
+          },
+          "total": 4
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "2",
+            "I162S2C6J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 23
+          },
+          "total": 23
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C1J1"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 2
+          },
+          "total": 10
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C1J2"
+          ],
+          "estados": {
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1,
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 7
+          },
+          "total": 8
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C1J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 54
+          },
+          "total": 54
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C3J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8
+          },
+          "total": 8
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C3J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 33
+          },
+          "total": 33
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C46J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 3
+          },
+          "total": 3
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C46J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 39
+          },
+          "total": 39
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C6J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 3
+          },
+          "total": 3
+        },
+        {
+          "clave": [
+            2025,
+            2025,
+            "3",
+            "I162S2C6J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 16
+          },
+          "total": 16
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C1J1"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 11,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1
+          },
+          "total": 12
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C1J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 9
+          },
+          "total": 9
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C1J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 60,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1
+          },
+          "total": 61
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C3J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 39,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1,
+            "E_PENDIENTE": 1
+          },
+          "total": 41
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C46J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 9,
+            "E_PENDIENTE": 2
+          },
+          "total": 11
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C46J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 75,
+            "E_PENDIENTE": 2
+          },
+          "total": 77
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "2",
+            "I162S2C6J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 6,
+            "E_PENDIENTE": 1
+          },
+          "total": 7
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C1J1"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 11,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1
+          },
+          "total": 12
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C1J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 8
+          },
+          "total": 8
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C1J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 56,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1
+          },
+          "total": 57
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C3J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 35,
+            "D_CORRESPONDENCIA_INTERNA_APROBADA": 1,
+            "E_PENDIENTE": 1
+          },
+          "total": 37
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C46J2"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 9,
+            "E_PENDIENTE": 2
+          },
+          "total": 11
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C46J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 72,
+            "E_PENDIENTE": 1
+          },
+          "total": 73
+        },
+        {
+          "clave": [
+            2026,
+            2026,
+            "3",
+            "I162S2C6J4"
+          ],
+          "estados": {
+            "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 5
+          },
+          "total": 5
+        }
+      ],
+      "fuentes": {
+        "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0",
+        "/Users/alexi/.local/share/ipss/destinos_calendario_v7_20261023/CONTEXTOS_POR_ORIGEN_PERIODO.json": "82a12e4dbbd9d3ea751f2601d6b4a2f4ffe6485cb7c1f53268015169dba585ca"
+      },
+      "no_cierres_nuevos": true
+    },
+    "combinaciones": {
+      "carrera_umas_plan": {
+        "total": 20,
+        "con_pendientes": 12
+      },
+      "carrera_umas_plan_ano_periodo": {
+        "total": 66,
+        "con_pendientes": 34
+      },
+      "codigo_origen_plan_ano_periodo": {
+        "total": 144,
+        "con_pendientes": 64
+      }
+    },
+    "planes_con_pendientes": [
+      {
+        "carrera_umas": "AUDT",
+        "plan": "AUDT20251",
+        "observaciones": 73,
+        "pendientes": 1,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ]
+      },
+      {
+        "carrera_umas": "IADM",
+        "plan": "IADM20241",
+        "observaciones": 169,
+        "pendientes": 11,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "ICDA",
+        "plan": "ICDA20251",
+        "observaciones": 85,
+        "pendientes": 2,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "plan": "ICIB20241",
+        "observaciones": 345,
+        "pendientes": 29,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "ICRE",
+        "plan": "ICRE20241",
+        "observaciones": 244,
+        "pendientes": 3,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "plan": "IINF20241",
+        "observaciones": 449,
+        "pendientes": 25,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen",
+          "Sin código candidato/contexto de familia atribuido"
+        ]
+      },
+      {
+        "carrera_umas": "ILOG",
+        "plan": "ILOG20241",
+        "observaciones": 127,
+        "pendientes": 6,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "TAMD",
+        "plan": "TAMD20241",
+        "observaciones": 176,
+        "pendientes": 9,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Familia del origen entre candidatos; atribución de versión/plan pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "TCIB",
+        "plan": "TCIB20241",
+        "observaciones": 203,
+        "pendientes": 2,
+        "razones": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "TCRE",
+        "plan": "TCRE20241",
+        "observaciones": 70,
+        "pendientes": 1,
+        "razones": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "TLOG",
+        "plan": "TLOG20241",
+        "observaciones": 158,
+        "pendientes": 6,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      },
+      {
+        "carrera_umas": "TPAS",
+        "plan": "TPAS20241",
+        "observaciones": 371,
+        "pendientes": 9,
+        "razones": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Familia del origen entre candidatos; atribución de versión/plan pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ]
+      }
+    ],
+    "qa_reconsulta_actual": {
+      "consultas": 2854,
+      "diferencias": 0,
+      "observaciones_id_distintas": 2854,
+      "personas_distintas": 1504,
+      "pendientes_observaciones": 104,
+      "pendientes_personas_distintas": 58,
+      "pendientes_multiversion_observaciones": 24,
+      "pendientes_multiversion_personas_distintas": 16
+    },
+    "combinaciones_contextuales": [
+      {
+        "carrera_umas": "ADMP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ADMP20251",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 29,
+        "documentales": 29,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C83J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C83J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ADMP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ADMP20251",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 28,
+        "documentales": 28,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C83J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C83J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ADMP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ADMP20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 29,
+        "documentales": 29,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C83J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C83J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ADMP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ADMP20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 28,
+        "documentales": 28,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C83J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C83J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "AUDT",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "AUDT20251",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 23,
+        "documentales": 22,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C46J4V3",
+          "I162S2C86J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C86J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "AUDT",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "AUDT20251",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 19,
+        "documentales": 19,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C86J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C86J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "AUDT",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "AUDT20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 16,
+        "documentales": 16,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C86J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C86J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "AUDT",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "AUDT20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 15,
+        "documentales": 15,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C86J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C86J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IADM",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IADM20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 48,
+        "documentales": 45,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C76J2V1",
+          "I162S2C76J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C76J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IADM",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IADM20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 38,
+        "documentales": 35,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C76J2V1",
+          "I162S2C76J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C76J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IADM",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IADM20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 44,
+        "documentales": 42,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C3J4V2",
+          "I162S2C76J2V1",
+          "I162S2C76J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C76J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IADM",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IADM20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 39,
+        "documentales": 36,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C111J4V1",
+          "I162S2C3J4V2",
+          "I162S2C76J2V1",
+          "I162S2C76J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C76J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICDA",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICDA20251",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 26,
+        "documentales": 26,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C46J4V3",
+          "I162S2C88J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C88J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ICDA",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICDA20251",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 21,
+        "documentales": 21,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C88J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C88J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ICDA",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICDA20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 20,
+        "documentales": 19,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C87J4V2",
+          "I162S2C88J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C88J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICDA",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICDA20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 18,
+        "documentales": 17,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C87J4V2",
+          "I162S2C88J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C88J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICIB20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 15,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 6,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C46J1V1",
+          "I162S2C46J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C46J2V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICIB20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 15,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 6,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C46J1V1",
+          "I162S2C46J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C46J2V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICIB20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 10,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C46J2V1",
+          "I162S2C46J4V3"
+        ],
+        "codigos_destino": [
+          "I162S2C46J2V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICIB20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 10,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C46J2V1",
+          "I162S2C46J4V3"
+        ],
+        "codigos_destino": [
+          "I162S2C46J2V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICIB20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 74,
+        "documentales": 70,
+        "internos": 0,
+        "pendientes": 4,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C46J1V1",
+          "I162S2C46J2V1",
+          "I162S2C46J4V3"
+        ],
+        "codigos_destino": [
+          "I162S2C46J4V3"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICIB20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 68,
+        "documentales": 63,
+        "internos": 0,
+        "pendientes": 5,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C46J1V1",
+          "I162S2C46J2V1",
+          "I162S2C46J4V3",
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C46J4V3"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICIB20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 78,
+        "documentales": 75,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 2,
+        "codigos_origen": [
+          "I162S2C46J1V1",
+          "I162S2C46J2V1",
+          "I162S2C46J4V3"
+        ],
+        "codigos_destino": [
+          "I162S2C46J4V3"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICIB20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 75,
+        "documentales": 72,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 2,
+        "codigos_origen": [
+          "I162S2C46J1V1",
+          "I162S2C46J2V1",
+          "I162S2C46J4V3"
+        ],
+        "codigos_destino": [
+          "I162S2C46J4V3"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 9,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C3J2V1",
+          "I162S2C3J2V4",
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C3J2V1",
+          "I162S2C3J2V4"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 9,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C3J2V1",
+          "I162S2C3J2V4",
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C3J2V1",
+          "I162S2C3J2V4"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 79,
+        "documentales": 77,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 2,
+        "codigos_origen": [
+          "I162S2C3J2V4",
+          "I162S2C3J4V2",
+          "I162S2C6J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C3J4V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 73,
+        "documentales": 72,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C3J2V4",
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C3J4V2"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICRE20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 39,
+        "documentales": 39,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C3J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICRE20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 35,
+        "documentales": 35,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C3J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IFIN",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IFIN20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 19,
+        "documentales": 19,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C111J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C111J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IFIN",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IFIN20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 16,
+        "documentales": 16,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C111J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C111J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IIND",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IIND20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 36,
+        "documentales": 36,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C87J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C87J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IIND",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IIND20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 32,
+        "documentales": 32,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C87J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C87J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "1",
+        "plan": "IINF20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 19,
+        "documentales": 16,
+        "internos": 2,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J1V1",
+          "I162S2C1J1V2",
+          "I162S2C57J1V1"
+        ],
+        "codigos_destino": [
+          "I162S2C1J1V1",
+          "I162S2C1J1V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "1",
+        "plan": "IINF20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 20,
+        "documentales": 17,
+        "internos": 2,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J1V1",
+          "I162S2C1J1V2",
+          "I162S2C57J1V1"
+        ],
+        "codigos_destino": [
+          "I162S2C1J1V1",
+          "I162S2C1J1V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "1",
+        "plan": "IINF20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 12,
+        "documentales": 11,
+        "internos": 1,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J1V2",
+          "I162S2C1J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C1J1V2",
+          "I162S2C1J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "1",
+        "plan": "IINF20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 12,
+        "documentales": 11,
+        "internos": 1,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J1V2",
+          "I162S2C1J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C1J1V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "IINF20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 15,
+        "documentales": 14,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J2V1",
+          "I162S2C1J2V4",
+          "I162S2C57J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C1J2V1",
+          "I162S2C1J2V4"
+        ],
+        "motivos_pendientes": [
+          "Sin código candidato/contexto de familia atribuido"
+        ],
+        "requisito_pendiente": [
+          "Completar SIN_OFERTA_NUEVOS_COMPATIBLE con fuente del programa/plan y período, sin inferirla del nombre"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "IINF20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 14,
+        "documentales": 13,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J2V1",
+          "I162S2C1J2V4",
+          "I162S2C57J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C1J2V1",
+          "I162S2C1J2V4"
+        ],
+        "motivos_pendientes": [
+          "Sin código candidato/contexto de familia atribuido"
+        ],
+        "requisito_pendiente": [
+          "Completar SIN_OFERTA_NUEVOS_COMPATIBLE con fuente del programa/plan y período, sin inferirla del nombre"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "IINF20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 9,
+        "documentales": 9,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J2V4"
+        ],
+        "codigos_destino": [
+          "I162S2C1J2V4"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "IINF20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 8,
+        "documentales": 8,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C1J2V4"
+        ],
+        "codigos_destino": [
+          "I162S2C1J2V4"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IINF20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 109,
+        "documentales": 99,
+        "internos": 2,
+        "pendientes": 8,
+        "pendientes_multiversion": 2,
+        "codigos_origen": [
+          "I162S2C1J1V2",
+          "I162S2C1J2V4",
+          "I162S2C1J4V2",
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C1J2V4",
+          "I162S2C1J4V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IINF20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 109,
+        "documentales": 99,
+        "internos": 1,
+        "pendientes": 9,
+        "pendientes_multiversion": 3,
+        "codigos_origen": [
+          "I162S2C1J1V2",
+          "I162S2C1J2V4",
+          "I162S2C1J4V2",
+          "I162S2C3J4V2",
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C1J2V4",
+          "I162S2C1J4V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IINF20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 64,
+        "documentales": 60,
+        "internos": 1,
+        "pendientes": 3,
+        "pendientes_multiversion": 2,
+        "codigos_origen": [
+          "I162S2C112J4V1",
+          "I162S2C1J1V2",
+          "I162S2C1J4V2",
+          "I162S2C46J4V3",
+          "I162S2C6J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C1J4V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IINF20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 58,
+        "documentales": 56,
+        "internos": 1,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C112J4V1",
+          "I162S2C1J1V2",
+          "I162S2C1J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C1J4V2"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ILOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ILOG20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 39,
+        "documentales": 37,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C77J2V1",
+          "I162S2C77J4V1",
+          "I162S2C79J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C77J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ILOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ILOG20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 35,
+        "documentales": 33,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C77J2V1",
+          "I162S2C77J4V1",
+          "I162S2C79J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C77J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ILOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ILOG20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 28,
+        "documentales": 27,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C77J2V1",
+          "I162S2C77J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C77J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "ILOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ILOG20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 25,
+        "documentales": 24,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C77J2V1",
+          "I162S2C77J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C77J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "IMDI",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IMDI20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 39,
+        "documentales": 38,
+        "internos": 1,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C112J4V1",
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C112J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IMDI",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IMDI20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 36,
+        "documentales": 35,
+        "internos": 1,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C112J4V1",
+          "I162S2C3J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C112J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IPRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IPRE20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 17,
+        "documentales": 17,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C124J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C124J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IPRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IPRE20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 15,
+        "documentales": 15,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C124J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C124J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IRHU",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IRHU20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 11,
+        "documentales": 11,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C113J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C113J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "IRHU",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IRHU20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 12,
+        "documentales": 12,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C113J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C113J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ISEP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ISEP20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 8,
+        "documentales": 8,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C125J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C125J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "ISEP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ISEP20261",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 6,
+        "documentales": 6,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C125J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C125J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "NATP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "NATP20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 8,
+        "documentales": 8,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C90J2V2"
+        ],
+        "codigos_destino": [
+          "I162S2C90J2V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "NATP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "NATP20251",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 15,
+        "documentales": 15,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C90J2V2"
+        ],
+        "codigos_destino": [
+          "I162S2C90J2V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TAMD20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 6,
+        "documentales": 4,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C78J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J2V1"
+        ],
+        "motivos_pendientes": [
+          "Familia del origen entre candidatos; atribución de versión/plan pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TAMD20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 4,
+        "documentales": 3,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C78J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J2V1"
+        ],
+        "motivos_pendientes": [
+          "Familia del origen entre candidatos; atribución de versión/plan pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TAMD20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 23,
+        "documentales": 23,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C78J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J2V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TAMD20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 18,
+        "documentales": 18,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C78J2V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J2V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TAMD20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 33,
+        "documentales": 33,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C78J2V1",
+          "I162S2C78J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TAMD20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 27,
+        "documentales": 27,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C78J2V1",
+          "I162S2C78J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TAMD20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 33,
+        "documentales": 30,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C57J4V1",
+          "I162S2C78J2V1",
+          "I162S2C78J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TAMD20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 32,
+        "documentales": 29,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C57J4V1",
+          "I162S2C78J2V1",
+          "I162S2C78J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C78J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TCIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCIB20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 67,
+        "documentales": 66,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C47J2V1",
+          "I162S2C47J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C47J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TCIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCIB20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 66,
+        "documentales": 65,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C47J2V1",
+          "I162S2C47J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C47J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TCIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCIB20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 35,
+        "documentales": 35,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C47J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C47J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TCIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCIB20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 35,
+        "documentales": 35,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C47J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C47J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TCRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 4,
+        "documentales": 4,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C6J2V1",
+          "I162S2C6J2V2"
+        ],
+        "codigos_destino": [
+          "I162S2C6J2V1",
+          "I162S2C6J2V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TCRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 3,
+        "documentales": 3,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C6J2V1",
+          "I162S2C6J2V2"
+        ],
+        "codigos_destino": [
+          "I162S2C6J2V1",
+          "I162S2C6J2V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 29,
+        "documentales": 29,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C6J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C6J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCRE20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 23,
+        "documentales": 22,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C6J2V2",
+          "I162S2C6J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C6J4V2"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCRE20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 6,
+        "documentales": 6,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C6J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C6J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCRE20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 5,
+        "documentales": 5,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C6J4V2"
+        ],
+        "codigos_destino": [
+          "I162S2C6J4V2"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TLOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TLOG20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 48,
+        "documentales": 46,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C79J2V1",
+          "I162S2C79J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C79J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TLOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TLOG20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 41,
+        "documentales": 39,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C79J2V1",
+          "I162S2C79J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C79J4V1"
+        ],
+        "motivos_pendientes": [
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TLOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TLOG20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 36,
+        "documentales": 35,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C118J4V1",
+          "I162S2C79J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C79J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TLOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TLOG20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 33,
+        "documentales": 32,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C118J4V1",
+          "I162S2C79J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C79J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TPAS",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TPAS20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "2",
+        "observaciones": 122,
+        "documentales": 118,
+        "internos": 0,
+        "pendientes": 4,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C1J4V2",
+          "I162S2C57J1V1",
+          "I162S2C57J2V1",
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C57J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Familia del origen entre candidatos; atribución de versión/plan pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TPAS",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TPAS20241",
+        "anio_observado": 2025,
+        "periodo_nativo": "3",
+        "observaciones": 125,
+        "documentales": 120,
+        "internos": 0,
+        "pendientes": 5,
+        "pendientes_multiversion": 1,
+        "codigos_origen": [
+          "I162S2C1J4V2",
+          "I162S2C57J1V1",
+          "I162S2C57J2V1",
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C57J4V1"
+        ],
+        "motivos_pendientes": [
+          "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente",
+          "Familia del origen entre candidatos; atribución de versión/plan pendiente",
+          "Misma carrera/sede; jornada candidata distinta del origen"
+        ],
+        "requisito_pendiente": [
+          "Fecha efectiva de asignación del plan al CODCLI y regla de migración/reingreso; perfil de grupo no acredita plan histórico"
+        ]
+      },
+      {
+        "carrera_umas": "TPAS",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TPAS20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "2",
+        "observaciones": 63,
+        "documentales": 63,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C57J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      },
+      {
+        "carrera_umas": "TPAS",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TPAS20241",
+        "anio_observado": 2026,
+        "periodo_nativo": "3",
+        "observaciones": 61,
+        "documentales": 61,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0,
+        "codigos_origen": [
+          "I162S2C57J4V1"
+        ],
+        "codigos_destino": [
+          "I162S2C57J4V1"
+        ],
+        "motivos_pendientes": [],
+        "requisito_pendiente": []
+      }
+    ],
+    "resumen_combinaciones_contextuales": {
+      "definicion": "carrera UMAS+sede observada+jornada SIES observada+plan+año observado+período nativo",
+      "total": 86,
+      "con_pendientes": 42,
+      "con_pendientes_multiversion": 17,
+      "carreras_con_pendiente": 12
+    },
+    "combinaciones_sin_periodo": [
+      {
+        "carrera_umas": "ADMP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ADMP20251",
+        "observaciones": 114,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "AUDT",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "AUDT20251",
+        "observaciones": 73,
+        "pendientes": 1,
+        "pendientes_multiversion": 1
+      },
+      {
+        "carrera_umas": "IADM",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IADM20241",
+        "observaciones": 169,
+        "pendientes": 11,
+        "pendientes_multiversion": 2
+      },
+      {
+        "carrera_umas": "ICDA",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICDA20251",
+        "observaciones": 85,
+        "pendientes": 2,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICIB20241",
+        "observaciones": 50,
+        "pendientes": 14,
+        "pendientes_multiversion": 2
+      },
+      {
+        "carrera_umas": "ICIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICIB20241",
+        "observaciones": 295,
+        "pendientes": 15,
+        "pendientes_multiversion": 6
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "ICRE20241",
+        "observaciones": 18,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "ICRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ICRE20241",
+        "observaciones": 226,
+        "pendientes": 3,
+        "pendientes_multiversion": 3
+      },
+      {
+        "carrera_umas": "IFIN",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IFIN20261",
+        "observaciones": 35,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IIND",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IIND20251",
+        "observaciones": 68,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "1",
+        "plan": "IINF20241",
+        "observaciones": 63,
+        "pendientes": 2,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "IINF20241",
+        "observaciones": 46,
+        "pendientes": 2,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IINF",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IINF20241",
+        "observaciones": 340,
+        "pendientes": 21,
+        "pendientes_multiversion": 7
+      },
+      {
+        "carrera_umas": "ILOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ILOG20241",
+        "observaciones": 127,
+        "pendientes": 6,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IMDI",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IMDI20261",
+        "observaciones": 75,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IPRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IPRE20261",
+        "observaciones": 32,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IRHU",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "IRHU20261",
+        "observaciones": 23,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "ISEP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "ISEP20261",
+        "observaciones": 14,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "NATP",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "NATP20251",
+        "observaciones": 23,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TAMD20241",
+        "observaciones": 51,
+        "pendientes": 3,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TAMD",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TAMD20241",
+        "observaciones": 125,
+        "pendientes": 6,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TCIB",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCIB20241",
+        "observaciones": 203,
+        "pendientes": 2,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "2",
+        "plan": "TCRE20241",
+        "observaciones": 7,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TCRE",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TCRE20241",
+        "observaciones": 63,
+        "pendientes": 1,
+        "pendientes_multiversion": 1
+      },
+      {
+        "carrera_umas": "TLOG",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TLOG20241",
+        "observaciones": 158,
+        "pendientes": 6,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TPAS",
+        "sede_observada": "2",
+        "jornada_sies_observada": "4",
+        "plan": "TPAS20241",
+        "observaciones": 371,
+        "pendientes": 9,
+        "pendientes_multiversion": 2
+      }
+    ],
+    "resumen_combinaciones_sin_periodo": {
+      "definicion": "carrera UMAS+sede observada+jornada SIES observada+plan",
+      "total": 26,
+      "con_pendientes": 16,
+      "con_pendientes_multiversion": 8
+    },
+    "por_carrera": [
+      {
+        "carrera_umas": "ADMP",
+        "observaciones": 114,
+        "documentales": 114,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "AUDT",
+        "observaciones": 73,
+        "documentales": 72,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1
+      },
+      {
+        "carrera_umas": "IADM",
+        "observaciones": 169,
+        "documentales": 158,
+        "internos": 0,
+        "pendientes": 11,
+        "pendientes_multiversion": 2
+      },
+      {
+        "carrera_umas": "ICDA",
+        "observaciones": 85,
+        "documentales": 83,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "ICIB",
+        "observaciones": 345,
+        "documentales": 316,
+        "internos": 0,
+        "pendientes": 29,
+        "pendientes_multiversion": 8
+      },
+      {
+        "carrera_umas": "ICRE",
+        "observaciones": 244,
+        "documentales": 241,
+        "internos": 0,
+        "pendientes": 3,
+        "pendientes_multiversion": 3
+      },
+      {
+        "carrera_umas": "IFIN",
+        "observaciones": 35,
+        "documentales": 35,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IIND",
+        "observaciones": 68,
+        "documentales": 68,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IINF",
+        "observaciones": 449,
+        "documentales": 413,
+        "internos": 11,
+        "pendientes": 25,
+        "pendientes_multiversion": 7
+      },
+      {
+        "carrera_umas": "ILOG",
+        "observaciones": 127,
+        "documentales": 121,
+        "internos": 0,
+        "pendientes": 6,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IMDI",
+        "observaciones": 75,
+        "documentales": 73,
+        "internos": 2,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IPRE",
+        "observaciones": 32,
+        "documentales": 32,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "IRHU",
+        "observaciones": 23,
+        "documentales": 23,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "ISEP",
+        "observaciones": 14,
+        "documentales": 14,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "NATP",
+        "observaciones": 23,
+        "documentales": 23,
+        "internos": 0,
+        "pendientes": 0,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TAMD",
+        "observaciones": 176,
+        "documentales": 167,
+        "internos": 0,
+        "pendientes": 9,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TCIB",
+        "observaciones": 203,
+        "documentales": 201,
+        "internos": 0,
+        "pendientes": 2,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TCRE",
+        "observaciones": 70,
+        "documentales": 69,
+        "internos": 0,
+        "pendientes": 1,
+        "pendientes_multiversion": 1
+      },
+      {
+        "carrera_umas": "TLOG",
+        "observaciones": 158,
+        "documentales": 152,
+        "internos": 0,
+        "pendientes": 6,
+        "pendientes_multiversion": 0
+      },
+      {
+        "carrera_umas": "TPAS",
+        "observaciones": 371,
+        "documentales": 362,
+        "internos": 0,
+        "pendientes": 9,
+        "pendientes_multiversion": 2
+      }
+    ],
+    "pendientes_por_motivo": {
+      "Misma carrera/sede; jornada candidata distinta del origen": 63,
+      "Candidatos en otra carrera/sede/institución; vínculo con origen pendiente": 34,
+      "Sin código candidato/contexto de familia atribuido": 2,
+      "Familia del origen entre candidatos; atribución de versión/plan pendiente": 5
+    },
+    "limites": [
+      "Hojas30–51 preservan cifras históricas; no equivalen al estado actual v7.",
+      "Codigo T1 conocido no acredita automáticamente el código del contexto destino.",
+      "Sin contexto no equivale a pendiente de código ni a deserción.",
+      "V17 preserva los denominadores 558/1150/1471 de T1; tasa T3-2026 utiliza1467 según regla heredada."
+    ],
+    "historico_63": {
+      "filas": 63,
+      "alcance": "Inventario original carrera UMAS+sede+jornada; cifras V6 preservadas como historia, no cierres actuales."
+    }
+  }
+}

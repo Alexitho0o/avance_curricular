@@ -1,0 +1,57 @@
+{
+ "clasificacion": "D decisión del usuario; C medidas reproducidas",
+ "estado": "APROBADA",
+ "opcion": "A",
+ "responsable_aprobacion": "Alexi, usuario de este chat",
+ "responsable_preparacion": "Claude",
+ "fecha_aprobacion": "2026-10-26T02:50:01.562573+00:00",
+ "autorizacion": "Respuesta explícita «opcion a» del 25-10-2026 23:49 (America/Santiago)",
+ "decision": {
+  "pendientes_codigo_sies": {
+   "cifra": 99,
+   "fuente": "Diccionario v8 vía Fase 3 (respaldo E_PENDIENTE)",
+   "uso": "Contextos sin código SIES aplicable"
+  },
+  "excepciones_ancla_T1": {
+   "cifra": 149,
+   "regla": "T1 + carrera + sede + jornada + plan; cualquier cambio de dimensión, incluida la versión, es excepción",
+   "equivale": "149 excepciones de Fase 3"
+  },
+  "cifra_v5_143": "RETIRADA: no se usa como cifra rectora; su regla escrita no coincide con la aplicada en IINF20241",
+  "cambios_solo_version_IINF20241": {
+   "contextos": 6,
+   "tratamiento": "Excepción visible como 'cambio de versión documentado'; no concordante con el ancla T1"
+  }
+ },
+ "fundamento": "Regla del usuario §6: si alguna dimensión cambia, el caso queda como excepción o pendiente.",
+ "alcance": "2.854 contextos del seguimiento T1→T2/T3 (cohortes 2024–2026), 20 planes. No cambia códigos, diccionario v8, bases, tasas ni denominadores.",
+ "no_autoriza": [
+  "modificar el Excel V5",
+  "nueva edición del diccionario",
+  "commit/push"
+ ],
+ "evidencia": {
+  "MANIFEST.json": "b6113b3c019581969153ed91010dac60a02369605e100c117820b5b92981609b",
+  "RESULTADO_POR_PLAN.csv": "f588f8edb0f6071b9d05fed73b161b2ddca986ff8ac5168a88ed89597905198f",
+  "QA.json": "e4d9fb39d07bf1af98121dfa21c85c630ec7a9bf7f6d387583098c393ec1c374",
+  "reproducir.py": "fb14b3acf36e23de23483fe8df687a1c6dc00275f386498ce8870fe7f4ef174d",
+  "LEEME.md (antes de anotar la decisión)": "a8e9a7f1c47ca696753385fd42d3ee00951c271122f6b4b3cd3906ffef0d286d"
+ },
+ "entradas": {
+  "vista_fase3_privada": {
+   "ruta": "/Users/alexi/.local/share/ipss/trazabilidad_integral_fase3_20261025/VISTA_T1_T2_T3.json",
+   "sha256": "72edecb9507f46985533d1c63b83735beb4db58d743c89c226ca6be1a2c8ef31"
+  },
+  "excel_v5": {
+   "ruta": "/Users/alexi/Desktop/IPSS_CONCILIACION_CARRERAS_UMAS_SIES_20261025_V5.xlsx",
+   "hoja": "2_Catalogo_UMAS",
+   "sha256": "7b994d5596dcfc526da79811a17a81344c64c82011c7507c656e66f1fd23fb88"
+  },
+  "manifest_fase3": {
+   "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/trazabilidad_integral_umas_sies_20261025/fase3/MANIFEST_FASE3.json",
+   "sha256": "7431ff4dcf89284088066a0fd5572aad66aaff5a2d6e598cddc27aa90c304538"
+  },
+  "diccionario": "v8_20261025_ocho_p (vía Fase 3)"
+ },
+ "reversion": "Volver a la situación anterior: ignorar este archivo; ninguna fuente fue alterada."
+}

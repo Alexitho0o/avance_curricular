@@ -1,0 +1,141 @@
+{
+  "clasificacion": "C",
+  "fecha": "2026-10-25T15:40:29.280280-03:00",
+  "proceso": "Matrícula individual y publicación SIES; control para trazabilidad de retención IPSS162",
+  "periodo_datos": "2022–2026",
+  "fuentes_sha256": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/MATRÍCULA/Matricula_2007_2026_WEB_10_07_2026.csv": "4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+    "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.csv": "d4f3675d5d63247b0118412f983729cb18924c2971cea1b7d0ef731e6c8e7803",
+    "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json": "c205fed8061bc02ea2623eea8d789ffc1bc1355e41f82bb1298d319bd76b08ad"
+  },
+  "constructor_anual_observado": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/construir_base_retencion_mu_2022_2026.py",
+    "sha256": "edcade5f199443517ce6ec88a7c43a58cf52ee80a671ab0b9eddec0f1e6de19e"
+  },
+  "lineaje": "QA_LINEAJE_MU.json",
+  "git": {
+    "rama": "feature/ire-2026",
+    "HEAD_antes": "8e2fb85bb8703758d6878681c9e2a29016e60c63",
+    "HEAD_despues": "8e2fb85bb8703758d6878681c9e2a29016e60c63",
+    "staged": [],
+    "tracked_pendiente_preexistente": "M PROYECTO_IPSS.json",
+    "commit": false,
+    "push": false
+  },
+  "archivos": {
+    "CHECKPOINT_FASE2.json": {
+      "sha256": "9589f31b58fb4f0c6a9cc47956b69f26c67f7a21cfbd1d77a933e9d7f96f080e",
+      "bytes": 1606
+    },
+    "INFORME_FASE2.md": {
+      "sha256": "68824f4a43bb8427ec626ba5b3b02f393bd40873754f4fdb6cab8c088b5f31e1",
+      "bytes": 8236
+    },
+    "QA_FASE2.json": {
+      "sha256": "f004e051ad1b26adafae8ea0158a7ca7aa1a74ac15ab63412ed92cd570241a78",
+      "bytes": 7369
+    },
+    "QA_LINEAJE_MU.json": {
+      "sha256": "993c612195f0867be0afb0ad8330539841d5c9ccad9ad5c4cb5c85e5b7df2822",
+      "bytes": 10073
+    },
+    "RESUMEN_EJECUTIVO.csv": {
+      "sha256": "949dc1ef9e5c050f70e890d59f407cf9dbb925b6a183f38dc685cf4a92bf4516",
+      "bytes": 1264
+    },
+    "brechas2022_2025/EXCEPCIONES_Y_FUENTES.json": {
+      "sha256": "13f54ff5986a85e7454dcdc63d046a8d20fcb4a611caf0727a3ed10c0194509c",
+      "bytes": 76678
+    },
+    "brechas2022_2025/INFORME_BRECHAS.md": {
+      "sha256": "e6023c1b969db4127407283284d5a627999430a97322115074ac1d78cd927991",
+      "bytes": 11997
+    },
+    "brechas2022_2025/QA.json": {
+      "sha256": "ed20fa7edb493b7dc2e72eebcaf383b10357cdd5062befa5af3ab87f91086664",
+      "bytes": 426
+    },
+    "brechas2022_2025/analizar_brechas.py": {
+      "sha256": "1f12d51d269804ae568a3eb5fcb0370013b9eaf5f6dbcb8d659d8659e9bbd116",
+      "bytes": 18096
+    },
+    "brechas2026/CONTROL_32_CARRERAS_2026.csv": {
+      "sha256": "75aef80697ea9f6c6d40b7657b5b3ae35b8eacc6a0619ff2f9f0b602ab24a8b6",
+      "bytes": 6273
+    },
+    "brechas2026/DETALLE_66_CODIGOS_2026.csv": {
+      "sha256": "2d2fb525eb80d1215732d39a5e482141fb5c7722b555dc80542c16ebdf7925e5",
+      "bytes": 22434
+    },
+    "brechas2026/INFORME_BRECHA_2026.md": {
+      "sha256": "2738e513fdc94e4f882c58079bdaad747d2cbd9e00ae6dc2401774170e063d58",
+      "bytes": 6018
+    },
+    "brechas2026/QA_Y_MANIFEST.json": {
+      "sha256": "d1f0f2b6cef4bde8044f0f7cad2e02e2c442628e5124d6b729f0dfad2cc1ed92",
+      "bytes": 991
+    },
+    "brechas2026/RESULTADOS_BRECHA_2026.json": {
+      "sha256": "f9b0ebd1209989f5a8fa6a5a80f0e5d14d7dc58d43124a0acf101cabb30827b6",
+      "bytes": 10968
+    },
+    "brechas2026/conciliar_brecha_2026.py": {
+      "sha256": "116a41f7a8b46f1403631b4de176d9199b1d2d010f6df9b7d9c403024f608790",
+      "bytes": 15400
+    },
+    "cerrar_fase2.py": {
+      "sha256": "4cd18eb6a6365c7fba2c4dce500454e063c69c2d28c061cc4d49eead88e370ea",
+      "bytes": 17448
+    },
+    "conciliacion/DETALLE_CONCILIACION.csv": {
+      "sha256": "f60b2e327f016ca1abeb8f26f65d11b4b9ebdbaff785a9a4912c40bb21235eaa",
+      "bytes": 60393
+    },
+    "conciliacion/INFORME.md": {
+      "sha256": "652f4ba1cf173b59c87f8f3419c32c6ae2eeecf4810c6b1e89f4bac0dfca225f",
+      "bytes": 4116
+    },
+    "conciliacion/MANIFEST.json": {
+      "sha256": "6154e2f5e6d9f43e882b73d4e378b48c26e4d2f1eb9c8a82ba4f3e2ba94b201e",
+      "bytes": 1727
+    },
+    "conciliacion/RESULTADOS.json": {
+      "sha256": "3bc390117918e72438557435b8d031fbf71f152b00bf9abf452bab82282e1005",
+      "bytes": 27326
+    },
+    "conciliacion/RESUMEN_ANUAL.csv": {
+      "sha256": "cb67bb2a3d0bdef0bfe6c5a29b0608e07bf0a8335fe366bb15c5c5fe9cd6d370",
+      "bytes": 3251
+    },
+    "conciliacion/SOLO_DIFERENCIAS.csv": {
+      "sha256": "4a69b4e6eabf4c0b48d08bab0de620d3302837a461eecd1ddb5f235ee9738c7f",
+      "bytes": 36326
+    },
+    "conciliacion/conciliar_mu_csv.py": {
+      "sha256": "63d3c49b060dd3e0f24dbe71c599991488a466f67bb2ef5cd6e7b8406ba825df",
+      "bytes": 18792
+    },
+    "verificar_lineaje_mu.py": {
+      "sha256": "6641bc4ad012259952f84cafeaf88a31128e35ab2056122b1f36d6a4b567ce1d",
+      "bytes": 6795
+    }
+  },
+  "reglas": {
+    "A": "No se agrega regla oficial",
+    "B": "Conteos y campos observados",
+    "C": "Lectura, normalización, composición y suma",
+    "D": "Conservar bases y denominadores",
+    "E": "Causas/aceptación/atribución personal no demostradas"
+  },
+  "privacidad": "Solo resultados agregados y código; identidad procesada únicamente en memoria.",
+  "reproduccion": [
+    "verificar_lineaje_mu.py",
+    "conciliacion/conciliar_mu_csv.py --salida <carpeta nueva>",
+    "brechas2022_2025/analizar_brechas.py",
+    "brechas2026/conciliar_brecha_2026.py",
+    "cerrar_fase2.py"
+  ],
+  "estado": "PASA_TECNICO_CON_BRECHAS_E_ABIERTAS",
+  "publicado": false
+}

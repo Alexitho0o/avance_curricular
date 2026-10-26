@@ -1,0 +1,93 @@
+{
+  "fecha": "2026-10-25T15:54:08.515391-03:00",
+  "clasificacion": "C",
+  "estado": "PASA_TECNICO_CON_LIMITES",
+  "controles": [
+    {
+      "control": "3179 orígenes con dos posiciones cada uno",
+      "resultado": "PASA"
+    },
+    {
+      "control": "2854 observaciones únicas, sin duplicación por unión",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Poblaciones originales conservadas",
+      "resultado": "PASA"
+    },
+    {
+      "control": "2838 posiciones con contexto; 3520 sin contexto",
+      "resultado": "PASA"
+    },
+    {
+      "control": "2718 mismo código +37 otro respaldado +99 pendientes",
+      "resultado": "PASA"
+    },
+    {
+      "control": "2742 documentales +13 internos aprobados +99 pendientes",
+      "resultado": "PASA"
+    },
+    {
+      "control": "352 filas de evidencia coinciden en seis campos",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Control por origen 2024 destino 2025-P2",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Control por origen 2024 destino 2025-P3",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Control por origen 2025 destino 2025-P2",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Control por origen 2025 destino 2025-P3",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Control por origen 2026 destino 2026-P2",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Control por origen 2026 destino 2026-P3",
+      "resultado": "PASA"
+    },
+    {
+      "control": "13 fuentes y controles conservados por SHA-256",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Entradas adicionales conservadas por SHA-256",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Privados fuera de repositorios Git",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Permisos privados 700/600",
+      "resultado": "PASA"
+    },
+    {
+      "control": "HEAD y cambios tracked previos conservados",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Sin cambios staged",
+      "resultado": "PASA"
+    },
+    {
+      "control": "Tablas agregadas sin identificadores originales",
+      "resultado": "PASA"
+    }
+  ],
+  "total": 20,
+  "limites": [
+    "No recalcula Excel ni tasas.",
+    "No certifica cobertura completa de matrícula/actividad; ausencia en diccionario no es deserción.",
+    "No acredita aceptación SIES ni fecha administrativa de cambio."
+  ]
+}

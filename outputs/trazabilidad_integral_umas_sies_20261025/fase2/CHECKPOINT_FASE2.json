@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-10-25T15:40:29.280280-03:00",
+  "clasificacion": "C/D/E",
+  "fase": "2/6",
+  "estado": "CONCILIACION_SOLICITADA_EJECUTADA_CON_CAUSAS_PENDIENTES",
+  "hitos": [
+    {
+      "hito": "1/3",
+      "accion": "Reutilizar códigos individuales y verificar linaje fuente→base",
+      "resultado": "10200 filas, 8 campos, 0 diferencias",
+      "evidencia": "QA_LINEAJE_MU.json",
+      "pendiente": "No cambia atribuciones CODCLI ni acredita recepción SIES"
+    },
+    {
+      "hito": "2/3",
+      "accion": "Conciliar año+código completo contra publicación",
+      "resultado": "198 combinaciones;990/990 valores previos reproducidos",
+      "evidencia": "conciliacion/RESULTADOS.json",
+      "pendiente": "Publicación agregada no ofrece identidad individual"
+    },
+    {
+      "hito": "3/3",
+      "accion": "Revisar diferencias preservando alcances",
+      "resultado": "2023:2 códigos compensados;2025:11 códigos +73 vsVIG1;2026:48 códigos +226",
+      "evidencia": "INFORME_FASE2.md",
+      "pendiente": "Causas documentales individuales no acreditadas"
+    }
+  ],
+  "no_repetir": [
+    "Lectura completa histórica2007–2027",
+    "Reasignación de versiones por totales",
+    "Pruebas de retención anual ya cerradas",
+    "Búsqueda de identidad aproximada"
+  ],
+  "siguiente": "Fase3/6, según autorización: vista longitudinal y excepciones T2/T3 conservando los códigos de origen. No se ejecutó en esta entrega.",
+  "prohibiciones_conservadas": [
+    "Sin modificación de bases/denominadores/reglas",
+    "Sin publicación de identificadores",
+    "Sin commit/push"
+  ]
+}
