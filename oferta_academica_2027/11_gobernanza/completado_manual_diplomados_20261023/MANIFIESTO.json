@@ -1,0 +1,48 @@
+{
+  "fecha": "2026-10-23",
+  "estado": "PLANTILLA_MANUAL_NO_CARGAR_XLSX_EN_PES",
+  "fuente": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020_V04_SIN_SALTO_FINAL.csv",
+    "sha256": "c938f1f11b7d6d1605057a649bcfadac075edc1d56a8b2ff1416ada97af03cdc"
+  },
+  "filas": 161,
+  "columnas": 48,
+  "diplomados": 21,
+  "campos_en_blanco": [
+    "VACANTES_PRIMER_SEMESTRE",
+    "VACANTES_SEGUNDO_SEMESTRE",
+    "VALOR_MATRICULA_ANUAL",
+    "COSTO_TITULACION",
+    "VALOR_CERTIFICADO_DIPLOMA",
+    "ARANCEL_ANUAL",
+    "VIGENCIA_CARRERA"
+  ],
+  "celdas_para_completar": 147,
+  "nombres_y_codigos_preservados": true,
+  "otros_programas": 140,
+  "decision": "La instruccion mas reciente pide completar manualmente: no se prellenan 15/15 ni se incorporan montos por coincidencias de nombres.",
+  "scripts": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/excel_manual_diplomados_20261023/preparar.py",
+      "sha256": "f5d3680937fbd2886175c8207a9106bfc0fef188b39da7d37b62aee188db9ca3"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/excel_manual_diplomados_20261023/build.mjs",
+      "sha256": "513c7bdc7bc5547a9d30ab3f3892d8c51cc8b4e7ea2fc3c5b23af683654ebfb8"
+    }
+  ],
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/completado_manual_diplomados_20261023/OFERTA_2027_ETAPA1_PARA_COMPLETAR_DIPLOMADOS_20261023.xlsx",
+      "sha256": "adde81e0330f6c8ffb419888db18e9c4f3d4b11928411c10495849221ef54074",
+      "bytes": 35936
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/OFERTA_2027_ETAPA1_PARA_COMPLETAR_DIPLOMADOS_20261023.xlsx",
+      "sha256": "adde81e0330f6c8ffb419888db18e9c4f3d4b11928411c10495849221ef54074",
+      "bytes": 35936
+    }
+  ],
+  "reanudacion": "Recibir Excel completado; verificar cambios por clave contra V04; validar e integrar; exportar CSV UTF-8 delimitado por punto y coma, sin encabezado ni salto final. No cambiar vigencias sin decision del usuario.",
+  "git": "Respaldo local, sin commit ni push"
+}

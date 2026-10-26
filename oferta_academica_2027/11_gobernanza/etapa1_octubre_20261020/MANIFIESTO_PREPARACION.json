@@ -1,0 +1,83 @@
+{
+  "fecha_ejecucion": "2026-10-20T17:13:14.566403-03:00",
+  "proceso": "Oferta Academica 2027, proceso 2026, segundo proceso octubre",
+  "etapa": 1,
+  "reporte_inicial": 6047,
+  "id_carga": 17467,
+  "estado": "BORRADOR_NO_CARGAR_PENDIENTE_VALIDACION",
+  "confirmacion_usuario": "Docencia confirmo que no hay cambios, comunicada por el usuario en esta conversacion; no se adjunto correo de confirmacion.",
+  "fuentes": [
+    {
+      "original": "/Users/alexi/Downloads/reporte_dinamico_6047_2026-10-20_09:05:04.csv",
+      "copia_proyecto": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/reporte_dinamico_6047_2026-10-20_09:05:04.csv",
+      "sha256": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62"
+    },
+    {
+      "original": "/Users/alexi/Downloads/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+      "copia_proyecto": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+      "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+    },
+    {
+      "original": "/Users/alexi/Downloads/Ord.  5669.pdf",
+      "copia_proyecto": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Ord.  5669.pdf",
+      "sha256": "e7ecc92d8683b0b4d15d70ea4f79b4802ac443a2f2fee619074bb835f8b8b7ae"
+    }
+  ],
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_etapa1_octubre_20261020.py",
+    "sha256": "961bc9c1ab3ea2bb90e55c541c29ac1b38016fd97a320698cf002c4fb73401bf"
+  },
+  "git_branch": "feature/ire-2026",
+  "git_head_preparacion": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+  "transformacion": {
+    "encoding_origen": "cp1252",
+    "encoding_salida": "utf-8 sin BOM",
+    "separador_salida": ";",
+    "columnas_retiradas": [
+      "CANTIDAD_BENEFICIO_DFE",
+      "CANTIDAD_MATRICULA_DFE",
+      "CODIGO_IES_NUM"
+    ],
+    "encabezados_salida": false,
+    "filtrado_filas": false,
+    "celdas_modificadas": 0,
+    "imputaciones": 0
+  },
+  "controles": {
+    "filas": 161,
+    "columnas_origen": 51,
+    "columnas_salida": 48,
+    "celdas_conservadas": 7728,
+    "duplicados_clave": 0,
+    "total_vacantes": 5461,
+    "vigencias": {
+      "2": 52,
+      "1": 109
+    },
+    "niveles": {
+      "1": 140,
+      "3": 21
+    },
+    "hallazgos": 172,
+    "programas_con_hallazgos": 109
+  },
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/BORRADOR_NO_CARGAR_OFERTA_2027_ETAPA1_OCTUBRE_17467_20261020.csv",
+      "sha256": "b82add534ea53eb3a15fa3aabb29798281edbcd12bb04b685cdddcec715c2ed5",
+      "bytes": 45258
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/BORRADOR_NO_CARGAR_OFERTA_2027_ETAPA1_OCTUBRE_17467_20261020.csv",
+      "sha256": "b82add534ea53eb3a15fa3aabb29798281edbcd12bb04b685cdddcec715c2ed5",
+      "bytes": 45258
+    }
+  ],
+  "pendientes": [
+    "Resolver vacios financieros obligatorios de diplomados con Docencia/Finanzas o confirmar excepcion escrita de SIES.",
+    "88 fechas de admision usan DD-MM-AAAA; el manual p26 exige DD/MM/AAAA. Conversion de formato pendiente en una version liberada.",
+    "Confirmar separador y restricciones tecnicas en estructura actual ID 17467: manual p14 dice delimitado por comas, reporte usa punto y coma. El borrador preserva separador observado, no certifica su aceptacion.",
+    "Validacion integral de reglas, largos, nombre exigido y catalogos PES pendiente; controles ejecutados no equivalen a aceptacion.",
+    "No se realizo carga PES ni commit/push. CSV ignorado por .gitignore; respaldo local reproducible."
+  ]
+}

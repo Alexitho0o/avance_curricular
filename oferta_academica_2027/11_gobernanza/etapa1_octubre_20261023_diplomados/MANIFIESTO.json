@@ -1,0 +1,55 @@
+{
+  "fecha": "2026-10-23T10:27:35.291189-03:00",
+  "estado": "BLOQUEADO_IDENTIDAD_VIGENCIA_Y_DISTRIBUCION_SEMESTRAL",
+  "entradas": [
+    {
+      "ruta": "/Users/alexi/Downloads/Oferta Diplomados 2027 - SIES vf.xlsx",
+      "sha256": "3c86e2d87fb4513a0361aadc3f7faa1fb05fb81638b59cdeb0ddd0ca2b9e0632"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020_V04_SIN_SALTO_FINAL.csv",
+      "sha256": "c938f1f11b7d6d1605057a649bcfadac075edc1d56a8b2ff1416ada97af03cdc"
+    }
+  ],
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/analizar_entrega_diplomados_20261023.py",
+    "sha256": "e30de6b3b8cf3823b7990bcc043235e99e230abf4ef04df4e06bda365ccccb14"
+  },
+  "controles": {
+    "registros_base": 161,
+    "diplomados_pes": 21,
+    "programas_docencia": 29,
+    "cruce": {
+      "SIN_CORRESPONDENCIA_CONFIRMADA": 16,
+      "COINCIDENCIA_NOMBRE_SIN_CLAVE_SIES": 3,
+      "CANDIDATO_POR_OMISION_DE_EN_NO_APLICADO": 2
+    },
+    "periodos": {
+      "2027 - 00": 12,
+      "2027 - 01": 8,
+      "2027 - 02": 7,
+      "2027 - 03": 2
+    },
+    "vacantes_excel": 435
+  },
+  "evidencia_rechazo": "Lectura previa en conversacion; original ya no disponible en las rutas revisadas",
+  "archivos": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/03_fuentes_institucionales/entregas_docencia/20261023_diplomados_vf/Oferta Diplomados 2027 - SIES vf.xlsx",
+      "sha256": "3c86e2d87fb4513a0361aadc3f7faa1fb05fb81638b59cdeb0ddd0ca2b9e0632"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_diplomados/CRUCE_21_DIPLOMADOS.tsv",
+      "sha256": "91b1376b64b22ae69c2e9ab5ddf1112da3a286eeb75972a881ba537cc5ead404"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_diplomados/PROGRAMAS_EXCEL_SIN_CORRESPONDENCIA.tsv",
+      "sha256": "c907ef26611ddc1ff48aabd56260604c5ce0db2cc6e5e11e8473c9d3dcc4ab0c"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_diplomados/BLOQUEOS_Y_REANUDACION.md",
+      "sha256": "47d659123b5f69136be41e832967b34ba28236f20749e307ce6d61ed303bea80"
+    }
+  ],
+  "salida_carga": null
+}

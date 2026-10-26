@@ -1,0 +1,121 @@
+{
+  "fecha": "2026-10-23T16:10:20.591Z",
+  "estado": "PREPARACION_NO_CARGA",
+  "proceso": 2026,
+  "oferta": 2027,
+  "etapa": "2 noviembre",
+  "fuentes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/CAMBIOS_V05.tsv": {
+      "sha256": "cba230d64f6c53ce0ff99ee81da71e3fa80b06cd3cecb32342aba0ab40f0bac0",
+      "modo": "0o644"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/CAMBIOS_V06.tsv": {
+      "sha256": "a422bee8e61c05fcc2f3c634d2f83d0807cddd66f587398ca956770fcfbc7e7c",
+      "modo": "0o644"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv": {
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+      "modo": "0o444"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/DECISIONES_21_DIPLOMADOS.tsv": {
+      "sha256": "3225bc9bcce93c61b9be0c798cb2b3b3b90c0781972aafeca876c98e684df02a",
+      "modo": "0o644"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/MANIFIESTO_ACEPTACION.json": {
+      "sha256": "4962d7e08fa7b71c55d4b782f5cf247a4db2257dd872e1280dff32f1976f29c6",
+      "modo": "0o644"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/MANIFIESTO_SHA256.tsv": {
+      "sha256": "ae649ff43909c08f8cc60e6818bce06ac858bc836e52d77a97db09c83661d678",
+      "modo": "0o644"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/README_CARGA_CONGELADA.md": {
+      "sha256": "3e27b2848c344f27f4d082bcb561a10802be15c64b8b5f5efc31edb1d8ac9d50",
+      "modo": "0o644"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/03_fuentes_institucionales/entregas_docencia/20261023_diplomados_vf/Oferta Diplomados 2027 - SIES vf.xlsx": {
+      "sha256": "3c86e2d87fb4513a0361aadc3f7faa1fb05fb81638b59cdeb0ddd0ca2b9e0632"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf": {
+      "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+    }
+  },
+  "controles": {
+    "programas_docencia": 29,
+    "ya_etapa1": 7,
+    "candidatos": 22,
+    "bajas_etapa1_intactas": 14,
+    "campos_sin_dato_directo": 17,
+    "ausencias_programa_campo": 374,
+    "importes_columna_D_candidatos": {
+      "400000": 9,
+      "600000": 2,
+      "990000": 11
+    },
+    "duplicados_nominales_docencia": 0,
+    "version_congelada_sin_cambios": true
+  },
+  "cambios_etapa1": 0,
+  "commit_push": false,
+  "scripts": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/excel_manual_diplomados_20261023/etapa2_noviembre.mjs",
+      "sha256": "a6a58a8b9ce4be1ba3ff2ae60496b9e2042dbf0743b88ee5cb1810ca9d30b937"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_diplomados_etapa2_noviembre_20261023.py",
+      "sha256": "861c6f499d7ff9f77ebf0ccd48fe803e1c16f721f42d539ff89ad0121786bf52"
+    }
+  ],
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/preparacion_etapa2_noviembre_20261023/REVISION_DIPLOMADOS_ETAPA2_NOVIEMBRE_20261023.xlsx",
+      "sha256": "c56a7d95c54f30848970286bc22b42ae8bf480bbae487fefd260a2971d76e805",
+      "bytes": 15498
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/REVISION_DIPLOMADOS_ETAPA2_NOVIEMBRE_20261023.xlsx",
+      "sha256": "c56a7d95c54f30848970286bc22b42ae8bf480bbae487fefd260a2971d76e805",
+      "bytes": 15498
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/preparacion_etapa2_noviembre_20261023/RESUMEN_Y_PENDIENTES.md",
+      "sha256": "2a74b759c53dcd8535800f33e8b29e8660e88c5f9c0b397c6576c4abdbf74d7a",
+      "bytes": 3945
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/preparacion_etapa2_noviembre_20261023/REVISION_48_COLUMNAS.tsv",
+      "sha256": "ae542b6b381ab3c75d89c246eabe476cfa0ebdfb18bd1d50d5e965c081a7c533",
+      "bytes": 7827
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/preparacion_etapa2_noviembre_20261023/ANALISIS.json",
+      "sha256": "38e41dc58f59d2da8876d2ff2f1d1bc90b9b4613c659936cdf97cee62974b237",
+      "bytes": 25409
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/preparacion_etapa2_noviembre_20261023/CONCILIACION_29_PROGRAMAS.tsv",
+      "sha256": "b90a4e0602ac9d4be34f110f269709c5c45e419e6fc74cfc871031b4be7f8147",
+      "bytes": 7491
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/preparacion_etapa2_noviembre_20261023/FALTANTES_POR_PROGRAMA.tsv",
+      "sha256": "f0c986c268f0a238837c213c8eec56152c23949ef4fdbe413568740c8d39b238",
+      "bytes": 61984
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/preparacion_etapa2_noviembre_20261023/BAJAS_ETAPA1_SIN_REACTIVACION.tsv",
+      "sha256": "051619c4a469e582607072aa89e5907e1ee9c2f8c4ee23ca8787bdf4ef5a4f2f",
+      "bytes": 725
+    }
+  ],
+  "pendientes": [
+    "Antecedentes academicos",
+    "Clasificacion y denominaciones",
+    "Alcance criterios vacantes y cobros",
+    "Oferta efectiva",
+    "Reporte 6048",
+    "Estructura descargada PES 17469"
+  ],
+  "reanudacion": "Completar pendientes, conciliar 6048, validar antes de producir CSV. No modificar V06."
+}

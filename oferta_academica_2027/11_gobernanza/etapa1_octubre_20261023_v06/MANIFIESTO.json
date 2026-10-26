@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-10-23T12:49:11.222869-03:00",
+  "estado": "V06_PREPARADA_PENDIENTE_ACEPTACION_PES",
+  "autorizacion_usuario": "si, esos montos son el arancel y la matricula queda en 0. Corrige solo eso",
+  "entradas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v05/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V05.csv",
+      "sha256": "917de0e0b8a25dfe1edcac20962c32f5819de262ef6969255dc47b326312fb56"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v05/rechazo_124430/23-10-2026_12-44-30_Oferta-Académica-Vigente-Editada-TP.csv.txt",
+      "sha256": "02ebb24435a8efadbfbe9fe447263222635cef93c5e5d42a09df0e949b563728"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v05/MANIFIESTO.json",
+      "sha256": "d7f86db902a8ee12f764ecdc7f7047d192614e1ae215c9e6a4646a92d5ec1b1a"
+    }
+  ],
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/corregir_aranceles_etapa1_v06_20261023.py",
+    "sha256": "98595d709612ad47357b5607077110c9545c7235b1d0f2baa7842e9c46eb00eb"
+  },
+  "controles": {
+    "filas": 161,
+    "columnas": 48,
+    "celdas_modificadas": 14,
+    "registros_modificados": 7,
+    "otros_registros_intactos": 154,
+    "otros_campos_intactos": true,
+    "vacantes_total": 5671,
+    "vigencia1": 95,
+    "vigencia2": 52,
+    "vigencia3": 14,
+    "arancel_positivo_en_todos_vigencia1": true,
+    "sin_encabezado": true,
+    "sin_salto_final": true,
+    "codificacion": "UTF-8 sin BOM",
+    "separador": ";"
+  },
+  "git_branch": "feature/ire-2026",
+  "git_head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+      "bytes": 45334
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+      "bytes": 45334
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-10-20T18:06:25.178218-03:00",
+  "estado": "CORREGIDO_SALTO_FINAL_PENDIENTE_REINTENTO_PES",
+  "entrada": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020.csv",
+    "sha256": "4a33d8a30ff7e4407d3cf7ccb43ee8a0d799e874744facef364c181e31c4e8d6",
+    "bytes": 45258
+  },
+  "evidencia_error": {
+    "origen": "/Users/alexi/Downloads/20-10-2026_17-59-19_Oferta-Académica-Vigente-Editada-TP.csv.txt",
+    "copia": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261020/v04_sin_salto_final/20-10-2026_17-59-19_Oferta-Académica-Vigente-Editada-TP.csv.txt",
+    "sha256": "da8789a146f6edef22a02ca2d6f6c02a15232c855c37611a156fa14aa3d06373"
+  },
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/corregir_salto_final_etapa1_20261020.py",
+    "sha256": "cfbcc284fa68c6168b4f350828406a6a57055337d8bd32fffcb56aca0da0e894"
+  },
+  "cambio": {
+    "byte_eliminado": "0A",
+    "posicion_base_cero": 45257,
+    "otros_bytes_modificados": 0
+  },
+  "controles": {
+    "filas": 161,
+    "columnas": 48,
+    "igualdad_celda_por_celda": true,
+    "salto_final": false
+  },
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020_V04_SIN_SALTO_FINAL.csv",
+      "sha256": "c938f1f11b7d6d1605057a649bcfadac075edc1d56a8b2ff1416ada97af03cdc",
+      "bytes": 45257
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020_V04_SIN_SALTO_FINAL.csv",
+      "sha256": "c938f1f11b7d6d1605057a649bcfadac075edc1d56a8b2ff1416ada97af03cdc",
+      "bytes": 45257
+    }
+  ]
+}

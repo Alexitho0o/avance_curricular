@@ -1,0 +1,32 @@
+{
+  "estado": "CONCILIACION_PARA_REVISION_SIN_CAMBIOS_CARGA",
+  "entradas": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/reporte_dinamico_6047_2026-10-20_09:05:04.csv": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62",
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/03_fuentes_institucionales/entregas_docencia/20261023_diplomados_vf/Oferta Diplomados 2027 - SIES vf.xlsx": "3c86e2d87fb4513a0361aadc3f7faa1fb05fb81638b59cdeb0ddd0ca2b9e0632",
+    "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020_V04_SIN_SALTO_FINAL.csv": "c938f1f11b7d6d1605057a649bcfadac075edc1d56a8b2ff1416ada97af03cdc"
+  },
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/conciliar_nombres_diplomados_20261023.py",
+    "sha256": "7faa906ac3efc4bda4841f99ff0c41178c08d65f1c3564f9277af9cc9bd0970e"
+  },
+  "controles": {
+    "SIN_COINCIDENCIA_NOMINAL": 13,
+    "COINCIDENCIA_NOMINAL_NORMALIZADA": 5,
+    "NOMBRE_AMPLIADO_REQUIERE_CONFIRMACION": 3
+  },
+  "vacantes_autorizadas_por_programa": {
+    "primer_semestre": 15,
+    "segundo_semestre": 15
+  },
+  "cambios_vigencia": 0,
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_diplomados/conciliacion_normalizada_v02/CONCILIACION_NOMBRES.tsv",
+      "sha256": "07469a6e8d0948b1a45b5e57dde9171a04018720288c621d0ebfb6dd3cae6c46"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_diplomados/conciliacion_normalizada_v02/DECISION_Y_METODO.md",
+      "sha256": "c41d674ab108d7dad044ffc6245782296633680fa894dfbb17a459f753a7b38d"
+    }
+  ]
+}

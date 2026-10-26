@@ -1,0 +1,111 @@
+{
+  "estado": "ACEPTADA_EN_PES_SEGUN_CONFIRMACION_USUARIO_CONGELADA",
+  "fecha_confirmacion_usuario": "2026-10-23",
+  "registro_local": "2026-10-23T12:56:29.464838-03:00",
+  "proceso": "Oferta Academica 2027, proceso 2026, segundo proceso octubre",
+  "etapa": 1,
+  "id_carga": 17467,
+  "version": "V06",
+  "evidencia_aceptacion": {
+    "tipo": "declaracion_usuario",
+    "texto": "quedo cargada ok en PES, congela la V06 como la version aceptada de la etapa 1",
+    "verificacion_directa_pes": false,
+    "comprobante": null
+  },
+  "fuente_v06": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+  "copia_escritorio": "/Users/alexi/Desktop/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+  "copia_congelada": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+  "sha256_csv": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+  "bytes": 45334,
+  "controles": {
+    "filas": 161,
+    "columnas": 48,
+    "vacantes": 5671,
+    "pregrado": 140,
+    "diplomados_vigencia1": 7,
+    "diplomados_vigencia3": 14,
+    "vigencias": {
+      "1": 95,
+      "2": 52,
+      "3": 14
+    }
+  },
+  "dependencias": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/reporte_dinamico_6047_2026-10-20_09:05:04.csv",
+      "sha256": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+      "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/03_fuentes_institucionales/entregas_docencia/20261023_diplomados_vf/Oferta Diplomados 2027 - SIES vf.xlsx",
+      "sha256": "3c86e2d87fb4513a0361aadc3f7faa1fb05fb81638b59cdeb0ddd0ca2b9e0632"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_etapa1_octubre_20261020.py",
+      "sha256": "961bc9c1ab3ea2bb90e55c541c29ac1b38016fd97a320698cf002c4fb73401bf"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_etapa1_octubre_fechas_20261020.py",
+      "sha256": "1ff8bde2d43eba1cab456ba74fe4cb9fbf082ab0ac711b0abd7722ecd65d6766"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_prueba_pes_etapa1_octubre_20261020.py",
+      "sha256": "1578c8acc34a2dda7f9294aa2fcad7ec643e334c502232d0115b29777e5d46d5"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/corregir_salto_final_etapa1_20261020.py",
+      "sha256": "cfbcc284fa68c6168b4f350828406a6a57055337d8bd32fffcb56aca0da0e894"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_carga_etapa1_v05_20261023.py",
+      "sha256": "7f4a28dc101f4f9c3395d83731f47194b9b26a35c80e0e3d9d5d57981019ea0a"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/corregir_aranceles_etapa1_v06_20261023.py",
+      "sha256": "98595d709612ad47357b5607077110c9545c7235b1d0f2baa7842e9c46eb00eb"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v05/MANIFIESTO.json",
+      "sha256": "d7f86db902a8ee12f764ecdc7f7047d192614e1ae215c9e6a4646a92d5ec1b1a"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v06/MANIFIESTO.json",
+      "sha256": "d51e607612cabb428c3262ce351d408fce65d7d179b873817946a31a92951ca2"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v05/rechazo_124430/23-10-2026_12-44-30_Oferta-Académica-Vigente-Editada-TP.csv.txt",
+      "sha256": "02ebb24435a8efadbfbe9fe447263222635cef93c5e5d42a09df0e949b563728"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_v05/DECISIONES_21_DIPLOMADOS.tsv",
+      "sha256": "3225bc9bcce93c61b9be0c798cb2b3b3b90c0781972aafeca876c98e684df02a"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_v05/CAMBIOS_POR_CELDA.tsv",
+      "sha256": "cba230d64f6c53ce0ff99ee81da71e3fa80b06cd3cecb32342aba0ab40f0bac0"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_v06/CAMBIOS_POR_CELDA.tsv",
+      "sha256": "a422bee8e61c05fcc2f3c634d2f83d0807cddd66f587398ca956770fcfbc7e7c"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/06_validaciones/etapa1_octubre_20261023_v06/CONTROLES.json",
+      "sha256": "82561b99f55962b42f6ba12d04f0b8ff0e4cf4916a09cb478530719c09847176"
+    }
+  ],
+  "script_congelamiento": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/congelar_v06_aceptada_20261023.py",
+    "sha256": "44601726d1eb772486fc2e9fd649e819aef5ed36a9cb03facff97345406dfd38"
+  },
+  "conciliacion_6048": "PENDIENTE_NO_SE_HA_RECIBIDO_REPORTE",
+  "estado_previo_conservado": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v06/MANIFIESTO.json",
+  "git": {
+    "rama": "feature/ire-2026",
+    "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "commit_realizado": false,
+    "push_realizado": false
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "fecha": "2026-10-23T11:51:33.532630-03:00",
+  "estado": "PREPARADO_PARA_CARGA_PENDIENTE_ACEPTACION_PES",
+  "entradas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020_V04_SIN_SALTO_FINAL.csv",
+      "sha256": "c938f1f11b7d6d1605057a649bcfadac075edc1d56a8b2ff1416ada97af03cdc"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/reporte_dinamico_6047_2026-10-20_09:05:04.csv",
+      "sha256": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+      "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/03_fuentes_institucionales/entregas_docencia/20261023_diplomados_vf/Oferta Diplomados 2027 - SIES vf.xlsx",
+      "sha256": "3c86e2d87fb4513a0361aadc3f7faa1fb05fb81638b59cdeb0ddd0ca2b9e0632"
+    }
+  ],
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_carga_etapa1_v05_20261023.py",
+    "sha256": "7f4a28dc101f4f9c3395d83731f47194b9b26a35c80e0e3d9d5d57981019ea0a"
+  },
+  "controles": {
+    "filas": 161,
+    "columnas": 48,
+    "pregrado_sin_cambios": 140,
+    "diplomados_vigencia1": 7,
+    "diplomados_vigencia3": 14,
+    "vigencias": {
+      "2": 52,
+      "1": 95,
+      "3": 14
+    },
+    "cambios_celdas": 56,
+    "vacantes_pregrado": 5461,
+    "vacantes_diplomados": 210,
+    "vacantes_total": 5671,
+    "vacios_financieros_solo_vigencia3": 56,
+    "duplicados_clave": 0,
+    "filas_vacias": 0,
+    "salto_final": false,
+    "errores_pes_previos_vigencia1_reproducidos": 0
+  },
+  "vigencia3": [
+    "40",
+    "63",
+    "64",
+    "65",
+    "67",
+    "71",
+    "95",
+    "97",
+    "98",
+    "101",
+    "102",
+    "103",
+    "104",
+    "105"
+  ],
+  "correspondencias": {
+    "53": [
+      17,
+      "Diplomado en Ciberseguridad Aplicada",
+      "Coincidencia nominal"
+    ],
+    "66": [
+      21,
+      "Diplomado en Fullstack",
+      "Coincidencia nominal"
+    ],
+    "68": [
+      19,
+      "Diplomado en Seguridad Ofensiva y ethical hacking",
+      "Equivalencia confirmada por usuario; no renombrar SIES"
+    ],
+    "69": [
+      18,
+      "Diplomado en Infraestructura Cloud",
+      "Coincidencia nominal normalizada"
+    ],
+    "70": [
+      25,
+      "Diplomado en Redes Industriales",
+      "Coincidencia nominal normalizada"
+    ],
+    "96": [
+      32,
+      "Diplomado en Gobernanza de Datos",
+      "Coincidencia nominal; no usar variante Gestion Estrategica"
+    ],
+    "99": [
+      9,
+      "Diplomado en Inteligencia Artificial Aplicada para la gestión publica y local",
+      "Candidato presentado en cuadro; usuario confirma restantes coincidentes salvo 95 y luego especifica bajas"
+    ]
+  },
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v05/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V05.csv",
+      "sha256": "917de0e0b8a25dfe1edcac20962c32f5819de262ef6969255dc47b326312fb56",
+      "bytes": 45334
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V05.csv",
+      "sha256": "917de0e0b8a25dfe1edcac20962c32f5819de262ef6969255dc47b326312fb56",
+      "bytes": 45334
+    }
+  ]
+}

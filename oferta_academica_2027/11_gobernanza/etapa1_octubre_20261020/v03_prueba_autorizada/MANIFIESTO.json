@@ -1,0 +1,38 @@
+{
+  "fecha": "2026-10-20T17:58:50.017121-03:00",
+  "estado": "PRUEBA_PES_AUTORIZADA_NO_CONFIRMADA",
+  "autorizacion": "Conservar vacios SIES; corregir solo fechas; generar copias para probar PES.",
+  "fuente": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/reporte_dinamico_6047_2026-10-20_09:05:04.csv",
+    "sha256": "4edfefaabf449b35163fa090ecac39649ecaf6aab10bbe3a4ef7e83a244f8e62"
+  },
+  "derivado_previo": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PENDIENTE_NO_CARGAR_OFERTA_2027_ETAPA1_17467_FECHAS_CORREGIDAS_20261020.csv",
+    "sha256": "4a33d8a30ff7e4407d3cf7ccb43ee8a0d799e874744facef364c181e31c4e8d6"
+  },
+  "script": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/04_scripts/preparar_prueba_pes_etapa1_octubre_20261020.py",
+    "sha256": "1578c8acc34a2dda7f9294aa2fcad7ec643e334c502232d0115b29777e5d46d5"
+  },
+  "controles": {
+    "filas": 161,
+    "columnas": 48,
+    "fechas_corregidas": 88,
+    "otros_cambios_de_valor": 0,
+    "vacios_financieros": 84,
+    "vacantes": 5461
+  },
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/07_resultados/borradores_prueba_no_oficiales/etapa1_octubre_20261020/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020.csv",
+      "sha256": "4a33d8a30ff7e4407d3cf7ccb43ee8a0d799e874744facef364c181e31c4e8d6",
+      "bytes": 45258
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/PRUEBA_PES_OFERTA_2027_ETAPA1_17467_20261020.csv",
+      "sha256": "4a33d8a30ff7e4407d3cf7ccb43ee8a0d799e874744facef364c181e31c4e8d6",
+      "bytes": 45258
+    }
+  ],
+  "carga_pes": "No ejecutada; pendiente de resultado y conciliacion 6048"
+}
