@@ -1,0 +1,32 @@
+{
+  "estado": "OK",
+  "fecha_hora": "2026-10-26T12:48:25.976530+00:00",
+  "clasificacion": "C validación; B resultados; E pendientes conservados",
+  "consultas_reales_v8_vs_v9": 24774,
+  "consultas_distintas": 21,
+  "distintas_son_las_21_autorizadas": true,
+  "cambios": {
+    "E_PENDIENTE|D_CORRESPONDENCIA_INTERNA_APROBADA|I162S2C79J4V1|REUTILIZABLE": 6,
+    "E_PENDIENTE|D_CORRESPONDENCIA_INTERNA_APROBADA|I162S2C57J4V1|REUTILIZABLE": 7,
+    "E_PENDIENTE|D_CORRESPONDENCIA_INTERNA_APROBADA|I162S2C78J4V1|REUTILIZABLE": 6,
+    "E_PENDIENTE|D_CORRESPONDENCIA_INTERNA_APROBADA|I162S2C47J4V1|REUTILIZABLE": 2
+  },
+  "niveles_v8": {
+    "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 21569,
+    "E_PENDIENTE": 3041,
+    "D_CORRESPONDENCIA_INTERNA_APROBADA": 164
+  },
+  "niveles_v9": {
+    "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 21569,
+    "E_PENDIENTE": 3020,
+    "D_CORRESPONDENCIA_INTERNA_APROBADA": 185
+  },
+  "tres_consumidores_misma_respuesta": true,
+  "integridad_alterada_rechazada": true,
+  "pruebas_unitarias": "12/12 OK (tests/test_diccionario_sies_seguimiento.py)",
+  "aplicar_adjudicaciones_reproduce_candidata": true,
+  "entorno": "Ejecutado en espejo con componentes idénticos (hash) y la misma base privada; en el Mac solo cambia la ruta absoluta de la base.",
+  "denominadores_modificados": false,
+  "identificadores_en_salidas_publicas": false,
+  "commit_push": false
+}

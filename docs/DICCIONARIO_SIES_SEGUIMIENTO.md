@@ -153,3 +153,19 @@ B/C — Histórico candidato: 21.569 documentales, 164 exclusivamente internos a
 C/E — Las 16 propuestas y 12 criterios de continuidad de fase1 no se adoptaron. No se cambian tasas ni denominadores. La candidata requiere la promoción autorizada del puntero. SQLite y Excel completo permanecen fuera de Git. Fuentes privadas deben estar disponibles localmente para reproducir datos; publicar documentación no las publica ni da acceso remoto.
 
 C — QA de esta edición en docs/qa_diccionario_v8_20261025/. El verificador histórico scripts/verificar_diccionario_sies_seguimiento.py escribe en v1 y no debe ejecutarse sin adaptar el destino. El QA de fase3 es el pertinente para esta candidata; no declarar que un verificador viejo certifica v8. Al promover, registrar autorización, responsable, fecha/hora y alerta de activación; verificar hashes y conservar el descriptor anterior para reversión.
+
+## Edición v9: cuatro planes de la revisión V3 (26-10-2026)
+
+**D/C.** Alexi aprobó integrar las 21 correspondencias internas de la revisión V3 (hoja 1 del Excel V5) y promover la edición. `v9_20261026_cuatro_planes_v3` conserva v8 y asigna, solo en esos 21 contextos T2/T3 2025–2026 de sede 2 y jornada 4: TLOG20241 → I162S2C79J4V1 (6), TAMD20241 → I162S2C78J4V1 (6), TPAS20241 → I162S2C57J4V1 (7) y TCIB20241 → I162S2C47J4V1 (2). Evidencia por observación: candidato único, actividad del plan en PROMEDIOS, Datos Alumnos RE/O y oferta anual vigente.
+
+B/C — Histórico: 21.569 documentales, 185 exclusivamente internos aprobados y 3.020 pendientes sobre 24.774 observaciones. Seguimiento T1→T2/T3: pendientes de código 99 → 78. Las 149 excepciones respecto del ancla T1 (decisión opción A) no cambian: el código T1 de cohorte se conserva aparte.
+
+**E.** Atribución documental, fecha efectiva de migración y aceptación SIES pendientes. No se extiende a otros contextos, planes ni períodos.
+
+C — QA: 24.774 consultas comparadas con v8, exactamente 21 distintas (E → D); tres consumidores con la misma respuesta; base alterada rechazada; 12 pruebas unitarias. Decisión, alerta, puntero anterior y QA junto al descriptor. Base privada en `~/.local/share/ipss/v9_candidata_21_20261025/`. Índice MU, bases anteriores, Excel y denominadores conservados. Sin commit/push. Reversión: restituir `activo.json` desde `ACTIVO_ANTERIOR.json`.
+
+## Control de consistencia T1 (decisión 26-10-2026)
+
+**D.** Alexi aprobó la regla de herencia del §6 en su variante estricta **solo como control**, no como regla de asignación: si un contexto conserva plan, carrera, CODCLI, sede, jornada, modalidad y duración, está en el año de T1 o el siguiente y no hay otra versión de la familia en la oferta del año, su código documental debe ser el de T1. Las diferencias se revisan; nunca se corrigen automáticamente. Respeta `NO_PROPAGAR_VERSION_ENTRE_CONTEXTOS`.
+
+C — Prueba retrospectiva: 933/933 aciertos; la variante laxa queda descartada (6 contraejemplos en IINF20241). No resuelve ninguno de los 78 pendientes. Ejecutar `outputs/regla_herencia_t1_20261026/control_consistencia_herencia_t1.py` tras cada nueva edición o vista; primera ejecución sobre v9: 0 diferencias.

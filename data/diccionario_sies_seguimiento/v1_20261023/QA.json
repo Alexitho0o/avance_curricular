@@ -1,0 +1,26 @@
+{
+  "estado": "OK_CON_ADVERTENCIAS",
+  "clasificacion": "C validación; B resultados; E pendientes conservados",
+  "consultas_reales": 24774,
+  "discrepancias_codigos": 0,
+  "resultados": {
+    "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 21561,
+    "E_PENDIENTE": 3076,
+    "D_CORRESPONDENCIA_INTERNA_APROBADA": 137
+  },
+  "tres_consumidores_misma_respuesta": true,
+  "integridad_alterada_rechazada": true,
+  "pruebas_negativas_y_temporales": 12,
+  "fuentes_intactas": true,
+  "denominadores_modificados": false,
+  "base_privada_fuera_git": true,
+  "identificadores_en_salidas_publicas": false,
+  "limites": [
+    "No acredita aceptación SIES ni fecha administrativa efectiva del plan.",
+    "No promociona propuestas ni extrapola códigos a otros contextos.",
+    "Índice RUT no resuelve 25 filas anuales con otro tipo documental; no se eliminan de las bases.",
+    "No ejecuta ni modifica motores anuales, libros ni complementos remotos."
+  ],
+  "rama": "feature/ire-2026",
+  "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+}

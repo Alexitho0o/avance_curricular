@@ -1,0 +1,107 @@
+{
+  "clasificacion": "C corrección documental; no altera el descriptor activo ni su hash",
+  "fecha_hora": "2026-10-26T12:59:45.959495+00:00",
+  "edicion": "v9_20261026_cuatro_planes_v3",
+  "descriptor_sha256": "6a0b3a1ef145505ce4959d135bcf863b822b9c70561a9f6f91166cc6afb6446d",
+  "defecto": "promover_v9.py registró en entradas_cierre_sha256 las rutas del repositorio con el prefijo del entorno de ejecución (/sessions/…/mnt/GitHub) en vez de /Users/alexi/Documents/GitHub. base_privada, componentes_sha256 y entradas_sha256 usan rutas correctas; los consumidores no leen entradas_cierre.",
+  "detectado_por": "outputs/procedencia_fuentes_v9_20261026/verificar_procedencia.py",
+  "equivalencias": [
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v8_20261025_ocho_p/descriptor.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v8_20261025_ocho_p/descriptor.json",
+      "sha256_citado": "701519d757779b3deaa618836bf862df29b9c0ef3e82dc45e5ec9c9b614764ef",
+      "sha256_actual": "701519d757779b3deaa618836bf862df29b9c0ef3e82dc45e5ec9c9b614764ef",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json",
+      "sha256_citado": "49b290ff206cb6071429b1e683aaca4cb42b14d036640ca1045f93a26fe67002",
+      "sha256_actual": "08a10ac919da17b6008b804911124e322d92faaa92ec94b1d29d9e7a33db03b6",
+      "coincide": false,
+      "nota": "Hash previo a la promoción; el contenido citado se conserva en ACTIVO_ANTERIOR.json"
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/construir_candidata_v9.py",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/construir_candidata_v9.py",
+      "sha256_citado": "810cf3a5e13deb3e12c82b8cfff2877b7188f3584cb42cd08625eda63d51f894",
+      "sha256_actual": "810cf3a5e13deb3e12c82b8cfff2877b7188f3584cb42cd08625eda63d51f894",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/QA_CANDIDATA.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/QA_CANDIDATA.json",
+      "sha256_citado": "77d3c60b110928057e5e601fca8bda290150e9d8dead0f28029d27ac0fda239f",
+      "sha256_actual": "77d3c60b110928057e5e601fca8bda290150e9d8dead0f28029d27ac0fda239f",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/MANIFEST_CANDIDATA.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/MANIFEST_CANDIDATA.json",
+      "sha256_citado": "464086e6825c48eb01da394c7dea8af3eaf1e5db6b2cdbec711b70a4c0f344d8",
+      "sha256_actual": "464086e6825c48eb01da394c7dea8af3eaf1e5db6b2cdbec711b70a4c0f344d8",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/LEEME.md",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/LEEME.md",
+      "sha256_citado": "6ab35b0a0a88fde67a7137a166fa5a20d6f461ee12582361459b54b12dcabfe9",
+      "sha256_actual": "482f66781f2a0972f27a3ba58eb16fbbddaf90b5bdd1ae1dc46c035d093b14f9",
+      "coincide": false,
+      "nota": "Se agregó una línea de actualización después de citarlo"
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/promover_v9.py",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/diccionario_v9_candidata_21_20261025/promover_v9.py",
+      "sha256_citado": "2d3feddd73dc783f7f9ae46b3015b752b1aaf949b8fe1a48c64e28b9a91f9341",
+      "sha256_actual": "2d3feddd73dc783f7f9ae46b3015b752b1aaf949b8fe1a48c64e28b9a91f9341",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/LEEME.md",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/LEEME.md",
+      "sha256_citado": "90195ff5322c9c69e5525ae1ce0856f9579d86719903b723dcea38107c43ecd5",
+      "sha256_actual": "90195ff5322c9c69e5525ae1ce0856f9579d86719903b723dcea38107c43ecd5",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/revisar_fuentes.py",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/revisar_fuentes.py",
+      "sha256_citado": "51e6530ac8906c988abd20562fbc83676107189939a0dead1a4191090d4944ec",
+      "sha256_actual": "51e6530ac8906c988abd20562fbc83676107189939a0dead1a4191090d4944ec",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/evidencia_temporal_historica.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/evidencia_temporal_historica.json",
+      "sha256_citado": "0bece0b35734105d7bb1616abd8d0d3235f8d6727c525fbbb6d1fbadedc34294",
+      "sha256_actual": "0bece0b35734105d7bb1616abd8d0d3235f8d6727c525fbbb6d1fbadedc34294",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/QA_MANIFEST.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_programas_cierres_20261025_v3/QA_MANIFEST.json",
+      "sha256_citado": "132a73fbba08d4e70d75b8ec238e494e6e651f126e6b2fbb96adb61cd6ba25c2",
+      "sha256_actual": "132a73fbba08d4e70d75b8ec238e494e6e651f126e6b2fbb96adb61cd6ba25c2",
+      "coincide": true,
+      "nota": ""
+    },
+    {
+      "clave_registrada": "/sessions/rcw-dc8cfecc7fd74a81929395044336/mnt/GitHub/avance_curricular/outputs/conciliacion_multiversion_t1_20261025/DECISION_APROBADA.json",
+      "ruta_mac_equivalente": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/conciliacion_multiversion_t1_20261025/DECISION_APROBADA.json",
+      "sha256_citado": "dcab066466160db2769bf9028fba046b7f3f84c979248d5bd486bb4e96082013",
+      "sha256_actual": "dcab066466160db2769bf9028fba046b7f3f84c979248d5bd486bb4e96082013",
+      "coincide": true,
+      "nota": ""
+    }
+  ],
+  "tratamiento": "Se documenta aquí en vez de reescribir la edición activa. Corregir en el descriptor de la próxima edición."
+}
