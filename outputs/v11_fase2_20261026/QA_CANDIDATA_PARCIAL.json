@@ -1,0 +1,22 @@
+{
+  "estado": "CANDIDATA_PENDIENTE_QA_COMPLETO",
+  "observaciones_v10": 24774,
+  "contextos_nuevos_E": 1126,
+  "saltados": {
+    "multiples_dimensiones_misma_llave": 2
+  },
+  "consultas_comparadas": 24774,
+  "diferencias_consulta": 0,
+  "excepciones_qa": [],
+  "integridad_sqlite": "ok",
+  "sha_v10": "c6c4b5a43434d87146a97d1c81510c87e0f988a5e3c232852d3bbc4622d1051c",
+  "sha_v11": "2df964de1fbb50be8a062708ee689667be1a33afd72d700bcc5792b940bf8423",
+  "sha_descriptor": "cfeed98672dc1e23bfb0b4b9dcd873cf3e50a59258d8ca5b8c8ff1c982d4b919",
+  "consulta_sin_dimensiones_diferencias": 0,
+  "consultas_nuevas_pendientes_sin_codigo": 1126,
+  "mu_anual_filas_v10_y_v11": 12207,
+  "pruebas_unitarias_existentes": "12 OK sobre servicio activo v10",
+  "tres_consumidores_candidata": "OK en entorno aislado: una consulta histórica y una nueva por consumidor",
+  "activo_sin_cambios": true,
+  "nota": "QA parcial: faltan controles dirigidos por grupo, prueba independiente de atribución y conciliación completa de posiciones. No activar."
+}

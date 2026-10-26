@@ -1,0 +1,76 @@
+{
+  "estado": "FALLIDO_O_ALERTA",
+  "contextos_nuevos": 1126,
+  "vinculos_posicion": 1126,
+  "recuento_T1": {
+    "MISMO_CODCLI_T1_EN_PROMEDIOS_SIN_ATRIBUCION_CODIGO": 1117,
+    "SIN_CODCLI_T1_EN_FUENTES_REVISADAS": 8,
+    "MISMO_CODCLI_T1_SIN_CODIGO_ORIGEN_ATRIBUIDO": 1
+  },
+  "familia_T1_vs_candidata": {
+    "familia_origen_en_candidatas": 1101,
+    "familia_origen_distinta_o_no_atribuible": 25
+  },
+  "sede_actual": {
+    "RE": 1053,
+    "CO": 73
+  },
+  "referencias_fila_ok": {
+    "PROMEDIOSDEALUMNOS_7804.xlsx": 1154,
+    "PROMEDIOSDEALUMNOS_12166.xlsx": 2467,
+    "PROMEDIOSDEALUMNOS_3233.xlsx": 518
+  },
+  "referencias_fila_no_coinciden": {
+    "PROMEDIOSDEALUMNOS_7804.xlsx": 190
+  },
+  "alertas": {},
+  "llaves_ambiguas": [
+    {
+      "numero_contextos": 2,
+      "carreras": [
+        "TENS"
+      ],
+      "sedes": [
+        "RE"
+      ],
+      "jornadas": [
+        "1",
+        "2"
+      ],
+      "familias": [
+        "I162S2C91J1",
+        "I162S2C91J2"
+      ],
+      "anio": "2025",
+      "periodo": "2",
+      "fuentes": [
+        "PROMEDIOSDEALUMNOS_12166.xlsx",
+        "PROMEDIOSDEALUMNOS_3233.xlsx",
+        "PROMEDIOSDEALUMNOS_7804.xlsx"
+      ],
+      "clasificacion": "E: llave sin dimensiones no identifica una sola observación; conservar ambas alternativas"
+    }
+  ],
+  "totales": {
+    "v10_observaciones": 24774,
+    "v11_observaciones": 25900,
+    "v10_personas": 5901,
+    "v11_personas": 6523,
+    "personas_nuevas": 622,
+    "personas_existentes_con_contextos": 16,
+    "v10_expedientes_persona_codcli": 6621,
+    "v11_expedientes_persona_codcli": 7262,
+    "expedientes_nuevos": 641,
+    "expedientes_existentes_con_contextos": 1
+  },
+  "fuentes_sha256": {
+    "PROMEDIOSDEALUMNOS_7804.xlsx": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "PROMEDIOSDEALUMNOS_12166.xlsx": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+    "PROMEDIOSDEALUMNOS_3233.xlsx": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+    "DATOSDEALUMNOS_12159.xlsx": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+  },
+  "vista_sha256": "72edecb9507f46985533d1c63b83735beb4db58d743c89c226ca6be1a2c8ef31",
+  "base_v10_sha256": "c6c4b5a43434d87146a97d1c81510c87e0f988a5e3c232852d3bbc4622d1051c",
+  "base_v11_sha256": "2df964de1fbb50be8a062708ee689667be1a33afd72d700bcc5792b940bf8423",
+  "nota": "Vínculo personal no prueba identidad de expediente ni sede histórica. Códigos T1 requieren atribución por CODCLI y período. Sin asignaciones nuevas."
+}

@@ -179,3 +179,13 @@ B/C — Histórico: 21.569 documentales, 212 internos aprobados, 2.993 pendiente
 **E.** La matrícula SIES es anual: no existe registro documental 2025 del contexto posterior al cambio; atribución documental y aceptación SIES pendientes. Los 21 pendientes de 2026 esperan la MU 2027.
 
 C — QA: 24.774 consultas vs v9, exactamente 27 distintas (E → D); tres consumidores iguales; base alterada rechazada; 12 pruebas; control de consistencia T1 sin diferencias. Descriptor con rutas del Mac (corrige la errata de v9). Reversión: `ACTIVO_ANTERIOR.json`. Sin commit/push. Base privada en `~/.local/share/ipss/v10_candidata_27_20261026/`.
+
+## Edición v11: ampliación y alternativas de jornada (26-10-2026)
+
+**D/C.** Alexi autorizó activar `v11_20261026_86_y_ambiguedad` tras aprobar 73 correspondencias internas para Concepción y 13 de 2025. Las decisiones son específicas a los contextos revisados; no autorizan propagar versiones a otros casos. Las dos alternativas TENS de 2025-período 2 permanecen pendientes: la consulta sin jornada devuelve `CONTEXTO_MULTIPLE` y con jornada conserva cada alternativa sin código.
+
+**B/C.** El diccionario tiene 25.902 observaciones, 6.524 personas y 7.264 expedientes persona/CODCLI/carrera; 21.569 observaciones tienen atribución documental anual, 298 solo correspondencia interna y 4.035 siguen pendientes. No son denominadores de retención. La candidata amplía el universo de v10; no interpretar la diferencia como matrícula nueva.
+
+**C/E.** QA funcional con alcance: comparación de 25.900 consultas completas y 25.900 sin dimensiones frente a la candidata anterior, exactamente 13 cambios aprobados; 12 pruebas unitarias y contraste representativo de tres consumidores. Los 73 cierres CO se habían verificado en la comparación anterior. Pendientes: cobertura de PROMEDIOS, atribución documental trimestral, aceptación SIES y otras excepciones; no inferir vigencia ni deserción desde actividad o ausencia de actividad. Ver `data/diccionario_sies_seguimiento/v11_20261026_86_y_ambiguedad/PENDIENTES.md` y `outputs/v11_fase2_20261026/QA_FINAL_V11_86_AMBIGUEDAD_20261026.md`.
+
+**C.** El cambio de puntero no modifica bases de origen, denominadores o motores. La reversión está en `data/diccionario_sies_seguimiento/v11_20261026_86_y_ambiguedad/ACTIVO_ANTERIOR.json`. La base activa contiene datos individuales y permanece privada, fuera de Git; GitHub no sustituye su respaldo. Sin commit ni push de esta activación.

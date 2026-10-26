@@ -1,0 +1,25 @@
+{
+  "clasificacion": "D autorización; C activación; E límites",
+  "responsable_aprobacion": "Alexi",
+  "responsable_ejecucion": "Codex",
+  "fecha_ejecucion": "2026-10-26T18:04:57.656775-03:00",
+  "autorizacion": "Activa la v11 como diccionario vigente y deja documentados los pendientes, sin cambiar las bases ni los denominadores y sin hacer push.",
+  "edicion_anterior": {
+    "descriptor": "data/diccionario_sies_seguimiento/v10_20261026_mu2026_27/descriptor.json",
+    "sha256": "409d77a85f4d910baeebc99e89ac1518809d8fa89d3043d4425a991679e28f4c"
+  },
+  "edicion_nueva": {
+    "descriptor": "data/diccionario_sies_seguimiento/v11_20261026_86_y_ambiguedad/descriptor.json",
+    "sha256": "825a6c62a5fa4f59fa0b82e1aca5716082b23cea7014993b50ca51c5c7da252a"
+  },
+  "qa": "PASS_CON_ALCANCE",
+  "pendientes": [
+    "Cobertura incompleta de PROMEDIOS 2026",
+    "Atribución documental trimestral y aceptación SIES de correspondencias internas",
+    "Dos alternativas de jornada sin adjudicar",
+    "Otras excepciones de familia, T1 e identidad documental"
+  ],
+  "reversion": "Restituir activo.json desde ACTIVO_ANTERIOR.json; conservar bases privadas.",
+  "bases_y_denominadores_modificados": false,
+  "push": false
+}

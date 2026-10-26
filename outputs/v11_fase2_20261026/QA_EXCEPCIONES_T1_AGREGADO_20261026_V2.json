@@ -1,0 +1,71 @@
+{
+  "fecha_hora": "2026-10-26T17:15:03.024697-03:00",
+  "estado": "REVISADO_CON_PENDIENTES",
+  "contextos_unicos_union": 100,
+  "grupos_superpuestos": {
+    "diferencia=True|sin_t1=False|co=False": 19,
+    "diferencia=True|sin_t1=True|co=False": 6,
+    "diferencia=False|sin_t1=True|co=False": 2,
+    "diferencia=False|sin_t1=False|co=True": 73
+  },
+  "diferencias_25": {
+    "por_tipo": {
+      "JORNADA": 19,
+      "CARRERA": 6
+    },
+    "por_carrera": {
+      "TENS": 12,
+      "TPAS": 8,
+      "CONG": 4,
+      "TRHU": 1
+    },
+    "mu_persona": {
+      "MU_PERSONA_NO_TIENE_FAMILIA_DESTINO_EN_ANIO_ORIGEN": 25
+    },
+    "familia_destino_en_mu_otro_ano_persona": 13,
+    "familia_destino_en_mu_posterior_persona": 13,
+    "personas": 16
+  },
+  "sin_coincidencia_8": {
+    "por_carrera": {
+      "TENS": 2,
+      "CONG": 4,
+      "TEIQ": 1,
+      "TRHU": 1
+    },
+    "por_tipo": {
+      "CARRERA": 6,
+      "SIN_DIFERENCIA": 2
+    },
+    "origen_ano_ingreso_coincide_da": 8,
+    "mu_persona": {
+      "MU_PERSONA_NO_TIENE_FAMILIA_DESTINO_EN_ANIO_ORIGEN": 6,
+      "MU_PERSONA_TIENE_FAMILIA_DESTINO": 2
+    },
+    "personas": 6
+  },
+  "sede_CO_73": {
+    "por_carrera": {
+      "COTEIQ": 41,
+      "COTFAR": 21,
+      "COTENS": 11
+    },
+    "mu_persona": {
+      "MU_PERSONA_TIENE_FAMILIA_DESTINO": 73
+    },
+    "da_misma_persona_codcli_CO": 73,
+    "mu_codigos_distintos_en_mismo_ano": 0,
+    "personas": 51,
+    "expedientes_persona_codcli": 51
+  },
+  "fuentes_sha256": {
+    "PROMEDIOSDEALUMNOS_7804.xlsx": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "PROMEDIOSDEALUMNOS_12166.xlsx": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+    "PROMEDIOSDEALUMNOS_3233.xlsx": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+    "DATOSDEALUMNOS_12159.xlsx": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+  },
+  "base_v10_sha256": "c6c4b5a43434d87146a97d1c81510c87e0f988a5e3c232852d3bbc4622d1051c",
+  "base_v11_sha256": "2df964de1fbb50be8a062708ee689667be1a33afd72d700bcc5792b940bf8423",
+  "vista_sha256": "72edecb9507f46985533d1c63b83735beb4db58d743c89c226ca6be1a2c8ef31",
+  "restricciones": "Datos de MU por persona y año no atribuyen automáticamente CODCLI, plan, sede histórica o fecha de cambio; estado DA es actual; sin modificación de código ni denominadores."
+}

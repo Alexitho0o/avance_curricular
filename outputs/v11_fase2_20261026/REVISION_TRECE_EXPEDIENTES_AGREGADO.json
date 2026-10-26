@@ -1,0 +1,76 @@
+{
+  "clasificacion": "B datos; C cruce; E atribucion documental",
+  "contextos": 13,
+  "personas": 8,
+  "expedientes": 8,
+  "grupos": [
+    {
+      "carrera": "TENS",
+      "periodo": "2",
+      "codigo_candidato": "I162S2C91J1V1",
+      "contextos": 2
+    },
+    {
+      "carrera": "TENS",
+      "periodo": "2",
+      "codigo_candidato": "I162S2C91J2V1",
+      "contextos": 3
+    },
+    {
+      "carrera": "TENS",
+      "periodo": "3",
+      "codigo_candidato": "I162S2C91J2V1",
+      "contextos": 2
+    },
+    {
+      "carrera": "TPAS",
+      "periodo": "2",
+      "codigo_candidato": "I162S2C57J1V1",
+      "contextos": 1
+    },
+    {
+      "carrera": "TPAS",
+      "periodo": "2",
+      "codigo_candidato": "I162S2C57J2V1",
+      "contextos": 2
+    },
+    {
+      "carrera": "TPAS",
+      "periodo": "3",
+      "codigo_candidato": "I162S2C57J1V1",
+      "contextos": 1
+    },
+    {
+      "carrera": "TPAS",
+      "periodo": "3",
+      "codigo_candidato": "I162S2C57J2V1",
+      "contextos": 2
+    }
+  ],
+  "controles": {
+    "DA_P2_2026_mismo_codcli": 13,
+    "DA_P2_2026_un_solo_codcli_persona": 13,
+    "DA_P2_2026_multiples_codcli_persona": 0,
+    "DA_P2_2026_misma_carrera_jornada": 13,
+    "DA_P3_2026_mismo_codcli": 13,
+    "DA_P3_2026_un_solo_codcli_persona": 13,
+    "DA_P3_2026_multiples_codcli_persona": 0,
+    "DA_P3_2026_misma_carrera_jornada": 13
+  },
+  "fuentes": [
+    {
+      "fuente": "DA_P2_2026",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    {
+      "fuente": "DA_P3_2026",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    }
+  ],
+  "detalle_privado_sha256": "a58f14ca5e77552abcbfc479ab650dc3f00f4f82b565e52f7d918cb2a7a6b641",
+  "limite": "Los respaldos 2026 no acreditan por sí mismos la fecha del cambio ni el código documental del periodo 2025."
+}
