@@ -1,0 +1,25 @@
+{
+ "clasificacion": "D decisión del usuario",
+ "estado": "APROBADA",
+ "opcion": "A corregida",
+ "responsable_aprobacion": "Alexi, usuario de este chat",
+ "responsable_preparacion": "Claude",
+ "fecha_aprobacion": "2026-10-26T11:47:00-03:00",
+ "autorizacion": "Respuesta explícita «si» a la corrección de 31 a 27.",
+ "reemplaza": "DECISION_APROBADA_D1.json (31 contextos)",
+ "decision": "Integrar como correspondencia interna 27 contextos T2/T3 2025: los 31 D1 menos 4 cuyo año de ingreso a la carrera en la MU 2026 es 2026.",
+ "criterio_completo": [
+  "código propuesto = único candidato calculado",
+  "sede 2",
+  "jornada del código = jornada del contexto",
+  "oferta 2025 vigente",
+  "actividad del plan en PROMEDIOS en el período",
+  "un solo plan en el expediente",
+  "año de ingreso a la carrera en la MU 2026 ≤ año del contexto (control obligatorio nuevo)",
+  "MU 2026 con un solo código, igual al propuesto",
+  "mismo CODCLI en 2026 con ese código documental"
+ ],
+ "pasan_a_E": "4 D1 con ingreso 2026 y los 10 D2 (9 con ingreso 2026 en la ingeniería mientras en 2025 estaban informados en el técnico; 1 con VIG = 0 sin año de ingreso).",
+ "efecto_esperado": "pendientes de código del seguimiento 78 → 51",
+ "aplicacion": "Nueva candidata v10 sin activar; la candidata de 31 queda reemplazada y no se usa."
+}

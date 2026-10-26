@@ -1,0 +1,19 @@
+{
+ "clasificacion": "B fuentes; C cruce; E pendientes",
+ "fecha": "2026-10-26",
+ "universo": "57 pendientes de 2025 (clase A 35, B 19, C 3); los 21 de 2026 no tienen carga T2/T3 conocida",
+ "cargas_SIES_2025_formato_SIES": {
+  "archivos": ["Descarga de lo cargado_08-05-2025…", "IPSS_Procesamiento.xlsx (Carga_Completa, Final a carga)", "Gestion_SIES_Matrícula_Pregrado_2025.xlsx", "IPSS2025.xlsx"],
+  "resultado": "0 de 57 contienen el código del nuevo contexto. La matrícula SIES es anual (corte en mayo): un código por persona y año, el mismo de la MU."
+ },
+ "listas_UMAS_2do_3er_ingreso_2025": {
+  "resultado": "2 de 57 aparecen como matrícula de período 2 o 3; los contextos T2/T3 son de estudiantes que continúan, no ingresos nuevos."
+ },
+ "MU_del_anio_siguiente_2026": {
+  "mismo_contexto_y_mismo_codigo_propuesto": {"A_jornada": 25, "B_cambio_carrera": 16, "total": 41},
+  "misma_carrera_otra_jornada": 7,
+  "otra_carrera": 4,
+  "sin_MU_2026": 5,
+  "lectura": "En 41 casos la MU 2026 documenta exactamente el código que el contexto T2/T3 2025 necesita. Es B para 2026; para 2025 T2/T3 solo puede usarse como correspondencia interna D (la regla NO_PROPAGAR_VERSION_ENTRE_CONTEXTOS impide atribuirlo automáticamente)."
+ }
+}

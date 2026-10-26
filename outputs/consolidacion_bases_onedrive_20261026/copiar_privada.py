@@ -3,7 +3,7 @@
 Las bases contienen RUT y CODCLI: se copian (nunca se mueven) a 07_PRIVADAS_DICCIONARIO y quedan
 registradas en la sección `catalogo_privadas` del catálogo. Verifica el hash del origen contra el
 descriptor de su edición, el de la copia contra el origen, y que el origen no cambie.
-Uso en Mac:  python3 copiar_privada.py --paso N      (N = 1..10)
+Uso en Mac:  python3 copiar_privada.py --paso N      (N = 1..11; el 11 es la base v10)
 """
 import argparse, datetime as dt, hashlib, json, shutil, sys, unicodedata
 from pathlib import Path
@@ -15,6 +15,7 @@ CARPETA = "IPSS_CONCILIACION_UMAS_SIES_BASES"
 SUB = "07_PRIVADAS_DICCIONARIO"
 DIC = "data/diccionario_sies_seguimiento/"
 PASOS = {  # paso: (edición o conjunto, descriptor que fija el hash o None, ruta relativa en PRIV, hash esperado si no hay descriptor)
+    11: ("v10_20261026_mu2026_27", DIC + "v10_20261026_mu2026_27/descriptor.json", None, None),
     1: ("v9_20261026_cuatro_planes_v3", DIC + "v9_20261026_cuatro_planes_v3/descriptor.json", None, None),
     2: ("v8_20261025_ocho_p", DIC + "v8_20261025_ocho_p/descriptor.json", None, None),
     3: ("v7_20261023_inf35_03_t3", DIC + "v7_20261023_inf35_03_t3/descriptor.json", None, None),
@@ -80,7 +81,7 @@ def main():
         accion = "COPIADO"
     if sha(origen) != h0:
         sys.exit("ALTO: el origen cambió durante la copia.")
-    entrada = {"paso": f"{a.paso}/{len(PASOS)}", "conjunto": nombre, "archivo": origen.name,
+    entrada = {"paso": f"{a.paso}/{10 if a.paso <= 10 else len(PASOS)}", "conjunto": nombre, "archivo": origen.name,
                "ruta_origen": f"{PRIV}/{rel}", "ruta_consolidada": f"{ONEDRIVE}/{CARPETA}/{SUB}/{nombre}/{origen.name}",
                "sha256": h0, "bytes": origen.stat().st_size, "hash_fijado_por": desc_rel or "manifiesto Fase 3",
                "accion": accion, "contiene_identificadores": True,

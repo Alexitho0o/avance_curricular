@@ -54,13 +54,13 @@ def main():
     d9 = json.loads((ROOT / activo["descriptor"]).read_text())
     d8 = json.loads((ROOT / d9["edicion_anterior"]["descriptor"]).read_text())
     citas = {}
-    for origen, desc in (("v9.entradas_sha256", d9), ("v9.entradas_cierre_sha256", d9), ("v8.entradas_cierre_sha256", d8)):
+    for origen, desc in (("activa.entradas_sha256", d9), ("activa.entradas_cierre_sha256", d9), ("anterior.entradas_cierre_sha256", d8)):
         clave = origen.split(".", 1)[1]
         for ruta, h in desc.get(clave, {}).items():
             citas.setdefault(ruta, {"esperado": h, "citado_en": []})["citado_en"].append(origen)
             if citas[ruta]["esperado"] != h:
                 citas[ruta]["conflicto_entre_descriptores"] = True
-    for ruta, h in (("base_privada_v9", d9["base_privada"]), ("base_privada_v8", d8["base_privada"])):
+    for ruta, h in (("base_privada_activa", d9["base_privada"]), ("base_privada_anterior", d8["base_privada"])):
         citas.setdefault(h["ruta"], {"esperado": h["sha256"], "citado_en": []})["citado_en"].append(ruta)
     filas = []
     for ruta, info in sorted(citas.items()):
