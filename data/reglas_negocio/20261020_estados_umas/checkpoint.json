@@ -1,0 +1,40 @@
+{
+  "clasificacion": "C",
+  "fecha": "2026-10-20T23:13:56.652029-03:00",
+  "estado": "RELACION_CONDICIONAL_CREADA_Y_DISTRIBUIDA",
+  "repositorios": {
+    "avance_curricular": {
+      "rama": "feature/ire-2026",
+      "HEAD_antes": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+      "HEAD_despues": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+      "commit": false,
+      "push": false
+    },
+    "CARACTERIZACIÓN": {
+      "rama": "main",
+      "HEAD_antes": "aba337784ccde0537fc21b2977b351170ed335e8",
+      "HEAD_despues": "aba337784ccde0537fc21b2977b351170ed335e8",
+      "commit": false,
+      "push": false
+    }
+  },
+  "archivos_generados_o_modificados_sha256": {
+    "data/reglas_negocio/20261020_estados_umas/qa.json": "c4ce5b808ce64f7448165acb6856bedebf28d38b549183ca7dbc38762b22c3b0",
+    "data/reglas_negocio/20261020_estados_umas/reglas.json": "a472ef5cf5590b7a9354ece08331814a584d9680fa4c8a484fb827eb300d2d62",
+    "data/reglas_negocio/20261020_estados_umas/manifest.json": "a0a9b7432b4d1355998191cb1151bda239d2817f53d06dc86455e0cbc961484e",
+    "data/reglas_negocio/20261020_estados_umas/distribucion_complementos.json": "09ff17ab1e1ea68d07a66952a0e91a798d8e579146556eb89d81d93060975823",
+    "data/reglas_negocio/20261020_estados_umas/relacion_estados_situaciones.tsv": "b793ededd0600b582ab72c4c5ab51bb0b96407e55f638d94971a91a0cda0eecf",
+    "data/reglas_negocio/20261020_estados_umas/ejemplos_sinteticos.tsv": "db9288ec11cbd45841d5edacbe41d2a34ae4b76b699b7ba30849e633fd84447e",
+    "PROYECTO_IPSS.json": "549c3c5435538b5abe58eddca5d6288d202c1e2ffc2475b751c91c80d086938a",
+    "docs/relacion_estados_umas_vig_sies_20261020.md": "35b045927769440ad472067db74014218bdb0118645644d8d3f88e222072e374",
+    "scripts/construir_relacion_estados_umas_20261020.py": "f0714df5fb86c0fc7227e390ca038b413443143d65ba0e5aff6c33297db19cc6"
+  },
+  "fuentes_y_excel_modificados": false,
+  "denominadores_D": {
+    "T2": 222,
+    "T3": 124
+  },
+  "QA": "OK documental;15 escenarios sintéticos;32 parejas;4 releases remotos verificados;2 skills locales validadas",
+  "pendientes_E": "Aplicación individual requiere matrícula/reglamento/historial/fechas y condición terminal; situación16 sin definición confirmada. No prueba conversacional de cada complemento en host.",
+  "publicacion_git": "No realizada; cambios locales sin staging."
+}

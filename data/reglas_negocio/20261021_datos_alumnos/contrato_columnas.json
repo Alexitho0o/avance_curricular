@@ -1,0 +1,706 @@
+{
+  "version": "1.0.0",
+  "fecha": "2026-10-21",
+  "alcance": "Contrato exploratorio de 67 encabezados; 66 presentes en Base Maestra, Numero opcional",
+  "precedencia": [
+    "Politica del proceso y corte",
+    "Relacion estados UMAS 2026-10-20",
+    "Interpretacion vigente de este contrato",
+    "Descripcion heredada"
+  ],
+  "fuentes": [
+    {
+      "referencia": "avance_curricular/requerimiento_bettersoft_uplus_2026/scripts/generar_diccionario_maestro_uplus_sies.py",
+      "sha256": "d156b93fdcdd9ca48f9e0e89b19c84fe6b5600be122f7dadb85fa53fa8e73705"
+    },
+    {
+      "referencia": "avance_curricular/docs/relacion_estados_umas_vig_sies_20261020.md",
+      "sha256": "35b045927769440ad472067db74014218bdb0118645644d8d3f88e222072e374"
+    }
+  ],
+  "llave_candidata": [
+    "CODCLI",
+    "CODCARPR",
+    "ANOMATRICULA",
+    "PERIODOMATRICULA"
+  ],
+  "no_resuelto": [
+    "Semantica temporal de FECHAMATRICULA (primera/renovacion)",
+    "Fecha de creacion y ultima modificacion en UMAS",
+    "Zona horaria y filtros del extractor Base Maestra",
+    "Historial efectivo de estados y situaciones",
+    "Dominio MATRICULA y codigos no documentados"
+  ],
+  "columnas": [
+    {
+      "columna": "Número",
+      "descripcion_heredada_corte_anterior": "Correlativo de fila del reporte",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Correlativo de fila del reporte",
+      "granularidad_heredada": "REPORTE",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CODCLI",
+      "descripcion_heredada_corte_anterior": "Identificador de matrícula en carrera; patrón AAAA+P+CODCARPR+NNN en 96,2% (el código infiere año/período/carrera desde él: no oficial)",
+      "interpretacion_vigente": "Identificador observado de matricula/programa. Validar unicidad por corte; no decodificar ano o periodo desde su patron.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CODCARPR",
+      "descripcion_heredada_corte_anterior": "Código interno de carrera/programa; idéntico a CODIGOCARRERA en 100%",
+      "interpretacion_vigente": "Codigo interno de carrera/programa. No es codigo unico SIES. No presumir igualdad universal con CODIGOCARRERA.",
+      "granularidad_heredada": "OFERTA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBRE_L",
+      "descripcion_heredada_corte_anterior": "Nombre de carrera U+; parte de la llave del puente SIES",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Nombre de carrera U+; parte de la llave del puente SIES",
+      "granularidad_heredada": "OFERTA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ANOMATRICULA",
+      "descripcion_heredada_corte_anterior": "Año de matrícula (definición temporal no documentada)",
+      "interpretacion_vigente": "Ano de matricula declarado. No acredita por si solo vigencia ni fecha de renovacion.",
+      "granularidad_heredada": "MATRÍCULA-PERÍODO",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "PERIODOMATRICULA",
+      "descripcion_heredada_corte_anterior": "Período de matrícula 1/2/3 (3 sin definición)",
+      "interpretacion_vigente": "Periodo interno de matricula. Preservar literal; no homologar a semestre SIES sin contrato del proceso.",
+      "granularidad_heredada": "MATRÍCULA-PERÍODO",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ANOINGRESO",
+      "descripcion_heredada_corte_anterior": "Año de ingreso a la carrera -> ANIO_ING_ACT",
+      "interpretacion_vigente": "Ano de ingreso a la carrera; no demuestra primer ingreso institucional.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "PERIODOINGRESO",
+      "descripcion_heredada_corte_anterior": "Período de ingreso -> SEM_ING_ACT (3->2 decisión interna)",
+      "interpretacion_vigente": "Periodo de ingreso a la carrera. No sustituye periodo de matricula ni autoriza convertir 3 en 2 en todos los procesos.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "FECHAMATRICULA",
+      "descripcion_heredada_corte_anterior": "Fecha de matrícula; año coincide con ANOMATRICULA en 76,3%",
+      "interpretacion_vigente": "Fecha de matricula declarada; primera matricula versus renovacion sigue por confirmar (UP-39). No es timestamp de creacion, extraccion ni primera aparicion.",
+      "granularidad_heredada": "MATRÍCULA-PERÍODO",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "JORNADA",
+      "descripcion_heredada_corte_anterior": "Jornada U+ D/V/O -> JOR 1/2/4 (con excepción)",
+      "interpretacion_vigente": "Jornada interna. No inferir modalidad de programa desde V/O/D ni sufijo SP; excepcion anual 2026 solo en su contrato.",
+      "granularidad_heredada": "MATRÍCULA / OFERTA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "RUT",
+      "descripcion_heredada_corte_anterior": "RUN con guion y DV; DV válido 100%",
+      "interpretacion_vigente": "Identificador de persona. Validar formato/DV en el proceso; puede tener multiples matriculas. No es llave de fila.",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBRE",
+      "descripcion_heredada_corte_anterior": "Nombre completo concatenado",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Nombre completo concatenado",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "SEXO",
+      "descripcion_heredada_corte_anterior": "M = masculino, F = femenino; S sin definición",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. M = masculino, F = femenino; S sin definición",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ESTADOCIVIL",
+      "descripcion_heredada_corte_anterior": "Estado civil texto (6 valores)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Estado civil texto (6 valores)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "FECHANACIMIENTO",
+      "descripcion_heredada_corte_anterior": "Fecha de nacimiento dd-mm-aaaa",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Fecha de nacimiento dd-mm-aaaa",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "DIRECCIONPROCEDENCIA",
+      "descripcion_heredada_corte_anterior": "Domicilio de procedencia",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Domicilio de procedencia",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CIUDADPROCEDENCIA",
+      "descripcion_heredada_corte_anterior": "Ciudad de procedencia",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Ciudad de procedencia",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "COMUNAPROCEDENCIA",
+      "descripcion_heredada_corte_anterior": "Comuna de procedencia",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Comuna de procedencia",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "FONOPROCEDENCIA",
+      "descripcion_heredada_corte_anterior": "Teléfono de procedencia",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Teléfono de procedencia",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "DIRECCIONACTUAL",
+      "descripcion_heredada_corte_anterior": "Dirección actual (texto único)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Dirección actual (texto único)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CIUDADACTUAL",
+      "descripcion_heredada_corte_anterior": "Ciudad actual",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Ciudad actual",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "COMUNAACTUAL",
+      "descripcion_heredada_corte_anterior": "Comuna actual -> COMUNA/REGION FCU",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Comuna actual -> COMUNA/REGION FCU",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "FONOACTUAL",
+      "descripcion_heredada_corte_anterior": "Teléfono actual -> CEL FCU",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Teléfono actual -> CEL FCU",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "MAIL",
+      "descripcion_heredada_corte_anterior": "Correo personal -> CORREO FCU",
+      "interpretacion_vigente": "Correo personal. No sustituye Mail_Inst en la incorporacion LimeSurvey 2027 P1; uso FCU depende de su contrato.",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "Mail_Inst",
+      "descripcion_heredada_corte_anterior": "Correo institucional",
+      "interpretacion_vigente": "Correo institucional. Exclusivo para incorporacion LimeSurvey 2027 P1; ausencia no se sustituye con MAIL ni bloquea el proceso completo.",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NACIONALIDAD",
+      "descripcion_heredada_corte_anterior": "Gentilicio texto -> NAC (1-197)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Gentilicio texto -> NAC (1-197)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "EMERGENCIA",
+      "descripcion_heredada_corte_anterior": "Contacto de emergencia",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Contacto de emergencia",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "FONOEMERGENCIA",
+      "descripcion_heredada_corte_anterior": "Teléfono de emergencia",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Teléfono de emergencia",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CODIGOCOLEGIO",
+      "descripcion_heredada_corte_anterior": "Código del establecimiento de EM (tipo de código no demostrado)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Código del establecimiento de EM (tipo de código no demostrado)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "COLEGIO",
+      "descripcion_heredada_corte_anterior": "Nombre del establecimiento de EM",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Nombre del establecimiento de EM",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "MODALIDAD",
+      "descripcion_heredada_corte_anterior": "Modalidad de ENSEÑANZA MEDIA (no del programa)",
+      "interpretacion_vigente": "Modalidad de ensenanza media, NO modalidad de carrera. Carrera se obtiene del catalogo gobernado MU/SIES.",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "DESCRIPCION",
+      "descripcion_heredada_corte_anterior": "Dependencia del establecimiento de EM (NO DEFINIDA 32%)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Dependencia del establecimiento de EM (NO DEFINIDA 32%)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CIUDADCOLEGIO",
+      "descripcion_heredada_corte_anterior": "Ciudad del colegio (usada para PAIS_EST_SEC)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Ciudad del colegio (usada para PAIS_EST_SEC)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "COMUNACOLEGIO",
+      "descripcion_heredada_corte_anterior": "Comuna del colegio (usada para PAIS_EST_SEC)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Comuna del colegio (usada para PAIS_EST_SEC)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CATEGORIA",
+      "descripcion_heredada_corte_anterior": "Categoría de matrícula (6 valores); relación con FOR_ING_ACT no demostrada",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Categoría de matrícula (6 valores); relación con FOR_ING_ACT no demostrada",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "VIASDEADMISION",
+      "descripcion_heredada_corte_anterior": "Vía de admisión U+ (4 valores) -> FOR_ING_ACT por heurística",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Vía de admisión U+ (4 valores) -> FOR_ING_ACT por heurística",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "MOTIVODESELECCION",
+      "descripcion_heredada_corte_anterior": "Marketing",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Marketing",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "MEDIOSDEINFORMACION",
+      "descripcion_heredada_corte_anterior": "Marketing",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Marketing",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "VIACONSULTA",
+      "descripcion_heredada_corte_anterior": "Marketing",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Marketing",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBREUNIVERSIDAD",
+      "descripcion_heredada_corte_anterior": "Institución anterior (texto libre, 9,3%)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Institución anterior (texto libre, 9,3%)",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CARRERARANTERIOR",
+      "descripcion_heredada_corte_anterior": "Carrera anterior (texto libre, 9,9%)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Carrera anterior (texto libre, 9,9%)",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "RUTRESPONSABLEFINANCIERO",
+      "descripcion_heredada_corte_anterior": "Responsable financiero",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Responsable financiero",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBRERESPONSABLEFINANCIERO",
+      "descripcion_heredada_corte_anterior": "Responsable financiero",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Responsable financiero",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CODIGOCARRERA",
+      "descripcion_heredada_corte_anterior": "Duplicado de CODCARPR (100%)",
+      "interpretacion_vigente": "Codigo de carrera fuente. Comparar con CODCARPR en cada corte; igualdad historica no prueba identidad universal.",
+      "granularidad_heredada": "OFERTA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "EMPRESA",
+      "descripcion_heredada_corte_anterior": "Laboral",
+      "interpretacion_vigente": "Dato laboral administrativo; no prueba emprendimiento propio o formalizado.",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ACTIVIDAD",
+      "descripcion_heredada_corte_anterior": "Laboral",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Laboral",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "DIRECCION_EMPRESA",
+      "descripcion_heredada_corte_anterior": "Laboral",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Laboral",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CIUDAD_EMPRESA",
+      "descripcion_heredada_corte_anterior": "Laboral",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Laboral",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "COMUNA_EMPRESA",
+      "descripcion_heredada_corte_anterior": "Laboral",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Laboral",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CANTIDADDEHIJOS",
+      "descripcion_heredada_corte_anterior": "Familiar",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Familiar",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "TRAMODERENTA",
+      "descripcion_heredada_corte_anterior": "Socioeconómico",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Socioeconómico",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBREEMPRESA",
+      "descripcion_heredada_corte_anterior": "Laboral",
+      "interpretacion_vigente": "Dato laboral administrativo; no prueba emprendimiento propio o formalizado ni reemplaza respuesta de encuesta.",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ANOEGRESOENSENANZAMEDIA",
+      "descripcion_heredada_corte_anterior": "Año egreso EM; valores inválidos (0, 4, 18, 99, 200, 1010)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Año egreso EM; valores inválidos (0, 4, 18, 99, 200, 1010)",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOTAENSENANZAMEDIA",
+      "descripcion_heredada_corte_anterior": "NEM con formatos mixtos",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. NEM con formatos mixtos",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "RUT EJECUTIVO",
+      "descripcion_heredada_corte_anterior": "Ejecutivo comercial",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Ejecutivo comercial",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBRE EJECUTIVO",
+      "descripcion_heredada_corte_anterior": "Ejecutivo comercial",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Ejecutivo comercial",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ESTADOACADEMICO",
+      "descripcion_heredada_corte_anterior": "Estado académico vigente (5 valores) -> VIG",
+      "interpretacion_vigente": "Estado academico observado en la extraccion. No contiene fecha efectiva ni asigna VIG SIES automaticamente.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "SITUACION",
+      "descripcion_heredada_corte_anterior": "Situación vigente 'código - descripción' (25) -> VIG, FOR 3, REINCORPORACION",
+      "interpretacion_vigente": "Situacion administrativa observada, distinta de ESTADOACADEMICO. Consultar pareja gobernada y corte; no asignar VIG SIES por etiqueta.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "MATRICULA",
+      "descripcion_heredada_corte_anterior": "Indicador 1/2 sin definición documentada",
+      "interpretacion_vigente": "Indicador de origen con significado de sus valores no documentado; no usar como booleano de vigencia.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NIVEL",
+      "descripcion_heredada_corte_anterior": "Nivel administrativo 1-20 -> NIV_ACA (conversiones internas)",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Nivel administrativo 1-20 -> NIV_ACA (conversiones internas)",
+      "granularidad_heredada": "MATRÍCULA-PERÍODO",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "ARANCELREAL",
+      "descripcion_heredada_corte_anterior": "Arancel efectivo",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Arancel efectivo",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "CON_FIRMA",
+      "descripcion_heredada_corte_anterior": "Firma de contrato",
+      "interpretacion_vigente": "Marca de firma del contrato observada al corte; su cambio no demuestra fecha de creacion de matricula.",
+      "granularidad_heredada": "MATRÍCULA-PERÍODO",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "FECHAFIRMA",
+      "descripcion_heredada_corte_anterior": "Fecha de firma",
+      "interpretacion_vigente": "Fecha declarada de firma; conservar separada de FECHAMATRICULA y de primera observacion de CON_FIRMA.",
+      "granularidad_heredada": "MATRÍCULA-PERÍODO",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "SEDE",
+      "descripcion_heredada_corte_anterior": "Sede RE/CO -> COD_SED 2/3",
+      "interpretacion_vigente": "Codigo de sede. En Caracterizacion 2027 P1: RE Santiago, CO Concepcion, PTG Patagonia. No extrapolar codigos SIES automaticamente.",
+      "granularidad_heredada": "MATRÍCULA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "NOMBRES",
+      "descripcion_heredada_corte_anterior": "Nombres de pila",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Nombres de pila",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "APELLIDO PATERNO",
+      "descripcion_heredada_corte_anterior": "Primer apellido",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Primer apellido",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    },
+    {
+      "columna": "APELLIDO MATERNO",
+      "descripcion_heredada_corte_anterior": "Segundo apellido",
+      "interpretacion_vigente": "Referencia descriptiva heredada; validar dominio y temporalidad en el corte actual. Segundo apellido",
+      "granularidad_heredada": "PERSONA",
+      "evidencia": "B/C; no definicion oficial universal",
+      "observaciones": "Porcentajes, dominios y recomendaciones regulatorias heredadas NO son validaciones del corte actual.",
+      "fuente": "diccionario_maestro_v1.0/ANOT",
+      "dato_privado_por_defecto": true
+    }
+  ]
+}

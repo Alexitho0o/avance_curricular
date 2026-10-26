@@ -1,0 +1,109 @@
+{
+  "recurso": "RELACION_ESTADOS_SITUACIONES_UMAS_VIG_MU2026",
+  "version": "2026-10-20.2",
+  "clasificacion": "C",
+  "fecha": "2026-10-20T23:05:26.271936-03:00",
+  "repositorio": "avance_curricular",
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "HEAD": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "hito": "H001-RETENCION-IPSS162",
+  "decision_D": "Usuario solicita crear relación explícita; denominadores T2=222/T3=124 se mantienen. No suministra una nueva equivalencia numérica por estado.",
+  "alcance": "Consulta condicional MU2026; sin asignación a estudiantes ni cambios del motor congelado",
+  "fuentes": [
+    {
+      "clasificacion": "A",
+      "ruta": "Manual_Matrícula_Unificada_2026.pdf",
+      "sha256": "3626600782798fbb5afa4100975eeffd2155b4912a112f63cee42f9741a82990",
+      "localizador": "p.7 §2.vi; p.10 suspensiones; p.31 Anexo7 Cuadro1 AF",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "D/B",
+      "ruta": "requerimiento_bettersoft_uplus_2026/REPORTE_CIERRE_GATE09_UPLUS_SIES_2026.md",
+      "sha256": "3f9669c09428f10d8425f313e645c72d596406ca660e1374a8ea182df6489e5b",
+      "localizador": "§C C09-01; §E1–3",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "D/B",
+      "ruta": "requerimiento_bettersoft_uplus_2026/MANIFIESTO_CONGELACION_v1.0.md",
+      "sha256": "96be33d00a926fe0bfe1a1f0cfc95df6e8ca4bc6d89a7ecbe0c47fbd42ef1e87",
+      "localizador": "C09_01 CONFIRMADA",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "D/B",
+      "ruta": "requerimiento_bettersoft_uplus_2026/resultados/DICCIONARIO_MAESTRO_UPLUS_SIES_2026_v1.0.xlsx",
+      "sha256": "7f394a121b6cb1a46d14db5f9be9849e578bfc138b9c289392520735713f5689",
+      "localizador": "12_GATE09_RESOLUCION fila2;18_CONFIRMACION_GATE10 fila2;05_DICCIONARIO_BETTERSOFT UP39/40/42/43/59/60/66/68;06_CATALOGOS_HOMOLOGACIONES J79:K79",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "C",
+      "ruta": "gobernanza_catalogos/gob_datosalumnos_estadoacademico_situacion.tsv",
+      "sha256": "ae1ee0d9778e15ee0cff7c7aa149afa356d1f1d801c3e481c07c53d109f84160",
+      "localizador": "29 parejas; VIG_ESPERADO es antecedente descartado como regla por Gate10",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "C",
+      "ruta": "procesos/caracterizacion/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187",
+      "localizador": "_MAPA_ESTADO_OFICIAL; consulta AST sin ejecutar módulo",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Downloads/DATOSDEALUMNOS_12112.xlsx",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "localizador": "Hoja1; ESTADOACADEMICO y SITUACION; solo conteos agregados",
+      "fuente_original_modificada": false
+    }
+  ],
+  "salidas_sha256": {
+    "ejemplos_sinteticos.tsv": "db9288ec11cbd45841d5edacbe41d2a34ae4b76b699b7ba30849e633fd84447e",
+    "qa.json": "c4ce5b808ce64f7448165acb6856bedebf28d38b549183ca7dbc38762b22c3b0",
+    "reglas.json": "a472ef5cf5590b7a9354ece08331814a584d9680fa4c8a484fb827eb300d2d62",
+    "relacion_estados_situaciones.tsv": "b793ededd0600b582ab72c4c5ab51bb0b96407e55f638d94971a91a0cda0eecf"
+  },
+  "documentacion": {
+    "ruta": "docs/relacion_estados_umas_vig_sies_20261020.md",
+    "sha256": "35b045927769440ad472067db74014218bdb0118645644d8d3f88e222072e374"
+  },
+  "script": {
+    "ruta": "scripts/construir_relacion_estados_umas_20261020.py",
+    "sha256": "f0714df5fb86c0fc7227e390ca038b413443143d65ba0e5aff6c33297db19cc6"
+  },
+  "validaciones": {
+    "clasificacion": "C",
+    "resultado": "OK_DOCUMENTAL_CON_PENDIENTES_DE_APLICACION",
+    "filas_fuente": 15136,
+    "pares_observados_y_documentados": 32,
+    "pares_con_clasificacion_interna": 31,
+    "pares_con_definicion_pendiente": 1,
+    "pares_con_antecedente_historico_descartado": 29,
+    "escenarios_sinteticos_ok": 15,
+    "VIG_asignados_a_filas_reales": 0,
+    "fuentes_originales_intactas": true,
+    "base_MU_y_excel_intactos_sha256": {
+      "outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "outputs/retencion_intermedia_t2_t3/20261020_221157/CONTINUIDAD_IPSS_INGRESOS_2025_T2_T3_EN_MU2026_20261020_221157.xlsx": "202072b117e61c53d4895d72f1dee7f92c2557a013ea3262d055de4bc28379a5"
+    },
+    "denominadores": {
+      "T2": 222,
+      "T3": 124
+    },
+    "datos_individuales_exportados": false,
+    "limite": "Valida integridad, cobertura de pares y condiciones documentales; no acredita disponibilidad del historial ni carga SIES."
+  },
+  "pendientes_E": [
+    "Reglamento institucional completo aplicable a vigencia al corte",
+    "Historial de matrícula y estados fechado UP43/UP66",
+    "Fechas de egreso/título UP59/UP60 y evidencia de actividades terminales",
+    "Definición/catalogación de situación16/ELIMINADO"
+  ],
+  "politica": "No presentar etiquetas ni implementación C como regla A. No VIG por estado aislado. No PII. No commit/push. Snapshot de complementos requiere verificación y nueva publicación si cambia.",
+  "siguiente_paso": "Consumir la relación para explicar condiciones y pendientes; aplicar a matrículas solo con hechos del mismo período/corte acreditados."
+}

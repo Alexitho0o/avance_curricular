@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "version": "2026-10-20.2",
+  "clasificacion": "C",
+  "proceso": "Matrícula Unificada",
+  "edicion": 2026,
+  "hito": "H001-RETENCION-IPSS162",
+  "grano": "matrícula/programa + período + corte; no estado global de persona",
+  "estado": "DOCUMENTADA_CONDICIONAL_NO_APLICADA_A_ESTUDIANTES",
+  "precedencia": "D: Gate09 C09-01 confirmado Gate10; no función estado→VIG",
+  "campos_de_comprobacion": {
+    "nota": "Conceptos técnicos C; no columnas físicas inventadas de UMAS. SI/NO requiere evidencia y fuente localizable.",
+    "contexto": "SI solo con proceso/edición, identidad de matrícula/programa, período y corte verificados",
+    "contradiccion": "NO solo tras comprobar consistencia temporal de las evidencias",
+    "matricula_vigente": "SI/NO/DESCONOCIDO conforme al reglamento y evidencia del período/corte",
+    "condicion_terminal": "SI: plan finalizado, actividad conducente al título en curso y título aún no obtenido; NO: condición no terminal acreditada; DESCONOCIDO: insuficiente"
+  },
+  "reglas": [
+    {
+      "id": "R1",
+      "clasificacion_definicion": "A",
+      "clasificacion_operacion": "C",
+      "vig": 1,
+      "condicion": "contexto=SI;contradiccion=NO;matricula_vigente=SI;condicion_terminal=NO",
+      "fuente": "Manual MU2026 p.31 AF"
+    },
+    {
+      "id": "R2",
+      "clasificacion_definicion": "A",
+      "clasificacion_operacion": "C",
+      "vig": 2,
+      "condicion": "contexto=SI;contradiccion=NO;matricula_vigente=SI;condicion_terminal=SI",
+      "fuente": "Manual MU2026 p.7 §2.vi;p.31 AF;Gate10 C09-01"
+    },
+    {
+      "id": "R0",
+      "clasificacion_definicion": "A",
+      "clasificacion_operacion": "C",
+      "vig": 0,
+      "condicion": "contexto=SI;contradiccion=NO;matricula_vigente=NO",
+      "fuente": "Manual MU2026 p.31 AF"
+    },
+    {
+      "id": "RE",
+      "clasificacion": "E",
+      "vig": null,
+      "condicion": "evidencia insuficiente o contradictoria; sin default"
+    }
+  ],
+  "denominadores_preservados_D": {
+    "T2": 222,
+    "T3": 124
+  },
+  "no_redefine": [
+    "retención",
+    "continuidad",
+    "Avance Curricular",
+    "Extranjeros",
+    "Titulaciones",
+    "elegibilidad de encuestas"
+  ]
+}

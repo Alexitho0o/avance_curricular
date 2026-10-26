@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "fecha": "2026-10-21",
+  "alcance": "Contrato descriptivo exploratorio; no modifica motores MU, VIG ni cierres congelados",
+  "origen": "CARACTERIZACIÓN/gobernanza/datos_alumnos/contrato_columnas.json",
+  "documentacion_origen": "CARACTERIZACIÓN/docs/gobernanza/AUDITORIA_EVOLUCION_DATOS_ALUMNOS.md",
+  "comando_origen": "CARACTERIZACIÓN/auditar_datos_alumnos.sh",
+  "sincronizacion_automatica": false,
+  "fuentes_locales": [
+    {"archivo": "contrato_columnas.json", "sha256": "669b9a3ab08bdadf06694fe79add2096706e06e693e835b89fab384bb0de2a81"},
+    {"archivo": "auditoria.md", "sha256": "8cc2b2dc3087e66b60d046e3503ba6ca8a35749177c904f83e0ec14c256d0ae4"}
+  ],
+  "precedencia": "Reglas del proceso/corte y relacion estados UMAS 2026-10-20 prevalecen sobre anotaciones heredadas del diccionario v1.0. No actualizar ese diccionario congelado ni convertir estado en VIG por etiqueta.",
+  "privacidad": "Solo esquema y reglas; sin registros de alumnos"
+}

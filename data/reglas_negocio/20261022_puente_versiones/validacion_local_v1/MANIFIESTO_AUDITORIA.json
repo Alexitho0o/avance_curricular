@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-10-22T17:16:35.655044+00:00",
+  "estado": "PENDIENTE_APROBACION_GOBERNANZA",
+  "fuentes": "FASE0_FUENTES.json",
+  "metodo": "validar.py; conjuntos Python y SQL independiente",
+  "alcance": "Auditoria de 63 dimensiones. No diccionario definitivo ni equivalencia oficial.",
+  "privacidad": "Cruces individuales en memoria local; salidas solo agregadas sin RUT, CODCLI, nombres o nacimiento. Sin servicios externos.",
+  "responsable_ejecucion": "Codex por encargo del usuario",
+  "responsable_aprobacion": "Gobernanza IPSS, pendiente de designacion",
+  "limitaciones": [
+    "Tipo y duracion UMAS no acreditados",
+    "MU no informa plan",
+    "Cruce historico no prueba equivalencia temporal",
+    "Retencion preservada por hash; conciliacion semantica no acreditada"
+  ],
+  "clasificacion": "C/D/E",
+  "commit_push": false
+}

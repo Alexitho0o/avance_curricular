@@ -1,0 +1,521 @@
+{
+  "estado": "PASS",
+  "metodo": "segunda lectura XLSX y SQLite DISTINCT + LEFT JOIN; contraste 63 dimensiones; controles DA/catalogo en primera implementacion, no duplicados independientemente",
+  "nuevas_propuestas_contextuales": [
+    "NAUTRE/J2",
+    "NECIRE/J2",
+    "NICCREOL/J4",
+    "NINFREOL/J4",
+    "TCRE/J2"
+  ],
+  "pendientes_antes": 24,
+  "pendientes_ahora": 19,
+  "denominador": 63,
+  "hashes_fuentes_consistentes": true,
+  "checks": [
+    {
+      "carrera": "ADMP",
+      "jornada": "4",
+      "observaciones": 375,
+      "personas": 174,
+      "un_codigo": 305,
+      "sin_match": 70
+    },
+    {
+      "carrera": "AUDT",
+      "jornada": "4",
+      "observaciones": 268,
+      "personas": 103,
+      "un_codigo": 207,
+      "sin_match": 61
+    },
+    {
+      "carrera": "IADM",
+      "jornada": "4",
+      "observaciones": 673,
+      "personas": 303,
+      "un_codigo": 457,
+      "sin_match": 216
+    },
+    {
+      "carrera": "ICDA",
+      "jornada": "4",
+      "observaciones": 212,
+      "personas": 74,
+      "un_codigo": 201,
+      "sin_match": 11
+    },
+    {
+      "carrera": "ICIB",
+      "jornada": "2",
+      "observaciones": 258,
+      "personas": 58,
+      "un_codigo": 204,
+      "sin_match": 54
+    },
+    {
+      "carrera": "ICIB",
+      "jornada": "4",
+      "observaciones": 1639,
+      "personas": 456,
+      "un_codigo": 1349,
+      "sin_match": 290
+    },
+    {
+      "carrera": "ICRE",
+      "jornada": "1",
+      "observaciones": 0,
+      "personas": 0,
+      "un_codigo": 0,
+      "sin_match": 0
+    },
+    {
+      "carrera": "ICRE",
+      "jornada": "2",
+      "observaciones": 58,
+      "personas": 14,
+      "un_codigo": 55,
+      "sin_match": 3
+    },
+    {
+      "carrera": "ICRE",
+      "jornada": "4",
+      "observaciones": 1092,
+      "personas": 248,
+      "un_codigo": 1035,
+      "sin_match": 57
+    },
+    {
+      "carrera": "IECIRE",
+      "jornada": "1",
+      "observaciones": 83,
+      "personas": 31,
+      "un_codigo": 83,
+      "sin_match": 0
+    },
+    {
+      "carrera": "IECIRE",
+      "jornada": "2",
+      "observaciones": 444,
+      "personas": 146,
+      "un_codigo": 355,
+      "sin_match": 89
+    },
+    {
+      "carrera": "IECIRE",
+      "jornada": "4",
+      "observaciones": 1,
+      "personas": 1,
+      "un_codigo": 0,
+      "sin_match": 1
+    },
+    {
+      "carrera": "IECIREOL",
+      "jornada": "4",
+      "observaciones": 2038,
+      "personas": 319,
+      "un_codigo": 1897,
+      "sin_match": 141
+    },
+    {
+      "carrera": "IECSRE",
+      "jornada": "2",
+      "observaciones": 318,
+      "personas": 81,
+      "un_codigo": 267,
+      "sin_match": 51
+    },
+    {
+      "carrera": "IECSREOL",
+      "jornada": "4",
+      "observaciones": 1381,
+      "personas": 252,
+      "un_codigo": 1283,
+      "sin_match": 98
+    },
+    {
+      "carrera": "IEMORE",
+      "jornada": "2",
+      "observaciones": 129,
+      "personas": 37,
+      "un_codigo": 127,
+      "sin_match": 2
+    },
+    {
+      "carrera": "IETMRE",
+      "jornada": "1",
+      "observaciones": 3,
+      "personas": 2,
+      "un_codigo": 3,
+      "sin_match": 0
+    },
+    {
+      "carrera": "IETMRE",
+      "jornada": "2",
+      "observaciones": 477,
+      "personas": 137,
+      "un_codigo": 460,
+      "sin_match": 17
+    },
+    {
+      "carrera": "IETMRE",
+      "jornada": "4",
+      "observaciones": 2,
+      "personas": 1,
+      "un_codigo": 0,
+      "sin_match": 2
+    },
+    {
+      "carrera": "IETMREOL",
+      "jornada": "4",
+      "observaciones": 2442,
+      "personas": 353,
+      "un_codigo": 2250,
+      "sin_match": 192
+    },
+    {
+      "carrera": "IFIN",
+      "jornada": "4",
+      "observaciones": 61,
+      "personas": 26,
+      "un_codigo": 60,
+      "sin_match": 1
+    },
+    {
+      "carrera": "IIND",
+      "jornada": "4",
+      "observaciones": 319,
+      "personas": 175,
+      "un_codigo": 183,
+      "sin_match": 136
+    },
+    {
+      "carrera": "IINF",
+      "jornada": "1",
+      "observaciones": 208,
+      "personas": 42,
+      "un_codigo": 176,
+      "sin_match": 32
+    },
+    {
+      "carrera": "IINF",
+      "jornada": "2",
+      "observaciones": 186,
+      "personas": 44,
+      "un_codigo": 173,
+      "sin_match": 13
+    },
+    {
+      "carrera": "IINF",
+      "jornada": "4",
+      "observaciones": 1618,
+      "personas": 449,
+      "un_codigo": 1336,
+      "sin_match": 282
+    },
+    {
+      "carrera": "ILOG",
+      "jornada": "4",
+      "observaciones": 513,
+      "personas": 208,
+      "un_codigo": 362,
+      "sin_match": 151
+    },
+    {
+      "carrera": "IMDI",
+      "jornada": "4",
+      "observaciones": 230,
+      "personas": 130,
+      "un_codigo": 130,
+      "sin_match": 100
+    },
+    {
+      "carrera": "IPRE",
+      "jornada": "4",
+      "observaciones": 56,
+      "personas": 24,
+      "un_codigo": 56,
+      "sin_match": 0
+    },
+    {
+      "carrera": "IRHU",
+      "jornada": "4",
+      "observaciones": 67,
+      "personas": 39,
+      "un_codigo": 53,
+      "sin_match": 14
+    },
+    {
+      "carrera": "ISEP",
+      "jornada": "4",
+      "observaciones": 36,
+      "personas": 20,
+      "un_codigo": 34,
+      "sin_match": 2
+    },
+    {
+      "carrera": "NATP",
+      "jornada": "2",
+      "observaciones": 45,
+      "personas": 22,
+      "un_codigo": 42,
+      "sin_match": 3
+    },
+    {
+      "carrera": "NAUTRE",
+      "jornada": "2",
+      "observaciones": 18,
+      "personas": 7,
+      "un_codigo": 18,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NCONRE",
+      "jornada": "2",
+      "observaciones": 261,
+      "personas": 109,
+      "un_codigo": 259,
+      "sin_match": 2
+    },
+    {
+      "carrera": "NCONRE",
+      "jornada": "4",
+      "observaciones": 5,
+      "personas": 2,
+      "un_codigo": 0,
+      "sin_match": 5
+    },
+    {
+      "carrera": "NCONREOL",
+      "jornada": "4",
+      "observaciones": 226,
+      "personas": 58,
+      "un_codigo": 220,
+      "sin_match": 6
+    },
+    {
+      "carrera": "NECIRE",
+      "jornada": "2",
+      "observaciones": 5,
+      "personas": 4,
+      "un_codigo": 5,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NETMRE",
+      "jornada": "2",
+      "observaciones": 2,
+      "personas": 2,
+      "un_codigo": 2,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NETMRE",
+      "jornada": "4",
+      "observaciones": 0,
+      "personas": 0,
+      "un_codigo": 0,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NICCRE",
+      "jornada": "2",
+      "observaciones": 31,
+      "personas": 9,
+      "un_codigo": 30,
+      "sin_match": 1
+    },
+    {
+      "carrera": "NICCREOL",
+      "jornada": "4",
+      "observaciones": 45,
+      "personas": 9,
+      "un_codigo": 45,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NICIRE",
+      "jornada": "2",
+      "observaciones": 1,
+      "personas": 1,
+      "un_codigo": 1,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NINFRE",
+      "jornada": "2",
+      "observaciones": 61,
+      "personas": 42,
+      "un_codigo": 60,
+      "sin_match": 1
+    },
+    {
+      "carrera": "NINFREOL",
+      "jornada": "4",
+      "observaciones": 39,
+      "personas": 16,
+      "un_codigo": 39,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NITMRE",
+      "jornada": "2",
+      "observaciones": 1,
+      "personas": 1,
+      "un_codigo": 1,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NTCCRE",
+      "jornada": "2",
+      "observaciones": 184,
+      "personas": 44,
+      "un_codigo": 184,
+      "sin_match": 0
+    },
+    {
+      "carrera": "NTCCREOL",
+      "jornada": "4",
+      "observaciones": 142,
+      "personas": 20,
+      "un_codigo": 136,
+      "sin_match": 6
+    },
+    {
+      "carrera": "TAMD",
+      "jornada": "2",
+      "observaciones": 112,
+      "personas": 41,
+      "un_codigo": 103,
+      "sin_match": 9
+    },
+    {
+      "carrera": "TAMD",
+      "jornada": "4",
+      "observaciones": 436,
+      "personas": 200,
+      "un_codigo": 324,
+      "sin_match": 112
+    },
+    {
+      "carrera": "TCIB",
+      "jornada": "4",
+      "observaciones": 823,
+      "personas": 272,
+      "un_codigo": 724,
+      "sin_match": 99
+    },
+    {
+      "carrera": "TCRE",
+      "jornada": "1",
+      "observaciones": 0,
+      "personas": 0,
+      "un_codigo": 0,
+      "sin_match": 0
+    },
+    {
+      "carrera": "TCRE",
+      "jornada": "2",
+      "observaciones": 27,
+      "personas": 10,
+      "un_codigo": 27,
+      "sin_match": 0
+    },
+    {
+      "carrera": "TCRE",
+      "jornada": "4",
+      "observaciones": 299,
+      "personas": 101,
+      "un_codigo": 282,
+      "sin_match": 17
+    },
+    {
+      "carrera": "TCSREOL",
+      "jornada": "4",
+      "observaciones": 893,
+      "personas": 206,
+      "un_codigo": 810,
+      "sin_match": 83
+    },
+    {
+      "carrera": "TLOG",
+      "jornada": "4",
+      "observaciones": 471,
+      "personas": 174,
+      "un_codigo": 393,
+      "sin_match": 78
+    },
+    {
+      "carrera": "TPAREOL",
+      "jornada": "4",
+      "observaciones": 2216,
+      "personas": 416,
+      "un_codigo": 1988,
+      "sin_match": 228
+    },
+    {
+      "carrera": "TPAS",
+      "jornada": "4",
+      "observaciones": 1763,
+      "personas": 532,
+      "un_codigo": 1525,
+      "sin_match": 238
+    },
+    {
+      "carrera": "TPCRE",
+      "jornada": "1",
+      "observaciones": 77,
+      "personas": 24,
+      "un_codigo": 76,
+      "sin_match": 1
+    },
+    {
+      "carrera": "TPCRE",
+      "jornada": "2",
+      "observaciones": 87,
+      "personas": 42,
+      "un_codigo": 85,
+      "sin_match": 2
+    },
+    {
+      "carrera": "TPCRE",
+      "jornada": "4",
+      "observaciones": 0,
+      "personas": 0,
+      "un_codigo": 0,
+      "sin_match": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "jornada": "4",
+      "observaciones": 116,
+      "personas": 26,
+      "un_codigo": 109,
+      "sin_match": 7
+    },
+    {
+      "carrera": "TTMRE",
+      "jornada": "1",
+      "observaciones": 88,
+      "personas": 25,
+      "un_codigo": 81,
+      "sin_match": 7
+    },
+    {
+      "carrera": "TTMRE",
+      "jornada": "2",
+      "observaciones": 277,
+      "personas": 80,
+      "un_codigo": 254,
+      "sin_match": 23
+    },
+    {
+      "carrera": "TTMREOL",
+      "jornada": "4",
+      "observaciones": 836,
+      "personas": 174,
+      "un_codigo": 738,
+      "sin_match": 98
+    }
+  ]
+}

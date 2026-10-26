@@ -1,0 +1,319 @@
+[
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogos_sies/2027/5910_20260907_6047_20261013_modalidad_v2/catalogo.json",
+    "bytes": 192656,
+    "sha256": "264f41dc115e1dd3560f9ebbd9f15bbc7a065d02a4708f55ec3e7ec8bf6a5ef4",
+    "clasificacion": "B",
+    "claves": [
+      "ambiguedades_cruce",
+      "anio",
+      "catalogo_anterior",
+      "catalogo_base",
+      "equivalencias_explicitas",
+      "estado",
+      "fuente",
+      "fuente_equivalencias_heredadas",
+      "habilita_carga_mu",
+      "oferta",
+      "regla_sedes",
+      "resumen",
+      "revision_equivalencias",
+      "revision_modalidad",
+      "schema_version",
+      "sedes_internas",
+      "version"
+    ],
+    "periodo": "2027",
+    "cobertura": "140 filas oferta",
+    "llaves": [
+      "codigo_unico"
+    ]
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/historico/2007_2026_h5_20261015/maestro.json",
+    "bytes": 3268603,
+    "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+    "clasificacion": "B",
+    "claves": [
+      "asignacion_individual",
+      "candidatos_plan_sies",
+      "equivalencias_programa_2026",
+      "fuentes",
+      "mapas_lectura_candidato_2026",
+      "mrun_anual",
+      "oferta_anual",
+      "periodo_objetivo",
+      "planes_umas",
+      "reglas_efectivas",
+      "schema_version",
+      "sector_ipss",
+      "universo_sies"
+    ],
+    "periodo": "2010-2026 oferta observada; 2007-2009 sin evidencia",
+    "cobertura": "747 observaciones oferta historica; 236 planes UMAS",
+    "llaves": [
+      "codigo_unico",
+      "anio",
+      "CODPESTUD"
+    ]
+  },
+  {
+    "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+    "bytes": 7290801,
+    "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+    "clasificacion": "B",
+    "hojas": [
+      {
+        "nombre": "Hoja1",
+        "filas_incluye_encabezado": 70001,
+        "columnas": [
+          "Número",
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "NOMBRE",
+          "PATERNO",
+          "MATERNO",
+          "CODCARR",
+          "CARRERA",
+          "JORNADA",
+          "REGIMEN",
+          "RAMOEQUIV",
+          "CODRAMO",
+          "CODSECC",
+          "ASIGNATURA",
+          "EXAMEN",
+          "NOTA_FINAL",
+          "ANO",
+          "PERIODO",
+          "ESTADO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO",
+          "NIVEL",
+          "ESTADO_ACADEMICO",
+          "PLAN_DE_ESTUDIO"
+        ]
+      }
+    ],
+    "periodo": "2019-2026 observado",
+    "cobertura": "70000 filas de asignaturas; no matriculas",
+    "llaves": [
+      "CODCLI",
+      "PLAN_DE_ESTUDIO",
+      "RUT",
+      "DIG",
+      "ANO",
+      "PERIODO"
+    ]
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+    "bytes": 1475920,
+    "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+    "clasificacion": "B",
+    "hojas": [
+      {
+        "nombre": "BASE_RETENCION_MU",
+        "filas_incluye_encabezado": 10201,
+        "columnas": [
+          "ANIO_INFORMADO",
+          "TIPO_DOC",
+          "N_DOC",
+          "DV",
+          "PRIMER_APELLIDO",
+          "SEGUNDO_APELLIDO",
+          "NOMBRE",
+          "SEXO",
+          "FECH_NAC",
+          "NAC",
+          "PAIS_EST_SEC",
+          "COD_SED",
+          "COD_CAR",
+          "MODALIDAD",
+          "JOR",
+          "VERSION",
+          "FOR_ING_ACT",
+          "ANIO_ING_ACT",
+          "SEM_ING_ACT",
+          "ANIO_ING_ORI",
+          "SEM_ING_ORI",
+          "ASI_INS_ANT",
+          "ASI_APR_ANT",
+          "PROM_PRI_SEM",
+          "PROM_SEG_SEM",
+          "ASI_INS_HIS",
+          "ASI_APR_HIS",
+          "NIV_ACA",
+          "SIT_FON_SOL",
+          "SUS_PRE",
+          "FECHA_MATRICULA",
+          "REINCORPORACION",
+          "VIG"
+        ]
+      }
+    ],
+    "periodo": "2022-2026",
+    "cobertura": "10200 filas MU; 10175 tipo R y 25 tipo P",
+    "llaves": [
+      "TIPO_DOC",
+      "N_DOC",
+      "DV",
+      "ANIO_INFORMADO",
+      "COD_SED",
+      "COD_CAR",
+      "JOR",
+      "VERSION"
+    ]
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/DICCIONARIO_VERSIONES_UMAS_SIES_PROPUESTO_20261022.csv",
+    "bytes": 4990,
+    "sha256": "71e78757d90eee61b05cb8993c11aa2691895ae283b2d35c5727f3b266b39cfb",
+    "clasificacion": "B",
+    "columnas": [
+      "codcarpr_interno",
+      "sede",
+      "jornada_catalogo",
+      "personas_matched",
+      "distribucion_versiones",
+      "version_propuesta",
+      "proporcion_predominante",
+      "estado",
+      "clasificacion"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/DICCIONARIO_VERSIONES_UMAS_SIES_PROPUESTO_20261022.manifest.json",
+    "bytes": 656,
+    "sha256": "3e7a975dd86808a5792f555bcb01b65aa2f56f35ddf4cc0e0f033f17f08d3787",
+    "clasificacion": "B",
+    "claves": [
+      "recurso",
+      "archivo",
+      "sha256",
+      "fecha",
+      "fuentes",
+      "regla_propuesta",
+      "privacidad",
+      "estado"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/PLAN_FASES_CIERRE_VERSIONES_UMAS_SIES_20261022.md",
+    "bytes": 4436,
+    "sha256": "2a32ceb06bf98e184240a539ce2581755441a8a321bc352094ca81894fd8b462",
+    "clasificacion": "B",
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/PUENTE_VERSIONES_PLAN_UMAS_SIES_20261022.csv",
+    "bytes": 18281,
+    "sha256": "5227389a67291bed8fcb0042d133d7bc77647c41901c0b0a8981e3adea6dd362",
+    "clasificacion": "B",
+    "columnas": [
+      "codcarpr_interno",
+      "sede",
+      "jornada_catalogo",
+      "codigo_unico_sies_candidato",
+      "planes_observados",
+      "primer_ano_plan_observado",
+      "vigencia_oferta_en_primer_ano",
+      "totales_mu_por_ano",
+      "clasificacion",
+      "resultado"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/PUENTE_VERSIONES_PLAN_UMAS_SIES_20261022.manifest.json",
+    "bytes": 670,
+    "sha256": "273a0af53b6d85f937ec3033ed449c39b471204815e48c7f10fd928a91d3f21d",
+    "clasificacion": "B",
+    "claves": [
+      "recurso",
+      "archivo",
+      "fecha_generacion",
+      "sha256",
+      "fuentes",
+      "politica",
+      "clasificacion"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/QA_PUENTE_VERSIONES_20261022.csv",
+    "bytes": 2812,
+    "sha256": "ebc9bab8a22575ba050a6e94e1be0ff32a627460350c4100c14b1299d5b74eaa",
+    "clasificacion": "B",
+    "columnas": [
+      "dimension",
+      "n_candidates",
+      "n_evidence",
+      "selected",
+      "mu_has_total",
+      "status",
+      "selected_reused"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/QA_PUENTE_VERSIONES_20261022.json",
+    "bytes": 821,
+    "sha256": "5af83c22c8ad9a4fe0055893969d7df85601484e216f2530279e6cc4dd91f9ed",
+    "clasificacion": "B",
+    "claves": [
+      "archivo_fuente",
+      "sha256_fuente",
+      "dimensiones_total",
+      "ok_preliminar",
+      "revisar",
+      "candidatos_reutilizados",
+      "controles",
+      "clasificacion"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/README.md",
+    "bytes": 982,
+    "sha256": "d8d413b01214ec2ba3debf40e172e8e3ce75fca34779864a598bb3b76ba04e24",
+    "clasificacion": "B",
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  },
+  {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261022_puente_versiones/TABLA_RESUMEN_TOTALES_BRECHAS_VERSIONES_20261022.csv",
+    "bytes": 1631,
+    "sha256": "6215a8207cf0c7341f3417d58d833309bdfb6aacbbda0a82737bcd63369db64f",
+    "clasificacion": "B",
+    "columnas": [
+      "indicador",
+      "fuente",
+      "valor",
+      "referencia",
+      "brecha_abs",
+      "brecha_pct",
+      "estado"
+    ],
+    "periodo": "derivado 2026-10-22",
+    "cobertura": "segun esquema y conteos del informe",
+    "llaves": "dimensiones agregadas o metadatos; no identidad individual"
+  }
+]
