@@ -1,0 +1,351 @@
+{
+  "foco_observaciones": 3094,
+  "foco_personas": 1751,
+  "estados": {
+    "PROPUESTA_CONDICIONADA_COHORTE_ADMISION": 2695,
+    "NO_DETERMINABLE_FECHA_AUSENTE_O_MULTIPLE": 32,
+    "NO_DETERMINABLE_SIN_PERFIL": 203,
+    "NO_DETERMINABLE_SIN_OFERTA_NUEVOS_COMPATIBLE": 19,
+    "NO_DETERMINABLE_EMPATE_NUEVOS": 94,
+    "NO_DETERMINABLE_SIN_GRUPO": 51
+  },
+  "nuevas_resoluciones": 0,
+  "personas_completas": 0,
+  "personas_parciales": 0,
+  "pendiente_interno_personas": 1751,
+  "pendiente_interno_observaciones": 3094,
+  "universo_personas": 5901,
+  "pendiente_documental_personas_previo": 1838,
+  "fecha_original_plan_acreditada": 0,
+  "cambio_plan_acreditado": 0,
+  "oferta_estados": {
+    "Vigente con estudiantes nuevos": 486,
+    "Vigente sin estudiantes nuevos": 261
+  },
+  "pruebas": [
+    {
+      "fecha": "DA_ANOINGRESO",
+      "grupo": "REGULAR",
+      "observaciones": {
+        "ACIERTO": 15069,
+        "ERROR": 1497,
+        "EMPATE_NUEVOS": 1040,
+        "FECHA_AUSENTE_O_MULTIPLE": 2,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 218
+      },
+      "personas_no_aditivas": {
+        "ACIERTO": 3590,
+        "ERROR": 329,
+        "EMPATE_NUEVOS": 162,
+        "FECHA_AUSENTE_O_MULTIPLE": 1,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 36
+      }
+    },
+    {
+      "fecha": "DA_ANOINGRESO",
+      "grupo": "SIN_REINCORPORACION_ACREDITADA",
+      "observaciones": {
+        "ACIERTO": 15207,
+        "SIN_PERFIL": 3112,
+        "ERROR": 1542,
+        "EMPATE_NUEVOS": 1040,
+        "FECHA_AUSENTE_O_MULTIPLE": 2,
+        "SIN_GRUPO": 267,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 218,
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 173
+      },
+      "personas_no_aditivas": {}
+    },
+    {
+      "fecha": "MU_INGRESO_ACTUAL",
+      "grupo": "REGULAR",
+      "observaciones": {
+        "ACIERTO": 15029,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 257,
+        "ERROR": 1494,
+        "EMPATE_NUEVOS": 1044,
+        "FECHA_AUSENTE_O_MULTIPLE": 2
+      },
+      "personas_no_aditivas": {
+        "ACIERTO": 3584,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 51,
+        "ERROR": 325,
+        "EMPATE_NUEVOS": 161,
+        "FECHA_AUSENTE_O_MULTIPLE": 1
+      }
+    },
+    {
+      "fecha": "MU_INGRESO_ACTUAL",
+      "grupo": "SIN_REINCORPORACION_ACREDITADA",
+      "observaciones": {
+        "ACIERTO": 15167,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 430,
+        "SIN_PERFIL": 3112,
+        "ERROR": 1539,
+        "EMPATE_NUEVOS": 1044,
+        "FECHA_AUSENTE_O_MULTIPLE": 2,
+        "SIN_GRUPO": 267
+      },
+      "personas_no_aditivas": {}
+    },
+    {
+      "fecha": "MU_INGRESO_ORIGEN",
+      "grupo": "REGULAR",
+      "observaciones": {
+        "ACIERTO": 14214,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 494,
+        "FECHA_AUSENTE_O_MULTIPLE": 723,
+        "ERROR": 1417,
+        "EMPATE_NUEVOS": 978
+      },
+      "personas_no_aditivas": {
+        "ACIERTO": 3513,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 139,
+        "FECHA_AUSENTE_O_MULTIPLE": 104,
+        "ERROR": 332,
+        "EMPATE_NUEVOS": 151
+      }
+    },
+    {
+      "fecha": "MU_INGRESO_ORIGEN",
+      "grupo": "SIN_REINCORPORACION_ACREDITADA",
+      "observaciones": {
+        "ACIERTO": 14349,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 494,
+        "FECHA_AUSENTE_O_MULTIPLE": 922,
+        "SIN_PERFIL": 2913,
+        "ERROR": 1465,
+        "EMPATE_NUEVOS": 978,
+        "SIN_GRUPO": 267,
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 173
+      },
+      "personas_no_aditivas": {}
+    },
+    {
+      "fecha": "DA_ANOINGRESO",
+      "grupo": "TIPO_NO_UNICO",
+      "observaciones": {
+        "SIN_PERFIL": 3112,
+        "SIN_GRUPO": 267,
+        "ACIERTO": 138,
+        "ERROR": 45
+      },
+      "personas_no_aditivas": {
+        "SIN_PERFIL": 704,
+        "SIN_GRUPO": 76,
+        "ACIERTO": 65,
+        "ERROR": 17
+      }
+    },
+    {
+      "fecha": "MU_INGRESO_ACTUAL",
+      "grupo": "TIPO_NO_UNICO",
+      "observaciones": {
+        "SIN_PERFIL": 3112,
+        "SIN_GRUPO": 267,
+        "ACIERTO": 138,
+        "ERROR": 45
+      },
+      "personas_no_aditivas": {
+        "SIN_PERFIL": 704,
+        "SIN_GRUPO": 76,
+        "ACIERTO": 65,
+        "ERROR": 17
+      }
+    },
+    {
+      "fecha": "MU_INGRESO_ORIGEN",
+      "grupo": "TIPO_NO_UNICO",
+      "observaciones": {
+        "SIN_PERFIL": 2913,
+        "FECHA_AUSENTE_O_MULTIPLE": 199,
+        "SIN_GRUPO": 267,
+        "ACIERTO": 135,
+        "ERROR": 48
+      },
+      "personas_no_aditivas": {
+        "SIN_PERFIL": 676,
+        "FECHA_AUSENTE_O_MULTIPLE": 38,
+        "SIN_GRUPO": 76,
+        "ACIERTO": 64,
+        "ERROR": 18
+      }
+    },
+    {
+      "fecha": "DA_ANOINGRESO",
+      "grupo": "CONTINUIDAD",
+      "observaciones": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 173
+      },
+      "personas_no_aditivas": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 42
+      }
+    },
+    {
+      "fecha": "MU_INGRESO_ACTUAL",
+      "grupo": "CONTINUIDAD",
+      "observaciones": {
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 173
+      },
+      "personas_no_aditivas": {
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 42
+      }
+    },
+    {
+      "fecha": "MU_INGRESO_ORIGEN",
+      "grupo": "CONTINUIDAD",
+      "observaciones": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 173
+      },
+      "personas_no_aditivas": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 42
+      }
+    }
+  ],
+  "ejemplos_validacion": [
+    [
+      [
+        "TPAREOL",
+        "4",
+        "2023",
+        2023,
+        "I162S2C57J4V1",
+        "I162S2C57J4V1",
+        "ACIERTO"
+      ],
+      458
+    ],
+    [
+      [
+        "TPAREOL",
+        "4",
+        "2021",
+        2021,
+        "I162S2C57J4V1",
+        "I162S2C57J4V1",
+        "ACIERTO"
+      ],
+      402
+    ],
+    [
+      [
+        "IETMREOL",
+        "4",
+        "2023",
+        2023,
+        "I162S2C3J4V2",
+        "I162S2C3J4V2",
+        "ACIERTO"
+      ],
+      324
+    ],
+    [
+      [
+        "IETMREOL",
+        "4",
+        "2023",
+        2022,
+        "I162S2C3J4V1",
+        "I162S2C3J4V2",
+        "ERROR"
+      ],
+      309
+    ],
+    [
+      [
+        "TPAS",
+        "4",
+        "2025",
+        2025,
+        "I162S2C57J4V1",
+        "I162S2C57J4V1",
+        "ACIERTO"
+      ],
+      298
+    ],
+    [
+      [
+        "IETMREOL",
+        "4",
+        "2024",
+        2023,
+        "I162S2C3J4V2",
+        "I162S2C3J4V2",
+        "ACIERTO"
+      ],
+      282
+    ],
+    [
+      [
+        "TPAS",
+        "4",
+        "2024",
+        2024,
+        "I162S2C57J4V1",
+        "I162S2C57J4V1",
+        "ACIERTO"
+      ],
+      273
+    ],
+    [
+      [
+        "IECSREOL",
+        "4",
+        "2023",
+        2023,
+        "I162S2C46J4V3",
+        "I162S2C46J4V3",
+        "ACIERTO"
+      ],
+      256
+    ],
+    [
+      [
+        "ICIB",
+        "4",
+        "2026",
+        2026,
+        "I162S2C46J4V3",
+        "I162S2C46J4V3",
+        "ACIERTO"
+      ],
+      252
+    ],
+    [
+      [
+        "TPAREOL",
+        "4",
+        "2022",
+        2022,
+        "I162S2C57J4V1",
+        "I162S2C57J4V1",
+        "ACIERTO"
+      ],
+      250
+    ],
+    [
+      [
+        "TPAREOL",
+        "4",
+        "2022",
+        2021,
+        "I162S2C57J4V1",
+        "I162S2C57J4V1",
+        "ACIERTO"
+      ],
+      245
+    ],
+    [
+      [
+        "IETMREOL",
+        "4",
+        "2022",
+        2022,
+        "I162S2C3J4V1",
+        "I162S2C3J4V2",
+        "ERROR"
+      ],
+      238
+    ]
+  ]
+}

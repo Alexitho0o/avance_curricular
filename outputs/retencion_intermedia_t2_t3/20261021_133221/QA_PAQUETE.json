@@ -1,0 +1,117 @@
+{
+  "zip_xml": "OK",
+  "original_sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d",
+  "output_sha256": "66e7cc11a0206793504e4eb275d8585e070413067df6f20b9fde234d3daaa54c",
+  "preserved_package_parts": [
+    "xl/theme/theme1.xml",
+    "xl/sharedStrings.xml",
+    "xl/tables/table1.xml",
+    "xl/tables/table2.xml",
+    "xl/tables/table3.xml",
+    "xl/tables/table4.xml",
+    "xl/tables/table5.xml",
+    "xl/tables/table6.xml",
+    "_rels/.rels",
+    "xl/worksheets/_rels/sheet1.xml.rels",
+    "xl/worksheets/_rels/sheet2.xml.rels",
+    "xl/worksheets/_rels/sheet3.xml.rels",
+    "xl/worksheets/_rels/sheet4.xml.rels",
+    "xl/worksheets/sheet5.xml"
+  ],
+  "cache_changes": [
+    [
+      "Resumen",
+      "F10",
+      [
+        "n",
+        "20"
+      ],
+      [
+        "n",
+        "2"
+      ]
+    ],
+    [
+      "Resumen",
+      "G10",
+      [
+        "n",
+        "1128"
+      ],
+      [
+        "n",
+        "1146"
+      ]
+    ],
+    [
+      "Resumen",
+      "F11",
+      [
+        "n",
+        "20"
+      ],
+      [
+        "n",
+        "2"
+      ]
+    ],
+    [
+      "Resumen",
+      "G11",
+      [
+        "n",
+        "1130"
+      ],
+      [
+        "n",
+        "1148"
+      ]
+    ]
+  ],
+  "approved_edits": {
+    "Resumen": {
+      "A5": "B/C: 18 de las 20 llaves recuperadas; 2 pendientes. E: cuatro tasas sin cierre acreditado; ver Revision_agregada.",
+      "A27": "Revisión ampliada: Revision_agregada contiene llaves, respaldos, pendientes y distinción interna IPSS/SIES.",
+      "I8": "E: T2_2025 solo cubre ingresos 2025-T2. Falta matrícula completa de cohorte 2024, fecha efectiva y estados al cierre.",
+      "H8": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I8)),'Revision_agregada'!I8,\"Pendiente\")",
+      "I9": "E: T3_2025 contiene varias cohortes. Falta acreditar exhaustividad y fecha efectiva de estados; 325 personas en 328 matrículas.",
+      "H9": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I9)),'Revision_agregada'!I9,\"Pendiente\")",
+      "I10": "E: Hoja1 solo cubre ingresos 2026-T2 y carece de estado. 10246 acredita congelamiento, no población y estados del cierre.",
+      "H10": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I10)),'Revision_agregada'!I10,\"Pendiente\")",
+      "I11": "E: Base restringe período de ingreso 3. Dos estados difieren con 2026_3. 11998 no acredita fecha efectiva ni cierre completo.",
+      "H11": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I11)),'Revision_agregada'!I11,\"Pendiente\")"
+    },
+    "Por_carrera": {
+      "E21": 0,
+      "E25": 1,
+      "E27": 0,
+      "E32": 0,
+      "E33": 0,
+      "E34": 1,
+      "A37": "C: conteos originales reproducidos; llaves ampliadas por puente explícito. Fuentes y método en manifiesto de esta revisión.",
+      "A38": "B/C: 18 de las 20 personas tienen CODCLI identificado; 2 siguen pendientes. Todas integran el denominador 1.150."
+    },
+    "Fuentes_y_alcance": {
+      "A25": "C: revisión ampliada en Revision_agregada y manifiesto adjunto; fuentes históricas y seguimiento anual conservados."
+    },
+    "Bases_por_confirmar": {
+      "C7": "T2_2025: 225 filas, todas ingreso y matrícula 2025-T2; no cubre toda la cohorte 2024.",
+      "C8": "T3_2025: 3.081 filas, varias cohortes. 325 personas de cohorte 2024 en 328 matrículas.",
+      "C9": "Hoja1: 528 filas de ingreso 2026-T2, sin estado. 10246: 14.204 filas de múltiples períodos.",
+      "C10": "Base: 557 filas, todas período de ingreso 3. 11998: 15.045 filas de múltiples períodos.",
+      "E9": "Fecha efectiva, población completa, historial de estados y regla intermedia. Congelamiento no acredita corte.",
+      "E10": "Cobertura completa, fecha efectiva y estados históricos; resolver 2 discrepancias Base / 2026_3.",
+      "A15": "C: candidatos revisados como fotografías. Presencias en respaldos, llaves y reglas se documentan en Revision_agregada."
+    }
+  },
+  "formula_errors": [],
+  "all_original_styles_tables_filters_validations_preserved": true,
+  "escenario80_byte_identical": true,
+  "denominadores": [
+    558,
+    1150,
+    222,
+    124
+  ],
+  "all_expected_values_pass": true
+}

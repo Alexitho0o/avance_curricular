@@ -1,0 +1,138 @@
+{
+  "fecha": "2026-10-21T09:27:00.163757-03:00",
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hoja": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "hoja": "08-05-2025_22-26-22_Matrícula_P",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    }
+  ],
+  "grupos": [
+    {
+      "periodo": 2,
+      "personas": 41,
+      "conteos": {
+        "numero_CODCLI_ingreso_por_persona": {
+          "1": 41
+        },
+        "numero_CODCLI_misma_carrera_en_11998": {
+          "1": 40,
+          "2": 1
+        },
+        "renovacion_mismo_CODCLI_2025": {
+          "sin_fila_2025": 38,
+          "con_fila_2025": 3
+        },
+        "otro_CODCLI_misma_carrera_ingreso2025": {
+          "no": 40,
+          "si": 1
+        },
+        "ANOMATRICULA_filas_CODCLI_origen": {
+          "2026": 23,
+          "2024": 15,
+          "2025": 3
+        },
+        "PERIODOMATRICULA_filas_CODCLI_origen": {
+          "2": 41
+        },
+        "estado_situacion_CODCLI_origen": {
+          "VIGENTE; 1 - ALUMNO REGULAR": 9,
+          "VIGENTE; 100 - TITULACIÓN INTERMEDIA": 4,
+          "ELIMINADO; 7 - NO RENUEVA MATRICULA": 17,
+          "VIGENTE; 49 - CAMBIO DE JORNADA": 1,
+          "TITULADO; 31 - TITULADO APROBADO": 9,
+          "ELIMINADO; 23 - RETIRO - RETRACTO": 1
+        },
+        "CODCLI_en_respaldo10246": {
+          "mismos_CODCLI": 41
+        },
+        "mismo_CODCLI_11998_poblacion_personas": {
+          "sin_colision_persona": 41
+        },
+        "CODCLI_origen_anios_ingreso": {
+          "2024": 41
+        },
+        "CODCLI_origen_periodos_ingreso": {
+          "2": 41
+        }
+      }
+    },
+    {
+      "periodo": 3,
+      "personas": 42,
+      "conteos": {
+        "numero_CODCLI_ingreso_por_persona": {
+          "1": 42
+        },
+        "numero_CODCLI_misma_carrera_en_11998": {
+          "1": 38,
+          "2": 3,
+          "3": 1
+        },
+        "renovacion_mismo_CODCLI_2025": {
+          "sin_fila_2025": 35,
+          "con_fila_2025": 7
+        },
+        "otro_CODCLI_misma_carrera_ingreso2025": {
+          "no": 40,
+          "si": 2
+        },
+        "ANOMATRICULA_filas_CODCLI_origen": {
+          "2026": 22,
+          "2024": 13,
+          "2025": 7
+        },
+        "PERIODOMATRICULA_filas_CODCLI_origen": {
+          "3": 40,
+          "1": 2
+        },
+        "estado_situacion_CODCLI_origen": {
+          "VIGENTE; 1 - ALUMNO REGULAR": 19,
+          "ELIMINADO; 23 - RETIRO - RETRACTO": 1,
+          "ELIMINADO; 7 - NO RENUEVA MATRICULA": 12,
+          "ELIMINADO; 11 - RENUNCIA POST INICIO CLASES": 1,
+          "VIGENTE; 38 - REINCORPORACION DE ACTIVIDADES": 4,
+          "SUSPENDIDO; 2 - SUSPENSIÓN TEMPORAL": 3,
+          "ELIMINADO; 5 - RENUNCIA ENTRE PERIODOS": 1,
+          "TITULADO; 31 - TITULADO APROBADO": 1
+        },
+        "CODCLI_en_respaldo10246": {
+          "mismos_CODCLI": 42
+        },
+        "mismo_CODCLI_11998_poblacion_personas": {
+          "sin_colision_persona": 42
+        },
+        "CODCLI_origen_anios_ingreso": {
+          "2024": 42
+        },
+        "CODCLI_origen_periodos_ingreso": {
+          "3": 42
+        }
+      }
+    }
+  ],
+  "personas_distintas": 83,
+  "CODCLI_origen_distintos": 83,
+  "RAW_MU2025_tiene_CODCLI": false,
+  "trazas_motor": [],
+  "privacidad": "Sin identificadores individuales en salidas. Identificadores solo en memoria."
+}

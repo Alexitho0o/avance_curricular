@@ -1,0 +1,1 @@
+D/C: v7 activa; INF35-03 T3-2024 V1 interno. E: documental pendiente. Continuar exclusivamente INF35-03/04 T2-2024; no extender cierres T3 hacia atrás. Seis homologaciones permanecen fuera de este bloque.

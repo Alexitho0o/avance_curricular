@@ -1,0 +1,323 @@
+{
+  "transiciones_calculo_2024": [
+    {
+      "estado_actual": "COHORTE_INCONSISTENTE",
+      "estado_escenario": "INCLUIDO",
+      "N_actual": 0,
+      "N_escenario": 1,
+      "R_actual": 0,
+      "R_escenario": 1,
+      "filas": 2
+    }
+  ],
+  "fecha": "2026-10-21T09:54:50.785355-03:00",
+  "clasificacion": "B observaciones; C cálculo; E escenario hipotético no aplicado; D denominadores actuales preservados",
+  "poblacion": 80,
+  "marcas": {
+    "2+3 INGRESO": 50,
+    "CORRECCIÓN": 30
+  },
+  "cruce_MU2026": {
+    "CON_VIG1": 53,
+    "SOLO_VIG0": 11,
+    "AUSENTE_MU2026": 16
+  },
+  "presencia_MU2024": {
+    "SIN_FILA_MU2024": 78,
+    "CON_FILA_MU2024": 2
+  },
+  "estado_actual_2025": {
+    "COHORTE_INCONSISTENTE": 53,
+    "INCLUIDO": 27
+  },
+  "aporte_actual_2025": {
+    "N": 27,
+    "R": 0,
+    "no_retenidos_incluidos": 27
+  },
+  "resultados": [
+    {
+      "cohorte": 2024,
+      "actual_C": {
+        "cohorte": 2024,
+        "N": 558,
+        "R": 326,
+        "tasa": 0.5842293906810035
+      },
+      "escenario_E_C": {
+        "cohorte": 2024,
+        "N": 560,
+        "R": 328,
+        "tasa": 0.5857142857142857
+      },
+      "delta_N_simulado": 2,
+      "delta_R_simulado": 2,
+      "delta_pp": 0.14848950332821964,
+      "sensibilidad_numerador_a_denominador_fijo": {
+        "N_actual_fijo": 558,
+        "R_sobre_poblacion_actual_fija": 326,
+        "tasa_poblacion_actual_fija": 0.5842293906810035,
+        "delta_pp": 0.0,
+        "advertencia": "Seguimiento de la misma población actualmente incluida; los nuevos elegibles hipotéticos se muestran solo en escenario separado."
+      },
+      "referencia_SIES_B": 0.675,
+      "brecha_actual_pp_C_B": -9.07706093189965,
+      "brecha_escenario_pp_E_C_B": -8.92857142857143
+    },
+    {
+      "cohorte": 2025,
+      "actual_C": {
+        "cohorte": 2025,
+        "N": 1150,
+        "R": 668,
+        "tasa": 0.5808695652173913
+      },
+      "escenario_E_C": {
+        "cohorte": 2025,
+        "N": 1123,
+        "R": 668,
+        "tasa": 0.5948352626892253
+      },
+      "delta_N_simulado": -27,
+      "delta_R_simulado": 0,
+      "delta_pp": 1.396569747183396,
+      "sensibilidad_numerador_a_denominador_fijo": {
+        "N_actual_fijo": 1150,
+        "R_sobre_poblacion_actual_fija": 668,
+        "tasa_poblacion_actual_fija": 0.5808695652173913,
+        "delta_pp": 0.0,
+        "advertencia": "Seguimiento de la misma población actualmente incluida; los nuevos elegibles hipotéticos se muestran solo en escenario separado."
+      },
+      "referencia_SIES_B": 0.5821152192605331,
+      "brecha_actual_pp_C_B": -0.12456540431418084,
+      "brecha_escenario_pp_E_C_B": 1.2720043428692152
+    }
+  ],
+  "desglose": [
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 2,
+      "MU2026": "AUSENTE_MU2026",
+      "estado_calculo_actual": "INCLUIDO",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "SIN_REGISTRO",
+      "personas": 11
+    },
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 2,
+      "MU2026": "CON_VIG1",
+      "estado_calculo_actual": "COHORTE_INCONSISTENTE",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:1",
+      "personas": 1
+    },
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 2,
+      "MU2026": "CON_VIG1",
+      "estado_calculo_actual": "COHORTE_INCONSISTENTE",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:2",
+      "personas": 23
+    },
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 2,
+      "MU2026": "SOLO_VIG0",
+      "estado_calculo_actual": "INCLUIDO",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:2",
+      "personas": 5
+    },
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 3,
+      "MU2026": "AUSENTE_MU2026",
+      "estado_calculo_actual": "INCLUIDO",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "SIN_REGISTRO",
+      "personas": 5
+    },
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 3,
+      "MU2026": "CON_VIG1",
+      "estado_calculo_actual": "COHORTE_INCONSISTENTE",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:2",
+      "personas": 2
+    },
+    {
+      "marca": "2+3 INGRESO",
+      "periodo_2024": 3,
+      "MU2026": "SOLO_VIG0",
+      "estado_calculo_actual": "INCLUIDO",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:2",
+      "personas": 3
+    },
+    {
+      "marca": "CORRECCIÓN",
+      "periodo_2024": 3,
+      "MU2026": "CON_VIG1",
+      "estado_calculo_actual": "COHORTE_INCONSISTENTE",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:2",
+      "personas": 27
+    },
+    {
+      "marca": "CORRECCIÓN",
+      "periodo_2024": 3,
+      "MU2026": "SOLO_VIG0",
+      "estado_calculo_actual": "INCLUIDO",
+      "N_RETENIDO_actual": 0,
+      "origenes_MU2026": "2024:2",
+      "personas": 3
+    }
+  ],
+  "por_programa": [
+    {
+      "codigo_unico": "I162S2C1J4V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "personas_reclasificadas": 9,
+      "N_actual": 5,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 4,
+      "VIG0_MU2026": 2,
+      "ausente_MU2026": 3
+    },
+    {
+      "codigo_unico": "I162S2C3J4V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "personas_reclasificadas": 5,
+      "N_actual": 3,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 2,
+      "VIG0_MU2026": 2,
+      "ausente_MU2026": 1
+    },
+    {
+      "codigo_unico": "I162S2C46J4V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "personas_reclasificadas": 22,
+      "N_actual": 9,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 13,
+      "VIG0_MU2026": 3,
+      "ausente_MU2026": 6
+    },
+    {
+      "codigo_unico": "I162S2C47J4V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "personas_reclasificadas": 5,
+      "N_actual": 3,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 2,
+      "VIG0_MU2026": 1,
+      "ausente_MU2026": 2
+    },
+    {
+      "codigo_unico": "I162S2C57J4V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "personas_reclasificadas": 29,
+      "N_actual": 4,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 25,
+      "VIG0_MU2026": 1,
+      "ausente_MU2026": 3
+    },
+    {
+      "codigo_unico": "I162S2C6J4V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "personas_reclasificadas": 2,
+      "N_actual": 0,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 2,
+      "VIG0_MU2026": 0,
+      "ausente_MU2026": 0
+    },
+    {
+      "codigo_unico": "I162S2C76J4V1",
+      "carrera": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+      "personas_reclasificadas": 8,
+      "N_actual": 3,
+      "R_actual": 0,
+      "N_escenario": 0,
+      "R_escenario": 0,
+      "VIG1_MU2026": 5,
+      "VIG0_MU2026": 2,
+      "ausente_MU2026": 1
+    }
+  ],
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hoja": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "hoja": "08-05-2025_22-26-22_Matrícula_P",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+      "hoja": "Final a carga / Carga_Completa (2) / Carga_Completa (3)"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "hoja": "BASE_RETENCION_MU / 01_CATALOGO_CARRERA / 02_COHORTE_ELEGIBILIDAD",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx",
+      "hoja": "Retención 1er año x IES",
+      "rango": "T59:U59; institución A59:B59",
+      "sha256": "168ac8baea6aee65fa8a40dfca5a269993951142c89cb536805f550b1ac3297b"
+    }
+  ],
+  "supuesto_escenario_E": "Solo en memoria, restaurar ANIO_ING_ACT y ANIO_ING_ORI a 2024 en las 80 filas MU2025; conservar semestres informados, VIG, programas, MU2024 y MU2026 y lógica de cálculo. Los denominadores simulados no sustituyen los actuales. No agregar estudiantes sin fila MU2024.",
+  "QA": {
+    "base_formula_reproducida": true,
+    "control_actual_2024": [
+      558,
+      326
+    ],
+    "control_actual_2025": [
+      1150,
+      668
+    ],
+    "registros_modificados_solo_memoria": 80,
+    "conteos_grupo_cierran": true,
+    "fuentes_originales_sin_escritura": true,
+    "archivos_individuales_generados": false
+  }
+}

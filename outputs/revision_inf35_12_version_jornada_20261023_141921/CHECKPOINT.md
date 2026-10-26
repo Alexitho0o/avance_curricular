@@ -1,0 +1,1 @@
+B/C: revisión INF35-12 terminada. Dicc. v3 sin cambios. C/E: T2 J4V2 y T3 J1V2 propuestas acotadas, no adoptadas. Pendiente decisión interna; atribución documental sigue abierta. No reconstruir el cruce de identidad ni volver a usar jornada actual como histórica. Consultar RESULTADO.json y evidencia privada antes de continuar.

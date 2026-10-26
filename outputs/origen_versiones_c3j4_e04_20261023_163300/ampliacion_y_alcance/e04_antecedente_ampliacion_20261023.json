@@ -1,0 +1,465 @@
+{
+  "proceso": "MU2025, antecedente de VERSION=1 en E04 IINF20241/J1",
+  "clasificacion": "B observado; C inspección y cruce; E regla generadora pendiente",
+  "inventario": {
+    "fuente": "/tmp/e04_antecedentes_inventario.json",
+    "sha256": "12884c73ef8e4aa97cc88e95cf0bc7546bfb58992e94cfa25202242fdab12762",
+    "raices_y_conteos": [
+      {
+        "root": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9",
+        "files": 347,
+        "rc": 0
+      },
+      {
+        "root": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA",
+        "files": 19,
+        "rc": 0
+      }
+    ],
+    "total_archivos": 366,
+    "archivos_con_extension_codigo_consulta": [],
+    "exclusion": "No se releyeron los 17 libros del paso previo; de IPSS2025.xlsx solo se verificó el encabezado de 32 columnas. Se excluyeron respaldos FCU2026."
+  },
+  "csv_nuevos": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSSreset.csv",
+      "sha256": "b8eb47f0eab9e90a080bbdda8e00a0e7010a42b31f935ba19bad74df74e1c287",
+      "filas": 1355,
+      "columnas": 32,
+      "encoding": "utf-8-sig",
+      "encabezado": false,
+      "schema_fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.xlsx",
+      "coincidencias": [
+        {
+          "fila": 948,
+          "metodo": "TIPO_DOC=R + N_DOC + DV exactos, normalizados",
+          "valores": {
+            "COD_SED": "2",
+            "COD_CAR": "1",
+            "JOR": "1",
+            "VERSION": "1",
+            "VIG": "0",
+            "ANIO_ING_ACT": "2024",
+            "ANIO_ING_ORI": "2024",
+            "FECHA_MATRICULA": "31-12-2024"
+          }
+        }
+      ],
+      "fecha_asignacion_version": "No disponible en estos CSV; FECHA_MATRICULA no es fecha de asignación SIES."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025rect.csv",
+      "sha256": "0c89c7bb35c1c6920a61b621ed1b96fc9e95a04db118895fea8fb8da048c7d6a",
+      "filas": 6,
+      "columnas": 32,
+      "encoding": "utf-8-sig",
+      "encabezado": false,
+      "schema_fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.xlsx",
+      "coincidencias": [],
+      "fecha_asignacion_version": "No disponible en estos CSV; FECHA_MATRICULA no es fecha de asignación SIES."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.csv",
+      "sha256": "9dca5cc1a967efb3b305695c31bcff62d7e0d09cf1b4a68529a1baa876842773",
+      "filas": 2371,
+      "columnas": 32,
+      "encoding": "utf-8-sig",
+      "encabezado": false,
+      "schema_fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.xlsx",
+      "coincidencias": [
+        {
+          "fila": 1001,
+          "metodo": "TIPO_DOC=R + N_DOC + DV exactos, normalizados",
+          "valores": {
+            "COD_SED": "2",
+            "COD_CAR": "1",
+            "JOR": "1",
+            "VERSION": "1",
+            "VIG": "1",
+            "ANIO_ING_ACT": "2024",
+            "ANIO_ING_ORI": "2024",
+            "FECHA_MATRICULA": "31-12-2024"
+          }
+        }
+      ],
+      "fecha_asignacion_version": "No disponible en estos CSV; FECHA_MATRICULA no es fecha de asignación SIES."
+    }
+  ],
+  "gestionsge": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/GESTIONSGE_1703.xlsx",
+    "sha256": "2ac487eb0ac09ac66d2c76afde9e62b9a4265357514d7ee696113d125a8e2401",
+    "core_no_fecha_efectiva": {
+      "created": "2025-03-18T13:21:15Z",
+      "modified": "2025-03-18T13:21:15Z"
+    },
+    "hoja": "Hoja1",
+    "filas_datos": 16395,
+    "encabezados": [
+      "RUT_ALUMNO",
+      "Asunto",
+      "RUT_ALUMNO",
+      "OBSERVACION",
+      "CODCARR",
+      "Rut_responsable",
+      "Nombre_responsable",
+      "FECHA_COMUNICO",
+      "DIA",
+      "MES",
+      "ANIO",
+      "TIPO_COMUNICACION"
+    ],
+    "metodo": "Cuerpo RUT exacto en ambas columnas RUT_ALUMNO y CODCARR=IINF; el archivo no contiene DV ni CODCLI. No se inventa DV.",
+    "coincidencias_cuerpo_rut": [
+      {
+        "fila": 12225,
+        "CODCARR": "IINF",
+        "FECHA_COMUNICO": "2024-10-11 00:00:00",
+        "tipo_comunicacion": "LLAMADO",
+        "resumen_manual_verificado": "Consulta por inscripción de asignaturas; la nota registra su inscripción y aviso.",
+        "menciones_version_o_plan": []
+      },
+      {
+        "fila": 12226,
+        "CODCARR": "IINF",
+        "FECHA_COMUNICO": "2024-07-11 00:00:00",
+        "tipo_comunicacion": "LLAMADO",
+        "resumen_manual_verificado": "Consulta de beneficio Junaeb; sin asignación de versión SIES.",
+        "menciones_version_o_plan": []
+      },
+      {
+        "fila": 12227,
+        "CODCARR": "IINF",
+        "FECHA_COMUNICO": "2024-11-05 00:00:00",
+        "tipo_comunicacion": "LLAMADO",
+        "resumen_manual_verificado": "Asignatura desaparecida de EVA; la nota registra su carga y corroboración.",
+        "menciones_version_o_plan": []
+      },
+      {
+        "fila": 12228,
+        "CODCARR": "IINF",
+        "FECHA_COMUNICO": "2024-03-14 00:00:00",
+        "tipo_comunicacion": "LLAMADO",
+        "resumen_manual_verificado": "Bienvenida, inducción y caracterización; sin asignación de versión SIES.",
+        "menciones_version_o_plan": []
+      }
+    ],
+    "limite_identidad": "Cuerpo y carrera coinciden; no equivale a comprobar RUT+DV/CODCLI completos."
+  },
+  "correos_revisados": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RV Resolución Eliminación Académica art. 29.msg",
+      "sha256": "0ef7ff3b46466a9207c9d125f6021767bb33076e615ffa523daa0a21f1726583",
+      "caracteres_cuerpo": 1032,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [
+        "Enviado el: jueves, 23 de mayo de 2024 16:27"
+      ],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/2 Comunicado proceso de Matrícula Unificada 2024..msg",
+      "sha256": "be2b6b70341d45e6833c81b828399ef09839a339599018b111c47f7f1b7c6136",
+      "caracteres_cuerpo": 4121,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/Oferta académica rezagada.msg",
+      "sha256": "852e0812fcfa0b66eeebd665e41ece247e62d3d964c915f949040508428c2eae",
+      "caracteres_cuerpo": 197,
+      "anos_mencionados": [],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RE 10Consulta programa regular de continuidad.msg",
+      "sha256": "42cfbc85530a53f77dd47518919696f74a72195e1a7655da678ef43853e65d7c",
+      "caracteres_cuerpo": 4033,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [
+        "Enviado el: lunes, 22 de abril de 2024 11:43"
+      ],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg",
+      "sha256": "ba1ada7f5778f4fb286b24c6133b3ce8cea3525da1928df5ce2f50f224106802",
+      "caracteres_cuerpo": 5619,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RE Consulta programa regular de continuidad.msg",
+      "sha256": "cb779022b6961cf328d02aabbcee4110e771fe358e5894f440811070e80247ba",
+      "caracteres_cuerpo": 2281,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RV 1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg",
+      "sha256": "53055669d1238586f4590e4209c5a2d577df0ef456021f07c9de3e240f1a6856",
+      "caracteres_cuerpo": 6036,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [
+        "Enviado el: jueves, 11 de abril de 2024 9:25"
+      ],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Estudiantes sin actividad.msg",
+      "sha256": "cc069c661ac2ccf18b30271c1f641ecdc2492058270e7ae5fc0a35a8b63572d8",
+      "caracteres_cuerpo": 922,
+      "anos_mencionados": [],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/RE Estudios secundarios .msg",
+      "sha256": "8e3d7c2127e18cc41fb9d9af9772483cdeb457db0127efb41543a22fe1bfd74d",
+      "caracteres_cuerpo": 5329,
+      "anos_mencionados": [
+        "2000",
+        "2001",
+        "2004",
+        "2005",
+        "2007",
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg",
+      "sha256": "b704aa3579ff30dbff2d627945a75277621315517cc198e99bb0a2884bbdda61",
+      "caracteres_cuerpo": 5619,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Revisión matrícula.msg",
+      "sha256": "73289ec7787f313f8569b4df412864f902a233e2905bf6eab10ddd2fc7c6ba79",
+      "caracteres_cuerpo": 1241,
+      "anos_mencionados": [],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/Estudiantes sin actividad.msg",
+      "sha256": "0685bad914f384b6b46d69c32396c4e0a2c74373a2a12663ac3261536d604290",
+      "caracteres_cuerpo": 922,
+      "anos_mencionados": [],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/RE Código error en carga2.msg",
+      "sha256": "329ce9e210b766113b969a7ac6bdbf8f3fcb0a0c56ba5c2fbcce5830d40baabd",
+      "caracteres_cuerpo": 2508,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/RE Código error en carga1vig0.msg",
+      "sha256": "a548deafbe47b117105b0e22842f5fb65b6683c55023cf6a452bfea17355005f",
+      "caracteres_cuerpo": 2508,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/Descarga de lo cargado Enero 2024/BD Cargada Final/RE Estudiantes de primer año IP SAN SEBASTIAN COD 162.msg",
+      "sha256": "71093a336d53a3e04c9e37dde29fe0555fab71d5fad36e8c6b001bf3f17b5904",
+      "caracteres_cuerpo": 3274,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Oferta academica/RE Consulta Instituto Profesional San Sebastián.msg",
+      "sha256": "ca6154315711eb66d6a92dbba99e0a229fc8718467a64614d90c5f6732292c7b",
+      "caracteres_cuerpo": 3819,
+      "anos_mencionados": [
+        "2024"
+      ],
+      "fechas_explicitas_en_cuerpo": [
+        "Enviado el: lunes, 2 de septiembre de 2024 19:31"
+      ],
+      "menciones_relevantes": [],
+      "identificador_foco_literal_en_cuerpo": false,
+      "alcance": "Cuerpo textual leído; adjuntos no ejecutados ni usados para adjudicar."
+    }
+  ],
+  "comprobante_carga": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/Carga proceso de matrícula 2025.pptx",
+    "sha256": "2c92703ce892fe1485a8efd49fbf89fc9948a8c827667678dc461cf7075a5303",
+    "core_no_fecha_efectiva": {
+      "created": "2025-05-09T02:24:59Z",
+      "modified": "2025-05-09T02:25:59Z"
+    },
+    "texto_slides": [
+      {
+        "parte": "ppt/slides/slide1.xml",
+        "texto": [
+          "Carga proceso de matrícula 2025"
+        ]
+      }
+    ],
+    "imagen_sha256": "db2a77577cac462c7dcbb106b0ac99f780a50c6be1725faa4f3e0b927f6fd460",
+    "observacion_visual_B": {
+      "parte": "ppt/media/image1.png",
+      "fecha_visible": "2025-05-08 22:23:44",
+      "estado_visible": "Carga completada",
+      "registros_visibles": 2371,
+      "ID_evento_visible": 467501
+    },
+    "limite": "La captura acredita el estado de una carga agregado; no contiene nombre/hash del CSV ni decisión individual sobre VERSION. Igualar 2371 no prueba por sí solo que sea ese archivo."
+  },
+  "promedios": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+    "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+    "core_no_fecha_efectiva": {
+      "created": "2025-05-08T15:08:28Z",
+      "modified": "2025-05-08T20:59:41Z"
+    },
+    "estructura_primera_fila": [
+      {
+        "hoja": "Hoja2",
+        "max_row": 4410,
+        "max_column": 106,
+        "primera_fila": [
+          "INSCRITAS",
+          "INSCRITAS historticas"
+        ],
+        "campo_VERSION_en_primera_fila": false
+      },
+      {
+        "hoja": "Hoja1",
+        "max_row": 62743,
+        "max_column": 28,
+        "primera_fila": [
+          "Número",
+          "CODCLI",
+          "RUT",
+          "DIG",
+          "NOMBRE",
+          "PATERNO",
+          "MATERNO",
+          "CODCARR",
+          "CARRERA",
+          "JORNADA",
+          "REGIMEN",
+          "RAMOEQUIV",
+          "CODRAMO",
+          "CODSECC",
+          "ASIGNATURA",
+          "EXAMEN",
+          "NOTA_FINAL",
+          "ANO",
+          "PERIODO",
+          "ESTADO",
+          "DESCRIPCION_ESTADO",
+          "CONVALIDADO",
+          "NIVEL",
+          "ESTADO_ACADEMICO",
+          "PLAN_DE_ESTUDIO",
+          "LLAVE RUT ASIGNATURA",
+          "Unico",
+          "Llave2"
+        ],
+        "campo_VERSION_en_primera_fila": false
+      }
+    ],
+    "objetos_consulta_conexion_vba": [],
+    "limite": "No se vuelve a calcular trayectoria. La estructura de Hoja1 carece de campo VERSION SIES; los metadatos son de mayo, no acreditan antecedente previo al 16-abr."
+  },
+  "QA": {
+    "fuentes_intactas": true,
+    "identidad_csv_tipo_documento_dv": true,
+    "GESTIONSGE_cuerpo_sin_DV_declarado": true,
+    "bases_denominadores_diccionario_modificados": false,
+    "nuevas_reglas_adoptadas": 0,
+    "regla_generadora_V1_localizada": false
+  },
+  "fuentes_sha256": {
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.xlsx": "239a792b529a6600deeea9dfddcf4fc2dcccc918645f0bc93123955bf97e7c71",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSSreset.csv": "b8eb47f0eab9e90a080bbdda8e00a0e7010a42b31f935ba19bad74df74e1c287",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025rect.csv": "0c89c7bb35c1c6920a61b621ed1b96fc9e95a04db118895fea8fb8da048c7d6a",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.csv": "9dca5cc1a967efb3b305695c31bcff62d7e0d09cf1b4a68529a1baa876842773",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/GESTIONSGE_1703.xlsx": "2ac487eb0ac09ac66d2c76afde9e62b9a4265357514d7ee696113d125a8e2401",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RV Resolución Eliminación Académica art. 29.msg": "0ef7ff3b46466a9207c9d125f6021767bb33076e615ffa523daa0a21f1726583",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/2 Comunicado proceso de Matrícula Unificada 2024..msg": "be2b6b70341d45e6833c81b828399ef09839a339599018b111c47f7f1b7c6136",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/Oferta académica rezagada.msg": "852e0812fcfa0b66eeebd665e41ece247e62d3d964c915f949040508428c2eae",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RE 10Consulta programa regular de continuidad.msg": "42cfbc85530a53f77dd47518919696f74a72195e1a7655da678ef43853e65d7c",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg": "ba1ada7f5778f4fb286b24c6133b3ce8cea3525da1928df5ce2f50f224106802",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RE Consulta programa regular de continuidad.msg": "cb779022b6961cf328d02aabbcee4110e771fe358e5894f440811070e80247ba",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RV 1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg": "53055669d1238586f4590e4209c5a2d577df0ef456021f07c9de3e240f1a6856",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Estudiantes sin actividad.msg": "cc069c661ac2ccf18b30271c1f641ecdc2492058270e7ae5fc0a35a8b63572d8",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/RE Estudios secundarios .msg": "8e3d7c2127e18cc41fb9d9af9772483cdeb457db0127efb41543a22fe1bfd74d",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg": "b704aa3579ff30dbff2d627945a75277621315517cc198e99bb0a2884bbdda61",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Revisión matrícula.msg": "73289ec7787f313f8569b4df412864f902a233e2905bf6eab10ddd2fc7c6ba79",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/Estudiantes sin actividad.msg": "0685bad914f384b6b46d69c32396c4e0a2c74373a2a12663ac3261536d604290",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/RE Código error en carga2.msg": "329ce9e210b766113b969a7ac6bdbf8f3fcb0a0c56ba5c2fbcce5830d40baabd",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/RE Código error en carga1vig0.msg": "a548deafbe47b117105b0e22842f5fb65b6683c55023cf6a452bfea17355005f",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/Descarga de lo cargado Enero 2024/BD Cargada Final/RE Estudiantes de primer año IP SAN SEBASTIAN COD 162.msg": "71093a336d53a3e04c9e37dde29fe0555fab71d5fad36e8c6b001bf3f17b5904",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Oferta academica/RE Consulta Instituto Profesional San Sebastián.msg": "ca6154315711eb66d6a92dbba99e0a229fc8718467a64614d90c5f6732292c7b",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/Carga proceso de matrícula 2025.pptx": "2c92703ce892fe1485a8efd49fbf89fc9948a8c827667678dc461cf7075a5303",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1"
+  },
+  "pendiente_E": "No se localizó exportación, consulta ni decisión anterior al lote del 16-abr que explique V1. Los CSV nuevos conservan V1, pero su posición cronológica respecto a Precarga no queda acreditada.",
+  "limite_cobertura": "Inventario de dos raíces concretas; inspección nueva acotada de 3 CSV, GESTIONSGE, 16 cuerpos MSG, estructura PROMEDIOS y comprobante PPTX. No ausencia universal, no consulta de plataforma SIES/UMAS ni historiales remotos."
+}

@@ -1,0 +1,72 @@
+{
+  "clasificacion": "B/C",
+  "alcance": "Rastreo de 50 personas C3/J4 V1(2021) a V2(2022); sin asignación causal ni cambios de bases/denominadores",
+  "script": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/origen_versiones_c3j4_e04_20261023/c3j4/rastrear_transiciones_c3j4_2021_2022.py",
+  "diccionario_fijado": {
+    "ruta": "/Users/alexi/.local/share/ipss/cierre_inf35_03_t3_20261023_154224/DICCIONARIO_SIES.sqlite",
+    "sha256": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e"
+  },
+  "qa": "PASS",
+  "fuentes": [
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/2022.xlsx",
+      "hoja": "2022",
+      "sha256": "ed4e2552e791848d4392066edd54de7ef2ab7d4603957d62ada5aa5174797038"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
+      "hoja": "MAT_2021",
+      "sha256": "8f14b670f00f725412d9dadffea5db9ad2de97b536c88dad992d4370252c401e"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/2022 - 1098/MAT_IP_CIISA_2022.xlsx",
+      "hoja": "MAT_2022",
+      "sha256": "28c826e409e50c482749c1e6cbb6426da86acbbd27e758d80355356a3367fb71"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.5 Otros/Matrícula 1er y 2do semestre/MAT_IP_CIISA_2021_1er y2do semestre.xlsx",
+      "hoja": "MAT_2021",
+      "sha256": "21174b560957fcc94f00459f8f4c0c44cbaf0beab548aab570f078ee01dbd36b"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.5 Otros/Matrícula 1er y 2do semestre/MAT_IP_CIISA_2022_1ro y 2do semestre.xlsx",
+      "hoja": "MAT_2022",
+      "sha256": "b1297a66881d5f3f8fb2bd7bda90ccad03144a350dcd1fcbd5152b1554e4ac25"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "hoja": "CSV con encabezados",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f"
+    }
+  ],
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/origen_versiones_c3j4_e04_20261023/c3j4/rastrear_transiciones_c3j4_2021_2022.py",
+      "sha256": "778d3e17deb41a7ca918c888543342ec255764903e1cfe82ea6526f867fc563c"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/origen_versiones_c3j4_e04_20261023_163300/c3j4/LOTES.json",
+      "sha256": "62ae6eecd3bfbf283eb261999cb481ea5b0488a643eeb4b7c8368d79bcabe3ed"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/origen_versiones_c3j4_e04_20261023_163300/c3j4/PATRONES.json",
+      "sha256": "3c37976600474f04b96a914a979f2360576b05c78be557298fcd3e128426b6cd"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/origen_versiones_c3j4_e04_20261023_163300/c3j4/PRIMARY.json",
+      "sha256": "eb7c4e45fdabb412072688ba3228207566d069b9a53acfbf9df0092da83ee0ba"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/origen_versiones_c3j4_e04_20261023_163300/c3j4/QA.json",
+      "sha256": "2e05144fc7105072b6c08af37496cfd086fc20d43f552d49eac9a971819d8eb2"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/origen_versiones_c3j4_e04_20261023_163300/c3j4/SEPARACION.json",
+      "sha256": "46c8f214efc6e9110a96221a387742fcb3783300754545eac6d01ecf533bfec8"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/origen_versiones_c3j4_e04_20261023_163300/c3j4/INFORME_C3J4.md",
+      "sha256": "60e8cdd79fd74af29a0ef4a49d4b96e90fe93baa97cff8ec49e83aca9ca5df79"
+    }
+  ]
+}

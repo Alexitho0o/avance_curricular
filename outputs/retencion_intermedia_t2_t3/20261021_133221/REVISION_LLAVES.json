@@ -1,0 +1,1503 @@
+{
+  "fecha": "2026-10-21T13:30:46.663848-03:00",
+  "clasificacion": "B observaciones; C cruces exactos; E alcance temporal y cobertura sin acreditar",
+  "personas_objetivo": 20,
+  "denominador_cohorte_2025": 1150,
+  "identificadas_previo": 18,
+  "sin_identificar_previo": 2,
+  "seguimiento_14": {
+    "10246": {
+      "personas_encontradas": 14,
+      "personas_con_alguna_VIGENTE": 13,
+      "personas_por_conjunto_estados": {
+        "VIGENTE": 12,
+        "SUSPENDIDO": 1,
+        "ELIMINADO / VIGENTE": 1
+      },
+      "filas_conservadas": 15,
+      "llaves_matricula_distintas": 15,
+      "duplicados_por_llave": 0,
+      "llaves_con_valores_distintos": 0,
+      "filas_por_anio_periodo": {
+        "2026-1": 12,
+        "2025-1": 2,
+        "2026-2": 1
+      },
+      "filas_por_estado": {
+        "VIGENTE": 13,
+        "SUSPENDIDO": 1,
+        "ELIMINADO": 1
+      },
+      "fechas_matricula_disponibles": 15,
+      "alcance": "Estado y año/período observados en extracción. FECHAMATRICULA no es fecha efectiva de estado ni prueba de renovación."
+    },
+    "11998": {
+      "personas_encontradas": 14,
+      "personas_con_alguna_VIGENTE": 14,
+      "personas_por_conjunto_estados": {
+        "VIGENTE": 13,
+        "ELIMINADO / VIGENTE": 1
+      },
+      "filas_conservadas": 15,
+      "llaves_matricula_distintas": 15,
+      "duplicados_por_llave": 0,
+      "llaves_con_valores_distintos": 0,
+      "filas_por_anio_periodo": {
+        "2026-1": 12,
+        "2026-3": 1,
+        "2026-2": 1,
+        "2025-1": 1
+      },
+      "filas_por_estado": {
+        "VIGENTE": 14,
+        "ELIMINADO": 1
+      },
+      "fechas_matricula_disponibles": 15,
+      "alcance": "Estado y año/período observados en extracción. FECHAMATRICULA no es fecha efectiva de estado ni prueba de renovación."
+    },
+    "12112": {
+      "personas_encontradas": 14,
+      "personas_con_alguna_VIGENTE": 14,
+      "personas_por_conjunto_estados": {
+        "VIGENTE": 13,
+        "ELIMINADO / VIGENTE": 1
+      },
+      "filas_conservadas": 15,
+      "llaves_matricula_distintas": 15,
+      "duplicados_por_llave": 0,
+      "llaves_con_valores_distintos": 0,
+      "filas_por_anio_periodo": {
+        "2026-1": 12,
+        "2026-3": 1,
+        "2026-2": 1,
+        "2025-1": 1
+      },
+      "filas_por_estado": {
+        "VIGENTE": 14,
+        "ELIMINADO": 1
+      },
+      "fechas_matricula_disponibles": 15,
+      "alcance": "Estado y año/período observados en extracción. FECHAMATRICULA no es fecha efectiva de estado ni prueba de renovación."
+    }
+  },
+  "fuentes_base": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hoja": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "hoja": "02_COHORTE_ELEGIBILIDAD / 01_CATALOGO_CARRERA",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "hoja": "2025_carga!J (RUT), BU (N_DOC), BV (DV)",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-20/2027_P1_082351/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/2025-2.xlsx",
+      "hoja": "Detalle1 / Hoja1",
+      "sha256": "63a38e07b8b24d796cd2104abb1a63129f09b4b88e291c640f9e0f9e116fb78b",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "hoja": "Base",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    }
+  ],
+  "fuentes_adicionales": [
+    {
+      "ruta": "/Users/alexi/Downloads/DATOSDEALUMNOS_12135.xlsx",
+      "sha256": "d7a3ca24567ea7d0ff61c3d92e0b208da158fe7cb4f68548a00f407977334714",
+      "contexto": "Respaldo DatosAlumnos; fecha de cierre no acreditada",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 15162,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/2025/DATOSDEALUMNOS_11248.xlsx",
+      "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+      "contexto": "Respaldo DatosAlumnos; fecha de cierre no acreditada",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 14637,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260825_20_40_34.xlsx",
+      "sha256": "7c46a2dea8dac92a1c92ffa8def96dca8da4437e06c0e69732c814d59de50243",
+      "contexto": "Base Maestra corte nominal 2026-08-25T20:40:34",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9706,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260826_13_00_39.xlsx",
+      "sha256": "c08b3a757c7b8a993b21749ae1c785223d44da37c8bfa2c01890c6390ada338b",
+      "contexto": "Base Maestra corte nominal 2026-08-26T13:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9720,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260827_13_00_37.xlsx",
+      "sha256": "bc930aa3fb674ace8d6204a806f4bc620fc3b00c5ec9d335f7599fef56621da6",
+      "contexto": "Base Maestra corte nominal 2026-08-27T13:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9732,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260828_13_00_37.xlsx",
+      "sha256": "88a5eab891959346085562c1a8d717f68a4bf2b300016eb73921169af4e4f320",
+      "contexto": "Base Maestra corte nominal 2026-08-28T13:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9743,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260829_13_00_37.xlsx",
+      "sha256": "c2717009783965d251062f1359d394cd7cdb62800f00f22774ae84cd65d6e9f7",
+      "contexto": "Base Maestra corte nominal 2026-08-29T13:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9755,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260830_13_00_38.xlsx",
+      "sha256": "e2326338958b9086c45532d1e43f2ebfd1238ecda21aa3cd5f3fe6e7d9a47d5d",
+      "contexto": "Base Maestra corte nominal 2026-08-30T13:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9757,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260831_13_00_42.xlsx",
+      "sha256": "399dec7be249701d82b0ef26495123799872bcfc6ac16796a0d2017c6f196ee2",
+      "contexto": "Base Maestra corte nominal 2026-08-31T13:00:42",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9757,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260901_13_00_41.xlsx",
+      "sha256": "3c7362dcf640d56bb912e29a8ea76540ff92a9bb5be59b5e5ac9a04b9ec81863",
+      "contexto": "Base Maestra corte nominal 2026-09-01T13:00:41",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9771,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260902_13_00_39.xlsx",
+      "sha256": "402dfdc6c194d12b79802798f42475d9f30aa5a87e0a481f12b9e93eff8e56c2",
+      "contexto": "Base Maestra corte nominal 2026-09-02T13:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9779,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260903_13_00_38.xlsx",
+      "sha256": "2d97e0f82f67cd812f967d65ae5b5f51689bfe8c67e157a5958b24941d006efd",
+      "contexto": "Base Maestra corte nominal 2026-09-03T13:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9789,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260904_13_00_38.xlsx",
+      "sha256": "4402628d7fb386bc44e1952252d56f1cdc47056d1cbe4d7379aa7027aabf58f1",
+      "contexto": "Base Maestra corte nominal 2026-09-04T13:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9794,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260905_13_00_37.xlsx",
+      "sha256": "183483536d9729d52cbb86e19bed17ff739703b92be758aa5e7288a95036fa0d",
+      "contexto": "Base Maestra corte nominal 2026-09-05T13:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9803,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260906_12_00_37.xlsx",
+      "sha256": "756251753c5c5cd0c5676864dfd13ccc1478513d054022b0a12b1a84336fee6f",
+      "contexto": "Base Maestra corte nominal 2026-09-06T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9805,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260907_12_00_38.xlsx",
+      "sha256": "2422944556d2c58ab926b106e085fb70243c40d103914547a8922b8f8d41c8e5",
+      "contexto": "Base Maestra corte nominal 2026-09-07T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9805,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260908_12_00_36.xlsx",
+      "sha256": "70f52dc42477e016eb9dc4d07c99243a2001f4370dc48e1f17294002997e0342",
+      "contexto": "Base Maestra corte nominal 2026-09-08T12:00:36",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9813,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 13,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260909_12_00_37.xlsx",
+      "sha256": "278e85afce6ef11071b5e641e578a173cbc8e4104aca6107ace7fd0f44304700",
+      "contexto": "Base Maestra corte nominal 2026-09-09T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9825,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260910_12_00_38.xlsx",
+      "sha256": "faf74b640c49edfaae7857599f46651783672a2f437a1c6657a9cec72bcceddb",
+      "contexto": "Base Maestra corte nominal 2026-09-10T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9833,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260911_12_00_37.xlsx",
+      "sha256": "59a0a3afa8498639a13e38ff1b9443367646b548ee035b7720944c2469a5340a",
+      "contexto": "Base Maestra corte nominal 2026-09-11T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9857,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260912_12_00_38.xlsx",
+      "sha256": "25778834c4d66c70a0e463cd4d73b23143d0132c0cb03104d771ef8c458f7626",
+      "contexto": "Base Maestra corte nominal 2026-09-12T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9864,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260913_12_00_37.xlsx",
+      "sha256": "ef043de211ab2fffe6b5f28d7f94245abbe4ec20f71585ec35aed798f8a981f4",
+      "contexto": "Base Maestra corte nominal 2026-09-13T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9864,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260914_12_00_37.xlsx",
+      "sha256": "d1488abf36b8aa2992af5ed5ceb215bb2c5ef4b8810bb13b79c740950125f4fd",
+      "contexto": "Base Maestra corte nominal 2026-09-14T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9865,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260915_12_00_36.xlsx",
+      "sha256": "1cd7a9b19cde69b4e101f1466db3d570cf8d0be69c36ae6e3f1d2916bbf5448d",
+      "contexto": "Base Maestra corte nominal 2026-09-15T12:00:36",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9873,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260916_12_00_41.xlsx",
+      "sha256": "4c2f721ef8df18cb4645dc4e3c28f3c9c5c054032e4f1e16dbcfaca9e4880593",
+      "contexto": "Base Maestra corte nominal 2026-09-16T12:00:41",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9881,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260917_12_00_37.xlsx",
+      "sha256": "ff07a44b133301cf3418e029d67d85aee3e971a7554bbcd1860874fcb0a309a8",
+      "contexto": "Base Maestra corte nominal 2026-09-17T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9896,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260918_12_00_41.xlsx",
+      "sha256": "8f37ff2b38dc6a1af55d936a2cfe7e3b10961ee9cb7d2e51ac3ce031a98fd2a4",
+      "contexto": "Base Maestra corte nominal 2026-09-18T12:00:41",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9898,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260919_12_00_37.xlsx",
+      "sha256": "335b826586cbe6ad68230594e27a1053d353469da078a798fae6446eb7664e46",
+      "contexto": "Base Maestra corte nominal 2026-09-19T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9898,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260920_12_00_37.xlsx",
+      "sha256": "a26ddf9b741b0f4df61216f8efb96de67029b350368a364c2e69d794d8318a4c",
+      "contexto": "Base Maestra corte nominal 2026-09-20T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9900,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260921_12_00_38.xlsx",
+      "sha256": "bd440a3e7912efd10007ae23a35c2bcdc86bcb1ce295e88cb9bbfb1c0047e927",
+      "contexto": "Base Maestra corte nominal 2026-09-21T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9906,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260922_12_00_57.xlsx",
+      "sha256": "edef6e5aa91952179eb405f994c5ac0c78561b34d7bf742ace3a4d19adeb9955",
+      "contexto": "Base Maestra corte nominal 2026-09-22T12:00:57",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9913,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260923_12_00_38.xlsx",
+      "sha256": "6791461c6a83bf968a81ace3d262ed4b4db5b7b13bf984908ad978e516e33854",
+      "contexto": "Base Maestra corte nominal 2026-09-23T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9953,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260924_12_00_41.xlsx",
+      "sha256": "fc3d0cfd06be9e5b10d700bf0d455313ebb80a9e91bec34b15aeeb3fdf0a2369",
+      "contexto": "Base Maestra corte nominal 2026-09-24T12:00:41",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 9979,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260925_12_00_38.xlsx",
+      "sha256": "1f7db02b28b552ea17ed34772230b385f91af1f639b34b3ba1925a174f252f30",
+      "contexto": "Base Maestra corte nominal 2026-09-25T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10001,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260926_12_00_39.xlsx",
+      "sha256": "a6849f437598adcacda966dfe23f3d78fced074d21f32703f4e837026ffdcebe",
+      "contexto": "Base Maestra corte nominal 2026-09-26T12:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10021,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260927_12_00_38.xlsx",
+      "sha256": "8724e0990b70536b71a5bb41e677313d7312ac01248ba2ac8c903bd9b1889568",
+      "contexto": "Base Maestra corte nominal 2026-09-27T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10022,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260928_12_00_37.xlsx",
+      "sha256": "24d873912dff6609b6e7a892ee3a4afb911bed3a299eecf639f218e7dd8dd3a2",
+      "contexto": "Base Maestra corte nominal 2026-09-28T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10023,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260929_12_00_39.xlsx",
+      "sha256": "30e71b2ba2b17efa9f6693867eeea1202451c0a6cff9e1c530af7e8abc7af191",
+      "contexto": "Base Maestra corte nominal 2026-09-29T12:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10048,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260930_12_00_38.xlsx",
+      "sha256": "e83245032869e78bd773e4ca5604bd3adb018183e130de5fcc1e767e1de7c3d9",
+      "contexto": "Base Maestra corte nominal 2026-09-30T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10077,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261001_12_00_38.xlsx",
+      "sha256": "a83336aa4b0f03f0294f0b58fc498505146b0ece45ac2618ac6b98ee493f5f3c",
+      "contexto": "Base Maestra corte nominal 2026-10-01T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10098,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261002_12_00_40.xlsx",
+      "sha256": "1cecc3771e82bf869152ebb6ac9c62bfdb5f6e4868dea6185e3adbbaee70d16e",
+      "contexto": "Base Maestra corte nominal 2026-10-02T12:00:40",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10106,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261003_12_00_39.xlsx",
+      "sha256": "75172898c82a9606da975e93bdd612c0134a39891aa14fa7d21cfc40c664dfdc",
+      "contexto": "Base Maestra corte nominal 2026-10-03T12:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10132,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261004_12_00_36.xlsx",
+      "sha256": "0492f9c86324e6792f4455af45c3e8e7957f970e6e023762747cadf48abf91ff",
+      "contexto": "Base Maestra corte nominal 2026-10-04T12:00:36",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10137,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261005_12_00_40.xlsx",
+      "sha256": "26ba47b56b2d564f6940d5d6041d5f2250476747f5282bd001f55b1ae65df2dd",
+      "contexto": "Base Maestra corte nominal 2026-10-05T12:00:40",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10141,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261006_12_00_38.xlsx",
+      "sha256": "e9be7560e1f59c02bfedd7e46353c9d3c65449ade1d5bdc4bf2992b2e52d0083",
+      "contexto": "Base Maestra corte nominal 2026-10-06T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10168,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261007_12_00_40.xlsx",
+      "sha256": "e90348852914fac237b511d3a9823e6844137f8b64b8095011f2b2c6b51bbb63",
+      "contexto": "Base Maestra corte nominal 2026-10-07T12:00:40",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10184,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261008_12_00_39.xlsx",
+      "sha256": "0c6809814d8e1e4b4fb9fe92e7c5fa4adce6f65d26f6d8d68ba25ab257715757",
+      "contexto": "Base Maestra corte nominal 2026-10-08T12:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10209,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261009_12_00_37.xlsx",
+      "sha256": "f64617eef87bafa16c0497d23b8c4d2232259d37150118e3ba7f9646de510ad5",
+      "contexto": "Base Maestra corte nominal 2026-10-09T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10230,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261010_12_00_38.xlsx",
+      "sha256": "598a690b01187656235611b0e38ebe3e537e0a15be97c0e556b09f3b43b4a2f9",
+      "contexto": "Base Maestra corte nominal 2026-10-10T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10249,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261011_12_00_41.xlsx",
+      "sha256": "a643f0183b135a44216df24f32db36a9ab0281b772f031b24d8840dbb346d19b",
+      "contexto": "Base Maestra corte nominal 2026-10-11T12:00:41",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10255,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261012_12_00_37.xlsx",
+      "sha256": "61e747841d01cbefee006bdb8738399e2dd0e71db69df54621758de8bbab475c",
+      "contexto": "Base Maestra corte nominal 2026-10-12T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10257,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261013_12_00_41.xlsx",
+      "sha256": "9ab5c2ca1f784e86667562af6a02a5822feb12c44dabd52b4cfe256320934db1",
+      "contexto": "Base Maestra corte nominal 2026-10-13T12:00:41",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10259,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261014_12_00_40.xlsx",
+      "sha256": "753faf2723428bcf8021fb1531975cc8acfe10645ee403fa59f1a6665c0ae34c",
+      "contexto": "Base Maestra corte nominal 2026-10-14T12:00:40",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10287,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261015_12_00_39.xlsx",
+      "sha256": "2fe90bf79f71493ae7708061ddb6852f54f974936f1590c2c0f02fa8774a7e49",
+      "contexto": "Base Maestra corte nominal 2026-10-15T12:00:39",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10314,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261016_12_00_42.xlsx",
+      "sha256": "f678a0f258a3022381abc786b4acac11c8fb4ee60f2192c05eab8eadccd202d6",
+      "contexto": "Base Maestra corte nominal 2026-10-16T12:00:42",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10341,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261017_12_00_37.xlsx",
+      "sha256": "a55215a9705a58aa67a9d5eb712e9bd431e70b71ea21b01602485bdc368f8b1f",
+      "contexto": "Base Maestra corte nominal 2026-10-17T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10368,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261018_12_00_38.xlsx",
+      "sha256": "83e58075b0560f4238fbe47cdffaa8e9ffd79ebe6a0404e5ff24c39a969dfe84",
+      "contexto": "Base Maestra corte nominal 2026-10-18T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10372,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261019_12_00_37.xlsx",
+      "sha256": "c3ff057ea34dea8f19756355ed0b1b4d63ece4702af7c4e0bc4407fd386e4d8d",
+      "contexto": "Base Maestra corte nominal 2026-10-19T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10380,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261020_12_00_38.xlsx",
+      "sha256": "73da62fc7e1c3033ef8173b34c6ffc158d14b585196e6611d825060ad02c9d80",
+      "contexto": "Base Maestra corte nominal 2026-10-20T12:00:38",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10405,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261021_12_00_37.xlsx",
+      "sha256": "2a3bfcc1061ed049a46f3c0a8e2dfe98c0baec28f4a180fa5ebf6355368dd477",
+      "contexto": "Base Maestra corte nominal 2026-10-21T12:00:37",
+      "hojas": [
+        {
+          "sheet_xml": "xl/worksheets/sheet1.xml",
+          "data_rows": 10431,
+          "matched_rows": 19
+        }
+      ],
+      "personas_20_encontradas": 18,
+      "personas_14_encontradas": 14,
+      "personas_14_alguna_VIGENTE": 14,
+      "pendientes_con_CODCLI_explicito": 0,
+      "original_intacto": true,
+      "estado_revision": "Cruce exacto ejecutado; conteos observados B/C."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL.xlsx",
+      "sha256": "65fd5a665849b0df3ca32ea23bba69f5c1b1a760c250b1788a6886a2dd20effd",
+      "contexto": "Preparación institucional histórica 2025",
+      "hojas": [],
+      "personas_20_encontradas": null,
+      "personas_14_encontradas": null,
+      "personas_14_alguna_VIGENTE": null,
+      "pendientes_con_CODCLI_explicito": null,
+      "original_intacto": true,
+      "estado_revision": "Encabezados inspeccionados; ninguna hoja con pareja CODCLI y RUT. No permite cruce por CODCLI."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "sha256": "57da408869681bdaa7eb18ee13ea482bad377ea9c58dc10afdb5ff34aeebbd09",
+      "contexto": "Preparación institucional histórica 2025",
+      "hojas": [],
+      "personas_20_encontradas": null,
+      "personas_14_encontradas": null,
+      "personas_14_alguna_VIGENTE": null,
+      "pendientes_con_CODCLI_explicito": null,
+      "original_intacto": true,
+      "estado_revision": "Encabezados inspeccionados; ninguna hoja con pareja CODCLI y RUT. No permite cruce por CODCLI."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "sha256": "64d955975c6b613a205a6d98a1d5589b418d5e4c463362a4b7e212b4722e9c09",
+      "contexto": "Preparación institucional histórica 2025",
+      "hojas": [],
+      "personas_20_encontradas": null,
+      "personas_14_encontradas": null,
+      "personas_14_alguna_VIGENTE": null,
+      "pendientes_con_CODCLI_explicito": null,
+      "original_intacto": true,
+      "estado_revision": "Encabezados inspeccionados; ninguna hoja con pareja CODCLI y RUT. No permite cruce por CODCLI."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_367_.xlsx",
+      "sha256": "cf4e65ef85d144cf6f591aa1c9e861d61f56ed7cf1ecc30ef68ac63bf277fa59",
+      "contexto": "Preparación institucional histórica 2025",
+      "hojas": [],
+      "personas_20_encontradas": null,
+      "personas_14_encontradas": null,
+      "personas_14_alguna_VIGENTE": null,
+      "pendientes_con_CODCLI_explicito": null,
+      "original_intacto": true,
+      "estado_revision": "Encabezados inspeccionados; ninguna hoja con pareja CODCLI y RUT. No permite cruce por CODCLI."
+    }
+  ],
+  "12112_relocalizado": {
+    "ruta_suministrada_ausente": "/Users/alexi/Desktop/Caracterizacion_2026-10-20_2027_P1_082504/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+    "ruta_leida": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-20/2027_P1_082351/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+    "hash_identico_gobernado": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471"
+  },
+  "comparaciones_llave_matricula": [
+    {
+      "desde": "10246",
+      "hasta": "11998",
+      "llaves_comunes": 14,
+      "solo_fuente_inicial": 1,
+      "solo_fuente_final": 1,
+      "pares_estado_observados": {
+        "VIGENTE → VIGENTE": 13,
+        "ELIMINADO → ELIMINADO": 1
+      },
+      "clasificacion": "B/C; no prueba fecha exacta de cambio"
+    },
+    {
+      "desde": "11998",
+      "hasta": "12112",
+      "llaves_comunes": 15,
+      "solo_fuente_inicial": 0,
+      "solo_fuente_final": 0,
+      "pares_estado_observados": {
+        "VIGENTE → VIGENTE": 14,
+        "ELIMINADO → ELIMINADO": 1
+      },
+      "clasificacion": "B/C; no prueba fecha exacta de cambio"
+    }
+  ],
+  "busqueda_dos_pendientes": {
+    "personas_resueltas_adicionales": 0,
+    "personas_aun_pendientes": 2,
+    "fuentes_distintas_adicionales_revisadas": 64,
+    "copias_identicas_no_releidas": 86,
+    "errores_lectura": [],
+    "metodo": "RUT exacto proveniente del puente explícito N_DOC–RUT; CODCLI observado en la misma fila. Sin cruces aproximados ni decodificar patrón.",
+    "por_carrera": [
+      {
+        "carrera": "INGENIERIA EN INFORMATICA",
+        "CODCLI_encontrado": false,
+        "cantidad_CODCLI": 0
+      },
+      {
+        "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+        "CODCLI_encontrado": false,
+        "cantidad_CODCLI": 0
+      }
+    ],
+    "fuentes_adicionales_con_cruce_CODCLI_RUT": 60,
+    "fuentes_adicionales_sin_esquema_comparable": [
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL.xlsx",
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_367_.xlsx"
+    ],
+    "resultado": "Sin nuevas correspondencias explícitas. Dos personas conservan CODCLI pendiente, sin acreditación de deserción."
+  },
+  "identificadas_final": 18,
+  "pendientes_final": 2,
+  "CODCLI_final_distintos": 19,
+  "cierres_parciales": [
+    {
+      "fuente": "T2_2026",
+      "llave": "CODCLI exacto con puente documental explícito",
+      "tiene_CODCLI": true,
+      "personas_con_llave_para_buscar": 18,
+      "personas_de_20_encontradas": 0,
+      "no_localizadas_entre_personas_con_llave": 18,
+      "sin_CODCLI_para_buscar": 2,
+      "estados_UMAS_observados": {},
+      "clasificacion": "B/C presencia; E fecha/cobertura del cierre no acreditadas"
+    },
+    {
+      "fuente": "T3_2026",
+      "llave": "CODCLI exacto con puente documental explícito",
+      "tiene_CODCLI": true,
+      "personas_con_llave_para_buscar": 18,
+      "personas_de_20_encontradas": 0,
+      "no_localizadas_entre_personas_con_llave": 18,
+      "sin_CODCLI_para_buscar": 2,
+      "estados_UMAS_observados": {},
+      "clasificacion": "B/C presencia; E fecha/cobertura del cierre no acreditadas"
+    }
+  ],
+  "pendientes_E": [
+    "Confirmar fecha efectiva del estado, cobertura completa y filtros del extractor de cada cierre.",
+    "Acreditar regla intermedia propia, sin convertir ESTADOACADEMICO en VIG SIES.",
+    "Recuperar correspondencia institucional explícita de los dos documentos pendientes si la búsqueda continúa sin resultado.",
+    "Definir semántica FECHAMATRICULA primera/renovación, historial de estados y zona horaria de Base Maestra."
+  ],
+  "privacidad": {
+    "datos_individuales_persistidos": false,
+    "salidas_solo_agregadas": true,
+    "fuentes_sin_modificar": true,
+    "git_sin_modificar_por_esta_tarea": true
+  },
+  "conciliacion_20": {
+    "personas": 20,
+    "identificadas": 18,
+    "pendientes": 2,
+    "CODCLI_distintos_recuperados": 19,
+    "personas_con_1_CODCLI": 17,
+    "personas_con_2_CODCLI": 1,
+    "personas_recuperadas_solo_CODCLI_por_documento_cambiado": 1,
+    "con_alguna_VIGENTE_12112": 14,
+    "solo_ELIMINADO_12112": 3,
+    "solo_SUSPENDIDO_12112": 1,
+    "sumas_verificadas": true,
+    "denominador_intacto": 1150
+  },
+  "seguimiento_master_nominal": {
+    "fuentes": 58,
+    "desde": "2026-08-25T20:40:34",
+    "hasta": "2026-10-21T12:00:37",
+    "personas_20_encontradas_en_cada_fuente": 18,
+    "persona_del_grupo14_con_estado_distinto_entre_extracciones": 1,
+    "cortes_con_13_de_14_personas_alguna_VIGENTE": 15,
+    "cortes_con_14_de_14_personas_alguna_VIGENTE": 43,
+    "ultima_observacion_nominal_13": "2026-09-08T12:00:36",
+    "primera_observacion_nominal_14": "2026-09-09T12:00:37",
+    "limite": "Cambio del conjunto de estados observados por persona. No identifica fecha efectiva ni prueba cambio de estado en una misma matrícula: la combinación año/período cambia. Fechas nominales y cobertura del extractor no acreditan cierres."
+  },
+  "QA_adicional": {
+    "dictamen": "OK_CON_PENDIENTES_E",
+    "58_hashes_y_conteos_filas_concuerdan_inventario_previo": true,
+    "inventario_master": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/auditoria_datos_alumnos/20261021_091039_506207/manifest.json",
+      "sha256": "4ca24688c4bf5b70b365e09b45d9da6bd598073f5169263eebc6c59c3eaa8066"
+    },
+    "fuentes_adicionales_sha256_revisados_nuevamente": true,
+    "errores_lectura": [],
+    "no_se_ejecutaron_pipelines": true,
+    "sin_datos_individuales_en_salidas": true
+  },
+  "fases_hitos": [
+    {
+      "fase": 2,
+      "hito": 1,
+      "estado": "Completado",
+      "evidencia": "14 personas, 15 matrículas en cada respaldo; sin colisiones de llave completa."
+    },
+    {
+      "fase": 2,
+      "hito": 2,
+      "estado": "Completado con limitaciones E",
+      "evidencia": "10246: 13 personas con alguna VIGENTE; 11998 y 12112: 14. Comparación por llave completa: 14 compartidas julio→octubre, 15 octubre→octubre."
+    },
+    {
+      "fase": 2,
+      "hito": 3,
+      "estado": "Conclusión documentada E",
+      "evidencia": "No se acreditó estado efectivo de cierre ni nueva retención. Estados UMAS no se transformaron en VIG SIES."
+    },
+    {
+      "fase": 3,
+      "hito": 1,
+      "estado": "Completado",
+      "evidencia": "64 fuentes adicionales: 60 permiten cruce exacto y 4 sin pareja CODCLI/RUT. 58 cortes Base Maestra, 2 extractos extra y 4 respaldos 2025."
+    },
+    {
+      "fase": 3,
+      "hito": 2,
+      "estado": "Completado con pendientes E",
+      "evidencia": "No se recuperaron nuevos CODCLI. Faltan dos correspondencias institucionales explícitas."
+    },
+    {
+      "fase": 3,
+      "hito": 3,
+      "estado": "Completado",
+      "evidencia": "20 = 18 identificadas + 2 pendientes; 19 CODCLI para 18 personas. Denominador 1.150 intacto."
+    }
+  ],
+  "control_colisiones_conjunto_P_R": {
+    "fecha": "2026-10-21T13:36:03.978552-03:00",
+    "clasificacion": "B fuentes observadas; C control exacto de conjuntos; E vigencia/cobertura de cierre pendiente",
+    "cohorte": 2025,
+    "denominador_fijo": 1150,
+    "personas_R_incluidas": 1130,
+    "RUT_R_distintos": 1130,
+    "personas_P_objetivo": 20,
+    "personas_P_con_CODCLI": 18,
+    "CODCLI_P_distintos": 19,
+    "identificadores_documentados_P_distintos": 24,
+    "interseccion_RUT_P_R": 0,
+    "interseccion_CODCLI_P_R_union_fuentes": 0,
+    "por_fuente": {
+      "11998": {
+        "personas_R_presentes_por_RUT_exacto": 1130,
+        "personas_P_presentes_por_CODCLI_documentado": 18,
+        "CODCLI_interseccion_P_R": 0,
+        "filas_R_con_CODCLI_del_grupo_P": 0,
+        "suma_personas_R_y_P_sin_solapamiento": 1148
+      },
+      "10246": {
+        "personas_R_presentes_por_RUT_exacto": 1130,
+        "personas_P_presentes_por_CODCLI_documentado": 18,
+        "CODCLI_interseccion_P_R": 0,
+        "filas_R_con_CODCLI_del_grupo_P": 0,
+        "suma_personas_R_y_P_sin_solapamiento": 1148
+      },
+      "12112": {
+        "personas_R_presentes_por_RUT_exacto": 1130,
+        "personas_P_presentes_por_CODCLI_documentado": 18,
+        "CODCLI_interseccion_P_R": 0,
+        "filas_R_con_CODCLI_del_grupo_P": 0,
+        "suma_personas_R_y_P_sin_solapamiento": 1148
+      },
+      "respaldo_2025_2": {
+        "personas_R_presentes_por_RUT_exacto": 1101,
+        "personas_P_presentes_por_CODCLI_documentado": 16,
+        "CODCLI_interseccion_P_R": 0,
+        "filas_R_con_CODCLI_del_grupo_P": 0,
+        "suma_personas_R_y_P_sin_solapamiento": 1117
+      },
+      "promedios_2071": {
+        "personas_R_presentes_por_RUT_exacto": 0,
+        "personas_P_presentes_por_CODCLI_documentado": 3,
+        "CODCLI_interseccion_P_R": 0,
+        "filas_R_con_CODCLI_del_grupo_P": 0,
+        "suma_personas_R_y_P_sin_solapamiento": 3
+      }
+    },
+    "sin_solapamiento": true,
+    "alcance": "Valida suma de presencia observada, no retención. La suma 1.148 solo aplica a las fuentes donde se comprobaron 1.130 R y 18 P presentes. No suma 18 al denominador 1.150. Sin exportar identificadores.",
+    "suma_1148_valida_10246_11998_12112": true
+  }
+}

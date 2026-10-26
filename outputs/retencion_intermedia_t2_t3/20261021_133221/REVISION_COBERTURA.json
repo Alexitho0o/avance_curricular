@@ -1,0 +1,1431 @@
+{
+  "alcance": "Revisión de cobertura, fechas, hojas y metadatos; solo resultados agregados. No se recalculan aquí cruces individuales ni tasas.",
+  "clasificaciones": {
+    "A": "No se introduce definición oficial nueva de tasa intermedia. La regla anual no acredita T2/T3.",
+    "B": "Contenido, hash y metadatos observados",
+    "C": "Perfiles y comparación determinística de hojas, contando todas las filas",
+    "D": "Preservar fuentes, denominadores y módulo activo",
+    "E": "Fecha efectiva, cobertura y regla intermedia no acreditadas"
+  },
+  "cierres": [
+    {
+      "cierre": "2025-T2",
+      "cohorte": 2024,
+      "denominador_fijo": 558,
+      "archivo": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "hoja": "T2_2025",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "presencias_previamente_comprobadas_conservadas": 1,
+      "estado_observado_vigente_previo": 1,
+      "vigentes_acreditados_al_cierre": null,
+      "fecha_efectiva_acreditada": null,
+      "tasa": "Pendiente",
+      "motivo": "225 filas limitadas a ANOINGRESO=2025 y PERIODOINGRESO=2; falta matrícula completa de todas las cohortes incluida 2024, fecha efectiva y estado histórico del cierre.",
+      "clasificacion_presencias": "B/C",
+      "clasificacion_cierre": "E",
+      "filtros_extractor_acreditados": false,
+      "estado_al_cierre_acreditado": false,
+      "cobertura_completa_acreditada": false
+    },
+    {
+      "cierre": "2025-T3",
+      "cohorte": 2024,
+      "denominador_fijo": 558,
+      "archivo": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "hoja": "T3_2025",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "presencias_previamente_comprobadas_conservadas": 325,
+      "estado_observado_vigente_previo": 317,
+      "vigentes_acreditados_al_cierre": null,
+      "fecha_efectiva_acreditada": null,
+      "tasa": "Pendiente",
+      "motivo": "3.081 filas de ANOMATRICULA=2025 y varios años/períodos de ingreso; población parcial según registro previo. Falta certificación de completitud, fecha efectiva y estados históricos. El filtro guardado es ingreso 2025-T3 y VIGENTE; se revisaron todas las filas.",
+      "clasificacion_presencias": "B/C",
+      "clasificacion_cierre": "E",
+      "filtros_extractor_acreditados": false,
+      "estado_al_cierre_acreditado": false,
+      "cobertura_completa_acreditada": false
+    },
+    {
+      "cierre": "2026-T2",
+      "cohorte": 2025,
+      "denominador_fijo": 1150,
+      "archivo": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "presencias_previamente_comprobadas_conservadas": 2,
+      "estado_observado_vigente_previo": null,
+      "vigentes_acreditados_al_cierre": null,
+      "fecha_efectiva_acreditada": null,
+      "tasa": "Pendiente",
+      "motivo": "528 filas limitadas a ingreso 2026-T2, sin ESTADOACADEMICO. Falta cohorte 2025 completa, fecha efectiva y estado del cierre. 10246 es respaldo más amplio, pero congelamiento/corrida no certifican el cierre.",
+      "clasificacion_presencias": "B/C",
+      "clasificacion_cierre": "E",
+      "filtros_extractor_acreditados": false,
+      "estado_al_cierre_acreditado": false,
+      "cobertura_completa_acreditada": false
+    },
+    {
+      "cierre": "2026-T3",
+      "cohorte": 2025,
+      "denominador_fijo": 1150,
+      "archivo": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "hoja": "Base",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "presencias_previamente_comprobadas_conservadas": 0,
+      "estado_observado_vigente_previo": null,
+      "vigentes_acreditados_al_cierre": null,
+      "fecha_efectiva_acreditada": null,
+      "tasa": "Pendiente",
+      "motivo": "557 filas Base, todas PERIODOINGRESO=3, con ingresos 2024/2025/2026. Falta matrícula completa de cohorte 2025 en todos los ingresos, fecha y estado del cierre. 11998 es respaldo más amplio de corrida posterior, sin snapshot efectivo acreditado.",
+      "clasificacion_presencias": "B/C",
+      "clasificacion_cierre": "E",
+      "filtros_extractor_acreditados": false,
+      "estado_al_cierre_acreditado": false,
+      "cobertura_completa_acreditada": false
+    }
+  ],
+  "fuentes_perfiladas": [
+    {
+      "id": "T2_2025",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sheet": "T2_2025",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "hash_validado": true,
+      "hojas": [
+        {
+          "nombre": "Hoja2",
+          "estado": "hidden",
+          "max_row": 16,
+          "max_col": 4
+        },
+        {
+          "nombre": "Hoja1",
+          "estado": "hidden",
+          "max_row": 226,
+          "max_col": 63
+        },
+        {
+          "nombre": "T2_2025",
+          "estado": "visible",
+          "max_row": 226,
+          "max_col": 62
+        }
+      ],
+      "headers": [
+        "NOMBRE_L",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA",
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "JORNADA",
+        "RUT",
+        "RUT2",
+        "DV",
+        "NOMBRE",
+        "SEXO",
+        "ESTADOCIVIL",
+        "FECHANACIMIENTO",
+        "DIRECCIONPROCEDENCIA",
+        "CIUDADPROCEDENCIA",
+        "COMUNAPROCEDENCIA",
+        "FONOPROCEDENCIA",
+        "DIRECCIONACTUAL",
+        "CIUDADACTUAL",
+        "COMUNAACTUAL",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "NACIONALIDAD",
+        "EMERGENCIA",
+        "FONOEMERGENCIA",
+        "CODIGOCOLEGIO",
+        "COLEGIO",
+        "MODALIDAD",
+        "DESCRIPCION",
+        "CIUDADCOLEGIO",
+        "COMUNACOLEGIO",
+        "CATEGORIA",
+        "VIASDEADMISION",
+        "MOTIVODESELECCION",
+        "MEDIOSDEINFORMACION",
+        "VIACONSULTA",
+        "NOMBREUNIVERSIDAD",
+        "CARRERARANTERIOR",
+        "RUTRESPONSABLEFINANCIERO",
+        "NOMBRERESPONSABLEFINANCIERO",
+        "CODIGOCARRERA",
+        "EMPRESA",
+        "ACTIVIDAD",
+        "DIRECCION_EMPRESA",
+        "CIUDAD_EMPRESA",
+        "COMUNA_EMPRESA",
+        "CANTIDADDEHIJOS",
+        "TRAMODERENTA",
+        "NOMBREEMPRESA",
+        "ANOEGRESOENSENANZAMEDIA",
+        "NOTAENSENANZAMEDIA",
+        "RUT EJECUTIVO",
+        "NOMBRE EJECUTIVO",
+        "ESTADOACADEMICO",
+        "SITUACION",
+        "MATRICULA",
+        "NIVEL",
+        "ARANCELREAL",
+        "CON_FIRMA",
+        "FECHAFIRMA"
+      ],
+      "header_row": 1,
+      "filas": 225,
+      "distribuciones": {
+        "ANOINGRESO": {
+          "2025": 225
+        },
+        "PERIODOINGRESO": {
+          "2": 225
+        },
+        "ANOMATRICULA": {
+          "2025": 225
+        },
+        "PERIODOMATRICULA": {
+          "2": 225
+        },
+        "ESTADOACADEMICO": {
+          "ELIMINADO": 25,
+          "VIGENTE": 200
+        }
+      },
+      "rut_distintos_incluido_vacio": 222,
+      "duplicados_exactos_excedentes": 0,
+      "llaves_candidatas_repetidas": 0,
+      "filas_excedentes_llave_candidata": 0,
+      "campos_fecha_no_personales": {
+        "FECHAMATRICULA": {
+          "no_vacios": 225,
+          "min_lexical": "01-07-2025",
+          "max_lexical": "31-05-2025"
+        },
+        "FECHAFIRMA": {
+          "no_vacios": 200,
+          "min_lexical": "01-07-2025",
+          "max_lexical": "31-05-2025"
+        }
+      }
+    },
+    {
+      "id": "T3_2025",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sheet": "T3_2025",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "hash_validado": true,
+      "hojas": [
+        {
+          "nombre": "T3_2025",
+          "estado": "visible",
+          "max_row": 3082,
+          "max_col": 63
+        },
+        {
+          "nombre": "Hoja2",
+          "estado": "hidden",
+          "max_row": 20,
+          "max_col": 3
+        },
+        {
+          "nombre": "Hoja3",
+          "estado": "hidden",
+          "max_row": 20,
+          "max_col": 3
+        },
+        {
+          "nombre": "T3",
+          "estado": "hidden",
+          "max_row": 112,
+          "max_col": 63
+        }
+      ],
+      "headers": [
+        "Número",
+        "CODCLI",
+        "CODCARPR",
+        "NOMBRE_L",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA",
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "JORNADA",
+        "RUT",
+        "NOMBRE",
+        "SEXO",
+        "ESTADOCIVIL",
+        "FECHANACIMIENTO",
+        "DIRECCIONPROCEDENCIA",
+        "CIUDADPROCEDENCIA",
+        "COMUNAPROCEDENCIA",
+        "FONOPROCEDENCIA",
+        "DIRECCIONACTUAL",
+        "CIUDADACTUAL",
+        "COMUNAACTUAL",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "NACIONALIDAD",
+        "EMERGENCIA",
+        "FONOEMERGENCIA",
+        "CODIGOCOLEGIO",
+        "COLEGIO",
+        "MODALIDAD",
+        "DESCRIPCION",
+        "CIUDADCOLEGIO",
+        "COMUNACOLEGIO",
+        "CATEGORIA",
+        "VIASDEADMISION",
+        "MOTIVODESELECCION",
+        "MEDIOSDEINFORMACION",
+        "VIACONSULTA",
+        "NOMBREUNIVERSIDAD",
+        "CARRERARANTERIOR",
+        "RUTRESPONSABLEFINANCIERO",
+        "NOMBRERESPONSABLEFINANCIERO",
+        "CODIGOCARRERA",
+        "EMPRESA",
+        "ACTIVIDAD",
+        "DIRECCION_EMPRESA",
+        "CIUDAD_EMPRESA",
+        "COMUNA_EMPRESA",
+        "CANTIDADDEHIJOS",
+        "TRAMODERENTA",
+        "NOMBREEMPRESA",
+        "ANOEGRESOENSENANZAMEDIA",
+        "NOTAENSENANZAMEDIA",
+        "RUT EJECUTIVO",
+        "NOMBRE EJECUTIVO",
+        "ESTADOACADEMICO",
+        "SITUACION",
+        "MATRICULA",
+        "NIVEL",
+        "ARANCELREAL",
+        "CON_FIRMA",
+        "FECHAFIRMA"
+      ],
+      "header_row": 1,
+      "filas": 3081,
+      "distribuciones": {
+        "ANOINGRESO": {
+          "2005": 1,
+          "2016": 3,
+          "2017": 1,
+          "2020": 6,
+          "2021": 17,
+          "2022": 66,
+          "2023": 269,
+          "2024": 500,
+          "2025": 2218
+        },
+        "PERIODOINGRESO": {
+          "1": 2523,
+          "2": 403,
+          "3": 155
+        },
+        "ANOMATRICULA": {
+          "2025": 3081
+        },
+        "PERIODOMATRICULA": {
+          "1": 2592,
+          "2": 333,
+          "3": 156
+        },
+        "ESTADOACADEMICO": {
+          "EGRESADO": 6,
+          "ELIMINADO": 497,
+          "SUSPENDIDO": 31,
+          "TITULADO": 74,
+          "VIGENTE": 2473
+        }
+      },
+      "rut_distintos_incluido_vacio": 2990,
+      "duplicados_exactos_excedentes": 0,
+      "llaves_candidatas_repetidas": 0,
+      "filas_excedentes_llave_candidata": 0,
+      "campos_fecha_no_personales": {
+        "FECHAMATRICULA": {
+          "no_vacios": 3081,
+          "min_lexical": "01-01-2025",
+          "max_lexical": "31-12-2024"
+        },
+        "FECHAFIRMA": {
+          "no_vacios": 2497,
+          "min_lexical": "01-01-2025",
+          "max_lexical": "31-12-2024"
+        }
+      }
+    },
+    {
+      "id": "T2_2026",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "hash_validado": true,
+      "hojas": [
+        {
+          "nombre": "Hoja2",
+          "estado": "visible",
+          "max_row": 50,
+          "max_col": 4
+        },
+        {
+          "nombre": "Hoja1",
+          "estado": "visible",
+          "max_row": 529,
+          "max_col": 19
+        }
+      ],
+      "headers": [
+        "Número",
+        "CODCLI",
+        "CODCARPR",
+        "NOMBRE_L",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA",
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "JORNADA",
+        "RUT",
+        "NOMBRE",
+        "SEXO",
+        "CATEGORIA",
+        "NOMBRES",
+        "APELLIDO PATERNO",
+        "APELLIDO MATERNO",
+        "MAIL",
+        "Mail_Inst"
+      ],
+      "header_row": 1,
+      "filas": 528,
+      "distribuciones": {
+        "ANOINGRESO": {
+          "2026": 528
+        },
+        "PERIODOINGRESO": {
+          "2": 528
+        },
+        "ANOMATRICULA": {
+          "2026": 528
+        },
+        "PERIODOMATRICULA": {
+          "2": 528
+        }
+      },
+      "rut_distintos_incluido_vacio": 527,
+      "duplicados_exactos_excedentes": 0,
+      "llaves_candidatas_repetidas": 0,
+      "filas_excedentes_llave_candidata": 0,
+      "campos_fecha_no_personales": {
+        "FECHAMATRICULA": {
+          "no_vacios": 528,
+          "min_lexical": "01-06-2026",
+          "max_lexical": "30-06-2026"
+        }
+      }
+    },
+    {
+      "id": "T3_2026",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sheet": "Base",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "hash_validado": true,
+      "hojas": [
+        {
+          "nombre": "Base",
+          "estado": "visible",
+          "max_row": 558,
+          "max_col": 66
+        },
+        {
+          "nombre": "Resumen2026_3",
+          "estado": "visible",
+          "max_row": 45,
+          "max_col": 7
+        },
+        {
+          "nombre": "2026_3",
+          "estado": "visible",
+          "max_row": 502,
+          "max_col": 68
+        },
+        {
+          "nombre": "Hoja2",
+          "estado": "hidden",
+          "max_row": 137,
+          "max_col": 1
+        }
+      ],
+      "headers": [
+        "CODCLI",
+        "CODCARPR",
+        "NOMBRE_L",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA",
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "JORNADA",
+        "RUT",
+        "NOMBRE",
+        "SEXO",
+        "ESTADOCIVIL",
+        "FECHANACIMIENTO",
+        "DIRECCIONPROCEDENCIA",
+        "CIUDADPROCEDENCIA",
+        "COMUNAPROCEDENCIA",
+        "FONOPROCEDENCIA",
+        "DIRECCIONACTUAL",
+        "CIUDADACTUAL",
+        "COMUNAACTUAL",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "NACIONALIDAD",
+        "EMERGENCIA",
+        "FONOEMERGENCIA",
+        "CODIGOCOLEGIO",
+        "COLEGIO",
+        "MODALIDAD",
+        "DESCRIPCION",
+        "CIUDADCOLEGIO",
+        "COMUNACOLEGIO",
+        "CATEGORIA",
+        "VIASDEADMISION",
+        "MOTIVODESELECCION",
+        "MEDIOSDEINFORMACION",
+        "VIACONSULTA",
+        "NOMBREUNIVERSIDAD",
+        "CARRERARANTERIOR",
+        "RUTRESPONSABLEFINANCIERO",
+        "NOMBRERESPONSABLEFINANCIERO",
+        "CODIGOCARRERA",
+        "EMPRESA",
+        "ACTIVIDAD",
+        "DIRECCION_EMPRESA",
+        "CIUDAD_EMPRESA",
+        "COMUNA_EMPRESA",
+        "CANTIDADDEHIJOS",
+        "TRAMODERENTA",
+        "NOMBREEMPRESA",
+        "ANOEGRESOENSENANZAMEDIA",
+        "NOTAENSENANZAMEDIA",
+        "RUT EJECUTIVO",
+        "NOMBRE EJECUTIVO",
+        "ESTADOACADEMICO",
+        "SITUACION",
+        "MATRICULA",
+        "NIVEL",
+        "ARANCELREAL",
+        "CON_FIRMA",
+        "FECHAFIRMA",
+        "SEDE",
+        "NOMBRES",
+        "APELLIDO PATERNO",
+        "APELLIDO MATERNO"
+      ],
+      "header_row": 1,
+      "filas": 557,
+      "distribuciones": {
+        "ANOINGRESO": {
+          "2024": 22,
+          "2025": 34,
+          "2026": 501
+        },
+        "PERIODOINGRESO": {
+          "3": 557
+        },
+        "ANOMATRICULA": {
+          "2026": 557
+        },
+        "PERIODOMATRICULA": {
+          "1": 2,
+          "3": 555
+        },
+        "ESTADOACADEMICO": {
+          "ELIMINADO": 69,
+          "VIGENTE": 488
+        }
+      },
+      "rut_distintos_incluido_vacio": 545,
+      "duplicados_exactos_excedentes": 0,
+      "llaves_candidatas_repetidas": 0,
+      "filas_excedentes_llave_candidata": 0,
+      "campos_fecha_no_personales": {
+        "FECHAMATRICULA": {
+          "no_vacios": 557,
+          "min_lexical": "01-07-2026",
+          "max_lexical": "31-08-2026"
+        },
+        "FECHAFIRMA": {
+          "no_vacios": 550,
+          "min_lexical": "01-07-2026",
+          "max_lexical": "31-08-2026"
+        }
+      }
+    },
+    {
+      "id": "respaldo_10246",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "hash_validado": true,
+      "hojas": [
+        {
+          "nombre": "Hoja1",
+          "estado": "visible",
+          "max_row": 14205,
+          "max_col": 67
+        }
+      ],
+      "headers": [
+        "Número",
+        "CODCLI",
+        "CODCARPR",
+        "NOMBRE_L",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA",
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "JORNADA",
+        "RUT",
+        "NOMBRE",
+        "SEXO",
+        "ESTADOCIVIL",
+        "FECHANACIMIENTO",
+        "DIRECCIONPROCEDENCIA",
+        "CIUDADPROCEDENCIA",
+        "COMUNAPROCEDENCIA",
+        "FONOPROCEDENCIA",
+        "DIRECCIONACTUAL",
+        "CIUDADACTUAL",
+        "COMUNAACTUAL",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "NACIONALIDAD",
+        "EMERGENCIA",
+        "FONOEMERGENCIA",
+        "CODIGOCOLEGIO",
+        "COLEGIO",
+        "MODALIDAD",
+        "DESCRIPCION",
+        "CIUDADCOLEGIO",
+        "COMUNACOLEGIO",
+        "CATEGORIA",
+        "VIASDEADMISION",
+        "MOTIVODESELECCION",
+        "MEDIOSDEINFORMACION",
+        "VIACONSULTA",
+        "NOMBREUNIVERSIDAD",
+        "CARRERARANTERIOR",
+        "RUTRESPONSABLEFINANCIERO",
+        "NOMBRERESPONSABLEFINANCIERO",
+        "CODIGOCARRERA",
+        "EMPRESA",
+        "ACTIVIDAD",
+        "DIRECCION_EMPRESA",
+        "CIUDAD_EMPRESA",
+        "COMUNA_EMPRESA",
+        "CANTIDADDEHIJOS",
+        "TRAMODERENTA",
+        "NOMBREEMPRESA",
+        "ANOEGRESOENSENANZAMEDIA",
+        "NOTAENSENANZAMEDIA",
+        "RUT EJECUTIVO",
+        "NOMBRE EJECUTIVO",
+        "ESTADOACADEMICO",
+        "SITUACION",
+        "MATRICULA",
+        "NIVEL",
+        "ARANCELREAL",
+        "CON_FIRMA",
+        "FECHAFIRMA",
+        "SEDE",
+        "NOMBRES",
+        "APELLIDO PATERNO",
+        "APELLIDO MATERNO"
+      ],
+      "header_row": 1,
+      "filas": 14204,
+      "distribuciones": {
+        "ANOINGRESO": {
+          "1989": 1,
+          "2000": 3,
+          "2002": 3,
+          "2003": 5,
+          "2004": 3,
+          "2005": 8,
+          "2006": 14,
+          "2007": 14,
+          "2008": 28,
+          "2009": 47,
+          "2010": 70,
+          "2011": 138,
+          "2012": 228,
+          "2013": 652,
+          "2014": 523,
+          "2015": 429,
+          "2016": 411,
+          "2017": 573,
+          "2018": 505,
+          "2019": 541,
+          "2020": 536,
+          "2021": 656,
+          "2022": 593,
+          "2023": 982,
+          "2024": 1204,
+          "2025": 2239,
+          "2026": 3798
+        },
+        "PERIODOINGRESO": {
+          "1": 11871,
+          "2": 1992,
+          "3": 341
+        },
+        "ANOMATRICULA": {
+          "2013": 483,
+          "2014": 442,
+          "2015": 514,
+          "2016": 485,
+          "2017": 525,
+          "2018": 503,
+          "2019": 629,
+          "2020": 500,
+          "2021": 572,
+          "2022": 568,
+          "2023": 602,
+          "2024": 1460,
+          "2025": 1891,
+          "2026": 5030
+        },
+        "PERIODOMATRICULA": {
+          "1": 12264,
+          "2": 1595,
+          "3": 345
+        },
+        "ESTADOACADEMICO": {
+          "EGRESADO": 134,
+          "ELIMINADO": 6497,
+          "SUSPENDIDO": 162,
+          "TITULADO": 3009,
+          "VIGENTE": 4402
+        }
+      },
+      "rut_distintos_incluido_vacio": 12171,
+      "duplicados_exactos_excedentes": 0,
+      "llaves_candidatas_repetidas": 1,
+      "filas_excedentes_llave_candidata": 1,
+      "campos_fecha_no_personales": {
+        "FECHAMATRICULA": {
+          "no_vacios": 14204,
+          "min_lexical": "01-01-2022",
+          "max_lexical": "31-12-2025"
+        },
+        "FECHAFIRMA": {
+          "no_vacios": 4738,
+          "min_lexical": "01-01-2024",
+          "max_lexical": "31-12-2025"
+        }
+      }
+    },
+    {
+      "id": "respaldo_11998",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "hash_validado": true,
+      "hojas": [
+        {
+          "nombre": "Hoja1",
+          "estado": "visible",
+          "max_row": 15046,
+          "max_col": 67
+        }
+      ],
+      "headers": [
+        "Número",
+        "CODCLI",
+        "CODCARPR",
+        "NOMBRE_L",
+        "ANOMATRICULA",
+        "PERIODOMATRICULA",
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "JORNADA",
+        "RUT",
+        "NOMBRE",
+        "SEXO",
+        "ESTADOCIVIL",
+        "FECHANACIMIENTO",
+        "DIRECCIONPROCEDENCIA",
+        "CIUDADPROCEDENCIA",
+        "COMUNAPROCEDENCIA",
+        "FONOPROCEDENCIA",
+        "DIRECCIONACTUAL",
+        "CIUDADACTUAL",
+        "COMUNAACTUAL",
+        "FONOACTUAL",
+        "MAIL",
+        "Mail_Inst",
+        "NACIONALIDAD",
+        "EMERGENCIA",
+        "FONOEMERGENCIA",
+        "CODIGOCOLEGIO",
+        "COLEGIO",
+        "MODALIDAD",
+        "DESCRIPCION",
+        "CIUDADCOLEGIO",
+        "COMUNACOLEGIO",
+        "CATEGORIA",
+        "VIASDEADMISION",
+        "MOTIVODESELECCION",
+        "MEDIOSDEINFORMACION",
+        "VIACONSULTA",
+        "NOMBREUNIVERSIDAD",
+        "CARRERARANTERIOR",
+        "RUTRESPONSABLEFINANCIERO",
+        "NOMBRERESPONSABLEFINANCIERO",
+        "CODIGOCARRERA",
+        "EMPRESA",
+        "ACTIVIDAD",
+        "DIRECCION_EMPRESA",
+        "CIUDAD_EMPRESA",
+        "COMUNA_EMPRESA",
+        "CANTIDADDEHIJOS",
+        "TRAMODERENTA",
+        "NOMBREEMPRESA",
+        "ANOEGRESOENSENANZAMEDIA",
+        "NOTAENSENANZAMEDIA",
+        "RUT EJECUTIVO",
+        "NOMBRE EJECUTIVO",
+        "ESTADOACADEMICO",
+        "SITUACION",
+        "MATRICULA",
+        "NIVEL",
+        "ARANCELREAL",
+        "CON_FIRMA",
+        "FECHAFIRMA",
+        "SEDE",
+        "NOMBRES",
+        "APELLIDO PATERNO",
+        "APELLIDO MATERNO"
+      ],
+      "header_row": 1,
+      "filas": 15045,
+      "distribuciones": {
+        "ANOINGRESO": {
+          "1989": 1,
+          "2000": 3,
+          "2002": 3,
+          "2003": 5,
+          "2004": 3,
+          "2005": 8,
+          "2006": 14,
+          "2007": 14,
+          "2008": 28,
+          "2009": 47,
+          "2010": 70,
+          "2011": 138,
+          "2012": 228,
+          "2013": 652,
+          "2014": 523,
+          "2015": 429,
+          "2016": 411,
+          "2017": 573,
+          "2018": 505,
+          "2019": 540,
+          "2020": 536,
+          "2021": 656,
+          "2022": 593,
+          "2023": 982,
+          "2024": 1204,
+          "2025": 2239,
+          "2026": 4321,
+          "2027": 319
+        },
+        "PERIODOINGRESO": {
+          "1": 12222,
+          "2": 1998,
+          "3": 825
+        },
+        "ANOMATRICULA": {
+          "2013": 483,
+          "2014": 442,
+          "2015": 514,
+          "2016": 485,
+          "2017": 525,
+          "2018": 503,
+          "2019": 628,
+          "2020": 500,
+          "2021": 572,
+          "2022": 568,
+          "2023": 602,
+          "2024": 1460,
+          "2025": 1832,
+          "2026": 5612,
+          "2027": 319
+        },
+        "PERIODOMATRICULA": {
+          "1": 12613,
+          "2": 1601,
+          "3": 831
+        },
+        "ESTADOACADEMICO": {
+          "EGRESADO": 146,
+          "ELIMINADO": 6734,
+          "SUSPENDIDO": 190,
+          "TITULADO": 3050,
+          "VIGENTE": 4925
+        }
+      },
+      "rut_distintos_incluido_vacio": 12927,
+      "duplicados_exactos_excedentes": 0,
+      "llaves_candidatas_repetidas": 1,
+      "filas_excedentes_llave_candidata": 1,
+      "campos_fecha_no_personales": {
+        "FECHAMATRICULA": {
+          "no_vacios": 15045,
+          "min_lexical": "01-01-2022",
+          "max_lexical": "31-12-2025"
+        },
+        "FECHAFIRMA": {
+          "no_vacios": 5228,
+          "min_lexical": "01-01-2024",
+          "max_lexical": "31-12-2025"
+        }
+      }
+    }
+  ],
+  "hojas_adicionales_y_filtros": [
+    {
+      "id": "T2_2025",
+      "properties": {
+        "created": "2025-10-01 10:57:27",
+        "modified": "2026-10-20 22:59:30"
+      },
+      "otras_hojas": [
+        {
+          "hoja": "Hoja2",
+          "estado": "hidden",
+          "filas_no_vacias_tras_primera": 14,
+          "columnas_temporales": [
+            "ESTADOACADEMICO"
+          ],
+          "distribuciones": {
+            "ESTADOACADEMICO": {
+              "ANOINGRESO": 1,
+              "None": 1,
+              "Cuenta de RUT": 1,
+              "Etiquetas de fila": 1,
+              "ADMINISTRACION PUBLICA": 1,
+              "AUDITORIA": 1,
+              "INGENIERIA EN ADMINISTRACION DE EMPRESAS": 1,
+              "INGENIERIA EN CIBERSEGURIDAD": 1,
+              "INGENIERIA EN CONECTIVIDAD Y REDES": 1,
+              "INGENIERIA EN INFORMATICA": 1,
+              "INGENIERIA EN LOGISTICA": 1,
+              "INGENIERIA INDUSTRIAL": 1,
+              "TECNICO EN ENFERMERIA": 1,
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS": 1,
+              "Total general": 1
+            }
+          }
+        },
+        {
+          "hoja": "Hoja1",
+          "estado": "hidden",
+          "filas_no_vacias_tras_primera": 225,
+          "columnas_temporales": [
+            "ANOINGRESO",
+            "PERIODOINGRESO",
+            "ANOMATRICULA",
+            "PERIODOMATRICULA",
+            "ESTADOACADEMICO"
+          ],
+          "distribuciones": {
+            "ANOINGRESO": {
+              "2025": 225
+            },
+            "PERIODOINGRESO": {
+              "2": 225
+            },
+            "ANOMATRICULA": {
+              "2025": 225
+            },
+            "PERIODOMATRICULA": {
+              "2": 225
+            },
+            "ESTADOACADEMICO": {
+              "VIGENTE": 200,
+              "ELIMINADO": 25
+            }
+          }
+        }
+      ],
+      "pivot_cache_sources": [
+        {
+          "parte": "xl/pivotCache/pivotCacheDefinition1.xml",
+          "worksheetSource": [
+            {
+              "ref": "A1:BJ226",
+              "sheet": "Hoja1"
+            }
+          ],
+          "recordCount": "225",
+          "refreshedDate": "45971.714641203704"
+        }
+      ],
+      "autofilters": [
+        {
+          "parte": "xl/worksheets/sheet2.xml",
+          "filters": [
+            {
+              "ref": "A1:BK226",
+              "columnas": []
+            }
+          ]
+        },
+        {
+          "parte": "xl/worksheets/sheet3.xml",
+          "filters": [
+            {
+              "ref": "A1:BJ226",
+              "columnas": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T3_2025",
+      "properties": {
+        "created": "2025-10-13 11:59:55",
+        "modified": "2026-10-20 16:23:51"
+      },
+      "otras_hojas": [
+        {
+          "hoja": "Hoja2",
+          "estado": "hidden",
+          "filas_no_vacias_tras_primera": 0,
+          "columnas_temporales": [],
+          "distribuciones": {}
+        },
+        {
+          "hoja": "Hoja3",
+          "estado": "hidden",
+          "filas_no_vacias_tras_primera": 0,
+          "columnas_temporales": [],
+          "distribuciones": {}
+        },
+        {
+          "hoja": "T3",
+          "estado": "hidden",
+          "filas_no_vacias_tras_primera": 111,
+          "columnas_temporales": [
+            "ANOINGRESO",
+            "PERIODOINGRESO",
+            "ANOMATRICULA",
+            "PERIODOMATRICULA",
+            "ESTADOACADEMICO"
+          ],
+          "distribuciones": {
+            "ANOINGRESO": {
+              "2025": 111
+            },
+            "PERIODOINGRESO": {
+              "3": 111
+            },
+            "ANOMATRICULA": {
+              "2025": 111
+            },
+            "PERIODOMATRICULA": {
+              "3": 111
+            },
+            "ESTADOACADEMICO": {
+              "VIGENTE": 111
+            }
+          }
+        }
+      ],
+      "pivot_cache_sources": [
+        {
+          "parte": "xl/pivotCache/pivotCacheDefinition1.xml",
+          "worksheetSource": [
+            {
+              "ref": "A1:BK112",
+              "sheet": "T3"
+            }
+          ],
+          "recordCount": "111",
+          "refreshedDate": "45971.72032951389"
+        }
+      ],
+      "autofilters": [
+        {
+          "parte": "xl/worksheets/sheet1.xml",
+          "filters": [
+            {
+              "ref": "A1:BK3082",
+              "columnas": [
+                {
+                  "colId": "6",
+                  "values": [
+                    "2025"
+                  ]
+                },
+                {
+                  "colId": "7",
+                  "values": [
+                    "3"
+                  ]
+                },
+                {
+                  "colId": "56",
+                  "values": [
+                    "VIGENTE"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "parte": "xl/worksheets/sheet4.xml",
+          "filters": [
+            {
+              "ref": "A1:BK112",
+              "columnas": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2_2026",
+      "properties": {
+        "created": "2026-07-14 19:21:46",
+        "modified": "2026-10-13 15:59:56"
+      },
+      "otras_hojas": [
+        {
+          "hoja": "Hoja2",
+          "estado": "visible",
+          "filas_no_vacias_tras_primera": 42,
+          "columnas_temporales": [
+            "PERIODOMATRICULA"
+          ],
+          "distribuciones": {
+            "PERIODOMATRICULA": {
+              "ANOINGRESO": 1,
+              "None": 7,
+              "Etiquetas de fila": 2,
+              "ADMINISTRACION PUBLICA": 2,
+              "AUDITORIA": 2,
+              "CONTABILIDAD GENERAL": 2,
+              "CONTINUIDAD INGENIERIA INFORMATICA": 2,
+              "INGENIERIA EN ADMINISTRACION DE EMPRESAS": 2,
+              "INGENIERIA EN CIBERSEGURIDAD": 2,
+              "INGENIERIA EN INFORMATICA": 2,
+              "INGENIERIA EN LOGISTICA": 2,
+              "INGENIERIA EN MARKETING DIGITAL": 2,
+              "INGENIERIA EN RECURSOS HUMANOS": 2,
+              "INGENIERIA INDUSTRIAL": 2,
+              "TECNICO EN ADMINISTRACION DE EMPRESAS": 2,
+              "TECNICO EN CIBERSEGURIDAD": 2,
+              "TECNICO EN ENFERMERIA": 2,
+              "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA": 2,
+              "TECNICO EN LOGISTICA": 2,
+              "TECNICO EN MARKETING DIGITAL": 2,
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS": 2,
+              "TECNICO EN RECURSOS HUMANOS": 2,
+              "Total general": 1
+            }
+          }
+        }
+      ],
+      "pivot_cache_sources": [
+        {
+          "parte": "xl/pivotCache/pivotCacheDefinition1.xml",
+          "worksheetSource": [
+            {
+              "ref": "A1:S529",
+              "sheet": "Hoja1"
+            }
+          ],
+          "recordCount": "528",
+          "refreshedDate": "46265.721588310182"
+        }
+      ],
+      "autofilters": [
+        {
+          "parte": "xl/worksheets/sheet2.xml",
+          "filters": [
+            {
+              "ref": "A1:S529",
+              "columnas": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T3_2026",
+      "properties": {
+        "created": "2026-10-05 14:22:17",
+        "modified": "2026-10-15 13:44:09"
+      },
+      "otras_hojas": [
+        {
+          "hoja": "Resumen2026_3",
+          "estado": "visible",
+          "filas_no_vacias_tras_primera": 36,
+          "columnas_temporales": [],
+          "distribuciones": {}
+        },
+        {
+          "hoja": "2026_3",
+          "estado": "visible",
+          "filas_no_vacias_tras_primera": 501,
+          "columnas_temporales": [
+            "ANOINGRESO",
+            "PERIODOINGRESO",
+            "ANOMATRICULA",
+            "PERIODOMATRICULA",
+            "ESTADOACADEMICO"
+          ],
+          "distribuciones": {
+            "ANOINGRESO": {
+              "2026": 501
+            },
+            "PERIODOINGRESO": {
+              "3": 501
+            },
+            "ANOMATRICULA": {
+              "2026": 501
+            },
+            "PERIODOMATRICULA": {
+              "3": 501
+            },
+            "ESTADOACADEMICO": {
+              "VIGENTE": 430,
+              "ELIMINADO": 71
+            }
+          }
+        },
+        {
+          "hoja": "Hoja2",
+          "estado": "hidden",
+          "filas_no_vacias_tras_primera": 136,
+          "columnas_temporales": [],
+          "distribuciones": {}
+        }
+      ],
+      "pivot_cache_sources": [
+        {
+          "parte": "xl/pivotCache/pivotCacheDefinition1.xml",
+          "worksheetSource": [
+            {
+              "ref": "A1:BP502",
+              "sheet": "2026_3"
+            }
+          ],
+          "recordCount": "501",
+          "refreshedDate": "46300.498297222221"
+        }
+      ],
+      "autofilters": [
+        {
+          "parte": "xl/worksheets/sheet1.xml",
+          "filters": [
+            {
+              "ref": "A1:BN558",
+              "columnas": [
+                {
+                  "colId": "9",
+                  "values": [
+                    "[valor individual omitido]"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "parte": "xl/worksheets/sheet3.xml",
+          "filters": [
+            {
+              "ref": "A1:BP502",
+              "columnas": [
+                {
+                  "colId": "55",
+                  "values": [
+                    "VIGENTE"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "comparacion_2026_t3_hojas": {
+    "Base": {
+      "filas_2026": 501,
+      "estados_2026": {
+        "VIGENTE": 432,
+        "ELIMINADO": 69
+      }
+    },
+    "2026_3": {
+      "filas_2026": 501,
+      "estados_2026": {
+        "VIGENTE": 430,
+        "ELIMINADO": 71
+      }
+    },
+    "comparacion": {
+      "llaves_compartidas": 501,
+      "solo_base": 0,
+      "solo_2026_3": 0,
+      "estados_distintos": 2,
+      "situaciones_distintas": 2
+    }
+  },
+  "candidatos": [
+    {
+      "id": "respaldo_10246",
+      "filas": 14204,
+      "fecha_congelamiento": "2026-07-22T11:03:28.160591-04:00",
+      "corrida_origen_nominal": "2026-07-21/2026_P2_161905",
+      "fecha_efectiva_cierre": null,
+      "ingresos_observados": "1989 y 2000–2026 (ver distribuciones; años faltantes no se inventan)",
+      "alcance": "Base de múltiples años/períodos y estados; no solo ingresos 2026-T2. El rol matrícula_oficial y estado CONGELADO acreditan procedencia reproducible, no exhaustividad ni corte académico.",
+      "duplicados": "1 llave candidata repetida, sin filas exactas duplicadas. Se debe conservar la colisión, no escoger una fila."
+    },
+    {
+      "id": "respaldo_11998",
+      "filas": 15045,
+      "fecha_inicio_corrida": "2026-10-15T14:18:42.932040-03:00",
+      "fecha_termino_corrida": "2026-10-15T14:20:42.180679-03:00",
+      "fecha_efectiva_cierre": null,
+      "alcance": "Base de múltiples años/períodos, incluye 2027. Inventario fase 1 tiene snapshot_date_accredited=null y file_date_not_used_as_cut=true. No se usa para trasladar estado de octubre a julio.",
+      "duplicados": "1 llave candidata repetida, sin filas exactas duplicadas. Se debe conservar la colisión, no escoger una fila."
+    }
+  ],
+  "scripts_y_filtros": {
+    "extractor_institucional": "No localizado un contrato/SQL del extractor que certifique cobertura de los cuatro listados o de DATOSDEALUMNOS. Contrato exploratorio declara filtros/zona/historial efectivo pendientes.",
+    "consumidor_caracterizacion": "caracterizacion.py 1949–1956 filtra ANOMATRICULA/PERIODOMATRICULA; 2101–2112 controla cohortes ANOINGRESO; 2115–2123 y 2170–2243 aplican exclusiones y estado/situación. Son reglas del consumidor, no garantía de la extracción ni de la tasa intermedia.",
+    "filtros_excel": "Se perfilaron filas completas e inspeccionaron hojas ocultas y fuentes de tablas dinámicas. Los filtros guardados no definen población completa."
+  },
+  "pendientes_comunes": [
+    "Certificar archivo/hoja y fecha efectiva de cada cierre por autoridad institucional y extractor/filtros utilizados.",
+    "Acreditar todas las matrículas de cohorte objetivo y conservar sus múltiples matrículas; distinguir personas de filas.",
+    "Obtener historia efectiva de ESTADOACADEMICO/SITUACION o snapshot certificado al corte.",
+    "Documentar regla intermedia aplicable; no convertir ESTADOACADEMICO directamente en VIG SIES ni T1/T2/T3 en semestres SIES."
+  ],
+  "evidencias": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/agent.md",
+      "sha256": "b4d21397560f0e7095fef24902152060430161d0789a6ee56ceb8449c3df3f2d"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/PROYECTO_IPSS.json",
+      "sha256": "cc5826c3c74c51c04d72843c9f833d33810dc45aa49e7e8b06dd8bdce15111c6"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/docs/unificacion_proyectos_y_reglas_negocio_20261015.md",
+      "sha256": "ef7d47f940f46045fc1c179642fd76807b8f3c876f03b1c1bc680271434a3d53"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/AGENTS.md",
+      "sha256": "2498ee3907fa8c63461e7427cd8ea7c84ac700f2c778b33851939e19ec19cc62"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/AGENTS.md",
+      "sha256": "82daa24ad1a19c9a83d82a015552d38bb0e2d2207e1f547723637b58b52d0ac7"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/README_INTEGRACION.md",
+      "sha256": "f3bd458c23453f08cf5ca12fbf0a18cf8211e3cb9191f872bfb7ab29e2489a3d"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261021_datos_alumnos/manifest.json",
+      "sha256": "c79481143df2cff1c4358565543eb5452fe9be4bcf14093a93c7b320b48e5ca4"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261021_datos_alumnos/contrato_columnas.json",
+      "sha256": "669b9a3ab08bdadf06694fe79add2096706e06e693e835b89fab384bb0de2a81"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261021_datos_alumnos/auditoria.md",
+      "sha256": "8cc2b2dc3087e66b60d046e3503ba6ca8a35749177c904f83e0ec14c256d0ae4"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "sha256": "bda8a15c0f0689bf013f94882a20cdb6fac25107888641af69c9210bc663f588"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/docs/gobernanza/H044_FUENTES_P2_DETERMINISTICAS.md",
+      "sha256": "aa31a1b2f02e081f29bf617b1ec3fb7a03ef7b3f3ac99978f546b3de972bed4c"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_1_20261015/inventario.json",
+      "sha256": "8c0b9f02c013f94b98dc72be1eae9912dadd991ba0e5a3fa7a64da3ef3904ae2"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/MANIFEST_REVISION.json",
+      "sha256": "bbedffbde20fac7882b5f0f08d4862d00c20e4dd38d4c3c68c630a88a901ee6a"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_090522_cobertura/MANIFEST_COMPROBACION.json",
+      "sha256": "d8718694b1543d6fc366e1e6374eb8f26cf85166e49adbd131c1a8da463d4ac9"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_090522_cobertura/COMPROBACION_COBERTURA_MU2025_MU2026.md",
+      "sha256": "0e52422a4db3df1a63d424fb8f7eee7e1c312387fe0246ff7f7116ec31935bc9"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "c0f23e85071dd0c319d1bd1bff05f22a49d898a7ba6d67bc4882595113690c8a"
+    }
+  ],
+  "qa": {
+    "hashes_fuentes_6_coinciden": true,
+    "archivos_originales_sin_editar": true,
+    "tasas_no_inventadas": true,
+    "salidas_sin_identificadores": true,
+    "codigo_solo_lectura_fuentes": true
+  },
+  "git": {
+    "branch": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "mutaciones_git": false
+  },
+  "bloqueos": {
+    "tipo": "Evidencia documental insuficiente, no denegación técnica",
+    "accion": "Acreditar cierre y calcular tasa intermedia",
+    "targets": [
+      "2025-T2",
+      "2025-T3",
+      "2026-T2",
+      "2026-T3"
+    ],
+    "estado": "Pendiente",
+    "razon": "Faltan completitud, fecha efectiva, estado histórico y regla intermedia acreditados"
+  }
+}

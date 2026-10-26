@@ -1,0 +1,268 @@
+{
+  "universo_raw": {
+    "personas": 5901,
+    "expedientes": 6622,
+    "observaciones": 24774,
+    "filas_asignatura_seleccionadas": 57131,
+    "filas_promedios": 70000,
+    "identidades_invalidas_fuera_y_dentro": 0,
+    "unidades_faltan": 0,
+    "unidades_nuevas": 0
+  },
+  "linea_base": {
+    "estados": {
+      "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO": 18304,
+      "SIN_EVIDENCIA_ANUAL_APLICABLE": 3112,
+      "DIFIERE_CODIGO_PROPUESTO_OBSERVADO": 1760,
+      "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA": 1497,
+      "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 15,
+      "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 86
+    },
+    "discrepancias_observaciones": 0,
+    "documental": {
+      "sin_pendientes": 4063,
+      "parcialmente_resueltas": 699,
+      "ninguna_observacion_resuelta": 1139,
+      "personas_con_algun_pendiente": 1838,
+      "observaciones_pendientes": 3213
+    }
+  },
+  "equivalencias": {
+    "adoptadas": {
+      "IMDI": 99,
+      "NATP": 3,
+      "ISEP": 2,
+      "IFIN": 1,
+      "IRHU": 14
+    },
+    "discrepancias": 0,
+    "interno": {
+      "sin_pendientes": 4150,
+      "parcialmente_resueltas": 699,
+      "ninguna_observacion_resuelta": 1052,
+      "personas_con_algun_pendiente": 1751,
+      "observaciones_pendientes": 3094
+    }
+  },
+  "retrospectiva": [
+    {
+      "metodo": "DA_ANOINGRESO",
+      "tipo": "REGULAR",
+      "observaciones": {
+        "ACIERTO": 15069,
+        "ERROR": 1497,
+        "EMPATE_NUEVOS": 1040,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 218,
+        "FECHA_AUSENTE_O_MULTIPLE": 2
+      },
+      "personas_no_aditivas": {
+        "ACIERTO": 3590,
+        "ERROR": 329,
+        "EMPATE_NUEVOS": 162,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 36,
+        "FECHA_AUSENTE_O_MULTIPLE": 1
+      }
+    },
+    {
+      "metodo": "MU_INGRESO_ACTUAL",
+      "tipo": "REGULAR",
+      "observaciones": {
+        "ACIERTO": 15029,
+        "ERROR": 1494,
+        "EMPATE_NUEVOS": 1044,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 257,
+        "FECHA_AUSENTE_O_MULTIPLE": 2
+      },
+      "personas_no_aditivas": {
+        "ACIERTO": 3584,
+        "ERROR": 325,
+        "EMPATE_NUEVOS": 161,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 51,
+        "FECHA_AUSENTE_O_MULTIPLE": 1
+      }
+    },
+    {
+      "metodo": "MU_INGRESO_ORIGEN",
+      "tipo": "REGULAR",
+      "observaciones": {
+        "ACIERTO": 14214,
+        "ERROR": 1417,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 494,
+        "EMPATE_NUEVOS": 978,
+        "FECHA_AUSENTE_O_MULTIPLE": 723
+      },
+      "personas_no_aditivas": {
+        "ACIERTO": 3513,
+        "ERROR": 332,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 139,
+        "EMPATE_NUEVOS": 151,
+        "FECHA_AUSENTE_O_MULTIPLE": 104
+      }
+    },
+    {
+      "metodo": "DA_ANOINGRESO",
+      "tipo": "TIPO_NO_UNICO",
+      "observaciones": {
+        "SIN_PERFIL": 3112,
+        "ACIERTO": 138,
+        "SIN_GRUPO": 267,
+        "ERROR": 45
+      },
+      "personas_no_aditivas": {
+        "SIN_PERFIL": 704,
+        "ACIERTO": 65,
+        "SIN_GRUPO": 76,
+        "ERROR": 17
+      }
+    },
+    {
+      "metodo": "MU_INGRESO_ACTUAL",
+      "tipo": "TIPO_NO_UNICO",
+      "observaciones": {
+        "SIN_PERFIL": 3112,
+        "ACIERTO": 138,
+        "SIN_GRUPO": 267,
+        "ERROR": 45
+      },
+      "personas_no_aditivas": {
+        "SIN_PERFIL": 704,
+        "ACIERTO": 65,
+        "SIN_GRUPO": 76,
+        "ERROR": 17
+      }
+    },
+    {
+      "metodo": "MU_INGRESO_ORIGEN",
+      "tipo": "TIPO_NO_UNICO",
+      "observaciones": {
+        "SIN_PERFIL": 2913,
+        "ACIERTO": 135,
+        "SIN_GRUPO": 267,
+        "FECHA_AUSENTE_O_MULTIPLE": 199,
+        "ERROR": 48
+      },
+      "personas_no_aditivas": {
+        "SIN_PERFIL": 676,
+        "ACIERTO": 64,
+        "SIN_GRUPO": 76,
+        "FECHA_AUSENTE_O_MULTIPLE": 38,
+        "ERROR": 18
+      }
+    },
+    {
+      "metodo": "DA_ANOINGRESO",
+      "tipo": "CONTINUIDAD",
+      "observaciones": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 173
+      },
+      "personas_no_aditivas": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 42
+      }
+    },
+    {
+      "metodo": "MU_INGRESO_ACTUAL",
+      "tipo": "CONTINUIDAD",
+      "observaciones": {
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 173
+      },
+      "personas_no_aditivas": {
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 42
+      }
+    },
+    {
+      "metodo": "MU_INGRESO_ORIGEN",
+      "tipo": "CONTINUIDAD",
+      "observaciones": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 173
+      },
+      "personas_no_aditivas": {
+        "EXCLUIDO_FECHA_NO_PROPIA_CONTINUIDAD": 42
+      }
+    }
+  ],
+  "validacion_por_persona": {
+    "metodo": "5 particiones deterministas por persona; perfil aprendido solo otras particiones; familias heredadas mantienen dependencia residual",
+    "resultados": {
+      "ACIERTO": 15171,
+      "ERROR": 1387,
+      "EMPATE_NUEVOS": 1228,
+      "SIN_OFERTA_NUEVOS_COMPATIBLE": 34,
+      "SIN_PERFIL": 4,
+      "FECHA_AUSENTE_O_MULTIPLE": 2
+    },
+    "personas_no_aditivas": {
+      "ACIERTO": 3608,
+      "ERROR": 299,
+      "EMPATE_NUEVOS": 205,
+      "SIN_OFERTA_NUEVOS_COMPATIBLE": 12,
+      "SIN_PERFIL": 3,
+      "FECHA_AUSENTE_O_MULTIPLE": 1
+    },
+    "particiones": {
+      "4": {
+        "ACIERTO": 3024,
+        "EMPATE_NUEVOS": 289,
+        "ERROR": 372,
+        "FECHA_AUSENTE_O_MULTIPLE": 2,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 14
+      },
+      "0": {
+        "ACIERTO": 3021,
+        "ERROR": 171,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 3,
+        "EMPATE_NUEVOS": 201
+      },
+      "1": {
+        "ERROR": 264,
+        "ACIERTO": 2711,
+        "EMPATE_NUEVOS": 233,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 14,
+        "SIN_PERFIL": 3
+      },
+      "3": {
+        "ACIERTO": 3204,
+        "EMPATE_NUEVOS": 247,
+        "ERROR": 259,
+        "SIN_OFERTA_NUEVOS_COMPATIBLE": 3
+      },
+      "2": {
+        "EMPATE_NUEVOS": 258,
+        "ACIERTO": 3211,
+        "ERROR": 321,
+        "SIN_PERFIL": 1
+      }
+    }
+  },
+  "cronologia": {
+    "expedientes_con_mas_de_un_plan_observado": 0,
+    "observaciones_con_mas_de_un_plan_expediente": 0,
+    "fechas_efectivas_plan_acreditadas": 0,
+    "limite": "Cronología de actividad y etiquetas de plan; no acto de migración ni fecha original confirmada"
+  },
+  "foco_actual": {
+    "estados_candidato": {
+      "UNICO": 2695,
+      "FECHA_AUSENTE_O_MULTIPLE": 32,
+      "SIN_PERFIL": 203,
+      "EMPATE_NUEVOS": 94,
+      "SIN_GRUPO": 51,
+      "SIN_OFERTA_NUEVOS_COMPATIBLE": 19
+    },
+    "candidatos_unicos": 2695,
+    "cierres_nuevos_documentales": 0,
+    "cierres_nuevos_internos": 0,
+    "motivo": "No hay nueva fecha efectiva ni equivalencia aprobada; candidatos no promovidos"
+  },
+  "preservacion_fuentes": true,
+  "registros_privados": 24774,
+  "sin_expansion": true,
+  "particiones_disjuntas": true,
+  "estado": "OK_CON_ADVERTENCIAS",
+  "limites": [
+    "Cortes DA no acreditados",
+    "Plan histórico no acreditado",
+    "Oferta y grupos heredados no son validación externa",
+    "Aceptación individual SIES no acreditada",
+    "Relectura adicional: 49.218 localizadores completos de 33 archivos; no equivale a inventario universal ni prueba temporal de otros procesos"
+  ]
+}

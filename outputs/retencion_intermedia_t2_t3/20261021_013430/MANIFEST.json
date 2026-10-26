@@ -1,0 +1,237 @@
+{
+  "clasificacion": "C",
+  "fecha_hora": "2026-10-21T01:38:12.290167-03:00",
+  "proceso": "Revisión de retención intermedia",
+  "alcance": "Cohortes 2024/2025 contra listados parciales de cierres 2025/2026 T2/T3",
+  "resultado": "OK_RESUMEN_DE_REVISION; tasas intermedias E por cobertura parcial",
+  "salidas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_013430/REVISION_RETENCION_INTERMEDIA_IPSS_2024_2025_20261021.xlsx",
+      "sha256": "1fed8a17c0b6977c579b14a86c012b7160170648b46e638f9009f33b0c0c85a0"
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/REVISION_RETENCION_INTERMEDIA_IPSS_2024_2025_20261021.xlsx",
+      "sha256": "1fed8a17c0b6977c579b14a86c012b7160170648b46e638f9009f33b0c0c85a0"
+    }
+  ],
+  "fuentes": [
+    {
+      "id": "T2_2025",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "bytes": 221698,
+      "mtime": "2026-10-20T21:43:06.816424-03:00",
+      "sheet": "T2_2025",
+      "cohort": 2024,
+      "year": 2025,
+      "term": 2,
+      "records": 225,
+      "unique_keys": 222,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2025": 225
+      },
+      "entry_terms": {
+        "2": 225
+      },
+      "states": {
+        "VIGENTE": 200,
+        "ELIMINADO": 25
+      },
+      "targets": 636,
+      "included": 558,
+      "match": 1,
+      "match_vig": 1,
+      "match_invalid_dv": 0
+    },
+    {
+      "id": "T3_2025",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "bytes": 1354391,
+      "mtime": "2026-10-20T21:43:06.824307-03:00",
+      "sheet": "T3_2025",
+      "cohort": 2024,
+      "year": 2025,
+      "term": 3,
+      "records": 3081,
+      "unique_keys": 2990,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2005": 1,
+        "2016": 3,
+        "2017": 1,
+        "2020": 6,
+        "2021": 17,
+        "2022": 66,
+        "2023": 269,
+        "2024": 500,
+        "2025": 2218
+      },
+      "entry_terms": {
+        "1": 2523,
+        "2": 403,
+        "3": 155
+      },
+      "states": {
+        "VIGENTE": 2473,
+        "TITULADO": 74,
+        "SUSPENDIDO": 31,
+        "ELIMINADO": 497,
+        "EGRESADO": 6
+      },
+      "targets": 636,
+      "included": 558,
+      "match": 325,
+      "match_vig": 317,
+      "match_invalid_dv": 0
+    },
+    {
+      "id": "T2_2026",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "bytes": 140509,
+      "mtime": "2026-10-20T21:43:06.815458-03:00",
+      "sheet": "Hoja1",
+      "cohort": 2025,
+      "year": 2026,
+      "term": 2,
+      "records": 528,
+      "unique_keys": 527,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2026": 528
+      },
+      "entry_terms": {
+        "2": 528
+      },
+      "states": {
+        "NO INFORMADO": 528
+      },
+      "targets": 1255,
+      "included": 1150,
+      "match": 2,
+      "match_vig": 0,
+      "match_invalid_dv": 0
+    },
+    {
+      "id": "T3_2026",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "bytes": 481817,
+      "mtime": "2026-10-20T21:43:06.825904-03:00",
+      "sheet": "Base",
+      "cohort": 2025,
+      "year": 2026,
+      "term": 3,
+      "records": 557,
+      "unique_keys": 545,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2024": 22,
+        "2025": 34,
+        "2026": 501
+      },
+      "entry_terms": {
+        "3": 557
+      },
+      "states": {
+        "VIGENTE": 488,
+        "ELIMINADO": 69
+      },
+      "targets": 1255,
+      "included": 1150,
+      "match": 0,
+      "match_vig": 0,
+      "match_invalid_dv": 0
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "rows": 10200,
+      "sheet": "BASE_RETENCION_MU"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "sheet": "02_COHORTE_ELEGIBILIDAD"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"
+    }
+  ],
+  "insumos_agregados": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_013430/insumos_agregados.json",
+    "sha256": "ecef4ee3428567d17daa4eff797fc0f72f7aec2867efab7317d5f2831b0be33e",
+    "procedencia": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/REVISION_RETENCION_INTERMEDIA_IPSS_2024_2025_T2_T3_20261020.xlsx",
+      "sha256": "699ca7b18aa3b5892ef7ef5b0dfbeb766d2632f0e4319a7c83995aa818092f12"
+    },
+    "hoja_rango": "Por_carrera!A7:I34"
+  },
+  "sin_recalcular_estudio_previo": true,
+  "denominadores_preservados": [
+    558,
+    1150,
+    222,
+    124
+  ],
+  "reglas_mu2027_no_aplicadas_al_historico": true,
+  "qa": {
+    "zip": "OK",
+    "tablas_y_encabezados": "OK",
+    "errores_formula": 0,
+    "formulas": 32,
+    "selectores_probados": 19,
+    "dependencia_recalculo": "OK con perturbación restaurada",
+    "fuentes_originales_sha256": "Intactos",
+    "visual": "Tres hojas renderizadas e inspeccionadas",
+    "apertura_excel_nativo": "No realizada"
+  },
+  "reproduccion": {
+    "preparar_resumen.py": "153ffc5c1d8f8a4bc9b959c3d777cba67ec77bf5ebe1b67423fa6e5e788a6227",
+    "construir_resumen.mjs": "6aa8f594bc670641804a39310abc0b59db8e6cbea63bd143aedecd47f7faa1b5",
+    "verificar_entrega.py": "48c3bbd30e1f21e28d61345f0ce2a2611ae3075c9fae63b8816161176500c30c"
+  },
+  "git": {
+    "rama_antes": "feature/ire-2026",
+    "HEAD_antes": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+    "rama_despues": "feature/ire-2026",
+    "HEAD_despues": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+    "commit": false,
+    "push": false
+  },
+  "pendientes_E": [
+    [
+      "2025-T2",
+      2024,
+      "Matrícula completa vigente al cierre 2025-T2 de todas las cohortes (incluida 2024), con identidad exacta y fecha/estado del cierre. La entrega actual solo contiene ingresos 2025-T2."
+    ],
+    [
+      "2025-T3",
+      2024,
+      "Listado completo o certificación de completitud de T3_2025 y estados efectivos a ese cierre. El usuario confirmó que la entrega es parcial. Incluye varios años de ingreso, pero eso no prueba cobertura total."
+    ],
+    [
+      "2026-T2",
+      2025,
+      "Matrícula completa vigente al cierre 2026-T2, incluida cohorte 2025. Incorporar estado o certificación de que todas sus filas estaban vigentes a esa fecha. La entrega actual solo contiene ingresos 2026-T2."
+    ],
+    [
+      "2026-T3",
+      2025,
+      "Matrícula completa vigente al cierre 2026-T3 de todas las cohortes, incluida 2025. Base solo contiene PERIODOINGRESO=3 y la hoja 2026_3 solo ingresos 2026."
+    ],
+    [
+      "Todas",
+      null,
+      "Confirmar fecha exacta del corte, cobertura completa y vínculo de documentos pasaporte-RUT cuando corresponda. Mantener la cohorte de origen SIES; no reemplazarla por ingreso operacional sin validación."
+    ]
+  ],
+  "privacidad": "Solo agregados; sin personas, RUT, MRUN, N_DOC, nombres, seudónimos ni nacimientos."
+}

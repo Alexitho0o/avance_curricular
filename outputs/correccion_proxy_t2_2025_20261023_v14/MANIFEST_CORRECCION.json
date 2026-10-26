@@ -1,0 +1,94 @@
+{
+  "clasificacion": "B fuentes; C corrección de cruce; D autorización del usuario; E mecanismo original y vigencia histórica pendientes",
+  "proceso": "Retención intertrimestral IPSS162",
+  "alcance": "Solo proxy2025-T2 de cohorteT1-2025",
+  "autorizacion": "Corregir cruce si se confirma error, sin cambiar denominadores.",
+  "fuentes": {
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": {
+      "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8"
+    },
+    "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json": {
+      "sha256": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0"
+    },
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx": {
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+    },
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx": {
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/evidencia/add_promedios_sheet_original.py": {
+      "sha256": "c09e9b3255cfb90f38ca1393cb49d62e8e061cf8c39fa081d8011525a70183d8"
+    }
+  },
+  "version_anterior": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/seguimiento_t1_hasta_2026_20261023_v13/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V13.xlsx",
+    "sha256": "c4f506adcf16e9ae2bbf072d21be5033e30ee6ee81eb5bc87171a73867cc164b"
+  },
+  "resultado": {
+    "estado": "OK_CON_LIMITES_E",
+    "numerador_antes": 600,
+    "numerador_despues": 611,
+    "denominador_antes_y_despues": 1150,
+    "tasa_antes": 0.5217391304347826,
+    "tasa_despues": 0.5313043478260869,
+    "diferencia_pp": 0.9565217391304348,
+    "presencias": 694,
+    "cambios_esperados_con_cache": 129,
+    "celdas_contenido_modificado": 90,
+    "hojas_modificadas": [
+      "26_Avance_Curricular_Resumen",
+      "18_Foto_Intertrimestral",
+      "28_QA_Matematica",
+      "52_Codigos_SIES_Revision",
+      "53_Codigos_T1_Confirmados"
+    ],
+    "otras_hojas_conservadas_bytes": 49,
+    "graficos_conservados_bytes": 13,
+    "tablas_conservadas_bytes": 35,
+    "estilos_conservados": true,
+    "fuentes_conservadas": true,
+    "denominadores_conservados": true,
+    "nuevas_asignaciones_SIES": 0,
+    "git_antes": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "git_despues": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "commit": false,
+    "push": false,
+    "limites": [
+      "Recálculo Artifact Tool y contraste independiente; no se ha validado apertura en Excel nativo.",
+      "El mecanismo original que precalculó600 permanece no localizado.",
+      "El indicador es proxy de actividad y estado del extracto, no matrícula vigente a fecha histórica."
+    ],
+    "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V14.xlsx",
+    "sha256": "20813b21f546085f94c10b2983335567c937e492f4d3f707be0893e5cb5234a4",
+    "escritorio": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V14.xlsx",
+    "prueba_dinamica": {
+      "controles": 14,
+      "estado": "OK",
+      "archivo_final_sin_cambios": true
+    },
+    "qa_independiente": {
+      "controles": 427,
+      "estado": "OK"
+    }
+  },
+  "archivos": {
+    "outputs/correccion_proxy_t2_2025_20261023_v14/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V14.xlsx": "20813b21f546085f94c10b2983335567c937e492f4d3f707be0893e5cb5234a4",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/RESULTADO_AGREGADO.json": "f7edc4cce4844352b7fdda7990ba3542fe0b8769462f986c97d573551ee14ce1",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/EDICION.json": "1a09426f2457e95a5fe43da2be86503489bbf38dfdb3a99fd7e277283790a9a7",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/QA_CORRECCION.json": "b5deb6e7ae1d07f814e5c184cbe07a8d6b04734a5b81e1edf148a72fc3afb809",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/DIFF_CELDAS.json": "dd42a222c01bb9512d1370b980ee79d544671d902023b7da1bcb2976298aa690",
+    "scripts/recalcular_proxy_t2_2025_v14_20261023.py": "059dcaa4a3bc25d8613f36852533a2e9caf5de0eef8a5ec4c1511b49b1d459de",
+    "scripts/ensamblar_proxy_t2_2025_v14_20261023.py": "b9a1975918384cbc42cac3254f8641511cc341d14c438620f8afc94ddca32f78",
+    "scripts/editar_proxy_t2_2025_v14_20261023.mjs": "cc0749857bb77523b25d840a10201df3f831c56d507303f2d2eeca930bdfddfb",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/README_Y_REANUDACION.md": "a31bd9d09b055fc77fcefd4eccb5b80a4a1da59f11349b0273627cb5c3143abe",
+    "docs/ESPECIFICACION_CORRECCION_PROXY_T2_2025_20261023.md": "f4b1fd7512475fdfbf6d32dfaf804e8d31fc78284a6aaca7e75e415cc6d71f51",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/QA_DINAMICA.json": "0f1f1d866c1eaf26021e94f89a7e826381dc9cfd9186781481d070bea88e1614",
+    "outputs/correccion_proxy_t2_2025_20261023_v14/QA_INDEPENDIENTE.json": "a40e45c2df263b0d8b825e631cc344ab43e74ee1125abaf5d0263fccc7ae7fb5"
+  }
+}

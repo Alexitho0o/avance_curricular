@@ -1,0 +1,1 @@
+Revisión de todo el universo, no solo pendientes. Se separan código documental observado y vigencia del plan. Se retiran n3/90 del control de enlace documental; no de las reglas de predominancia. Sin cambios operativos. Ver INFORME_V6.md.

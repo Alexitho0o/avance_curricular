@@ -1,0 +1,931 @@
+{
+  "source": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/seguimiento_t1_hasta_2026_20261023_v13/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V13.xlsx",
+  "source_sha256": "c4f506adcf16e9ae2bbf072d21be5033e30ee6ee81eb5bc87171a73867cc164b",
+  "scratch": "/tmp/retencion_proxy_t2_v14_20261023",
+  "edits": [
+    {
+      "sheet": "26_Avance_Curricular_Resumen",
+      "cell": "D1852",
+      "before": 680,
+      "value": 694,
+      "expected": 694
+    },
+    {
+      "sheet": "26_Avance_Curricular_Resumen",
+      "cell": "E1852",
+      "before": 600,
+      "formula": "=SUMIFS('53_Codigos_T1_Confirmados'!$G$6:$G$223,'53_Codigos_T1_Confirmados'!$A$6:$A$223,2025,'53_Codigos_T1_Confirmados'!$C$6:$C$223,2)",
+      "expected": 611
+    },
+    {
+      "sheet": "26_Avance_Curricular_Resumen",
+      "cell": "F1852",
+      "before": "=IF(C1852=0,\"\",E1852/C1852)",
+      "formula": "=IF(C1852=0,\"\",E1852/C1852)",
+      "expected": 0.5313043478260869
+    },
+    {
+      "sheet": "26_Avance_Curricular_Resumen",
+      "cell": "H1852",
+      "before": "Proxy de actividad/estado; no es foto de cierre SIES",
+      "value": "C · Incluye R/P; proxy, no foto de cierre.",
+      "expected": "C · Incluye R/P; proxy, no foto de cierre."
+    },
+    {
+      "sheet": "18_Foto_Intertrimestral",
+      "cell": "E8",
+      "before": 600,
+      "formula": "='26_Avance_Curricular_Resumen'!E1852",
+      "expected": 611
+    },
+    {
+      "sheet": "18_Foto_Intertrimestral",
+      "cell": "F8",
+      "before": 0.521739130434783,
+      "formula": "=IF(D8=0,\"\",E8/D8)",
+      "expected": 0.5313043478260869
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "C11",
+      "before": 600,
+      "value": 611,
+      "expected": 611
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "D11",
+      "before": 600,
+      "formula": "='26_Avance_Curricular_Resumen'!E1852",
+      "expected": 611
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "E11",
+      "before": 600,
+      "formula": "=D11",
+      "expected": 611
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "F11",
+      "before": "OK",
+      "formula": "=IF(C11=E11,\"OK\",\"FALLIDO\")",
+      "expected": "OK"
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "H11",
+      "before": "Personas únicas con VIGENTE",
+      "value": "C · RUT+DV y puente P: 600 R + 11 P.",
+      "expected": "C · RUT+DV y puente P: 600 R + 11 P."
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "C12",
+      "before": 0.5217391304,
+      "value": 0.5313043478260869,
+      "expected": 0.5313043478260869
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "D12",
+      "before": 0.521739130434783,
+      "formula": "='26_Avance_Curricular_Resumen'!F1852",
+      "expected": 0.5313043478260869
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "E12",
+      "before": 0.521739130434783,
+      "formula": "=D12",
+      "expected": 0.5313043478260869
+    },
+    {
+      "sheet": "28_QA_Matematica",
+      "cell": "F12",
+      "before": "OK",
+      "formula": "=IF(ROUND(C12,10)=ROUND(E12,10),\"OK\",\"FALLIDO\")",
+      "expected": "OK"
+    },
+    {
+      "sheet": "52_Codigos_SIES_Revision",
+      "cell": "A1",
+      "before": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se reutiliza el código T1 documentado. Bases, población, numeradores y denominadores existentes se conservan. Este resumen separa seguimiento académico de revisión del código SIES.",
+      "value": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES.",
+      "expected": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES."
+    },
+    {
+      "sheet": "52_Codigos_SIES_Revision",
+      "cell": "E8",
+      "before": "='18_Foto_Intertrimestral'!E8",
+      "formula": "='18_Foto_Intertrimestral'!E8",
+      "expected": 611
+    },
+    {
+      "sheet": "52_Codigos_SIES_Revision",
+      "cell": "G8",
+      "before": "=IF(F8>0,E8/F8,\"Pendiente\")",
+      "formula": "=IF(F8>0,E8/F8,\"Pendiente\")",
+      "expected": 0.5313043478260869
+    },
+    {
+      "sheet": "52_Codigos_SIES_Revision",
+      "cell": "I8",
+      "before": "E · Desglose por código pendiente; total conservado de hoja 18 E8",
+      "value": "B/C · 611 por cruce R/P; desglose conciliado con hoja 53",
+      "expected": "B/C · 611 por cruce R/P; desglose conciliado con hoja 53"
+    },
+    {
+      "sheet": "52_Codigos_SIES_Revision",
+      "cell": "A14",
+      "before": "E · El proxy usa actividad y estado académico del extracto PROMEDIOS; no acredita vigencia histórica al cierre. T2-2025 conserva 600/1.150: la reproducción con documentos R y P obtiene 611. Falta justificar los 11 de diferencia antes de desglosar ese total.",
+      "value": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre.",
+      "expected": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre."
+    },
+    {
+      "sheet": "52_Codigos_SIES_Revision",
+      "cell": "A32",
+      "before": "C · Esta edición consulta el diccionario v7 y limita la revisión a los períodos 2 y 3 del calendario indicado. V12 revisaba el mismo año de origen y todos los períodos: sus pendientes no son directamente comparables. Las hojas 1–51 y sus 13 gráficos se conservan exactamente.",
+      "value": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan.",
+      "expected": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G54",
+      "before": "Pendiente",
+      "value": 3,
+      "expected": 3
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I54",
+      "before": "=IF(ISNUMBER(G54),IF(H54>0,G54/H54,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G54),IF(H54>0,G54/H54,\"No aplica\"),\"Pendiente\")",
+      "expected": 1.0
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J54",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G56",
+      "before": "Pendiente",
+      "value": 8,
+      "expected": 8
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I56",
+      "before": "=IF(ISNUMBER(G56),IF(H56>0,G56/H56,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G56),IF(H56>0,G56/H56,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.7272727272727273
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J56",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G58",
+      "before": "Pendiente",
+      "value": 3,
+      "expected": 3
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I58",
+      "before": "=IF(ISNUMBER(G58),IF(H58>0,G58/H58,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G58),IF(H58>0,G58/H58,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.75
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J58",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G60",
+      "before": "Pendiente",
+      "value": 5,
+      "expected": 5
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I60",
+      "before": "=IF(ISNUMBER(G60),IF(H60>0,G60/H60,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G60),IF(H60>0,G60/H60,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5555555555555556
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J60",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G62",
+      "before": "Pendiente",
+      "value": 53,
+      "expected": 53
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I62",
+      "before": "=IF(ISNUMBER(G62),IF(H62>0,G62/H62,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G62),IF(H62>0,G62/H62,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5824175824175825
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J62",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G64",
+      "before": "Pendiente",
+      "value": 1,
+      "expected": 1
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I64",
+      "before": "=IF(ISNUMBER(G64),IF(H64>0,G64/H64,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G64),IF(H64>0,G64/H64,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.3333333333333333
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J64",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G66",
+      "before": "Pendiente",
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I66",
+      "before": "=IF(ISNUMBER(G66),IF(H66>0,G66/H66,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G66),IF(H66>0,G66/H66,\"No aplica\"),\"Pendiente\")",
+      "expected": 1.0
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J66",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G68",
+      "before": "Pendiente",
+      "value": 37,
+      "expected": 37
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I68",
+      "before": "=IF(ISNUMBER(G68),IF(H68>0,G68/H68,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G68),IF(H68>0,G68/H68,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.6851851851851852
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J68",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G70",
+      "before": "Pendiente",
+      "value": 16,
+      "expected": 16
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I70",
+      "before": "=IF(ISNUMBER(G70),IF(H70>0,G70/H70,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G70),IF(H70>0,G70/H70,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.8888888888888888
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J70",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G72",
+      "before": "Pendiente",
+      "value": 3,
+      "expected": 3
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I72",
+      "before": "=IF(ISNUMBER(G72),IF(H72>0,G72/H72,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G72),IF(H72>0,G72/H72,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.2727272727272727
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J72",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G74",
+      "before": "Pendiente",
+      "value": 40,
+      "expected": 40
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I74",
+      "before": "=IF(ISNUMBER(G74),IF(H74>0,G74/H74,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G74),IF(H74>0,G74/H74,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.547945205479452
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J74",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G76",
+      "before": "Pendiente",
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I76",
+      "before": "=IF(ISNUMBER(G76),IF(H76>0,G76/H76,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G76),IF(H76>0,G76/H76,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.75
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J76",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G78",
+      "before": "Pendiente",
+      "value": 5,
+      "expected": 5
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I78",
+      "before": "=IF(ISNUMBER(G78),IF(H78>0,G78/H78,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G78),IF(H78>0,G78/H78,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.7142857142857143
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J78",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G80",
+      "before": "Pendiente",
+      "value": 36,
+      "expected": 36
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I80",
+      "before": "=IF(ISNUMBER(G80),IF(H80>0,G80/H80,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G80),IF(H80>0,G80/H80,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5538461538461539
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J80",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G82",
+      "before": "Pendiente",
+      "value": 9,
+      "expected": 9
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I82",
+      "before": "=IF(ISNUMBER(G82),IF(H82>0,G82/H82,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G82),IF(H82>0,G82/H82,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.6
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J82",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G84",
+      "before": "Pendiente",
+      "value": 3,
+      "expected": 3
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I84",
+      "before": "=IF(ISNUMBER(G84),IF(H84>0,G84/H84,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G84),IF(H84>0,G84/H84,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.3333333333333333
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J84",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G86",
+      "before": "Pendiente",
+      "value": 59,
+      "expected": 59
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I86",
+      "before": "=IF(ISNUMBER(G86),IF(H86>0,G86/H86,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G86),IF(H86>0,G86/H86,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5566037735849056
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J86",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G88",
+      "before": "Pendiente",
+      "value": 1,
+      "expected": 1
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I88",
+      "before": "=IF(ISNUMBER(G88),IF(H88>0,G88/H88,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G88),IF(H88>0,G88/H88,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J88",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G90",
+      "before": "Pendiente",
+      "value": 2,
+      "expected": 2
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I90",
+      "before": "=IF(ISNUMBER(G90),IF(H90>0,G90/H90,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G90),IF(H90>0,G90/H90,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.4
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J90",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G92",
+      "before": "Pendiente",
+      "value": 20,
+      "expected": 20
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I92",
+      "before": "=IF(ISNUMBER(G92),IF(H92>0,G92/H92,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G92),IF(H92>0,G92/H92,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5714285714285714
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J92",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G94",
+      "before": "Pendiente",
+      "value": 8,
+      "expected": 8
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I94",
+      "before": "=IF(ISNUMBER(G94),IF(H94>0,G94/H94,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G94),IF(H94>0,G94/H94,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.42105263157894735
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J94",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G96",
+      "before": "Pendiente",
+      "value": 36,
+      "expected": 36
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I96",
+      "before": "=IF(ISNUMBER(G96),IF(H96>0,G96/H96,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G96),IF(H96>0,G96/H96,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J96",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G98",
+      "before": "Pendiente",
+      "value": 3,
+      "expected": 3
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I98",
+      "before": "=IF(ISNUMBER(G98),IF(H98>0,G98/H98,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G98),IF(H98>0,G98/H98,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.3333333333333333
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J98",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G100",
+      "before": "Pendiente",
+      "value": 32,
+      "expected": 32
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I100",
+      "before": "=IF(ISNUMBER(G100),IF(H100>0,G100/H100,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G100),IF(H100>0,G100/H100,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.6153846153846154
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J100",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G102",
+      "before": "Pendiente",
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I102",
+      "before": "=IF(ISNUMBER(G102),IF(H102>0,G102/H102,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G102),IF(H102>0,G102/H102,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.6666666666666666
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J102",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G104",
+      "before": "Pendiente",
+      "value": 26,
+      "expected": 26
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I104",
+      "before": "=IF(ISNUMBER(G104),IF(H104>0,G104/H104,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G104),IF(H104>0,G104/H104,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.40625
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J104",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G106",
+      "before": "Pendiente",
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I106",
+      "before": "=IF(ISNUMBER(G106),IF(H106>0,G106/H106,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G106),IF(H106>0,G106/H106,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.35294117647058826
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J106",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G108",
+      "before": "Pendiente",
+      "value": 38,
+      "expected": 38
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I108",
+      "before": "=IF(ISNUMBER(G108),IF(H108>0,G108/H108,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G108),IF(H108>0,G108/H108,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5846153846153846
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J108",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G110",
+      "before": "Pendiente",
+      "value": 23,
+      "expected": 23
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I110",
+      "before": "=IF(ISNUMBER(G110),IF(H110>0,G110/H110,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G110),IF(H110>0,G110/H110,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.32857142857142857
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J110",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G112",
+      "before": "Pendiente",
+      "value": 9,
+      "expected": 9
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I112",
+      "before": "=IF(ISNUMBER(G112),IF(H112>0,G112/H112,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G112),IF(H112>0,G112/H112,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.4090909090909091
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J112",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G114",
+      "before": "Pendiente",
+      "value": 20,
+      "expected": 20
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I114",
+      "before": "=IF(ISNUMBER(G114),IF(H114>0,G114/H114,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G114),IF(H114>0,G114/H114,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5263157894736842
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J114",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G116",
+      "before": "Pendiente",
+      "value": 21,
+      "expected": 21
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I116",
+      "before": "=IF(ISNUMBER(G116),IF(H116>0,G116/H116,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G116),IF(H116>0,G116/H116,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.525
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J116",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G118",
+      "before": "Pendiente",
+      "value": 20,
+      "expected": 20
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I118",
+      "before": "=IF(ISNUMBER(G118),IF(H118>0,G118/H118,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G118),IF(H118>0,G118/H118,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J118",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G120",
+      "before": "Pendiente",
+      "value": 11,
+      "expected": 11
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I120",
+      "before": "=IF(ISNUMBER(G120),IF(H120>0,G120/H120,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G120),IF(H120>0,G120/H120,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.4782608695652174
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J120",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G122",
+      "before": "Pendiente",
+      "value": 20,
+      "expected": 20
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I122",
+      "before": "=IF(ISNUMBER(G122),IF(H122>0,G122/H122,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G122),IF(H122>0,G122/H122,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.5882352941176471
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J122",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "G124",
+      "before": "Pendiente",
+      "value": 16,
+      "expected": 16
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "I124",
+      "before": "=IF(ISNUMBER(G124),IF(H124>0,G124/H124,\"No aplica\"),\"Pendiente\")",
+      "formula": "=IF(ISNUMBER(G124),IF(H124>0,G124/H124,\"No aplica\"),\"Pendiente\")",
+      "expected": 0.3902439024390244
+    },
+    {
+      "sheet": "53_Codigos_T1_Confirmados",
+      "cell": "J124",
+      "before": "Pendiente de linaje del proxy",
+      "value": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre.",
+      "expected": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+    }
+  ],
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "fuentes": {
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": {
+      "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8"
+    },
+    "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json": {
+      "sha256": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0"
+    },
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx": {
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+    },
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx": {
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/evidencia/add_promedios_sheet_original.py": {
+      "sha256": "c09e9b3255cfb90f38ca1393cb49d62e8e061cf8c39fa081d8011525a70183d8"
+    }
+  }
+}

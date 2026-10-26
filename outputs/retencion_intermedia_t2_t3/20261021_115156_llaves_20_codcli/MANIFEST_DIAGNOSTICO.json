@@ -1,0 +1,177 @@
+{
+  "recurso": "DIAGNOSTICO_LLAVE_CODCLI_20_DOCUMENTOS_P_COHORTE2025",
+  "hito": "H001-RETENCION-IPSS162",
+  "fecha": "2026-10-21T11:54:38.469662-03:00",
+  "clasificacion": "B observaciones; C cruce exacto; D denominadores preservados; E dos CODCLI y cobertura temporal pendientes",
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hoja": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "hoja": "02_COHORTE_ELEGIBILIDAD / 01_CATALOGO_CARRERA",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "hoja": "2025_carga!J (RUT), BU (N_DOC), BV (DV)",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-20_2027_P1_082504/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/2025-2.xlsx",
+      "hoja": "Detalle1 / Hoja1",
+      "sha256": "63a38e07b8b24d796cd2104abb1a63129f09b4b88e291c640f9e0f9e116fb78b",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "hoja": "Base",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "clasificacion": "B fuente institucional / C derivado técnico"
+    }
+  ],
+  "seleccion": {
+    "personas": 20,
+    "TIPO_DOC": {
+      "P": 20
+    },
+    "DV_vacio": 20,
+    "N_DOC_numerico_9_digitos": 20,
+    "estado_motor": "INCLUIDO",
+    "origen": 2025,
+    "regla_anterior": "La llave de los listados se construyó solo para TIPO_DOC=R. Para P se dejó sin llave, no como ausencia."
+  },
+  "metodo_C": {
+    "fuente": "IPSS_Procesamiento.xlsx / 2025_carga",
+    "campos": [
+      "RUT (J)",
+      "N_DOC (BU)",
+      "DV (BV)"
+    ],
+    "N_DOC_objetivo_con_RUT_explicito_unico": 20,
+    "RUT_documentados_distintos": 20,
+    "transformacion_C": "Se lee la correspondencia RUT↔N_DOC existente en la misma fila; no se deduce desde nombres, fecha de nacimiento o sexo, ni se convierte un pasaporte por una función inventada. Luego se recupera CODCLI por RUT exacto en fuentes UMAS y se sigue ese CODCLI conservando todas sus matrículas.",
+    "alcance_E": "Correspondencia observada de la preparación institucional 2025; no certifica que un RUT temporal sea un RUN oficial ni autoriza cambiar el documento informado a SIES."
+  },
+  "resultados_resumen": {
+    "personas_objetivo": 20,
+    "CODCLI_identificado": 18,
+    "sin_CODCLI_identificado": 2,
+    "CODCLI_distintos": 19,
+    "un_CODCLI": 17,
+    "dos_CODCLI": 1,
+    "recuperada_solo_por_CODCLI_en_12112": 1,
+    "alguna_matricula_VIGENTE_en_12112": 14,
+    "criterio_del_estado": "Se observa ESTADOACADEMICO en la extracción. No demuestra vigencia al cierre T2/T3 ni asigna VIG SIES.",
+    "cierres_parciales": [
+      {
+        "fuente": "T2_2026",
+        "llave": "CODCLI exacto con puente documental explícito",
+        "tiene_CODCLI": true,
+        "personas_con_llave_para_buscar": 18,
+        "personas_de_20_encontradas": 0,
+        "no_localizadas_entre_personas_con_llave": 18,
+        "sin_CODCLI_para_buscar": 2,
+        "estados_UMAS_observados": {},
+        "clasificacion": "B/C presencia; E fecha/cobertura del cierre no acreditadas"
+      },
+      {
+        "fuente": "T3_2026",
+        "llave": "CODCLI exacto con puente documental explícito",
+        "tiene_CODCLI": true,
+        "personas_con_llave_para_buscar": 18,
+        "personas_de_20_encontradas": 0,
+        "no_localizadas_entre_personas_con_llave": 18,
+        "sin_CODCLI_para_buscar": 2,
+        "estados_UMAS_observados": {},
+        "clasificacion": "B/C presencia; E fecha/cobertura del cierre no acreditadas"
+      }
+    ]
+  },
+  "QA_C": {
+    "resultado": "OK_CON_PENDIENTES_E",
+    "seleccion_20_y_denominador_1150_reproducidos_sin_cambiar_reglas": true,
+    "correspondencias_N_DOC_RUT_explicitas_univocas": 20,
+    "colisiones_CODCLI_entre_personas_objetivo": 0,
+    "colisiones_identificadores_por_CODCLI_en_cada_fuente": 0,
+    "fuentes_originales_sin_cambios_por_sha256": true,
+    "xlsx_actual_sin_cambios": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+      "sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d"
+    },
+    "denominadores_actuales_verificados": [
+      558,
+      1150,
+      222,
+      124
+    ],
+    "salidas_solo_agregados": true,
+    "identificadores_individuales_guardados": false
+  },
+  "procedencia_12112": {
+    "ruta_anterior": "/Users/alexi/Downloads/DATOSDEALUMNOS_12112.xlsx",
+    "ruta_actual": "/Users/alexi/Desktop/Caracterizacion_2026-10-20_2027_P1_082504/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+    "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+    "resultado_B": "Ruta anterior no disponible; copia localizada con bytes idénticos al hash gobernado."
+  },
+  "pendientes_E": [
+    "CODCLI de una persona de Ingeniería en Informática y una de Técnico en Programación y Análisis de Sistemas no identificado en los respaldos revisados.",
+    "Acreditar completitud, fecha efectiva y estados al cierre T2/T3; cero coincidencias entre los 18 buscables no acredita deserción.",
+    "La clasificación P y la correspondencia institucional observada no acreditan que un identificador temporal sea RUN oficial."
+  ],
+  "salidas": {
+    "RESULTADOS_AGREGADOS.json": "d79adf3a480dcaf46a4dc5ecf32473ffe4e085836e0a27b564a466ca9d488068",
+    "seleccion_y_exploracion.py": "7ca9243134e6df4c58a32a0fc26fe4bbc98b5cac921dc9eb6794c20ca944ec2e",
+    "comprobar_20_codcli.py": "8e886bcd02741628c89d1f40b1998ca37ea2ae9f3e5168ac78ecdd1094232d0d",
+    "DIAGNOSTICO_LLAVES_20_CODCLI.md": "a9360d5270a0bbebc0799f5a744e8acb23989238ac4a9f0b6c2f7c1a6035864e"
+  },
+  "reutilizacion": {
+    "script_seleccion": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/profile.py",
+    "sha256": "39b64cfea7773f269a10ba9576f1945f79e35e0f69a681913a173a2b279c0d88",
+    "alcance": "Solo se ejecuta en memoria la sección de selección previa a specs=. No se ejecutan las escrituras del script anterior."
+  },
+  "git": {
+    "rama_antes": "feature/ire-2026",
+    "rama_despues": "feature/ire-2026",
+    "HEAD_antes": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "HEAD_despues": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "commit": false,
+    "push": false
+  },
+  "borrador_superado_local": "outputs/retencion_intermedia_t2_t3/20261021_103508_llaves_20_codcli/RESULTADOS_AGREGADOS.json; no incluye 12112 y su presentación de ausencias de cierre fue sustituida por la separación 18 buscables/2 sin CODCLI de esta versión."
+}

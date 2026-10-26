@@ -1,0 +1,56 @@
+[
+  {
+    "hoja": "18_Foto_Intertrimestral",
+    "celda": "B82",
+    "antes": "B · Cierre T3: 2025 = Matrícula T3_2025 2.xlsx, hoja T3_2025 (hoja 24); 2026 = DATOSDEALUMNOS_12159 al 22-10-2026, T3 en curso (hoja 25). Cierre T2 del grupo 1: sin foto completa (las fotos T2 solo traen la matrícula del periodo 2).",
+    "despues": "B · Foto T3: 2025 = Matrícula T3_2025 2.xlsx (hoja 24); 2026 = DATOSDEALUMNOS_12159 al 22-10-2026, T3 en curso (hoja 25). C/D · T2 del grupo 1 usa actividad del período y estado VIGENTE de PROMEDIOS como seguimiento interno."
+  },
+  {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "celda": "D1853",
+    "antes": 582,
+    "despues": "=SUM(D1859:D1860)"
+  },
+  {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "celda": "E1853",
+    "antes": 535,
+    "despues": "=SUM(E1859:E1860)"
+  },
+  {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "celda": "H1853",
+    "antes": "Proxy de actividad/estado; no es foto de cierre SIES",
+    "despues": "C · R/P incluidos; detalle debajo."
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "A18",
+    "antes": "Pendientes explícitos",
+    "despues": "Alcance del cálculo interno"
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "A19",
+    "antes": "Los proxies completan vacíos de T1 con avance académico; no prueban una foto de matrícula al cierre. El estado académico se observa por persona y período, pero la fuente tiene múltiples filas por asignatura.",
+    "despues": "C/D · Para el seguimiento interno se cuenta una persona con actividad del período y estado VIGENTE en PROMEDIOS, sin exigir fecha histórica del estado. Se deduplican las filas por asignatura. La foto de matrícula T3 mantiene su fuente y cálculo separados."
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "A1",
+    "antes": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES.",
+    "despues": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V15 completa los auxiliares PROMEDIOS de 2025 con documentos R/P. La revisión del código SIES permanece separada."
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "A14",
+    "antes": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre.",
+    "despues": "C · PROMEDIOS 2025: T2=611/1.150 y T3=546/1.150 (hoja 26). D · Actividad del período + estado VIGENTE del extracto; no se exige fecha histórica para este análisis interno. Foto de matrícula T3: 1.023/1.150."
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "A32",
+    "antes": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan.",
+    "despues": "C · V15 conserva diccionario v7, denominadores, tablas y gráficos. Corrige el auxiliar T3-2025 mediante el puente R/P y normaliza los estilos que Excel reparaba. La foto T3 no cambia."
+  }
+]

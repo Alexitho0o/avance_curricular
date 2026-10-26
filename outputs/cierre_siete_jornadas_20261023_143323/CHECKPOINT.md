@@ -1,0 +1,1 @@
+D/C: v5 activa; siete cierres internos aprobados. E: atribución documental pendiente. Cinco observaciones por jornada quedan en INF35-03/04 T2/T3-2024 e INF35-10 T2-2025. Seis homologaciones fuera de este foco. Sin cambios de bases/denominadores/Excel ni commit/push.

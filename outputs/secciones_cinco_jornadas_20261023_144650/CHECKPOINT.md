@@ -1,0 +1,1 @@
+C/E: revisión finalizada; no aplicada. Proponer INF35-04 T3-2024 I162S2C1J2V4 (cambio reportado en noviembre + secciones/plan + MU2025) e INF35-10 T2-2025 I162S2C1J2V4 (T1 + cuatro asignaturas V). Pendientes: INF35-03 T2/T3-2024 versión V1/V2; INF35-04 T2-2024 jornada administrativa. Conservar v5 y esperar aprobación acotada; no extrapolar sección ni código de compañeros.

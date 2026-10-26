@@ -1,0 +1,1040 @@
+{
+  "proceso": "Retención intertrimestral interna IPSS162",
+  "periodo": "2026/T2",
+  "fecha_ejecucion": "2026-10-23T21:46:22.675494-03:00",
+  "clasificacion_evidencia": "B observado; C cálculo; E atribución pendiente",
+  "actual_sin_cambios": {
+    "matriculas": 528,
+    "personas": 527,
+    "renuncias_agregadas": 66,
+    "matriculas_restantes": 462,
+    "tasa_matriculas": 0.875
+  },
+  "estructura_t2": [
+    {
+      "nombre": "Hoja2",
+      "filas": 50,
+      "columnas": 4,
+      "visibilidad": "visible"
+    },
+    {
+      "nombre": "Hoja1",
+      "filas": 529,
+      "columnas": 19,
+      "visibilidad": "visible"
+    }
+  ],
+  "cache_dinamica_t2": {
+    "registros": 528,
+    "origen": {
+      "ref": "A1:S529",
+      "sheet": "Hoja1"
+    },
+    "campos": [
+      "Número",
+      "CODCLI",
+      "CODCARPR",
+      "NOMBRE_L",
+      "ANOMATRICULA",
+      "PERIODOMATRICULA",
+      "ANOINGRESO",
+      "PERIODOINGRESO",
+      "FECHAMATRICULA",
+      "JORNADA",
+      "RUT",
+      "NOMBRE",
+      "SEXO",
+      "CATEGORIA",
+      "NOMBRES",
+      "APELLIDO PATERNO",
+      "APELLIDO MATERNO",
+      "MAIL",
+      "Mail_Inst"
+    ]
+  },
+  "detalle_renuncias": {
+    "estado": "NO_LOCALIZADO_EN_COBERTURA_REVISADA",
+    "clasificacion": "E",
+    "referencia": "T2 Hoja2 C32:C50: constantes agregadas, sin lista individual acreditada."
+  },
+  "contrastes": {
+    "DA10246": {
+      "clasificacion": "B/C",
+      "hoja": "Hoja1",
+      "columnas_cruce": [
+        "CODCLI",
+        "RUT"
+      ],
+      "columnas_estado": [
+        "ESTADOACADEMICO",
+        "SITUACION"
+      ],
+      "filas_respaldo": 14204,
+      "cardinalidad_codcli": {
+        "1": 527,
+        "0": 1
+      },
+      "coincidencias_rut": 527,
+      "estados": {
+        "VIGENTE": 520,
+        "ELIMINADO": 7,
+        "NO_LOCALIZADO_POR_CODCLI": 1
+      },
+      "situaciones": {
+        "VIGENTE | 1 - ALUMNO REGULAR": 519,
+        "ELIMINADO | 23 - RETIRO - RETRACTO": 1,
+        "ELIMINADO | 11 - RENUNCIA POST INICIO CLASES": 5,
+        "VIGENTE | 38 - REINCORPORACION DE ACTIVIDADES": 1,
+        "ELIMINADO | 24 - CAMBIO DE CARRERA": 1
+      },
+      "personas_con_matricula_vigente_en_respaldo": 519,
+      "duplicado_sin_identificadores": [
+        {
+          "carrera": "CONG",
+          "estado": "VIGENTE",
+          "situacion": "1 - ALUMNO REGULAR"
+        },
+        {
+          "carrera": "TAMD",
+          "estado": "VIGENTE",
+          "situacion": "1 - ALUMNO REGULAR"
+        }
+      ],
+      "busqueda_rut_sin_codcli": [
+        {
+          "carrera_origen": "IRHU",
+          "filas_mismo_rut": 1,
+          "filas_misma_carrera": 0,
+          "estados_otro_codcli": {
+            "VIGENTE": 1
+          }
+        }
+      ],
+      "por_carrera": [
+        {
+          "carrera": "ADMINISTRACION PUBLICA",
+          "matriculas": 20,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 32,
+          "estados": {
+            "VIGENTE": 20
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "AUDITORIA",
+          "matriculas": 15,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 33,
+          "estados": {
+            "VIGENTE": 15
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "CONTABILIDAD GENERAL",
+          "matriculas": 25,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 34,
+          "estados": {
+            "VIGENTE": 25
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "CONTINUIDAD INGENIERIA INFORMATICA",
+          "matriculas": 3,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 35,
+          "estados": {
+            "VIGENTE": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "matriculas": 36,
+          "renuncias_celda": 6,
+          "renuncias_calculo": 6,
+          "fila": 36,
+          "estados": {
+            "VIGENTE": 35,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -5
+        },
+        {
+          "carrera": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+          "matriculas": 33,
+          "renuncias_celda": 4,
+          "renuncias_calculo": 4,
+          "fila": 37,
+          "estados": {
+            "VIGENTE": 33
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -4
+        },
+        {
+          "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+          "matriculas": 30,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 38,
+          "estados": {
+            "VIGENTE": 30
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "TECNICO EN CIBERSEGURIDAD",
+          "matriculas": 16,
+          "renuncias_celda": 3,
+          "renuncias_calculo": 3,
+          "fila": 39,
+          "estados": {
+            "VIGENTE": 16
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -3
+        },
+        {
+          "carrera": "INGENIERIA EN INFORMATICA",
+          "matriculas": 33,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 40,
+          "estados": {
+            "VIGENTE": 33
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+          "matriculas": 26,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 41,
+          "estados": {
+            "VIGENTE": 25,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "INGENIERIA EN LOGISTICA",
+          "matriculas": 34,
+          "renuncias_celda": 6,
+          "renuncias_calculo": 6,
+          "fila": 42,
+          "estados": {
+            "VIGENTE": 33,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -5
+        },
+        {
+          "carrera": "TECNICO EN LOGISTICA",
+          "matriculas": 21,
+          "renuncias_celda": 3,
+          "renuncias_calculo": 3,
+          "fila": 43,
+          "estados": {
+            "VIGENTE": 20,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "INGENIERIA EN MARKETING DIGITAL",
+          "matriculas": 33,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 44,
+          "estados": {
+            "VIGENTE": 33
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "TECNICO EN MARKETING DIGITAL",
+          "matriculas": 28,
+          "renuncias_celda": 5,
+          "renuncias_calculo": 5,
+          "fila": 45,
+          "estados": {
+            "VIGENTE": 27,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -4
+        },
+        {
+          "carrera": "INGENIERIA EN RECURSOS HUMANOS",
+          "matriculas": 6,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 46,
+          "estados": {
+            "NO_LOCALIZADO_POR_CODCLI": 1,
+            "VIGENTE": 5
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN RECURSOS HUMANOS",
+          "matriculas": 18,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 47,
+          "estados": {
+            "VIGENTE": 18
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "INGENIERIA INDUSTRIAL",
+          "matriculas": 26,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 48,
+          "estados": {
+            "VIGENTE": 26
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "TECNICO EN ENFERMERIA",
+          "matriculas": 60,
+          "renuncias_celda": 11,
+          "renuncias_calculo": 11,
+          "fila": 49,
+          "estados": {
+            "VIGENTE": 59,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -10
+        },
+        {
+          "carrera": "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+          "matriculas": 65,
+          "renuncias_celda": 18,
+          "renuncias_calculo": 18,
+          "fila": 50,
+          "estados": {
+            "VIGENTE": 64,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -17
+        }
+      ],
+      "carreras_discordantes_complemento": 15,
+      "limite": "Estado del respaldo; no acredita pertenencia a las66 renuncias del cierreT2."
+    },
+    "DA11998": {
+      "clasificacion": "B/C",
+      "hoja": "Hoja1",
+      "columnas_cruce": [
+        "CODCLI",
+        "RUT"
+      ],
+      "columnas_estado": [
+        "ESTADOACADEMICO",
+        "SITUACION"
+      ],
+      "filas_respaldo": 15045,
+      "cardinalidad_codcli": {
+        "1": 526,
+        "0": 2
+      },
+      "coincidencias_rut": 526,
+      "estados": {
+        "VIGENTE": 463,
+        "ELIMINADO": 63,
+        "NO_LOCALIZADO_POR_CODCLI": 2
+      },
+      "situaciones": {
+        "VIGENTE | 1 - ALUMNO REGULAR": 459,
+        "ELIMINADO | 11 - RENUNCIA POST INICIO CLASES": 56,
+        "ELIMINADO | 23 - RETIRO - RETRACTO": 3,
+        "ELIMINADO | 24 - CAMBIO DE CARRERA": 4,
+        "VIGENTE | 38 - REINCORPORACION DE ACTIVIDADES": 4
+      },
+      "personas_con_matricula_vigente_en_respaldo": 462,
+      "duplicado_sin_identificadores": [
+        {
+          "carrera": "CONG",
+          "estado": "VIGENTE",
+          "situacion": "1 - ALUMNO REGULAR"
+        },
+        {
+          "carrera": "TAMD",
+          "estado": "VIGENTE",
+          "situacion": "1 - ALUMNO REGULAR"
+        }
+      ],
+      "busqueda_rut_sin_codcli": [
+        {
+          "carrera_origen": "IRHU",
+          "filas_mismo_rut": 1,
+          "filas_misma_carrera": 0,
+          "estados_otro_codcli": {
+            "ELIMINADO": 1
+          }
+        },
+        {
+          "carrera_origen": "TLOG",
+          "filas_mismo_rut": 1,
+          "filas_misma_carrera": 1,
+          "estados_otro_codcli": {
+            "VIGENTE": 1
+          }
+        }
+      ],
+      "por_carrera": [
+        {
+          "carrera": "ADMINISTRACION PUBLICA",
+          "matriculas": 20,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 32,
+          "estados": {
+            "VIGENTE": 19,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "AUDITORIA",
+          "matriculas": 15,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 33,
+          "estados": {
+            "VIGENTE": 14,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "CONTABILIDAD GENERAL",
+          "matriculas": 25,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 34,
+          "estados": {
+            "VIGENTE": 23,
+            "ELIMINADO": 2
+          },
+          "complemento_vigente_incluye_no_localizados": 2,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "CONTINUIDAD INGENIERIA INFORMATICA",
+          "matriculas": 3,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 35,
+          "estados": {
+            "VIGENTE": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "matriculas": 36,
+          "renuncias_celda": 6,
+          "renuncias_calculo": 6,
+          "fila": 36,
+          "estados": {
+            "VIGENTE": 32,
+            "ELIMINADO": 4
+          },
+          "complemento_vigente_incluye_no_localizados": 4,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+          "matriculas": 33,
+          "renuncias_celda": 4,
+          "renuncias_calculo": 4,
+          "fila": 37,
+          "estados": {
+            "VIGENTE": 30,
+            "ELIMINADO": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 3,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+          "matriculas": 30,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 38,
+          "estados": {
+            "VIGENTE": 30
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "TECNICO EN CIBERSEGURIDAD",
+          "matriculas": 16,
+          "renuncias_celda": 3,
+          "renuncias_calculo": 3,
+          "fila": 39,
+          "estados": {
+            "VIGENTE": 14,
+            "ELIMINADO": 2
+          },
+          "complemento_vigente_incluye_no_localizados": 2,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN INFORMATICA",
+          "matriculas": 33,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 40,
+          "estados": {
+            "VIGENTE": 29,
+            "ELIMINADO": 4
+          },
+          "complemento_vigente_incluye_no_localizados": 4,
+          "diferencia_complemento_vs_renuncias": 2
+        },
+        {
+          "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+          "matriculas": 26,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 41,
+          "estados": {
+            "VIGENTE": 23,
+            "ELIMINADO": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 3,
+          "diferencia_complemento_vs_renuncias": 3
+        },
+        {
+          "carrera": "INGENIERIA EN LOGISTICA",
+          "matriculas": 34,
+          "renuncias_celda": 6,
+          "renuncias_calculo": 6,
+          "fila": 42,
+          "estados": {
+            "VIGENTE": 28,
+            "ELIMINADO": 6
+          },
+          "complemento_vigente_incluye_no_localizados": 6,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "TECNICO EN LOGISTICA",
+          "matriculas": 21,
+          "renuncias_celda": 3,
+          "renuncias_calculo": 3,
+          "fila": 43,
+          "estados": {
+            "VIGENTE": 19,
+            "NO_LOCALIZADO_POR_CODCLI": 1,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 2,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN MARKETING DIGITAL",
+          "matriculas": 33,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 44,
+          "estados": {
+            "VIGENTE": 33
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "TECNICO EN MARKETING DIGITAL",
+          "matriculas": 28,
+          "renuncias_celda": 5,
+          "renuncias_calculo": 5,
+          "fila": 45,
+          "estados": {
+            "VIGENTE": 24,
+            "ELIMINADO": 4
+          },
+          "complemento_vigente_incluye_no_localizados": 4,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN RECURSOS HUMANOS",
+          "matriculas": 6,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 46,
+          "estados": {
+            "NO_LOCALIZADO_POR_CODCLI": 1,
+            "VIGENTE": 5
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN RECURSOS HUMANOS",
+          "matriculas": 18,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 47,
+          "estados": {
+            "ELIMINADO": 5,
+            "VIGENTE": 13
+          },
+          "complemento_vigente_incluye_no_localizados": 5,
+          "diferencia_complemento_vs_renuncias": 5
+        },
+        {
+          "carrera": "INGENIERIA INDUSTRIAL",
+          "matriculas": 26,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 48,
+          "estados": {
+            "VIGENTE": 25,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN ENFERMERIA",
+          "matriculas": 60,
+          "renuncias_celda": 11,
+          "renuncias_calculo": 11,
+          "fila": 49,
+          "estados": {
+            "VIGENTE": 48,
+            "ELIMINADO": 12
+          },
+          "complemento_vigente_incluye_no_localizados": 12,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+          "matriculas": 65,
+          "renuncias_celda": 18,
+          "renuncias_calculo": 18,
+          "fila": 50,
+          "estados": {
+            "VIGENTE": 51,
+            "ELIMINADO": 14
+          },
+          "complemento_vigente_incluye_no_localizados": 14,
+          "diferencia_complemento_vs_renuncias": -4
+        }
+      ],
+      "carreras_discordantes_complemento": 15,
+      "limite": "Estado del respaldo; no acredita pertenencia a las66 renuncias del cierreT2."
+    },
+    "DA12159": {
+      "clasificacion": "B/C",
+      "hoja": "Hoja1",
+      "columnas_cruce": [
+        "CODCLI",
+        "RUT"
+      ],
+      "columnas_estado": [
+        "ESTADOACADEMICO",
+        "SITUACION"
+      ],
+      "filas_respaldo": 15185,
+      "cardinalidad_codcli": {
+        "1": 526,
+        "0": 2
+      },
+      "coincidencias_rut": 526,
+      "estados": {
+        "VIGENTE": 462,
+        "ELIMINADO": 63,
+        "NO_LOCALIZADO_POR_CODCLI": 2,
+        "SUSPENDIDO": 1
+      },
+      "situaciones": {
+        "VIGENTE | 1 - ALUMNO REGULAR": 458,
+        "ELIMINADO | 11 - RENUNCIA POST INICIO CLASES": 56,
+        "ELIMINADO | 23 - RETIRO - RETRACTO": 3,
+        "ELIMINADO | 24 - CAMBIO DE CARRERA": 4,
+        "VIGENTE | 38 - REINCORPORACION DE ACTIVIDADES": 4,
+        "SUSPENDIDO | 2 - SUSPENSIÓN TEMPORAL": 1
+      },
+      "personas_con_matricula_vigente_en_respaldo": 461,
+      "duplicado_sin_identificadores": [
+        {
+          "carrera": "CONG",
+          "estado": "VIGENTE",
+          "situacion": "1 - ALUMNO REGULAR"
+        },
+        {
+          "carrera": "TAMD",
+          "estado": "VIGENTE",
+          "situacion": "1 - ALUMNO REGULAR"
+        }
+      ],
+      "busqueda_rut_sin_codcli": [
+        {
+          "carrera_origen": "IRHU",
+          "filas_mismo_rut": 1,
+          "filas_misma_carrera": 0,
+          "estados_otro_codcli": {
+            "ELIMINADO": 1
+          }
+        },
+        {
+          "carrera_origen": "TLOG",
+          "filas_mismo_rut": 1,
+          "filas_misma_carrera": 1,
+          "estados_otro_codcli": {
+            "VIGENTE": 1
+          }
+        }
+      ],
+      "por_carrera": [
+        {
+          "carrera": "ADMINISTRACION PUBLICA",
+          "matriculas": 20,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 32,
+          "estados": {
+            "VIGENTE": 19,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "AUDITORIA",
+          "matriculas": 15,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 33,
+          "estados": {
+            "VIGENTE": 14,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "CONTABILIDAD GENERAL",
+          "matriculas": 25,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 34,
+          "estados": {
+            "VIGENTE": 23,
+            "ELIMINADO": 2
+          },
+          "complemento_vigente_incluye_no_localizados": 2,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "CONTINUIDAD INGENIERIA INFORMATICA",
+          "matriculas": 3,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 35,
+          "estados": {
+            "VIGENTE": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "matriculas": 36,
+          "renuncias_celda": 6,
+          "renuncias_calculo": 6,
+          "fila": 36,
+          "estados": {
+            "VIGENTE": 32,
+            "ELIMINADO": 4
+          },
+          "complemento_vigente_incluye_no_localizados": 4,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+          "matriculas": 33,
+          "renuncias_celda": 4,
+          "renuncias_calculo": 4,
+          "fila": 37,
+          "estados": {
+            "VIGENTE": 30,
+            "ELIMINADO": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 3,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+          "matriculas": 30,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 38,
+          "estados": {
+            "VIGENTE": 30
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "TECNICO EN CIBERSEGURIDAD",
+          "matriculas": 16,
+          "renuncias_celda": 3,
+          "renuncias_calculo": 3,
+          "fila": 39,
+          "estados": {
+            "VIGENTE": 13,
+            "ELIMINADO": 2,
+            "SUSPENDIDO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 3,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "INGENIERIA EN INFORMATICA",
+          "matriculas": 33,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 40,
+          "estados": {
+            "VIGENTE": 29,
+            "ELIMINADO": 4
+          },
+          "complemento_vigente_incluye_no_localizados": 4,
+          "diferencia_complemento_vs_renuncias": 2
+        },
+        {
+          "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+          "matriculas": 26,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 41,
+          "estados": {
+            "VIGENTE": 23,
+            "ELIMINADO": 3
+          },
+          "complemento_vigente_incluye_no_localizados": 3,
+          "diferencia_complemento_vs_renuncias": 3
+        },
+        {
+          "carrera": "INGENIERIA EN LOGISTICA",
+          "matriculas": 34,
+          "renuncias_celda": 6,
+          "renuncias_calculo": 6,
+          "fila": 42,
+          "estados": {
+            "VIGENTE": 28,
+            "ELIMINADO": 6
+          },
+          "complemento_vigente_incluye_no_localizados": 6,
+          "diferencia_complemento_vs_renuncias": 0
+        },
+        {
+          "carrera": "TECNICO EN LOGISTICA",
+          "matriculas": 21,
+          "renuncias_celda": 3,
+          "renuncias_calculo": 3,
+          "fila": 43,
+          "estados": {
+            "VIGENTE": 19,
+            "NO_LOCALIZADO_POR_CODCLI": 1,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 2,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN MARKETING DIGITAL",
+          "matriculas": 33,
+          "renuncias_celda": 2,
+          "renuncias_calculo": 2,
+          "fila": 44,
+          "estados": {
+            "VIGENTE": 33
+          },
+          "complemento_vigente_incluye_no_localizados": 0,
+          "diferencia_complemento_vs_renuncias": -2
+        },
+        {
+          "carrera": "TECNICO EN MARKETING DIGITAL",
+          "matriculas": 28,
+          "renuncias_celda": 5,
+          "renuncias_calculo": 5,
+          "fila": 45,
+          "estados": {
+            "VIGENTE": 24,
+            "ELIMINADO": 4
+          },
+          "complemento_vigente_incluye_no_localizados": 4,
+          "diferencia_complemento_vs_renuncias": -1
+        },
+        {
+          "carrera": "INGENIERIA EN RECURSOS HUMANOS",
+          "matriculas": 6,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 46,
+          "estados": {
+            "NO_LOCALIZADO_POR_CODCLI": 1,
+            "VIGENTE": 5
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN RECURSOS HUMANOS",
+          "matriculas": 18,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 47,
+          "estados": {
+            "ELIMINADO": 5,
+            "VIGENTE": 13
+          },
+          "complemento_vigente_incluye_no_localizados": 5,
+          "diferencia_complemento_vs_renuncias": 5
+        },
+        {
+          "carrera": "INGENIERIA INDUSTRIAL",
+          "matriculas": 26,
+          "renuncias_celda": null,
+          "renuncias_calculo": 0,
+          "fila": 48,
+          "estados": {
+            "VIGENTE": 25,
+            "ELIMINADO": 1
+          },
+          "complemento_vigente_incluye_no_localizados": 1,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN ENFERMERIA",
+          "matriculas": 60,
+          "renuncias_celda": 11,
+          "renuncias_calculo": 11,
+          "fila": 49,
+          "estados": {
+            "VIGENTE": 48,
+            "ELIMINADO": 12
+          },
+          "complemento_vigente_incluye_no_localizados": 12,
+          "diferencia_complemento_vs_renuncias": 1
+        },
+        {
+          "carrera": "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+          "matriculas": 65,
+          "renuncias_celda": 18,
+          "renuncias_calculo": 18,
+          "fila": 50,
+          "estados": {
+            "VIGENTE": 51,
+            "ELIMINADO": 14
+          },
+          "complemento_vigente_incluye_no_localizados": 14,
+          "diferencia_complemento_vs_renuncias": -4
+        }
+      ],
+      "carreras_discordantes_complemento": 14,
+      "limite": "Estado del respaldo; no acredita pertenencia a las66 renuncias del cierreT2."
+    }
+  },
+  "escenarios_condicionales_c_e": [
+    {
+      "condicion": "Ambas matrículas de la única persona duplicada permanecen después de restar las66.",
+      "personas_restantes": 461,
+      "personas_base_escenario": 527,
+      "tasa": 0.8747628083491461
+    },
+    {
+      "condicion": "Una o ambas matrículas de esa persona forman parte de las66.",
+      "personas_restantes": 462,
+      "personas_base_escenario": 527,
+      "tasa": 0.8766603415559773
+    }
+  ],
+  "nota_escenario": "527 es unidad personas del mismo universo528; no reemplaza ningún denominador aprobado.",
+  "supuestos_escenario_e": [
+    "Las66 renuncias representan66 matrículas distintas del universo528, sin repeticiones ni otros períodos.",
+    "Una persona permanece si conserva al menos una matrícula de ese universo.",
+    "Restar528−66 reproduce la regla del resumen; no acredita vigencia individual al cierre."
+  ],
+  "fuentes": {
+    "T2": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia_t2_t3/20261022_fuentes/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769"
+    },
+    "T3": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia_t2_t3/20261022_fuentes/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae"
+    },
+    "DA10246": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    "DA11998": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    "DA12159": {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    },
+    "MANIFEST_ORIGEN": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/retencion_intermedia_t2_t3/MANIFEST_RETENCION_FOTO_INTERTRIMESTRAL_20261022.json",
+      "sha256": "3fa3c725d0bc21564d29c8415e01add40064fac3aa2eedb669990d420fddd541"
+    },
+    "MANIFEST_10246": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "sha256": "bda8a15c0f0689bf013f94882a20cdb6fac25107888641af69c9210bc663f588"
+    },
+    "MANIFEST_12159": {
+      "ruta": "/Users/alexi/Desktop/Caracterizacion_2026-10-22_2027_P1_084218/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "ef41ab72060b70bca2e3756ee97f9469ce108f27feeca9e6892b920f94054a84"
+    },
+    "V16": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+    },
+    "V16_ESCRITORIO": {
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+    }
+  }
+}

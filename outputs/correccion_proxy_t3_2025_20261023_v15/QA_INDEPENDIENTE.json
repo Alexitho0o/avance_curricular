@@ -1,0 +1,238 @@
+{
+  "fecha_utc": "2026-10-24T00:00:50.970268+00:00",
+  "clasificacion": "C · QA independiente de estructura, alcance y aritmética; fuentes observadas B",
+  "estado": "OK",
+  "fuentes_sha256": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V14.xlsx": "20813b21f546085f94c10b2983335567c937e492f4d3f707be0893e5cb5234a4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RESULTADO_AGREGADO.json": "fd9495a334191ad00b318e798e8d35d6b9945e9d4242d0d9226a2a8af871c0bb"
+  },
+  "conteos": {
+    "hojas": 54,
+    "graficos": 13,
+    "tablas": 35,
+    "celdas": 110712
+  },
+  "controles": [
+    {
+      "control": "ZIP CRC",
+      "estado": "OK",
+      "detalle": "Ambos archivos íntegros al leer cada parte"
+    },
+    {
+      "control": "Fuente V14 coincide con EDICION",
+      "estado": "OK",
+      "detalle": "20813b21f546085f94c10b2983335567c937e492f4d3f707be0893e5cb5234a4"
+    },
+    {
+      "control": "Hojas y orden conservados",
+      "estado": "OK",
+      "detalle": {
+        "antes": 54,
+        "despues": 54
+      }
+    },
+    {
+      "control": "Whitelist sin duplicados",
+      "estado": "OK",
+      "detalle": {
+        "entradas": 43,
+        "unicas": 43
+      }
+    },
+    {
+      "control": "43 valores/formulas esperados",
+      "estado": "OK",
+      "detalle": {
+        "verificados": 43,
+        "discrepancias": []
+      }
+    },
+    {
+      "control": "43 antecedentes before contrastados con V14",
+      "estado": "OK",
+      "detalle": {
+        "discrepancias": []
+      }
+    },
+    {
+      "control": "Sin cambios celulares fuera de whitelist",
+      "estado": "OK",
+      "detalle": {
+        "diferencias": 43,
+        "nuevas_celdas": 33,
+        "eliminadas": [],
+        "inesperadas": [],
+        "indices_estilo_existentes_cambiados": []
+      }
+    },
+    {
+      "control": "Gráficos conservados byte a byte",
+      "estado": "OK",
+      "detalle": {
+        "antes": 13,
+        "despues": 13,
+        "cambiados": []
+      }
+    },
+    {
+      "control": "Tablas conservados byte a byte",
+      "estado": "OK",
+      "detalle": {
+        "antes": 35,
+        "despues": 35,
+        "cambiados": []
+      }
+    },
+    {
+      "control": "XML y relaciones bien formados",
+      "estado": "OK",
+      "detalle": []
+    },
+    {
+      "control": "Sin nuevos errores de celda",
+      "estado": "OK",
+      "detalle": {
+        "antes": 0,
+        "despues": 0
+      }
+    },
+    {
+      "control": "315 estilos y 22 dxf conservados",
+      "estado": "OK",
+      "detalle": {
+        "cellXfs_antes": 315,
+        "cellXfs_despues": 315,
+        "dxfs_antes": 22,
+        "dxfs_despues": 22
+      }
+    },
+    {
+      "control": "Únicamente se retiraron extLst de estilos 211-213",
+      "estado": "OK",
+      "detalle": {
+        "indices_modificados": [
+          211,
+          212,
+          213
+        ],
+        "indices_extLst_retirados": [
+          211,
+          212,
+          213
+        ]
+      }
+    },
+    {
+      "control": "Referencias de estilos válidas",
+      "estado": "OK",
+      "detalle": {
+        "fuera_de_rango": []
+      }
+    },
+    {
+      "control": "Recálculo aritmético independiente de nueve fórmulas",
+      "estado": "OK",
+      "detalle": {
+        "C1861": 1150.0,
+        "D1853": 596.0,
+        "E1853": 546.0,
+        "D1861": 596.0,
+        "E1861": 546.0,
+        "F1853": 0.4747826086956522,
+        "F1859": 0.47345132743362833,
+        "F1860": 0.55,
+        "F1861": 0.4747826086956522
+      }
+    },
+    {
+      "control": "Método 535+11 y 582+14",
+      "estado": "OK",
+      "detalle": {
+        "vigentes": 546,
+        "con_registro": 596,
+        "cohorte": 1150
+      }
+    },
+    {
+      "control": "E1853 referencia el detalle R/P",
+      "estado": "OK",
+      "detalle": "SUM(E1859:E1860)"
+    },
+    {
+      "control": "Foto T3 y seguimiento T2 conservados",
+      "estado": "OK",
+      "detalle": [
+        {
+          "sheet": "18_Foto_Intertrimestral",
+          "cell": "G8",
+          "antes": 1023.0,
+          "despues": 1023.0,
+          "esperado": 1023
+        },
+        {
+          "sheet": "18_Foto_Intertrimestral",
+          "cell": "E8",
+          "antes": 611.0,
+          "despues": 611.0,
+          "esperado": 611
+        },
+        {
+          "sheet": "26_Avance_Curricular_Resumen",
+          "cell": "E1852",
+          "antes": 611.0,
+          "despues": 611.0,
+          "esperado": 611
+        },
+        {
+          "sheet": "26_Avance_Curricular_Resumen",
+          "cell": "C1852",
+          "antes": 1150.0,
+          "despues": 1150.0,
+          "esperado": 1150
+        },
+        {
+          "sheet": "26_Avance_Curricular_Resumen",
+          "cell": "C1853",
+          "antes": 1150.0,
+          "despues": 1150.0,
+          "esperado": 1150
+        }
+      ]
+    },
+    {
+      "control": "Inventario de partes cambiadas",
+      "estado": "INFORMATIVO",
+      "detalle": {
+        "partes": [
+          "xl/styles.xml",
+          "xl/worksheets/sheet19.xml",
+          "xl/worksheets/sheet29.xml",
+          "xl/worksheets/sheet27.xml",
+          "xl/worksheets/sheet52.xml"
+        ],
+        "agregadas": []
+      }
+    },
+    {
+      "control": "Fuentes/libros sin modificaciones durante esta revisión",
+      "estado": "OK",
+      "detalle": {
+        "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V14.xlsx": true,
+        "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx": true,
+        "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json": true,
+        "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RESULTADO_AGREGADO.json": true
+      }
+    }
+  ],
+  "limites": [
+    "No se ejecutó una segunda apertura en Excel nativo por este auditor; la apertura sin aviso fue informada por el agente principal y no se presenta como verificación independiente.",
+    "Se recalcularon independientemente las nueve fórmulas afectadas; la conservación de las otras fórmulas se verificó por comparación, no mediante recálculo completo en Excel.",
+    "Este QA no reconstruye nuevamente las identidades privadas: contrasta los sumandos agregados ya reproducidos con RUT+DV y puente explícito R/P."
+  ],
+  "script": {
+    "ruta": "/private/tmp/qa_independiente_v15_20261023.py",
+    "sha256": "57301fcf4bf61689e0297b8f0cae38a53d8bbcd59ee8e1a7a3cb710324675515"
+  }
+}

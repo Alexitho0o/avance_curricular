@@ -1,0 +1,4 @@
+# Reproducción local
+Inputs privados ya existentes: /tmp/ipss_resolucion_2317_20261022/resultados.json y /tmp/ipss_revision_63_20261022/payload.json. No subir ni versionar esos índices. Las fuentes agregadas y hashes están fijados en FUENTES_HASHES.json.
+Orden: cruzar_historico.py → preparar_entrega.py → build.mjs con runtime Node de Codex → ensamblar.py. Autor privado: build_privado.mjs usa la ruta privada explícita; expandir_verificar_privado.py completa todas las filas con estilos artifact-tool y verifica cada celda. qa_independiente.py recalcula selección sin llamar al resolutor y prueba que invertir orden no cambie resultados.
+Reproducir en rutas nuevas para no sobrescribir entregas. El método no modifica reglas ni adopta las propuestas. Scripts sin datos individuales en repositorio; payloads y detalle solo locales privados.

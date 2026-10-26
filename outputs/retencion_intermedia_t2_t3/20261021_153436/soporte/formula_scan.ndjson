@@ -1,0 +1,2 @@
+{"kind":"match","sheet":"13_Granular_Codigo_Unico","address":"F115","value":"#VALUE!","formula":"IF(MID($C115,FIND(\"J\",$C115)+1,FIND(\"V\",$C115)-FIND(\"J\",$C115)-1)=\"1\",\"Diurno\",IF(MID($C115,FIND(\"J\",$C115)+1,FIND(\"V\",$C115)-FIND(\"J\",$C115)-1)=\"2\",\"Vespertino\",IF(MID($C115,FIND(\"J\",$C115)+1,FIND(\"V\",$C115)-FIND(\"J\",$C115)-1)=\"4\",\"Virtual\",\"No mapeado\")))","match":"value"}
+{"kind":"match","sheet":"13_Granular_Codigo_Unico","address":"G115","value":"#VALUE!","formula":"IF($F115=\"Virtual\",\"A distancia\",\"Presencial\")","match":"value"}

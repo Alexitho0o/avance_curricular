@@ -1,0 +1,228 @@
+{
+  "dictamen": "OK_CON_PENDIENTES_E",
+  "checks": [
+    {
+      "control": "private_directory_mode_0700",
+      "OK": true
+    },
+    {
+      "control": "private_workbook_mode_0600",
+      "OK": true
+    },
+    {
+      "control": "private_xlsx_and_json_git_ignored",
+      "OK": true
+    },
+    {
+      "control": "private_files_not_tracked",
+      "OK": true
+    },
+    {
+      "control": "xlsx_zip_crc_intact",
+      "OK": true
+    },
+    {
+      "control": "seven_expected_sheets",
+      "OK": true
+    },
+    {
+      "control": "all_six_detail_tables_and_filters",
+      "OK": true
+    },
+    {
+      "control": "fixed_person_counts",
+      "OK": true
+    },
+    {
+      "control": "no_duplicate_person_rows",
+      "OK": true
+    },
+    {
+      "control": "no_repeated_original_identity_within_cohort",
+      "OK": true
+    },
+    {
+      "control": "one_person_per_source_observation",
+      "OK": true
+    },
+    {
+      "control": "no_duplicate_full_enrolment_key_in_three_focus_snapshots",
+      "OK": true
+    },
+    {
+      "control": "Cohortes_MU_all_source_rows_preserved",
+      "OK": true
+    },
+    {
+      "control": "Cohortes_MU_literal_inputs_exact",
+      "OK": true
+    },
+    {
+      "control": "Identidad_20_all_source_rows_preserved",
+      "OK": true
+    },
+    {
+      "control": "Identidad_20_literal_inputs_exact",
+      "OK": true
+    },
+    {
+      "control": "Cierres_observados_all_source_rows_preserved",
+      "OK": true
+    },
+    {
+      "control": "Cierres_observados_literal_inputs_exact",
+      "OK": true
+    },
+    {
+      "control": "Matriculas_20_all_source_rows_preserved",
+      "OK": true
+    },
+    {
+      "control": "Matriculas_20_literal_inputs_exact",
+      "OK": true
+    },
+    {
+      "control": "MU_anual_20_all_source_rows_preserved",
+      "OK": true
+    },
+    {
+      "control": "MU_anual_20_literal_inputs_exact",
+      "OK": true
+    },
+    {
+      "control": "Cohortes_MU_identifiers_stored_as_text",
+      "OK": true
+    },
+    {
+      "control": "Identidad_20_identifiers_stored_as_text",
+      "OK": true
+    },
+    {
+      "control": "Cierres_observados_identifiers_stored_as_text",
+      "OK": true
+    },
+    {
+      "control": "Matriculas_20_identifiers_stored_as_text",
+      "OK": true
+    },
+    {
+      "control": "MU_anual_20_identifiers_stored_as_text",
+      "OK": true
+    },
+    {
+      "control": "all_four_closure_formulas_match_direct_counts",
+      "OK": true
+    },
+    {
+      "control": "all_four_rates_pending_E",
+      "OK": true
+    },
+    {
+      "control": "20_reconciliation_formula_caches",
+      "OK": true
+    },
+    {
+      "control": "14_people_all_matriculas_formula_caches",
+      "OK": true
+    },
+    {
+      "control": "all_formula_caches_available",
+      "OK": true
+    },
+    {
+      "control": "zero_cached_formula_errors",
+      "OK": true
+    },
+    {
+      "control": "no_identity_unexpected_columns",
+      "OK": true
+    },
+    {
+      "control": "aggregate_and_desktop_identical_verified_hash",
+      "OK": true
+    },
+    {
+      "control": "scenario80_sheet_unchanged",
+      "OK": true
+    },
+    {
+      "control": "aggregate_contains_no_known_individual_identifiers",
+      "OK": true
+    },
+    {
+      "control": "all_75_used_sources_hash_unchanged",
+      "OK": true
+    },
+    {
+      "control": "avance_status_unchanged",
+      "OK": true
+    },
+    {
+      "control": "caracterizacion_status_unchanged",
+      "OK": true
+    },
+    {
+      "control": "avance_branch_and_HEAD_unchanged",
+      "OK": true
+    },
+    {
+      "control": "caracterizacion_HEAD_unchanged",
+      "OK": true
+    }
+  ],
+  "controls_passed": 42,
+  "new_private_formulas_with_cache": 12866,
+  "formula_errors": 0,
+  "missing_caches": 0,
+  "private_sha256": "a099965d65e9c31d1852bd405819c21a761fc2cba5f069eaa76e7c758a947db3",
+  "private_path": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia/20261021_144031/DETALLE_PRIVADO_RETENCION_INTERMEDIA_20261021_144031.xlsx",
+  "aggregate_sha256": "66e7cc11a0206793504e4eb275d8585e070413067df6f20b9fde234d3daaa54c",
+  "aggregate_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_133221/RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+  "desktop_path": "/Users/alexi/Desktop/RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+  "closure_counts": [
+    [
+      558,
+      1,
+      1,
+      1
+    ],
+    [
+      558,
+      325,
+      317,
+      328
+    ],
+    [
+      1150,
+      2,
+      "Sin campo",
+      2
+    ],
+    [
+      1150,
+      0,
+      0,
+      0
+    ]
+  ],
+  "git": {
+    "avance": {
+      "branch": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+      "status_short": " M PROYECTO_IPSS.json\n?? data/reglas_negocio/20261020_estados_umas/\n?? data/reglas_negocio/20261021_datos_alumnos/\n?? docs/relacion_estados_umas_vig_sies_20261020.md\n?? oferta_academica_2027/00_fuentes_originales/\n?? oferta_academica_2027/04_scripts/corregir_salto_final_etapa1_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_fechas_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_prueba_pes_etapa1_octubre_20261020.py\n?? oferta_academica_2027/11_gobernanza/etapa1_octubre_20261020/\n?? outputs/estados_umas_vig_sies/\n?? outputs/retencion_intermedia_t2_t3/\n?? scripts/construir_relacion_estados_umas_20261020.py\n",
+      "remote": "https://github.com/Alexitho0o/avance_curricular.git"
+    },
+    "caracterizacion": {
+      "branch": "main",
+      "HEAD": "aba337784ccde0537fc21b2977b351170ed335e8",
+      "status_short": " M AGENTS.md\n M caracterizacion_comunicacion_2027.py\n M caracterizacion_incorporacion.py\n M caracterizacion_reportes_2027.py\n M caracterizacion_runtime.py\n M tests/test_reportes_2027.py\n M tests/test_separacion_2027.py\n?? auditar_datos_alumnos.sh\n?? caracterizacion_firma_pendiente_2027.py\n?? caracterizacion_matricula_reporte_2027.py\n?? docs/gobernanza/AUDITORIA_DATOS_ALUMNOS_EXCEL.md\n?? docs/gobernanza/AUDITORIA_EVOLUCION_DATOS_ALUMNOS.md\n?? docs/gobernanza/HALLAZGOS_DATOS_ALUMNOS_20261021.md\n?? docs/gobernanza/MATRICULA_CORREO_2027_P1.md\n?? gobernanza/datos_alumnos/\n?? gobernanza/marca/\n?? scripts/auditar_casos_incorporacion.py\n?? scripts/auditar_datos_alumnos.py\n?? scripts/exportar_auditoria_datos_alumnos.mjs\n?? scripts/gobernanza/importar_contrato_datos_alumnos.py\n?? scripts/publicar_excel_auditoria_datos.py\n?? tests/test_auditoria_datos_alumnos.py\n?? tests/test_excel_auditoria_datos.py\n?? tests/test_firma_pendiente_2027.py\n?? tests/test_matricula_reporte_2027.py\n",
+      "remote": "https://github.com/Alexitho0o/CARACTERIZACION.git"
+    }
+  },
+  "limits": [
+    "Artifact Tool; no apertura ni recálculo certificado en Excel nativo.",
+    "Suite general de reglas previa limitada por unidecode ausente; no se declara suite completa aprobada.",
+    "Cuatro tasas intermedias pendientes E; dos CODCLI sin correspondencia explícita."
+  ],
+  "no_commit_push_merge_PR": true
+}

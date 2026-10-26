@@ -1,0 +1,3 @@
+# Reanudación
+
+TCRE20241/2024/1 clasificado por autorización como Homologación en plan rechazado, código vacío. No reabrir como candidato automático V2; documental/versión siguen E. Estado vigente se reproduce con siete operaciones acumuladas privadas. Pendientes internos 3.088/1.750, documentales 3.213/1.838. Siguiente bloque 79 observaciones/20 personas con código anual único sin atribución. Primer grupo ya prevalidado: Programación 2024, 24 observaciones/8 personas, TPAREOL20231 y TPAS20241, código anual V1 I162S2C57J4V1. Revisar cronología exacta por persona y período antes de proponer cierres. Sin commit/push.

@@ -1,0 +1,100 @@
+{
+  "status": "OK",
+  "summary": [
+    [
+      222,
+      74,
+      0.3333333333333333,
+      6,
+      142,
+      2,
+      3,
+      0
+    ],
+    [
+      124,
+      48,
+      0.3870967741935484,
+      2,
+      74,
+      3,
+      3,
+      0
+    ]
+  ],
+  "expected": [
+    [
+      222,
+      74,
+      0.3333333333333333,
+      6,
+      142,
+      2,
+      3,
+      0
+    ],
+    [
+      124,
+      48,
+      0.3870967741935484,
+      2,
+      74,
+      3,
+      3,
+      0
+    ]
+  ],
+  "selector_tests": [
+    {
+      "career": "Todas",
+      "result": "OK"
+    },
+    {
+      "career": "ADMINISTRACION PUBLICA",
+      "result": "OK"
+    },
+    {
+      "career": "AUDITORIA",
+      "result": "OK"
+    },
+    {
+      "career": "CONTINUIDAD INGENIERIA  CIBERSEGURIDAD",
+      "result": "OK"
+    },
+    {
+      "career": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+      "result": "OK"
+    },
+    {
+      "career": "INGENIERIA EN CIBERSEGURIDAD",
+      "result": "OK"
+    },
+    {
+      "career": "INGENIERIA EN INFORMATICA",
+      "result": "OK"
+    },
+    {
+      "career": "INGENIERIA EN LOGISTICA",
+      "result": "OK"
+    },
+    {
+      "career": "INGENIERIA INDUSTRIAL",
+      "result": "OK"
+    },
+    {
+      "career": "MÚLTIPLES CARRERAS (PENDIENTE)",
+      "result": "OK"
+    },
+    {
+      "career": "TECNICO EN ENFERMERIA",
+      "result": "OK"
+    },
+    {
+      "career": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "result": "OK"
+    }
+  ],
+  "mutation_vig": "OK: reduce numerador en 1 y se restaura",
+  "engine": "artifact-tool; no Excel nativo",
+  "formula_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

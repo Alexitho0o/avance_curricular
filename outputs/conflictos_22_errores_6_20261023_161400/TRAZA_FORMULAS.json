@@ -1,0 +1,58 @@
+{
+  "clasificacion": "B fórmulas observadas; C análisis de dependencia; E no recertifica todas las tasas",
+  "fuente_diagnostico": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+    "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+    "hoja": "02_COHORTE_ELEGIBILIDAD",
+    "celdas": {
+      "C2": "=\"I162S\"&BASE_RETENCION_MU!L2&\"C\"&BASE_RETENCION_MU!M2&\"J\"&BASE_RETENCION_MU!O2&\"V\"&BASE_RETENCION_MU!P2",
+      "D2": "=\"OFE_\"&B2&\"|\"&C2",
+      "E2": "=COUNTIF('01_CATALOGO_CARRERA'!$Q$2:$Q$748,D2)",
+      "F2": "=IF(E2=1,MATCH(D2,'01_CATALOGO_CARRERA'!$Q$2:$Q$748,0),\"\")",
+      "S2": "=IF(E2<>1,\"\",IF(J2=\"Técnico de Nivel Superior\",4,IF(J2=\"Profesional Sin Licenciatura\",6,IF(OR(J2=\"Profesional Con Licenciatura\",J2=\"Licenciatura no conducente a título\"),8,\"\"))))",
+      "T2": "=IF(R2=0,\"FUERA_COHORTE\",IF(Q2=0,\"VIGENCIA_0\",IF(E2<>1,\"CATALOGO_NO_UNIVOCO\",IF(G2<>\"Pregrado\",\"OTRO_NIVEL\",IF(H2<>\"Plan Regular\",\"PLAN_NO_REGULAR\",IF(I2<>\"NO APLICA\",\"PLAN_ESPECIAL\",IF(S2=\"\",\"CATEGORIA_PENDIENTE\",IF(K2<S2,\"DURACION_INSUFICIENTE\",\"ELEGIBLE\"))))))))",
+      "V2": "=IF(T2=\"ELEGIBLE\",COUNTIFS(BASE_RETENCION_MU!$A$2:$A$10201,B2+1,BASE_RETENCION_MU!$B$2:$B$10201,BASE_RETENCION_MU!B2,BASE_RETENCION_MU!$C$2:$C$10201,BASE_RETENCION_MU!C2,BASE_RETENCION_MU!$D$2:$D$10201,BASE_RETENCION_MU!D2,BASE_RETENCION_MU!$AG$2:$AG$10201,\">=1\"),0)",
+      "W2": "=IF(T2=\"ELEGIBLE\",COUNTIFS(BASE_RETENCION_MU!$A$2:$A$10201,B2+1,BASE_RETENCION_MU!$B$2:$B$10201,BASE_RETENCION_MU!B2,BASE_RETENCION_MU!$C$2:$C$10201,BASE_RETENCION_MU!C2,BASE_RETENCION_MU!$D$2:$D$10201,BASE_RETENCION_MU!D2,BASE_RETENCION_MU!$T$2:$T$10201,O2,BASE_RETENCION_MU!$U$2:$U$10201,P2,BASE_RETENCION_MU!$AG$2:$AG$10201,\">=1\"),0)",
+      "X2": "=IF(T2<>\"ELEGIBLE\",T2,IF(U2>1,\"DUPLICADO_PERSONA_COHORTE\",IF(V2>W2,\"COHORTE_INCONSISTENTE\",\"INCLUIDO\")))",
+      "Y2": "=IF(X2=\"INCLUIDO\",1,0)",
+      "Z2": "=IF(AND(Y2=1,W2>0),1,0)"
+    }
+  },
+  "fuente_intertrimestral": {
+    "ruta": "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx",
+    "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+    "celdas": {
+      "18_Foto_Intertrimestral": {
+        "D7": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2024,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+        "E7": "='26_Avance_Curricular_Resumen'!E1850",
+        "F7": "='26_Avance_Curricular_Resumen'!F1850",
+        "G7": "='26_Avance_Curricular_Resumen'!E1851",
+        "H7": "='26_Avance_Curricular_Resumen'!F1851",
+        "D8": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+        "E8": "='26_Avance_Curricular_Resumen'!E1852",
+        "G8": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$Q$6:$Q$4478,1)",
+        "H8": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G8/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")",
+        "D11": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+        "G11": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$Q$6:$Q$4478,1)",
+        "H11": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G11/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")"
+      },
+      "20_Foto_BBDD": {
+        "H6": "='9_Base_Analitica_Detalle'!F678",
+        "I6": "=VALUE(SUBSTITUTE(IFERROR(LEFT(E6,FIND(\"-\",E6)-1),E6),\".\",\"\"))",
+        "M6": "=IF(C6=2,IF(B6=2025,CHOOSE(G6,\"VIG 1\",\"NO APLICA\",\"PENDIENTE\",\"VIG 0\",\"SIN REGLA\",\"Sin matrícula de ingreso en el corte\"),\"Sin estado\"),IF(C6=3,\"No aplica\",\"Sin foto completa\"))",
+        "P6": "=IF(B6=2025,CHOOSE(IFERROR(IF(INDEX('24_Foto_Corte_T3_2025'!$M$6:$M$3086,MATCH(O6,'24_Foto_Corte_T3_2025'!$M$6:$M$3086,1))=O6,INDEX('24_Foto_Corte_T3_2025'!$P$6:$P$3086,MATCH(O6,'24_Foto_Corte_T3_2025'!$M$6:$M$3086,1)),6),6),\"VIG 1\",\"NO APLICA\",\"PENDIENTE\",\"VIG 0\",\"SIN REGLA\",\"Sin matrícula de ingreso en el corte\"),IF(B6=2026,CHOOSE(IFERROR(IF(INDEX('25_Foto_Corte_T3_2026'!$M$6:$M$15190,MATCH(O6,'25_Foto_Corte_T3_2026'!$M$6:$M$15190,1))=O6,INDEX('25_Foto_Corte_T3_2026'!$P$6:$P$15190,MATCH(O6,'25_Foto_Corte_T3_2026'!$M$6:$M$15190,1)),6),6),\"VIG 1\",\"NO APLICA\",\"PENDIENTE\",\"VIG 0\",\"SIN REGLA\",\"Sin matrícula de ingreso en el corte\"),\"Sin foto\"))",
+        "Q6": "=IF(P6=\"VIG 1\",1,0)",
+        "R6": "=IF(OR(P6=\"NO APLICA\",P6=\"PENDIENTE\",P6=\"Sin foto\"),0,1)"
+      }
+    }
+  },
+  "conclusiones": [
+    "VERSION forma código de origen y llave de catálogo que controla elegibilidad inicial.",
+    "W, matching anual siguiente, usa tipo documental/documento/DV, año siguiente, año/semestre origen y VIG>=1; no usa VERSION.",
+    "Z solo requiere caso incluido y W>0.",
+    "Las fórmulas intertrimestrales originales usan grupos, presencia/estado y proxies; no consultan nuevo diccionario.",
+    "V12 tiene resultados congelados en hojas18/19; el cambio de diccionario no ejecuta recálculo de esas hojas.",
+    "H11 divide por filas evaluables R=1, no por todoD11; diferencia existente de alcance, no efecto de asignar versión."
+  ],
+  "propuesta_aplicada": false
+}

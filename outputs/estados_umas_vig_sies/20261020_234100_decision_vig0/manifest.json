@@ -1,0 +1,111 @@
+{
+  "recurso": "Relación UMAS VIG con decisiones internas confirmadas",
+  "clasificacion": "C/D/E",
+  "fecha": "2026-10-21T02:42:28.294Z",
+  "archivo": "REGLAS_UMAS_SIES_VIG_CONFIRMADO_20261020_234100.xlsx",
+  "sha256": "50c021a7d941287abb625dd5d2b23ebabbb1b8886e9d84271cb1b0454519115d",
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/estados_umas_vig_sies/20261020_excel_reglas/REGLAS_UMAS_Y_SIES_MU2026_20261020.xlsx",
+      "sha256": "1b0596426081628f4b8958cf2ef9a48270594626614df6cadd51734943b38286"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/Manual_Matrícula_Unificada_2026.pdf",
+      "sha256": "3626600782798fbb5afa4100975eeffd2155b4912a112f63cee42f9741a82990"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261020_estados_umas/manifest.json",
+      "sha256": "a0a9b7432b4d1355998191cb1151bda239d2817f53d06dc86455e0cbc961484e"
+    }
+  ],
+  "reglas_D": 23,
+  "pendientes_E": 9,
+  "hojas": 1,
+  "tablas": 1,
+  "tests": [
+    {
+      "name": "VIG0",
+      "observed": 23,
+      "expected": 23,
+      "ok": true
+    },
+    {
+      "name": "Pendientes",
+      "observed": 9,
+      "expected": 9,
+      "ok": true
+    },
+    {
+      "name": "Registros",
+      "observed": 15136,
+      "expected": 15136,
+      "ok": true
+    },
+    {
+      "name": "TITULADO31",
+      "observed": "PENDIENTE",
+      "expected": "PENDIENTE",
+      "ok": true
+    },
+    {
+      "name": "TITULADO42",
+      "observed": "PENDIENTE",
+      "expected": "PENDIENTE",
+      "ok": true
+    },
+    {
+      "name": "SUSPENDIDO2",
+      "observed": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "name": "ELIMINADO16",
+      "observed": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "name": "Retirar decisión deja pendiente",
+      "observed": "PENDIENTE",
+      "expected": "PENDIENTE",
+      "ok": true
+    },
+    {
+      "name": "Contador responde",
+      "observed": 22,
+      "expected": 22,
+      "ok": true
+    },
+    {
+      "name": "Decisión ausente no produce cero",
+      "observed": "PENDIENTE",
+      "expected": "PENDIENTE",
+      "ok": true
+    },
+    {
+      "name": "Restaurado",
+      "observed": 23,
+      "expected": 23,
+      "ok": true
+    }
+  ],
+  "scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "head": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "git_despues": {
+    "rama": "feature/ire-2026",
+    "head": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "commit": false,
+  "push": false,
+  "original_intacto": true,
+  "builder": "/Users/alexi/Documents/Codex/2026-10-20/excel-reglas-umas/update.mjs",
+  "limite": "Recálculo Artifact Tool y verificación OOXML; no prueba en Excel nativo. Decisión D no elevada a norma A."
+}

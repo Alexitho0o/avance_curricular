@@ -1,0 +1,97 @@
+{
+  "fecha": "2026-10-23T12:56:56.917711-03:00",
+  "clasificacion": "C aplicación; B observado; D decisiones ya aprobadas; E pendientes",
+  "fuentes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reproduccion_puente_20261023_004044/RETENCION_IPSS_PUENTE_REPRODUCIDO_20261023_V11.xlsx": "dd6d00cf7d329cc1123419206ce8d5f7a1c25b35b452e143153c637ea319772b",
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json": "fe8770d862682ef35f97190ae8a2d294a9cfe45198592733e22642f65a2067f6",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v1_20261023/descriptor.json": "255ae85f739fbd2ba483871e737e2f0869eb7674b6689a531eade7ec69ae97e5"
+  },
+  "diccionario": "v1_20261023",
+  "origen_excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reproduccion_puente_20261023_004044/RETENCION_IPSS_PUENTE_REPRODUCIDO_20261023_V11.xlsx",
+  "privado": "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556",
+  "auditoria_privada_hashes": {
+    "CONSULTAS_EXACTAS.json": "f19fc4b1cf4505243c94a6ed17171c14c1f3fcf5063862be49bc9711e9b1dce0",
+    "SIN_CONTEXTO.json": "cad5967ea7319801e9da8ceebbdb1fed8613129112841f8e9d15cf42207bca8b",
+    "ORIGENES_T1.json": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0"
+  },
+  "grupos_aplicados": "Grupo 1 / MU-T1 2024–2026. Grupos 2 y 3 del libro preservados, no reclasificados.",
+  "limites": [
+    "Período nativo no equivale automáticamente a corte T2/T3.",
+    "Código de origen permanece aunque no se localice contexto.",
+    "No localizado en foto T3 no equivale a deserción.",
+    "No acredita aceptación SIES.",
+    "Las 1.471 filas T1 2026 pertenecen al libro vigente; se conserva ese denominador, distinto de 1.467 citado en una entrega histórica."
+  ],
+  "salida": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+  "salida_sha256": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+  "copia_escritorio": "/Users/alexi/Desktop/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+  "copia_sha256": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+  "QA": {
+    "estado": "OK_CON_PENDIENTES_E",
+    "hojas_originales_bytes_identicos": 51,
+    "graficos_originales_bytes_identicos": 13,
+    "tablas_originales_bytes_identicos": 33,
+    "hojas_nuevas": [
+      "52_Codigos_SIES_Revision",
+      "53_Codigos_T1_Confirmados",
+      "54_Contextos_y_Pendientes"
+    ],
+    "tablas_nuevas_estructura_validada": 2,
+    "formulas_nuevas_verificadas": 86,
+    "controles_aritmeticos_independientes": 86,
+    "errores_en_hojas_nuevas": [],
+    "denominadores_T1_conservados": {
+      "2024": 558,
+      "2025": 1150,
+      "2026": 1471
+    },
+    "fuentes_hash_sin_cambio": true,
+    "datos_personales_agregados_al_excel": false,
+    "partes_originales_modificadas": [
+      "xl/styles.xml",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "[Content_Types].xml"
+    ],
+    "limites": [
+      "Recálculo de suplemento con Artifact Tool; no se ha probado apertura en Excel nativo.",
+      "Conservación exacta de las hojas anteriores no certifica semánticamente sus tasas históricas.",
+      "Pendientes de versión/contexto permanecen; no hay nuevos cierres de equivalencia."
+    ],
+    "sha256": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+    "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+    "copia_escritorio": "/Users/alexi/Desktop/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+    "copia_sha256": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+    "rama_HEAD_sin_cambio": true
+  },
+  "scripts": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/aplicar_diccionario_excel_intertrimestral_20261023.py": "9de38a6a5cdf0130da7b7d885cfc9d153ed3759f6bd02a215ba17576e1ae069a",
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/construir_hojas_diccionario_intertrimestral_20261023.mjs": "ff224a59dbf2a259fe8463dc7a97ffd0e1b0235aa148fb5123d623a3f7417621",
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/ensamblar_diccionario_excel_intertrimestral_20261023.py": "f05f99b2476bdac7ebdee99eb4f2fd5b039d04f287b90865a225047f802c0591"
+  },
+  "git": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "commit": false,
+    "push": false
+  },
+  "archivos_agregados_sha256": {
+    "INFORME.md": "483cf43abd6da8f0c1dd12575b0f7845e3185e7154c200350e1cdf2a68b6bd19",
+    "suplemento.xlsx.inspect.ndjson": "45085623695f9931c5b8b8ba5059b97e7c01c4210fb05a8a5ae80597df7bb7e7",
+    "tablas.json": "30360a043b871b8cdcaab81e505cf23230ab041e9ecba75d4b1e202c162dc1bb",
+    "RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+    "preview_revision.png": "d86eda202964bc2e22577f6ad8168c9b6013091e78ee5afd8f4c9e71e354f512",
+    "QA_EXCEL.json": "83e688a8096b50da2dcf22fb49395ea9b8cf9eea29898a32bc571078e93b038b",
+    "preview_origenes.png": "15374aeccdbdef65fa5bd368d4e18c374e97b20e57dac6b57c2e29ef140bfade",
+    "CHECKPOINT.md": "791897a4192a25710a7e9d2871110dc4ddbeb37a9074c984a095de3d7e5c103f",
+    "GIT_DESPUES.json": "c5537a9939c9f24f78646f1d168525b0ad30ef09f342dd8cf3398e1c8fa22535",
+    "preview_contextos.png": "6788ee58e813e918c712512adae5df010c259b8788e67c8fa742219e0eeb7808",
+    "FORMULAS_NUEVAS.json": "c9ffd62feb493edb7a359279bce802425239e0fc51f7d90b6af8e9b11a6b4181",
+    "suplemento.xlsx": "3887616dd9ee4ed189ace4c2f48c85f4d45b0591b9b2d562ed647ef671e77345",
+    "GIT_ANTES.json": "7fe9828ab5fc4e4f2f339f9c5c5869d9ffadadb06ba6455e381c1222264dbdb0",
+    "RESULTADOS.json": "97266644eee9204076d0141bc03e82f7092b3f16d40456b909b66f2627856774"
+  }
+}

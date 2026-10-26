@@ -1,0 +1,280 @@
+{
+  "universo_personas": 5901,
+  "foco_personas": 2317,
+  "foco_observaciones": 4973,
+  "categorias": [
+    [
+      "a_alternativas",
+      22,
+      43,
+      86
+    ],
+    [
+      "b_sin_anual",
+      1821,
+      1851,
+      3112
+    ],
+    [
+      "c_sin_DA",
+      2,
+      2,
+      15
+    ],
+    [
+      "e_difiere_propuesta",
+      556,
+      558,
+      1760
+    ]
+  ],
+  "sin_anual_particion": [
+    [
+      "SIN_CODIGO_NINGUNA_FUENTE",
+      1379,
+      1016,
+      1016
+    ],
+    [
+      "MISMA_FAMILIA_OTRO_ANO_PROCESO",
+      1472,
+      696,
+      696
+    ],
+    [
+      "SOLO_OTRA_FAMILIA",
+      261,
+      115,
+      109
+    ]
+  ],
+  "sin_anual_presencia_procesos_no_sumable": {
+    "observaciones_con_matricula_otra_fecha": 1462,
+    "observaciones_con_avance": 946,
+    "observaciones_con_titulados": 511
+  },
+  "personas_multicarrera_foco": 64,
+  "personas_multiano_foco": 382,
+  "personas_multijornada_foco": 7,
+  "contradicciones_desglose": {
+    "UN_CODIGO_PERO_ATRIBUCION_MULTIPLE_IDENTIDAD_EXPEDIENTE": 86
+  },
+  "comparacion_504": {
+    "personas": 504,
+    "antes_con_codigo": 497,
+    "ahora_con_codigo": 497,
+    "conjunto_codigos_identico": true,
+    "expedientes": 508,
+    "antes_misma_familia": 500,
+    "ahora_misma_familia": 500,
+    "conjuntos_familia_identicos": true,
+    "observaciones": {
+      "observaciones_comparadas": 1589,
+      "conjuntos_iguales": 1589,
+      "antes_con_codigo": 1497,
+      "ahora_con_codigo": 1497
+    }
+  },
+  "propuestas_previas_39": {
+    "personas": 5456,
+    "expedientes": 6113,
+    "observaciones": 23183,
+    "resultados": {
+      "SIN_EVIDENCIA_ANUAL_APLICABLE": 3020,
+      "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO": 18304,
+      "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 86,
+      "DIFIERE_CODIGO_PROPUESTO_OBSERVADO": 1760,
+      "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 13
+    }
+  },
+  "principales_carreras": [
+    [
+      "ICIB",
+      "INGENIERIA EN CIBERSEGURIDAD",
+      187,
+      188,
+      346
+    ],
+    [
+      "IINF",
+      "INGENIERIA EN INFORMATICA",
+      172,
+      172,
+      343
+    ],
+    [
+      "IETMREOL",
+      "INGENIERIA EN CONECTIVIDAD Y REDES",
+      171,
+      171,
+      506
+    ],
+    [
+      "IADM",
+      "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+      166,
+      166,
+      216
+    ],
+    [
+      "IECIREOL",
+      "INGENIERIA EN INFORMATICA",
+      159,
+      161,
+      545
+    ],
+    [
+      "TPAS",
+      "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      148,
+      148,
+      252
+    ],
+    [
+      "TPAREOL",
+      "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      117,
+      117,
+      245
+    ],
+    [
+      "IECIRE",
+      "INGENIERIA EN  INFORMATICA",
+      114,
+      114,
+      254
+    ],
+    [
+      "IIND",
+      "INGENIERIA INDUSTRIAL",
+      110,
+      110,
+      136
+    ],
+    [
+      "ILOG",
+      "INGENIERIA EN LOGISTICA",
+      105,
+      105,
+      151
+    ]
+  ],
+  "por_ano": [
+    [
+      "2019",
+      167,
+      167,
+      239
+    ],
+    [
+      "2020",
+      327,
+      328,
+      495
+    ],
+    [
+      "2021",
+      552,
+      558,
+      1422
+    ],
+    [
+      "2022",
+      155,
+      156,
+      314
+    ],
+    [
+      "2023",
+      155,
+      161,
+      363
+    ],
+    [
+      "2024",
+      268,
+      284,
+      472
+    ],
+    [
+      "2025",
+      423,
+      425,
+      683
+    ],
+    [
+      "2026",
+      720,
+      724,
+      985
+    ]
+  ],
+  "por_jornada": [
+    [
+      "1",
+      23,
+      23,
+      58
+    ],
+    [
+      "2",
+      299,
+      301,
+      800
+    ],
+    [
+      "4",
+      2002,
+      2062,
+      4115
+    ]
+  ],
+  "diferencias_causa_comprobable": {
+    "OBSERVADO_ENTRE_CANDIDATOS_NO_PREDOMINANTE": {
+      "observaciones": 593,
+      "personas": 262,
+      "por_ano": {
+        "2020": 133,
+        "2019": 104,
+        "2021": 347,
+        "2024": 8,
+        "2025": 1
+      }
+    },
+    "OBSERVADO_FUERA_CANDIDATOS_ORIGINALES": {
+      "observaciones": 1167,
+      "personas": 306,
+      "por_ano": {
+        "2021": 869,
+        "2020": 222,
+        "2019": 60,
+        "2022": 16
+      }
+    }
+  },
+  "carreras_distintas_foco": 38,
+  "jornadas_distintas": 3,
+  "auditoria_reglas": {
+    "lector_multiproceso": "mismo inventario38 y lector de V2; universo ampliado",
+    "recuperacion_historica": "identidad exacta, documentos R/1/RUT o campo tipo ausente; código completo; sin filtro previo año/familia",
+    "etapa_anual_adicional": "solo proceso MATRICULA con MC_CAT_PERIODO o ANIO_INFORMADO explícito igual a año PR, familia SIES y DA del corte",
+    "plan_literal_filtra": false,
+    "vig_filtra": false,
+    "minimo3_filtra": false,
+    "predominancia90_filtra": false,
+    "tipo_duracion_filtran": false,
+    "DA_y_atribucion": "controles de vinculación del expediente; no implican que código no exista",
+    "temporalidad_respaldo": "docs/fase_4_planes_asignaciones_umas.md puntos4–7",
+    "fuente_primaria": "etiquetas de Publicados/Enviados no certifican aceptación; MU consolidada derivada admitida como base gobernada; retención derivada no añade evidencia anual independiente"
+  },
+  "comparacion_metodos_mismo_grano": {
+    "denominador_observaciones": 24774,
+    "con_propuesta_dominante": 23183,
+    "con_codigo_cualquier_fuente": 23395,
+    "con_codigo_misma_familia_cualquier_ano": 23134,
+    "con_codigo_anual_unico_y_DA": 21561,
+    "interseccion_propuesta_y_anual_contexto": 20064,
+    "confirmadas_en_interseccion": 18304,
+    "difieren_en_interseccion": 1760
+  }
+}

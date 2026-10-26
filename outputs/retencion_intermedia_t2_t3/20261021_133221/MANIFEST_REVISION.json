@@ -1,0 +1,767 @@
+{
+  "fase_hito": "Fase 4/4 · Hito 3/3",
+  "fecha": "2026-10-21T14:26:43.113181-03:00",
+  "dictamen": "QA_TECNICO_OK_CON_PENDIENTES_E",
+  "alcance": "Retención intermedia IPSS162; agregados; auditoría interna/SIES y titulación",
+  "original": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+    "sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d"
+  },
+  "salida": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_133221/RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+    "sha256": "66e7cc11a0206793504e4eb275d8585e070413067df6f20b9fde234d3daaa54c"
+  },
+  "copia_escritorio": {
+    "ruta": "/Users/alexi/Desktop/RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+    "sha256": "66e7cc11a0206793504e4eb275d8585e070413067df6f20b9fde234d3daaa54c",
+    "identica": true
+  },
+  "hojas": [
+    "Resumen",
+    "Por_carrera",
+    "Fuentes_y_alcance",
+    "Bases_por_confirmar",
+    "Escenario_80",
+    "Revision_agregada"
+  ],
+  "denominadores_fijos": [
+    558,
+    1150,
+    222,
+    124
+  ],
+  "presencias_listados": [
+    1,
+    325,
+    2,
+    0
+  ],
+  "vigentes_observados": [
+    1,
+    317,
+    null,
+    0
+  ],
+  "vigentes_acreditados_cierre": [
+    "Pendiente",
+    "Pendiente",
+    "Pendiente",
+    "Pendiente"
+  ],
+  "tasas_intermedias": [
+    "Pendiente",
+    "Pendiente",
+    "Pendiente",
+    "Pendiente"
+  ],
+  "personas20": {
+    "personas": 20,
+    "identificadas": 18,
+    "pendientes": 2,
+    "CODCLI_distintos_recuperados": 19,
+    "personas_con_1_CODCLI": 17,
+    "personas_con_2_CODCLI": 1,
+    "personas_recuperadas_solo_CODCLI_por_documento_cambiado": 1,
+    "con_alguna_VIGENTE_12112": 14,
+    "solo_ELIMINADO_12112": 3,
+    "solo_SUSPENDIDO_12112": 1,
+    "sumas_verificadas": true,
+    "denominador_intacto": 1150
+  },
+  "separacion_reglas": "SEPARACION_ACREDITADA_CON_EXCEPCION_PARCIAL_Y_CONTRATO_PENDIENTE",
+  "metodo": {
+    "cruces": "Llaves exactas, puente explícito N_DOC/RUT/CODCLI; sin nombres, sexo, nacimiento ni decodificación. Filas en memoria; se conservan todas las matrículas; personas únicas por universo fijado.",
+    "fechas": "Nombre, mtime, congelamiento y corrida no acreditan fecha efectiva. Estados posteriores no se extrapolan.",
+    "authoring": "Artifact Tool; transporte OOXML de celdas autorizadas y hoja nueva para preservar partes originales; openpyxl solo lectura para QA.",
+    "recalculo": "Artifact Tool, recalculate final; sensibilidad restaurada y reimportación sin reescritura.",
+    "datos_individuales_persistidos": false
+  },
+  "fuentes_revalidadas_final": [
+    {
+      "ruta": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/analisis-institucional-alexi/1.1.3/skills/consultar-fuentes-ipss/references/estados-umas/estados-umas.md",
+      "sha256": "414effcb82b42cd9e5e0c8c3f117a6e1c135cfca109acd7e68af4949fd82d181",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/04_AUDITORIA/manifest_ejecucion.json",
+      "sha256": "c0f23e85071dd0c319d1bd1bff05f22a49d898a7ba6d67bc4882595113690c8a",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/auditoria_datos_alumnos/20261021_091039_506207/manifest.json",
+      "sha256": "4ca24688c4bf5b70b365e09b45d9da6bd598073f5169263eebc6c59c3eaa8066",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/AGENTS.md",
+      "sha256": "82daa24ad1a19c9a83d82a015552d38bb0e2d2207e1f547723637b58b52d0ac7",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/Manual_Matrícula_Unificada_2026.pdf",
+      "sha256": "3626600782798fbb5afa4100975eeffd2155b4912a112f63cee42f9741a82990",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/PROYECTO_IPSS.json",
+      "sha256": "cc5826c3c74c51c04d72843c9f833d33810dc45aa49e7e8b06dd8bdce15111c6",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/agent.md",
+      "sha256": "b4d21397560f0e7095fef24902152060430161d0789a6ee56ceb8449c3df3f2d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py",
+      "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/fuentes/manual_oferta_acceso_2027_texto_completo.json",
+      "sha256": "97bca64703165584ae786d732afaf990ab372741b5c9fb96be1142b7903f964d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/reglas.json",
+      "sha256": "bbe594b7d546cee16dd1b499483ee0c6cb69d24bc87f0601bf6bbe8aa8adb6c7",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261020_estados_umas/reglas.json",
+      "sha256": "a472ef5cf5590b7a9354ece08331814a584d9680fa4c8a484fb827eb300d2d62",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261021_datos_alumnos/auditoria.md",
+      "sha256": "8cc2b2dc3087e66b60d046e3503ba6ca8a35749177c904f83e0ec14c256d0ae4",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261021_datos_alumnos/contrato_columnas.json",
+      "sha256": "669b9a3ab08bdadf06694fe79add2096706e06e693e835b89fab384bb0de2a81",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261021_datos_alumnos/manifest.json",
+      "sha256": "c79481143df2cff1c4358565543eb5452fe9be4bcf14093a93c7b320b48e5ca4",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_1_20261015/inventario.json",
+      "sha256": "8c0b9f02c013f94b98dc72be1eae9912dadd991ba0e5a3fa7a64da3ef3904ae2",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/control_cambios_vig_mu2027.md",
+      "sha256": "9dd2d4f4b596891bfac8ea764a71d525761443b34f5cf2371f848f26f904c53a",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/relacion_estados_umas_vig_sies_20261020.md",
+      "sha256": "35b045927769440ad472067db74014218bdb0118645644d8d3f88e222072e374",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/unificacion_proyectos_y_reglas_negocio_20261015.md",
+      "sha256": "ef7d47f940f46045fc1c179642fd76807b8f3c876f03b1c1bc680271434a3d53",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/MANIFEST_BASE_RETENCION_MU_2022_2026.json",
+      "sha256": "746539ed62a3a3a051da14fd7f32b90fc6fd30a426304386d54e19c203d74145",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/MANIFEST_REVISION.json",
+      "sha256": "bbedffbde20fac7882b5f0f08d4862d00c20e4dd38d4c3c68c630a88a901ee6a",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/profile.py",
+      "sha256": "39b64cfea7773f269a10ba9576f1945f79e35e0f69a681913a173a2b279c0d88",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_221157/profile.py",
+      "sha256": "cd8d1d5445dcab9637645959f49628826552b108010ce6b45fab177d8bc225eb",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_090522_cobertura/COMPROBACION_COBERTURA_MU2025_MU2026.md",
+      "sha256": "0e52422a4db3df1a63d424fb8f7eee7e1c312387fe0246ff7f7116ec31935bc9",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_090522_cobertura/MANIFEST_COMPROBACION.json",
+      "sha256": "d8718694b1543d6fc366e1e6374eb8f26cf85166e49adbd131c1a8da463d4ac9",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+      "sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/AGENTS.md",
+      "sha256": "2498ee3907fa8c63461e7427cd8ea7c84ac700f2c778b33851939e19ec19cc62",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/README_INTEGRACION.md",
+      "sha256": "f3bd458c23453f08cf5ca12fbf0a18cf8211e3cb9191f872bfb7ab29e2489a3d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion_estado_kpi.py",
+      "sha256": "7590ea34169a06cf6b7451d8c6414b2dcfff87cb442e89b8e62e3def16f6c3ef",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion_longitudinal.py",
+      "sha256": "64f29edb65179307e1264f95393ed7d4d739cf4a763b47a9b09814d192970207",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion_retencion.py",
+      "sha256": "29dae4561a9969c6c87cd14350ed79a2f2aa78a0f82a72491cb7d6a130a9ee79",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "sha256": "bda8a15c0f0689bf013f94882a20cdb6fac25107888641af69c9210bc663f588",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/docs/gobernanza/H044_FUENTES_P2_DETERMINISTICAS.md",
+      "sha256": "aa31a1b2f02e081f29bf617b1ec3fb7a03ef7b3f3ac99978f546b3de972bed4c",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/HITO_4B_P.md",
+      "sha256": "fc610dcce2bbae907aa524e4daa61d906439ce5fd8a0de0f8738b013c017066c",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/HITO_4C_P.md",
+      "sha256": "346c8736ea10b717cda7991e9975c212e97f282d36569109fb1fd5697d4b805d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/Retencion_ipss_2022_2024_GRANULAR.manifest.json",
+      "sha256": "58db9b51a7be923afc3684aeb4c874f3413c248d544c6887076265ebc55b1629",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/Retencion_ipss_2022_2024_GRANULAR.xlsx",
+      "sha256": "e85d8c15c9fa2eccb25a376ea352f345ddcec91dbcf8176070b1ae3490c5d946",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/tests/test_hito4b_sectorizado_sies_retencion.py",
+      "sha256": "3435a4960171625d62a1bdfc286d80208b4352e1b68024722aae3d978245c2f5",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/2025/DATOSDEALUMNOS_11248.xlsx",
+      "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/DATOSDEALUMNOS_12135.xlsx",
+      "sha256": "d7a3ca24567ea7d0ff61c3d92e0b208da158fe7cb4f68548a00f407977334714",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-20/2027_P1_082351/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "sha256": "64d955975c6b613a205a6d98a1d5589b418d5e4c463362a4b7e212b4722e9c09",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL.xlsx",
+      "sha256": "65fd5a665849b0df3ca32ea23bba69f5c1b1a760c250b1788a6886a2dd20effd",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "sha256": "57da408869681bdaa7eb18ee13ea482bad377ea9c58dc10afdb5ff34aeebbd09",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_367_.xlsx",
+      "sha256": "cf4e65ef85d144cf6f591aa1c9e861d61f56ed7cf1ecc30ef68ac63bf277fa59",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/2025-2.xlsx",
+      "sha256": "63a38e07b8b24d796cd2104abb1a63129f09b4b88e291c640f9e0f9e116fb78b",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260825_20_40_34.xlsx",
+      "sha256": "7c46a2dea8dac92a1c92ffa8def96dca8da4437e06c0e69732c814d59de50243",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260826_13_00_39.xlsx",
+      "sha256": "c08b3a757c7b8a993b21749ae1c785223d44da37c8bfa2c01890c6390ada338b",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260827_13_00_37.xlsx",
+      "sha256": "bc930aa3fb674ace8d6204a806f4bc620fc3b00c5ec9d335f7599fef56621da6",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260828_13_00_37.xlsx",
+      "sha256": "88a5eab891959346085562c1a8d717f68a4bf2b300016eb73921169af4e4f320",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260829_13_00_37.xlsx",
+      "sha256": "c2717009783965d251062f1359d394cd7cdb62800f00f22774ae84cd65d6e9f7",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260830_13_00_38.xlsx",
+      "sha256": "e2326338958b9086c45532d1e43f2ebfd1238ecda21aa3cd5f3fe6e7d9a47d5d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260831_13_00_42.xlsx",
+      "sha256": "399dec7be249701d82b0ef26495123799872bcfc6ac16796a0d2017c6f196ee2",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260901_13_00_41.xlsx",
+      "sha256": "3c7362dcf640d56bb912e29a8ea76540ff92a9bb5be59b5e5ac9a04b9ec81863",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260902_13_00_39.xlsx",
+      "sha256": "402dfdc6c194d12b79802798f42475d9f30aa5a87e0a481f12b9e93eff8e56c2",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260903_13_00_38.xlsx",
+      "sha256": "2d97e0f82f67cd812f967d65ae5b5f51689bfe8c67e157a5958b24941d006efd",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260904_13_00_38.xlsx",
+      "sha256": "4402628d7fb386bc44e1952252d56f1cdc47056d1cbe4d7379aa7027aabf58f1",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260905_13_00_37.xlsx",
+      "sha256": "183483536d9729d52cbb86e19bed17ff739703b92be758aa5e7288a95036fa0d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260906_12_00_37.xlsx",
+      "sha256": "756251753c5c5cd0c5676864dfd13ccc1478513d054022b0a12b1a84336fee6f",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260907_12_00_38.xlsx",
+      "sha256": "2422944556d2c58ab926b106e085fb70243c40d103914547a8922b8f8d41c8e5",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260908_12_00_36.xlsx",
+      "sha256": "70f52dc42477e016eb9dc4d07c99243a2001f4370dc48e1f17294002997e0342",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260909_12_00_37.xlsx",
+      "sha256": "278e85afce6ef11071b5e641e578a173cbc8e4104aca6107ace7fd0f44304700",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260910_12_00_38.xlsx",
+      "sha256": "faf74b640c49edfaae7857599f46651783672a2f437a1c6657a9cec72bcceddb",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260911_12_00_37.xlsx",
+      "sha256": "59a0a3afa8498639a13e38ff1b9443367646b548ee035b7720944c2469a5340a",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260912_12_00_38.xlsx",
+      "sha256": "25778834c4d66c70a0e463cd4d73b23143d0132c0cb03104d771ef8c458f7626",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260913_12_00_37.xlsx",
+      "sha256": "ef043de211ab2fffe6b5f28d7f94245abbe4ec20f71585ec35aed798f8a981f4",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260914_12_00_37.xlsx",
+      "sha256": "d1488abf36b8aa2992af5ed5ceb215bb2c5ef4b8810bb13b79c740950125f4fd",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260915_12_00_36.xlsx",
+      "sha256": "1cd7a9b19cde69b4e101f1466db3d570cf8d0be69c36ae6e3f1d2916bbf5448d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260916_12_00_41.xlsx",
+      "sha256": "4c2f721ef8df18cb4645dc4e3c28f3c9c5c054032e4f1e16dbcfaca9e4880593",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260917_12_00_37.xlsx",
+      "sha256": "ff07a44b133301cf3418e029d67d85aee3e971a7554bbcd1860874fcb0a309a8",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260918_12_00_41.xlsx",
+      "sha256": "8f37ff2b38dc6a1af55d936a2cfe7e3b10961ee9cb7d2e51ac3ce031a98fd2a4",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260919_12_00_37.xlsx",
+      "sha256": "335b826586cbe6ad68230594e27a1053d353469da078a798fae6446eb7664e46",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260920_12_00_37.xlsx",
+      "sha256": "a26ddf9b741b0f4df61216f8efb96de67029b350368a364c2e69d794d8318a4c",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260921_12_00_38.xlsx",
+      "sha256": "bd440a3e7912efd10007ae23a35c2bcdc86bcb1ce295e88cb9bbfb1c0047e927",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260922_12_00_57.xlsx",
+      "sha256": "edef6e5aa91952179eb405f994c5ac0c78561b34d7bf742ace3a4d19adeb9955",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260923_12_00_38.xlsx",
+      "sha256": "6791461c6a83bf968a81ace3d262ed4b4db5b7b13bf984908ad978e516e33854",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260924_12_00_41.xlsx",
+      "sha256": "fc3d0cfd06be9e5b10d700bf0d455313ebb80a9e91bec34b15aeeb3fdf0a2369",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260925_12_00_38.xlsx",
+      "sha256": "1f7db02b28b552ea17ed34772230b385f91af1f639b34b3ba1925a174f252f30",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260926_12_00_39.xlsx",
+      "sha256": "a6849f437598adcacda966dfe23f3d78fced074d21f32703f4e837026ffdcebe",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260927_12_00_38.xlsx",
+      "sha256": "8724e0990b70536b71a5bb41e677313d7312ac01248ba2ac8c903bd9b1889568",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260928_12_00_37.xlsx",
+      "sha256": "24d873912dff6609b6e7a892ee3a4afb911bed3a299eecf639f218e7dd8dd3a2",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260929_12_00_39.xlsx",
+      "sha256": "30e71b2ba2b17efa9f6693867eeea1202451c0a6cff9e1c530af7e8abc7af191",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260930_12_00_38.xlsx",
+      "sha256": "e83245032869e78bd773e4ca5604bd3adb018183e130de5fcc1e767e1de7c3d9",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261001_12_00_38.xlsx",
+      "sha256": "a83336aa4b0f03f0294f0b58fc498505146b0ece45ac2618ac6b98ee493f5f3c",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261002_12_00_40.xlsx",
+      "sha256": "1cecc3771e82bf869152ebb6ac9c62bfdb5f6e4868dea6185e3adbbaee70d16e",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261003_12_00_39.xlsx",
+      "sha256": "75172898c82a9606da975e93bdd612c0134a39891aa14fa7d21cfc40c664dfdc",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261004_12_00_36.xlsx",
+      "sha256": "0492f9c86324e6792f4455af45c3e8e7957f970e6e023762747cadf48abf91ff",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261005_12_00_40.xlsx",
+      "sha256": "26ba47b56b2d564f6940d5d6041d5f2250476747f5282bd001f55b1ae65df2dd",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261006_12_00_38.xlsx",
+      "sha256": "e9be7560e1f59c02bfedd7e46353c9d3c65449ade1d5bdc4bf2992b2e52d0083",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261007_12_00_40.xlsx",
+      "sha256": "e90348852914fac237b511d3a9823e6844137f8b64b8095011f2b2c6b51bbb63",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261008_12_00_39.xlsx",
+      "sha256": "0c6809814d8e1e4b4fb9fe92e7c5fa4adce6f65d26f6d8d68ba25ab257715757",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261009_12_00_37.xlsx",
+      "sha256": "f64617eef87bafa16c0497d23b8c4d2232259d37150118e3ba7f9646de510ad5",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261010_12_00_38.xlsx",
+      "sha256": "598a690b01187656235611b0e38ebe3e537e0a15be97c0e556b09f3b43b4a2f9",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261011_12_00_41.xlsx",
+      "sha256": "a643f0183b135a44216df24f32db36a9ab0281b772f031b24d8840dbb346d19b",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261012_12_00_37.xlsx",
+      "sha256": "61e747841d01cbefee006bdb8738399e2dd0e71db69df54621758de8bbab475c",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261013_12_00_41.xlsx",
+      "sha256": "9ab5c2ca1f784e86667562af6a02a5822feb12c44dabd52b4cfe256320934db1",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261014_12_00_40.xlsx",
+      "sha256": "753faf2723428bcf8021fb1531975cc8acfe10645ee403fa59f1a6665c0ae34c",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261015_12_00_39.xlsx",
+      "sha256": "2fe90bf79f71493ae7708061ddb6852f54f974936f1590c2c0f02fa8774a7e49",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261016_12_00_42.xlsx",
+      "sha256": "f678a0f258a3022381abc786b4acac11c8fb4ee60f2192c05eab8eadccd202d6",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261017_12_00_37.xlsx",
+      "sha256": "a55215a9705a58aa67a9d5eb712e9bd431e70b71ea21b01602485bdc368f8b1f",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261018_12_00_38.xlsx",
+      "sha256": "83e58075b0560f4238fbe47cdffaa8e9ffd79ebe6a0404e5ff24c39a969dfe84",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261019_12_00_37.xlsx",
+      "sha256": "c3ff057ea34dea8f19756355ed0b1b4d63ece4702af7c4e0bc4407fd386e4d8d",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261020_12_00_38.xlsx",
+      "sha256": "73da62fc7e1c3033ef8173b34c6ffc158d14b585196e6611d825060ad02c9d80",
+      "intacto": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261021_12_00_37.xlsx",
+      "sha256": "2a3bfcc1061ed049a46f3c0a8e2dfe98c0baec28f4a180fa5ebf6355368dd477",
+      "intacto": true
+    }
+  ],
+  "fuentes_revalidadas_total": 115,
+  "qa": {
+    "paquete": "QA_PAQUETE.json",
+    "independiente": "QA_INDEPENDIENTE.json",
+    "visual": "Todas las vistas modificadas y hoja nueva revisadas; imágenes de soporte.",
+    "native_excel": "No ejecutado; comportamiento nativo/regional no certificado.",
+    "suite_reglas": "Prueba existente aislada OK y cinco sintéticos; suite completa bloqueada por falta de unidecode.",
+    "originales_intactos": true,
+    "escenario80_byte_identico": true
+  },
+  "git": {
+    "rama_antes": "feature/ire-2026",
+    "rama_despues": "feature/ire-2026",
+    "HEAD_antes": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "HEAD_despues": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "remotos": [
+      "origin\thttps://github.com/Alexitho0o/avance_curricular.git (fetch)",
+      "origin\thttps://github.com/Alexitho0o/avance_curricular.git (push)"
+    ],
+    "cambios_previos_conservados": true,
+    "nuevos_cambios_solo_carpeta_salida": true,
+    "status_before_sha256": "445b47a67cdde35218f20f64a36c1884f20f3d24d3b78921d48a12716d656009",
+    "commit": false,
+    "push": false,
+    "merge": false,
+    "PR": false,
+    "publicado": false
+  },
+  "pendientes_E": [
+    "E · 2025-T2: completar población de cohorte 2024 y renovaciones; certificar fecha y estados. 2025-T3: acreditar exhaustividad de T3_2025 y temporalidad de sus estados.",
+    "E · 2026-T2: acreditar cobertura y estados históricos de cohorte 2025. 2026-T3: incluir períodos de ingreso 1/2, fijar hoja autorizada y aclarar dos discrepancias de estado. Los timestamps de respaldo no resuelven estos requisitos.",
+    "E · Identidad: revisadas 64 fuentes adicionales, 60 comparables y 4 sin pareja CODCLI/RUT. Siguen pendientes una persona de Ingeniería en Informática y una de Técnico en Programación y Análisis de Sistemas; falta correspondencia institucional explícita.",
+    "E · Regla interna: decidir efecto de título antes/durante/después del corte, carrera de origen/otra carrera, rematrícula, egreso sin título y múltiples matrículas. Exigir título/egreso fechado y relación con programa; no descontar personas por duración teórica.",
+    "E · Validación futura: contrato versionado con responsable, población, corte, numerador y tratamiento de culminación. Pruebas sintéticas de fronteras y faltantes antes de aplicar; mantener independiente el consumidor SIES."
+  ],
+  "bloqueos": {
+    "acceso": "Resueltas las interrupciones de transporte; reanudación local con script/salidas inspeccionados, Git y hashes comprobados. 12112 relocalizado por hash.",
+    "denegaciones": [],
+    "documentales": [
+      "Cuatro cierres sin cobertura/fecha/estado/regla suficientes",
+      "Dos CODCLI sin correspondencia explícita",
+      "Decisión de denominador/titulación interna pendiente"
+    ],
+    "validacion": [
+      "Aplicación Microsoft Excel no probada",
+      "Suite completa de reglas no importada por unidecode ausente"
+    ]
+  },
+  "trazabilidad": "BITACORA_HITOS.md; PROMPT_ACTUALIZADO_RETENCION.md; REVISION_COMPLETA.md",
+  "salidas": {
+    "BITACORA_HITOS.md": "b17a536e9c6f979d1b9fe64878d578a636cb4ad869a7370032670cf91ea55449",
+    "COMPROBANTE_LIBRARY.json": "983c7517b4532eba7195a83f29cbdcf0812b1a69c75d66eb9a822e7951c33528",
+    "CONTEOS_REPRODUCIDOS.json": "c3e16d4212402ec98dd2ae1669130988bfff0aeeae41576f69bc4a269e2eebc2",
+    "PROMPT_ACTUALIZADO_RETENCION.md": "72fcdfe22cea0f58d65adb4b2dc3652b936f365e0fb69d12de7a6c098c3fd57e",
+    "QA_INDEPENDIENTE.json": "c3f3d9403e4283ff1bf7073da4c6303ad8b55e832e348fec8f81aeac151bd2b2",
+    "QA_PAQUETE.json": "97335c8692aace0171ff55e15666519e40863c95478616528d73f9e9412fccde",
+    "RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx": "66e7cc11a0206793504e4eb275d8585e070413067df6f20b9fde234d3daaa54c",
+    "REVISION_COBERTURA.json": "af96f73d85f10e800fd9bc760471991631a3546a2e42616f02b41050adab9e1e",
+    "REVISION_COMPLETA.md": "e64f992bbfdcdd0070e8b815c36140cf3f63e8d94b9e3b7058ed433a86463942",
+    "REVISION_LLAVES.json": "f205145889c1b1bfeb1fc7af796193cabcc8e29f32c02f76336176f1a0726a51",
+    "REVISION_REGLAS.json": "a2afd758b39d878262a736169d31b53983a492903bc9b9ca41579098a7aa1519",
+    "soporte/bases.png": "b28cfa0b2b6d9ef295f5b7a190dd8fde679afd280f266e33d51939235c526004",
+    "soporte/build.mjs": "284a45c663ec7a59a5d974d97aed6e5903ea466e38c12794199b441b0d54bfff",
+    "soporte/carreras.png": "a51a159bd942ef9c0f4983f5a2b08184aeca0a097f81f17a1d3330765c90fb07",
+    "soporte/config.json": "89188c68ecac82e8d0c2a1e4e1c72beb47b9dc62581e72c648237e991bc476f1",
+    "soporte/final_cierres.png": "7f93f6a631a829fbc26d8c2c6aa0045e95f050878aed7f77ab26c86631f67038",
+    "soporte/final_resumen.png": "fa1b29599fd3c2d243b00373c5d208a93636f2d8f75b17d0643d2041737c4e29",
+    "soporte/final_seguimiento.png": "999ba643ad53253e5a00ecd9669b0018a9cac8712c6672aaae2053f36e2c2a09",
+    "soporte/finalize.py": "c0c8a3e3d138dbfbe26fe19ee30afda49f97ae1447fc782cc04c4f943b8b31f7",
+    "soporte/formula_scan.ndjson": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146",
+    "soporte/fuentes.png": "0ec8b7631cf51132ee20e66fcd615965d56f10cacbd787f46d275ef7e80979a3",
+    "soporte/git_before.txt": "445b47a67cdde35218f20f64a36c1884f20f3d24d3b78921d48a12716d656009",
+    "soporte/inspect.ndjson": "0581a8c0175f35d9c16258c4e8c7e987dd06980c141da21f80de2d4d25890caa",
+    "soporte/llaves.png": "563f4c52c1440a650ae59a38a9de65cfeafa5c2ab7c7c06717685835357b8d6a",
+    "soporte/preserve.py": "3c90a643aae992f0b67311ef9b747de7934ef7f98bba18441d8604b89db6ca27",
+    "soporte/probar_reglas.py": "7e00422b4af5eeffc73f83cc788ae325a847860c343c0f5bc33af8b2cc1a334a",
+    "soporte/reglas.png": "96bd40678ded78e07273fd56253ca78ad338f87182652b4c97e1fe0a983052f2",
+    "soporte/reproducir_conteos.py": "dce1a3f04fe8adfa4f8e2965c90a92965e0ad33177902094c41a4bf706085bff",
+    "soporte/verify_final.mjs": "78fa75fce6c2fb24a041d065a2e64dab885646da69b431cf55a1fee146932600"
+  },
+  "library": {
+    "estado": "Confirmado por create_library_file y library_read",
+    "comprobante": "COMPROBANTE_LIBRARY.json",
+    "archivos": [
+      {
+        "name": "RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+        "library_file_id": "libfile_b688ed6a1c24819184aec5f2289cc490",
+        "file_id": "file_00000000204481f5a5e1e43fd62a85ff",
+        "size_bytes": 37461,
+        "local_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_133221/RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+        "sha256": "66e7cc11a0206793504e4eb275d8585e070413067df6f20b9fde234d3daaa54c",
+        "status": "succeeded",
+        "verified_by_library_read": true,
+        "current_version_number": 0,
+        "xattr_applied": true
+      },
+      {
+        "name": "PROMPT_ACTUALIZADO_RETENCION.md",
+        "library_file_id": "libfile_df20350f86dc81918428e96009316a95",
+        "file_id": "file_0000000063c481f5b40fa1ff3b1d61c0",
+        "size_bytes": 21003,
+        "local_path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_133221/PROMPT_ACTUALIZADO_RETENCION.md",
+        "sha256": "72fcdfe22cea0f58d65adb4b2dc3652b936f365e0fb69d12de7a6c098c3fd57e",
+        "status": "succeeded",
+        "verified_by_library_read": true,
+        "current_version_number": 0,
+        "xattr_applied": true
+      }
+    ],
+    "incluye_bases_individuales": false
+  }
+}

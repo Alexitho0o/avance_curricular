@@ -1,0 +1,14 @@
+{
+  "clasificacion": "B/C",
+  "apertura_sin_reparacion": true,
+  "archivo": "RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+  "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c",
+  "evidencia": [
+    "Excel mostró la ventana del libro V16 sin diálogo de recuperación en la apertura final.",
+    "Se navegó a 18_Foto_Intertrimestral!B91: encabezado Bases de cálculo de las tasas 2026 visible; rango utilizado A1:I97; barra de estado Listo.",
+    "Autoguardado desactivado. No se guardó el libro desde Excel."
+  ],
+  "incidencia_corregida": "El primer ensamblaje de prueba tenía celdas nuevas fuera de orden en su fila. Se canceló la apertura, se corrigió el orden y se añadió QA estricto de orden/duplicados; la apertura final no solicitó reparación.",
+  "verificacion_visual": "Bloque completo B91:I97 renderizado e inspeccionado con Artifact Tool; sin truncamiento en el rango nuevo.",
+  "limite": "Una consulta posterior de interfaz para ajustar zoom agotó el tiempo de espera. No se afirma prueba dinámica nativa. Las 53 comprobaciones dinámicas se ejecutaron con Artifact Tool sobre el archivo final, solo en memoria."
+}

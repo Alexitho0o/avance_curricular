@@ -1,0 +1,229 @@
+{
+  "fecha": "2026-10-23T08:30:41.153905-03:00",
+  "alcance": "Recuperación de lectura T3-2024 y revisión dirigida F02",
+  "fuentes_sha256": {
+    "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/REVISION_16_CASOS_FINAL.json": "e9113ffbb94a565f9e7a9da31a5f87e9a6d320b4b87112520229e5daf7c60028",
+    "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/PERFIL_FUENTES_ADICIONALES.json": "792fa57dbe4401f05764b8c25ab0a141a3d7ab3407f64c9441361ccf1aaf555e",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx": "97c0fc4fbe4dd9a24be611d0960f4ad6c1559db907a9d86d12a039bc89110fa6",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/PROMEDIOSDEALUMNOS_3233.xlsx": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+    "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/PROMEDIOSDEALUMNOS_7804.xlsx": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "/Users/alexi/Desktop/Caracterizacion_anual_2026_20261015_130336_379868/03_RESPALDOS/P1/01_ENTRADAS/PROMEDIOSDEALUMNOS_7804.xlsx": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+  },
+  "entrega_anterior_manifest": {
+    "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/cambios_plan_12_y_4_20261023_080207/MANIFEST.json",
+    "sha256": "2f9507ef866090b96df288f34c8b74a407112470f15f4adc2a67531e02dd2771"
+  },
+  "resultado": {
+    "fuente_T3_hash": "97c0fc4fbe4dd9a24be611d0960f4ad6c1559db907a9d86d12a039bc89110fa6",
+    "tres_hojas_leidas": true,
+    "inventario_T3": [
+      {
+        "hoja": "RESUMEN",
+        "filas_no_vacias": 63,
+        "dimension": [
+          160,
+          13
+        ],
+        "uso": "Inspección completa de resumen; no es llave individual"
+      },
+      {
+        "hoja": "DATOS CRUDOS U+ 19-11-2024",
+        "filas_datos": 4155,
+        "encabezados": [
+          "NÚMERO",
+          "ANO",
+          "PERIODO",
+          "CODCLI",
+          "RUT",
+          "CODIGO_PLAN_ESTUDIO",
+          "PATERNO",
+          "MATERNO",
+          "NOMBRE_ALUMNO",
+          "CODCARRERA_ALUMNO",
+          "CODIGO_ASIGNATURA",
+          "CODIGO_CARRERA_ASIGNATURA",
+          "ASIGNATURA",
+          "SECCION",
+          "ASIGNATURA_UNICA",
+          "NOTAS_NO_INGRESADAS",
+          "NOTAS_INGRESADAS",
+          "TOTAL_A_INGRESAR",
+          "PORC_INGRESO",
+          "FECHAINICIO",
+          "FECHAFIN",
+          "RUT_DOCENTE",
+          "DIG",
+          "PROFESOR",
+          "ESTADO",
+          "ESTADO_ACADEMICO",
+          "FECHA MEDICION"
+        ],
+        "filas_foco": 43,
+        "personas_foco": 12
+      },
+      {
+        "hoja": "ERRORES",
+        "filas_datos": 3,
+        "encabezados": [
+          "NÚMERO",
+          "ANO",
+          "PERIODO",
+          "CODCLI",
+          "RUT",
+          "CODIGO_PLAN_ESTUDIO",
+          "PATERNO",
+          "MATERNO",
+          "NOMBRE_ALUMNO",
+          "CODCARRERA_ALUMNO",
+          "CODIGO_ASIGNATURA",
+          "CODIGO_CARRERA_ASIGNATURA",
+          "ASIGNATURA",
+          "SECCION",
+          "NOTAS_NO_INGRESADAS",
+          "NOTAS_INGRESADAS",
+          "TOTAL_A_INGRESAR",
+          "PORC_INGRESO",
+          "FECHAINICIO",
+          "FECHAFIN",
+          "RUT_DOCENTE",
+          "DIG",
+          "PROFESOR",
+          "ESTADO",
+          "ESTADO_ACADEMICO"
+        ],
+        "filas_foco": 0,
+        "personas_foco": 0
+      }
+    ],
+    "filas_foco_T3": 43,
+    "personas_foco_T3": 12,
+    "filas_F02_T3": 6,
+    "planes_F02_T3": {
+      "IINF20241": 6
+    },
+    "fechas_medicion_F02_T3": [
+      "2024-11-19"
+    ],
+    "filas_F02_T3_reproducidas_maestro": 6,
+    "filas_F02_T3_adicionales": 0,
+    "filas_plan_anterior_2024_2": 3,
+    "fuentes_plan_anterior_2024_2": {
+      "PROMEDIOSDEALUMNOS_7804.xlsx": 2,
+      "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+    },
+    "alertas_identidad": 0,
+    "fechas_reporte_plan_nuevo": [
+      "2024-05-27",
+      "2024-05-31",
+      "2024-06-18",
+      "2024-06-19",
+      "2024-08-05",
+      "2024-09-16",
+      "2024-09-23",
+      "2024-09-30",
+      "2024-10-02",
+      "2024-10-03",
+      "2024-11-19"
+    ],
+    "fecha_efectiva_cambio": "Pendiente: ningún campo leído identifica un evento administrativo de cambio",
+    "codigo_anual_2024": [
+      "I162S2C1J4V2"
+    ],
+    "codigos_nuevos_adoptados": 0,
+    "denominadores_conservados": [
+      5901,
+      6622,
+      24774
+    ],
+    "clasificacion": "B datos; C comparación; E fecha efectiva pendiente",
+    "plan_anterior_observaciones_distintas": 2,
+    "plan_anterior_eventos_academicos_observados": 1,
+    "plan_anterior_alias_mismo_archivo": 1,
+    "filas_T3_reproducidas_del_maestro": 43,
+    "estado_lectura": "RESUELTO: tres hojas leídas",
+    "estado_fecha_efectiva": "PENDIENTE",
+    "primera_fecha_reporte_plan_nuevo": "2024-05-27"
+  },
+  "qa": {
+    "estado_tecnico": "OK",
+    "estado_funcional_fecha": "PENDIENTE_E",
+    "hojas_completas": 3,
+    "hash_T3_coincide_anterior": true,
+    "alertas_identidad": 0,
+    "filas_F02": 6,
+    "filas_F02_reproducidas_maestro": 6,
+    "filas_T3_foco_reproducidas_maestro": 43,
+    "duplicados_fuente_hoja_fila_T3": 0,
+    "observaciones_fuente_asignatura_antigua": 2,
+    "asignaturas_antiguas_distintas": 1,
+    "alias_mismo_7804_excluidos_del_conteo": 1,
+    "archivos_entrega_anterior_verificados": 37,
+    "entradas_hash_conservadas": 8,
+    "bases_y_denominadores_sin_cambios": true,
+    "codigo_adoptado_sin_cambios": true,
+    "rama_head_remotos_conservados": true,
+    "cambios_git_previos_conservados": true,
+    "nuevos_archivos_status": [
+      "?? docs/ESPECIFICACION_REVISION_T3_2024_F02_20261023.md",
+      "?? scripts/cerrar_respaldo_t3_2024_f02_20261023.py",
+      "?? scripts/revisar_respaldo_t3_2024_f02_20261023.py"
+    ],
+    "privado_fuera_git": true,
+    "limites": [
+      "Sin evento de cambio administrativo de plan",
+      "No equiparar fechas de asignatura/matrícula/medición",
+      "No equiparar período bimestral a trimestre por su número"
+    ],
+    "salidas_agregadas_sin_identificadores": true
+  },
+  "privado": "/Users/alexi/.local/share/ipss/revision_t3_2024_f02_20261023_082535",
+  "scripts": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/revisar_respaldo_t3_2024_f02_20261023.py": "157b388ae5965231f4615de4b7250d839ee0173ec0679d8cc6add12e325f9fc4",
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cerrar_respaldo_t3_2024_f02_20261023.py": "01b27bc42401daf5b2e0ab883b8b73343e5df2d7c456f64bacbe0a61e9a1da4b"
+  },
+  "reproduccion": [
+    "revisar_respaldo_t3_2024_f02_20261023.py CONFIG.json",
+    "cerrar_respaldo_t3_2024_f02_20261023.py CONFIG.json"
+  ],
+  "salidas_privadas_hashes": {
+    "CONTROL_IDENTIDAD.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "FILAS_T3_FOCO_16.json": "5e38ea85817b3d4d304f53c964f98af738594148e890eb4f137af45d90d57183",
+    "F02_T3_DETALLE.csv": "e2d4f552c81fac990751d256f14321de74b0513351bffb3dc6ba9837432e7e85",
+    "F02_CRONOLOGIA_FUENTES.json": "71b3081d69ff011f6b5c065a1aefffc4f5acc9cbbc474443aacd7f627b099df6",
+    "F02_ANTECEDENTE.json": "b763c011e3d84cb333dc0e297cfdac48e5045e424ea65ce9a25014a17dc2be6a",
+    "RESUMEN_HOJA_ORIGINAL.json": "c7abf338d55718290bf368aff2e2da28747fb193be2c0e5f48fdcdce018716fd",
+    "COMPARACION_T3_MAESTRO.json": "c461d77f35f9aa4d338499740c5abc63fe422e30f6556957bac70cc11cdc9c15",
+    "F02_PLAN_ANTERIOR_2024_2.json": "78b9bd90e82dc0793ae0df94818e9745d52b96f9b5a34aaea5dfe2d6626f05b7",
+    "F02_PROMEDIOS_RELECTURA.json": "56cb9a947814d36a0adadd0d021fd3dba53dffcb9d596c2535294f607dff3452"
+  },
+  "salidas_agregadas_hashes": {
+    "INFORME_F02_T3_2024.md": "39ce33379dc69d6985b07e0258bf7966a165484d61f69f8805f3df486ec3de0a",
+    "FUENTES_HASHES.json": "4cc294c512a1e3940fccdb31dcd1c1d00a9ac67f983d9340214ed20d092d3174",
+    "QA.json": "9b99efb2333a004020b509da8f82e4c03d3204e664d8ecead92fa08e4acf4373",
+    "CONFIG.json": "b43cfef330ebac318fc9b123be5dca87068e65c41ad105cf42a62e801083b4d8",
+    "CRONOLOGIA_F02_SIN_IDENTIFICADORES.csv": "98d52bd58ba8c868d8a61b54238193434a7b91442ec78746c0e54d649655a2bc",
+    "INVENTARIO_PROMEDIOS.json": "6928996bd4fb9056860200364f73c495ec1c3bd63040140449e17056a8ea236e",
+    "CHECKPOINT.md": "6828457a0ba6677a65b009cbb6f9cfb0561cf6d9b3e548b21ba2f39e89fd57c2",
+    "GIT_DESPUES.json": "e728330e36fe53bb92a2d659f075f2c62d7f7c2f7eac45b2f0af8099f3b757a7",
+    "GIT_ANTES.json": "cca54974d93ae082f7bd015c9f8831696911e7c93338f6c17e2d6add786fb8c0",
+    "RESULTADOS.json": "a5339ceeb3ec8a99067ba6e4cbcef2b7d163acd25dc650038210d812a2e7924f"
+  },
+  "bases_modificadas": false,
+  "denominadores_modificados": false,
+  "commit": false,
+  "push": false,
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "status": "M PROYECTO_IPSS.json\n?? data/reglas_negocio/20261020_estados_umas/\n?? data/reglas_negocio/20261021_datos_alumnos/\n?? data/reglas_negocio/20261022_puente_versiones/\n?? docs/ESPECIFICACION_CAMBIOS_PLAN_12_Y_4_20261023.md\n?? docs/ESPECIFICACION_PUENTE_VERSIONES_VALIDACION_20261022.md\n?? docs/ESPECIFICACION_REPRODUCCION_PUENTE_20261023.md\n?? docs/ESPECIFICACION_RETENCION_INTERMEDIA_T2_T3_20261021.md\n?? docs/ESPECIFICACION_TRAYECTORIAS_374_20261023.md\n?? docs/relacion_estados_umas_vig_sies_20261020.md\n?? oferta_academica_2027/00_fuentes_originales/\n?? oferta_academica_2027/04_scripts/corregir_salto_final_etapa1_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_fechas_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_prueba_pes_etapa1_octubre_20261020.py\n?? oferta_academica_2027/11_gobernanza/etapa1_octubre_20261020/\n?? outputs/auditoria_embudo_2317_20261022/\n?? outputs/cambios_plan_12_y_4_20261023_080207/\n?? outputs/diagnostico_2317_20261022/\n?? outputs/estados_umas_vig_sies/\n?? outputs/reproduccion_puente_20261023_003916/\n?? outputs/reproduccion_puente_20261023_004044/\n?? outputs/retencion_intermedia_t2_t3/\n?? outputs/retencion_puente_provisional_20261022/\n?? outputs/retencion_puente_provisional_20261022_v2/\n?? outputs/retencion_puente_provisional_20261022_v3/\n?? outputs/retencion_puente_provisional_20261022_v4/\n?? outputs/retencion_puente_provisional_20261022_v5/\n?? outputs/retencion_puente_provisional_20261022_v6/\n?? outputs/retencion_puente_provisional_20261022_v7/\n?? outputs/retencion_puente_provisional_20261023_v10/\n?? outputs/retencion_puente_provisional_20261023_v8/\n?? outputs/retencion_puente_provisional_20261023_v9/\n?? outputs/revision_t3_2024_f02_20261023_082535/\n?? outputs/trayectorias_374_20261023_072124/\n?? outputs/trayectorias_374_20261023_072227/\n?? outputs/trayectorias_374_20261023_072401/\n?? procesos/retencion_intermedia_t2_t3/\n?? scripts/auditar_cronologia_reproduccion_20261023.py\n?? scripts/cerrar_reproduccion_20261023.py\n?? scripts/cerrar_revision_planes_12_y_4_20261023.py\n?? scripts/cerrar_trayectorias_374_20261023.py\n?? scripts/construir_relacion_estados_umas_20261020.py\n?? scripts/crear_entrega_reproduccion_20261023.mjs\n?? scripts/ensamblar_reproduccion_20261023.py\n?? scripts/investigar_cambios_plan_12_y_4_20261023.py\n?? scripts/preparar_entrega_reproduccion_20261023.py\n?? scripts/recuperar_evidencia_planes_12_y_4_20261023.py\n?? scripts/reproducir_puente_20261023.py\n?? scripts/retencion_intermedia_t2_t3/\n?? scripts/revisar_trayectorias_374_20261023.py\n?? scripts/verificar_evidencias_puente_20261023.py",
+    "remotos": "origin\thttps://github.com/Alexitho0o/avance_curricular.git (fetch)\norigin\thttps://github.com/Alexitho0o/avance_curricular.git (push)"
+  },
+  "git_despues": {
+    "rama": "feature/ire-2026",
+    "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "status": "M PROYECTO_IPSS.json\n?? data/reglas_negocio/20261020_estados_umas/\n?? data/reglas_negocio/20261021_datos_alumnos/\n?? data/reglas_negocio/20261022_puente_versiones/\n?? docs/ESPECIFICACION_CAMBIOS_PLAN_12_Y_4_20261023.md\n?? docs/ESPECIFICACION_PUENTE_VERSIONES_VALIDACION_20261022.md\n?? docs/ESPECIFICACION_REPRODUCCION_PUENTE_20261023.md\n?? docs/ESPECIFICACION_RETENCION_INTERMEDIA_T2_T3_20261021.md\n?? docs/ESPECIFICACION_REVISION_T3_2024_F02_20261023.md\n?? docs/ESPECIFICACION_TRAYECTORIAS_374_20261023.md\n?? docs/relacion_estados_umas_vig_sies_20261020.md\n?? oferta_academica_2027/00_fuentes_originales/\n?? oferta_academica_2027/04_scripts/corregir_salto_final_etapa1_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_fechas_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_prueba_pes_etapa1_octubre_20261020.py\n?? oferta_academica_2027/11_gobernanza/etapa1_octubre_20261020/\n?? outputs/auditoria_embudo_2317_20261022/\n?? outputs/cambios_plan_12_y_4_20261023_080207/\n?? outputs/diagnostico_2317_20261022/\n?? outputs/estados_umas_vig_sies/\n?? outputs/reproduccion_puente_20261023_003916/\n?? outputs/reproduccion_puente_20261023_004044/\n?? outputs/retencion_intermedia_t2_t3/\n?? outputs/retencion_puente_provisional_20261022/\n?? outputs/retencion_puente_provisional_20261022_v2/\n?? outputs/retencion_puente_provisional_20261022_v3/\n?? outputs/retencion_puente_provisional_20261022_v4/\n?? outputs/retencion_puente_provisional_20261022_v5/\n?? outputs/retencion_puente_provisional_20261022_v6/\n?? outputs/retencion_puente_provisional_20261022_v7/\n?? outputs/retencion_puente_provisional_20261023_v10/\n?? outputs/retencion_puente_provisional_20261023_v8/\n?? outputs/retencion_puente_provisional_20261023_v9/\n?? outputs/revision_t3_2024_f02_20261023_082535/\n?? outputs/trayectorias_374_20261023_072124/\n?? outputs/trayectorias_374_20261023_072227/\n?? outputs/trayectorias_374_20261023_072401/\n?? procesos/retencion_intermedia_t2_t3/\n?? scripts/auditar_cronologia_reproduccion_20261023.py\n?? scripts/cerrar_reproduccion_20261023.py\n?? scripts/cerrar_respaldo_t3_2024_f02_20261023.py\n?? scripts/cerrar_revision_planes_12_y_4_20261023.py\n?? scripts/cerrar_trayectorias_374_20261023.py\n?? scripts/construir_relacion_estados_umas_20261020.py\n?? scripts/crear_entrega_reproduccion_20261023.mjs\n?? scripts/ensamblar_reproduccion_20261023.py\n?? scripts/investigar_cambios_plan_12_y_4_20261023.py\n?? scripts/preparar_entrega_reproduccion_20261023.py\n?? scripts/recuperar_evidencia_planes_12_y_4_20261023.py\n?? scripts/reproducir_puente_20261023.py\n?? scripts/retencion_intermedia_t2_t3/\n?? scripts/revisar_respaldo_t3_2024_f02_20261023.py\n?? scripts/revisar_trayectorias_374_20261023.py\n?? scripts/verificar_evidencias_puente_20261023.py",
+    "remotos": "origin\thttps://github.com/Alexitho0o/avance_curricular.git (fetch)\norigin\thttps://github.com/Alexitho0o/avance_curricular.git (push)"
+  }
+}

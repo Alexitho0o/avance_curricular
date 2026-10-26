@@ -1,0 +1,164 @@
+{
+  "hito_referencia": "H001-RETENCION-IPSS162",
+  "proceso": "Seguimiento institucional de continuidad",
+  "cohortes": [
+    "2025-T2",
+    "2025-T3"
+  ],
+  "observacion": "MU2026; fuente REPORTE JULIO 2026",
+  "fecha": "2026-10-20T22:15:30.400843-03:00",
+  "decision_D": "Todos los ingresos del archivo correspondiente: T2=222, T3=124; incluidos ELIMINADO. Confirmación explícita del usuario.",
+  "fuentes": [
+    {
+      "id": "MU",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sheet": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "bytes": 1475920,
+      "mtime": "2026-09-01T14:23:51.453026-04:00",
+      "rows": 10200,
+      "rows_2026": 4105,
+      "vig": {
+        "0": 960,
+        "1": 3145
+      }
+    },
+    {
+      "id": "T2",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sheet": "T2_2025",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "bytes": 221698,
+      "mtime": "2026-10-20T21:43:06.816424-03:00",
+      "rows": 225,
+      "selected_rows": 225,
+      "selected_persons": 222,
+      "states": {
+        "VIGENTE": 200,
+        "ELIMINADO": 25
+      }
+    },
+    {
+      "id": "T3",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sheet": "T3_2025",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "bytes": 1354391,
+      "mtime": "2026-10-20T21:43:06.824307-03:00",
+      "rows": 3081,
+      "selected_rows": 127,
+      "selected_persons": 124,
+      "states": {
+        "VIGENTE": 111,
+        "ELIMINADO": 16
+      }
+    },
+    {
+      "id": "MU_MANIFEST",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/MANIFEST_BASE_RETENCION_MU_2022_2026.json",
+      "sha256": "746539ed62a3a3a051da14fd7f32b90fc6fd30a426304386d54e19c203d74145"
+    }
+  ],
+  "regla_anual_referencia": {
+    "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+    "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8",
+    "alcance": "A: no define T2/T3 ni convierte este cálculo C en retención oficial"
+  },
+  "llave_C": "RUT normalizado con DV exacto = N_DOC+DV cuando TIPO_DOC=R; búsqueda en ANIO_INFORMADO=2026, sin filtro por cohorte/carrera",
+  "numerador_C": "Personas de cada cohorte con al menos una fila VIG=1 en MU2026",
+  "denominador_D": "Personas únicas del año/período de ingreso del archivo correspondiente; todos los estados",
+  "resultados_C": {
+    "2025-T2": {
+      "students": 222,
+      "found": 80,
+      "continue": 74,
+      "onlyzero": 6,
+      "absent": 142,
+      "origin_discrepancy": 2,
+      "multiple_careers": 3,
+      "duplicate_source_persons": 3
+    },
+    "2025-T3": {
+      "students": 124,
+      "found": 50,
+      "continue": 48,
+      "onlyzero": 2,
+      "absent": 74,
+      "origin_discrepancy": 3,
+      "multiple_careers": 3,
+      "duplicate_source_persons": 3
+    }
+  },
+  "controles_B_C": {
+    "both_cohorts": 0,
+    "t2_later_snapshot": 290,
+    "t2_later_only": 68,
+    "t2_initial_only": 0,
+    "mu_rows": 4105,
+    "mu_matched_rows": 130,
+    "mu_unknown_vig": {}
+  },
+  "pendientes_E": [
+    [
+      "E",
+      "Ausencias en MU2026",
+      "La fuente no explica por qué faltan estas personas. No se asigna una causa ni se declara deserción."
+    ],
+    [
+      "B/E",
+      "Cinco años de origen distintos",
+      "Dos personas de T2 y tres de T3 tienen ANIO_ING_ORI distinto de 2025. Se identifican en Cruce_revision."
+    ],
+    [
+      "C/E",
+      "Seis personas con varias carreras",
+      "Tres por cohorte. Se cuentan una vez y se muestran en un grupo aparte; la asignación de carrera queda pendiente."
+    ],
+    [
+      "E",
+      "Alcance de las fechas",
+      "Falta confirmar la fecha efectiva de corte de vigencia. Los archivos recibidos fueron descritos como parciales."
+    ]
+  ],
+  "salida": {
+    "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_221157/CONTINUIDAD_IPSS_INGRESOS_2025_T2_T3_EN_MU2026_20261020_221157.xlsx",
+    "sha256": "202072b117e61c53d4895d72f1dee7f92c2557a013ea3262d055de4bc28379a5"
+  },
+  "originales_sin_modificar": true,
+  "git": {
+    "rama_antes": "feature/ire-2026",
+    "head_antes": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+    "commit": false,
+    "push": false,
+    "rama_despues": "feature/ire-2026",
+    "head_despues": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "reproducir": "profile.py lee fuentes, valida y seudonimiza; build.mjs crea fórmulas, prueba filtros y exporta; verify.py valida salida y hashes. No identificadores directos en archivos derivados.",
+  "qa": {
+    "resultado": "OK",
+    "fuentes_hash_intactos": true,
+    "manifest_mu_hash_verificado": true,
+    "formulas": 3665,
+    "errores_formula": 0,
+    "filas_persona_verificadas": 346,
+    "controles_carrera": "OK",
+    "recalculo_y_selector": "artifact-tool; pruebas de todas las carreras y perturbación VIG restaurada",
+    "zip_xml_tablas": "OK",
+    "grafico": "Eje 0%-100% corregido únicamente en XML de gráfico nativo; verificación de lectura independiente",
+    "apertura_excel_nativo": "No realizada"
+  },
+  "scripts": [
+    {
+      "archivo": "profile.py",
+      "sha256": "cd8d1d5445dcab9637645959f49628826552b108010ce6b45fab177d8bc225eb"
+    },
+    {
+      "archivo": "build.mjs",
+      "sha256": "a0b074132154bc2de7cdae3210054a9232c2844266eef22bb79ae4cf90b3f0fc"
+    },
+    {
+      "archivo": "verify.py",
+      "sha256": "d30069b243867f43b98d8f9b8174f36030c7b2c206767a911041e37c71f8902c"
+    }
+  ]
+}

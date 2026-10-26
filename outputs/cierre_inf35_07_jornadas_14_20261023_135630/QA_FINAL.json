@@ -1,0 +1,27 @@
+{
+  "resultado": "OK_CON_ADVERTENCIAS",
+  "consultas": 24774,
+  "cambios_autorizados": 1,
+  "restantes_identicas": 24773,
+  "indice_mu_identico": true,
+  "documental_inalterado": true,
+  "fuentes_conservadas": true,
+  "denominadores_inalterados": true,
+  "consumidores": 3,
+  "consultas_por_consumidor": 35,
+  "pruebas_sinteticas": 12,
+  "conservacion_excel": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+  "identidad_codcli_carrera_clave_matricula_conservada_en_intervalo": true,
+  "fuentes_6_hash_conforme": true,
+  "auditoria_preexistente_hash_conforme": true,
+  "HEAD_antes": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+  "HEAD_despues": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+  "rama": "feature/ire-2026",
+  "commit_push": false,
+  "limites": [
+    "La auditoría de 58 cortes fue reutilizada como derivado gobernado; se releyeron seis originales, no se reconstruyeron los 58.",
+    "Cortes nominales y zona horaria no confirmada; el intervalo acredita cambio entre respaldos, no fecha efectiva del acto.",
+    "No se determinó versión SIES de destino a partir de jornada sola.",
+    "No se extrapoló agosto-octubre 2026 a los períodos 2024 o 2025."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "clasificacion": "B observación en Excel; C reparación técnica",
+  "estado": "OK",
+  "fecha_registro": "2026-10-23T21:03:14.315202-03:00",
+  "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx",
+  "sha256": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3",
+  "apertura_excel_nativo": "Abrió directamente sin aviso de recuperación ni título Reparado. Se observó la ventana y hoja 26 del archivo V15.",
+  "verificacion_visual": {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "filas": "1858:1861",
+    "R": [
+      1130,
+      582,
+      535,
+      "47,35 %"
+    ],
+    "P": [
+      20,
+      14,
+      11,
+      "55,00 %"
+    ],
+    "total": [
+      1150,
+      596,
+      546,
+      "47,48 %"
+    ]
+  },
+  "reparacion": {
+    "evidencia_v14": "evidencia/REPARACION_EXCEL_V14.xml",
+    "parte": "xl/styles.xml",
+    "accion": "Retirar tres extensiones xfComplement huérfanas en cellXfs 211,212,213; sin renumerar estilos.",
+    "resto_xml_estilos_identico": true,
+    "cellXfs": 315,
+    "dxf": 22
+  },
+  "limites": [
+    "Se comprobó la apertura de esta copia en Excel para Mac y el bloque afectado; no se afirma una certificación de cada operación futura en toda versión de Excel.",
+    "Excel no guardó ni normalizó el libro entregado; hash del paquete sin cambios después de la comprobación."
+  ]
+}

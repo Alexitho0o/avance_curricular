@@ -1,0 +1,248 @@
+{
+  "proceso": "Seguimiento intermedio de retención IPSS 162",
+  "cohortes": [
+    2024,
+    2025
+  ],
+  "cierres": [
+    "2025-T2",
+    "2025-T3",
+    "2026-T2",
+    "2026-T3"
+  ],
+  "fecha": "2026-10-20",
+  "estado": "REVISION_COMPLETA; TASAS_BLOQUEADAS_POR_COBERTURA_PARCIAL",
+  "decision_D": "Alexi confirmó listados parciales y solicitó preparar revisión y señalar bases faltantes.",
+  "fuentes": [
+    {
+      "id": "T2_2025",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "bytes": 221698,
+      "mtime": "2026-10-20T21:43:06.816424-03:00",
+      "sheet": "T2_2025",
+      "cohort": 2024,
+      "year": 2025,
+      "term": 2,
+      "records": 225,
+      "unique_keys": 222,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2025": 225
+      },
+      "entry_terms": {
+        "2": 225
+      },
+      "states": {
+        "VIGENTE": 200,
+        "ELIMINADO": 25
+      },
+      "targets": 636,
+      "included": 558,
+      "match": 1,
+      "match_vig": 1,
+      "match_invalid_dv": 0
+    },
+    {
+      "id": "T3_2025",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "bytes": 1354391,
+      "mtime": "2026-10-20T21:43:06.824307-03:00",
+      "sheet": "T3_2025",
+      "cohort": 2024,
+      "year": 2025,
+      "term": 3,
+      "records": 3081,
+      "unique_keys": 2990,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2005": 1,
+        "2016": 3,
+        "2017": 1,
+        "2020": 6,
+        "2021": 17,
+        "2022": 66,
+        "2023": 269,
+        "2024": 500,
+        "2025": 2218
+      },
+      "entry_terms": {
+        "1": 2523,
+        "2": 403,
+        "3": 155
+      },
+      "states": {
+        "VIGENTE": 2473,
+        "TITULADO": 74,
+        "SUSPENDIDO": 31,
+        "ELIMINADO": 497,
+        "EGRESADO": 6
+      },
+      "targets": 636,
+      "included": 558,
+      "match": 325,
+      "match_vig": 317,
+      "match_invalid_dv": 0
+    },
+    {
+      "id": "T2_2026",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "bytes": 140509,
+      "mtime": "2026-10-20T21:43:06.815458-03:00",
+      "sheet": "Hoja1",
+      "cohort": 2025,
+      "year": 2026,
+      "term": 2,
+      "records": 528,
+      "unique_keys": 527,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2026": 528
+      },
+      "entry_terms": {
+        "2": 528
+      },
+      "states": {
+        "NO INFORMADO": 528
+      },
+      "targets": 1255,
+      "included": 1150,
+      "match": 2,
+      "match_vig": 0,
+      "match_invalid_dv": 0
+    },
+    {
+      "id": "T3_2026",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "bytes": 481817,
+      "mtime": "2026-10-20T21:43:06.825904-03:00",
+      "sheet": "Base",
+      "cohort": 2025,
+      "year": 2026,
+      "term": 3,
+      "records": 557,
+      "unique_keys": 545,
+      "invalid_keys": 0,
+      "invalid_dv": 0,
+      "entry_years": {
+        "2024": 22,
+        "2025": 34,
+        "2026": 501
+      },
+      "entry_terms": {
+        "3": 557
+      },
+      "states": {
+        "VIGENTE": 488,
+        "ELIMINADO": 69
+      },
+      "targets": 1255,
+      "included": 1150,
+      "match": 0,
+      "match_vig": 0,
+      "match_invalid_dv": 0
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "rows": 10200,
+      "sheet": "BASE_RETENCION_MU"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "sheet": "02_COHORTE_ELEGIBILIDAD"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"
+    }
+  ],
+  "salida": {
+    "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/REVISION_RETENCION_INTERMEDIA_IPSS_2024_2025_T2_T3_20261020.xlsx",
+    "sha256": "699ca7b18aa3b5892ef7ef5b0dfbeb766d2632f0e4319a7c83995aa818092f12"
+  },
+  "pendientes_E": [
+    [
+      "2025-T2",
+      2024,
+      "Matrícula completa vigente al cierre 2025-T2 de todas las cohortes (incluida 2024), con identidad exacta y fecha/estado del cierre. La entrega actual solo contiene ingresos 2025-T2."
+    ],
+    [
+      "2025-T3",
+      2024,
+      "Listado completo o certificación de completitud de T3_2025 y estados efectivos a ese cierre. El usuario confirmó que la entrega es parcial. Incluye varios años de ingreso, pero eso no prueba cobertura total."
+    ],
+    [
+      "2026-T2",
+      2025,
+      "Matrícula completa vigente al cierre 2026-T2, incluida cohorte 2025. Incorporar estado o certificación de que todas sus filas estaban vigentes a esa fecha. La entrega actual solo contiene ingresos 2026-T2."
+    ],
+    [
+      "2026-T3",
+      2025,
+      "Matrícula completa vigente al cierre 2026-T3 de todas las cohortes, incluida 2025. Base solo contiene PERIODOINGRESO=3 y la hoja 2026_3 solo ingresos 2026."
+    ],
+    [
+      "Todas",
+      null,
+      "Confirmar fecha exacta del corte, cobertura completa y vínculo de documentos pasaporte-RUT cuando corresponda. Mantener la cohorte de origen SIES; no reemplazarla por ingreso operacional sin validación."
+    ]
+  ],
+  "fuentes_sin_modificar": true,
+  "git": {
+    "rama_antes": "feature/ire-2026",
+    "head_antes": "b8140dcba0f179865671cff75f98b9e1041eeb0a",
+    "commit": false,
+    "push": false,
+    "rama_despues": "feature/ire-2026",
+    "head_despues": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "clasificacion": {
+    "A": "Regla SIES anual citada; no normativa T2/T3",
+    "B": "Contenido observado en fuentes",
+    "C": "Normalización exacta, evaluación técnica del motor anual, fórmulas y conteos",
+    "D": "Revisión de listados parciales confirmada por usuario",
+    "E": "Cobertura, fecha de cierre, denominador intermedio y documentos no comparables"
+  },
+  "proteccion": "No RUT, N_DOC, nombres, apellidos, fecha de nacimiento ni contacto personal en el derivado. IDs locales seudonimizados y filas fuente para trazabilidad.",
+  "qa": {
+    "resultado": "OK revisión; tasas pendientes",
+    "formula_errors": 0,
+    "formula_cells": 44087,
+    "detail_rows_checked": 1891,
+    "career_rows_checked": 28,
+    "sheets": 6,
+    "charts": 1,
+    "sources_hashes_unchanged": true,
+    "excel_native_open_test": "No realizado; recálculo y selector verificados con artifact-tool y lectura independiente del XLSX exportado."
+  },
+  "reproducibilidad": {
+    "pasos": [
+      "Ejecutar profile.py con Python y openpyxl de lectura: regenera profile.json seudonimizado a partir de fuentes originales.",
+      "Ejecutar build.mjs con runtime @oai/artifact-tool: genera libro y comprueba fórmulas y selector.",
+      "Ejecutar verify.py: compara cada cruce y carrera contra cálculo independiente y hashes originales."
+    ],
+    "scripts": [
+      {
+        "archivo": "profile.py",
+        "sha256": "39b64cfea7773f269a10ba9576f1945f79e35e0f69a681913a173a2b279c0d88"
+      },
+      {
+        "archivo": "build.mjs",
+        "sha256": "e9a7966cc0bcd8682584ac5173c39bb2c5b70bba4592f2aa67928423cb7858b0"
+      },
+      {
+        "archivo": "verify.py",
+        "sha256": "c37285dbde7dd01841ffaa24fcebf06aa2eb889adecd3ca232f1aa07ab0d9399"
+      }
+    ],
+    "datos_intermedios": "profile.json se genera localmente; no se entrega ni se agrega a Git."
+  }
+}

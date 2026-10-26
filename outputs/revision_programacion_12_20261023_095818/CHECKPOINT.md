@@ -1,0 +1,3 @@
+# Reanudación
+
+Revisadas 12 observaciones de Programación (7 personas): 7 propuestas con continuidad MU2023/2024/2025; 5 propuestas complementarias (2 con MU2023/2024, 1 solo MU2024 + continuidad académica, 2 de cambio real con actividad en ambos planes). Todas V1 I162S2C57J4V1. No adoptadas. No extrapolar a homologaciones ni confundir período bimestral/trimestral. Estado vigente conserva las siete operaciones acumuladas anteriores: seis asignaciones y una clasificación TCRE, 3.088/1.750 internos, 3.213/1.838 documentales. Usar detalle privado REVISION_12_POR_OBSERVACION.json y evidencia fuente/hoja/fila. Falta decisión sobre propuestas; atribución documental y día administrativo siguen pendientes.

@@ -1,0 +1,3 @@
+# Corrección metodológica V4 — 2026-10-22
+
+Se corrige la comparación V3 que podía interpretarse como reducción validada bajo reglas originales. Línea base: 24/63 (38,10%), sin nuevas recalificaciones demostradas bajo TODOS los controles. Escenario mixto: 19/63 (30,16%), PROPUESTA_METODOLOGICA_NO_APROBADA. Indicador homogéneo contextual: 8/63 (12,70%), tres previas y cinco nuevas disjuntas, alcance observacional. TCRE/J2=80% no pasa 90%; los otros cuatro no acreditan todos los controles. No presentar nuevamente el delta como avance comparable. Se preservan V3, fuentes, tasas, denominadores y gráficos; sin nuevas búsquedas ni evidencia.

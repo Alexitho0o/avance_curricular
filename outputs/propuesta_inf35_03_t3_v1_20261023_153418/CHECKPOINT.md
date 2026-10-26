@@ -1,0 +1,1 @@
+C: propuesta interna INF35-03 T3-2024 = I162S2C1J1V1, con supuesto temporal explícito; no aplicada. D: requiere aprobación acotada. E: documental y fecha siguen pendientes. No extender a T2-2024 ni 2026. Revisar PROPUESTA.json para evidencia e impacto. Diccionario v6, bases, Excel y denominadores sin cambios.

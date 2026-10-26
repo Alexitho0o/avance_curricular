@@ -1,0 +1,925 @@
+{
+  "recurso": "Seguimiento de cohortes IPSS 2024/2025 T1/T2/T3 usando maqueta T1 aprobada",
+  "hito": "H001-RETENCION-IPSS162",
+  "fecha": "2026-10-21T16:39:47.961716-03:00",
+  "resultado": "OK_CON_PENDIENTES_E",
+  "clasificaciones": {
+    "A": "Definición oficial, limitada al proceso/período de la fuente",
+    "B": "Dato observado",
+    "C": "Cálculo/implementación",
+    "D": "Decisión interna",
+    "E": "Hipótesis/pendiente"
+  },
+  "decision_d": "Usar la maqueta T1 conservando diseño, gráficos nativos y filtros; entregar agregado sin identificadores y detalle privado separado; no modificar fuentes, motor anual ni denominadores; sin commit/push.",
+  "maqueta": {
+    "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx",
+    "sha256": "5b64030011ad64f742a95ad72a91cc326ad918afaea46ea989496d2e8c44f899",
+    "sheets": 18,
+    "native_charts": 13
+  },
+  "fuentes_directas_b": [
+    {
+      "id": "F001",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "context": "Respaldo UMAS; estado efectivo de cierre no acreditado",
+      "bytes": 5183704
+    },
+    {
+      "id": "F002",
+      "path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35",
+      "context": "Respaldo UMAS; estado efectivo de cierre no acreditado",
+      "bytes": 5465638
+    },
+    {
+      "id": "F003",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-20/2027_P1_082351/01_ENTRADAS/DATOSDEALUMNOS_12112.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "context": "Respaldo UMAS; estado efectivo de cierre no acreditado",
+      "bytes": 5496667
+    },
+    {
+      "id": "F004",
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_12135.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "d7a3ca24567ea7d0ff61c3d92e0b208da158fe7cb4f68548a00f407977334714",
+      "context": "Respaldo DatosAlumnos; fecha de cierre no acreditada",
+      "bytes": 5505086
+    },
+    {
+      "id": "F005",
+      "path": "/Users/alexi/Downloads/2025/DATOSDEALUMNOS_11248.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+      "context": "Respaldo DatosAlumnos; fecha de cierre no acreditada",
+      "bytes": 5329258
+    },
+    {
+      "id": "F006",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260825_20_40_34.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "7c46a2dea8dac92a1c92ffa8def96dca8da4437e06c0e69732c814d59de50243",
+      "context": "Base Maestra corte nominal 2026-08-25T20:40:34",
+      "bytes": 3231344
+    },
+    {
+      "id": "F007",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260826_13_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "c08b3a757c7b8a993b21749ae1c785223d44da37c8bfa2c01890c6390ada338b",
+      "context": "Base Maestra corte nominal 2026-08-26T13:00:39",
+      "bytes": 3236111
+    },
+    {
+      "id": "F008",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260827_13_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "bc930aa3fb674ace8d6204a806f4bc620fc3b00c5ec9d335f7599fef56621da6",
+      "context": "Base Maestra corte nominal 2026-08-27T13:00:37",
+      "bytes": 3237309
+    },
+    {
+      "id": "F009",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260828_13_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "88a5eab891959346085562c1a8d717f68a4bf2b300016eb73921169af4e4f320",
+      "context": "Base Maestra corte nominal 2026-08-28T13:00:37",
+      "bytes": 3240368
+    },
+    {
+      "id": "F010",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260829_13_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "c2717009783965d251062f1359d394cd7cdb62800f00f22774ae84cd65d6e9f7",
+      "context": "Base Maestra corte nominal 2026-08-29T13:00:37",
+      "bytes": 3244019
+    },
+    {
+      "id": "F011",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260830_13_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "e2326338958b9086c45532d1e43f2ebfd1238ecda21aa3cd5f3fe6e7d9a47d5d",
+      "context": "Base Maestra corte nominal 2026-08-30T13:00:38",
+      "bytes": 3244585
+    },
+    {
+      "id": "F012",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260831_13_00_42.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "399dec7be249701d82b0ef26495123799872bcfc6ac16796a0d2017c6f196ee2",
+      "context": "Base Maestra corte nominal 2026-08-31T13:00:42",
+      "bytes": 3244650
+    },
+    {
+      "id": "F013",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260901_13_00_41.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "3c7362dcf640d56bb912e29a8ea76540ff92a9bb5be59b5e5ac9a04b9ec81863",
+      "context": "Base Maestra corte nominal 2026-09-01T13:00:41",
+      "bytes": 3248622
+    },
+    {
+      "id": "F014",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260902_13_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "402dfdc6c194d12b79802798f42475d9f30aa5a87e0a481f12b9e93eff8e56c2",
+      "context": "Base Maestra corte nominal 2026-09-02T13:00:39",
+      "bytes": 3251234
+    },
+    {
+      "id": "F015",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260903_13_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "2d97e0f82f67cd812f967d65ae5b5f51689bfe8c67e157a5958b24941d006efd",
+      "context": "Base Maestra corte nominal 2026-09-03T13:00:38",
+      "bytes": 3253907
+    },
+    {
+      "id": "F016",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260904_13_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "4402628d7fb386bc44e1952252d56f1cdc47056d1cbe4d7379aa7027aabf58f1",
+      "context": "Base Maestra corte nominal 2026-09-04T13:00:38",
+      "bytes": 3255235
+    },
+    {
+      "id": "F017",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260905_13_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "183483536d9729d52cbb86e19bed17ff739703b92be758aa5e7288a95036fa0d",
+      "context": "Base Maestra corte nominal 2026-09-05T13:00:37",
+      "bytes": 3258182
+    },
+    {
+      "id": "F018",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260906_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "756251753c5c5cd0c5676864dfd13ccc1478513d054022b0a12b1a84336fee6f",
+      "context": "Base Maestra corte nominal 2026-09-06T12:00:37",
+      "bytes": 3258550
+    },
+    {
+      "id": "F019",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260907_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "2422944556d2c58ab926b106e085fb70243c40d103914547a8922b8f8d41c8e5",
+      "context": "Base Maestra corte nominal 2026-09-07T12:00:38",
+      "bytes": 3258610
+    },
+    {
+      "id": "F020",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260908_12_00_36.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "70f52dc42477e016eb9dc4d07c99243a2001f4370dc48e1f17294002997e0342",
+      "context": "Base Maestra corte nominal 2026-09-08T12:00:36",
+      "bytes": 3261278
+    },
+    {
+      "id": "F021",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260909_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "278e85afce6ef11071b5e641e578a173cbc8e4104aca6107ace7fd0f44304700",
+      "context": "Base Maestra corte nominal 2026-09-09T12:00:37",
+      "bytes": 3264459
+    },
+    {
+      "id": "F022",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260910_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "faf74b640c49edfaae7857599f46651783672a2f437a1c6657a9cec72bcceddb",
+      "context": "Base Maestra corte nominal 2026-09-10T12:00:38",
+      "bytes": 3267025
+    },
+    {
+      "id": "F023",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260911_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "59a0a3afa8498639a13e38ff1b9443367646b548ee035b7720944c2469a5340a",
+      "context": "Base Maestra corte nominal 2026-09-11T12:00:37",
+      "bytes": 3273765
+    },
+    {
+      "id": "F024",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260912_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "25778834c4d66c70a0e463cd4d73b23143d0132c0cb03104d771ef8c458f7626",
+      "context": "Base Maestra corte nominal 2026-09-12T12:00:38",
+      "bytes": 3276085
+    },
+    {
+      "id": "F025",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260913_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "ef043de211ab2fffe6b5f28d7f94245abbe4ec20f71585ec35aed798f8a981f4",
+      "context": "Base Maestra corte nominal 2026-09-13T12:00:37",
+      "bytes": 3276058
+    },
+    {
+      "id": "F026",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260914_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "d1488abf36b8aa2992af5ed5ceb215bb2c5ef4b8810bb13b79c740950125f4fd",
+      "context": "Base Maestra corte nominal 2026-09-14T12:00:37",
+      "bytes": 3276171
+    },
+    {
+      "id": "F027",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260915_12_00_36.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "1cd7a9b19cde69b4e101f1466db3d570cf8d0be69c36ae6e3f1d2916bbf5448d",
+      "context": "Base Maestra corte nominal 2026-09-15T12:00:36",
+      "bytes": 3278956
+    },
+    {
+      "id": "F028",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260916_12_00_41.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "4c2f721ef8df18cb4645dc4e3c28f3c9c5c054032e4f1e16dbcfaca9e4880593",
+      "context": "Base Maestra corte nominal 2026-09-16T12:00:41",
+      "bytes": 3281236
+    },
+    {
+      "id": "F029",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260917_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "ff07a44b133301cf3418e029d67d85aee3e971a7554bbcd1860874fcb0a309a8",
+      "context": "Base Maestra corte nominal 2026-09-17T12:00:37",
+      "bytes": 3285412
+    },
+    {
+      "id": "F030",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260918_12_00_41.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "8f37ff2b38dc6a1af55d936a2cfe7e3b10961ee9cb7d2e51ac3ce031a98fd2a4",
+      "context": "Base Maestra corte nominal 2026-09-18T12:00:41",
+      "bytes": 3286002
+    },
+    {
+      "id": "F031",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260919_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "335b826586cbe6ad68230594e27a1053d353469da078a798fae6446eb7664e46",
+      "context": "Base Maestra corte nominal 2026-09-19T12:00:37",
+      "bytes": 3286371
+    },
+    {
+      "id": "F032",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260920_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "a26ddf9b741b0f4df61216f8efb96de67029b350368a364c2e69d794d8318a4c",
+      "context": "Base Maestra corte nominal 2026-09-20T12:00:37",
+      "bytes": 3286865
+    },
+    {
+      "id": "F033",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260921_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "bd440a3e7912efd10007ae23a35c2bcdc86bcb1ce295e88cb9bbfb1c0047e927",
+      "context": "Base Maestra corte nominal 2026-09-21T12:00:38",
+      "bytes": 3288807
+    },
+    {
+      "id": "F034",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260922_12_00_57.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "edef6e5aa91952179eb405f994c5ac0c78561b34d7bf742ace3a4d19adeb9955",
+      "context": "Base Maestra corte nominal 2026-09-22T12:00:57",
+      "bytes": 3291228
+    },
+    {
+      "id": "F035",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260923_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "6791461c6a83bf968a81ace3d262ed4b4db5b7b13bf984908ad978e516e33854",
+      "context": "Base Maestra corte nominal 2026-09-23T12:00:38",
+      "bytes": 3303163
+    },
+    {
+      "id": "F036",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260924_12_00_41.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "fc3d0cfd06be9e5b10d700bf0d455313ebb80a9e91bec34b15aeeb3fdf0a2369",
+      "context": "Base Maestra corte nominal 2026-09-24T12:00:41",
+      "bytes": 3311200
+    },
+    {
+      "id": "F037",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260925_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "1f7db02b28b552ea17ed34772230b385f91af1f639b34b3ba1925a174f252f30",
+      "context": "Base Maestra corte nominal 2026-09-25T12:00:38",
+      "bytes": 3317515
+    },
+    {
+      "id": "F038",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260926_12_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "a6849f437598adcacda966dfe23f3d78fced074d21f32703f4e837026ffdcebe",
+      "context": "Base Maestra corte nominal 2026-09-26T12:00:39",
+      "bytes": 3323371
+    },
+    {
+      "id": "F039",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260927_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "8724e0990b70536b71a5bb41e677313d7312ac01248ba2ac8c903bd9b1889568",
+      "context": "Base Maestra corte nominal 2026-09-27T12:00:38",
+      "bytes": 3323657
+    },
+    {
+      "id": "F040",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260928_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "24d873912dff6609b6e7a892ee3a4afb911bed3a299eecf639f218e7dd8dd3a2",
+      "context": "Base Maestra corte nominal 2026-09-28T12:00:37",
+      "bytes": 3323982
+    },
+    {
+      "id": "F041",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260929_12_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "30e71b2ba2b17efa9f6693867eeea1202451c0a6cff9e1c530af7e8abc7af191",
+      "context": "Base Maestra corte nominal 2026-09-29T12:00:39",
+      "bytes": 3331655
+    },
+    {
+      "id": "F042",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20260930_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "e83245032869e78bd773e4ca5604bd3adb018183e130de5fcc1e767e1de7c3d9",
+      "context": "Base Maestra corte nominal 2026-09-30T12:00:38",
+      "bytes": 3339920
+    },
+    {
+      "id": "F043",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261001_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "a83336aa4b0f03f0294f0b58fc498505146b0ece45ac2618ac6b98ee493f5f3c",
+      "context": "Base Maestra corte nominal 2026-10-01T12:00:38",
+      "bytes": 3345339
+    },
+    {
+      "id": "F044",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261002_12_00_40.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "1cecc3771e82bf869152ebb6ac9c62bfdb5f6e4868dea6185e3adbbaee70d16e",
+      "context": "Base Maestra corte nominal 2026-10-02T12:00:40",
+      "bytes": 3347637
+    },
+    {
+      "id": "F045",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261003_12_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "75172898c82a9606da975e93bdd612c0134a39891aa14fa7d21cfc40c664dfdc",
+      "context": "Base Maestra corte nominal 2026-10-03T12:00:39",
+      "bytes": 3354797
+    },
+    {
+      "id": "F046",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261004_12_00_36.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "0492f9c86324e6792f4455af45c3e8e7957f970e6e023762747cadf48abf91ff",
+      "context": "Base Maestra corte nominal 2026-10-04T12:00:36",
+      "bytes": 3356784
+    },
+    {
+      "id": "F047",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261005_12_00_40.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "26ba47b56b2d564f6940d5d6041d5f2250476747f5282bd001f55b1ae65df2dd",
+      "context": "Base Maestra corte nominal 2026-10-05T12:00:40",
+      "bytes": 3357478
+    },
+    {
+      "id": "F048",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261006_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "e9be7560e1f59c02bfedd7e46353c9d3c65449ade1d5bdc4bf2992b2e52d0083",
+      "context": "Base Maestra corte nominal 2026-10-06T12:00:38",
+      "bytes": 3366081
+    },
+    {
+      "id": "F049",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261007_12_00_40.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "e90348852914fac237b511d3a9823e6844137f8b64b8095011f2b2c6b51bbb63",
+      "context": "Base Maestra corte nominal 2026-10-07T12:00:40",
+      "bytes": 3370958
+    },
+    {
+      "id": "F050",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261008_12_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "0c6809814d8e1e4b4fb9fe92e7c5fa4adce6f65d26f6d8d68ba25ab257715757",
+      "context": "Base Maestra corte nominal 2026-10-08T12:00:39",
+      "bytes": 3378161
+    },
+    {
+      "id": "F051",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261009_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "f64617eef87bafa16c0497d23b8c4d2232259d37150118e3ba7f9646de510ad5",
+      "context": "Base Maestra corte nominal 2026-10-09T12:00:37",
+      "bytes": 3384312
+    },
+    {
+      "id": "F052",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261010_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "598a690b01187656235611b0e38ebe3e537e0a15be97c0e556b09f3b43b4a2f9",
+      "context": "Base Maestra corte nominal 2026-10-10T12:00:38",
+      "bytes": 3390124
+    },
+    {
+      "id": "F053",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261011_12_00_41.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "a643f0183b135a44216df24f32db36a9ab0281b772f031b24d8840dbb346d19b",
+      "context": "Base Maestra corte nominal 2026-10-11T12:00:41",
+      "bytes": 3392311
+    },
+    {
+      "id": "F054",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261012_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "61e747841d01cbefee006bdb8738399e2dd0e71db69df54621758de8bbab475c",
+      "context": "Base Maestra corte nominal 2026-10-12T12:00:37",
+      "bytes": 3393144
+    },
+    {
+      "id": "F055",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261013_12_00_41.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "9ab5c2ca1f784e86667562af6a02a5822feb12c44dabd52b4cfe256320934db1",
+      "context": "Base Maestra corte nominal 2026-10-13T12:00:41",
+      "bytes": 3393371
+    },
+    {
+      "id": "F056",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261014_12_00_40.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "753faf2723428bcf8021fb1531975cc8acfe10645ee403fa59f1a6665c0ae34c",
+      "context": "Base Maestra corte nominal 2026-10-14T12:00:40",
+      "bytes": 3401608
+    },
+    {
+      "id": "F057",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261015_12_00_39.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "2fe90bf79f71493ae7708061ddb6852f54f974936f1590c2c0f02fa8774a7e49",
+      "context": "Base Maestra corte nominal 2026-10-15T12:00:39",
+      "bytes": 3409116
+    },
+    {
+      "id": "F058",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261016_12_00_42.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "f678a0f258a3022381abc786b4acac11c8fb4ee60f2192c05eab8eadccd202d6",
+      "context": "Base Maestra corte nominal 2026-10-16T12:00:42",
+      "bytes": 4050029
+    },
+    {
+      "id": "F059",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261017_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "a55215a9705a58aa67a9d5eb712e9bd431e70b71ea21b01602485bdc368f8b1f",
+      "context": "Base Maestra corte nominal 2026-10-17T12:00:37",
+      "bytes": 4059296
+    },
+    {
+      "id": "F060",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261018_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "83e58075b0560f4238fbe47cdffaa8e9ffd79ebe6a0404e5ff24c39a969dfe84",
+      "context": "Base Maestra corte nominal 2026-10-18T12:00:38",
+      "bytes": 4060526
+    },
+    {
+      "id": "F061",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261019_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "c3ff057ea34dea8f19756355ed0b1b4d63ece4702af7c4e0bc4407fd386e4d8d",
+      "context": "Base Maestra corte nominal 2026-10-19T12:00:37",
+      "bytes": 4063765
+    },
+    {
+      "id": "F062",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261020_12_00_38.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "73da62fc7e1c3033ef8173b34c6ffc158d14b585196e6611d825060ad02c9d80",
+      "context": "Base Maestra corte nominal 2026-10-20T12:00:38",
+      "bytes": 4073065
+    },
+    {
+      "id": "F063",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261021_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "2a3bfcc1061ed049a46f3c0a8e2dfe98c0baec28f4a180fa5ebf6355368dd477",
+      "context": "Base Maestra corte nominal 2026-10-21T12:00:37",
+      "bytes": 4082369
+    },
+    {
+      "id": "F064",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sheet": "T2_2025",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "context": "Listado parcial 2025-T2",
+      "bytes": 221698
+    },
+    {
+      "id": "F065",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sheet": "T3_2025",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "context": "Listado parcial 2025-T3",
+      "bytes": 1354391
+    },
+    {
+      "id": "F066",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "context": "Listado parcial 2026-T2",
+      "bytes": 140509
+    },
+    {
+      "id": "F067",
+      "path": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sheet": "Base",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "context": "Listado parcial 2026-T3",
+      "bytes": 481817
+    },
+    {
+      "id": "F068",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sheet": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "context": "Matrícula anual informada a SIES; no se transforma en cierre T2/T3",
+      "bytes": 1475920
+    },
+    {
+      "id": "F069",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "sheet": "02_COHORTE_ELEGIBILIDAD / 01_CATALOGO_CARRERA",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+      "context": "Selección anual congelada",
+      "bytes": 4687507
+    }
+  ],
+  "fuentes_de_trazabilidad": [
+    {
+      "clasificacion": "C: selección anual aprobada",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261020_215248/profile.py",
+      "sha256": "39b64cfea7773f269a10ba9576f1945f79e35e0f69a681913a173a2b279c0d88"
+    },
+    {
+      "clasificacion": "B/C: correspondencias exactas previas; privado",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia/20261021_144031/payload.json",
+      "sha256": "3fce7e39d6916dc98ae6098ddadde13614baada79375990793352c5e487b82a9"
+    },
+    {
+      "clasificacion": "B/C: ejercicio Escenario_80 anterior, conservado por separado",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+      "sha256": "12bf04615558554a30275b4ee8c6197617e7195c059c4c87277a91c4697e719d"
+    },
+    {
+      "clasificacion": "A: transcripción de regla SIES anual",
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"
+    },
+    {
+      "clasificacion": "B/C: fuente primaria de correspondencia explícita; consumo mediante evidencia privada previa",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "sheet": "2025_carga",
+      "columns": "J RUT; BU N_DOC; BV DV",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+    }
+  ],
+  "metodo_c": {
+    "cohortes_fijas": {
+      "2024": 558,
+      "2025": 1150
+    },
+    "grupos_agregados": 349,
+    "personas": 1708,
+    "observaciones_matricula": 4021,
+    "identidad": "Documento exacto TIPO_DOC+N_DOC+DV y correspondencias CODCLI explícitas; sin identificación aproximada. Una persona puede tener varios CODCLI/matrículas; conteo de personas sin duplicar.",
+    "seguimiento": "C/E: T2/T3 = presencia por pertenencia al listado parcial de cierre, dividida por cohorte fija; no certifica cobertura ni tasa de retención intermedia. Última matrícula declarada no es último período cursado. Último respaldo = ANOMATRICULA 2026 y estado VIGENTE en extracción nominal 21-oct-2026. T1 conserva motor anual.",
+    "periodos": {
+      "clasificacion": "B/C/E",
+      "evidence": "2025-T3 contiene 325 personas de cohorte 2024 aunque la mayoría conserva PERIODOMATRICULA=1. No interpretar ese campo como último período cursado.",
+      "closure_counts": [
+        1,
+        325,
+        2,
+        0
+      ],
+      "rule_C": "Presencia en T2/T3 usa pertenencia a listado de cierre, no PERIODOMATRICULA. Última matrícula declarada y última observación nominal se muestran separadas.",
+      "formal_rate": "Pendiente E"
+    },
+    "ultimo_respaldo": {
+      "id": "F063",
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Shortcuts/DW_IPSS - Estudiantes/Base Maestra/Datos_Alumnos_20261021_12_00_37.xlsx",
+      "sheet": "Hojas con RUT+CODCLI",
+      "sha256": "2a3bfcc1061ed049a46f3c0a8e2dfe98c0baec28f4a180fa5ebf6355368dd477",
+      "context": "Base Maestra corte nominal 2026-10-21T12:00:37",
+      "bytes": 4082369,
+      "date_nominal": "2026-10-21T12:00:37",
+      "class": "B; fecha nominal de extracción, no estado efectivo de cierre"
+    },
+    "formulas": "SUMIFS de pesos por grupo; proporciones = suma numeradores / suma denominadores; nunca promedio de tasas.",
+    "control_unico": "14_Vistas_Ejecutivas: C4 cohorte, H4 sector, S4 carrera dependiente de sector, L4 seguimiento. Hojas 12/13/15 conectadas. Bloques T2/T3 de 2025 conservan alcance explícito.",
+    "comparacion_sies": "Referencias anuales heredadas como contexto en 16/17 y hoja5; solo comparables en T1 institucional, sin sector/carrera. Se eliminaron etiquetas y conclusiones heredadas erróneas en 4/10/12/13/15."
+  },
+  "cuatro_cierres_b_c_e": [
+    {
+      "cohort": 2024,
+      "closure": "2025-T2",
+      "denominator": 558,
+      "observed_presence": 1,
+      "VIGENTE_observed": 1,
+      "formal_rate": "Pendiente E"
+    },
+    {
+      "cohort": 2024,
+      "closure": "2025-T3",
+      "denominator": 558,
+      "observed_presence": 325,
+      "VIGENTE_observed": 317,
+      "formal_rate": "Pendiente E"
+    },
+    {
+      "cohort": 2025,
+      "closure": "2026-T2",
+      "denominator": 1150,
+      "observed_presence": 2,
+      "VIGENTE_observed": "Sin campo E",
+      "formal_rate": "Pendiente E"
+    },
+    {
+      "cohort": 2025,
+      "closure": "2026-T3",
+      "denominator": 1150,
+      "observed_presence": 0,
+      "VIGENTE_observed": "No inferir ausencia de continuidad",
+      "formal_rate": "Pendiente E"
+    }
+  ],
+  "controles_b_c": {
+    "2024": {
+      "denominator": 558,
+      "T1": 326,
+      "T2_records_observed": 1,
+      "T3_records_observed": 325,
+      "latest_snapshot_found": 552,
+      "latest_snapshot_any_VIGENTE": 220,
+      "latest_snapshot_2026_VIGENTE": 213
+    },
+    "2025": {
+      "denominator": 1150,
+      "T1": 668,
+      "T2_records_observed": 2,
+      "T3_records_observed": 0,
+      "latest_snapshot_found": 1117,
+      "latest_snapshot_any_VIGENTE": 952,
+      "latest_snapshot_2026_VIGENTE": 491
+    }
+  },
+  "ultimas_matriculas_declaradas_b_c": [
+    {
+      "cohort": 2024,
+      "last_period": "2024-T1",
+      "people": 222,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "2024-T3",
+      "people": 2,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "2025-T1",
+      "people": 35,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "2025-T3",
+      "people": 3,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "2026-T1",
+      "people": 283,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "2026-T2",
+      "people": 4,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "2026-T3",
+      "people": 3,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2024,
+      "last_period": "Sin período UMAS localizado",
+      "people": 6,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "2025-T1",
+      "people": 601,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "2025-T2",
+      "people": 8,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "2025-T3",
+      "people": 1,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "2026-T1",
+      "people": 495,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "2026-T2",
+      "people": 11,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "2026-T3",
+      "people": 2,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    },
+    {
+      "cohort": 2025,
+      "last_period": "Sin período UMAS localizado",
+      "people": 32,
+      "clasificacion": "B/C; matrícula declarada, no último período cursado"
+    }
+  ],
+  "salidas": {
+    "agregado": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/RETENCION_INTERMEDIA_IPSS_MAQUETA_T1_20261021_153436.xlsx",
+      "sha256": "f82556fe6efc0fc52b0aa790f0852fd22f8e7c341ff4f4b959cc759f91ca7833",
+      "desktop": "/Users/alexi/Desktop/RETENCION_INTERMEDIA_IPSS_MAQUETA_T1_20261021_153436.xlsx",
+      "identifiers": 0,
+      "sheets": 18,
+      "charts": 13,
+      "formula_errors": [],
+      "original_drawings_media_byte_identical": true,
+      "theme_byte_identical": true,
+      "table_headers_exact": true
+    },
+    "privado_no_publicable": {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia/20261021_153436/TRAYECTORIAS_PRIVADAS_IPSS_20261021_153436.xlsx",
+      "sha256": "299ab952cf98f07c379d843f734191b1e48f0318c30bac72d0b75c99d15d3234",
+      "persons": 1708,
+      "observations": 4021,
+      "formulas": 24657,
+      "missing_caches": 0,
+      "formula_errors": [],
+      "ignored": true
+    }
+  },
+  "QA_c": {
+    "archivo": "QA_FINAL.json",
+    "filtros": "QA_FILTROS_FINAL.json",
+    "controles_filtro": 164,
+    "trayectorias": "QA_TRAYECTORIA.json",
+    "comparabilidad": "QA_COMPARABILIDAD.json",
+    "bloques": "QA_BLOQUES_T2_T3.json",
+    "limite": "No validación en Excel nativo; las vistas de Artifact muestran diferencias de render respecto a Excel aun en la plantilla original."
+  },
+  "pendientes_e": [
+    "E: cobertura completa, fecha efectiva y estado aplicable de los cuatro cierres no acreditados por los listados parciales; no certificar tasas ni llamar desertor a quien no aparece.",
+    "B/C/E: PERIODOMATRICULA es matrícula declarada, no último período cursado; 325 personas de cohorte 2024 en el cierre T3-2025 conservan mayoritariamente período 1.",
+    "E: dos CODCLI pendientes dentro de 1150; las 20 personas ya forman parte del denominador. Las 18 identificadas reúnen 19 CODCLI.",
+    "E: TITULADO/EGRESADO requieren programa y fecha acreditados para otra regla interna; no se cambia elegibilidad ni se equipara no retenido con deserción.",
+    "B/C/E: Base Maestra nominal 21-oct-2026 tiene otro alcance que DatosAlumnos. Último respaldo cuenta únicamente ANOMATRICULA=2026 y VIGENTE (213/558; 491/1150). No acredita cierres históricos.",
+    "C/E: detalle de matrícula no mide asignaturas aprobadas ni avance curricular; ninguna fecha de retiro se infiere por máximo período.",
+    "C: Escenario_80 y los ejercicios 222/124 permanecen en su libro anterior, intactos y separados; no se aplican a 558/1150.",
+    "C/E: recálculo y render local Artifact Tool y validación OOXML; Excel nativo no ejecutado."
+  ],
+  "git": {
+    "avance_curricular": {
+      "branch": "feature/ire-2026",
+      "before_HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+      "after_HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "CARACTERIZACION": {
+      "branch": "main",
+      "before_HEAD": "aba337784ccde0537fc21b2977b351170ed335e8",
+      "after_HEAD": "aba337784ccde0537fc21b2977b351170ed335e8"
+    },
+    "commits": false,
+    "push": false,
+    "stage": false
+  },
+  "politica_privacidad": "Agregado sin documentos, nombres, CODCLI individuales, MRUN ni fecha de nacimiento exacta. Detalle y derivados con identificadores únicamente en .local_restricted, verificado ignorado/no rastreado, directorios700/archivos600. No publicación ni cargas a servicios externos.",
+  "reproduccion_c": [
+    "soporte/seguir_trayectorias.py: extracción inicial privada; luego ejecutar necesariamente conciliar_periodos.py que distingue cierre de período declarado.",
+    "soporte/conciliar_periodos.py: pertenencia exacta a listados, matrículas y último respaldo; 1708 personas sin duplicar.",
+    "soporte/adaptar_maqueta.py: plantilla de transporte sin datos personales y configuración agregada.",
+    "soporte/construir.mjs: autoría agregada y QA; su sección privada inicial agotó memoria; no ejecutar esa sección. Usar privado.mjs optimizado.",
+    "soporte/privado.mjs: detalle completo con rangos acotados por persona y grupo.",
+    "soporte/agregar_lectura_trayectoria.mjs; ajustar_privado.mjs; ajustar_comparacion.mjs; limpiar_herencia.mjs: ajustes finales trazables y controles.",
+    "soporte/qa_filtros_final.mjs: QA de filtros sin escribir el libro.",
+    "soporte/preservar_y_validar.py: transporte de celdas/cachés calculados a partes nativas de maqueta; conserva dibujos/tema y regenera cachés de gráficos; valida privacidad/tablas/fuentes/copia.",
+    "soporte/ver_final.mjs: lectura/render sin modificar el libro."
+  ],
+  "archivos_soporte": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/adaptar_maqueta.py",
+      "sha256": "21161feae7ade613d75e4b3a086af9e24644e24413f8d974d8ca0461d43add68"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/agregar_lectura_trayectoria.mjs",
+      "sha256": "0b49d75136dc7fe9852061addd68da2c969a8bb7a7a862762abf8c4d371e31bb"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/ajustar_comparacion.mjs",
+      "sha256": "c832bb33489c01a2714cf5c4dc118e61b80ffaa47d69d0c3cc7ffd5fdd4c146b"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/ajustar_privado.mjs",
+      "sha256": "fe3797c1224ea3120653520eec4f5e62bb24577c33f92a428ebbe748098761f3"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/conciliar_periodos.py",
+      "sha256": "74fa2fe12f4ace9b66f21d7fe418850988ae5b2b8ac3d2a9e29868a028602ab2"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/config.json",
+      "sha256": "e2ef4a1422e93cace4280ef508ebbc72492cb266b9547546bbe79a2b0d15a896"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/construir.mjs",
+      "sha256": "9658b6e7cab52af376ad2ede8e679d2ce075557cc964650d48e08446de393f87"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/formula_scan.ndjson",
+      "sha256": "df8fef0250bd1b4319b60cbc25097a20fd6fdb1de70262e80cd30aadcfc3ec60"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/git_antes.txt",
+      "sha256": "36cb88cf3c1a02e535721be17f41cf438ece0a6c4ea3b98c1be8c58ace74da3a"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/git_despues_CARACTERIZACION.json",
+      "sha256": "e326b007a31e8c8fa1a541ba554ab61655e03432562f849e7c9e4056e4184c7c"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/git_despues_avance_curricular.json",
+      "sha256": "1ee74b89bec3c4fae70c56423aaabe0631512feb79a91253cf218b604c4eb6ac"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/limpiar_herencia.mjs",
+      "sha256": "4aa6affff0a15a6610741f6aa4b88284d53617f7dc5c3035ffbfb7caac36c1a5"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/preservar_y_validar.py",
+      "sha256": "e4fcf9933e0528823979a1e34255540085f0e0d100ba0ba48a99248dab3ffc32"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/privado.mjs",
+      "sha256": "d8c81512dc88d914bffcc1449534a41edca01d5bfab27a390c0a28cbaad08d69"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/qa_filtros_final.mjs",
+      "sha256": "15e71d2cdacb579731e0bbfab4039483eaf2118d6716f1358276caa8d300feb2"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/seguir_trayectorias.py",
+      "sha256": "a96980625004d9317d255604695b9dae9acbff3241ab7dd8aa4a032fd8a6dd5d"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_153436/soporte/ver_final.mjs",
+      "sha256": "3d728357758edf851330a78dbb0fe3b876040b7c8947122021976a783db62a4b"
+    }
+  ]
+}

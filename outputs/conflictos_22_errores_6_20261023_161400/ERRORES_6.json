@@ -1,0 +1,1162 @@
+{
+  "errores": [
+    {
+      "id": "E01",
+      "carrera": "IECSREOL",
+      "sede": "2",
+      "jornada": "4",
+      "ano": "2024",
+      "plan": "IECSREOL20211",
+      "ingreso_DA": "2023",
+      "codigo": "I162S2C46J4V1",
+      "pred": "I162S2C46J4V3",
+      "fold": 0,
+      "personas_train": 28,
+      "grupo_completo_codigos": {
+        "I162S2C46J4V1": 1,
+        "I162S2C46J4V3": 29
+      },
+      "hallazgo": "MU 2024 registra NIV_ACA=4; las otras 29 personas del grupo tienen niveles 5–7. Forma de ingreso 11 y origen 1900 también existen en V3: no distinguen. El mismo CODCLI, plan y jornada tienen V3 en 2023 y V1 en 2024.",
+      "variable_discriminante_observada": [
+        "MU.NIV_ACA"
+      ],
+      "alcance": "Separación descriptiva por nivel académico; sin regla causal acreditada nivel→versión.",
+      "pendiente": "Explicar el cambio anual V3→V1 sin cambio de plan observado; no tratar origen 1900 como una fecha real.",
+      "clasificacion": "B datos observados; C contraste experimental; E causalidad/regla general no acreditadas",
+      "primario": {
+        "id": "E01",
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+        "hoja": "CSV",
+        "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068",
+        "coincidencias_identidad": [
+          {
+            "fila": 354,
+            "codigo": "I162S2C46J4V1",
+            "tipo_doc_verificado": true,
+            "limite_tipo_doc": null,
+            "campos": {
+              "COD_SED": "2",
+              "COD_CAR": "46",
+              "JOR": "4",
+              "VERSION": "1",
+              "ANIO_ING_ACT": "2023",
+              "SEM_ING_ACT": "1",
+              "ANIO_ING_ORI": "1900",
+              "SEM_ING_ORI": "0",
+              "FOR_ING_ACT": "11",
+              "FECH_CAR": "08-05-2024 18:34",
+              "NIVEL": "0",
+              "NIVEL 2": "ANTIGUO",
+              "VIG": "1"
+            }
+          }
+        ],
+        "codigo_objetivo_reproducido": true
+      },
+      "referencias": [
+        {
+          "tipo": "contextos_DA",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+          "hoja": "Hoja1",
+          "fila": 5613,
+          "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+        },
+        {
+          "tipo": "evidencias_matricula",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "hoja": "BASE_RETENCION_MU",
+          "fila": 2537,
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 1678,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        }
+      ],
+      "trayectoria_diccionario": [
+        {
+          "anio": "2021",
+          "carrera": "TCSREOL",
+          "plan": "TCSREOL20211",
+          "jornada": "4",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C47J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C47J4V1"
+          ],
+          "periodos": [
+            "1",
+            "3",
+            "5"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2022",
+          "carrera": "TCSREOL",
+          "plan": "TCSREOL20211",
+          "jornada": "4",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C47J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C47J4V1"
+          ],
+          "periodos": [
+            "2",
+            "3",
+            "4"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2023",
+          "carrera": "IECSREOL",
+          "plan": "IECSREOL20211",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C46J4V3"
+          ],
+          "codigos_internos": [
+            "I162S2C46J4V3"
+          ],
+          "periodos": [
+            "1",
+            "2",
+            "4",
+            "5"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 4
+        },
+        {
+          "anio": "2023",
+          "carrera": "TCSREOL",
+          "plan": "TCSREOL20211",
+          "jornada": "4",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C47J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C47J4V1"
+          ],
+          "periodos": [
+            "1"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 1
+        },
+        {
+          "anio": "2024",
+          "carrera": "IECSREOL",
+          "plan": "IECSREOL20211",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C46J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C46J4V1"
+          ],
+          "periodos": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 5
+        }
+      ],
+      "codigo_doc_ya_conocido": true,
+      "nuevos_cierres": 0
+    },
+    {
+      "id": "E02",
+      "carrera": "IECIREOL",
+      "sede": "2",
+      "jornada": "4",
+      "ano": "2022",
+      "plan": "IECIREOL20201",
+      "ingreso_DA": "2020",
+      "codigo": "I162S2C1J4V1",
+      "pred": "I162S2C1J4V2",
+      "fold": 1,
+      "personas_train": 6,
+      "grupo_completo_codigos": {
+        "I162S2C1J4V1": 1,
+        "I162S2C1J4V2": 8
+      },
+      "hallazgo": "Origen e ingreso actual MU 2020 coinciden con DA 2020. El mismo CODCLI, plan y jornada documentan V1 en 2020–2022 y V2 en 2023. Ingreso, período de ingreso, vía de admisión y estado se solapan con el grupo V2.",
+      "variable_discriminante_observada": [],
+      "alcance": "No se encontró un discriminante reutilizable entre los campos revisados. Una fecha exacta de matrícula distinta no demuestra una regla.",
+      "pendiente": "Acreditar el cambio efectivo de versión o el criterio de reporte entre 2022 y 2023; conservar el código anual documentado.",
+      "clasificacion": "B datos observados; C contraste experimental; E causalidad/regla general no acreditadas",
+      "primario": {
+        "id": "E02",
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+        "hoja": "CSV",
+        "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+        "coincidencias_identidad": [
+          {
+            "fila": 197,
+            "codigo": "I162S2C1J4V1",
+            "tipo_doc_verificado": true,
+            "limite_tipo_doc": null,
+            "campos": {
+              "COD_SED": "2",
+              "COD_CAR": "1",
+              "JOR": "4",
+              "VERSION": "1",
+              "ANIO_ING_ACT": "2020",
+              "SEM_ING_ACT": "1",
+              "ANIO_ING_ORI": "2020",
+              "SEM_ING_ORI": "1",
+              "FOR_ING_ACT": "1",
+              "FECH_CAR": "06/04/2022 13:07",
+              "VIG": "1"
+            }
+          }
+        ],
+        "codigo_objetivo_reproducido": true
+      },
+      "referencias": [
+        {
+          "tipo": "contextos_DA",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+          "hoja": "Hoja1",
+          "fila": 3797,
+          "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+        },
+        {
+          "tipo": "evidencias_matricula",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "hoja": "BASE_RETENCION_MU",
+          "fila": 197,
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 18719,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        }
+      ],
+      "trayectoria_diccionario": [
+        {
+          "anio": "2020",
+          "carrera": "IECIREOL",
+          "plan": "IECIREOL20201",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C1J4V1"
+          ],
+          "periodos": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 4
+        },
+        {
+          "anio": "2021",
+          "carrera": "IECIREOL",
+          "plan": "IECIREOL20201",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C1J4V1"
+          ],
+          "periodos": [
+            "1",
+            "3",
+            "4",
+            "5"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 4
+        },
+        {
+          "anio": "2022",
+          "carrera": "IECIREOL",
+          "plan": "IECIREOL20201",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C1J4V1"
+          ],
+          "periodos": [
+            "2",
+            "3",
+            "5"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2023",
+          "carrera": "IECIREOL",
+          "plan": "IECIREOL20201",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J4V2"
+          ],
+          "codigos_internos": [
+            "I162S2C1J4V2"
+          ],
+          "periodos": [
+            "1",
+            "3",
+            "4",
+            "5"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 4
+        }
+      ],
+      "codigo_doc_ya_conocido": true,
+      "nuevos_cierres": 0
+    },
+    {
+      "id": "E03",
+      "carrera": "IETMREOL",
+      "sede": "2",
+      "jornada": "4",
+      "ano": "2022",
+      "plan": "IETMREOL20211",
+      "ingreso_DA": "2022",
+      "codigo": "I162S2C3J4V1",
+      "pred": "I162S2C3J4V2",
+      "fold": 1,
+      "personas_train": 56,
+      "grupo_completo_codigos": {
+        "I162S2C3J4V1": 1,
+        "I162S2C3J4V2": 66
+      },
+      "hallazgo": "MU 2022 conserva ingreso actual y origen 2018; DatosAlumnos declara 2022. Las 66 personas V2 del mismo grupo tienen ingreso actual y origen 2019, 2020 o 2022. Otra matrícula de esta persona aparece en J2 en 2020–2021; después aparece en J4V1 en 2022 y J4V2 en 2023.",
+      "variable_discriminante_observada": [
+        "MU.ANIO_ING_ACT",
+        "MU.ANIO_ING_ORI"
+      ],
+      "alcance": "La antigüedad documentada separa localmente la minoría. ANOINGRESO del corte DatosAlumnos no conserva ese contexto anterior; esto no acredita la fecha de cambio de plan.",
+      "pendiente": "Validar la relación entre expedientes y la migración; no sustituir automáticamente DatosAlumnos por MU en todos los casos.",
+      "clasificacion": "B datos observados; C contraste experimental; E causalidad/regla general no acreditadas",
+      "primario": {
+        "id": "E03",
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+        "hoja": "CSV",
+        "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f",
+        "coincidencias_identidad": [
+          {
+            "fila": 666,
+            "codigo": "I162S2C3J4V1",
+            "tipo_doc_verificado": true,
+            "limite_tipo_doc": null,
+            "campos": {
+              "COD_SED": "2",
+              "COD_CAR": "3",
+              "JOR": "4",
+              "VERSION": "1",
+              "ANIO_ING_ACT": "2018",
+              "SEM_ING_ACT": "1",
+              "ANIO_ING_ORI": "2018",
+              "SEM_ING_ORI": "1",
+              "FOR_ING_ACT": "1",
+              "FECH_CAR": "06/05/2022 0:11",
+              "VIG": "1"
+            }
+          }
+        ],
+        "codigo_objetivo_reproducido": true
+      },
+      "referencias": [
+        {
+          "tipo": "contextos_DA",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+          "hoja": "Hoja1",
+          "fila": 5110,
+          "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+        },
+        {
+          "tipo": "evidencias_matricula",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "hoja": "BASE_RETENCION_MU",
+          "fila": 666,
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 2152,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 9507,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 10731,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 16269,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 16471,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 17284,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 23589,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 27782,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        }
+      ],
+      "trayectoria_diccionario": [
+        {
+          "anio": "2020",
+          "carrera": "IETMRE",
+          "plan": "IETMRE20191",
+          "jornada": "2",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C3J2V1"
+          ],
+          "codigos_internos": [
+            "I162S2C3J2V1"
+          ],
+          "periodos": [
+            "2"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 1
+        },
+        {
+          "anio": "2021",
+          "carrera": "IETMRE",
+          "plan": "IETMRE20191",
+          "jornada": "2",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C3J2V1"
+          ],
+          "codigos_internos": [
+            "I162S2C3J2V1"
+          ],
+          "periodos": [
+            "1",
+            "2"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 2
+        },
+        {
+          "anio": "2022",
+          "carrera": "IETMREOL",
+          "plan": "IETMREOL20211",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C3J4V1"
+          ],
+          "codigos_internos": [
+            "I162S2C3J4V1"
+          ],
+          "periodos": [
+            "1",
+            "2",
+            "3"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2023",
+          "carrera": "IETMREOL",
+          "plan": "IETMREOL20211",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C3J4V2"
+          ],
+          "codigos_internos": [
+            "I162S2C3J4V2"
+          ],
+          "periodos": [
+            "1",
+            "3",
+            "4"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2024",
+          "carrera": "ICRE",
+          "plan": "ICRE20241",
+          "jornada": "4",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C3J4V2"
+          ],
+          "codigos_internos": [
+            "I162S2C3J4V2"
+          ],
+          "periodos": [
+            "1",
+            "2"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 2
+        }
+      ],
+      "codigo_doc_ya_conocido": true,
+      "nuevos_cierres": 0
+    },
+    {
+      "id": "E04",
+      "carrera": "IINF",
+      "sede": "2",
+      "jornada": "1",
+      "ano": "2025",
+      "plan": "IINF20241",
+      "ingreso_DA": "2024",
+      "codigo": "I162S2C1J1V1",
+      "pred": "I162S2C1J1V2",
+      "fold": 1,
+      "personas_train": 6,
+      "grupo_completo_codigos": {
+        "I162S2C1J1V1": 1,
+        "I162S2C1J1V2": 8
+      },
+      "hallazgo": "El mismo CODCLI, plan IINF20241 y jornada 1 tienen V2 en 2024, V1 en 2025 y V2 en 2026. Año y semestre de ingreso, forma de ingreso, modalidad y vigencia no separan a la persona de las ocho con V2 del grupo K3.",
+      "variable_discriminante_observada": [],
+      "alcance": "Oscilación anual de la etiqueta documentada, con causa sin identificar. Una fecha exacta de matrícula única no prueba la versión.",
+      "pendiente": "Auditar la decisión o transformación de MU 2025 y su contexto histórico; no corregir V1 por ser minoritaria.",
+      "clasificacion": "B datos observados; C contraste experimental; E causalidad/regla general no acreditadas",
+      "primario": {
+        "id": "E04",
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+        "hoja": "08-05-2025_22-26-22_Matrícula_P",
+        "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062",
+        "coincidencias_identidad": [
+          {
+            "fila": 867,
+            "codigo": "I162S2C1J1V1",
+            "tipo_doc_verificado": true,
+            "limite_tipo_doc": null,
+            "campos": {
+              "COD_SED": "2",
+              "COD_CAR": "1",
+              "JOR": "1",
+              "VERSION": "1",
+              "ANIO_ING_ACT": "2024",
+              "SEM_ING_ACT": "1",
+              "ANIO_ING_ORI": "2024",
+              "SEM_ING_ORI": "1",
+              "FOR_ING_ACT": "1",
+              "FECH_CAR": "2025-05-08 22:23:42",
+              "NIVEL_1": "Antiguo",
+              "NIVEL_2": "Antiguo",
+              "CONTINUIDAD": "",
+              "CARRERA": "INGENIERIA EN INFORMATICA",
+              "VIGENCIA": "Vigente"
+            }
+          }
+        ],
+        "codigo_objetivo_reproducido": true
+      },
+      "referencias": [
+        {
+          "tipo": "contextos_DA",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+          "hoja": "Hoja1",
+          "fila": 6910,
+          "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+        },
+        {
+          "tipo": "evidencias_matricula",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "hoja": "BASE_RETENCION_MU",
+          "fila": 4591,
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 52872,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 53527,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        }
+      ],
+      "trayectoria_diccionario": [
+        {
+          "anio": "2024",
+          "carrera": "IINF",
+          "plan": "IINF20241",
+          "jornada": "1",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J1V2"
+          ],
+          "codigos_internos": [
+            "I162S2C1J1V2"
+          ],
+          "periodos": [
+            "1",
+            "2",
+            "3"
+          ],
+          "estados": [
+            "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2025",
+          "carrera": "IINF",
+          "plan": "IINF20241",
+          "jornada": "1",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J1V1"
+          ],
+          "codigos_internos": [
+            "I162S2C1J1V1"
+          ],
+          "periodos": [
+            "1",
+            "2",
+            "3"
+          ],
+          "estados": [
+            "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA"
+          ],
+          "n": 3
+        },
+        {
+          "anio": "2026",
+          "carrera": "IINF",
+          "plan": "IINF20241",
+          "jornada": "1",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C1J1V2"
+          ],
+          "codigos_internos": [
+            "I162S2C1J1V2"
+          ],
+          "periodos": [
+            "1",
+            "2",
+            "3"
+          ],
+          "estados": [
+            "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA"
+          ],
+          "n": 3
+        }
+      ],
+      "codigo_doc_ya_conocido": true,
+      "nuevos_cierres": 0
+    },
+    {
+      "id": "E05",
+      "carrera": "TPCREOL",
+      "sede": "2",
+      "jornada": "4",
+      "ano": "2020",
+      "plan": "TPCREOL",
+      "ingreso_DA": "2020",
+      "codigo": "I162S2C2J4V2",
+      "pred": "I162S2C2J4V1",
+      "fold": 2,
+      "personas_train": 3,
+      "grupo_completo_codigos": {
+        "I162S2C2J4V1": 3,
+        "I162S2C2J4V2": 1
+      },
+      "hallazgo": "MU 2020 documenta origen e ingreso actual 2016, frente al origen 2018 de las otras tres personas V1. DatosAlumnos indica ingreso 2020 para todas. La persona V2 tiene MM_SEM_SUSPENSION=2 y las demás 0; las evidencias PROMEDIOS 2020 conservadas contienen solo convalidación y homologación.",
+      "variable_discriminante_observada": [
+        "MU.MM_ANIO_ORIGEN",
+        "MU.MM_ANIO_ACTUAL",
+        "MU.MM_SEM_SUSPENSION"
+      ],
+      "alcance": "Separación descriptiva por historia previa; origen e ingreso DatosAlumnos son distintos. No demuestra actividad cursada ni vigencia trimestral.",
+      "pendiente": "Distinguir el expediente antiguo de una homologación en un nuevo contexto; no equiparar registros de convalidación con avance cursado.",
+      "clasificacion": "B datos observados; C contraste experimental; E causalidad/regla general no acreditadas",
+      "primario": null,
+      "referencias": [
+        {
+          "tipo": "contextos_DA",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+          "hoja": "Hoja1",
+          "fila": 4146,
+          "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+        },
+        {
+          "tipo": "evidencias_matricula",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2020.xlsx",
+          "hoja": "MAT_2020",
+          "fila": 887,
+          "sha256": "a74cfc67d9129d185d098a789923b4588e5ebb4e02b152f7af43caaf16483b27"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 13313,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 17558,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 17967,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 18590,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 18724,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 32653,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 62458,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 62842,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        }
+      ],
+      "trayectoria_diccionario": [
+        {
+          "anio": "2020",
+          "carrera": "TPCREOL",
+          "plan": "TPCREOL",
+          "jornada": "4",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C2J4V2"
+          ],
+          "codigos_internos": [
+            "I162S2C2J4V2"
+          ],
+          "periodos": [
+            "1"
+          ],
+          "estados": [
+            "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA"
+          ],
+          "n": 1
+        }
+      ],
+      "codigo_doc_ya_conocido": true,
+      "nuevos_cierres": 0
+    },
+    {
+      "id": "E06",
+      "carrera": "IETMRE",
+      "sede": "2",
+      "jornada": "2",
+      "ano": "2021",
+      "plan": "IETMRE20211",
+      "ingreso_DA": "2021",
+      "codigo": "I162S2C3J2V3",
+      "pred": "I162S2C3J2V1",
+      "fold": 4,
+      "personas_train": 23,
+      "grupo_completo_codigos": {
+        "I162S2C3J2V1": 30,
+        "I162S2C3J2V3": 1
+      },
+      "hallazgo": "MU 2021 documenta Plan Regular de Continuidad y duración de cuatro semestres para V3; las otras 30 personas V1 tienen Plan Regular y ocho semestres. La persona aparece en NCONRE en 2020 con otro CODCLI y V3; después en IETMRE20211 en 2021, y en IETMREOL/J4 con otro CODCLI en 2022. El origen 2019 también aparece en tres personas V1, por lo que no separa por sí solo.",
+      "variable_discriminante_observada": [
+        "MU.MC_TIPO_PLAN_CARR",
+        "MU.MC_DUR_ESTUDIO_CARR",
+        "trayectoria multiexpediente"
+      ],
+      "alcance": "Perfil regular o continuidad explícito en el archivo SIES. Puede depender del código objetivo: no constituye un predictor independiente sin respaldo UMAS propio del plan.",
+      "pendiente": "Revisar la atribución del código anual entre CODCLI distintos de la misma familia; duración y tipo importados del código no son prueba independiente.",
+      "clasificacion": "B datos observados; C contraste experimental; E causalidad/regla general no acreditadas",
+      "primario": null,
+      "referencias": [
+        {
+          "tipo": "contextos_DA",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+          "hoja": "Hoja1",
+          "fila": 4473,
+          "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+        },
+        {
+          "tipo": "evidencias_matricula",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
+          "hoja": "MAT_2021",
+          "fila": 349,
+          "sha256": "8f14b670f00f725412d9dadffea5db9ad2de97b536c88dad992d4370252c401e"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 1958,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 8691,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 13852,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 16586,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 17447,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 19088,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 20345,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 21448,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 22786,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 27736,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        },
+        {
+          "tipo": "fuentes_promedios",
+          "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+          "hoja": "Hoja1",
+          "fila": 32475,
+          "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+        }
+      ],
+      "trayectoria_diccionario": [
+        {
+          "anio": "2020",
+          "carrera": "NCONRE",
+          "plan": "NCONRE",
+          "jornada": "2",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C3J2V3"
+          ],
+          "codigos_internos": [
+            "I162S2C3J2V3"
+          ],
+          "periodos": [
+            "2"
+          ],
+          "estados": [
+            "CODIGO_ANUAL_UNICO_SIN_PROPUESTA_PREVIA"
+          ],
+          "n": 1
+        },
+        {
+          "anio": "2021",
+          "carrera": "IETMRE",
+          "plan": "IETMRE20211",
+          "jornada": "2",
+          "mismo_codcli": true,
+          "codigos_doc": [
+            "I162S2C3J2V3"
+          ],
+          "codigos_internos": [
+            "I162S2C3J2V3"
+          ],
+          "periodos": [
+            "1",
+            "2"
+          ],
+          "estados": [
+            "DIFIERE_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 2
+        },
+        {
+          "anio": "2022",
+          "carrera": "IETMREOL",
+          "plan": "IETMREOL20211",
+          "jornada": "4",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C3J4V2"
+          ],
+          "codigos_internos": [
+            "I162S2C3J4V2"
+          ],
+          "periodos": [
+            "1"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 1
+        },
+        {
+          "anio": "2023",
+          "carrera": "IETMREOL",
+          "plan": "IETMREOL20211",
+          "jornada": "4",
+          "mismo_codcli": false,
+          "codigos_doc": [
+            "I162S2C3J4V2"
+          ],
+          "codigos_internos": [
+            "I162S2C3J4V2"
+          ],
+          "periodos": [
+            "1"
+          ],
+          "estados": [
+            "CONFIRMA_CODIGO_PROPUESTO_OBSERVADO"
+          ],
+          "n": 1
+        }
+      ],
+      "codigo_doc_ya_conocido": true,
+      "nuevos_cierres": 0
+    }
+  ],
+  "fuentes": [
+    {
+      "fuente_original": "/Users/alexi/Downloads/DATOSDEALUMNOS_12159.xlsx",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0_caracterizacion/2026-10-22/2027_P1_083635/01_ENTRADAS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    },
+    {
+      "fuente_original": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "ruta_actual": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    {
+      "fuente_original": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2020.xlsx",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2020.xlsx",
+      "sha256": "a74cfc67d9129d185d098a789923b4588e5ebb4e02b152f7af43caaf16483b27"
+    },
+    {
+      "fuente_original": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
+      "sha256": "8f14b670f00f725412d9dadffea5db9ad2de97b536c88dad992d4370252c401e"
+    },
+    {
+      "fuente_original": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068"
+    },
+    {
+      "fuente_original": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f"
+    },
+    {
+      "fuente_original": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f"
+    },
+    {
+      "fuente_original": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "ruta_actual": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062"
+    },
+    {
+      "fuente_original": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "ruta_actual": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "uso": "Localizadores y estados conservados en payload del diccionario; hash contrastado, no relectura completa de PROMEDIOS."
+    }
+  ],
+  "QA": {
+    "seis_errores_reproducidos": true,
+    "base_diccionario_sha256": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e",
+    "fuente_DA_reubicada_hash_coincide_manifiesto": true,
+    "cuatro_codigos_consolidados_reproducidos_RAW": true,
+    "dos_historicos_leidos_directamente": true,
+    "adopciones": 0,
+    "bases_denominadores_modificados": false,
+    "limites": [
+      "Las seis minorías tienen una sola persona en su grupo K3; un discriminante puede inducir abstención, no aprendizaje con soporte mínimo de tres.",
+      "No interpretar un código anual repetido en períodos como versión trimestral independientemente acreditada.",
+      "NIV_ACA, duración/tipo SIES y estados actuales requieren evidencia temporal y no pueden usarse como reglas independientes automáticamente.",
+      "Las fechas exactas que distinguen una persona no constituyen una regla generalizable."
+    ]
+  },
+  "scripts": [
+    {
+      "ruta": "/tmp/auditar_seis.py",
+      "sha256": "ceb0e31fb7adce00dc553d8195db6e576a09a5dd8a9398650ffd8e26a978a9d3"
+    },
+    {
+      "ruta": "/tmp/perfilar_seis.py",
+      "sha256": "6d2eb519f103bb443845c828e491c0a6bf7441a4671c25003118d0e8da720d95"
+    },
+    {
+      "ruta": "/tmp/primarios_seis.py",
+      "sha256": "a1c16eef49d6017ca4eb955a6eb38342fc4d567260b0ca268b46c95e54f4ead5"
+    },
+    {
+      "ruta": "/tmp/cerrar_seis.py",
+      "sha256": "f8ac81db4d896adbd5c654fc9b0e1e18f70d31b9065c0a9895cbd311d1abe1f5"
+    }
+  ]
+}

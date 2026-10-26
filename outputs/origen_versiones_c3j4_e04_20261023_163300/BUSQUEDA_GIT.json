@@ -1,0 +1,845 @@
+[
+  {
+    "repo": "/Users/alexi/Documents/GitHub/avance_curricular",
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+    "remotos": "origin\thttps://github.com/Alexitho0o/avance_curricular.git (fetch)\norigin\thttps://github.com/Alexitho0o/avance_curricular.git (push)\n",
+    "commits_locales": 243,
+    "primer_commit": "a00b72f4a136decbae09f0fac0d379d98c50ca4c 2025-04-16T22:10:39-04:00 Initial commit",
+    "ultimo_commit": "b0a0bff9ba70ea8344a258f744960cef8080e04b 2026-10-21T10:22:52-03:00 H001-RETENCION-IPSS162 feat(retencion): gobierna escenario agregado de 80 ingresos con QA y denominadores preservados",
+    "objetos_codigo_rutas_candidatas": [
+      {
+        "objeto": "5c9077feab35a80201e6425ccdc9438f5bbb1d1c",
+        "ruta": "requerimiento_bettersoft_uplus_2026/scripts/generar_diccionario_maestro_uplus_sies.py"
+      },
+      {
+        "objeto": "550c9820965ae80db773ba845eb0f93b0b5bd596",
+        "ruta": "scripts/actualizar_excel_retencion_mu_2022_2026.py"
+      },
+      {
+        "objeto": "b357f1b0af575b61b10558dd3d74144004f9c2bc",
+        "ruta": "scripts/compile_puente_sies_compilado.py"
+      },
+      {
+        "objeto": "8570e239ad0ab68c07c8df5c1dd5925afa32c001",
+        "ruta": "scripts/construir_base_retencion_mu_2022_2026.py"
+      },
+      {
+        "objeto": "cc3c732ab5865486e62966e41261d7d3e6921af6",
+        "ruta": "tools/auditar_cambio_sies_cicib.py"
+      },
+      {
+        "objeto": "9ee82c21652ddf926b8f143c4522ecb58e0d2af9",
+        "ruta": "common/catalogos_sies.py"
+      },
+      {
+        "objeto": "5cc18aa601c3de14ce8465567feb2db93d783fce",
+        "ruta": "common/consulta_sies_historica.py"
+      },
+      {
+        "objeto": "816121d2c66bf566fdb9e25afaecbb0023b8c2d4",
+        "ruta": "outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20261005_revision_final/corregir_referencias_y_nota.py"
+      },
+      {
+        "objeto": "721f22e972d7b765549f2ca11214fc8532786039",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/agregar_matrices_powerbi.py"
+      },
+      {
+        "objeto": "548c504d2ba24ea0e8f34488307863c41ce541a8",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/analizar_retencion_interna_ipss.py"
+      },
+      {
+        "objeto": "2d909ab36401187528f4615fe7a0b2ac0c5444f3",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/auditar_graficos_consolidado.py"
+      },
+      {
+        "objeto": "53930fceabcd0ac8a86f834d2fea675c3aa517a9",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/auditar_informe_retencion_sies.py"
+      },
+      {
+        "objeto": "56faf77053feaf81a3232b9c3ef2948ae4c2d06d",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/auditar_retencion_ipss_162.py"
+      },
+      {
+        "objeto": "f48c467dfde556119b86df77c6858ed829ac32bf",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/auditar_y_cruzar_retencion_ipss_162.py"
+      },
+      {
+        "objeto": "7546034661dcf13722f0c657d2dc8f01600bf28f",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/calcular_retencion.py"
+      },
+      {
+        "objeto": "7fd3337321b4a77a21f283c33ce73d516bfe3ac0",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/codigo_extraccion_matricula.py"
+      },
+      {
+        "objeto": "a98160a8680dd1adac03d7a6abf2d1b7d0a1eb98",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/conciliar_oficial_ipss_162.py"
+      },
+      {
+        "objeto": "403acae3a7901d739705b45980bb4d508e05a9b0",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/consolidar_conciliacion_metodologica_ipss_162.py"
+      },
+      {
+        "objeto": "a8e5d7d78d78505a67019742d445bf569df6f979",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/diagnostico_extraccion_matricula.sh"
+      },
+      {
+        "objeto": "5eeeecb4acaa2a9167b23c62d07f368344ed11b5",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/extraer_titulados_ipss_por_anio.py"
+      },
+      {
+        "objeto": "b2dd441d0023a645caa7989e15313ff621c3336b",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/generar_consolidado_retencion.py"
+      },
+      {
+        "objeto": "8da7cc9353b639bdef64c3c387757c71db013d8a",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/generar_consolidado_retencion_completo.py"
+      },
+      {
+        "objeto": "54daa301c7a5ac6f9b0ec342a22b7a1acdc51c1e",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/inspeccionar_csv_sies.py"
+      },
+      {
+        "objeto": "60e68e6ef4753d887817395d43172d50590c3cf9",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/limpiar_consolidado_tabular.py"
+      },
+      {
+        "objeto": "70ea4a482724cab728d577443336ab51d1b5cb50",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/matrices_titulacion_bi.py"
+      },
+      {
+        "objeto": "68a02d366c96ff4992ac978e3f9568b6d5a5335c",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/procesar_titulados_ipss.py"
+      },
+      {
+        "objeto": "a5849cec1a2f09c32ec2191193d84e5e3704d7b8",
+        "ruta": "procesos/caracterizacion/EXTRACCION_MATRICULA_SIES _2007_2025/setup_entorno.sh"
+      },
+      {
+        "objeto": "ca95c0132b5823652ac8f2cb4a006743ffc54804",
+        "ruta": "procesos/caracterizacion/caracterizacion_catalogo_sies_2027.py"
+      },
+      {
+        "objeto": "2cf2346d73e621dc6c35686d32ade96a45117dc5",
+        "ruta": "procesos/caracterizacion/caracterizacion_sies_historico.py"
+      },
+      {
+        "objeto": "770740738e86b0ee2d6e8cd9b9bfd475b44df472",
+        "ruta": "procesos/caracterizacion/common/consulta_sies_historica.py"
+      },
+      {
+        "objeto": "6c16a7970678272186e4365923e8b2f43fcb26c7",
+        "ruta": "procesos/caracterizacion/diagnosticos/diagnosticar_corregir_fcu_sies.py"
+      },
+      {
+        "objeto": "a704f27ffa8c5a3eed9b121fd628d93acf394b6d",
+        "ruta": "procesos/caracterizacion/explorar_fuentes_matricula_titulacion.py"
+      },
+      {
+        "objeto": "48d78cf1d5e21067b4ac8ff277f598c339263118",
+        "ruta": "procesos/caracterizacion/gobernanza/sies/anual/2027/5910_20260907_6047_20261013/resolutor.py"
+      },
+      {
+        "objeto": "039ebdfefa1ae20d2a2014c8150f0d7de5ee479e",
+        "ruta": "procesos/caracterizacion/scripts/consultar_sies_historico.py"
+      },
+      {
+        "objeto": "274648068d356653fff07c3491a729f94ab6baf5",
+        "ruta": "procesos/caracterizacion/scripts/gobernanza/auditar_catalogo_sies_2027.py"
+      },
+      {
+        "objeto": "270d137bd02f5b0973535668cff47daed56c7169",
+        "ruta": "procesos/caracterizacion/tests/test_catalogo_sies_2027.py"
+      },
+      {
+        "objeto": "0248d393767d890b16dff00ef4d04c4241970566",
+        "ruta": "procesos/caracterizacion/tests/test_hito4b_sectorizado_sies_retencion.py"
+      },
+      {
+        "objeto": "cca6884e2b89c4589fd695ae34509882931caf45",
+        "ruta": "procesos/caracterizacion/tests/test_multimatricula_2027.py"
+      },
+      {
+        "objeto": "13a6fc3a97240192bf3d8197ce95ffabfc090929",
+        "ruta": "scripts/conciliar_matricula_publicada.py"
+      },
+      {
+        "objeto": "4424562fcda954aa99ce98fc7952d4df27b0da24",
+        "ruta": "scripts/consultar_catalogo_sies.py"
+      },
+      {
+        "objeto": "672745e58d4ea4dfed1f81b3cc821a77aec72c10",
+        "ruta": "scripts/diagnosticar_candidatos_mrun_umas.py"
+      },
+      {
+        "objeto": "dfb286e772e947e8060ce767055a3cf88960a644",
+        "ruta": "scripts/estructura_planes_umas.py"
+      },
+      {
+        "objeto": "97e2164b6b78335a914b3634786371632804689c",
+        "ruta": "scripts/generar_catalogos_sies_por_anio.py"
+      },
+      {
+        "objeto": "da6ddbf2b864292b5771de6b8dd06838191cfe01",
+        "ruta": "scripts/preparar_diccionario_sies_umas_2007_2026.py"
+      },
+      {
+        "objeto": "5a7e2274dc6f3c387d8208e93b79fae19b0ebec4",
+        "ruta": "scripts/reconstruir_oferta_historica_sies.py"
+      },
+      {
+        "objeto": "032c8e21008ddaf02c88e8c924253891d21f2990",
+        "ruta": "scripts/reconstruir_planes_umas.py"
+      },
+      {
+        "objeto": "71d3d95ce55c2521d0b51d5e105b6f248ea3609f",
+        "ruta": "scripts/verificar_extraccion_oferta_sies.py"
+      },
+      {
+        "objeto": "a72a5ca26f9931210909aae718da048031848a8e",
+        "ruta": "tests/test_catalogos_sies.py"
+      },
+      {
+        "objeto": "9374a0d3c078317c85e9c23c0f59b49a91870b74",
+        "ruta": "tests/test_conciliacion_matricula_publicada.py"
+      },
+      {
+        "objeto": "f4d5188cc6237a135494a98a4cef9879156b0dcb",
+        "ruta": "tests/test_estructura_planes_umas.py"
+      },
+      {
+        "objeto": "f488da1e03c66dc9200e211cf12a5bf4f40cb8a2",
+        "ruta": "tests/test_oferta_historica_sies.py"
+      },
+      {
+        "objeto": "a1730af30af6c66f5ec915d129892b01b11b0b14",
+        "ruta": "tests/test_planes_umas.py"
+      },
+      {
+        "objeto": "e330bc242b3e04826ee90a84bc428e933b32c16f",
+        "ruta": "archive/analisis_mu2026_invalidado_20260623_172936/repo/scripts/cierre_34_multivigentes_sies 2.py"
+      },
+      {
+        "objeto": "232d1102926f8b43b7ec6b2b7cd9a89ed8c753cc",
+        "ruta": "archive/analisis_mu2026_invalidado_20260623_172936/repo/scripts/generar_cierre_34_multivigentes_sies_auditable 2.py"
+      },
+      {
+        "objeto": "80da0f3830ab19a768d228a7d2132303d35b22f1",
+        "ruta": "archive/analisis_mu2026_invalidado_20260623_172936/repo/scripts/generar_cierre_34_multivigentes_sies_auditable_ANTES_CORRECCION_TIPOS_20260623_132044 2.py"
+      },
+      {
+        "objeto": "f6c1ea5ffde8bc373a4b1a5e191efcfa3bd0c779",
+        "ruta": "archive/analisis_mu2026_invalidado_20260623_172936/repo/scripts/generar_rectificacion_matricula_unificada_pregrado_2026 2.py"
+      },
+      {
+        "objeto": "03700845cacd6e39c31191240af6ac8a73df7d1d",
+        "ruta": "archive/cned_trabajo_previo_20260605/indices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio 2.py"
+      },
+      {
+        "objeto": "3898a788681099e70fac814cc6a18b085c8a2373",
+        "ruta": "avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/04_CONCILIACION_MATRICULA/PREPARACION_MATRICULA_20260703_141254/08_AUDITORIA/preparar_matricula_sies2026.py"
+      },
+      {
+        "objeto": "bea3e4e62b3697c934810a6bacb39b82cd9ffc88",
+        "ruta": "avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/05_RESOLUCION_PENDIENTES/DIAGNOSTICO_FUENTES_AVANCE_20260703_142658/09_AUDITORIA/diagnosticar_fuentes_avance_sies2026.py"
+      },
+      {
+        "objeto": "ecc8927ac002f1311776e28ff570e5b1eb928b46",
+        "ruta": "avance_curricular_2026/05_cierre_integral/CIERRE_AVANCE_CURRICULAR_20260703_125157/10_AUDITORIA/scripts/cierre_integral_sies2026.py"
+      },
+      {
+        "objeto": "e7071b1be29d965324434120cf57ad409f34f874",
+        "ruta": "avance_curricular_2026/06_gobernanza_columnas_5809/GOBERNANZA_COLUMNAS_5809_20260703_231812/99_AUDITORIA/gobernanza_columnas_5809_sies2026.py"
+      },
+      {
+        "objeto": "2cfdf0c9b66bb3e51b9abf2e957fdbada1bbf8b0",
+        "ruta": "avance_curricular_2026/29_auditoria_corregida_logica_2025_5809/auditoria_corregida_logica_2025_5809.py"
+      },
+      {
+        "objeto": "f7e9688eaa5a889434610c0e4e188d08da51b4ba",
+        "ruta": "avance_curricular_2026/30_mapeo_resolucion_bloqueos_5809_2025/mapear_resolucion_bloqueos_5809_2025.py"
+      },
+      {
+        "objeto": "e8c451106d61020498e5400a5f5f274ff2b331b5",
+        "ruta": "avance_curricular_2026/31_aplicacion_regla_gobernada_sin_actividad_5809_2025/aplicar_regla_gobernada_sin_actividad_5809_2025.py"
+      },
+      {
+        "objeto": "348a84d0e879177d0abec81bc5083197b8eb311a",
+        "ruta": "avance_curricular_2026/33_validacion_estado_y_avance_2025_5809/validacion_estado_y_avance_2025_5809.py"
+      },
+      {
+        "objeto": "2507b00370ec6f44a5f4f4afc4ab43cd871b4459",
+        "ruta": "avance_curricular_2026/56_auditoria_sin_registros_2025_codcli_lista_5809/AUDITORIA_SIN_REGISTROS_2025_CODCLI_LISTA_20260708_173435/auditoria_sin_registros_2025_codcli_lista_5809.py"
+      },
+      {
+        "objeto": "b2a034eebf90e0e0de9c9641065c0f37824cbd8c",
+        "ruta": "avance_curricular_2026/95_validacion_final_sies_ready_5809/VALIDACION_FINAL_SIES_READY_5809_20260709_030847/h95_validacion_final_sies_ready_5809.py"
+      },
+      {
+        "objeto": "554075fb1460d5eabe9c5616eda1238b0944fe91",
+        "ruta": "avance_curricular_2026/96_sies_ready_21_campos_5809/SIES_READY_21_CAMPOS_5809_20260709_032225/h96_sies_ready_21_campos_5809.py"
+      },
+      {
+        "objeto": "0bac74a09b0702866aa76a32dc62e24b80c6e4b3",
+        "ruta": "avance_curricular_2026/97_sies_ready_21_campos_con_fecha_sin_vigencia_5809/SIES_READY_21_CAMPOS_CON_FECHA_SIN_VIGENCIA_5809_20260709_033145/h97_sies_ready_21_campos_con_fecha_sin_vigencia_5809.py"
+      },
+      {
+        "objeto": "3aea37f55f420a2fb3f7b4cd6ae9b4b1fc21d947",
+        "ruta": "avance_curricular_2026/99_archivo_final_subir_sies_5809/ARCHIVO_FINAL_SUBIR_SIES_5809_20260709_034408/h99_archivo_final_subir_sies_5809.py"
+      },
+      {
+        "objeto": "a0ebe10738c53c1f1768a7fe4ff20c39f90694f4",
+        "ruta": "backups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175504/auditar_caso_netmre016_mu2026 2.py"
+      },
+      {
+        "objeto": "91b02cedf882212893a800b358cb924f765e747a",
+        "ruta": "backups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175504/auditar_combinaciones_sies_mu2026 2.py"
+      },
+      {
+        "objeto": "414417235d51c2974d4dbf2765e52cdef11b9b7c",
+        "ruta": "backups/pre_integracion_mu_extranjeros_sies_20260625_181842/scripts/codigo_gobernanza_v2 2.py"
+      },
+      {
+        "objeto": "19221a603642ea474d00bcc43ce34888f1cbf3fc",
+        "ruta": "estudiantes_extranjeros_2026/backups/pre_gobernanza_columnas_extranjeros_20260624_175958/scripts/gobernar_columnas_extranjeros_2025 2.py"
+      },
+      {
+        "objeto": "4e29e2c2ba46b03e7218c5b9aa4fdcbc046270a4",
+        "ruta": "estudiantes_extranjeros_2026/backups/pre_gobernanza_columnas_extranjeros_20260624_180026/scripts/gobernar_columnas_extranjeros_2025 2.py"
+      },
+      {
+        "objeto": "bb336be2e702e952b9ee2b02ff14af669ddf4a1c",
+        "ruta": "estudiantes_extranjeros_2026/backups/pre_gobernanza_columnas_extranjeros_20260624_180126/scripts/gobernar_columnas_extranjeros_2025 2.py"
+      },
+      {
+        "objeto": "4458011e0278c42534b53bda4029e6bfe3fee75d",
+        "ruta": "estudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140952/scripts/resolver_codigos_sies_v6 2.py"
+      },
+      {
+        "objeto": "3c9daed14b6c17f327e757c392df6794c7cdfa6f",
+        "ruta": "estudiantes_extranjeros_2026/scripts/corregir_gobernanza_extranjeros_2025_v2 2.py"
+      },
+      {
+        "objeto": "be46940b52af3a8635b160bf32e7702efb624b75",
+        "ruta": "estudiantes_extranjeros_2026/scripts/corregir_universo_extranjeros_2025 2.py"
+      },
+      {
+        "objeto": "65180b942438dec88d99cda7a7b543abc61948eb",
+        "ruta": "indices_2025/scripts/02_diagnostico_arquitectura_indices 2.py"
+      },
+      {
+        "objeto": "61d1a450ff853fdf7b92f6f99d2dd3f6b37b5eb9",
+        "ruta": "scripts/cierre_integral_sies2026.py"
+      },
+      {
+        "objeto": "4a571a27dd97b7de82ba6a804589302360048953",
+        "ruta": "scripts/compile_puente_sies_compilado 2.py"
+      },
+      {
+        "objeto": "3d13350c941e0c64beee5d89e2f169cef94004f5",
+        "ruta": "scripts/corregir_fase06_vigencia_extranjeros_2025.py"
+      },
+      {
+        "objeto": "cc35b0530e5c0695313785b6d4f92fcbb7259325",
+        "ruta": "scripts/diagnosticar_103_nacionalidades_chilenas_extranjeros_2025.py"
+      },
+      {
+        "objeto": "4abea3f0af192de39705e34d055c0608a7ccf134",
+        "ruta": "scripts/preparar_matriz_sies_desde_gobernanza_29.py"
+      },
+      {
+        "objeto": "39369e5bb26a5bee0fc9bf5bce2bb6f9d1aeb968",
+        "ruta": "scripts/validar_gobernanza_20_columnas_extranjeros_2025.py"
+      },
+      {
+        "objeto": "29a071dec03b2e8cf1f0aa3cd07183517b3dd90d",
+        "ruta": "tests/test_extranjeros_final_sies.py"
+      },
+      {
+        "objeto": "584e86c378573c77d3595c11fa2a66076939730b",
+        "ruta": "tests/test_sies_resolver 2.py"
+      },
+      {
+        "objeto": "e54c77e445cbe86206d323b85f7ea08bc6a0592c",
+        "ruta": "estudiantes_extranjeros_2026/resultados/auditorias_trazabilidad/MANIFEST_CUARENTENA_SIMULADA_EXTRANJEROS_2025_20260707_002106/NO_EJECUTAR_mover_a_cuarentena_20260707_002106.sh"
+      },
+      {
+        "objeto": "3c9e100b806aac2aaa0baabf8192411dd54989fa",
+        "ruta": "archive/cned_trabajo_previo_20260605/indices_2025/cned/scripts/07_generar_programas_faltantes_desde_promedios.py"
+      },
+      {
+        "objeto": "845093e4ec7cbaceedefaaaf3dae83a05517f20c",
+        "ruta": "archive/cned_trabajo_previo_20260605/indices_2025/cned/scripts/07_identificar_programas_faltantes_indices_desde_promedios.py"
+      },
+      {
+        "objeto": "3187c94e9facab2c95bb92ecc16d1399051df140",
+        "ruta": "scripts/certificar_vigencia_extranjeros_2025.py"
+      },
+      {
+        "objeto": "85571f5caf12336b9fc2b0fdc2da36709efb1ec2",
+        "ruta": "scripts/corregir_fase06_vigencia_extranjeros_2025.py"
+      },
+      {
+        "objeto": "5486c70e29563340a204c763f2580246762c9bdf",
+        "ruta": "scripts/reconstruir_final_extranjeros_2025.py"
+      },
+      {
+        "objeto": "9a001b339f463669a0e2c6c676439cf2545d249c",
+        "ruta": "estudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140341/scripts/resolver_codigos_sies_v6.py"
+      },
+      {
+        "objeto": "9028bf77d40f03a98f4a83faaaa4c8b2e6a6e913",
+        "ruta": "estudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140631/scripts/resolver_codigos_sies_v6.py"
+      },
+      {
+        "objeto": "36b23ecdac6b00d46a11af6efb68f42406534efe",
+        "ruta": "estudiantes_extranjeros_2026/scripts/conciliar_precarga_pes_2025.py"
+      },
+      {
+        "objeto": "9d91f337e51b20b10d80cc85928294ff13adaae4",
+        "ruta": "estudiantes_extranjeros_2026/scripts/congelar_base_extranjeros_2025.py"
+      },
+      {
+        "objeto": "7e6f54e2ce403397fd0f17a628209f2ea911117b",
+        "ruta": "scripts/auditar_logica_versiones_sies_mu.py"
+      },
+      {
+        "objeto": "d064c76bd6f9bd3c33098e02fa60d0b103ff6fd0",
+        "ruta": "scripts/auditar_transversal_gobernanza_sies_mu2026.py"
+      },
+      {
+        "objeto": "2ad3ccf1884e10fb7b7e4153dcc48fb0da734d59",
+        "ruta": "scripts/sies_resolver.py"
+      }
+    ],
+    "historial_cadenas_especificas": {
+      "rc": 0,
+      "stdout": "b8140dcba0f179865671cff75f98b9e1041eeb0a 2026-09-30T17:28:56-03:00 H001-RETENCION-IPSS162 docs(retencion): adenda 7 - rediseno lado a lado hoja4/5/14, fix relocalizacion formulas, elimina menu fijo, cohorte, regla 100pct, texto a numero\n\nscripts/preparar_cierre_d4.py\nc3e1d70f817525d5a0e230bb90f5ce5102f712fe 2026-09-23T00:38:20-03:00 feat(sies): freeze Bettersoft U+ regulatory requirements v1.0\n\nrequerimiento_bettersoft_uplus_2026/scripts/generar_diccionario_maestro_uplus_sies.py\n3e47c66e88cb0aefa466437926a791de2ce452f9 2026-09-23T00:38:20-03:00 feat(sies): freeze Bettersoft U+ regulatory requirements v1.0\n\nrequerimiento_bettersoft_uplus_2026/scripts/generar_diccionario_maestro_uplus_sies.py\n466bf1b171d0a5f792e45de5db1bdd9f1d68fbc4 2026-07-06T13:16:16-04:00 chore(git): excluye diagnostico mayor a 100MB\n\navance_curricular_2026/80_gobernanza_titulacion_nivel20_periodos_45_5809/GOBERNANZA_TITULACION_NIVEL20_PERIODOS_45_5809_20260709_012554/h80_gobernanza_titulacion_nivel20_periodos_45.py\navance_curricular_2026/81_auditoria_notas_3_titulados_nivel20_5809/AUDITORIA_NOTAS_3_TITULADOS_NIVEL20_5809_20260709_014503/h81_auditoria_notas_3_titulados_nivel20.py\navance_curricular_2026/82_gobernanza_periodos_135_246_titulados_nivel20_5809/GOBERNANZA_PERIODOS_135_246_TITULADOS_NIVEL20_5809_20260709_015105/h82_gobernanza_periodos_135_246_titulados_nivel20.py\n94d9a1237e6679e5033a11ad4699da3c22b8fe89 2026-04-09T08:59:36-04:00 cd /Users/alexi/Documents/GitHub/avance_curricular\n\narchive/cned_trabajo_previo_20260605/indices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio 2.py\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175504/auditar_caso_netmre016_mu2026 2.py\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175606/auditar_caso_netmre016_mu2026 2.py\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175712/auditar_caso_netmre016_mu2026 2.py\nestudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140952/scripts/resolver_codigos_sies_v6 2.py\nestudiantes_extranjeros_2026/scripts/resolver_codigos_sies_v6 2.py\nindices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio 2.py\nscripts/auditar_caso_netmre016_mu2026 2.py\ndbc12dc1d40db740d6a311bb08ed727f9b969214 2026-06-05T14:44:27-04:00 Cierra carga PES Personal Académico 2026 con respaldo KPI e histórico SIES\n\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175504/auditar_caso_netmre016_mu2026.py\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175606/auditar_caso_netmre016_mu2026.py\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175712/auditar_caso_netmre016_mu2026.py\nbackups/pre_auditoria_transversal_gobernanza_sies_mu2026_20260625_175930/auditar_caso_netmre016_mu2026.py\nestudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140341/scripts/resolver_codigos_sies_v6.py\nestudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140631/scripts/resolver_codigos_sies_v6.py\nestudiantes_extranjeros_2026/backups/pre_resolucion_codigos_sies_v6_20260625_140952/scripts/resolver_codigos_sies_v6.py\nestudiantes_extranjeros_2026/scripts/resolver_codigos_sies_v6.py\nscripts/auditar_caso_netmre016_mu2026.py\nscripts/auditar_transversal_gobernanza_sies_mu2026.py\neafe09a049ee1bd75e441102ce34dc2b58101b08 2026-06-03T13:05:02-04:00 fix: canonicalize clean CNED materializer script\n\narchive/cned_trabajo_previo_20260605/indices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio.py\nb351645cc5af790e0b9692fb48b28788c2d18d84 2026-06-03T13:05:02-04:00 fix: canonicalize clean CNED materializer script\n\narchive/cned_trabajo_previo_20260605/indices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio.py\n4caf70b4c42a8b7187828066cd14f34e0eda3b4a 2026-06-03T13:05:02-04:00 fix: canonicalize clean CNED materializer script\n\nindices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio.py\n06389a6f1aaafa9dbf7767d76d5718f2a10cacb0 2026-06-03T13:05:02-04:00 fix: canonicalize clean CNED materializer script\n\nindices_2025/cned/scripts/06_materializar_artefacto_operativo_cned_limpio.py\n",
+      "stderr": ""
+    },
+    "alcance": "Objetos y refs locales; no fetch, no prueba de ausencia en repositorios remotos u otros respaldos."
+  },
+  {
+    "repo": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+    "rama": "main",
+    "HEAD": "aba337784ccde0537fc21b2977b351170ed335e8",
+    "remotos": "origin\thttps://github.com/Alexitho0o/CARACTERIZACION.git (fetch)\norigin\thttps://github.com/Alexitho0o/CARACTERIZACION.git (push)\n",
+    "commits_locales": 70,
+    "primer_commit": "be752da182be3c79b284ff3169f442584635b49f 2026-05-05T23:14:24-04:00 Cierre FCU 2026 P1: base estable post carga exitosa",
+    "ultimo_commit": "353d3227fede0fd07d0ff1c60e5cc57016c5bd73 2026-10-22T11:09:59-03:00 Usar FECHAFIRMA en seguimiento diario 2027",
+    "objetos_codigo_rutas_candidatas": [
+      {
+        "objeto": "721f22e972d7b765549f2ca11214fc8532786039",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/agregar_matrices_powerbi.py"
+      },
+      {
+        "objeto": "548c504d2ba24ea0e8f34488307863c41ce541a8",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/analizar_retencion_interna_ipss.py"
+      },
+      {
+        "objeto": "2d909ab36401187528f4615fe7a0b2ac0c5444f3",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/auditar_graficos_consolidado.py"
+      },
+      {
+        "objeto": "53930fceabcd0ac8a86f834d2fea675c3aa517a9",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/auditar_informe_retencion_sies.py"
+      },
+      {
+        "objeto": "56faf77053feaf81a3232b9c3ef2948ae4c2d06d",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/auditar_retencion_ipss_162.py"
+      },
+      {
+        "objeto": "f48c467dfde556119b86df77c6858ed829ac32bf",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/auditar_y_cruzar_retencion_ipss_162.py"
+      },
+      {
+        "objeto": "7546034661dcf13722f0c657d2dc8f01600bf28f",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/calcular_retencion.py"
+      },
+      {
+        "objeto": "7fd3337321b4a77a21f283c33ce73d516bfe3ac0",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/codigo_extraccion_matricula.py"
+      },
+      {
+        "objeto": "a98160a8680dd1adac03d7a6abf2d1b7d0a1eb98",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/conciliar_oficial_ipss_162.py"
+      },
+      {
+        "objeto": "403acae3a7901d739705b45980bb4d508e05a9b0",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/consolidar_conciliacion_metodologica_ipss_162.py"
+      },
+      {
+        "objeto": "a8e5d7d78d78505a67019742d445bf569df6f979",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/diagnostico_extraccion_matricula.sh"
+      },
+      {
+        "objeto": "5eeeecb4acaa2a9167b23c62d07f368344ed11b5",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/extraer_titulados_ipss_por_anio.py"
+      },
+      {
+        "objeto": "b2dd441d0023a645caa7989e15313ff621c3336b",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/generar_consolidado_retencion.py"
+      },
+      {
+        "objeto": "8da7cc9353b639bdef64c3c387757c71db013d8a",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/generar_consolidado_retencion_completo.py"
+      },
+      {
+        "objeto": "54daa301c7a5ac6f9b0ec342a22b7a1acdc51c1e",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/inspeccionar_csv_sies.py"
+      },
+      {
+        "objeto": "60e68e6ef4753d887817395d43172d50590c3cf9",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/limpiar_consolidado_tabular.py"
+      },
+      {
+        "objeto": "70ea4a482724cab728d577443336ab51d1b5cb50",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/matrices_titulacion_bi.py"
+      },
+      {
+        "objeto": "68a02d366c96ff4992ac978e3f9568b6d5a5335c",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/procesar_titulados_ipss.py"
+      },
+      {
+        "objeto": "a5849cec1a2f09c32ec2191193d84e5e3704d7b8",
+        "ruta": "EXTRACCION_MATRICULA_SIES _2007_2025/setup_entorno.sh"
+      },
+      {
+        "objeto": "2cf2346d73e621dc6c35686d32ade96a45117dc5",
+        "ruta": "caracterizacion_sies_historico.py"
+      },
+      {
+        "objeto": "6c16a7970678272186e4365923e8b2f43fcb26c7",
+        "ruta": "diagnosticos/diagnosticar_corregir_fcu_sies.py"
+      },
+      {
+        "objeto": "a704f27ffa8c5a3eed9b121fd628d93acf394b6d",
+        "ruta": "explorar_fuentes_matricula_titulacion.py"
+      },
+      {
+        "objeto": "0248d393767d890b16dff00ef4d04c4241970566",
+        "ruta": "tests/test_hito4b_sectorizado_sies_retencion.py"
+      },
+      {
+        "objeto": "8ab20e039fc4e19fc27de1458dddf5dec97e212a",
+        "ruta": "caracterizacion_catalogo_sies_2027.py"
+      },
+      {
+        "objeto": "5cc18aa601c3de14ce8465567feb2db93d783fce",
+        "ruta": "common/consulta_sies_historica.py"
+      },
+      {
+        "objeto": "48d78cf1d5e21067b4ac8ff277f598c339263118",
+        "ruta": "gobernanza/sies/anual/2027/5910_20260907_6047_20261013/resolutor.py"
+      },
+      {
+        "objeto": "9ee82c21652ddf926b8f143c4522ecb58e0d2af9",
+        "ruta": "gobernanza/sies/anual/2027/5910_20260907_6047_20261013_modalidad_v2/resolutor.py"
+      },
+      {
+        "objeto": "97ec49c2c5eeb0ac95035026ba7ac62e45d3b13f",
+        "ruta": "gobernanza/sies/historico/2007_2026_h5_20261015/resolutor.py"
+      },
+      {
+        "objeto": "039ebdfefa1ae20d2a2014c8150f0d7de5ee479e",
+        "ruta": "scripts/consultar_sies_historico.py"
+      },
+      {
+        "objeto": "274648068d356653fff07c3491a729f94ab6baf5",
+        "ruta": "scripts/gobernanza/auditar_catalogo_sies_2027.py"
+      },
+      {
+        "objeto": "c5ce7214581994bc823575f35f9296a6ee0f87a8",
+        "ruta": "scripts/gobernanza/cotejar_instrumentos_2024_2025.py"
+      },
+      {
+        "objeto": "270d137bd02f5b0973535668cff47daed56c7169",
+        "ruta": "tests/test_catalogo_sies_2027.py"
+      },
+      {
+        "objeto": "048c748133857135d7773f7a9575e2ff08bb0b2f",
+        "ruta": "tests/test_cotejo_instrumentos_2024_2025.py"
+      },
+      {
+        "objeto": "cca6884e2b89c4589fd695ae34509882931caf45",
+        "ruta": "tests/test_multimatricula_2027.py"
+      }
+    ],
+    "historial_cadenas_especificas": {
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "alcance": "Objetos y refs locales; no fetch, no prueba de ausencia en repositorios remotos u otros respaldos."
+  },
+  {
+    "repo": "/Users/alexi/Documents/GitHub/IPSS_Procesos_SIES",
+    "rama": "feat/pnm2007-2026-b5-dax-catalog-v1",
+    "HEAD": "4ca28d4d36b5ee9fe242868ec4bad45aaf2eb677",
+    "remotos": "origin\thttps://github.com/Alexitho0o/IPSS_Procesos_SIES.git (fetch)\norigin\thttps://github.com/Alexitho0o/IPSS_Procesos_SIES.git (push)\n",
+    "commits_locales": 216,
+    "primer_commit": "6e31f6a4170650c383ff9fd07571cd8ecef7b718 2026-07-21T16:51:20-04:00 Baseline governed PBIR copy",
+    "ultimo_commit": "4ca28d4d36b5ee9fe242868ec4bad45aaf2eb677 2026-08-21T18:24:38-04:00 chore: respaldo final antes de archivar el repositorio",
+    "objetos_codigo_rutas_candidatas": [
+      {
+        "objeto": "b5df251de2a5b91575681b402d92f11487bbf4a7",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/artifacts/pbip/p04_windows_handoff/RUN_P04_WINDOWS.ps1"
+      },
+      {
+        "objeto": "9f837784a5ac5611f595b048f00a1ec817ae5901",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/build_source_glossary_mapping.py"
+      },
+      {
+        "objeto": "421166df4c52ab17773470c37b760c7aca03e9ea",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/execute_b3_wp00_wp01_preflight.py"
+      },
+      {
+        "objeto": "b64235f2cf3415efd35ee12bd6931fdc4f648aff",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/execute_b3_wp02_wp03_derivatives.py"
+      },
+      {
+        "objeto": "3f6f48c86e95f8c40c58871670445a634e6e20fb",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/execute_b4_p01_reproduce_derivatives.py"
+      },
+      {
+        "objeto": "5563752200931d482df0dbdbfd5f5e69788098ef",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/execute_b4_p02_p03_p04_controls.py"
+      },
+      {
+        "objeto": "9f52c666b1a3b8ed10b09e6d7712bbb941bbab68",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/extract_glossary_txt.py"
+      },
+      {
+        "objeto": "956ceddb0762d6aadd793ddbecf3b7f9e7c516de",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_b3_architecture_inventory.py"
+      },
+      {
+        "objeto": "22cc2c4462e0b893006f3a072cd3137bdf785f6a",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_b3_key_transformation_specification.py"
+      },
+      {
+        "objeto": "fd3bfd1b77e4adff287ce6e63706953cad860066",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_b3_logical_model_proposal.py"
+      },
+      {
+        "objeto": "da47864a8bece988a6c2471de1f1540a2ffa6aa6",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_b3_reversible_implementation_plan.py"
+      },
+      {
+        "objeto": "98dd5acde29d00db9dd954d9884b4bb1a0e5f7cf",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_b4_model_candidate_package.py"
+      },
+      {
+        "objeto": "9f535ed28ea74dbe4768106153482b0c3a3a4a17",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_b4_pbip_materialization_plan.py"
+      },
+      {
+        "objeto": "afe581a1ecb95b94392c8d59d819fd6413925ba5",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/preflight_sources.py"
+      },
+      {
+        "objeto": "4702cd32265b830b4d7e5233533911b3d30796c5",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/profile_csv.py"
+      },
+      {
+        "objeto": "452f93533f5285a07f725fe88d01bfeb769a421d",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/quality_b2.py"
+      },
+      {
+        "objeto": "b50a780748733f49e98559595f0e01dea7adea49",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/register_b3_impl_plan_v1_approval.py"
+      },
+      {
+        "objeto": "179c4c2e8b1efaf39dd80e760ae690cd3f339573",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/register_b3_opt_a_approval.py"
+      },
+      {
+        "objeto": "97b7c6693e9c92e0015f2228b753de6fb526b440",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/register_b3_spec_v1_approval.py"
+      },
+      {
+        "objeto": "1c0c07a94272ef8e72fafa3b6631701d1fd4138b",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/validate_b1.py"
+      },
+      {
+        "objeto": "acc9ea8551fd425923e38e35becff6c046d9079b",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/generate_pnm_b9_runtime_rebaseline.py"
+      },
+      {
+        "objeto": "60f91ddcfa81f3f0a50376b3d6f8beaeed10f078",
+        "ruta": "SIES_ANALITICO_PANORAMA_NACIONAL_MATRICULA_2007_2026/scripts/validate_pnm_b9_postwrite.py"
+      },
+      {
+        "objeto": "bbef043faabb7595e9e0e523c655b85e976366fe",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_AGG_H02/__init__.py"
+      },
+      {
+        "objeto": "a17dbd9e08814286ebbe4783fdf4fd4e1a1135e7",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_AGG_H02/h02_dimensional_aggregates.py"
+      },
+      {
+        "objeto": "20ad81c048d05ba12500c467ac3728290b3a43c3",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_AGG_H02/tests/test_h02_dimensional_aggregates.py"
+      },
+      {
+        "objeto": "38476f5b9581c4e6dc66ff822ac2f6716437f385",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/__init__.py"
+      },
+      {
+        "objeto": "208251baf80e11c7581f70c30856adececa16084",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/analytics_dax_h01.py"
+      },
+      {
+        "objeto": "31c1e05c0a81f36031e6bc2e176459394dade072",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/bridge_semantic_fix_h01.py"
+      },
+      {
+        "objeto": "a2a0d5334a73fb9c61e944b0f46b33dc4cc01bec",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/mcp_runtime_repair_h01.py"
+      },
+      {
+        "objeto": "bd51d320a5810d9f6cb619f6e887dd9757954730",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/tests/test_analytics_dax_h01.py"
+      },
+      {
+        "objeto": "1ffc55a27ef6237d707bc03c10bfd0dd3669593f",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/tests/test_bridge_semantic_fix_h01.py"
+      },
+      {
+        "objeto": "aee1e6388b4d3406d992b93592f4ca60b25a1870",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/tests/test_mcp_runtime_repair_h01.py"
+      },
+      {
+        "objeto": "157af755d72a25c9564861c6ae1dc9890a6e8111",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_VISUAL_H03/generar_visual_h03.py"
+      },
+      {
+        "objeto": "f3c6584f4c9862faadb932f04ba8b33da8ad961a",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_VISUAL_H03/tests/test_validar_visual_h03.py"
+      },
+      {
+        "objeto": "18099953b38b8f7dbe79cd2699d1d0afa819eb54",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_VISUAL_H03/validar_visual_h03.py"
+      },
+      {
+        "objeto": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/__init__.py"
+      },
+      {
+        "objeto": "2de82d8bc743eea6f4e3738e871c18b68ccec527",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/pipeline_bi_trayectoria_sies.py"
+      },
+      {
+        "objeto": "99b2f6a562e06fe430a561cb0aaed1599eb601a7",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/runtime_close_bi_trayectoria_sies.py"
+      },
+      {
+        "objeto": "8e705606d0420d28840bbf1750d1b751b1428b55",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/tests/test_pipeline_bi_trayectoria_sies.py"
+      },
+      {
+        "objeto": "229b97735b943bc930f8e55a2f47249ff344e065",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/tests/test_runtime_close_bi_trayectoria_sies.py"
+      },
+      {
+        "objeto": "299329d5396f0606437413dc71d5da6554e6b297",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/00_utilidades_fuentes_sies.py"
+      },
+      {
+        "objeto": "1b144cfdb07f94ec2a1c86a5c119d075ceea7022",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/01_inventariar_fuentes_sies.py"
+      },
+      {
+        "objeto": "ffc72816729d58a9f43b734fe1aefe32376e92a2",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/02_clasificar_fuentes_sies.py"
+      },
+      {
+        "objeto": "4a2b72c021680fda8baee75b3ea5530f38d60ec1",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/10_validar_paquete_fuentes_sies.py"
+      },
+      {
+        "objeto": "3ebb0f14eaedd8185a6e0b0a4ef381b11bbfea21",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/12_reconciliar_conteos_oficiales.py"
+      },
+      {
+        "objeto": "2e18595a16fe2c7cbf0772a2e53f2de5be568135",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/13_reconciliar_universos_semanticos.py"
+      },
+      {
+        "objeto": "7ececec3ebfd088cdbeb5c3d19da0a21c4cca16e",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/__init__.py"
+      },
+      {
+        "objeto": "11f987f15e1e4e1d9cff07d8a9e0c762cd36ab99",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/ejecutar_pipeline_fuentes_sies.ps1"
+      },
+      {
+        "objeto": "0f29ba83503134b7d3121acf5758b7ccbf9e9c1f",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_clasificacion.py"
+      },
+      {
+        "objeto": "88c84620dbc3a18e5298a6f35a933a7b25ce9678",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_configuracion.py"
+      },
+      {
+        "objeto": "d67265365d2cbe08eb2a936121d2dad1df3fcba1",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_diccionarios.py"
+      },
+      {
+        "objeto": "d00bf940f8d36f2587ac6afefa9c2d9413a93e34",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_esquemas_canonicos.py"
+      },
+      {
+        "objeto": "10ec9a7cee1a35962093f6572b59b9f43c3ad95e",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_inventario.py"
+      },
+      {
+        "objeto": "d05e0555d75ffdac8391380f25f12bb3940ff692",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_llaves.py"
+      },
+      {
+        "objeto": "20b0c4de7992a214263402fd8c999cdb177597b3",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_perfilado.py"
+      },
+      {
+        "objeto": "b7ad9942cf5dda7de3a75a1b68b0f54360f31247",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_reconciliacion.py"
+      },
+      {
+        "objeto": "f06e2ce27f6691f0f1d03a174736f8bec592dd62",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_reconciliacion_semantica.py"
+      },
+      {
+        "objeto": "e1664a439b0cd120e24fe158d6cdccf7dd6a958f",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/tests/test_seguridad.py"
+      },
+      {
+        "objeto": "e47503683f64471a16c6ab52439771c5a7a48eba",
+        "ruta": "02_IMPLEMENTACION/BI_SIES_ANALYTICS_DAX/analytics_dax_h01.py"
+      },
+      {
+        "objeto": "58b074d3c209e302b5e1dd5974f856ac8c205bdb",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/runtime_close_bi_trayectoria_sies.py"
+      },
+      {
+        "objeto": "b9e7edddd0ef246a643fabae2192c3a1d1be2b3d",
+        "ruta": "02_IMPLEMENTACION/BI_TRAYECTORIA_SIES/tests/test_runtime_close_bi_trayectoria_sies.py"
+      },
+      {
+        "objeto": "237c7ddd8ce7424176dee63715f5ec3731279fb1",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/00_utilidades_fuentes_sies.py"
+      },
+      {
+        "objeto": "ab92e88d338269a5755028b6b1c365bf8ce960fb",
+        "ruta": "02_IMPLEMENTACION/FUENTES_SIES/00_utilidades_fuentes_sies.py"
+      }
+    ],
+    "historial_cadenas_especificas": {
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "alcance": "Objetos y refs locales; no fetch, no prueba de ausencia en repositorios remotos u otros respaldos."
+  }
+]

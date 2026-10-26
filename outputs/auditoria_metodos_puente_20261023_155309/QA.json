@@ -1,0 +1,44 @@
+{
+  "resultado": "OK_EXPERIMENTO_NO_APLICADO",
+  "observaciones_originales": 24774,
+  "universo_control_anual": 8354,
+  "particiones_persona_sin_solapamiento": true,
+  "documental_no_usado_como_etiqueta_trimestral": true,
+  "diccionario_bases_denominadores_intactos": true,
+  "commit_push": false,
+  "git": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "revision_independiente": {
+    "metodo": "Recomputación por segundo agente con código propio y SQLite en lectura",
+    "K2": [
+      7672,
+      7662,
+      10,
+      682
+    ],
+    "K3": [
+      7670,
+      7664,
+      6,
+      684
+    ],
+    "orden": "emitidos, correctos, errores, abstenciones",
+    "resultado": "COINCIDE",
+    "limite": "Revisión de etiquetas anuales heredadas, no validación externa de fuentes."
+  },
+  "diccionario_anual_agregado": {
+    "grupos": 278,
+    "univocos_observados": 256,
+    "multicodigo": 22,
+    "promovido": false
+  },
+  "limites_variables": {
+    "version_no_extraida_de_predictores": true,
+    "sede_y_familia_contextuales_heredadas": true,
+    "no_validacion_independiente_ISCJ": true,
+    "atributos_de_cortes_posteriores_posibles": true,
+    "validacion_temporal_es_retrospectiva": true
+  }
+}

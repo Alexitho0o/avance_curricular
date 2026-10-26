@@ -1,0 +1,149 @@
+{
+  "recurso": "CORRECCION_AUXILIAR_PROMEDIOS_T3_2025_V15",
+  "proceso": "Retención IPSS 162; seguimiento interno T1/T2/T3",
+  "version": "V15",
+  "fecha": "2026-10-23T21:03:14.315202-03:00",
+  "clasificaciones": {
+    "A": "No se introduce ni modifica una regla oficial.",
+    "B": "Fuentes y conteos observados; apertura nativa.",
+    "C": "Cruce exacto, sumas, divisiones y parche mínimo OOXML.",
+    "D": "Criterio interno solicitado: actividad del período y estado VIGENTE sin exigir fecha histórica exacta; denominador conservado.",
+    "E": "No se recuperó algoritmo original que produjo535; no impide reproducción nueva."
+  },
+  "entrada_libro": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V14.xlsx",
+    "sha256": "20813b21f546085f94c10b2983335567c937e492f4d3f707be0893e5cb5234a4"
+  },
+  "fuentes": {
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": {
+      "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8"
+    },
+    "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json": {
+      "sha256": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0"
+    },
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx": {
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+    },
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx": {
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t2_2025_20261023_v14/evidencia/add_promedios_sheet_original.py": {
+      "sha256": "c09e9b3255cfb90f38ca1393cb49d62e8e061cf8c39fa081d8011525a70183d8"
+    }
+  },
+  "referencias": {
+    "cohorte": "20_Foto_BBDD grupo1,año2025; origen original de cada integrante validado por fila9; referencias personales permanecen en memoria",
+    "puente": "IPSS_Procesamiento.xlsx/2025_carga: J RUT,BU N_DOC,BV DV",
+    "actividad": "PROMEDIOSDEALUMNOS_12166.xlsx/Hoja1: RUT,DIG,CODCLI,ANO,PERIODO,ESTADO_ACADEMICO",
+    "proxy_heredado": "26_Avance_Curricular_Resumen!A1848:H1855; E1853=535 literal; F1853=E1853/C1853"
+  },
+  "salida": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx",
+    "sha256": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3",
+    "copia_escritorio": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx",
+    "sha256_copia": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3"
+  },
+  "resultados": {
+    "denominador": 1150,
+    "T3_antes": 535,
+    "T3_R": 535,
+    "T3_P": 11,
+    "T3_despues": 546,
+    "T3_tasa": 0.4747826086956522,
+    "variacion_pp": 0.9565217391304347,
+    "T3_presencias": 596,
+    "T2_sin_cambio": 611,
+    "foto_T3_sin_cambio": 1023
+  },
+  "QA": {
+    "estado": "OK",
+    "celdas_autorizadas": 43,
+    "controles_independientes": 20,
+    "controles_dinamicos": 10,
+    "apertura_nativa_sin_reparacion": true,
+    "fuentes_y_denominadores_conservados": true,
+    "graficos_identicos": 13,
+    "tablas_identicas": 35,
+    "hojas_totales": 54,
+    "hojas_identicas": 50,
+    "estilos_conservados": 315,
+    "dxf_conservados": 22,
+    "extension_estilos_huerfanas_retiradas": 3
+  },
+  "archivos": {
+    "docs/ESPECIFICACION_PROXY_T3_Y_REPARACION_V15_20261023.md": {
+      "sha256": "6001192b80d9d82994c9100097b5fdf66fcba4ed83ff0139dbf1f764cc05d20a"
+    },
+    "scripts/recalcular_proxy_t3_2025_v15_20261023.py": {
+      "sha256": "5b5031dd0cbd7da49b1a5576e315cec3dca19b4b54fa3e444eb607fdd5aa6fad"
+    },
+    "scripts/ensamblar_proxy_t3_v15_20261023.py": {
+      "sha256": "db517fa9c4f2e2d8cd33c6da75340f76cbddb670e11c30281eeb2755ca297813"
+    },
+    "scripts/editar_proxy_t3_v15_20261023.mjs": {
+      "sha256": "9719d11603c65ca2f9eaf4ab036f2e14390ce1981ad6276aa5356f53ee052b9b"
+    },
+    "scripts/reparar_estilos_v15_20261023.py": {
+      "sha256": "e1ce70885b6f16fbd7c8c23ef4438343257c3335b74ec0eaa8ef9c2b617caa2e"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/DIFF_CELDAS_EXISTENTES.json": {
+      "sha256": "8e07fef946ae5dc3f4663d1488e8c582b54135cc97f30944bfb8d79c50df43b6"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/EDICION.json": {
+      "sha256": "2f020eb9e5883d7b3c14789394a3e2de8806d5551783135f28b8196c29f80820"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/GIT_ESTADO_ENTREGA.json": {
+      "sha256": "1d49464ee45e904c63fa436c07e594c6637a3a9bb6173fcf9f7e8f86dd94d26a"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/QA_DINAMICA.json": {
+      "sha256": "05a6a62e0edafda98c5d82b2f67c00c299cab3a46663342d1a0e4990e4d1d311"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/QA_ESTRUCTURAL_CALCULOS.json": {
+      "sha256": "b32c2cd09b83b14bd49da2bcb83eeb613feba28a5ea915f4cdfff3354fd9d7d7"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/QA_EXCEL_NATIVO.json": {
+      "sha256": "e45dbcb5727b6e6a13c5915fee2ec41964c16962e841ed73a14e0ca448b54775"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/QA_INDEPENDIENTE.json": {
+      "sha256": "79126c50e6963e7d9f1e1f0e4d837ba50f26961940168722f585f69aeef33800"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/README_Y_REANUDACION.md": {
+      "sha256": "fdd9637cefd0d43fb6ee3ccf72eb29c98fc044433ef4264d6d1409b7c2210cff"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/RESULTADO_AGREGADO.json": {
+      "sha256": "fd9495a334191ad00b318e798e8d35d6b9945e9d4242d0d9226a2a8af871c0bb"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx": {
+      "sha256": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/evidencia/QA_ESTILOS.json": {
+      "sha256": "ce79c5e0d682038023c69b2fa0d7a59309644ca01a4114d3524412f6e946e224"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/evidencia/REPARACION_EXCEL_V14.xml": {
+      "sha256": "a7c6ff80ab51e51a68a0619ccb901fd29992686b57c5f4230be279f7b662ae01"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/evidencia/estilos_v15_normalizados.xml": {
+      "sha256": "98ed32ac6496d41b0eb85c970fe4103bd1c2fe91bf9a728191cab7257a77a078"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/preview_calculo.png": {
+      "sha256": "f10ec21f4eb2a04089d7129acf36f77b2d1558242dd2bf6a22207a5c9bccecd3"
+    },
+    "outputs/correccion_proxy_t3_2025_20261023_v15/preview_resumen.png": {
+      "sha256": "ad148586a41c008ccc9c1a24a7fc65dac858e4fddfdc02b99776387718122ff5"
+    }
+  },
+  "git": {
+    "antes": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "despues": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "staging": false,
+    "commit": false,
+    "push": false
+  },
+  "privacidad": "Solo se añadieron conteos agregados, fórmulas y notas; no identificadores ni nóminas nuevas. Sin transmisiones externas."
+}

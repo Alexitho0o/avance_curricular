@@ -1,0 +1,46 @@
+"""Prepara exclusivamente agregados en repo y detalle en directorio privado."""
+from pathlib import Path
+import json,csv,shutil
+O=Path(__file__).parent;T=Path('/tmp/ipss_resolucion_2317_20261022');load=lambda p:json.load(open(p));s=load(O/'RESULTADO.json');r=load(T/'resultados.json');proof=load(T/'evidencias.json')
+rows=[['V7 · Conciliación caso a caso · 22/10/2026'],['Código anual observado; no equivalencia general del plan. Hojas V6 preservadas como línea base.'],['Mismo universo: 5.901 personas; revisión focal de 2.317 personas / 4.973 observaciones.'],['Indicador','Antes','Ahora','Alcance'],['Observaciones en cola de revisión',4973,3213,'1.760 diferencias conciliadas con evidencia ya existente'],['Personas con al menos un pendiente',2317,1838,'479 sin pendientes de este conjunto; 77 parcialmente conciliadas'],['Proporción de personas pendientes sobre 5901',2317/5901,1838/5901,'Cola de conciliación documental; NO retención ni brecha de planes'],['Personas parcialmente conciliadas',None,77,'Conservan al menos una observación pendiente'],['Personas sin observación conciliada',None,1761,'Dentro de las 2317 revisadas'],['Código anual observado conciliado',0,1760,'Cambio de estado de revisión; no recuperación nueva de código'],['Brecha original de dimensiones',24/63,24/63,'Línea base original; no nuevas equivalencias generales acreditadas'],['Escenario metodológico mixto',19/63,19/63,'PROPUESTA_METODOLOGICA_NO_APROBADA'],['Validación contextual previa limitada',8/63,8/63,'Indicador distinto, conservado sin recalificación'],['Informe docencia titulados2025',None,431,'Ambos campos código vacíos; 144 filas /143 personas del foco'],['Nuevas personas con código por esa fuente',None,0,'No confundir informe de titulación con carga SIES completada'],['Plan histórico efectivo',None,'NO_ACREDITADO','La conciliación de código anual no acredita vigencia de la etiqueta de plan'],['Gobernanza',None,'PENDIENTE_APROBACION_GOBERNANZA','Canon, tasas, denominadores y 13 gráficos preservados'],['Fuente de cifras',None,'RESULTADO.json; detalle privado local','Sin enlaces automáticos al archivo privado'],['Pendiente T3 heredado',None,'Conservado','Desfase previo entre tasa almacenada y cociente; no corregido en esta tarea']]
+rr=list(csv.reader(open(O/'CARRERA_ANO_JORNADA.csv',encoding='utf-8-sig')));agg=[{'name':'41_Conciliacion_Individual','rows':rows},{'name':'42_Casos_Carrera_Ano_Jornada','rows':[['Desglose del mismo foco'],['Personas por grupo no aditivas; observaciones reconciliables'],[],rr[0]]+[[*x[:3],*map(int,x[3:])] for x in rr[1:]]}];(O/'payload.json').write_text(json.dumps(agg,ensure_ascii=False))
+headers=['Observacion_ID','RUT_DV','CODCLI','Carrera','Sede','Jornada','Plan_PR','Ano_PR','Periodo_PR','Estado_anterior','Causa_anterior','Codigo_propuesto_anterior','Codigo_anual_previo','Codigos_localizados','Codigo_adoptado_observacion','Estado_nuevo','Regla','Razon','Dato_faltante','Solucion_concreta','Clasificacion','Evidencias_localizadas','Plan_historico']
+private=[{'name':'RESUMEN','headers':['Indicador','Antes','Ahora','Alcance'],'rows':rows[4:]},{'name':'RESOLUCION_4973','headers':headers,'rows':r,'textcols':[1,2]},{'name':'EVIDENCIA_POR_OBSERVACION','headers':['Observacion_ID','Fuente','Hoja','Fila','Codigo','Proceso','Ano_fuente','Condicion_fuente'],'rows':proof}]
+from collections import defaultdict
+persons=defaultdict(list)
+for v in r:persons[v[1]].append(v)
+private.append({'name':'PERSONAS_2317','headers':['RUT_DV','Observaciones_foco','Conciliadas_codigo','Pendientes','Estado','Expedientes_Carrera_CODCLI'],'rows':[[k,len(v),sum(x[15].startswith('CONCILIADO') for x in v),sum(not x[15].startswith('CONCILIADO') for x in v),'TOTAL_EN_FOCO' if all(x[15].startswith('CONCILIADO') for x in v) else 'PARCIAL' if any(x[15].startswith('CONCILIADO') for x in v) else 'PENDIENTE',len({(x[3],x[2]) for x in v})] for k,v in sorted(persons.items())],'textcols':[0]})
+private+=load(T/'DA_foco.json')
+private.append({'name':'LEEME','headers':['Tema','Detalle'],'rows':[['Alcance','Solo 2317 personas /4973 observaciones. No se revisan nuevamente las otras3584.'],['Conciliado','Código observado adoptado solo para conciliación de observación. No certifica plan efectivo histórico, elegibilidad ni aceptación SIES individual.'],['Fuente2025','Informe docencia431 filas; ambos códigos vacíos.144 filas de143 personas del foco; no incorpora códigos.'],['DA','Todas las filas DA del privadoV3 correspondientes al foco;67 columnas originales preservadas, más trazabilidad. Año de corte no equivale a año de observación.'],['Reglas','V6: identidad exacta/familia/año/contextoDA sin atribución múltiple. No n3/90. Las diferencias estadísticas se resuelven descriptivamente sin cambiar canon.'],['Estado','Los bloqueados incluyen requisito y acción por observación. No localizado significa solo cobertura revisada.'],['Privacidad','Uso local privado. Fuera de Git; no subir a servicios.']]})
+(T/'payload.json').write_text(json.dumps(private,ensure_ascii=False))
+report=f'''# Resolución focal V7
+Se procesaron una a una 4.973 observaciones de 2.317 personas mediante reglas reproducibles. Se conciliaron 1.760 diferencias contra la propuesta previa usando el código anual ya documentado y contexto DA concordante, sin atribución múltiple en V6. Es resolución de la cola de revisión, no recuperación nueva ni validación del plan histórico.
+
+479 personas quedan totalmente conciliadas dentro del foco;77 parcialmente;1.761 no tienen observación conciliada. Quedan1.838 personas con pendiente de las5.901:31,15%, frente a2.317/5.901=39,26%. No se revisaron las otras3.584. La brecha original24/63=38,10% se conserva como definición distinta. No hay nuevas equivalencias generales aprobadas.
+
+## Evidencia y límites
+1.760 códigos anuales adoptados por observación:1.735 enlaces al extracto Publicados y25 a la base gobernada derivada; estos últimos conservan esa condición y no se presentan como proceso independiente. Código anterior y observado se conservan en privado. Fuentes Publicados/Enviados no acreditan aceptación individual por sí solas.
+86 observaciones con código único siguen bloqueadas por atribución exacta de expediente;71 presentan cohorte compatible, lo cual no prueba qué matrícula corresponde. Se conserva como hipótesis, sin promoción.
+15 observaciones necesitan contextoDA conjunto exacto; se revisaron los expedientes en ambos cortes disponibles sin filtrar previamente jornada/carrera.
+1.472 necesitan matrícula anual o semántica temporal documentada del otro proceso. Los encabezados AVC2020–2022 y el consolidado dicen proceso/año carga, no acreditan por sí solos año académico; no se generalizó la resta de un año desde2017–2019.
+261 requieren historial con fecha efectiva de cambio de carrera/sede/jornada. Se conservaron códigos de otros contextos, sin transferirlos.
+1.379 no localizadas requieren carga/rectificación individual del año/carrera/jornada especificados por fila. No se equiparan a inexistencia universal.
+
+## Fuente2025 dirigida
+Se leyó Informe de Titulados2025_vf.xlsx (Hoja1,431 filas):230 eventos con fecha2025 y201 con fecha2026. Ambos campos COD_SIES_OBT_TIT y COD_SIES_TERMINAL están vacíos en todas las filas. Hay144 filas de143 personas del foco. Esta fuente aporta evento e ingreso, pero no código; es informe de Docencia, no carga completada ni comprobante de aceptación. Se fija su hash en FUENTES_NUEVAS.json.0 personas nuevas con código.
+
+## Acciones restantes
+El privado contiene por observación requisito exacto de año/periodo/carrera/jornada, código previo/encontrado/adoptado, regla, razón, fuente/hoja/fila y solución. Para resolver atribuciones se necesita puente matrícula–CODCLI o historial de cambios; para temporalidad, definición del año académico de las cargas o matrícula del año. Ninguna decisión nueva se ha aplicado al canon. No se exige mayoría a evidencia directa.
+
+## Entrega
+V7 agrega conciliación a V6 y conserva las hojas anteriores como línea base,13 gráficos y números históricos. El privadoV4 conserva filas DA completas del foco y el detalle de resolución. No se afirma cierre de planes. Sin commit,push,uploads ni cambio de rama.
+'''
+(O/'INFORME_RESOLUCION.md').write_text(report)
+# Reutilizar autor y ensamblador probados, nuevas rutas explícitas.
+b=(O.parent/'retencion_puente_provisional_20261022_v6/build.mjs').read_text();(O/'build.mjs').write_text(b)
+a=(O.parent/'retencion_puente_provisional_20261022_v6/ensamblar.py').read_text().replace('20261022_v5/RETENCION_IPSS_PROVISIONAL_PUENTE_20261022_V5.xlsx','20261022_v6/RETENCION_IPSS_PROVISIONAL_PUENTE_20261022_V6.xlsx').replace("dst=O/'RETENCION_IPSS_PROVISIONAL_PUENTE_20261022_V6.xlsx'","dst=O/'RETENCION_IPSS_PROVISIONAL_PUENTE_20261022_V7.xlsx'")
+(O/'ensamblar.py').write_text(a)
+b=Path('/tmp/ipss_embudo_2317_20261022/build.mjs').read_text().replace('/tmp/ipss_embudo_2317_20261022/','/tmp/ipss_resolucion_2317_20261022/').replace('AUDITORIA_PRIVADA_EMBUDO_2317_IPSS_20261022.xlsx','REVISION_PRIVADA_RESOLUCION_IPSS_20261022_V4.xlsx');(T/'build.mjs').write_text(b)
+for d in [O,T]:
+ if not (d/'node_modules').exists():(d/'node_modules').symlink_to('/Users/alexi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules',target_is_directory=True)
+print('Payloads creados; privados fuera de Git')

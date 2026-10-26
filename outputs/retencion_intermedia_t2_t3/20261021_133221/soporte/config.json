@@ -1,0 +1,299 @@
+{
+  "base": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_100654/RETENCION_INTERMEDIA_IPSS_ESCENARIO_80_20261021_100654.xlsx",
+  "output": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_133221/RETENCION_INTERMEDIA_IPSS_REVISION_20261021_133221.xlsx",
+  "date": "21-10-2026 13:32 -0300",
+  "stamp": "20261021_133221",
+  "edits": {
+    "Resumen": {
+      "A5": "B/C: 18 de las 20 llaves recuperadas; 2 pendientes. E: cuatro tasas sin cierre acreditado; ver Revision_agregada.",
+      "A27": "Revisión ampliada: Revision_agregada contiene llaves, respaldos, pendientes y distinción interna IPSS/SIES.",
+      "I8": "E: T2_2025 solo cubre ingresos 2025-T2. Falta matrícula completa de cohorte 2024, fecha efectiva y estados al cierre.",
+      "H8": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I8)),'Revision_agregada'!I8,\"Pendiente\")",
+      "I9": "E: T3_2025 contiene varias cohortes. Falta acreditar exhaustividad y fecha efectiva de estados; 325 personas en 328 matrículas.",
+      "H9": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I9)),'Revision_agregada'!I9,\"Pendiente\")",
+      "I10": "E: Hoja1 solo cubre ingresos 2026-T2 y carece de estado. 10246 acredita congelamiento, no población y estados del cierre.",
+      "H10": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I10)),'Revision_agregada'!I10,\"Pendiente\")",
+      "I11": "E: Base restringe período de ingreso 3. Dos estados difieren con 2026_3. 11998 no acredita fecha efectiva ni cierre completo.",
+      "H11": "=IF(AND($H$4=\"Todas\",ISNUMBER('Revision_agregada'!I11)),'Revision_agregada'!I11,\"Pendiente\")"
+    },
+    "Por_carrera": {
+      "E21": 0,
+      "E25": 1,
+      "E27": 0,
+      "E32": 0,
+      "E33": 0,
+      "E34": 1,
+      "A37": "C: conteos originales reproducidos; llaves ampliadas por puente explícito. Fuentes y método en manifiesto de esta revisión.",
+      "A38": "B/C: 18 de las 20 personas tienen CODCLI identificado; 2 siguen pendientes. Todas integran el denominador 1.150."
+    },
+    "Fuentes_y_alcance": {
+      "A25": "C: revisión ampliada en Revision_agregada y manifiesto adjunto; fuentes históricas y seguimiento anual conservados."
+    },
+    "Bases_por_confirmar": {
+      "C7": "T2_2025: 225 filas, todas ingreso y matrícula 2025-T2; no cubre toda la cohorte 2024.",
+      "C8": "T3_2025: 3.081 filas, varias cohortes. 325 personas de cohorte 2024 en 328 matrículas.",
+      "C9": "Hoja1: 528 filas de ingreso 2026-T2, sin estado. 10246: 14.204 filas de múltiples períodos.",
+      "C10": "Base: 557 filas, todas período de ingreso 3. 11998: 15.045 filas de múltiples períodos.",
+      "E9": "Fecha efectiva, población completa, historial de estados y regla intermedia. Congelamiento no acredita corte.",
+      "E10": "Cobertura completa, fecha efectiva y estados históricos; resolver 2 discrepancias Base / 2026_3.",
+      "A15": "C: candidatos revisados como fotografías. Presencias en respaldos, llaves y reglas se documentan en Revision_agregada."
+    }
+  },
+  "closures": [
+    {
+      "cohort": 2024,
+      "closure": "2025-T2",
+      "source": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sheet": "T2_2025",
+      "source_rows": 225,
+      "denominator": 558,
+      "comparable_document_keys": 558,
+      "without_comparable_document_key": 0,
+      "persons_found": 1,
+      "persons_with_observed_VIGENTE": 1,
+      "state_field": true,
+      "persons_not_found_with_key": 557,
+      "matched_rows_all_enrolments": 1,
+      "matched_people_multiple_rows": 0,
+      "rate": "Pendiente",
+      "accredited_VIGENTE_at_closure": "Pendiente",
+      "class": "B/C observed presence; E coverage/date/state not accredited"
+    },
+    {
+      "cohort": 2024,
+      "closure": "2025-T3",
+      "source": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sheet": "T3_2025",
+      "source_rows": 3081,
+      "denominator": 558,
+      "comparable_document_keys": 558,
+      "without_comparable_document_key": 0,
+      "persons_found": 325,
+      "persons_with_observed_VIGENTE": 317,
+      "state_field": true,
+      "persons_not_found_with_key": 233,
+      "matched_rows_all_enrolments": 328,
+      "matched_people_multiple_rows": 3,
+      "rate": "Pendiente",
+      "accredited_VIGENTE_at_closure": "Pendiente",
+      "class": "B/C observed presence; E coverage/date/state not accredited"
+    },
+    {
+      "cohort": 2025,
+      "closure": "2026-T2",
+      "source": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sheet": "Hoja1",
+      "source_rows": 528,
+      "denominator": 1150,
+      "comparable_document_keys": 1130,
+      "without_comparable_document_key": 20,
+      "persons_found": 2,
+      "persons_with_observed_VIGENTE": null,
+      "state_field": false,
+      "persons_not_found_with_key": 1128,
+      "matched_rows_all_enrolments": 2,
+      "matched_people_multiple_rows": 0,
+      "rate": "Pendiente",
+      "accredited_VIGENTE_at_closure": "Pendiente",
+      "class": "B/C observed presence; E coverage/date/state not accredited"
+    },
+    {
+      "cohort": 2025,
+      "closure": "2026-T3",
+      "source": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sheet": "Base",
+      "source_rows": 557,
+      "denominator": 1150,
+      "comparable_document_keys": 1130,
+      "without_comparable_document_key": 20,
+      "persons_found": 0,
+      "persons_with_observed_VIGENTE": 0,
+      "state_field": true,
+      "persons_not_found_with_key": 1130,
+      "matched_rows_all_enrolments": 0,
+      "matched_people_multiple_rows": 0,
+      "rate": "Pendiente",
+      "accredited_VIGENTE_at_closure": "Pendiente",
+      "class": "B/C observed presence; E coverage/date/state not accredited"
+    }
+  ],
+  "closure_notes": [
+    "E: T2_2025 solo cubre ingresos 2025-T2. Falta matrícula completa de cohorte 2024, fecha efectiva y estados al cierre.",
+    "E: T3_2025 contiene varias cohortes. Falta acreditar exhaustividad y fecha efectiva de estados; 325 personas en 328 matrículas.",
+    "E: Hoja1 solo cubre ingresos 2026-T2 y carece de estado. 10246 acredita congelamiento, no población y estados del cierre.",
+    "E: Base restringe período de ingreso 3. Dos estados difieren con 2026_3. 11998 no acredita fecha efectiva ni cierre completo."
+  ],
+  "careers": [
+    {
+      "career": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+      "people": 1,
+      "identified": 1,
+      "pending": 0
+    },
+    {
+      "career": "INGENIERIA EN INFORMATICA",
+      "people": 4,
+      "identified": 3,
+      "pending": 1
+    },
+    {
+      "career": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+      "people": 2,
+      "identified": 2,
+      "pending": 0
+    },
+    {
+      "career": "TECNICO EN ENFERMERIA",
+      "people": 9,
+      "identified": 9,
+      "pending": 0
+    },
+    {
+      "career": "TECNICO EN LOGISTICA",
+      "people": 1,
+      "identified": 1,
+      "pending": 0
+    },
+    {
+      "career": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "people": 3,
+      "identified": 2,
+      "pending": 1
+    }
+  ],
+  "identity_total_note": "19 CODCLI corresponden a 18 personas",
+  "identity_note": "D/B/C: las 20 ya integraban el denominador 1.150. Hay 17 personas con un CODCLI y una con dos. Los 18 identificados no aparecen en los dos listados parciales 2026; no se acredita deserción.",
+  "traces": [
+    {
+      "source": "10246 · julio",
+      "people": 14,
+      "enrolments": 15,
+      "active": 13,
+      "note": "B: 13 con alguna VIGENTE y una SUSPENDIDO. Congelamiento de julio; fecha efectiva del estado pendiente."
+    },
+    {
+      "source": "11998 · octubre",
+      "people": 14,
+      "enrolments": 15,
+      "active": 14,
+      "note": "B: las 14 con alguna VIGENTE; una además ELIMINADO. Mezcla matrículas 2025/2026; no acredita cierre."
+    },
+    {
+      "source": "12112 · octubre",
+      "people": 14,
+      "enrolments": 15,
+      "active": 14,
+      "note": "B: misma observación, con copia idéntica recuperada en OneDrive. La ruta previa de Escritorio ya no existe."
+    }
+  ],
+  "trace_note": "B/C/E: 14 llaves de matrícula comunes entre julio y octubre mantienen estado: 13 VIGENTE y 1 ELIMINADO. La persona SUSPENDIDO en julio aparece después con otra llave año/período; no se afirma cambio de la misma matrícula ni vigencia al cierre.",
+  "snapshots": [
+    {
+      "source": "DatosAlumnos 10246",
+      "document": 1130,
+      "bridge": 18,
+      "note": "B/C: fotografía de varias matrículas y años. La presencia no acredita continuidad al cierre T2."
+    },
+    {
+      "source": "DatosAlumnos 11998",
+      "document": 1130,
+      "bridge": 18,
+      "note": "B/C: fotografía que incluye matrícula 2027. La presencia no acredita continuidad al cierre T3."
+    }
+  ],
+  "rules": [
+    {
+      "label": "B/A · Interna IPSS y SIES",
+      "text": "El diccionario interno define matrícula IPSS t+1 aunque cambie carrera. SIES fija su propia cohorte/elegibilidad anual y referencia al 30 de abril. Ninguna definición examinada cierra automáticamente T2/T3. Fuentes: REVISION_REGLAS.json, R01–R03."
+    },
+    {
+      "label": "C · Excepción parcial implementada",
+      "text": "Caracterización excluye TITULADO en el período base (TITULADO_ANTES_SEGUIMIENTO). El componente longitudinal es opcional, desactivado por defecto. Selecciona una fila por persona: no satisface el contrato de todas las matrículas de esta revisión. R04/R06/R07."
+    },
+    {
+      "label": "C/E · Titulación durante seguimiento",
+      "text": "Con VIGENTE en base y TITULADO/EGRESADO en destino, ese código devuelve NO_RETENIDO y mantiene elegibilidad. No evalúa fecha de título. Este resultado técnico no demuestra deserción. Falta gobernar culminación fechada y su efecto en el denominador. R05/R11."
+    },
+    {
+      "label": "A/C · Duración, nivel y avance",
+      "text": "Duración formal depende de oferta/plan y unidad. NIV_ACA representa nivel curricular; el motor lo transforma y acota, sin declarar título. Tiempo transcurrido y duración cumplida no prueban avance real, egreso ni titulación. Se requieren asignaturas/créditos y eventos fechados. R09."
+    },
+    {
+      "label": "D/E · Alcance y propuesta",
+      "text": "Se conservan 558/1.150/222/124. Propuesta pendiente: registrar titulación acreditada como resultado separado, sin sumarla a retenidos o desertores. Falta decidir cohorte fija versus población aún expuesta, ventana y múltiples programas. No se crea categoría “no recurrido”. R10 y propuesta E."
+    }
+  ],
+  "pending": [
+    "E · 2025-T2: completar población de cohorte 2024 y renovaciones; certificar fecha y estados. 2025-T3: acreditar exhaustividad de T3_2025 y temporalidad de sus estados.",
+    "E · 2026-T2: acreditar cobertura y estados históricos de cohorte 2025. 2026-T3: incluir períodos de ingreso 1/2, fijar hoja autorizada y aclarar dos discrepancias de estado. Los timestamps de respaldo no resuelven estos requisitos.",
+    "E · Identidad: revisadas 64 fuentes adicionales, 60 comparables y 4 sin pareja CODCLI/RUT. Siguen pendientes una persona de Ingeniería en Informática y una de Técnico en Programación y Análisis de Sistemas; falta correspondencia institucional explícita.",
+    "E · Regla interna: decidir efecto de título antes/durante/después del corte, carrera de origen/otra carrera, rematrícula, egreso sin título y múltiples matrículas. Exigir título/egreso fechado y relación con programa; no descontar personas por duración teórica.",
+    "E · Validación futura: contrato versionado con responsable, población, corte, numerador y tratamiento de culminación. Pruebas sintéticas de fronteras y faltantes antes de aplicar; mantener independiente el consumidor SIES."
+  ],
+  "provenance": [
+    "Fuentes de cierres: rutas, hojas y hashes en Fuentes_y_alcance. Auditoría ampliada de extractores, hojas ocultas, filtros y discrepancias: REVISION_COBERTURA.json, adjunto en la misma carpeta.",
+    "Llaves: IPSS_Procesamiento.xlsx / 2025_carga!J,BU,BV y respaldos DatosAlumnos. Búsqueda ampliada, temporalidad, todas las matrículas y hashes: REVISION_LLAVES.json. Ningún identificador se exporta.",
+    "Reglas: procesos/caracterizacion/caracterizacion_retencion.py y pruebas Hito4B; diccionario Retencion_ipss_2022_2024_GRANULAR.xlsx; regla SIES 09-09-2026; Manual MU2026 p.31. Referencias precisas y hashes en REVISION_REGLAS.json.",
+    "C: fórmulas recalculadas y verificadas; tasas intermedias solo se habilitan con cierre acreditado y numerador numérico. QA completo y cambios autorizados en MANIFEST_REVISION.json. No se certificó comportamiento en la aplicación Microsoft Excel.",
+    "C/E: prueba existente de retención aislada aprobada y cinco casos sintéticos comprobados. La suite completa no pudo importarse por dependencia unidecode ausente; no se instaló ni alteró el entorno."
+  ],
+  "expected": {
+    "Resumen": {
+      "C8": 558,
+      "C9": 558,
+      "C10": 1150,
+      "C11": 1150,
+      "D8": 1,
+      "D9": 325,
+      "D10": 2,
+      "D11": 0,
+      "E8": 1,
+      "E9": 317,
+      "E10": "Sin estado",
+      "E11": 0,
+      "F8": 0,
+      "F9": 0,
+      "F10": 2,
+      "F11": 2,
+      "G8": 557,
+      "G9": 233,
+      "G10": 1146,
+      "G11": 1148,
+      "H8": "Pendiente",
+      "H9": "Pendiente",
+      "H10": "Pendiente",
+      "H11": "Pendiente",
+      "B21": 222,
+      "B22": 124,
+      "D21": 74,
+      "D22": 48,
+      "G21": 0.3333333333333333,
+      "G22": 0.3870967741935484
+    },
+    "Revision_agregada": {
+      "D25": 20,
+      "E25": 18,
+      "F25": 2,
+      "F32": 1,
+      "F33": 0,
+      "F34": 0,
+      "F41": 1148,
+      "F42": 1148,
+      "D44": 0,
+      "E44": 0,
+      "F44": 0,
+      "G44": 0,
+      "I8": "Pendiente",
+      "I9": "Pendiente",
+      "I10": "Pendiente",
+      "I11": "Pendiente"
+    },
+    "Escenario_80": {
+      "B8": 558,
+      "B9": 1150,
+      "E8": 560,
+      "E9": 1123
+    }
+  },
+  "master_note": "B/C/E: en 58 respaldos Base Maestra se observan 13 de las 14 personas con alguna VIGENTE hasta el nominal 08-09 y 14 desde 09-09-2026, incluido 02-10. Son fechas nominales de extracción; no establecen el evento ni certifican cierre."
+}

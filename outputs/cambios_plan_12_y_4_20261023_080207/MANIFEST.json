@@ -1,0 +1,258 @@
+{
+  "fecha": "2026-10-23T08:22:57.751566-03:00",
+  "proceso": "Conciliación histórica UMAS–SIES; puente retención IPSS162",
+  "alcance": "12 cambios anuales y cuatro pistas de fecha",
+  "objetivo": "Localizar cronología de planes sin alterar bases ni denominadores",
+  "resultado": {
+    "foco_personas": 16,
+    "cambios_anuales": 12,
+    "pistas_fecha": 4,
+    "personas_calificaciones": 14,
+    "personas_calificaciones_cambio": 10,
+    "personas_calificaciones_fecha": 4,
+    "filas_calificaciones": 524,
+    "filas_DA_recuperadas": 24,
+    "filas_promedios_adicionales": 2189,
+    "pistas_plan_periodo_corrobora": 3,
+    "pistas_plan_periodo_no_corrobora": 1,
+    "mismo_codcli_plan_ambos_anos": 7,
+    "contrastes_raw_derivado": 123,
+    "discordancias_raw_derivado": 0,
+    "fechas_efectivas_cambio_confirmadas": 0,
+    "codigos_nuevos_adoptados": 0,
+    "denominadores": [
+      5901,
+      6622,
+      24774
+    ],
+    "pendientes_documentales_antecedente": 1838,
+    "pendientes_internos_antecedente": 1751,
+    "alcance_indicadores": "Se conservan; no se recalculan ni reducen por esta corroboración parcial",
+    "clasificacion": "B/C observaciones/cálculos; E fecha efectiva y causas no acreditadas"
+  },
+  "qa": {
+    "estado": "OK_CON_ADVERTENCIAS",
+    "foco_16_sin_duplicados": true,
+    "particion_12_y_4": true,
+    "filas_recuperadas": 548,
+    "duplicados_fuente_hoja_fila": 0,
+    "rechazos_RUT_CODCLI": 0,
+    "codcli_unico_en_segmentos_previos": true,
+    "tres_pistas_corrobora": true,
+    "raw_derivado": {
+      "comparaciones": 123,
+      "discordancias": 0
+    },
+    "fuentes_hash_verificadas": 17,
+    "denominadores_conservados": [
+      5901,
+      6622,
+      24774
+    ],
+    "archivos_previos_no_modificados": true,
+    "codigo_adoptado_sin_cambios": true,
+    "privado_fuera_git": true,
+    "sin_identificadores_en_salida_publica": true,
+    "ramas_head_conservados": true,
+    "advertencias": [
+      "Fecha efectiva de cambio no localizada: no cierre de asignación por período",
+      "Una fuente adicional T3_2024 no releída por TimeoutError",
+      "Calificaciones repetidas entre reportes no son personas ni evidencias independientes",
+      "Código anual no prueba aceptación SIES ni vigencia del plan en trimestre"
+    ]
+  },
+  "fuentes": [
+    {
+      "archivo": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/CAMBIOS_VERSION_ANUAL.json",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/CAMBIOS_VERSION_ANUAL.json",
+      "sha256": "56a4e5dd72168dc35128eea76682613729db8545d86a7b45b090e85fb2c26dfa"
+    },
+    {
+      "archivo": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/CUATRO_PISTAS_FECHA.json",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/CUATRO_PISTAS_FECHA.json",
+      "sha256": "1ed9d9dce0d2047300a2062075c016f7803c08ec372f203c6d1021b61d0285b4"
+    },
+    {
+      "archivo": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/OBSERVACIONES_REVISADAS.json",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/OBSERVACIONES_REVISADAS.json",
+      "sha256": "0da0e3d6a5471809e8c4cdd2b3ad3156237847afa4022fc5171b719ca8dbd96e"
+    },
+    {
+      "archivo": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/SEGMENTOS_EXPEDIENTE_PLAN.json",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/trayectorias_374_20261023_072401/SEGMENTOS_EXPEDIENTE_PLAN.json",
+      "sha256": "9689253ed45fff26521ae85117edfcbcd64c0072bca750028dcf4a6753bcebd1"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/MATRÍCULA UNIFICADA/DATOSDEALUMNOS ORIGEN DE LOS DATOS2025.xlsx",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/MATRÍCULA UNIFICADA/DATOSDEALUMNOS ORIGEN DE LOS DATOS2025.xlsx",
+      "sha256": "63c5cbc05494e4ac36b97041656ded478cf8deab2f562223e851d1cb2a2ef2f1"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/PROMEDIOSDEALUMNOS_3233.xlsx",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/PROMEDIOSDEALUMNOS_3233.xlsx",
+      "sha256": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e"
+    },
+    {
+      "archivo": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "lectura_verificada": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "sha256": "64d955975c6b613a205a6d98a1d5589b418d5e4c463362a4b7e212b4722e9c09"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2022/2022.csv",
+      "sha256": "08ee0b7973f4a2705b388c73413f2ce5402b849f8c3c09c3843d5c2f8c060a4f"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "lectura_verificada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/Cumplimiento Ingreso de Notas.xlsx",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/LECTURA_Cumplimiento Ingreso de Notas.xlsx",
+      "sha256": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80"
+    },
+    {
+      "archivo": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/LECTURA_Cumplimiento Ingreso de Notas.xlsx",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/LECTURA_Cumplimiento Ingreso de Notas.xlsx",
+      "sha256": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/LECTURA_CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "sha256": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65"
+    },
+    {
+      "archivo": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/LECTURA_CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "lectura_verificada": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207/LECTURA_CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "sha256": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65"
+    }
+  ],
+  "fuentes_lectura_bloqueada": [
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/Cumplimiento Ingreso de Notas.xlsx",
+      "hoja": "Hoja1",
+      "error": "[Errno 60] Operation timed out"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "hoja": "MASTER INGRESO 2024",
+      "error": "[Errno 60] Operation timed out"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+      "hoja": "DATOS CRUDOS U+ 19-11-2024",
+      "error": "[Errno 60] Operation timed out"
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+      "hoja": "ERRORES",
+      "error": "[Errno 60] Operation timed out"
+    }
+  ],
+  "nota_errores": "Registro de intentos iniciales: MASTER y Cumplimiento Ingreso de Notas recuperados; PRUEBA T3_2024 sigue pendiente",
+  "scripts": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/investigar_cambios_plan_12_y_4_20261023.py": "df33a95f6814d03951431ffbe6e17b50a06dc0f8bf1655a91c34cde84514b8f7",
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/recuperar_evidencia_planes_12_y_4_20261023.py": "5093f8803b707280a9f6c0c18a40c37d871ec5e176875294fd6d930110cd5968",
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/cerrar_revision_planes_12_y_4_20261023.py": "76b26f5edd044f39c62abd521b1ffd2f212a4d16cde75802bc89a9f8af74b021"
+  },
+  "reproduccion": [
+    "scripts/investigar_cambios_plan_12_y_4_20261023.py CONFIG_REPRODUCCION.json",
+    "scripts/recuperar_evidencia_planes_12_y_4_20261023.py CONFIG_REPRODUCCION.json",
+    "scripts/cerrar_revision_planes_12_y_4_20261023.py CONFIG_REPRODUCCION.json"
+  ],
+  "privado": "/Users/alexi/.local/share/ipss/cambios_plan_12_y_4_20261023_080207",
+  "salidas_privadas_hashes": {
+    "LECTURA_CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65",
+    "CRONOLOGIA_PLANES.csv": "95423f7611625b0f196f5ee5e04392b7310bd5212fbcc92c4a9b558f4fe7a9d0",
+    "PERFIL_PREPARACION_MU2025.json": "af932a78cd5e52a7a1cb5b94c0deb562231d4343e4ee5bdf1b2d57bfc7dac561",
+    "INVENTARIO_ONEDRIVE_RUTAS.txt": "460fd03f94ff849d46d28f1bbd3c43320ce388e78b0a3ed4c3527a92775f8cf9",
+    "FOCO_PRIVADO.json": "7f198a48bbad687fdc7bce6684ae605b853a65d38704ca168ed79fa6ae2773f4",
+    "CRONOLOGIA_PLANES.json": "f97149384bb540b53734c1f632b333e2dd999285ab99a358ba2bed1eb9ef36d4",
+    "INVENTARIO_INICIAL_RUTAS.txt": "a8fc39f6f322a1c2dda613f8c7fb66f052753885a20df343d611c55680ce3b9a",
+    "MU_PRIMARIA_PRIVADA.json": "d3c81d2adadfcb5f53747022128f951439b43964b11610b5f0ab3dc64ff71354",
+    "PERFIL_FUENTES_ADICIONALES.json": "792fa57dbe4401f05764b8c25ab0a141a3d7ab3407f64c9441361ccf1aaf555e",
+    "REVISION_16_CASOS_FINAL.json": "e9113ffbb94a565f9e7a9da31a5f87e9a6d320b4b87112520229e5daf7c60028",
+    "REVISION_16_CASOS.json": "0efcad449abe159fbe8cfd35f9eba28c421a46b11dcf0751ade635bb3e28106d",
+    "REVISION_16_CASOS_AMPLIADA.json": "ed199af5c3735c1f8d21a06beb29f85b294f06346ca24e1b625925bf330d6ecf",
+    "LECTURA_Cumplimiento Ingreso de Notas.xlsx": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80",
+    "RECONOCIMIENTOS_CUATRO.json": "339913540bd8f620c650fee66a439173d1df9381f92edccf1382b73b9a894e20",
+    "FILAS_RECUPERADAS_CODCLI.json": "918beabdaace7de17ed6b10679f1f598e0b1b72869e6dad478fa829685cada88",
+    "RECHAZOS_IDENTIDAD.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "FILAS_ADICIONALES_PRIVADAS.json": "ce39b7d6e626585dbdb9f9c76c59c7a45fb51801538dc016ddd4ae9809406ea5",
+    "RESUMEN_16_PERSONAS.csv": "13606be52795d3551c8ab975673aa34680cb4334efc0bf3c64c5102e5db8f33c"
+  },
+  "salidas_agregadas_hashes": {
+    "BITACORA.json": "a25e2d5533fe563e691d4178dd83ddda143e187332921bc4cd88c059c2166fdd",
+    "REVISION_CAMPOS_EVENTO.json": "8b6dada72c9bbd7783247f13a45b3377f06b18234324a60f86fa17aca51228d2",
+    "INVENTARIO_RECUPERACION.json": "652ef1cfb8e9c0eb19449c66578000d652e64b7a8cdd753cddd9128691f38c9e",
+    "CONFIG_REPRODUCCION.json": "0497c2b34bf1bebc5c0c9b74e6e2d978296d109273bbaaded6b0d2ce39d0f9aa",
+    "RESULTADOS_FINAL.json": "a2a3ddcd5708a78316c0c767cc3e9ef2b41ce0b195b82d387229dae9e4305dce",
+    "FUENTES_HASHES.json": "8318e91b6f1d5faa911d58c33f50d452c9e45006598b426a73a2a65243e3d384",
+    "QA.json": "4f9cf2635124338598cd8f289792a209ce2a31a29367c8a067e8f8eaa3c5ddac",
+    "CHECKPOINT.md": "86f47d6371bc85b6f90dd1ca4a2eea7b1ac4df0a6712b8d3a2c6732e124a1f00",
+    "FUENTES_VERIFICADAS_FINAL.json": "6be29d63c6cfc34c6337a7de0a76a5af09f8a08329f00df53ccc598f6d09492d",
+    "GIT_DESPUES.json": "a626671c39106ec7f2bf06c688b788a423e801e3c7fb5ed1f8bb518a882ca849",
+    "PISTAS_FECHA_4.csv": "75fb6368015db3675bb37569124085b821db71bf016fe2e638e2c6ac7ae553f1",
+    "HALLAZGOS_RECUPERACION.json": "eebc4d84536362d9883274100b69bfc9a2a2847c2458c625eaf3a4a194ffe6c6",
+    "INVENTARIO_ADICIONAL.json": "9d637fdb65103bb21a49df2035976e4c3f649af4668d77145af52807d0f9fc2a",
+    "ERRORES_LECTURA.json": "7f5693a46b9c561342fb998fcc0c0901690ef09c3a79d799b875253d327a530f",
+    "INFORME_12_Y_4.md": "cc81a68b6e50c2677ec5ddf9451ce6bb895aadbe314292c65a22dd5d517a8bb6",
+    "RESULTADOS_PRIMERA_LECTURA.json": "e8633fc68e25b473cbf6cc63b64aa8fa0dd68cf5524b9fedd16bef90badb411e",
+    "GIT_ANTES.json": "ce0318a5a6fc51dda2e7ca2689f66313dc6e087ef69c5567793dd6442c73b49f",
+    "RESULTADOS.json": "a2a3ddcd5708a78316c0c767cc3e9ef2b41ce0b195b82d387229dae9e4305dce",
+    "CAMBIOS_ANUALES_12.csv": "64e4ddea111b8cfd33b4cd6751b21258fadd017614a1bc4e147e6afb1c173575"
+  },
+  "bases_modificadas": false,
+  "canon_modificado": false,
+  "commit": false,
+  "push": false,
+  "git_antes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular": {
+      "rama": "feature/ire-2026",
+      "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN": {
+      "rama": "main",
+      "head": "aba337784ccde0537fc21b2977b351170ed335e8"
+    },
+    "/Users/alexi/Documents/GitHub/IPSS_Procesos_SIES": {
+      "rama": "feat/pnm2007-2026-b5-dax-catalog-v1",
+      "head": "4ca28d4d36b5ee9fe242868ec4bad45aaf2eb677"
+    }
+  },
+  "git_despues": {
+    "/Users/alexi/Documents/GitHub/avance_curricular": {
+      "rama": "feature/ire-2026",
+      "head": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN": {
+      "rama": "main",
+      "head": "aba337784ccde0537fc21b2977b351170ed335e8"
+    },
+    "/Users/alexi/Documents/GitHub/IPSS_Procesos_SIES": {
+      "rama": "feat/pnm2007-2026-b5-dax-catalog-v1",
+      "head": "4ca28d4d36b5ee9fe242868ec4bad45aaf2eb677"
+    }
+  }
+}

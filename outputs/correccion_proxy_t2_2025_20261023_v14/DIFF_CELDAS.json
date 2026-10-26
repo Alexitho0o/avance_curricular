@@ -1,0 +1,542 @@
+[
+  {
+    "hoja": "18_Foto_Intertrimestral",
+    "celda": "E8",
+    "antes": 600,
+    "despues": "='26_Avance_Curricular_Resumen'!E1852"
+  },
+  {
+    "hoja": "18_Foto_Intertrimestral",
+    "celda": "F8",
+    "antes": 0.521739130434783,
+    "despues": "=IF(D8=0,\"\",E8/D8)"
+  },
+  {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "celda": "D1852",
+    "antes": 680,
+    "despues": 694
+  },
+  {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "celda": "E1852",
+    "antes": 600,
+    "despues": "=SUMIFS('53_Codigos_T1_Confirmados'!$G$6:$G$223,'53_Codigos_T1_Confirmados'!$A$6:$A$223,2025,'53_Codigos_T1_Confirmados'!$C$6:$C$223,2)"
+  },
+  {
+    "hoja": "26_Avance_Curricular_Resumen",
+    "celda": "H1852",
+    "antes": "Proxy de actividad/estado; no es foto de cierre SIES",
+    "despues": "C · Incluye R/P; proxy, no foto de cierre."
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "C11",
+    "antes": 600,
+    "despues": 611
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "D11",
+    "antes": 600,
+    "despues": "='26_Avance_Curricular_Resumen'!E1852"
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "E11",
+    "antes": 600,
+    "despues": "=D11"
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "F11",
+    "antes": "OK",
+    "despues": "=IF(C11=E11,\"OK\",\"FALLIDO\")"
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "H11",
+    "antes": "Personas únicas con VIGENTE",
+    "despues": "C · RUT+DV y puente P: 600 R + 11 P."
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "C12",
+    "antes": 0.5217391304,
+    "despues": 0.5313043478260869
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "D12",
+    "antes": 0.521739130434783,
+    "despues": "='26_Avance_Curricular_Resumen'!F1852"
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "E12",
+    "antes": 0.521739130434783,
+    "despues": "=D12"
+  },
+  {
+    "hoja": "28_QA_Matematica",
+    "celda": "F12",
+    "antes": "OK",
+    "despues": "=IF(ROUND(C12,10)=ROUND(E12,10),\"OK\",\"FALLIDO\")"
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "A1",
+    "antes": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se reutiliza el código T1 documentado. Bases, población, numeradores y denominadores existentes se conservan. Este resumen separa seguimiento académico de revisión del código SIES.",
+    "despues": "52 · Seguimiento de T1 en T2 y T3 hasta 2026\nC/D · Se conserva el código T1, las bases y los denominadores. V14 corrige el proxy T2-2025 por identidad completa, incluidos documentos P. El seguimiento académico se separa de la revisión del código SIES."
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "I8",
+    "antes": "E · Desglose por código pendiente; total conservado de hoja 18 E8",
+    "despues": "B/C · 611 por cruce R/P; desglose conciliado con hoja 53"
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "A14",
+    "antes": "E · El proxy usa actividad y estado académico del extracto PROMEDIOS; no acredita vigencia histórica al cierre. T2-2025 conserva 600/1.150: la reproducción con documentos R y P obtiene 611. Falta justificar los 11 de diferencia antes de desglosar ese total.",
+    "despues": "C · T2-2025: 611/1.150; incluye 11 documentos P verificados. E · No se recuperó el cálculo original de 600. El estado en PROMEDIOS no acredita vigencia de matrícula al cierre."
+  },
+  {
+    "hoja": "52_Codigos_SIES_Revision",
+    "celda": "A32",
+    "antes": "C · Esta edición consulta el diccionario v7 y limita la revisión a los períodos 2 y 3 del calendario indicado. V12 revisaba el mismo año de origen y todos los períodos: sus pendientes no son directamente comparables. Las hojas 1–51 y sus 13 gráficos se conservan exactamente.",
+    "despues": "C · Se conserva el diccionario v7 y la revisión de los períodos 2 y 3. V14 corrige únicamente el proxy T2-2025 y sus referencias en hojas 18, 26, 28, 52 y 53. Las otras 49 hojas, los denominadores y los 13 gráficos se conservan."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G54",
+    "antes": "Pendiente",
+    "despues": 3
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J54",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G56",
+    "antes": "Pendiente",
+    "despues": 8
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J56",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G58",
+    "antes": "Pendiente",
+    "despues": 3
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J58",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G60",
+    "antes": "Pendiente",
+    "despues": 5
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J60",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G62",
+    "antes": "Pendiente",
+    "despues": 53
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J62",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G64",
+    "antes": "Pendiente",
+    "despues": 1
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J64",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G66",
+    "antes": "Pendiente",
+    "despues": 6
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J66",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G68",
+    "antes": "Pendiente",
+    "despues": 37
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J68",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G70",
+    "antes": "Pendiente",
+    "despues": 16
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J70",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G72",
+    "antes": "Pendiente",
+    "despues": 3
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J72",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G74",
+    "antes": "Pendiente",
+    "despues": 40
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J74",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G76",
+    "antes": "Pendiente",
+    "despues": 6
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J76",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G78",
+    "antes": "Pendiente",
+    "despues": 5
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J78",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G80",
+    "antes": "Pendiente",
+    "despues": 36
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J80",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G82",
+    "antes": "Pendiente",
+    "despues": 9
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J82",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G84",
+    "antes": "Pendiente",
+    "despues": 3
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J84",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G86",
+    "antes": "Pendiente",
+    "despues": 59
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J86",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G88",
+    "antes": "Pendiente",
+    "despues": 1
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J88",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G90",
+    "antes": "Pendiente",
+    "despues": 2
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J90",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G92",
+    "antes": "Pendiente",
+    "despues": 20
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J92",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G94",
+    "antes": "Pendiente",
+    "despues": 8
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J94",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G96",
+    "antes": "Pendiente",
+    "despues": 36
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J96",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G98",
+    "antes": "Pendiente",
+    "despues": 3
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J98",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G100",
+    "antes": "Pendiente",
+    "despues": 32
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J100",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G102",
+    "antes": "Pendiente",
+    "despues": 6
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J102",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G104",
+    "antes": "Pendiente",
+    "despues": 26
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J104",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G106",
+    "antes": "Pendiente",
+    "despues": 6
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J106",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G108",
+    "antes": "Pendiente",
+    "despues": 38
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J108",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G110",
+    "antes": "Pendiente",
+    "despues": 23
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J110",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G112",
+    "antes": "Pendiente",
+    "despues": 9
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J112",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G114",
+    "antes": "Pendiente",
+    "despues": 20
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J114",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G116",
+    "antes": "Pendiente",
+    "despues": 21
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J116",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G118",
+    "antes": "Pendiente",
+    "despues": 20
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J118",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G120",
+    "antes": "Pendiente",
+    "despues": 11
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J120",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G122",
+    "antes": "Pendiente",
+    "despues": 20
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J122",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "G124",
+    "antes": "Pendiente",
+    "despues": 16
+  },
+  {
+    "hoja": "53_Codigos_T1_Confirmados",
+    "celda": "J124",
+    "antes": "Pendiente de linaje del proxy",
+    "despues": "C · Actividad 2025-T2 y estado VIGENTE; R/P. No foto de cierre."
+  }
+]

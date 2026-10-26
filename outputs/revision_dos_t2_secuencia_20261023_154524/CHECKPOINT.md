@@ -1,0 +1,1 @@
+D/C: v7 conserva INF35-03 T3-2024 J1V1 interno. B/C: secuencia T2 verificada en seis fechas, 42 filas / siete cursos-sección. E: dos T2 siguen pendientes; no hay cambio ordenable de sección/plan ni jornada administrativa atribuida. Se requieren evidencias de asignación por período o una decisión explícita sobre un escenario condicionado; no extrapolar aprobaciones anteriores.

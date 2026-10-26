@@ -1,0 +1,1 @@
+D/C: v6 activa; dos cierres internos aprobados. E: atribución documental pendiente. Continuar INF35-03 T2/T3-2024 e INF35-04 T2-2024; seis homologaciones fuera de este foco. Sin cambios de bases/denominadores/Excel ni commit/push.

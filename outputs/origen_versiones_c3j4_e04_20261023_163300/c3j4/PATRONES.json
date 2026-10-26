@@ -1,0 +1,196 @@
+{
+  "clasificacion": "B/C; patrones observados, no regla causal",
+  "fuentes": "rutas/hash en regla_c3j4_primary.json",
+  "cardinalidad": {
+    "filas_2021": 139,
+    "personas_2021": 139,
+    "filas_2022": 158,
+    "personas_2022": 158,
+    "comunes": 75
+  },
+  "transiciones": [
+    {
+      "2021": "I162S2C3J4V1",
+      "2022": "I162S2C3J4V2",
+      "personas": 58,
+      "campos": {
+        "MM_ANIO_ACTUAL": {
+          "2021 → 2021": 50,
+          "2020 → 2020": 8
+        },
+        "MM_SEM_ACTUAL": {
+          "1 → 1": 50,
+          "2 → 2": 8
+        },
+        "MM_ANIO_ORIGEN": {
+          "2021 → 2021": 39,
+          "2019 → 2021": 4,
+          "2015 → 2021": 1,
+          "2020 → 2020": 8,
+          "2004 → 2021": 1,
+          "2009 → 2021": 1,
+          "2017 → 2021": 2,
+          "2010 → 2021": 1,
+          "2014 → 2021": 1
+        },
+        "MM_SEM_ORIGEN": {
+          "1 → 1": 50,
+          "2 → 2": 8
+        },
+        "MC_TIPO_PLAN_CARR": {
+          "Plan Regular → Plan Regular": 58
+        },
+        "MC_CARAC_PLAN_ESP": {
+          "NO APLICA → NO APLICA": 58
+        },
+        "MC_DUR_ESTUDIO_CARR": {
+          "8 → 8": 58
+        },
+        "MC_DUR_PROCESO_TIT": {
+          "0 → 0": 58
+        },
+        "MC_DUR_TOTAL_CARR": {
+          "8 → 8": 58
+        }
+      }
+    },
+    {
+      "2021": "I162S2C3J4V1",
+      "2022": "I162S2C3J4V1",
+      "personas": 2,
+      "campos": {
+        "MM_ANIO_ACTUAL": {
+          "2021 → 2021": 2
+        },
+        "MM_SEM_ACTUAL": {
+          "1 → 1": 2
+        },
+        "MM_ANIO_ORIGEN": {
+          "2021 → 2021": 2
+        },
+        "MM_SEM_ORIGEN": {
+          "1 → 1": 2
+        },
+        "MC_TIPO_PLAN_CARR": {
+          "Plan Regular → Plan Regular": 2
+        },
+        "MC_CARAC_PLAN_ESP": {
+          "NO APLICA → NO APLICA": 2
+        },
+        "MC_DUR_ESTUDIO_CARR": {
+          "8 → 8": 2
+        },
+        "MC_DUR_PROCESO_TIT": {
+          "0 → 0": 2
+        },
+        "MC_DUR_TOTAL_CARR": {
+          "8 → 8": 2
+        }
+      }
+    },
+    {
+      "2021": "I162S2C3J4V2",
+      "2022": "I162S2C3J4V2",
+      "personas": 15,
+      "campos": {
+        "MM_ANIO_ACTUAL": {
+          "2020 → 2020": 9,
+          "2019 → 2014": 1,
+          "2019 → 2019": 5
+        },
+        "MM_SEM_ACTUAL": {
+          "1 → 1": 15
+        },
+        "MM_ANIO_ORIGEN": {
+          "2020 → 2020": 9,
+          "2019 → 2014": 1,
+          "2019 → 2019": 5
+        },
+        "MM_SEM_ORIGEN": {
+          "1 → 1": 15
+        },
+        "MC_TIPO_PLAN_CARR": {
+          "Plan Regular → Plan Regular": 15
+        },
+        "MC_CARAC_PLAN_ESP": {
+          "NO APLICA → NO APLICA": 15
+        },
+        "MC_DUR_ESTUDIO_CARR": {
+          "8 → 8": 15
+        },
+        "MC_DUR_PROCESO_TIT": {
+          "0 → 0": 15
+        },
+        "MC_DUR_TOTAL_CARR": {
+          "8 → 8": 15
+        }
+      }
+    }
+  ],
+  "paquetes_fuentes": [
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/2022.xlsx",
+      "core": {
+        "creator": "Carlos Alberto Aravena Smith",
+        "lastModifiedBy": "Carlos Aravena Smith",
+        "created": "2024-04-05T12:10:09Z",
+        "modified": "2024-04-05T12:10:09Z"
+      },
+      "connections": []
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
+      "core": {
+        "creator": "Rossana del Carmen Venegas Loyola",
+        "lastModifiedBy": "ALEXI MARCELO BURGOS FLORES",
+        "created": "2023-08-04T15:42:50Z",
+        "modified": "2026-01-06T14:54:12Z"
+      },
+      "connections": []
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/2022 - 1098/MAT_IP_CIISA_2022.xlsx",
+      "core": {
+        "creator": "Rossana del Carmen Venegas Loyola",
+        "lastModifiedBy": "Rossana del Carmen Venegas Loyola",
+        "created": "2023-08-04T15:43:43Z",
+        "modified": "2023-08-08T17:57:16Z"
+      },
+      "connections": []
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.5 Otros/Matrícula 1er y 2do semestre/MAT_IP_CIISA_2021_1er y2do semestre.xlsx",
+      "core": {
+        "title": null,
+        "subject": null,
+        "creator": "Rossana del Carmen Venegas Loyola",
+        "keywords": null,
+        "description": null,
+        "lastModifiedBy": "Carlos Aravena Smith",
+        "revision": null,
+        "created": "2023-08-04T15:42:50Z",
+        "modified": "2024-08-27T04:22:32Z",
+        "category": null,
+        "contentStatus": null
+      },
+      "connections": [
+        "xl/externalLinks/externalLink1.xml",
+        "xl/externalLinks/_rels/externalLink1.xml.rels",
+        "xl/externalLinks/_rels/externalLink2.xml.rels",
+        "xl/externalLinks/_rels/externalLink3.xml.rels",
+        "xl/externalLinks/externalLink2.xml",
+        "xl/externalLinks/externalLink3.xml"
+      ]
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.5 Otros/Matrícula 1er y 2do semestre/MAT_IP_CIISA_2022_1ro y 2do semestre.xlsx",
+      "core": {
+        "creator": "Rossana del Carmen Venegas Loyola",
+        "lastModifiedBy": "Carlos Aravena Smith",
+        "created": "2023-08-04T15:43:43Z",
+        "modified": "2024-08-27T04:31:16Z"
+      },
+      "connections": []
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "clasificacion": "B fuentes; C aplicación y controles; D decisiones internas previas conservadas; E pendientes explícitos",
+  "origen_excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+  "fuentes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+    "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0",
+    "/Users/alexi/.local/share/ipss/destinos_calendario_v7_20261023/CONTEXTOS_POR_ORIGEN_PERIODO.json": "82a12e4dbbd9d3ea751f2601d6b4a2f4ffe6485cb7c1f53268015169dba585ca",
+    "/Users/alexi/.local/share/ipss/destinos_calendario_v7_20261023/RANURAS_POR_ORIGEN_PERIODO.json": "2b6c4772818695af0d7473c9ed3998ebad6aba5c3f62fe7cce6559e4bab2f094",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8",
+    "/Users/alexi/.local/share/ipss/cierre_inf35_03_t3_20261023_154224/DICCIONARIO_SIES.sqlite": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e",
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+    "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+  },
+  "diccionario": "v7_20261023_inf35_03_t3",
+  "nuevos_cierres": 0,
+  "alcance": "Código T1 documentado; 2024 observado en 2025 y 2025/2026 en el mismo año; solo períodos nativos 2 y 3. No equiparar automáticamente actividad a cierre.",
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "pendientes": [
+    "2024 se sigue en2025-2/3 por alcance explícito de hoja26; no cambiarlo a2024.",
+    "Proxy de actividad usa estado académico del extracto; no acredita vigencia de matrícula al cierre.",
+    "Coincidencia de cifras no demuestra que el constructor original usó idéntico código.",
+    "RUT corporal para proxy es implementación de reproducción; no se usa para adjudicar identidad documental SIES.",
+    "T3-2026 conserva denominador de tasa1467 y población original1471; cuatro casos quedan fuera por fórmula heredada R.",
+    "No usa versión SIES de destino como filtro de continuidad; código de clasificación es siempre T1.",
+    "T2-2025 queda con total600 visible y desglose Pendiente, no cero."
+  ],
+  "resultado": {
+    "estado": "OK_CON_PENDIENTES_E",
+    "hojas_originales_conservadas_bytes": 51,
+    "graficos_conservados_bytes": 13,
+    "tablas_previas_conservadas_bytes": 33,
+    "tablas_actualizadas_validas": 2,
+    "formulas_recalculadas_y_contrastadas": 302,
+    "controles_independientes": 308,
+    "errores_calculo_hojas_actualizadas": [],
+    "partes_modificadas": [
+      "xl/styles.xml",
+      "xl/worksheets/sheet52.xml",
+      "xl/worksheets/sheet53.xml",
+      "xl/tables/table34.xml",
+      "xl/worksheets/_rels/sheet53.xml.rels",
+      "xl/worksheets/sheet54.xml",
+      "xl/tables/table35.xml",
+      "xl/worksheets/_rels/sheet54.xml.rels"
+    ],
+    "fuentes_sin_cambio": true,
+    "sin_identificadores_en_hojas_actualizadas": true,
+    "denominadores_originales": [
+      558,
+      1150,
+      1471
+    ],
+    "denominador_heredado_T3_2026": 1467,
+    "nuevos_cierres": 0,
+    "limites": [
+      "Recálculo con Artifact Tool; no se validó apertura en Excel nativo.",
+      "T2-2025 conserva600/1150; desglose pendiente frente a reproducción611.",
+      "No certifica las tasas proxy como vigencia histórica al cierre.",
+      "104 contextos pendientes no equivalen a104 personas ni a deserción."
+    ],
+    "git_antes": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "git_despues": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "commit": false,
+    "push": false,
+    "archivo": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/seguimiento_t1_hasta_2026_20261023_v13/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V13.xlsx",
+    "sha256": "c4f506adcf16e9ae2bbf072d21be5033e30ee6ee81eb5bc87171a73867cc164b",
+    "escritorio": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V13.xlsx",
+    "sha256_escritorio": "c4f506adcf16e9ae2bbf072d21be5033e30ee6ee81eb5bc87171a73867cc164b"
+  },
+  "artefactos_agregados": {
+    "INDICADORES_AGREGADOS.json": "8e20b7f3a31d9ae9e41e19e390193bcba5352105021e0dc9e99f1da474662a49",
+    "FORMULAS.json": "6d94c6d3a258dda588eaf6c3f48ceadee85053d10f01dcc82d4151543d472025",
+    "QA_EXCEL.json": "c43816ab06257729b49d8e496b8dbc27ffd1656c445cdea7d119baedebcf8bff",
+    "CONSULTA_CALENDARIO_AGREGADA.json": "b887bd8d8202922b5e2b708134c657c9c0c9afdaa0ec05daeb29dcd8991e6dd3",
+    "QA_PREVIO.json": "79782e254b612730e50eb16840d4e03e47d30c721eb2da9063155fbf8e95c8be",
+    "TABLAS_SEGUIMIENTO.json": "b7aa2e7b60911a4fb8701afe110f5b372d73bdac8d80b9e27792c13bf1019b11",
+    "FOCO_MULTIVERSION.json": "9cbf3710cf068082b0af3af73c72aaf4ecc153937d41001d59822c50685d1df8"
+  },
+  "scripts": {
+    "scripts/consultar_destinos_calendario_v13_20261023.py": "8e137143194bd7ecff14ed264265319c63afb0a2baac01b7645db85dec8cedd1",
+    "scripts/construir_seguimiento_t1_v13_20261023.mjs": "f8237be140c33988ba2ca4c45d0e06054733f3f70155000001194c8c27a3913d",
+    "scripts/v13_20261023_reconstruir_proxy_t1.py": "a64ce536747a18318453a89e26866c7fcb7b59e5fc14ea597de91476f8a7e92a",
+    "scripts/preparar_seguimiento_t1_v13_20261023.py": "2af38643c24bec93ff3894f3f9eb973877778c930057926f510c90f0fdeddc2d",
+    "scripts/v13_20261023_seguimiento_t1_agregado.py": "7d5565c25e8085502d1e26bff98ffb3d0a1ea09d990c2f4ca0cc0b3cb3a0e90f",
+    "scripts/ensamblar_seguimiento_t1_v13_20261023.py": "aff4541a4b1f4af3a9035fb2552fd7a6dcf96766d0b81ffe836e8e2e97a83413"
+  },
+  "documentacion": {
+    "outputs/seguimiento_t1_hasta_2026_20261023_v13/README_Y_REANUDACION.md": "846fc1560f8c68cd380f8781d0f407bf6ade7eb3be2b31dab7f29bab566f7ab9",
+    "docs/ESPECIFICACION_SEGUIMIENTO_T1_HASTA_2026_20261023.md": "76266e1335cb297644038f7679118199f376bc66cdfd7a78384dd6853c8ddcdd"
+  },
+  "revision_visual": {
+    "estado": "REVISADA",
+    "vistas": [
+      "resumen",
+      "controles",
+      "origen",
+      "excepciones"
+    ],
+    "observacion": "Valores y notas legibles; estilos institucionales de las hojas previas preservados. No es prueba de Excel nativo."
+  },
+  "QA_independiente": {
+    "archivo": "QA_INDEPENDIENTE.json",
+    "sha256": "59491ca216ade07491976564f7bdfd5f2da2df2b811b997afa5c7bbcef481305",
+    "controles_correctos": 633
+  }
+}

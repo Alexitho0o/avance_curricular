@@ -1,0 +1,428 @@
+{
+  "fecha_utc": "2026-10-21T16:30:28.911058+00:00",
+  "alcance": "Auditoría solo lectura de definiciones/consumidores; agregados sin datos personales",
+  "dictamen": "SEPARACION_ACREDITADA_CON_EXCEPCION_PARCIAL_Y_CONTRATO_PENDIENTE",
+  "denominadores_preservados": [
+    558,
+    1150,
+    222,
+    124
+  ],
+  "hallazgos": [
+    {
+      "id": "R01",
+      "clase": "B",
+      "tema": "Retención interna documentada",
+      "hallazgo": "El diccionario interno define continuidad institucional en IPSS t+1 aunque cambie carrera; separa misma carrera y mismo programa. No expresa excepción de titulados en diccionario A1:A74.",
+      "evidencia": [
+        "INTERNO",
+        "INTERNO_MANIFEST"
+      ],
+      "alcance": "No es publicación SIES ni definición aprobada de los cuatro cierres intermedios."
+    },
+    {
+      "id": "R02",
+      "clase": "A",
+      "tema": "Retención oficial SIES",
+      "hallazgo": "La fuente SIES exige misma institución y cohorte de origen al año siguiente, programas regulares y mínimos de duración 4/6/8 semestres según nivel; excluye especiales e inconsistencias de origen y publica categorías desde 10 casos. Referencia anual al 30 de abril.",
+      "evidencia": [
+        "SIES"
+      ],
+      "alcance": "No define T2/T3 ni una equivalencia entre trimestres y semestres."
+    },
+    {
+      "id": "R03",
+      "clase": "C",
+      "tema": "Motor anual gobernado",
+      "hallazgo": "El libro anual revisado usa catálogo/plan/duración, VIG y coincidencia persona+cohorte de origen en t+1. Las fórmulas R2:Z2 no incorporan fechas ni eventos de titulación.",
+      "evidencia": [
+        "ANUAL"
+      ],
+      "alcance": "Se inspeccionaron fórmulas sin recalcular ni alterar el histórico; no se aplica regla nueva."
+    },
+    {
+      "id": "R04",
+      "clase": "C",
+      "tema": "Excepción implementada en Caracterización",
+      "hallazgo": "caracterizacion_retencion.py excluye del denominador TITULADO en la fila seleccionada del período base, bajo TITULADO_ANTES_SEGUIMIENTO. Usa VIGENTE/SUSPENDIDO como estados elegibles base y retenidos destino; distingue cambio de programa.",
+      "evidencia": [
+        "LONGITUDINAL",
+        "TEST",
+        "HITO4B"
+      ],
+      "alcance": "Implementación interna parcial: no regla universal ni prueba de fecha real del título."
+    },
+    {
+      "id": "R05",
+      "clase": "C/E",
+      "tema": "Brecha de titulación entre cierres",
+      "hallazgo": "Si la base es VIGENTE y el destino TITULADO o EGRESADO, el componente devuelve NO_RETENIDO y mantiene elegibilidad. No recibe fecha de titulación/egreso ni duración/plan; fecha_corte solo se copia a la salida.",
+      "evidencia": [
+        "LONGITUDINAL",
+        "TEST"
+      ],
+      "alcance": "Confirmado por cinco casos sintéticos. NO_RETENIDO técnico no acredita deserción ni satisface el tratamiento propuesto de culminación entre cierres."
+    },
+    {
+      "id": "R06",
+      "clase": "C",
+      "tema": "Uso efectivo del componente",
+      "hallazgo": "El componente longitudinal está separado desde HITO4C-P y se activa solo con CARACTERIZACION_EJECUTAR_LONGITUDINAL=1; por defecto no se ejecuta en Caracterización.",
+      "evidencia": [
+        "OPTIN",
+        "CONSUMIDOR",
+        "HITO4C"
+      ],
+      "alcance": "La existencia de código y prueba no acredita ejecución en las fuentes candidatas."
+    },
+    {
+      "id": "R07",
+      "clase": "C/E",
+      "tema": "Multiplicidad y población",
+      "hallazgo": "El componente escoge una fila por persona con prioridad de estados y CODCLI; las filas sin llave quedan fuera antes del bucle. No implementa conservación de todas las matrículas ni denominador fijo requerido por esta revisión.",
+      "evidencia": [
+        "LONGITUDINAL"
+      ],
+      "alcance": "No reutilizar directamente para reemplazar 558/1150 ni retirar las dos llaves pendientes."
+    },
+    {
+      "id": "R08",
+      "clase": "C/D",
+      "tema": "Estado UMAS, VIG y titulación",
+      "hallazgo": "es_titulado_kpi clasifica TITULADO o situación TITULADO APROBADO, pero no decide universo ni período. Las reglas comunes MU y la referencia del complemento no redefinen retención; NO APLICA para TITULADO en MU2027 no excluye universalmente a la persona ni otra matrícula activa.",
+      "evidencia": [
+        "KPI_TITULO",
+        "VIG_REGLAS",
+        "VIG_ALCANCE",
+        "MU2027",
+        "COMPLEMENTO_ESTADOS"
+      ],
+      "alcance": "Evaluar matrícula/programa+período+corte y evento fechado; no convertir estado actual a VIG histórico."
+    },
+    {
+      "id": "R09",
+      "clase": "A/C",
+      "tema": "Duración formal y nivel",
+      "hallazgo": "La oferta distingue duración de estudios, titulación y total (semestres) de duración del régimen (unidad del régimen). MU2026 prioriza nivel administrativo del alumno sobre nivel del ramo, convierte conforme tabla institucional y acota por duración/cohorte; no infiere un título por completar la duración.",
+      "evidencia": [
+        "INTEGRACION",
+        "NIVEL",
+        "MANUAL_MU",
+        "OFERTA_2027"
+      ],
+      "alcance": "Nivel académico normativo representa semestre curricular de la mayoría de asignaturas; no es tiempo transcurrido, porcentaje de avance real ni evento de egreso/titulación."
+    },
+    {
+      "id": "R10",
+      "clase": "E",
+      "tema": "Contrato pendiente",
+      "hallazgo": "Registro común mantiene MET-RETENCION-001 pendiente de auditoría y MET-TITULACION-001 pendiente de contrato completo. No se localizó categoría técnica no recurrido en las rutas de código/documentación revisadas.",
+      "evidencia": [
+        "REGISTRO"
+      ],
+      "alcance": "No crear categoría ni política de exclusión por semejanza verbal."
+    },
+    {
+      "id": "R11",
+      "clase": "C/E",
+      "tema": "Fecha de titulación disponible",
+      "hallazgo": "El código de Caracterización declara que su fuente no contiene fecha diaria de titulación y usa ANO+PERIODO en resúmenes. Ese uso no acredita una fecha efectiva de evento para los cierres de esta tarea.",
+      "evidencia": [
+        "CONSUMIDOR"
+      ],
+      "alcance": "Se necesita historia de eventos o certificado/registro institucional fechado; un timestamp de extracción no la reemplaza."
+    }
+  ],
+  "propuesta_y_pendientes": [
+    {
+      "clase": "D",
+      "estado": "INSTRUCCION_USUARIO_APLICADA_AL_ALCANCE",
+      "decision": "Preservar los cuatro denominadores y las tasas históricas; separar la revisión interna de SIES, sin ausencia=deserción ni duración cumplida=título."
+    },
+    {
+      "clase": "E",
+      "estado": "PROPUESTA_NO_APROBADA_COMO_REGLA",
+      "decision": "Agregar como resultado separado de trayectoria la titulación institucional acreditada hasta el corte, vinculada al programa y evento fechado. No sumarla automáticamente a retenidos ni a desertores."
+    },
+    {
+      "clase": "E",
+      "estado": "DECISION_DENOMINADOR_PENDIENTE",
+      "decision": "Definir si el indicador interno conserva cohorte fija con resultados separados (matrícula, culminación, otras salidas, desconocido) o mide continuidad entre quienes aún deben cursar. No descontar titulados del denominador ni publicar tasa ajustada antes de aprobar población, ventana y tratamiento de riesgos concurrentes."
+    },
+    {
+      "clase": "E",
+      "estado": "DEFINICION_OPERATIVA_PENDIENTE",
+      "decision": "Precisar título antes de base versus durante seguimiento; título de la carrera de origen versus otro programa; rematrícula en otro programa; múltiples matrículas; egresado sin título; título sin fecha y suspensiones."
+    },
+    {
+      "clase": "E",
+      "estado": "EVIDENCIA_PENDIENTE",
+      "decision": "Exigir historia de matrícula/estados fechada, evento de egreso/titulación, correspondencia persona–matrícula–programa, oferta/plan vigente y unidades del calendario; avances reales por asignaturas/créditos/requisitos aprobados. Nivel teórico solo como escenario rotulado, nunca como logro observado."
+    },
+    {
+      "clase": "E",
+      "estado": "VALIDACION_PENDIENTE",
+      "decision": "Versionar un contrato específico interno con responsable, fecha, universo, corte, fórmulas y ejemplos; probar títulos antes/durante/después del corte, cambios de programa, múltiples matrículas y faltantes antes de usarlo. Mantener independiente el consumidor SIES."
+    }
+  ],
+  "fuentes": [
+    {
+      "id": "INTEGRACION",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/unificacion_proyectos_y_reglas_negocio_20261015.md",
+      "seccion": "Registro común y reglas comprobadas 5–6",
+      "sha256": "ef7d47f940f46045fc1c179642fd76807b8f3c876f03b1c1bc680271434a3d53"
+    },
+    {
+      "id": "REGISTRO",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/reglas.json",
+      "seccion": "MET-RETENCION-001; MET-TITULACION-001; TRA-DURACION-001",
+      "sha256": "bbe594b7d546cee16dd1b499483ee0c6cb69d24bc87f0601bf6bbe8aa8adb6c7"
+    },
+    {
+      "id": "INTERNO",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/Retencion_ipss_2022_2024_GRANULAR.xlsx",
+      "seccion": "diccionario!A29,A33,A37,A41,A45,A54,A62,A70",
+      "sha256": "e85d8c15c9fa2eccb25a376ea352f345ddcec91dbcf8176070b1ae3490c5d946"
+    },
+    {
+      "id": "INTERNO_MANIFEST",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/Retencion_ipss_2022_2024_GRANULAR.manifest.json",
+      "seccion": "autoría y fuente interna, no SIES",
+      "sha256": "58db9b51a7be923afc3684aeb4c874f3413c248d544c6887076265ebc55b1629"
+    },
+    {
+      "id": "SIES",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "seccion": "Definición del correo SIES 9-sep-2026",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"
+    },
+    {
+      "id": "ANUAL",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "seccion": "02_COHORTE_ELEGIBILIDAD!R2:Z2; fórmulas leídas sin exportar individuos",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3"
+    },
+    {
+      "id": "LONGITUDINAL",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion_retencion.py",
+      "seccion": "18–20, 99–107, 146–162, 169–265",
+      "sha256": "29dae4561a9969c6c87cd14350ed79a2f2aa78a0f82a72491cb7d6a130a9ee79"
+    },
+    {
+      "id": "TEST",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/tests/test_hito4b_sectorizado_sies_retencion.py",
+      "seccion": "Hito4BRetencionTests, 88–121",
+      "sha256": "3435a4960171625d62a1bdfc286d80208b4352e1b68024722aae3d978245c2f5"
+    },
+    {
+      "id": "OPTIN",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion_longitudinal.py",
+      "seccion": "3–14",
+      "sha256": "64f29edb65179307e1264f95393ed7d4d739cf4a763b47a9b09814d192970207"
+    },
+    {
+      "id": "CONSUMIDOR",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion.py",
+      "seccion": "7796–7825; 7983–8010; 8050–8108",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187"
+    },
+    {
+      "id": "HITO4B",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/HITO_4B_P.md",
+      "seccion": "73–90",
+      "sha256": "fc610dcce2bbae907aa524e4daa61d906439ce5fd8a0de0f8738b013c017066c"
+    },
+    {
+      "id": "HITO4C",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/HITO_4C_P.md",
+      "seccion": "Arquitectura y solución: longitudinal opt-in",
+      "sha256": "346c8736ea10b717cda7991e9975c212e97f282d36569109fb1fd5697d4b805d"
+    },
+    {
+      "id": "KPI_TITULO",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/caracterizacion_estado_kpi.py",
+      "seccion": "3–14; 47–66",
+      "sha256": "7590ea34169a06cf6b7451d8c6414b2dcfff87cb442e89b8e62e3def16f6c3ef"
+    },
+    {
+      "id": "VIG_REGLAS",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261020_estados_umas/reglas.json",
+      "seccion": "version 2026-10-20.2; no_redefine",
+      "sha256": "a472ef5cf5590b7a9354ece08331814a584d9680fa4c8a484fb827eb300d2d62"
+    },
+    {
+      "id": "VIG_ALCANCE",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/relacion_estados_umas_vig_sies_20261020.md",
+      "seccion": "91–107",
+      "sha256": "35b045927769440ad472067db74014218bdb0118645644d8d3f88e222072e374"
+    },
+    {
+      "id": "MU2027",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/control_cambios_vig_mu2027.md",
+      "seccion": "43–49",
+      "sha256": "9dd2d4f4b596891bfac8ea764a71d525761443b34f5cf2371f848f26f904c53a"
+    },
+    {
+      "id": "NIVEL",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py",
+      "seccion": "3020–3026; 4123–4154",
+      "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+    },
+    {
+      "id": "MANUAL_MU",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/Manual_Matrícula_Unificada_2026.pdf",
+      "seccion": "p.31 AA NIV_ACA",
+      "sha256": "3626600782798fbb5afa4100975eeffd2155b4912a112f63cee42f9741a82990"
+    },
+    {
+      "id": "OFERTA_2027",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/fuentes/manual_oferta_acceso_2027_texto_completo.json",
+      "seccion": "p.8 definiciones de duración y régimen",
+      "sha256": "97bca64703165584ae786d732afaf990ab372741b5c9fb96be1142b7903f964d"
+    },
+    {
+      "id": "COMPLEMENTO_ESTADOS",
+      "ruta": "/Users/alexi/.codex/plugins/cache/created-by-me-remote/analisis-institucional-alexi/1.1.3/skills/consultar-fuentes-ipss/references/estados-umas/estados-umas.md",
+      "seccion": "52–66: clasificación, helper y alcance de retención",
+      "sha256": "414effcb82b42cd9e5e0c8c3f117a6e1c135cfca109acd7e68af4949fd82d181"
+    }
+  ],
+  "qa": {
+    "existing_retention_test": {
+      "testsRun": 1,
+      "errors": 0,
+      "failures": 0,
+      "method": "AST extraction of unchanged Hito4BRetencionTests, isolates retention from unrelated missing unidecode dependency"
+    },
+    "synthetic_probes": [
+      {
+        "estado_base_sintetico": "TITULADO",
+        "estado_destino_sintetico": null,
+        "resultado": "TITULADO_ANTES_SEGUIMIENTO",
+        "elegible": false
+      },
+      {
+        "estado_base_sintetico": "VIGENTE",
+        "estado_destino_sintetico": "TITULADO",
+        "resultado": "NO_RETENIDO",
+        "elegible": true
+      },
+      {
+        "estado_base_sintetico": "VIGENTE",
+        "estado_destino_sintetico": "EGRESADO",
+        "resultado": "NO_RETENIDO",
+        "elegible": true
+      },
+      {
+        "estado_base_sintetico": "VIGENTE",
+        "estado_destino_sintetico": null,
+        "resultado": "NO_RETENIDO",
+        "elegible": true
+      },
+      {
+        "estado_base_sintetico": "VIGENTE",
+        "estado_destino_sintetico": "SUSPENDIDO",
+        "resultado": "RETENIDO_INSTITUCIONAL",
+        "elegible": true
+      }
+    ],
+    "full_suite_limitation": "Full test module import blocked by missing unidecode in bundled runtime; isolated retention test completed."
+  },
+  "modificaciones_fuentes": false,
+  "ejecucion_pipeline_real": false,
+  "commit_push_merge_pr": false,
+  "auditoria_duracion": {
+    "scope": "Auditoría de solo lectura: duración formal, nivel curricular y titulación; sin ejecutar pipelines ni cambiar fuentes",
+    "findings": [
+      {
+        "id": "NIV01",
+        "class": "A",
+        "finding": "NIV_ACA formal es el semestre curricular donde se ubica la mayoría de las asignaturas cursadas; admite valores de 1 a duración de carrera. No es una inferencia por años transcurridos ni prueba de egreso/titulación.",
+        "source": "Manual_Matrícula_Unificada_2026.pdf",
+        "page": 31
+      },
+      {
+        "id": "NIV02",
+        "class": "C",
+        "finding": "MU2026 prioriza DA_NIVEL (nivel alumno) sobre NIVEL de Hoja1 (nivel del ramo); conserva fuente, método y estado de auditoría.",
+        "source": "codigo_gobernanza_v2.py",
+        "lines": [
+          3020,
+          3026,
+          3187,
+          3189
+        ]
+      },
+      {
+        "id": "NIV03",
+        "class": "C",
+        "finding": "El motor normaliza NIV_ACA=20 a 8, convierte nivel administrativo trimestral a semestre curricular, aplica mínimo/default 1, acota a DURACION_ESTUDIOS_REF y a 2 para cohorte 2026. Estos ajustes no asignan TITULADO ni EGRESADO.",
+        "source": "codigo_gobernanza_v2.py",
+        "lines": [
+          4123,
+          4154
+        ]
+      },
+      {
+        "id": "NIV04",
+        "class": "C/E",
+        "finding": "Existe tabla operativa trimestral→semestral específica de MU2026 y QA de paridad. No generalizarla a cierres T2/T3 ni a otras ediciones: TRA-DURACION-001 mantiene pendiente fórmula/precisión por proceso y año.",
+        "source": "codigo_gobernanza_v2.py",
+        "lines": [
+          625,
+          642
+        ],
+        "other_sources": [
+          "qa_checks.py:572-603",
+          "data/reglas_negocio/20261015/reglas.json:253-270"
+        ]
+      },
+      {
+        "id": "NIV05",
+        "class": "A",
+        "finding": "Oferta 2026/2027 distingue duración de estudios, duración de titulación y duración total, expresadas en semestres. Duración del régimen usa la unidad declarada del régimen; no equivale automáticamente al tiempo real de una persona.",
+        "sources": [
+          "data/reglas_negocio/20261015/fuentes/manual_oferta_2026_texto_completo.json:pagina_fisica=7-8",
+          "data/reglas_negocio/20261015/fuentes/manual_oferta_acceso_2027_texto_completo.json:pagina_fisica=8"
+        ]
+      },
+      {
+        "id": "NIV06",
+        "class": "C",
+        "finding": "La prueba existente de prioridad NIV_ACA comprueba DA_NIVEL y niveles independientes por matrícula; no acredita titulación por duración. Se leyó su código y no se ejecutó porque depende de una salida individual productiva.",
+        "source": "scripts/test_niv_aca_priority.py",
+        "lines": [
+          3,
+          9,
+          56,
+          91
+        ]
+      },
+      {
+        "id": "NIV07",
+        "class": "E",
+        "finding": "No se localizó en los consumidores revisados una regla que estime automáticamente titulación por duración cumplida. Nivel teórico por calendario, avance real y evento titulación fechado deben conservarse como conceptos distintos; cualquier futura fórmula de nivel esperado requiere calendario, régimen, fecha ingreso, plan/version aplicable, suspensiones y convalidaciones gobernadas.",
+        "sources": [
+          "codigo_gobernanza_v2.py",
+          "procesos/caracterizacion/caracterizacion.py",
+          "docs/unificacion_proyectos_y_reglas_negocio_20261015.md:43-74"
+        ]
+      }
+    ],
+    "limitations": [
+      "docs/Manual_Matricula_Unificada_2026.pdf no es PDF válido (cabecera texto). Se utilizó el PDF válido de la raíz con acento.",
+      "No se aplicaron cambios ni se ejecutaron pruebas dependientes de salidas productivas individuales.",
+      "La detección de reglas se limita a los consumidores y documentos especificados; no certifica inexistencia universal en todo sistema institucional."
+    ],
+    "sources_sha256": {
+      "/Users/alexi/Documents/GitHub/avance_curricular/Manual_Matrícula_Unificada_2026.pdf": "3626600782798fbb5afa4100975eeffd2155b4912a112f63cee42f9741a82990",
+      "/Users/alexi/Documents/GitHub/avance_curricular/codigo_gobernanza_v2.py": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d",
+      "/Users/alexi/Documents/GitHub/avance_curricular/qa_checks.py": "2dec292840f0f72ce7e215b1b2f12f852d02093343b25db117ad12c9e482ee98",
+      "/Users/alexi/Documents/GitHub/avance_curricular/scripts/test_niv_aca_priority.py": "c69cba7b14afb216f25135d7052cc00ba11367e36587ac36ab35831ee9cf98e5",
+      "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/reglas.json": "bbe594b7d546cee16dd1b499483ee0c6cb69d24bc87f0601bf6bbe8aa8adb6c7",
+      "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/fuentes/manual_oferta_2026_texto_completo.json": "6c5a8248d099552d9ae33924121c4a541f168fe38d28ba896201446a06c922b7",
+      "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/fuentes/manual_oferta_acceso_2027_texto_completo.json": "97bca64703165584ae786d732afaf990ab372741b5c9fb96be1142b7903f964d",
+      "/Users/alexi/Documents/GitHub/avance_curricular/docs/unificacion_proyectos_y_reglas_negocio_20261015.md": "ef7d47f940f46045fc1c179642fd76807b8f3c876f03b1c1bc680271434a3d53"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "fase": 1,
+    "hito": 1,
+    "fuente": "GIT_ANTES.json y contratos locales",
+    "accion": "Verificar repositorios, ramas y autorización",
+    "resultado": "Sin cambio de rama ni operaciones de publicación",
+    "archivo": "GIT_DESPUES.json",
+    "pendiente": "Ninguno técnico de acceso a repos"
+  },
+  {
+    "fase": 1,
+    "hito": 2,
+    "fuente": "MANIFEST previo y cuatro derivados privados con hash",
+    "accion": "Fijar foco por identidad y deduplicar",
+    "resultado": "12+4=16 personas sin solapamiento",
+    "archivo": "RESULTADOS_FINAL.json",
+    "pendiente": "Conservar definición de resuelto"
+  },
+  {
+    "fase": 1,
+    "hito": 3,
+    "fuente": "Documentación de planes y catálogo de reportes IPSS",
+    "accion": "Separar fechas de asignatura, matrícula y plan",
+    "resultado": "No hay regla A nueva ni evento administrativo demostrado",
+    "archivo": "INFORME_12_Y_4.md",
+    "pendiente": "Fecha efectiva"
+  },
+  {
+    "fase": 2,
+    "hito": 1,
+    "fuente": "RAW MU 2022–2025",
+    "accion": "Contrastar códigos anuales",
+    "resultado": "123 comparaciones; cero discordancias",
+    "archivo": "QA.json",
+    "pendiente": "Código anual no acredita período de plan"
+  },
+  {
+    "fase": 2,
+    "hito": 2,
+    "fuente": "PROMEDIOS y dos reportes de calificaciones",
+    "accion": "Leer fuentes adicionales y registrar localizadores",
+    "resultado": "524 filas de calificaciones de 14 personas; 2189 filas PROMEDIOS",
+    "archivo": "INVENTARIO_RECUPERACION.json",
+    "pendiente": "Una fuente T3 con TimeoutError"
+  },
+  {
+    "fase": 2,
+    "hito": 3,
+    "fuente": "DATOSDEALUMNOS ORIGEN Hoja1",
+    "accion": "Cruzar CODCLI exacto y corroborar cuerpo RUT",
+    "resultado": "24 filas recuperadas; cero rechazos identidad",
+    "archivo": "QA.json",
+    "pendiente": "No convertir fecha de matrícula en migración"
+  },
+  {
+    "fase": 3,
+    "hito": 1,
+    "fuente": "12 cambios previos y asociaciones de plan",
+    "accion": "Comparar plan y código anual",
+    "resultado": "7 con mismo CODCLI/plan a ambos lados",
+    "archivo": "CAMBIOS_ANUALES_12.csv",
+    "pendiente": "Causa y fecha efectiva"
+  },
+  {
+    "fase": 3,
+    "hito": 2,
+    "fuente": "Cuatro pistas y MASTER INGRESO 2024",
+    "accion": "Corroborar CODCLI/plan/año/período",
+    "resultado": "Tres corroboradas; una no corroborada",
+    "archivo": "PISTAS_FECHA_4.csv",
+    "pendiente": "No adopción de código por coincidencia de fecha"
+  },
+  {
+    "fase": 3,
+    "hito": 3,
+    "fuente": "PROMEDIOS2071 estados de asignatura",
+    "accion": "Separar homologaciones/convalidaciones",
+    "resultado": "Planes alternativos F01/F04 con reconocimiento observado",
+    "archivo": "INFORME_12_Y_4.md",
+    "pendiente": "Reconocimiento no acredita nueva cursada"
+  },
+  {
+    "fase": 4,
+    "hito": 1,
+    "fuente": "Derivados de la revisión",
+    "accion": "Generar informe agregado y cronología privada",
+    "resultado": "Archivos separados, originales conservados",
+    "archivo": "MANIFEST.json",
+    "pendiente": "Sin modificación de Excel previo"
+  },
+  {
+    "fase": 4,
+    "hito": 2,
+    "fuente": "Fuentes y resultados",
+    "accion": "QA hashes/identidad/duplicados/denominadores/Git",
+    "resultado": "OK_CON_ADVERTENCIAS",
+    "archivo": "QA.json",
+    "pendiente": "Advertencias documentales explícitas"
+  },
+  {
+    "fase": 4,
+    "hito": 3,
+    "fuente": "Salidas y scripts persistentes",
+    "accion": "Registrar hashes y reanudación",
+    "resultado": "Sin commit/push ni códigos adoptados nuevos",
+    "archivo": "CHECKPOINT.md",
+    "pendiente": "Recuperar fuente T3 y evento/equivalencia temporal si existe"
+  }
+]

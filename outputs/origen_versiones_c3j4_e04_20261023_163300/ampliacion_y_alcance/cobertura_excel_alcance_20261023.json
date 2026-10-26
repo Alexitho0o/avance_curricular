@@ -1,0 +1,3756 @@
+{
+  "clasificacion": "B observado/C recuento; D cierres internos ya autorizados; E pendientes",
+  "excel": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+    "sha256": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+    "edicion_diccionario_incorporada": "v1_20261023"
+  },
+  "diccionario_consultado_actual": {
+    "edicion": "v7_20261023_inf35_03_t3",
+    "ruta": "/Users/alexi/.local/share/ipss/cierre_inf35_03_t3_20261023_154224/DICCIONARIO_SIES.sqlite",
+    "sha256": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e"
+  },
+  "origenes_T1": {
+    "total": 3179,
+    "todos_codigo_origen_documentado": 3179,
+    "por_anio_v1": [
+      {
+        "anio": 2024,
+        "origenes_T1": 558,
+        "codigo_origen_documentado": 558,
+        "sin_contexto_localizado": 65,
+        "todos_contextos_con_codigo": 445,
+        "todos_contextos_pendientes": 38,
+        "contextos_parcialmente_resueltos": 10,
+        "personas_con_algun_contexto": 493,
+        "cobertura_contexto_pct": 88.35125448028674
+      },
+      {
+        "anio": 2025,
+        "origenes_T1": 1150,
+        "codigo_origen_documentado": 1150,
+        "todos_contextos_con_codigo": 845,
+        "todos_contextos_pendientes": 20,
+        "sin_contexto_localizado": 283,
+        "contextos_parcialmente_resueltos": 2,
+        "personas_con_algun_contexto": 867,
+        "cobertura_contexto_pct": 75.3913043478261
+      },
+      {
+        "anio": 2026,
+        "origenes_T1": 1471,
+        "codigo_origen_documentado": 1471,
+        "sin_contexto_localizado": 591,
+        "todos_contextos_con_codigo": 859,
+        "todos_contextos_pendientes": 12,
+        "contextos_parcialmente_resueltos": 9,
+        "personas_con_algun_contexto": 880,
+        "cobertura_contexto_pct": 59.82324949014276
+      }
+    ],
+    "por_anio_v7": [
+      {
+        "anio": 2024,
+        "origenes_T1": 558,
+        "codigo_origen_documentado": 558,
+        "sin_contexto_localizado": 65,
+        "todos_contextos_con_codigo": 447,
+        "todos_contextos_pendientes": 34,
+        "contextos_parcialmente_resueltos": 12,
+        "personas_con_algun_contexto": 493,
+        "cobertura_contexto_pct": 88.35125448028674
+      },
+      {
+        "anio": 2025,
+        "origenes_T1": 1150,
+        "codigo_origen_documentado": 1150,
+        "todos_contextos_con_codigo": 849,
+        "sin_contexto_localizado": 283,
+        "todos_contextos_pendientes": 16,
+        "contextos_parcialmente_resueltos": 2,
+        "personas_con_algun_contexto": 867,
+        "cobertura_contexto_pct": 75.3913043478261
+      },
+      {
+        "anio": 2026,
+        "origenes_T1": 1471,
+        "codigo_origen_documentado": 1471,
+        "sin_contexto_localizado": 591,
+        "todos_contextos_con_codigo": 861,
+        "todos_contextos_pendientes": 10,
+        "contextos_parcialmente_resueltos": 9,
+        "personas_con_algun_contexto": 880,
+        "cobertura_contexto_pct": 59.82324949014276
+      }
+    ],
+    "personas_distintas_entre_anios": 3142,
+    "llave_persona_vacia": 0
+  },
+  "cobertura_v1_en_excel": {
+    "total": {
+      "observaciones": 5320,
+      "personas_sin_duplicar": 2212,
+      "persona_anio": 2240,
+      "expedientes_persona_CODCLI": 2255,
+      "B/C Documental": 5088,
+      "D Interno aprobado": 2,
+      "E Pendiente": 230,
+      "con_codigo_pct": 95.67669172932331
+    },
+    "por_anio_periodo": [
+      {
+        "anio": 2024,
+        "periodo_nativo": 1,
+        "observaciones": 502,
+        "personas_sin_duplicar": 492,
+        "persona_anio": 492,
+        "expedientes_persona_CODCLI": 502,
+        "B/C Documental": 455,
+        "D Interno aprobado": 0,
+        "E Pendiente": 47,
+        "con_codigo_pct": 90.63745019920319
+      },
+      {
+        "anio": 2024,
+        "periodo_nativo": 2,
+        "observaciones": 397,
+        "personas_sin_duplicar": 387,
+        "persona_anio": 387,
+        "expedientes_persona_CODCLI": 397,
+        "B/C Documental": 351,
+        "D Interno aprobado": 0,
+        "E Pendiente": 46,
+        "con_codigo_pct": 88.41309823677582
+      },
+      {
+        "anio": 2024,
+        "periodo_nativo": 3,
+        "observaciones": 348,
+        "personas_sin_duplicar": 339,
+        "persona_anio": 339,
+        "expedientes_persona_CODCLI": 348,
+        "B/C Documental": 305,
+        "D Interno aprobado": 0,
+        "E Pendiente": 43,
+        "con_codigo_pct": 87.64367816091954
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 1,
+        "observaciones": 867,
+        "personas_sin_duplicar": 865,
+        "persona_anio": 865,
+        "expedientes_persona_CODCLI": 867,
+        "B/C Documental": 846,
+        "D Interno aprobado": 0,
+        "E Pendiente": 21,
+        "con_codigo_pct": 97.57785467128028
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 2,
+        "observaciones": 542,
+        "personas_sin_duplicar": 542,
+        "persona_anio": 542,
+        "expedientes_persona_CODCLI": 542,
+        "B/C Documental": 528,
+        "D Interno aprobado": 0,
+        "E Pendiente": 14,
+        "con_codigo_pct": 97.41697416974169
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 3,
+        "observaciones": 462,
+        "personas_sin_duplicar": 462,
+        "persona_anio": 462,
+        "expedientes_persona_CODCLI": 462,
+        "B/C Documental": 451,
+        "D Interno aprobado": 0,
+        "E Pendiente": 11,
+        "con_codigo_pct": 97.61904761904762
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 1,
+        "observaciones": 880,
+        "personas_sin_duplicar": 876,
+        "persona_anio": 876,
+        "expedientes_persona_CODCLI": 880,
+        "B/C Documental": 865,
+        "D Interno aprobado": 0,
+        "E Pendiente": 15,
+        "con_codigo_pct": 98.29545454545455
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 2,
+        "observaciones": 683,
+        "personas_sin_duplicar": 682,
+        "persona_anio": 682,
+        "expedientes_persona_CODCLI": 683,
+        "B/C Documental": 665,
+        "D Interno aprobado": 1,
+        "E Pendiente": 17,
+        "con_codigo_pct": 97.51098096632504
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 3,
+        "observaciones": 639,
+        "personas_sin_duplicar": 638,
+        "persona_anio": 638,
+        "expedientes_persona_CODCLI": 639,
+        "B/C Documental": 622,
+        "D Interno aprobado": 1,
+        "E Pendiente": 16,
+        "con_codigo_pct": 97.49608763693271
+      }
+    ],
+    "varias_versiones": {
+      "observaciones": 2009,
+      "personas_sin_duplicar": 802,
+      "persona_anio": 806,
+      "expedientes_persona_CODCLI": 812,
+      "B/C Documental": 1927,
+      "D Interno aprobado": 2,
+      "E Pendiente": 80,
+      "con_codigo_pct": 96.0179193628671
+    }
+  },
+  "cobertura_consulta_actual_v7": {
+    "total": {
+      "observaciones": 5320,
+      "personas_sin_duplicar": 2212,
+      "persona_anio": 2240,
+      "expedientes_persona_CODCLI": 2255,
+      "B/C Documental": 5088,
+      "D Interno aprobado": 29,
+      "E Pendiente": 203,
+      "con_codigo_pct": 96.1842105263158
+    },
+    "por_anio_periodo": [
+      {
+        "anio": 2024,
+        "periodo_nativo": 1,
+        "observaciones": 502,
+        "personas_sin_duplicar": 492,
+        "persona_anio": 492,
+        "expedientes_persona_CODCLI": 502,
+        "B/C Documental": 455,
+        "D Interno aprobado": 4,
+        "E Pendiente": 43,
+        "con_codigo_pct": 91.43426294820718
+      },
+      {
+        "anio": 2024,
+        "periodo_nativo": 2,
+        "observaciones": 397,
+        "personas_sin_duplicar": 387,
+        "persona_anio": 387,
+        "expedientes_persona_CODCLI": 397,
+        "B/C Documental": 351,
+        "D Interno aprobado": 2,
+        "E Pendiente": 44,
+        "con_codigo_pct": 88.91687657430731
+      },
+      {
+        "anio": 2024,
+        "periodo_nativo": 3,
+        "observaciones": 348,
+        "personas_sin_duplicar": 339,
+        "persona_anio": 339,
+        "expedientes_persona_CODCLI": 348,
+        "B/C Documental": 305,
+        "D Interno aprobado": 4,
+        "E Pendiente": 39,
+        "con_codigo_pct": 88.79310344827586
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 1,
+        "observaciones": 867,
+        "personas_sin_duplicar": 865,
+        "persona_anio": 865,
+        "expedientes_persona_CODCLI": 867,
+        "B/C Documental": 846,
+        "D Interno aprobado": 4,
+        "E Pendiente": 17,
+        "con_codigo_pct": 98.03921568627452
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 2,
+        "observaciones": 542,
+        "personas_sin_duplicar": 542,
+        "persona_anio": 542,
+        "expedientes_persona_CODCLI": 542,
+        "B/C Documental": 528,
+        "D Interno aprobado": 4,
+        "E Pendiente": 10,
+        "con_codigo_pct": 98.1549815498155
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 3,
+        "observaciones": 462,
+        "personas_sin_duplicar": 462,
+        "persona_anio": 462,
+        "expedientes_persona_CODCLI": 462,
+        "B/C Documental": 451,
+        "D Interno aprobado": 3,
+        "E Pendiente": 8,
+        "con_codigo_pct": 98.26839826839827
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 1,
+        "observaciones": 880,
+        "personas_sin_duplicar": 876,
+        "persona_anio": 876,
+        "expedientes_persona_CODCLI": 880,
+        "B/C Documental": 865,
+        "D Interno aprobado": 2,
+        "E Pendiente": 13,
+        "con_codigo_pct": 98.52272727272727
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 2,
+        "observaciones": 683,
+        "personas_sin_duplicar": 682,
+        "persona_anio": 682,
+        "expedientes_persona_CODCLI": 683,
+        "B/C Documental": 665,
+        "D Interno aprobado": 3,
+        "E Pendiente": 15,
+        "con_codigo_pct": 97.80380673499268
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 3,
+        "observaciones": 639,
+        "personas_sin_duplicar": 638,
+        "persona_anio": 638,
+        "expedientes_persona_CODCLI": 639,
+        "B/C Documental": 622,
+        "D Interno aprobado": 3,
+        "E Pendiente": 14,
+        "con_codigo_pct": 97.80907668231612
+      }
+    ],
+    "varias_versiones": {
+      "observaciones": 2009,
+      "personas_sin_duplicar": 802,
+      "persona_anio": 806,
+      "expedientes_persona_CODCLI": 812,
+      "B/C Documental": 1927,
+      "D Interno aprobado": 29,
+      "E Pendiente": 53,
+      "con_codigo_pct": 97.36187157789945
+    },
+    "varias_versiones_por_anio_periodo": [
+      {
+        "anio": 2024,
+        "periodo_nativo": 1,
+        "observaciones": 270,
+        "personas_sin_duplicar": 267,
+        "persona_anio": 267,
+        "expedientes_persona_CODCLI": 270,
+        "B/C Documental": 254,
+        "D Interno aprobado": 4,
+        "E Pendiente": 12,
+        "con_codigo_pct": 95.55555555555556
+      },
+      {
+        "anio": 2024,
+        "periodo_nativo": 2,
+        "observaciones": 212,
+        "personas_sin_duplicar": 209,
+        "persona_anio": 209,
+        "expedientes_persona_CODCLI": 212,
+        "B/C Documental": 196,
+        "D Interno aprobado": 2,
+        "E Pendiente": 14,
+        "con_codigo_pct": 93.39622641509433
+      },
+      {
+        "anio": 2024,
+        "periodo_nativo": 3,
+        "observaciones": 188,
+        "personas_sin_duplicar": 185,
+        "persona_anio": 185,
+        "expedientes_persona_CODCLI": 188,
+        "B/C Documental": 173,
+        "D Interno aprobado": 4,
+        "E Pendiente": 11,
+        "con_codigo_pct": 94.14893617021276
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 1,
+        "observaciones": 288,
+        "personas_sin_duplicar": 288,
+        "persona_anio": 288,
+        "expedientes_persona_CODCLI": 288,
+        "B/C Documental": 283,
+        "D Interno aprobado": 4,
+        "E Pendiente": 1,
+        "con_codigo_pct": 99.65277777777777
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 2,
+        "observaciones": 205,
+        "personas_sin_duplicar": 205,
+        "persona_anio": 205,
+        "expedientes_persona_CODCLI": 205,
+        "B/C Documental": 200,
+        "D Interno aprobado": 4,
+        "E Pendiente": 1,
+        "con_codigo_pct": 99.51219512195122
+      },
+      {
+        "anio": 2025,
+        "periodo_nativo": 3,
+        "observaciones": 174,
+        "personas_sin_duplicar": 174,
+        "persona_anio": 174,
+        "expedientes_persona_CODCLI": 174,
+        "B/C Documental": 171,
+        "D Interno aprobado": 3,
+        "E Pendiente": 0,
+        "con_codigo_pct": 100.0
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 1,
+        "observaciones": 251,
+        "personas_sin_duplicar": 250,
+        "persona_anio": 250,
+        "expedientes_persona_CODCLI": 251,
+        "B/C Documental": 245,
+        "D Interno aprobado": 2,
+        "E Pendiente": 4,
+        "con_codigo_pct": 98.40637450199203
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 2,
+        "observaciones": 218,
+        "personas_sin_duplicar": 218,
+        "persona_anio": 218,
+        "expedientes_persona_CODCLI": 218,
+        "B/C Documental": 209,
+        "D Interno aprobado": 3,
+        "E Pendiente": 6,
+        "con_codigo_pct": 97.24770642201835
+      },
+      {
+        "anio": 2026,
+        "periodo_nativo": 3,
+        "observaciones": 203,
+        "personas_sin_duplicar": 203,
+        "persona_anio": 203,
+        "expedientes_persona_CODCLI": 203,
+        "B/C Documental": 196,
+        "D Interno aprobado": 3,
+        "E Pendiente": 4,
+        "con_codigo_pct": 98.0295566502463
+      }
+    ],
+    "relaciones": {
+      "Familia no determinada": {
+        "observaciones": 6,
+        "personas_sin_duplicar": 2,
+        "persona_anio": 2,
+        "expedientes_persona_CODCLI": 2,
+        "B/C Documental": 0,
+        "D Interno aprobado": 0,
+        "E Pendiente": 6,
+        "con_codigo_pct": 0.0
+      },
+      "Misma familia": {
+        "observaciones": 5102,
+        "personas_sin_duplicar": 2150,
+        "persona_anio": 2176,
+        "expedientes_persona_CODCLI": 2176,
+        "B/C Documental": 5088,
+        "D Interno aprobado": 6,
+        "E Pendiente": 8,
+        "con_codigo_pct": 99.84319874558996
+      },
+      "Otra familia": {
+        "observaciones": 212,
+        "personas_sin_duplicar": 84,
+        "persona_anio": 84,
+        "expedientes_persona_CODCLI": 84,
+        "B/C Documental": 0,
+        "D Interno aprobado": 23,
+        "E Pendiente": 189,
+        "con_codigo_pct": 10.849056603773585
+      }
+    }
+  },
+  "universo_completo_foto_hoja20": [
+    {
+      "anio": 2024,
+      "grupo_ingreso": 1,
+      "filas_persona": 558,
+      "aplicado_diccionario": true
+    },
+    {
+      "anio": 2025,
+      "grupo_ingreso": 1,
+      "filas_persona": 1150,
+      "aplicado_diccionario": true
+    },
+    {
+      "anio": 2025,
+      "grupo_ingreso": 2,
+      "filas_persona": 222,
+      "aplicado_diccionario": false
+    },
+    {
+      "anio": 2026,
+      "grupo_ingreso": 1,
+      "filas_persona": 1471,
+      "aplicado_diccionario": true
+    },
+    {
+      "anio": 2026,
+      "grupo_ingreso": 2,
+      "filas_persona": 527,
+      "aplicado_diccionario": false
+    },
+    {
+      "anio": 2026,
+      "grupo_ingreso": 3,
+      "filas_persona": 545,
+      "aplicado_diccionario": false
+    }
+  ],
+  "nuevos_grupos_T2_T3_preservados_no_reclasificados": 1294,
+  "no_incluye_2027": true,
+  "celdas": {
+    "18_Foto_Intertrimestral": {
+      "dimensiones": [
+        89,
+        9
+      ],
+      "muestra_agregada": [
+        [
+          {
+            "celda": "A1",
+            "valor": "🏠 Portada / Índice"
+          }
+        ],
+        [
+          {
+            "celda": "B2",
+            "valor": "18. Foto Retención Intertrimestral — cálculo propio interno (periodos 1, 2 y 3)"
+          }
+        ],
+        [
+          {
+            "celda": "B3",
+            "valor": "C/D · Los cortes T1 sin foto completa se completan con un proxy de avance académico desde la hoja 26. La tasa proxy usa personas únicas con registro en el año-período y estado académico VIGENTE; no reemplaza una foto de matrícula de cierre."
+          }
+        ],
+        [
+          {
+            "celda": "B5",
+            "valor": "A. Institucional"
+          }
+        ],
+        [
+          {
+            "celda": "B6",
+            "valor": "Año"
+          },
+          {
+            "celda": "C6",
+            "valor": "Grupo de ingreso"
+          },
+          {
+            "celda": "D6",
+            "valor": "N° Est"
+          },
+          {
+            "celda": "E6",
+            "valor": "N° Est. vigentes T2"
+          },
+          {
+            "celda": "F6",
+            "valor": "Tasa vigentes T2"
+          },
+          {
+            "celda": "G6",
+            "valor": "N° Est. vigentes T3"
+          },
+          {
+            "celda": "H6",
+            "valor": "Tasa vigentes T3"
+          },
+          {
+            "celda": "I6",
+            "valor": "Retención 1er año (cálculo propio, hoja 9)"
+          }
+        ],
+        [
+          {
+            "celda": "B7",
+            "valor": 2024
+          },
+          {
+            "celda": "C7",
+            "valor": "1 · Matrícula Unificada (periodo 1) · proxy avance académico"
+          },
+          {
+            "celda": "D7",
+            "valor": 558
+          },
+          {
+            "celda": "E7",
+            "valor": 160
+          },
+          {
+            "celda": "F7",
+            "valor": 0.28673835125448
+          },
+          {
+            "celda": "G7",
+            "valor": 175
+          },
+          {
+            "celda": "H7",
+            "valor": 0.313620071684588
+          },
+          {
+            "celda": "I7",
+            "valor": 0.584229390681004
+          }
+        ],
+        [
+          {
+            "celda": "B8",
+            "valor": 2025
+          },
+          {
+            "celda": "C8",
+            "valor": "1 · Matrícula Unificada (periodo 1) · proxy avance académico"
+          },
+          {
+            "celda": "D8",
+            "valor": 1150
+          },
+          {
+            "celda": "E8",
+            "valor": 600
+          },
+          {
+            "celda": "F8",
+            "valor": 0.521739130434783
+          },
+          {
+            "celda": "G8",
+            "valor": 1023
+          },
+          {
+            "celda": "H8",
+            "valor": 0.889565217391304
+          },
+          {
+            "celda": "I8",
+            "valor": 0.580869565217391
+          }
+        ],
+        [
+          {
+            "celda": "B9",
+            "valor": 2025
+          },
+          {
+            "celda": "C9",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D9",
+            "valor": 222
+          },
+          {
+            "celda": "E9",
+            "valor": 200
+          },
+          {
+            "celda": "F9",
+            "valor": 0.900900900900901
+          },
+          {
+            "celda": "G9",
+            "valor": 202
+          },
+          {
+            "celda": "H9",
+            "valor": 0.90990990990991
+          },
+          {
+            "celda": "I9",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B10",
+            "valor": 2025
+          },
+          {
+            "celda": "C10",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D10",
+            "valor": 1368
+          },
+          {
+            "celda": "E10",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F10",
+            "valor": "—"
+          },
+          {
+            "celda": "G10",
+            "valor": 1222
+          },
+          {
+            "celda": "H10",
+            "valor": 0.89327485380117
+          },
+          {
+            "celda": "I10",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B11",
+            "valor": 2026
+          },
+          {
+            "celda": "C11",
+            "valor": "1 · Matrícula Unificada (periodo 1) · proxy avance académico"
+          },
+          {
+            "celda": "D11",
+            "valor": 1471
+          },
+          {
+            "celda": "E11",
+            "valor": 1042
+          },
+          {
+            "celda": "F11",
+            "valor": 0.708361658735554
+          },
+          {
+            "celda": "G11",
+            "valor": 1360
+          },
+          {
+            "celda": "H11",
+            "valor": 0.92706203135651
+          },
+          {
+            "celda": "I11",
+            "valor": "Se mide en 2027"
+          }
+        ],
+        [
+          {
+            "celda": "B12",
+            "valor": 2026
+          },
+          {
+            "celda": "C12",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D12",
+            "valor": 527
+          },
+          {
+            "celda": "E12",
+            "valor": 462
+          },
+          {
+            "celda": "F12",
+            "valor": 0.875
+          },
+          {
+            "celda": "G12",
+            "valor": 467
+          },
+          {
+            "celda": "H12",
+            "valor": 0.886148007590133
+          },
+          {
+            "celda": "I12",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B13",
+            "valor": 2026
+          },
+          {
+            "celda": "C13",
+            "valor": "3 · Ingreso T3 (foto del área)"
+          },
+          {
+            "celda": "D13",
+            "valor": 545
+          },
+          {
+            "celda": "E13",
+            "valor": "No aplica"
+          },
+          {
+            "celda": "F13",
+            "valor": "—"
+          },
+          {
+            "celda": "G13",
+            "valor": 480
+          },
+          {
+            "celda": "H13",
+            "valor": 0.880733944954129
+          },
+          {
+            "celda": "I13",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B14",
+            "valor": 2026
+          },
+          {
+            "celda": "C14",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D14",
+            "valor": 2523
+          },
+          {
+            "celda": "E14",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F14",
+            "valor": "—"
+          },
+          {
+            "celda": "G14",
+            "valor": 2290
+          },
+          {
+            "celda": "H14",
+            "valor": 0.909090909090909
+          },
+          {
+            "celda": "I14",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B16",
+            "valor": "B. Sector Administración y Comercio"
+          }
+        ],
+        [
+          {
+            "celda": "B17",
+            "valor": "Año"
+          },
+          {
+            "celda": "C17",
+            "valor": "Grupo de ingreso"
+          },
+          {
+            "celda": "D17",
+            "valor": "N° Est"
+          },
+          {
+            "celda": "E17",
+            "valor": "N° Est. vigentes T2"
+          },
+          {
+            "celda": "F17",
+            "valor": "Tasa vigentes T2"
+          },
+          {
+            "celda": "G17",
+            "valor": "N° Est. vigentes T3"
+          },
+          {
+            "celda": "H17",
+            "valor": "Tasa vigentes T3"
+          },
+          {
+            "celda": "I17",
+            "valor": "Retención 1er año (cálculo propio, hoja 9)"
+          }
+        ],
+        [
+          {
+            "celda": "B18",
+            "valor": 2024
+          },
+          {
+            "celda": "C18",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D18",
+            "valor": 61
+          },
+          {
+            "celda": "E18",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F18",
+            "valor": "—"
+          },
+          {
+            "celda": "G18",
+            "valor": "Sin foto"
+          },
+          {
+            "celda": "H18",
+            "valor": "—"
+          },
+          {
+            "celda": "I18",
+            "valor": 0.442622950819672
+          }
+        ],
+        [
+          {
+            "celda": "B19",
+            "valor": 2025
+          },
+          {
+            "celda": "C19",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D19",
+            "valor": 477
+          },
+          {
+            "celda": "E19",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F19",
+            "valor": "—"
+          },
+          {
+            "celda": "G19",
+            "valor": 438
+          },
+          {
+            "celda": "H19",
+            "valor": 0.918238993710692
+          },
+          {
+            "celda": "I19",
+            "valor": 0.528301886792453
+          }
+        ],
+        [
+          {
+            "celda": "B20",
+            "valor": 2025
+          },
+          {
+            "celda": "C20",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D20",
+            "valor": 97
+          },
+          {
+            "celda": "E20",
+            "valor": 86
+          },
+          {
+            "celda": "F20",
+            "valor": 0.88659793814433
+          },
+          {
+            "celda": "G20",
+            "valor": 87
+          },
+          {
+            "celda": "H20",
+            "valor": 0.896907216494845
+          },
+          {
+            "celda": "I20",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B21",
+            "valor": 2025
+          },
+          {
+            "celda": "C21",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D21",
+            "valor": 574
+          },
+          {
+            "celda": "E21",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F21",
+            "valor": "—"
+          },
+          {
+            "celda": "G21",
+            "valor": 525
+          },
+          {
+            "celda": "H21",
+            "valor": 0.914634146341463
+          },
+          {
+            "celda": "I21",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B22",
+            "valor": 2026
+          },
+          {
+            "celda": "C22",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D22",
+            "valor": 608
+          },
+          {
+            "celda": "E22",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F22",
+            "valor": "—"
+          },
+          {
+            "celda": "G22",
+            "valor": 556
+          },
+          {
+            "celda": "H22",
+            "valor": 0.914473684210526
+          },
+          {
+            "celda": "I22",
+            "valor": "Se mide en 2027"
+          }
+        ],
+        [
+          {
+            "celda": "B23",
+            "valor": 2026
+          },
+          {
+            "celda": "C23",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D23",
+            "valor": 268
+          },
+          {
+            "celda": "E23",
+            "valor": 237
+          },
+          {
+            "celda": "F23",
+            "valor": 0.881040892193309
+          },
+          {
+            "celda": "G23",
+            "valor": 241
+          },
+          {
+            "celda": "H23",
+            "valor": 0.899253731343284
+          },
+          {
+            "celda": "I23",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B24",
+            "valor": 2026
+          },
+          {
+            "celda": "C24",
+            "valor": "3 · Ingreso T3 (foto del área)"
+          },
+          {
+            "celda": "D24",
+            "valor": 204
+          },
+          {
+            "celda": "E24",
+            "valor": "No aplica"
+          },
+          {
+            "celda": "F24",
+            "valor": "—"
+          },
+          {
+            "celda": "G24",
+            "valor": 188
+          },
+          {
+            "celda": "H24",
+            "valor": 0.92156862745098
+          },
+          {
+            "celda": "I24",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B25",
+            "valor": 2026
+          },
+          {
+            "celda": "C25",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D25",
+            "valor": 1074
+          },
+          {
+            "celda": "E25",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F25",
+            "valor": "—"
+          },
+          {
+            "celda": "G25",
+            "valor": 980
+          },
+          {
+            "celda": "H25",
+            "valor": 0.912476722532589
+          },
+          {
+            "celda": "I25",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B27",
+            "valor": "B. Sector Tecnologías"
+          }
+        ],
+        [
+          {
+            "celda": "B28",
+            "valor": "Año"
+          },
+          {
+            "celda": "C28",
+            "valor": "Grupo de ingreso"
+          },
+          {
+            "celda": "D28",
+            "valor": "N° Est"
+          },
+          {
+            "celda": "E28",
+            "valor": "N° Est. vigentes T2"
+          },
+          {
+            "celda": "F28",
+            "valor": "Tasa vigentes T2"
+          },
+          {
+            "celda": "G28",
+            "valor": "N° Est. vigentes T3"
+          },
+          {
+            "celda": "H28",
+            "valor": "Tasa vigentes T3"
+          },
+          {
+            "celda": "I28",
+            "valor": "Retención 1er año (cálculo propio, hoja 9)"
+          }
+        ],
+        [
+          {
+            "celda": "B29",
+            "valor": 2024
+          },
+          {
+            "celda": "C29",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D29",
+            "valor": 497
+          },
+          {
+            "celda": "E29",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F29",
+            "valor": "—"
+          },
+          {
+            "celda": "G29",
+            "valor": "Sin foto"
+          },
+          {
+            "celda": "H29",
+            "valor": "—"
+          },
+          {
+            "celda": "I29",
+            "valor": 0.601609657947686
+          }
+        ],
+        [
+          {
+            "celda": "B30",
+            "valor": 2025
+          },
+          {
+            "celda": "C30",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D30",
+            "valor": 598
+          },
+          {
+            "celda": "E30",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F30",
+            "valor": "—"
+          },
+          {
+            "celda": "G30",
+            "valor": 522
+          },
+          {
+            "celda": "H30",
+            "valor": 0.872909698996656
+          },
+          {
+            "celda": "I30",
+            "valor": 0.637123745819398
+          }
+        ],
+        [
+          {
+            "celda": "B31",
+            "valor": 2025
+          },
+          {
+            "celda": "C31",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D31",
+            "valor": 104
+          },
+          {
+            "celda": "E31",
+            "valor": 97
+          },
+          {
+            "celda": "F31",
+            "valor": 0.932692307692308
+          },
+          {
+            "celda": "G31",
+            "valor": 97
+          },
+          {
+            "celda": "H31",
+            "valor": 0.932692307692308
+          },
+          {
+            "celda": "I31",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B32",
+            "valor": 2025
+          },
+          {
+            "celda": "C32",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D32",
+            "valor": 701
+          },
+          {
+            "celda": "E32",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F32",
+            "valor": "—"
+          },
+          {
+            "celda": "G32",
+            "valor": 619
+          },
+          {
+            "celda": "H32",
+            "valor": 0.8830242510699
+          },
+          {
+            "celda": "I32",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B33",
+            "valor": 2026
+          },
+          {
+            "celda": "C33",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D33",
+            "valor": 574
+          },
+          {
+            "celda": "E33",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F33",
+            "valor": "—"
+          },
+          {
+            "celda": "G33",
+            "valor": 534
+          },
+          {
+            "celda": "H33",
+            "valor": 0.936842105263158
+          },
+          {
+            "celda": "I33",
+            "valor": "Se mide en 2027"
+          }
+        ],
+        [
+          {
+            "celda": "B34",
+            "valor": 2026
+          },
+          {
+            "celda": "C34",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D34",
+            "valor": 134
+          },
+          {
+            "celda": "E34",
+            "valor": 129
+          },
+          {
+            "celda": "F34",
+            "valor": 0.962686567164179
+          },
+          {
+            "celda": "G34",
+            "valor": 124
+          },
+          {
+            "celda": "H34",
+            "valor": 0.925373134328358
+          },
+          {
+            "celda": "I34",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B35",
+            "valor": 2026
+          },
+          {
+            "celda": "C35",
+            "valor": "3 · Ingreso T3 (foto del área)"
+          },
+          {
+            "celda": "D35",
+            "valor": 210
+          },
+          {
+            "celda": "E35",
+            "valor": "No aplica"
+          },
+          {
+            "celda": "F35",
+            "valor": "—"
+          },
+          {
+            "celda": "G35",
+            "valor": 189
+          },
+          {
+            "celda": "H35",
+            "valor": 0.9
+          },
+          {
+            "celda": "I35",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B36",
+            "valor": 2026
+          },
+          {
+            "celda": "C36",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D36",
+            "valor": 916
+          },
+          {
+            "celda": "E36",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F36",
+            "valor": "—"
+          },
+          {
+            "celda": "G36",
+            "valor": 845
+          },
+          {
+            "celda": "H36",
+            "valor": 0.926535087719298
+          },
+          {
+            "celda": "I36",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B38",
+            "valor": "B. Sector Salud"
+          }
+        ],
+        [
+          {
+            "celda": "B39",
+            "valor": "Año"
+          },
+          {
+            "celda": "C39",
+            "valor": "Grupo de ingreso"
+          },
+          {
+            "celda": "D39",
+            "valor": "N° Est"
+          },
+          {
+            "celda": "E39",
+            "valor": "N° Est. vigentes T2"
+          },
+          {
+            "celda": "F39",
+            "valor": "Tasa vigentes T2"
+          },
+          {
+            "celda": "G39",
+            "valor": "N° Est. vigentes T3"
+          },
+          {
+            "celda": "H39",
+            "valor": "Tasa vigentes T3"
+          },
+          {
+            "celda": "I39",
+            "valor": "Retención 1er año (cálculo propio, hoja 9)"
+          }
+        ],
+        [
+          {
+            "celda": "B40",
+            "valor": 2024
+          },
+          {
+            "celda": "C40",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D40",
+            "valor": 0
+          },
+          {
+            "celda": "E40",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F40",
+            "valor": "—"
+          },
+          {
+            "celda": "G40",
+            "valor": "Sin foto"
+          },
+          {
+            "celda": "H40",
+            "valor": "—"
+          },
+          {
+            "celda": "I40",
+            "valor": "—"
+          }
+        ],
+        [
+          {
+            "celda": "B41",
+            "valor": 2025
+          },
+          {
+            "celda": "C41",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D41",
+            "valor": 75
+          },
+          {
+            "celda": "E41",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F41",
+            "valor": "—"
+          },
+          {
+            "celda": "G41",
+            "valor": 63
+          },
+          {
+            "celda": "H41",
+            "valor": 0.84
+          },
+          {
+            "celda": "I41",
+            "valor": 0.466666666666667
+          }
+        ],
+        [
+          {
+            "celda": "B42",
+            "valor": 2025
+          },
+          {
+            "celda": "C42",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D42",
+            "valor": 21
+          },
+          {
+            "celda": "E42",
+            "valor": 17
+          },
+          {
+            "celda": "F42",
+            "valor": 0.80952380952381
+          },
+          {
+            "celda": "G42",
+            "valor": 18
+          },
+          {
+            "celda": "H42",
+            "valor": 0.857142857142857
+          },
+          {
+            "celda": "I42",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B43",
+            "valor": 2025
+          },
+          {
+            "celda": "C43",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D43",
+            "valor": 95
+          },
+          {
+            "celda": "E43",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F43",
+            "valor": "—"
+          },
+          {
+            "celda": "G43",
+            "valor": 80
+          },
+          {
+            "celda": "H43",
+            "valor": 0.842105263157895
+          },
+          {
+            "celda": "I43",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B44",
+            "valor": 2026
+          },
+          {
+            "celda": "C44",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D44",
+            "valor": 289
+          },
+          {
+            "celda": "E44",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F44",
+            "valor": "—"
+          },
+          {
+            "celda": "G44",
+            "valor": 270
+          },
+          {
+            "celda": "H44",
+            "valor": 0.934256055363322
+          },
+          {
+            "celda": "I44",
+            "valor": "Se mide en 2027"
+          }
+        ],
+        [
+          {
+            "celda": "B45",
+            "valor": 2026
+          },
+          {
+            "celda": "C45",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D45",
+            "valor": 125
+          },
+          {
+            "celda": "E45",
+            "valor": 96
+          },
+          {
+            "celda": "F45",
+            "valor": 0.768
+          },
+          {
+            "celda": "G45",
+            "valor": 102
+          },
+          {
+            "celda": "H45",
+            "valor": 0.816
+          },
+          {
+            "celda": "I45",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B46",
+            "valor": 2026
+          },
+          {
+            "celda": "C46",
+            "valor": "3 · Ingreso T3 (foto del área)"
+          },
+          {
+            "celda": "D46",
+            "valor": 131
+          },
+          {
+            "celda": "E46",
+            "valor": "No aplica"
+          },
+          {
+            "celda": "F46",
+            "valor": "—"
+          },
+          {
+            "celda": "G46",
+            "valor": 103
+          },
+          {
+            "celda": "H46",
+            "valor": 0.786259541984733
+          },
+          {
+            "celda": "I46",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B47",
+            "valor": 2026
+          },
+          {
+            "celda": "C47",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D47",
+            "valor": 542
+          },
+          {
+            "celda": "E47",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F47",
+            "valor": "—"
+          },
+          {
+            "celda": "G47",
+            "valor": 473
+          },
+          {
+            "celda": "H47",
+            "valor": 0.872693726937269
+          },
+          {
+            "celda": "I47",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B49",
+            "valor": "C. Tipo de carrera · Técnico de Nivel Superior"
+          }
+        ],
+        [
+          {
+            "celda": "B50",
+            "valor": "Año"
+          },
+          {
+            "celda": "C50",
+            "valor": "Grupo de ingreso"
+          },
+          {
+            "celda": "D50",
+            "valor": "N° Est"
+          },
+          {
+            "celda": "E50",
+            "valor": "N° Est. vigentes T2"
+          },
+          {
+            "celda": "F50",
+            "valor": "Tasa vigentes T2"
+          },
+          {
+            "celda": "G50",
+            "valor": "N° Est. vigentes T3"
+          },
+          {
+            "celda": "H50",
+            "valor": "Tasa vigentes T3"
+          },
+          {
+            "celda": "I50",
+            "valor": "Retención 1er año (cálculo propio, hoja 9)"
+          }
+        ],
+        [
+          {
+            "celda": "B51",
+            "valor": 2024
+          },
+          {
+            "celda": "C51",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D51",
+            "valor": 271
+          },
+          {
+            "celda": "E51",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F51",
+            "valor": "—"
+          },
+          {
+            "celda": "G51",
+            "valor": "Sin foto"
+          },
+          {
+            "celda": "H51",
+            "valor": "—"
+          },
+          {
+            "celda": "I51",
+            "valor": 0.549815498154982
+          }
+        ],
+        [
+          {
+            "celda": "B52",
+            "valor": 2025
+          },
+          {
+            "celda": "C52",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D52",
+            "valor": 565
+          },
+          {
+            "celda": "E52",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F52",
+            "valor": "—"
+          },
+          {
+            "celda": "G52",
+            "valor": 495
+          },
+          {
+            "celda": "H52",
+            "valor": 0.876106194690266
+          },
+          {
+            "celda": "I52",
+            "valor": 0.557522123893805
+          }
+        ],
+        [
+          {
+            "celda": "B53",
+            "valor": 2025
+          },
+          {
+            "celda": "C53",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D53",
+            "valor": 36
+          },
+          {
+            "celda": "E53",
+            "valor": 31
+          },
+          {
+            "celda": "F53",
+            "valor": 0.861111111111111
+          },
+          {
+            "celda": "G53",
+            "valor": 31
+          },
+          {
+            "celda": "H53",
+            "valor": 0.861111111111111
+          },
+          {
+            "celda": "I53",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B54",
+            "valor": 2025
+          },
+          {
+            "celda": "C54",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D54",
+            "valor": 599
+          },
+          {
+            "celda": "E54",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F54",
+            "valor": "—"
+          },
+          {
+            "celda": "G54",
+            "valor": 525
+          },
+          {
+            "celda": "H54",
+            "valor": 0.876460767946578
+          },
+          {
+            "celda": "I54",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B55",
+            "valor": 2026
+          },
+          {
+            "celda": "C55",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D55",
+            "valor": 793
+          },
+          {
+            "celda": "E55",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F55",
+            "valor": "—"
+          },
+          {
+            "celda": "G55",
+            "valor": 730
+          },
+          {
+            "celda": "H55",
+            "valor": 0.925221799746515
+          },
+          {
+            "celda": "I55",
+            "valor": "Se mide en 2027"
+          }
+        ],
+        [
+          {
+            "celda": "B56",
+            "valor": 2026
+          },
+          {
+            "celda": "C56",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D56",
+            "valor": 291
+          },
+          {
+            "celda": "E56",
+            "valor": "Sin estado"
+          },
+          {
+            "celda": "F56",
+            "valor": "—"
+          },
+          {
+            "celda": "G56",
+            "valor": 248
+          },
+          {
+            "celda": "H56",
+            "valor": 0.852233676975945
+          },
+          {
+            "celda": "I56",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B57",
+            "valor": 2026
+          },
+          {
+            "celda": "C57",
+            "valor": "3 · Ingreso T3 (foto del área)"
+          },
+          {
+            "celda": "D57",
+            "valor": 288
+          },
+          {
+            "celda": "E57",
+            "valor": "No aplica"
+          },
+          {
+            "celda": "F57",
+            "valor": "—"
+          },
+          {
+            "celda": "G57",
+            "valor": 245
+          },
+          {
+            "celda": "H57",
+            "valor": 0.850694444444444
+          },
+          {
+            "celda": "I57",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B58",
+            "valor": 2026
+          },
+          {
+            "celda": "C58",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D58",
+            "valor": 1362
+          },
+          {
+            "celda": "E58",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F58",
+            "valor": "—"
+          },
+          {
+            "celda": "G58",
+            "valor": 1215
+          },
+          {
+            "celda": "H58",
+            "valor": 0.894698085419735
+          },
+          {
+            "celda": "I58",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B60",
+            "valor": "C. Tipo de carrera · Profesional sin licenciatura"
+          }
+        ],
+        [
+          {
+            "celda": "B61",
+            "valor": "Año"
+          },
+          {
+            "celda": "C61",
+            "valor": "Grupo de ingreso"
+          },
+          {
+            "celda": "D61",
+            "valor": "N° Est"
+          },
+          {
+            "celda": "E61",
+            "valor": "N° Est. vigentes T2"
+          },
+          {
+            "celda": "F61",
+            "valor": "Tasa vigentes T2"
+          },
+          {
+            "celda": "G61",
+            "valor": "N° Est. vigentes T3"
+          },
+          {
+            "celda": "H61",
+            "valor": "Tasa vigentes T3"
+          },
+          {
+            "celda": "I61",
+            "valor": "Retención 1er año (cálculo propio, hoja 9)"
+          }
+        ],
+        [
+          {
+            "celda": "B62",
+            "valor": 2024
+          },
+          {
+            "celda": "C62",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D62",
+            "valor": 287
+          },
+          {
+            "celda": "E62",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F62",
+            "valor": "—"
+          },
+          {
+            "celda": "G62",
+            "valor": "Sin foto"
+          },
+          {
+            "celda": "H62",
+            "valor": "—"
+          },
+          {
+            "celda": "I62",
+            "valor": 0.616724738675958
+          }
+        ],
+        [
+          {
+            "celda": "B63",
+            "valor": 2025
+          },
+          {
+            "celda": "C63",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D63",
+            "valor": 585
+          },
+          {
+            "celda": "E63",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F63",
+            "valor": "—"
+          },
+          {
+            "celda": "G63",
+            "valor": 528
+          },
+          {
+            "celda": "H63",
+            "valor": 0.902564102564103
+          },
+          {
+            "celda": "I63",
+            "valor": 0.603418803418803
+          }
+        ],
+        [
+          {
+            "celda": "B64",
+            "valor": 2025
+          },
+          {
+            "celda": "C64",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D64",
+            "valor": 186
+          },
+          {
+            "celda": "E64",
+            "valor": 169
+          },
+          {
+            "celda": "F64",
+            "valor": 0.908602150537634
+          },
+          {
+            "celda": "G64",
+            "valor": 171
+          },
+          {
+            "celda": "H64",
+            "valor": 0.919354838709677
+          },
+          {
+            "celda": "I64",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B65",
+            "valor": 2025
+          },
+          {
+            "celda": "C65",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D65",
+            "valor": 771
+          },
+          {
+            "celda": "E65",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F65",
+            "valor": "—"
+          },
+          {
+            "celda": "G65",
+            "valor": 699
+          },
+          {
+            "celda": "H65",
+            "valor": 0.906614785992218
+          },
+          {
+            "celda": "I65",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B66",
+            "valor": 2026
+          },
+          {
+            "celda": "C66",
+            "valor": "1 · Matrícula Unificada (periodo 1)"
+          },
+          {
+            "celda": "D66",
+            "valor": 678
+          },
+          {
+            "celda": "E66",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F66",
+            "valor": "—"
+          },
+          {
+            "celda": "G66",
+            "valor": 630
+          },
+          {
+            "celda": "H66",
+            "valor": 0.929203539823009
+          },
+          {
+            "celda": "I66",
+            "valor": "Se mide en 2027"
+          }
+        ],
+        [
+          {
+            "celda": "B67",
+            "valor": 2026
+          },
+          {
+            "celda": "C67",
+            "valor": "2 · Ingreso T2 (foto del área)"
+          },
+          {
+            "celda": "D67",
+            "valor": 236
+          },
+          {
+            "celda": "E67",
+            "valor": "Sin estado"
+          },
+          {
+            "celda": "F67",
+            "valor": "—"
+          },
+          {
+            "celda": "G67",
+            "valor": 219
+          },
+          {
+            "celda": "H67",
+            "valor": 0.927966101694915
+          },
+          {
+            "celda": "I67",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B68",
+            "valor": 2026
+          },
+          {
+            "celda": "C68",
+            "valor": "3 · Ingreso T3 (foto del área)"
+          },
+          {
+            "celda": "D68",
+            "valor": 257
+          },
+          {
+            "celda": "E68",
+            "valor": "No aplica"
+          },
+          {
+            "celda": "F68",
+            "valor": "—"
+          },
+          {
+            "celda": "G68",
+            "valor": 235
+          },
+          {
+            "celda": "H68",
+            "valor": 0.914396887159533
+          },
+          {
+            "celda": "I68",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B69",
+            "valor": 2026
+          },
+          {
+            "celda": "C69",
+            "valor": "Total (persona una vez)"
+          },
+          {
+            "celda": "D69",
+            "valor": 1165
+          },
+          {
+            "celda": "E69",
+            "valor": "Sin foto completa"
+          },
+          {
+            "celda": "F69",
+            "valor": "—"
+          },
+          {
+            "celda": "G69",
+            "valor": 1078
+          },
+          {
+            "celda": "H69",
+            "valor": 0.925321888412017
+          },
+          {
+            "celda": "I69",
+            "valor": "No aplica"
+          }
+        ],
+        [
+          {
+            "celda": "B71",
+            "valor": "D. Confirmación de los ingresos T2 2025 (D, 22-10-2026: foto T3 del mismo año y renovación en el periodo 2 del año siguiente)"
+          }
+        ],
+        [
+          {
+            "celda": "B72",
+            "valor": "Indicador"
+          },
+          {
+            "celda": "D72",
+            "valor": "Personas"
+          },
+          {
+            "celda": "E72",
+            "valor": "Tasa"
+          },
+          {
+            "celda": "F72",
+            "valor": "Fuente"
+          }
+        ],
+        [
+          {
+            "celda": "B73",
+            "valor": "Ingresos T2 2025 (personas)"
+          },
+          {
+            "celda": "D73",
+            "valor": 222
+          },
+          {
+            "celda": "E73",
+            "valor": "—"
+          },
+          {
+            "celda": "F73",
+            "valor": "Matrícula T2_2025 2 · Hoja1 (hoja 20)"
+          }
+        ],
+        [
+          {
+            "celda": "B74",
+            "valor": "VIG 1 en su matrícula de ingreso · foto 2025-3"
+          },
+          {
+            "celda": "D74",
+            "valor": 202
+          },
+          {
+            "celda": "E74",
+            "valor": 0.90990990990991
+          },
+          {
+            "celda": "F74",
+            "valor": "Hoja 24"
+          }
+        ],
+        [
+          {
+            "celda": "B75",
+            "valor": "Renovaron en 2026, periodo 2 (U+ al 22-10-2026)"
+          },
+          {
+            "celda": "D75",
+            "valor": 65
+          },
+          {
+            "celda": "E75",
+            "valor": 0.292792792792793
+          },
+          {
+            "celda": "F75",
+            "valor": "DATOSDEALUMNOS_12159: matrícula de ingreso 2025-2 con ANOMATRICULA 2026 y PERIODOMATRICULA 2"
+          }
+        ],
+        [
+          {
+            "celda": "B76",
+            "valor": "   de ellos VIGENTE hoy"
+          },
+          {
+            "celda": "D76",
+            "valor": 64
+          },
+          {
+            "celda": "E76",
+            "valor": 0.288288288288288
+          },
+          {
+            "celda": "F76",
+            "valor": "ídem"
+          }
+        ],
+        [
+          {
+            "celda": "B77",
+            "valor": "VIGENTE hoy sin matrícula 2026 (E: causa por confirmar)"
+          },
+          {
+            "celda": "D77",
+            "valor": 115
+          },
+          {
+            "celda": "E77",
+            "valor": 0.518018018018018
+          },
+          {
+            "celda": "F77",
+            "valor": "ídem; última matrícula 2025"
+          }
+        ],
+        [
+          {
+            "celda": "B79",
+            "valor": "Lectura y reglas"
+          }
+        ],
+        [
+          {
+            "celda": "B80",
+            "valor": "C · Grupo 1 = estudiantes de primer año de la Matrícula Unificada (2024 y 2025: hoja 9; 2026: hoja 11 con ingreso de origen 2026-1, VIG 1 y sin RUT duplicado, 1.471). Grupos 2 y 3 = personas distintas de las fotos del área."
+          }
+        ],
+        [
+          {
+            "celda": "B81",
+            "valor": "D · Vigencia = matrícula de ingreso (CODCLI con el año de ingreso de la persona) con las 32 reglas estado|situación → VIG (hoja 21). Retenido: sigue vigente. Desertor: se va sin titularse. Titulado (NO APLICA) y PENDIENTE salen del denominador."
+          }
+        ],
+        [
+          {
+            "celda": "B82",
+            "valor": "B · Cierre T3: 2025 = Matrícula T3_2025 2.xlsx, hoja T3_2025 (hoja 24); 2026 = DATOSDEALUMNOS_12159 al 22-10-2026, T3 en curso (hoja 25). Cierre T2 del grupo 1: sin foto completa (las fotos T2 solo traen la matrícula del periodo 2)."
+          }
+        ],
+        [
+          {
+            "celda": "B83",
+            "valor": "D · Esta hoja es cálculo propio interno: los periodos 2 y 3 no existen en la metodología SIES. La comparación con SIES (IPSS publicado, subsistema IP, tipo de carrera, sexo y carrera genérica) es solo del periodo 1 y está en las hojas 5 y 16."
+          }
+        ],
+        [
+          {
+            "celda": "B84",
+            "valor": "C · Tasa anual de los tres periodos (pendiente, E): se calcula ponderada (Σ retenidos / Σ ingresos), no como promedio de tasas, y exige la misma medida un año después para los tres grupos (T2: renovación 2026-2; T3: cierre 2026-3)."
+          }
+        ],
+        [
+          {
+            "celda": "B85",
+            "valor": "B/E · Grupo 1 2025: 37 personas sin matrícula de ingreso 2025 en la foto 2025-3 (U+ las registra con ingreso 2024 o pasaporte sin cruce). Ingresos T2 2026: la foto no trae estado; T2 = matriculados − renuncias del área (hoja 23, unidad matrícula)."
+          }
+        ],
+        [
+          {
+            "celda": "B86",
+            "valor": "Fuentes (SHA-256): Matrícula T2_2025 2.xlsx: ed5de007202d… · Matrícula T3_2025 2.xlsx: 68a1cd54ee48… · Matrícula T_2_13_07_2026.xlsx: 7926a9cabcc6… · Matrícula_T3_02_10_2026.xlsx: de4e73ee7d27… · avance_curricular@09314ca:data/reglas_negocio/mu2027/versiones/20261021_v1/reglas.json: 5ffa47d537f3… · DATOSDEALUMNOS_12159.xlsx (U+, estado al 22-10-2026): a06384834203… · avance_curricular@09314ca:DURACION_ESTUDIOS.tsv (NIVEL_CARRERA): 701025451acf… · USO RESTRINGIDO: las hojas 20, 24 y 25 contienen RUT."
+          }
+        ],
+        [
+          {
+            "celda": "B88",
+            "valor": "Clasificación de cifras nuevas"
+          }
+        ],
+        [
+          {
+            "celda": "B89",
+            "valor": "Proxy de avance académico: C (cálculo interno) basado en PROMEDIOSDEALUMNOS_12166.xlsx; no es dato SIES ni foto de matrícula de cierre."
+          }
+        ]
+      ]
+    },
+    "52_Codigos_SIES_Revision": {
+      "dimensiones": [
+        null,
+        null
+      ],
+      "muestra_agregada": [
+        [
+          {
+            "celda": "A1",
+            "valor": "52 · Diccionario SIES aplicado al seguimiento intertrimestral\nB/C · Se conserva el código de la cohorte MU/T1; se revisa la versión del contexto académico por separado.\nD · Ninguna base, tasa ni denominador cambia. E · Un código pendiente o un contexto no localizado no significa deserción."
+          }
+        ],
+        [
+          {
+            "celda": "A5",
+            "valor": "Año MU/T1"
+          },
+          {
+            "celda": "B5",
+            "valor": "Alcance"
+          },
+          {
+            "celda": "C5",
+            "valor": "Estudiantes T1"
+          },
+          {
+            "celda": "D5",
+            "valor": "Con contexto"
+          },
+          {
+            "celda": "E5",
+            "valor": "Sin contexto"
+          },
+          {
+            "celda": "F5",
+            "valor": "Obs. documentales"
+          },
+          {
+            "celda": "G5",
+            "valor": "Obs. internas"
+          },
+          {
+            "celda": "H5",
+            "valor": "Obs. pendientes"
+          },
+          {
+            "celda": "I5",
+            "valor": "Clasificación"
+          }
+        ],
+        [
+          {
+            "celda": "A6",
+            "valor": 2024
+          },
+          {
+            "celda": "B6",
+            "valor": "Grupo 1 del libro"
+          },
+          {
+            "celda": "C6",
+            "valor": 558
+          },
+          {
+            "celda": "D6",
+            "valor": 493
+          },
+          {
+            "celda": "E6",
+            "valor": 65
+          },
+          {
+            "celda": "F6",
+            "valor": 1111
+          },
+          {
+            "celda": "G6",
+            "valor": 0
+          },
+          {
+            "celda": "H6",
+            "valor": 136
+          },
+          {
+            "celda": "I6",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A7",
+            "valor": 2025
+          },
+          {
+            "celda": "B7",
+            "valor": "Grupo 1 del libro"
+          },
+          {
+            "celda": "C7",
+            "valor": 1150
+          },
+          {
+            "celda": "D7",
+            "valor": 867
+          },
+          {
+            "celda": "E7",
+            "valor": 283
+          },
+          {
+            "celda": "F7",
+            "valor": 1825
+          },
+          {
+            "celda": "G7",
+            "valor": 0
+          },
+          {
+            "celda": "H7",
+            "valor": 46
+          },
+          {
+            "celda": "I7",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A8",
+            "valor": 2026
+          },
+          {
+            "celda": "B8",
+            "valor": "Grupo 1 del libro"
+          },
+          {
+            "celda": "C8",
+            "valor": 1471
+          },
+          {
+            "celda": "D8",
+            "valor": 880
+          },
+          {
+            "celda": "E8",
+            "valor": 591
+          },
+          {
+            "celda": "F8",
+            "valor": 2152
+          },
+          {
+            "celda": "G8",
+            "valor": 2
+          },
+          {
+            "celda": "H8",
+            "valor": 48
+          },
+          {
+            "celda": "I8",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A9",
+            "valor": "Total registros"
+          },
+          {
+            "celda": "B9",
+            "valor": "Personas-año / contextos, según columna"
+          },
+          {
+            "celda": "C9",
+            "valor": 3179
+          },
+          {
+            "celda": "D9",
+            "valor": 2240
+          },
+          {
+            "celda": "E9",
+            "valor": 939
+          },
+          {
+            "celda": "F9",
+            "valor": 5088
+          },
+          {
+            "celda": "G9",
+            "valor": 2
+          },
+          {
+            "celda": "H9",
+            "valor": 230
+          }
+        ],
+        [
+          {
+            "celda": "A11",
+            "valor": "Control población T1: debe ser 0"
+          },
+          {
+            "celda": "C11",
+            "valor": 0
+          },
+          {
+            "celda": "D11",
+            "valor": "Contextos consultados: no es denominador"
+          },
+          {
+            "celda": "G11",
+            "valor": 5320
+          },
+          {
+            "celda": "H11",
+            "valor": "C · Sin adjudicaciones nuevas"
+          }
+        ],
+        [
+          {
+            "celda": "A13",
+            "valor": "Cómo revisar: en la hoja 53 filtre «Varias versiones» = Sí para ver los códigos de origen. En la hoja 54 filtre «Origen con varias versiones» = Sí y «Respaldo» para separar documental, interno aprobado y pendiente. La familia T1 y la del contexto pueden diferir: no se fuerza la continuidad de un plan."
+          }
+        ],
+        [
+          {
+            "celda": "A16",
+            "valor": "Familia SIES T1"
+          },
+          {
+            "celda": "B16",
+            "valor": "Carrera T1"
+          },
+          {
+            "celda": "C16",
+            "valor": "Estudiantes T1"
+          },
+          {
+            "celda": "D16",
+            "valor": "Obs. documentales"
+          },
+          {
+            "celda": "E16",
+            "valor": "Obs. internas"
+          },
+          {
+            "celda": "F16",
+            "valor": "Obs. pendientes"
+          },
+          {
+            "celda": "G16",
+            "valor": "Sin contexto"
+          },
+          {
+            "celda": "H16",
+            "valor": "Total contextos"
+          },
+          {
+            "celda": "I16",
+            "valor": "Clasificación"
+          }
+        ],
+        [
+          {
+            "celda": "A17",
+            "valor": "I162S2C1J1"
+          },
+          {
+            "celda": "B17",
+            "valor": "Ingeniería en Informática"
+          },
+          {
+            "celda": "C17",
+            "valor": 41
+          },
+          {
+            "celda": "D17",
+            "valor": 96
+          },
+          {
+            "celda": "E17",
+            "valor": 0
+          },
+          {
+            "celda": "F17",
+            "valor": 18
+          },
+          {
+            "celda": "G17",
+            "valor": 0
+          },
+          {
+            "celda": "H17",
+            "valor": 114
+          },
+          {
+            "celda": "I17",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A18",
+            "valor": "I162S2C1J2"
+          },
+          {
+            "celda": "B18",
+            "valor": "Ingeniería en Informática"
+          },
+          {
+            "celda": "C18",
+            "valor": 36
+          },
+          {
+            "celda": "D18",
+            "valor": 79
+          },
+          {
+            "celda": "E18",
+            "valor": 0
+          },
+          {
+            "celda": "F18",
+            "valor": 8
+          },
+          {
+            "celda": "G18",
+            "valor": 2
+          },
+          {
+            "celda": "H18",
+            "valor": 87
+          },
+          {
+            "celda": "I18",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A19",
+            "valor": "I162S2C1J4"
+          },
+          {
+            "celda": "B19",
+            "valor": "Ingeniería en Informática"
+          },
+          {
+            "celda": "C19",
+            "valor": 242
+          },
+          {
+            "celda": "D19",
+            "valor": 580
+          },
+          {
+            "celda": "E19",
+            "valor": 0
+          },
+          {
+            "celda": "F19",
+            "valor": 9
+          },
+          {
+            "celda": "G19",
+            "valor": 7
+          },
+          {
+            "celda": "H19",
+            "valor": 589
+          },
+          {
+            "celda": "I19",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A20",
+            "valor": "I162S2C3J2"
+          },
+          {
+            "celda": "B20",
+            "valor": "Ingeniería en Conectividad y Redes"
+          },
+          {
+            "celda": "C20",
+            "valor": 15
+          },
+          {
+            "celda": "D20",
+            "valor": 27
+          },
+          {
+            "celda": "E20",
+            "valor": 0
+          },
+          {
+            "celda": "F20",
+            "valor": 12
+          },
+          {
+            "celda": "G20",
+            "valor": 0
+          },
+          {
+            "celda": "H20",
+            "valor": 39
+          },
+          {
+            "celda": "I20",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A21",
+            "valor": "I162S2C3J4"
+          },
+          {
+            "celda": "B21",
+            "valor": "Ingeniería en Conectividad y Redes"
+          },
+          {
+            "celda": "C21",
+            "valor": 162
+          },
+          {
+            "celda": "D21",
+            "valor": 397
+          },
+          {
+            "celda": "E21",
+            "valor": 2
+          },
+          {
+            "celda": "F21",
+            "valor": 5
+          },
+          {
+            "celda": "G21",
+            "valor": 2
+          },
+          {
+            "celda": "H21",
+            "valor": 404
+          },
+          {
+            "celda": "I21",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A22",
+            "valor": "I162S2C46J2"
+          },
+          {
+            "celda": "B22",
+            "valor": "Ingeniería en Ciberseguridad"
+          },
+          {
+            "celda": "C22",
+            "valor": 36
+          },
+          {
+            "celda": "D22",
+            "valor": 75
+          },
+          {
+            "celda": "E22",
+            "valor": 0
+          },
+          {
+            "celda": "F22",
+            "valor": 15
+          },
+          {
+            "celda": "G22",
+            "valor": 0
+          },
+          {
+            "celda": "H22",
+            "valor": 90
+          },
+          {
+            "celda": "I22",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A23",
+            "valor": "I162S2C46J4"
+          },
+          {
+            "celda": "B23",
+            "valor": "Ingeniería en Ciberseguridad"
+          },
+          {
+            "celda": "C23",
+            "valor": 216
+          },
+          {
+            "celda": "D23",
+            "valor": 517
+          },
+          {
+            "celda": "E23",
+            "valor": 0
+          },
+          {
+            "celda": "F23",
+            "valor": 6
+          },
+          {
+            "celda": "G23",
+            "valor": 6
+          },
+          {
+            "celda": "H23",
+            "valor": 523
+          },
+          {
+            "celda": "I23",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A24",
+            "valor": "I162S2C6J2"
+          },
+          {
+            "celda": "B24",
+            "valor": "Técnico en Conectividad y Redes"
+          },
+          {
+            "celda": "C24",
+            "valor": 9
+          },
+          {
+            "celda": "D24",
+            "valor": 15
+          },
+          {
+            "celda": "E24",
+            "valor": 0
+          },
+          {
+            "celda": "F24",
+            "valor": 2
+          },
+          {
+            "celda": "G24",
+            "valor": 0
+          },
+          {
+            "celda": "H24",
+            "valor": 17
+          },
+          {
+            "celda": "I24",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A25",
+            "valor": "I162S2C6J4"
+          },
+          {
+            "celda": "B25",
+            "valor": "Técnico en Conectividad y Redes"
+          },
+          {
+            "celda": "C25",
+            "valor": 68
+          },
+          {
+            "celda": "D25",
+            "valor": 141
+          },
+          {
+            "celda": "E25",
+            "valor": 0
+          },
+          {
+            "celda": "F25",
+            "valor": 5
+          },
+          {
+            "celda": "G25",
+            "valor": 2
+          },
+          {
+            "celda": "H25",
+            "valor": 146
+          },
+          {
+            "celda": "I25",
+            "valor": "B/C/D/E"
+          }
+        ],
+        [
+          {
+            "celda": "A26",
+            "valor": "Total foco"
+          },
+          {
+            "celda": "B26",
+            "valor": "Familias con versiones múltiples en la evidencia"
+          },
+          {
+            "celda": "C26",
+            "valor": 825
+          },
+          {
+            "celda": "D26",
+            "valor": 1927
+          },
+          {
+            "celda": "E26",
+            "valor": 2
+          },
+          {
+            "celda": "F26",
+            "valor": 80
+          },
+          {
+            "celda": "G26",
+            "valor": 19
+          },
+          {
+            "celda": "H26",
+            "valor": 2009
+          }
+        ],
+        [
+          {
+            "celda": "A28",
+            "valor": "B/C · Los 3.179 códigos T1 están comprobados: 558 (2024), 1.150 (2025) y 1.471 (2026), como aparecen en esta versión del libro. Grupos de ingreso T2/T3 preservados, no reclasificados en esta aplicación."
+          }
+        ],
+        [
+          {
+            "celda": "A29",
+            "valor": "B/C · Una observación es persona–expediente–plan–año–período nativo. Una persona puede aportar varias. El código anual documentado es reutilizable en el contexto ya atribuido; no demuestra aceptación SIES ni día exacto de cambio."
+          }
+        ],
+        [
+          {
+            "celda": "A30",
+            "valor": "D/E · Dos correspondencias internas ya aprobadas siguen sin atribución documental. Los candidatos de las filas pendientes NO fueron adoptados. La ausencia de contexto en el diccionario no prueba ausencia de matrícula."
+          }
+        ],
+        [
+          {
+            "celda": "A31",
+            "valor": "B/C · El puente explícito N_DOC–RUT de IPSS_Procesamiento.xlsx / 2025_carga se reutilizó para 20 documentos P; no se inventó una conversión ni se cambió el documento original."
+          }
+        ],
+        [
+          {
+            "celda": "A32",
+            "valor": "Fuentes: V11, respaldo AUDITADO_ENTREGA (hojas 9, 11, 20, 24, 25), BASE_RETENCION_MU y diccionario activo v1_20261023. Rutas, hashes, consultas privadas y QA: MANIFEST_APLICACION.json junto al libro."
+          }
+        ],
+        [
+          {
+            "celda": "A33",
+            "valor": "E · Las notas y resultados históricos de las hojas 1–51 se conservan. Esta aplicación no certifica sus tasas ni convierte los períodos nativos de PROMEDIOS en fotos completas de cierre."
+          }
+        ]
+      ]
+    },
+    "53_Codigos_T1_Confirmados": {
+      "dimensiones": [
+        null,
+        null
+      ],
+      "muestra_agregada": [
+        {
+          "fila": 1,
+          "valores": [
+            "53 · Código SIES de origen: grupos MU/T1\nB/C · Código comprobado contra MU. Una fila agrupa estudiantes del mismo año, carrera y código.\nEste código identifica la cohorte seguida. No se reemplaza por la versión de otro plan o período.",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 2,
+          "valores": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 3,
+          "valores": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 4,
+          "valores": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 5,
+          "valores": [
+            "Año MU",
+            "Carrera T1",
+            "Familia SIES",
+            "Código SIES T1 confirmado",
+            "Varias versiones en evidencias",
+            "Estudiantes T1",
+            "Con contexto en diccionario",
+            "Sin contexto localizado",
+            "Clasificación"
+          ]
+        }
+      ]
+    },
+    "54_Contextos_y_Pendientes": {
+      "dimensiones": [
+        null,
+        null
+      ],
+      "muestra_agregada": [
+        {
+          "fila": 1,
+          "valores": [
+            "54 · Versiones documentadas, internas y pendientes\nB/C · Contextos del diccionario para las personas T1, en el mismo año. No son estudiantes adicionales.\nEl período es el valor nativo de PROMEDIOS; no se equipara automáticamente a T2/T3. La presencia de CODCLI en la foto T3 se informa aparte.",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 2,
+          "valores": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 3,
+          "valores": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 4,
+          "valores": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "fila": 5,
+          "valores": [
+            "Año observado",
+            "Período nativo",
+            "Carrera T1",
+            "Carrera UMAS expediente",
+            "Plan observado",
+            "Familia SIES origen",
+            "Origen con varias versiones",
+            "Código cohorte T1",
+            "Código contexto adoptado",
+            "Respaldo",
+            "Expediente observado foto T3",
+            "Relación con familia T1",
+            "Observaciones",
+            "Candidatos NO adoptados",
+            "Pendiente o límite"
+          ]
+        }
+      ]
+    }
+  },
+  "fuentes": {
+    "manifest": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/MANIFEST_APLICACION.json",
+      "sha256": "0dcb3fa757fb447931907e0b0984dfea2af56800d7293209d2145636c5e48a2e"
+    },
+    "privados_hashes": {
+      "CONSULTAS_EXACTAS.json": "f19fc4b1cf4505243c94a6ed17171c14c1f3fcf5063862be49bc9711e9b1dce0",
+      "SIN_CONTEXTO.json": "cad5967ea7319801e9da8ceebbdb1fed8613129112841f8e9d15cf42207bca8b",
+      "ORIGENES_T1.json": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0"
+    },
+    "script_aplicacion": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/aplicar_diccionario_excel_intertrimestral_20261023.py",
+      "sha256": "9de38a6a5cdf0130da7b7d885cfc9d153ed3759f6bd02a215ba17576e1ae069a"
+    },
+    "script_auditoria_actual": {
+      "ruta": "/tmp/cobertura_excel_alcance_20261023.py",
+      "sha256": "134023ed008dbc091f98e76e17b868789cace5087d9a7e35dc4101dcd338a52c"
+    }
+  },
+  "limites": [
+    "La asignación documental es anual y no prueba aceptación SIES ni fecha exacta de cambio.",
+    "Los períodos reportados son nativos de PROMEDIOS, no se declaran trimestres equivalentes.",
+    "El código de origen sigue respaldado para personas sin contexto localizado.",
+    "Los grupos de ingreso2/3 no fueron reclasificados en V12; no se les asigna el porcentaje de cobertura de T1.",
+    "No se alteraron bases, denominadores, Excel ni diccionario.",
+    "La consulta v7 no actualiza las hojas52-54 del Excel V12, que contienen v1."
+  ],
+  "porcentaje_9181_prueba_no_excel": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/auditoria_metodos_puente_20261023_155309/VALIDACION_POR_PERSONA.json",
+    "sha256": "6798986dc5fc37ac3e2de79f6314ec85c981e4f90f12f6973393766984190456",
+    "seccion": "K3_mas_ingreso_DA_min3/global",
+    "resultado": {
+      "universo": 8354,
+      "personas": 4762,
+      "emitidos": 7670,
+      "correctos": 7664,
+      "errores": 6,
+      "abstenciones": 684,
+      "cobertura_pct": 91.81230548240364,
+      "precision_emitidos_pct": 99.92177314211213,
+      "error_total_pct": 0.07182188173330141,
+      "personas_con_error": 6,
+      "motivos_abstencion": {
+        "MULTIPLES_CODIGOS": 247,
+        "SIN_GRUPO_ENTRENADO": 168,
+        "SOPORTE_INSUFICIENTE": 268,
+        "VARIABLE_AUSENTE": 1
+      }
+    },
+    "familias_multiversion": {
+      "universo": 5256,
+      "personas": 2726,
+      "emitidos": 4619,
+      "correctos": 4613,
+      "errores": 6,
+      "abstenciones": 637,
+      "cobertura_pct": 87.88051750380518,
+      "precision_emitidos_pct": 99.87010175362633,
+      "error_total_pct": 0.1141552511415525,
+      "personas_con_error": 6,
+      "motivos_abstencion": {
+        "MULTIPLES_CODIGOS": 247,
+        "SIN_GRUPO_ENTRENADO": 152,
+        "SOPORTE_INSUFICIENTE": 237,
+        "VARIABLE_AUSENTE": 1
+      }
+    },
+    "nota": "Prueba anual entre personas, no versión de T2/T3; etiquetas heredadas de atribución documental anual."
+  },
+  "detalle_denominadores_tasas_heredadas": {
+    "clasificacion": "B observado/C recuento de fórmula existente",
+    "fuente": {
+      "ruta": "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx",
+      "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+      "hojas": [
+        "18_Foto_Intertrimestral",
+        "20_Foto_BBDD"
+      ]
+    },
+    "grupos": [
+      {
+        "anio": 2024,
+        "grupo": 1,
+        "filas_grupo": 558,
+        "personas_unicas_llave": 558,
+        "en_base_T3_R1": 0,
+        "vigente_T3_Q1": 0,
+        "valores_R": {
+          "0": 558
+        },
+        "valores_Q": {
+          "0": 558
+        },
+        "valores_M_T2": {
+          "Sin foto completa": 558
+        },
+        "primera_vez_T1": 558
+      },
+      {
+        "anio": 2025,
+        "grupo": 1,
+        "filas_grupo": 1150,
+        "personas_unicas_llave": 1150,
+        "en_base_T3_R1": 1150,
+        "vigente_T3_Q1": 1023,
+        "valores_R": {
+          "1": 1150
+        },
+        "valores_Q": {
+          "1": 1023,
+          "0": 127
+        },
+        "valores_M_T2": {
+          "Sin foto completa": 1150
+        },
+        "primera_vez_T1": 1150
+      },
+      {
+        "anio": 2025,
+        "grupo": 2,
+        "filas_grupo": 222,
+        "personas_unicas_llave": 222,
+        "en_base_T3_R1": 222,
+        "vigente_T3_Q1": 202,
+        "valores_R": {
+          "1": 222
+        },
+        "valores_Q": {
+          "1": 202,
+          "0": 20
+        },
+        "valores_M_T2": {
+          "VIG 1": 200,
+          "VIG 0": 22
+        },
+        "primera_vez_T1": 218
+      },
+      {
+        "anio": 2026,
+        "grupo": 1,
+        "filas_grupo": 1471,
+        "personas_unicas_llave": 1471,
+        "en_base_T3_R1": 1467,
+        "vigente_T3_Q1": 1360,
+        "valores_R": {
+          "1": 1467,
+          "0": 4
+        },
+        "valores_Q": {
+          "1": 1360,
+          "0": 111
+        },
+        "valores_M_T2": {
+          "Sin foto completa": 1471
+        },
+        "primera_vez_T1": 1471
+      },
+      {
+        "anio": 2026,
+        "grupo": 2,
+        "filas_grupo": 527,
+        "personas_unicas_llave": 527,
+        "en_base_T3_R1": 527,
+        "vigente_T3_Q1": 467,
+        "valores_R": {
+          "1": 527
+        },
+        "valores_Q": {
+          "1": 467,
+          "0": 60
+        },
+        "valores_M_T2": {
+          "Sin estado": 527
+        },
+        "primera_vez_T1": 517
+      },
+      {
+        "anio": 2026,
+        "grupo": 3,
+        "filas_grupo": 545,
+        "personas_unicas_llave": 545,
+        "en_base_T3_R1": 545,
+        "vigente_T3_Q1": 480,
+        "valores_R": {
+          "1": 545
+        },
+        "valores_Q": {
+          "1": 480,
+          "0": 65
+        },
+        "valores_M_T2": {
+          "No aplica": 545
+        },
+        "primera_vez_T1": 535
+      }
+    ],
+    "cuatro_2026_T1_sin_base_T3": [
+      {
+        "fila_20": 1783,
+        "fuente_fila_original": "RETENCION · 11_BASE_RETENCION_MU_RAW fila 6279",
+        "carrera": "Técnico en Ciberseguridad",
+        "sector": "Tecnologías",
+        "tipo_carrera": "Técnico de Nivel Superior",
+        "tipo_doc": "R",
+        "codigo_SIES_origen": "I162S2C47J4V1",
+        "estado_ingreso_T3_P": "NO APLICA",
+        "estados_RUT_T3_S": "ELIMINADO/TITULADO",
+        "vig_T3": 0,
+        "en_base_T3": 0,
+        "primera_vez_ano": 1
+      },
+      {
+        "fila_20": 1878,
+        "fuente_fila_original": "RETENCION · 11_BASE_RETENCION_MU_RAW fila 6595",
+        "carrera": "Técnico en Conectividad y Redes",
+        "sector": "Tecnologías",
+        "tipo_carrera": "Técnico de Nivel Superior",
+        "tipo_doc": "R",
+        "codigo_SIES_origen": "I162S2C6J4V2",
+        "estado_ingreso_T3_P": "NO APLICA",
+        "estados_RUT_T3_S": "ELIMINADO/TITULADO",
+        "vig_T3": 0,
+        "en_base_T3": 0,
+        "primera_vez_ano": 1
+      },
+      {
+        "fila_20": 2114,
+        "fuente_fila_original": "RETENCION · 11_BASE_RETENCION_MU_RAW fila 7365",
+        "carrera": "Técnico en Programación y Análisis de Sistemas",
+        "sector": "Tecnologías",
+        "tipo_carrera": "Técnico de Nivel Superior",
+        "tipo_doc": "R",
+        "codigo_SIES_origen": "I162S2C57J4V1",
+        "estado_ingreso_T3_P": "NO APLICA",
+        "estados_RUT_T3_S": "ELIMINADO/TITULADO",
+        "vig_T3": 0,
+        "en_base_T3": 0,
+        "primera_vez_ano": 1
+      },
+      {
+        "fila_20": 2301,
+        "fuente_fila_original": "RETENCION · 11_BASE_RETENCION_MU_RAW fila 7994",
+        "carrera": "Técnico en Programación y Análisis de Sistemas",
+        "sector": "Tecnologías",
+        "tipo_carrera": "Técnico de Nivel Superior",
+        "tipo_doc": "R",
+        "codigo_SIES_origen": "I162S2C57J4V1",
+        "estado_ingreso_T3_P": "NO APLICA",
+        "estados_RUT_T3_S": "ELIMINADO/TITULADO",
+        "vig_T3": 0,
+        "en_base_T3": 0,
+        "primera_vez_ano": 1
+      }
+    ],
+    "formulas_marca_cuatro": {
+      "Q1783": "=IF(P1783=\"VIG 1\",1,0)",
+      "R1783": "=IF(OR(P1783=\"NO APLICA\",P1783=\"PENDIENTE\",P1783=\"Sin foto\"),0,1)",
+      "T1783": "=IF(COUNTIFS($B$6:B1783,B1783,$I$6:I1783,I1783)=1,1,0)",
+      "Q1878": "=IF(P1878=\"VIG 1\",1,0)",
+      "R1878": "=IF(OR(P1878=\"NO APLICA\",P1878=\"PENDIENTE\",P1878=\"Sin foto\"),0,1)",
+      "T1878": "=IF(COUNTIFS($B$6:B1878,B1878,$I$6:I1878,I1878)=1,1,0)",
+      "Q2114": "=IF(P2114=\"VIG 1\",1,0)",
+      "R2114": "=IF(OR(P2114=\"NO APLICA\",P2114=\"PENDIENTE\",P2114=\"Sin foto\"),0,1)",
+      "T2114": "=IF(COUNTIFS($B$6:B2114,B2114,$I$6:I2114,I2114)=1,1,0)",
+      "Q2301": "=IF(P2301=\"VIG 1\",1,0)",
+      "R2301": "=IF(OR(P2301=\"NO APLICA\",P2301=\"PENDIENTE\",P2301=\"Sin foto\"),0,1)",
+      "T2301": "=IF(COUNTIFS($B$6:B2301,B2301,$I$6:I2301,I2301)=1,1,0)"
+    },
+    "formulas_tasa": {
+      "D7": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2024,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+      "G7": "='26_Avance_Curricular_Resumen'!E1851",
+      "H7": "='26_Avance_Curricular_Resumen'!F1851",
+      "D8": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+      "G8": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$Q$6:$Q$4478,1)",
+      "H8": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G8/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")",
+      "D11": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+      "G11": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$Q$6:$Q$4478,1)",
+      "H11": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G11/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")",
+      "D12": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,2)",
+      "F12": "=IFERROR(IF(N(SUM('23_Foto_Renuncias_T2_2026'!$C$6:$C$24))>0,E12/SUM('23_Foto_Renuncias_T2_2026'!$C$6:$C$24),\"—\"),\"—\")"
+    },
+    "interpretacion": "Las cuatro filas adicionales de 1471 frente a 1467 se excluyen de H11 por la marca R=0: P indica NO APLICA y S registra ELIMINADO/TITULADO para las cuatro. La fórmula R descarta NO APLICA, PENDIENTE y Sin foto, aunque su encabezado diga EN BASE T3. No son cuatro identidades ausentes ni un código SIES faltante. Es una exclusión existente del denominador de esa tasa; no se cambia ni se aprueba aquí su regla."
+  }
+}

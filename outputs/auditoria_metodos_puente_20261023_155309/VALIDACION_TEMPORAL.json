@@ -1,0 +1,299 @@
+{
+  "T_plan": {
+    "global": {
+      "universo": 8354,
+      "personas": 4762,
+      "emitidos": 4225,
+      "correctos": 3695,
+      "errores": 530,
+      "abstenciones": 4129,
+      "cobertura_pct": 50.57457505386641,
+      "precision_emitidos_pct": 87.45562130177515,
+      "error_total_pct": 6.344266219774958,
+      "personas_con_error": 524,
+      "motivos_abstencion": {
+        "SIN_GRUPO_ENTRENADO": 2476,
+        "MULTIPLES_CODIGOS": 1653
+      }
+    },
+    "por_anio": {
+      "2019": {
+        "universo": 529,
+        "personas": 529,
+        "emitidos": 0,
+        "correctos": 0,
+        "errores": 0,
+        "abstenciones": 529,
+        "cobertura_pct": 0.0,
+        "precision_emitidos_pct": null,
+        "error_total_pct": 0.0,
+        "personas_con_error": 0,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 529
+        }
+      },
+      "2020": {
+        "universo": 598,
+        "personas": 598,
+        "emitidos": 388,
+        "correctos": 325,
+        "errores": 63,
+        "abstenciones": 210,
+        "cobertura_pct": 64.88294314381271,
+        "precision_emitidos_pct": 83.76288659793815,
+        "error_total_pct": 10.535117056856187,
+        "personas_con_error": 63,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 124,
+          "MULTIPLES_CODIGOS": 86
+        }
+      },
+      "2021": {
+        "universo": 896,
+        "personas": 884,
+        "emitidos": 385,
+        "correctos": 367,
+        "errores": 18,
+        "abstenciones": 511,
+        "cobertura_pct": 42.96875,
+        "precision_emitidos_pct": 95.32467532467533,
+        "error_total_pct": 2.0089285714285716,
+        "personas_con_error": 18,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 403,
+          "MULTIPLES_CODIGOS": 108
+        }
+      },
+      "2022": {
+        "universo": 869,
+        "personas": 857,
+        "emitidos": 780,
+        "correctos": 355,
+        "errores": 425,
+        "abstenciones": 89,
+        "cobertura_pct": 89.75834292289989,
+        "precision_emitidos_pct": 45.51282051282051,
+        "error_total_pct": 48.906789413118524,
+        "personas_con_error": 425,
+        "motivos_abstencion": {
+          "MULTIPLES_CODIGOS": 89
+        }
+      },
+      "2023": {
+        "universo": 1059,
+        "personas": 1049,
+        "emitidos": 244,
+        "correctos": 237,
+        "errores": 7,
+        "abstenciones": 815,
+        "cobertura_pct": 23.040604343720492,
+        "precision_emitidos_pct": 97.1311475409836,
+        "error_total_pct": 0.6610009442870632,
+        "personas_con_error": 7,
+        "motivos_abstencion": {
+          "MULTIPLES_CODIGOS": 621,
+          "SIN_GRUPO_ENTRENADO": 194
+        }
+      },
+      "2024": {
+        "universo": 1147,
+        "personas": 1145,
+        "emitidos": 83,
+        "correctos": 83,
+        "errores": 0,
+        "abstenciones": 1064,
+        "cobertura_pct": 7.2362685265911075,
+        "precision_emitidos_pct": 100.0,
+        "error_total_pct": 0.0,
+        "personas_con_error": 0,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 818,
+          "MULTIPLES_CODIGOS": 246
+        }
+      },
+      "2025": {
+        "universo": 1466,
+        "personas": 1466,
+        "emitidos": 1090,
+        "correctos": 1073,
+        "errores": 17,
+        "abstenciones": 376,
+        "cobertura_pct": 74.35197817189632,
+        "precision_emitidos_pct": 98.44036697247707,
+        "error_total_pct": 1.159618008185539,
+        "personas_con_error": 17,
+        "motivos_abstencion": {
+          "MULTIPLES_CODIGOS": 223,
+          "SIN_GRUPO_ENTRENADO": 153
+        }
+      },
+      "2026": {
+        "universo": 1790,
+        "personas": 1789,
+        "emitidos": 1255,
+        "correctos": 1255,
+        "errores": 0,
+        "abstenciones": 535,
+        "cobertura_pct": 70.11173184357541,
+        "precision_emitidos_pct": 100.0,
+        "error_total_pct": 0.0,
+        "personas_con_error": 0,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 255,
+          "MULTIPLES_CODIGOS": 280
+        }
+      }
+    },
+    "nota": "Puede usar historia previa de misma persona; prueba separada de cinco particiones por persona."
+  },
+  "T_plan_ingreso": {
+    "global": {
+      "universo": 8354,
+      "personas": 4762,
+      "emitidos": 3201,
+      "correctos": 2932,
+      "errores": 269,
+      "abstenciones": 5153,
+      "cobertura_pct": 38.316973904716306,
+      "precision_emitidos_pct": 91.5963761324586,
+      "error_total_pct": 3.220014364376347,
+      "personas_con_error": 269,
+      "motivos_abstencion": {
+        "SIN_GRUPO_ENTRENADO": 4785,
+        "VARIABLE_AUSENTE": 1,
+        "MULTIPLES_CODIGOS": 367
+      }
+    },
+    "por_anio": {
+      "2019": {
+        "universo": 529,
+        "personas": 529,
+        "emitidos": 0,
+        "correctos": 0,
+        "errores": 0,
+        "abstenciones": 529,
+        "cobertura_pct": 0.0,
+        "precision_emitidos_pct": null,
+        "error_total_pct": 0.0,
+        "personas_con_error": 0,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 528,
+          "VARIABLE_AUSENTE": 1
+        }
+      },
+      "2020": {
+        "universo": 598,
+        "personas": 598,
+        "emitidos": 288,
+        "correctos": 268,
+        "errores": 20,
+        "abstenciones": 310,
+        "cobertura_pct": 48.16053511705686,
+        "precision_emitidos_pct": 93.05555555555556,
+        "error_total_pct": 3.3444816053511706,
+        "personas_con_error": 20,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 301,
+          "MULTIPLES_CODIGOS": 9
+        }
+      },
+      "2021": {
+        "universo": 896,
+        "personas": 884,
+        "emitidos": 437,
+        "correctos": 437,
+        "errores": 0,
+        "abstenciones": 459,
+        "cobertura_pct": 48.77232142857143,
+        "precision_emitidos_pct": 100.0,
+        "error_total_pct": 0.0,
+        "personas_con_error": 0,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 445,
+          "MULTIPLES_CODIGOS": 14
+        }
+      },
+      "2022": {
+        "universo": 869,
+        "personas": 857,
+        "emitidos": 510,
+        "correctos": 276,
+        "errores": 234,
+        "abstenciones": 359,
+        "cobertura_pct": 58.68814729574223,
+        "precision_emitidos_pct": 54.11764705882353,
+        "error_total_pct": 26.927502876869966,
+        "personas_con_error": 234,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 330,
+          "MULTIPLES_CODIGOS": 29
+        }
+      },
+      "2023": {
+        "universo": 1059,
+        "personas": 1049,
+        "emitidos": 354,
+        "correctos": 345,
+        "errores": 9,
+        "abstenciones": 705,
+        "cobertura_pct": 33.42776203966006,
+        "precision_emitidos_pct": 97.45762711864407,
+        "error_total_pct": 0.8498583569405099,
+        "personas_con_error": 9,
+        "motivos_abstencion": {
+          "MULTIPLES_CODIGOS": 191,
+          "SIN_GRUPO_ENTRENADO": 514
+        }
+      },
+      "2024": {
+        "universo": 1147,
+        "personas": 1145,
+        "emitidos": 266,
+        "correctos": 265,
+        "errores": 1,
+        "abstenciones": 881,
+        "cobertura_pct": 23.190932868352224,
+        "precision_emitidos_pct": 99.62406015037594,
+        "error_total_pct": 0.08718395815170009,
+        "personas_con_error": 1,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 819,
+          "MULTIPLES_CODIGOS": 62
+        }
+      },
+      "2025": {
+        "universo": 1466,
+        "personas": 1466,
+        "emitidos": 580,
+        "correctos": 575,
+        "errores": 5,
+        "abstenciones": 886,
+        "cobertura_pct": 39.56343792633015,
+        "precision_emitidos_pct": 99.13793103448276,
+        "error_total_pct": 0.34106412005457026,
+        "personas_con_error": 5,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 863,
+          "MULTIPLES_CODIGOS": 23
+        }
+      },
+      "2026": {
+        "universo": 1790,
+        "personas": 1789,
+        "emitidos": 766,
+        "correctos": 766,
+        "errores": 0,
+        "abstenciones": 1024,
+        "cobertura_pct": 42.79329608938548,
+        "precision_emitidos_pct": 100.0,
+        "error_total_pct": 0.0,
+        "personas_con_error": 0,
+        "motivos_abstencion": {
+          "SIN_GRUPO_ENTRENADO": 985,
+          "MULTIPLES_CODIGOS": 39
+        }
+      }
+    },
+    "nota": "Puede usar historia previa de misma persona; prueba separada de cinco particiones por persona."
+  }
+}

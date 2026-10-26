@@ -1,0 +1,1 @@
+C/E: siete propuestas internas (INF35-01/02 T2/T3-2024 J1V2; INF35-07 T2-2025 J2V4; INF35-11 T2/T3-2026 J4V2), cinco destinos sin propuesta suficiente (03/04 dos cada uno y 10 uno). No aplicadas. V4 sigue activa. Esperar aprobación acotada; no confundir propuestas con atribución documental ni modificar denominadores.

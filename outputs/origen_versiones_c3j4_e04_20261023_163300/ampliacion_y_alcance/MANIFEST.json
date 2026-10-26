@@ -1,0 +1,282 @@
+{
+  "clasificacion": "B/C/E",
+  "fecha": "2026-10-23T16:55:40.662123-03:00",
+  "proceso": "MU / seguimiento retención intertrimestral IPSS162",
+  "alcance": "Aclaración de cobertura y búsqueda acotada de antecedente C3/J4 MU2022 y E04 MU2025",
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "git_despues": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "commit_push_staging": false,
+  "QA": {
+    "fuentes_y_bases_hashes_conservados": true,
+    "origenes_T1_todos_con_codigo": true,
+    "suma_contextos": true,
+    "cobertura_9618": true,
+    "multiples_versiones": true,
+    "sin_contexto_separado": true,
+    "HEAD_conservado": true,
+    "sin_modificar_diccionario_excel_bases": true,
+    "no_aplicacion_de_nuevas_equivalencias": true
+  },
+  "fuentes_verificadas": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx",
+      "sha256": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+      "esperado": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/cierre_inf35_03_t3_20261023_154224/DICCIONARIO_SIES.sqlite",
+      "sha256": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e",
+      "esperado": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json",
+      "sha256": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497",
+      "esperado": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json",
+      "sha256": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8",
+      "esperado": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "esperado": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.xlsx",
+      "sha256": "239a792b529a6600deeea9dfddcf4fc2dcccc918645f0bc93123955bf97e7c71",
+      "esperado": "239a792b529a6600deeea9dfddcf4fc2dcccc918645f0bc93123955bf97e7c71",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSSreset.csv",
+      "sha256": "b8eb47f0eab9e90a080bbdda8e00a0e7010a42b31f935ba19bad74df74e1c287",
+      "esperado": "b8eb47f0eab9e90a080bbdda8e00a0e7010a42b31f935ba19bad74df74e1c287",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025rect.csv",
+      "sha256": "0c89c7bb35c1c6920a61b621ed1b96fc9e95a04db118895fea8fb8da048c7d6a",
+      "esperado": "0c89c7bb35c1c6920a61b621ed1b96fc9e95a04db118895fea8fb8da048c7d6a",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/IPSS2025.csv",
+      "sha256": "9dca5cc1a967efb3b305695c31bcff62d7e0d09cf1b4a68529a1baa876842773",
+      "esperado": "9dca5cc1a967efb3b305695c31bcff62d7e0d09cf1b4a68529a1baa876842773",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/Indicadores Intermedios Academicos VRA/GESTIONSGE_1703.xlsx",
+      "sha256": "2ac487eb0ac09ac66d2c76afde9e62b9a4265357514d7ee696113d125a8e2401",
+      "esperado": "2ac487eb0ac09ac66d2c76afde9e62b9a4265357514d7ee696113d125a8e2401",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RV Resolución Eliminación Académica art. 29.msg",
+      "sha256": "0ef7ff3b46466a9207c9d125f6021767bb33076e615ffa523daa0a21f1726583",
+      "esperado": "0ef7ff3b46466a9207c9d125f6021767bb33076e615ffa523daa0a21f1726583",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/2 Comunicado proceso de Matrícula Unificada 2024..msg",
+      "sha256": "be2b6b70341d45e6833c81b828399ef09839a339599018b111c47f7f1b7c6136",
+      "esperado": "be2b6b70341d45e6833c81b828399ef09839a339599018b111c47f7f1b7c6136",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/Oferta académica rezagada.msg",
+      "sha256": "852e0812fcfa0b66eeebd665e41ece247e62d3d964c915f949040508428c2eae",
+      "esperado": "852e0812fcfa0b66eeebd665e41ece247e62d3d964c915f949040508428c2eae",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RE 10Consulta programa regular de continuidad.msg",
+      "sha256": "42cfbc85530a53f77dd47518919696f74a72195e1a7655da678ef43853e65d7c",
+      "esperado": "42cfbc85530a53f77dd47518919696f74a72195e1a7655da678ef43853e65d7c",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg",
+      "sha256": "ba1ada7f5778f4fb286b24c6133b3ce8cea3525da1928df5ce2f50f224106802",
+      "esperado": "ba1ada7f5778f4fb286b24c6133b3ce8cea3525da1928df5ce2f50f224106802",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RE Consulta programa regular de continuidad.msg",
+      "sha256": "cb779022b6961cf328d02aabbcee4110e771fe358e5894f440811070e80247ba",
+      "esperado": "cb779022b6961cf328d02aabbcee4110e771fe358e5894f440811070e80247ba",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/RV 1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg",
+      "sha256": "53055669d1238586f4590e4209c5a2d577df0ef456021f07c9de3e240f1a6856",
+      "esperado": "53055669d1238586f4590e4209c5a2d577df0ef456021f07c9de3e240f1a6856",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Estudiantes sin actividad.msg",
+      "sha256": "cc069c661ac2ccf18b30271c1f641ecdc2492058270e7ae5fc0a35a8b63572d8",
+      "esperado": "cc069c661ac2ccf18b30271c1f641ecdc2492058270e7ae5fc0a35a8b63572d8",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/RE Estudios secundarios .msg",
+      "sha256": "8e3d7c2127e18cc41fb9d9af9772483cdeb457db0127efb41543a22fe1bfd74d",
+      "esperado": "8e3d7c2127e18cc41fb9d9af9772483cdeb457db0127efb41543a22fe1bfd74d",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/1 Comunicado proceso de Matrícula Unificada 2024. CFT e IP.msg",
+      "sha256": "b704aa3579ff30dbff2d627945a75277621315517cc198e99bb0a2884bbdda61",
+      "esperado": "b704aa3579ff30dbff2d627945a75277621315517cc198e99bb0a2884bbdda61",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Revisión matrícula.msg",
+      "sha256": "73289ec7787f313f8569b4df412864f902a233e2905bf6eab10ddd2fc7c6ba79",
+      "esperado": "73289ec7787f313f8569b4df412864f902a233e2905bf6eab10ddd2fc7c6ba79",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/Estudiantes sin actividad.msg",
+      "sha256": "0685bad914f384b6b46d69c32396c4e0a2c74373a2a12663ac3261536d604290",
+      "esperado": "0685bad914f384b6b46d69c32396c4e0a2c74373a2a12663ac3261536d604290",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/RE Código error en carga2.msg",
+      "sha256": "329ce9e210b766113b969a7ac6bdbf8f3fcb0a0c56ba5c2fbcce5830d40baabd",
+      "esperado": "329ce9e210b766113b969a7ac6bdbf8f3fcb0a0c56ba5c2fbcce5830d40baabd",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/RE Código error en carga1vig0.msg",
+      "sha256": "a548deafbe47b117105b0e22842f5fb65b6683c55023cf6a452bfea17355005f",
+      "esperado": "a548deafbe47b117105b0e22842f5fb65b6683c55023cf6a452bfea17355005f",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/BD Final/Cierre 30 de abril/Descarga de lo cargado Enero 2024/BD Cargada Final/RE Estudiantes de primer año IP SAN SEBASTIAN COD 162.msg",
+      "sha256": "71093a336d53a3e04c9e37dde29fe0555fab71d5fad36e8c6b001bf3f17b5904",
+      "esperado": "71093a336d53a3e04c9e37dde29fe0555fab71d5fad36e8c6b001bf3f17b5904",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Oferta academica/RE Consulta Instituto Profesional San Sebastián.msg",
+      "sha256": "ca6154315711eb66d6a92dbba99e0a229fc8718467a64614d90c5f6732292c7b",
+      "esperado": "ca6154315711eb66d6a92dbba99e0a229fc8718467a64614d90c5f6732292c7b",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/BD Carga/Carga proceso de matrícula 2025.pptx",
+      "sha256": "2c92703ce892fe1485a8efd49fbf89fc9948a8c827667678dc461cf7075a5303",
+      "esperado": "2c92703ce892fe1485a8efd49fbf89fc9948a8c827667678dc461cf7075a5303",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "esperado": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Titulados/RE Consulta sobre titulados y matricula unificada.msg",
+      "sha256": "92f9bba361a703a7dafbe1ba9a681e59c1072a5dace8506ce33b855bd1f94df2",
+      "esperado": "92f9bba361a703a7dafbe1ba9a681e59c1072a5dace8506ce33b855bd1f94df2",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Modificación datos historicos/RV Solicita Modificación Datos Históricos SIES IP CIISA.msg",
+      "sha256": "6e3ee7c65044ec2401b609c040c8cab28d083355ec7d277616b9489a9cf1749d",
+      "esperado": "6e3ee7c65044ec2401b609c040c8cab28d083355ec7d277616b9489a9cf1749d",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/CIISA 2019 2024.xlsx",
+      "sha256": "f4521e771f29d4889f8e3d1b2a8e61b50a815193ad54578aaf5f81c4f5569c7c",
+      "esperado": "f4521e771f29d4889f8e3d1b2a8e61b50a815193ad54578aaf5f81c4f5569c7c",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/NIVELES.xlsx",
+      "sha256": "1f261d07c6f673dd62757ac84573204d6fb3a85385a4b5bf6c5e890010600a3e",
+      "esperado": "1f261d07c6f673dd62757ac84573204d6fb3a85385a4b5bf6c5e890010600a3e",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/Matricula/excel_carlos.xlsx",
+      "sha256": "5a2d5fb5248c5193a946978774c7850117ec31efe0d5f28263184e865cbe0f6c",
+      "esperado": "5a2d5fb5248c5193a946978774c7850117ec31efe0d5f28263184e865cbe0f6c",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2023/A. C. Carrera 2022_2023.xlsx",
+      "sha256": "2b6a26cd4b9186ae5a6c691fed14063e198f9d3854b67bb5f467a530bc5a3a61",
+      "esperado": "2b6a26cd4b9186ae5a6c691fed14063e198f9d3854b67bb5f467a530bc5a3a61",
+      "conservado": true
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261015/fuentes/20251125_85582_Instructivo_Oferta_Academica_2026_CFT_E_IP_DFE.pdf",
+      "sha256": "af8289f9292848fa16d2939ad730b8105c9d4605904a6af3974fc00ec9febbe2",
+      "esperado": "af8289f9292848fa16d2939ad730b8105c9d4605904a6af3974fc00ec9febbe2",
+      "conservado": true
+    }
+  ],
+  "salidas": [
+    {
+      "ruta": "INFORME.md",
+      "sha256": "d416dcc257b2e125c049e209b7aade7a505b8ba6958941133732b06e33c52808"
+    },
+    {
+      "ruta": "c3j4_antecedente_ampliacion_20261023.json",
+      "sha256": "7acd3b5a7425e2cccdd2305a51753eb2a01ba02de447e90e0cb765586f1ba8d7"
+    },
+    {
+      "ruta": "cobertura_excel_alcance_20261023.json",
+      "sha256": "7c668a71785e999d56a031a99f4da07f2cd6c53b22e4263f89616c1e927f9f6f"
+    },
+    {
+      "ruta": "e04_antecedente_ampliacion_20261023.json",
+      "sha256": "6d366e22a1a2a5039e1c1169f1988fe441bde87149a09270c937da98f4f1e90b"
+    },
+    {
+      "ruta": "reproduccion/cobertura_excel_alcance_20261023.py",
+      "sha256": "134023ed008dbc091f98e76e17b868789cace5087d9a7e35dc4101dcd338a52c"
+    },
+    {
+      "ruta": "reproduccion/cobertura_excel_celdas.py",
+      "sha256": "bcfe1cf54051e3bc52e059860a63d0f517d8334a883028db98e166b0459cd37a"
+    },
+    {
+      "ruta": "reproduccion/cobertura_excel_denominadores.py",
+      "sha256": "e51b788508f7cb2c414de8205243de9edf7b33d4152e30b61191e35abc7cc334"
+    },
+    {
+      "ruta": "reproduccion/e04_antecedente_ampliacion_20261023.py",
+      "sha256": "8805a832887c5a8ef0f9e77af280c813059009a4c9be05d60bafad9871bbbf5e"
+    },
+    {
+      "ruta": "reproduccion/e04_leer_msg.py",
+      "sha256": "1e884ecff58253af85448c3985fe7a9fa7914c3c4cb1bff43e10349e80d4c100"
+    }
+  ],
+  "reproduccion": "Se preservan los lectores de auditoría ejecutados. Algunas rutas temporales deben adaptarse al directorio persistente. C3/J4 conserva trazabilidad de fuentes, adjunto y filas en JSON; no se afirma un pipeline completo independiente.",
+  "pendientes": [
+    "Consulta/decisión generadora de V2 MU2022 no localizada",
+    "Consulta/decisión generadora de V1 E04 anterior a Precarga no localizada",
+    "No cerrar tasas ni cambiar equivalencias con esta aclaración"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "edicion": "v7_20261023_inf35_03_t3",
+  "universo_observaciones": 24774,
+  "personas": 5901,
+  "expedientes_carrera_codcli": 6622,
+  "documental": 21561,
+  "solo_interno": 164,
+  "pendientes": 3049,
+  "personas_categorias_excluyentes": {
+    "documental": {
+      "sin_pendientes": 4063,
+      "parciales": 699,
+      "ninguna_resuelta": 1139
+    },
+    "interno": {
+      "sin_pendientes": 4155,
+      "parciales": 704,
+      "ninguna_resuelta": 1042
+    }
+  },
+  "por_anio": [
+    {
+      "ano": "2019",
+      "observaciones": 997,
+      "documentales": 922,
+      "solo_internas": 0,
+      "pendientes": 75
+    },
+    {
+      "ano": "2020",
+      "observaciones": 1300,
+      "documentales": 1160,
+      "solo_internas": 0,
+      "pendientes": 140
+    },
+    {
+      "ano": "2021",
+      "observaciones": 2672,
+      "documentales": 2466,
+      "solo_internas": 0,
+      "pendientes": 206
+    },
+    {
+      "ano": "2022",
+      "observaciones": 3004,
+      "documentales": 2706,
+      "solo_internas": 0,
+      "pendientes": 298
+    },
+    {
+      "ano": "2023",
+      "observaciones": 3664,
+      "documentales": 3301,
+      "solo_internas": 0,
+      "pendientes": 363
+    },
+    {
+      "ano": "2024",
+      "observaciones": 3604,
+      "documentales": 3140,
+      "solo_internas": 28,
+      "pendientes": 436
+    },
+    {
+      "ano": "2025",
+      "observaciones": 4077,
+      "documentales": 3395,
+      "solo_internas": 11,
+      "pendientes": 671
+    },
+    {
+      "ano": "2026",
+      "observaciones": 5456,
+      "documentales": 4471,
+      "solo_internas": 125,
+      "pendientes": 860
+    }
+  ],
+  "pendientes_por_estado": {
+    "SIN_EVIDENCIA_ANUAL_APLICABLE": 2966,
+    "CODIGO_ANUAL_SIN_CONTEXTO_DA_EXACTO": 15,
+    "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 67,
+    "HOMOLOGACION_EN_PLAN_RECHAZADO_SIN_VERSION": 1
+  },
+  "control_anual_deduplicado": {
+    "contextos": 8354,
+    "personas": 4762,
+    "grupos_con_etiquetas_conflictivas_excluidos": 0,
+    "ingresos_DA_multiples": 0
+  },
+  "alcance": "Etiqueta documental anual atribuida, no verdad trimestral independiente; no afirma aceptación SIES ni vigencia",
+  "ejemplo_totales_sintetico": {
+    "totales": {
+      "V1": 1,
+      "V2": 1
+    },
+    "soluciones": [
+      [
+        "V1",
+        "V2"
+      ],
+      [
+        "V2",
+        "V1"
+      ]
+    ],
+    "conclusion": "La misma conciliación de totales permite dos asignaciones personales diferentes."
+  }
+}

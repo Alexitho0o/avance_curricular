@@ -1,0 +1,1999 @@
+{
+  "fuentes_sha256": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aplicacion_diccionario_intertrimestral_20261023_125556/RETENCION_IPSS_DICCIONARIO_APLICADO_20261023_V12.xlsx": "e7f797b5de9a6e9748cd250e9931947dbc8469f65d01f5a488c765e0009676fe",
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/reproduccion_puente_20261023_004044/RETENCION_IPSS_PUENTE_REPRODUCIDO_20261023_V11.xlsx": "dd6d00cf7d329cc1123419206ce8d5f7a1c25b35b452e143153c637ea319772b",
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+    "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/ORIGENES_T1.json": "9ba34a21ce89170f6343e068ba38ac1a546a927c1bd5ffcab9f4fd6ef48288a0",
+    "/Users/alexi/.local/share/ipss/aplicacion_diccionario_intertrimestral_20261023_125556/CONSULTAS_EXACTAS.json": "f19fc4b1cf4505243c94a6ed17171c14c1f3fcf5063862be49bc9711e9b1dce0",
+    "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497"
+  },
+  "diccionario_activo": "v7_20261023_inf35_03_t3",
+  "estado": "RECOMENDACION_TECNICA_C_SOLO_LECTURA",
+  "QA_observado": {
+    "hojas": 54,
+    "graficos": 13,
+    "tablas": 35,
+    "hojas_1_51_identicas_V11": true,
+    "partes_V11_modificadas": [
+      "xl/styles.xml",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "[Content_Types].xml"
+    ],
+    "hoja18_valores_distintos_original": [],
+    "formulas_1_51_referencian_52_54": [],
+    "formulas52": 86,
+    "formulas52_sin_cache": 0,
+    "observaciones_unicas": 5320,
+    "origenes_T1": 3179
+  },
+  "rangos_actuales": {
+    "52": "A1:I39; resumen A5:I11; foco A16:I26; notas A28:I33",
+    "53": "A5:I114;109 grupos; table34 RevisionCodigosOrigenT1",
+    "54": "A5:O331;326 grupos; table35 RevisionVersionesContexto"
+  },
+  "formulas52": [
+    {
+      "celda": "C6",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A6,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "558"
+    },
+    {
+      "celda": "D6",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A6,'53_Codigos_T1_Confirmados'!$G$6:$G$114)",
+      "cache": "493"
+    },
+    {
+      "celda": "E6",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A6,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "65"
+    },
+    {
+      "celda": "F6",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A6,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "1111"
+    },
+    {
+      "celda": "G6",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A6,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "H6",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A6,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "136"
+    },
+    {
+      "celda": "C7",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A7,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "1150"
+    },
+    {
+      "celda": "D7",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A7,'53_Codigos_T1_Confirmados'!$G$6:$G$114)",
+      "cache": "867"
+    },
+    {
+      "celda": "E7",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A7,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "283"
+    },
+    {
+      "celda": "F7",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A7,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "1825"
+    },
+    {
+      "celda": "G7",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A7,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "H7",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A7,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "46"
+    },
+    {
+      "celda": "C8",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A8,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "1471"
+    },
+    {
+      "celda": "D8",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A8,'53_Codigos_T1_Confirmados'!$G$6:$G$114)",
+      "cache": "880"
+    },
+    {
+      "celda": "E8",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$A$6:$A$114,A8,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "591"
+    },
+    {
+      "celda": "F8",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A8,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "2152"
+    },
+    {
+      "celda": "G8",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A8,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "2"
+    },
+    {
+      "celda": "H8",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$A$6:$A$331,A8,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "48"
+    },
+    {
+      "celda": "C9",
+      "formula": "SUM(C6:C8)",
+      "cache": "3179"
+    },
+    {
+      "celda": "D9",
+      "formula": "SUM(D6:D8)",
+      "cache": "2240"
+    },
+    {
+      "celda": "E9",
+      "formula": "SUM(E6:E8)",
+      "cache": "939"
+    },
+    {
+      "celda": "F9",
+      "formula": "SUM(F6:F8)",
+      "cache": "5088"
+    },
+    {
+      "celda": "G9",
+      "formula": "SUM(G6:G8)",
+      "cache": "2"
+    },
+    {
+      "celda": "H9",
+      "formula": "SUM(H6:H8)",
+      "cache": "230"
+    },
+    {
+      "celda": "C11",
+      "formula": "C9-D9-E9",
+      "cache": "0"
+    },
+    {
+      "celda": "G11",
+      "formula": "SUM(F9:H9)",
+      "cache": "5320"
+    },
+    {
+      "celda": "C17",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A17,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "41"
+    },
+    {
+      "celda": "D17",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A17,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "96"
+    },
+    {
+      "celda": "E17",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A17,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F17",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A17,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "18"
+    },
+    {
+      "celda": "G17",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A17,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "0"
+    },
+    {
+      "celda": "H17",
+      "formula": "SUM(D17:F17)",
+      "cache": "114"
+    },
+    {
+      "celda": "C18",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A18,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "36"
+    },
+    {
+      "celda": "D18",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A18,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "79"
+    },
+    {
+      "celda": "E18",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A18,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F18",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A18,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "8"
+    },
+    {
+      "celda": "G18",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A18,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "2"
+    },
+    {
+      "celda": "H18",
+      "formula": "SUM(D18:F18)",
+      "cache": "87"
+    },
+    {
+      "celda": "C19",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A19,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "242"
+    },
+    {
+      "celda": "D19",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A19,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "580"
+    },
+    {
+      "celda": "E19",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A19,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F19",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A19,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "9"
+    },
+    {
+      "celda": "G19",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A19,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "7"
+    },
+    {
+      "celda": "H19",
+      "formula": "SUM(D19:F19)",
+      "cache": "589"
+    },
+    {
+      "celda": "C20",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A20,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "15"
+    },
+    {
+      "celda": "D20",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A20,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "27"
+    },
+    {
+      "celda": "E20",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A20,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F20",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A20,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "12"
+    },
+    {
+      "celda": "G20",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A20,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "0"
+    },
+    {
+      "celda": "H20",
+      "formula": "SUM(D20:F20)",
+      "cache": "39"
+    },
+    {
+      "celda": "C21",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A21,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "162"
+    },
+    {
+      "celda": "D21",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A21,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "397"
+    },
+    {
+      "celda": "E21",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A21,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "2"
+    },
+    {
+      "celda": "F21",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A21,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "5"
+    },
+    {
+      "celda": "G21",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A21,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "2"
+    },
+    {
+      "celda": "H21",
+      "formula": "SUM(D21:F21)",
+      "cache": "404"
+    },
+    {
+      "celda": "C22",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A22,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "36"
+    },
+    {
+      "celda": "D22",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A22,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "75"
+    },
+    {
+      "celda": "E22",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A22,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F22",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A22,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "15"
+    },
+    {
+      "celda": "G22",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A22,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "0"
+    },
+    {
+      "celda": "H22",
+      "formula": "SUM(D22:F22)",
+      "cache": "90"
+    },
+    {
+      "celda": "C23",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A23,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "216"
+    },
+    {
+      "celda": "D23",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A23,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "517"
+    },
+    {
+      "celda": "E23",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A23,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F23",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A23,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "6"
+    },
+    {
+      "celda": "G23",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A23,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "6"
+    },
+    {
+      "celda": "H23",
+      "formula": "SUM(D23:F23)",
+      "cache": "523"
+    },
+    {
+      "celda": "C24",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A24,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "9"
+    },
+    {
+      "celda": "D24",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A24,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "15"
+    },
+    {
+      "celda": "E24",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A24,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F24",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A24,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "2"
+    },
+    {
+      "celda": "G24",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A24,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "0"
+    },
+    {
+      "celda": "H24",
+      "formula": "SUM(D24:F24)",
+      "cache": "17"
+    },
+    {
+      "celda": "C25",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A25,'53_Codigos_T1_Confirmados'!$F$6:$F$114)",
+      "cache": "68"
+    },
+    {
+      "celda": "D25",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A25,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"B/C Documental\")",
+      "cache": "141"
+    },
+    {
+      "celda": "E25",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A25,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"D Interno aprobado\")",
+      "cache": "0"
+    },
+    {
+      "celda": "F25",
+      "formula": "SUMIFS('54_Contextos_y_Pendientes'!$M$6:$M$331,'54_Contextos_y_Pendientes'!$F$6:$F$331,A25,'54_Contextos_y_Pendientes'!$J$6:$J$331,\"E Pendiente\")",
+      "cache": "5"
+    },
+    {
+      "celda": "G25",
+      "formula": "SUMIF('53_Codigos_T1_Confirmados'!$C$6:$C$114,A25,'53_Codigos_T1_Confirmados'!$H$6:$H$114)",
+      "cache": "2"
+    },
+    {
+      "celda": "H25",
+      "formula": "SUM(D25:F25)",
+      "cache": "146"
+    },
+    {
+      "celda": "C26",
+      "formula": "SUM(C17:C25)",
+      "cache": "825"
+    },
+    {
+      "celda": "D26",
+      "formula": "SUM(D17:D25)",
+      "cache": "1927"
+    },
+    {
+      "celda": "E26",
+      "formula": "SUM(E17:E25)",
+      "cache": "2"
+    },
+    {
+      "celda": "F26",
+      "formula": "SUM(F17:F25)",
+      "cache": "80"
+    },
+    {
+      "celda": "G26",
+      "formula": "SUM(G17:G25)",
+      "cache": "19"
+    },
+    {
+      "celda": "H26",
+      "formula": "SUM(H17:H25)",
+      "cache": "2009"
+    }
+  ],
+  "tablas": [
+    {
+      "part": "xl/tables/table31.xml",
+      "id": "31",
+      "name": "T_H4_A",
+      "ref": "B6:F18"
+    },
+    {
+      "part": "xl/tables/table19.xml",
+      "id": "19",
+      "name": "T_H12_C",
+      "ref": "B76:F88"
+    },
+    {
+      "part": "xl/tables/table8.xml",
+      "id": "8",
+      "name": "T_CONS_N1",
+      "ref": "AX6:BA11"
+    },
+    {
+      "part": "xl/tables/table18.xml",
+      "id": "18",
+      "name": "T_H12_B",
+      "ref": "B61:G73"
+    },
+    {
+      "part": "xl/tables/table33.xml",
+      "id": "33",
+      "name": "T_H5",
+      "ref": "B6:G10"
+    },
+    {
+      "part": "xl/tables/table24.xml",
+      "id": "24",
+      "name": "T_H14_N4",
+      "ref": "L6:P16"
+    },
+    {
+      "part": "xl/tables/table6.xml",
+      "id": "6",
+      "name": "T_CONS_H4B",
+      "ref": "H6:O9"
+    },
+    {
+      "part": "xl/tables/table26.xml",
+      "id": "26",
+      "name": "T_H14_N6",
+      "ref": "X6:AB33"
+    },
+    {
+      "part": "xl/tables/table4.xml",
+      "id": "4",
+      "name": "T_CONS_H12D",
+      "ref": "AR6:AV26"
+    },
+    {
+      "part": "xl/tables/table17.xml",
+      "id": "17",
+      "name": "T_H12_A",
+      "ref": "B7:G58"
+    },
+    {
+      "part": "xl/tables/table28.xml",
+      "id": "28",
+      "name": "T_H14_N7B",
+      "ref": "AI6:AL9"
+    },
+    {
+      "part": "xl/tables/table3.xml",
+      "id": "3",
+      "name": "T_CONS_H12C",
+      "ref": "AL6:AP18"
+    },
+    {
+      "part": "xl/tables/table9.xml",
+      "id": "9",
+      "name": "T_CONS_N2",
+      "ref": "BC6:BF9"
+    },
+    {
+      "part": "xl/tables/table22.xml",
+      "id": "22",
+      "name": "T_H14_N1",
+      "ref": "B6:E11"
+    },
+    {
+      "part": "xl/tables/table20.xml",
+      "id": "20",
+      "name": "T_H12_D",
+      "ref": "B91:F111"
+    },
+    {
+      "part": "xl/tables/table25.xml",
+      "id": "25",
+      "name": "T_H14_N5",
+      "ref": "R6:V23"
+    },
+    {
+      "part": "xl/tables/table21.xml",
+      "id": "21",
+      "name": "T_H13_B",
+      "ref": "B50:I135"
+    },
+    {
+      "part": "xl/tables/table12.xml",
+      "id": "12",
+      "name": "T_CONS_N6",
+      "ref": "BT6:BX33"
+    },
+    {
+      "part": "xl/tables/table5.xml",
+      "id": "5",
+      "name": "T_CONS_H4A",
+      "ref": "B6:F18"
+    },
+    {
+      "part": "xl/tables/table16.xml",
+      "id": "16",
+      "name": "T_CONS_VISTA",
+      "ref": "CO6:CS13"
+    },
+    {
+      "part": "xl/tables/table30.xml",
+      "id": "30",
+      "name": "T_H14_VISTA",
+      "ref": "AS6:AW13"
+    },
+    {
+      "part": "xl/tables/table7.xml",
+      "id": "7",
+      "name": "T_CONS_H5",
+      "ref": "Q6:V10"
+    },
+    {
+      "part": "xl/tables/table13.xml",
+      "id": "13",
+      "name": "T_CONS_N7A",
+      "ref": "BZ6:CC9"
+    },
+    {
+      "part": "xl/tables/table2.xml",
+      "id": "2",
+      "name": "T_CONS_H12B",
+      "ref": "AE6:AJ18"
+    },
+    {
+      "part": "xl/tables/table29.xml",
+      "id": "29",
+      "name": "T_H14_N7C",
+      "ref": "AN6:AQ11"
+    },
+    {
+      "part": "xl/tables/table15.xml",
+      "id": "15",
+      "name": "T_CONS_N7C",
+      "ref": "CJ6:CM11"
+    },
+    {
+      "part": "xl/tables/table14.xml",
+      "id": "14",
+      "name": "T_CONS_N7B",
+      "ref": "CE6:CH9"
+    },
+    {
+      "part": "xl/tables/table10.xml",
+      "id": "10",
+      "name": "T_CONS_N4",
+      "ref": "BH6:BL16"
+    },
+    {
+      "part": "xl/tables/table11.xml",
+      "id": "11",
+      "name": "T_CONS_N5",
+      "ref": "BN6:BR23"
+    },
+    {
+      "part": "xl/tables/table32.xml",
+      "id": "32",
+      "name": "T_H4_B",
+      "ref": "H6:O9"
+    },
+    {
+      "part": "xl/tables/table27.xml",
+      "id": "27",
+      "name": "T_H14_N7A",
+      "ref": "AD6:AG9"
+    },
+    {
+      "part": "xl/tables/table23.xml",
+      "id": "23",
+      "name": "T_H14_N2",
+      "ref": "G6:J9"
+    },
+    {
+      "part": "xl/tables/table1.xml",
+      "id": "1",
+      "name": "T_CONS_H12A",
+      "ref": "X6:AC57"
+    },
+    {
+      "part": "xl/tables/table34.xml",
+      "id": "34",
+      "name": "RevisionCodigosOrigenT1",
+      "ref": "A5:I114"
+    },
+    {
+      "part": "xl/tables/table35.xml",
+      "id": "35",
+      "name": "RevisionVersionesContexto",
+      "ref": "A5:O331"
+    }
+  ],
+  "contextos_v7_por_ano": [
+    {
+      "ano": 2024,
+      "respaldo": "B/C Documental",
+      "observaciones": 1111
+    },
+    {
+      "ano": 2024,
+      "respaldo": "D Interno aprobado",
+      "observaciones": 10
+    },
+    {
+      "ano": 2024,
+      "respaldo": "E Pendiente",
+      "observaciones": 126
+    },
+    {
+      "ano": 2025,
+      "respaldo": "B/C Documental",
+      "observaciones": 1825
+    },
+    {
+      "ano": 2025,
+      "respaldo": "D Interno aprobado",
+      "observaciones": 11
+    },
+    {
+      "ano": 2025,
+      "respaldo": "E Pendiente",
+      "observaciones": 35
+    },
+    {
+      "ano": 2026,
+      "respaldo": "B/C Documental",
+      "observaciones": 2152
+    },
+    {
+      "ano": 2026,
+      "respaldo": "D Interno aprobado",
+      "observaciones": 8
+    },
+    {
+      "ano": 2026,
+      "respaldo": "E Pendiente",
+      "observaciones": 42
+    }
+  ],
+  "contextos_v7_por_periodo_nativo": [
+    {
+      "ano": 2024,
+      "periodo_nativo": "1",
+      "respaldo": "B/C Documental",
+      "observaciones": 455
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "1",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 4
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "1",
+      "respaldo": "E Pendiente",
+      "observaciones": 43
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "2",
+      "respaldo": "B/C Documental",
+      "observaciones": 351
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "2",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 2
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "2",
+      "respaldo": "E Pendiente",
+      "observaciones": 44
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "3",
+      "respaldo": "B/C Documental",
+      "observaciones": 305
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "3",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 4
+    },
+    {
+      "ano": 2024,
+      "periodo_nativo": "3",
+      "respaldo": "E Pendiente",
+      "observaciones": 39
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "1",
+      "respaldo": "B/C Documental",
+      "observaciones": 846
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "1",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 4
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "1",
+      "respaldo": "E Pendiente",
+      "observaciones": 17
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "2",
+      "respaldo": "B/C Documental",
+      "observaciones": 528
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "2",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 4
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "2",
+      "respaldo": "E Pendiente",
+      "observaciones": 10
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "3",
+      "respaldo": "B/C Documental",
+      "observaciones": 451
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "3",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 3
+    },
+    {
+      "ano": 2025,
+      "periodo_nativo": "3",
+      "respaldo": "E Pendiente",
+      "observaciones": 8
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "1",
+      "respaldo": "B/C Documental",
+      "observaciones": 865
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "1",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 2
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "1",
+      "respaldo": "E Pendiente",
+      "observaciones": 13
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "2",
+      "respaldo": "B/C Documental",
+      "observaciones": 665
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "2",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 3
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "2",
+      "respaldo": "E Pendiente",
+      "observaciones": 15
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "3",
+      "respaldo": "B/C Documental",
+      "observaciones": 622
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "3",
+      "respaldo": "D Interno aprobado",
+      "observaciones": 3
+    },
+    {
+      "ano": 2026,
+      "periodo_nativo": "3",
+      "respaldo": "E Pendiente",
+      "observaciones": 14
+    }
+  ],
+  "foco_multiple_v7": {
+    "B/C Documental": 1927,
+    "E Pendiente": 53,
+    "D Interno aprobado": 29
+  },
+  "cambios_v1_v7": [
+    {
+      "antes": "E Pendiente",
+      "despues": "D Interno aprobado",
+      "n": 27
+    }
+  ],
+  "T1_T3_desglose_por_codigo": [
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J2V1",
+      "poblacion_T1": 1,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 1
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J4V1",
+      "poblacion_T1": 7,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 7
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J1V1",
+      "poblacion_T1": 21,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 21
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J2V1",
+      "poblacion_T1": 14,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 14
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J4V3",
+      "poblacion_T1": 54,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 54
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Conectividad y Redes",
+      "codigo_T1": "I162S2C3J2V4",
+      "poblacion_T1": 6,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 6
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Conectividad y Redes",
+      "codigo_T1": "I162S2C3J4V2",
+      "poblacion_T1": 62,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 62
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J1V2",
+      "poblacion_T1": 15,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 15
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J2V4",
+      "poblacion_T1": 12,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 12
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J4V2",
+      "poblacion_T1": 80,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 80
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Logística",
+      "codigo_T1": "I162S2C77J2V1",
+      "poblacion_T1": 6,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 6
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Ingeniería en Logística",
+      "codigo_T1": "I162S2C77J4V1",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 9
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J2V1",
+      "poblacion_T1": 7,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 7
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J4V1",
+      "poblacion_T1": 8,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 8
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J1V1",
+      "poblacion_T1": 5,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 5
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J2V1",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 11
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J4V1",
+      "poblacion_T1": 55,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 55
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Conectividad y Redes",
+      "codigo_T1": "I162S2C6J2V2",
+      "poblacion_T1": 2,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 2
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Conectividad y Redes",
+      "codigo_T1": "I162S2C6J4V2",
+      "poblacion_T1": 23,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 23
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Logística",
+      "codigo_T1": "I162S2C79J2V1",
+      "poblacion_T1": 8,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 8
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Logística",
+      "codigo_T1": "I162S2C79J4V1",
+      "poblacion_T1": 15,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 15
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J1V1",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 11
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J2V1",
+      "poblacion_T1": 17,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 17
+    },
+    {
+      "ano_T1": 2024,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J4V1",
+      "poblacion_T1": 109,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 109
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Administración Pública",
+      "codigo_T1": "I162S2C83J4V1",
+      "poblacion_T1": 70,
+      "T3_VIGENTE_Q": 65,
+      "T3_EN_BASE_R": 70
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Auditoría",
+      "codigo_T1": "I162S2C86J4V1",
+      "poblacion_T1": 40,
+      "T3_VIGENTE_Q": 36,
+      "T3_EN_BASE_R": 40
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Contabilidad General",
+      "codigo_T1": "I162S2C85J4V1",
+      "poblacion_T1": 38,
+      "T3_VIGENTE_Q": 35,
+      "T3_EN_BASE_R": 38
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J2V1",
+      "poblacion_T1": 19,
+      "T3_VIGENTE_Q": 16,
+      "T3_EN_BASE_R": 19
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J4V1",
+      "poblacion_T1": 72,
+      "T3_VIGENTE_Q": 67,
+      "T3_EN_BASE_R": 72
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J1V1",
+      "poblacion_T1": 18,
+      "T3_VIGENTE_Q": 16,
+      "T3_EN_BASE_R": 18
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J2V1",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 10,
+      "T3_EN_BASE_R": 11
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J4V3",
+      "poblacion_T1": 73,
+      "T3_VIGENTE_Q": 61,
+      "T3_EN_BASE_R": 73
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Ciencia de Datos",
+      "codigo_T1": "I162S2C88J4V1",
+      "poblacion_T1": 40,
+      "T3_VIGENTE_Q": 39,
+      "T3_EN_BASE_R": 40
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Conectividad y Redes",
+      "codigo_T1": "I162S2C3J2V1",
+      "poblacion_T1": 3,
+      "T3_VIGENTE_Q": 3,
+      "T3_EN_BASE_R": 3
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Conectividad y Redes",
+      "codigo_T1": "I162S2C3J2V4",
+      "poblacion_T1": 6,
+      "T3_VIGENTE_Q": 6,
+      "T3_EN_BASE_R": 6
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Conectividad y Redes",
+      "codigo_T1": "I162S2C3J4V2",
+      "poblacion_T1": 54,
+      "T3_VIGENTE_Q": 48,
+      "T3_EN_BASE_R": 54
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J1V1",
+      "poblacion_T1": 3,
+      "T3_VIGENTE_Q": 3,
+      "T3_EN_BASE_R": 3
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J1V2",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 9,
+      "T3_EN_BASE_R": 11
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J2V1",
+      "poblacion_T1": 4,
+      "T3_VIGENTE_Q": 3,
+      "T3_EN_BASE_R": 4
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J2V4",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 8,
+      "T3_EN_BASE_R": 9
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J4V2",
+      "poblacion_T1": 91,
+      "T3_VIGENTE_Q": 78,
+      "T3_EN_BASE_R": 91
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Logística",
+      "codigo_T1": "I162S2C77J2V1",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 9,
+      "T3_EN_BASE_R": 9
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Ingeniería en Logística",
+      "codigo_T1": "I162S2C77J4V1",
+      "poblacion_T1": 52,
+      "T3_VIGENTE_Q": 51,
+      "T3_EN_BASE_R": 52
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Administración Pública",
+      "codigo_T1": "I162S2C84J4V1",
+      "poblacion_T1": 22,
+      "T3_VIGENTE_Q": 18,
+      "T3_EN_BASE_R": 22
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J2V1",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 8,
+      "T3_EN_BASE_R": 9
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J4V1",
+      "poblacion_T1": 64,
+      "T3_VIGENTE_Q": 56,
+      "T3_EN_BASE_R": 64
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J1V1",
+      "poblacion_T1": 8,
+      "T3_VIGENTE_Q": 8,
+      "T3_EN_BASE_R": 8
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J2V1",
+      "poblacion_T1": 7,
+      "T3_VIGENTE_Q": 7,
+      "T3_EN_BASE_R": 7
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J4V1",
+      "poblacion_T1": 65,
+      "T3_VIGENTE_Q": 58,
+      "T3_EN_BASE_R": 65
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Ciencia de Datos",
+      "codigo_T1": "I162S2C89J4V1",
+      "poblacion_T1": 23,
+      "T3_VIGENTE_Q": 18,
+      "T3_EN_BASE_R": 23
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Conectividad y Redes",
+      "codigo_T1": "I162S2C6J2V1",
+      "poblacion_T1": 2,
+      "T3_VIGENTE_Q": 2,
+      "T3_EN_BASE_R": 2
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Conectividad y Redes",
+      "codigo_T1": "I162S2C6J2V2",
+      "poblacion_T1": 5,
+      "T3_VIGENTE_Q": 5,
+      "T3_EN_BASE_R": 5
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Conectividad y Redes",
+      "codigo_T1": "I162S2C6J4V2",
+      "poblacion_T1": 35,
+      "T3_VIGENTE_Q": 29,
+      "T3_EN_BASE_R": 35
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Enfermería",
+      "codigo_T1": "I162S2C91J1V1",
+      "poblacion_T1": 34,
+      "T3_VIGENTE_Q": 29,
+      "T3_EN_BASE_R": 34
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Enfermería",
+      "codigo_T1": "I162S2C91J2V1",
+      "poblacion_T1": 41,
+      "T3_VIGENTE_Q": 34,
+      "T3_EN_BASE_R": 41
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Logística",
+      "codigo_T1": "I162S2C79J2V1",
+      "poblacion_T1": 17,
+      "T3_VIGENTE_Q": 14,
+      "T3_EN_BASE_R": 17
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Logística",
+      "codigo_T1": "I162S2C79J4V1",
+      "poblacion_T1": 65,
+      "T3_VIGENTE_Q": 63,
+      "T3_EN_BASE_R": 65
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J1V1",
+      "poblacion_T1": 15,
+      "T3_VIGENTE_Q": 13,
+      "T3_EN_BASE_R": 15
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J2V1",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 8,
+      "T3_EN_BASE_R": 9
+    },
+    {
+      "ano_T1": 2025,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J4V1",
+      "poblacion_T1": 106,
+      "T3_VIGENTE_Q": 90,
+      "T3_EN_BASE_R": 106
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Administración Pública",
+      "codigo_T1": "I162S2C83J4V1",
+      "poblacion_T1": 45,
+      "T3_VIGENTE_Q": 43,
+      "T3_EN_BASE_R": 45
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Auditoría",
+      "codigo_T1": "I162S2C86J4V1",
+      "poblacion_T1": 23,
+      "T3_VIGENTE_Q": 22,
+      "T3_EN_BASE_R": 23
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Contabilidad General",
+      "codigo_T1": "I162S2C85J4V1",
+      "poblacion_T1": 33,
+      "T3_VIGENTE_Q": 33,
+      "T3_EN_BASE_R": 33
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería Industrial",
+      "codigo_T1": "I162S2C87J4V2",
+      "poblacion_T1": 51,
+      "T3_VIGENTE_Q": 50,
+      "T3_EN_BASE_R": 51
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J1V1",
+      "poblacion_T1": 6,
+      "T3_VIGENTE_Q": 4,
+      "T3_EN_BASE_R": 6
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J2V1",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 7,
+      "T3_EN_BASE_R": 9
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Administración de Empresas",
+      "codigo_T1": "I162S2C76J4V1",
+      "poblacion_T1": 57,
+      "T3_VIGENTE_Q": 53,
+      "T3_EN_BASE_R": 57
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J1V1",
+      "poblacion_T1": 12,
+      "T3_VIGENTE_Q": 10,
+      "T3_EN_BASE_R": 12
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J2V1",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 11,
+      "T3_EN_BASE_R": 11
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Ciberseguridad",
+      "codigo_T1": "I162S2C46J4V3",
+      "poblacion_T1": 89,
+      "T3_VIGENTE_Q": 85,
+      "T3_EN_BASE_R": 89
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Ciencia de Datos",
+      "codigo_T1": "I162S2C88J4V1",
+      "poblacion_T1": 25,
+      "T3_VIGENTE_Q": 22,
+      "T3_EN_BASE_R": 25
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Conectividad y Redes",
+      "codigo_T1": "I162S2C3J4V2",
+      "poblacion_T1": 46,
+      "T3_VIGENTE_Q": 45,
+      "T3_EN_BASE_R": 46
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Finanzas",
+      "codigo_T1": "I162S2C111J4V1",
+      "poblacion_T1": 24,
+      "T3_VIGENTE_Q": 20,
+      "T3_EN_BASE_R": 24
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J1V2",
+      "poblacion_T1": 12,
+      "T3_VIGENTE_Q": 12,
+      "T3_EN_BASE_R": 12
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J2V4",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 11,
+      "T3_EN_BASE_R": 11
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Informática",
+      "codigo_T1": "I162S2C1J4V2",
+      "poblacion_T1": 71,
+      "T3_VIGENTE_Q": 69,
+      "T3_EN_BASE_R": 71
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Logística",
+      "codigo_T1": "I162S2C77J2V1",
+      "poblacion_T1": 13,
+      "T3_VIGENTE_Q": 12,
+      "T3_EN_BASE_R": 13
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Logística",
+      "codigo_T1": "I162S2C77J4V1",
+      "poblacion_T1": 37,
+      "T3_VIGENTE_Q": 33,
+      "T3_EN_BASE_R": 37
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Marketing Digital",
+      "codigo_T1": "I162S2C112J4V1",
+      "poblacion_T1": 56,
+      "T3_VIGENTE_Q": 51,
+      "T3_EN_BASE_R": 56
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Prevención de Riesgos",
+      "codigo_T1": "I162S2C124J4V1",
+      "poblacion_T1": 24,
+      "T3_VIGENTE_Q": 22,
+      "T3_EN_BASE_R": 24
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Recursos Humanos",
+      "codigo_T1": "I162S2C113J4V1",
+      "poblacion_T1": 26,
+      "T3_VIGENTE_Q": 21,
+      "T3_EN_BASE_R": 26
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Ingeniería en Seguridad Privada",
+      "codigo_T1": "I162S2C125J4V1",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 10,
+      "T3_EN_BASE_R": 11
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Naturopatía",
+      "codigo_T1": "I162S2C90J2V2",
+      "poblacion_T1": 19,
+      "T3_VIGENTE_Q": 17,
+      "T3_EN_BASE_R": 19
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Administración Pública",
+      "codigo_T1": "I162S2C84J4V1",
+      "poblacion_T1": 19,
+      "T3_VIGENTE_Q": 17,
+      "T3_EN_BASE_R": 19
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J1V1",
+      "poblacion_T1": 10,
+      "T3_VIGENTE_Q": 9,
+      "T3_EN_BASE_R": 10
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J2V1",
+      "poblacion_T1": 30,
+      "T3_VIGENTE_Q": 28,
+      "T3_EN_BASE_R": 30
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Administración de Empresas",
+      "codigo_T1": "I162S2C78J4V1",
+      "poblacion_T1": 45,
+      "T3_VIGENTE_Q": 40,
+      "T3_EN_BASE_R": 45
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J1V1",
+      "poblacion_T1": 11,
+      "T3_VIGENTE_Q": 9,
+      "T3_EN_BASE_R": 11
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J2V1",
+      "poblacion_T1": 15,
+      "T3_VIGENTE_Q": 12,
+      "T3_EN_BASE_R": 15
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Ciberseguridad",
+      "codigo_T1": "I162S2C47J4V1",
+      "poblacion_T1": 47,
+      "T3_VIGENTE_Q": 41,
+      "T3_EN_BASE_R": 46,
+      "T3_NO_APLICA": 1
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Ciencia de Datos",
+      "codigo_T1": "I162S2C89J4V1",
+      "poblacion_T1": 18,
+      "T3_VIGENTE_Q": 16,
+      "T3_EN_BASE_R": 18
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Conectividad y Redes",
+      "codigo_T1": "I162S2C6J4V2",
+      "poblacion_T1": 10,
+      "T3_VIGENTE_Q": 8,
+      "T3_EN_BASE_R": 9,
+      "T3_NO_APLICA": 1
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Enfermería",
+      "codigo_T1": "I162S2C91J1V1",
+      "poblacion_T1": 48,
+      "T3_VIGENTE_Q": 45,
+      "T3_EN_BASE_R": 48
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Enfermería",
+      "codigo_T1": "I162S2C91J2V1",
+      "poblacion_T1": 64,
+      "T3_VIGENTE_Q": 58,
+      "T3_EN_BASE_R": 64
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Enfermería",
+      "codigo_T1": "I162S3C91J2V1",
+      "poblacion_T1": 14,
+      "T3_VIGENTE_Q": 10,
+      "T3_EN_BASE_R": 14
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Enfermería e Instrumentación Quirúrgica",
+      "codigo_T1": "I162S2C114J2V1",
+      "poblacion_T1": 73,
+      "T3_VIGENTE_Q": 73,
+      "T3_EN_BASE_R": 73
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Enfermería e Instrumentación Quirúrgica",
+      "codigo_T1": "I162S3C114J2V1",
+      "poblacion_T1": 32,
+      "T3_VIGENTE_Q": 29,
+      "T3_EN_BASE_R": 32
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Farmacia",
+      "codigo_T1": "I162S2C115J2V1",
+      "poblacion_T1": 22,
+      "T3_VIGENTE_Q": 22,
+      "T3_EN_BASE_R": 22
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Farmacia",
+      "codigo_T1": "I162S3C115J2V1",
+      "poblacion_T1": 17,
+      "T3_VIGENTE_Q": 16,
+      "T3_EN_BASE_R": 17
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Finanzas",
+      "codigo_T1": "I162S2C116J4V1",
+      "poblacion_T1": 23,
+      "T3_VIGENTE_Q": 20,
+      "T3_EN_BASE_R": 23
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Infraestructura Cloud",
+      "codigo_T1": "I162S2C117J4V1",
+      "poblacion_T1": 12,
+      "T3_VIGENTE_Q": 10,
+      "T3_EN_BASE_R": 12
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Logística",
+      "codigo_T1": "I162S2C79J2V1",
+      "poblacion_T1": 14,
+      "T3_VIGENTE_Q": 14,
+      "T3_EN_BASE_R": 14
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Logística",
+      "codigo_T1": "I162S2C79J4V1",
+      "poblacion_T1": 37,
+      "T3_VIGENTE_Q": 37,
+      "T3_EN_BASE_R": 37
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Marketing Digital",
+      "codigo_T1": "I162S2C118J4V1",
+      "poblacion_T1": 62,
+      "T3_VIGENTE_Q": 59,
+      "T3_EN_BASE_R": 62
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Prevención de Riesgos",
+      "codigo_T1": "I162S2C10J4V1",
+      "poblacion_T1": 16,
+      "T3_VIGENTE_Q": 15,
+      "T3_EN_BASE_R": 16
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J1V1",
+      "poblacion_T1": 9,
+      "T3_VIGENTE_Q": 9,
+      "T3_EN_BASE_R": 9
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J2V1",
+      "poblacion_T1": 10,
+      "T3_VIGENTE_Q": 9,
+      "T3_EN_BASE_R": 10
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Programación y Análisis de Sistemas",
+      "codigo_T1": "I162S2C57J4V1",
+      "poblacion_T1": 74,
+      "T3_VIGENTE_Q": 68,
+      "T3_EN_BASE_R": 72,
+      "T3_NO_APLICA": 2
+    },
+    {
+      "ano_T1": 2026,
+      "carrera": "Técnico en Recursos Humanos",
+      "codigo_T1": "I162S2C119J4V1",
+      "poblacion_T1": 28,
+      "T3_VIGENTE_Q": 23,
+      "T3_EN_BASE_R": 28
+    }
+  ],
+  "T1_T3_totales": {
+    "2024": {
+      "poblacion_T1": 558,
+      "T3_VIGENTE_Q": 0,
+      "T3_EN_BASE_R": 0,
+      "T3_SIN_FOTO": 558
+    },
+    "2025": {
+      "poblacion_T1": 1150,
+      "T3_VIGENTE_Q": 1023,
+      "T3_EN_BASE_R": 1150
+    },
+    "2026": {
+      "poblacion_T1": 1471,
+      "T3_VIGENTE_Q": 1360,
+      "T3_EN_BASE_R": 1467,
+      "T3_NO_APLICA": 4
+    }
+  },
+  "estado_T2_en_hoja20": [
+    {
+      "ano": 2024,
+      "etiqueta": "Sin foto completa",
+      "n": 558
+    },
+    {
+      "ano": 2025,
+      "etiqueta": "Sin foto completa",
+      "n": 1150
+    },
+    {
+      "ano": 2026,
+      "etiqueta": "Sin foto completa",
+      "n": 1471
+    }
+  ],
+  "celdas_18_T1": [
+    {
+      "celda": "18_Foto_Intertrimestral!D7",
+      "formula_original": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2024,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+      "valor_V12": 558,
+      "valor_original": 558
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!E7",
+      "formula_original": "='26_Avance_Curricular_Resumen'!E1850",
+      "valor_V12": 160,
+      "valor_original": 160
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!F7",
+      "formula_original": "='26_Avance_Curricular_Resumen'!F1850",
+      "valor_V12": 0.28673835125448,
+      "valor_original": 0.28673835125448
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!G7",
+      "formula_original": "='26_Avance_Curricular_Resumen'!E1851",
+      "valor_V12": 175,
+      "valor_original": 175
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!H7",
+      "formula_original": "='26_Avance_Curricular_Resumen'!F1851",
+      "valor_V12": 0.313620071684588,
+      "valor_original": 0.313620071684588
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!I7",
+      "formula_original": "=IF(N(D7)>0,SUMIFS('20_Foto_BBDD'!$H$6:$H$4478,'20_Foto_BBDD'!$B$6:$B$4478,2024,'20_Foto_BBDD'!$C$6:$C$4478,1)/D7,\"—\")",
+      "valor_V12": 0.584229390681004,
+      "valor_original": 0.584229390681004
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!D8",
+      "formula_original": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+      "valor_V12": 1150,
+      "valor_original": 1150
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!E8",
+      "formula_original": "='26_Avance_Curricular_Resumen'!E1852",
+      "valor_V12": 600,
+      "valor_original": 600
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!F8",
+      "formula_original": "='26_Avance_Curricular_Resumen'!F1852",
+      "valor_V12": 0.521739130434783,
+      "valor_original": 0.521739130434783
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!G8",
+      "formula_original": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$Q$6:$Q$4478,1)",
+      "valor_V12": 1023,
+      "valor_original": 1023
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!H8",
+      "formula_original": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G8/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")",
+      "valor_V12": 0.889565217391304,
+      "valor_original": 0.889565217391304
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!I8",
+      "formula_original": "=IF(N(D8)>0,SUMIFS('20_Foto_BBDD'!$H$6:$H$4478,'20_Foto_BBDD'!$B$6:$B$4478,2025,'20_Foto_BBDD'!$C$6:$C$4478,1)/D8,\"—\")",
+      "valor_V12": 0.580869565217391,
+      "valor_original": 0.580869565217391
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!D11",
+      "formula_original": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1)",
+      "valor_V12": 1471,
+      "valor_original": 1471
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!E11",
+      "formula_original": "='26_Avance_Curricular_Resumen'!E1854",
+      "valor_V12": 1042,
+      "valor_original": 1042
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!F11",
+      "formula_original": "='26_Avance_Curricular_Resumen'!F1854",
+      "valor_V12": 0.708361658735554,
+      "valor_original": 0.708361658735554
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!G11",
+      "formula_original": "=COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$Q$6:$Q$4478,1)",
+      "valor_V12": 1360,
+      "valor_original": 1360
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!H11",
+      "formula_original": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G11/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")",
+      "valor_V12": 0.92706203135651,
+      "valor_original": 0.92706203135651
+    },
+    {
+      "celda": "18_Foto_Intertrimestral!I11",
+      "formula_original": "Se mide en 2027",
+      "valor_V12": "Se mide en 2027",
+      "valor_original": "Se mide en 2027"
+    }
+  ],
+  "alcance_temporal_proxy": [
+    {
+      "ano_T1": 2024,
+      "destino": "2025-2",
+      "fuente": "26_Avance_Curricular_Resumen!A1850:H1850",
+      "numerador": 160,
+      "denominador": 558,
+      "tipo": "proxy actividad/estado"
+    },
+    {
+      "ano_T1": 2024,
+      "destino": "2025-3",
+      "fuente": "26_Avance_Curricular_Resumen!A1851:H1851",
+      "numerador": 175,
+      "denominador": 558,
+      "tipo": "proxy actividad/estado"
+    },
+    {
+      "ano_T1": 2025,
+      "destino": "2025-2",
+      "fuente": "26_Avance_Curricular_Resumen!A1852:H1852",
+      "numerador": 600,
+      "denominador": 1150,
+      "tipo": "proxy actividad/estado"
+    },
+    {
+      "ano_T1": 2026,
+      "destino": "2026-2",
+      "fuente": "26_Avance_Curricular_Resumen!A1854:H1854",
+      "numerador": 1042,
+      "denominador": 1471,
+      "tipo": "proxy actividad/estado"
+    }
+  ],
+  "recomendacion_minima": [
+    "Actualizar solamente hojas52-54 en copiaV13, mantener1-51 y13graficos/33tablasprevias byte-identicos.",
+    "52: resumen visible de resultados existentes por referencias18!D7:H7,D8:H8,D11:H11; anotar ano_destino y proxy/foto. Control de codigo separado de tasa.",
+    "53: conservar A:I del origen; agregar T3 por codigo de origen usando indicadoresQ/R originales2025/2026. Formular tasa como numerador/elegibles; mostrar1471poblacion y1467elegibles por separado. No usar numero de contextos como denominador.",
+    "53: T2proxy no se obtiene de20 porqueM=Sin foto completa para3179origenes. Solo desagregar si se reconstruye exactamente el linaje individual delproxy quehoyestaen26; deotromodo referencia institucional en52 y pendiente de desglose en53.",
+    "54: mantenerHcodigo_cohorteT1 vsIcodigo_contextodestino; actualizar estadoJ y limiteOsegunv7. Conservar candidatosN solo sinadopcion. No presentar un codigo internoD como documental.",
+    "Fijar descriptorv7yhash enmanifest; eliminar literalesv1 y doscorrespondencias. Reagrupar y contar las filas agregadas nuevas, sin fijar su cantidad de antemano.",
+    "Preservar formulas originales existentes; V12 hoja18 ya contiene valores fijados y20 agregado,noafirmar que es motor vivo del original. No recalcular historicos fijados."
+  ],
+  "no_modificado": [
+    "Excel",
+    "fuentes",
+    "diccionario",
+    "denominadores",
+    "Git"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "hito": "H001-RETENCION-IPSS162",
+  "fecha": "2026-10-21T09:56:56.003729-03:00",
+  "recurso": "Escenario separado de 80 reclasificaciones MU2025 y cruce MU2026",
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "hoja": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "hoja": "08-05-2025_22-26-22_Matrícula_P",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+      "hoja": "Final a carga / Carga_Completa (2) / Carga_Completa (3)"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "hoja": "BASE_RETENCION_MU / 01_CATALOGO_CARRERA / 02_COHORTE_ELEGIBILIDAD",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/sies/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx",
+      "hoja": "Retención 1er año x IES",
+      "rango": "T59:U59; institución A59:B59",
+      "sha256": "168ac8baea6aee65fa8a40dfca5a269993951142c89cb536805f550b1ac3297b"
+    }
+  ],
+  "resultado": [
+    {
+      "cohorte": 2024,
+      "actual_C": {
+        "cohorte": 2024,
+        "N": 558,
+        "R": 326,
+        "tasa": 0.5842293906810035
+      },
+      "escenario_E_C": {
+        "cohorte": 2024,
+        "N": 560,
+        "R": 328,
+        "tasa": 0.5857142857142857
+      },
+      "delta_N_simulado": 2,
+      "delta_R_simulado": 2,
+      "delta_pp": 0.14848950332821964,
+      "sensibilidad_numerador_a_denominador_fijo": {
+        "N_actual_fijo": 558,
+        "R_sobre_poblacion_actual_fija": 326,
+        "tasa_poblacion_actual_fija": 0.5842293906810035,
+        "delta_pp": 0.0,
+        "advertencia": "Seguimiento de la misma población actualmente incluida; los nuevos elegibles hipotéticos se muestran solo en escenario separado."
+      },
+      "referencia_SIES_B": 0.675,
+      "brecha_actual_pp_C_B": -9.07706093189965,
+      "brecha_escenario_pp_E_C_B": -8.92857142857143
+    },
+    {
+      "cohorte": 2025,
+      "actual_C": {
+        "cohorte": 2025,
+        "N": 1150,
+        "R": 668,
+        "tasa": 0.5808695652173913
+      },
+      "escenario_E_C": {
+        "cohorte": 2025,
+        "N": 1123,
+        "R": 668,
+        "tasa": 0.5948352626892253
+      },
+      "delta_N_simulado": -27,
+      "delta_R_simulado": 0,
+      "delta_pp": 1.396569747183396,
+      "sensibilidad_numerador_a_denominador_fijo": {
+        "N_actual_fijo": 1150,
+        "R_sobre_poblacion_actual_fija": 668,
+        "tasa_poblacion_actual_fija": 0.5808695652173913,
+        "delta_pp": 0.0,
+        "advertencia": "Seguimiento de la misma población actualmente incluida; los nuevos elegibles hipotéticos se muestran solo en escenario separado."
+      },
+      "referencia_SIES_B": 0.5821152192605331,
+      "brecha_actual_pp_C_B": -0.12456540431418084,
+      "brecha_escenario_pp_E_C_B": 1.2720043428692152
+    }
+  ],
+  "poblacion_B_C": 80,
+  "cruce_MU2026_B": {
+    "CON_VIG1": 53,
+    "SOLO_VIG0": 11,
+    "AUSENTE_MU2026": 16
+  },
+  "supuesto_E": "Solo en memoria, restaurar ANIO_ING_ACT y ANIO_ING_ORI a 2024 en las 80 filas MU2025; conservar semestres informados, VIG, programas, MU2024 y MU2026 y lógica de cálculo. Los denominadores simulados no sustituyen los actuales. No agregar estudiantes sin fila MU2024.",
+  "denominadores_actuales_preservados_D": [
+    558,
+    1150,
+    222,
+    124
+  ],
+  "QA": "OK de consistencia, controles y preservación; aprobación histórica/semestre pendientes E",
+  "repositorios": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular",
+      "rama": "feature/ire-2026",
+      "HEAD_antes": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+      "HEAD_despues": "80ca13a5a249a1a2bd53a699f5f73689b1f53040",
+      "status_short_despues": " M PROYECTO_IPSS.json\n?? data/reglas_negocio/20261020_estados_umas/\n?? data/reglas_negocio/20261021_datos_alumnos/\n?? docs/relacion_estados_umas_vig_sies_20261020.md\n?? oferta_academica_2027/00_fuentes_originales/\n?? oferta_academica_2027/04_scripts/corregir_salto_final_etapa1_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_etapa1_octubre_fechas_20261020.py\n?? oferta_academica_2027/04_scripts/preparar_prueba_pes_etapa1_octubre_20261020.py\n?? oferta_academica_2027/11_gobernanza/etapa1_octubre_20261020/\n?? outputs/estados_umas_vig_sies/\n?? outputs/retencion_intermedia_t2_t3/\n?? scripts/construir_relacion_estados_umas_20261020.py\n"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN",
+      "rama": "main",
+      "HEAD_antes": "aba337784ccde0537fc21b2977b351170ed335e8",
+      "HEAD_despues": "aba337784ccde0537fc21b2977b351170ed335e8",
+      "status_short_despues": " M AGENTS.md\n M caracterizacion_comunicacion_2027.py\n M caracterizacion_incorporacion.py\n M caracterizacion_reportes_2027.py\n M caracterizacion_runtime.py\n M tests/test_reportes_2027.py\n M tests/test_separacion_2027.py\n?? auditar_datos_alumnos.sh\n?? caracterizacion_firma_pendiente_2027.py\n?? caracterizacion_matricula_reporte_2027.py\n?? docs/gobernanza/AUDITORIA_DATOS_ALUMNOS_EXCEL.md\n?? docs/gobernanza/AUDITORIA_EVOLUCION_DATOS_ALUMNOS.md\n?? docs/gobernanza/HALLAZGOS_DATOS_ALUMNOS_20261021.md\n?? docs/gobernanza/MATRICULA_CORREO_2027_P1.md\n?? gobernanza/datos_alumnos/\n?? gobernanza/marca/\n?? scripts/auditar_casos_incorporacion.py\n?? scripts/auditar_datos_alumnos.py\n?? scripts/exportar_auditoria_datos_alumnos.mjs\n?? scripts/gobernanza/importar_contrato_datos_alumnos.py\n?? scripts/publicar_excel_auditoria_datos.py\n?? tests/test_auditoria_datos_alumnos.py\n?? tests/test_excel_auditoria_datos.py\n?? tests/test_firma_pendiente_2027.py\n?? tests/test_matricula_reporte_2027.py\n"
+    }
+  ],
+  "salidas": [
+    {
+      "archivo": "ESCENARIO_80_RECLASIFICACION_RETENCION.md",
+      "sha256": "bf608c36bca663223a65ac29e5cbda11dd3a6111c202d5526f6ae184bc8c1f48"
+    },
+    {
+      "archivo": "ESCENARIO_RESUMEN_AGREGADO.csv",
+      "sha256": "6dcb4507b3f28f3305d22bc4bafb8c2834fed35bb470cf297eed5edb3c01b6e4"
+    },
+    {
+      "archivo": "RESULTADOS_ESCENARIO_AGREGADOS.json",
+      "sha256": "4a4f0f7183d4a1bcff507085399920cbaa3e37c5829bf2d11ced58ef38d0681c"
+    },
+    {
+      "archivo": "calcular_escenario.py",
+      "sha256": "fc234b5bcc36a4a8398048c6533aa651f880d862635a091f0948cd4ae75dbcbe"
+    },
+    {
+      "archivo": "documentar_escenario.py",
+      "sha256": "0f1287dcfc47b7513489675cd3aba880a6e55b817b3f2a1e4a8c325c79abdb85"
+    }
+  ],
+  "politica": "Agregados sin identificadores; escenario solo en memoria; no altera el Excel ni sus bases; sin commit/push."
+}

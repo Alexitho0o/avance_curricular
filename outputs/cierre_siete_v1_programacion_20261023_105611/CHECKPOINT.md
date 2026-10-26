@@ -1,0 +1,3 @@
+# Reanudación
+
+Aplicados siete cierres V1 de Programación por autorización de Alexi. Estado vigente: 3.081 observaciones / 1.750 personas pendientes internas; 3.213 / 1.838 documentales. Reconstruir desde base privada 20261023_004044 y ADJUDICACIONES_ACUMULADAS.json de esta ejecución (14 operaciones; 13 asignaciones + clasificación TCRE). Otras cinco de tres personas cumplen criterio complementario propuesto, no aprobado ni aplicado; consultar CINCO_CRITERIO_COMPLEMENTARIO.json privado. No confundir fechas del plan anterior con nuevo ni períodos bimestrales/trimestrales. Con eventual aprobación, 3.076/1.750 internos; documental intacto. Sin commit/push ni modificaciones a bases o denominadores.

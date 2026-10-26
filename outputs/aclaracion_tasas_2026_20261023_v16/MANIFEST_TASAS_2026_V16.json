@@ -1,0 +1,130 @@
+{
+  "hito": "H001-RETENCION-IPSS162",
+  "proceso": "seguimiento interno intertrimestral",
+  "version": "V16",
+  "fecha_ejecucion": "2026-10-23T21:25:12.253415-03:00",
+  "periodo_revisado": 2026,
+  "alcance": "18_Foto_Intertrimestral H11/F12/H14",
+  "estado": "QA_OK_LOCAL_SIN_COMMIT_PUSH",
+  "clasificaciones": {
+    "A": "No se incorpora ni modifica regla oficial",
+    "B": "Datos fuente y exclusiones observados; evidencia agregada",
+    "C": "Fórmulas, conciliación, preservación OOXML y QA",
+    "D": "Se conserva exclusión interna ya documentada; sin nueva regla",
+    "E": "Tasa T2 por persona no calculable con renuncias solo agregadas"
+  },
+  "fuentes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx": {
+      "sha256": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3",
+      "tipo": "resultado/derivado"
+    },
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": {
+      "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+      "tipo": "resultado/derivado"
+    },
+    "/Users/alexi/Downloads/Matrícula T_2_13_07_2026.xlsx": {
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "tipo": "fuente institucional"
+    }
+  },
+  "resultados": [
+    {
+      "celda": "H11",
+      "numerador": 1360,
+      "denominador": 1467,
+      "tasa": 0.9270620313565099
+    },
+    {
+      "celda": "F12",
+      "numerador": 462,
+      "denominador": 528,
+      "tasa": 0.875
+    },
+    {
+      "celda": "H14",
+      "numerador": 2290,
+      "denominador": 2519,
+      "tasa": 0.9090909090909091
+    }
+  ],
+  "sin_cambio_bases_ni_denominadores": true,
+  "archivos": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/~$RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx": {
+      "sha256": "afca0b812572531b1df4bc8953673a9948cc9ef9014f4940bfe46bf62ad67280",
+      "bytes": 165
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/QA_EXCEL_NATIVO.json": {
+      "sha256": "b5f5d36e10b68568418cce168aa2f56450e46cd04d8641ffd092a4a72f2df74d",
+      "bytes": 1175
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/QA_DINAMICA.json": {
+      "sha256": "d5df07d3c3a377750435138c3e95f77f181c911a488ec3e83030af3cbbd6ab7e",
+      "bytes": 4611
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EVIDENCIA_AGREGADA.json": {
+      "sha256": "99a78d43ba1f51f318177ebaeab834029b9608aabbdef2262b5345a420ad5fee",
+      "bytes": 2665
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/QA_ESTRUCTURA_Y_CALCULO.json": {
+      "sha256": "00cbf6b10ba137abe5a24a04e1d0036fedc0f2b36893ee69eb9371fdca018b3c",
+      "bytes": 4828
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/EDICION.json": {
+      "sha256": "dc61847e217d84ef7eb69b613ddf910b6aaf22b3a7a79c459120c99405fe662f",
+      "bytes": 8616
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx": {
+      "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c",
+      "bytes": 600462
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/QA_INDEPENDIENTE.json": {
+      "sha256": "7aa1a357dc2de04fff91fba4ef355e87aa85b97635d0ad93d1c17a831aa90046",
+      "bytes": 1418
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/preview_bases_v16.png": {
+      "sha256": "9d6ee78f77a201b40d38ffbc7a559b8216e2d18c453863262a526613c6431a2a",
+      "bytes": 98562
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/GIT_ESTADO_ENTREGA.json": {
+      "sha256": "728bdfc678bdd76d5504de1bb8c6b58502ae6ced45415774de5f3ac19ec4fe56",
+      "bytes": 601
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/aclaracion_tasas_2026_20261023_v16/README_Y_REANUDACION.md": {
+      "sha256": "4aefdccaeaaccf92cab8b5ee03cb3db87370fb85ca65f1cf16b204e9834a5646",
+      "bytes": 2939
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/aclarar_tasas_2026_v16_20261023.py": {
+      "sha256": "a212f95dae3a973f343259baf694cc4095d81da55cd0a913c300815f7a712748",
+      "bytes": 18957
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/scripts/editar_tasas_2026_v16_20261023.mjs": {
+      "sha256": "a1cea13b3718a4da6ffffba887ed63a3fa264d871602391aaf1f1706b036c982",
+      "bytes": 3018
+    },
+    "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_BASES_TASAS_2026_V16_20261023.md": {
+      "sha256": "f90d19bef2d61e1880b3a0aa49833aa9152e1b2a95dacb61370246347ffd6012",
+      "bytes": 2351
+    }
+  },
+  "copia_escritorio": {
+    "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V16.xlsx",
+    "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+  },
+  "qa": {
+    "estructura": "QA_ESTRUCTURA_Y_CALCULO.json",
+    "dinamica": "QA_DINAMICA.json",
+    "nativo": "QA_EXCEL_NATIVO.json",
+    "limite": "Tres tasas; preservación byte a byte del contenido ajeno a la edición, no nueva certificación global"
+  },
+  "privacidad": "Solo agregados nuevos, sin identificadores individuales",
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "git_despues": {
+    "rama": "feature/ire-2026",
+    "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+  },
+  "commit": false,
+  "push": false
+}

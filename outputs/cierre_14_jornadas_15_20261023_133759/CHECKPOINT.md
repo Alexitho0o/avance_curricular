@@ -1,0 +1,1 @@
+D/C: v2_20261023_14 activa; 14 cierres aprobados. B/C: QA completo, mismos originales y denominadores. E: 21 pendientes del foco; entre 15 jornadas hay una propuesta adicional T3-2025 J2V4 no aplicada y 14 sin período acreditado. Las seis homologaciones siguen pendientes. Sin commit/push. Ver INFORME.md y MANIFEST.json.

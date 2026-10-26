@@ -1,0 +1,4 @@
+# Reproducción local
+Entradas privadas existentes en /tmp/ipss_revision_63_20261022 y /tmp/ipss_embudo_2317_20261022; no se incluyen en Git. Resolver.py lee índices y fuentes originales, escribe detalle solo en /tmp/ipss_resolucion_2317_20261022 y agregados en esta carpeta.
+Orden: resolver.py, preparar_entrega.py, build.mjs con runtime Node de Codex, ensamblar.py, build privado, expandir_verificar_privado.py, qa_independiente.py. Los autores privados conservan estilo artifact-tool; la expansión XML reutilizada permite escribir todas las filas sin cargar cientos de miles de celdas en el motor de diseño. Cada celda exportada se compara con el payload local, incluidos identificadores texto y fechas.
+Antes de reproducir, usar rutas nuevas para conservar esta entrega. No aplicar a canon ni reescribir fuentes. Todas las fuentes nuevas y fuentes de códigos adoptados tienen hashes en los JSON de QA.

@@ -1,0 +1,66 @@
+{
+  "tests": [
+    {
+      "label": "Combinaciones",
+      "actual": 32,
+      "expected": 32,
+      "ok": true
+    },
+    {
+      "label": "Registros",
+      "actual": 15136,
+      "expected": 15136,
+      "ok": true
+    },
+    {
+      "label": "Pendientes categorización",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    },
+    {
+      "label": "Coincidentes",
+      "actual": 31,
+      "expected": 31,
+      "ok": true
+    },
+    {
+      "label": "Cambio categoría muestra diferencia",
+      "actual": "REVISAR DIFERENCIA (E)",
+      "expected": "REVISAR DIFERENCIA (E)",
+      "ok": true
+    },
+    {
+      "label": "Categoría ausente queda pendiente",
+      "actual": "E: PENDIENTE",
+      "expected": "E: PENDIENTE",
+      "ok": true
+    },
+    {
+      "label": "Contador responde a falta de categoría",
+      "actual": 2,
+      "expected": 2,
+      "ok": true
+    },
+    {
+      "label": "Suma recalcula",
+      "actual": 15137,
+      "expected": 15137,
+      "ok": true
+    },
+    {
+      "label": "Restaurado universo",
+      "actual": 15136,
+      "expected": 15136,
+      "ok": true
+    },
+    {
+      "label": "Restaurado pendiente",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    }
+  ],
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "engine": "Artifact Tool; no confirma apertura en Excel nativo"
+}

@@ -1,0 +1,1 @@
+D/C: v4 activa, INF35-12 T2 J4V2 y T3 J1V2 cerrados internamente. E documental pendiente. Foco35:17 reutilizables/18 pendientes (12 jornada,6 homologaciones). Continuar solo con restantes; no reconstruir estos cierres. Bases/denominadores/Excel intactos; sin commit/push.

@@ -1,0 +1,27 @@
+# V8: aplicación del cruce histórico a pendientes V7
+
+## Resultado
+Se evaluaron3213 observaciones de1838 personas, sin ampliar el foco. El método heredado16oct produjo402 propuestas por coincidencia con inicio de oferta (255 personas) y2370 por intervalo (1343 personas). La unión con propuesta es1596 personas; no sumar personas entre estados.441 observaciones no obtienen propuesta.
+
+La vía histórica se ejecutó. No se obtuvo nuevo vínculo documental individual suficiente para adoptar código: pendientes3213 observaciones y1838/5901 personas (31,15%), igual aV7.0 personas adicionales totalmente o parcialmente conciliadas en esta ejecución. Las479 completas y77 parciales deV7 permanecen como resultado anterior. No se declara mejora comparable de cierre ni se cambia la línea base24/63 de dimensiones.
+
+## Qué aporta y por qué no se promueve automáticamente
+2377 observaciones tienen exactamente un candidato de la familia/perfil en el año de referencia;544 tienen varios y292 no tienen ninguno. Esta partición no es la partición de resultados del resolutor: INTERVALO_PROPUESTO selecciona último inicio aunque haya coexistencia. Ambas vistas se conservan para no confundir elección del algoritmo con unicidad histórica.
+En los544 empates de perfil, modalidad disponible tampoco discrimina. Ejemplos: IIND/J4/año referencia2026,84 observaciones, I162S2C87J4V1/V2; IETMREOL/J4/2022,79, I162S2C3J4V1/V2; IECIRE/J2/2019,51, I162S2C1J2V1/V4. Hace falta vínculo individual con código o atributo/perfil efectivo documentado que distinga esas variantes; no inventarlo a partir de nombre.
+1267 propuestas tienen ese código en MU personal en algún año;52 lo tienen en el año de observación. Estas52 ya estaban bloqueadas enV7 por atribución de expediente:43 tienen perfil anual único y9 más de uno. Un catálogo de programas no aporta por sí solo la fila matrícula–CODCLI que falta.2748 propuestas tienen MRUN agregado del código en el año de referencia; es evidencia de existencia del programa con matrícula, no identidad de estas personas.
+131 observaciones tienen fecha de referencia posterior a la actividad. Se conserva la propuesta reproducida del método, con ambos años visibles, sin retrotraer el plan.13 observaciones de continuidad usan mínimo observado propio de carrera; ninguna fecha se certifica como ingreso efectivo.
+
+## Reglas aplicadas y fuentes
+Se reutilizaron sin modificación common/versiones_por_cohorte.py y common/continuidad_trayectoria.py. Los paquetes grupos_existentes.json e historias_oferta.json se verificaron contra su manifiesto16oct. Perfil=duración total y tipo de plan del grupo gobernado: no es una duración individual inventada en DatosAlumnos. Se conserva fuente_perfil (manual/canónico/unanimidad) y no se usa nombre como llave.
+Regular: ANOINGRESO concordante del expediente entre cortes. Continuidad: mínimo de matrícula observada y actividad APROBADO/REPROBADO no convalidada de la misma persona/carrera; no hereda ingreso técnico. PROMEDIOS12166 se leyó una vez, proyectando solo los expedientes del foco por identidad exacta:13394 filas relevantes,4904 excluidas de evidencia de inicio por la regla de estado/convalidación. No se modifica ninguna fila fuente.
+La consulta incluye todas las versiones históricas de la familia, sin filtro del catálogo2027. El libro privado conserva todos los candidatos, perfil compatible o no, oferta en año de referencia/observación, registro CSV, inicio de oferta, primera matrícula MRUN y límite general de cobertura2010. Ofertas2007–2009 no quedan inventadas. El resolutor permite comparar un perfil de otro año cuando no tiene la oferta del año exacto: esto se conserva como comportamiento heredado y se señala en la resolución completa, no se transforma en prueba contemporánea.
+La regla interna vigente produce codigo_propuesto, habilitada_carga_oficial=False y acredita_codpestud=False. Una coincidencia de inicio sigue siendo propuesta; la hipótesis de intervalo no demuestra cierre de la versión anterior. Año de primera matrícula no asignaV1.
+
+## Bloqueos sin propuesta
+25 observaciones: ingreso ausente/inválido;203: perfil de duración no determinado;1: cohorte anterior a cobertura;9: anterior al inicio del perfil;51: sin grupo existente;136: tipo de plan ambiguo;13: múltiples perfiles de duración;3: fuera del ámbito2007–2026. Total441. El privado identifica carrera, expediente, año y requisito por fila.
+
+## Decisión precisa pendiente
+Para adoptar inferencias no documentales sería necesaria una regla explícita que autorice asignación por perfil y fecha, indicando cómo probar fecha propia, resolver coexistencia, cambios de plan, fechas posteriores a actividad y validar frente a códigos individuales conocidos. Esa regla debe distinguir inferencia de código efectivamente informado. No está aprobada ni aplicada aquí. Alternativa documental: recuperar vínculo matrícula–CODCLI y plan/fecha efectivos para los casos con códigos personales ya existentes. No se exige90% ni tamaño mínimo a ese enlace.
+
+## Entrega y conservación
+V8 agrega hojas43/44 aV7. PrivadoV5 contiene3213 registros, todos los candidatos, fechas con fuente/hoja/fila y filas DA completas del foco. Versiones anteriores,13 gráficos, tasas y denominadores se preservan. Desfase T3 previo permanece documentado. Sin commit,push,uploads ni cambio de rama. QA independiente reproduce3213 selecciones y conjuntos anuales; verificaciones de libros y hashes se adjuntan.

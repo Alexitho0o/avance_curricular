@@ -1,0 +1,116 @@
+{
+  "estado": "OK_CON_PENDIENTES_SEMANTICOS",
+  "fuentes_DA": {
+    "/Users/alexi/Downloads/DATOSDEALUMNOS_12159.xlsx": {
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9",
+      "hoja": "Hoja1",
+      "encabezados_plan": [],
+      "fechas_disponibles": [
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "FECHAFIRMA"
+      ],
+      "corte_efectivo": "No acreditado; docProps no lo sustituye"
+    },
+    "/Users/alexi/Downloads/2025/DATOSDEALUMNOS_11248.xlsx": {
+      "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143",
+      "hoja": "Hoja1",
+      "encabezados_plan": [],
+      "fechas_disponibles": [
+        "ANOINGRESO",
+        "PERIODOINGRESO",
+        "FECHAMATRICULA",
+        "FECHAFIRMA"
+      ],
+      "corte_efectivo": "No acreditado; docProps no lo sustituye"
+    }
+  },
+  "caso_C3J4": {
+    "observaciones": 674,
+    "personas": 87,
+    "codigo_observado": "I162S2C3J4V2",
+    "ingreso_actual_MU": 2022,
+    "desglose": [
+      {
+        "carrera": "ICRE",
+        "plan": "ICRE20241",
+        "ano_observado": "2024",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 44
+      },
+      {
+        "carrera": "ICRE",
+        "plan": "ICRE20241",
+        "ano_observado": "2025",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 39
+      },
+      {
+        "carrera": "ICRE",
+        "plan": "ICRE20241",
+        "ano_observado": "2026",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 1
+      },
+      {
+        "carrera": "IETMREOL",
+        "plan": "IETMREOL20211",
+        "ano_observado": "2022",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2020",
+        "observaciones": 9
+      },
+      {
+        "carrera": "IETMREOL",
+        "plan": "IETMREOL20211",
+        "ano_observado": "2022",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 229
+      },
+      {
+        "carrera": "IETMREOL",
+        "plan": "IETMREOL20211",
+        "ano_observado": "2023",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 309
+      },
+      {
+        "carrera": "IETMREOL",
+        "plan": "IETMREOL20211",
+        "ano_observado": "2024",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 41
+      },
+      {
+        "carrera": "IETMREOL",
+        "plan": "IETMREOL20211",
+        "ano_observado": "2025",
+        "DA_ANOINGRESO": "2022",
+        "MU_ANIO_ORIGEN": "2022",
+        "observaciones": 2
+      }
+    ]
+  },
+  "personas_familia_con_varios_expedientes_planes": 377,
+  "personas_unicas_no_sumar_familias": 374,
+  "por_familia": {
+    "I162S2C1J1": 1,
+    "I162S2C1J2": 7,
+    "I162S2C1J4": 56,
+    "I162S2C3J2": 3,
+    "I162S2C3J4": 66,
+    "I162S2C46J4": 70,
+    "I162S2C47J4": 44,
+    "I162S2C57J4": 104,
+    "I162S2C6J2": 2,
+    "I162S2C6J4": 24
+  },
+  "conclusion": "Una etiqueta de plan por expediente no descarta varios expedientes/planes de la persona dentro de una familia. Coexistencia o secuencia observada no acredita fecha efectiva de migración, reingreso ni equivalencia retrospectiva."
+}

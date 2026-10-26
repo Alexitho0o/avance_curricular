@@ -1,0 +1,6 @@
+# Reproducción local y límites
+Los scripts reutilizan el índice privado V3 en /tmp/ipss_revision_63_20261022 y el inventario dirigido en /tmp/ipss_embudo_2317_20261022. Estos insumos privados no se incluyen en Git. Su ausencia impide reproducir sin restaurar esos insumos locales; no ejecutar barridos sustitutos automáticos.
+Orden: auditar.py → completar_titulados.py → avance_omitido.py → embudo.py → prefijos_traza.py → embudo.py. La segunda ejecución de embudo incorpora los componentes prefijados. Los scripts de incorporación se ejecutan una sola vez desde una salida limpia para evitar duplicar evidencia.
+INVENTARIO_DIRIGIDO conserva intentos iniciales y sus correcciones: el parseo posterior de titulación de 23 campos sustituye el intento inicial fallido, sin certificar identidad total entre CSV y XLSX.
+Las hojas Intake2/Intake3 del archivo MU2024 contienen contexto DA con RUT combinado, sin código SIES completo. Sus cero coincidencias del lector de cargas no acreditan ausencia de esas personas; no se usan para demostrar ausencia histórica de código.
+QA.py verifica libros contra sus payloads locales, particiones y hashes sin imprimir identidades. Los identificadores y los payloads privados permanecen fuera del repositorio.

@@ -1,0 +1,63 @@
+{
+  "clasificacion": "B/C; exclusión según decisión interna D existente, no norma SIES",
+  "fuentes": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/correccion_proxy_t3_2025_20261023_v15/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261023_V15.xlsx": {
+      "sha256": "3d5390c763e6ef40f327a87252a3793c185c4c4423c754b533fd96ec85abe3b3",
+      "tipo": "resultado/derivado"
+    },
+    "/Users/alexi/Downloads/RETENCION_IPSS_FINAL_con_Foto_Intertrimestral_20261022_AUDITADO_ENTREGA.xlsx": {
+      "sha256": "20fe8438cba065f15240f1e67c066e5feb8bac8841f182864e40ca7bc9512aa8",
+      "tipo": "resultado/derivado"
+    },
+    "/Users/alexi/Downloads/Matrícula T_2_13_07_2026.xlsx": {
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "tipo": "fuente institucional"
+    }
+  },
+  "T1_T3": {
+    "personas": 1471,
+    "vigentes": 1360,
+    "base": 1467,
+    "excluidos": 4,
+    "estados": {
+      "VIG 1": 1360,
+      "VIG 0": 107,
+      "NO APLICA": 4
+    }
+  },
+  "total_unico_T3": {
+    "personas": 2523,
+    "vigentes": 2290,
+    "base": 2519,
+    "excluidos": 4,
+    "estados": {
+      "VIG 1": 2290,
+      "VIG 0": 229,
+      "NO APLICA": 4
+    }
+  },
+  "exclusiones": {
+    "TITULADO | 31 - TITULADO APROBADO": 4
+  },
+  "T2": {
+    "matriculas": 528,
+    "codcli": 528,
+    "personas": 527,
+    "renuncias": 66,
+    "vigentes": 462
+  },
+  "formulas_originales": {
+    "H11": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G11/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$C$6:$C$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")",
+    "F12": "=IFERROR(IF(N(SUM('23_Foto_Renuncias_T2_2026'!$C$6:$C$24))>0,E12/SUM('23_Foto_Renuncias_T2_2026'!$C$6:$C$24),\"—\"),\"—\")",
+    "H14": "=IF(COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$T$6:$T$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1)>0,G14/COUNTIFS('20_Foto_BBDD'!$B$6:$B$4478,2026,'20_Foto_BBDD'!$T$6:$T$4478,1,'20_Foto_BBDD'!$R$6:$R$4478,1),\"—\")"
+  },
+  "referencias": [
+    "20_Foto_BBDD!B6:V4478: B año, C grupo, P estado, Q numerador, R elegibilidad, T deduplicación",
+    "25_Foto_Corte_T3_2026!J6:M15190: estado/situación y llave de matrícula",
+    "21_Foto_Reglas_VIG!B3 y B31:E31: regla interna TITULADO",
+    "23_Foto_Renuncias_T2_2026!C6:F24: matrícula, renuncias, diferencia",
+    "T2 original: Hoja1 filas 2:529; Hoja2 B32:C50",
+    "53_Codigos_T1_Confirmados!A6:H223: cohorte, año, período, población, numerador, denominador"
+  ],
+  "pendiente_e": "Renuncias individuales para calcular una tasa T2 de personas. La tasa vigente usa matrículas y se conserva."
+}

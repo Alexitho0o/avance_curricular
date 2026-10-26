@@ -1,0 +1,294 @@
+{
+  "sources": [
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sheet": "BASE_RETENCION_MU",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "bytes": 1475920,
+      "mtime": "2026-09-01T14:23:51.453026-04:00"
+    },
+    {
+      "path": "/Users/alexi/Downloads/DATOSDEALUMNOS_12112.xlsx",
+      "sheet": "Hoja1",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "bytes": 5496667,
+      "mtime": "2026-10-20T08:23:08.134946-03:00"
+    },
+    {
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sheet": "T2_2025",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "bytes": 221698,
+      "mtime": "2026-10-20T21:43:06.816424-03:00"
+    },
+    {
+      "path": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sheet": "T3_2025",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "bytes": 1354391,
+      "mtime": "2026-10-20T21:43:06.824307-03:00"
+    },
+    {
+      "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+      "sheet": "CONSOLIDADO",
+      "sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+      "bytes": 582631,
+      "mtime": "2026-07-01T00:29:43.667976-04:00"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/MANIFEST_BASE_RETENCION_MU_2022_2026.json",
+      "sheet": null,
+      "sha256": "746539ed62a3a3a051da14fd7f32b90fc6fd30a426304386d54e19c203d74145",
+      "bytes": 5518,
+      "mtime": "2026-09-28T23:43:34.056442-03:00"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/INVENTARIO_FUENTES_SHA256.json",
+      "sheet": null,
+      "sha256": "a5b5f4e393c51b0dcfb6a34c4f796c94e396c903679950d246dc36eaba719e1b",
+      "bytes": 3515,
+      "mtime": "2026-09-28T23:43:34.056169-03:00"
+    },
+    {
+      "path": "/Users/alexi/Documents/GitHub/avance_curricular/scripts/construir_base_retencion_mu_2022_2026.py",
+      "sheet": null,
+      "sha256": "edcade5f199443517ce6ec88a7c43a58cf52ee80a671ab0b9eddec0f1e6de19e",
+      "bytes": 16612,
+      "mtime": "2026-09-28T23:43:34.057398-03:00"
+    }
+  ],
+  "global": {
+    "umas_records": 15136,
+    "umas_valid_rut_unique": 13011,
+    "umas_unparseable_rows": 0,
+    "umas_invalid_dv_rows": 0,
+    "mu2026_records": 4105,
+    "mu2026_invalid_key_rows": 0,
+    "mu2026_doc_types": {
+      "R": 4105
+    },
+    "umas_year_rows": {
+      "2013": 483,
+      "2017": 525,
+      "2014": 442,
+      "2015": 514,
+      "2016": 485,
+      "2019": 628,
+      "2021": 572,
+      "2018": 503,
+      "2023": 602,
+      "2020": 500,
+      "2026": 5613,
+      "2022": 568,
+      "2025": 1831,
+      "2024": 1460,
+      "2027": 410
+    },
+    "umas_2026_period_rows": {
+      "1": 4199,
+      "2": 812,
+      "3": 602
+    }
+  },
+  "cohorts": {
+    "2025-T2": {
+      "denominator": 222,
+      "absent_mu": 142,
+      "all_origin_valid_dv": true,
+      "new_matches_more_permissive_format": 0,
+      "same_body_different_dv_mu": 0,
+      "found_current_umas": 142,
+      "found_current_after_format_only": 0,
+      "current_classification_persons": {
+        "Solo años de matrícula distintos de 2026/2027": 139,
+        "ANOMATRICULA 2026 y VIGENTE": 3
+      },
+      "current_rows": 152,
+      "current_years_rows": {
+        "2025": 145,
+        "2019": 1,
+        "2020": 1,
+        "2024": 2,
+        "2026": 3
+      },
+      "current_states_rows": {
+        "SUSPENDIDO": 6,
+        "ELIMINADO": 36,
+        "VIGENTE": 109,
+        "EGRESADO": 1
+      },
+      "current_situations_rows": {
+        "2 - SUSPENSIÓN TEMPORAL": 6,
+        "11 - RENUNCIA POST INICIO CLASES": 28,
+        "1 - ALUMNO REGULAR": 108,
+        "24 - CAMBIO DE CARRERA": 5,
+        "38 - REINCORPORACION DE ACTIVIDADES": 2,
+        "12 - ELIMINADO MATRICULA SIN FIRMA": 1,
+        "23 - RETIRO - RETRACTO": 1,
+        "14 - APRUEBA PROGRAMA EC": 1
+      },
+      "current_2026_terms_rows": {
+        "2": 3
+      },
+      "current_2026_states_rows": {
+        "VIGENTE": 3
+      },
+      "current_2026_vig_terms_rows": {
+        "2": 3
+      },
+      "current_2026_vig_enrol_dates": {
+        "20-05-2026": 1,
+        "01-07-2026": 1,
+        "08-07-2026": 1
+      },
+      "current_2026_vig_categories": {
+        "NORMAL": 3
+      },
+      "any2026_persons_by_term_combination": {
+        "2": 3
+      },
+      "vig2026_persons_by_term_combination": {
+        "2": 3
+      },
+      "all_cohort_current_2026_vig_persons": 64,
+      "absent_other_mu_years_persons": {
+        "Ninguno": 142
+      },
+      "source_orig_states_rows": {
+        "VIGENTE": 123,
+        "ELIMINADO": 22
+      },
+      "source_orig_career_rows": {
+        "ADMINISTRACION PUBLICA": 18,
+        "AUDITORIA": 11,
+        "INGENIERIA EN ADMINISTRACION DE EMPRESAS": 28,
+        "CONTINUIDAD INGENIERIA  CIBERSEGURIDAD": 1,
+        "TECNICO EN ENFERMERIA": 13,
+        "INGENIERIA EN CIBERSEGURIDAD": 16,
+        "INGENIERIA EN CONECTIVIDAD Y REDES": 1,
+        "INGENIERIA EN INFORMATICA": 17,
+        "INGENIERIA INDUSTRIAL": 18,
+        "INGENIERIA EN LOGISTICA": 14,
+        "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS": 8
+      },
+      "no2026_current_state_combinations_persons": {
+        "SUSPENDIDO": 6,
+        "ELIMINADO": 27,
+        "VIGENTE": 99,
+        "ELIMINADO / VIGENTE": 6,
+        "EGRESADO / VIGENTE": 1
+      },
+      "no2026_with_any_VIGENTE_persons": 106,
+      "no2026_VIGENTE_years_rows": {
+        "2025": 106
+      }
+    },
+    "2025-T3": {
+      "denominator": 124,
+      "absent_mu": 74,
+      "all_origin_valid_dv": true,
+      "new_matches_more_permissive_format": 0,
+      "same_body_different_dv_mu": 0,
+      "found_current_umas": 74,
+      "found_current_after_format_only": 0,
+      "current_classification_persons": {
+        "Solo años de matrícula distintos de 2026/2027": 72,
+        "ANOMATRICULA 2026; sin VIGENTE": 1,
+        "ANOMATRICULA 2026 y VIGENTE": 1
+      },
+      "current_rows": 83,
+      "current_years_rows": {
+        "2025": 77,
+        "2026": 3,
+        "2022": 1,
+        "2020": 1,
+        "2019": 1
+      },
+      "current_states_rows": {
+        "VIGENTE": 49,
+        "ELIMINADO": 33,
+        "SUSPENDIDO": 1
+      },
+      "current_situations_rows": {
+        "1 - ALUMNO REGULAR": 50,
+        "23 - RETIRO - RETRACTO": 16,
+        "24 - CAMBIO DE CARRERA": 6,
+        "11 - RENUNCIA POST INICIO CLASES": 9,
+        "3 - ELIMINACION AUTOMATICA": 1,
+        "2 - SUSPENSIÓN TEMPORAL": 1
+      },
+      "current_2026_terms_rows": {
+        "1": 2,
+        "3": 1
+      },
+      "current_2026_states_rows": {
+        "ELIMINADO": 2,
+        "VIGENTE": 1
+      },
+      "current_2026_vig_terms_rows": {
+        "3": 1
+      },
+      "current_2026_vig_enrol_dates": {
+        "12-09-2026": 1
+      },
+      "current_2026_vig_categories": {
+        "NORMAL": 1
+      },
+      "any2026_persons_by_term_combination": {
+        "1": 1,
+        "3": 1
+      },
+      "vig2026_persons_by_term_combination": {
+        "3": 1
+      },
+      "all_cohort_current_2026_vig_persons": 34,
+      "absent_other_mu_years_persons": {
+        "Ninguno": 73,
+        "2024 / 2025": 1
+      },
+      "source_orig_states_rows": {
+        "VIGENTE": 62,
+        "ELIMINADO": 14
+      },
+      "source_orig_career_rows": {
+        "ADMINISTRACION PUBLICA": 11,
+        "AUDITORIA": 10,
+        "INGENIERIA EN ADMINISTRACION DE EMPRESAS": 11,
+        "INGENIERIA EN CIBERSEGURIDAD": 10,
+        "INGENIERIA INDUSTRIAL": 13,
+        "INGENIERIA EN LOGISTICA": 6,
+        "INGENIERIA EN INFORMATICA": 5,
+        "TECNICO EN ENFERMERIA": 9,
+        "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS": 1
+      },
+      "no2026_current_state_combinations_persons": {
+        "VIGENTE": 42,
+        "ELIMINADO": 23,
+        "ELIMINADO / VIGENTE": 6,
+        "SUSPENDIDO": 1
+      },
+      "no2026_with_any_VIGENTE_persons": 48,
+      "no2026_VIGENTE_years_rows": {
+        "2025": 48
+      }
+    }
+  },
+  "coverage": {
+    "canonical_path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/REPORTE JULIO 2026/MATRICULA_UNIFICADA_PREGRADO_2026_CONSOLIDADA_FINAL_CON_ENCABEZADOS.xlsx",
+    "canonical_sheet": "CONSOLIDADO",
+    "canonical_sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+    "inventory_expected_sha256": "fab3f4c3ba10534e0ec1d8eea4249a5bbbdc03cc012534b3184f59d9d3d663d7",
+    "canonical_hash_matches_inventory": true,
+    "canonical_rows": 4105,
+    "mu2026_rows": 4105,
+    "columns_compared": 32,
+    "normalized_row_by_row_equal": true,
+    "normalized_canonical_content_hash": "a2fb9332f346081766814e67e2d5aeecb73e89f9a2f6e718b0bb50540c19adb7",
+    "normalized_base_content_hash": "a2fb9332f346081766814e67e2d5aeecb73e89f9a2f6e718b0bb50540c19adb7",
+    "different_cells_by_column": {},
+    "absent_found_directly_in_canonical": {
+      "2": 0,
+      "3": 0
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "recurso": "Excel consulta estados y situaciones UMAS versus VIG MU2026",
+  "clasificacion": "C",
+  "fecha": "2026-10-21T02:28:57.598Z",
+  "archivo": "REGLAS_UMAS_Y_SIES_MU2026_20261020.xlsx",
+  "sha256": "1b0596426081628f4b8958cf2ef9a48270594626614df6cadd51734943b38286",
+  "fuente": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/20261020_estados_umas/manifest.json",
+  "sha256_manifiesto_fuente": "a0a9b7432b4d1355998191cb1151bda239d2817f53d06dc86455e0cbc961484e",
+  "fuentes": [
+    {
+      "clasificacion": "A",
+      "ruta": "Manual_Matrícula_Unificada_2026.pdf",
+      "sha256": "3626600782798fbb5afa4100975eeffd2155b4912a112f63cee42f9741a82990",
+      "localizador": "p.7 §2.vi; p.10 suspensiones; p.31 Anexo7 Cuadro1 AF",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "D/B",
+      "ruta": "requerimiento_bettersoft_uplus_2026/REPORTE_CIERRE_GATE09_UPLUS_SIES_2026.md",
+      "sha256": "3f9669c09428f10d8425f313e645c72d596406ca660e1374a8ea182df6489e5b",
+      "localizador": "§C C09-01; §E1–3",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "D/B",
+      "ruta": "requerimiento_bettersoft_uplus_2026/MANIFIESTO_CONGELACION_v1.0.md",
+      "sha256": "96be33d00a926fe0bfe1a1f0cfc95df6e8ca4bc6d89a7ecbe0c47fbd42ef1e87",
+      "localizador": "C09_01 CONFIRMADA",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "D/B",
+      "ruta": "requerimiento_bettersoft_uplus_2026/resultados/DICCIONARIO_MAESTRO_UPLUS_SIES_2026_v1.0.xlsx",
+      "sha256": "7f394a121b6cb1a46d14db5f9be9849e578bfc138b9c289392520735713f5689",
+      "localizador": "12_GATE09_RESOLUCION fila2;18_CONFIRMACION_GATE10 fila2;05_DICCIONARIO_BETTERSOFT UP39/40/42/43/59/60/66/68;06_CATALOGOS_HOMOLOGACIONES J79:K79",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "C",
+      "ruta": "gobernanza_catalogos/gob_datosalumnos_estadoacademico_situacion.tsv",
+      "sha256": "ae1ee0d9778e15ee0cff7c7aa149afa356d1f1d801c3e481c07c53d109f84160",
+      "localizador": "29 parejas; VIG_ESPERADO es antecedente descartado como regla por Gate10",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "C",
+      "ruta": "procesos/caracterizacion/caracterizacion.py",
+      "sha256": "3e49e7f51973dcfd68db886a9b2f8ec4345b2eb5da0770976fe5d73b8d2ef187",
+      "localizador": "_MAPA_ESTADO_OFICIAL; consulta AST sin ejecutar módulo",
+      "fuente_original_modificada": false
+    },
+    {
+      "clasificacion": "B",
+      "ruta": "/Users/alexi/Downloads/DATOSDEALUMNOS_12112.xlsx",
+      "sha256": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+      "localizador": "Hoja1; ESTADOACADEMICO y SITUACION; solo conteos agregados",
+      "fuente_original_modificada": false
+    }
+  ],
+  "hojas": 1,
+  "tablas": 1,
+  "combinaciones": 32,
+  "registros": 15136,
+  "categorizadas_C": 31,
+  "pendientes_categoria_E": 1,
+  "VIG_asignado_individualmente": 0,
+  "datos_personales": false,
+  "git_antes": {
+    "branch": "feature/ire-2026",
+    "head": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "git_despues": {
+    "branch": "feature/ire-2026",
+    "head": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "commit": false,
+  "push": false,
+  "builder": "/Users/alexi/Documents/Codex/2026-10-20/excel-reglas-umas/build.mjs",
+  "sha256_builder": "ed3fe9a6f7355e7491963cde1aaa21a17cc8f592eec7b240a0d84d7aa939cd4e",
+  "qa": [
+    {
+      "label": "Combinaciones",
+      "actual": 32,
+      "expected": 32,
+      "ok": true
+    },
+    {
+      "label": "Registros",
+      "actual": 15136,
+      "expected": 15136,
+      "ok": true
+    },
+    {
+      "label": "Pendientes categorización",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    },
+    {
+      "label": "Coincidentes",
+      "actual": 31,
+      "expected": 31,
+      "ok": true
+    },
+    {
+      "label": "Cambio categoría muestra diferencia",
+      "actual": "REVISAR DIFERENCIA (E)",
+      "expected": "REVISAR DIFERENCIA (E)",
+      "ok": true
+    },
+    {
+      "label": "Categoría ausente queda pendiente",
+      "actual": "E: PENDIENTE",
+      "expected": "E: PENDIENTE",
+      "ok": true
+    },
+    {
+      "label": "Contador responde a falta de categoría",
+      "actual": 2,
+      "expected": 2,
+      "ok": true
+    },
+    {
+      "label": "Suma recalcula",
+      "actual": 15137,
+      "expected": 15137,
+      "ok": true
+    },
+    {
+      "label": "Restaurado universo",
+      "actual": 15136,
+      "expected": 15136,
+      "ok": true
+    },
+    {
+      "label": "Restaurado pendiente",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    }
+  ],
+  "limite": "Recalculado y exportado con Artifact Tool. Comportamiento de filtros en Excel nativo no verificado en esta ejecución.",
+  "siguiente_paso": "Revisar categoría 16/ELIMINADO y acreditar hechos por matrícula/período/corte antes de asignar VIG."
+}

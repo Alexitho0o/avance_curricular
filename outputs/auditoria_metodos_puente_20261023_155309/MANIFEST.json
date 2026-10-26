@@ -1,0 +1,79 @@
+{
+  "fecha_hora": "2026-10-23T15:53:09.542912-03:00",
+  "entradas": {
+    "puntero_sha256": "a041fa4d8c1cd25006959fc2b05089eab396f9b684cb35c942e7263343890497",
+    "descriptor": {
+      "descriptor": "data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json",
+      "sha256": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8",
+      "clasificacion": "D integración autorizada; C consulta común",
+      "alcance": "Atribución de códigos para seguimiento; motores anuales congelados"
+    },
+    "base_privada_sha256": "625b9b9d449906b38be23b7c8ad6c7f4a762f43eab9f52f0bc71fe50a5cdb38e",
+    "base_privada_ruta": "/Users/alexi/.local/share/ipss/cierre_inf35_03_t3_20261023_154224/DICCIONARIO_SIES.sqlite"
+  },
+  "salidas_sha256": {
+    "INFORME.md": "b9cbad0c67f215b5fb8fe1b634d4c283e83a10b26f4a7de8bfb50154a8d1842f",
+    "CONTINUIDAD_EXPEDIENTE.json": "11748718361b51e1510c1e0b451718eb8eed3e77e3d06c6215a2b2ffc65643a0",
+    "QA.json": "70475b2a2a4d2e2854daa051a3061553a495fb716a240a2e0f71781abec1824b",
+    "IDENTIFICABILIDAD.json": "d9645d16e8071fa4e3df10354a0f3538e443e5c200931a825faa2191e862ae9f",
+    "FUENTES_METODOS.json": "0a239dae652ca8b01e396a52b45120c95353ae5d22f32f7584e6e34166787d1b",
+    "DICCIONARIO_ANUAL_OBSERVADO.csv": "755f1eefb4477192801c85ace6c348ea6b3a965b6f7de872ae1571d8d22b8c2f",
+    "VALIDACION_TEMPORAL.json": "cb1f46f08eddda3d209e01949201f6c7f0afc967231c94f6c2f22d5ebac41076",
+    "COMPARACION_PAREADA.json": "366572124ed97c7f84d043d4aff24dfb2f11f432c571cab826c067fcda1cbf67",
+    "CHECKPOINT.md": "b638e64bf73e2da52dc6ff2d872ddbaa8dfd23f9a1c4e726bd43cf91333a490e",
+    "ALCANCE_EXPERIMENTAL_PENDIENTES.json": "5e80d3b74f38a2d8d934cd052fbf315303e69b7c786c1358a2f54289e1bb2466",
+    "RESUMEN.json": "6a8d2109fd28eee04bda5d11ce88d1560f23c457ae4c113742254df024477411",
+    "GRUPOS_MULTICODIGO.json": "496cec48674df2039a41b8eff3f3107132af7915d8205e30108260e3a02b7312",
+    "VALIDACION_POR_PERSONA.json": "6798986dc5fc37ac3e2de79f6314ec85c981e4f90f12f6973393766984190456"
+  },
+  "codigo_sha256": {
+    "scripts/auditar_metodos_puente_20261023.py": "a3bc54061f286f3a16c9dd1c2f9701213fa3c01099e2a56074237d1f3076ab4e",
+    "docs/ESPECIFICACION_AUDITORIA_METODOS_PUENTE_20261023.md": "3414ee0792b406be3771d510484765f863421c9f0a5c62e1b5478590084024a7",
+    "scripts/preparar_auditoria_metodos_puente_20261023.py": "6899131f816a33f94918c6c86262ec592337eb0e204127fc304723e5c1ca57b8"
+  },
+  "QA": {
+    "resultado": "OK_EXPERIMENTO_NO_APLICADO",
+    "observaciones_originales": 24774,
+    "universo_control_anual": 8354,
+    "particiones_persona_sin_solapamiento": true,
+    "documental_no_usado_como_etiqueta_trimestral": true,
+    "diccionario_bases_denominadores_intactos": true,
+    "commit_push": false,
+    "git": {
+      "rama": "feature/ire-2026",
+      "HEAD": "80ca13a5a249a1a2bd53a699f5f73689b1f53040"
+    },
+    "revision_independiente": {
+      "metodo": "Recomputación por segundo agente con código propio y SQLite en lectura",
+      "K2": [
+        7672,
+        7662,
+        10,
+        682
+      ],
+      "K3": [
+        7670,
+        7664,
+        6,
+        684
+      ],
+      "orden": "emitidos, correctos, errores, abstenciones",
+      "resultado": "COINCIDE",
+      "limite": "Revisión de etiquetas anuales heredadas, no validación externa de fuentes."
+    },
+    "diccionario_anual_agregado": {
+      "grupos": 278,
+      "univocos_observados": 256,
+      "multicodigo": 22,
+      "promovido": false
+    },
+    "limites_variables": {
+      "version_no_extraida_de_predictores": true,
+      "sede_y_familia_contextuales_heredadas": true,
+      "no_validacion_independiente_ISCJ": true,
+      "atributos_de_cortes_posteriores_posibles": true,
+      "validacion_temporal_es_retrospectiva": true
+    }
+  },
+  "cierre_fecha_hora": "2026-10-23T16:02:19.060810-03:00"
+}

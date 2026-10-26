@@ -1,0 +1,1 @@
+D/C: v3_20261023_inf35_07 activa; 1 cierre nuevo INF35-07/T3-2025 J2V4. Foco 35: 15 reutilizables, 20 pendientes (14 jornada, 6 homologaciones). B: INF35-12 O→D entre respaldos 29–30 sep 2026, D confirmado 2 oct. E: versión destino aún pendiente; sin extrapolar. QA íntegro; no fuentes/denominadores/Excel modificados ni commit/push.

@@ -1,0 +1,116 @@
+{
+  "fecha": "2026-10-21T02:55:19.340Z",
+  "archivo": "REGLAS_UMAS_SIES_REVISION_EGRESO_20261020_235420.xlsx",
+  "sha256": "3f6d50c5003e8552dda8e807f0580afd6e5453614d5bca44c774444000a6d834",
+  "fuente_excel": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/estados_umas_vig_sies/20261020_235001_decisiones_vig/REGLAS_UMAS_SIES_CONFIRMADAS_20261020_235001.xlsx",
+  "sha256_fuente_excel": "eb9e1b48b5f408f939e79980fbe4771c07ebe30f941a98a8de07abc67e12bd00",
+  "original_intacto": true,
+  "fuente_umas": "/Users/alexi/Downloads/DATOSDEALUMNOS_12112.xlsx",
+  "sha256_umas": "fdd47d99b934479f39d8db6d00eceb40714d3b8c7baa1e3a89a9288b2b8bc471",
+  "hoja": "Hoja1",
+  "filtro": {
+    "ESTADOACADEMICO": "EGRESADO",
+    "SITUACION": "13 - EGRESO"
+  },
+  "resultado_agregado": [
+    {
+      "clasificacion": "B",
+      "CODCARPR": "TTMRE",
+      "NOMBRE_L": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 5,
+      "ANOMATRICULA": {
+        "2013": 3,
+        "2014": 2
+      },
+      "SEDE": "RE",
+      "JORNADA": "V"
+    },
+    {
+      "clasificacion": "B",
+      "CODCARPR": "TPCRE",
+      "NOMBRE_L": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 3,
+      "ANOMATRICULA": {
+        "2013": 2,
+        "2014": 1
+      },
+      "SEDE": "RE",
+      "JORNADA": "V"
+    }
+  ],
+  "decision_nueva_D": "EGRESADO + 14 - APRUEBA PROGRAMA EC = NO APLICA (D)",
+  "pendiente_E": "EGRESADO + 13 - EGRESO; 8 registros; usuario decidirá",
+  "tests": [
+    {
+      "label": "B5",
+      "actual": 23,
+      "expected": 23,
+      "ok": true
+    },
+    {
+      "label": "D5",
+      "actual": 5,
+      "expected": 5,
+      "ok": true
+    },
+    {
+      "label": "F5",
+      "actual": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "H5",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    },
+    {
+      "label": "J5",
+      "actual": 15136,
+      "expected": 15136,
+      "ok": true
+    },
+    {
+      "label": "D11",
+      "actual": "PENDIENTE",
+      "expected": "PENDIENTE",
+      "ok": true
+    },
+    {
+      "label": "D12",
+      "actual": "NO APLICA (D)",
+      "expected": "NO APLICA (D)",
+      "ok": true
+    },
+    {
+      "label": "Exclusión requiere decisión",
+      "actual": "PENDIENTE",
+      "expected": "PENDIENTE",
+      "ok": true
+    },
+    {
+      "label": "Pendientes recalculan",
+      "actual": 2,
+      "expected": 2,
+      "ok": true
+    }
+  ],
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "git_antes": {
+    "rama": "feature/ire-2026",
+    "HEAD": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "git_despues": {
+    "rama": "feature/ire-2026",
+    "HEAD": "b8140dcba0f179865671cff75f98b9e1041eeb0a"
+  },
+  "commit": false,
+  "push": false,
+  "datos_individuales_exportados": false,
+  "denominadores_preservados": {
+    "T2": 222,
+    "T3": 124
+  },
+  "limite": "Recalculado con Artifact Tool; no prueba nativa Excel"
+}

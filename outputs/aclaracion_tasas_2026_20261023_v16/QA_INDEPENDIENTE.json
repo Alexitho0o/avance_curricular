@@ -1,0 +1,27 @@
+{
+  "clasificacion": "B/C",
+  "estado": "OK",
+  "metodo": "Segunda revisión independiente de fuentes, ZIP/XML y dependencias, sin modificar archivos.",
+  "fuentes": "Original auditado, fuente T2 y V15; rutas y hashes en EVIDENCIA_AGREGADA.json.",
+  "tasas": [
+    {"celda": "H11", "numerador": 1360, "denominador": 1467, "poblacion": 1471, "excluidos": 4},
+    {"celda": "F12", "numerador": 462, "denominador": 528, "unidad": "matrículas", "personas": 527, "renuncias": 66},
+    {"celda": "H14", "numerador": 2290, "denominador": 2519, "poblacion": 2523, "excluidos": 4}
+  ],
+  "exclusiones": "Cuatro TITULADO / 31 - TITULADO APROBADO; ninguna PENDIENTE en estos grupos. Regla interna D vigente preservada.",
+  "partes_modificadas": ["xl/worksheets/sheet19.xml"],
+  "celdas_preexistentes_modificadas": ["H11", "F12", "H14"],
+  "celdas_nuevas_agregadas": 31,
+  "otras_hojas_identicas_bytes": 53,
+  "graficos_identicos_bytes": 13,
+  "tablas_identicas_bytes": 35,
+  "estilos_identicos_bytes": true,
+  "formulas_dependientes_revisadas": 13,
+  "circularidad": 0,
+  "celdas_duplicadas": 0,
+  "orden_y_xml_y_zip": "OK",
+  "numeradores_y_denominadores_conservados": true,
+  "diferencias_cache": "Solo precisión de coma flotante de aproximadamente 1e-16 en dos tasas.",
+  "privacidad": "No hay identificadores individuales en celdas nuevas.",
+  "sha256": "aa4309934a0ed34740913bfdf2314e97a1a4cb51cbe36b830266df13df4cb37c"
+}

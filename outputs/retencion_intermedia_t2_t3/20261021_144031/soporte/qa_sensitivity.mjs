@@ -1,0 +1,25 @@
+import fs from 'node:fs/promises';
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const dir='/Users/alexi/Documents/GitHub/avance_curricular/.local_restricted/retencion_intermedia/20261021_144031';
+const d=JSON.parse(await fs.readFile(`${dir}/payload.json`,'utf8'));
+const w=await SpreadsheetFile.importXlsx(await FileBlob.load(`${dir}/DETALLE_PRIVADO_RETENCION_INTERMEDIA_20261021_144031.xlsx`));
+const id=w.worksheets.getItem('Identidad_20'),s=w.worksheets.getItem('Resumen_privado'),c=w.worksheets.getItem('Cierres_observados');
+const checks=[];function ok(name,x){if(!x)throw Error(name);checks.push(name);}
+const r=d.identity.findIndex(x=>x[9]>0)+7;
+const origH=id.getRange(`H${r}`).values[0][0],origI=id.getRange(`I${r}`).values[0][0],origN=id.getRange(`J${r}`).values[0][0];
+const baseline=s.getRange('B15:E15').values[0];
+ok('baseline_20_18_2_19',JSON.stringify(baseline)==='[20,18,2,19]');
+id.getRange(`H${r}`).values=[['Pendiente']];id.getRange(`I${r}`).values=[['']];w.recalculate();
+ok('known_person_changes_to_pending',id.getRange(`J${r}`).values[0][0]===0&&id.getRange(`K${r}`).values[0][0]==='Pendiente');
+ok('summary_reacts_without_changing_denominator',JSON.stringify(s.getRange('B15:E15').values[0])===JSON.stringify([20,17,3,19-origN]));
+id.getRange(`H${r}`).values=[[origH]];id.getRange(`I${r}`).values=[[origI]];w.recalculate();
+ok('original_identity_results_restored',JSON.stringify(s.getRange('B15:E15').values[0])==='[20,18,2,19]');
+const cr=d.closures.findIndex(x=>x[2]==='2025-T2')+7,old=c.getRange(`L${cr}`).values[0][0];
+c.getRange(`L${cr}`).values=[['ELIMINADO']];w.recalculate();
+ok('observed_state_count_reacts',s.getRange('E7').values[0][0]===0&&s.getRange('D7').values[0][0]===1);
+ok('pending_rate_not_promoted_by_state_change',s.getRange('I7').values[0][0]==='Pendiente');
+c.getRange(`L${cr}`).values=[[old]];w.recalculate();
+ok('closing_originals_restored',s.getRange('E7').values[0][0]===1&&s.getRange('D7').values[0][0]===1);
+const result={status:'OK',checks,engine:'Artifact Tool local; imported saved workbook; changes in memory only; no re-export',formula_sensitivity:true};
+await fs.writeFile('/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_intermedia_t2_t3/20261021_144031/QA_SENSIBILIDAD.json',JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result));
