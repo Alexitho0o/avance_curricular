@@ -1,0 +1,20 @@
+{
+ "clasificacion": "A regla oficial; B dato observado; C conciliación; E pendientes",
+ "fecha": "2026-10-26",
+ "causa2_311_vs_488": {
+  "definiciones": {"311": "posiciones de la causa 2 con actividad en PROMEDIOS (12166, 7804 o 3233) en el mismo año y período", "488": "posiciones de la causa 2 cuya persona tiene alguna fila en PROMEDIOS 12166, en cualquier período y carrera"},
+  "conjuntos": {"universo_causa2": 544, "interseccion": 308, "solo_311": 3, "solo_488": 180, "en_ninguno": 53},
+  "lectura": "No se contradicen: son conjuntos distintos con 308 en común. Los 3 solo en 311 tienen actividad del período solo en 7804/3233; los 180 solo en 488 están en 12166 pero no en ese período."
+ },
+ "inventario_55_vs_45_mas_11": {
+  "catalogo": {"fuentes": 45, "privadas": 11, "hashes_unicos": 56},
+  "carpeta_onedrive": {"archivos_totales": 60, "datos": 56, "metadatos": 3, "duplicado_pendiente_de_borrar": 1},
+  "lectura": "El 55 corresponde a las 10:48 (45 fuentes + 10 privadas). A las 11:53 se agregó la base v10 (privada 11): 56. La carpeta tiene además CATALOGO_FUENTES.json, CATALOGO_FUENTES.csv, LEEME.md y la copia en _DUPLICADO_PARA_BORRAR."
+ },
+ "fechas": {
+  "corte_oficial_matricula_SIES": {"valor": "30 de abril de cada año", "clase": "A", "fuente": "procesos/caracterizacion/gobernanza/sies/RETENCION/RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.manifest.json (campo fecha_referencia; sha256 274433b1…); también MATRICULA_2007_2026.manifest.json cita el glosario oficial"},
+  "carga_SIES_2025": {"valor": "08-05-2025", "clase": "B", "fuente": "nombre del archivo 'Descarga de lo cargado_08-05-2025_22-26-22_Matrícula_Pregrado_2025.xlsx'; es fecha de carga/descarga, no de corte"},
+  "exportacion_UMAS": {"valor": "no acreditada", "clase": "E", "fuente": "DATOSDEALUMNOS_12159 y PROMEDIOSDEALUMNOS_12166/7804/3233 no registran fecha de exportación en su contenido"},
+  "correccion": "En la Fase 2 se dijo 'corte en mayo': era la fecha de carga. El corte oficial es el 30 de abril (A)."
+ }
+}

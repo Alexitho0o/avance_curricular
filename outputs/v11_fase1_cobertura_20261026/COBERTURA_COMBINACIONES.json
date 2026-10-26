@@ -1,0 +1,2616 @@
+{
+ "clasificacion": "B grupos gobernados, MU y oferta; C cruce; E pendientes",
+ "fecha": "2026-10-26",
+ "universo": "combinaciones carrera UMAS + jornada con actividad 2024+ en PROMEDIOS 12166, 7804 y 3233, fuera de PRUEBAS_CONTEXTUALES.json",
+ "conciliacion_41_vs_52": {
+  "solo_12166": 41,
+  "con_7804_y_3233": 52
+ },
+ "por_estado": {
+  "FAMILIA_RESPALDADA": 32,
+  "FAMILIA_RESPALDADA_CON_DIVERGENCIA_MU": 2,
+  "NO_LOCALIZADA": 11,
+  "CONFLICTO": 3,
+  "FAMILIA_EN_GRUPOS_SIN_MU": 4
+ },
+ "por_tipo": {
+  "carrera_regular": 29,
+  "continuidad": 8,
+  "sede_distinta_CO": 3,
+  "diplomado_o_educacion_continua": 12
+ },
+ "por_estado_tipo": {
+  "CONFLICTO|carrera_regular": 2,
+  "CONFLICTO|diplomado_o_educacion_continua": 1,
+  "FAMILIA_EN_GRUPOS_SIN_MU|diplomado_o_educacion_continua": 4,
+  "FAMILIA_RESPALDADA|carrera_regular": 26,
+  "FAMILIA_RESPALDADA|continuidad": 6,
+  "FAMILIA_RESPALDADA_CON_DIVERGENCIA_MU|continuidad": 2,
+  "NO_LOCALIZADA|carrera_regular": 1,
+  "NO_LOCALIZADA|diplomado_o_educacion_continua": 7,
+  "NO_LOCALIZADA|sede_distinta_CO": 3
+ },
+ "fuentes_sha256": {
+  "grupos_existentes.json": "80ce832f8d230551cac18b043e6715023f34ec42fb007313f1b17051c98463aa",
+  "PRUEBAS_CONTEXTUALES.json": "f333699f05e9df0ac48629a892e28831844123b44f77a68fde7df6a2222e2145",
+  "maestro.json": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+  "MU (índice mu_anual de la base v10)": "c6c4b5a43434d87146a97d1c81510c87e0f988a5e3c232852d3bbc4622d1051c",
+  "oferta (V5 hoja 3)": "16ad1b8eade1ab96d8763469d7e939a0de3d7e72dbfc877eabb42d0f12a33286",
+  "PROMEDIOSDEALUMNOS_12166.xlsx": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+  "PROMEDIOSDEALUMNOS_7804.xlsx": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+  "PROMEDIOSDEALUMNOS_3233.xlsx": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+  "DATOSDEALUMNOS_12159.xlsx": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+ },
+ "tabla": [
+  {
+   "carrera": "CADMP",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 7
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 97,
+   "filas_por_fuente": {
+    "12166": 69,
+    "7804": 28
+   },
+   "codcli": 7,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"CADMP\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C83J4"
+   ],
+   "codigos_base": [
+    "I162S2C83J4V1",
+    "I162S2C83J4V2"
+   ],
+   "equivalencias": 4,
+   "fuente_perfil": "PERFIL_NO_UNIVOCO",
+   "mu_familias_observadas": {
+    "I162S2C83J4": 7
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C83J4V1",
+    "I162S2C83J4V2"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C83J4V1": [
+     "2025",
+     "2026"
+    ],
+    "I162S2C83J4V2": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1",
+    "2"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CIADM",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 27
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 796,
+   "filas_por_fuente": {
+    "12166": 418,
+    "7804": 278,
+    "3233": 100
+   },
+   "codcli": 27,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CIADM\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C76J4"
+   ],
+   "codigos_base": [
+    "I162S2C76J4V1",
+    "I162S2C76J4V2"
+   ],
+   "equivalencias": 4,
+   "fuente_perfil": "PERFIL_NO_UNIVOCO",
+   "mu_familias_observadas": {
+    "I162S2C76J4": 37
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C76J4V1",
+    "I162S2C76J4V2"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C76J4V1": [
+     "2024",
+     "2025",
+     "2026"
+    ],
+    "I162S2C76J4V2": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1",
+    "2"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CICIB",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 135
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 3420,
+   "filas_por_fuente": {
+    "12166": 674,
+    "7804": 1817,
+    "3233": 929
+   },
+   "codcli": 135,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CICIB\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C46J4"
+   ],
+   "codigos_base": [
+    "I162S2C46J4V1"
+   ],
+   "equivalencias": 2,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C46J4": 219,
+    "I162S2C47J2": 2,
+    "I162S2C57J4": 1,
+    "I162S2C47J4": 1
+   },
+   "mu_coincide_pct": 98.2,
+   "codigos_oferta": [
+    "I162S2C46J4V1",
+    "I162S2C46J4V2",
+    "I162S2C46J4V3"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C46J4V1": [
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CICIB",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 4
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 46,
+   "filas_por_fuente": {
+    "12166": 18,
+    "7804": 28
+   },
+   "codcli": 4,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CICIB\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C46J2"
+   ],
+   "codigos_base": [
+    "I162S2C46J2V3"
+   ],
+   "equivalencias": 2,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C46J2": 4,
+    "I162S2C46J4": 1
+   },
+   "mu_coincide_pct": 80.0,
+   "codigos_oferta": [
+    "I162S2C46J2V1",
+    "I162S2C46J2V2",
+    "I162S2C46J2V3"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C46J2V3": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "3"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CICRE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 179
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 4393,
+   "filas_por_fuente": {
+    "12166": 886,
+    "7804": 2342,
+    "3233": 1165
+   },
+   "codcli": 179,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CICRE\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C3J4"
+   ],
+   "codigos_base": [
+    "I162S2C3J4V1",
+    "I162S2C3J4V2",
+    "I162S2C3J4V3"
+   ],
+   "equivalencias": 6,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C3J4": 286,
+    "I162S2C6J2": 1,
+    "I162S2C6J4": 1
+   },
+   "mu_coincide_pct": 99.3,
+   "codigos_oferta": [
+    "I162S2C3J4V1",
+    "I162S2C3J4V2",
+    "I162S2C3J4V3"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C3J4V1": [
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ],
+    "I162S2C3J4V2": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ],
+    "I162S2C3J4V3": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1",
+    "2",
+    "3"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CICRE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 2
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 27,
+   "filas_por_fuente": {
+    "12166": 10,
+    "7804": 17
+   },
+   "codcli": 2,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CICRE\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C3J2"
+   ],
+   "codigos_base": [
+    "I162S2C3J2V3"
+   ],
+   "equivalencias": 2,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C3J2": 2,
+    "I162S2C3J4": 1
+   },
+   "mu_coincide_pct": 66.7,
+   "codigos_oferta": [
+    "I162S2C3J2V1",
+    "I162S2C3J2V2",
+    "I162S2C3J2V3",
+    "I162S2C3J2V4"
+   ],
+   "estado": "FAMILIA_RESPALDADA_CON_DIVERGENCIA_MU",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C3J2V3": [
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "3"
+   ],
+   "condicion_pendiente": "revisar divergencia entre familia del grupo y familias informadas en MU"
+  },
+  {
+   "carrera": "CIIND",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 56
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 888,
+   "filas_por_fuente": {
+    "12166": 211,
+    "7804": 494,
+    "3233": 183
+   },
+   "codcli": 56,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CIIND\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C22J4"
+   ],
+   "codigos_base": [
+    "I162S2C22J4V1",
+    "I162S2C22J4V2"
+   ],
+   "equivalencias": 4,
+   "fuente_perfil": "PERFIL_NO_UNIVOCO",
+   "mu_familias_observadas": {
+    "I162S2C22J4": 37,
+    "I162S2C87J4": 37
+   },
+   "mu_coincide_pct": 50.0,
+   "codigos_oferta": [
+    "I162S2C22J4V1",
+    "I162S2C22J4V2"
+   ],
+   "estado": "FAMILIA_RESPALDADA_CON_DIVERGENCIA_MU",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C22J4V1": [
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ],
+    "I162S2C22J4V2": [
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1",
+    "2"
+   ],
+   "condicion_pendiente": "revisar divergencia entre familia del grupo y familias informadas en MU"
+  },
+  {
+   "carrera": "CIINF",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 124
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 2974,
+   "filas_por_fuente": {
+    "12166": 612,
+    "7804": 1592,
+    "3233": 770
+   },
+   "codcli": 124,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CIINF\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C1J4"
+   ],
+   "codigos_base": [
+    "I162S2C1J4V1",
+    "I162S2C1J4V2",
+    "I162S2C1J4V3"
+   ],
+   "equivalencias": 6,
+   "fuente_perfil": "MANUAL_FCU2026",
+   "mu_familias_observadas": {
+    "I162S2C1J4": 189,
+    "I162S2C57J4": 3,
+    "I162S2C57J2": 1
+   },
+   "mu_coincide_pct": 97.9,
+   "codigos_oferta": [
+    "I162S2C1J4V1",
+    "I162S2C1J4V2",
+    "I162S2C1J4V3"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C1J4V1": [
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ],
+    "I162S2C1J4V2": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ],
+    "I162S2C1J4V3": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1",
+    "2",
+    "3"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CILOG",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 38
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 552,
+   "filas_por_fuente": {
+    "12166": 150,
+    "7804": 305,
+    "3233": 97
+   },
+   "codcli": 38,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CILOG\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C77J4"
+   ],
+   "codigos_base": [
+    "I162S2C77J4V1",
+    "I162S2C77J4V2"
+   ],
+   "equivalencias": 4,
+   "fuente_perfil": "MANUAL_FCU2026",
+   "mu_familias_observadas": {
+    "I162S2C77J4": 49
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C77J4V1",
+    "I162S2C77J4V2"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "continuidad",
+   "oferta_anios_codigos_base": {
+    "I162S2C77J4V1": [
+     "2024",
+     "2025",
+     "2026"
+    ],
+    "I162S2C77J4V2": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1",
+    "2"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "CONG",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 101
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 1603,
+   "filas_por_fuente": {
+    "12166": 926,
+    "7804": 507,
+    "3233": 170
+   },
+   "codcli": 101,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"CONG\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C85J4"
+   ],
+   "codigos_base": [
+    "I162S2C85J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C85J4": 83,
+    "I162S2C57J4": 1,
+    "I162S2C6J4": 1
+   },
+   "mu_coincide_pct": 97.6,
+   "codigos_oferta": [
+    "I162S2C85J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C85J4V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "COTEIQ",
+   "sede_UMAS": "CO",
+   "sedes_obs": {
+    "CO": 42
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 544,
+   "filas_por_fuente": {
+    "12166": 207,
+    "7804": 337
+   },
+   "codcli": 42,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {
+    "I162S3C114J2": 34,
+    "I162S3C91J2": 1,
+    "I162S2C114J2": 1
+   },
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": true,
+   "tipo_programa": "sede_distinta_CO",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "COTENS",
+   "sede_UMAS": "CO",
+   "sedes_obs": {
+    "CO": 17
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 114,
+   "filas_por_fuente": {
+    "12166": 46,
+    "7804": 68
+   },
+   "codcli": 17,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {
+    "I162S3C91J2": 16
+   },
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": true,
+   "tipo_programa": "sede_distinta_CO",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "COTFAR",
+   "sede_UMAS": "CO",
+   "sedes_obs": {
+    "CO": 19
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 164,
+   "filas_por_fuente": {
+    "12166": 74,
+    "7804": 90
+   },
+   "codcli": 19,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {
+    "I162S3C115J2": 18,
+    "I162S2C115J2": 1
+   },
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": true,
+   "tipo_programa": "sede_distinta_CO",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DACD",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 24
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 420,
+   "filas_por_fuente": {
+    "12166": 238,
+    "7804": 140,
+    "3233": 42
+   },
+   "codcli": 30,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"DACD\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C63J4"
+   ],
+   "codigos_base": [
+    "I162S2C63J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C1J4": 1
+   },
+   "mu_coincide_pct": 0.0,
+   "codigos_oferta": [
+    "I162S2C63J4V1"
+   ],
+   "estado": "CONFLICTO",
+   "origen_12166": true,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {
+    "I162S2C63J4V1": [
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "la familia del grupo no coincide con la MU; requiere revisión y decisión D"
+  },
+  {
+   "carrera": "DCBS",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 33
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 659,
+   "filas_por_fuente": {
+    "12166": 312,
+    "7804": 294,
+    "3233": 53
+   },
+   "codcli": 59,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {
+    "I162S2C3J4": 1
+   },
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": true,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DDASC",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 10
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 50,
+   "filas_por_fuente": {
+    "7804": 50
+   },
+   "codcli": 10,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {
+    "I162S2C1J1": 1,
+    "I162S2C1J4": 1
+   },
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DDSC",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 6
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 50,
+   "filas_por_fuente": {
+    "7804": 50
+   },
+   "codcli": 10,
+   "anios": [
+    "2025"
+   ],
+   "grupo": "[\"DDSC\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C97J4"
+   ],
+   "codigos_base": [
+    "I162S2C97J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [
+    "I162S2C97J4V1"
+   ],
+   "estado": "FAMILIA_EN_GRUPOS_SIN_MU",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {
+    "I162S2C97J4V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "programa sin matrícula pregrado en MU; decidir si entra al seguimiento"
+  },
+  {
+   "carrera": "DFSCK",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 14
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 56,
+   "filas_por_fuente": {
+    "7804": 56
+   },
+   "codcli": 14,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DFSK",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 17
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 184,
+   "filas_por_fuente": {
+    "7804": 128,
+    "3233": 56
+   },
+   "codcli": 32,
+   "anios": [
+    "2025"
+   ],
+   "grupo": "[\"DFSK\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C66J4"
+   ],
+   "codigos_base": [
+    "I162S2C66J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [
+    "I162S2C66J4V1"
+   ],
+   "estado": "FAMILIA_EN_GRUPOS_SIN_MU",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {
+    "I162S2C66J4V1": [
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "programa sin matrícula pregrado en MU; decidir si entra al seguimiento"
+  },
+  {
+   "carrera": "DHIAD",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 4
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 16,
+   "filas_por_fuente": {
+    "7804": 16
+   },
+   "codcli": 4,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DIAR",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 5
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 56,
+   "filas_por_fuente": {
+    "7804": 35,
+    "3233": 21
+   },
+   "codcli": 5,
+   "anios": [
+    "2025"
+   ],
+   "grupo": "[\"DIAR\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C95J4"
+   ],
+   "codigos_base": [
+    "I162S2C95J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [
+    "I162S2C95J4V1"
+   ],
+   "estado": "FAMILIA_EN_GRUPOS_SIN_MU",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {
+    "I162S2C95J4V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "programa sin matrícula pregrado en MU; decidir si entra al seguimiento"
+  },
+  {
+   "carrera": "DICD",
+   "sede_UMAS": "?",
+   "sedes_obs": {},
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 81,
+   "filas_por_fuente": {
+    "7804": 81
+   },
+   "codcli": 9,
+   "anios": [
+    "2025"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DREIN",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 22
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 66,
+   "filas_por_fuente": {
+    "7804": 66
+   },
+   "codcli": 22,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "DRID",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 14
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 42,
+   "filas_por_fuente": {
+    "7804": 42
+   },
+   "codcli": 14,
+   "anios": [
+    "2025"
+   ],
+   "grupo": "[\"DRID\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C70J4"
+   ],
+   "codigos_base": [
+    "I162S2C70J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [
+    "I162S2C70J4V1"
+   ],
+   "estado": "FAMILIA_EN_GRUPOS_SIN_MU",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {
+    "I162S2C70J4V1": [
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "programa sin matrícula pregrado en MU; decidir si entra al seguimiento"
+  },
+  {
+   "carrera": "ECCURYDP",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 157
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 1095,
+   "filas_por_fuente": {
+    "7804": 660,
+    "3233": 435
+   },
+   "codcli": 250,
+   "anios": [
+    "2024",
+    "2025"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {
+    "I162S2C57J4": 2,
+    "I162S2C3J4": 1,
+    "I162S2C1J4": 1
+   },
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": false,
+   "tipo_programa": "diplomado_o_educacion_continua",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "IADM",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 9
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 101,
+   "filas_por_fuente": {
+    "12166": 69,
+    "7804": 31,
+    "3233": 1
+   },
+   "codcli": 9,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"IADM\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C76J1"
+   ],
+   "codigos_base": [
+    "I162S2C76J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C76J1": 8
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C76J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C76J1V1": [
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "IADM",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 32
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 623,
+   "filas_por_fuente": {
+    "12166": 301,
+    "7804": 232,
+    "3233": 90
+   },
+   "codcli": 32,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"IADM\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C76J2"
+   ],
+   "codigos_base": [
+    "I162S2C76J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C76J2": 38,
+    "I162S2C1J1": 1
+   },
+   "mu_coincide_pct": 97.4,
+   "codigos_oferta": [
+    "I162S2C76J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C76J2V1": [
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "ICIB",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 50
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 1491,
+   "filas_por_fuente": {
+    "12166": 618,
+    "7804": 541,
+    "3233": 332
+   },
+   "codcli": 50,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"ICIB\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C46J1"
+   ],
+   "codigos_base": [
+    "I162S2C46J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C46J1": 79,
+    "I162S2C46J4": 3
+   },
+   "mu_coincide_pct": 96.3,
+   "codigos_oferta": [
+    "I162S2C46J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C46J1V1": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "ILOG",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 39
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 606,
+   "filas_por_fuente": {
+    "12166": 163,
+    "7804": 316,
+    "3233": 127
+   },
+   "codcli": 39,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"ILOG\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C77J2"
+   ],
+   "codigos_base": [
+    "I162S2C77J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C77J2": 41,
+    "I162S2C79J2": 3,
+    "I162S2C77J4": 1
+   },
+   "mu_coincide_pct": 91.1,
+   "codigos_oferta": [
+    "I162S2C77J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C77J2V1": [
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TADP",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 40
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 771,
+   "filas_por_fuente": {
+    "12166": 417,
+    "7804": 268,
+    "3233": 86
+   },
+   "codcli": 40,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TADP\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C84J4"
+   ],
+   "codigos_base": [
+    "I162S2C84J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C84J4": 44
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C84J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C84J4V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TAMD",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 12
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 176,
+   "filas_por_fuente": {
+    "12166": 129,
+    "7804": 47
+   },
+   "codcli": 12,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TAMD\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C78J1"
+   ],
+   "codigos_base": [
+    "I162S2C78J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C78J1": 12
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C78J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C78J1V1": [
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TCDA",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 48
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 630,
+   "filas_por_fuente": {
+    "12166": 210,
+    "7804": 325,
+    "3233": 95
+   },
+   "codcli": 48,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TCDA\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C89J4"
+   ],
+   "codigos_base": [
+    "I162S2C89J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C89J4": 51
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C89J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C89J4V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TCIB",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 28
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 602,
+   "filas_por_fuente": {
+    "12166": 286,
+    "7804": 233,
+    "3233": 83
+   },
+   "codcli": 28,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TCIB\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C47J1"
+   ],
+   "codigos_base": [
+    "I162S2C47J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C47J1": 34,
+    "I162S2C46J2": 1,
+    "I162S2C47J4": 1,
+    "I162S2C46J1": 1
+   },
+   "mu_coincide_pct": 91.9,
+   "codigos_oferta": [
+    "I162S2C47J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C47J1V1": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TCIB",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 36
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 873,
+   "filas_por_fuente": {
+    "12166": 362,
+    "7804": 342,
+    "3233": 169
+   },
+   "codcli": 36,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TCIB\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C47J2"
+   ],
+   "codigos_base": [
+    "I162S2C47J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C47J2": 49,
+    "I162S2C46J2": 2
+   },
+   "mu_coincide_pct": 96.1,
+   "codigos_oferta": [
+    "I162S2C47J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C47J2V1": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TCSRE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 5
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 35,
+   "filas_por_fuente": {
+    "12166": 13,
+    "7804": 15,
+    "3233": 7
+   },
+   "codcli": 5,
+   "anios": [
+    "2024",
+    "2025"
+   ],
+   "grupo": "[\"TCSRE\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C47J1"
+   ],
+   "codigos_base": [
+    "I162S2C47J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C46J4": 4,
+    "I162S2C47J1": 2
+   },
+   "mu_coincide_pct": 33.3,
+   "codigos_oferta": [
+    "I162S2C47J1V1"
+   ],
+   "estado": "CONFLICTO",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C47J1V1": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "la familia del grupo no coincide con la MU; requiere revisión y decisión D"
+  },
+  {
+   "carrera": "TCSRE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 4
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 27,
+   "filas_por_fuente": {
+    "12166": 11,
+    "7804": 11,
+    "3233": 5
+   },
+   "codcli": 4,
+   "anios": [
+    "2024"
+   ],
+   "grupo": "[\"TCSRE\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C47J2"
+   ],
+   "codigos_base": [
+    "I162S2C47J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C46J4": 4,
+    "I162S2C47J2": 3
+   },
+   "mu_coincide_pct": 42.9,
+   "codigos_oferta": [
+    "I162S2C47J2V1"
+   ],
+   "estado": "CONFLICTO",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C47J2V1": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "la familia del grupo no coincide con la MU; requiere revisión y decisión D"
+  },
+  {
+   "carrera": "TEIQ",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 198
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 869,
+   "filas_por_fuente": {
+    "12166": 522,
+    "7804": 347
+   },
+   "codcli": 198,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TEIQ\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C114J2"
+   ],
+   "codigos_base": [
+    "I162S2C114J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C114J2": 77,
+    "I162S2C91J2": 1
+   },
+   "mu_coincide_pct": 98.7,
+   "codigos_oferta": [
+    "I162S2C114J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C114J2V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TENS",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 101
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 1395,
+   "filas_por_fuente": {
+    "12166": 437,
+    "7804": 756,
+    "3233": 202
+   },
+   "codcli": 101,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TENS\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C91J1"
+   ],
+   "codigos_base": [
+    "I162S2C91J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C91J1": 96,
+    "I162S2C91J2": 7
+   },
+   "mu_coincide_pct": 93.2,
+   "codigos_oferta": [
+    "I162S2C91J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C91J1V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TENS",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 232
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 1982,
+   "filas_por_fuente": {
+    "12166": 731,
+    "7804": 992,
+    "3233": 259
+   },
+   "codcli": 232,
+   "anios": [
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TENS\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C91J2"
+   ],
+   "codigos_base": [
+    "I162S2C91J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C91J2": 126,
+    "I162S2C91J1": 10,
+    "I162S2C114J2": 1,
+    "I162S2C3J2": 1
+   },
+   "mu_coincide_pct": 91.3,
+   "codigos_oferta": [
+    "I162S2C91J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C91J2V1": [
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TFAR",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 26
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 199,
+   "filas_por_fuente": {
+    "12166": 92,
+    "7804": 107
+   },
+   "codcli": 26,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TFAR\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C115J2"
+   ],
+   "codigos_base": [
+    "I162S2C115J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C115J2": 25
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C115J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C115J2V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TFARSP",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 17
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 30,
+   "filas_por_fuente": {
+    "12166": 30
+   },
+   "codcli": 17,
+   "anios": [
+    "2026"
+   ],
+   "grupo": null,
+   "familias_grupo": [],
+   "codigos_base": [],
+   "equivalencias": 0,
+   "fuente_perfil": null,
+   "mu_familias_observadas": {},
+   "mu_coincide_pct": null,
+   "codigos_oferta": [],
+   "estado": "NO_LOCALIZADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {},
+   "versiones_posibles": [],
+   "condicion_pendiente": "no hay grupo gobernado; requiere evidencia nueva (MU/oferta) y decisión D"
+  },
+  {
+   "carrera": "TFIN",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 29
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 204,
+   "filas_por_fuente": {
+    "12166": 97,
+    "7804": 107
+   },
+   "codcli": 29,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TFIN\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C116J4"
+   ],
+   "codigos_base": [
+    "I162S2C116J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C116J4": 29
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C116J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C116J4V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TICL",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 13
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 113,
+   "filas_por_fuente": {
+    "12166": 56,
+    "7804": 57
+   },
+   "codcli": 13,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TICL\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C117J4"
+   ],
+   "codigos_base": [
+    "I162S2C117J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C117J4": 13
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C117J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C117J4V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TLOG",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 43
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 659,
+   "filas_por_fuente": {
+    "12166": 167,
+    "7804": 319,
+    "3233": 173
+   },
+   "codcli": 43,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TLOG\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C79J2"
+   ],
+   "codigos_base": [
+    "I162S2C79J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C79J2": 52,
+    "I162S2C77J2": 3,
+    "I162S2C78J2": 1
+   },
+   "mu_coincide_pct": 92.9,
+   "codigos_oferta": [
+    "I162S2C79J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C79J2V1": [
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TMDI",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 126
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 661,
+   "filas_por_fuente": {
+    "12166": 376,
+    "7804": 285
+   },
+   "codcli": 126,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TMDI\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C118J4"
+   ],
+   "codigos_base": [
+    "I162S2C118J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C118J4": 69
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C118J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C118J4V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TMIRE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 1
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 3,
+   "filas_por_fuente": {
+    "7804": 3
+   },
+   "codcli": 1,
+   "anios": [
+    "2025"
+   ],
+   "grupo": "[\"TMIRE\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C11J2"
+   ],
+   "codigos_base": [
+    "I162S2C11J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C11J2": 1
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C11J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": false,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C11J2V1": [
+     "2013",
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TPARE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 11
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 81,
+   "filas_por_fuente": {
+    "12166": 32,
+    "7804": 34,
+    "3233": 15
+   },
+   "codcli": 11,
+   "anios": [
+    "2024"
+   ],
+   "grupo": "[\"TPARE\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C57J1"
+   ],
+   "codigos_base": [
+    "I162S2C57J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C57J1": 11
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C57J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C57J1V1": [
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TPARE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 7
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 54,
+   "filas_por_fuente": {
+    "12166": 20,
+    "7804": 23,
+    "3233": 11
+   },
+   "codcli": 7,
+   "anios": [
+    "2024",
+    "2025"
+   ],
+   "grupo": "[\"TPARE\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C57J2"
+   ],
+   "codigos_base": [
+    "I162S2C57J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C57J2": 7
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C57J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C57J2V1": [
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TPAS",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 38
+   },
+   "jornada_UMAS": "D",
+   "jornada_SIES": "1",
+   "filas": 847,
+   "filas_por_fuente": {
+    "12166": 213,
+    "7804": 419,
+    "3233": 215
+   },
+   "codcli": 38,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TPAS\",\"RE\",\"D\"]",
+   "familias_grupo": [
+    "I162S2C57J1"
+   ],
+   "codigos_base": [
+    "I162S2C57J1V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C57J1": 53,
+    "I162S2C57J4": 2,
+    "I162S2C57J2": 1,
+    "I162S2C1J1": 1
+   },
+   "mu_coincide_pct": 93.0,
+   "codigos_oferta": [
+    "I162S2C57J1V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C57J1V1": [
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TPAS",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 45
+   },
+   "jornada_UMAS": "V",
+   "jornada_SIES": "2",
+   "filas": 973,
+   "filas_por_fuente": {
+    "12166": 238,
+    "7804": 510,
+    "3233": 225
+   },
+   "codcli": 45,
+   "anios": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "grupo": "[\"TPAS\",\"RE\",\"V\"]",
+   "familias_grupo": [
+    "I162S2C57J2"
+   ],
+   "codigos_base": [
+    "I162S2C57J2V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+   "mu_familias_observadas": {
+    "I162S2C57J2": 56,
+    "I162S2C57J1": 3,
+    "I162S2C1J2": 2,
+    "I162S2C1J4": 1
+   },
+   "mu_coincide_pct": 88.9,
+   "codigos_oferta": [
+    "I162S2C57J2V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C57J2V1": [
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TPRE",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 22
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 146,
+   "filas_por_fuente": {
+    "12166": 68,
+    "7804": 78
+   },
+   "codcli": 22,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TPRE\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C10J4"
+   ],
+   "codigos_base": [
+    "I162S2C10J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C10J4": 22
+   },
+   "mu_coincide_pct": 100.0,
+   "codigos_oferta": [
+    "I162S2C10J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C10J4V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  },
+  {
+   "carrera": "TRHU",
+   "sede_UMAS": "RE",
+   "sedes_obs": {
+    "RE": 48
+   },
+   "jornada_UMAS": "O",
+   "jornada_SIES": "4",
+   "filas": 254,
+   "filas_por_fuente": {
+    "12166": 135,
+    "7804": 119
+   },
+   "codcli": 48,
+   "anios": [
+    "2026"
+   ],
+   "grupo": "[\"TRHU\",\"RE\",\"O\"]",
+   "familias_grupo": [
+    "I162S2C119J4"
+   ],
+   "codigos_base": [
+    "I162S2C119J4V1"
+   ],
+   "equivalencias": 1,
+   "fuente_perfil": "CODCARPR_CANONICO",
+   "mu_familias_observadas": {
+    "I162S2C119J4": 29,
+    "I162S2C84J4": 1,
+    "I162S2C113J4": 1
+   },
+   "mu_coincide_pct": 93.5,
+   "codigos_oferta": [
+    "I162S2C119J4V1"
+   ],
+   "estado": "FAMILIA_RESPALDADA",
+   "origen_12166": true,
+   "tipo_programa": "carrera_regular",
+   "oferta_anios_codigos_base": {
+    "I162S2C119J4V1": [
+     "2026"
+    ]
+   },
+   "versiones_posibles": [
+    "1"
+   ],
+   "condicion_pendiente": "versión individual y período: por MU documental o candidato único (no acreditados por el mapa)"
+  }
+ ],
+ "criterios": [
+  "Una familia I162S…C…J no es un código completo con versión",
+  "El grupo genera candidatos; no acredita versión individual ni período",
+  "Sede de la combinación: la más frecuente en DATOSDEALUMNOS para sus CODCLI",
+  "MU observada: familias de los códigos que la MU informa para esas personas en el mismo año de actividad"
+ ]
+}

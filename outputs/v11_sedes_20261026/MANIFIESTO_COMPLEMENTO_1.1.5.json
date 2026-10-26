@@ -1,0 +1,39 @@
+{
+ "clasificacion": "C candidato; publicación E pendiente",
+ "estado": "PREPARADO_NO_PUBLICADO",
+ "plugin": "analisis-institucional-alexi",
+ "plugin_id": "plugins_6ac95787a4188191876782c7da9bc018",
+ "expected_release_id": "pluginrel_6ade3a4a3f688191a75e1dd2bdce63c4",
+ "version_base": "1.1.4",
+ "version_propuesta": "1.1.5",
+ "base": "contenido remoto 1.1.4 releído el 25-10 (PLUGIN_PUBLICADO.json)",
+ "archivos_modificados": [
+  ".codex-plugin/plugin.json",
+  "plugin.json",
+  "references/diccionario-sies-seguimiento.md",
+  "references/sedes-umas-sies.md",
+  "skills/consultar-fuentes-ipss/SKILL.md",
+  "skills/ipss-verificacion-cifras-matricula/SKILL.md"
+ ],
+ "archivos_nuevos": [
+  "references/sedes-umas-sies.md"
+ ],
+ "sha256": {
+  "plugin.json": "ac61b4a02688af967ace524346007aaac1e0f525159e1e01e4021c399e968f46",
+  ".codex-plugin/plugin.json": "92ab321235e35f0810185bd4772294ee0784d98197953974850f83e2561c332c",
+  "skills/consultar-fuentes-ipss/SKILL.md": "0ab7ff7206189b38b4175ceae7554b7d93d27b8ec6c36a1042006856af5f96fc",
+  "skills/ipss-verificacion-cifras-matricula/SKILL.md": "b392ce4645085af8a0845e5ccb6e2adeaaf7d3a88e7585f7a86f0938e0b189ae",
+  "references/coordinacion.md": "93c95bc150e7deb2d4cbe6f8f28c9202a5180478b2c939202db4d757a57a8268",
+  "references/entorno.md": "b939d16d7f0519788bdea409dd5343bf81760ab89b8ed0045acc96da519f516d",
+  "references/diccionario-sies-seguimiento.md": "6e07627444b0dd5955d4f1946b3f44a8e15cbff77a6d1f7ffd6ad6fd1051796f",
+  "references/sedes-umas-sies.md": "17c5f11513a54751b7220dab9741fc5e87d780a9b4edd4551f75413fdb21581e"
+ },
+ "identificadores": false,
+ "bases_o_excel": false,
+ "pendiente": [
+  "Releer el release remoto vigente y comparar con expected_release_id antes de publicar",
+  "Publicar el overlay con el mecanismo del complemento y autorización específica",
+  "Actualizar la skill local de Codex (~/.codex/skills/ipss-verificacion-cifras-matricula) desde su fuente, no desde la caché",
+  "Prueba de consumo en una conversación nueva"
+ ]
+}

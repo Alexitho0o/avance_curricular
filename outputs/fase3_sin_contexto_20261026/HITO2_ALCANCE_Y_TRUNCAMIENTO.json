@@ -1,0 +1,16 @@
+{
+ "clasificacion": "B fuentes; C diagnóstico; E",
+ "fecha": "2026-10-26",
+ "alcance_del_diccionario": {
+  "regla": "scripts/reproducir_puente_20261023.py toma como universo solo las filas de PROMEDIOS 12166 cuya combinación carrera UMAS + jornada está en data/reglas_negocio/20261022_puente_versiones/investigacion_contextual_v3/PRUEBAS_CONTEXTUALES.json (63 combinaciones, 46 carreras), y exige reproducir el universo de V10.",
+  "combinaciones_con_actividad_2024_en_adelante": {"dentro": 37, "fuera": 41, "filas_fuera": 10644},
+  "fuera_principales": ["CONG-J4", "CICRE-J4", "TENS-J2", "CICIB-J4", "ICIB-J1", "CIINF-J4", "TEIQ-J2", "TENS-J1", "CIADM-J4", "TADP-J4", "TMDI-J4", "TCIB-J2", "DCBS-J4", "IADM-J2", "TCIB-J1", "DACD-J4", "TPAS-J2", "TPAS-J1"],
+  "causa_2_persona_fuera": "488 de 544 posiciones tienen filas en 12166, pero en jornada diurna o vespertina de carreras cuya regla solo cubre otra jornada (p. ej., ICIB-J1, TCIB-J1/J2, IADM-J2, TPAS-J1/J2); 50 solo aparecen en 7804/3233; 6 en ningún PROMEDIOS."
+ },
+ "truncamiento_PROMEDIOS_12166": {
+  "filas": 70000, "orden": "no cronológico (mezcla años y carreras): el corte deja fuera un subconjunto disperso de filas",
+  "CODCLI_faltantes_vs_7804": {"2025-1": "215 de 2.495 (8,6 %)", "2025-2": "91 de 1.934 (4,7 %)", "2025-3": "215 de 1.774 (12,1 %)", "2026-1": "196 de 3.253 (6,0 %)"},
+  "2026-2_y_2026-3": "solo existen en 12166; por analogía faltarían entre 5 % y 12 % de los CODCLI (estimación, E)",
+  "efecto_en_causa_6": "2025: sin efecto (7804 cubre 2025-2/3). 2026: entre ~16 y ~40 de las 327 posiciones 'vigente sin actividad' podrían deberse al truncamiento (estimación, E)."
+ }
+}

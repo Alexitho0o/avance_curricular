@@ -1,0 +1,11 @@
+# Sedes IPSS en UMAS y en el código único SIES
+
+C — Alcance: institución SIES 162. A regla oficial, B observado, C implementación, D decisión interna, E pendiente.
+
+1. Para la equivalencia de sede, lee el catálogo común del repositorio `avance_curricular`: `gobernanza_sede.tsv` en la raíz (columnas SEDE_ORIG, SEDE_NORM, COD_SED, NOMBRE_SEDE, FUENTE_REGLA). `data/gobernanza_sede.tsv` es solo una nota de traslado: no contiene equivalencias. Verifica su hash antes de usarlo y conserva su alcance.
+2. B/C — Equivalencias registradas: `RE → 2` (CASA CENTRAL (SANTIAGO)) y `CO → 3` (SEDE CONCEPCION), validadas contra la oferta. En el código `I162S3C91J2V1`, `S3` es solo el componente de sede: no identifica carrera, jornada ni versión, y no se extrapola a otras instituciones o años.
+3. B — `procesos/caracterizacion/docs/gobernanza/CATALOGO_SEDES_2027.json` nombra RE Santiago, CO Concepción y PTG Patagonia para 2027 P1, por confirmación del usuario; no registra códigos SIES.
+4. E — `PTG → 4 (SEDE PATAGONIA)` figura en la carga de oferta 2027 etapa 1 (V06), aceptada en PES según el usuario y sin comprobante directo. El reporte SIES 5912 no contiene sede 4: sus coincidencias de sede 2 no la confirman. No uses S4 ni la denominación Puerto Montt como equivalencia acreditada hasta tener el listado de sedes SIES o una descarga de PES.
+5. No asignes sede por dirección, nombre del programa ni prefijo de código UMAS (CO…, PM…). La sede es una dimensión de la clave; resolver el código de cada expediente y período mediante el diccionario activo (`PROYECTO_IPSS.json` → `recursos_comunes.diccionario_sies_seguimiento`).
+6. Mantén separadas cuatro capas: equivalencia de sede, familia SIES del programa, versión y atribución individual. Una equivalencia de sede o una familia propuesta no atribuye un código a una persona; la atribución exige evidencia documental del año (MU) o una decisión D aprobada para ese contexto. Las propuestas de programas por sede requieren su propia aprobación.
+7. Cambios de jornada, plan o versión dentro del año: la matrícula SIES es anual (fecha de referencia oficial: 30 de abril, A). No propagues versión entre contextos; la herencia del código T1 es solo un control de consistencia en su variante estricta.
