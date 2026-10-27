@@ -1,0 +1,11 @@
+{
+  "estado": "BORRADOR",
+  "subproyecto": "ANALISIS_DESERCION_IPSS",
+  "componentes": {
+    "1_retencion_primer_anio": {"estado": "pendiente_fase_2", "unidad": "persona"},
+    "2_salida_entre_periodos": {"estado": "referenciado", "descripcion": "Indicador intertrimestral; no es retención oficial SIES", "ruta": "data/reglas_negocio/indicador_intertrimestral/REGLA.json", "duplicar": false},
+    "3_destino_de_la_salida": {"estado": "E", "categorias": ["cambio de institución", "deserción del sistema", "sin determinar"], "condicion": "vínculo verificable RUT–MRUN"},
+    "4_reporte": {"estado": "pendiente_validacion", "salidas": ["tablas agregadas", "Excel generado desde código"]}
+  },
+  "principios": ["persona una vez por cohorte", "suma de numeradores sobre suma de denominadores", "ausencia de actividad no es desercion"]
+}
