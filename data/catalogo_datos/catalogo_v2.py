@@ -62,6 +62,7 @@ for r in rows:
  else: r['uso_analisis']='no usar; referenciar canónico'
 # Concilia contenedores ZIP/GZ con candidatos de igual nombre base, sin extracción.
 csvs={Path(r['ruta']).name:r for r in rows if r['tipo']=='.csv'}
+matched_containers=set()
 for r in rows:
  if r['tipo'] not in ('.zip','.gz'): continue
  members=r.get('indice_interno',[])
@@ -71,7 +72,12 @@ for r in rows:
   if not c or int(m.get('tamano',-1)) != c['bytes']: continue
   crc=m.get('crc32'); ccrc=crc32_file(Path(c['ruta']))
   if crc and crc.lower()==ccrc.lower():
-   r['relacion']='contenedor de '+c['ruta']; r['uso_analisis']='no usar; referenciar canónico'; r['contenedor_de']=c['ruta']; c['relacion']='canónico'; c['uso_analisis']='canónico'
+   r['relacion']='contenedor de '+c['ruta']; r['uso_analisis']='no usar; referenciar canónico'; r['contenedor_de']=c['ruta']; c['relacion']='canónico'; c['uso_analisis']='canónico'; matched_containers.add(r['ruta'])
+# Una relación heredada o producida por igualdad de hash no basta para declarar un
+# contenedor: debe existir coincidencia explícita de nombre, tamaño y CRC32/ISIZE.
+for r in rows:
+ if r['tipo'] in ('.zip','.gz') and r.get('relacion','').startswith('contenedor de ') and r['ruta'] not in matched_containers:
+  r['relacion']='canónico'; r['uso_analisis']='canónico'; r.pop('contenedor_de',None)
 # Un GZ sin CSV candidato del mismo nombre base es canónico; nunca queda pendiente.
 for r in rows:
  if r['tipo']=='.gz' and r['relacion']=='pendiente de equivalencia':
