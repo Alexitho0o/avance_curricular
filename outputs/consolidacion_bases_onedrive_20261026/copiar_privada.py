@@ -15,6 +15,7 @@ CARPETA = "IPSS_CONCILIACION_UMAS_SIES_BASES"
 SUB = "07_PRIVADAS_DICCIONARIO"
 DIC = "data/diccionario_sies_seguimiento/"
 PASOS = {  # paso: (edición o conjunto, descriptor que fija el hash o None, ruta relativa en PRIV, hash esperado si no hay descriptor)
+    14: ("v17_20261027_capa_promedios", DIC + "v17_20261027_candidata_promedios/descriptor.json", None, None),
     13: ("v16_20261027_candidata_sedes", DIC + "v16_20261027_candidata_sedes/descriptor.json", None, None),
     12: ("v15_20261027_candidata_302", DIC + "v15_20261027_candidata_302/descriptor.json", None, None),
     11: ("v10_20261026_mu2026_27", DIC + "v10_20261026_mu2026_27/descriptor.json", None, None),
@@ -60,8 +61,15 @@ def main():
     nombre, desc_rel, rel, esperado = PASOS[a.paso]
     if desc_rel:
         d = json.loads((ROOT / desc_rel).read_text())
-        rel = d["base_privada"]["ruta"][len(PRIV) + 1:]
-        esperado = d["base_privada"]["sha256"]
+        if a.paso == 14:
+            metadata = json.loads((ROOT / d["capa_promedios"]["metadata"]).read_text())
+            if sha(ROOT / d["capa_promedios"]["metadata"]) != d["capa_promedios"]["sha256"]:
+                sys.exit("ALTO: metadata de capa alterada.")
+            objeto = metadata["capa_privada"]
+        else:
+            objeto = d["base_privada"]
+        rel = objeto["ruta"][len(PRIV) + 1:]
+        esperado = objeto["sha256"]
     origen = Path(a.priv_local) / rel
     h0 = sha(origen)
     if h0 != esperado:

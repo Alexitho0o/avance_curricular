@@ -4,7 +4,7 @@ import argparse,json,os,subprocess,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from common.diccionario_sies_seguimiento import DiccionarioSiesSeguimiento,ROOT
-from common.seguimiento_promedios_v11 import CapaPromedios
+from common.seguimiento_promedios import CapaPromedios
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--salida-privada',type=Path,required=True);args=parser.parse_args();output=args.salida_privada.expanduser().resolve()
  if not output.parent.is_dir() or output.is_relative_to(ROOT) or output.exists() or subprocess.run(['git','-C',str(output.parent),'rev-parse','--show-toplevel'],capture_output=True).returncode==0:raise ValueError('Se requiere archivo nuevo en carpeta privada existente fuera del repositorio')

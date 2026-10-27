@@ -1,0 +1,60 @@
+{
+  "estado": "ACTIVA_PASS_CON_LIMITES",
+  "consultas_codigo": 26930,
+  "capa_preservada": 25902,
+  "capa_agregada": 1028,
+  "consumidores_oficiales_v17": {
+    "consultas_codigos_sin_cambio": 26930,
+    "capa_anterior_preservada": 25902,
+    "capa_agregada": 1028,
+    "cobertura_capas": 26930,
+    "consumidores": 3,
+    "muestra_por_consumidor": 60,
+    "muestra_por_grupo": {
+      "anteriores": 20,
+      "fase_c": 20,
+      "fase_e": 20
+    },
+    "respuestas_iguales": true,
+    "capa_disponible_en_muestra": true,
+    "base_alterada_rechazada": true,
+    "limites": "Muestra no exhaustiva; fuentes con cobertura y fechas no certificadas."
+  },
+  "compatibilidad_v16": {
+    "tres_consumidores": 3,
+    "muestra_por_consumidor": 60,
+    "misma_respuesta": true,
+    "capa_v16_disponible": true,
+    "formato": "sha256_base_v11",
+    "descriptor_prueba_rehash_aislado": true,
+    "descriptor_v16_original_con_componentes_git_valido": true,
+    "limite": "Formato y muestra probados en entorno aislado; el descriptor activo v16 requiere componentes originales hasta activar v17."
+  },
+  "base_alterada_rechazada": true,
+  "pruebas_unitarias": 15,
+  "control_t1": {
+    "consistentes": 933,
+    "diferencias": 0
+  },
+  "resumen": {
+    "universo_observaciones": 26930,
+    "B/C": 21569,
+    "D": 1326,
+    "E": 4035,
+    "pendientes_internos_observaciones": 4035,
+    "sedes_normalizadas": 1128,
+    "seis_E_sin_adjudicar": 6,
+    "capa_complementaria_observaciones": 26930
+  },
+  "descriptor_sha256": "84a4de0ee379595c0cff1b9721a61fc810407bb2758b1721de28c8415341d68a",
+  "limitaciones": [
+    "v16 activa requiere componentes anteriores de Git en checkout aislado hasta promoción v17",
+    "Las fuentes no tienen cobertura ni fecha certificadas."
+  ],
+  "sin_activacion_commit_push": true,
+  "descriptor_activo_sha256": "ef3ec2ec32ba2772b5dae53c732471bef4b68a51f31014fd2b647e6474a8d161",
+  "consumidores_puntero_real": "outputs/fase_e_v17_candidata_20261027/QA_CONSUMIDORES_ACTIVO.json",
+  "t1_puntero_real": "outputs/regla_herencia_t1_20261026/CONTROL_v17_20261027_candidata_promedios.json",
+  "activacion_autorizada": true,
+  "base_reutilizada_v16": true
+}
