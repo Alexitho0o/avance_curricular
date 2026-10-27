@@ -15,6 +15,7 @@ CARPETA = "IPSS_CONCILIACION_UMAS_SIES_BASES"
 SUB = "07_PRIVADAS_DICCIONARIO"
 DIC = "data/diccionario_sies_seguimiento/"
 PASOS = {  # paso: (edición o conjunto, descriptor que fija el hash o None, ruta relativa en PRIV, hash esperado si no hay descriptor)
+    12: ("v15_20261027_candidata_302", DIC + "v15_20261027_candidata_302/descriptor.json", None, None),
     11: ("v10_20261026_mu2026_27", DIC + "v10_20261026_mu2026_27/descriptor.json", None, None),
     1: ("v9_20261026_cuatro_planes_v3", DIC + "v9_20261026_cuatro_planes_v3/descriptor.json", None, None),
     2: ("v8_20261025_ocho_p", DIC + "v8_20261025_ocho_p/descriptor.json", None, None),

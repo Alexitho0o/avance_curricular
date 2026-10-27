@@ -1,0 +1,68 @@
+{
+  "estado": "ACTIVA_PASS_CON_LIMITES",
+  "consultas_v14_sin_cambio": 26628,
+  "contextos_nuevos": 302,
+  "existentes_E_preservados": 6,
+  "tres_consumidores": {
+    "tres_consumidores_misma_respuesta": true,
+    "consultas_por_consumidor": 1,
+    "capa_promedios_observacion_nueva": "PENDIENTE_OBSERVACION_SIN_CAPA",
+    "base_alterada_rechazada": true,
+    "limite": "Prueba de un contexto por consumidor; con inyección de descriptor candidata, sin cambiar activo."
+  },
+  "unitarias_aprobadas": 15,
+  "control_T1": {
+    "resultado": "PASS",
+    "consistentes": 933,
+    "diferencias": 0,
+    "alcance": "Solo códigos documentales en la vista y regla estricta; no asigna ni valida documentalmente contextos nuevos."
+  },
+  "foco": {
+    "contextos_foco": 5144,
+    "antes": {
+      "contextos_pendientes": 1292,
+      "personas_totalmente_pendientes": 45,
+      "expedientes_totalmente_pendientes": 296,
+      "personas": 488,
+      "expedientes": 1032
+    },
+    "despues": {
+      "contextos_pendientes": 990,
+      "personas_totalmente_pendientes": 45,
+      "expedientes_totalmente_pendientes": 215,
+      "personas": 488,
+      "expedientes": 1032
+    },
+    "contextos_cambiados": 302,
+    "metodo": "Reutiliza clasificación validada v14 y solo actualiza 302 contextos aprobados; la pertenencia al foco no cambia."
+  },
+  "capa_302": "PENDIENTE_OBSERVACION_SIN_CAPA: solo se conservaron índices anteriores",
+  "fuentes_y_denominadores_sin_cambio": true,
+  "activo_no_modificado": false,
+  "commit_push": false,
+  "tres_consumidores_muestra_60": {
+    "muestra_nuevas": 30,
+    "muestra_anteriores": 30,
+    "consumidores": 3,
+    "respuestas_iguales": true,
+    "consulta_total": 180,
+    "metodo": "Descriptor candidato inyectado sin cambiar puntero activo. Muestra determinística, no exhaustiva.",
+    "capa_nuevas_sin_indice": 30
+  },
+  "descriptor_sha256": "f8d5702d247ff741df4d1230f5ebd8fe54d8b91e255049f2e6b9adbbb8ae52a8",
+  "resumen": {
+    "universo_observaciones": 26930,
+    "B/C": 21569,
+    "D": 1326,
+    "E": 4035,
+    "nuevas_observaciones_D": 302,
+    "seis_existentes_E_no_modificadas": 6,
+    "pendientes_internos_observaciones": 4035,
+    "codigo_documental_reutilizado": 21569,
+    "solo_correspondencia_interna_aprobada": 1326
+  },
+  "descriptor_activo_sha256": "9ea4dfd2b336eb7d7746720ef0de8126ef2ab3ef4c39b96356d069dbf1f2b87f",
+  "t1_puntero_real": "outputs/regla_herencia_t1_20261026/CONTROL_v15_20261027_candidata_302.json",
+  "consumidores_puntero_real": "outputs/fase_d_v15_302_20261027/QA_CONSUMIDORES_ACTIVO.json",
+  "activacion_autorizada": true
+}

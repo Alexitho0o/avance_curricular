@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,sys,subprocess,os
+R=Path(__file__).resolve().parents[2];sys.path.insert(0,str(R));from common.diccionario_sies_seguimiento import DiccionarioSiesSeguimiento
+O=Path(__file__).parent;P=Path.home()/'.local/share/ipss/fase_d_v15_302_20261027';desc=R/'data/diccionario_sies_seguimiento/v15_20261027_candidata_302/descriptor.json';old=DiccionarioSiesSeguimiento();cand=DiccionarioSiesSeguimiento(descriptor=desc);new=json.loads((Path.home()/'.local/share/ipss/fase_d_v15_candidata_20261027/NUEVAS_OBSERVACIONES_PRIVADAS.json').read_text())[:30];req=[]
+for x in new:req.append({'persona':x['persona'],'codcli':x['CODCLI'],'plan':x['plan'],'anio':x['ano'],'periodo':x['periodo'],'carrera':x['carrera'],'sede':x['sede_dimension'],'jornada':x['jornada_sies']})
+for r in old.db.execute('select persona,codcli,plan,anio,periodo,carrera,sede,jornada from observaciones order by id'):
+ q=dict(zip(['persona','codcli','plan','anio','periodo','carrera','sede','jornada'],r));a=old.consultar(**q);b=cand.consultar(**q)
+ if a['estado']=='REUTILIZABLE' and a.get('codigo_sies')==b.get('codigo_sies'):req.append(q)
+ if len(req)==60:break
+assert len(req)==60
+payload=json.dumps([{'metodo':'consultar','entrada':x} for x in req]);paths=['scripts/consultar_diccionario_sies_seguimiento.py','scripts/retencion_intermedia_t2_t3/consultar_codigos_sies.py','procesos/caracterizacion/scripts/consultar_diccionario_sies_seguimiento.py'];answers=[]
+for i,f in enumerate(paths):
+ out=P/('test_60_consumidor_'+str(i)+'.json');assert not out.exists(); launch="import sys,runpy;from common.diccionario_sies_seguimiento import DiccionarioSiesSeguimiento as D;orig=D.__init__;D.__init__=lambda self,*a,**kw:orig(self,descriptor="+repr(str(desc))+");sys.argv=["+repr(str(R/f))+",'--salida-privada',"+repr(str(out))+"];runpy.run_path(sys.argv[0],run_name='__main__')";p=subprocess.run([sys.executable,'-c',launch],input=payload,text=True,capture_output=True,cwd=R);assert p.returncode==0,p.stderr;ans=json.loads(out.read_text());assert len(ans)==60;answers.append(ans)
+assert answers[0]==answers[1]==answers[2];assert all(z['nivel_respaldo']=='D_CORRESPONDENCIA_INTERNA_APROBADA' for z in answers[0][:30]);res={'muestra_nuevas':30,'muestra_anteriores':30,'consumidores':3,'respuestas_iguales':True,'consulta_total':180,'metodo':'Descriptor candidato inyectado sin cambiar puntero activo. Muestra determinística, no exhaustiva.','capa_nuevas_sin_indice':sum(z['seguimiento_promedios']['estado']=='PENDIENTE_OBSERVACION_SIN_CAPA' for z in answers[0][:30])};(O/'QA_CONSUMIDORES_60.json').write_text(json.dumps(res,ensure_ascii=False,indent=2)+'\n');print(json.dumps(res,ensure_ascii=False));old.close();cand.close()
