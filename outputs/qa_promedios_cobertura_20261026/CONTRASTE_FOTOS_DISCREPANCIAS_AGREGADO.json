@@ -1,0 +1,112 @@
+{
+  "clasificacion": "B fotos; C cruces; D fotos de matrícula como referencia para estado cuando lo registran; E ausencias y cobertura",
+  "fotos": [
+    {
+      "foto": "T2",
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "filas_con_codcli": 528,
+      "columnas_estado": false,
+      "columnas_seccion": false,
+      "columnas_nota": false,
+      "resultados": {
+        "notas_T3": {
+          "expedientes_objetivo": 585,
+          "encontrados_mismo_rut_y_codcli": 86,
+          "no_localizados_en_hoja": 499,
+          "estados_observados": {
+            "SIN_COLUMNA_O_VALOR": 86
+          },
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 86
+        },
+        "seccion_T3": {
+          "expedientes_objetivo": 9,
+          "encontrados_mismo_rut_y_codcli": 0,
+          "no_localizados_en_hoja": 9,
+          "estados_observados": {},
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 0
+        },
+        "estado_T2": {
+          "expedientes_objetivo": 2,
+          "encontrados_mismo_rut_y_codcli": 1,
+          "no_localizados_en_hoja": 1,
+          "estados_observados": {
+            "SIN_COLUMNA_O_VALOR": 1
+          },
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 1
+        },
+        "estado_T3": {
+          "expedientes_objetivo": 1,
+          "encontrados_mismo_rut_y_codcli": 0,
+          "no_localizados_en_hoja": 1,
+          "estados_observados": {},
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 0
+        }
+      }
+    },
+    {
+      "foto": "T3",
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "hoja": "Base",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "filas_con_codcli": 557,
+      "columnas_estado": true,
+      "columnas_seccion": false,
+      "columnas_nota": false,
+      "resultados": {
+        "notas_T3": {
+          "expedientes_objetivo": 585,
+          "encontrados_mismo_rut_y_codcli": 51,
+          "no_localizados_en_hoja": 534,
+          "estados_observados": {
+            "VIGENTE": 51
+          },
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 49
+        },
+        "seccion_T3": {
+          "expedientes_objetivo": 9,
+          "encontrados_mismo_rut_y_codcli": 0,
+          "no_localizados_en_hoja": 9,
+          "estados_observados": {},
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 0
+        },
+        "estado_T2": {
+          "expedientes_objetivo": 2,
+          "encontrados_mismo_rut_y_codcli": 0,
+          "no_localizados_en_hoja": 2,
+          "estados_observados": {},
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 0
+        },
+        "estado_T3": {
+          "expedientes_objetivo": 1,
+          "encontrados_mismo_rut_y_codcli": 1,
+          "no_localizados_en_hoja": 0,
+          "estados_observados": {
+            "VIGENTE": 1
+          },
+          "conflictos_estado": 0,
+          "con_matricula_anio_periodo_igual_al_archivo": 1
+        }
+      }
+    }
+  ],
+  "estados_asignatura_diferencia_nota": [
+    {
+      "estado_respaldo": "",
+      "descripcion_respaldo": "",
+      "estado_v11": "",
+      "descripcion_v11": "",
+      "llaves": 653
+    }
+  ],
+  "limites": "Foto T2 no contiene ESTADOACADEMICO; T3 debe interpretarse según su cobertura y alcance de ingreso. Ausencia en foto no prueba deserción; las fotos no incluyen sección ni nota. El período de actividad académica no prueba corte de matrícula.",
+  "bases_denominadores_modificados": false
+}

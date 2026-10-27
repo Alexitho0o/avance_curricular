@@ -1,0 +1,5 @@
+# Fase 2 — revisión de respaldos por período de siete contextos
+[B/C] Se contrastaron los CODCLI propios y alternativos y cuerpo de RUT contra dos reportes de ingreso de notas previamente inventariados, con hash verificado. En dos contextos se localizó el CODCLI propio; en cinco, el CODCLI alternativo. En ninguno se localizó en estos reportes el mismo plan y período del contexto pendiente. Dos registros de plan propio corresponden a 2024-3, no al contexto pendiente 2025-1. En los cinco restantes los reportes registran el plan alternativo en 2024-3.
+[E] Fechas de asignaturas o reporte no son fecha efectiva de migración; estos reportes no prueban qué expediente recibió el código MU. El RUT del reporte se cruzó por cuerpo con CODCLI exacto previamente vinculado; DV no fue acreditado por esos reportes. No se localizó en estos dos respaldos una bitácora formal de migración. No se declara ausencia universal.
+[E] Los siete se conservan como excepción; ninguna atribución nueva. Foco: 1292 pendientes de 5144, sin modificaciones a denominadores ni bases.
+[C] Los localizadores y datos individuales quedan en archivo privado excluido de Git. Sin commit ni push.

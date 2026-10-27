@@ -1,0 +1,49 @@
+{
+  "id": "CIERRE_INTERNO_TITULO_TCRE20241_20261026",
+  "clasificacion": "D",
+  "estado": "CERRADO_INTERNO",
+  "responsable_aprobacion": "Alexi, usuario de este chat",
+  "registro_fecha_hora": "2026-10-26T23:38:03.629147-03:00",
+  "autorizacion": "Revisa si esta cadena permite cerrar internamente el vínculo del título con el CODCLI de TCRE y el plan TCRE20241, dejando pendiente el acta formal, ya que el actano es necesaria asi que dalo por terminado si funciona , sin cambiar las bases ni los denominadores.",
+  "alcance": "Solo el caso de titulación del 24-07-2025 examinado; no regla general de atribución de títulos.",
+  "vinculo_adoptado": {
+    "fecha_titulo": "2025-07-24",
+    "titulo": "TÉCNICO EN CONECTIVIDAD Y REDES",
+    "carrera_umas": "TCRE",
+    "plan": "TCRE20241",
+    "codcli": "Resolver en fuente privada por hash, hoja DATOS ALUMNOS, columna CODCLI, fila 7174; identificador no publicado."
+  },
+  "criterio": "Documento y DV concordantes; único expediente TITULADO entre los tres del caso, seleccionado por fórmula posterior; su CODCLI exacto tiene un único plan observado en 26 filas de PROMEDIOS. Se acepta la cadena como correspondencia interna por autorización explícita.",
+  "evidencias": {
+    "clasificacion": "B/C",
+    "fuentes_sha256": {
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/enviado por docencia/Informe de Titulados 2025_vf.xlsx": "676e6451eed59dae08d4cbcf99188932e0a2b586f9c3eb46f4b597721743f236",
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Attachments/Titulados_Empleabilidad_2026-1_v4.xlsx": "1653f039d7995eb0d4360d017217d0d1a0567f8b7982e172727aaa3420772818",
+      "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Promedio-notas-Alexi.xlsx": "1037f4492d7215350c8deb7ad7c827804a934f61feb3205c088b9f94d61a7d88"
+    },
+    "docencia": {
+      "hoja": "Hoja1",
+      "fila": 107
+    },
+    "seleccion": {
+      "hoja": "DATOS ALUMNOS",
+      "fila": 7174
+    },
+    "promedios": {
+      "hoja": "Hoja1",
+      "filas_asignaturas": 26,
+      "planes_distintos": 1
+    }
+  },
+  "pendientes_no_bloqueantes": [
+    {
+      "clasificacion": "E",
+      "concepto": "Acta formal o registro institucional originario que asocie el título con CODCLI y plan."
+    },
+    {
+      "clasificacion": "E",
+      "concepto": "Fórmula original del puntaje 2130 y fecha efectiva de migración; no se declaran resueltas."
+    }
+  ],
+  "efecto": "Cierra la investigación interna de este vínculo; no modifica diccionario SIES, bases, denominadores, tasas ni prueba de envío/aceptación SIES."
+}

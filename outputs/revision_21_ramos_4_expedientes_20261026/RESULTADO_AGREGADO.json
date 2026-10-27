@@ -1,0 +1,257 @@
+{
+  "clasificacion": "B registros; C cruce exacto; E atribución y vigencia",
+  "fecha": "2026-10-26",
+  "fuentes": {
+    "respaldo_titulacion": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/SEGUNDA CARGA/ARCHIVOS VARIOS/1668382 Captura IES Incremental5320 Oferta Académica Titulados5319 Titulados Histórico.xlsx",
+      "sha256": "149367ca3f7be7717f958e2ce0f8924e18353e6302766b1abf737c54b5dce8e3",
+      "hojas": [
+        "5319 Titulados Histór",
+        "Res_Tit_Carga"
+      ]
+    },
+    "promedios": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "hoja": "Hoja1"
+    },
+    "estructura": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/estructura_asignaturas.json",
+      "sha256": "29ce1e42276cd2e67de56cc5ba74422a5c818dca2f089937fa08976961916422",
+      "procedencia": {
+        "filas_Excel": "2:11439",
+        "hoja": "BBDD Bruta",
+        "id": "umas_planes_re_co",
+        "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+        "sha256_antes": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+        "sha256_despues": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+      }
+    },
+    "datos_alumnos": [
+      {
+        "archivo": "DATOSDEALUMNOS_12159.xlsx",
+        "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+      },
+      {
+        "archivo": "DATOSDEALUMNOS_11248.xlsx",
+        "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143"
+      }
+    ],
+    "v11_sha256": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141"
+  },
+  "ramos": [
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA101IECIREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA103IECIREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA401IECIREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20211",
+      "ramo": "AS31TPAREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU105IEMORE",
+      "candidatos_misma_malla": [
+        "AU107IEMORE"
+      ],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU201IEMORE",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU305IEMORE",
+      "candidatos_misma_malla": [
+        "AU308IEMORE"
+      ],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "CA306IEMORE",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "ramo": "CA306IETMRE",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "candidatos_misma_malla": [
+        "EH102IETMREOL"
+      ],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG302IETMREOL",
+      "candidatos_misma_malla": [
+        "EH301IETMREOL"
+      ],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG11TPCREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG12TPCREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG16TPCREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG17TPCREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG21TPCREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG26TPCREOL",
+      "candidatos_misma_malla": [],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    },
+    {
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "candidatos_misma_malla": [
+        "AC21TTMRE"
+      ],
+      "relacion_explicita_directa": [],
+      "estado": "E: no hay relación explícita para candidatos en esta fuente"
+    }
+  ],
+  "casos_agrupados": [
+    {
+      "planes_compatibles": [
+        {
+          "carrera": "IECIREOL",
+          "plan": "IECIREOL20211"
+        },
+        {
+          "carrera": "IINF",
+          "plan": "IINF20241"
+        }
+      ],
+      "personas": 3,
+      "estado": "E: confirmar atribución y fecha efectiva"
+    },
+    {
+      "planes_compatibles": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241"
+        },
+        {
+          "carrera": "TTMRE",
+          "plan": "TTMRE20211"
+        }
+      ],
+      "personas": 1,
+      "estado": "E: confirmar atribución y fecha efectiva"
+    }
+  ],
+  "privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/revision_21_ramos_4_expedientes_20261026/DETALLE_CUATRO_CASOS_V2.json",
+    "sha256": "444f79443cff990ad94c13835d65fd3c362d5fd9b3329b8c1d6ff963a0c12d9a"
+  },
+  "limitaciones": "Una traza de candidatura no es título con plan declarado. La actividad no fecha migración ni cierre; fuentes con corte no certificado. No se cambian bases ni denominadores."
+}

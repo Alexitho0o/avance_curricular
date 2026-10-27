@@ -1,0 +1,168 @@
+{
+  "clasificacion": "B/C",
+  "estado": "PASS_QA_EXCEL_NATIVO",
+  "filtros": [
+    {
+      "selection": [
+        "prom12166",
+        2026,
+        2,
+        "Todas",
+        "Todas"
+      ],
+      "expected": [
+        6223,
+        4525,
+        829,
+        867,
+        2
+      ],
+      "observed": [
+        6223,
+        4525,
+        829,
+        867,
+        2
+      ],
+      "rate": 0.845162495330594,
+      "pass": true
+    },
+    {
+      "selection": [
+        "prom12166",
+        2026,
+        3,
+        "Todas",
+        "Todas"
+      ],
+      "expected": [
+        6296,
+        0,
+        0,
+        537,
+        5759
+      ],
+      "observed": [
+        6296,
+        0,
+        0,
+        537,
+        5759
+      ],
+      "rate": "Pendiente",
+      "pass": true
+    },
+    {
+      "selection": [
+        "prom7804",
+        2026,
+        1,
+        "Todas",
+        "Todas"
+      ],
+      "expected": [
+        14659,
+        7971,
+        1384,
+        3464,
+        1840
+      ],
+      "observed": [
+        14659,
+        7971,
+        1384,
+        3464,
+        1840
+      ],
+      "rate": 0.852057723142704,
+      "pass": true
+    },
+    {
+      "selection": [
+        "prom12166",
+        2025,
+        1,
+        "IINF",
+        "Todas"
+      ],
+      "expected": [
+        441,
+        318,
+        47,
+        76,
+        0
+      ],
+      "observed": [
+        441,
+        318,
+        47,
+        76,
+        0
+      ],
+      "rate": 0.871232876712329,
+      "pass": true
+    },
+    {
+      "selection": [
+        "prom12166",
+        2026,
+        2,
+        "TENS",
+        "Todas"
+      ],
+      "expected": [
+        233,
+        95,
+        68,
+        70,
+        0
+      ],
+      "observed": [
+        233,
+        95,
+        68,
+        70,
+        0
+      ],
+      "rate": 0.582822085889571,
+      "pass": true
+    },
+    {
+      "selection": [
+        "prom12166",
+        2019,
+        5,
+        "TENS",
+        "Todas"
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rate": "Pendiente",
+      "pass": true
+    }
+  ],
+  "controles_matematicos_coincidentes": 12,
+  "errores_formula_observados": 0,
+  "graficos_revisados": 3,
+  "comparacion_celdas": {
+    "formulas_seleccion": 2758,
+    "selectores_texto_a_numero": 2,
+    "etiquetas_sin_espacios_finales_al_guardar_excel": 12,
+    "cambios_en_bases": 0,
+    "otros_cambios": 0
+  },
+  "sha256": "893d5d8d0c8d86dcc45c030bbeaa46a034f6b26f14b87727b9fb6d5df13ab847",
+  "limite": "No cierra pendientes metodologicos; mantiene PASS_CON_ALCANCE del estudio."
+}

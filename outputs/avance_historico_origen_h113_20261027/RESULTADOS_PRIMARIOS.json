@@ -1,0 +1,81 @@
+{
+  "clasificacion": "B/C/E",
+  "universo_fijo": 2371,
+  "origen_algoritmo": "H94D commit 3067c97",
+  "mapeo_externo_recuperado": false,
+  "hojas_promedios": {
+    "Hoja1": 129493,
+    "DatosAlumnos": 13707,
+    "Matricula_2025": 14055,
+    "matriz": 139,
+    "base_datos": 72
+  },
+  "registros_coinciden_seis_columnas": 2370,
+  "registros_diferentes": 1,
+  "diferencias_por_columna": {
+    "CURSO_1ER_SEM": 1,
+    "CURSO_2DO_SEM": 1,
+    "UNIDADES_CURSADAS": 1,
+    "UNIDADES_APROBADAS": 1,
+    "UNID_CURSADAS_TOTAL": 1,
+    "UNID_APROBADAS_TOTAL": 1
+  },
+  "sumas_reproducidas_sin_mapeo": {
+    "UNIDADES_CURSADAS": 21377,
+    "UNIDADES_APROBADAS": 17616,
+    "UNID_CURSADAS_TOTAL": 47193,
+    "UNID_APROBADAS_TOTAL": 41615
+  },
+  "sumas_h113": {
+    "UNIDADES_CURSADAS": 21389,
+    "UNIDADES_APROBADAS": 17628,
+    "UNID_CURSADAS_TOTAL": 47205,
+    "UNID_APROBADAS_TOTAL": 41627
+  },
+  "alertas_de_atribucion": {
+    "grupos_clave_legacy_con_mas_de_una_identidad_precarga": 7,
+    "filas_precarga_en_esos_grupos": 14,
+    "filas_precarga_con_varios_codcli_en_actividad_seleccionada": 492,
+    "filas_precarga_con_varias_carreras_en_actividad_seleccionada": 489,
+    "filas_precarga_con_varios_planes_en_actividad_seleccionada": 489,
+    "filas_precarga_sin_fuente_seleccionada": 7,
+    "filas_precarga_con_aprobacion_repetida_codcli_plan_codramo": 9,
+    "repeticiones_aprobadas_contadas_en_precarga": 10,
+    "filas_precarga_con_varios_cuerpos_documentales_en_actividad_seleccionada": 27
+  },
+  "advertencias": [
+    "Coincidir con H113 reproduce una implementación; no acredita por sí solo atribución correcta al programa ni validez académica.",
+    "La prueba omite el mapeo externo no localizado; no se declara ejecución íntegra del script histórico.",
+    "Alertas multicarrera y repetición requieren contexto; no equivalen automáticamente a errores."
+  ],
+  "diferencia_pendiente_agregada": [
+    {
+      "codigo_unico": "I162S2C1J2V4",
+      "plan_estudios": "1",
+      "valores_reproducidos": {
+        "CURSO_1ER_SEM": "NO",
+        "CURSO_2DO_SEM": "NO",
+        "UNIDADES_CURSADAS": "0",
+        "UNIDADES_APROBADAS": "0",
+        "UNID_CURSADAS_TOTAL": "0",
+        "UNID_APROBADAS_TOTAL": "0"
+      },
+      "valores_h113": {
+        "CURSO_1ER_SEM": "SI",
+        "CURSO_2DO_SEM": "SI",
+        "UNIDADES_CURSADAS": "12",
+        "UNIDADES_APROBADAS": "12",
+        "UNID_CURSADAS_TOTAL": "12",
+        "UNID_APROBADAS_TOTAL": "12"
+      },
+      "filas_fuente_seleccionada": 0,
+      "clasificacion": "B/C/E"
+    }
+  ],
+  "perfil_documental": {
+    "precarga_documento_solo_digitos": 2371,
+    "precarga_dv_separado_no_vacio": 2346,
+    "hoja1_rut_solo_digitos": 129493,
+    "hoja1_dig_separado_no_vacio": 129493
+  }
+}

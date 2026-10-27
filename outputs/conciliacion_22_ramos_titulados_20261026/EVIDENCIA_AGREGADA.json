@@ -1,0 +1,964 @@
+{
+  "clasificacion": "B registros; C cruce; E vigencia y acreditación",
+  "fuentes": {
+    "estructura": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/estructura_asignaturas.json",
+      "sha256": "29ce1e42276cd2e67de56cc5ba74422a5c818dca2f089937fa08976961916422",
+      "procedencia": {
+        "filas_Excel": "2:11439",
+        "hoja": "BBDD Bruta",
+        "id": "umas_planes_re_co",
+        "path": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+        "sha256_antes": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+        "sha256_despues": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+      }
+    },
+    "respaldo_xlsx": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/SEGUNDA CARGA/ARCHIVOS VARIOS/1668382 Captura IES Incremental5320 Oferta Académica Titulados5319 Titulados Histórico.xlsx",
+      "sha256": "149367ca3f7be7717f958e2ce0f8924e18353e6302766b1abf737c54b5dce8e3",
+      "hojas": [
+        "5319 Titulados Histór",
+        "Res_Tit_Carga"
+      ]
+    },
+    "csv": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/Titulación Unificada 2026.csv",
+      "sha256": "b52586f6741109e293c90896721ca5b879f5f51ec98a1c80650464aa52356dec"
+    },
+    "promedios": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "hoja": "Hoja1"
+    },
+    "v11_sha256": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141"
+  },
+  "discrepancias": [
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "asignatura": "CA101IECIREOL",
+      "nombre_observado": [
+        "FORMACION PARA EL DESARROLLO PROFESIONAL"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IECIREOL/IECIREOL"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "asignatura": "CA103IECIREOL",
+      "nombre_observado": [
+        "TALLER DE HERRAMIENTAS TECNOLOGICAS"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IECIREOL/IECIREOL"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "asignatura": "CA401IECIREOL",
+      "nombre_observado": [
+        "GESTION DE PROCESOS DE NEGOCIOS Y ARQUITECTURA DE SERVICIOS"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IECIREOL/IECIREOL"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20211",
+      "asignatura": "AS31TPAREOL",
+      "nombre_observado": [
+        "TALLER DE INTEGRACIÓN O PRÁCTICA PROFESIONAL"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPAREOL/TPAREOL2020",
+        "TPAREOL/TPAREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "asignatura": "AU105IEMORE",
+      "nombre_observado": [
+        "SENSORES E INSTRUMENTACION INDUSTRIAL"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [
+        "AU107IEMORE"
+      ],
+      "mismo_codigo_en_otros_planes": [
+        "IEMORE/IEMORE20151",
+        "IEMORE/IEMORE20171"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "asignatura": "AU201IEMORE",
+      "nombre_observado": [
+        "APLICACIONES CON PLC Y HMI I"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IEMORE/IEMORE20151",
+        "IEMORE/IEMORE20171"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "asignatura": "AU305IEMORE",
+      "nombre_observado": [
+        "CONTROL Y COMANDO II"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [
+        "AU308IEMORE"
+      ],
+      "mismo_codigo_en_otros_planes": [
+        "IEMORE/IEMORE20171"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "asignatura": "CA306IEMORE",
+      "nombre_observado": [
+        "EVALUACIÓN DE PROYECTOS"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IEMORE/IEMORE20171"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "asignatura": "CA306IETMRE",
+      "nombre_observado": [
+        "HERRAMIENTAS DE OPTIMIZACION PARA LA OPERACION PRODUCTIVA"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMRE/IETMRE20161"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "asignatura": "AG101IETMREOL",
+      "nombre_observado": [
+        "MATEMÁTICAS"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMREOL/IETMREOL20191",
+        "IETMREOL/IETMREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "asignatura": "AG102IETMREOL",
+      "nombre_observado": [
+        "TALLER DE COMUNICACIÓN ORAL Y ESCRITA"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [
+        "EH102IETMREOL"
+      ],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMREOL/IETMREOL20191",
+        "IETMREOL/IETMREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "asignatura": "AG106IETMREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL BEGINNER"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMREOL/IETMREOL20191",
+        "IETMREOL/IETMREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [
+        {
+          "plan_origen": "IETMREOL",
+          "ramo_origen": "EH106IETMREOL",
+          "plan": "IETMREOL20191",
+          "ramo": "AG106IETMREOL",
+          "filas_fuente": [
+            4668
+          ],
+          "literal": "IETMREOL20191/AG106IETMREOL"
+        }
+      ],
+      "clasificacion_relacion": "B/C relación explícita en catálogo; E aplicación individual y vigencia"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "asignatura": "AG201IETMREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL ELEMENTARY"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMREOL/IETMREOL20191",
+        "IETMREOL/IETMREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "asignatura": "AG206IETMREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL PRE INTERMEDIATE"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMREOL/IETMREOL20191",
+        "IETMREOL/IETMREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "asignatura": "AG302IETMREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL INTERMEDIATE"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [
+        "EH301IETMREOL"
+      ],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "IETMREOL/IETMREOL20191",
+        "IETMREOL/IETMREOL20211"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "asignatura": "AG11TPCREOL",
+      "nombre_observado": [
+        "MATEMÁTICA"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPCREOL/TPCREOL20191"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "asignatura": "AG12TPCREOL",
+      "nombre_observado": [
+        "TALLER DE COMUNICACIÓN ORAL Y ESCRITA"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPCREOL/TPCREOL20191"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "asignatura": "AG16TPCREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL BEGINNER"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPCREOL/TPCREOL20191"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "asignatura": "AG17TPCREOL",
+      "nombre_observado": [
+        "ESTADÍSTICAS BÁSICA"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPCREOL/TPCREOL20191"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "asignatura": "AG21TPCREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL ELEMENTARY"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPCREOL/TPCREOL20191"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "asignatura": "AG26TPCREOL",
+      "nombre_observado": [
+        "ENGLISH LEVEL PRE INTERMEDIATE"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [],
+      "mismo_codigo_en_otros_planes": [
+        "TPCREOL/TPCREOL20191"
+      ],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    },
+    {
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "asignatura": "AS21TTMRE",
+      "nombre_observado": [
+        "EMPRENDIMIENTO"
+      ],
+      "nivel_observado": [],
+      "equivalente_exacto_en_plan": [],
+      "mismo_nombre_en_plan": [
+        "AC21TTMRE"
+      ],
+      "mismo_codigo_en_otros_planes": [],
+      "estado": "E: coincidencia exploratoria; equivalencia curricular no acreditada",
+      "relaciones_catalogo": [],
+      "clasificacion_relacion": "E: sin relación explícita para este contexto"
+    }
+  ],
+  "titulados_por_plan": [
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2019,
+          "periodo": 2
+        },
+        {
+          "ano": 2019,
+          "periodo": 4
+        },
+        {
+          "ano": 2019,
+          "periodo": 5
+        },
+        {
+          "ano": 2020,
+          "periodo": 1
+        },
+        {
+          "ano": 2020,
+          "periodo": 2
+        },
+        {
+          "ano": 2020,
+          "periodo": 3
+        },
+        {
+          "ano": 2020,
+          "periodo": 4
+        },
+        {
+          "ano": 2020,
+          "periodo": 5
+        },
+        {
+          "ano": 2021,
+          "periodo": 1
+        },
+        {
+          "ano": 2021,
+          "periodo": 3
+        },
+        {
+          "ano": 2021,
+          "periodo": 4
+        },
+        {
+          "ano": 2021,
+          "periodo": 5
+        },
+        {
+          "ano": 2022,
+          "periodo": 1
+        },
+        {
+          "ano": 2022,
+          "periodo": 2
+        },
+        {
+          "ano": 2022,
+          "periodo": 3
+        },
+        {
+          "ano": 2022,
+          "periodo": 4
+        },
+        {
+          "ano": 2022,
+          "periodo": 5
+        },
+        {
+          "ano": 2023,
+          "periodo": 1
+        },
+        {
+          "ano": 2023,
+          "periodo": 3
+        },
+        {
+          "ano": 2023,
+          "periodo": 4
+        },
+        {
+          "ano": 2023,
+          "periodo": 5
+        },
+        {
+          "ano": 2024,
+          "periodo": 1
+        },
+        {
+          "ano": 2024,
+          "periodo": 2
+        },
+        {
+          "ano": 2024,
+          "periodo": 3
+        },
+        {
+          "ano": 2024,
+          "periodo": 4
+        },
+        {
+          "ano": 2024,
+          "periodo": 5
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 9,
+      "personas_con_multiples_expedientes_compatibles": 0,
+      "registros_titulo_por_codigo": {
+        "I162S2C1J4V2": 9
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 9
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2025": 5,
+        "2024": 4
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20211",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2021,
+          "periodo": 1
+        },
+        {
+          "ano": 2021,
+          "periodo": 2
+        },
+        {
+          "ano": 2021,
+          "periodo": 3
+        },
+        {
+          "ano": 2021,
+          "periodo": 4
+        },
+        {
+          "ano": 2021,
+          "periodo": 5
+        },
+        {
+          "ano": 2022,
+          "periodo": 1
+        },
+        {
+          "ano": 2022,
+          "periodo": 2
+        },
+        {
+          "ano": 2022,
+          "periodo": 3
+        },
+        {
+          "ano": 2022,
+          "periodo": 4
+        },
+        {
+          "ano": 2022,
+          "periodo": 5
+        },
+        {
+          "ano": 2023,
+          "periodo": 1
+        },
+        {
+          "ano": 2023,
+          "periodo": 2
+        },
+        {
+          "ano": 2023,
+          "periodo": 3
+        },
+        {
+          "ano": 2023,
+          "periodo": 4
+        },
+        {
+          "ano": 2023,
+          "periodo": 5
+        },
+        {
+          "ano": 2024,
+          "periodo": 1
+        },
+        {
+          "ano": 2024,
+          "periodo": 2
+        },
+        {
+          "ano": 2024,
+          "periodo": 3
+        },
+        {
+          "ano": 2024,
+          "periodo": 4
+        },
+        {
+          "ano": 2024,
+          "periodo": 5
+        },
+        {
+          "ano": 2025,
+          "periodo": 1
+        },
+        {
+          "ano": 2025,
+          "periodo": 2
+        },
+        {
+          "ano": 2025,
+          "periodo": 3
+        },
+        {
+          "ano": 2025,
+          "periodo": 4
+        },
+        {
+          "ano": 2025,
+          "periodo": 5
+        },
+        {
+          "ano": 2026,
+          "periodo": 2
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 104,
+      "personas_con_multiples_expedientes_compatibles": 3,
+      "registros_titulo_por_codigo": {
+        "I162S2C1J4V2": 102,
+        "I162S2C1J4V1": 2
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 104
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2025": 57,
+        "2026": 5,
+        "2023": 19,
+        "2024": 23
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2019,
+          "periodo": 1
+        },
+        {
+          "ano": 2019,
+          "periodo": 2
+        },
+        {
+          "ano": 2021,
+          "periodo": 1
+        },
+        {
+          "ano": 2021,
+          "periodo": 2
+        },
+        {
+          "ano": 2022,
+          "periodo": 1
+        },
+        {
+          "ano": 2022,
+          "periodo": 2
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 16,
+      "personas_con_multiples_expedientes_compatibles": 0,
+      "registros_titulo_por_codigo": {
+        "I162S2C22J2V1": 16
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 16
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2023": 12,
+        "2024": 4
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    },
+    {
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2019,
+          "periodo": 1
+        },
+        {
+          "ano": 2019,
+          "periodo": 2
+        },
+        {
+          "ano": 2020,
+          "periodo": 1
+        },
+        {
+          "ano": 2020,
+          "periodo": 2
+        },
+        {
+          "ano": 2021,
+          "periodo": 1
+        },
+        {
+          "ano": 2021,
+          "periodo": 2
+        },
+        {
+          "ano": 2022,
+          "periodo": 1
+        },
+        {
+          "ano": 2022,
+          "periodo": 2
+        },
+        {
+          "ano": 2023,
+          "periodo": 1
+        },
+        {
+          "ano": 2023,
+          "periodo": 2
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 8,
+      "personas_con_multiples_expedientes_compatibles": 0,
+      "registros_titulo_por_codigo": {
+        "I162S2C3J2V4": 8
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 8
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2025": 1,
+        "2023": 3,
+        "2024": 4
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2019,
+          "periodo": 3
+        },
+        {
+          "ano": 2020,
+          "periodo": 2
+        },
+        {
+          "ano": 2020,
+          "periodo": 3
+        },
+        {
+          "ano": 2020,
+          "periodo": 4
+        },
+        {
+          "ano": 2020,
+          "periodo": 5
+        },
+        {
+          "ano": 2021,
+          "periodo": 1
+        },
+        {
+          "ano": 2021,
+          "periodo": 2
+        },
+        {
+          "ano": 2021,
+          "periodo": 4
+        },
+        {
+          "ano": 2021,
+          "periodo": 5
+        },
+        {
+          "ano": 2022,
+          "periodo": 2
+        },
+        {
+          "ano": 2022,
+          "periodo": 3
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 14,
+      "personas_con_multiples_expedientes_compatibles": 0,
+      "registros_titulo_por_codigo": {
+        "I162S2C3J4V1": 13,
+        "I162S2C3J4V2": 1
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 14
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2021": 2,
+        "2022": 11,
+        "2023": 1
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2019,
+          "periodo": 1
+        },
+        {
+          "ano": 2020,
+          "periodo": 1
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 5,
+      "personas_con_multiples_expedientes_compatibles": 0,
+      "registros_titulo_por_codigo": {
+        "I162S2C2J4V1": 4,
+        "I162S2C2J4V2": 1
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 5
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2020": 2,
+        "2021": 2,
+        "2022": 1
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    },
+    {
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "periodos_actividad_promedios": [
+        {
+          "ano": 2020,
+          "periodo": 2
+        },
+        {
+          "ano": 2021,
+          "periodo": 1
+        },
+        {
+          "ano": 2021,
+          "periodo": 2
+        },
+        {
+          "ano": 2022,
+          "periodo": 1
+        },
+        {
+          "ano": 2022,
+          "periodo": 2
+        },
+        {
+          "ano": 2023,
+          "periodo": 1
+        },
+        {
+          "ano": 2023,
+          "periodo": 2
+        },
+        {
+          "ano": 2023,
+          "periodo": 3
+        },
+        {
+          "ano": 2023,
+          "periodo": 5
+        },
+        {
+          "ano": 2024,
+          "periodo": 1
+        },
+        {
+          "ano": 2024,
+          "periodo": 2
+        }
+      ],
+      "personas_con_mismo_rut_y_codigo_v11_y_registro_titulacion": 10,
+      "personas_con_multiples_expedientes_compatibles": 1,
+      "registros_titulo_por_codigo": {
+        "I162S2C6J1V2": 3,
+        "I162S2C6J2V2": 2,
+        "I162S2C6J2V1": 5
+      },
+      "vinculos_v11_por_tipo_no_exclusivos": {
+        "DOCUMENTAL": 10
+      },
+      "fechas_o_anos_titulo_observados": {
+        "2025": 2,
+        "2021": 3,
+        "2023": 5
+      },
+      "limite": "Titulación y código observados: no prueban automáticamente plan efectivo o aceptación. Los registros pueden solaparse entre fuentes; los años no establecen fecha de vigencia del plan."
+    }
+  ],
+  "qa_csv_vs_xlsx": {
+    "csv_filas_con_identidad_codigo": 431,
+    "xlsx_filas_con_identidad_codigo": 431,
+    "llaves_distintas_csv": 431,
+    "llaves_distintas_xlsx": 431,
+    "llaves_comunes": 431,
+    "csv_sin_coincidencia": 0,
+    "xlsx_sin_coincidencia": 0,
+    "limite": "Contraste solo por tipo documento, número, DV y código de título; no prueba igualdad íntegra ni aceptación."
+  },
+  "limitaciones": "Identidad exacta no demuestra plan individual de titulación: se reutiliza vínculo v11 y se mantienen colisiones entre expedientes. No modificar fuentes ni denominadores."
+}

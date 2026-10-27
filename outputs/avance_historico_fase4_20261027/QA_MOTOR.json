@@ -1,0 +1,261 @@
+[
+  {
+    "control": "anual",
+    "values": [
+      [
+        17628,
+        21389,
+        0.8241619524054421
+      ],
+      [
+        41627,
+        96104,
+        0.43314534254557563
+      ],
+      [
+        38235,
+        96104,
+        0.3978502455673021
+      ]
+    ]
+  },
+  {
+    "control": "qa",
+    "values": [
+      [
+        "Registros anuales",
+        2371,
+        2371,
+        0,
+        "Coincide"
+      ],
+      [
+        "Cursadas anuales",
+        21389,
+        21389,
+        0,
+        "Coincide"
+      ],
+      [
+        "Aprobadas anuales",
+        17628,
+        17628,
+        0,
+        "Coincide"
+      ],
+      [
+        "Cursadas acumuladas",
+        47205,
+        47205,
+        0,
+        "Coincide"
+      ],
+      [
+        "Aprobadas H113",
+        41627,
+        41627,
+        0,
+        "Coincide"
+      ],
+      [
+        "Aprobadas H114B",
+        38235,
+        38235,
+        0,
+        "Coincide"
+      ],
+      [
+        "Denominador plan",
+        96104,
+        96104,
+        0,
+        "Coincide"
+      ],
+      [
+        "Filas PROMEDIOS 7804",
+        129493,
+        129493,
+        0,
+        "Coincide"
+      ],
+      [
+        "Filas PROMEDIOS 12166",
+        70000,
+        70000,
+        0,
+        "Coincide"
+      ],
+      [
+        "Contextos malla 7804",
+        13072,
+        13072,
+        0,
+        "Coincide"
+      ],
+      [
+        "Contextos malla 12166",
+        8976,
+        8976,
+        0,
+        "Coincide"
+      ],
+      [
+        "Conciliación selección",
+        0,
+        0,
+        0,
+        "Coincide"
+      ]
+    ]
+  },
+  {
+    "control": "filtro",
+    "seleccion": [
+      "prom12166",
+      "2026",
+      "2",
+      "Todas",
+      "Todas"
+    ],
+    "esperado": [
+      6223,
+      4525,
+      829,
+      867,
+      2
+    ],
+    "observado": [
+      6223,
+      4525,
+      829,
+      867,
+      2
+    ],
+    "pass": true
+  },
+  {
+    "control": "filtro",
+    "seleccion": [
+      "prom12166",
+      "2026",
+      "3",
+      "Todas",
+      "Todas"
+    ],
+    "esperado": [
+      6296,
+      0,
+      0,
+      537,
+      5759
+    ],
+    "observado": [
+      6296,
+      0,
+      0,
+      537,
+      5759
+    ],
+    "pass": true
+  },
+  {
+    "control": "filtro",
+    "seleccion": [
+      "prom7804",
+      "2026",
+      "1",
+      "Todas",
+      "Todas"
+    ],
+    "esperado": [
+      14659,
+      7971,
+      1384,
+      3464,
+      1840
+    ],
+    "observado": [
+      14659,
+      7971,
+      1384,
+      3464,
+      1840
+    ],
+    "pass": true
+  },
+  {
+    "control": "filtro",
+    "seleccion": [
+      "prom12166",
+      "2025",
+      "1",
+      "IINF",
+      "Todas"
+    ],
+    "esperado": [
+      441,
+      318,
+      47,
+      76,
+      0
+    ],
+    "observado": [
+      441,
+      318,
+      47,
+      76,
+      0
+    ],
+    "pass": true
+  },
+  {
+    "control": "filtro",
+    "seleccion": [
+      "prom12166",
+      "2026",
+      "2",
+      "TENS",
+      "Todas"
+    ],
+    "esperado": [
+      233,
+      95,
+      68,
+      70,
+      0
+    ],
+    "observado": [
+      233,
+      95,
+      68,
+      70,
+      0
+    ],
+    "pass": true
+  },
+  {
+    "control": "filtro",
+    "seleccion": [
+      "prom12166",
+      "2019",
+      "5",
+      "TENS",
+      "Todas"
+    ],
+    "esperado": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "observado": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pass": true
+  }
+]

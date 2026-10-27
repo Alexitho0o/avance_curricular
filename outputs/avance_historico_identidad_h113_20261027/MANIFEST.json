@@ -1,0 +1,68 @@
+{
+  "fecha_utc": "2026-10-27T12:22:09.774010+00:00",
+  "fuentes": {
+    "promedios": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "bytes": 27787332
+    },
+    "precarga": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_Precarga Matrícula Avance Curricular 2026.csv",
+      "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "bytes": 254294
+    },
+    "h113": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/AVANCE_CURRICULAR_2026_SALIDAS_20260704_221542/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_FINAL_H113_REGENERADO.csv",
+      "sha256": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "bytes": 247825
+    },
+    "h114b": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_H114B_CORREGIDO_PLAN.csv",
+      "sha256": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "bytes": 247823
+    },
+    "puente_mu": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/IPSS_Procesamiento.xlsx",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+    }
+  },
+  "script_sha256": "1e9655dec437a3d99789a448c786e37b1b40bae93a5e3f40d71baeac1240f6a7",
+  "git_antes": {
+    "head": "262f445828f7e939fac59c3cc76d0bb20a101746",
+    "branch": "feature/ire-2026"
+  },
+  "git_despues": {
+    "head": "262f445828f7e939fac59c3cc76d0bb20a101746",
+    "branch": "feature/ire-2026"
+  },
+  "fuente_auditoria_previa": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/avance_historico_origen_h113_20261027/MANIFEST_ORIGEN_H113.json",
+    "sha256": "24a614d3ae93fd7183c96eff4b7b8042891fd6e5fc2138d2b4bbc3a480bfb42b"
+  },
+  "diccionario_descriptor": {
+    "edicion": "v11_20261026_86_promedios_integrada",
+    "base_sha256": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141"
+  },
+  "salidas": {
+    "RESULTADOS.json": "b513dbbafb54b18eb0d0e077963fc80a2aa6477faf620fb90c3c95d92e073800",
+    "QA.json": "5a274db79cc42396081e630249183774e571eeb059876be524cb14bb918172f5",
+    "INFORME_IDENTIDAD_H113.md": "c9ebbca11a5d81482cce28d463226f0bda6e3ad69e72e4d3e51cb556919e8022",
+    "BUSQUEDA_PUENTE_FALTANTE.json": "2dc9d70c7cde6feeebc7fe65939748feb4a870ef20f14e0b759f40183ea70477"
+  },
+  "commit": false,
+  "push": false,
+  "especificacion": {
+    "ruta": "docs/ESPECIFICACION_IDENTIDAD_H113_20261027.md",
+    "sha256": "1a15c755c53c7ecc3a78faac024adb4d44d467ae47a3c4f5a8dbfe0985c65f6c"
+  },
+  "scripts": {
+    "revisar_identidad.py": "1e9655dec437a3d99789a448c786e37b1b40bae93a5e3f40d71baeac1240f6a7",
+    "buscar_puente_faltante.py": "e36588961efe228bc06feb55bed9c5b259d706793e2d557e9804cb3cc38f00c7"
+  },
+  "checkpoint": {
+    "llave_documental": "efecto cuantificado en 27 registros, escenario no adoptado",
+    "fila_P": "sin CODCLI/asignaturas recuperables en los tres respaldos; tipo/DV discrepante",
+    "siguiente": "atribucion carrera/plan, sin repetir busquedas agotadas",
+    "bases_y_denominadores": "conservados"
+  }
+}

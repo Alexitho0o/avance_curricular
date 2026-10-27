@@ -1,0 +1,84 @@
+{
+  "clasificacion": "B observaciones; C vínculo; E vigencia y asignación",
+  "fuentes": [
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "hoja": "MASTER INGRESO 2024",
+      "sha256": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65",
+      "fila_encabezado": 2
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+      "hoja": "DATOS CRUDOS U+ 19-11-2024",
+      "sha256": "97c0fc4fbe4dd9a24be611d0960f4ad6c1559db907a9d86d12a039bc89110fa6",
+      "fila_encabezado": 1
+    },
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/Cumplimiento Ingreso de Notas.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80",
+      "fila_encabezado": 1
+    }
+  ],
+  "identidad": "CODCLI exacto con propietario único en v11 y cuerpo RUT idéntico; los reportes no corroboran DV del estudiante de manera independiente.",
+  "casos": {
+    "personas_con_registros": 4,
+    "personas_sin_registros": 0,
+    "pares_persona_plan_observados": 4
+  },
+  "ramos": {
+    "AG206IETMREOL": [
+      {
+        "fuente": "CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+        "plan": "TTMREOL20191",
+        "filas": 1
+      },
+      {
+        "fuente": "CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+        "plan": "TTMREOL20211",
+        "filas": 1
+      },
+      {
+        "fuente": "PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+        "plan": "TTMREOL20191",
+        "filas": 1
+      },
+      {
+        "fuente": "PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+        "plan": "TTMREOL20211",
+        "filas": 1
+      }
+    ],
+    "AG302IETMREOL": [
+      {
+        "fuente": "CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+        "plan": "IETMREOL20211",
+        "filas": 1
+      },
+      {
+        "fuente": "PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+        "plan": "IETMREOL20211",
+        "filas": 1
+      }
+    ],
+    "AS31TPAREOL": [
+      {
+        "fuente": "CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+        "plan": "TPARE20211",
+        "filas": 2
+      },
+      {
+        "fuente": "CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+        "plan": "TPAREOL20211",
+        "filas": 29
+      }
+    ]
+  },
+  "ramos_buscados": 21,
+  "ramos_con_filas": 3,
+  "detalle_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/busqueda_bitacora_mallas_20261026/EVIDENCIA_REPORTES_CUATRO.json",
+    "sha256": "0de4018a1ab873f83f0bf7b37683ab97546b813b11bbc6c68f01ab8b248eb6a8"
+  },
+  "limites": "Fecha de reporte e inicio de asignatura no prueban fecha efectiva de cambio de plan ni plan del título. Nombre de curso y actividad no equivalen a una homologación autorizada."
+}

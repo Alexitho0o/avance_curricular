@@ -1,0 +1,26 @@
+{
+  "clasificacion": "B fuente; C búsqueda literal; E identidad y hechos",
+  "fuente": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/GESTIONSGE_1703.xlsx",
+    "hoja": "Hoja1",
+    "sha256": "2ac487eb0ac09ac66d2c76afde9e62b9a4265357514d7ee696113d125a8e2401"
+  },
+  "metodo": "Búsqueda por cuerpo de RUT en dos columnas RUT_ALUMNO, sin DV en fuente; se excluyen cuerpos ambiguos en v11 y columnas discordantes. Búsqueda literal en ASUNTO y OBSERVACION; no se exporta texto.",
+  "personas_buscadas": 4,
+  "personas_con_registros": 3,
+  "registros_coincidentes": 20,
+  "personas_con_palabras_por_tema": {
+    "plan": 2,
+    "titulacion": 1,
+    "homologacion": 2
+  },
+  "registros_con_patron_literal": {
+    "codcli_explicito": 0,
+    "codigo_plan_explicito": 0,
+    "codigo_ramo_explicito": 0,
+    "solicitud_o_consulta": 3,
+    "palabra_decision_busqueda_limitada": 0
+  },
+  "registros_excluidos_ambiguos": 0,
+  "limites": "El cuerpo de RUT no acredita DV; la búsqueda literal puede omitir sinónimos, archivos y eventos. Una mención no es documento de titulación ni acredita migración o equivalencia."
+}

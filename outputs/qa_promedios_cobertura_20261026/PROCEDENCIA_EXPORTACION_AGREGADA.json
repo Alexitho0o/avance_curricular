@@ -1,0 +1,83 @@
+{
+  "clasificacion": "B fuentes y metadatos; C lectura; E origen UMAS",
+  "fecha_revision": "2026-10-26T18:34:22.643683-03:00",
+  "respaldo_ampliado": {
+    "manifest_path": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/04_AUDITORIA/manifest_ejecucion.json",
+    "manifest_sha256": "c0f23e85071dd0c319d1bd1bff05f22a49d898a7ba6d67bc4882595113690c8a",
+    "fecha_inicio_procesamiento": "2026-10-15T14:18:42.932040-03:00",
+    "fecha_fin_procesamiento": "2026-10-15T14:20:42.180679-03:00",
+    "periodo_procesamiento": 3,
+    "entrada": {
+      "tipo": "promedios_auxiliar",
+      "ruta_original": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261015_141035_172286/P3/01_ENTRADAS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "ruta_archivada": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261015_141035_172286/P3/01_ENTRADAS/PROMEDIOSDEALUMNOS_7804_001.xlsx",
+      "nombre": "PROMEDIOSDEALUMNOS_7804.xlsx",
+      "tamano_bytes": 31301376,
+      "sha256_original": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71",
+      "sha256_copia": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71"
+    },
+    "metadata_archivo": {
+      "core_xml": {
+        "modified": "2026-10-15T16:51:57Z"
+      },
+      "hoja": "Hoja1",
+      "autofiltro_rangos": [
+        "A1:C8"
+      ],
+      "filtros_de_columna": 0,
+      "filas_ocultas": 0,
+      "elementos_fila": 142216
+    },
+    "procesos_con_misma_entrada": [
+      {
+        "periodo_proceso": "P1",
+        "manifest": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P1/04_AUDITORIA/manifest_ejecucion.json",
+        "sha256_manifest": "2bf8ab4e02c94da0441d40560382a010c597e6cbac9d610ebedfac792f5377cc",
+        "fecha_inicio": "2026-10-15T14:12:05.472939-03:00",
+        "sha256_promedios": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71"
+      },
+      {
+        "periodo_proceso": "P2",
+        "manifest": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P2/04_AUDITORIA/manifest_ejecucion.json",
+        "sha256_manifest": "2faa7d8c2ef0e540c2e3c560bf24e166c3885b49048e2779c715f13c95ec3d27",
+        "fecha_inicio": "2026-10-15T14:16:47.515504-03:00",
+        "sha256_promedios": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71"
+      },
+      {
+        "periodo_proceso": "P3",
+        "manifest": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/04_AUDITORIA/manifest_ejecucion.json",
+        "sha256_manifest": "c0f23e85071dd0c319d1bd1bff05f22a49d898a7ba6d67bc4882595113690c8a",
+        "fecha_inicio": "2026-10-15T14:18:42.932040-03:00",
+        "sha256_promedios": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71"
+      }
+    ]
+  },
+  "v11_12166": {
+    "inventario_path": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/retencion_intermedia_t2_t3/INVENTARIO_COPIAS_EXTERNAS_20261022.json",
+    "inventario_sha256": "5073cff946c59febd56cf14f72023494d4c42bb54eee143553353dfb1428b159",
+    "fecha_inventario": "2026-10-22",
+    "archivo_inventariado": {
+      "archivo": "PROMEDIOSDEALUMNOS_12166.xlsx",
+      "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "bytes": 7290801,
+      "clasificacion_datos": "individual_restringido",
+      "evidencia": "70.000 filas; RUT, CODCLI, nombre, asignatura, período y estado académico",
+      "uso": "evidencia de avance por persona y período; no equivale por sí sola a una foto de matrícula de cierre",
+      "destino": "copia privada en .local_restricted/retencion_intermedia_t2_t3/20261022_fuentes; fuera de Git"
+    },
+    "catalogo_path": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogo_fuentes/CATALOGO_FUENTES.json",
+    "catalogo_sha256": "97e2ba51c9c16a941ec17e3ef81a89fb175dca8fca06e39b481142d76787ff30",
+    "metadata_archivo": {
+      "core_xml": {},
+      "hoja": "Hoja1",
+      "autofiltro_rangos": [
+        "A1:Y70001"
+      ],
+      "filtros_de_columna": 0,
+      "filas_ocultas": 0,
+      "elementos_fila": 70001
+    }
+  },
+  "limite": "Fechas de procesamiento e inventario no son exportación UMAS ni corte; filtros visibles de Excel no prueban filtros de consulta origen."
+}

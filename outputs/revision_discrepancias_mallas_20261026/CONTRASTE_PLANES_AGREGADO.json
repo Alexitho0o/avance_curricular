@@ -1,0 +1,983 @@
+{
+  "clasificacion": "B listado y actividad; C cruce; E vigencia, integridad y graduación",
+  "fuentes": {
+    "listado": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "hoja": "BBDD Bruta",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+    },
+    "observaciones": "MALLAS_OBSERVADAS_TITULADO_CANDIDATA.json"
+  },
+  "llave": "CODCARR + CODPESTUD/PLAN_DE_ESTUDIO + CODRAMO; NIVEL comparado sin conversión",
+  "totales": {
+    "planes_con_llave_en_listado": 73,
+    "nivel_coincidente_unico": 950,
+    "asignaturas_observadas_fuera_del_listado": 22,
+    "asignaturas_listadas_no_observadas": 1303,
+    "planes_sin_llave_en_listado": 2
+  },
+  "planes": [
+    {
+      "carrera_umas": "ASRE",
+      "plan": "ASRE20151",
+      "listadas": 29,
+      "observadas": 2,
+      "ambas": 2,
+      "solo_observadas": 0,
+      "solo_listado": 27,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 2
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "ASRE",
+      "plan": "TASRE20191",
+      "listadas": 29,
+      "observadas": 13,
+      "ambas": 13,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 13
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "ASREOL",
+      "plan": "ASREOL",
+      "listadas": 28,
+      "observadas": 2,
+      "ambas": 2,
+      "solo_observadas": 0,
+      "solo_listado": 26,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 2
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "ASREOL",
+      "plan": "TASREOL20191",
+      "listadas": 29,
+      "observadas": 13,
+      "ambas": 13,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 13
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "CICIB",
+      "plan": "CICIB20241",
+      "listadas": 22,
+      "observadas": 6,
+      "ambas": 6,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 6
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "CICRE",
+      "plan": "CICRE20241",
+      "listadas": 22,
+      "observadas": 6,
+      "ambas": 6,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 6
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "CIINF",
+      "plan": "CIINF20241",
+      "listadas": 23,
+      "observadas": 6,
+      "ambas": 6,
+      "solo_observadas": 0,
+      "solo_listado": 17,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 6
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "ICIB",
+      "plan": "ICIB20241",
+      "listadas": 47,
+      "observadas": 29,
+      "ambas": 29,
+      "solo_observadas": 0,
+      "solo_listado": 18,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 29
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "ICRE",
+      "plan": "ICRE20241",
+      "listadas": 47,
+      "observadas": 16,
+      "ambas": 16,
+      "solo_observadas": 0,
+      "solo_listado": 31,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 16
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIRE",
+      "plan": "IECIRE20121",
+      "listadas": 38,
+      "observadas": 1,
+      "ambas": 1,
+      "solo_observadas": 0,
+      "solo_listado": 37,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 1
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIRE",
+      "plan": "IECIRE20151",
+      "listadas": 41,
+      "observadas": 5,
+      "ambas": 5,
+      "solo_observadas": 0,
+      "solo_listado": 36,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 5
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIRE",
+      "plan": "IECIRE20191",
+      "listadas": 44,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIRE",
+      "plan": "IECIRE2020",
+      "listadas": 43,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 22,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIRE",
+      "plan": "IECIRE20211",
+      "listadas": 45,
+      "observadas": 22,
+      "ambas": 22,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 22
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIREOL",
+      "plan": "IECIREOL",
+      "listadas": 40,
+      "observadas": 5,
+      "ambas": 5,
+      "solo_observadas": 0,
+      "solo_listado": 35,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 5
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIREOL",
+      "plan": "IECIREOL20191",
+      "listadas": 44,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "listadas": 44,
+      "observadas": 24,
+      "ambas": 21,
+      "solo_observadas": 3,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECIREOL",
+      "plan": "IECIREOL20211",
+      "listadas": 45,
+      "observadas": 23,
+      "ambas": 22,
+      "solo_observadas": 1,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 22
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECSRE",
+      "plan": "IECSRE20191",
+      "listadas": 43,
+      "observadas": 20,
+      "ambas": 20,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 20
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECSRE",
+      "plan": "IECSRE20211",
+      "listadas": 44,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IECSREOL",
+      "plan": "IECSREOL20211",
+      "listadas": 44,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IEMORE",
+      "plan": "IEMORE20171",
+      "listadas": 47,
+      "observadas": 13,
+      "ambas": 13,
+      "solo_observadas": 0,
+      "solo_listado": 34,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 13
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IEMORE",
+      "plan": "IEMORE20201",
+      "listadas": 49,
+      "observadas": 49,
+      "ambas": 49,
+      "solo_observadas": 0,
+      "solo_listado": 0,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 49
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IEMORE",
+      "plan": "IEMORE20211",
+      "listadas": 50,
+      "observadas": 54,
+      "ambas": 50,
+      "solo_observadas": 4,
+      "solo_listado": 0,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 50
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMRE",
+      "plan": "IETMRE20121",
+      "listadas": 38,
+      "observadas": 3,
+      "ambas": 3,
+      "solo_observadas": 0,
+      "solo_listado": 35,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 3
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMRE",
+      "plan": "IETMRE20161",
+      "listadas": 41,
+      "observadas": 4,
+      "ambas": 4,
+      "solo_observadas": 0,
+      "solo_listado": 37,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 4
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMRE",
+      "plan": "IETMRE20191",
+      "listadas": 43,
+      "observadas": 21,
+      "ambas": 20,
+      "solo_observadas": 1,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 20
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMRE",
+      "plan": "IETMRE20211",
+      "listadas": 43,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 22,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMREOL",
+      "plan": "IETMREOL",
+      "listadas": 41,
+      "observadas": 10,
+      "ambas": 4,
+      "solo_observadas": 6,
+      "solo_listado": 37,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 4
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMREOL",
+      "plan": "IETMREOL20191",
+      "listadas": 43,
+      "observadas": 20,
+      "ambas": 20,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 20
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IETMREOL",
+      "plan": "IETMREOL20211",
+      "listadas": 44,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 23,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "IINF",
+      "plan": "IINF20241",
+      "listadas": 48,
+      "observadas": 16,
+      "ambas": 16,
+      "solo_observadas": 0,
+      "solo_listado": 32,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 16
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NAUTRE",
+      "plan": "NAUTRE",
+      "listadas": 22,
+      "observadas": 8,
+      "ambas": 8,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 8
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NAUTRE",
+      "plan": "NAUTRE2020",
+      "listadas": 25,
+      "observadas": 25,
+      "ambas": 25,
+      "solo_observadas": 0,
+      "solo_listado": 0,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 25
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NCONRE",
+      "plan": "NCONRE",
+      "listadas": 20,
+      "observadas": 4,
+      "ambas": 4,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 4
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NCONREOL",
+      "plan": "NCONREOL2019",
+      "listadas": 20,
+      "observadas": 4,
+      "ambas": 4,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 4
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NECIRE",
+      "plan": "NECIRE20151",
+      "listadas": 24,
+      "observadas": 2,
+      "ambas": 2,
+      "solo_observadas": 0,
+      "solo_listado": 22,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 2
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NETMRE",
+      "plan": "NETMRE20121",
+      "listadas": 20,
+      "observadas": 2,
+      "ambas": 2,
+      "solo_observadas": 0,
+      "solo_listado": 18,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 2
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NICCRE",
+      "plan": "NICCRE20191",
+      "listadas": 22,
+      "observadas": 8,
+      "ambas": 8,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 8
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NICCRE",
+      "plan": "NICCRE2020",
+      "listadas": 21,
+      "observadas": 7,
+      "ambas": 7,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 7
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NICCREOL",
+      "plan": "NICCREOL2020",
+      "listadas": 21,
+      "observadas": 7,
+      "ambas": 7,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 7
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NINFRE",
+      "plan": "NINFRE",
+      "listadas": 19,
+      "observadas": 3,
+      "ambas": 3,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 3
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NINFREOL",
+      "plan": "NINFREOL2019",
+      "listadas": 19,
+      "observadas": 3,
+      "ambas": 3,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 3
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NITMRE",
+      "plan": "NCONRE",
+      "estado": "E: carrera y plan no encontrados en listado",
+      "observadas": 2
+    },
+    {
+      "carrera_umas": "NTCCRE",
+      "plan": "NTCCRE20191",
+      "listadas": 29,
+      "observadas": 14,
+      "ambas": 14,
+      "solo_observadas": 0,
+      "solo_listado": 15,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 14
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NTCCRE",
+      "plan": "NTCCRE2020",
+      "listadas": 27,
+      "observadas": 13,
+      "ambas": 13,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 13
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "NTCCREOL",
+      "plan": "NTCCREOL2020",
+      "listadas": 27,
+      "observadas": 13,
+      "ambas": 13,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 13
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TAMD",
+      "plan": "TAMD20241",
+      "listadas": 27,
+      "observadas": 27,
+      "ambas": 27,
+      "solo_observadas": 0,
+      "solo_listado": 0,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 27
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCIB",
+      "plan": "TCIB20241",
+      "listadas": 26,
+      "observadas": 21,
+      "ambas": 21,
+      "solo_observadas": 0,
+      "solo_listado": 5,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 21
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCRE",
+      "plan": "TCRE20241",
+      "listadas": 26,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCSRE",
+      "plan": "TCSRE20191",
+      "listadas": 23,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCSRE",
+      "plan": "TCSRE20211",
+      "listadas": 24,
+      "observadas": 11,
+      "ambas": 11,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 11
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCSREOL",
+      "plan": "TCSREOL2020",
+      "listadas": 23,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCSREOL",
+      "plan": "TCSREOL20211",
+      "listadas": 24,
+      "observadas": 11,
+      "ambas": 11,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 11
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TCSREOL",
+      "plan": "TCSREOL20231",
+      "listadas": 24,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TLOG",
+      "plan": "TLOG20241",
+      "listadas": 26,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TMIRE",
+      "plan": "TMIRE20171",
+      "listadas": 27,
+      "observadas": 5,
+      "ambas": 5,
+      "solo_observadas": 0,
+      "solo_listado": 22,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 5
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TMIRE",
+      "plan": "TMIRE2020",
+      "listadas": 27,
+      "observadas": 27,
+      "ambas": 27,
+      "solo_observadas": 0,
+      "solo_listado": 0,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 27
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TMIRE",
+      "plan": "TMIRE20211",
+      "listadas": 28,
+      "observadas": 28,
+      "ambas": 28,
+      "solo_observadas": 0,
+      "solo_listado": 0,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 28
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPARE",
+      "plan": "TPARE2020",
+      "listadas": 23,
+      "observadas": 11,
+      "ambas": 11,
+      "solo_observadas": 0,
+      "solo_listado": 12,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 11
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPARE",
+      "plan": "TPARE20211",
+      "listadas": 24,
+      "observadas": 12,
+      "ambas": 12,
+      "solo_observadas": 0,
+      "solo_listado": 12,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 12
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPAREOL",
+      "plan": "TPAREOL2020",
+      "listadas": 23,
+      "observadas": 11,
+      "ambas": 11,
+      "solo_observadas": 0,
+      "solo_listado": 12,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 11
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPAREOL",
+      "plan": "TPAREOL20211",
+      "listadas": 24,
+      "observadas": 12,
+      "ambas": 12,
+      "solo_observadas": 0,
+      "solo_listado": 12,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 12
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPAREOL",
+      "plan": "TPAREOL20231",
+      "listadas": 24,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPAS",
+      "plan": "TPAS20241",
+      "listadas": 26,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 16,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPCRE",
+      "plan": "TPCRE20151",
+      "listadas": 23,
+      "observadas": 2,
+      "ambas": 2,
+      "solo_observadas": 0,
+      "solo_listado": 21,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 2
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPCRE",
+      "plan": "TPCRE20191",
+      "listadas": 23,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPCREOL",
+      "plan": "TPCREOL",
+      "listadas": 23,
+      "observadas": 8,
+      "ambas": 2,
+      "solo_observadas": 6,
+      "solo_listado": 21,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 2
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TPCREOL",
+      "plan": "TPCREOL20191",
+      "listadas": 23,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TTMRE",
+      "plan": "TTMRE20191",
+      "listadas": 23,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TTMRE",
+      "plan": "TTMRE20211",
+      "listadas": 24,
+      "observadas": 12,
+      "ambas": 11,
+      "solo_observadas": 1,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 11
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TTMREOL",
+      "plan": "TPCPASO",
+      "estado": "E: carrera y plan no encontrados en listado",
+      "observadas": 1
+    },
+    {
+      "carrera_umas": "TTMREOL",
+      "plan": "TTMREOL20191",
+      "listadas": 23,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TTMREOL",
+      "plan": "TTMREOL20211",
+      "listadas": 24,
+      "observadas": 11,
+      "ambas": 11,
+      "solo_observadas": 0,
+      "solo_listado": 13,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 11
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    },
+    {
+      "carrera_umas": "TTMREOL",
+      "plan": "TTMREOL20231",
+      "listadas": 24,
+      "observadas": 10,
+      "ambas": 10,
+      "solo_observadas": 0,
+      "solo_listado": 14,
+      "comparacion_nivel": {
+        "nivel_coincidente_unico": 10
+      },
+      "estado": "B/C coincidencia estructural; E vigencia y completitud por plan"
+    }
+  ],
+  "limitaciones": "El listado no acredita por sí mismo su vigencia histórica ni completitud. Evidencia de titulados es estado del extracto. No asigna SIES, no determina equivalencias de ramos ni modifica bases."
+}

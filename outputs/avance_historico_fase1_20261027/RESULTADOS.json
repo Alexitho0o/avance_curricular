@@ -1,0 +1,447 @@
+{
+  "clasificacion": "B/C",
+  "proceso": 2026,
+  "datos": 2025,
+  "registros": 2371,
+  "carrera_plan": 43,
+  "corregidos": 247,
+  "grupos_corregidos": 20,
+  "sumas_unidades": {
+    "UNIDADES_CURSADAS": {
+      "h113": 21389,
+      "h114b": 21389,
+      "diferencia": 0
+    },
+    "UNIDADES_APROBADAS": {
+      "h113": 17628,
+      "h114b": 17628,
+      "diferencia": 0
+    },
+    "UNID_CURSADAS_TOTAL": {
+      "h113": 47205,
+      "h114b": 47205,
+      "diferencia": 0
+    },
+    "UNID_APROBADAS_TOTAL": {
+      "h113": 41627,
+      "h114b": 38235,
+      "diferencia": -3392
+    }
+  },
+  "denominador_plan_sumado": 96104,
+  "alcance": "Reproducción desde detalle H112A y CSV H113; no desde RAW PROMEDIOS.",
+  "controles": [
+    {
+      "control": "h112b_csv columnas",
+      "esperado": [
+        21
+      ],
+      "observado": [
+        21
+      ],
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112b_csv"
+    },
+    {
+      "control": "h113_csv columnas",
+      "esperado": [
+        21
+      ],
+      "observado": [
+        21
+      ],
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h113_csv"
+    },
+    {
+      "control": "h114b_csv columnas",
+      "esperado": [
+        21
+      ],
+      "observado": [
+        21
+      ],
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h114b_csv"
+    },
+    {
+      "control": "SHA H112B",
+      "esperado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "observado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "manifest H112B Git"
+    },
+    {
+      "control": "SHA H113",
+      "esperado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "observado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "manifest H113 Git"
+    },
+    {
+      "control": "Carreras filas",
+      "esperado": 43,
+      "observado": 43,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112b_csv"
+    },
+    {
+      "control": "Matrícula filas antes",
+      "esperado": 2371,
+      "observado": 2371,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h113_csv"
+    },
+    {
+      "control": "Matrícula filas después",
+      "esperado": 2371,
+      "observado": 2371,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h114b_csv"
+    },
+    {
+      "control": "H112B precarga llaves conservadas",
+      "esperado": true,
+      "observado": true,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112B hojas01/03"
+    },
+    {
+      "control": "H112B campos precargados inmutables",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112B hojas01/03/04"
+    },
+    {
+      "control": "H112B unidad asignatura",
+      "esperado": [
+        "1"
+      ],
+      "observado": [
+        "1"
+      ],
+      "estado": "PASS",
+      "clasificacion": "B/C/D",
+      "fuente": "H112B"
+    },
+    {
+      "control": "H112B otra unidad vacía",
+      "esperado": [
+        ""
+      ],
+      "observado": [
+        ""
+      ],
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112B"
+    },
+    {
+      "control": "Carreras CSV/Excel filas",
+      "esperado": 43,
+      "observado": 43,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "Carreras CSV/Excel"
+    },
+    {
+      "control": "Carreras CSV/Excel diferencias de celdas normalizadas",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "Carreras CSV/Excel"
+    },
+    {
+      "control": "Matrícula CSV/Excel filas",
+      "esperado": 2371,
+      "observado": 2371,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "Matrícula CSV/Excel"
+    },
+    {
+      "control": "Matrícula CSV/Excel diferencias de celdas normalizadas",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "Matrícula CSV/Excel"
+    },
+    {
+      "control": "Carreras llaves duplicadas",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112b_csv"
+    },
+    {
+      "control": "H113 llaves individuales duplicadas",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113"
+    },
+    {
+      "control": "H113 sin carrera-plan",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113"
+    },
+    {
+      "control": "H114B llaves individuales duplicadas",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H114B"
+    },
+    {
+      "control": "H114B sin carrera-plan",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H114B"
+    },
+    {
+      "control": "Orden y llaves conservadas",
+      "esperado": true,
+      "observado": true,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113/H114B"
+    },
+    {
+      "control": "Detalle asignaturas filas",
+      "esperado": 1711,
+      "observado": 1711,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112A hoja05"
+    },
+    {
+      "control": "Detalle duplicados código-unidad",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112A hoja05"
+    },
+    {
+      "control": "Método A filas",
+      "esperado": 1711,
+      "observado": 1711,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112A hojas05/06"
+    },
+    {
+      "control": "Método A discrepancias",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112A hojas05/06"
+    },
+    {
+      "control": "Distribución recreada / hoja10 diferencias",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112A hojas05/10"
+    },
+    {
+      "control": "H112B campos distribución vs H112A",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112A hoja10/H112B"
+    },
+    {
+      "control": "Suma años = unidades plan",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112B"
+    },
+    {
+      "control": "Distribución fuera duración",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H112B"
+    },
+    {
+      "control": "H114B celdas distintas de fórmula min",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113+H112B contra H114B"
+    },
+    {
+      "control": "Cambios en otras columnas",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113/H114B"
+    },
+    {
+      "control": "Registros corregidos",
+      "esperado": 247,
+      "observado": 247,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113/H114B y manifest H114B"
+    },
+    {
+      "control": "Carrera-plan afectados",
+      "esperado": 20,
+      "observado": 20,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113/H114B y manifest H114B"
+    },
+    {
+      "control": "H113 aprobadas año > cursadas año",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113"
+    },
+    {
+      "control": "H113 aprobadas total > cursadas total",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113"
+    },
+    {
+      "control": "H113 aprobadas año > aprobadas total",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H113"
+    },
+    {
+      "control": "H114B aprobadas año > cursadas año",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H114B"
+    },
+    {
+      "control": "H114B aprobadas total > cursadas total",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H114B"
+    },
+    {
+      "control": "H114B aprobadas año > aprobadas total",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H114B"
+    },
+    {
+      "control": "H114B aprobadas total sobre plan",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "H114B/H112B"
+    },
+    {
+      "control": "Fuente inalterada h112a",
+      "esperado": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "observado": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112a"
+    },
+    {
+      "control": "Fuente inalterada h112a_script",
+      "esperado": "2914cf95c9667e3269e79bd3eb341449d7597f5b23f06b7c17a47f4004553ad7",
+      "observado": "2914cf95c9667e3269e79bd3eb341449d7597f5b23f06b7c17a47f4004553ad7",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112a_script"
+    },
+    {
+      "control": "Fuente inalterada h112b_csv",
+      "esperado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "observado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112b_csv"
+    },
+    {
+      "control": "Fuente inalterada h112b_excel",
+      "esperado": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "observado": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h112b_excel"
+    },
+    {
+      "control": "Fuente inalterada h113_csv",
+      "esperado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "observado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h113_csv"
+    },
+    {
+      "control": "Fuente inalterada h114b_csv",
+      "esperado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "observado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h114b_csv"
+    },
+    {
+      "control": "Fuente inalterada h114b_excel",
+      "esperado": "547c54ed40d074eae4af56e5b6e125351ff6b2d30b3f2a9259e8c21efd255453",
+      "observado": "547c54ed40d074eae4af56e5b6e125351ff6b2d30b3f2a9259e8c21efd255453",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "h114b_excel"
+    },
+    {
+      "control": "Fuente inalterada manual",
+      "esperado": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "observado": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "estado": "PASS",
+      "clasificacion": "B/C",
+      "fuente": "manual"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Contraste de fuentes anuales 2023–2025
+[B/C] Los 89 contextos tienen código completo en su fuente MU anual por documento y DV: 5/5 en 2023, 15/15 en 2024 y 69/69 en 2025. Ninguno de los 89 tiene múltiples códigos para el mismo documento en la fuente de su año. Hashes verificados contra inventario.
+[B/C] En respaldo de preparación MU2025, comparación por documento, carrera UMAS, jornada y código: 47 coincidencias, 20 documentos no encontrados y 2 carreras distintas. Esto corrige el resultado anterior 44/25: aquel cálculo se reproduce con una selección inconsistente; las cifras 47/22 son las de este nuevo contraste sobre los 69 contextos reconstruidos.
+[E] Los conteos no demuestran plan/codcli en matrícula ni aceptación SIES; la ausencia en una hoja de preparación no implica ausencia en la MU anual. No se aplicaron atribuciones.

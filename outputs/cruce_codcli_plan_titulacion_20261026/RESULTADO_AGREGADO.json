@@ -1,0 +1,176 @@
+{
+  "clasificacion": "B fuente; C cruce por CODCLI exacto; E titulo y vigencia",
+  "metodo": "Se seleccionan dos CODCLI presentes en BBDD y se cruzan sin condicionar por RUT en todas las filas de las cuatro fuentes de actividad.",
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/MATRÍCULA UNIFICADA/DATOSDEALUMNOS ORIGEN DE LOS DATOS2025.xlsx",
+      "sha256": "63c5cbc05494e4ac36b97041656ded478cf8deab2f562223e851d1cb2a2ef2f1",
+      "hoja": "BBDD",
+      "codcli_conocidos": 3,
+      "codcli_coincidentes": 2
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/CUMPLIMIENTO INGRESO CALIFICACIONES.xlsx",
+      "sha256": "e1a1162b2f07e8ac434ca18f877d3900159bfaaa6e2c27870b76377635fbef65",
+      "hoja": "MASTER INGRESO 2024",
+      "fila_encabezado": 2,
+      "codcli_distintos_con_match": 1,
+      "filas_coincidentes": 40,
+      "pares_carrera_plan": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "expedientes": 1
+        }
+      ],
+      "periodos": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "1",
+          "filas": 12
+        },
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "2",
+          "filas": 24
+        },
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "3",
+          "filas": 4
+        }
+      ]
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/PRUEBA CUMPLIMIENTO INGRESO CALIFICACIONES T3_2024.xlsx",
+      "sha256": "97c0fc4fbe4dd9a24be611d0960f4ad6c1559db907a9d86d12a039bc89110fa6",
+      "hoja": "DATOS CRUDOS U+ 19-11-2024",
+      "fila_encabezado": 1,
+      "codcli_distintos_con_match": 1,
+      "filas_coincidentes": 4,
+      "pares_carrera_plan": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "expedientes": 1
+        }
+      ],
+      "periodos": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "3",
+          "filas": 4
+        }
+      ]
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/06_INDICADORES_ACADEMICOS_VRA/Cumplimiento Ingreso de Notas.xlsx",
+      "sha256": "40b2c5242e3b5cfaeb68ff573c0a73103f5942282e7cfca4832df1b7f8d69b80",
+      "hoja": "Hoja1",
+      "fila_encabezado": 1,
+      "codcli_distintos_con_match": 1,
+      "filas_coincidentes": 4,
+      "pares_carrera_plan": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "expedientes": 1
+        }
+      ],
+      "periodos": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "3",
+          "filas": 4
+        }
+      ]
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "hoja": "Hoja1",
+      "fila_encabezado": 1,
+      "codcli_distintos_con_match": 2,
+      "filas_coincidentes": 17,
+      "pares_carrera_plan": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "expedientes": 1
+        },
+        {
+          "carrera": "TTMRE",
+          "plan": "TTMRE20211",
+          "expedientes": 1
+        }
+      ],
+      "periodos": [
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "1",
+          "filas": 7
+        },
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "2",
+          "filas": 1
+        },
+        {
+          "carrera": "TCRE",
+          "plan": "TCRE20241",
+          "anio": "2024",
+          "periodo": "3",
+          "filas": 2
+        },
+        {
+          "carrera": "TTMRE",
+          "plan": "TTMRE20211",
+          "anio": "2022",
+          "periodo": "1",
+          "filas": 3
+        },
+        {
+          "carrera": "TTMRE",
+          "plan": "TTMRE20211",
+          "anio": "2022",
+          "periodo": "2",
+          "filas": 1
+        },
+        {
+          "carrera": "TTMRE",
+          "plan": "TTMRE20211",
+          "anio": "2023",
+          "periodo": "1",
+          "filas": 2
+        },
+        {
+          "carrera": "TTMRE",
+          "plan": "TTMRE20211",
+          "anio": "2023",
+          "periodo": "2",
+          "filas": 1
+        }
+      ]
+    }
+  ],
+  "limites": [
+    "CODCLI exacto documenta coincidencia de expediente; no confirma por sí solo identidad de propietario en cada fuente.",
+    "La actividad de asignaturas y un estado académico no son un registro formal de título asignado a un plan.",
+    "El periodo de actividad y fecha de reporte no acreditan la fecha efectiva del cambio de plan.",
+    "No se comparan ni modifican bases, tasas o denominadores; no se infiere fórmula del puntaje 2130."
+  ]
+}

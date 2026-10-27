@@ -1,0 +1,238 @@
+{
+  "clasificacion": "B registros UMAS; C cruce; E autorización y vigencia",
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "pares_con_reconocimiento": 15,
+      "registros_invalidos": 0
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_3233.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e",
+      "pares_con_reconocimiento": 7,
+      "registros_invalidos": 0
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_2071.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "348d1807381e545425c0f204c7321172a522718dec829dd9a60bf5dd07e45ef1",
+      "pares_con_reconocimiento": 10,
+      "registros_invalidos": 0
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "pares_con_reconocimiento": 15,
+      "registros_invalidos": 0
+    }
+  ],
+  "metodo": "Llave con RUT, DV, CODCLI, carrera, plan, año, periodo, ramo, sección, estado, descripción, RAMOEQUIV y CONVALIDADO; identidades solo en memoria. Se retienen únicamente I/E; no se suman extracciones.",
+  "totales": {
+    "pares_con_registro_7804": 15,
+    "pares_con_mismo_registro_en_otra_extraccion": 15,
+    "registros_en_7804": 21,
+    "registros_repetidos": 21
+  },
+  "pares": [
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA101IECIREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA103IECIREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU105IEMORE",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU201IEMORE",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "registros_en_7804": 2,
+      "registros_repetidos_en_al_menos_otra_extraccion": 2,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 2,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 2
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "registros_en_7804": 2,
+      "registros_repetidos_en_al_menos_otra_extraccion": 2,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 2,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 2,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 2
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "registros_en_7804": 2,
+      "registros_repetidos_en_al_menos_otra_extraccion": 2,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 2,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 2,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 2
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "registros_en_7804": 2,
+      "registros_repetidos_en_al_menos_otra_extraccion": 2,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 2
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG11TPCREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG12TPCREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG16TPCREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG17TPCREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG21TPCREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 0,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG26TPCREOL",
+      "registros_en_7804": 1,
+      "registros_repetidos_en_al_menos_otra_extraccion": 1,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 1,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 1
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    },
+    {
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "registros_en_7804": 3,
+      "registros_repetidos_en_al_menos_otra_extraccion": 3,
+      "coincidencias_por_otra_extraccion": {
+        "PROMEDIOSDEALUMNOS_3233.xlsx": 3,
+        "PROMEDIOSDEALUMNOS_2071.xlsx": 3,
+        "PROMEDIOSDEALUMNOS_12166.xlsx": 3
+      },
+      "personas_de_los_cuatro_casos_en_7804": 0
+    }
+  ],
+  "limites": "Cortes potencialmente derivados de la misma base no son evidencia administrativa independiente. Coincidencia no prueba autorización, vigencia del plan, equivalencia universal ni título."
+}

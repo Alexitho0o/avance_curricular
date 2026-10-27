@@ -1,0 +1,5 @@
+# Fase 2 — períodos y cambios de expediente: siete contextos
+[B/C] Revisados siete contextos de siete personas y expedientes contra Datos Alumnos 11248 y 12159; en los siete aparecen tanto el CODCLI del contexto como otro CODCLI de la persona. En los siete existe año de matrícula del expediente propio igual al año del contexto. En los siete el otro expediente declara ingreso en el mismo año o antes; esto no fecha el cambio efectivo.
+[B/C] En cinco contextos ambos expedientes tienen código anual igual en el diccionario. En dos de 2025 la preparación indica TPAREOL frente a actividad TPAS. Las familias comunes no sustituyen evidencia de relación entre plan y expediente.
+[E] No se documentó vigencia de plan al período o fecha efectiva de migración. Se mantienen siete pendientes, sin asumir error, deserción ni equivalencia. [C] Sin cambio de diccionario, bases o denominadores; sin commit o push.
+[E] Continuación concreta: contrastar por CODCLI la bitácora de cambios de plan y los respaldos de inscripción/notas por período que declaren fechas y procedencia; si no existen, conservar excepción sin repetir búsquedas ya agotadas.

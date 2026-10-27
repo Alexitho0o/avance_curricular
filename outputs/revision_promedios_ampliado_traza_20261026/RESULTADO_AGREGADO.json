@@ -1,0 +1,573 @@
+{
+  "clasificacion": "B fuentes; C cruce y traza; E regla de puntuación y homologación",
+  "fuentes": [
+    {
+      "etiqueta": "7804_previo",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "filas_objetivo": 33,
+      "llaves_distintas": 33,
+      "llaves_incompletas": 0,
+      "llaves_multiples": 0,
+      "ramos_encontrados": 21
+    },
+    {
+      "etiqueta": "7804_ampliado",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71",
+      "filas_objetivo": 33,
+      "llaves_distintas": 33,
+      "llaves_incompletas": 0,
+      "llaves_multiples": 0,
+      "ramos_encontrados": 21
+    }
+  ],
+  "llave": "RUT cuerpo+DV+CODCLI+carrera+plan+año+período+CODRAMO+CODSECC; datos personales solo en memoria",
+  "comparacion": {
+    "llaves_comunes": 33,
+    "solo_previo": 0,
+    "solo_ampliado": 0,
+    "llaves_comunes_con_atributos_distintos": 12,
+    "cambios_por_campo": {
+      "CONVALIDADO": 12
+    },
+    "patrones_valor_sin_contenido": [
+      {
+        "campo": "CONVALIDADO",
+        "previo": "NULL",
+        "ampliado": "VACIO",
+        "llaves": 12
+      }
+    ],
+    "ramos_con_llaves_extra_ampliado": 0,
+    "detalle_llaves_extra": []
+  },
+  "estados_por_fuente": [
+    {
+      "fuente": "7804_previo",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA101IECIREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA103IECIREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA401IECIREOL",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20211",
+      "ramo": "AS31TPAREOL",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 4
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU105IEMORE",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU201IEMORE",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU305IEMORE",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "CA306IEMORE",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "ramo": "CA306IETMRE",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "ramo": "CA306IETMRE",
+      "estado": "R",
+      "descripcion": "REPROBADO",
+      "filas": 2
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "estado": "R",
+      "descripcion": "REPROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG302IETMREOL",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG11TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG12TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG16TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG17TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG21TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG26TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 2
+    },
+    {
+      "fuente": "7804_previo",
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA101IECIREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA103IECIREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20201",
+      "ramo": "CA401IECIREOL",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IECIREOL",
+      "plan": "IECIREOL20211",
+      "ramo": "AS31TPAREOL",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 4
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU105IEMORE",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU201IEMORE",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "AU305IEMORE",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IEMORE",
+      "plan": "IEMORE20211",
+      "ramo": "CA306IEMORE",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "ramo": "CA306IETMRE",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMRE",
+      "plan": "IETMRE20191",
+      "ramo": "CA306IETMRE",
+      "estado": "R",
+      "descripcion": "REPROBADO",
+      "filas": 2
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "estado": "R",
+      "descripcion": "REPROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "IETMREOL",
+      "plan": "IETMREOL",
+      "ramo": "AG302IETMREOL",
+      "estado": "A",
+      "descripcion": "APROBADO",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG11TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG12TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG16TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG17TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG21TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TPCREOL",
+      "plan": "TPCREOL",
+      "ramo": "AG26TPCREOL",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 1
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "estado": "E",
+      "descripcion": "CONVALIDACION",
+      "filas": 2
+    },
+    {
+      "fuente": "7804_ampliado",
+      "carrera": "TTMRE",
+      "plan": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "estado": "I",
+      "descripcion": "HOMOLOGADO",
+      "filas": 1
+    }
+  ],
+  "traza": {
+    "personas": 4,
+    "filas_traza": 4,
+    "puntajes": {
+      "2130": 4
+    },
+    "temas_literales": {
+      "RUT": 4,
+      "PLAN": 4,
+      "CARRERA": 4,
+      "FAMILIA": 4,
+      "JORNADA": 4,
+      "ANO": 4,
+      "INGRESO": 4,
+      "NOMBRE": 4,
+      "EXACTO": 4
+    },
+    "advertencia": "Los temas muestran términos de TRACE_REASONS, no la fórmula o su peso. La traza elige candidato, no acredita plan formal ni aceptación."
+  },
+  "limitaciones": "No sumar extracciones, no inferir vigencia o aprobación de malla. Estado de asignatura no reemplaza resolución. No se modifica base o denominadores."
+}

@@ -1,0 +1,130 @@
+{
+  "estado": "PARCIAL_CON_ALERTAS_DE_ATRIBUCION",
+  "controles_integridad": [
+    {
+      "control": "Hash PROMEDIOS fuente H51",
+      "esperado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "observado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Hash H113",
+      "esperado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "observado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Filas precarga",
+      "esperado": 2371,
+      "observado": 2371,
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Filas H113",
+      "esperado": 2371,
+      "observado": 2371,
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Llaves precarga/H113 en orden",
+      "esperado": true,
+      "observado": true,
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Llaves individuales sin duplicados",
+      "esperado": 0,
+      "observado": 0,
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Conciliacion universo reproducido",
+      "esperado": 2371,
+      "observado": 2371,
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Fuente conservada promedios",
+      "esperado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "observado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Fuente conservada precarga",
+      "esperado": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "observado": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Fuente conservada h113",
+      "esperado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "observado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Fuente conservada h114b",
+      "esperado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "observado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Cambio ajeno conservado PROYECTO_IPSS.json",
+      "esperado": "3a85f1976f9fd22f7c3beb9fd4387e8d84a707d338b0cd7faca9b77719a878c5",
+      "observado": "3a85f1976f9fd22f7c3beb9fd4387e8d84a707d338b0cd7faca9b77719a878c5",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Cambio ajeno conservado data/diccionario_sies_seguimiento/activo.json",
+      "esperado": "a3eb344f574d0032a25de06d89010047ac6ca3f46809930621ed2a79825fc883",
+      "observado": "a3eb344f574d0032a25de06d89010047ac6ca3f46809930621ed2a79825fc883",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Cambio ajeno conservado docs/DICCIONARIO_SIES_SEGUIMIENTO.md",
+      "esperado": "4ce383104201543da7505046b679c521badb969f40970aa959cf948b2453edc2",
+      "observado": "4ce383104201543da7505046b679c521badb969f40970aa959cf948b2453edc2",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Cambio ajeno conservado scripts/consultar_diccionario_sies_seguimiento.py",
+      "esperado": "3d8481b3251ac045adaed1f0391ff5087fd77bc020916c386d1a995ad806df7b",
+      "observado": "3d8481b3251ac045adaed1f0391ff5087fd77bc020916c386d1a995ad806df7b",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "HEAD conservado",
+      "esperado": "262f445828f7e939fac59c3cc76d0bb20a101746",
+      "observado": "262f445828f7e939fac59c3cc76d0bb20a101746",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    },
+    {
+      "control": "Rama conservada",
+      "esperado": "feature/ire-2026",
+      "observado": "feature/ire-2026",
+      "estado": "PASS",
+      "clasificacion": "B/C"
+    }
+  ],
+  "coincidencia_no_es_validacion_funcional": true,
+  "conciliacion_primaria": {
+    "estado": "PENDIENTE",
+    "registros_diferentes": 1,
+    "mapeo_externo_recuperado": false
+  }
+}

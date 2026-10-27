@@ -1,0 +1,59 @@
+{
+  "clasificacion": "B observaciones; C cruce; E fecha de cambio",
+  "grupos": {
+    "DA_P2": [
+      {
+        "periodo_diferencia": "2",
+        "estado_en_respaldo": "VIGENTE",
+        "expedientes": 2
+      },
+      {
+        "periodo_diferencia": "3",
+        "estado_en_respaldo": "VIGENTE",
+        "expedientes": 1
+      }
+    ],
+    "DA_P3": [
+      {
+        "periodo_diferencia": "2",
+        "estado_en_respaldo": "VIGENTE",
+        "expedientes": 2
+      },
+      {
+        "periodo_diferencia": "3",
+        "estado_en_respaldo": "VIGENTE",
+        "expedientes": 1
+      }
+    ],
+    "DA_12159": [
+      {
+        "periodo_diferencia": "2",
+        "estado_en_respaldo": "SUSPENDIDO",
+        "expedientes": 2
+      },
+      {
+        "periodo_diferencia": "3",
+        "estado_en_respaldo": "ELIMINADO",
+        "expedientes": 1
+      }
+    ]
+  },
+  "fuentes": {
+    "DA_P2": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869"
+    },
+    "DA_P3": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/DATOSDEALUMNOS_11998.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "5d2df5e7998a4ec903e12d51b25114e8f1ff36da57cecaf623e90398b0828f35"
+    },
+    "DA_12159": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_12159.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    }
+  },
+  "limite": "Los estados de cada extracción no acreditan fecha de cambio ni estado en cierre."
+}

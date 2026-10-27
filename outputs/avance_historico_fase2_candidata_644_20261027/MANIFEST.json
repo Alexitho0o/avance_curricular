@@ -1,0 +1,85 @@
+{
+  "fecha_utc": "2026-10-27T13:07:47.221680+00:00",
+  "clasificacion": "B fuentes; C candidata y simulación; E aprobación pendiente",
+  "fuentes": {
+    "promedios": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "bytes": 27787332
+    },
+    "precarga": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_Precarga Matrícula Avance Curricular 2026.csv",
+      "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "bytes": 254294
+    },
+    "h113": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/AVANCE_CURRICULAR_2026_SALIDAS_20260704_221542/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_FINAL_H113_REGENERADO.csv",
+      "sha256": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "bytes": 247825
+    },
+    "h114b": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_MATRICULA_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16768_H114B_CORREGIDO_PLAN.csv",
+      "sha256": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "bytes": 247823
+    }
+  },
+  "fuentes_mu": {
+    "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx": {
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "referencias_verificadas": 514
+    },
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx": {
+      "sha256": "8f14b670f00f725412d9dadffea5db9ad2de97b536c88dad992d4370252c401e",
+      "referencias_verificadas": 20
+    },
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2020.xlsx": {
+      "sha256": "a74cfc67d9129d185d098a789923b4588e5ebb4e02b152f7af43caaf16483b27",
+      "referencias_verificadas": 11
+    },
+    "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2019.xlsx": {
+      "sha256": "02fb4af6dbcbe4efbb5410a410c58c0546d303dd3d33e43217110e2e1a4cf7c8",
+      "referencias_verificadas": 5
+    }
+  },
+  "codigo_reutilizado": {
+    "outputs/avance_historico_atribucion_20261027/auditar_atribucion.py": "534b075f836269948e14bd1db30b97ea4204a47739833cd263de4101c246cdce",
+    "outputs/avance_historico_periodos_815_20261027/revisar_periodos.py": "e22d430a34056c9223153e72d38849cf5803832b8891af24d8a07ac3a52b89b9",
+    "outputs/avance_historico_periodos_815_20261027/verificar_evidencia.py": "5e1e18cb8aae9e43df94d7488a2aeb569e668f98c115260faa0d06ee1b8f3bf8"
+  },
+  "diccionario": {
+    "edicion": "v11_20261026_86_promedios_integrada",
+    "base_sha256": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141",
+    "estado": "SIN_CAMBIOS"
+  },
+  "detalle_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/avance_historico_candidata_644_20261027/PROPUESTAS_CONTEXTUALES_644.json",
+    "sha256": "4e41f7e692a0927d74e0f24cf6a4cadb84482e6d34b504a8237565df93502cd2",
+    "git": false
+  },
+  "git_antes": {
+    "head": "262f445828f7e939fac59c3cc76d0bb20a101746",
+    "rama": "feature/ire-2026"
+  },
+  "git_despues": {
+    "rama": "feature/ire-2026",
+    "head": "262f445828f7e939fac59c3cc76d0bb20a101746"
+  },
+  "commit": false,
+  "push": false,
+  "salidas": {
+    "CHECKPOINT.json": "c67281729223d14679383ac1504caf905010e71bfb2eba1e46fb0c73817db3d4",
+    "QA.json": "24719d524961c0bc664e15d7c0aaec2d536e910d7bcef4f5cefec3d03290a9f2",
+    "INFORME_FASE2.md": "5b8c58683d9179ba878e408b2d1b469a3209303caf539ee563e364a7b1910c33",
+    "cerrar_entrega.py": "2d12b019275d3d686417da713c435e40cf0dff8f5a241eb7258025194899ad3c",
+    "QA_ENTREGA.json": "ddbf5bec38ea089fbce965c08460abbd2c6d40b732030383c01bfad6bb4f83d6",
+    "VERIFICACION_FUENTES_Y_CONTEXTO.json": "e65facba656b7cddfe97885022e07f61989883f615ec22ff61e328b1d87fd7b1",
+    "INCIDENCIA_TECNICA.json": "f3aa9e1469484dc636c382fb5997db5093b0def6808e6730d34c307e1ddfbe88",
+    "CANDIDATOS_POR_CODIGO.csv": "92c29b02c9c79e4cdc6d1d52b621da0cf0ed8acd0cc46ae6464835c5d796ff52",
+    "RESULTADOS.json": "633afa0ccaad0d16aead18ed34ce6654c4f6dc60c257b256e10f8c3c0a52e6a3",
+    "preparar_candidata.py": "12aa75e01f1187c798705c3465706e65b293ab84e61ce4cb97bbe55001d18e87"
+  },
+  "especificacion": {
+    "ruta": "docs/ESPECIFICACION_CANDIDATA_644_AVANCE_20261027.md",
+    "sha256": "3ebaecba57737f3af3493828f45dcf6429fc80106458c87519d554947e39aa51"
+  }
+}

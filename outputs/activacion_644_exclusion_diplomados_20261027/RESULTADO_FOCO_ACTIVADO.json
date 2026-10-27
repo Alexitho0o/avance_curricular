@@ -1,0 +1,99 @@
+{
+  "clase": "B/C/D/E",
+  "universo_total": 2371,
+  "filas_foco": 489,
+  "filas_aun_multicarrera_con_identidad_exacta": 470,
+  "filas_sin_actividad_exacta": 0,
+  "personas_con_actividad_exacta": 488,
+  "expedientes_persona_codcli_carrera": 1032,
+  "contextos_unicos_consultados": 5144,
+  "filas_con_actividad_de_otra_familia_respaldada": 122,
+  "estados_anuales_filas": {
+    "TODO_ANUAL_MISMO_CODIGO": 267,
+    "CON_ATRIBUCION_ANUAL_PENDIENTE": 194,
+    "CODIGOS_ANUALES_RESPALDADOS_DISTINTOS": 1,
+    "SIN_UNIDADES_ANUALES_A_R_OBSERVADAS": 27
+  },
+  "estados_acumulados_filas": {
+    "TODO_MISMO_CODIGO": 141,
+    "CON_CONTEXTO_PENDIENTE": 327,
+    "CODIGOS_COMPLETOS_CON_CAMBIOS": 21
+  },
+  "unidades_H113_foco": {
+    "cursadas_2025": 4425,
+    "aprobadas_2025": 3899,
+    "cursadas_acumuladas": 22291,
+    "aprobadas_acumuladas": 20515
+  },
+  "unidades_identidad_exacta_foco": {
+    "cursadas_2025": 4296,
+    "aprobadas_2025": 3792,
+    "cursadas_acumuladas": 21781,
+    "aprobadas_acumuladas": 20038
+  },
+  "particion_unidades_por_atribucion": {
+    "MISMO_CODIGO": {
+      "cursadas_2025": 2754,
+      "aprobadas_2025": 2398,
+      "cursadas_acumuladas": 13038,
+      "aprobadas_acumuladas": 12043
+    },
+    "OTRA_VERSION_MISMA_FAMILIA": {
+      "cursadas_2025": 0,
+      "aprobadas_2025": 0,
+      "cursadas_acumuladas": 204,
+      "aprobadas_acumuladas": 169
+    },
+    "OTRA_FAMILIA": {
+      "cursadas_2025": 19,
+      "aprobadas_2025": 17,
+      "cursadas_acumuladas": 2796,
+      "aprobadas_acumuladas": 2520
+    },
+    "PENDIENTE": {
+      "cursadas_2025": 1523,
+      "aprobadas_2025": 1377,
+      "cursadas_acumuladas": 5743,
+      "aprobadas_acumuladas": 5306
+    }
+  },
+  "motivos_pendientes_consulta_por_fila_precarga": {
+    "SIN_EVIDENCIA_ANUAL_APLICABLE": 367,
+    "CONTEXTO_NO_LOCALIZADO": 934,
+    "CONTEXTO_ACTIVIDAD_SEDE_HISTORICA_PENDIENTE": 15,
+    "CONTRADICCION_O_ATRIBUCION_MULTIPLE": 29,
+    "JORNADA_RAW_NO_CONFIRMADA_EN_MAPEO": 31,
+    "HOMOLOGACION_EN_PLAN_RECHAZADO_SIN_VERSION": 1
+  },
+  "diagnostico_contextos_unicos_no_localizados": {
+    "causas": {
+      "PERIODO_NO_INDEXADO": 171,
+      "EXPEDIENTE_NO_INDEXADO": 762,
+      "CARRERA_DISTINTA_EN_INDICE": 1
+    },
+    "anios": {
+      "2025": 410,
+      "2019": 89,
+      "2023": 78,
+      "2024": 185,
+      "2022": 62,
+      "2020": 56,
+      "2021": 54
+    }
+  },
+  "niveles_respaldo_contextos_unicos": {
+    "B/C_DOCUMENTAL_ANUAL_ATRIBUIDO": 3109,
+    "E_PENDIENTE": 1374,
+    "D_CORRESPONDENCIA_INTERNA_APROBADA": 661
+  },
+  "edicion_diccionario": "v12_20261027_644_internos",
+  "escenario_adoptado": true,
+  "limites": [
+    "PLAN_ESTUDIOS SIES numerico no equivale al nombre de plan UMAS. Coincidencia de codigo no cierra ese enlace.",
+    "Otra familia/version histórica no excluye reconocimiento valido; requiere equivalencia aplicable al plan destino.",
+    "Unidades son aportes a filas H113; pueden reutilizar contextos. No son personas ni asignaturas únicas institucionales.",
+    "No se calculan tasas; no se adopta correccion ni se cambia denominador."
+  ],
+  "pendientes_contextos": 1374,
+  "coincide_con_simulacion_aprobada": true
+}

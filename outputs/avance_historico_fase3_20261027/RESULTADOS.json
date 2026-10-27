@@ -1,0 +1,127 @@
+{
+  "clase": "B/C/E",
+  "fase": 3,
+  "hitos": {
+    "3.1": "VALIDACION_MATEMATICA_CONGELADA; ATRIBUCION_INTEGRAL_PENDIENTE",
+    "3.2": "PERFIL_POR_PERIODO_LITERAL_COMPLETADO; COBERTURA_Y_CALENDARIO_PENDIENTES",
+    "3.3": "PERTENENCIA_EXACTA_A_LISTADO_CALCULADA; VIGENCIA_Y_EQUIVALENCIAS_PENDIENTES"
+  },
+  "candidata_644_aplicada": false,
+  "totales_congelados": {
+    "registros": 2371,
+    "denominador_plan_sumado": 96104,
+    "cursadas_anual": 21389,
+    "aprobadas_anual": 17628,
+    "cursadas_acumuladas": 47205,
+    "aprobadas_acumuladas_H113": 41627,
+    "aprobadas_acumuladas_H114B": 38235
+  },
+  "cocientes_observados": {
+    "aprobacion_anual": 0.8241619524054421,
+    "avance_acumulado_H113": 0.43314534254557563,
+    "avance_acumulado_H114B": 0.3978502455673021
+  },
+  "alertas_limite_plan": {
+    "H113_sobre_plan": 247,
+    "H113_sobre_125pct_plan": 166,
+    "H114B_sobre_plan": 0,
+    "H114B_sobre_125pct_plan": 0
+  },
+  "errores_aritmeticos": {
+    "H113_negativos": 0,
+    "H113_aprobadas_anual_sobre_cursadas": 0,
+    "H113_aprobadas_acum_sobre_cursadas": 0,
+    "H114B_negativos": 0,
+    "H114B_aprobadas_anual_sobre_cursadas": 0,
+    "H114B_aprobadas_acum_sobre_cursadas": 0
+  },
+  "extractos_internos_separados": {
+    "prom7804": {
+      "filas_RAW": 129493,
+      "filas_identidad_comparable": 129493,
+      "filas_sin_llave_documental_completa": 0,
+      "eventos_despues_deduplicacion_diagnostica": 129493,
+      "repeticiones_exactas_evento": 0,
+      "eventos_sin_ano_o_periodo": 4211,
+      "personas_observadas": 11241,
+      "expedientes_persona_codcli": 13068,
+      "expediente_plan_jornada": 13072,
+      "estados_listado": {
+        "PLAN_NO_LOCALIZADO": 4217,
+        "LISTADO_EXACTO_DISPONIBLE_VIGENCIA_PENDIENTE": 8855
+      },
+      "niveles_comparacion_eventos": {
+        "SIN_NIVEL_O_RAMO_EN_LISTADO": 4754,
+        "NIVEL_COINCIDE_LISTADO": 124739
+      },
+      "anos_observados": [
+        "",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "periodos_observados": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "limite": "Extractos separados; cobertura completa no certificada. Ningún estado actual se retroproyecta."
+    },
+    "prom12166": {
+      "filas_RAW": 70000,
+      "filas_identidad_comparable": 70000,
+      "filas_sin_llave_documental_completa": 0,
+      "eventos_despues_deduplicacion_diagnostica": 70000,
+      "repeticiones_exactas_evento": 0,
+      "eventos_sin_ano_o_periodo": 0,
+      "personas_observadas": 7938,
+      "expedientes_persona_codcli": 8975,
+      "expediente_plan_jornada": 8976,
+      "estados_listado": {
+        "LISTADO_EXACTO_DISPONIBLE_VIGENCIA_PENDIENTE": 8956,
+        "PLAN_NO_LOCALIZADO": 20
+      },
+      "niveles_comparacion_eventos": {
+        "NIVEL_COINCIDE_LISTADO": 69898,
+        "SIN_NIVEL_O_RAMO_EN_LISTADO": 102
+      },
+      "anos_observados": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "periodos_observados": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "limite": "Extractos separados; cobertura completa no certificada. Ningún estado actual se retroproyecta."
+    }
+  },
+  "listado": {
+    "carrera_plan": 223,
+    "sin_divergencia_de_ramos_entre_sedes": 223,
+    "con_divergencia_de_ramos_entre_sedes": 0,
+    "tipos_filas": {
+      "OBL": 11413,
+      "OPC": 25
+    }
+  },
+  "filas_tabla_mallas": 565,
+  "limite": "No hay nueva tasa oficial ni avance final aprobado; el listado no certifica vigencia/completitud histórica. Los estados A/E/I/R son códigos observados de resultado, no VIG."
+}

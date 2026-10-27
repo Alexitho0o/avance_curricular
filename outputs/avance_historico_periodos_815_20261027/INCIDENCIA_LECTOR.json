@@ -1,0 +1,9 @@
+{
+  "clase": "C",
+  "causa": "El verificador nuevo comparó MC_CAT_PERIODO literal MAT_2019/MAT_2020/MAT_2021 contra el año numérico del índice. El constructor gobernado elimina el prefijo MAT_.",
+  "evidencia_codigo": "scripts/reproducir_puente_20261023.py:138",
+  "ajuste": "Aplicar la normalización ya gobernada exclusivamente al campo MC_CAT_PERIODO.",
+  "afectados_control": 66,
+  "bases_modificadas": false,
+  "estado": "RESUELTA_EN_VERIFICADOR; 751 enlaces comprobados, 0 diferencias"
+}

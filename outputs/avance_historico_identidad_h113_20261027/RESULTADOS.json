@@ -1,0 +1,302 @@
+{
+  "clase": "B/C/E",
+  "universo": 2371,
+  "denominadores_modificados": false,
+  "escenario_adoptado": false,
+  "campos": [
+    "CURSO_1ER_SEM",
+    "CURSO_2DO_SEM",
+    "UNIDADES_CURSADAS",
+    "UNIDADES_APROBADAS",
+    "UNID_CURSADAS_TOTAL",
+    "UNID_APROBADAS_TOTAL"
+  ],
+  "conciliacion_legacy": {
+    "coinciden": 2370,
+    "difieren": 1
+  },
+  "escenario_cuerpo_completo": {
+    "registros_con_cambio_vs_legacy": 27,
+    "sumas_h113": {
+      "UNIDADES_CURSADAS": 21389,
+      "UNIDADES_APROBADAS": 17628,
+      "UNID_CURSADAS_TOTAL": 47205,
+      "UNID_APROBADAS_TOTAL": 41627
+    },
+    "sumas_legacy": {
+      "UNIDADES_CURSADAS": 21377,
+      "UNIDADES_APROBADAS": 17616,
+      "UNID_CURSADAS_TOTAL": 47193,
+      "UNID_APROBADAS_TOTAL": 41615
+    },
+    "sumas_cuerpo": {
+      "UNIDADES_CURSADAS": 21232,
+      "UNIDADES_APROBADAS": 17509,
+      "UNID_CURSADAS_TOTAL": 46667,
+      "UNID_APROBADAS_TOTAL": 41138
+    },
+    "cobertura_dv_en_filas_que_cambian": {
+      "con_asignaturas_cuerpo_y_dv_exactos": 27
+    }
+  },
+  "siete_grupos": [
+    {
+      "grupo": "COL-01",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C46J4V3",
+        "I162S2C47J4V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        22,
+        14,
+        74,
+        64
+      ],
+      "unidades_escenario_cuerpo": [
+        11,
+        7,
+        37,
+        32
+      ],
+      "clase": "B/C/E"
+    },
+    {
+      "grupo": "COL-02",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C1J4V2",
+        "I162S2C76J2V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        50,
+        40,
+        50,
+        40
+      ],
+      "unidades_escenario_cuerpo": [
+        25,
+        20,
+        25,
+        20
+      ],
+      "clase": "B/C/E"
+    },
+    {
+      "grupo": "COL-03",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C47J4V1",
+        "I162S2C88J4V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        32,
+        24,
+        32,
+        24
+      ],
+      "unidades_escenario_cuerpo": [
+        16,
+        12,
+        16,
+        12
+      ],
+      "clase": "B/C/E"
+    },
+    {
+      "grupo": "COL-04",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C46J4V3",
+        "I162S2C91J2V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        56,
+        46,
+        128,
+        116
+      ],
+      "unidades_escenario_cuerpo": [
+        28,
+        23,
+        64,
+        58
+      ],
+      "clase": "B/C/E"
+    },
+    {
+      "grupo": "COL-05",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C3J4V2",
+        "I162S2C46J2V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        48,
+        48,
+        142,
+        142
+      ],
+      "unidades_escenario_cuerpo": [
+        24,
+        24,
+        71,
+        71
+      ],
+      "clase": "B/C/E"
+    },
+    {
+      "grupo": "COL-06",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C46J4V3",
+        "I162S2C57J4V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        36,
+        36,
+        118,
+        118
+      ],
+      "unidades_escenario_cuerpo": [
+        18,
+        18,
+        59,
+        59
+      ],
+      "clase": "B/C/E"
+    },
+    {
+      "grupo": "COL-07",
+      "filas_precarga": 2,
+      "codigos_sies": [
+        "I162S2C85J4V1"
+      ],
+      "filas_con_cambio_en_conteos": 2,
+      "unidades_antes": [
+        32,
+        0,
+        32,
+        0
+      ],
+      "unidades_escenario_cuerpo": [
+        16,
+        0,
+        16,
+        0
+      ],
+      "clase": "B/C/E"
+    }
+  ],
+  "registro_diferente": [
+    {
+      "clase": "B/C/E",
+      "tipo_documento": "P",
+      "codigo_sies": "I162S2C1J2V4",
+      "plan_sies": "1",
+      "dv_presente": false,
+      "coincidencias_cuerpo_por_hoja": {
+        "Hoja1": 0,
+        "DatosAlumnos": 0,
+        "Matricula_2025": 0,
+        "base_datos": 0
+      },
+      "h113": {
+        "CURSO_1ER_SEM": 1,
+        "CURSO_2DO_SEM": 1,
+        "UNIDADES_CURSADAS": 12,
+        "UNIDADES_APROBADAS": 12,
+        "UNID_CURSADAS_TOTAL": 12,
+        "UNID_APROBADAS_TOTAL": 12
+      },
+      "legacy": {
+        "CURSO_1ER_SEM": 0,
+        "CURSO_2DO_SEM": 0,
+        "UNIDADES_CURSADAS": 0,
+        "UNIDADES_APROBADAS": 0,
+        "UNID_CURSADAS_TOTAL": 0,
+        "UNID_APROBADAS_TOTAL": 0
+      },
+      "cuerpo": {
+        "CURSO_1ER_SEM": 0,
+        "CURSO_2DO_SEM": 0,
+        "UNIDADES_CURSADAS": 0,
+        "UNIDADES_APROBADAS": 0,
+        "UNID_CURSADAS_TOTAL": 0,
+        "UNID_APROBADAS_TOTAL": 0
+      },
+      "consulta_diccionario": "DV ausente; contrato no permite inventarlo"
+    }
+  ],
+  "limites": [
+    "Escenario de identidad exclusivamente; conserva seleccion multicarrera del historico.",
+    "Cuerpo sin DV no es cierre de identidad; DV se contrasta separadamente.",
+    "No se recupero MAPEO_IDENTIDAD_CODCLI.xlsx; no se afirma reproduccion integral.",
+    "No hay datos individuales en las salidas."
+  ],
+  "puente_explicito_mu": [
+    {
+      "clase": "B/C/E",
+      "hoja": "2025_carga",
+      "columnas": [
+        "J RUT",
+        "BU N_DOC",
+        "BV DV",
+        "CD:CI componentes SIES"
+      ],
+      "filas_coincidentes": 1,
+      "identificadores_internos_distintos": 1,
+      "codigos_observados": [
+        "I162S2C1J2V4"
+      ],
+      "codigo_h113_presente": true,
+      "resultado": "PENDIENTE",
+      "tipo_h113": "P",
+      "tipos_final_carga": [
+        "R"
+      ],
+      "dv_h113_presente": false,
+      "dv_puente_presente": true,
+      "dv_igual_h113": false,
+      "criterio": "N_DOC exacto + codigo completo; la discrepancia tipo/DV no se resuelve ni se omite",
+      "rut_interno_con_dv_explicito": true,
+      "dv_coincide_promedios": false,
+      "codcli_en_asignaturas": 0,
+      "planes_en_asignaturas": [],
+      "carreras_en_asignaturas": [],
+      "valores_por_enlace": {
+        "CURSO_1ER_SEM": 0,
+        "CURSO_2DO_SEM": 0,
+        "UNIDADES_CURSADAS": 0,
+        "UNIDADES_APROBADAS": 0,
+        "UNID_CURSADAS_TOTAL": 0,
+        "UNID_APROBADAS_TOTAL": 0
+      },
+      "reproduce_seis_columnas": false
+    }
+  ],
+  "escenario_condicionado_legacy_mas_puente": {
+    "coinciden_seis": 2370,
+    "sumas": {
+      "UNIDADES_CURSADAS": 21377,
+      "UNIDADES_APROBADAS": 17616,
+      "UNID_CURSADAS_TOTAL": 47193,
+      "UNID_APROBADAS_TOTAL": 41615
+    }
+  },
+  "escenario_condicionado_cuerpo_mas_puente": {
+    "sumas": {
+      "UNIDADES_CURSADAS": 21232,
+      "UNIDADES_APROBADAS": 17509,
+      "UNID_CURSADAS_TOTAL": 46667,
+      "UNID_APROBADAS_TOTAL": 41138
+    },
+    "filas_con_cambio_vs_h113": 28
+  }
+}

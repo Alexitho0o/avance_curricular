@@ -1,0 +1,393 @@
+{
+  "estado": "PASS_CALCULOS_CON_PENDIENTES",
+  "controles": [
+    {
+      "control": "Hash entrada h112a",
+      "esperado": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "observado": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada h112a_script",
+      "esperado": "2914cf95c9667e3269e79bd3eb341449d7597f5b23f06b7c17a47f4004553ad7",
+      "observado": "2914cf95c9667e3269e79bd3eb341449d7597f5b23f06b7c17a47f4004553ad7",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada h112b_csv",
+      "esperado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "observado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada h112b_excel",
+      "esperado": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "observado": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada h113_csv",
+      "esperado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "observado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada h114b_csv",
+      "esperado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "observado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada h114b_excel",
+      "esperado": "547c54ed40d074eae4af56e5b6e125351ff6b2d30b3f2a9259e8c21efd255453",
+      "observado": "547c54ed40d074eae4af56e5b6e125351ff6b2d30b3f2a9259e8c21efd255453",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada manual",
+      "esperado": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "observado": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada prom12166",
+      "esperado": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "observado": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada listado",
+      "esperado": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "observado": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Hash entrada prom7804",
+      "esperado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "observado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Base vigente hash",
+      "esperado": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141",
+      "observado": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "43 planes",
+      "esperado": 43,
+      "observado": 43,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "2371 filas precarga",
+      "esperado": 2371,
+      "observado": 2371,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "2371 filas H114B",
+      "esperado": 2371,
+      "observado": 2371,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Dos métodos cocientes",
+      "esperado": 0,
+      "observado": 0,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Controles aritméticos negativos/orden",
+      "esperado": 0,
+      "observado": 0,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Control totales congelados",
+      "esperado": [
+        2371,
+        96104,
+        21389,
+        17628,
+        47205,
+        41627,
+        38235
+      ],
+      "observado": [
+        2371,
+        96104,
+        21389,
+        17628,
+        47205,
+        41627,
+        38235
+      ],
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Eventos por período prom7804",
+      "esperado": 129493,
+      "observado": 129493,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Partición filas RAW prom7804",
+      "esperado": 129493,
+      "observado": 129493,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Partición nivel eventos prom7804",
+      "esperado": 129493,
+      "observado": 129493,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Partición expediente-plan-jornada prom7804",
+      "esperado": 13072,
+      "observado": 13072,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Eventos por período prom12166",
+      "esperado": 70000,
+      "observado": 70000,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Partición filas RAW prom12166",
+      "esperado": 70000,
+      "observado": 70000,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Partición nivel eventos prom12166",
+      "esperado": 70000,
+      "observado": 70000,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Partición expediente-plan-jornada prom12166",
+      "esperado": 8976,
+      "observado": 8976,
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h112a",
+      "esperado": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "observado": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h112a_script",
+      "esperado": "2914cf95c9667e3269e79bd3eb341449d7597f5b23f06b7c17a47f4004553ad7",
+      "observado": "2914cf95c9667e3269e79bd3eb341449d7597f5b23f06b7c17a47f4004553ad7",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h112b_csv",
+      "esperado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "observado": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h112b_excel",
+      "esperado": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "observado": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h113_csv",
+      "esperado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "observado": "54a7cbbb6b30784835b9d0a3df9e842285edb6249cbbd53ae54b6d4e82b8aab3",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h114b_csv",
+      "esperado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "observado": "99ed792e455ab72fa1cc1595507176d2a446b800d20dd76429ea1ac21e6fd7ac",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada h114b_excel",
+      "esperado": "547c54ed40d074eae4af56e5b6e125351ff6b2d30b3f2a9259e8c21efd255453",
+      "observado": "547c54ed40d074eae4af56e5b6e125351ff6b2d30b3f2a9259e8c21efd255453",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada manual",
+      "esperado": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "observado": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada prom12166",
+      "esperado": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "observado": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada listado",
+      "esperado": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "observado": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Fuente preservada prom7804",
+      "esperado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "observado": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/avance_historico_fase1_20261027/MANIFEST_FASE1.json",
+      "esperado": "ee2d163b24be550a53ef63e0758f595695e06b958c1727b94c51687bd7f95bd4",
+      "observado": "ee2d163b24be550a53ef63e0758f595695e06b958c1727b94c51687bd7f95bd4",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/avance_historico_fase1_20261027/RESULTADOS.json",
+      "esperado": "b7d9986e4df8b642964e99bbfcb10586ec61bc263b03dc563dfed53baa4c38c0",
+      "observado": "b7d9986e4df8b642964e99bbfcb10586ec61bc263b03dc563dfed53baa4c38c0",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/avance_historico_identidad_h113_20261027/RESULTADOS.json",
+      "esperado": "b513dbbafb54b18eb0d0e077963fc80a2aa6477faf620fb90c3c95d92e073800",
+      "observado": "b513dbbafb54b18eb0d0e077963fc80a2aa6477faf620fb90c3c95d92e073800",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/avance_historico_fase2_candidata_644_20261027/MANIFEST.json",
+      "esperado": "a8c9af43b7cba4ac8012a728567408efc3b0777c962fd8b7a6822442cfb9d439",
+      "observado": "a8c9af43b7cba4ac8012a728567408efc3b0777c962fd8b7a6822442cfb9d439",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/avance_historico_fase2_candidata_644_20261027/RESULTADOS.json",
+      "esperado": "633afa0ccaad0d16aead18ed34ce6654c4f6dc60c257b256e10f8c3c0a52e6a3",
+      "observado": "633afa0ccaad0d16aead18ed34ce6654c4f6dc60c257b256e10f8c3c0a52e6a3",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/cierre_interno_iinf_reconocimientos_20261026/DECISION_Y_REGISTRO.json",
+      "esperado": "9d7800d14ff4e4682efb2c671d9c41ed7272255b6de9bf87a34267fe44fbcef3",
+      "observado": "9d7800d14ff4e4682efb2c671d9c41ed7272255b6de9bf87a34267fe44fbcef3",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Auditoría previa preservada outputs/avance_interno_preparacion_20261027/COBERTURA_AGREGADA.json",
+      "esperado": "9472ae0a2851479571d8ee0799152ce68e5f3ac2a569b6a686d8c42f4f380c6b",
+      "observado": "9472ae0a2851479571d8ee0799152ce68e5f3ac2a569b6a686d8c42f4f380c6b",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Cambio previo preservado PROYECTO_IPSS.json",
+      "esperado": "3a85f1976f9fd22f7c3beb9fd4387e8d84a707d338b0cd7faca9b77719a878c5",
+      "observado": "3a85f1976f9fd22f7c3beb9fd4387e8d84a707d338b0cd7faca9b77719a878c5",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Cambio previo preservado data/diccionario_sies_seguimiento/activo.json",
+      "esperado": "a3eb344f574d0032a25de06d89010047ac6ca3f46809930621ed2a79825fc883",
+      "observado": "a3eb344f574d0032a25de06d89010047ac6ca3f46809930621ed2a79825fc883",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Cambio previo preservado docs/DICCIONARIO_SIES_SEGUIMIENTO.md",
+      "esperado": "4ce383104201543da7505046b679c521badb969f40970aa959cf948b2453edc2",
+      "observado": "4ce383104201543da7505046b679c521badb969f40970aa959cf948b2453edc2",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Cambio previo preservado scripts/consultar_diccionario_sies_seguimiento.py",
+      "esperado": "3d8481b3251ac045adaed1f0391ff5087fd77bc020916c386d1a995ad806df7b",
+      "observado": "3d8481b3251ac045adaed1f0391ff5087fd77bc020916c386d1a995ad806df7b",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Diccionario preservado",
+      "esperado": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141",
+      "observado": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Activo preservado",
+      "esperado": "a3eb344f574d0032a25de06d89010047ac6ca3f46809930621ed2a79825fc883",
+      "observado": "a3eb344f574d0032a25de06d89010047ac6ca3f46809930621ed2a79825fc883",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "HEAD preservado",
+      "esperado": "262f445828f7e939fac59c3cc76d0bb20a101746",
+      "observado": "262f445828f7e939fac59c3cc76d0bb20a101746",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Rama preservada",
+      "esperado": "feature/ire-2026",
+      "observado": "feature/ire-2026",
+      "clase": "B/C",
+      "estado": "PASS"
+    },
+    {
+      "control": "Identificadores en archivos agregados",
+      "esperado": [],
+      "observado": [],
+      "clase": "B/C",
+      "estado": "PASS"
+    }
+  ],
+  "limite": "PASS de cálculos y preservación; no cierre integral, asignación nueva ni autorización de carga."
+}

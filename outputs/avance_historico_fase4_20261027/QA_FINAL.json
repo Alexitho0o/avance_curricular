@@ -1,0 +1,256 @@
+{
+  "clasificacion": "C",
+  "estado": "PASS_CON_ALCANCE",
+  "controles": [
+    {
+      "control": "15 hojas",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Registros anuales",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Cursadas anuales",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Aprobadas anuales",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Cursadas acumuladas",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Aprobadas H113",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Aprobadas H114B",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Denominador plan",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Filas PROMEDIOS 7804",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Filas PROMEDIOS 12166",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Contextos malla 7804",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Contextos malla 12166",
+      "pass": true
+    },
+    {
+      "control": "Matemática: Conciliación selección",
+      "pass": true
+    },
+    {
+      "control": "43 desgloses anuales × 9 resultados",
+      "pass": true,
+      "detalle": {
+        "diferencias": 0
+      }
+    },
+    {
+      "control": "2371 búsquedas de unidades y nombre exactos",
+      "pass": true,
+      "detalle": {
+        "diferencias": 0
+      }
+    },
+    {
+      "control": "2758 contextos actividad × 6 resultados",
+      "pass": true,
+      "detalle": {
+        "diferencias": 0
+      }
+    },
+    {
+      "control": "565 ratios de malla y estado pendiente",
+      "pass": true,
+      "detalle": {
+        "diferencias": 0
+      }
+    },
+    {
+      "control": "Resumen de mallas responde a fuente seleccionada",
+      "pass": true,
+      "detalle": {
+        "esperado": [
+          8956,
+          312171,
+          40893,
+          55853
+        ],
+        "observado": [
+          8956,
+          312171,
+          40893,
+          55853
+        ]
+      }
+    },
+    {
+      "control": "Desglose ejecutivo por carrera",
+      "pass": true,
+      "detalle": {
+        "carreras": 88,
+        "diferencias": 0
+      }
+    },
+    {
+      "control": "RAW íntegro prom7804",
+      "pass": true,
+      "detalle": {
+        "filas": 129493,
+        "filas_distintas": 0
+      }
+    },
+    {
+      "control": "RAW íntegro prom12166",
+      "pass": true,
+      "detalle": {
+        "filas": 70000,
+        "filas_distintas": 0
+      }
+    },
+    {
+      "control": "Listado de mallas íntegro",
+      "pass": true,
+      "detalle": {
+        "filas": 11438,
+        "filas_distintas": 0
+      }
+    },
+    {
+      "control": "ZIP íntegro",
+      "pass": true
+    },
+    {
+      "control": "Fórmulas evaluadas y sin error",
+      "pass": true,
+      "detalle": {
+        "formulas": 40245,
+        "con_cache_no_vacio": 38649,
+        "blancos_esperados_verificados": 1596,
+        "errores": 0
+      }
+    },
+    {
+      "control": "3 gráficos editables",
+      "pass": true
+    },
+    {
+      "control": "Gráficos con referencia a celdas",
+      "pass": true
+    },
+    {
+      "control": "Tablas con encabezados únicos",
+      "pass": true
+    },
+    {
+      "control": "Tabla de mallas cubre 11438 filas",
+      "pass": true
+    },
+    {
+      "control": "Sin vínculos externos",
+      "pass": true
+    },
+    {
+      "control": "6 pruebas de selección con recálculo",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h112a",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h112a_script",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h112b_csv",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h112b_excel",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h113_csv",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h114b_csv",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: h114b_excel",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: manual",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: prom12166",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: listado",
+      "pass": true
+    },
+    {
+      "control": "Fuente preservada: prom7804",
+      "pass": true
+    },
+    {
+      "control": "V24 preservada",
+      "pass": true
+    },
+    {
+      "control": "Cambio previo preservado: PROYECTO_IPSS.json",
+      "pass": true
+    },
+    {
+      "control": "Cambio previo preservado: data/diccionario_sies_seguimiento/activo.json",
+      "pass": true
+    },
+    {
+      "control": "Cambio previo preservado: docs/DICCIONARIO_SIES_SEGUIMIENTO.md",
+      "pass": true
+    },
+    {
+      "control": "Cambio previo preservado: scripts/consultar_diccionario_sies_seguimiento.py",
+      "pass": true
+    },
+    {
+      "control": "HEAD y rama sin cambios",
+      "pass": true
+    },
+    {
+      "control": "Excel excluido de Git",
+      "pass": true
+    }
+  ],
+  "fuentes_y_denominadores_preservados": true,
+  "excel_nativo": "NO_VERIFICADO",
+  "sha256": "8419524b6e6f57c935cbabddb38f70378bac288bd53b03fb6b6cc3b0c598335b",
+  "head": "262f445828f7e939fac59c3cc76d0bb20a101746",
+  "rama": "feature/ire-2026",
+  "limites": [
+    "No certifica vigencia histórica de mallas ni cobertura total de extractos.",
+    "No aplica las 644 atribuciones candidatas.",
+    "Recálculo con Artifact Tool y contraste independiente; prueba de apertura en Excel nativo separada."
+  ]
+}

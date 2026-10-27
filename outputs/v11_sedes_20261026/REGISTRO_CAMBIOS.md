@@ -33,3 +33,5 @@ Responsable de preparación: Claude, a pedido de Alexi. Sin commit, push ni publ
 - Aprobar o rechazar la propuesta de programas de sede CO (`outputs/v11_fase1_cobertura_20261026/PROPUESTA_D_SEDE_CO.json`).
 - Obtener el listado de sedes SIES (Etapa 1, «Consultar Oferta Académica Vigente…», o solicitud a SIES) para cerrar PTG → S4.
 - Commit de `docs/sedes…`, `outputs/fase3_sin_contexto_20261026/`, `outputs/v11_fase1_cobertura_20261026/` y `outputs/v11_sedes_20261026/`, cuando lo autorices.
+
+El .diff 1.1.4→1.1.5 queda local (líneas de contexto vacías incompatibles con git diff --check); el candidato y su manifiesto con hashes están versionados.

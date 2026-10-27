@@ -1,0 +1,42 @@
+{
+  "clasificacion": "C búsqueda literal; E ausencia fuera de alcance",
+  "raiz": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados",
+  "extensiones": [
+    "*.py",
+    "*.js",
+    "*.mjs",
+    "*.sql",
+    "*.ipynb",
+    "*.md",
+    "*.txt"
+  ],
+  "busquedas": [
+    {
+      "patron": "TRACE_SCORE_CANDIDATO|TRACE_REASONS_CANDIDATO|Res_Tit_Unificada|FAMILIA POR NOMBRE_TITULO|SEM_INGRESO_ACTUAL cercano",
+      "exit_code": 1,
+      "estadisticas": [
+        "0 matches",
+        "0 matched lines",
+        "0 files contained matches",
+        "327 files searched",
+        "109964341 bytes searched"
+      ],
+      "errores": false,
+      "contenido_coincidente_exportado": false
+    },
+    {
+      "patron": "\\b2130\\b",
+      "exit_code": 1,
+      "estadisticas": [
+        "0 matches",
+        "0 matched lines",
+        "0 files contained matches",
+        "327 files searched",
+        "109964341 bytes searched"
+      ],
+      "errores": false,
+      "contenido_coincidente_exportado": false
+    }
+  ],
+  "limitaciones": "No inspecciona Excel, PDF, binarios, archivos comprimidos ni rutas externas a esta raíz. No prueba ausencia de algoritmo con otro nombre o fuera del alcance."
+}

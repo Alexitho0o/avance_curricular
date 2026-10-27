@@ -1,0 +1,40 @@
+{
+  "casos": 7,
+  "personas": 7,
+  "estadisticas": {
+    "propio_mismo_anio_matricula": 7,
+    "anclaje_ambos_expedientes": 5,
+    "ambos_expedientes_presentes": 7
+  },
+  "grupos": [
+    {
+      "anio": "2024",
+      "carrera": "IETMREOL",
+      "causa": "ANIO_ANTERIOR",
+      "contextos": 4
+    },
+    {
+      "anio": "2024",
+      "carrera": "IECSREOL",
+      "causa": "ANIO_ANTERIOR",
+      "contextos": 1
+    },
+    {
+      "anio": "2025",
+      "carrera": "TPAS",
+      "causa": "SIN_COINCIDENCIA_PREPARACION",
+      "contextos": 2
+    }
+  ],
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_11248.xlsx",
+      "sha256": "a636a005e7678c7b050cbafbefea64a0cd38f89269c58e17dec6d9a6e6d40143"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    }
+  ],
+  "limite": "Año de matrícula o ingreso no es fecha efectiva de migración; estados del extracto no son historia. Detalle individual fuera de Git."
+}

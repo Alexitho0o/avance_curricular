@@ -1,0 +1,62 @@
+{
+  "clasificacion": "B estructura y datos; C cruce; E vinculo y corte",
+  "carpeta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS",
+  "datos_alumnos": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/base de datos 1900-2026.xlsx",
+    "sha256": "6b6cb8d515f3ac1eef9e94ebf005c3ac014c76f506294a3881b6e8ef80b55c03",
+    "hoja": "Hoja1",
+    "filas_datos": 13308,
+    "columnas": 67,
+    "campos_plan": [],
+    "campos_titulo_fecha": [],
+    "codcli_objetivo": 3,
+    "filas_codcli_localizadas": 3,
+    "filas_codcli_con_rut_dv": 3,
+    "filas_con_ocho_campos_iguales_al_respaldo_previo": 3,
+    "estados_observados": {
+      "ELIMINADO": 2,
+      "TITULADO": 1
+    },
+    "corte_extraccion": "no acreditado"
+  },
+  "titulaciones_agregadas_2025": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/TITULACION/TITULADO_2025_web_27_05_2026_E.xlsx",
+    "sha256": "2cdf4b606cfddf71e000043166d9c23a6d15992c2819954946d05819603ba46b",
+    "hoja": "in",
+    "columnas": 42,
+    "campos_codcli": [],
+    "campos_rut": [],
+    "campos_total_titulaciones": [
+      "TOTAL TITULACIONES"
+    ]
+  },
+  "titulados_consolidado": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/TITULACION/Titulados_IPSS_162_Consolidado_2007_2025.csv",
+    "sha256": "70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229",
+    "columnas": 41,
+    "contiene_mrun": true,
+    "campos_codcli": [],
+    "campos_rut": []
+  },
+  "busqueda_tecnica": {
+    "extensiones": [
+      "py",
+      "sql",
+      "js",
+      "mjs",
+      "ipynb",
+      "json",
+      "md",
+      "txt",
+      "log"
+    ],
+    "archivos_con_coincidencia_literal": 0,
+    "errores": false,
+    "codigo_salida": 1
+  },
+  "limitaciones": [
+    "Sin fecha de extracción validada, no asignar estados a cortes históricos.",
+    "TIT y CSV no permiten atribuir título a CODCLI; no se realizó cruce RUT-MRUN.",
+    "Búsqueda técnica limitada a las extensiones listadas; no incluye comprimidos, Excel ni PDF."
+  ]
+}

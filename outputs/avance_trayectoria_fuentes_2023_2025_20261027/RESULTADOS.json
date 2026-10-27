@@ -1,0 +1,51 @@
+{
+  "alcance": "89 contextos; fuentes anuales institucionales, no prueba de aceptación PES",
+  "fuentes": [
+    {
+      "anio": "2023",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2023/2023.csv",
+      "sha256": "cf13147baa2d0a10ad021e867362b593a95337259889b18b483d8710a4b90e35"
+    },
+    {
+      "anio": "2024",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2024/08-05-2024_18-31-54_Matrícula_Pregrado_2024.csv",
+      "sha256": "5cd5c664b303301bc4e1c5f910c708c1d68e78465eebe3002364a07ea8e4a068"
+    },
+    {
+      "anio": "2025",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2025/2025.xlsx",
+      "sha256": "9ceb4f3e15111a4d968410fcb799d56bd349a6e91a9d473d5a9cceedaab15062"
+    }
+  ],
+  "fuente_preparacion": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+    "hoja": "2025_carga",
+    "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+  },
+  "contraste_anual": {
+    "2023": {
+      "contextos": 5,
+      "codigo_exacto_en_fuente": 5,
+      "sin_codigo_exacto_en_fuente": 0,
+      "multiples_codigos_en_fuente": 0
+    },
+    "2024": {
+      "contextos": 15,
+      "codigo_exacto_en_fuente": 15,
+      "sin_codigo_exacto_en_fuente": 0,
+      "multiples_codigos_en_fuente": 0
+    },
+    "2025": {
+      "contextos": 69,
+      "codigo_exacto_en_fuente": 69,
+      "sin_codigo_exacto_en_fuente": 0,
+      "multiples_codigos_en_fuente": 0
+    }
+  },
+  "preparacion_2025": {
+    "identidad_ausente_en_preparacion": 20,
+    "carrera_umas_distinta": 2,
+    "coincidencia_completa": 47
+  },
+  "limitacion": "Fuentes MU no incluyen CODCLI ni PLAN_DE_ESTUDIO. El cruce por persona y código no acredita por sí mismo plan ni asignación a expediente; no se modificaron datos o denominadores."
+}

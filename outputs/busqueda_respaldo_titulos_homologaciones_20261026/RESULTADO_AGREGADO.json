@@ -1,0 +1,492 @@
+{
+  "clasificacion": "B fuentes; C cruce; E atribución",
+  "fuentes": {
+    "informe_docencia": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/enviado por docencia/Informe de Titulados 2025_vf.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "676e6451eed59dae08d4cbcf99188932e0a2b586f9c3eb46f4b597721743f236",
+      "columnas_codcli_plan_presentes": false
+    },
+    "estructura": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_4_20261015/estructura_asignaturas.json",
+      "sha256": "29ce1e42276cd2e67de56cc5ba74422a5c818dca2f089937fa08976961916422",
+      "procedencia": "Listado_Planes_estudio_Sedes RE+CO.xlsx / BBDD Bruta"
+    }
+  },
+  "titulados": {
+    "personas_buscadas": 4,
+    "personas_en_informe_docencia": 4,
+    "personas_con_codigo_sies_vacio": 4,
+    "limite": "Informe de Docencia carece de CODCLI y PLAN_DE_ESTUDIO; no asigna plan y no prueba aceptación."
+  },
+  "ramos": [
+    {
+      "carrera": "IECIREOL",
+      "plan_revisado": "IECIREOL20201",
+      "ramo": "CA101IECIREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "ASREOL",
+          "ramo_origen": "CA11ASREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA101IECIREOL",
+          "filas_fuente": [
+            2477
+          ]
+        },
+        {
+          "plan_origen": "TPCREOL",
+          "ramo_origen": "CA11TPCREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA101IECIREOL",
+          "filas_fuente": [
+            2256
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan_revisado": "IECIREOL20201",
+      "ramo": "CA103IECIREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "ASREOL",
+          "ramo_origen": "CA13ASREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA103IECIREOL",
+          "filas_fuente": [
+            28
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL",
+          "ramo_origen": "TM103IETMREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA103IECIREOL",
+          "filas_fuente": [
+            176
+          ]
+        },
+        {
+          "plan_origen": "TPCREOL",
+          "ramo_origen": "CA13TPCREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA103IECIREOL",
+          "filas_fuente": [
+            1169
+          ]
+        },
+        {
+          "plan_origen": "TTMREOL",
+          "ramo_origen": "TM13TTMREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA103IECIREOL",
+          "filas_fuente": [
+            358
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan_revisado": "IECIREOL20201",
+      "ramo": "CA401IECIREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "NINFREOL2019",
+          "ramo_origen": "CA401NINFREOL",
+          "plan_destino": "IECIREOL",
+          "ramo_destino": "CA401IECIREOL",
+          "filas_fuente": [
+            8524
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IECIREOL",
+      "plan_revisado": "IECIREOL20211",
+      "ramo": "AS31TPAREOL",
+      "relaciones_codigo_en_cualquier_plan": [],
+      "conclusion": "E sin referencia del código en relaciones revisadas"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan_revisado": "IEMORE20211",
+      "ramo": "AU105IEMORE",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TMIRE20131",
+          "ramo_origen": "CA15TMIRE20131",
+          "plan_destino": "IEMORE20151",
+          "ramo_destino": "AU105IEMORE",
+          "filas_fuente": [
+            1525
+          ]
+        },
+        {
+          "plan_origen": "TMIRE20131",
+          "ramo_origen": "IM15TMIRE20131",
+          "plan_destino": "IEMORE20151",
+          "ramo_destino": "AU105IEMORE",
+          "filas_fuente": [
+            1540
+          ]
+        },
+        {
+          "plan_origen": "TMIRE20151",
+          "ramo_origen": "AU15TMIRE",
+          "plan_destino": "IEMORE20151",
+          "ramo_destino": "AU105IEMORE",
+          "filas_fuente": [
+            1544
+          ]
+        },
+        {
+          "plan_origen": "TMIRE20171",
+          "ramo_origen": "AU15TMIRE",
+          "plan_destino": "IEMORE20151",
+          "ramo_destino": "AU105IEMORE",
+          "filas_fuente": [
+            1549
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan_revisado": "IEMORE20211",
+      "ramo": "AU201IEMORE",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TMIRE20151",
+          "ramo_origen": "AU21TMIRE",
+          "plan_destino": "IEMORE20151",
+          "ramo_destino": "AU201IEMORE",
+          "filas_fuente": [
+            3439
+          ]
+        },
+        {
+          "plan_origen": "TMIRE20171",
+          "ramo_origen": "AU21TMIRE",
+          "plan_destino": "IEMORE20151",
+          "ramo_destino": "AU201IEMORE",
+          "filas_fuente": [
+            3443
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan_revisado": "IEMORE20211",
+      "ramo": "AU305IEMORE",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "NAUTRE",
+          "ramo_origen": "AU305NIAC",
+          "plan_destino": "IEMORE20171",
+          "ramo_destino": "AU305IEMORE",
+          "filas_fuente": [
+            2548
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IEMORE",
+      "plan_revisado": "IEMORE20211",
+      "ramo": "CA306IEMORE",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "NAUTRE",
+          "ramo_origen": "CA306NIAC",
+          "plan_destino": "IEMORE20171",
+          "ramo_destino": "CA306IEMORE",
+          "filas_fuente": [
+            2551
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IETMRE",
+      "plan_revisado": "IETMRE20191",
+      "ramo": "CA306IETMRE",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "NCONRE",
+          "ramo_origen": "CA306NITMRE",
+          "plan_destino": "IETMRE20161",
+          "ramo_destino": "CA306IETMRE",
+          "filas_fuente": [
+            2582
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan_revisado": "IETMREOL",
+      "ramo": "AG101IETMREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "IETMREOL20191",
+          "ramo_origen": "AG101IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG101IECIREOL",
+          "filas_fuente": [
+            1375
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL20211",
+          "ramo_origen": "AG101IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG101IECIREOL",
+          "filas_fuente": [
+            1377
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan_revisado": "IETMREOL",
+      "ramo": "AG102IETMREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "IETMREOL20191",
+          "ramo_origen": "AG102IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG102IECIREOL",
+          "filas_fuente": [
+            3281
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL20211",
+          "ramo_origen": "AG102IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG102IECIREOL",
+          "filas_fuente": [
+            3283
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan_revisado": "IETMREOL",
+      "ramo": "AG201IETMREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "IETMREOL20191",
+          "ramo_origen": "AG201IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG201IECIREOL",
+          "filas_fuente": [
+            8436
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL20211",
+          "ramo_origen": "AG201IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG201IECIREOL",
+          "filas_fuente": [
+            8440
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan_revisado": "IETMREOL",
+      "ramo": "AG206IETMREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "IETMREOL20191",
+          "ramo_origen": "AG206IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG206IECIREOL",
+          "filas_fuente": [
+            10160
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL20211",
+          "ramo_origen": "AG206IETMREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG206IECIREOL",
+          "filas_fuente": [
+            10164
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "IETMREOL",
+      "plan_revisado": "IETMREOL",
+      "ramo": "AG302IETMREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "IECSREOL20211",
+          "ramo_origen": "AG302IECSREOL",
+          "plan_destino": "IETMREOL20191",
+          "ramo_destino": "AG302IETMREOL",
+          "filas_fuente": [
+            10685
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL20191",
+          "ramo_origen": "AG302IETMREOL",
+          "plan_destino": "IECIREOL20211",
+          "ramo_destino": "AG302IECIREOL",
+          "filas_fuente": [
+            10699
+          ]
+        },
+        {
+          "plan_origen": "IETMREOL20211",
+          "ramo_origen": "AG302IETMREOL",
+          "plan_destino": "IECIREOL20211",
+          "ramo_destino": "AG302IECIREOL",
+          "filas_fuente": [
+            10703
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan_revisado": "TPCREOL",
+      "ramo": "AG11TPCREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TPCREOL20191",
+          "ramo_origen": "AG11TPCREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG101IECIREOL",
+          "filas_fuente": [
+            2260
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan_revisado": "TPCREOL",
+      "ramo": "AG12TPCREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TPCREOL20191",
+          "ramo_origen": "AG12TPCREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG102IECIREOL",
+          "filas_fuente": [
+            4036
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan_revisado": "TPCREOL",
+      "ramo": "AG16TPCREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TPCREOL20191",
+          "ramo_origen": "AG16TPCREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG106IECIREOL",
+          "filas_fuente": [
+            6659
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan_revisado": "TPCREOL",
+      "ramo": "AG17TPCREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TPCREOL20191",
+          "ramo_origen": "AG17TPCREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG107IECIREOL",
+          "filas_fuente": [
+            6201
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan_revisado": "TPCREOL",
+      "ramo": "AG21TPCREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TPCREOL20191",
+          "ramo_origen": "AG21TPCREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG201IECIREOL",
+          "filas_fuente": [
+            8081
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TPCREOL",
+      "plan_revisado": "TPCREOL",
+      "ramo": "AG26TPCREOL",
+      "relaciones_codigo_en_cualquier_plan": [
+        {
+          "plan_origen": "TPCREOL20191",
+          "ramo_origen": "AG26TPCREOL",
+          "plan_destino": "IECIREOL20191",
+          "ramo_destino": "AG206IECIREOL",
+          "filas_fuente": [
+            10276
+          ]
+        }
+      ],
+      "conclusion": "B/C referencia en otros planes; E equivalencia para plan revisado"
+    },
+    {
+      "carrera": "TTMRE",
+      "plan_revisado": "TTMRE20211",
+      "ramo": "AS21TTMRE",
+      "relaciones_codigo_en_cualquier_plan": [],
+      "conclusion": "E sin referencia del código en relaciones revisadas"
+    }
+  ],
+  "conteos": {
+    "ramos_revisados": 21,
+    "ramos_con_referencia_en_cualquier_plan": 19
+  },
+  "limitaciones": "Las relaciones son literales del catálogo y pueden involucrar otros planes. No se infiere transitividad ni homologación individual. No se han cambiado fuentes o denominadores."
+}

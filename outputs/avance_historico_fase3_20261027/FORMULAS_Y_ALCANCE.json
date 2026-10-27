@@ -1,0 +1,44 @@
+[
+  {
+    "indicador": "Aprobación anual observada",
+    "formula": "SUMA(aprobadas_anuales)/SUMA(cursadas_anuales)",
+    "unidad": "Unidades; no retención",
+    "clase": "C",
+    "condicion": "Mismo universo/unidad/carrera; denominador cero => Pendiente"
+  },
+  {
+    "indicador": "Avance acumulado respecto plan",
+    "formula": "SUMA(aprobadas_acumuladas_aplicables)/SUMA(unidades_plan_por_registro)",
+    "unidad": "Unidades del plan",
+    "clase": "A definición p4g; C agregación",
+    "condicion": "No promediar tasas simples; confirmar plan, año, atribución y reconocimientos"
+  },
+  {
+    "indicador": "Actividad por período",
+    "formula": "Conteo distinto persona+CODCLI con resultado A/R en ANO+PERIODO",
+    "unidad": "Expedientes observados",
+    "clase": "C",
+    "condicion": "No equivale a matrícula vigente ni abandono; no convertir PERIODO sin tabla aplicable"
+  },
+  {
+    "indicador": "Aprobaciones frente al listado",
+    "formula": "CARDINAL((CODRAMO_A UNION CODRAMO_E_I) INTERSECCION ramos_listados)/CARDINAL(ramos_listados)",
+    "unidad": "Asignaturas distintas por expediente-plan",
+    "clase": "C/E",
+    "condicion": "Diagnóstico, no indicador final: no homologar por nombre; malla desconocida => Pendiente"
+  },
+  {
+    "indicador": "Nivel curricular",
+    "formula": "Comparar NIVEL del ramo contra NIVEL del mismo CODRAMO en carrera+plan",
+    "unidad": "Nivel asignado a ramo",
+    "clase": "B/C",
+    "condicion": "No equivale a nivel completado ni a trimestre"
+  },
+  {
+    "indicador": "Transformación H114B",
+    "formula": "MIN(aprobadas_acumuladas_H113; total_plan; cursadas_acumuladas_H113)",
+    "unidad": "Unidades",
+    "clase": "C histórica",
+    "condicion": "Solo reproducción histórica; no aplicar un límite100% universal como si fuera A"
+  }
+]

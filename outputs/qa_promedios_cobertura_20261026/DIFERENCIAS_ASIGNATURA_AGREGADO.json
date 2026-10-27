@@ -1,0 +1,124 @@
+{
+  "clasificacion": "B datos; C comparaciones; E causa",
+  "fecha": "2026-10-26T18:27:30.173945-03:00",
+  "fuentes": {
+    "v11_12166": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+    },
+    "respaldo_ampliado": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "hoja": "Hoja1",
+      "sha256": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71"
+    }
+  },
+  "metodo": "Llave RUT+DV+CODCLI+carrera+plan+CODRAMO+CODSECC por año/período. Llaves únicas, no filas ni personas. Clases de exclusivas disjuntas por coincidencia jerárquica; no demuestran causa.",
+  "periodos": {
+    "2026-2": {
+      "filas_respaldo": 6230,
+      "filas_v11": 6223,
+      "llaves_comunes": 6148,
+      "solo_respaldo": 82,
+      "solo_v11": 75,
+      "personas_afectadas_exclusivas_respaldo": 59,
+      "personas_afectadas_exclusivas_v11": 75,
+      "clasificacion_exclusivas_respaldo": {
+        "mismo_expediente_otras_asignaturas": 82
+      },
+      "clasificacion_exclusivas_v11": {
+        "mismo_expediente_otras_asignaturas": 74,
+        "sin_persona_en_otra_fuente": 1
+      },
+      "grupos_asignatura_con_seccion_diferente": 0,
+      "grupos_uno_a_uno": 0,
+      "equivalencia_exclusivas_respaldo": {
+        "sin_coincidencia_equivalencia_o_nombre": 82
+      },
+      "equivalencia_exclusivas_v11": {
+        "sin_coincidencia_equivalencia_o_nombre": 75
+      },
+      "llaves_comunes_con_multiplicidad": 0,
+      "diferencias_valores_llave_comun": {
+        "ESTADO_ACADEMICO": 5
+      },
+      "personas_diferencia_nota": 0,
+      "personas_diferencia_estado": 2,
+      "patron_nota_respaldo_vs_v11": [],
+      "patron_estado_respaldo_vs_v11": [
+        {
+          "respaldo": "VIGENTE",
+          "v11": "SUSPENDIDO",
+          "llaves": 5
+        }
+      ],
+      "personas_distintas_respaldo": 2838,
+      "personas_distintas_v11": 2839,
+      "personas_solo_respaldo": 0,
+      "personas_solo_v11": 1,
+      "codcli_solo_respaldo": 0,
+      "codcli_solo_v11": 1,
+      "filas_llave_incompleta_respaldo": 0,
+      "filas_llave_incompleta_v11": 0
+    },
+    "2026-3": {
+      "filas_respaldo": 6304,
+      "filas_v11": 6296,
+      "llaves_comunes": 6179,
+      "solo_respaldo": 125,
+      "solo_v11": 117,
+      "personas_afectadas_exclusivas_respaldo": 116,
+      "personas_afectadas_exclusivas_v11": 99,
+      "clasificacion_exclusivas_respaldo": {
+        "mismo_expediente_otras_asignaturas": 116,
+        "misma_asignatura_otra_seccion": 9
+      },
+      "clasificacion_exclusivas_v11": {
+        "sin_persona_en_otra_fuente": 26,
+        "mismo_expediente_otras_asignaturas": 80,
+        "misma_asignatura_otra_seccion": 9,
+        "misma_persona_otro_codcli": 2
+      },
+      "grupos_asignatura_con_seccion_diferente": 9,
+      "grupos_uno_a_uno": 9,
+      "equivalencia_exclusivas_respaldo": {
+        "sin_coincidencia_equivalencia_o_nombre": 116,
+        "misma_equivalencia_y_nombre": 9
+      },
+      "equivalencia_exclusivas_v11": {
+        "sin_coincidencia_equivalencia_o_nombre": 108,
+        "misma_equivalencia_y_nombre": 9
+      },
+      "llaves_comunes_con_multiplicidad": 0,
+      "diferencias_valores_llave_comun": {
+        "NOTA_FINAL": 653,
+        "ESTADO_ACADEMICO": 1
+      },
+      "personas_diferencia_nota": 585,
+      "personas_diferencia_estado": 1,
+      "patron_nota_respaldo_vs_v11": [
+        {
+          "respaldo": "vacia",
+          "v11": "cero",
+          "llaves": 653
+        }
+      ],
+      "patron_estado_respaldo_vs_v11": [
+        {
+          "respaldo": "VIGENTE",
+          "v11": "ELIMINADO",
+          "llaves": 1
+        }
+      ],
+      "personas_distintas_respaldo": 2740,
+      "personas_distintas_v11": 2750,
+      "personas_solo_respaldo": 0,
+      "personas_solo_v11": 10,
+      "codcli_solo_respaldo": 0,
+      "codcli_solo_v11": 11,
+      "filas_llave_incompleta_respaldo": 0,
+      "filas_llave_incompleta_v11": 0
+    }
+  },
+  "limites": "Las diferencias detectadas no demuestran corrección, traslado o fecha del cambio; no se infiere vigencia, deserción ni completitud."
+}

@@ -1,0 +1,5 @@
+# Fase 2 — revisión de 42 contextos
+[D] Se aplica criterio aprobado a los casos sin conflicto: código anual único por persona y año, mismo CODCLI, carrera, sede, jornada y plan en actividad, más ancla documental del mismo plan y código en otro año. Es correspondencia interna; la atribución documental al período y fecha efectiva siguen pendientes.
+[B/C] Se incorporaron 35 contextos y quedaron 7 sin incorporar: cinco tienen otro CODCLI con el mismo código en el año; dos tienen carrera UMAS distinta en respaldo de preparación 2025. La falta de fila en esa hoja no descalifica por sí sola una coincidencia con MU anual.
+[C] v14 conserva 26.593 consultas previas y todas las filas anteriores y de MU. Tres consumidores concuerdan para cinco consultas, 12 pruebas unitarias correctas. Foco: pendientes 1.327 a 1.292 en 5.144 contextos, unidades conservadas.
+[E] Fotos y estados complementarios no indexados para nuevas observaciones; Excel anterior sin actualización. Sin cambio de bases, denominadores, commit ni push.

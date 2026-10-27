@@ -1,0 +1,20 @@
+{
+  "clasificacion": "D autorización; C integración; E cobertura y fecha",
+  "responsable": "Alexi",
+  "fecha_hora": "2026-10-26T19:00:09.141316-03:00",
+  "motivo": "Integrar PROMEDIOS y mostrar discrepancias en los tres consumidores de v11",
+  "edicion_anterior": {
+    "descriptor": "data/diccionario_sies_seguimiento/v11_20261026_86_y_ambiguedad/descriptor.json",
+    "sha256": "825a6c62a5fa4f59fa0b82e1aca5716082b23cea7014993b50ca51c5c7da252a"
+  },
+  "base_sha256": "1dafb1486f3ebd080ad4435a3af80b65a1a7016ba47b51f30d91b9a050985141",
+  "tres_consumidores_qa": true,
+  "reglas": "Último periodo observado y estado del extracto, sin aplicarlo retroactivamente; fotos y alertas separadas.",
+  "limitaciones": [
+    "PROMEDIOS incompleto o frescura no certificada",
+    "estado histórico y fecha de cambio no acreditados",
+    "discrepancias no resueltas",
+    "sin cambio de bases ni denominadores"
+  ],
+  "reversion": "Restituir wrapper anterior desde Git y ACTIVO_ANTERIOR.json; conservar capa privada y base."
+}

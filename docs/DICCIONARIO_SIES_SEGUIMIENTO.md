@@ -189,3 +189,13 @@ C — QA: 24.774 consultas vs v9, exactamente 27 distintas (E → D); tres consu
 **C/E.** QA funcional con alcance: comparación de 25.900 consultas completas y 25.900 sin dimensiones frente a la candidata anterior, exactamente 13 cambios aprobados; 12 pruebas unitarias y contraste representativo de tres consumidores. Los 73 cierres CO se habían verificado en la comparación anterior. Pendientes: cobertura de PROMEDIOS, atribución documental trimestral, aceptación SIES y otras excepciones; no inferir vigencia ni deserción desde actividad o ausencia de actividad. Ver `data/diccionario_sies_seguimiento/v11_20261026_86_y_ambiguedad/PENDIENTES.md` y `outputs/v11_fase2_20261026/QA_FINAL_V11_86_AMBIGUEDAD_20261026.md`.
 
 **C.** El cambio de puntero no modifica bases de origen, denominadores o motores. La reversión está en `data/diccionario_sies_seguimiento/v11_20261026_86_y_ambiguedad/ACTIVO_ANTERIOR.json`. La base activa contiene datos individuales y permanece privada, fuera de Git; GitHub no sustituye su respaldo. Sin commit ni push de esta activación.
+
+## Seguimiento adicional con PROMEDIOS (26-10-2026)
+
+**D/C.** A solicitud de Alexi se preparó una capa local vinculada a la v11 que prioriza el estado del extracto PROMEDIOS en el último año/período observado por RUT+CODCLI. La capa conserva las fotos como respaldo separado y alerta diferencias de estado, sección y notas. No asigna retrospectivamente el estado actual a períodos anteriores. El último período observado no certifica último período real, vigencia en el cierre ni retención; 12166 tiene cobertura no certificada (**E**).
+
+**C.** El recurso `PROYECTO_IPSS.json → recursos_comunes → seguimiento_promedios_v11` señala el resultado y la capa privada verificada. La consulta enriquecida adicional, sus pruebas y los límites están en `outputs/qa_promedios_cobertura_20261026/CRITERIO_V11_ULTIMO_PROMEDIOS_20261026.md`. Los tres consumidores originales no fueron cambiados y no incorporan automáticamente esta capa. No se cambian SQLite, fuentes, reglas de elegibilidad, denominadores ni tasas.
+
+
+## Activación v12 — 2026-10-27
+[D] 644 correspondencias internas aprobadas. Atribución documental pendiente. Ver `outputs/activacion_644_exclusion_diplomados_20261027/CIERRE.md` y QA. Exclusión de diplomados solo en vistas internas.
