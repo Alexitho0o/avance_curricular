@@ -1,0 +1,6 @@
+# Fase C · Hito 1 — índice complementario de 726 observaciones
+[B/C] Índice privado nuevo: 726 claves únicas, exactamente las observaciones adicionales de v12–v14 respecto a v11 integrada. Verificación independiente de diferencias de IDs y lectura de 726 registros PASS.
+[B/C] Actividad con coincidencia exacta RUT+DV, CODCLI, plan, carrera, año y período: 726 en 7804 consolidado, 726 en 7804 ampliado de otro hash, 579 en 3233 y 0 en 12166. Fuentes no sumables. Los 726 cuentan con al menos una fuente de actividad; el 0 de una fuente no significa actividad cero ni ausencia institucional.
+[B/C/E] 12166 aporta un estado del extracto en 726 expedientes consultados por observación; no reconstruye historial del estado ni fecha exacta de cierre. Se detectan diferencias de firma de asignatura entre extractos en 585 contextos; no se infiere causa.
+[B/C] Las 726 observaciones corresponden a 2019–2025. Las fotos accesibles aquí son T2/T3 de 2026: no hay período comparable en estos contextos. Cero coincidencias de foto no significa deserción.
+[C/E] Índice creado, no conectado a los tres consumidores ni activado en v14; los consumidores existentes seguirán mostrando capa pendiente para estos IDs. Activación requiere diseño y control aparte. Fuentes, v14 y base preservados por hash; sin commit ni push.

@@ -98,3 +98,9 @@ Este archivo define las reglas y convenciones que deben seguir los agentes de IA
 ---
 Última actualización: 2026-04-09
 Responsable: Arquitectura Técnica
+
+## Normalización de documentos y dígito verificador (2026-10-27)
+
+- Nunca usar `x or ""` para normalizar un documento o dígito verificador:
+  el valor numérico cero es válido y no debe convertirse en vacío. Distinguir
+  explícitamente `None` de `0` y verificar variantes numéricas y de texto.

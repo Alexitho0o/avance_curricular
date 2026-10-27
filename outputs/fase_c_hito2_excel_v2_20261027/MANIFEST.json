@@ -1,0 +1,45 @@
+{
+  "fecha": "2026-10-27T13:29:28.109819-03:00",
+  "estado": "PASS_CON_ALCANCE",
+  "libro_v1": {
+    "ruta": "/Users/alexi/Desktop/AVANCE_ACADEMICO_HISTORICO_IPSS_20261027_V1.xlsx",
+    "sha256": "642a9e707d1f5dd01e1bae250e8fdb4a4d23077d4c18c1144f96949158aa28cc"
+  },
+  "libro_v2": {
+    "ruta": "/Users/alexi/Desktop/AVANCE_ACADEMICO_HISTORICO_IPSS_20261027_V2.xlsx",
+    "sha256": "1300c4ead3da4f0d9a68880498814f5a73a0f6a881734891ee163ff15908eaec",
+    "contiene_identificadores": true,
+    "no_publicar_git": true
+  },
+  "fuentes": {
+    "PROMEDIOSDEALUMNOS_12166.xlsx": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "hoja": "Hoja1",
+      "filas": 70000
+    },
+    "PROMEDIOSDEALUMNOS_7804.xlsx": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca",
+      "hoja": "Hoja1",
+      "filas": 129493
+    }
+  },
+  "archivos": {
+    "medir_cobertura.py": "b485cbe5819e5702660ae0cebeeac5314e93e9173b0f39aed4af4b90f9754545",
+    "CONTROL_7804_12166.json": "cfcf732de26fd595c4dfdbcdab190b8ecefb6cd284833a4779a960601b1c7344",
+    "comparar_unidades.py": "2c431f4446fcfb7af558ed86b4a37f833e58d8442a0070180880b6cde1eccd9a",
+    "COMPARACION_UNIDADES.json": "76466586aaeda435512111e38da5d9f141e9bed9f787b3cae8acc710d009ba76",
+    "verificar_libros.py": "e493a3d86ac7a978504e218270490ad8d743b40ef5df4ac9987bb8bfa2b49d82",
+    "QA_COMPARACION_LIBROS.json": "c22b6b4139313bc5cae569d5525fc276186d272bf26491e82a6eaa6ac4e4e91c",
+    "INFORME.md": "f00d9d31eac50057094cc2de17227c677f0e2c139b6480649a4baaa10db72069"
+  },
+  "pruebas_excel_nativo": {
+    "controles_qa": 12,
+    "filtros_fuente": 2,
+    "exclusion_diplomados": true,
+    "render_pendientes": true
+  },
+  "git_head": "0f99f671c23fc3839e5c73631a2126d629fc70d5",
+  "sin_commit_push": true
+}

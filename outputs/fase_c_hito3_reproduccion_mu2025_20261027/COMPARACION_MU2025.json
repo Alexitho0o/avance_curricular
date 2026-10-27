@@ -1,0 +1,25 @@
+{
+  "clasificacion": "B/C",
+  "universo_contextos_2025": 69,
+  "misma_fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+  "misma_hoja": "2025_carga",
+  "sha256_fuente": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4",
+  "resultados": {
+    "DIFERENCIA": 25,
+    "NUEVO_NO_ENCONTRADO": 20,
+    "NUEVO_CARRERA_DISTINTA": 2,
+    "COINCIDE": 44,
+    "NUEVO_COINCIDE": 47
+  },
+  "diferencias_reproducidas": {
+    "DV_CERO_NUMERICO": 3
+  },
+  "causa": "El método 44 normaliza con str(x or \"\"); para DV numérico 0 devuelve vacío. El método 47 conserva el cero.",
+  "filtro_carrera_jornada_codigo_igual": true,
+  "agregado_44_no_desglosa_25": true,
+  "detalle_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_c_hito3_20261027/COMPARACION_CASO_A_CASO.json",
+    "sha256": "d330c383774017447fd46d5881ea46054329d605e836a42492bec30941db6ee0"
+  },
+  "salvedad": "La coincidencia es por documento/carrera/jornada/código; no acredita CODCLI ni plan en esa hoja."
+}

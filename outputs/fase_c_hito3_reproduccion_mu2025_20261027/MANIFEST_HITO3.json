@@ -1,0 +1,41 @@
+{
+  "proceso": "avance académico histórico IPSS; conciliación UMAS–SIES",
+  "fecha": "2026-10-27",
+  "rama": "feature/ire-2026",
+  "head": "0f99f671c23fc3839e5c73631a2126d629fc70d5",
+  "entradas": {
+    "fuente_mu2025": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/RESPALDO SIES ENVIADO POR CARLOS ARAVENA EL 24-9/2025/Matricula/SIES/06-05-2025/IPSS_Procesamiento.xlsx",
+      "hoja": "2025_carga",
+      "sha256": "e2984ccdf22ecf35c46e1f77275fdd12cda47bd2d77a523860e2cd2cf90127f4"
+    },
+    "metodo_segundo": {
+      "ruta": "outputs/avance_trayectoria_fuentes_2023_2025_20261027/auditar_fuentes.py",
+      "sha256": "0a28486aac3ad33c2a22af4762eeb091576d4ac2b9810043e73b92fc4d6f3b59"
+    },
+    "detalle_privado": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase_c_hito3_20261027/COMPARACION_CASO_A_CASO.json",
+      "sha256": "d330c383774017447fd46d5881ea46054329d605e836a42492bec30941db6ee0"
+    }
+  },
+  "salidas": {
+    "metodo_44_original.py": "096c8b4ccd3a31635a026e6128f30196b34bca7092f5ae3b2162526c7f63e3a1",
+    "comparar_metodos.py": "b6ea33edfc007cdb7fe95f87ffa39a583b99304d9132c8a8a8f40cdb4fb33b1c",
+    "analizar_nucleo.py": "9bf2156a40a90b06acaca0dba187130603893117abee3096516c54a013288b97",
+    "COMPARACION_MU2025.json": "726edc0d6bab09b23b45cd407d3925cf8a2518c06188bf9844d40ed59d9afcfa",
+    "NUCLEO_RESUMEN.json": "a01d3d2c278cfb672a7a4f93ef5edc383bd7cc8f7978b53de4a16462fd4a51a2",
+    "DESGLOSE_NUCLEO_AGREGADO.csv": "5821c7e84b0623c5f562446b1b6d19a787d9c86524f19702aa3a9e914b177a21",
+    "INFORME.md": "5eeb8e2dd0fa709ae29339861f3c48b67c37837612e36c2255d99561168eb821"
+  },
+  "qa": {
+    "reproduccion_69": true,
+    "conteos_44_25_y_47_20_2": true,
+    "diferencias_dv_cero": 3,
+    "personas_sin_codigo": 45,
+    "expedientes_sin_codigo": 296,
+    "expedientes_de_45_personas": 87,
+    "bases_denominadores_modificados": false,
+    "commit_push": false
+  },
+  "clasificacion": "B/C observaciones y calculos; E pendientes documentales"
+}
