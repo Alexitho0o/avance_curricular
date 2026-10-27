@@ -1,0 +1,46 @@
+{
+  "fuente_v24": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx",
+    "sha256": "1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481"
+  },
+  "fuente_promedios": {
+    "ruta": "/Users/alexi/Downloads/PROMEDIOSDEALUMNOS_12166.xlsx",
+    "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+    "hoja": "Hoja1"
+  },
+  "resultados": [
+    {
+      "celda": "E1850",
+      "personas_en_cohorte": 558,
+      "actividad_observada": 269,
+      "vigente_extracto_reproducido": 160,
+      "valor_literal_v24": 160,
+      "coincide": true
+    },
+    {
+      "celda": "E1851",
+      "personas_en_cohorte": 558,
+      "actividad_observada": 296,
+      "vigente_extracto_reproducido": 175,
+      "valor_literal_v24": 175,
+      "coincide": true
+    },
+    {
+      "celda": "E1854",
+      "personas_en_cohorte": 1471,
+      "actividad_observada": 1051,
+      "vigente_extracto_reproducido": 1042,
+      "valor_literal_v24": 1042,
+      "coincide": true
+    }
+  ],
+  "metodo": "Reconstrucción por cuerpo de RUT, periodo y estado VIGENTE del extracto; no demuestra que el constructor original usara el mismo algoritmo.",
+  "limites": [
+    "DV no fue usado en el método heredado; no acredita identidad de forma universal.",
+    "Estado del extracto no demuestra estado a fecha de cierre."
+  ],
+  "detalle_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_h_hito2b_20261027/PROXIES_PRIVADOS.sqlite",
+    "sha256": "2a74746d944a2101f544c9194080abaa210f5062a21089a4677e7b61e60f42c6"
+  }
+}

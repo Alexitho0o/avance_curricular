@@ -1,0 +1,132 @@
+{
+  "estado": "BORRADOR_NO_ACTIVO",
+  "fecha": "2026-10-27T16:48:08.136404-03:00",
+  "fuentes": [
+    {
+      "id": "V24",
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx",
+      "sha256": "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db"
+    },
+    {
+      "id": "V24_COPIA_RECALCULADA",
+      "ruta": "/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx",
+      "sha256": "1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481"
+    },
+    {
+      "id": "ESPECIFICACION",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_RETENCION_INTERMEDIA_T2_T3_20261021.md",
+      "sha256": "87c9ca74478d6fead2f213f0f94af1f9fdae56b8f52da912d96f052285c1a195"
+    },
+    {
+      "id": "BASES_V16",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_BASES_TASAS_2026_V16_20261023.md",
+      "sha256": "f90d19bef2d61e1880b3a0aa49833aa9152e1b2a95dacb61370246347ffd6012"
+    },
+    {
+      "id": "CORREO_SIES",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt",
+      "sha256": "92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"
+    }
+  ],
+  "reglas": [
+    {
+      "clase": "A",
+      "definicion": "Retención anual SIES: misma institución y cohorte al año siguiente, elegibilidad y corte anual. No define indicador intertrimestral.",
+      "origen": "CORREO_SIES"
+    },
+    {
+      "clase": "D/C",
+      "definicion": "Grupo 1 primer año MU; grupos 2 y 3 ingresos separados. T1 2026: ingreso de origen 2026-1, VIG 1 y sin RUT duplicado.",
+      "origen": "V24:18_Foto_Intertrimestral!B80"
+    },
+    {
+      "clase": "C/E",
+      "definicion": "Grupo 1 en T2 usa proxy de actividad y estado de PROMEDIOS; no acredita foto de matrícula al cierre. Para 2024 en T3 institucional se usa también proxy.",
+      "origen": "V24:18_Foto_Intertrimestral!B3,E7:H8,E11:F11,B82"
+    },
+    {
+      "clase": "B/C",
+      "definicion": "T3 2025 consulta la foto de 2025; T3 2026 consulta DATOSDEALUMNOS, estado de extracción en T3 en curso.",
+      "origen": "V24:18_Foto_Intertrimestral!B82;24_Foto_Corte_T3_2025;25_Foto_Corte_T3_2026"
+    },
+    {
+      "clase": "C",
+      "definicion": "R representa en base T3, Q vigente; denominador T3 suma R y numerador suma Q dentro del grupo; total usa T para primera persona del año.",
+      "origen": "V24:18_Foto_Intertrimestral!G8:H10;20_Foto_BBDD!Q:R,T"
+    },
+    {
+      "clase": "D/C",
+      "definicion": "T1 2026 T3 1360/1467: cuatro no aplica de 1471; total T3 2290/2519 con cuatro exclusiones.",
+      "origen": "BASES_V16;V24:18_Foto_Intertrimestral!D93:H93,D95:H95"
+    },
+    {
+      "clase": "B/C/E",
+      "definicion": "Ingreso T2 2026: 462/528 matrículas; 527 personas en D12, renuncias agregadas sin nómina completa. No convertir a tasa de personas.",
+      "origen": "BASES_V16;V24:18_Foto_Intertrimestral!D12:F12,D94:I94;23_Foto_Renuncias_T2_2026"
+    },
+    {
+      "clase": "C",
+      "definicion": "Ingreso T2 2025 excluye del denominador T2 estados NO APLICA y PENDIENTE; T3 usa bandera R.",
+      "origen": "V24:18_Foto_Intertrimestral!E9:H9"
+    },
+    {
+      "clase": "C/E",
+      "definicion": "Sin foto completa, sin foto y no aplica conservan texto; no convertirlos a cero.",
+      "origen": "V24:18_Foto_Intertrimestral!E10:F10,E13:F13,E14:F14,E18:H18"
+    },
+    {
+      "clase": "C",
+      "definicion": "Para grupos compatibles, agregar numeradores y denominadores; no promediar porcentajes.",
+      "origen": "ESPECIFICACION"
+    },
+    {
+      "clase": "D/E",
+      "definicion": "Diplomados excluidos en el seguimiento autorizado; esta regla requiere auditar universo y filtros de V24 antes de afirmar aplicación total.",
+      "origen": "Decisión usuario; V24:20_Foto_BBDD"
+    },
+    {
+      "clase": "E",
+      "definicion": "La paridad desde fuentes crudas y por sector/carrera no está completada; constantes/proxies de hoja 26 requieren trazabilidad independiente.",
+      "origen": "V24:26_Avance_Curricular_Resumen!E1850,E1851,E1854"
+    }
+  ],
+  "pendientes": [
+    "Reconstrucción integral independiente de hoja 20 y de reglas de deduplicación y vigencia.",
+    "Paridad de todos los campos y de E/F en secciones sector y tipo.",
+    "Demostrar exclusión de diplomados en el universo V24.",
+    "Sin autorización para activar o crear V25."
+  ],
+  "tipos_de_celda": [
+    {
+      "celdas": "18!E7:H7, E8:F8, E11:F11",
+      "tipo": "proxy actividad y estado del extracto",
+      "clase": "C/E",
+      "origen": "26!E1850:E1854; 18!B3,B82"
+    },
+    {
+      "celdas": "18!G8:H14",
+      "tipo": "vigencia en foto, salvo referencias a proxy y no aplica",
+      "clase": "B/C/E",
+      "origen": "20!P:R; 24 y 25"
+    },
+    {
+      "celdas": "18!E12:F12; F94:H94",
+      "tipo": "matrículas T2-2026, renuncias agregadas",
+      "clase": "B/C/E",
+      "origen": "23!C6:F24; 18!D94:I94"
+    },
+    {
+      "celdas": "18!D14,G14,H14, D95:H95",
+      "tipo": "personas únicas T3; no suma la tasa de matrículas T2",
+      "clase": "C/D",
+      "origen": "20!T,Q,R; 18!D95:I95"
+    }
+  ],
+  "constantes_hoja26": {
+    "clase": "C/E",
+    "resultado": "E1850=160, E1851=175 y E1854=1042 reproducidos por cuerpo de RUT y estado VIGENTE en PROMEDIOS 12166; coincidencia no acredita algoritmo original ni validez histórica de estado.",
+    "constructor_original": "no localizado; pendiente documental E",
+    "origen": "outputs/fase_h_hito2b_fuentes_20261027/PROXIES_REPRODUCIDOS.json"
+  },
+  "estado_validacion": "REPRODUCCION_PARCIAL"
+}

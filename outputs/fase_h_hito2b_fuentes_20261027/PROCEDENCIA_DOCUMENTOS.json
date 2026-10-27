@@ -1,0 +1,75 @@
+{
+  "registros_v24": 4473,
+  "resultado_por_documento_y_fila": {
+    "COINCIDE": 4473
+  },
+  "grupos": [
+    {
+      "ano": 2024,
+      "grupo": 1,
+      "estado": "COINCIDE",
+      "filas": 558
+    },
+    {
+      "ano": 2025,
+      "grupo": 1,
+      "estado": "COINCIDE",
+      "filas": 1150
+    },
+    {
+      "ano": 2025,
+      "grupo": 2,
+      "estado": "COINCIDE",
+      "filas": 222
+    },
+    {
+      "ano": 2026,
+      "grupo": 1,
+      "estado": "COINCIDE",
+      "filas": 1471
+    },
+    {
+      "ano": 2026,
+      "grupo": 2,
+      "estado": "COINCIDE",
+      "filas": 527
+    },
+    {
+      "ano": 2026,
+      "grupo": 3,
+      "estado": "COINCIDE",
+      "filas": 545
+    }
+  ],
+  "fuentes": {
+    "maqueta": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx",
+      "sha256": "5b64030011ad64f742a95ad72a91cc326ad918afaea46ea989496d2e8c44f899"
+    },
+    "t2_2025": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3"
+    },
+    "t2_2026": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769"
+    },
+    "t3_2026": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae"
+    },
+    "v24": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx",
+      "sha256": "1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481"
+    }
+  },
+  "detalle_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_h_hito2b_20261027/PARIDAD_PRIVADA.sqlite",
+    "sha256": "898e2421cf171d116311bfadf3693d6918d35f8ddc98526fced36f2fa60ea7ca"
+  },
+  "limitaciones": [
+    "La fila original se toma de la referencia de V24: verifica linaje, no selecciona independientemente la población ni reproduce deduplicación.",
+    "Solo se contrastó documento; no se reconstruyeron vigencia, carrera, sector, estado, ni otros campos de hoja 20.",
+    "El documento se compara como lo presenta V24; no implica validación de identidad ni DV."
+  ]
+}
