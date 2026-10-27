@@ -1,0 +1,63 @@
+{
+  "estado": "ACTIVA_PASS_CON_LIMITES",
+  "comparacion_consultas": 26930,
+  "normalizadas": 1128,
+  "colisiones": 0,
+  "D_localizables": 86,
+  "E_sin_adjudicar": 6,
+  "consumidores": {
+    "muestra_nuevas": 30,
+    "muestra_anteriores": 30,
+    "consumidores": 3,
+    "respuestas_iguales": true,
+    "consulta_total": 180,
+    "metodo": "Descriptor candidato inyectado sin cambiar puntero activo. Muestra determinística, no exhaustiva.",
+    "capa_nuevas_sin_indice": 30
+  },
+  "base_alterada_rechazada": true,
+  "unitarias_aprobadas": 15,
+  "T1": {
+    "consistentes": 933,
+    "diferencias": 0,
+    "alcance": "Solo códigos documentales en vista T1"
+  },
+  "foco": {
+    "contextos": 5144,
+    "v15": {
+      "contextos_pendientes": 990,
+      "personas_totalmente_pendientes": 45,
+      "expedientes_totalmente_pendientes": 215,
+      "personas": 488,
+      "expedientes": 1032
+    },
+    "v16": {
+      "contextos_pendientes": 990,
+      "personas_totalmente_pendientes": 45,
+      "expedientes_totalmente_pendientes": 215,
+      "personas": 488,
+      "expedientes": 1032
+    },
+    "contextos_con_cambio_pendiente": 0,
+    "metodo": "Consulta sin sede como consumidor del foco, con control de jornada existente; no altera población."
+  },
+  "resumen": {
+    "universo_observaciones": 26930,
+    "B/C": 21569,
+    "D": 1326,
+    "E": 4035,
+    "pendientes_internos_observaciones": 4035,
+    "sedes_normalizadas": 1128,
+    "seis_E_sin_adjudicar": 6
+  },
+  "limites": [
+    "Capa complementaria para 302 observaciones añadidas en v15 permanece pendiente de indexación",
+    "Muestra de consumidores de 60 contextos, no exhaustiva",
+    "0 colisiones no adjudica los seis códigos E"
+  ],
+  "activo_v15_sin_cambio": false,
+  "commit_push": false,
+  "descriptor_activo_sha256": "d26459094dd82f55d9e8dcfd4f8606cfc369a8303e530a0f20b35a4fe05f0511",
+  "t1_puntero_real": "outputs/regla_herencia_t1_20261026/CONTROL_v16_20261027_candidata_sedes.json",
+  "consumidores_puntero_real": "outputs/fase_d_v16_candidata_20261027/QA_CONSUMIDORES_ACTIVO_V16.json",
+  "activacion_autorizada": true
+}
