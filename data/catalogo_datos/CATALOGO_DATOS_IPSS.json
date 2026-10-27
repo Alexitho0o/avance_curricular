@@ -1,6 +1,6 @@
 {
   "estado": "INVENTARIO_METADATOS_V3",
-  "fecha": "2026-10-27T17:57:55.450971-03:00",
+  "fecha": "2026-10-27T18:13:50.491428-03:00",
   "raiz": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS",
   "metodo": "Metadatos y bytes únicamente; 193 SHA-256 reutilizados, huellas para pendientes, índices comprimidos sin extracción.",
   "archivos": 206,
@@ -5826,6 +5826,56 @@
     "avance_historico": "outputs/fase_e_hito2_excel_v3_20261027/",
     "catalogo_fuentes": "data/catalogo_fuentes/CATALOGO_FUENTES.json"
   },
+  "copias_fuera_0_bases_de_datos": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/1. INDICES/Matricula_2007_2025_WEB_15_07_2025.csv",
+      "bytes": 145607116,
+      "crc32": "d4612ec2",
+      "sha256": "761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198",
+      "relacion": "copia exacta",
+      "diferencia": null
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/2025/☀️ PROYECTO DE VISUALIZACIÓN DE DATOS NACIONAL/MATRÍCULA/Matricula_2007_2025_WEB_15_07_2025.csv",
+      "bytes": 145607116,
+      "crc32": "1fd183ea",
+      "sha256": "afce23fe1f29e5a88d3cd794f23f8a1b75394d43815077af98d66de79adf4a7f",
+      "relacion": "mismo nombre y tamaño, contenido distinto — edición no identificada; no usar",
+      "diferencia": "Desde línea 117: filas distintas; mismo encabezado, delimitador ;, codificación compatible y CRLF."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Archivos de chat de Microsoft Teams/Matricula_2007_2025_WEB_15_07_2025.csv",
+      "bytes": 145607116,
+      "crc32": "d4612ec2",
+      "sha256": "761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198",
+      "relacion": "copia exacta",
+      "diferencia": null
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/Matricula_2007_2025_WEB_15_07_2025.csv",
+      "bytes": 145607116,
+      "crc32": "d4612ec2",
+      "sha256": "761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198",
+      "relacion": "copia exacta",
+      "diferencia": null
+    }
+  ],
+  "referencias_modelos_powerbi": [
+    {
+      "modelo": "IPSS_Procesos_SIES",
+      "tabla": "Matricula_2007_2025_WEB_15_07_2025",
+      "ruta_declarada": "C:\\Users\\Enzo Castro\\OneDrive - Instituto Profesional San Sebastián\\0 BASES DE DATOS\\MATRÍCULA\\Matricula_2007_2025_WEB_15_07_2025.csv",
+      "hash_canonico_verificado": "761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198",
+      "pendiente": "portabilidad de ruta entre equipos"
+    },
+    {
+      "modelo": "IPSS_Procesos_SIES_PNM_LOCAL",
+      "tabla": "Matricula_2007_2025_WEB_15_07_2025",
+      "ruta_declarada": "C:\\Users\\Enzo Castro\\OneDrive - Instituto Profesional San Sebastián\\0 BASES DE DATOS\\MATRÍCULA\\Matricula_2007_2025_WEB_15_07_2025.csv",
+      "hash_canonico_verificado": "761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198",
+      "pendiente": "portabilidad de ruta entre equipos"
+    }
+  ],
   "pendientes": [
     "Hashes completos pendientes solo para entradas no canónicas o equivalencia pendiente",
     "RAR sin índice disponible",

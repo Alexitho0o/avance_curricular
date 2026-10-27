@@ -306,3 +306,18 @@ Total: 27
 - Cada archivo tiene un rol único; copias y contenedores no se usan en análisis.
 - Ninguna publicación SIES queda en la subsección documento institucional.
 - Recomendar “Liberar espacio” en OneDrive para revisar disponibilidad física.
+
+## Copias fuera de 0 BASES DE DATOS
+
+| Ruta | Bytes | CRC32 | SHA-256 | Relación |
+| --- | ---: | --- | --- | --- |
+| /Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/1. INDICES/Matricula_2007_2025_WEB_15_07_2025.csv | 145607116 | d4612ec2 | 761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198 | copia exacta |
+| /Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/2025/☀️ PROYECTO DE VISUALIZACIÓN DE DATOS NACIONAL/MATRÍCULA/Matricula_2007_2025_WEB_15_07_2025.csv | 145607116 | 1fd183ea | afce23fe1f29e5a88d3cd794f23f8a1b75394d43815077af98d66de79adf4a7f | mismo nombre y tamaño, contenido distinto — edición no identificada; no usar |
+| /Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Archivos de chat de Microsoft Teams/Matricula_2007_2025_WEB_15_07_2025.csv | 145607116 | d4612ec2 | 761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198 | copia exacta |
+| /Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/otros/Matricula_2007_2025_WEB_15_07_2025.csv | 145607116 | d4612ec2 | 761d4acc7a42eed70878adab93deac14f97110974a4430518c46bafe7e8a8198 | copia exacta |
+
+Edición no identificada: desde la línea 117 presenta filas distintas; conserva encabezado, delimitador, codificación compatible y CRLF.
+
+## Referencias Power BI
+
+Ambos modelos leen la ruta canónica; la ruta declarada usa `C:\Users\Enzo Castro\...` y queda pendiente de portabilidad.
