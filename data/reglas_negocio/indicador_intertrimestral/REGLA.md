@@ -28,3 +28,6 @@ Estado: **borrador, sin paridad completa ni activación**. No confundir la conti
 
 
 **[C/E] Actualización Hito 2b:** E1850=160, E1851=175 y E1854=1042 se reprodujeron desde PROMEDIOS 12166 por cuerpo de RUT y estado VIGENTE del extracto. La coincidencia no prueba el algoritmo original ni vigencia a fecha de cierre; el constructor original sigue E. F12 es 462/528 matrículas, mientras H11 y H14 son tasas de personas; E14/F14 conservan «Sin foto completa»/«—», sin sumar unidades distintas.
+
+
+**[D/C]** Si no se encuentra la matrícula de ingreso en foto 2025/2026, mostrar «Sin matrícula de ingreso en el corte», Q=0 y R=1: queda en el denominador y no suma al numerador. La decisión evita inflar la tasa y no acredita deserción.

@@ -1,0 +1,68 @@
+{
+  "conteos_por_grupo": [
+    {
+      "ano": 2024,
+      "grupo": 1,
+      "personas": 558,
+      "duplicados_llave_corporal": 0
+    },
+    {
+      "ano": 2025,
+      "grupo": 1,
+      "personas": 1150,
+      "duplicados_llave_corporal": 0
+    },
+    {
+      "ano": 2025,
+      "grupo": 2,
+      "personas": 222,
+      "duplicados_llave_corporal": 3
+    },
+    {
+      "ano": 2026,
+      "grupo": 1,
+      "personas": 1476,
+      "duplicados_llave_corporal": 5
+    },
+    {
+      "ano": 2026,
+      "grupo": 2,
+      "personas": 527,
+      "duplicados_llave_corporal": 1
+    },
+    {
+      "ano": 2026,
+      "grupo": 3,
+      "personas": 545,
+      "duplicados_llave_corporal": 12
+    }
+  ],
+  "sin_llave": 0,
+  "fuentes": {
+    "maqueta": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx",
+      "sha256": "5b64030011ad64f742a95ad72a91cc326ad918afaea46ea989496d2e8c44f899"
+    },
+    "t2_2025": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3"
+    },
+    "t2_2026": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769"
+    },
+    "t3_2026": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae"
+    }
+  },
+  "salida_privada": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_h_hito2c_20261027/UNIVERSO_CONSTRUIDO.sqlite",
+    "sha256": "0e83076246ce8ad46006415c66596c392f0e2d63db7c5e0c157efe2a8a37277b"
+  },
+  "limites": [
+    "La llave corporal RUT se reproduce como hipótesis técnica; no demuestra identidad de documentos P ni resuelve colisiones DV.",
+    "Selección de planes, periodos y categorías reproduce la interpretación preliminar y requiere control de membresía.",
+    "Todavía no se calculan estados, fotos ni denominadores de tasas."
+  ]
+}

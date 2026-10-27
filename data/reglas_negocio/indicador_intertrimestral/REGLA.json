@@ -88,13 +88,19 @@
       "clase": "E",
       "definicion": "La paridad desde fuentes crudas y por sector/carrera no está completada; constantes/proxies de hoja 26 requieren trazabilidad independiente.",
       "origen": "V24:26_Avance_Curricular_Resumen!E1850,E1851,E1854"
+    },
+    {
+      "clase": "D/C",
+      "definicion": "Si no se encuentra matrícula de ingreso en foto 2025/2026: P = Sin matrícula de ingreso en el corte, Q = 0 y R = 1. La persona permanece en el denominador y no suma al numerador; tratamiento deliberado para no inflar la tasa. No acredita deserción.",
+      "origen": "Decisión explícita usuario; V24 20_Foto_BBDD!P564,R564"
     }
   ],
   "pendientes": [
     "Reconstrucción integral independiente de hoja 20 y de reglas de deduplicación y vigencia.",
     "Paridad de todos los campos y de E/F en secciones sector y tipo.",
     "Demostrar exclusión de diplomados en el universo V24.",
-    "Sin autorización para activar o crear V25."
+    "Sin autorización para activar o crear V25.",
+    "Cinco personas T1-2026 con matrícula duplicada están en construcción y no en V24; criterio de selección y causación administrativa por acreditar."
   ],
   "tipos_de_celda": [
     {
@@ -128,5 +134,34 @@
     "constructor_original": "no localizado; pendiente documental E",
     "origen": "outputs/fase_h_hito2b_fuentes_20261027/PROXIES_REPRODUCIDOS.json"
   },
-  "estado_validacion": "REPRODUCCION_PARCIAL"
+  "estado_validacion": "PARIDAD_PARCIAL_5_REGISTROS_Y_DESGLOSES_PENDIENTES",
+  "referencias_versionadas_hito2c": [
+    {
+      "ruta": "data/reglas_negocio/mu2027/versiones/20261021_v1/reglas.json",
+      "commit": "09314ca44c2134e38fd3e73d4ccb02f7b598ab0b",
+      "sha256": "5ffa47d537f3ae81cd470ae9c1c9ed75cafb4adb4eb38e980d45fd21a272714e",
+      "validacion": "Coincide con la hoja 21 tras quitar espacio final; 32 pares y valores coinciden."
+    },
+    {
+      "ruta": "docs/SEGUIMIENTO_RUT_Y_CONVERSION_PERIODOS_20261023.md",
+      "commit": "e390385a58289ea54a70938102ae640f0aba2dc5",
+      "sha256": "79479caefc114d0dcdda2ea992829d4246adec2bf22f19756dac889d3cad5e91"
+    }
+  ],
+  "cierre_hito_2c": {
+    "estado": "PARIDAD_PARCIAL_CON_PENDIENTES_EXPLICITOS",
+    "clase": "E",
+    "cinco_personas_t1_2026": {
+      "hallazgo": "Cinco personas con dos matrículas vigentes en la fuente no aparecen en V24; causa de exclusión no acreditada.",
+      "impacto_H11_pp": 0.0248,
+      "impacto_H14_pp": 0.018,
+      "direccion": "construcción menos V24",
+      "sin_cambio_denominadores_aprobados": true
+    },
+    "proxies_y_desgloses": {
+      "estado": "Pendiente",
+      "detalle": "Paridad desde fuentes originales de proxies y desgloses sector/tipo no completada.",
+      "impacto": "No cuantificado; pendiente de comparación completa."
+    }
+  }
 }

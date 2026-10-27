@@ -30,3 +30,11 @@ def documento_comparable(valor):
     if valor is None:return ''
     if isinstance(valor,float) and valor.is_integer():valor=int(valor)
     return str(valor).strip().upper().replace('.','').replace(' ','')
+
+def clasificar_prioridad_foto(anio, prioridades):
+    """Retorna estado, numerador Q y denominador R de la lógica histórica V24."""
+    if anio not in (2025,2026):return 'Sin foto',0,0
+    prioridad=min(prioridades,default=6)
+    nombres={1:'VIG 1',2:'NO APLICA',3:'PENDIENTE',4:'VIG 0',5:'SIN REGLA',6:'Sin matrícula de ingreso en el corte'}
+    if prioridad not in nombres:raise ValueError('Prioridad no reconocida')
+    return nombres[prioridad],int(prioridad==1),int(prioridad not in (2,3))
