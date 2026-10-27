@@ -1,0 +1,96 @@
+{
+  "clasificacion": "D criterio interno; B fuentes; C implementación; E fecha/cobertura y discrepancias",
+  "fecha_hora": "2026-10-26T18:57:50.550112-03:00",
+  "edicion_diccionario": "v19_20261027_candidata_fase_g",
+  "fuentes": {
+    "v11_12166": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015",
+      "hoja": "Hoja1"
+    },
+    "respaldo_ampliado": {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/analisis_anual/2026/20261016_002933_892820/entrega/03_RESPALDOS/P3/01_ENTRADAS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "78491c4cd66978b16b1236fbc8fc9d01a9c99246c3ba4d33e20b7f32f2959a71",
+      "hoja": "Hoja1"
+    },
+    "foto_2026_2": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "hoja": "Hoja1",
+      "tiene_estado": false
+    },
+    "foto_2026_3": {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "hoja": "Base",
+      "tiene_estado": true
+    }
+  },
+  "conteos_por_observacion_v11": {
+    "ESTADO_DEL_EXTRACTO": 25902
+  },
+  "estados_por_observacion_v11": {
+    "ELIMINADO": 5830,
+    "VIGENTE": 10217,
+    "TITULADO": 9453,
+    "SUSPENDIDO": 402
+  },
+  "alertas_por_observacion_no_exclusivas": {
+    "NOTA_EXTRACCIONES_DISTINTA": 529,
+    "ESTADO_PROMEDIOS_ACTUAL_Y_FOTO_DIFIEREN": 3,
+    "ESTADO_EXTRACCIONES_DISTINTO": 3,
+    "SECCION_EXTRACCIONES_DISTINTA": 8
+  },
+  "total_observaciones": 27183,
+  "expedientes_promedios": 8975,
+  "expedientes_con_mas_de_un_estado_observado": 0,
+  "resultado_ultimo_expediente": {
+    "ESTADO_DEL_EXTRACTO": 8975
+  },
+  "ultimo_ano_2026": {
+    "ESTADO_DEL_EXTRACTO": 4076
+  },
+  "filas_no_procesadas": {
+    "respaldo_ampliado_identidad_o_periodo": 4211
+  },
+  "capa_privada": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_g_v19_candidata_20261027/CAPA_PROMEDIOS_V19_COMPLETA.json",
+    "sha256": "54d07b5d06fcafcbaa5b2fd1689ded5a0a8fa2510c59304f8ff167037e8d1bb8"
+  },
+  "limites": "Último año/período observado en PROMEDIOS 12166; estado es del extracto y no se asigna retroactivamente a períodos previos. El corte/frescura y cobertura del archivo no están certificados; cero no equivale vacío. Foto no localizada no implica abandono. No afecta códigos SIES ni denominadores.",
+  "alcance_v12": "25902 observaciones anteriores conservadas; 644 nuevas con capa PROMEDIOS pendiente de indexación. No se infieren fotos ni estados.",
+  "alcance_v13": "Observaciones previas preservadas; nuevas observaciones con capa de fotos y estado pendiente de indexacion.",
+  "alcance_v14": "Observaciones previas preservadas; nuevas observaciones con capa de fotos y estado pendiente de indexacion.",
+  "alcance_v15": "Observaciones nuevas pendientes de indexación complementaria.",
+  "alcance_v16": "Solo cambia la representación de sede; 302 observaciones v15 aún requieren indexación complementaria.",
+  "sha256_base_diccionario": "5edd372136875bd36a268606ed649b76ba4c0e5d2b8afe63719dcc7cae78ccbd",
+  "indices_adicionales": [
+    {
+      "nombre": "Fase C",
+      "ruta": "/Users/alexi/.local/share/ipss/fase_c_hito1_726_20261027/INDICE_COMPLEMENTARIO_726.sqlite",
+      "sha256": "8f8c439eeafccc6329a5708a16e9a3e266f63dc13575e770211930a453d7dbac",
+      "id_desde": 25903,
+      "id_hasta": 26628
+    },
+    {
+      "nombre": "Fase E",
+      "ruta": "/Users/alexi/.local/share/ipss/fase_e_hito1_302_20261027/INDICE_COMPLEMENTARIO_302.sqlite",
+      "sha256": "86e9c1e1c37f6da0e1760fbc9b52d9d6852ccc5c9d77fe8460a710b88fbebb15",
+      "id_desde": 26629,
+      "id_hasta": 26930
+    }
+  ],
+  "limites_v17": "Fuentes con corte y cobertura no certificados; estado es del extracto, no histórico. No altera asignaciones.",
+  "alcance_v18": "Entradas nuevas con actividad fuente; estado más reciente y fotos no reconstruidos y no inferidos.",
+  "indice_fase_f": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_f_v18_candidata_20261027/INDICE_COMPLEMENTARIO_218.sqlite",
+    "sha256": "8c5587a54e3af8d2f27ba3d823b25dbc57b7a59bda3994302938bd6f6035d95f",
+    "observaciones": 218
+  },
+  "indice_fase_g": {
+    "ruta": "/Users/alexi/.local/share/ipss/fase_g_v19_candidata_20261027/INDICE_COMPLEMENTARIO_35.sqlite",
+    "sha256": "56859e30c516f67a840c72a7919a06510fa9116b62d94d5a9621663c64164748",
+    "observaciones": 35
+  },
+  "alcance_v19": "35 observaciones nuevas: actividad, estado extracto 12166 y comparación con fotos por período. No acredita vigencia histórica."
+}
