@@ -63,3 +63,5 @@ No se leyeron valores de V24 para construir el cálculo. La comparación secunda
 La auditoría VIG gobernada (ruta y hash consignados en la regla) registra 960 VIG=0 en el envío 2026 por controles de nómina. No se revierten ni se cuentan automáticamente como retención: falta fundamento académico individual. Esta decisión no se extrapola retrospectivamente a 2023–2025, donde la definición SIES se evalúa por presencia en MU de `t+1`.
 
 No se clasifican diferencias como error de código mientras no exista una tabla SIES comparable y una clasificación gobernada de programas especiales. La regla permanece `BORRADOR_NO_ACTIVO`; no se propone activación.
+
+La comprobación de versiones posteriores de MU 2025 no confirma que los VIG=0 sean meramente provisionales: entre los 52 retenidos de cohorte 2024 con VIG=0, solo 8 aparecen con VIG=1 en las tres fuentes posteriores; entre los 2 casos análogos de cohorte 2023, solo 1. Se mantiene una única regla de cálculo por presencia para reproducir 2022–2024 y 2025 queda E; los 960 controles VIG=0 no se cuentan como retenidos hasta contar con una versión final validada y la cohorte completa.

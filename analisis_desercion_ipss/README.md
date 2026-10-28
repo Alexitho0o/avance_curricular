@@ -18,4 +18,4 @@ Estado: **BORRADOR**. El propósito es separar y documentar la Retención de 1er
 
 ## Relación con la gobernanza existente
 
-El diccionario UMAS–SIES vigente se consulta mediante `data/diccionario_sies_seguimiento/activo.json`. Las fuentes y sus hashes se consultan en `data/catalogo_datos/CATALOGO_DATOS_IPSS.json` y `data/catalogo_fuentes/CATALOGO_FUENTES.json`. El componente intertrimestral se referencia en `data/reglas_negocio/indicador_intertrimestral/REGLA.json`; no se copia. El estado del subproyecto y sus reglas se registra en `PROYECTO_IPSS.json`.
+El diccionario UMAS–SIES vigente se consulta mediante `data/diccionario_sies_seguimiento/activo.json`. Las fuentes y sus hashes se consultan en `data/catalogo_datos/CATALOGO_DATOS_IPSS.json` y `data/catalogo_fuentes/CATALOGO_FUENTES.json`. El componente intertrimestral se referencia en `data/reglas_negocio/indicador_intertrimestral/REGLA.json`; no se copia. La auditoría VIG se referencia en `data/reglas_negocio/mu2027/estudio/AUDITORIA_VIG_ENVIOS_RETENCION.md` y el hito H001 en `manifests/milestones/H001-RETENCION-IPSS162/`. El estado del subproyecto y sus reglas se registra en `PROYECTO_IPSS.json`.
