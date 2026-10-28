@@ -1,0 +1,2288 @@
+{
+  "estado": "PARCIAL_CON_PENDIENTES",
+  "clases": "A oficial; B observado; C cálculo; D decisión; E pendiente",
+  "fuentes": {
+    "mu": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    "mu_2021": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
+      "sha256": "8f14b670f00f725412d9dadffea5db9ad2de97b536c88dad992d4370252c401e"
+    },
+    "catalogo_h001": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+      "sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3"
+    },
+    "h001_agregado": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+      "sha256": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5"
+    },
+    "publicacion_titulados": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/TITULACION/Titulados_IPSS_162_Consolidado_2007_2025.csv",
+      "sha256": "70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229"
+    },
+    "glosario_titulados": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/TITULACION/GLOSARIO_DE_TITULADO_2007_2025_E.pdf",
+      "sha256": "b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f"
+    },
+    "datos_alumnos": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9"
+    },
+    "grupos_carrera": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_por_cohorte/20261016/grupos_existentes.json",
+      "sha256": "80ce832f8d230551cac18b043e6715023f34ec42fb007313f1b17051c98463aa"
+    },
+    "maestro_carreras": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+      "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+    },
+    "catalogo_fuentes": {
+      "ruta": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+      "sha256": "f50834c8bd0ed0b17bd612fc4eaa72ac2706f7920323eae0c30c40cf1d060807"
+    },
+    "diccionario_activo": {
+      "ruta": "data/diccionario_sies_seguimiento/activo.json",
+      "sha256": "26615bd2849dd39dfbf947ffda9f8d5d211504ad8c4e900d4ff0f2f936d4cc55"
+    },
+    "inventario_titulacion": {
+      "ruta": "outputs/inventario_busquedas_titulacion_20261026/INFORME.md",
+      "sha256": "bfb37f2f778c197a014869bd072ede3e603b0617ec23d5c933ceae8f7dd3ecc6"
+    },
+    "conciliacion_mu_sies": {
+      "ruta": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
+      "sha256": "3bc390117918e72438557435b8d031fbf71f152b00bf9abf452bab82282e1005"
+    },
+    "regla_h001": {
+      "ruta": "manifests/milestones/H001-RETENCION-IPSS162/README.md",
+      "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48"
+    },
+    "implementacion_h001": {
+      "ruta": "common/analisis_desercion/h001.py",
+      "sha256": "91203bc6c4668a232b1f74f4249b63d4819a77e613923ae5a24a0dc01999b443"
+    },
+    "puente": {
+      "ruta": "procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json",
+      "sha256": "c205fed8061bc02ea2623eea8d789ffc1bc1355e41f82bb1298d319bd76b08ad"
+    }
+  },
+  "matriz": [
+    {
+      "anio": 2022,
+      "mu_sies": {
+        "mu_filas": 1038,
+        "mu_pregrado_filas": 1036,
+        "mu_nivel_no_acreditado_filas": 2,
+        "vig1_pregrado": 1033,
+        "vig0_pregrado": 3,
+        "publicado_pregrado": 1033,
+        "publicado_postitulo": 0,
+        "publicado_institucional": 1033,
+        "diferencia_publicado_menos_vig1": 0,
+        "estado": "CUADRA",
+        "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
+        "nota": "2025 y 2026: diferencia neta observada; causa individual pendiente."
+      },
+      "retencion_mu": {
+        "matriculas_mu": 1038,
+        "personas_mu_llave_comparable": 1021,
+        "candidatos_primer_anio_filas": 310,
+        "motivos_exclusiones_filas": {
+          "VIG 0": 3,
+          "elegible": 305,
+          "origen distinto en año siguiente": 2
+        },
+        "elegibles_h001_filas": 305,
+        "h001_en_mu_con_llave_comparable_filas": 305,
+        "estado": "CUADRA",
+        "nota": "Candidatos son registros con año y semestre de origen compatibles; partición por primer motivo según implementación H001. Unidad filas."
+      },
+      "titulacion_publicada": {
+        "cat_periodo": 2021,
+        "registros": 214,
+        "carga": 214,
+        "estado": "E",
+        "nota": "Alineación t↔t−1 observada, no se acredita como norma. Código agregado no enlaza personas con MRUN."
+      },
+      "titulacion_mu": {
+        "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2022/TIT_2022_162_def (1 de marzo de 2021 hasta el 28 de febrero de 2022).csv",
+        "sha256": "451dcc2ca39b9a5dfb6072282d32fb8a5440a2af21d8cf667e1e9ee62bf1e60d",
+        "registros": 214,
+        "personas_con_llave_comparable": 214,
+        "personas_con_mu_por_anio": {
+          "2021": 106,
+          "2022": 26
+        },
+        "por_codigo_obtenido": {
+          "I162S2C1J4V3": 3,
+          "I162S2C3J4V1": 18,
+          "I162S2C3J2V2": 4,
+          "I162S2C2J4V2": 7,
+          "I162S2C6J4V2": 10,
+          "I162S2C35J4V1": 6,
+          "I162S2C3J2V1": 22,
+          "I162S2C47J2V1": 5,
+          "I162S2C11J2V1": 4,
+          "I162S2C46J2V3": 4,
+          "I162S2C3J2V3": 29,
+          "I162S2C2J4V1": 4,
+          "I162S2C22J2V2": 3,
+          "I162S2C46J2V2": 17,
+          "I162S2C6J2V2": 13,
+          "I162S2C2J2V1": 5,
+          "I162S2C1J2V1": 19,
+          "I162S2C47J4V1": 1,
+          "I162S2C35J2V1": 3,
+          "I162S2C6J2V1": 8,
+          "I162S2C6J4V1": 2,
+          "I162S2C1J2V3": 6,
+          "I162S2C2J2V2": 5,
+          "I162S2C2J1V2": 6,
+          "I162S2C6J1V2": 4,
+          "I162S2C2J1V1": 2,
+          "I162S2C1J2V2": 1,
+          "I162S2C46J2V1": 2,
+          "I162S2C6J1V1": 1
+        },
+        "estado": "E",
+        "nota": "Archivo de carga observado; alineación proceso t y cat_periodo t−1 es observación, no regla oficial acreditada. El cruce MU comprueba identidad, no expediente.",
+        "cat_periodo_publicado": 2021,
+        "registros_publicados": 214,
+        "diferencia_carga_menos_publicacion": 0,
+        "comparacion_codigo": [
+          {
+            "codigo_sies": "I162S2C11J2V1",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V1",
+            "carga": 19,
+            "publicacion": 19,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V2",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V3",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V3",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C22J2V2",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J1V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J1V2",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J2V1",
+            "carga": 5,
+            "publicacion": 5,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J2V2",
+            "carga": 5,
+            "publicacion": 5,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J4V1",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J4V2",
+            "carga": 7,
+            "publicacion": 7,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C35J2V1",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C35J4V1",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V1",
+            "carga": 22,
+            "publicacion": 22,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V2",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V3",
+            "carga": 29,
+            "publicacion": 29,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V1",
+            "carga": 18,
+            "publicacion": 18,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V2",
+            "carga": 17,
+            "publicacion": 17,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V3",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J2V1",
+            "carga": 5,
+            "publicacion": 5,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J4V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J1V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J1V2",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V1",
+            "carga": 8,
+            "publicacion": 8,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V2",
+            "carga": 13,
+            "publicacion": 13,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V2",
+            "carga": 10,
+            "publicacion": 10,
+            "estado": "E"
+          }
+        ]
+      },
+      "datos_alumnos_mu": {
+        "matriculas_mu": 1038,
+        "rut_dv_y_carrera": 897,
+        "solo_rut_dv": 141,
+        "no_localizado": 0,
+        "no_localizado_sin_rut_dv_comparable": 0,
+        "estado": "E",
+        "nota": "RUT+DV exacto; carrera por CODCLI y carrera UMAS de DA, contexto del mismo año y código documental o D aprobado en diccionario v20. Solo documento incluye no acreditado y carrera distinta. No localizado incluye documentos sin RUT+DV comparable; no demuestra inexistencia del expediente. No evalúa vigencia."
+      },
+      "cobertura_familia": {
+        "matriculas_mu": 1038,
+        "rut_dv_y_carrera": 1009,
+        "codcarpr_fuera_familia": 26,
+        "familia_sin_mapeo": 3,
+        "sin_observacion_diccionario_2026_entre_no_respaldados": null,
+        "estado": "B/C/E",
+        "nota": "Candidatos según grupos y relaciones operativas del maestro 2026; no acreditan plan, vigencia temporal ni atribución individual. Fuera del conjunto no prueba por sí sola cambio de carrera.",
+        "familias_sin_mapeo": [
+          {
+            "anio": 2022,
+            "familia_sies": "I162S2C35J4",
+            "matriculas": 3,
+            "clase": "B/C; E equivalencia pendiente"
+          }
+        ]
+      }
+    },
+    {
+      "anio": 2023,
+      "mu_sies": {
+        "mu_filas": 1145,
+        "mu_pregrado_filas": 1145,
+        "mu_nivel_no_acreditado_filas": 0,
+        "vig1_pregrado": 1142,
+        "vig0_pregrado": 3,
+        "publicado_pregrado": 1142,
+        "publicado_postitulo": 19,
+        "publicado_institucional": 1161,
+        "diferencia_publicado_menos_vig1": 0,
+        "estado": "CUADRA",
+        "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
+        "nota": "2025 y 2026: diferencia neta observada; causa individual pendiente."
+      },
+      "retencion_mu": {
+        "matriculas_mu": 1145,
+        "personas_mu_llave_comparable": 1133,
+        "candidatos_primer_anio_filas": 370,
+        "motivos_exclusiones_filas": {
+          "elegible": 366,
+          "VIG 0": 3,
+          "origen distinto en año siguiente": 1
+        },
+        "elegibles_h001_filas": 366,
+        "h001_en_mu_con_llave_comparable_filas": 366,
+        "estado": "CUADRA",
+        "nota": "Candidatos son registros con año y semestre de origen compatibles; partición por primer motivo según implementación H001. Unidad filas."
+      },
+      "titulacion_publicada": {
+        "cat_periodo": 2022,
+        "registros": 294,
+        "carga": 283,
+        "estado": "E",
+        "nota": "Alineación t↔t−1 observada, no se acredita como norma. Código agregado no enlaza personas con MRUN."
+      },
+      "titulacion_mu": {
+        "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2023/TIT_IP_CIISA_2023 (1 de marzo de 2022 hasta el 28 de febrero de 2023).csv",
+        "sha256": "c590811b196bde2b5aaa9d060bd09ea65f532129515ea31bd326a569e71d61bd",
+        "registros": 283,
+        "personas_con_llave_comparable": 282,
+        "personas_con_mu_por_anio": {
+          "2022": 130,
+          "2023": 26
+        },
+        "por_codigo_obtenido": {
+          "I162S2C47J4V1": 14,
+          "I162S2C46J2V1": 9,
+          "I162S2C1J2V2": 3,
+          "I162S2C3J4V1": 43,
+          "I162S2C6J2V2": 16,
+          "I162S2C46J4V1": 8,
+          "I162S2C1J4V1": 12,
+          "I162S2C3J4V2": 9,
+          "I162S2C22J2V2": 7,
+          "I162S2C3J2V3": 18,
+          "I162S2C46J2V3": 3,
+          "I162S2C1J4V3": 7,
+          "I162S2C57J4V1": 14,
+          "I162S2C46J4V3": 18,
+          "I162S2C22J2V1": 5,
+          "I162S2C6J4V1": 1,
+          "I162S2C35J4V2": 6,
+          "I162S2C3J2V1": 12,
+          "I162S2C1J2V1": 6,
+          "I162S2C3J2V2": 1,
+          "I162S2C6J4V2": 7,
+          "I162S2C1J2V3": 7,
+          "I162S2C2J4V2": 3,
+          "I162S2C11J1V1": 1,
+          "I162S2C35J4V1": 3,
+          "I162S2C47J2V1": 3,
+          "I162S2C57J2V1": 14,
+          "I162S2C3J2V4": 1,
+          "I162S2C6J2V1": 3,
+          "I162S2C11J2V1": 4,
+          "I162S2C2J4V1": 2,
+          "I162S2C35J2V2": 2,
+          "I162S2C57J1V1": 7,
+          "I162S2C1J4V2": 2,
+          "I162S2C46J2V2": 2,
+          "I162S2C46J1V1": 1,
+          "I162S2C1J1V1": 1,
+          "I162S2C2J1V2": 1,
+          "I162S2C2J1V1": 1,
+          "I162S2C1J2V4": 1,
+          "I162S2C47J1V1": 3,
+          "I162S2C6J1V2": 2
+        },
+        "estado": "E",
+        "nota": "Archivo de carga observado; alineación proceso t y cat_periodo t−1 es observación, no regla oficial acreditada. El cruce MU comprueba identidad, no expediente.",
+        "cat_periodo_publicado": 2022,
+        "registros_publicados": 294,
+        "diferencia_carga_menos_publicacion": -11,
+        "comparacion_codigo": [
+          {
+            "codigo_sies": "I162S2C11J1V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C11J2V1",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J1V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V1",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V2",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V3",
+            "carga": 7,
+            "publicacion": 7,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V4",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V1",
+            "carga": 12,
+            "publicacion": 12,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V2",
+            "carga": 2,
+            "publicacion": 8,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V3",
+            "carga": 7,
+            "publicacion": 7,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C22J2V1",
+            "carga": 5,
+            "publicacion": 5,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C22J2V2",
+            "carga": 7,
+            "publicacion": 7,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J1V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J1V2",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J4V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J4V2",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C35J2V2",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C35J4V1",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C35J4V2",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V1",
+            "carga": 12,
+            "publicacion": 12,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V2",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V3",
+            "carga": 18,
+            "publicacion": 18,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V4",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V1",
+            "carga": 43,
+            "publicacion": 43,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V2",
+            "carga": 9,
+            "publicacion": 12,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J1V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V1",
+            "carga": 9,
+            "publicacion": 9,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V2",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V3",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V1",
+            "carga": 8,
+            "publicacion": 8,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V3",
+            "carga": 18,
+            "publicacion": 18,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J1V1",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J2V1",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J4V1",
+            "carga": 14,
+            "publicacion": 14,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J1V1",
+            "carga": 7,
+            "publicacion": 7,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J2V1",
+            "carga": 14,
+            "publicacion": 15,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J4V1",
+            "carga": 14,
+            "publicacion": 14,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J1V2",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V1",
+            "carga": 3,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V2",
+            "carga": 16,
+            "publicacion": 16,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V2",
+            "carga": 7,
+            "publicacion": 7,
+            "estado": "E"
+          }
+        ]
+      },
+      "datos_alumnos_mu": {
+        "matriculas_mu": 1145,
+        "rut_dv_y_carrera": 1085,
+        "solo_rut_dv": 59,
+        "no_localizado": 1,
+        "no_localizado_sin_rut_dv_comparable": 0,
+        "estado": "E",
+        "nota": "RUT+DV exacto; carrera por CODCLI y carrera UMAS de DA, contexto del mismo año y código documental o D aprobado en diccionario v20. Solo documento incluye no acreditado y carrera distinta. No localizado incluye documentos sin RUT+DV comparable; no demuestra inexistencia del expediente. No evalúa vigencia."
+      },
+      "cobertura_familia": {
+        "matriculas_mu": 1145,
+        "rut_dv_y_carrera": 1112,
+        "codcarpr_fuera_familia": 32,
+        "no_localizado": 1,
+        "sin_observacion_diccionario_2026_entre_no_respaldados": null,
+        "estado": "B/C/E",
+        "nota": "Candidatos según grupos y relaciones operativas del maestro 2026; no acreditan plan, vigencia temporal ni atribución individual. Fuera del conjunto no prueba por sí sola cambio de carrera.",
+        "familias_sin_mapeo": []
+      }
+    },
+    {
+      "anio": 2024,
+      "mu_sies": {
+        "mu_filas": 1541,
+        "mu_pregrado_filas": 1535,
+        "mu_nivel_no_acreditado_filas": 6,
+        "vig1_pregrado": 1455,
+        "vig0_pregrado": 80,
+        "publicado_pregrado": 1455,
+        "publicado_postitulo": 13,
+        "publicado_institucional": 1468,
+        "diferencia_publicado_menos_vig1": 0,
+        "estado": "CUADRA",
+        "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
+        "nota": "2025 y 2026: diferencia neta observada; causa individual pendiente."
+      },
+      "retencion_mu": {
+        "matriculas_mu": 1541,
+        "personas_mu_llave_comparable": 1531,
+        "candidatos_primer_anio_filas": 636,
+        "motivos_exclusiones_filas": {
+          "elegible": 558,
+          "VIG 0": 76,
+          "origen distinto en año siguiente": 2
+        },
+        "elegibles_h001_filas": 558,
+        "h001_en_mu_con_llave_comparable_filas": 558,
+        "estado": "CUADRA",
+        "nota": "Candidatos son registros con año y semestre de origen compatibles; partición por primer motivo según implementación H001. Unidad filas."
+      },
+      "titulacion_publicada": {
+        "cat_periodo": 2023,
+        "registros": 342,
+        "carga": 346,
+        "estado": "E",
+        "nota": "Alineación t↔t−1 observada, no se acredita como norma. Código agregado no enlaza personas con MRUN."
+      },
+      "titulacion_mu": {
+        "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Titulación Unificada/TIT_IP_CIISA_2024.xlsx",
+        "sha256": "fc4ec093991ee4234cec9706afd4409b6ec138bdea1a4a8abb3488fad653ee8c",
+        "hoja": "21-03-2023_18-23-51_Titulados_2",
+        "registros": 346,
+        "personas_con_llave_comparable": 345,
+        "personas_con_mu_por_anio": {
+          "2023": 204,
+          "2024": 57
+        },
+        "por_codigo_obtenido": {
+          "I162S2C46J4V2": 9,
+          "I162S2C46J4V3": 20,
+          "I162S2C3J4V2": 67,
+          "I162S2C57J4V1": 54,
+          "I162S2C3J4V1": 2,
+          "I162S2C6J4V2": 23,
+          "I162S2C47J4V1": 25,
+          "I162S2C1J4V2": 42,
+          "I162S2C1J2V4": 13,
+          "I162S2C3J2V4": 22,
+          "I162S2C46J2V1": 11,
+          "I162S2C1J1V2": 2,
+          "I162S2C22J2V1": 12,
+          "I162S2C57J1V1": 6,
+          "I162S2C6J1V2": 5,
+          "I162S2C47J1V1": 7,
+          "I162S2C47J2V1": 4,
+          "I162S2C6J2V2": 2,
+          "162S2C47J1V1": 1,
+          "I162S2C57J2V1": 11,
+          "I162S2C11J2V1": 2,
+          "I162S2C3J2V1": 2,
+          "I162S2C6J2V1": 3,
+          "I162S2C2J2V1": 1
+        },
+        "estado": "E",
+        "nota": "Respaldo inventariado en Publicados: nombre y hoja no acreditan carga final del proceso 2024.",
+        "cat_periodo_publicado": 2023,
+        "registros_publicados": 342,
+        "diferencia_carga_menos_publicacion": 4,
+        "comparacion_codigo": [
+          {
+            "codigo_sies": "162S2C47J1V1",
+            "carga": 1,
+            "publicacion": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C11J2V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J1V2",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V4",
+            "carga": 13,
+            "publicacion": 13,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V2",
+            "carga": 42,
+            "publicacion": 42,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C22J2V1",
+            "carga": 12,
+            "publicacion": 12,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J2V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V4",
+            "carga": 22,
+            "publicacion": 22,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V2",
+            "carga": 67,
+            "publicacion": 64,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V1",
+            "carga": 11,
+            "publicacion": 11,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V2",
+            "carga": 9,
+            "publicacion": 9,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V3",
+            "carga": 20,
+            "publicacion": 20,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J1V1",
+            "carga": 7,
+            "publicacion": 8,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J2V1",
+            "carga": 4,
+            "publicacion": 4,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J4V1",
+            "carga": 25,
+            "publicacion": 25,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J1V1",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J2V1",
+            "carga": 11,
+            "publicacion": 10,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J4V1",
+            "carga": 54,
+            "publicacion": 54,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J1V2",
+            "carga": 5,
+            "publicacion": 5,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V1",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V2",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V2",
+            "carga": 23,
+            "publicacion": 23,
+            "estado": "E"
+          }
+        ],
+        "comparacion_codigo_normalizada": [
+          {
+            "codigo_sies": "I162S2C11J2V1",
+            "carga": 2,
+            "publicacion": 2,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J1V2",
+            "carga": 2,
+            "publicacion": 2,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V4",
+            "carga": 13,
+            "publicacion": 13,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V2",
+            "carga": 42,
+            "publicacion": 42,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C22J2V1",
+            "carga": 12,
+            "publicacion": 12,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C2J2V1",
+            "carga": 1,
+            "publicacion": 1,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V1",
+            "carga": 2,
+            "publicacion": 2,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V4",
+            "carga": 22,
+            "publicacion": 22,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V1",
+            "carga": 2,
+            "publicacion": 2,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V2",
+            "carga": 67,
+            "publicacion": 64,
+            "diferencia": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V1",
+            "carga": 11,
+            "publicacion": 11,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V2",
+            "carga": 9,
+            "publicacion": 9,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V3",
+            "carga": 20,
+            "publicacion": 20,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J1V1",
+            "carga": 8,
+            "publicacion": 8,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J2V1",
+            "carga": 4,
+            "publicacion": 4,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J4V1",
+            "carga": 25,
+            "publicacion": 25,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J1V1",
+            "carga": 6,
+            "publicacion": 6,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J2V1",
+            "carga": 11,
+            "publicacion": 10,
+            "diferencia": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J4V1",
+            "carga": 54,
+            "publicacion": 54,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J1V2",
+            "carga": 5,
+            "publicacion": 5,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V1",
+            "carga": 3,
+            "publicacion": 3,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V2",
+            "carga": 2,
+            "publicacion": 2,
+            "diferencia": 0,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V2",
+            "carga": 23,
+            "publicacion": 23,
+            "diferencia": 0,
+            "estado": "E"
+          }
+        ],
+        "control_prefijo": {
+          "codigos_modificados_en_derivado": 1,
+          "neto_antes": 4,
+          "neto_despues": 4,
+          "diferencia_formato": "B/C: dos diferencias inversas se anulan al normalizar prefijo; no demuestra igualdad individual."
+        }
+      },
+      "datos_alumnos_mu": {
+        "matriculas_mu": 1541,
+        "rut_dv_y_carrera": 1211,
+        "solo_rut_dv": 320,
+        "no_localizado": 10,
+        "no_localizado_sin_rut_dv_comparable": 0,
+        "estado": "E",
+        "nota": "RUT+DV exacto; carrera por CODCLI y carrera UMAS de DA, contexto del mismo año y código documental o D aprobado en diccionario v20. Solo documento incluye no acreditado y carrera distinta. No localizado incluye documentos sin RUT+DV comparable; no demuestra inexistencia del expediente. No evalúa vigencia."
+      },
+      "cobertura_familia": {
+        "matriculas_mu": 1541,
+        "rut_dv_y_carrera": 1517,
+        "no_localizado": 10,
+        "codcarpr_fuera_familia": 14,
+        "sin_observacion_diccionario_2026_entre_no_respaldados": null,
+        "estado": "B/C/E",
+        "nota": "Candidatos según grupos y relaciones operativas del maestro 2026; no acreditan plan, vigencia temporal ni atribución individual. Fuera del conjunto no prueba por sí sola cambio de carrera.",
+        "familias_sin_mapeo": []
+      }
+    },
+    {
+      "anio": 2025,
+      "mu_sies": {
+        "mu_filas": 2371,
+        "mu_pregrado_filas": 2371,
+        "mu_nivel_no_acreditado_filas": 0,
+        "vig1_pregrado": 2298,
+        "vig0_pregrado": 73,
+        "publicado_pregrado": 2371,
+        "publicado_postitulo": 151,
+        "publicado_institucional": 2522,
+        "diferencia_publicado_menos_vig1": 73,
+        "estado": "CUADRA",
+        "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
+        "nota": "CUADRA contra total incluido VIG 0 (2.371 = 2.371); causa metodológica E, ver H001 Cierre a nivel carrera."
+      },
+      "retencion_mu": {
+        "matriculas_mu": 2371,
+        "personas_mu_llave_comparable": 2370,
+        "candidatos_primer_anio_filas": 1255,
+        "motivos_exclusiones_filas": {
+          "elegible": 1150,
+          "origen distinto en año siguiente": 103,
+          "matrículas positivas duplicadas en cohorte": 2
+        },
+        "elegibles_h001_filas": 1150,
+        "h001_en_mu_con_llave_comparable_filas": 1150,
+        "estado": "CUADRA",
+        "nota": "Candidatos son registros con año y semestre de origen compatibles; partición por primer motivo según implementación H001. Unidad filas."
+      },
+      "titulacion_publicada": {
+        "cat_periodo": 2024,
+        "registros": 270,
+        "carga": null,
+        "estado": "E",
+        "nota": "Alineación t↔t−1 observada, no se acredita como norma. Código agregado no enlaza personas con MRUN."
+      },
+      "titulacion_mu": {
+        "estado": "E",
+        "nota": "Carga individual del proceso no acreditada en esta ejecución."
+      },
+      "datos_alumnos_mu": {
+        "matriculas_mu": 2371,
+        "rut_dv_y_carrera": 1659,
+        "solo_rut_dv": 685,
+        "no_localizado": 27,
+        "no_localizado_sin_rut_dv_comparable": 25,
+        "estado": "E",
+        "nota": "RUT+DV exacto; carrera por CODCLI y carrera UMAS de DA, contexto del mismo año y código documental o D aprobado en diccionario v20. Solo documento incluye no acreditado y carrera distinta. No localizado incluye documentos sin RUT+DV comparable; no demuestra inexistencia del expediente. No evalúa vigencia."
+      },
+      "cobertura_familia": {
+        "matriculas_mu": 2371,
+        "rut_dv_y_carrera": 2303,
+        "codcarpr_fuera_familia": 41,
+        "no_localizado": 27,
+        "sin_rut_dv_comparable": 25,
+        "sin_observacion_diccionario_2026_entre_no_respaldados": null,
+        "estado": "B/C/E",
+        "nota": "Candidatos según grupos y relaciones operativas del maestro 2026; no acreditan plan, vigencia temporal ni atribución individual. Fuera del conjunto no prueba por sí sola cambio de carrera.",
+        "familias_sin_mapeo": []
+      }
+    },
+    {
+      "anio": 2026,
+      "mu_sies": {
+        "mu_filas": 4105,
+        "mu_pregrado_filas": 4105,
+        "mu_nivel_no_acreditado_filas": 0,
+        "vig1_pregrado": 3145,
+        "vig0_pregrado": 960,
+        "publicado_pregrado": 3371,
+        "publicado_postitulo": 54,
+        "publicado_institucional": 3425,
+        "diferencia_publicado_menos_vig1": 226,
+        "estado": "E",
+        "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
+        "nota": "2025 y 2026: diferencia neta observada; causa individual pendiente."
+      },
+      "retencion_mu": {
+        "matriculas_mu": 4105,
+        "personas_mu_llave_comparable": 4071,
+        "candidatos_primer_anio_filas": null,
+        "motivos_exclusiones_filas": null,
+        "elegibles_h001_filas": null,
+        "h001_en_mu_con_llave_comparable_filas": null,
+        "estado": "NO APLICA AÚN",
+        "nota": "Requiere MU 2027 para observar t+1; H001 no calcula esta cohorte en esta ejecución."
+      },
+      "titulacion_publicada": {
+        "cat_periodo": 2025,
+        "registros": 431,
+        "carga": 431,
+        "estado": "E",
+        "nota": "Alineación t↔t−1 observada, no se acredita como norma. Código agregado no enlaza personas con MRUN."
+      },
+      "titulacion_mu": {
+        "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/Titulación Unificada 2026.csv",
+        "sha256": "b52586f6741109e293c90896721ca5b879f5f51ec98a1c80650464aa52356dec",
+        "registros": 431,
+        "personas_con_llave_comparable": 429,
+        "personas_con_mu_por_anio": {
+          "2025": 320,
+          "2026": 42
+        },
+        "por_codigo_obtenido": {
+          "I162S2C57J4V1": 56,
+          "I162S2C1J2V4": 6,
+          "I162S2C6J4V2": 24,
+          "I162S2C47J4V1": 39,
+          "I162S2C46J2V1": 17,
+          "I162S2C46J4V3": 48,
+          "I162S2C3J2V4": 19,
+          "I162S2C1J4V2": 31,
+          "I162S2C57J1V1": 2,
+          "I162S2C3J4V2": 69,
+          "I162S2C46J1V1": 6,
+          "I162S2C6J1V2": 1,
+          "I162S2C57J2V1": 6,
+          "I162S2C6J2V2": 2,
+          "I162S2C11J2V1": 1,
+          "I162S2C47J1V1": 2,
+          "I162S2C47J2V1": 3,
+          "I162S2C3J1V2": 1,
+          "I162S2C46J2V2": 9,
+          "I162S2C46J4V1": 23,
+          "I162S2C1J1V2": 3,
+          "I162S2C3J4V3": 36,
+          "I162S2C1J4V3": 19,
+          "I162S2C3J2V3": 5,
+          "I162S2C1J2V3": 3
+        },
+        "estado": "E",
+        "nota": "Estructura homologada con encabezado de 2022; carácter final de la carga y comparabilidad por código pendientes.",
+        "cat_periodo_publicado": 2025,
+        "registros_publicados": 431,
+        "diferencia_carga_menos_publicacion": 0,
+        "comparacion_codigo": [
+          {
+            "codigo_sies": "I162S2C11J2V1",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J1V2",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V3",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J2V4",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V2",
+            "carga": 31,
+            "publicacion": 31,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C1J4V3",
+            "carga": 19,
+            "publicacion": 19,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J1V2",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V3",
+            "carga": 5,
+            "publicacion": 5,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J2V4",
+            "carga": 19,
+            "publicacion": 19,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V2",
+            "carga": 69,
+            "publicacion": 69,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C3J4V3",
+            "carga": 36,
+            "publicacion": 36,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J1V1",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V1",
+            "carga": 17,
+            "publicacion": 17,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J2V2",
+            "carga": 9,
+            "publicacion": 9,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V1",
+            "carga": 23,
+            "publicacion": 23,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C46J4V3",
+            "carga": 48,
+            "publicacion": 48,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J1V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J2V1",
+            "carga": 3,
+            "publicacion": 3,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C47J4V1",
+            "carga": 39,
+            "publicacion": 39,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J1V1",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J2V1",
+            "carga": 6,
+            "publicacion": 6,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C57J4V1",
+            "carga": 56,
+            "publicacion": 56,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J1V2",
+            "carga": 1,
+            "publicacion": 1,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J2V2",
+            "carga": 2,
+            "publicacion": 2,
+            "estado": "E"
+          },
+          {
+            "codigo_sies": "I162S2C6J4V2",
+            "carga": 24,
+            "publicacion": 24,
+            "estado": "E"
+          }
+        ]
+      },
+      "datos_alumnos_mu": {
+        "matriculas_mu": 4105,
+        "rut_dv_y_carrera": 1847,
+        "solo_rut_dv": 2258,
+        "no_localizado": 0,
+        "no_localizado_sin_rut_dv_comparable": 0,
+        "estado": "E",
+        "nota": "RUT+DV exacto; carrera por CODCLI y carrera UMAS de DA, contexto del mismo año y código documental o D aprobado en diccionario v20. Solo documento incluye no acreditado y carrera distinta. No localizado incluye documentos sin RUT+DV comparable; no demuestra inexistencia del expediente. No evalúa vigencia."
+      },
+      "cobertura_familia": {
+        "matriculas_mu": 4105,
+        "familia_sin_mapeo": 73,
+        "rut_dv_y_carrera": 4032,
+        "sin_observacion_diccionario_2026_entre_no_respaldados": 1790,
+        "estado": "B/C/E",
+        "nota": "Candidatos según grupos y relaciones operativas del maestro 2026; no acreditan plan, vigencia temporal ni atribución individual. Fuera del conjunto no prueba por sí sola cambio de carrera.",
+        "familias_sin_mapeo": [
+          {
+            "anio": 2026,
+            "familia_sies": "I162S3C114J2",
+            "matriculas": 35,
+            "clase": "B/C; E equivalencia pendiente"
+          },
+          {
+            "anio": 2026,
+            "familia_sies": "I162S3C115J2",
+            "matriculas": 20,
+            "clase": "B/C; E equivalencia pendiente"
+          },
+          {
+            "anio": 2026,
+            "familia_sies": "I162S3C91J2",
+            "matriculas": 18,
+            "clase": "B/C; E equivalencia pendiente"
+          }
+        ]
+      }
+    }
+  ],
+  "titulados_publicados_por_codigo": [
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C11J2V1",
+      "carrera": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C1J2V1",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 19
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C1J2V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C1J2V3",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C1J4V3",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C22J2V2",
+      "carrera": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C2J1V1",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C2J1V2",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C2J2V1",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 5
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C2J2V2",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 5
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C2J4V1",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C2J4V2",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 7
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C35J2V1",
+      "carrera": "TECNICO EN ANALISIS DE SISTEMAS",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C35J4V1",
+      "carrera": "TECNICO EN ANALISIS DE SISTEMAS",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C3J2V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 22
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C3J2V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C3J2V3",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 29
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C3J4V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 18
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C46J2V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C46J2V2",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 17
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C46J2V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C47J2V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 5
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C47J4V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C6J1V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C6J1V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C6J2V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 8
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C6J2V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 13
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C6J4V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2021,
+      "codigo_sies": "I162S2C6J4V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 10
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C11J1V1",
+      "carrera": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C11J2V1",
+      "carrera": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J1V1",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J2V1",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J2V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J2V3",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 7
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J2V4",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J4V1",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 12
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J4V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 8
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C1J4V3",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 7
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C22J2V1",
+      "carrera": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 5
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C22J2V2",
+      "carrera": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 7
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C2J1V1",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C2J1V2",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C2J4V1",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C2J4V2",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C35J2V2",
+      "carrera": "TECNICO EN ANALISIS DE SISTEMAS",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C35J4V1",
+      "carrera": "TECNICO EN ANALISIS DE SISTEMAS",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C35J4V2",
+      "carrera": "TECNICO EN ANALISIS DE SISTEMAS",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C3J2V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 12
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C3J2V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C3J2V3",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 18
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C3J2V4",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C3J4V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 43
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C3J4V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 12
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C46J1V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C46J2V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 9
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C46J2V2",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C46J2V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C46J4V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 8
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C46J4V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 18
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C47J1V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C47J2V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C47J4V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 14
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C57J1V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 7
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C57J2V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 15
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C57J4V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 14
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C6J1V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C6J2V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C6J2V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 16
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C6J4V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2022,
+      "codigo_sies": "I162S2C6J4V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 7
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C11J2V1",
+      "carrera": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C1J1V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C1J2V4",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 13
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C1J4V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 42
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C22J2V1",
+      "carrera": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 12
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C2J2V1",
+      "carrera": "TECNICO EN PROGRAMACION COMPUTACIONAL",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C3J2V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C3J2V4",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 22
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C3J4V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C3J4V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 64
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C46J2V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 11
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C46J4V2",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 9
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C46J4V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 20
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C47J1V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 8
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C47J2V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C47J4V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 25
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C57J1V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C57J2V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 10
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C57J4V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 54
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C6J1V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 5
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C6J2V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C6J2V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2023,
+      "codigo_sies": "I162S2C6J4V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 23
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C1J2V4",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 8
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C1J4V1",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C1J4V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 52
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C22J2V1",
+      "carrera": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C3J2V4",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 9
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C3J4V1",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C3J4V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 43
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C46J2V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 9
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C46J4V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 30
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C47J1V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C47J4V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 11
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C57J1V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 11
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C57J2V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 4
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C57J4V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 72
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C6J2V1",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2024,
+      "codigo_sies": "I162S2C6J4V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 12
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C11J2V1",
+      "carrera": "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C1J1V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C1J2V3",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C1J2V4",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C1J4V2",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 31
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C1J4V3",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "registros": 19
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C3J1V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C3J2V3",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 5
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C3J2V4",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 19
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C3J4V2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 69
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C3J4V3",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "registros": 36
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C46J1V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C46J2V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 17
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C46J2V2",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 9
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C46J4V1",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 23
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C46J4V3",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "registros": 48
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C47J1V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C47J2V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 3
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C47J4V1",
+      "carrera": "TECNICO EN CIBERSEGURIDAD",
+      "registros": 39
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C57J1V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C57J2V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 6
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C57J4V1",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "registros": 56
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C6J1V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 1
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C6J2V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 2
+    },
+    {
+      "anio_publicacion": 2025,
+      "codigo_sies": "I162S2C6J4V2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "registros": 24
+    }
+  ],
+  "pendientes": [
+    "Alineación t↔t−1 de titulación observada B; regla escrita no localizada en esta ejecución.",
+    "Inventario de búsquedas de titulación 20261026 revisado: describe scripts, no acredita carga de proceso 2025; carácter final del respaldo 2024 pendiente.",
+    "Titulación y publicación: diferencias por código no explicadas; MRUN no permite enlace por persona.",
+    "DATOSDEALUMNOS_12159 figura en catálogo y descriptor v20 con hash e idéntica copia; no hay fecha de extracción ni evidencia de que sea el extracto más reciente.",
+    "Copia antigua del consolidado cfcf9099… no utilizada; fuente única OneDrive 70758082…"
+  ]
+}

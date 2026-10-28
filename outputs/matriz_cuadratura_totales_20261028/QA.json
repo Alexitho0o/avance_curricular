@@ -1,0 +1,33 @@
+{
+  "estado": "PARCIAL_CON_PENDIENTES",
+  "hash_entradas_principales_verificado": true,
+  "consolidado_one_drive_registros": 3504,
+  "diccionario_v20_componentes_y_base_verificados": true,
+  "cobertura_da_tres_niveles_disjuntos_suma_mu": true,
+  "cobertura_por_familia_cuatro_niveles_disjuntos_suma_mu": true,
+  "prefijo_2024_derivado_no_altera_neto": true,
+  "h001_elegibles_conciliados": true,
+  "h001_particion_por_primer_motivo": true,
+  "mu_pregrado_mas_no_acreditado_concilia": true,
+  "suma_codigos_titulados_concilia": true,
+  "escaneo_identificadores_sospechosos": 0,
+  "limitacion_escaneo": "Patrón de identificador numérico en valores agregados; no equivale a certificación absoluta. Rutas, hashes y notas excluidas para evitar falsos positivos.",
+  "pendientes": [
+    "Alineación t↔t−1 de titulación observada B; regla escrita no localizada en esta ejecución.",
+    "Inventario de búsquedas de titulación 20261026 revisado: describe scripts, no acredita carga de proceso 2025; carácter final del respaldo 2024 pendiente.",
+    "Titulación y publicación: diferencias por código no explicadas; MRUN no permite enlace por persona.",
+    "DATOSDEALUMNOS_12159 figura en catálogo y descriptor v20 con hash e idéntica copia; no hay fecha de extracción ni evidencia de que sea el extracto más reciente.",
+    "Copia antigua del consolidado cfcf9099… no utilizada; fuente única OneDrive 70758082…"
+  ],
+  "desglose_familias_sin_mapeo_concilia": true,
+  "escaneo_cuatro_archivos_con_identificadores_de_fuentes": {
+    "archivos": [
+      "MATRIZ_CUADRATURA_TOTALES_2022_2026.md",
+      "MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "QA.json",
+      "construir_matriz.py"
+    ],
+    "coincidencias": 0,
+    "metodo": "Identificadores observados en MU/DA por límites de token; sólo se publica el número de coincidencias."
+  }
+}
