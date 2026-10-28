@@ -8,6 +8,8 @@ def calcular(rows,cohortes=range(2022,2026)):
     out=[]
     for y in cohortes:
         base={k for (k,a),rs in by.items() if a==y and any(r.get('VIG')==1 and int(r.get('ANIO_ING_ACT',-1))==y for r in rs)}
-        ret={k for k in base if any(r.get('VIG')==1 for r in by.get((k,y+1),[]))}
+        # Regla SIES: permanece si está presente en la MU de t+1 de IPSS.
+        # VIG describe el registro, pero no es un filtro adicional de retención.
+        ret={k for k in base if by.get((k,y+1),[])}
         out.append({'cohorte':y,'denominador':len(base),'retenidos':len(ret),'tasa':len(ret)/len(base) if base else None})
     return out

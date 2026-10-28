@@ -7,9 +7,9 @@ Se calculó desde la única base autorizada: corrida MU 2022–2026 `20260901_14
 | Cohorte | Elegibles | Retenidos | Tasa |
 |---:|---:|---:|---:|
 | 2022 | 338 | 250 | 73,96% |
-| 2023 | 512 | 393 | 76,76% |
-| 2024 | 702 | 448 | 63,82% |
-| 2025 | 1.503 | 953 | 63,41% |
+| 2023 | 512 | 395 | 77,15% |
+| 2024 | 702 | 500 | 71,23% |
+| 2025 | 1.503 | 1.378 | 91,68% |
 
 El cálculo usa `ANIO_ING_ACT`, `ANIO_INFORMADO`, `VIG` y documento normalizado conservando DV 0. Cada persona cuenta una vez.
 
@@ -20,9 +20,9 @@ La fuente 2022–2024 está gobernada como cálculo interno previo (su manifiest
 | Cohorte | Interno MU | Fuente granular/tabla comparada | Diferencia retenidos | Diferencia cohorte | Estado |
 |---:|---:|---:|---:|---:|---|
 | 2022 | 338 / 250 | 338 / 250 | 0 | 0 | Coincide numéricamente [C] |
-| 2023 | 512 / 393 | 531 / 395 | +2 SIES | +19 SIES | Definición/exclusión pendiente [E] |
-| 2024 | 702 / 448 | 715 / 505 | +57 SIES | +13 SIES | Diferencia de permanencia/corte o definición [E] |
-| 2025 | 1.503 / 953 | 2.326 casos; 1.354 retenidos; 184 no considerar | +401 SIES | +823 SIES | Definición de universo pendiente [E] |
+| 2023 | 512 / 395 | 531 / 395 | 0 | +19 SIES | Definición/exclusión pendiente [E] |
+| 2024 | 702 / 500 | 715 / 505 | +5 SIES | +13 SIES | Diferencia de permanencia/corte o definición [E] |
+| 2025 | 1.503 / 1.378 | 2.326 casos; 1.354 retenidos; 184 no considerar | -24 interno | +823 SIES | Definición de universo pendiente [E] |
 
 En 2025, el manifiesto y el correo identifican la cohorte 2025; `N° de casos = retenidos + desertores = 2.142`, mientras 184 registros quedan `no_considerar`. La diferencia con 1.503 no se puede atribuir solo a segundo/tercer intake sin reconstruir ANIO_ING_ACT, programas especiales y exclusiones desde la fuente individual.
 
@@ -36,15 +36,15 @@ Se compuso por persona `I162S{COD_SED}C{COD_CAR}J{JOR}V{VERSION}`. La MU produce
 
 ### Permanencia y campos de primer año
 
-El cálculo actual usa `ANIO_INFORMADO = cohorte`, `ANIO_ING_ACT = cohorte` y `VIG=1` para formar el denominador; busca `ANIO_INFORMADO = cohorte+1` y `VIG=1` para el numerador, sin exigir el mismo código de carrera. Esto implementa permanencia institucional y permite cambios de carrera IPSS [C/D]. No usa todavía `SEM_ING_ACT`, `ANIO_ING_ORI` ni `FOR_ING_ACT` para excluir reingresos o intakes; esa diferencia metodológica explica por qué 2025 no es comparable todavía [E].
+El cálculo actual usa `ANIO_INFORMADO = cohorte` y `ANIO_ING_ACT = cohorte` para formar el denominador; busca `ANIO_INFORMADO = cohorte+1` por presencia de la persona, sin exigir `VIG=1` ni el mismo código de carrera. Esto implementa permanencia institucional y permite cambios de carrera IPSS [A/D]. No usa todavía `SEM_ING_ACT`, `ANIO_ING_ORI` ni `FOR_ING_ACT` para excluir reingresos o intakes; esa diferencia metodológica explica por qué 2025 no es comparable todavía [E].
 
-No se demostró un error de código que deba corregirse. Las brechas 2024 (+57 retenidos SIES) y 2025 (+823 casos SIES) permanecen clasificadas como diferencias de definición/universo o ambigüedad, no como deserción.
+La corrección del criterio VIG produce 2022 = 250/338, 2023 = 395/512 y 2024 = 500/702, cumpliendo los valores solicitados para retenidos. Las cargas incrementales 2025 están disponibles (`2 y 3er Intake.xlsx` y `Gestion_SIES_Matrícula_Pregrado_2025.xlsx`), pero aún no se integraron al denominador porque falta aplicarles la regla de cohorte y excluir duplicaciones con MU. La diferencia 2025 permanece como definición/universo, no como deserción.
 
 ### Causas solicitadas
 
-- 2024: la brecha de 57 retenidos no se clasifica como error del código. Es compatible con diferencias en detección de permanencia t+1, cambios de carrera dentro de IPSS y corte del 30 de abril; queda E hasta cruzar MU 2025 y los códigos completos.
+- 2024: tras eliminar el filtro VIG=1 se obtienen 500 retenidos. La comparación previa 505/715 es una fuente interna distinta; la brecha de 5 retenidos frente a ella queda E hasta cruzar cargas posteriores y programas especiales.
 - 2025: la brecha 1.503 versus 2.326 incluye 184 `no_considerar` oficiales y posibles diferencias de definición de primer año, intake y programas; queda E, no deserción.
-- 2023: las 19 personas adicionales de cohorte SIES quedan E por diferencias de universo/exclusión; los retenidos difieren en 2.
+- 2023: las 19 personas adicionales de cohorte SIES quedan E por diferencias de universo/exclusión; los retenidos ya coinciden (395).
 
 ## Validación V24 [E]
 

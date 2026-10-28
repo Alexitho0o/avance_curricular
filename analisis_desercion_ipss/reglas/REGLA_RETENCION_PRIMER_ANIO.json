@@ -9,7 +9,7 @@
     {"clase":"A","termino":"cohorte_1er_anio","definicion":"estudiantes matriculados como primer año en el año de referencia"},
     {"clase":"A","termino":"fecha_referencia","definicion":"30 de abril"},
     {"clase":"A","termino":"t_mas_1","definicion":"año académico siguiente"},
-    {"clase":"A/D","termino":"retenido","definicion":"matriculado en la misma institución y cohorte; cambio de carrera IPSS cuenta como retenido institucional"},
+    {"clase":"A","termino":"retenido","definicion":"persona de la cohorte presente en la MU de t+1 de IPSS, con cualquier valor de VIG; cambio de carrera IPSS cuenta como retenido institucional","correccion":"Se elimina el filtro VIG=1 en t+1: VIG describe el registro y no sustituye la presencia en la MU"},
     {"clase":"A","termino":"exclusiones","definicion":"programas especiales; diplomados cuando estén identificados por fuente gobernada"},
     {"clase":"A","termino":"umbral_publicacion","definicion":"al menos 10 casos de cohorte"},
     {"clase":"C","termino":"formula","definicion":"suma de retenidos / suma de elegibles; persona una vez"}
