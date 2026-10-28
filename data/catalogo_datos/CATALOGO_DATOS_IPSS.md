@@ -5,6 +5,8 @@ Archivos inventariados: 206; bytes lógicos: 21483257467.
 Archivos de sistema excluidos: 7; bytes excluidos: 75804.
 Solo se leyeron metadatos y bytes; no se movieron, copiaron ni extrajeron originales.
 
+Actualización 28-10-2026: `RETENCION/Retencion ipss.xlsx` es un cálculo interno previo agregado (C), no una publicación SIES; su manifiesto gobernado confirma el mismo SHA-256 y la autoría. La paridad con ese libro es consistencia interna, no validación externa. La ficha original conserva su clasificación de privacidad provisional.
+
 ## SIES_PUBLICAS
 
 | Ruta | Bytes | SHA-256 | Rol | Datos personales | Años |
