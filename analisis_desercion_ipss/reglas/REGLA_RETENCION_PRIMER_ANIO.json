@@ -3,7 +3,13 @@
   "nombre_oficial": "Retención de 1er año",
   "fuentes": [
     {"clase":"A","ruta":"procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt","hash":"92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"},
-    {"clase":"B","ruta":"outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx","hash":"19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"}
+    {"clase":"B","ruta":"outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx","hash":"19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"},
+    {"clase":"C","ruta":"data/reglas_negocio/mu2027/estudio/AUDITORIA_VIG_ENVIOS_RETENCION.md","commit":"55e3b709afb9483f0ecdd2d166f67229a454a5ef","hash":"7ccfc88001e7e36ef3299d52dc5f7d6448bce63b995da1aa400634e465774f00"},
+    {"clase":"C","ruta":"data/reglas_negocio/mu2027/estudio/MANIFEST.json","commit":"55e3b709afb9483f0ecdd2d166f67229a454a5ef","hash":"a8893104074228e643492a4a63dbc04c85be080b020915d6b15a02313432fd42"},
+    {"clase":"C","ruta":"data/reglas_negocio/mu2027/estudio/RESULTADOS_AGREGADOS.json","commit":"55e3b709afb9483f0ecdd2d166f67229a454a5ef","hash":"003c55b57e2aa476a8bd6d9223ec46d4155f59f7311d0183eea24c795226cff0"},
+    {"clase":"C","ruta":"data/reglas_negocio/mu2027/estudio/auditar_solo_lectura.py","commit":"55e3b709afb9483f0ecdd2d166f67229a454a5ef","hash":"ba71eea98eebe3627593b613a37897ef6dd4d7b6e39d8a31732771807e0f5f30"},
+    {"clase":"C","ruta":"manifests/milestones/H001-RETENCION-IPSS162/README.md","commit":"55e3b709afb9483f0ecdd2d166f67229a454a5ef","hash":"6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48"},
+    {"clase":"A/C","ruta":"data/reglas_negocio/mu2027/versiones/20261021_v1/reglas.json","commit":"55e3b709afb9483f0ecdd2d166f67229a454a5ef","hash":"5ffa47d537f3ae81cd470ae9c1c9ed75cafb4adb4eb38e980d45fd21a272714e"}
   ],
   "reglas": [
     {"clase":"A","termino":"cohorte_1er_anio","definicion":"estudiantes matriculados como primer año en el año de referencia"},
@@ -14,5 +20,10 @@
     {"clase":"A","termino":"umbral_publicacion","definicion":"al menos 10 casos de cohorte"},
     {"clase":"C","termino":"formula","definicion":"suma de retenidos / suma de elegibles; persona una vez"}
   ],
-  "pendientes":["duración y programas especiales no identificables en MU; casos eliminados; paridad SIES/V24 en Fase 3"]
+  "definiciones_conciliadas":[
+    {"nombre":"SIES_oficial","clase":"A","cohorte":"universo oficial de primer año del año t, con exclusiones y no_considerar de la publicación SIES","retenido":"persona presente en MU de t+1 de IPSS; VIG no es filtro adicional","fuente":"REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt"},
+    {"nombre":"diagnostico_H001","clase":"C/D","cohorte":"cohortes institucionales H001: 305, 366, 558 y 1.150; filtros y padrón del diagnóstico anual","retenido":"presencia según el diagnóstico reproducido, con sus universos internos","fuente":"AUDITORIA_VIG_ENVIOS_RETENCION.md y manifiestos H001"},
+    {"nombre":"codigo_nuevo","clase":"C","cohorte":"ANIO_INFORMADO y ANIO_ING_ACT sobre MU 142342; persona una vez","retenido":"presencia de la persona en t+1, cualquier VIG; no exige mismo código","fuente":"common/analisis_desercion/retencion_primer_anio.py"}
+  ],
+  "pendientes":["2025: integrar cohorte completa incluyendo 2.º y 3.er intake; no publicar 2025 como paridad SIES hasta resolver universo y VIG", "2023–2024: explicar diferencias de denominador frente a SIES mediante cargas posteriores, exclusiones y cohorte de origen", "las 960 VIG=0 de MU 2026 son controles institucionales documentados; no se revierten ni cuentan como retenidas en ese control", "duración y programas especiales no identificables en MU; paridad por código SIES pendiente"]
 }

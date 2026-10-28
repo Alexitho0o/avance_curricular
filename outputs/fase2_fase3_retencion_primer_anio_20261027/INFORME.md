@@ -52,4 +52,14 @@ No se leyeron valores de V24 para construir el cálculo. La comparación secunda
 
 ## Diferencias y límites
 
+### Tres definiciones que no deben mezclarse
+
+| Definición | Cohorte y filtros | Retenido | Resultado/estado |
+|---|---|---|---|
+| SIES oficial [A] | Universo oficial de primer año; exclusiones y `no_considerar` del reporte SIES | Presencia en MU de `t+1` de IPSS, cualquier VIG | Validación externa; 2025 E hasta integrar 2.º/3.er intake |
+| Diagnóstico H001 [C/D] | Denominadores 305/366/558/1.150 y padrón institucional del hito | Criterio del diagnóstico anual | Indicador interno separado |
+| Código nuevo [C] | MU 142342, `ANIO_INFORMADO`/`ANIO_ING_ACT`, persona una vez | Presencia en `t+1`, cualquier VIG | Reproduce la lógica oficial; no activa la regla |
+
+La auditoría VIG gobernada (ruta y hash consignados en la regla) registra 960 VIG=0 en el envío 2026 por controles de nómina. No se revierten ni se cuentan automáticamente como retención: falta fundamento académico individual. Esta decisión no se extrapola retrospectivamente a 2023–2025, donde la definición SIES se evalúa por presencia en MU de `t+1`.
+
 No se clasifican diferencias como error de código mientras no exista una tabla SIES comparable y una clasificación gobernada de programas especiales. La regla permanece `BORRADOR_NO_ACTIVO`; no se propone activación.
