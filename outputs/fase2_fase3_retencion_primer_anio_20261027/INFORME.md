@@ -13,9 +13,38 @@ Se calculó desde la única base autorizada: corrida MU 2022–2026 `20260901_14
 
 El cálculo usa `ANIO_ING_ACT`, `ANIO_INFORMADO`, `VIG` y documento normalizado conservando DV 0. Cada persona cuenta una vez.
 
-## Validación SIES [B/E]
+## Validación SIES [B/C/E]
 
-Se localizaron los manifiestos y fuentes oficiales: `RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.tsv`, `Retencion_ipss_2022_2024_GRANULAR.xlsx` e `Informe_Retencion_SIES_2026_270702026.xlsx`. Esta ejecución aún no extrae una tabla comparable completa para 2022–2025 por institución/carrera/persona; por tanto la paridad numérica queda **E** y no se declara diferencia porcentual.
+La fuente 2022–2024 está gobernada como cálculo interno previo (su manifiesto dice que no es fuente SIES). La fuente 2025 es la transcripción granular del correo SIES y su manifiesto confirma que representa la referencia 2025.
+
+| Cohorte | Interno MU | Fuente granular/tabla comparada | Diferencia retenidos | Diferencia cohorte | Estado |
+|---:|---:|---:|---:|---:|---|
+| 2022 | 338 / 250 | 338 / 250 | 0 | 0 | Coincide numéricamente [C] |
+| 2023 | 512 / 393 | 531 / 395 | +2 SIES | +19 SIES | Definición/exclusión pendiente [E] |
+| 2024 | 702 / 448 | 715 / 505 | +57 SIES | +13 SIES | Diferencia de permanencia/corte o definición [E] |
+| 2025 | 1.503 / 953 | 2.326 casos; 1.354 retenidos; 184 no considerar | +401 SIES | +823 SIES | Definición de universo pendiente [E] |
+
+En 2025, el manifiesto y el correo identifican la cohorte 2025; `N° de casos = retenidos + desertores = 2.142`, mientras 184 registros quedan `no_considerar`. La diferencia con 1.503 no se puede atribuir solo a segundo/tercer intake sin reconstruir ANIO_ING_ACT, programas especiales y exclusiones desde la fuente individual.
+
+Por código único, el TSV 2025 contiene 37 códigos; la base MU 142342 no conserva `mc_codigo_unico` completo por persona, sino dimensiones `COD_SED`, `COD_CAR`, `JOR` y `VERSION`. Por eso la paridad por código único queda E: no se deben inventar correspondencias.
+
+Los códigos con mayores volúmenes oficiales para priorizar la conciliación son, entre otros, los que concentran `ret_1_retenido` 16–66; la atribución individual requiere el diccionario UMAS–SIES vigente, no una coincidencia por nombre.
+
+### Composición y existencia de códigos
+
+Se compuso por persona `I162S{COD_SED}C{COD_CAR}J{JOR}V{VERSION}`. La MU produce 27 códigos en 2022, 21 en 2023, 32 en 2024 y 43 en 2025. Contra los códigos de las fuentes SIES: 2022 tiene 17/17 presentes; 2023, 9/10; 2024, 24/25; 2025, 36/37. Los faltantes de código no se corrigieron por inferencia y quedan E hasta verificar oferta histórica del año correspondiente.
+
+### Permanencia y campos de primer año
+
+El cálculo actual usa `ANIO_INFORMADO = cohorte`, `ANIO_ING_ACT = cohorte` y `VIG=1` para formar el denominador; busca `ANIO_INFORMADO = cohorte+1` y `VIG=1` para el numerador, sin exigir el mismo código de carrera. Esto implementa permanencia institucional y permite cambios de carrera IPSS [C/D]. No usa todavía `SEM_ING_ACT`, `ANIO_ING_ORI` ni `FOR_ING_ACT` para excluir reingresos o intakes; esa diferencia metodológica explica por qué 2025 no es comparable todavía [E].
+
+No se demostró un error de código que deba corregirse. Las brechas 2024 (+57 retenidos SIES) y 2025 (+823 casos SIES) permanecen clasificadas como diferencias de definición/universo o ambigüedad, no como deserción.
+
+### Causas solicitadas
+
+- 2024: la brecha de 57 retenidos no se clasifica como error del código. Es compatible con diferencias en detección de permanencia t+1, cambios de carrera dentro de IPSS y corte del 30 de abril; queda E hasta cruzar MU 2025 y los códigos completos.
+- 2025: la brecha 1.503 versus 2.326 incluye 184 `no_considerar` oficiales y posibles diferencias de definición de primer año, intake y programas; queda E, no deserción.
+- 2023: las 19 personas adicionales de cohorte SIES quedan E por diferencias de universo/exclusión; los retenidos difieren en 2.
 
 ## Validación V24 [E]
 
