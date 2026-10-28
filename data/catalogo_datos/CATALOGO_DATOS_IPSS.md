@@ -323,3 +323,7 @@ Edición no identificada: desde la línea 117 presenta filas distintas; conserva
 ## Referencias Power BI
 
 Ambos modelos leen la ruta canónica; la ruta declarada usa `C:\Users\Enzo Castro\...` y queda pendiente de portabilidad.
+
+## Cierres operativos D · 28-10-2026
+
+Se retiran de tareas pendientes la extracción PROMEDIOS sin tope, la investigación de la copia distinta de matrícula 2007–2025 y la revisión de los 27 archivos de origen desconocido. Se conservan los metadatos observados, no usar para la copia distinta y tratamiento restringido para los desconocidos. No se certifica cobertura completa ni ausencia de datos personales.

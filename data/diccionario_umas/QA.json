@@ -1,0 +1,65 @@
+{
+  "estado": "PASS_CON_PENDIENTES_E",
+  "fecha": "2026-10-28",
+  "rama": "feature/ire-2026",
+  "head": "782efc8b4e37e60898cbea832667c887199bf536",
+  "fuentes": 20,
+  "hojas": 83,
+  "columnas_inventariadas": 3757,
+  "columnas_privadas_o_excluidas_sin_valores": 2961,
+  "movimiento_permanencia": {
+    "origen_ausente": true,
+    "destino_sha256": "56437ff17e5efd9c0f2e398e8f8ba4490730a43c970e44676357925553198c6b",
+    "fecha": "2026-10-27",
+    "filas": 4982,
+    "codcli_distintos": 4982,
+    "plan_disponible": false
+  },
+  "fuentes_intactas_por_hash": true,
+  "renombres_duplicados_en_lectura": 6,
+  "inscripciones_etiquetas_suman_4982_por_periodo": true,
+  "rut_sin_dv_corrob_por_codcli": {
+    "cuerpo_igual_por_codcli": 4980,
+    "dv_da_valido": 4980,
+    "sin_codcli_da": 2
+  },
+  "lista_longitud_original_800": 3468,
+  "lista_nombres_finales_parciales": 2136,
+  "SQL_independiente_12159": {
+    "variables": 7,
+    "diferencias": 0
+  },
+  "particion_mallas_suma_4982": true,
+  "mallas_atribucion_plan": "E; Permanencia no trae plan",
+  "pruebas_sinteticas": {
+    "cantidad": 10,
+    "resultado": "PASS"
+  },
+  "motores_activo_denominadores_tasas_intactos": true,
+  "privacidad": {
+    "valores_privados_en_perfiles": 0,
+    "identificadores_detectados": 0,
+    "filas_individuales_publicadas": 0,
+    "archivos_escaneados": 14,
+    "tokens_revisados": 179982,
+    "metadatos_homonimos_revisados": [
+      "CARRERA",
+      "CARRERAS",
+      "CIUDAD",
+      "FUENTES",
+      "GENERAL",
+      "NO TIENE",
+      "SANTIAGO"
+    ],
+    "coincidencias_en_rutas_preexistentes_catalogo": 44,
+    "metodo": "Coincidencia exacta de valores privados; revisión explícita de homónimos de esquema/prosa. Catálogo: control diferencial frente a HEAD; CSV local: entrada Permanencia. Ningún valor ni distribución privada en perfiles."
+  },
+  "commit_push": false,
+  "pendientes": [
+    "Dos CODCLI sin ancla en DatosAlumnos12159, sin inventar DV.",
+    "Seis discrepancias de estado y209 de carrera actual en12159; no se interpretan como cambios históricos fechados.",
+    "310 expedientes con total distinto de5810: compatibilidad contable con dos títulos intermedios comprobada; fórmula exportadora y plan individual E. 1917 sin referencia5810.",
+    "Mallas04 sólo con manifiesto Git; payload TSV ausente, sin declararlo recuperado.",
+    "Campo P1, fórmulas/ventanas de indicadores y lista completa de ramos pendientes no acreditados."
+  ]
+}

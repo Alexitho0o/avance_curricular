@@ -76,7 +76,7 @@ Los motivos H001 se encuentran en el JSON: cada fila cuenta una vez por primer m
 
 El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.
 
-Brecha MU 2026 = 226 [E]. Método preparado y no ejecutado sobre datos reales: `metodo_mu2026.contrastar_fuente` requiere descarga individual de lo cargado en PES MU 2026 o precarga AC 2027 con año de matrícula 2026, hash y adaptador de columnas acreditados. Clasifica sólo los 48 códigos pregrado con diferencia como VIG 1 nuestra, VIG 0 nuestra o matrícula documento/código ausente en nuestra base. El caso 2025 respalda investigar esta hipótesis, sin extrapolarlo a 2026. El análisis de perfiles MRUN queda como alternativa cuando exista microdato 2026.
+Brecha MU 2026 = 226 [E]. El contraste documental `metodo_mu2026.contrastar_fuente` sigue requiriendo descarga PES por documento o precarga AC2027; no se ejecutó sin ella. MRUN2026 sí existe en H2: se incorpora un diagnóstico separado A/B/C por perfiles demográficos, familia y tipo unánime, sin guardar vínculos RUT–MRUN ni confundirlo con identidad acreditada.
 
 Pendientes:
 - Inventario de búsquedas de titulación 20261026 revisado: describe scripts, no acredita carga de proceso 2025; carácter final del respaldo 2024 pendiente.
@@ -104,6 +104,7 @@ No existe aún (D, Alexi): el proceso AC 2027 ocurre después de MU 2027 (abril�
 - [BUSQUEDA_PRECARGA_AC2027](BUSQUEDA_PRECARGA_AC2027.md): evidencia y hashes en el JSON homónimo.
 - [DICTAMEN_LIBROS_Y_CARGAS_MU2026](DICTAMEN_LIBROS_Y_CARGAS_MU2026.md): evidencia y hashes en el JSON homónimo.
 - [PREPARACION_CARGAS_ACUMULATIVAS_MU2026](PREPARACION_CARGAS_ACUMULATIVAS_MU2026.md): evidencia y hashes en el JSON homónimo.
+- [DIAGNOSTICO_BRECHA_MRUN2026](DIAGNOSTICO_BRECHA_MRUN2026.md): evidencia y hashes en el JSON homónimo.
 
 B/C: 06_DETALLE_TOTAL reproduce las 4.105 matrículas y Hoja1 las 2.379 filas históricas H001. ABF: SIRVE PARCIAL; 193/228 = 84.65% de la brecha positiva compatible con parte de las VIG0 vigentes en abril (aproximadamente 85%, C/E); no acredita aceptación SIES. No se suman automáticamente las 459 candidatas.
 
@@ -131,3 +132,22 @@ Grupos disjuntos: 30 positivos cubiertos (4 exactos), 16 insuficientes y 2 negat
 | I162S3C91J2V1 | 4 | 3 | 3 | 1 |
 
 Las dos brechas negativas se detallan en el dictamen y no compensan las 35 pendientes positivas. E: reconstrucción no ejecutada. Las dos formulaciones originales eran equivalentes con I162 fijo; se preparan ahora L1 documento+código único y L2 gruesa documento+COD_CAR, sin sede, jornada ni versión (C/E). Si L1 reproduce mejor la publicación y el linaje confirma registros antiguos no sobrescritos, éstos serán una explicación candidata. Alexi descargará el Historial y el archivo cargado de cada carga Finalizado. No se usarán envíos locales. Fuentes, bases, denominadores y tasas intactos.
+
+## MRUN2026 recuperado de H2 [B/C/E]
+
+B/C: 3.425 matrículas2026 (3.371 pregrado+54 postítulo), con cero diferencias por código frente a publicación. Foco exclusivo de48 códigos:2.973 registros.
+
+| Clasificación candidata | Registros MRUN |
+|---|---:|
+| vig1_candidata_unica | 1916 |
+| vig0_candidata_unica | 10 |
+| varios_candidatos | 807 |
+| sin_candidato | 240 |
+
+C/E: 198 registros tienen alguna candidata VIG0 (incluye ambigüedades); capacidad descriptiva por código 105/228, sin cobertura por candidatura VIG0 123. No son personas identificadas ni reducción de la brecha226: pueden compartir candidatos. Dictamen y clasificación por código: DIAGNOSTICO_BRECHA_MRUN2026.md/.json. No se guardaron vínculos RUT–MRUN.
+
+## Prueba inversa y mallas [B/C/E]
+
+Prueba inversa: 2.703 de 2.747 VIG1 con candidato de perfil completo; 44 sin candidato. De los 240 MRUN sin candidato completo, 224 tienen perfiles en otra familia con bloqueo A y 16 no. Compatibilidad, sin certificación de identidad ni cambio de la brecha. Detalle: PRUEBA_INVERSA_MRUN2026.md/.json.
+
+ADMP, AUDT e ICDA: diferencia +2 compatible con los dos ítems TITULO INTERMEDIO presentes en todas las listas frente a 5810; fórmula exportadora y plan individual siguen E. Detalle: MALLAS_TITULO_INTERMEDIO_MRUN2026.md/.json.

@@ -333,6 +333,14 @@ dictamen_path=OUT/'DICTAMEN_LIBROS_Y_CARGAS_MU2026.json'
 if dictamen_path.exists():
     dictamen=json.loads(dictamen_path.read_text())
     result['brecha_mu2026']['compatibilidad_abf_abril']=dictamen['comprobacion_abril']['compatibilidad_por_codigo']
+mrun_path=OUT/'DIAGNOSTICO_BRECHA_MRUN2026.json'
+if mrun_path.exists():
+    mrun_diag=jsonread(mrun_path)
+    for item in mrun_diag['fuentes']:verified(item['ruta'],item['sha256'])
+    result['brecha_mu2026'].update(fuente_mrun_ipss_disponible_hasta=2026,investigacion_realizada=True,diagnostico_mrun={'ruta':str(mrun_path),'sha256':hashfile(mrun_path),'clase':'C/E compatibilidad de perfiles; no identidad','resumen':mrun_diag['resumen'],'por_codigo':mrun_diag['por_codigo']})
+    result['brecha_mu2026']['metodo_preparado']='Contraste documental PES pendiente; adaptador MRUN ejecutado sólo como diagnóstico A/B/C de perfiles, sin enlaces personales.'
+    result.setdefault('informes_busqueda_y_dictamen',{})['DIAGNOSTICO_BRECHA_MRUN2026']={'ruta':str(mrun_path),'sha256':hashfile(mrun_path),'clase':'C/E sin identidad acreditada'}
+    result['cierres_operativos_20261028']=CAT.get('cierres_operativos_20261028',[])
 c35=collections.Counter()
 for r in mu[2022]:
     if (normalizar(r['COD_SED']),normalizar(r['COD_CAR']),normalizar(r['JOR']))==('2','35','4'):
@@ -342,6 +350,7 @@ for r in mu[2022]:
 result['revision_c35j4']={'anio':2022,'familia':'I162S2C35J4','codcarpr_observados_en_personas_da':dict(c35),'estado':'E','nota':'Oferta histórica identifica Técnico en Análisis de Sistemas, pero observar otros expedientes actuales no acredita equivalencia histórica. No se agrega familia a partir de nombre ni RUT.'}
 assert all(sum(x['registros'] for x in result['titulados_publicados_por_codigo'] if x['anio_publicacion']==y)==sum(public[y].values()) for y in public)
 assert total_publico==3504
+result['informes_hitos_20261028']={n:{'ruta':str(OUT/(n+'.json')),'sha256':hashfile(OUT/(n+'.json')),'clase':'C/E' if n.startswith('PRUEBA') else 'B/C/E'} for n in ('PRUEBA_INVERSA_MRUN2026','MALLAS_TITULO_INTERMEDIO_MRUN2026') if (OUT/(n+'.json')).exists()}
 (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 lines=['# Matriz de cuadratura 2022–2026','', 'B/C: datos observados y cálculos; E: pendiente. H001 cuenta filas; validar unicidad antes de llamar personas.','', '| Año | MU filas | Pregrado + nivel no acreditado | VIG1 / VIG0 pregrado | SIES pregrado + postítulo | Brecha pregrado | H001 candidatos / elegibles (filas) | Titulación carga / SIES t−1 (registros) | Respaldo de código único v20 / solo RUT / no localizado |','|---|---:|---:|---:|---:|---:|---:|---:|---|']
 for x in mat:
@@ -370,7 +379,7 @@ for x in contraste_pes:lines.append(f"| {x['proceso']} | {x['periodo_acad_titula
 lines += ['', '## Cargas frente a PES 5319: RUT+DV y código derivado', '', '| Proceso | Carga | PES | Coinciden | Sólo carga | Sólo PES | Duplicados exactos en carga | Neto |', '|---|---:|---:|---:|---:|---:|---:|---:|']
 for x in contraste_pes:
     if 'carga_registros' in x: lines.append(f"| {x['proceso']} | {x['carga_registros']} | {x['pes5319_registros']} | {x['coinciden_rut_dv_codigo_registros']} | {sum(x['solo_carga_por_codigo'].values())} | {sum(x['solo_pes_por_codigo'].values())} | {x['duplicados_exactos_en_carga']} | {x['neto_carga_menos_pes']} |")
-lines += ['', 'El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.', '', 'Brecha MU 2026 = 226 [E]. Método preparado y no ejecutado sobre datos reales: `metodo_mu2026.contrastar_fuente` requiere descarga individual de lo cargado en PES MU 2026 o precarga AC 2027 con año de matrícula 2026, hash y adaptador de columnas acreditados. Clasifica sólo los 48 códigos pregrado con diferencia como VIG 1 nuestra, VIG 0 nuestra o matrícula documento/código ausente en nuestra base. El caso 2025 respalda investigar esta hipótesis, sin extrapolarlo a 2026. El análisis de perfiles MRUN queda como alternativa cuando exista microdato 2026.', '', 'Pendientes:']+[f'- {p}' for p in result['pendientes']]
+lines += ['', 'El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.', '', 'Brecha MU 2026 = 226 [E]. El contraste documental `metodo_mu2026.contrastar_fuente` sigue requiriendo descarga PES por documento o precarga AC2027; no se ejecutó sin ella. MRUN2026 sí existe en H2: se incorpora un diagnóstico separado A/B/C por perfiles demográficos, familia y tipo unánime, sin guardar vínculos RUT–MRUN ni confundirlo con identidad acreditada.', '', 'Pendientes:']+[f'- {p}' for p in result['pendientes']]
 lines += ['', '## Titulación frente a matrícula: comparación preliminar por persona', '', '| Proceso | Registros de carga observada | Personas con documento comparable | Presentes en MU t−1 | Presentes en MU t |', '|---|---:|---:|---:|---:|']
 for y,t in titulos.items():
     a=t['personas_con_mu_por_anio']; lines.append(f"| {y} | {t['registros']} | {t['personas_con_llave_comparable']} | {a[str(y-1)] if a[str(y-1)] is not None else 'E'} | {a[str(y)]} |")
@@ -389,6 +398,11 @@ with (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.md').open('a',encoding='utf-8') a
         f.write('\n### Pendientes E: 35 matrículas no cubiertas por candidatas de abril\n\n| Código | Brecha positiva | Candidatas | Cubrible | Sin cubrir |\n|---|---:|---:|---:|---:|\n')
         for r in c['no_cubiertas_por_codigo']:f.write(f"| {r['codigo_sies']} | {r['brecha_positiva']} | {r['candidatas']} | {r['cubrible']} | {r['sin_cubrir']} |\n")
         f.write('\nLas dos brechas negativas se detallan en el dictamen y no compensan las 35 pendientes positivas. E: reconstrucción no ejecutada. Las dos formulaciones originales eran equivalentes con I162 fijo; se preparan ahora L1 documento+código único y L2 gruesa documento+COD_CAR, sin sede, jornada ni versión (C/E). Si L1 reproduce mejor la publicación y el linaje confirma registros antiguos no sobrescritos, éstos serán una explicación candidata. Alexi descargará el Historial y el archivo cargado de cada carga Finalizado. No se usarán envíos locales. Fuentes, bases, denominadores y tasas intactos.\n')
+    if mrun_path.exists():
+        s=mrun_diag['resumen']
+        f.write('\n## MRUN2026 recuperado de H2 [B/C/E]\n\nB/C: 3.425 matrículas2026 (3.371 pregrado+54 postítulo), con cero diferencias por código frente a publicación. Foco exclusivo de48 códigos:2.973 registros.\n\n| Clasificación candidata | Registros MRUN |\n|---|---:|\n')
+        for k in ('vig1_candidata_unica','vig0_candidata_unica','varios_candidatos','sin_candidato'):f.write(f"| {k} | {s[k]} |\n")
+        f.write(f"\nC/E: {s['con_alguna_candidata_vig0']} registros tienen alguna candidata VIG0 (incluye ambigüedades); capacidad descriptiva por código {s['capacidad_descriptiva_positiva']}/228, sin cobertura por candidatura VIG0 {s['pendiente_positivo_sin_candidata_vig0']}. No son personas identificadas ni reducción de la brecha226: pueden compartir candidatos. Dictamen y clasificación por código: DIAGNOSTICO_BRECHA_MRUN2026.md/.json. No se guardaron vínculos RUT–MRUN.\n")
 def detectar(x, path=''):
     hits=[]
     if isinstance(x,dict):
@@ -421,3 +435,7 @@ qa['metodo_mu2026']={'estado':'PREPARADO_NO_EJECUTADO_CON_FUENTE_REAL','pruebas_
 qa['escaneo_cuatro_archivos_con_identificadores_de_fuentes']={'archivos':list(files),'coincidencias':privacy_hits,'metodo':'Identificadores observados en MU/DA por límites de token; sólo se publica el número de coincidencias.'}
 (OUT/'QA.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Matriz parcial generada; controles de suma aprobados; escaneo estructurado sin coincidencias.')
+
+if result.get("informes_hitos_20261028"):
+    with (OUT/"MATRIZ_CUADRATURA_TOTALES_2022_2026.md").open("a") as f:
+        f.write("\n## Prueba inversa y mallas [B/C/E]\n\nVer PRUEBA_INVERSA_MRUN2026.md/.json y MALLAS_TITULO_INTERMEDIO_MRUN2026.md/.json: compatibilidad de perfiles y de conteo de unidades; sin certificar identidad, fórmula exportadora o plan individual. Bases y cifras conciliadas intactas.\n")

@@ -1,0 +1,466 @@
+{
+  "clase": "B fuente observada; C extracción/paridad; D cierre de pendientes",
+  "fuente_h2": {
+    "fuente_h2": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+    "sha256_h2": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd",
+    "fuente_nacional_2026": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/OFICIAL_2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+      "bytes": 1015950538,
+      "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235"
+    },
+    "regla_filtro": "cat_periodo=2026 y cod_inst=162",
+    "manifest_h2": "data/recuperacion_cruce_mrun_umas/20261016/manifest.json"
+  },
+  "filas_h2": 24386,
+  "fuente_consolidada": {
+    "categoria": "11_SIES_MRUN_IPSS_162",
+    "archivo": "MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+    "ruta_consolidada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+    "sha256": "b5c637a3056927c5abdfd1e59ea4e90decfcf81fdadf36bf6a93dda8409770c8",
+    "bytes": 2625563,
+    "accion": "YA_EXISTIA_IDENTICO",
+    "hash_copia_igual_origen": true,
+    "origenes": [
+      {
+        "ruta": "/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+        "citado_en": [
+          "matriz_cuadratura_totales_20261028"
+        ]
+      }
+    ],
+    "datos_personales": "sí; MRUN seudonimizado, sin RUT/CODCLI",
+    "descripcion": "Subconjunto IPSS2026 de H2, 3.425 matrículas. No contiene vínculos con identificadores UMAS.",
+    "procedencia_primaria": {
+      "fuente_h2": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+      "sha256_h2": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd",
+      "fuente_nacional_2026": {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/OFICIAL_2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+        "bytes": 1015950538,
+        "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235"
+      },
+      "regla_filtro": "cat_periodo=2026 y cod_inst=162",
+      "manifest_h2": "data/recuperacion_cruce_mrun_umas/20261016/manifest.json"
+    }
+  },
+  "mrun2026": {
+    "total": 3425,
+    "pregrado": 3371,
+    "postitulo": 54
+  },
+  "paridad_por_codigo": [
+    {
+      "codigo_sies": "I162S2C10J4V1",
+      "mrun": 17,
+      "publicado": 17,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C111J4V1",
+      "mrun": 30,
+      "publicado": 30,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C112J4V1",
+      "mrun": 66,
+      "publicado": 66,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C113J4V1",
+      "mrun": 33,
+      "publicado": 33,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C114J2V1",
+      "mrun": 94,
+      "publicado": 94,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C115J2V1",
+      "mrun": 27,
+      "publicado": 27,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C116J4V1",
+      "mrun": 24,
+      "publicado": 24,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C117J4V1",
+      "mrun": 12,
+      "publicado": 12,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C118J4V1",
+      "mrun": 64,
+      "publicado": 64,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C119J4V1",
+      "mrun": 28,
+      "publicado": 28,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C124J4V1",
+      "mrun": 25,
+      "publicado": 25,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C125J4V1",
+      "mrun": 13,
+      "publicado": 13,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C1J1V1",
+      "mrun": 2,
+      "publicado": 2,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C1J1V2",
+      "mrun": 34,
+      "publicado": 34,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C1J2V4",
+      "mrun": 32,
+      "publicado": 32,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C1J4V2",
+      "mrun": 239,
+      "publicado": 239,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C1J4V3",
+      "mrun": 86,
+      "publicado": 86,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C22J4V2",
+      "mrun": 36,
+      "publicado": 36,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C3J2V3",
+      "mrun": 2,
+      "publicado": 2,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C3J2V4",
+      "mrun": 6,
+      "publicado": 6,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C3J4V2",
+      "mrun": 153,
+      "publicado": 153,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C3J4V3",
+      "mrun": 113,
+      "publicado": 113,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C46J1V1",
+      "mrun": 35,
+      "publicado": 35,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C46J2V1",
+      "mrun": 41,
+      "publicado": 41,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C46J2V3",
+      "mrun": 4,
+      "publicado": 4,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C46J4V1",
+      "mrun": 78,
+      "publicado": 78,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C46J4V3",
+      "mrun": 256,
+      "publicado": 256,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C47J1V1",
+      "mrun": 19,
+      "publicado": 19,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C47J2V1",
+      "mrun": 27,
+      "publicado": 27,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C47J4V1",
+      "mrun": 111,
+      "publicado": 111,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C53J3V1",
+      "mrun": 17,
+      "publicado": 17,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C57J1V1",
+      "mrun": 28,
+      "publicado": 28,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C57J2V1",
+      "mrun": 25,
+      "publicado": 25,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C57J4V1",
+      "mrun": 257,
+      "publicado": 257,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C66J4V1",
+      "mrun": 15,
+      "publicado": 15,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C6J2V2",
+      "mrun": 7,
+      "publicado": 7,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C6J4V2",
+      "mrun": 45,
+      "publicado": 45,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C70J4V1",
+      "mrun": 22,
+      "publicado": 22,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C76J1V1",
+      "mrun": 7,
+      "publicado": 7,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C76J2V1",
+      "mrun": 25,
+      "publicado": 25,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C76J4V1",
+      "mrun": 132,
+      "publicado": 132,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C76J4V2",
+      "mrun": 21,
+      "publicado": 21,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C77J1V1",
+      "mrun": 1,
+      "publicado": 1,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C77J2V1",
+      "mrun": 20,
+      "publicado": 20,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C77J4V1",
+      "mrun": 98,
+      "publicado": 98,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C77J4V2",
+      "mrun": 32,
+      "publicado": 32,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C78J1V1",
+      "mrun": 10,
+      "publicado": 10,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C78J2V1",
+      "mrun": 36,
+      "publicado": 36,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C78J4V1",
+      "mrun": 88,
+      "publicado": 88,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C79J2V1",
+      "mrun": 25,
+      "publicado": 25,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C79J4V1",
+      "mrun": 87,
+      "publicado": 87,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C83J4V1",
+      "mrun": 94,
+      "publicado": 94,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C83J4V2",
+      "mrun": 9,
+      "publicado": 9,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C84J4V1",
+      "mrun": 34,
+      "publicado": 34,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C85J4V1",
+      "mrun": 56,
+      "publicado": 56,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C86J4V1",
+      "mrun": 62,
+      "publicado": 62,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C87J4V1",
+      "mrun": 5,
+      "publicado": 5,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C87J4V2",
+      "mrun": 77,
+      "publicado": 77,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C88J4V1",
+      "mrun": 52,
+      "publicado": 52,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C89J4V1",
+      "mrun": 37,
+      "publicado": 37,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C90J2V2",
+      "mrun": 22,
+      "publicado": 22,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C91J1V1",
+      "mrun": 87,
+      "publicado": 87,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S2C91J2V1",
+      "mrun": 112,
+      "publicado": 112,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S3C114J2V1",
+      "mrun": 36,
+      "publicado": 36,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S3C115J2V1",
+      "mrun": 19,
+      "publicado": 19,
+      "diferencia": 0
+    },
+    {
+      "codigo_sies": "I162S3C91J2V1",
+      "mrun": 18,
+      "publicado": 18,
+      "diferencia": 0
+    }
+  ],
+  "diferencias_por_codigo": 0,
+  "nacionales": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/OFICIAL_2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+      "bytes": 1015950538,
+      "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/ordenar ipss octubre 2026/Matricula-Ed-Superior-2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+      "bytes": 1015950538,
+      "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235"
+    }
+  ],
+  "copias_nacionales_identicas": true,
+  "archivos_nacionales_copiados": 0,
+  "catalogos_json_csv_leeme_identicos": true,
+  "originales_modificados": false,
+  "vinculos_rut_mrun_persistidos": false
+}

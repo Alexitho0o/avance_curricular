@@ -1,0 +1,2543 @@
+{
+  "clase": "A definición unidad; B totales observados; C comparación; E plan no informado",
+  "referencia_proceso": "Avance Curricular2026 informa2025; Permanencia es foto27-10-2026. No se presupone vigencia de todos los planes en2026.",
+  "fuentes": {
+    "listado": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+      "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049"
+    },
+    "h112a": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Carreras Avance Curricular 2026/otros/AVANCE_CURRICULAR_2026_DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769_20260709_114429/DECISION_ALTERNATIVA_PERIODIZACION_CARRERAS_16769.xlsx",
+      "sha256": "3c08ffe17f8225ead1cd7cb8635433d7b5da0b5254ed92d4cc67fa5c43f4b7b0",
+      "bytes": 701049
+    },
+    "h112b_excel": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Carreras Avance Curricular 2026/5810_CARRERAS_AVANCE_CURRICULAR_2026_REVISION_H112B_CONTROLADO.xlsx",
+      "sha256": "5f7cf7de3fef11624d7dffa872134af6f79fd1563f533875513db8de1224f849",
+      "bytes": 41969
+    },
+    "h112b_csv": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Carreras Avance Curricular 2026/5810_CARRERAS_AVANCE_CURRICULAR_2026_SUBIR_SIES_ID_16769_21C_H112B_CONTROLADO.csv",
+      "sha256": "e355417a13f1caa7434da88ae167c663b2526225743a1ede191de7c024c2c8a0",
+      "bytes": 4595,
+      "estructura": {
+        "filas": 43,
+        "columnas": 21,
+        "encabezado": false,
+        "delimitador": ";",
+        "encoding_lector": "utf-8-sig compatible"
+      }
+    },
+    "manual": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/requerimiento_bettersoft_uplus_2026/01_fuentes_oficiales/avance_curricular_2026/Instructivo_Avance Curricular SIES - 2026.txt",
+      "sha256": "7a3fd506bc75c2561594d45bc0d3a834dd781822f459fdaac9d8c47e4b1422a2",
+      "bytes": 45400
+    }
+  },
+  "gobernanza_04": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas",
+    "archivos_locales_materializados": 0,
+    "manifest_recuperado_de_Git": {
+      "commit": "3067c976b19101eca1cb0912f14ea70525c96d34",
+      "ruta": "avance_curricular_2026/04_gobernanza_mallas/03_auditorias/AUDITORIA_MALLAS_COMPARTIDAS_END_TO_END_20260701_090314/03_RESULTADOS/09_MANIFIESTO_TABLA_CANONICA_LOGISTICA.json",
+      "sha256": "e5437227146bd130bf6fc0831ca668a79b41ec80131bfb01473e33ab3b6b2f0c"
+    },
+    "maestro_tsv_citado": "/Users/alexi/Documents/GitHub/avance_curricular/avance_curricular_2026/04_gobernanza_mallas/02_conciliacion/CONCILIACION_CANONICA_PDF_HOJA1_20260626_170541/02_CATALOGO_HOJA1_PLANES_CANONICOS.tsv",
+    "maestro_tsv_sha256_citado": "6256a1e7fe78fedf4bb4f227de4e302ca00eef52ea47d46b548168abd97f9411",
+    "payload_maestro_tsv_disponible": false,
+    "alternativa_verificada": "H112a detalle gobernado, carga5810H112b y listadoRE+CO; no se restituye ni modifica el árbol histórico"
+  },
+  "por_carrera": [
+    {
+      "carrera_umas": "ADMP",
+      "expedientes": 148,
+      "total_ramos_malla_observado": {
+        "51": 148
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "ADMP20251",
+          "ramos_distintos": 49
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C83J4V1",
+          "plan_umas": "ADMP20251",
+          "total_carga_5810": 49.0,
+          "unidades_detalle_gobernado": 49,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "ADMP20251",
+          "codramo_distintos_observados": 29,
+          "ramoequiv_distintos_observados": 34
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": 148,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "AUDT",
+      "expedientes": 103,
+      "total_ramos_malla_observado": {
+        "49": 103
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "AUDT20251",
+          "ramos_distintos": 47
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C86J4V1",
+          "plan_umas": "AUDT20251",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "AUDT20251",
+          "codramo_distintos_observados": 24,
+          "ramoequiv_distintos_observados": 32
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": 103,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CADMP",
+      "expedientes": 10,
+      "total_ramos_malla_observado": {
+        "23": 10
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CADMP20251",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CADMP20251",
+          "codramo_distintos_observados": 13,
+          "ramoequiv_distintos_observados": 13
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 10,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CAUDT",
+      "expedientes": 4,
+      "total_ramos_malla_observado": {
+        "23": 4
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CAUDT20251",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 4,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CIADM",
+      "expedientes": 26,
+      "total_ramos_malla_observado": {
+        "25": 26
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CIADM20241",
+          "ramos_distintos": 25
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CIADM20241",
+          "codramo_distintos_observados": 25,
+          "ramoequiv_distintos_observados": 29
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 26,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CICDA",
+      "expedientes": 3,
+      "total_ramos_malla_observado": {
+        "22": 3
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CICDA20251",
+          "ramos_distintos": 22
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 3,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CICIB",
+      "expedientes": 97,
+      "total_ramos_malla_observado": {
+        "22": 97
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CICIB20241",
+          "ramos_distintos": 22
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CICIB20241",
+          "codramo_distintos_observados": 22,
+          "ramoequiv_distintos_observados": 42
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 97,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CICRE",
+      "expedientes": 122,
+      "total_ramos_malla_observado": {
+        "22": 122
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CICRE20241",
+          "ramos_distintos": 22
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CICRE20241",
+          "codramo_distintos_observados": 22,
+          "ramoequiv_distintos_observados": 57
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 122,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CIIND",
+      "expedientes": 44,
+      "total_ramos_malla_observado": {
+        "23": 44
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CIIND20251",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C87J4V1",
+          "plan_umas": "CIIND20251",
+          "total_carga_5810": 23.0,
+          "unidades_detalle_gobernado": 23,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CIIND20251",
+          "codramo_distintos_observados": 18,
+          "ramoequiv_distintos_observados": 27
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 44,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 44,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CIINF",
+      "expedientes": 94,
+      "total_ramos_malla_observado": {
+        "23": 94
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CIINF20241",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CIINF20241",
+          "codramo_distintos_observados": 23,
+          "ramoequiv_distintos_observados": 46
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 94,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CILOG",
+      "expedientes": 38,
+      "total_ramos_malla_observado": {
+        "23": 38
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CILOG20241",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CILOG20241",
+          "codramo_distintos_observados": 18,
+          "ramoequiv_distintos_observados": 21
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 38,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CIMDI",
+      "expedientes": 3,
+      "total_ramos_malla_observado": {
+        "23": 3
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CIMDI20261",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 3,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CIPRE",
+      "expedientes": 5,
+      "total_ramos_malla_observado": {
+        "27": 5
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CIPRE20261",
+          "ramos_distintos": 27
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 5,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CIRHU",
+      "expedientes": 7,
+      "total_ramos_malla_observado": {
+        "23": 7
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CIRHU20261",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 7,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CISEP",
+      "expedientes": 7,
+      "total_ramos_malla_observado": {
+        "24": 7
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CISEP20261",
+          "ramos_distintos": 24
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 7,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "CONG",
+      "expedientes": 98,
+      "total_ramos_malla_observado": {
+        "26": 98
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "CONG20251",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C85J4V1",
+          "plan_umas": "CONG20251",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "CONG20251",
+          "codramo_distintos_observados": 24,
+          "ramoequiv_distintos_observados": 27
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 98,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 98,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "COTEIQ",
+      "expedientes": 51,
+      "total_ramos_malla_observado": {
+        "29": 51
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "COTEIQ20261",
+          "ramos_distintos": 29
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "COTEIQ20261",
+          "codramo_distintos_observados": 23,
+          "ramoequiv_distintos_observados": 31
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 51,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "COTENS",
+      "expedientes": 31,
+      "total_ramos_malla_observado": {
+        "29": 31
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "COTENS20261",
+          "ramos_distintos": 29
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "COTENS20261",
+          "codramo_distintos_observados": 10,
+          "ramoequiv_distintos_observados": 13
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 31,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "COTFAR",
+      "expedientes": 28,
+      "total_ramos_malla_observado": {
+        "29": 28
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "COTFAR20261",
+          "ramos_distintos": 29
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "COTFAR20261",
+          "codramo_distintos_observados": 11,
+          "ramoequiv_distintos_observados": 13
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 28,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IADM",
+      "expedientes": 268,
+      "total_ramos_malla_observado": {
+        "51": 268
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IADM20241",
+          "ramos_distintos": 51
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C76J2V1",
+          "plan_umas": "IADM20241",
+          "total_carga_5810": 51.0,
+          "unidades_detalle_gobernado": 51,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C76J4V1",
+          "plan_umas": "IADM20241",
+          "total_carga_5810": 51.0,
+          "unidades_detalle_gobernado": 51,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C76J4V2",
+          "plan_umas": "IADM20241",
+          "total_carga_5810": 51.0,
+          "unidades_detalle_gobernado": 51,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IADM20241",
+          "codramo_distintos_observados": 41,
+          "ramoequiv_distintos_observados": 57
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 268,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 268,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "ICDA",
+      "expedientes": 59,
+      "total_ramos_malla_observado": {
+        "47": 59
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "ICDA20251",
+          "ramos_distintos": 45
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C89J4V1",
+          "plan_umas": "ICDA20251",
+          "total_carga_5810": 45.0,
+          "unidades_detalle_gobernado": 45,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C88J4V1",
+          "plan_umas": "ICDA20251",
+          "total_carga_5810": 45.0,
+          "unidades_detalle_gobernado": 45,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "ICDA20251",
+          "codramo_distintos_observados": 20,
+          "ramoequiv_distintos_observados": 25
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": 59,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "ICIB",
+      "expedientes": 422,
+      "total_ramos_malla_observado": {
+        "47": 422
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "ICIB20241",
+          "ramos_distintos": 47
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C47J1V1",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C47J2V1",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C47J4V1",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C46J1V1",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C46J2V1",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C46J4V1",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C46J4V3",
+          "plan_umas": "ICIB20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "ICIB20241",
+          "codramo_distintos_observados": 76,
+          "ramoequiv_distintos_observados": 233
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 422,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 422,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "ICRE",
+      "expedientes": 168,
+      "total_ramos_malla_observado": {
+        "47": 168
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "ICRE20241",
+          "ramos_distintos": 47
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C3J4V3",
+          "plan_umas": "ICRE20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C3J2V1",
+          "plan_umas": "ICRE20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C3J2V4",
+          "plan_umas": "ICRE20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C3J4V2",
+          "plan_umas": "ICRE20241",
+          "total_carga_5810": 47.0,
+          "unidades_detalle_gobernado": 47,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "ICRE20241",
+          "codramo_distintos_observados": 48,
+          "ramoequiv_distintos_observados": 219
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 168,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 168,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IECIRE",
+      "expedientes": 1,
+      "total_ramos_malla_observado": {
+        "41": 1
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IECIRE20081",
+          "ramos_distintos": 37
+        },
+        {
+          "plan": "IECIRE20101",
+          "ramos_distintos": 39
+        },
+        {
+          "plan": "IECIRE20121",
+          "ramos_distintos": 38
+        },
+        {
+          "plan": "IECIRE20151",
+          "ramos_distintos": 41
+        },
+        {
+          "plan": "IECIRE20191",
+          "ramos_distintos": 44
+        },
+        {
+          "plan": "IECIRE2020",
+          "ramos_distintos": 43
+        },
+        {
+          "plan": "IECIRE20211",
+          "ramos_distintos": 45
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IECIRE20191",
+          "codramo_distintos_observados": 60,
+          "ramoequiv_distintos_observados": 76
+        },
+        {
+          "plan": "IECIRE20211",
+          "codramo_distintos_observados": 46,
+          "ramoequiv_distintos_observados": 89
+        },
+        {
+          "plan": "IECIRE2020",
+          "codramo_distintos_observados": 58,
+          "ramoequiv_distintos_observados": 67
+        },
+        {
+          "plan": "IECIRE20151",
+          "codramo_distintos_observados": 42,
+          "ramoequiv_distintos_observados": 65
+        },
+        {
+          "plan": "IECIRE20121",
+          "codramo_distintos_observados": 28,
+          "ramoequiv_distintos_observados": 28
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 1,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IECIREOL",
+      "expedientes": 1,
+      "total_ramos_malla_observado": {
+        "45": 1
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IECIREOL",
+          "ramos_distintos": 40
+        },
+        {
+          "plan": "IECIREOL20191",
+          "ramos_distintos": 44
+        },
+        {
+          "plan": "IECIREOL20211",
+          "ramos_distintos": 45
+        },
+        {
+          "plan": "IECIREOL20201",
+          "ramos_distintos": 44
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IECIREOL20211",
+          "codramo_distintos_observados": 58,
+          "ramoequiv_distintos_observados": 213
+        },
+        {
+          "plan": "IECIREOL20191",
+          "codramo_distintos_observados": 45,
+          "ramoequiv_distintos_observados": 66
+        },
+        {
+          "plan": "IECIREOL20201",
+          "codramo_distintos_observados": 74,
+          "ramoequiv_distintos_observados": 78
+        },
+        {
+          "plan": "IETMREOL20211",
+          "codramo_distintos_observados": 7,
+          "ramoequiv_distintos_observados": 7
+        },
+        {
+          "plan": "IECIREOL",
+          "codramo_distintos_observados": 42,
+          "ramoequiv_distintos_observados": 97
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 1,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IFIN",
+      "expedientes": 42,
+      "total_ramos_malla_observado": {
+        "51": 42
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IFIN20261",
+          "ramos_distintos": 49
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IFIN20261",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 9
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IIND",
+      "expedientes": 181,
+      "total_ramos_malla_observado": {
+        "49": 181
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IIND20251",
+          "ramos_distintos": 47
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IIND20251",
+          "codramo_distintos_observados": 26,
+          "ramoequiv_distintos_observados": 36
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IINF",
+      "expedientes": 383,
+      "total_ramos_malla_observado": {
+        "48": 383
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IINF20241",
+          "ramos_distintos": 48
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C1J1V1",
+          "plan_umas": "IINF20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C1J1V2",
+          "plan_umas": "IINF20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C1J2V1",
+          "plan_umas": "IINF20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C1J2V4",
+          "plan_umas": "IINF20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C1J4V2",
+          "plan_umas": "IINF20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C1J4V3",
+          "plan_umas": "IINF20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IINF20241",
+          "codramo_distintos_observados": 48,
+          "ramoequiv_distintos_observados": 210
+        },
+        {
+          "plan": "TPAS20241",
+          "codramo_distintos_observados": 2,
+          "ramoequiv_distintos_observados": 2
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 383,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 383,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "ILOG",
+      "expedientes": 196,
+      "total_ramos_malla_observado": {
+        "48": 196
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "ILOG20241",
+          "ramos_distintos": 48
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C77J2V1",
+          "plan_umas": "ILOG20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C77J4V1",
+          "plan_umas": "ILOG20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C77J4V2",
+          "plan_umas": "ILOG20241",
+          "total_carga_5810": 48.0,
+          "unidades_detalle_gobernado": 48,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "ILOG20241",
+          "codramo_distintos_observados": 34,
+          "ramoequiv_distintos_observados": 42
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 196,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 196,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IMDI",
+      "expedientes": 118,
+      "total_ramos_malla_observado": {
+        "49": 118
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IMDI20261",
+          "ramos_distintos": 47
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IMDI20261",
+          "codramo_distintos_observados": 10,
+          "ramoequiv_distintos_observados": 13
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IPRE",
+      "expedientes": 38,
+      "total_ramos_malla_observado": {
+        "57": 38
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IPRE20261",
+          "ramos_distintos": 55
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IPRE20261",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 9
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "IRHU",
+      "expedientes": 64,
+      "total_ramos_malla_observado": {
+        "51": 64
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "IRHU20261",
+          "ramos_distintos": 49
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "IRHU20261",
+          "codramo_distintos_observados": 11,
+          "ramoequiv_distintos_observados": 15
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "ISEP",
+      "expedientes": 31,
+      "total_ramos_malla_observado": {
+        "55": 31
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "ISEP20261",
+          "ramos_distintos": 53
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "ISEP20261",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 9
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 0,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "NATP",
+      "expedientes": 31,
+      "total_ramos_malla_observado": {
+        "51": 31
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "NATP20251",
+          "ramos_distintos": 51
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "NATP20251",
+          "codramo_distintos_observados": 10,
+          "ramoequiv_distintos_observados": 13
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 31,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "NETMRE",
+      "expedientes": 1,
+      "total_ramos_malla_observado": {
+        "20": 1
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "NETMRE20091",
+          "ramos_distintos": 22
+        },
+        {
+          "plan": "NETMRE20101",
+          "ramos_distintos": 20
+        },
+        {
+          "plan": "NETMRE20121",
+          "ramos_distintos": 20
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "NETMRE20121",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 11
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 1,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TADP",
+      "expedientes": 32,
+      "total_ramos_malla_observado": {
+        "28": 32
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TADP20251",
+          "ramos_distintos": 28
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TADP20251",
+          "codramo_distintos_observados": 26,
+          "ramoequiv_distintos_observados": 32
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 32,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TAMD",
+      "expedientes": 211,
+      "total_ramos_malla_observado": {
+        "27": 211
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TAMD20241",
+          "ramos_distintos": 27
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C78J2V1",
+          "plan_umas": "TAMD20241",
+          "total_carga_5810": 27.0,
+          "unidades_detalle_gobernado": 27,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C84J4V1",
+          "plan_umas": "TAMD20241",
+          "total_carga_5810": 27.0,
+          "unidades_detalle_gobernado": 27,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C78J4V1",
+          "plan_umas": "TAMD20241",
+          "total_carga_5810": 27.0,
+          "unidades_detalle_gobernado": 27,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TAMD20241",
+          "codramo_distintos_observados": 27,
+          "ramoequiv_distintos_observados": 43
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 211,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 211,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TCDA",
+      "expedientes": 42,
+      "total_ramos_malla_observado": {
+        "25": 42
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TCDA20251",
+          "ramos_distintos": 25
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TCDA20251",
+          "codramo_distintos_observados": 19,
+          "ramoequiv_distintos_observados": 28
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 42,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TCIB",
+      "expedientes": 202,
+      "total_ramos_malla_observado": {
+        "26": 202
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TCIB20241",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TCIB20241",
+          "codramo_distintos_observados": 26,
+          "ramoequiv_distintos_observados": 109
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 202,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TCRE",
+      "expedientes": 56,
+      "total_ramos_malla_observado": {
+        "26": 56
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TCRE20241",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C6J4V2",
+          "plan_umas": "TCRE20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C6J2V2",
+          "plan_umas": "TCRE20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C6J2V1",
+          "plan_umas": "TCRE20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TCRE20241",
+          "codramo_distintos_observados": 27,
+          "ramoequiv_distintos_observados": 111
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 56,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 56,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TCSREOL",
+      "expedientes": 1,
+      "total_ramos_malla_observado": {
+        "24": 1
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TCSREOL2020",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TCSREOL20211",
+          "ramos_distintos": 24
+        },
+        {
+          "plan": "TCSREOL20231",
+          "ramos_distintos": 24
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TCSREOL20211",
+          "codramo_distintos_observados": 25,
+          "ramoequiv_distintos_observados": 111
+        },
+        {
+          "plan": "TCSREOL2020",
+          "codramo_distintos_observados": 23,
+          "ramoequiv_distintos_observados": 84
+        },
+        {
+          "plan": "TCSREOL20231",
+          "codramo_distintos_observados": 24,
+          "ramoequiv_distintos_observados": 48
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 1,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TEIQ",
+      "expedientes": 221,
+      "total_ramos_malla_observado": {
+        "29": 221
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TEIQ20261",
+          "ramos_distintos": 29
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TEIQ20261",
+          "codramo_distintos_observados": 16,
+          "ramoequiv_distintos_observados": 24
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 221,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TENS",
+      "expedientes": 365,
+      "total_ramos_malla_observado": {
+        "29": 365
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TENS20251",
+          "ramos_distintos": 29
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C91J1V1",
+          "plan_umas": "TENS20251",
+          "total_carga_5810": 29.0,
+          "unidades_detalle_gobernado": 29,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C91J2V1",
+          "plan_umas": "TENS20251",
+          "total_carga_5810": 29.0,
+          "unidades_detalle_gobernado": 29,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TENS20251",
+          "codramo_distintos_observados": 25,
+          "ramoequiv_distintos_observados": 37
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 365,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 365,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TFAR",
+      "expedientes": 58,
+      "total_ramos_malla_observado": {
+        "29": 58
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TFAR20261",
+          "ramos_distintos": 29
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TFAR20261",
+          "codramo_distintos_observados": 10,
+          "ramoequiv_distintos_observados": 11
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 58,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TFIN",
+      "expedientes": 38,
+      "total_ramos_malla_observado": {
+        "27": 38
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TFIN20261",
+          "ramos_distintos": 27
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TFIN20261",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 10
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 38,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TICL",
+      "expedientes": 21,
+      "total_ramos_malla_observado": {
+        "26": 21
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TICL20261",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TICL20261",
+          "codramo_distintos_observados": 11,
+          "ramoequiv_distintos_observados": 15
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 21,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TLOG",
+      "expedientes": 174,
+      "total_ramos_malla_observado": {
+        "26": 174
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TLOG20241",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C79J4V1",
+          "plan_umas": "TLOG20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C79J2V1",
+          "plan_umas": "TLOG20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TLOG20241",
+          "codramo_distintos_observados": 26,
+          "ramoequiv_distintos_observados": 35
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 174,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 174,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TMDI",
+      "expedientes": 142,
+      "total_ramos_malla_observado": {
+        "26": 142
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TMDI20261",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TMDI20261",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 11
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 142,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TPAS",
+      "expedientes": 370,
+      "total_ramos_malla_observado": {
+        "26": 370
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TPAS20241",
+          "ramos_distintos": 26
+        }
+      ],
+      "referencias_carga_5810": [
+        {
+          "codigo_sies": "I162S2C57J1V1",
+          "plan_umas": "TPAS20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C57J2V1",
+          "plan_umas": "TPAS20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        },
+        {
+          "codigo_sies": "I162S2C57J4V1",
+          "plan_umas": "TPAS20241",
+          "total_carga_5810": 26.0,
+          "unidades_detalle_gobernado": 26,
+          "unidad": "asignaturas/cursos/módulos (TIPO_UNIDAD_MEDIDA=1)",
+          "clase": "B/C referencia2026 datos2025; no acredita plan individual de Permanencia"
+        }
+      ],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TPAS20241",
+          "codramo_distintos_observados": 26,
+          "ramoequiv_distintos_observados": 144
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 370,
+      "con_total_distinto_5810": 0,
+      "sin_referencia_5810": false,
+      "con_total_coincidente_alguna_malla_listado": 370,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TPCRE",
+      "expedientes": 1,
+      "total_ramos_malla_observado": {
+        "23": 1
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TPCRE20081",
+          "ramos_distintos": 21
+        },
+        {
+          "plan": "TPCRE20101",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TPCRE20121",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TPCRE20121V2",
+          "ramos_distintos": 22
+        },
+        {
+          "plan": "TPCRE20151",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TPCRE20191",
+          "ramos_distintos": 23
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TPCRE20191",
+          "codramo_distintos_observados": 31,
+          "ramoequiv_distintos_observados": 50
+        },
+        {
+          "plan": "TPCRE20151",
+          "codramo_distintos_observados": 23,
+          "ramoequiv_distintos_observados": 81
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 1,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TPRE",
+      "expedientes": 34,
+      "total_ramos_malla_observado": {
+        "30": 34
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TPRE20261",
+          "ramos_distintos": 30
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TPRE20261",
+          "codramo_distintos_observados": 9,
+          "ramoequiv_distintos_observados": 10
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 34,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TRHU",
+      "expedientes": 88,
+      "total_ramos_malla_observado": {
+        "27": 88
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TRHU20261",
+          "ramos_distintos": 27
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TRHU20261",
+          "codramo_distintos_observados": 8,
+          "ramoequiv_distintos_observados": 10
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 88,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TTMRE",
+      "expedientes": 2,
+      "total_ramos_malla_observado": {
+        "23": 2
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TTMRE20121",
+          "ramos_distintos": 22
+        },
+        {
+          "plan": "TTMRE20121V2",
+          "ramos_distintos": 21
+        },
+        {
+          "plan": "TTMRE20161",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TTMRE20191",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TTMRE20211",
+          "ramos_distintos": 24
+        },
+        {
+          "plan": "TTMRE20091",
+          "ramos_distintos": 20
+        },
+        {
+          "plan": "TTMRE20101",
+          "ramos_distintos": 22
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TTMRE20191",
+          "codramo_distintos_observados": 36,
+          "ramoequiv_distintos_observados": 91
+        },
+        {
+          "plan": "TTMRE20211",
+          "codramo_distintos_observados": 25,
+          "ramoequiv_distintos_observados": 71
+        },
+        {
+          "plan": "TTMRE20161",
+          "codramo_distintos_observados": 23,
+          "ramoequiv_distintos_observados": 47
+        },
+        {
+          "plan": "TTMRE20121",
+          "codramo_distintos_observados": 4,
+          "ramoequiv_distintos_observados": 5
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 2,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    },
+    {
+      "carrera_umas": "TTMREOL",
+      "expedientes": 1,
+      "total_ramos_malla_observado": {
+        "23": 1
+      },
+      "es_constante_entre_no_vacios": true,
+      "totales_no_numericos_o_vacios": 0,
+      "mallas_listado_por_plan": [
+        {
+          "plan": "TTMREOL",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TTMREOL20191",
+          "ramos_distintos": 23
+        },
+        {
+          "plan": "TTMREOL20211",
+          "ramos_distintos": 24
+        },
+        {
+          "plan": "TTMREOL20231",
+          "ramos_distintos": 24
+        }
+      ],
+      "referencias_carga_5810": [],
+      "PROMEDIOS_por_plan": [
+        {
+          "plan": "TTMREOL20211",
+          "codramo_distintos_observados": 28,
+          "ramoequiv_distintos_observados": 112
+        },
+        {
+          "plan": "TTMREOL20191",
+          "codramo_distintos_observados": 26,
+          "ramoequiv_distintos_observados": 69
+        },
+        {
+          "plan": "TTMREOL20231",
+          "codramo_distintos_observados": 27,
+          "ramoequiv_distintos_observados": 46
+        },
+        {
+          "plan": "TPCPASO",
+          "codramo_distintos_observados": 1,
+          "ramoequiv_distintos_observados": 1
+        },
+        {
+          "plan": "TTMREOL",
+          "codramo_distintos_observados": 23,
+          "ramoequiv_distintos_observados": 48
+        }
+      ],
+      "con_total_coincidente_alguna_5810": 0,
+      "con_total_distinto_5810": null,
+      "sin_referencia_5810": true,
+      "con_total_coincidente_alguna_malla_listado": 1,
+      "estado": "E_ATRIBUCION_DE_PLAN: sólo comparación numérica por carrera; no se asigna plan ni se corrige total"
+    }
+  ],
+  "resumen": {
+    "carreras": 54,
+    "expedientes": 4982,
+    "carreras_total_constante": 54,
+    "carreras_varios_totales": 0,
+    "coincidencias_numericas_5810": 2755,
+    "diferencias_numericas_5810": 310,
+    "sin_referencia_5810": 1917,
+    "registros_carga_5810": 43,
+    "registros_5810_sin_carrera_por_plan": 0,
+    "referencias_5810_con_detalle_gobernado_mismo_total": 42
+  },
+  "limites": [
+    "Permanencia no trae plan: igualdad de total no prueba igualdad de malla.",
+    "Listado bruto puede repetir ramos por requisitos; se cuentan códigos distintos, sin asumir obligatoriedad de todas las filas.",
+    "PROMEDIOS es actividad observada y no acredita malla completa; convalidaciones/equivalencias no se fusionan automáticamente.",
+    "HistorialGit prueba manifiesto; TSV canónico ausente no se declara reconstruido."
+  ],
+  "referencias_5810_todas": [
+    {
+      "codigo_sies": "I162S2C91J1V1",
+      "plan_umas": "TENS20251",
+      "total_unidades": "29",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TENS"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C91J2V1",
+      "plan_umas": "TENS20251",
+      "total_unidades": "29",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TENS"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C57J1V1",
+      "plan_umas": "TPAS20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TPAS"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C57J2V1",
+      "plan_umas": "TPAS20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TPAS"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C57J4V1",
+      "plan_umas": "TPAS20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TPAS"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C78J2V1",
+      "plan_umas": "TAMD20241",
+      "total_unidades": "27",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TAMD"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C89J4V1",
+      "plan_umas": "ICDA20251",
+      "total_unidades": "45",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICDA"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C85J4V1",
+      "plan_umas": "CONG20251",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "CONG"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C84J4V1",
+      "plan_umas": "TAMD20241",
+      "total_unidades": "27",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TAMD"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C79J4V1",
+      "plan_umas": "TLOG20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TLOG"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C79J2V1",
+      "plan_umas": "TLOG20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TLOG"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C78J4V1",
+      "plan_umas": "TAMD20241",
+      "total_unidades": "27",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TAMD"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C11J2V1",
+      "plan_umas": "TMIRE20171",
+      "total_unidades": "27",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TMIRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C6J4V2",
+      "plan_umas": "TCRE20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TCRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C6J2V2",
+      "plan_umas": "TCRE20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TCRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C47J1V1",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C47J2V1",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C6J2V1",
+      "plan_umas": "TCRE20241",
+      "total_unidades": "26",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "TCRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C47J4V1",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C46J1V1",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C46J2V1",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C46J4V1",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C46J4V3",
+      "plan_umas": "ICIB20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICIB"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C76J2V1",
+      "plan_umas": "IADM20241",
+      "total_unidades": "51",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IADM"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C76J4V1",
+      "plan_umas": "IADM20241",
+      "total_unidades": "51",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IADM"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C77J2V1",
+      "plan_umas": "ILOG20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ILOG"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C77J4V1",
+      "plan_umas": "ILOG20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ILOG"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C3J4V3",
+      "plan_umas": "ICRE20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C1J1V1",
+      "plan_umas": "IINF20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IINF"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C1J1V2",
+      "plan_umas": "IINF20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IINF"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C1J2V1",
+      "plan_umas": "IINF20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IINF"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C1J2V4",
+      "plan_umas": "IINF20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IINF"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C1J4V2",
+      "plan_umas": "IINF20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IINF"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C1J4V3",
+      "plan_umas": "IINF20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IINF"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C3J2V1",
+      "plan_umas": "ICRE20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C3J2V4",
+      "plan_umas": "ICRE20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C3J4V2",
+      "plan_umas": "ICRE20241",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICRE"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C83J4V1",
+      "plan_umas": "ADMP20251",
+      "total_unidades": "49",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ADMP"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C86J4V1",
+      "plan_umas": "AUDT20251",
+      "total_unidades": "47",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "AUDT"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C87J4V1",
+      "plan_umas": "CIIND20251",
+      "total_unidades": "23",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "CIIND"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C88J4V1",
+      "plan_umas": "ICDA20251",
+      "total_unidades": "45",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ICDA"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C76J4V2",
+      "plan_umas": "IADM20241",
+      "total_unidades": "51",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "IADM"
+      ],
+      "estado": "B/C"
+    },
+    {
+      "codigo_sies": "I162S2C77J4V2",
+      "plan_umas": "ILOG20241",
+      "total_unidades": "48",
+      "tipo_unidad": "1",
+      "codcarpr_en_listado": [
+        "ILOG"
+      ],
+      "estado": "B/C"
+    }
+  ],
+  "referencias_5810_sin_carrera_por_plan": [],
+  "titulo_intermedio_comparacion_20261028": {
+    "ruta": "outputs/matriz_cuadratura_totales_20261028/MALLAS_TITULO_INTERMEDIO_MRUN2026.json",
+    "sha256": "af619dfd7e282ab29508c98409ad4fa7a17077b25082e16a5c36ca04b452bcbe",
+    "carreras_compatibles": [
+      "ADMP",
+      "AUDT",
+      "ICDA"
+    ],
+    "clase": "B/C compatibilidad contable; E fórmula exportadora y plan individual"
+  }
+}

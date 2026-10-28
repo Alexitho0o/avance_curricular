@@ -1,0 +1,1017 @@
+{
+  "clase": "B observado; C control; E semántica/cobertura pendiente",
+  "permanencia": {
+    "fecha_extraccion": "2026-10-27",
+    "filas": 4982,
+    "codcli_distintos": 4982,
+    "campo_ano": {
+      "2026": 4981,
+      "2025": 1
+    },
+    "sin_columna_plan": true,
+    "fotografia_no_historia": true
+  },
+  "rut": {
+    "formato_permanencia": "Cuerpo numérico del documento sin DV; no RUN completo ni DV pegado",
+    "filas_numericas_sin_separador": 4982,
+    "contraste_DATOSDEALUMNOS_12159_por_CODCLI": {
+      "cuerpo_igual_por_codcli": 4980,
+      "dv_da_valido": 4980,
+      "sin_codcli_da": 2
+    },
+    "fuente_contraste_sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9",
+    "algoritmo": "módulo11 sobre el DV explícito de DatosAlumnos, sólo para contrastar formato; no se agrega DV a Permanencia",
+    "hipotesis_DV_pegado_rechazada": {
+      "validacion_fortuita_al_separar_ultimo_digito": {
+        "DV_NO_VALIDADO": 4525,
+        "VALIDO": 457
+      },
+      "nota": "La coincidencia de módulo11 aislada no acredita formato: las4980 anclas coinciden con el cuerpo completo de DA, no con cuerpo+DV."
+    },
+    "clase": "B formato corroborado; C control; E dos CODCLI sin ancla en este extracto",
+    "dv_inventados": 0
+  },
+  "inscripciones_por_etiqueta": {
+    "2026-1": {
+      "no_tomo": 1156,
+      "si_tomo": 3182,
+      "sin_etiqueta": 644
+    },
+    "2026-2": {
+      "no_tomo": 1957,
+      "si_tomo": 3025
+    },
+    "2026-3": {
+      "no_tomo": 2339,
+      "si_tomo": 2643
+    }
+  },
+  "etiquetas_desplazadas_respecto_cabecera": {
+    "columna_t1": 2115,
+    "columna_t3": 1471,
+    "columna_t2": 644
+  },
+  "celdas_sin_etiqueta_valida": 644,
+  "ingreso_anio_vs_etiqueta_discrepancias": 0,
+  "lista_ramos_pend": {
+    "longitud_maxima_original": 800,
+    "filas_en_maximo_original": 3468,
+    "longitud_maxima_sin_espacios_extremos": 800,
+    "filas_en_maximo_sin_espacios_extremos": 2786,
+    "filas_800_con_nombre_final_prefijo_incompleto_de_catalogo": 2136,
+    "dictamen": "B/C: límite observable800 y nombres finales parciales frente al catálogo: la lista no es completa en esas filas. E: no se acredita la consulta SQL exportadora ni el contenido omitido. No usar esta lista como malla completa.",
+    "original_no_recortado_por_el_lector": true,
+    "valores_no_exportados": true
+  },
+  "columnas_duplicadas_renombradas": [
+    {
+      "posicion": 37,
+      "original": "Medio_Por_Donde_Se_Realizó",
+      "normalizado": "Medio_Por_Donde_Se_Realizó_ACADEMIA",
+      "clase": "C alias de lectura; libro original intacto"
+    },
+    {
+      "posicion": 38,
+      "original": "Comentario",
+      "normalizado": "Comentario_ACADEMIA",
+      "clase": "C alias de lectura; libro original intacto"
+    },
+    {
+      "posicion": 40,
+      "original": "Quien_realizó_la_gestión",
+      "normalizado": "Quien_realizó_la_gestión_ACADEMIA",
+      "clase": "C alias de lectura; libro original intacto"
+    },
+    {
+      "posicion": 42,
+      "original": "Medio_Por_Donde_Se_Realizó",
+      "normalizado": "Medio_Por_Donde_Se_Realizó_FINANZAS",
+      "clase": "C alias de lectura; libro original intacto"
+    },
+    {
+      "posicion": 43,
+      "original": "Comentario",
+      "normalizado": "Comentario_FINANZAS",
+      "clase": "C alias de lectura; libro original intacto"
+    },
+    {
+      "posicion": 45,
+      "original": "Quien_realizó_la_gestión",
+      "normalizado": "Quien_realizó_la_gestión_FINANZAS",
+      "clase": "C alias de lectura; libro original intacto"
+    }
+  ],
+  "fuente_original_no_editada": true,
+  "concordancia_por_codcli": [
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS ORIGEN DE LOS DATOS2025.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 1545,
+      "sin_codcli_comun": 3437,
+      "variables": {
+        "carrera": {
+          "concordantes": 1545,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 1501,
+          "diferentes": 44,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 97.15210355987055
+        },
+        "jornada": {
+          "concordantes": 1505,
+          "diferentes": 40,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 97.41100323624596
+        },
+        "sede": {
+          "concordantes": 1545,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_anio": {
+          "concordantes": 1544,
+          "diferentes": 1,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 99.93527508090615
+        },
+        "ingreso_periodo": {
+          "concordantes": 1544,
+          "diferentes": 1,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 99.93527508090615
+        },
+        "estado": {
+          "concordantes": 1308,
+          "diferentes": 237,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1545,
+          "tasa_concordancia_pct": 84.66019417475728
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 2313,
+      "sin_codcli_comun": 2669,
+      "variables": {
+        "carrera": {
+          "concordantes": 2313,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 2205,
+          "diferentes": 108,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 95.3307392996109
+        },
+        "jornada": {
+          "concordantes": 2301,
+          "diferentes": 12,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 99.48119325551232
+        },
+        "sede": {
+          "concordantes": 2313,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_anio": {
+          "concordantes": 2313,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_periodo": {
+          "concordantes": 2313,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 100.0
+        },
+        "estado": {
+          "concordantes": 1523,
+          "diferentes": 790,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 2313,
+          "tasa_concordancia_pct": 65.84522265456117
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_11248.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 4980,
+      "sin_codcli_comun": 2,
+      "variables": {
+        "carrera": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 4771,
+          "diferentes": 209,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 95.80321285140562
+        },
+        "jornada": {
+          "concordantes": 4971,
+          "diferentes": 9,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 99.81927710843374
+        },
+        "sede": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_anio": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_periodo": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "estado": {
+          "concordantes": 4905,
+          "diferentes": 75,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 98.49397590361446
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_12159.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 4980,
+      "sin_codcli_comun": 2,
+      "variables": {
+        "carrera": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 4771,
+          "diferentes": 209,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 95.80321285140562
+        },
+        "jornada": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "sede": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_anio": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_periodo": {
+          "concordantes": 4980,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 100.0
+        },
+        "estado": {
+          "concordantes": 4974,
+          "diferentes": 6,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 4980,
+          "tasa_concordancia_pct": 99.87951807228916
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 0,
+      "sin_codcli_comun": 4982,
+      "variables": {
+        "carrera": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "carrera_actual": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "jornada": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_periodo": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "estado": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 0,
+      "sin_codcli_comun": 4982,
+      "variables": {
+        "carrera": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "carrera_actual": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "jornada": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_periodo": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "estado": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 0,
+      "sin_codcli_comun": 4982,
+      "variables": {
+        "carrera": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "carrera_actual": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "jornada": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_periodo": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "estado": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES__d59e0f31.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 0,
+      "sin_codcli_comun": 4982,
+      "variables": {
+        "carrera": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "carrera_actual": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "jornada": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_periodo": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "estado": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_2176.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 0,
+      "sin_codcli_comun": 4982,
+      "variables": {
+        "carrera": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "carrera_actual": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "jornada": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_periodo": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "estado": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_3194.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 1383,
+      "sin_codcli_comun": 3599,
+      "variables": {
+        "carrera": {
+          "concordantes": 1383,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1383,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 1341,
+          "diferentes": 42,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1383,
+          "tasa_concordancia_pct": 96.96312364425162
+        },
+        "jornada": {
+          "concordantes": 1340,
+          "diferentes": 43,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1383,
+          "tasa_concordancia_pct": 96.89081706435286
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 1383,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 1383,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1383,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_periodo": {
+          "concordantes": 1383,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1383,
+          "tasa_concordancia_pct": 100.0
+        },
+        "estado": {
+          "concordantes": 1194,
+          "diferentes": 189,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1383,
+          "tasa_concordancia_pct": 86.33405639913232
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_367_.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 0,
+      "sin_codcli_comun": 4982,
+      "variables": {
+        "carrera": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "carrera_actual": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "jornada": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_periodo": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "estado": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_4094.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 1588,
+      "sin_codcli_comun": 3394,
+      "variables": {
+        "carrera": {
+          "concordantes": 1588,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1588,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 1544,
+          "diferentes": 44,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1588,
+          "tasa_concordancia_pct": 97.22921914357683
+        },
+        "jornada": {
+          "concordantes": 1550,
+          "diferentes": 38,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1588,
+          "tasa_concordancia_pct": 97.60705289672543
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 1588,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 1587,
+          "diferentes": 1,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1588,
+          "tasa_concordancia_pct": 99.93702770780857
+        },
+        "ingreso_periodo": {
+          "concordantes": 1587,
+          "diferentes": 1,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1588,
+          "tasa_concordancia_pct": 99.93702770780857
+        },
+        "estado": {
+          "concordantes": 1341,
+          "diferentes": 247,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1588,
+          "tasa_concordancia_pct": 84.44584382871537
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_4490.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 1465,
+      "sin_codcli_comun": 3517,
+      "variables": {
+        "carrera": {
+          "concordantes": 1465,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1465,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 1422,
+          "diferentes": 43,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1465,
+          "tasa_concordancia_pct": 97.06484641638225
+        },
+        "jornada": {
+          "concordantes": 1432,
+          "diferentes": 33,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1465,
+          "tasa_concordancia_pct": 97.74744027303754
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 1465,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 1464,
+          "diferentes": 1,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1465,
+          "tasa_concordancia_pct": 99.93174061433447
+        },
+        "ingreso_periodo": {
+          "concordantes": 1464,
+          "diferentes": 1,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1465,
+          "tasa_concordancia_pct": 99.93174061433447
+        },
+        "estado": {
+          "concordantes": 1268,
+          "diferentes": 197,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1465,
+          "tasa_concordancia_pct": 86.55290102389078
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    },
+    {
+      "fuente_datos_alumnos": "DATOSDEALUMNOS_4649.xlsx",
+      "codcli_permanencia": 4982,
+      "codcli_comunes": 1797,
+      "sin_codcli_comun": 3185,
+      "variables": {
+        "carrera": {
+          "concordantes": 1797,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1797,
+          "tasa_concordancia_pct": 100.0
+        },
+        "carrera_actual": {
+          "concordantes": 1747,
+          "diferentes": 50,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1797,
+          "tasa_concordancia_pct": 97.21758486366166
+        },
+        "jornada": {
+          "concordantes": 1763,
+          "diferentes": 34,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1797,
+          "tasa_concordancia_pct": 98.10795770728993
+        },
+        "sede": {
+          "concordantes": 0,
+          "diferentes": 0,
+          "sin_dato": 1797,
+          "ambiguos": 0,
+          "comparables": 0,
+          "tasa_concordancia_pct": null
+        },
+        "ingreso_anio": {
+          "concordantes": 1797,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1797,
+          "tasa_concordancia_pct": 100.0
+        },
+        "ingreso_periodo": {
+          "concordantes": 1797,
+          "diferentes": 0,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1797,
+          "tasa_concordancia_pct": 100.0
+        },
+        "estado": {
+          "concordantes": 1467,
+          "diferentes": 330,
+          "sin_dato": 0,
+          "ambiguos": 0,
+          "comparables": 1797,
+          "tasa_concordancia_pct": 81.63606010016694
+        }
+      },
+      "clase": "B/C concordancia del estado de dos extractos, sin vigencia histórica; no se elige el más nuevo por nombre de archivo"
+    }
+  ]
+}

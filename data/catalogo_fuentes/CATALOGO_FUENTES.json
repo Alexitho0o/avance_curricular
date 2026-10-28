@@ -7,8 +7,8 @@
   "descriptor": "data/diccionario_sies_seguimiento/v9_20261026_cuatro_planes_v3/descriptor.json",
   "sha256": "6a0b3a1ef145505ce4959d135bcf863b822b9c70561a9f6f91166cc6afb6446d"
  },
- "archivos": 61,
- "bytes_total": 469987251,
+ "archivos": 63,
+ "bytes_total": 474285395,
  "pendientes": [],
  "catalogo": [
   {
@@ -840,6 +840,36 @@
   },
   {
    "categoria": "11_SIES_MRUN_IPSS_162",
+   "archivo": "MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+   "ruta_consolidada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+   "sha256": "b5c637a3056927c5abdfd1e59ea4e90decfcf81fdadf36bf6a93dda8409770c8",
+   "bytes": 2625563,
+   "accion": "YA_EXISTIA_IDENTICO",
+   "hash_copia_igual_origen": true,
+   "origenes": [
+    {
+     "ruta": "/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+     "citado_en": [
+      "matriz_cuadratura_totales_20261028"
+     ]
+    }
+   ],
+   "datos_personales": "sí; MRUN seudonimizado, sin RUT/CODCLI",
+   "descripcion": "Subconjunto IPSS2026 de H2, 3.425 matrículas. No contiene vínculos con identificadores UMAS.",
+   "procedencia_primaria": {
+    "fuente_h2": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+    "sha256_h2": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd",
+    "fuente_nacional_2026": {
+     "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/OFICIAL_2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+     "bytes": 1015950538,
+     "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235"
+    },
+    "regla_filtro": "cat_periodo=2026 y cod_inst=162",
+    "manifest_h2": "data/recuperacion_cruce_mrun_umas/20261016/manifest.json"
+   }
+  },
+  {
+   "categoria": "11_SIES_MRUN_IPSS_162",
    "archivo": "Titulados_IPSS_162_Consolidado_2007_2025.csv",
    "ruta_consolidada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/Titulados_IPSS_162_Consolidado_2007_2025.csv",
    "sha256": "70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229",
@@ -1084,6 +1114,31 @@
    ],
    "datos_personales": "sí",
    "descripcion": "Carga o documentación de Titulación Unificada 2026"
+  },
+  {
+   "categoria": "13_UMAS_PERMANENCIA_RESTRINGIDO/20261027",
+   "archivo": "Permanencia.xlsx",
+   "ruta_consolidada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/13_UMAS_PERMANENCIA_RESTRINGIDO/20261027/Permanencia.xlsx",
+   "sha256": "56437ff17e5efd9c0f2e398e8f8ba4490730a43c970e44676357925553198c6b",
+   "bytes": 1672581,
+   "accion": "MOVIDO_POR_INSTRUCCION_EXPLICITA",
+   "hash_copia_igual_origen": true,
+   "integridad_movimiento_igual_origen": true,
+   "origenes": [
+    {
+     "ruta": "/Users/alexi/Downloads/Permanencia.xlsx",
+     "citado_en": [
+      "D Alexi 28-10-2026: mover Permanencia"
+     ]
+    }
+   ],
+   "datos_personales": "sí",
+   "grano": "expediente CODCLI",
+   "fecha_extraccion": "2026-10-27",
+   "periodo_fotografia": 2026,
+   "alcance_temporal": "foto al FECHA_EXTRACCIÓN; no acredita estados históricos",
+   "columna_plan_disponible": false,
+   "sensibles": "Contacto, morosidad y comentarios sólo privados; no se exportan valores en Git"
   }
  ],
  "excluidos_por_regla": [
@@ -1689,124 +1744,65 @@
    "sha256": "008f5506125e2cd6d2029f4262e607552e5d1fa94a38097318ef9e9cf5c142bb",
    "accion": "SOLO_REFERENCIA_SIN_COPIA",
    "clase": "B/C metadato de catálogo"
+  },
+  {
+   "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/OFICIAL_2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+   "bytes": 1015950538,
+   "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235",
+   "accion": "SOLO_REFERENCIA_SIN_COPIA",
+   "clase": "B/C hash nacional verificado"
+  },
+  {
+   "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/ordenar ipss octubre 2026/Matricula-Ed-Superior-2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+   "bytes": 1015950538,
+   "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235",
+   "accion": "SOLO_REFERENCIA_SIN_COPIA",
+   "clase": "B/C hash nacional verificado"
   }
  ],
  "ampliacion_matriz_20261028": {
-  "plan_sha256": "cc6069cb9ab200d7e431693a5cf5d086ae92f91b001e4e4905e85157f4c9edb8",
+  "plan_sha256": "642610830644bdcecc6dbe14119b4824b53c8e9702547e247b5254f2a3cb10a3",
   "script_sha256": "81b41158939a546f499ad46692be99e33e4739043ec16de3512591e6b99b5f9b",
   "operaciones": [
    {
-    "origen": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/EXTRACCION_MATRICULA_SIES _2007_2025/salida/reporte_matricula_ip_san_sebastian.csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/reporte_matricula_ip_san_sebastian.csv",
-    "sha256": "1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6",
+    "origen": "/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+    "sha256": "b5c637a3056927c5abdfd1e59ea4e90decfcf81fdadf36bf6a93dda8409770c8",
     "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no; MRUN seudonimizado"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/TITULACION/Titulados_IPSS_162_Consolidado_2007_2025.csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/Titulados_IPSS_162_Consolidado_2007_2025.csv",
-    "sha256": "70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no; MRUN seudonimizado"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/TITULACION/GLOSARIO_DE_TITULADO_2007_2025_E.pdf",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/GLOSARIO_DE_TITULADO_2007_2025_E.pdf",
-    "sha256": "b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_Precarga Matrícula Avance Curricular 2026.csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/5809_Precarga Matrícula Avance Curricular 2026.csv",
-    "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
-    "accion": "COPIADO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2022/TIT_2022_162_def (1 de marzo de 2021 hasta el 28 de febrero de 2022).csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/TIT_2022_162_def (1 de marzo de 2021 hasta el 28 de febrero de 2022).csv",
-    "sha256": "451dcc2ca39b9a5dfb6072282d32fb8a5440a2af21d8cf667e1e9ee62bf1e60d",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2023/TIT_IP_CIISA_2023 (1 de marzo de 2022 hasta el 28 de febrero de 2023).csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/TIT_IP_CIISA_2023 (1 de marzo de 2022 hasta el 28 de febrero de 2023).csv",
-    "sha256": "c590811b196bde2b5aaa9d060bd09ea65f532129515ea31bd326a569e71d61bd",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2024/TIT_IP_CIISA_2024 (1 de marzo 2023 hasta 29 de febrero 2024).csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/TIT_IP_CIISA_2024 (1 de marzo 2023 hasta 29 de febrero 2024).csv",
-    "sha256": "96a85611e211c0547f5082f2c927c127a5114c85ee2adafac35220af09cfd8e7",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no; agregado por carrera"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/16683-82 Captura IES Incremental:5320 Oferta Académica Titulados:5319 Titulados Histórico.xlsx",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/16683-82 Captura IES Incremental:5320 Oferta Académica Titulados:5319 Titulados Histórico.xlsx",
-    "sha256": "edef1e2574884fbd5f1bbc7f820f9c081d7a0daccd5d4c0555ca26447ba148ac",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/5319 Titulados Históricos 2007-2025.csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/09_TITULACION_DATOS_RESTRINGIDOS/5319 Titulados Históricos 2007-2025.csv",
-    "sha256": "08df93d633765d5b5b6ec9fafd89cb88898d9475e9e1696626fe352c669b4a56",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/5320 Oferta Académica Titulados 2026.csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/5320 Oferta Académica Titulados 2026.csv",
-    "sha256": "4951051655435e4ece8281c5815a09a062ce853856f30750e95bb1d9e4783d33",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/Instructivo_Titulación_Unificada_2026 (1).pdf",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/Instructivo_Titulación_Unificada_2026 (1).pdf",
-    "sha256": "4bec713c93ad1cb9bdf446be611cc9b924162539f7440ae76be10158da2e4786",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/Ord. 8449_19122025_Matricula_Titulacion_Unificada_2026.pdf",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/Ord. 8449_19122025_Matricula_Titulacion_Unificada_2026.pdf",
-    "sha256": "5fd9eacad4453869078e3345eb5d74435c7fdccfa45b4b5b57f45e553d6b65cd",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "no"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/Titulación Unificada 2026.csv",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/Titulación Unificada 2026.csv",
-    "sha256": "b52586f6741109e293c90896721ca5b879f5f51ec98a1c80650464aa52356dec",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2026/titulación unificada 2026.xlsx",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/titulación unificada 2026.xlsx",
-    "sha256": "33ceda0c3cd3bfbc9da37c1d5920e7ef7330cf0be1af5ab336b6d1dea424fa27",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Matrícula Unificada/MAT_IP_CIISA_2021.xlsx",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/MAT_IP_CIISA_2021.xlsx",
-    "sha256": "8f14b670f00f725412d9dadffea5db9ad2de97b536c88dad992d4370252c401e",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
-   },
-   {
-    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Publicados/Titulación Unificada/TIT_IP_CIISA_2024.xlsx",
-    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/TIT_IP_CIISA_2024.xlsx",
-    "sha256": "fc4ec093991ee4234cec9706afd4409b6ec138bdea1a4a8abb3488fad653ee8c",
-    "accion": "YA_EXISTIA_IDENTICO",
-    "datos_personales": "sí"
+    "datos_personales": "sí; MRUN seudonimizado, sin RUT/CODCLI"
    }
   ]
+ },
+ "cierres_operativos_20261028": [
+  {
+   "id": "PROMEDIOS_2026",
+   "estado": "CERRADO_D",
+   "responsable": "Alexi",
+   "fecha": "2026-10-28",
+   "decision": "12166 es la única extracción; se acepta su límite. Permanencia cubre la actividad 2026 según Alexi. No solicitar extracción sin tope.",
+   "alcance": "D; no certifica cobertura completa de 12166 ni recalcula indicadores."
+  },
+  {
+   "id": "COPIA_MATRICULA_2007_2025_DISTINTA",
+   "estado": "CERRADO_D",
+   "responsable": "Alexi",
+   "fecha": "2026-10-28",
+   "decision": "No continuar investigando la copia distinta; conservar no usar y no equivalente al canónico."
+  },
+  {
+   "id": "27_ORIGEN_DESCONOCIDO",
+   "estado": "CERRADO_D",
+   "responsable": "Alexi",
+   "fecha": "2026-10-28",
+   "decision": "Se retira la revisión manual de pendientes. Mantener la incertidumbre de metadatos y tratamiento restringido; no declarar ausencia de datos personales."
+  }
+ ],
+ "limpieza_duplicado_20261028": {
+  "clase": "D Alexi; B/C verificación",
+  "eliminado_por": "cerebro, según Alexi",
+  "referencias_retiradas_en_esta_ejecucion": 0,
+  "copia_canonica_sha256": "57da408869681bdaa7eb18ee13ea482bad377ea9c58dc10afdb5ff34aeebbd09",
+  "copia_canonica_disponible": true,
+  "nota": "La ruta de copia redundante ya no figura en el catálogo; no se borraron archivos en esta ejecución."
  }
 }

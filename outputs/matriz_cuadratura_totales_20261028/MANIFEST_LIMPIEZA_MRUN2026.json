@@ -1,0 +1,91 @@
+{
+  "estado": "PREPARADO_SIN_COMMIT_PUSH",
+  "head": "782efc8b4e37e60898cbea832667c887199bf536",
+  "ejecucion": "Limpieza de metadatos y diagnóstico MRUN autorizado; no reconstrucción PES",
+  "fuente_y_copia": {
+    "categoria": "11_SIES_MRUN_IPSS_162",
+    "archivo": "MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+    "ruta_consolidada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/11_SIES_MRUN_IPSS_162/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+    "sha256": "b5c637a3056927c5abdfd1e59ea4e90decfcf81fdadf36bf6a93dda8409770c8",
+    "bytes": 2625563,
+    "accion": "YA_EXISTIA_IDENTICO",
+    "hash_copia_igual_origen": true,
+    "origenes": [
+      {
+        "ruta": "/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/MRUN_MATRICULA_IPSS_162_2026_H2.csv",
+        "citado_en": [
+          "matriz_cuadratura_totales_20261028"
+        ]
+      }
+    ],
+    "datos_personales": "sí; MRUN seudonimizado, sin RUT/CODCLI",
+    "descripcion": "Subconjunto IPSS2026 de H2, 3.425 matrículas. No contiene vínculos con identificadores UMAS.",
+    "procedencia_primaria": {
+      "fuente_h2": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/reporte_matricula_ip_san_sebastian_2007_2026_20260901.csv",
+      "sha256_h2": "510b7d03405398ed29196f750048dea1b07656ba722c1bf12cb3ab427098f0fd",
+      "fuente_nacional_2026": {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/PNM2007_2026_LOCAL_DATA/PNM_PROF27_ANALISIS_SEGURO/FUENTE_GRANULAR/OFICIAL_2026/20260810_Matrícula_Ed_Superior_2026_PUBL_MRUN.csv",
+        "bytes": 1015950538,
+        "sha256": "9f49090d521ef5d15badcca41e4073dabb7e67c48e0b1aa3ea8ea2712b840235"
+      },
+      "regla_filtro": "cat_periodo=2026 y cod_inst=162",
+      "manifest_h2": "data/recuperacion_cruce_mrun_umas/20261016/manifest.json"
+    }
+  },
+  "script_fuente": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/preparar_fuente_mrun2026.py",
+    "sha256": "7fa54f791fa899330eecf5f25168d2bafddc606e7fb560a8012e6d30e0802baf"
+  },
+  "script_diagnostico": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/diagnosticar_brecha_mrun2026.py",
+    "sha256": "b5a155f6d4cb08ca582eec0e38bc6025d62f34bd7b1120dc98d214bc4e0230ac"
+  },
+  "qa": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/QA_LIMPIEZA_MRUN2026.json",
+    "sha256": "c293c5f77fcfa8bc2129448064c26619f7653ba66d6a5b660f22bb64052419c3"
+  },
+  "salidas_primarias": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/FUENTE_MRUN2026_Y_LIMPIEZA.json",
+      "sha256": "b937c09864012121d302dd971c2cbf55f9c9d70b45a8cd2c206d3ee96105df36"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/LIMPIEZA_Y_CANDIDATAS_MRUN2026.json",
+      "sha256": "43f1696835c46ab60d52919fc8d74790fc698dfe56ffed2f6712880af8ddb252"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/DIAGNOSTICO_BRECHA_MRUN2026.json",
+      "sha256": "5bd3e87413fb3789dd9a2315c32a9a9bfa7f7514b17a670410d97cc49039910d"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/DIAGNOSTICO_BRECHA_MRUN2026.md",
+      "sha256": "8bb6b5fbe38277e8c506ed377a9eb17366a9b61b8fb5af1747e1d74d0e6d579f"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "sha256": "eba0b7ae26ebd94a3f93584b4d1f84012d78e18fbb0ccdccc6dbf667ee442ea0"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.md",
+      "sha256": "62dfd74fc8e1f8450341d95c30f71d52b6dbaae5612fb98b573370c369b6e79d"
+    }
+  ],
+  "pendiente": "Respaldo autorizado por Alexi 2026-10-28; borrado externo de candidata31 documentado, sin otros borrados",
+  "catalogos": [
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogo_fuentes/CATALOGO_FUENTES.json",
+      "ruta_onedrive": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/CATALOGO_FUENTES.json",
+      "sha256": "37ff3686308eeb4c02b88ea4c2bf823abcfbe66fcd4b1a26ad002830bbd58686"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogo_fuentes/CATALOGO_FUENTES.csv",
+      "ruta_onedrive": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/CATALOGO_FUENTES.csv",
+      "sha256": "9704d52223895d7b710dac9ec981772506fed30a0444005c070472487030cb9b"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/catalogo_fuentes/LEEME.md",
+      "ruta_onedrive": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/LEEME.md",
+      "sha256": "9f65eeea1148547be148439cad32570c9583564b7bf7a81c18ba309485344446"
+    }
+  ]
+}

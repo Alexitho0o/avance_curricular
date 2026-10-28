@@ -10,7 +10,7 @@ comparar MU 2025 con la precarga AC 2026, sin cambiar VIG ni reglas de retenció
 | Carpeta | Contenido | Datos personales |
 |---|---|---|
 | 09_TITULACION_DATOS_RESTRINGIDOS | PES 5319 histórico 2007–2024 por período académico | Sí: nombres y documentos. Uso restringido |
-| 11_SIES_MRUN_IPSS_162 | Extracción matrícula IPSS 2007–2025 y consolidado titulados IPSS 2007–2025 | MRUN seudonimizado; derivados institucionales de publicación SIES |
+| 11_SIES_MRUN_IPSS_162 | Extracción matrícula IPSS 2007–2025, subconjunto MRUN matrícula IPSS 2026 y consolidado titulados IPSS 2007–2025 | MRUN seudonimizado; derivados institucionales de publicación SIES |
 | 12_TITULACION_UNIFICADA_CARGAS | Cargas 2022/2023/2026, agregado 2024 de 470 bytes, respaldo XLSX 2024, reportes PES y documentación oficial | Las cargas y el libro combinado contienen identificadores. Uso restringido; instructivo, oficio, glosario y oferta 5320 son documentación |
 
 También se incorporó MAT_IP_CIISA_2021.xlsx a la carpeta 02 (contiene documentos).
@@ -63,3 +63,13 @@ SQLite del diccionario (v1 a v9, una subcarpeta por edición) y la vista de segu
 de Fase 3. **Contienen RUT y CODCLI.** Están registradas en `catalogo_privadas` del catálogo.
 Los originales siguen en `~/.local/share/ipss/` y el diccionario activo sigue leyendo desde ahí.
 Script: `outputs/consolidacion_bases_onedrive_20261026/copiar_privada.py --paso N`.
+
+## Limpieza y MRUN 2026 · 28-10-2026
+
+D, Alexi: copia redundante eliminada por el cerebro; catálogo sin su ruta y canónico DATOSDEALUMNOS_1758 conservado (SHA-256 57da4088…). Ninguna candidata borrada. Se cierran los tres pendientes operativos descritos en LIMPIEZA_Y_CANDIDATAS_MRUN2026.json.
+
+La carpeta 11 incorpora MRUN_MATRICULA_IPSS_162_2026_H2.csv: 3.425 matrículas (3.371 pregrado + 54 postítulo), extraídas del H2 de 24.386 filas con hash 510b7d03…. Contiene MRUN seudonimizado; uso restringido, sin vínculo RUT–MRUN. Los dos nacionales de 1.015.950.538 bytes son idénticos por SHA-256 y sólo se referencian; no se copian.
+
+## Permanencia · extracción27-10-2026
+
+13_UMAS_PERMANENCIA_RESTRINGIDO/20261027/Permanencia.xlsx fue movido desde Descargas por instrucción explícita D de Alexi. Hash antes y después 56437ff17e5efd9c0f2e398e8f8ba4490730a43c970e44676357925553198c6b. Datos personales: sí; grano expediente CODCLI. Foto2026 a FECHA_EXTRACCIÓN, sin columna de plan; no reconstruye estados históricos. Contactos, morosidad y comentarios quedan sólo en privado.

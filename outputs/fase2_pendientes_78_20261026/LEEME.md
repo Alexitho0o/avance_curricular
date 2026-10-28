@@ -31,3 +31,7 @@ la decisión de 31 queda marcada como REEMPLAZADA.
 (`c6c4b5a4…`), no activa. Cambian exactamente 27 observaciones (E → D); consultas por el módulo común:
 24.774, distintas 27. Niveles: 21.569 B/C, 212 D, 2.993 E. Pendientes del seguimiento: 78 → 51.
 La candidata de 31 (`v10_candidata_31_20261026/`) queda marcada REEMPLAZADA y no se usa.
+
+### Conservación histórica [D, Alexi 28-10-2026]
+
+El cerebro eliminó la carpeta privada `~/.local/share/ipss/v10_candidata_31_20261026/`: la propuesta de 31 fue REEMPLAZADA por la de 27. La referencia anterior describe el intento descartado y no una base disponible. Registro: `outputs/matriz_cuadratura_totales_20261028/LIMPIEZA_Y_CANDIDATAS_MRUN2026.json`.
