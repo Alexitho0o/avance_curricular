@@ -23,6 +23,7 @@ tit=one('/Users/alexi/Library/CloudStorage/OneDrive-*/0 BASES DE DATOS/TITULACIO
 add(tit,'11_SIES_MRUN_IPSS_162','no; MRUN seudonimizado','Consolidado institucional de publicación SIES por cod_inst 162','70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229')
 add(one('/Users/alexi/Library/CloudStorage/OneDrive-*/0 BASES DE DATOS/TITULACION/GLOSARIO_DE_TITULADO_2007_2025_E.pdf'),'12_TITULACION_UNIFICADA_CARGAS','no','Glosario oficial de la publicación de titulados; evidencia documental','b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f')
 parent=one('/Users/alexi/Library/CloudStorage/OneDrive-*/Datos DAI*/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada')
+add(one('/Users/alexi/Library/CloudStorage/OneDrive-*/Datos DAI*/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_Precarga Matrícula Avance Curricular 2026.csv'),'02_MATRICULA_UNIFICADA_Y_CARGAS_SIES','sí','Precarga SIES Avance Curricular 2026; observación de matrícula 2025, contiene nombres y documentos','f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed')
 for year in (2022,2023,2024,2026):
     for p in sorted((parent/str(year)).iterdir()):
         if not p.is_file() or p.suffix.lower() not in ('.csv','.xlsx','.pdf'): continue

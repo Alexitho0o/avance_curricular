@@ -7,8 +7,8 @@
   "descriptor": "data/diccionario_sies_seguimiento/v9_20261026_cuatro_planes_v3/descriptor.json",
   "sha256": "6a0b3a1ef145505ce4959d135bcf863b822b9c70561a9f6f91166cc6afb6446d"
  },
- "archivos": 60,
- "bytes_total": 469732957,
+ "archivos": 61,
+ "bytes_total": 469987251,
  "pendientes": [],
  "catalogo": [
   {
@@ -146,6 +146,25 @@
      ]
     }
    ]
+  },
+  {
+   "categoria": "02_MATRICULA_UNIFICADA_Y_CARGAS_SIES",
+   "archivo": "5809_Precarga Matrícula Avance Curricular 2026.csv",
+   "ruta_consolidada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/5809_Precarga Matrícula Avance Curricular 2026.csv",
+   "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+   "bytes": 254294,
+   "accion": "COPIADO",
+   "hash_copia_igual_origen": true,
+   "origenes": [
+    {
+     "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_Precarga Matrícula Avance Curricular 2026.csv",
+     "citado_en": [
+      "matriz_cuadratura_totales_20261028"
+     ]
+    }
+   ],
+   "datos_personales": "sí",
+   "descripcion": "Precarga SIES Avance Curricular 2026; observación de matrícula 2025, contiene nombres y documentos"
   },
   {
    "categoria": "02_MATRICULA_UNIFICADA_Y_CARGAS_SIES",
@@ -1673,7 +1692,7 @@
   }
  ],
  "ampliacion_matriz_20261028": {
-  "plan_sha256": "b8b7015c13c6e204bc6fa0d9ff2765a4c50d3651684ac33d079e0399161f1814",
+  "plan_sha256": "cc6069cb9ab200d7e431693a5cf5d086ae92f91b001e4e4905e85157f4c9edb8",
   "script_sha256": "81b41158939a546f499ad46692be99e33e4739043ec16de3512591e6b99b5f9b",
   "operaciones": [
    {
@@ -1696,6 +1715,13 @@
     "sha256": "b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f",
     "accion": "YA_EXISTIA_IDENTICO",
     "datos_personales": "no"
+   },
+   {
+    "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/5809_Precarga Matrícula Avance Curricular 2026.csv",
+    "destino": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/5809_Precarga Matrícula Avance Curricular 2026.csv",
+    "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+    "accion": "COPIADO",
+    "datos_personales": "sí"
    },
    {
     "origen": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Titulación Unificada/2022/TIT_2022_162_def (1 de marzo de 2021 hasta el 28 de febrero de 2022).csv",

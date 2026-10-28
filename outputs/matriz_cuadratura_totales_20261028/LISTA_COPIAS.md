@@ -5,6 +5,7 @@
 | 11_SIES_MRUN_IPSS_162 | reporte_matricula_ip_san_sebastian.csv | 1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6 | no; MRUN seudonimizado |
 | 11_SIES_MRUN_IPSS_162 | Titulados_IPSS_162_Consolidado_2007_2025.csv | 70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229 | no; MRUN seudonimizado |
 | 12_TITULACION_UNIFICADA_CARGAS | GLOSARIO_DE_TITULADO_2007_2025_E.pdf | b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f | no |
+| 02_MATRICULA_UNIFICADA_Y_CARGAS_SIES | 5809_Precarga Matrícula Avance Curricular 2026.csv | f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed | sí |
 | 12_TITULACION_UNIFICADA_CARGAS | TIT_2022_162_def (1 de marzo de 2021 hasta el 28 de febrero de 2022).csv | 451dcc2ca39b9a5dfb6072282d32fb8a5440a2af21d8cf667e1e9ee62bf1e60d | sí |
 | 12_TITULACION_UNIFICADA_CARGAS | TIT_IP_CIISA_2023 (1 de marzo de 2022 hasta el 28 de febrero de 2023).csv | c590811b196bde2b5aaa9d060bd09ea65f532129515ea31bd326a569e71d61bd | sí |
 | 12_TITULACION_UNIFICADA_CARGAS | TIT_IP_CIISA_2024 (1 de marzo 2023 hasta 29 de febrero 2024).csv | 96a85611e211c0547f5082f2c927c127a5114c85ee2adafac35220af09cfd8e7 | no; agregado por carrera |

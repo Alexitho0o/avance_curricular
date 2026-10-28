@@ -12,7 +12,7 @@ B/C: datos observados y cálculos; E: pendiente. H001 cuenta filas; validar unic
 
 La última columna conserva la medición anterior denominada respaldo de código único en v20: exige código en v20 pero compara solo su componente C con MU, por lo que no acredita que el código completo coincida. No es la cobertura de carrera ni indica vigencia.
 
-MU 2025: CUADRA contra el total incluido VIG 0 (2.371 = 2.371); causa metodológica E, ver H001 § Cierre a nivel carrera. H001 2026: NO APLICA AÚN; requiere MU 2027.
+**MU 2025: SIES registró como matriculadas las 73 VIG 0 (precarga AC 2026).** [B/C] Las 2.298 VIG 1 y las 73 VIG 0 coinciden por documento+DV y código con VIGENCIA 1 en AC 2026 (2.371/2.371). Para documentos P se conserva el tipo documental y el DV original, incluso vacío; no se inventa RUT. La causa normativa continúa E: VIGENCIA de AC y VIG de MU pertenecen a procesos distintos. H001 2026: NO APLICA AÚN; requiere MU 2027.
 
 ## Cobertura por familia SIES y CODCARPR de Datos Alumnos
 
@@ -76,7 +76,7 @@ Los motivos H001 se encuentran en el JSON: cada fila cuenta una vez por primer m
 
 El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.
 
-Brecha MU 2026 = 226 [E], sin nueva investigación. Se requiere microdato MRUN 2026 de IPSS; después se podrá contrastar código × sexo × rango de edad con MU, incluidos los 960 VIG 0.
+Brecha MU 2026 = 226 [E]. Método preparado y no ejecutado sobre datos reales: `metodo_mu2026.contrastar_fuente` requiere descarga individual de lo cargado en PES MU 2026 o precarga AC 2027 con año de matrícula 2026, hash y adaptador de columnas acreditados. Clasifica sólo los 48 códigos pregrado con diferencia como VIG 1 nuestra, VIG 0 nuestra o matrícula documento/código ausente en nuestra base. El caso 2025 respalda investigar esta hipótesis, sin extrapolarlo a 2026. El análisis de perfiles MRUN queda como alternativa cuando exista microdato 2026.
 
 Pendientes:
 - Inventario de búsquedas de titulación 20261026 revisado: describe scripts, no acredita carga de proceso 2025; carácter final del respaldo 2024 pendiente.

@@ -40,7 +40,7 @@
     },
     "catalogo_fuentes": {
       "ruta": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
-      "sha256": "14883113e1e5dbae8fb38a3d78ddbb139aaf97bdb67c9bdf3a216a07f2b1d577"
+      "sha256": "50f5e8f3a08ab608a5042028aea3bb886a91add2a545064b6772743d4b35d625"
     },
     "diccionario_activo": {
       "ruta": "data/diccionario_sies_seguimiento/activo.json",
@@ -69,6 +69,13 @@
     "pes5319": {
       "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/09_TITULACION_DATOS_RESTRINGIDOS/5319 Titulados Históricos 2007-2025.csv",
       "sha256": "08df93d633765d5b5b6ec9fafd89cb88898d9475e9e1696626fe352c669b4a56"
+    },
+    "precarga_ac2026": {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/5809_Precarga Matrícula Avance Curricular 2026.csv",
+      "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+      "encoding": "latin1",
+      "delimitador": ";",
+      "clase": "B precarga SIES; no altera definición VIG MU"
     },
     "instructivo_titulacion_2026": {
       "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/12_TITULACION_UNIFICADA_CARGAS/Instructivo_Titulación_Unificada_2026 (1).pdf",
@@ -1166,7 +1173,21 @@
         "diferencia_publicado_menos_vig1": 73,
         "estado": "CUADRA",
         "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
-        "nota": "CUADRA contra total incluido VIG 0 (2.371 = 2.371); causa metodológica E, ver H001 Cierre a nivel carrera."
+        "nota": "SIES registró como matriculadas las 73 VIG 0 (precarga AC 2026). B: todas con mismo documento/DV, código y VIGENCIA 1 en precarga. La causa normativa sigue E.",
+        "contraste_precarga_ac2026": {
+          "clase": "B datos observados; C cruce; E fundamento normativo",
+          "fuente": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/5809_Precarga Matrícula Avance Curricular 2026.csv",
+          "sha256": "f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed",
+          "mu_vig1": 2298,
+          "mu_vig0": 73,
+          "vig1_en_ac_mismo_codigo_vigencia1": 2298,
+          "vig0_en_ac_mismo_codigo_vigencia1": 73,
+          "sin_coincidencia_univoca": 0,
+          "filas_precarga": 2371,
+          "llaves_precarga": 2371,
+          "detalle_privado": "/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/CRUCE_MU2025_PRECARGA_AC2026.json",
+          "detalle_sha256": "a285657bc6575021105b16e772e64bf3b98a69912a074d9de342bb8522f3145a"
+        }
       },
       "retencion_mu": {
         "matriculas_mu": 2371,
@@ -3045,16 +3066,19 @@
     "valor_conservado": 226,
     "investigacion_realizada": false,
     "fuente_mrun_ipss_disponible_hasta": 2025,
-    "requisito": "Microdato MRUN de matrícula 2026 IPSS",
-    "metodo_futuro": "Cuadrar por código × sexo × rango de edad frente a MU, incluyendo los 960 VIG 0; sin enlazar RUT–MRUN por atributos."
+    "requisito": "Fuente SIES individual MU 2026: descarga lo cargado PES o precarga AC 2027; metadato de año y hash obligatorios",
+    "hipotesis": "E: algunos VIG 0 de nuestra MU 2026 podrían figurar matriculados en SIES, como se observa en 2025; no se extrapolan 73 ni 960 a retenidos ni se corrigen tasas.",
+    "respaldo_hipotesis": "B cruce MU 2025 con precarga AC 2026: 73/73 VIG 0 aparecen con VIGENCIA 1",
+    "metodo_preparado": "metodo_mu2026.py; sólo 48 códigos con diferencia; VIG 1 nuestra / VIG 0 nuestra / no está en nuestra base; no ejecutado con fuente real.",
+    "metodo_sha256": "a673ca2ec8f976ae70f011a5d29b5115ab94f882978278dec0bdf1f27edd85ae"
   },
   "revision_c35j4": {
     "anio": 2022,
     "familia": "I162S2C35J4",
     "codcarpr_observados_en_personas_da": {
-      "ASREOL": 3,
+      "ASRE": 1,
       "TPAREOL": 1,
-      "ASRE": 1
+      "ASREOL": 3
     },
     "estado": "E",
     "nota": "Oferta histórica identifica Técnico en Análisis de Sistemas, pero observar otros expedientes actuales no acredita equivalencia histórica. No se agrega familia a partir de nombre ni RUT."

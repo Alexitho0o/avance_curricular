@@ -1,5 +1,28 @@
 # Consolidación y cuadratura · 28-10-2026
 
+## Actualización: evidencia SIES de las 73 VIG 0 de MU 2025
+
+**B/C:** Copiada y catalogada la precarga 5809 de AC 2026 (datos personales: sí).
+El cruce MU 142342 de 2025 por tipo documental, número, DV y código completo
+encuentra las 2.298 VIG 1 y las 73 VIG 0, todas con VIGENCIA 1 en la precarga.
+No se corrige ninguna matrícula. VIGENCIA AC y VIG MU se interpretan dentro de
+sus procesos: la causa normativa de la diferencia sigue **E**.
+Los valores numéricos cero se convierten explícitamente, sin selección por falsedad.
+El detalle del cruce queda en ~/.local/share/ipss/matriz_cuadratura_totales_20261028/.
+
+**C/E:** `metodo_mu2026.contrastar_fuente` queda preparado para una descarga PES
+de MU 2026 o precarga AC 2027 con año de matrícula 2026 acreditado y hash.
+El foco contiene los 48 códigos pregrado con diferencia. Produce agregados por
+código para VIG 1 nuestra, VIG 0 nuestra o matrícula ausente en nuestra base.
+Los duplicados de documento/código se informan sin inflar el conteo. Un VIG
+contradictorio bloquea la clasificación. El detalle se limita a almacenamiento privado.
+Cinco pruebas sintéticas comprueban DV 0, VIG 0, clases, duplicados, conflictos,
+fuente ausente y el foco. No se ejecuta sobre una fuente real 2026 todavía.
+La brecha 226 permanece **E**; el hallazgo 2025 sustenta una hipótesis para revisarla.
+
+Esta actualización amplía a 16 las fuentes/documentos del plan de copias. Los
+apartados siguientes conservan el registro de la ampliación anterior de 15.
+
 ## Fase 0/3 · Extracciones y copias
 
 **B/C:** Matrícula IPSS: 20.961 registros, cod_inst 162, 2007–2025.

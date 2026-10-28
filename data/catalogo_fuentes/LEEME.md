@@ -2,6 +2,11 @@
 
 ## Ampliación autorizada · 28-10-2026
 
+La carpeta 02 también conserva `5809_Precarga Matrícula Avance Curricular 2026.csv`,
+SHA-256 `f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed`.
+Contiene nombres y documentos (datos_personales: sí); copia de lectura para
+comparar MU 2025 con la precarga AC 2026, sin cambiar VIG ni reglas de retención.
+
 | Carpeta | Contenido | Datos personales |
 |---|---|---|
 | 09_TITULACION_DATOS_RESTRINGIDOS | PES 5319 histórico 2007–2024 por período académico | Sí: nombres y documentos. Uso restringido |

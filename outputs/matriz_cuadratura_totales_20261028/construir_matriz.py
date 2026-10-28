@@ -62,6 +62,30 @@ diagnostico=verified(ROOT/'outputs/retencion_primer_anio_ipss_162/20260930_00000
 w=openpyxl.load_workbook(diagnostico,read_only=True,data_only=True)
 it=w['01_CATALOGO_CARRERA'].iter_rows(values_only=True); ch=next(it); catalogo=[dict(zip(ch,r)) for r in it]
 all_rows=[r for year in sorted(mu) for r in mu[year]]
+ac2026=fuente('f86e805ca2909f0f8e3dd439a5afb7fc15939a8078b17e13ef33b5cdec2490ed')
+with ac2026.open(encoding='latin1',newline='') as f:
+    ac_reader=csv.DictReader(f,delimiter=';')
+    required={'TIPO_DOCUMENTO','NUM_DOCUMENTO','DV','CODIGO_UNICO','VIGENCIA'}
+    if not required.issubset(ac_reader.fieldnames):raise ValueError('Precarga AC sin campos obligatorios')
+    ac_rows=list(ac_reader)
+ac_index=collections.defaultdict(set)
+for r in ac_rows:
+    k=(identity(r['TIPO_DOCUMENTO'],r['NUM_DOCUMENTO'],r['DV']),normalizar(r['CODIGO_UNICO']))
+    ac_index[k].add(normalizar(r['VIGENCIA']))
+ac_counts=collections.Counter();ac_details=[]
+for fila,r in enumerate(mu[2025],2):
+    ident=identity(r['TIPO_DOC'],r['N_DOC'],r['DV']); code=codigo(r);vig=normalizar(r['VIG'])
+    key=(ident,code); states=ac_index.get(key,set())
+    ac_counts['mu_vig_'+vig]+=1
+    if ident is not None and states=={'1'}:ac_counts['mu_vig_'+vig+'_en_ac_vigencia_1']+=1
+    else:ac_counts['sin_coincidencia_univoca_vigencia_1']+=1
+    ac_details.append({'identidad':ident,'codigo':code,'vig_mu':vig,'vigencias_ac_observadas':sorted(states)})
+assert ac_counts['mu_vig_1']==2298 and ac_counts['mu_vig_0']==73
+assert ac_counts['mu_vig_1_en_ac_vigencia_1']==2298 and ac_counts['mu_vig_0_en_ac_vigencia_1']==73
+assert ac_counts['sin_coincidencia_univoca_vigencia_1']==0
+ac_private=Path('/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/CRUCE_MU2025_PRECARGA_AC2026.json')
+ac_private.parent.mkdir(parents=True,exist_ok=True)
+ac_private.write_text(json.dumps(ac_details,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');ac_private.chmod(0o600)
 eligibles=reproducir_h001(all_rows,catalogo)
 por_programa=collections.defaultdict(list); por_persona=collections.defaultdict(list)
 for p in catalogo: por_programa[(normalizar(p['ANO']),normalizar(p['CODIGO_UNICO']))].append(p)
@@ -284,19 +308,22 @@ for entry in mat:
     entry['cobertura_familia']['familias_sin_mapeo']=[{'anio':year,'familia_sies':f,'matriculas':n,'clase':'B/C; E equivalencia pendiente'} for f,n in sorted(sin_mapeo_por_familia.items())]
     if year==2025:
         entry['mu_sies']['estado']='CUADRA'
-        entry['mu_sies']['nota']='CUADRA contra total incluido VIG 0 (2.371 = 2.371); causa metodológica E, ver H001 Cierre a nivel carrera.'
+        entry['mu_sies']['nota']='SIES registró como matriculadas las 73 VIG 0 (precarga AC 2026). B: todas con mismo documento/DV, código y VIGENCIA 1 en precarga. La causa normativa sigue E.'
+        entry['mu_sies']['contraste_precarga_ac2026']={'clase':'B datos observados; C cruce; E fundamento normativo','fuente':str(ac2026),'sha256':hashfile(ac2026),'mu_vig1':2298,'mu_vig0':73,'vig1_en_ac_mismo_codigo_vigencia1':ac_counts['mu_vig_1_en_ac_vigencia_1'],'vig0_en_ac_mismo_codigo_vigencia1':ac_counts['mu_vig_0_en_ac_vigencia_1'],'sin_coincidencia_univoca':ac_counts['sin_coincidencia_univoca_vigencia_1'],'filas_precarga':len(ac_rows),'llaves_precarga':len(ac_index),'detalle_privado':str(ac_private),'detalle_sha256':hashfile(ac_private)}
     if year==2026:
         entry['retencion_mu']['estado']='NO APLICA AÚN'
         entry['retencion_mu']['nota']='Requiere MU 2027 para observar t+1; H001 no calcula esta cohorte en esta ejecución.'
 catalogo_fuentes={'mu':str(base),'mu_2021':str(mu21),'catalogo_h001':str(diagnostico),'h001_agregado':str(agg),'publicacion_titulados':str(publico),'glosario_titulados':str(glosario),'datos_alumnos':str(da),'grupos_carrera':str(grupos_path),'maestro_carreras':str(maestro_path),'catalogo_fuentes':'data/catalogo_fuentes/CATALOGO_FUENTES.json','diccionario_activo':'data/diccionario_sies_seguimiento/activo.json','inventario_titulacion':'outputs/inventario_busquedas_titulacion_20261026/INFORME.md','conciliacion_mu_sies':'outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json','regla_h001':'manifests/milestones/H001-RETENCION-IPSS162/README.md','implementacion_h001':'common/analisis_desercion/h001.py','puente':'procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json'}
 result={'estado':'PARCIAL_CON_PENDIENTES','clases':'A oficial; B observado; C cálculo; D decisión; E pendiente','fuentes':{k:{'ruta':v,'sha256':hashfile(v if Path(v).is_absolute() else ROOT/v)} for k,v in catalogo_fuentes.items()},'matriz':mat,'titulados_publicados_por_codigo':[{'anio_publicacion':a,'codigo_sies':code,'carrera':name,'registros':n} for a in sorted(public) for (code,name),n in sorted(public[a].items())], 'pendientes':['Alineación t↔t−1 de titulación observada B; regla escrita no localizada en esta ejecución.','Inventario de búsquedas de titulación 20261026 revisado: describe scripts, no acredita carga de proceso 2025; carácter final del respaldo 2024 pendiente.','Titulación y publicación: diferencias por código no explicadas; MRUN no permite enlace por persona.','DATOSDEALUMNOS_12159 figura en catálogo y descriptor v20 con hash e idéntica copia; no hay fecha de extracción ni evidencia de que sea el extracto más reciente.','Copia antigua del consolidado cfcf9099… no utilizada; fuente única OneDrive 70758082…']}
 result['fuentes']['pes5319']={'ruta':str(pes5319),'sha256':hashfile(pes5319)}
+result['fuentes']['precarga_ac2026']={'ruta':str(ac2026),'sha256':hashfile(ac2026),'encoding':'latin1','delimitador':';','clase':'B precarga SIES; no altera definición VIG MU'}
 result['fuentes']['instructivo_titulacion_2026']={'ruta':str(manual),'sha256':hashfile(manual),'paginas':[3,6],'clase':'A','ventana':'1-mar-2025 a 28-feb-2026; captura 2026, Titulados 2025'}
 result['contraste_pes5319']=contraste_pes
 result['detalle_privado']={'ruta':str(private_dir/'CONTRASTE_TITULACION_5319.json'),'sha256':hashfile(private_dir/'CONTRASTE_TITULACION_5319.json'),'publicable':False}
 result['pendientes']=[x for x in result['pendientes'] if not x.startswith('Alineación')]
 result['pendientes'].append('A: ventana 2026 escrita en instructivo págs. 3 y 6. Ventanas de procesos históricos corroboradas por el reporte y rótulos B; no se extrapola norma 2026 a otros manuales.')
-result['brecha_mu2026']={'estado':'E','valor_conservado':226,'investigacion_realizada':False,'fuente_mrun_ipss_disponible_hasta':2025,'requisito':'Microdato MRUN de matrícula 2026 IPSS','metodo_futuro':'Cuadrar por código × sexo × rango de edad frente a MU, incluyendo los 960 VIG 0; sin enlazar RUT–MRUN por atributos.'}
+result['brecha_mu2026']={'estado':'E','valor_conservado':226,'investigacion_realizada':False,'fuente_mrun_ipss_disponible_hasta':2025,'requisito':'Fuente SIES individual MU 2026: descarga lo cargado PES o precarga AC 2027; metadato de año y hash obligatorios','hipotesis':'E: algunos VIG 0 de nuestra MU 2026 podrían figurar matriculados en SIES, como se observa en 2025; no se extrapolan 73 ni 960 a retenidos ni se corrigen tasas.','respaldo_hipotesis':'B cruce MU 2025 con precarga AC 2026: 73/73 VIG 0 aparecen con VIGENCIA 1','metodo_preparado':'metodo_mu2026.py; sólo 48 códigos con diferencia; VIG 1 nuestra / VIG 0 nuestra / no está en nuestra base; no ejecutado con fuente real.'}
+result['brecha_mu2026']['metodo_sha256']=hashfile(OUT/'metodo_mu2026.py')
 c35=collections.Counter()
 for r in mu[2022]:
     if (normalizar(r['COD_SED']),normalizar(r['COD_CAR']),normalizar(r['JOR']))==('2','35','4'):
@@ -311,7 +338,7 @@ lines=['# Matriz de cuadratura 2022–2026','', 'B/C: datos observados y cálcul
 for x in mat:
     m=x['mu_sies'];h=x['retencion_mu'];t=x['titulacion_publicada'];d=x['datos_alumnos_mu']
     lines.append(f"| {x['anio']} | {m['mu_filas']} | {m['mu_pregrado_filas']} + {m['mu_nivel_no_acreditado_filas']} | {m['vig1_pregrado']} / {m['vig0_pregrado']} | {m['publicado_pregrado']} + {m['publicado_postitulo']} | {m['diferencia_publicado_menos_vig1']} | {h['candidatos_primer_anio_filas'] if h['candidatos_primer_anio_filas'] is not None else 'No aplica aún'} / {h['elegibles_h001_filas'] if h['elegibles_h001_filas'] is not None else 'E'} | {t['carga'] if t['carga'] is not None else 'E'} / {t['registros']} | {d['rut_dv_y_carrera']} / {d['solo_rut_dv']} / {d['no_localizado']} |")
-lines += ['', 'La última columna conserva la medición anterior denominada respaldo de código único en v20: exige código en v20 pero compara solo su componente C con MU, por lo que no acredita que el código completo coincida. No es la cobertura de carrera ni indica vigencia.','', 'MU 2025: CUADRA contra el total incluido VIG 0 (2.371 = 2.371); causa metodológica E, ver H001 § Cierre a nivel carrera. H001 2026: NO APLICA AÚN; requiere MU 2027.', '', '## Cobertura por familia SIES y CODCARPR de Datos Alumnos', '', '| Año | RUT+DV y carrera candidata | RUT+DV, CODCARPR fuera de candidatos | RUT+DV sin familia mapeada | No localizado | Sin RUT+DV comparable (incluido en no localizado) |', '|---|---:|---:|---:|---:|---:|']
+lines += ['', 'La última columna conserva la medición anterior denominada respaldo de código único en v20: exige código en v20 pero compara solo su componente C con MU, por lo que no acredita que el código completo coincida. No es la cobertura de carrera ni indica vigencia.','', '**MU 2025: SIES registró como matriculadas las 73 VIG 0 (precarga AC 2026).** [B/C] Las 2.298 VIG 1 y las 73 VIG 0 coinciden por documento+DV y código con VIGENCIA 1 en AC 2026 (2.371/2.371). Para documentos P se conserva el tipo documental y el DV original, incluso vacío; no se inventa RUT. La causa normativa continúa E: VIGENCIA de AC y VIG de MU pertenecen a procesos distintos. H001 2026: NO APLICA AÚN; requiere MU 2027.', '', '## Cobertura por familia SIES y CODCARPR de Datos Alumnos', '', '| Año | RUT+DV y carrera candidata | RUT+DV, CODCARPR fuera de candidatos | RUT+DV sin familia mapeada | No localizado | Sin RUT+DV comparable (incluido en no localizado) |', '|---|---:|---:|---:|---:|---:|']
 for x in mat:
     f=x['cobertura_familia']; lines.append(f"| {x['anio']} | {f.get('rut_dv_y_carrera',0)} | {f.get('codcarpr_fuera_familia',0)} | {f.get('familia_sin_mapeo',0)} | {f.get('no_localizado',0)} | {f.get('sin_rut_dv_comparable',0)} |")
 lines += ['', 'Las equivalencias son candidatos de grupos existentes y relaciones operativas 2026 del maestro. No acreditan plan ni vigencia histórica; una carrera fuera del conjunto puede deberse a cobertura incompleta del catálogo. No localizado incluye documentos no comparables.']
@@ -334,7 +361,7 @@ for x in contraste_pes:lines.append(f"| {x['proceso']} | {x['periodo_acad_titula
 lines += ['', '## Cargas frente a PES 5319: RUT+DV y código derivado', '', '| Proceso | Carga | PES | Coinciden | Sólo carga | Sólo PES | Duplicados exactos en carga | Neto |', '|---|---:|---:|---:|---:|---:|---:|---:|']
 for x in contraste_pes:
     if 'carga_registros' in x: lines.append(f"| {x['proceso']} | {x['carga_registros']} | {x['pes5319_registros']} | {x['coinciden_rut_dv_codigo_registros']} | {sum(x['solo_carga_por_codigo'].values())} | {sum(x['solo_pes_por_codigo'].values())} | {x['duplicados_exactos_en_carga']} | {x['neto_carga_menos_pes']} |")
-lines += ['', 'El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.', '', 'Brecha MU 2026 = 226 [E], sin nueva investigación. Se requiere microdato MRUN 2026 de IPSS; después se podrá contrastar código × sexo × rango de edad con MU, incluidos los 960 VIG 0.', '', 'Pendientes:']+[f'- {p}' for p in result['pendientes']]
+lines += ['', 'El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.', '', 'Brecha MU 2026 = 226 [E]. Método preparado y no ejecutado sobre datos reales: `metodo_mu2026.contrastar_fuente` requiere descarga individual de lo cargado en PES MU 2026 o precarga AC 2027 con año de matrícula 2026, hash y adaptador de columnas acreditados. Clasifica sólo los 48 códigos pregrado con diferencia como VIG 1 nuestra, VIG 0 nuestra o matrícula documento/código ausente en nuestra base. El caso 2025 respalda investigar esta hipótesis, sin extrapolarlo a 2026. El análisis de perfiles MRUN queda como alternativa cuando exista microdato 2026.', '', 'Pendientes:']+[f'- {p}' for p in result['pendientes']]
 lines += ['', '## Titulación frente a matrícula: comparación preliminar por persona', '', '| Proceso | Registros de carga observada | Personas con documento comparable | Presentes en MU t−1 | Presentes en MU t |', '|---|---:|---:|---:|---:|']
 for y,t in titulos.items():
     a=t['personas_con_mu_por_anio']; lines.append(f"| {y} | {t['registros']} | {t['personas_con_llave_comparable']} | {a[str(y-1)] if a[str(y-1)] is not None else 'E'} | {a[str(y)]} |")
@@ -367,6 +394,8 @@ files=('MATRIZ_CUADRATURA_TOTALES_2022_2026.md','MATRIZ_CUADRATURA_TOTALES_2022_
 privacy_hits=sum(sum(1 for _ in pattern.finditer((OUT/name).read_text(encoding='utf-8'))) for name in files)
 if privacy_hits: raise ValueError('Se detectaron posibles identificadores de fuente en archivos de entrega; no publicar')
 qa['desglose_familias_sin_mapeo_concilia']=True
+qa['mu2025_precarga_ac2026']={'vig1_mismo_codigo_vigencia1':2298,'vig0_mismo_codigo_vigencia1':73,'sin_coincidencia':0,'qa':'PASS','causa_normativa':'E'}
+qa['metodo_mu2026']={'estado':'PREPARADO_NO_EJECUTADO_CON_FUENTE_REAL','pruebas_sinteticas':'Ejecutar test_metodo_mu2026.py; no sustituye validación real','sha256':hashfile(OUT/'metodo_mu2026.py')}
 qa['escaneo_cuatro_archivos_con_identificadores_de_fuentes']={'archivos':list(files),'coincidencias':privacy_hits,'metodo':'Identificadores observados en MU/DA por límites de token; sólo se publica el número de coincidencias.'}
 (OUT/'QA.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Matriz parcial generada; controles de suma aprobados; escaneo estructurado sin coincidencias.')

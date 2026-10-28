@@ -20,6 +20,22 @@
     "A: ventana 2026 escrita en instructivo págs. 3 y 6. Ventanas de procesos históricos corroboradas por el reporte y rótulos B; no se extrapola norma 2026 a otros manuales."
   ],
   "desglose_familias_sin_mapeo_concilia": true,
+  "mu2025_precarga_ac2026": {
+    "vig1_mismo_codigo_vigencia1": 2298,
+    "vig0_mismo_codigo_vigencia1": 73,
+    "sin_coincidencia": 0,
+    "qa": "PASS",
+    "causa_normativa": "E"
+  },
+  "metodo_mu2026": {
+    "estado": "PREPARADO_NO_EJECUTADO_CON_FUENTE_REAL",
+    "pruebas_sinteticas": {
+      "cantidad": 5,
+      "resultado": "PASS",
+      "fuente_real_2026_ejecutada": false
+    },
+    "sha256": "a673ca2ec8f976ae70f011a5d29b5115ab94f882978278dec0bdf1f27edd85ae"
+  },
   "escaneo_cuatro_archivos_con_identificadores_de_fuentes": {
     "archivos": [
       "MATRIZ_CUADRATURA_TOTALES_2022_2026.md",
@@ -30,7 +46,7 @@
     "coincidencias": 0,
     "metodo": "Identificadores observados en MU/DA por límites de token; sólo se publica el número de coincidencias."
   },
-  "copias_verificadas_contra_origen": 15,
+  "copias_verificadas_contra_origen": 16,
   "catalogos_json_csv_y_leeme_identicos": true,
   "mapa_anterior_132_grupos_intacto": true,
   "mapa_nuevo_solo_3_adiciones": true,
@@ -38,8 +54,13 @@
   "controles_mu_h001_diccionario_v20_sin_cambios": true,
   "brecha_226_no_investigada": true,
   "nacionales_solo_referencia": 56,
+  "cruce_mu2025_ac2026_independiente_sql": {
+    "vig0": 73,
+    "vig1": 2298,
+    "diferencias_con_constructor": 0
+  },
   "escaneo_documentos_pes5319_en_salidas": {
-    "archivos": 12,
+    "archivos": 14,
     "coincidencias": 0
   }
 }
