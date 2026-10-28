@@ -71,7 +71,11 @@ def categoria(ruta):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mapa", action="append", default=[], help="prefijo_mac=prefijo_local (solo fuera del Mac)")
+    ap.add_argument("--plan", type=Path, help="Ampliación explícita por ruta/hash/categoría; conserva todo el catálogo anterior")
     a = ap.parse_args()
+    if a.plan:
+        ampliar_catalogo(a.plan)
+        return
     mapa = sorted((tuple(x.split("=", 1)) for x in a.mapa), key=lambda t: -len(t[0]))
     destino = localizar(ONEDRIVE, mapa)
     if destino is None:
@@ -171,6 +175,53 @@ def main():
                       "por_categoria": {k: sum(1 for c in catalogo if c["categoria"] == k) for k in sorted({c["categoria"] for c in catalogo})}},
                      ensure_ascii=False, indent=1))
 
+
+def ampliar_catalogo(plan_path):
+    """Amplía copias autorizadas sin reconstruir ni truncar el catálogo vigente."""
+    plan = json.loads(plan_path.read_text(encoding='utf-8'))
+    repo = ROOT / 'data/catalogo_fuentes'
+    cat = json.loads((repo / 'CATALOGO_FUENTES.json').read_text(encoding='utf-8'))
+    destino = localizar(cat['carpeta_consolidada'], [(ONEDRIVE, ONEDRIVE)])
+    if destino is None: raise FileNotFoundError('Destino consolidado no disponible')
+    registros = {x['sha256']: x for x in cat['catalogo']}
+    operaciones = []
+    for item in plan['copias']:
+        src = Path(item['origen']); expected = item['sha256']
+        if sha(src) != expected: raise ValueError('Origen con hash distinto: '+src.name)
+        dst = destino / item['categoria'] / src.name
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        if dst.exists():
+            if sha(dst) != expected: raise ValueError('Destino distinto; no se sobrescribe: '+dst.name)
+            accion = 'YA_EXISTIA_IDENTICO'
+        else:
+            with dst.open('xb') as fout, src.open('rb') as fin: shutil.copyfileobj(fin, fout)
+            accion = 'COPIADO'
+        if sha(dst) != expected or sha(src) != expected: raise ValueError('Integridad de copia no confirmada')
+        old = registros.get(expected)
+        origenes = list(old.get('origenes', [])) if old else []
+        if not any(nfc(o['ruta'])==nfc(str(src)) for o in origenes): origenes.append({'ruta':str(src),'citado_en':['matriz_cuadratura_totales_20261028']})
+        record = {'categoria':item['categoria'],'archivo':dst.name,'ruta_consolidada':str(dst),'sha256':expected,'bytes':dst.stat().st_size,'accion':accion,'hash_copia_igual_origen':True,'origenes':origenes,'datos_personales':item['datos_personales'],'descripcion':item['descripcion']}
+        if old and nfc(old['ruta_consolidada'])!=nfc(str(dst)):
+            record['otras_copias_conservadas'] = old.get('otras_copias_conservadas',[])+[old['ruta_consolidada']]
+        elif old and old.get('otras_copias_conservadas'):
+            record['otras_copias_conservadas'] = old['otras_copias_conservadas']
+        registros[expected] = record
+        operaciones.append({'origen':str(src),'destino':str(dst),'sha256':expected,'accion':accion,'datos_personales':item['datos_personales']})
+    cat['catalogo'] = sorted(registros.values(),key=lambda x:(x['categoria'],x['archivo']))
+    cat['archivos'] = len(cat['catalogo']); cat['bytes_total'] = sum(x['bytes'] for x in cat['catalogo'])
+    cat['referencias_nacionales_sin_copia'] = plan['referencias_nacionales_sin_copia']
+    cat['ampliacion_matriz_20261028'] = {'plan_sha256':sha(plan_path),'script_sha256':sha(Path(__file__)),'operaciones':operaciones}
+    texto = json.dumps(cat,ensure_ascii=False,indent=1)+'\n'
+    for p in (repo/'CATALOGO_FUENTES.json',destino/'CATALOGO_FUENTES.json'): p.write_text(texto,encoding='utf-8')
+    import io
+    stream=io.StringIO(newline=''); writer=csv.writer(stream,delimiter=';')
+    writer.writerow(['CATEGORIA','ARCHIVO','SHA256','BYTES','ORIGEN_PRINCIPAL','RUTA_CONSOLIDADA','DATOS_PERSONALES'])
+    for x in cat['catalogo']: writer.writerow([x['categoria'],x['archivo'],x['sha256'],x['bytes'],x['origenes'][0]['ruta'],x['ruta_consolidada'],x.get('datos_personales','desconocido')])
+    contenido=stream.getvalue().encode('utf-8-sig')
+    for p in (repo/'CATALOGO_FUENTES.csv',destino/'CATALOGO_FUENTES.csv'): p.write_bytes(contenido)
+    assert sha(repo/'CATALOGO_FUENTES.json')==sha(destino/'CATALOGO_FUENTES.json')
+    assert sha(repo/'CATALOGO_FUENTES.csv')==sha(destino/'CATALOGO_FUENTES.csv')
+    print(json.dumps({'copias':len(operaciones),'archivos_catalogados':cat['archivos'],'catalogos_identicos':True},ensure_ascii=False))
 
 if __name__ == "__main__":
     main()

@@ -32,13 +32,19 @@ def identity(tipo, doc, dv):
     if not t or not d or (t == 'R' and not v): return None
     return (t,d,v)
 def jsonread(p): return json.loads(Path(p).read_text(encoding='utf-8'))
+CAT_PATH=ROOT/'data/catalogo_fuentes/CATALOGO_FUENTES.json'
+CAT=jsonread(CAT_PATH)
+def fuente(expected):
+    matches=[x for x in CAT['catalogo'] if x['sha256']==expected]
+    if len(matches)!=1: raise ValueError('Hash sin entrada única en catálogo '+expected)
+    return verified(matches[0]['ruta_consolidada'],expected)
 
-base=verified(ROOT/'outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx','19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd')
+base=fuente('19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd')
 agg=verified(ROOT/'outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json','ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5')
-publico=verified(one('/Users/alexi/Library/CloudStorage/OneDrive-*/0 BASES DE DATOS/TITULACION/Titulados_IPSS_162_Consolidado_2007_2025.csv'),'70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229')
-da=verified(one('/Users/alexi/Library/CloudStorage/OneDrive-*/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_12159.xlsx'),'a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9')
-glosario=verified(one('/Users/alexi/Library/CloudStorage/OneDrive-*/0 BASES DE DATOS/TITULACION/GLOSARIO_DE_TITULADO_2007_2025_E.pdf'),'b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f')
-grupos_path=verified(ROOT/'data/versiones_por_cohorte/20261016/grupos_existentes.json','80ce832f8d230551cac18b043e6715023f34ec42fb007313f1b17051c98463aa')
+publico=fuente('70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229')
+da=fuente('a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9')
+glosario=fuente('b9be9c46aa1c27452d55fc9efaef87c65624c40d4bc1234d21e87897f89af05f')
+grupos_path=verified(ROOT/'data/versiones_por_cohorte/20261028/grupos_existentes.json','fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc')
 maestro_path=verified(ROOT/'data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json','2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5')
 familias=collections.defaultdict(set)
 for grupo in jsonread(grupos_path):
@@ -97,17 +103,19 @@ manifest=jsonread(ROOT/'outputs/reproduccion_puente_20261023_004044/FUENTES_HASH
 fuentes_hist=jsonread(ROOT/'outputs/reproduccion_puente_20261023_004044/FUENTES_HASHES.json')
 hist=[(p,h) for p,h in fuentes_hist.items() if p.endswith('/MAT_IP_CIISA_2021.xlsx')]
 if len(hist)!=1: raise ValueError('MU 2021 sin fuente única')
-mu21=verified(*hist[0]); s=openpyxl.load_workbook(mu21,read_only=True,data_only=True)['MAT_2021']
+mu21=fuente(hist[0][1]); s=openpyxl.load_workbook(mu21,read_only=True,data_only=True)['MAT_2021']
 it=s.iter_rows(values_only=True); hh=next(it); mu[2021]=[]
 for row in it:
     r=dict(zip(hh,row)); doc=r.get('MM_N_DOCUMENTO'); dv=r.get('MM_DV')
     if doc is not None and dv is not None: mu[2021].append({'TIPO_DOC':'R','N_DOC':doc,'DV':dv})
 titulos={}
+cargas_individuales={}
 for year, token in ((2022,'TIT_2022_162_def'),(2023,'TIT_IP_CIISA_2023')):
     paths=[(p,h) for p,h in manifest.items() if token in p and p.endswith('.csv')]
     if len(paths)!=1: raise ValueError('Fuente de titulación no única '+str(year))
-    path=verified(*paths[0]); encoding='latin1' if year==2022 else 'utf-8-sig'
+    path=fuente(paths[0][1]); encoding='latin1' if year==2022 else 'utf-8-sig'
     with path.open(encoding=encoding,newline='') as f: records=list(csv.DictReader(f,delimiter=';'))
+    cargas_individuales[year]=records
     personas={identity(r['TIPO_DOCUMENTO'],r['NUM_DOCUMENTO'],r['DV']) for r in records}; personas.discard(None)
     title_codes=collections.Counter(r['COD_SIES_OBT_TIT'].strip() for r in records)
     matches={}
@@ -119,7 +127,7 @@ for year, token in ((2022,'TIT_2022_162_def'),(2023,'TIT_IP_CIISA_2023')):
 embudo=jsonread(ROOT/'outputs/auditoria_embudo_2317_20261022/HASHES_FUENTES.json')
 f26=[(p,h) for p,h in embudo.items() if p.endswith('/Titulación Unificada 2026.csv')]
 if len(f26)!=1: raise ValueError('Carga titulación 2026 no localizada')
-p26=verified(*f26[0]); h22=next(csv.reader(open(titulos[2022]['archivo'],encoding='latin1',newline=''),delimiter=';'))
+p26=fuente(f26[0][1]); h22=next(csv.reader(open(titulos[2022]['archivo'],encoding='latin1',newline=''),delimiter=';'))
 with p26.open(encoding='utf-8-sig',newline='') as f: rows26=list(csv.reader(f,delimiter=';'))
 if any(len(r)!=len(h22) for r in rows26): raise ValueError('Estructura 2026 inesperada')
 records=[dict(zip(h22,r)) for r in rows26]
@@ -130,14 +138,65 @@ for y in (2025,2026):
 titulos[2026]={'archivo':str(p26),'sha256':hashfile(p26),'registros':len(records),'personas_con_llave_comparable':len(personas),'personas_con_mu_por_anio':matches,'por_codigo_obtenido':dict(collections.Counter(r['COD_SIES_OBT_TIT'].strip() for r in records)),'estado':'E','nota':'Estructura homologada con encabezado de 2022; carácter final de la carga y comparabilidad por código pendientes.'}
 p24s=[(p,h) for p,h in fuentes_hist.items() if p.endswith('/TIT_IP_CIISA_2024.xlsx')]
 if len(p24s)!=1: raise ValueError('Respaldo 2024 no localizado')
-p24=verified(*p24s[0]); w24=openpyxl.load_workbook(p24,read_only=True,data_only=True)
+p24=fuente(p24s[0][1]); w24=openpyxl.load_workbook(p24,read_only=True,data_only=True)
 s24=w24['21-03-2023_18-23-51_Titulados_2']; it=s24.iter_rows(values_only=True); h24=next(it)
 rs24=[dict(zip(h24,r)) for r in it if r[1] and r[2]]
+cargas_individuales[2024]=rs24
 personas={identity(r['TIPO_DOCUMENTO'],r['NUM_DOCUMENTO'],r['DV']) for r in rs24}; personas.discard(None)
 matches={}
 for y in (2023,2024):
     ids={identity(r['TIPO_DOC'],r['N_DOC'],r['DV']) for r in mu[y]}; ids.discard(None); matches[str(y)]=len(personas & ids)
 titulos[2024]={'archivo':str(p24),'sha256':hashfile(p24),'hoja':s24.title,'registros':len(rs24),'personas_con_llave_comparable':len(personas),'personas_con_mu_por_anio':matches,'por_codigo_obtenido':dict(collections.Counter(normalizar(r['COD_SIES_OBT_TIT']) for r in rs24)),'estado':'E','nota':'Respaldo inventariado en Publicados: nombre y hoja no acreditan carga final del proceso 2024.'}
+pes5319=fuente('08df93d633765d5b5b6ec9fafd89cb88898d9475e9e1696626fe352c669b4a56')
+manual_entry=next(x for x in CAT['catalogo'] if x['archivo'].startswith('Instructivo_Titulacio'))
+manual=fuente(manual_entry['sha256'])
+accepted=collections.defaultdict(list)
+with pes5319.open(encoding='latin1',newline='') as f:
+    for fila,r in enumerate(csv.DictReader(f,delimiter=';'),2):
+        y=normalizar(r['PERIODO_ACAD_TITULACION'])
+        if y.isdigit(): accepted[int(y)].append((fila,r))
+def codigo_derivado(c):
+    c=normalizar(c)
+    return 'I'+c if re.fullmatch(r'162S\d+C\d+J\d+V\d+',c) else c
+contraste_pes=[]; privados=[]
+for proceso in (2022,2023,2024,2025):
+    periodo=proceso-1
+    accepted_counter=collections.Counter((identity(r['TIPO_DOCUMENTO'],r['NUM_DOCUMENTO'],r['DV']),codigo_derivado(r['COD_UNICO_OBT_TIT'])) for _,r in accepted[periodo])
+    by_code=collections.Counter()
+    for (ident,code),n in accepted_counter.items(): by_code[code]+=n
+    published=collections.Counter()
+    for (code,_),n in public[periodo].items(): published[code]+=n
+    por_codigo=[{'codigo_sies':c,'pes5319':by_code[c],'publicado':published[c],'diferencia':by_code[c]-published[c]} for c in sorted(set(by_code)|set(published))]
+    resumen={'proceso':proceso,'periodo_acad_titulacion':periodo,'pes5319_registros':sum(accepted_counter.values()),'publicado_registros':sum(published.values()),'pes_publicado_por_codigo':por_codigo,'estado_pes_publicacion':'CUADRA' if by_code==published else 'E','clase':'B reporte histórico PES; C comparación por código; no enlaza MRUN y RUT'}
+    if proceso in cargas_individuales:
+        cargados=collections.Counter((identity(r['TIPO_DOCUMENTO'],r['NUM_DOCUMENTO'],r['DV']),codigo_derivado(r['COD_SIES_OBT_TIT'])) for r in cargas_individuales[proceso])
+        solo_carga=cargados-accepted_counter; solo_pes=accepted_counter-cargados
+        def aggregate(counter):
+            codes=collections.Counter()
+            for (_ident,code),n in counter.items(): codes[code]+=n
+            return dict(sorted(codes.items()))
+        causas=collections.Counter(); detalle_causas=collections.Counter()
+        for (ident,code),n in solo_carga.items():
+            same=[];body=[]
+            for yy,rows in accepted.items():
+                for _,r in rows:
+                    other=identity(r['TIPO_DOCUMENTO'],r['NUM_DOCUMENTO'],r['DV'])
+                    if ident==other: same.append((yy,codigo_derivado(r['COD_UNICO_OBT_TIT'])))
+                    elif ident and other and ident[:2]==other[:2]: body.append((yy,codigo_derivado(r['COD_UNICO_OBT_TIT'])))
+            periods=sorted({yy for yy,cc in same if cc==code and yy!=periodo})
+            if periods:
+                label='misma_identidad_y_codigo_en_otro_periodo_PES'
+                detalle_causas[(label,code,','.join(map(str,periods)))]+=n
+            elif same:label='misma_identidad_PES_con_otro_codigo'
+            elif body:label='cuerpo_documento_PES_con_DV_distinto'
+            else:label='documento_no_localizado_en_PES'
+            causas[label]+=n
+        resumen.update({'carga_registros':sum(cargados.values()),'coinciden_rut_dv_codigo_registros':sum((cargados & accepted_counter).values()),'solo_carga_por_codigo':aggregate(solo_carga),'solo_pes_por_codigo':aggregate(solo_pes),'duplicados_exactos_en_carga':sum(n-1 for n in cargados.values() if n>1),'neto_carga_menos_pes':sum(cargados.values())-sum(accepted_counter.values()),'causas_observadas_solo_carga':dict(causas),'otros_periodos_por_codigo':[{'motivo':m,'codigo':cc,'periodos_pes':pp,'registros':nn} for (m,cc,pp),nn in sorted(detalle_causas.items())],'explicacion':'B/C comparación exacta y diferencias de período/DV observadas; E fundamento de incorporación, omisión o asignación temporal no acreditado. No se corrige fuente ni DV.'})
+        privados.append({'proceso':proceso,'fuente_carga':titulos[proceso]['archivo'],'fuente_pes':str(pes5319),'solo_carga':[{'identidad':ident,'codigo':code,'registros':n} for (ident,code),n in solo_carga.items()],'solo_pes':[{'identidad':ident,'codigo':code,'registros':n} for (ident,code),n in solo_pes.items()]})
+    else: resumen['carga_enviada']='E: archivo enviado del proceso 2025 no localizado; 5319 aporta registro histórico B, no copia del envío.'
+    contraste_pes.append(resumen)
+private_dir=Path('/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028'); private_dir.mkdir(parents=True,exist_ok=True)
+(private_dir/'CONTRASTE_TITULACION_5319.json').write_text(json.dumps(privados,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 da_por_persona=collections.defaultdict(set); da_documentos=set()
 ws=openpyxl.load_workbook(da,read_only=True,data_only=True)['Hoja1']; it=ws.iter_rows(values_only=True); headers=next(it)
 for row in it:
@@ -231,6 +290,20 @@ for entry in mat:
         entry['retencion_mu']['nota']='Requiere MU 2027 para observar t+1; H001 no calcula esta cohorte en esta ejecución.'
 catalogo_fuentes={'mu':str(base),'mu_2021':str(mu21),'catalogo_h001':str(diagnostico),'h001_agregado':str(agg),'publicacion_titulados':str(publico),'glosario_titulados':str(glosario),'datos_alumnos':str(da),'grupos_carrera':str(grupos_path),'maestro_carreras':str(maestro_path),'catalogo_fuentes':'data/catalogo_fuentes/CATALOGO_FUENTES.json','diccionario_activo':'data/diccionario_sies_seguimiento/activo.json','inventario_titulacion':'outputs/inventario_busquedas_titulacion_20261026/INFORME.md','conciliacion_mu_sies':'outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json','regla_h001':'manifests/milestones/H001-RETENCION-IPSS162/README.md','implementacion_h001':'common/analisis_desercion/h001.py','puente':'procesos/caracterizacion/gobernanza/sies/TABLA_PUENTE_CSV_BASE_RETENCION_MU.manifest.json'}
 result={'estado':'PARCIAL_CON_PENDIENTES','clases':'A oficial; B observado; C cálculo; D decisión; E pendiente','fuentes':{k:{'ruta':v,'sha256':hashfile(v if Path(v).is_absolute() else ROOT/v)} for k,v in catalogo_fuentes.items()},'matriz':mat,'titulados_publicados_por_codigo':[{'anio_publicacion':a,'codigo_sies':code,'carrera':name,'registros':n} for a in sorted(public) for (code,name),n in sorted(public[a].items())], 'pendientes':['Alineación t↔t−1 de titulación observada B; regla escrita no localizada en esta ejecución.','Inventario de búsquedas de titulación 20261026 revisado: describe scripts, no acredita carga de proceso 2025; carácter final del respaldo 2024 pendiente.','Titulación y publicación: diferencias por código no explicadas; MRUN no permite enlace por persona.','DATOSDEALUMNOS_12159 figura en catálogo y descriptor v20 con hash e idéntica copia; no hay fecha de extracción ni evidencia de que sea el extracto más reciente.','Copia antigua del consolidado cfcf9099… no utilizada; fuente única OneDrive 70758082…']}
+result['fuentes']['pes5319']={'ruta':str(pes5319),'sha256':hashfile(pes5319)}
+result['fuentes']['instructivo_titulacion_2026']={'ruta':str(manual),'sha256':hashfile(manual),'paginas':[3,6],'clase':'A','ventana':'1-mar-2025 a 28-feb-2026; captura 2026, Titulados 2025'}
+result['contraste_pes5319']=contraste_pes
+result['detalle_privado']={'ruta':str(private_dir/'CONTRASTE_TITULACION_5319.json'),'sha256':hashfile(private_dir/'CONTRASTE_TITULACION_5319.json'),'publicable':False}
+result['pendientes']=[x for x in result['pendientes'] if not x.startswith('Alineación')]
+result['pendientes'].append('A: ventana 2026 escrita en instructivo págs. 3 y 6. Ventanas de procesos históricos corroboradas por el reporte y rótulos B; no se extrapola norma 2026 a otros manuales.')
+result['brecha_mu2026']={'estado':'E','valor_conservado':226,'investigacion_realizada':False,'fuente_mrun_ipss_disponible_hasta':2025,'requisito':'Microdato MRUN de matrícula 2026 IPSS','metodo_futuro':'Cuadrar por código × sexo × rango de edad frente a MU, incluyendo los 960 VIG 0; sin enlazar RUT–MRUN por atributos.'}
+c35=collections.Counter()
+for r in mu[2022]:
+    if (normalizar(r['COD_SED']),normalizar(r['COD_CAR']),normalizar(r['JOR']))==('2','35','4'):
+        ident=identity(r['TIPO_DOC'],r['N_DOC'],r['DV'])
+        if ident and ident[0]=='R':
+            pe=rut_normalizado(ident[1]+'-'+ident[2]); c35.update({c for _,c in da_por_persona.get(pe,set())})
+result['revision_c35j4']={'anio':2022,'familia':'I162S2C35J4','codcarpr_observados_en_personas_da':dict(c35),'estado':'E','nota':'Oferta histórica identifica Técnico en Análisis de Sistemas, pero observar otros expedientes actuales no acredita equivalencia histórica. No se agrega familia a partir de nombre ni RUT.'}
 assert all(sum(x['registros'] for x in result['titulados_publicados_por_codigo'] if x['anio_publicacion']==y)==sum(public[y].values()) for y in public)
 assert total_publico==3504
 (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -246,7 +319,7 @@ lines += ['', '### Matrículas en familias sin mapeo — desglose agregado', '',
 for x in mat:
     for r in x['cobertura_familia']['familias_sin_mapeo']:
         lines.append(f"| {r['anio']} | {r['familia_sies']} | {r['matriculas']} | B/C; equivalencia E |")
-lines += ['', 'El desglose suma 3 matrículas en 2022 y 73 en 2026; los demás años no presentan esta categoría. No se modifica ninguna equivalencia.']
+lines += ['', 'Nueva edición de grupos 20261028: agrega sólo tres familias CO. Familia sin mapeo en 2026: 73 → 0. Las 3 matrículas C35J4 de 2022 siguen pendientes; no se modifica el diccionario personal.']
 f=next(x['cobertura_familia'] for x in mat if x['anio']==2026)
 lines += [f"En 2026, entre las matrículas sin respaldo v20, {f['sin_observacion_diccionario_2026_entre_no_respaldados']} pertenecen a personas sin ninguna observación del diccionario en 2026; no se afirma que la causa sea exclusivamente PROMEDIOS."]
 lines += ['', '## Diferencias de titulación por código (carga menos publicación)', '', '| Proceso | Código SIES | Carga | Publicación | Diferencia | Estado |', '|---|---|---:|---:|---:|---|']
@@ -256,7 +329,12 @@ for y in (2023,2024):
 lines += ['', 'En 2024 se observó `162S2C47J1V1` sin I y una diferencia inversa para `I162S2C47J1V1`: al normalizar el prefijo únicamente en el derivado se anulan estas dos diferencias por código [B/C]. No demuestra igualdad individual. La diferencia neta del proceso no cambia. El resto permanece E.', '', '| Proceso 2024: código derivado | Carga normalizada | Publicación | Diferencia | Estado |', '|---|---:|---:|---:|---|']
 for z in titulos[2024]['comparacion_codigo_normalizada']:
     if z['diferencia']: lines.append(f"| {z['codigo_sies']} | {z['carga']} | {z['publicacion']} | {z['diferencia']} | E |")
-lines += ['', 'Los motivos H001 se encuentran en el JSON: la clasificación cuenta cada fila una vez por el primer motivo aplicable. La correspondencia entre carga de titulados y período publicado es observada, no norma acreditada. El glosario 2007–2025, pág. 1, describe AÑO como año del proceso, sin establecer aquí el desfase t−1 de cat_periodo; no se presume equivalencia de campos. El respaldo 2024 tiene alcance pendiente. No hay enlace individual RUT–MRUN.', '', 'Pendientes:']+[f'- {p}' for p in result['pendientes']]
+lines += ['', 'Los motivos H001 se encuentran en el JSON: cada fila cuenta una vez por primer motivo aplicable. Instructivo Titulación Unificada 2026, págs. 3 y 6 [A]: ventana 1-mar-2025 a 28-feb-2026, denominada Titulados 2025. No se extrapola el manual 2026 para afirmar normativas históricas. El reporte PES 5319 permite comprobar el período académico por registro [B]. El respaldo 2024 mantiene alcance pendiente. No existe enlace individual RUT–MRUN.', '', '## Reporte PES 5319 frente a publicación', '', '| Proceso | PERIODO_ACAD_TITULACION | PES 5319 | Publicación | Coincidencia por código |', '|---|---:|---:|---:|---|']
+for x in contraste_pes:lines.append(f"| {x['proceso']} | {x['periodo_acad_titulacion']} | {x['pes5319_registros']} | {x['publicado_registros']} | {x['estado_pes_publicacion']} |")
+lines += ['', '## Cargas frente a PES 5319: RUT+DV y código derivado', '', '| Proceso | Carga | PES | Coinciden | Sólo carga | Sólo PES | Duplicados exactos en carga | Neto |', '|---|---:|---:|---:|---:|---:|---:|---:|']
+for x in contraste_pes:
+    if 'carga_registros' in x: lines.append(f"| {x['proceso']} | {x['carga_registros']} | {x['pes5319_registros']} | {x['coinciden_rut_dv_codigo_registros']} | {sum(x['solo_carga_por_codigo'].values())} | {sum(x['solo_pes_por_codigo'].values())} | {x['duplicados_exactos_en_carga']} | {x['neto_carga_menos_pes']} |")
+lines += ['', 'El JSON desglosa los registros no coincidentes por código; sus identificadores se guardan exclusivamente en la salida privada. En 2024, cuatro registros del respaldo tienen la misma identidad y código en otro período PES; otro registro presenta cuerpo de documento coincidente pero DV distinto. No se decide cuál DV corregir ni se altera una fecha. Esto localiza el neto +4; el fundamento institucional del desfase sigue E. En 2023, los 283 registros enviados están en el histórico, que agrega 11; el origen del envío adicional no se acredita. Proceso 2025: 5319 contiene 270 registros históricos [B]; no se localizó el archivo enviado.', '', 'Brecha MU 2026 = 226 [E], sin nueva investigación. Se requiere microdato MRUN 2026 de IPSS; después se podrá contrastar código × sexo × rango de edad con MU, incluidos los 960 VIG 0.', '', 'Pendientes:']+[f'- {p}' for p in result['pendientes']]
 lines += ['', '## Titulación frente a matrícula: comparación preliminar por persona', '', '| Proceso | Registros de carga observada | Personas con documento comparable | Presentes en MU t−1 | Presentes en MU t |', '|---|---:|---:|---:|---:|']
 for y,t in titulos.items():
     a=t['personas_con_mu_por_anio']; lines.append(f"| {y} | {t['registros']} | {t['personas_con_llave_comparable']} | {a[str(y-1)] if a[str(y-1)] is not None else 'E'} | {a[str(y)]} |")

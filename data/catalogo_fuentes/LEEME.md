@@ -1,5 +1,28 @@
 # Catálogo de fuentes del proyecto de conciliación UMAS–SIES
 
+## Ampliación autorizada · 28-10-2026
+
+| Carpeta | Contenido | Datos personales |
+|---|---|---|
+| 09_TITULACION_DATOS_RESTRINGIDOS | PES 5319 histórico 2007–2024 por período académico | Sí: nombres y documentos. Uso restringido |
+| 11_SIES_MRUN_IPSS_162 | Extracción matrícula IPSS 2007–2025 y consolidado titulados IPSS 2007–2025 | MRUN seudonimizado; derivados institucionales de publicación SIES |
+| 12_TITULACION_UNIFICADA_CARGAS | Cargas 2022/2023/2026, agregado 2024 de 470 bytes, respaldo XLSX 2024, reportes PES y documentación oficial | Las cargas y el libro combinado contienen identificadores. Uso restringido; instructivo, oficio, glosario y oferta 5320 son documentación |
+
+También se incorporó MAT_IP_CIISA_2021.xlsx a la carpeta 02 (contiene documentos).
+No se movieron ni cortaron originales. SHA-256 origen y copia verificados; cualquier
+copia previa permanece conservada y puede figurar en `otras_copias_conservadas`.
+Las referencias nacionales 20250729_*_PUBL_MRUN y 20250718_Titulados_*_WEB se
+registran únicamente por ruta y hash; no se copian a la carpeta consolidada.
+El agregado 2024 no es una nómina. El archivo enviado del proceso 2025 no se localizó;
+el reporte PES 5319 conserva 270 registros de período académico 2024.
+
+Actualizar esta ampliación con:
+`python3 outputs/consolidacion_bases_onedrive_20261026/consolidar_bases.py --plan outputs/matriz_cuadratura_totales_20261028/PLAN_CONSOLIDACION.json`.
+Este modo conserva entradas y bases privadas anteriores. Los catálogos JSON y CSV
+se escriben idénticos aquí y en OneDrive. El consumidor de la matriz selecciona las
+bases por SHA-256 en el catálogo; los resultados y catálogos versionados de Git
+mantienen sus rutas relativas y hashes.
+
 **B/C.** Todas las bases del proyecto están copiadas en una sola carpeta de OneDrive:
 `~/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/`.
 

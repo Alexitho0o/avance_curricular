@@ -1,0 +1,73 @@
+{
+  "clasificacion": "B/C extracción institucional, no fuente oficial individual de SIES",
+  "matricula_sha256": "1ae2bf5b1ac47e9ffebc0d4d9040a8fd080b42602fe3176e39b409cad4353de6",
+  "original_identico": true,
+  "matricula_script": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/EXTRACCION_MATRICULA_SIES _2007_2025/codigo_extraccion_matricula.py",
+  "matricula_script_filtro": "nombre institucional exacto IP SAN SEBASTIAN; se verifica también cod_inst del resultado, sin reextraer",
+  "titulados_consolidado_sha256": "70758082b7b5ab6363b267f58d334f86349a6c355dc5636cf1654b90dedca229",
+  "otras_salidas_filtradas_localizadas": [],
+  "pendientes": [
+    "La extracción de matrícula termina en 2025; requiere microdato 2026 para estudiar brecha 226.",
+    "El consolidado es derivado institucional de fuentes oficiales; no debe rotularse como archivo oficial de carga."
+  ],
+  "consolidado_anterior_no_usar": {
+    "ruta": "/Users/alexi/Documents/GitHub/Titulados_IPSS_162_Consolidado_2007_2025.csv",
+    "sha256": "cfcf9099e6a641bb0600d5318035b7e591b6bdd8435ed94f6ea8f91698e1291b",
+    "filas": 3073,
+    "uso": "NO_USAR_VERSION_ANTERIOR"
+  },
+  "matricula": {
+    "filas": 20961,
+    "periodos": [
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "cod_inst": [
+      "162"
+    ]
+  },
+  "titulados": {
+    "filas": 3504,
+    "periodos": [
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "cod_inst": [
+      "162"
+    ]
+  }
+}
