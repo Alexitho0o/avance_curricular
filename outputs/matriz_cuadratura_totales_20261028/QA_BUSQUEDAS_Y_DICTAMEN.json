@@ -1,0 +1,60 @@
+{
+  "estado": "PASS_CON_PENDIENTES_E",
+  "fecha": "2026-10-28",
+  "rama": "feature/ire-2026",
+  "head_antes_y_despues": "a7330f4a3b306b899f929bce7292100a745386fd",
+  "matriz_numerica_igual_al_head": true,
+  "fuentes_matriz_iguales_al_head": true,
+  "libros_y_base_intactos_sha256": true,
+  "detalle_4105_identico_por_multiconjunto": true,
+  "hoja1_2379_igual_a_H001_V24": true,
+  "continuidades_400_sin_doble_conteo": true,
+  "cruce_abril_independiente_sql": {
+    "diferencias": 0,
+    "vig0_en_todos_codigos": 520,
+    "vig0_en_48": 459
+  },
+  "cuadratura_por_codigo_48": true,
+  "brecha_226_conservada": true,
+  "ac2027_rotulo_D_sin_convertir_a_A": true,
+  "errores_en_busquedas": 0,
+  "reconstruccion_acumulativa": "E; no ejecutada sin llave e historial acreditados",
+  "staging_vacio": true,
+  "commit_push_ejecutados": false,
+  "detalle_individual_solo_privado": true,
+  "privacidad": {
+    "archivos": 19,
+    "coincidencias_identificadores_observados": 0,
+    "coincidencias_patron_rut_dv": 0,
+    "alcance": "Documentos MU, documentos y CODCLI de abril por límites de token; no se publican los valores. Metadatos de autor solicitados se conservan."
+  },
+  "compatibilidad_por_codigo_sql": {
+    "diferencias": 0,
+    "brecha_positiva": 228,
+    "cubrible": 193,
+    "pendiente_positivo": 35,
+    "porcentaje": 84.64912280701755,
+    "positivos_cubiertos": 30,
+    "exactos": 4,
+    "insuficientes": 16,
+    "negativos": 2,
+    "diferencia_negativa": -2,
+    "neto": 226,
+    "nota": "32 con candidatas >= brecha incluyen 2 negativos; 193 se compone de 139+54, no sólo de los suficientes."
+  },
+  "etapa": "QA previo al commit y push autorizados; los estados de ejecución reflejan este instante.",
+  "preparacion_llaves": {
+    "protocolo_generado": true,
+    "reconstruccion_real_ejecutada": false,
+    "equivalencia_de_formulaciones_originales_verificada_codigos": 48,
+    "llave_1": "documento + código único",
+    "llave_2": "documento + COD_CAR, sin sede, jornada ni versión",
+    "sensibilidad_gruesa_estructuralmente_distinta": true,
+    "codigos_en_control_estructural": 48,
+    "cod_car_distintos_en_control": 29,
+    "cod_car_con_varios_codigos": 13,
+    "hipotesis_sin_resultado": true,
+    "llave_normativa_confirmada": false,
+    "faltan": "Historial PES y archivo cargado de cada carga Finalizado"
+  }
+}

@@ -1,0 +1,1411 @@
+{
+  "clase": "B metadatos/filas; C comparación; D rótulo AC2027 de Alexi; E atribución SIES y prueba acumulativa",
+  "libros": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/MATRÍCULA UNIFICADA 2026.xlsx",
+      "sha256": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1",
+      "autor_declarado": "openpyxl",
+      "ultimo_modificador_declarado": "Alexi Marcelo Burgos Flores",
+      "fecha_creacion_ooxml": "2026-07-01 04:37:04",
+      "fecha_modificacion_ooxml": "2026-10-15 13:02:51",
+      "nota_fechas": "Metadatos editables del libro; no acreditan fecha de recepción PES ni instante de extracción UMAS.",
+      "hojas": [
+        {
+          "hoja": "06_DETALLE_TOTAL",
+          "filas_declaradas": 4106,
+          "columnas_declaradas": 20
+        },
+        {
+          "hoja": "Hoja1",
+          "filas_declaradas": 2380,
+          "columnas_declaradas": 25
+        },
+        {
+          "hoja": "00_RESUMEN_GENERAL",
+          "filas_declaradas": 10,
+          "columnas_declaradas": 2
+        },
+        {
+          "hoja": "01_RESUMEN_ESTADO",
+          "filas_declaradas": 3,
+          "columnas_declaradas": 4
+        },
+        {
+          "hoja": "02_VIGENTES_CARRERA_SEDE",
+          "filas_declaradas": 53,
+          "columnas_declaradas": 5
+        },
+        {
+          "hoja": "03_VIGENTES_ANIO_INGRESO",
+          "filas_declaradas": 9,
+          "columnas_declaradas": 4
+        },
+        {
+          "hoja": "04_DETALLE_VIGENTES",
+          "filas_declaradas": 3146,
+          "columnas_declaradas": 19
+        },
+        {
+          "hoja": "05_DETALLE_NO_VIGENTES",
+          "filas_declaradas": 961,
+          "columnas_declaradas": 19
+        },
+        {
+          "hoja": "07_CARRERA_ESTADO",
+          "filas_declaradas": 65,
+          "columnas_declaradas": 4
+        },
+        {
+          "hoja": "08_RUT_MULTIMATRICULA",
+          "filas_declaradas": 35,
+          "columnas_declaradas": 4
+        },
+        {
+          "hoja": "09_CONSOLIDADO_J4",
+          "filas_declaradas": 14,
+          "columnas_declaradas": 8
+        },
+        {
+          "hoja": "10_CONSOLIDADO_JORNADAS",
+          "filas_declaradas": 30,
+          "columnas_declaradas": 22
+        }
+      ],
+      "06_DETALLE_TOTAL": {
+        "registros": 4105,
+        "grano": "matrícula por documento y código SIES",
+        "relacion_mu2026": "idéntico",
+        "identica_multiconjunto_rut_codigo_vig": true,
+        "solo_libro": 0,
+        "solo_mu": 0
+      },
+      "Hoja1": {
+        "registros": 2379,
+        "grano": "persona-cohorte con indicador anual retenido",
+        "por_cohorte": {
+          "2022": 305,
+          "2023": 366,
+          "2024": 558,
+          "2025": 1150
+        },
+        "coincide_con_H001_V24_por_cohorte_documento_retencion": true,
+        "origen": "C comparación con V24; no equivale a bitácora de creación",
+        "relacion_mu2026": "independiente: cohortes 2022–2025, no padrón de matrícula 2026"
+      },
+      "dictamen": {
+        "a_fuente_sies": "NO SIRVE: libro interno, no descarga PES acreditada",
+        "b_brecha_226": "NO SIRVE: derivado que reproduce nuestra base",
+        "c_otro_uso": "SIRVE: auditoría de nuestra MU y reproducción histórica H001; no es evidencia independiente de SIES"
+      }
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/SEGUNDA CARGA/ARCHIVOS VARIOS/Matricula Unificada_ ABF.xlsx",
+      "sha256": "02b48ea4f4de0cd210bfeb743149f063947e121aed70442a1f6a541cb2be1e44",
+      "autor_declarado": "ALEXI MARCELO BURGOS FLORES",
+      "ultimo_modificador_declarado": "Karla A. Munoz Gajardo",
+      "fecha_creacion_ooxml": "2026-04-09 14:56:32",
+      "fecha_modificacion_ooxml": "2026-04-09 21:02:13",
+      "nota_fechas": "Metadatos editables del libro; no acreditan fecha de recepción PES ni instante de extracción UMAS.",
+      "hojas": [
+        {
+          "hoja": "MATRICULA_UNIFICADA_32",
+          "filas_declaradas": 1283,
+          "columnas_declaradas": 38
+        },
+        {
+          "hoja": "Hoja3",
+          "filas_declaradas": 1,
+          "columnas_declaradas": 1
+        },
+        {
+          "hoja": "Vigentes",
+          "filas_declaradas": 3408,
+          "columnas_declaradas": 68
+        },
+        {
+          "hoja": "Continuidades",
+          "filas_declaradas": 401,
+          "columnas_declaradas": 68
+        }
+      ],
+      "MATRICULA_UNIFICADA_32": {
+        "registros": 1282,
+        "matriculas_con_llave": 1282,
+        "llaves_distintas": 1282,
+        "grano": "matrícula preparada de 32 campos MU",
+        "relacion_mu2026_documento_codigo": "independiente con intersección parcial",
+        "interseccion_mu2026": 1229,
+        "coincidencias_tambien_vig": 1036,
+        "sin_correspondencia_mu2026": 53,
+        "campos_ingreso_y_vig": {
+          "ANIO_ING_ACT": {
+            "2026": 1024,
+            "2024": 43,
+            "2025": 199,
+            "2023": 11,
+            "2022": 5
+          },
+          "SEM_ING_ACT": {
+            "1": 1278,
+            "2": 4
+          },
+          "ANIO_ING_ORI": {
+            "2026": 953,
+            "2024": 43,
+            "2025": 199,
+            "1900": 71,
+            "2023": 11,
+            "2022": 5
+          },
+          "SEM_ING_ORI": {
+            "1": 1278,
+            "2": 4
+          },
+          "VIG": {
+            "1": 1260,
+            "0": 22
+          }
+        }
+      },
+      "Vigentes": {
+        "registros": 3407,
+        "personas_documento": 3377,
+        "expedientes_documento_codcli": 3407,
+        "estados": {
+          "VIGENTE": 3407
+        },
+        "grano": "expediente UMAS; la persona puede repetirse por CODCLI",
+        "documentos_en_mu2026": 3259,
+        "relacion_documentos_mu2026": "independiente con intersección parcial",
+        "normalizacion_documento": "RUT cuerpo en columnas A/K + DV en L; se conserva DV numérico 0. No se cruza el cuerpo solo."
+      },
+      "Continuidades": {
+        "registros": 400,
+        "personas_documento": 400,
+        "expedientes_documento_codcli": 400,
+        "estados": {
+          "VIGENTE": 400
+        },
+        "grano": "expediente UMAS; la persona puede repetirse por CODCLI",
+        "documentos_en_mu2026": 394,
+        "relacion_documentos_mu2026": "independiente con intersección parcial"
+      },
+      "continuidades_ya_en_vigentes_expedientes": 400,
+      "asignacion_codigos_abril": {
+        "metodo": "Grupos 20261028; se conserva código MU de referencia sólo con familia única concordante, o candidato único; no se elige versión por totales",
+        "ambiguedades_filas": {
+          "version_no_univoca": 49
+        },
+        "fuente_mapa_sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc",
+        "limite": "Versión de referencia anual no acredita versión asignada al 09-04. Conteos por código son C/E y excluyen filas no atribuibles."
+      },
+      "dictamen": {
+        "a_fuente_sies": "NO SIRVE: preparación interna anterior al corte",
+        "b_brecha_226": "SIRVE PARCIAL: prueba de compatibilidad por código; no acredita aceptación SIES",
+        "c_otro_uso": "SIRVE: trazabilidad UMAS pre-corte, continuidad y preparación MU"
+      }
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/PRIMERA CARGA/RESPALDO MATRÍCULA UNIFICADA 2026.xlsx",
+      "sha256": "7a9240c994cbf375a0ff5e871f5a8eca70e94c8605fffa40b5b8c53d3366ada5",
+      "autor_declarado": "Natalia Gajardo Mejias",
+      "ultimo_modificador_declarado": "ALEXI MARCELO BURGOS FLORES",
+      "fecha_creacion_ooxml": "2026-01-06 15:27:12",
+      "fecha_modificacion_ooxml": "2026-03-25 15:05:00",
+      "nota_fechas": "Metadatos editables del libro; no acreditan fecha de recepción PES ni instante de extracción UMAS.",
+      "hojas": [
+        {
+          "hoja": "Hoja4",
+          "filas_declaradas": 35,
+          "columnas_declaradas": 5
+        },
+        {
+          "hoja": "Hoja5",
+          "filas_declaradas": 33,
+          "columnas_declaradas": 8
+        },
+        {
+          "hoja": "TASA RESPUESTA",
+          "filas_declaradas": 1040,
+          "columnas_declaradas": 33
+        },
+        {
+          "hoja": "SUBIR sin continuidad",
+          "filas_declaradas": 1040,
+          "columnas_declaradas": 32
+        },
+        {
+          "hoja": "SUBIR",
+          "filas_declaradas": 1188,
+          "columnas_declaradas": 32
+        },
+        {
+          "hoja": "BBDD",
+          "filas_declaradas": 1190,
+          "columnas_declaradas": 63
+        },
+        {
+          "hoja": "BD 2",
+          "filas_declaradas": 1189,
+          "columnas_declaradas": 73
+        },
+        {
+          "hoja": "Hoja2",
+          "filas_declaradas": 1189,
+          "columnas_declaradas": 20
+        },
+        {
+          "hoja": "Hoja3",
+          "filas_declaradas": 1313,
+          "columnas_declaradas": 2
+        }
+      ],
+      "SUBIR": {
+        "registros": 1187,
+        "matriculas_con_llave": 1187,
+        "llaves_distintas": 1187,
+        "grano": "matrícula preparada de 32 campos MU",
+        "relacion_mu2026_documento_codigo": "independiente con intersección parcial",
+        "interseccion_mu2026": 830,
+        "coincidencias_tambien_vig": 614,
+        "sin_correspondencia_mu2026": 357,
+        "campos_ingreso_y_vig": {
+          "ANIO_ING_ACT": {
+            "2025": 3,
+            "2026": 1184
+          },
+          "SEM_ING_ACT": {
+            "1": 1187
+          },
+          "ANIO_ING_ORI": {
+            "2026": 1039,
+            "2024": 148
+          },
+          "SEM_ING_ORI": {
+            "2": 3,
+            "1": 1184
+          },
+          "VIG": {
+            "1": 1187
+          }
+        },
+        "registros_en_48_codigos": 1050,
+        "por_codigo_en_48": {
+          "I162S2C10J4V1": 7,
+          "I162S2C111J4V1": 21,
+          "I162S2C112J4V1": 27,
+          "I162S2C113J4V1": 17,
+          "I162S2C114J2V1": 53,
+          "I162S2C115J2V1": 17,
+          "I162S2C116J4V1": 10,
+          "I162S2C118J4V1": 29,
+          "I162S2C124J4V1": 6,
+          "I162S2C125J4V1": 7,
+          "I162S2C1J1V2": 7,
+          "I162S2C1J2V4": 9,
+          "I162S2C1J4V2": 60,
+          "I162S2C3J4V2": 25,
+          "I162S2C3J4V3": 41,
+          "I162S2C46J1V1": 8,
+          "I162S2C46J2V1": 11,
+          "I162S2C46J4V1": 21,
+          "I162S2C46J4V3": 64,
+          "I162S2C47J2V1": 11,
+          "I162S2C57J1V1": 7,
+          "I162S2C57J2V1": 8,
+          "I162S2C57J4V1": 54,
+          "I162S2C6J2V2": 2,
+          "I162S2C6J4V2": 7,
+          "I162S2C76J1V1": 5,
+          "I162S2C76J2V1": 14,
+          "I162S2C76J4V1": 50,
+          "I162S2C77J1V1": 1,
+          "I162S2C77J4V1": 41,
+          "I162S2C78J2V1": 14,
+          "I162S2C78J4V1": 34,
+          "I162S2C79J2V1": 6,
+          "I162S2C79J4V1": 28,
+          "I162S2C83J4V1": 43,
+          "I162S2C84J4V1": 12,
+          "I162S2C85J4V1": 16,
+          "I162S2C86J4V1": 24,
+          "I162S2C87J4V1": 11,
+          "I162S2C87J4V2": 52,
+          "I162S2C88J4V1": 20,
+          "I162S2C89J4V1": 17,
+          "I162S2C90J2V2": 10,
+          "I162S2C91J1V1": 31,
+          "I162S2C91J2V1": 51,
+          "I162S3C114J2V1": 25,
+          "I162S3C115J2V1": 7,
+          "I162S3C91J2V1": 9
+        }
+      },
+      "dictamen": {
+        "a_fuente_sies": "NO SIRVE: libro de preparación anterior al corte, sin prueba de recepción PES",
+        "b_brecha_226": "SIRVE PARCIAL: propuesta pre-corte del primer año; no valida la cifra SIES",
+        "c_otro_uso": "SIRVE: preparación MU/FCU y control de cohorte inicial. SUBIR contiene estructura MU de 32 campos; no se reduce a FCU."
+      }
+    }
+  ],
+  "comparacion_abril_48_codigos": [
+    {
+      "codigo_sies": "I162S2C10J4V1",
+      "vigentes_abril_codigo_referencia_personas": 30,
+      "vig1_nuestra": 16,
+      "publicacion_sies": 17,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 14,
+      "coincidencias_con_familia_unica": 14,
+      "residuo_escenario_agregar_esos_vig0": -13,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C111J4V1",
+      "vigentes_abril_codigo_referencia_personas": 33,
+      "vig1_nuestra": 24,
+      "publicacion_sies": 30,
+      "brecha_publicado_menos_vig1": 6,
+      "nuestras_vig0_vigentes_abril_misma_familia": 9,
+      "coincidencias_con_familia_unica": 9,
+      "residuo_escenario_agregar_esos_vig0": -3,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 6,
+      "cubrible_por_candidatas": 6,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C112J4V1",
+      "vigentes_abril_codigo_referencia_personas": 64,
+      "vig1_nuestra": 56,
+      "publicacion_sies": 66,
+      "brecha_publicado_menos_vig1": 10,
+      "nuestras_vig0_vigentes_abril_misma_familia": 8,
+      "coincidencias_con_familia_unica": 8,
+      "residuo_escenario_agregar_esos_vig0": 2,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 10,
+      "cubrible_por_candidatas": 8,
+      "sin_cubrir": 2,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C113J4V1",
+      "vigentes_abril_codigo_referencia_personas": 36,
+      "vig1_nuestra": 26,
+      "publicacion_sies": 33,
+      "brecha_publicado_menos_vig1": 7,
+      "nuestras_vig0_vigentes_abril_misma_familia": 10,
+      "coincidencias_con_familia_unica": 10,
+      "residuo_escenario_agregar_esos_vig0": -3,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 7,
+      "cubrible_por_candidatas": 7,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C114J2V1",
+      "vigentes_abril_codigo_referencia_personas": 89,
+      "vig1_nuestra": 74,
+      "publicacion_sies": 94,
+      "brecha_publicado_menos_vig1": 20,
+      "nuestras_vig0_vigentes_abril_misma_familia": 11,
+      "coincidencias_con_familia_unica": 11,
+      "residuo_escenario_agregar_esos_vig0": 9,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 20,
+      "cubrible_por_candidatas": 11,
+      "sin_cubrir": 9,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C115J2V1",
+      "vigentes_abril_codigo_referencia_personas": 37,
+      "vig1_nuestra": 23,
+      "publicacion_sies": 27,
+      "brecha_publicado_menos_vig1": 4,
+      "nuestras_vig0_vigentes_abril_misma_familia": 15,
+      "coincidencias_con_familia_unica": 15,
+      "residuo_escenario_agregar_esos_vig0": -11,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 4,
+      "cubrible_por_candidatas": 4,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C116J4V1",
+      "vigentes_abril_codigo_referencia_personas": 33,
+      "vig1_nuestra": 23,
+      "publicacion_sies": 24,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 10,
+      "coincidencias_con_familia_unica": 10,
+      "residuo_escenario_agregar_esos_vig0": -9,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C118J4V1",
+      "vigentes_abril_codigo_referencia_personas": 89,
+      "vig1_nuestra": 62,
+      "publicacion_sies": 64,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 27,
+      "coincidencias_con_familia_unica": 27,
+      "residuo_escenario_agregar_esos_vig0": -25,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C124J4V1",
+      "vigentes_abril_codigo_referencia_personas": 35,
+      "vig1_nuestra": 24,
+      "publicacion_sies": 25,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 11,
+      "coincidencias_con_familia_unica": 11,
+      "residuo_escenario_agregar_esos_vig0": -10,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C125J4V1",
+      "vigentes_abril_codigo_referencia_personas": 25,
+      "vig1_nuestra": 11,
+      "publicacion_sies": 13,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 14,
+      "coincidencias_con_familia_unica": 14,
+      "residuo_escenario_agregar_esos_vig0": -12,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C1J1V2",
+      "vigentes_abril_codigo_referencia_personas": 30,
+      "vig1_nuestra": 33,
+      "publicacion_sies": 34,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 0,
+      "coincidencias_con_familia_unica": 0,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C1J2V4",
+      "vigentes_abril_codigo_referencia_personas": 30,
+      "vig1_nuestra": 29,
+      "publicacion_sies": 32,
+      "brecha_publicado_menos_vig1": 3,
+      "nuestras_vig0_vigentes_abril_misma_familia": 2,
+      "coincidencias_con_familia_unica": 2,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 3,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C1J4V2",
+      "vigentes_abril_codigo_referencia_personas": 214,
+      "vig1_nuestra": 232,
+      "publicacion_sies": 239,
+      "brecha_publicado_menos_vig1": 7,
+      "nuestras_vig0_vigentes_abril_misma_familia": 21,
+      "coincidencias_con_familia_unica": 21,
+      "residuo_escenario_agregar_esos_vig0": -14,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 7,
+      "cubrible_por_candidatas": 7,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C3J4V2",
+      "vigentes_abril_codigo_referencia_personas": 150,
+      "vig1_nuestra": 152,
+      "publicacion_sies": 153,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 7,
+      "coincidencias_con_familia_unica": 7,
+      "residuo_escenario_agregar_esos_vig0": -6,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C3J4V3",
+      "vigentes_abril_codigo_referencia_personas": 115,
+      "vig1_nuestra": 112,
+      "publicacion_sies": 113,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 3,
+      "coincidencias_con_familia_unica": 3,
+      "residuo_escenario_agregar_esos_vig0": -2,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C46J1V1",
+      "vigentes_abril_codigo_referencia_personas": 35,
+      "vig1_nuestra": 34,
+      "publicacion_sies": 35,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 1,
+      "coincidencias_con_familia_unica": 1,
+      "residuo_escenario_agregar_esos_vig0": 0,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C46J2V1",
+      "vigentes_abril_codigo_referencia_personas": 36,
+      "vig1_nuestra": 39,
+      "publicacion_sies": 41,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 4,
+      "coincidencias_con_familia_unica": 4,
+      "residuo_escenario_agregar_esos_vig0": -2,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C46J4V1",
+      "vigentes_abril_codigo_referencia_personas": 82,
+      "vig1_nuestra": 77,
+      "publicacion_sies": 78,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 4,
+      "coincidencias_con_familia_unica": 4,
+      "residuo_escenario_agregar_esos_vig0": -3,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C46J4V3",
+      "vigentes_abril_codigo_referencia_personas": 218,
+      "vig1_nuestra": 242,
+      "publicacion_sies": 256,
+      "brecha_publicado_menos_vig1": 14,
+      "nuestras_vig0_vigentes_abril_misma_familia": 14,
+      "coincidencias_con_familia_unica": 14,
+      "residuo_escenario_agregar_esos_vig0": 0,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 14,
+      "cubrible_por_candidatas": 14,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C47J2V1",
+      "vigentes_abril_codigo_referencia_personas": 24,
+      "vig1_nuestra": 25,
+      "publicacion_sies": 27,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 0,
+      "coincidencias_con_familia_unica": 0,
+      "residuo_escenario_agregar_esos_vig0": 2,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 2,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C57J1V1",
+      "vigentes_abril_codigo_referencia_personas": 25,
+      "vig1_nuestra": 24,
+      "publicacion_sies": 28,
+      "brecha_publicado_menos_vig1": 4,
+      "nuestras_vig0_vigentes_abril_misma_familia": 1,
+      "coincidencias_con_familia_unica": 1,
+      "residuo_escenario_agregar_esos_vig0": 3,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 4,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 3,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C57J2V1",
+      "vigentes_abril_codigo_referencia_personas": 26,
+      "vig1_nuestra": 22,
+      "publicacion_sies": 25,
+      "brecha_publicado_menos_vig1": 3,
+      "nuestras_vig0_vigentes_abril_misma_familia": 2,
+      "coincidencias_con_familia_unica": 2,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 3,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C57J4V1",
+      "vigentes_abril_codigo_referencia_personas": 220,
+      "vig1_nuestra": 255,
+      "publicacion_sies": 257,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 16,
+      "coincidencias_con_familia_unica": 16,
+      "residuo_escenario_agregar_esos_vig0": -14,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C6J2V2",
+      "vigentes_abril_codigo_referencia_personas": 3,
+      "vig1_nuestra": 6,
+      "publicacion_sies": 7,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 0,
+      "coincidencias_con_familia_unica": 0,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C6J4V2",
+      "vigentes_abril_codigo_referencia_personas": 40,
+      "vig1_nuestra": 46,
+      "publicacion_sies": 45,
+      "brecha_publicado_menos_vig1": -1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 5,
+      "coincidencias_con_familia_unica": 5,
+      "residuo_escenario_agregar_esos_vig0": -6,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 0,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "BRECHA_NEGATIVA"
+    },
+    {
+      "codigo_sies": "I162S2C76J1V1",
+      "vigentes_abril_codigo_referencia_personas": 10,
+      "vig1_nuestra": 6,
+      "publicacion_sies": 7,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 4,
+      "coincidencias_con_familia_unica": 4,
+      "residuo_escenario_agregar_esos_vig0": -3,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C76J2V1",
+      "vigentes_abril_codigo_referencia_personas": 25,
+      "vig1_nuestra": 18,
+      "publicacion_sies": 25,
+      "brecha_publicado_menos_vig1": 7,
+      "nuestras_vig0_vigentes_abril_misma_familia": 7,
+      "coincidencias_con_familia_unica": 7,
+      "residuo_escenario_agregar_esos_vig0": 0,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 7,
+      "cubrible_por_candidatas": 7,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C76J4V1",
+      "vigentes_abril_codigo_referencia_personas": 108,
+      "vig1_nuestra": 120,
+      "publicacion_sies": 132,
+      "brecha_publicado_menos_vig1": 12,
+      "nuestras_vig0_vigentes_abril_misma_familia": 21,
+      "coincidencias_con_familia_unica": 21,
+      "residuo_escenario_agregar_esos_vig0": -9,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 12,
+      "cubrible_por_candidatas": 12,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C77J1V1",
+      "vigentes_abril_codigo_referencia_personas": 0,
+      "vig1_nuestra": 0,
+      "publicacion_sies": 1,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 0,
+      "coincidencias_con_familia_unica": 0,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C77J4V1",
+      "vigentes_abril_codigo_referencia_personas": 85,
+      "vig1_nuestra": 91,
+      "publicacion_sies": 98,
+      "brecha_publicado_menos_vig1": 7,
+      "nuestras_vig0_vigentes_abril_misma_familia": 15,
+      "coincidencias_con_familia_unica": 15,
+      "residuo_escenario_agregar_esos_vig0": -8,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 7,
+      "cubrible_por_candidatas": 7,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C78J2V1",
+      "vigentes_abril_codigo_referencia_personas": 42,
+      "vig1_nuestra": 34,
+      "publicacion_sies": 36,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 6,
+      "coincidencias_con_familia_unica": 6,
+      "residuo_escenario_agregar_esos_vig0": -4,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C78J4V1",
+      "vigentes_abril_codigo_referencia_personas": 97,
+      "vig1_nuestra": 82,
+      "publicacion_sies": 88,
+      "brecha_publicado_menos_vig1": 6,
+      "nuestras_vig0_vigentes_abril_misma_familia": 26,
+      "coincidencias_con_familia_unica": 26,
+      "residuo_escenario_agregar_esos_vig0": -20,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 6,
+      "cubrible_por_candidatas": 6,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C79J2V1",
+      "vigentes_abril_codigo_referencia_personas": 29,
+      "vig1_nuestra": 26,
+      "publicacion_sies": 25,
+      "brecha_publicado_menos_vig1": -1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 5,
+      "coincidencias_con_familia_unica": 5,
+      "residuo_escenario_agregar_esos_vig0": -6,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 0,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "BRECHA_NEGATIVA"
+    },
+    {
+      "codigo_sies": "I162S2C79J4V1",
+      "vigentes_abril_codigo_referencia_personas": 103,
+      "vig1_nuestra": 86,
+      "publicacion_sies": 87,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 31,
+      "coincidencias_con_familia_unica": 31,
+      "residuo_escenario_agregar_esos_vig0": -30,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C83J4V1",
+      "vigentes_abril_codigo_referencia_personas": 78,
+      "vig1_nuestra": 84,
+      "publicacion_sies": 94,
+      "brecha_publicado_menos_vig1": 10,
+      "nuestras_vig0_vigentes_abril_misma_familia": 11,
+      "coincidencias_con_familia_unica": 11,
+      "residuo_escenario_agregar_esos_vig0": -1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 10,
+      "cubrible_por_candidatas": 10,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C84J4V1",
+      "vigentes_abril_codigo_referencia_personas": 25,
+      "vig1_nuestra": 30,
+      "publicacion_sies": 34,
+      "brecha_publicado_menos_vig1": 4,
+      "nuestras_vig0_vigentes_abril_misma_familia": 1,
+      "coincidencias_con_familia_unica": 1,
+      "residuo_escenario_agregar_esos_vig0": 3,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 4,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 3,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C85J4V1",
+      "vigentes_abril_codigo_referencia_personas": 65,
+      "vig1_nuestra": 52,
+      "publicacion_sies": 56,
+      "brecha_publicado_menos_vig1": 4,
+      "nuestras_vig0_vigentes_abril_misma_familia": 17,
+      "coincidencias_con_familia_unica": 17,
+      "residuo_escenario_agregar_esos_vig0": -13,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 4,
+      "cubrible_por_candidatas": 4,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C86J4V1",
+      "vigentes_abril_codigo_referencia_personas": 52,
+      "vig1_nuestra": 60,
+      "publicacion_sies": 62,
+      "brecha_publicado_menos_vig1": 2,
+      "nuestras_vig0_vigentes_abril_misma_familia": 13,
+      "coincidencias_con_familia_unica": 13,
+      "residuo_escenario_agregar_esos_vig0": -11,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 2,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C87J4V1",
+      "vigentes_abril_codigo_referencia_personas": 0,
+      "vig1_nuestra": 0,
+      "publicacion_sies": 5,
+      "brecha_publicado_menos_vig1": 5,
+      "nuestras_vig0_vigentes_abril_misma_familia": 0,
+      "coincidencias_con_familia_unica": 0,
+      "residuo_escenario_agregar_esos_vig0": 5,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 5,
+      "cubrible_por_candidatas": 0,
+      "sin_cubrir": 5,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C87J4V2",
+      "vigentes_abril_codigo_referencia_personas": 88,
+      "vig1_nuestra": 69,
+      "publicacion_sies": 77,
+      "brecha_publicado_menos_vig1": 8,
+      "nuestras_vig0_vigentes_abril_misma_familia": 36,
+      "coincidencias_con_familia_unica": 36,
+      "residuo_escenario_agregar_esos_vig0": -28,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 8,
+      "cubrible_por_candidatas": 8,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C88J4V1",
+      "vigentes_abril_codigo_referencia_personas": 48,
+      "vig1_nuestra": 47,
+      "publicacion_sies": 52,
+      "brecha_publicado_menos_vig1": 5,
+      "nuestras_vig0_vigentes_abril_misma_familia": 6,
+      "coincidencias_con_familia_unica": 6,
+      "residuo_escenario_agregar_esos_vig0": -1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 5,
+      "cubrible_por_candidatas": 5,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S2C89J4V1",
+      "vigentes_abril_codigo_referencia_personas": 33,
+      "vig1_nuestra": 30,
+      "publicacion_sies": 37,
+      "brecha_publicado_menos_vig1": 7,
+      "nuestras_vig0_vigentes_abril_misma_familia": 6,
+      "coincidencias_con_familia_unica": 6,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 7,
+      "cubrible_por_candidatas": 6,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C90J2V2",
+      "vigentes_abril_codigo_referencia_personas": 20,
+      "vig1_nuestra": 19,
+      "publicacion_sies": 22,
+      "brecha_publicado_menos_vig1": 3,
+      "nuestras_vig0_vigentes_abril_misma_familia": 1,
+      "coincidencias_con_familia_unica": 1,
+      "residuo_escenario_agregar_esos_vig0": 2,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 3,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 2,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C91J1V1",
+      "vigentes_abril_codigo_referencia_personas": 97,
+      "vig1_nuestra": 69,
+      "publicacion_sies": 87,
+      "brecha_publicado_menos_vig1": 18,
+      "nuestras_vig0_vigentes_abril_misma_familia": 17,
+      "coincidencias_con_familia_unica": 17,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 18,
+      "cubrible_por_candidatas": 17,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S2C91J2V1",
+      "vigentes_abril_codigo_referencia_personas": 107,
+      "vig1_nuestra": 92,
+      "publicacion_sies": 112,
+      "brecha_publicado_menos_vig1": 20,
+      "nuestras_vig0_vigentes_abril_misma_familia": 20,
+      "coincidencias_con_familia_unica": 20,
+      "residuo_escenario_agregar_esos_vig0": 0,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 20,
+      "cubrible_por_candidatas": 20,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S3C114J2V1",
+      "vigentes_abril_codigo_referencia_personas": 39,
+      "vig1_nuestra": 33,
+      "publicacion_sies": 36,
+      "brecha_publicado_menos_vig1": 3,
+      "nuestras_vig0_vigentes_abril_misma_familia": 2,
+      "coincidencias_con_familia_unica": 2,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 3,
+      "cubrible_por_candidatas": 2,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    },
+    {
+      "codigo_sies": "I162S3C115J2V1",
+      "vigentes_abril_codigo_referencia_personas": 21,
+      "vig1_nuestra": 18,
+      "publicacion_sies": 19,
+      "brecha_publicado_menos_vig1": 1,
+      "nuestras_vig0_vigentes_abril_misma_familia": 2,
+      "coincidencias_con_familia_unica": 2,
+      "residuo_escenario_agregar_esos_vig0": -1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 1,
+      "cubrible_por_candidatas": 1,
+      "sin_cubrir": 0,
+      "grupo_compatibilidad": "POSITIVA_CUBIERTA"
+    },
+    {
+      "codigo_sies": "I162S3C91J2V1",
+      "vigentes_abril_codigo_referencia_personas": 17,
+      "vig1_nuestra": 14,
+      "publicacion_sies": 18,
+      "brecha_publicado_menos_vig1": 4,
+      "nuestras_vig0_vigentes_abril_misma_familia": 3,
+      "coincidencias_con_familia_unica": 3,
+      "residuo_escenario_agregar_esos_vig0": 1,
+      "clase": "B abril; C cruce por familia candidata; E explicación SIES/versión abril",
+      "brecha_positiva": 4,
+      "cubrible_por_candidatas": 3,
+      "sin_cubrir": 1,
+      "grupo_compatibilidad": "POSITIVA_INSUFICIENTE"
+    }
+  ],
+  "comprobacion_abril": {
+    "codigos": 48,
+    "unidad": "matrículas documento/código, no suma de personas únicas entre códigos",
+    "suma_brecha": 226,
+    "vig0_mu2026_total": 960,
+    "vig0_nuestra_con_vigente_abril_familia_todos_codigos": 520,
+    "vig0_nuestra_con_vigente_abril_familia_en_48": 459,
+    "residuo_neto_escenario": -233,
+    "codigos_con_residuo_cero": 4,
+    "cuadra_todos_los_codigos": false,
+    "estado": "E: una fotografía interna no acredita aceptación SIES ni causa de la brecha",
+    "coincidencias_familia_unica_en_48": 459,
+    "nota_familia": "El mapa contiene IECIREOL con dos familias candidatas. Se separa el control de familia única; no se asigna familia por totales.",
+    "compatibilidad_por_codigo": {
+      "clase": "C/E compatibilidad, no aceptación SIES",
+      "hipotesis": "SIES pudo contar una parte de nuestras VIG 0 que estaban vigentes en abril, no necesariamente todas.",
+      "formula": "cubrible por código = min(max(publicado − VIG1 nuestra, 0), candidatas); porcentaje = suma cubrible / suma brechas positivas",
+      "codigos_positivos": 46,
+      "brecha_positiva": 228,
+      "codigos_positivos_cubiertos_totalmente": 30,
+      "codigos_candidatas_mayor_igual_brecha_incluye_negativos": 32,
+      "codigos_positivos_exactos": 4,
+      "cubrible_en_positivos_cubiertos_totalmente": 139,
+      "codigos_positivos_insuficientes": 16,
+      "cubrible_en_insuficientes": 54,
+      "cubrible_total": 193,
+      "sin_cubrir_total": 35,
+      "compatibilidad_porcentaje": 84.64912280701755,
+      "codigos_negativos": 2,
+      "brecha_negativa": -2,
+      "brecha_neta": 226,
+      "nota_conteos": "Los 32 códigos de candidatas >= brecha incluyen los dos negativos: 30 positivos cubiertos + 16 insuficientes + 2 negativos = 48. Los 193 cubribles suman 139 de los 30 positivos cubiertos y 54 de los 16 insuficientes.",
+      "clasificacion": "Compatible con aproximadamente el 85% de la brecha positiva (C/E); no acredita aceptación SIES.",
+      "no_cubiertas_por_codigo": [
+        {
+          "codigo_sies": "I162S2C112J4V1",
+          "brecha_positiva": 10,
+          "candidatas": 8,
+          "cubrible": 8,
+          "sin_cubrir": 2,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C114J2V1",
+          "brecha_positiva": 20,
+          "candidatas": 11,
+          "cubrible": 11,
+          "sin_cubrir": 9,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C1J1V2",
+          "brecha_positiva": 1,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C1J2V4",
+          "brecha_positiva": 3,
+          "candidatas": 2,
+          "cubrible": 2,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C47J2V1",
+          "brecha_positiva": 2,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 2,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C57J1V1",
+          "brecha_positiva": 4,
+          "candidatas": 1,
+          "cubrible": 1,
+          "sin_cubrir": 3,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C57J2V1",
+          "brecha_positiva": 3,
+          "candidatas": 2,
+          "cubrible": 2,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C6J2V2",
+          "brecha_positiva": 1,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C77J1V1",
+          "brecha_positiva": 1,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": true,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C84J4V1",
+          "brecha_positiva": 4,
+          "candidatas": 1,
+          "cubrible": 1,
+          "sin_cubrir": 3,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C87J4V1",
+          "brecha_positiva": 5,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 5,
+          "solo_publicado_sin_mu": true,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C89J4V1",
+          "brecha_positiva": 7,
+          "candidatas": 6,
+          "cubrible": 6,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C90J2V2",
+          "brecha_positiva": 3,
+          "candidatas": 1,
+          "cubrible": 1,
+          "sin_cubrir": 2,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C91J1V1",
+          "brecha_positiva": 18,
+          "candidatas": 17,
+          "cubrible": 17,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S3C114J2V1",
+          "brecha_positiva": 3,
+          "candidatas": 2,
+          "cubrible": 2,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S3C91J2V1",
+          "brecha_positiva": 4,
+          "candidatas": 3,
+          "cubrible": 3,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        }
+      ],
+      "negativas_por_codigo": [
+        {
+          "codigo_sies": "I162S2C6J4V2",
+          "diferencia": -1,
+          "estado": "E: diferencia negativa separada, sin compensar pendientes positivos"
+        },
+        {
+          "codigo_sies": "I162S2C79J2V1",
+          "diferencia": -1,
+          "estado": "E: diferencia negativa separada, sin compensar pendientes positivos"
+        }
+      ]
+    }
+  },
+  "prueba_cargas_acumulativas": {
+    "estado": "E_NO_EJECUTADA",
+    "manual": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/manual_matrícula_unificada.txt",
+      "sha256": "ce2dda6e32df94012679718e6e20f58a97fcf4ddf7038be5046d5d17238a67c9",
+      "acumulativas": "A página 15, líneas 468–470: cargas acumulativas, actualización al cargar correctamente",
+      "finalizada": "A página 16, líneas 483–498: historial y resultado Finalizado permiten acreditar éxito",
+      "vig0": "A páginas 17–18, líneas 519–529: para retirar matrícula se recarga VIG 0; no se borra el registro",
+      "identificacion": "Página 38, líneas 1266–1267 menciona misma identificación, sin explicitar aquí la composición completa de la llave."
+    },
+    "bloqueos": [
+      "No se acreditó en manual la composición exacta de la llave de actualización; no se sustituye por una llave inferida de nuestros scripts.",
+      "No hay historial PES completo de cargas Finalizado que acredite orden, éxito de primeras/segunda/tercera cargas y recepción de rectificación 23-06.",
+      "No se localizó evidencia verificable de reinicio/eliminación de cargas 2026 en los respaldos revisados. Ausencia de evidencia no prueba que no ocurriera."
+    ],
+    "archivos_candidatos": [
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/08-05-2026_23-21-16_Matrícula-Pregrado-2026.csv_orig 1.zip",
+        "bytes": 121103,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/11-05-2026_12-12-47_Matrícula-Pregrado-2026.csv_orig 1.zip",
+        "bytes": 3592,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/08-05-2026_23-21-16_Matrícula-Pregrado-2026.csv_orig.zip",
+        "bytes": 121103,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/CUARTA SUBIDA FINAL/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+        "bytes": 508017,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/PRIMERA CARGA/Libro1.csv",
+        "bytes": 127999,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/QUINTA SUBIDA +95/11-05-2026_12-12-47_Matrícula-Pregrado-2026.csv_orig.zip",
+        "bytes": 3592,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/QUINTA SUBIDA +95/matricula_unificada_2026_COMPLEMENTO_95_CODCLI_PARA_SUBIR.csv",
+        "bytes": 11607,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/QUINTA SUBIDA +95/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+        "bytes": 508017,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/RECTIFICACIÓN 23-06/RECTIFICACION_MU2026_RECONSTRUIDA_DESDE_CERO_CON_ENCABEZADOS.xlsx",
+        "bytes": 25548,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/RECTIFICACIÓN 23-06/RESUMEN_EJECUTIVO_RECTIFICACION_MU2026_RECONSTRUIDA.xlsx",
+        "bytes": 21637,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/SEGUNDA CARGA/ARCHIVOS VARIOS/matricula_unificada_ok.csv",
+        "bytes": 25128,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/TERCERA CARGA 7-5 A LAS 1 DE LA TARDE/07-05-2026_12-30-41_Matrícula-Pregrado-2026.csv_orig.zip",
+        "bytes": 100470,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/TERCERA CARGA 7-5 A LAS 1 DE LA TARDE/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+        "bytes": 424357,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      },
+      {
+        "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/matricula_unificada_2026_pregrado_PARA_SUBIR.csv",
+        "bytes": 508017,
+        "recepcion_finalizada": "E no acreditada por nombre o existencia del archivo"
+      }
+    ],
+    "vig1_resultante": null,
+    "llaves_antiguas_no_sobrescritas": null,
+    "nota": "No se reconstruye un estado PES fingiendo que los envíos locales equivalen a cargas aceptadas.",
+    "respaldos_internos_revisados": [
+      {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/CIERRE_PES_READY_MU2026.md",
+        "sha256": "27c2594a7e5dcadda917f87e182be8174e66e40bb65c4cd022cc72758afe3302"
+      },
+      {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/gate/gate_final_mu_2026.md",
+        "sha256": "5d61831de0b2a3dde2d7e45b12aa5cdf99fe8e9314dbe8a70cd39aedc3a89b96"
+      },
+      {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/decision_operativa_mu_2026.md",
+        "sha256": "c346957013fb8cab44f3a47591db196d2fbdc7f3e68e050895b583a1970a1274"
+      },
+      {
+        "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/control/reportes/ejecucion_oficial_mu_2026.md",
+        "sha256": "3f02cdc040898b67f656c12d6d4c378b045c394148097980b6cae1d0d3a81a78"
+      }
+    ],
+    "evidencia_parcial": "B: CIERRE_PES_READY_MU2026.md del 07-05 declara 3.402 filas y comparación con un archivo que completó carga; el gate registra 3.433 filas brutas. Son controles internos, no historial completo de recepciones PES ni evidencia de las cargas posteriores.",
+    "vig1_nuestra_institucional": 3145,
+    "publicacion_sies_pregrado": 3371,
+    "preparacion_sensibilidad": {
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "clase": "C/E, llaves candidatas no confirmadas como llave normativa PES",
+      "llave_1": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "CODIGO_UNICO"
+      ],
+      "llave_2": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_CAR"
+      ],
+      "documento": "Tipo, número y DV originales; DV 0 se conserva. No se usa cuerpo de RUT solo.",
+      "antecedente": "Las formulaciones originales documento+código único y documento+S+C+J+V son equivalentes con I162 fijo y componentes coherentes. Se reemplaza la segunda.",
+      "relacion_entre_llaves": "L1 conserva código único completo; L2 gruesa omite sede, jornada y versión y puede sobrescribir contextos distintos de una misma carrera.",
+      "hipotesis": "C/E: si L1 reproduce mejor la publicación que L2 y el linaje confirma registros antiguos no sobrescritos, éstos son una explicación candidata; no es prueba de aceptación SIES.",
+      "fuente_requerida": "Export o captura del Historial de Carga MU2026, más ver el archivo cargado de cada carga Finalizado; Alexi descargará estos respaldos.",
+      "prohibicion": "No reconstruir con archivos locales de envío, orig.zip, PARA_SUBIR o reconstrucciones internas.",
+      "protocolo": "PREPARACION_CARGAS_ACUMULATIVAS_MU2026.json"
+    }
+  },
+  "detalle_privado": {
+    "ruta": "/Users/alexi/.local/share/ipss/matriz_cuadratura_totales_20261028/DICTAMEN_LIBROS_MU2026_DETALLE.json",
+    "sha256": "a46e639c8f41e61623c5106b483599eb254d5d97eceed48f1eff6a008b8147e3"
+  },
+  "fuentes_intactas_por_hash": true,
+  "fuente_base_mu": {
+    "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+    "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+    "registros_mu2026": 4105
+  }
+}

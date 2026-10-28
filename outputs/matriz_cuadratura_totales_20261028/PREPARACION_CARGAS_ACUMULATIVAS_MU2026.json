@@ -1,0 +1,127 @@
+{
+  "estado": "PREPARADO_NO_EJECUTADO",
+  "proceso": "Matrícula Unificada 2026; institución 162",
+  "clase": "A manual; C diseño; E llave PES y recepción individual por acreditar",
+  "manual": {
+    "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/manual_matrícula_unificada.txt",
+    "sha256": "ce2dda6e32df94012679718e6e20f58a97fcf4ddf7038be5046d5d17238a67c9",
+    "pagina_15_lineas": "468–478",
+    "pagina_15": "Las cargas son acumulativas; actualizan registros al volver a cargarse correctamente (Terminado ok); el resultado exitoso es Finalizado.",
+    "pagina_16_lineas": "483–498",
+    "pagina_16": "Historial de Carga ordenado por fecha; campos Fecha Inicio, Fecha Fin, Resultado; acción ver el archivo cargado."
+  },
+  "fuentes_requeridas": [
+    {
+      "fuente": "Export o captura del Historial de Carga MU2026 que descargará Alexi",
+      "campos": [
+        "identificador de carga, si existe",
+        "Fecha Inicio",
+        "Fecha Fin",
+        "Resultado",
+        "evidencia de eliminación/reinicio, si existe"
+      ],
+      "validacion": "Transcribir capturas con revisión; conservar imagen original en privado, ruta y hash. Ordenar por el orden acreditado de aplicación; tiempos empatados o contradictorios quedan E."
+    },
+    {
+      "fuente": "ver el archivo cargado de cada carga Finalizado, descargado de PES por Alexi",
+      "metadatos": [
+        "vínculo a la fila del historial",
+        "ruta privada",
+        "SHA-256",
+        "filas",
+        "columnas",
+        "codificación",
+        "delimitador"
+      ],
+      "validacion": "Cada archivo debe corresponder a su carga exitosa y tener esquema individual interpretable. Los nombres de envío no prueban aceptación."
+    }
+  ],
+  "fuentes_prohibidas_para_reconstruccion": [
+    "Nuestros archivos locales de envío",
+    "*_orig.zip",
+    "*_PARA_SUBIR.csv",
+    "CSV de errores",
+    "Consolidados o rectificaciones reconstruidos internamente"
+  ],
+  "llaves_candidatas": [
+    {
+      "id": "L1",
+      "clase": "C/E sensibilidad",
+      "campos": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "CODIGO_UNICO"
+      ],
+      "nota": "Documento incluye tipo, número y DV; no cuerpo de RUT solo."
+    },
+    {
+      "id": "L2",
+      "clase": "C/E sensibilidad",
+      "campos": [
+        "TIPO_DOC",
+        "N_DOC",
+        "DV",
+        "COD_CAR"
+      ],
+      "nota": "Llave gruesa: excluye sede, jornada y versión; puede sobrescribir registros de distintos contextos de la misma carrera."
+    }
+  ],
+  "normalizacion": [
+    "Conservar originales y columnas derivadas; None se distingue de 0. Prohibido x or vacío para documento/DV.",
+    "Conservar tipo documental y ceros iniciales textuales; DV 0 sigue siendo 0. Sin aproximaciones ni cruces por nombre.",
+    "Validar institución I162 y coherencia de código completo con S/C/J/V. No inventar componentes ni resolver discrepancias por totales."
+  ],
+  "antecedente_llaves_equivalentes": {
+    "clase": "C",
+    "llave_1_original": [
+      "TIPO_DOC",
+      "N_DOC",
+      "DV",
+      "CODIGO_UNICO"
+    ],
+    "llave_2_original": [
+      "TIPO_DOC",
+      "N_DOC",
+      "DV",
+      "COD_SED",
+      "COD_CAR",
+      "JOR",
+      "VERSION"
+    ],
+    "conclusion": "Con institución I162 fija, código completo coherente y componentes normalizados, las dos formulaciones originales son equivalentes. La segunda se reemplaza por documento + COD_CAR para ofrecer una sensibilidad distinta."
+  },
+  "relacion_llaves_vigentes": "L1 conserva sede, jornada y versión dentro del código único; L2 agrupa por documento + COD_CAR y puede unir contextos distintos. Ambas son sensibilidad C/E, no llave normativa PES acreditada.",
+  "hipotesis_sensibilidad": {
+    "clase": "C/E",
+    "condicion": "Si L1 reproduce la publicación mejor que L2, y el linaje identifica registros antiguos no sobrescritos bajo L1 que L2 sustituye.",
+    "interpretacion": "Los registros antiguos no sobrescritos son una explicación candidata, no aceptación SIES ni demostración causal.",
+    "evaluacion_futura": "Comparar discrepancia absoluta total por código y cantidad de códigos coincidentes, en el mismo universo pregrado; mostrar también el neto y el foco de 48 códigos, sin elegir por compensación de diferencias. Si las métricas discrepan, informar el resultado mixto.",
+    "resultado": null
+  },
+  "algoritmo_futuro_no_ejecutado": [
+    "Verificar hashes y relación archivo recibido ↔ fila del historial. Admitir sólo Finalizado; documentar errores y faltantes sin aplicarlos.",
+    "Acreditar el orden de aplicación y cualquier eliminación/reinicio antes de acumular; no asumir que no existieron.",
+    "Mantener dos estados en paralelo, indexados por L1 documento + código único y L2 documento + COD_CAR. Una llave repetida reemplaza el registro completo con el de la carga posterior; VIG 0 actualiza, no elimina físicamente.",
+    "Duplicados incompatibles dentro de una carga o sin orden acreditado bloquean el grupo; no elegir primera ni última fila por conveniencia.",
+    "Conservar linaje de cada llave: primera carga, última carga, cambios VIG, y si una llave antigua nunca volvió a ser sobrescrita.",
+    "Conciliar ambos estados en privado y producir sólo agregados VIG1/VIG0 por código, incluidas altas antiguas no sobrescritas; separar registros de L1 que la llave gruesa L2 sustituye.",
+    "Comparar con 3.371 pregrado publicados y 3.145 VIG1 nuestras, más los 48 códigos con diferencia; no ajustar bases ni tasas."
+  ],
+  "controles_futuros": [
+    "Cobertura del historial y todos los archivos Finalizado",
+    "Identidad y componentes completos; DV 0 conservado",
+    "Orden acreditado, sin empates no resueltos",
+    "Reinicio/eliminación documentado o incidencia E explícita",
+    "Linaje de actualizaciones y llaves antiguas",
+    "Equivalencia de las dos formulaciones originales; L1 vigente y L2 gruesa no se fuerzan a coincidir",
+    "Comparación por código de discrepancia absoluta, códigos coincidentes y neto, con linaje de sobrescritura",
+    "Sumas de registros/matrículas/personas con unidades separadas",
+    "Salida sin identificadores"
+  ],
+  "estado_reconstruido": null,
+  "vig1_resultante": null,
+  "llaves_antiguas_no_sobrescritas": null,
+  "ejecucion_con_archivos_reales": false,
+  "limitacion": "Este entregable es protocolo y esquema de sensibilidad; no implementa ni ejecuta aún una reconstrucción de PES."
+}

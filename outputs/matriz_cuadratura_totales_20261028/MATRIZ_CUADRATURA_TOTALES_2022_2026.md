@@ -95,3 +95,39 @@ Pendientes:
 | 2024 | 346 | 345 | 204 | 57 |
 
 B/C: presencias por documento, sin atribución de expediente. MU 2021 procede del respaldo histórico inventariado, separado de la base 142342.
+
+No existe aún (D, Alexi): el proceso AC 2027 ocurre después de MU 2027 (abril–mayo 2027); su precarga contendrá la matrícula 2026 registrada por SIES. No se presenta como calendario oficial A. B/C: no localizada en los ámbitos revisados. Método 2026 no ejecutado.
+
+## Búsquedas y dictamen de libros MU2026
+
+- [BUSQUEDA_DESCARGA_PES_MU2026](BUSQUEDA_DESCARGA_PES_MU2026.md): evidencia y hashes en el JSON homónimo.
+- [BUSQUEDA_PRECARGA_AC2027](BUSQUEDA_PRECARGA_AC2027.md): evidencia y hashes en el JSON homónimo.
+- [DICTAMEN_LIBROS_Y_CARGAS_MU2026](DICTAMEN_LIBROS_Y_CARGAS_MU2026.md): evidencia y hashes en el JSON homónimo.
+- [PREPARACION_CARGAS_ACUMULATIVAS_MU2026](PREPARACION_CARGAS_ACUMULATIVAS_MU2026.md): evidencia y hashes en el JSON homónimo.
+
+B/C: 06_DETALLE_TOTAL reproduce las 4.105 matrículas y Hoja1 las 2.379 filas históricas H001. ABF: SIRVE PARCIAL; 193/228 = 84.65% de la brecha positiva compatible con parte de las VIG0 vigentes en abril (aproximadamente 85%, C/E); no acredita aceptación SIES. No se suman automáticamente las 459 candidatas.
+
+Grupos disjuntos: 30 positivos cubiertos (4 exactos), 16 insuficientes y 2 negativos (-2). La brecha positiva 228 más la negativa -2 conserva la neta 226. Los 32 códigos con candidatas >= brecha incluyen los dos negativos.
+
+### Pendientes E: 35 matrículas no cubiertas por candidatas de abril
+
+| Código | Brecha positiva | Candidatas | Cubrible | Sin cubrir |
+|---|---:|---:|---:|---:|
+| I162S2C112J4V1 | 10 | 8 | 8 | 2 |
+| I162S2C114J2V1 | 20 | 11 | 11 | 9 |
+| I162S2C1J1V2 | 1 | 0 | 0 | 1 |
+| I162S2C1J2V4 | 3 | 2 | 2 | 1 |
+| I162S2C47J2V1 | 2 | 0 | 0 | 2 |
+| I162S2C57J1V1 | 4 | 1 | 1 | 3 |
+| I162S2C57J2V1 | 3 | 2 | 2 | 1 |
+| I162S2C6J2V2 | 1 | 0 | 0 | 1 |
+| I162S2C77J1V1 | 1 | 0 | 0 | 1 |
+| I162S2C84J4V1 | 4 | 1 | 1 | 3 |
+| I162S2C87J4V1 | 5 | 0 | 0 | 5 |
+| I162S2C89J4V1 | 7 | 6 | 6 | 1 |
+| I162S2C90J2V2 | 3 | 1 | 1 | 2 |
+| I162S2C91J1V1 | 18 | 17 | 17 | 1 |
+| I162S3C114J2V1 | 3 | 2 | 2 | 1 |
+| I162S3C91J2V1 | 4 | 3 | 3 | 1 |
+
+Las dos brechas negativas se detallan en el dictamen y no compensan las 35 pendientes positivas. E: reconstrucción no ejecutada. Las dos formulaciones originales eran equivalentes con I162 fijo; se preparan ahora L1 documento+código único y L2 gruesa documento+COD_CAR, sin sede, jornada ni versión (C/E). Si L1 reproduce mejor la publicación y el linaje confirma registros antiguos no sobrescritos, éstos serán una explicación candidata. Alexi descargará el Historial y el archivo cargado de cada carga Finalizado. No se usarán envíos locales. Fuentes, bases, denominadores y tasas intactos.

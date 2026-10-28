@@ -3070,15 +3070,224 @@
     "hipotesis": "E: algunos VIG 0 de nuestra MU 2026 podrían figurar matriculados en SIES, como se observa en 2025; no se extrapolan 73 ni 960 a retenidos ni se corrigen tasas.",
     "respaldo_hipotesis": "B cruce MU 2025 con precarga AC 2026: 73/73 VIG 0 aparecen con VIGENCIA 1",
     "metodo_preparado": "metodo_mu2026.py; sólo 48 códigos con diferencia; VIG 1 nuestra / VIG 0 nuestra / no está en nuestra base; no ejecutado con fuente real.",
-    "metodo_sha256": "a673ca2ec8f976ae70f011a5d29b5115ab94f882978278dec0bdf1f27edd85ae"
+    "metodo_sha256": "a673ca2ec8f976ae70f011a5d29b5115ab94f882978278dec0bdf1f27edd85ae",
+    "precarga_ac2027_disponibilidad": {
+      "clase": "D rótulo aprobado por Alexi; B/C búsqueda local",
+      "fecha_busqueda": "2026-10-28",
+      "resultado": "No existe aún (D, Alexi): el proceso AC 2027 ocurre después de MU 2027 (abril–mayo 2027); su precarga contendrá la matrícula 2026 registrada por SIES",
+      "observacion_busqueda": "No localizada en catálogos, OneDrive Enviados/Avance Curricular, Descargas ni Escritorio; no existe carpeta 2027 en el ámbito OneDrive revisado.",
+      "fecha_oficial": null,
+      "metodo_ejecutado": false
+    },
+    "compatibilidad_abf_abril": {
+      "clase": "C/E compatibilidad, no aceptación SIES",
+      "hipotesis": "SIES pudo contar una parte de nuestras VIG 0 que estaban vigentes en abril, no necesariamente todas.",
+      "formula": "cubrible por código = min(max(publicado − VIG1 nuestra, 0), candidatas); porcentaje = suma cubrible / suma brechas positivas",
+      "codigos_positivos": 46,
+      "brecha_positiva": 228,
+      "codigos_positivos_cubiertos_totalmente": 30,
+      "codigos_candidatas_mayor_igual_brecha_incluye_negativos": 32,
+      "codigos_positivos_exactos": 4,
+      "cubrible_en_positivos_cubiertos_totalmente": 139,
+      "codigos_positivos_insuficientes": 16,
+      "cubrible_en_insuficientes": 54,
+      "cubrible_total": 193,
+      "sin_cubrir_total": 35,
+      "compatibilidad_porcentaje": 84.64912280701755,
+      "codigos_negativos": 2,
+      "brecha_negativa": -2,
+      "brecha_neta": 226,
+      "nota_conteos": "Los 32 códigos de candidatas >= brecha incluyen los dos negativos: 30 positivos cubiertos + 16 insuficientes + 2 negativos = 48. Los 193 cubribles suman 139 de los 30 positivos cubiertos y 54 de los 16 insuficientes.",
+      "clasificacion": "Compatible con aproximadamente el 85% de la brecha positiva (C/E); no acredita aceptación SIES.",
+      "no_cubiertas_por_codigo": [
+        {
+          "codigo_sies": "I162S2C112J4V1",
+          "brecha_positiva": 10,
+          "candidatas": 8,
+          "cubrible": 8,
+          "sin_cubrir": 2,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C114J2V1",
+          "brecha_positiva": 20,
+          "candidatas": 11,
+          "cubrible": 11,
+          "sin_cubrir": 9,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C1J1V2",
+          "brecha_positiva": 1,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C1J2V4",
+          "brecha_positiva": 3,
+          "candidatas": 2,
+          "cubrible": 2,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C47J2V1",
+          "brecha_positiva": 2,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 2,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C57J1V1",
+          "brecha_positiva": 4,
+          "candidatas": 1,
+          "cubrible": 1,
+          "sin_cubrir": 3,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C57J2V1",
+          "brecha_positiva": 3,
+          "candidatas": 2,
+          "cubrible": 2,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C6J2V2",
+          "brecha_positiva": 1,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C77J1V1",
+          "brecha_positiva": 1,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": true,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C84J4V1",
+          "brecha_positiva": 4,
+          "candidatas": 1,
+          "cubrible": 1,
+          "sin_cubrir": 3,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C87J4V1",
+          "brecha_positiva": 5,
+          "candidatas": 0,
+          "cubrible": 0,
+          "sin_cubrir": 5,
+          "solo_publicado_sin_mu": true,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C89J4V1",
+          "brecha_positiva": 7,
+          "candidatas": 6,
+          "cubrible": 6,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C90J2V2",
+          "brecha_positiva": 3,
+          "candidatas": 1,
+          "cubrible": 1,
+          "sin_cubrir": 2,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S2C91J1V1",
+          "brecha_positiva": 18,
+          "candidatas": 17,
+          "cubrible": 17,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S3C114J2V1",
+          "brecha_positiva": 3,
+          "candidatas": 2,
+          "cubrible": 2,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        },
+        {
+          "codigo_sies": "I162S3C91J2V1",
+          "brecha_positiva": 4,
+          "candidatas": 3,
+          "cubrible": 3,
+          "sin_cubrir": 1,
+          "solo_publicado_sin_mu": false,
+          "estado": "E"
+        }
+      ],
+      "negativas_por_codigo": [
+        {
+          "codigo_sies": "I162S2C6J4V2",
+          "diferencia": -1,
+          "estado": "E: diferencia negativa separada, sin compensar pendientes positivos"
+        },
+        {
+          "codigo_sies": "I162S2C79J2V1",
+          "diferencia": -1,
+          "estado": "E: diferencia negativa separada, sin compensar pendientes positivos"
+        }
+      ]
+    }
+  },
+  "informes_busqueda_y_dictamen": {
+    "BUSQUEDA_DESCARGA_PES_MU2026": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/BUSQUEDA_DESCARGA_PES_MU2026.json",
+      "sha256": "926c931d7dd7350ebb1c579e689cb3f0c1f563bca02883a56863bb485022b745",
+      "clase": "B/C evidencia; D rótulo; E atribución y reconstrucción pendientes"
+    },
+    "BUSQUEDA_PRECARGA_AC2027": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/BUSQUEDA_PRECARGA_AC2027.json",
+      "sha256": "809ef7ddbcaafe6ab893e25e583c1282b6c442feccb552235704789a1653e41c",
+      "clase": "B/C evidencia; D rótulo; E atribución y reconstrucción pendientes"
+    },
+    "DICTAMEN_LIBROS_Y_CARGAS_MU2026": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/DICTAMEN_LIBROS_Y_CARGAS_MU2026.json",
+      "sha256": "5f8f45b2ddc6e510d23d23dc796032a459886452b2226b80117ad343fe955c53",
+      "clase": "B/C evidencia; D rótulo; E atribución y reconstrucción pendientes"
+    },
+    "PREPARACION_CARGAS_ACUMULATIVAS_MU2026": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/PREPARACION_CARGAS_ACUMULATIVAS_MU2026.json",
+      "sha256": "4f56077391bed60b9206227806c88bd3bdb53d72565a40f97b808530db4b545f",
+      "clase": "B/C evidencia; D rótulo; E atribución y reconstrucción pendientes"
+    }
   },
   "revision_c35j4": {
     "anio": 2022,
     "familia": "I162S2C35J4",
     "codcarpr_observados_en_personas_da": {
+      "ASREOL": 3,
       "ASRE": 1,
-      "TPAREOL": 1,
-      "ASREOL": 3
+      "TPAREOL": 1
     },
     "estado": "E",
     "nota": "Oferta histórica identifica Técnico en Análisis de Sistemas, pero observar otros expedientes actuales no acredita equivalencia histórica. No se agrega familia a partir de nombre ni RUT."

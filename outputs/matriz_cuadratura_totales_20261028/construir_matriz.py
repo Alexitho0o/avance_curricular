@@ -324,6 +324,15 @@ result['pendientes']=[x for x in result['pendientes'] if not x.startswith('Aline
 result['pendientes'].append('A: ventana 2026 escrita en instructivo págs. 3 y 6. Ventanas de procesos históricos corroboradas por el reporte y rótulos B; no se extrapola norma 2026 a otros manuales.')
 result['brecha_mu2026']={'estado':'E','valor_conservado':226,'investigacion_realizada':False,'fuente_mrun_ipss_disponible_hasta':2025,'requisito':'Fuente SIES individual MU 2026: descarga lo cargado PES o precarga AC 2027; metadato de año y hash obligatorios','hipotesis':'E: algunos VIG 0 de nuestra MU 2026 podrían figurar matriculados en SIES, como se observa en 2025; no se extrapolan 73 ni 960 a retenidos ni se corrigen tasas.','respaldo_hipotesis':'B cruce MU 2025 con precarga AC 2026: 73/73 VIG 0 aparecen con VIGENCIA 1','metodo_preparado':'metodo_mu2026.py; sólo 48 códigos con diferencia; VIG 1 nuestra / VIG 0 nuestra / no está en nuestra base; no ejecutado con fuente real.'}
 result['brecha_mu2026']['metodo_sha256']=hashfile(OUT/'metodo_mu2026.py')
+rotulo_ac2027='No existe aún (D, Alexi): el proceso AC 2027 ocurre después de MU 2027 (abril–mayo 2027); su precarga contendrá la matrícula 2026 registrada por SIES'
+result['brecha_mu2026']['precarga_ac2027_disponibilidad']={'clase':'D rótulo aprobado por Alexi; B/C búsqueda local','fecha_busqueda':'2026-10-28','resultado':rotulo_ac2027,'observacion_busqueda':'No localizada en catálogos, OneDrive Enviados/Avance Curricular, Descargas ni Escritorio; no existe carpeta 2027 en el ámbito OneDrive revisado.','fecha_oficial':None,'metodo_ejecutado':False}
+for nombre in ('BUSQUEDA_DESCARGA_PES_MU2026','BUSQUEDA_PRECARGA_AC2027','DICTAMEN_LIBROS_Y_CARGAS_MU2026','PREPARACION_CARGAS_ACUMULATIVAS_MU2026'):
+    p=OUT/(nombre+'.json')
+    if p.exists():result.setdefault('informes_busqueda_y_dictamen',{})[nombre]={'ruta':str(p),'sha256':hashfile(p),'clase':'B/C evidencia; D rótulo; E atribución y reconstrucción pendientes'}
+dictamen_path=OUT/'DICTAMEN_LIBROS_Y_CARGAS_MU2026.json'
+if dictamen_path.exists():
+    dictamen=json.loads(dictamen_path.read_text())
+    result['brecha_mu2026']['compatibilidad_abf_abril']=dictamen['comprobacion_abril']['compatibilidad_por_codigo']
 c35=collections.Counter()
 for r in mu[2022]:
     if (normalizar(r['COD_SED']),normalizar(r['COD_CAR']),normalizar(r['JOR']))==('2','35','4'):
@@ -367,6 +376,19 @@ for y,t in titulos.items():
     a=t['personas_con_mu_por_anio']; lines.append(f"| {y} | {t['registros']} | {t['personas_con_llave_comparable']} | {a[str(y-1)] if a[str(y-1)] is not None else 'E'} | {a[str(y)]} |")
 lines += ['', 'B/C: presencias por documento, sin atribución de expediente. MU 2021 procede del respaldo histórico inventariado, separado de la base 142342.']
 (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+with (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.md').open('a',encoding='utf-8') as f:
+    f.write('\n'+rotulo_ac2027+'. No se presenta como calendario oficial A. B/C: no localizada en los ámbitos revisados. Método 2026 no ejecutado.\n')
+    f.write('\n## Búsquedas y dictamen de libros MU2026\n\n')
+    for nombre in result.get('informes_busqueda_y_dictamen',{}):f.write(f'- [{nombre}]({nombre}.md): evidencia y hashes en el JSON homónimo.\n')
+    audit_path=OUT/'DICTAMEN_LIBROS_Y_CARGAS_MU2026.json'
+    if audit_path.exists():
+        audit=json.loads(audit_path.read_text());a=audit['comprobacion_abril']
+        c=a['compatibilidad_por_codigo']
+        f.write(f"\nB/C: 06_DETALLE_TOTAL reproduce las 4.105 matrículas y Hoja1 las 2.379 filas históricas H001. ABF: SIRVE PARCIAL; {c['cubrible_total']}/{c['brecha_positiva']} = {c['compatibilidad_porcentaje']:.2f}% de la brecha positiva compatible con parte de las VIG0 vigentes en abril (aproximadamente 85%, C/E); no acredita aceptación SIES. No se suman automáticamente las 459 candidatas.\n")
+        f.write(f"\nGrupos disjuntos: {c['codigos_positivos_cubiertos_totalmente']} positivos cubiertos (4 exactos), {c['codigos_positivos_insuficientes']} insuficientes y {c['codigos_negativos']} negativos ({c['brecha_negativa']}). La brecha positiva {c['brecha_positiva']} más la negativa {c['brecha_negativa']} conserva la neta 226. Los 32 códigos con candidatas >= brecha incluyen los dos negativos.\n")
+        f.write('\n### Pendientes E: 35 matrículas no cubiertas por candidatas de abril\n\n| Código | Brecha positiva | Candidatas | Cubrible | Sin cubrir |\n|---|---:|---:|---:|---:|\n')
+        for r in c['no_cubiertas_por_codigo']:f.write(f"| {r['codigo_sies']} | {r['brecha_positiva']} | {r['candidatas']} | {r['cubrible']} | {r['sin_cubrir']} |\n")
+        f.write('\nLas dos brechas negativas se detallan en el dictamen y no compensan las 35 pendientes positivas. E: reconstrucción no ejecutada. Las dos formulaciones originales eran equivalentes con I162 fijo; se preparan ahora L1 documento+código único y L2 gruesa documento+COD_CAR, sin sede, jornada ni versión (C/E). Si L1 reproduce mejor la publicación y el linaje confirma registros antiguos no sobrescritos, éstos serán una explicación candidata. Alexi descargará el Historial y el archivo cargado de cada carga Finalizado. No se usarán envíos locales. Fuentes, bases, denominadores y tasas intactos.\n')
 def detectar(x, path=''):
     hits=[]
     if isinstance(x,dict):

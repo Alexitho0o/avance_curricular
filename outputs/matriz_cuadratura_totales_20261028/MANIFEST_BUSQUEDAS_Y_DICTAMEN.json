@@ -1,0 +1,107 @@
+{
+  "estado": "QA_PREVIO_AL_RESPALDO_AUTORIZADO",
+  "head_esperado": "a7330f4a3b306b899f929bce7292100a745386fd",
+  "rama": "feature/ire-2026",
+  "autorizacion": "D: Alexi autoriza commit y push exclusivamente de estos 19 archivos, con la segunda llave gruesa y sin ejecutar la reconstrucción.",
+  "archivos_exactos": [
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "sha256": "bf512c6b6a3cc6b578cac52dcbf7d3aeb3e4048fd05b4f5cc2b61b3b742205de"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.md",
+      "sha256": "13ba96374c355fbccdbb89bb153b8efa975747a5dacf1be41115f6532502a188"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/QA.json",
+      "sha256": "1a105524527804b6e1b36b6fb5548076d851975542361f02525d7e207b729a12"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/construir_matriz.py",
+      "sha256": "6d2f6472e1d2d9fa72c47f74ea0aed935cb7553783f3ddcf4f6db3c177529c8a"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/BUSQUEDA_DESCARGA_PES_MU2026.json",
+      "sha256": "926c931d7dd7350ebb1c579e689cb3f0c1f563bca02883a56863bb485022b745"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/BUSQUEDA_DESCARGA_PES_MU2026.md",
+      "sha256": "89e0b52e94617a9a1bc74d2a2c325a5d174035f611192aa29934e55e7f158e8a"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/buscar_descarga_pes_mu2026.py",
+      "sha256": "925a345241abe179e0bc2dcdc45edbeb30ca0524f95e23bf5a2546f52751edd7"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/BUSQUEDA_PRECARGA_AC2027.json",
+      "sha256": "809ef7ddbcaafe6ab893e25e583c1282b6c442feccb552235704789a1653e41c"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/BUSQUEDA_PRECARGA_AC2027.md",
+      "sha256": "c703ddf31cc21ef8d6bd43a9b7f4c2990ee0783bc4888ac6a577b8dccc42dc02"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/buscar_precarga_ac2027.py",
+      "sha256": "2d3f3f6468f94205103d38488da21fab7e754d350f9cba06244e32c76c11f99a"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/DICTAMEN_LIBROS_Y_CARGAS_MU2026.json",
+      "sha256": "5f8f45b2ddc6e510d23d23dc796032a459886452b2226b80117ad343fe955c53"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/DICTAMEN_LIBROS_Y_CARGAS_MU2026.md",
+      "sha256": "2dc09b894f8cca9e4d8933d1a07b5d866ffa1f1232814688c9b40eead9ee23c0"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/auditar_libros_y_cargas_mu2026.py",
+      "sha256": "3722bec252dcfc844b2f180a9ca2aeb1a2a6c8b362ffa8586359d2a9f4aadd9a"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/cerrar_qa_busquedas.py",
+      "sha256": "f2da7402c10756601c13af64658873a5d2d8f85bf97e0ec98ab787545ecb1102"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/QA_BUSQUEDAS_Y_DICTAMEN.json",
+      "sha256": "4586354c9d2e752732109fa87c8a40dc6490b8c7abf88cff4bd47848f3f790de"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/preparar_cargas_acumulativas.py",
+      "sha256": "43fa90aa754565bfa57f854b0b26cba91b9e9a4fe7b83f05bc65f655218d0b00"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/PREPARACION_CARGAS_ACUMULATIVAS_MU2026.json",
+      "sha256": "4f56077391bed60b9206227806c88bd3bdb53d72565a40f97b808530db4b545f"
+    },
+    {
+      "ruta": "outputs/matriz_cuadratura_totales_20261028/PREPARACION_CARGAS_ACUMULATIVAS_MU2026.md",
+      "sha256": "1266db3a6a6b16cbfdf15dc32a531feb7d279fd0d33261e09fc5392e3c74e8ed"
+    }
+  ],
+  "manifest_excluido_de_su_propio_hash": true,
+  "excluidos": [
+    "Datos individuales y bases XLSX/CSV",
+    "commits.sh",
+    "oferta_academica_2027/",
+    "Cualquier otro cambio pendiente"
+  ],
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/MATRÍCULA UNIFICADA 2026.xlsx",
+      "sha256": "7787626606187375b6915a0c0651885fff54567841e87e7685351a8b593d65f1"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/SEGUNDA CARGA/ARCHIVOS VARIOS/Matricula Unificada_ ABF.xlsx",
+      "sha256": "02b48ea4f4de0cd210bfeb743149f063947e121aed70442a1f6a541cb2be1e44"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Matrícula Unificada/2026/PRIMERA CARGA/RESPALDO MATRÍCULA UNIFICADA 2026.xlsx",
+      "sha256": "7a9240c994cbf375a0ff5e871f5a8eca70e94c8605fffa40b5b8c53d3366ada5"
+    }
+  ],
+  "pendientes": [
+    "Fuente individual SIES MU2026 no localizada",
+    "Calendario oficial AC2027 no verificado: rótulo D de Alexi",
+    "Llave completa de actualización PES e historial exitoso de cargas sin acreditar",
+    "Brecha226 sin causa demostrada"
+  ]
+}
