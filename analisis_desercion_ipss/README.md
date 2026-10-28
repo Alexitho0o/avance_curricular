@@ -4,7 +4,7 @@ Estado: **BORRADOR**. El propósito es separar y documentar la Retención de 1er
 
 ## Componentes
 
-1. `1_retencion_primer_anio`: indicador oficial SIES, con cohorte, corte del 30 de abril y unidad persona.
+1. `1_retencion_primer_anio`: **activo como indicador interno H001**, alineado con la definición SIES; no es la tasa oficial. Cohorte, referencia del 30 de abril y unidad persona; brechas y límites en su regla.
 2. `2_salida_entre_periodos`: reutiliza el indicador intertrimestral gobernado; no lo duplica ni lo presenta como tasa oficial SIES.
 3. `3_destino_de_la_salida`: distingue cambio de institución, deserción del sistema y sin determinar. Permanece E hasta acreditar RUT–MRUN.
 4. `4_reporte`: genera tablas agregadas y Excel desde código, nunca desde valores pegados.

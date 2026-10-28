@@ -1,0 +1,498 @@
+{
+  "rotulo": "Indicador interno alineado con la definición oficial SIES; no es la tasa oficial",
+  "estado": "ACTIVA_INTERNA",
+  "unidad": "persona por cohorte",
+  "umbral_publicacion": 10,
+  "fuente_diagnostico": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_ipss_162/20260930_000000/RETENCION_PRIMER_ANIO_IPSS_162_DIAGNOSTICO_BRECHAS_20260930.xlsx",
+  "fuente_sha256": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+  "mapeo_carreras_sha256": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+  "fuente_mapeo": {
+    "archivo": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx",
+    "sha256": "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db",
+    "hoja": "8_Mapeo_Sector_IPSS",
+    "rango": "B6:D22",
+    "referencia": "manifests/milestones/H001-RETENCION-IPSS162/README.md"
+  },
+  "grupos": {
+    "institucional": [
+      {
+        "cohorte": 2022,
+        "casos": 305,
+        "retenidos": 224,
+        "tasa": 0.7344262295081967,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "casos": 366,
+        "retenidos": 258,
+        "tasa": 0.7049180327868853,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "casos": 558,
+        "retenidos": 326,
+        "tasa": 0.5842293906810035,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "casos": 1150,
+        "retenidos": 668,
+        "tasa": 0.5808695652173913,
+        "estado": "PUBLICABLE"
+      }
+    ],
+    "sector": [
+      {
+        "cohorte": 2022,
+        "sector": "Tecnologías",
+        "casos": 305,
+        "retenidos": 224,
+        "tasa": 0.7344262295081967,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "sector": "Tecnologías",
+        "casos": 366,
+        "retenidos": 258,
+        "tasa": 0.7049180327868853,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "sector": "Administración y Comercio",
+        "casos": 61,
+        "retenidos": 27,
+        "tasa": 0.4426229508196721,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "sector": "Tecnologías",
+        "casos": 497,
+        "retenidos": 299,
+        "tasa": 0.6016096579476862,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "sector": "Administración y Comercio",
+        "casos": 477,
+        "retenidos": 252,
+        "tasa": 0.5283018867924528,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "sector": "Salud",
+        "casos": 75,
+        "retenidos": 35,
+        "tasa": 0.4666666666666667,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "sector": "Tecnologías",
+        "casos": 598,
+        "retenidos": 381,
+        "tasa": 0.637123745819398,
+        "estado": "PUBLICABLE"
+      }
+    ],
+    "carrera": [
+      {
+        "cohorte": 2022,
+        "cod_car": "1",
+        "carrera": "Ingenieria En Informatica",
+        "sector": "Tecnologías",
+        "casos": 44,
+        "retenidos": 30,
+        "tasa": 0.6818181818181818,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2022,
+        "cod_car": "3",
+        "carrera": "Ingenieria En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 70,
+        "retenidos": 56,
+        "tasa": 0.8,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2022,
+        "cod_car": "46",
+        "carrera": "Ingenieria En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 44,
+        "retenidos": 38,
+        "tasa": 0.8636363636363636,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2022,
+        "cod_car": "47",
+        "carrera": "Tecnico En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 32,
+        "retenidos": 24,
+        "tasa": 0.75,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2022,
+        "cod_car": "57",
+        "carrera": "Tecnico En Programacion Y Analisis De Sistemas",
+        "sector": "Tecnologías",
+        "casos": 82,
+        "retenidos": 55,
+        "tasa": 0.6707317073170732,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2022,
+        "cod_car": "6",
+        "carrera": "Tecnico En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 33,
+        "retenidos": 21,
+        "tasa": 0.6363636363636364,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "cod_car": "1",
+        "carrera": "Ingenieria En Informatica",
+        "sector": "Tecnologías",
+        "casos": 65,
+        "retenidos": 40,
+        "tasa": 0.6153846153846154,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "cod_car": "3",
+        "carrera": "Ingenieria En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 36,
+        "retenidos": 24,
+        "tasa": 0.6666666666666666,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "cod_car": "46",
+        "carrera": "Ingenieria En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 68,
+        "retenidos": 46,
+        "tasa": 0.6764705882352942,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "cod_car": "47",
+        "carrera": "Tecnico En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 56,
+        "retenidos": 42,
+        "tasa": 0.75,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "cod_car": "57",
+        "carrera": "Tecnico En Programacion Y Analisis De Sistemas",
+        "sector": "Tecnologías",
+        "casos": 117,
+        "retenidos": 89,
+        "tasa": 0.7606837606837606,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2023,
+        "cod_car": "6",
+        "carrera": "Tecnico En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 24,
+        "retenidos": 17,
+        "tasa": 0.7083333333333334,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "1",
+        "carrera": "Ingenieria En Informatica",
+        "sector": "Tecnologías",
+        "casos": 107,
+        "retenidos": 72,
+        "tasa": 0.6728971962616822,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "3",
+        "carrera": "Ingenieria En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 68,
+        "retenidos": 46,
+        "tasa": 0.6764705882352942,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "46",
+        "carrera": "Ingenieria En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 89,
+        "retenidos": 49,
+        "tasa": 0.550561797752809,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "47",
+        "carrera": "Tecnico En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 71,
+        "retenidos": 37,
+        "tasa": 0.5211267605633803,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "57",
+        "carrera": "Tecnico En Programacion Y Analisis De Sistemas",
+        "sector": "Tecnologías",
+        "casos": 137,
+        "retenidos": 89,
+        "tasa": 0.6496350364963503,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "6",
+        "carrera": "Tecnico En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 25,
+        "retenidos": 6,
+        "tasa": 0.24,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "76",
+        "carrera": "Ingenieria En Administracion De Empresas",
+        "sector": "Administración y Comercio",
+        "casos": null,
+        "retenidos": null,
+        "tasa": null,
+        "estado": "SUPRIMIDO_UMBRAL"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "77",
+        "carrera": "Ingenieria En Logistica",
+        "sector": "Administración y Comercio",
+        "casos": 15,
+        "retenidos": 7,
+        "tasa": 0.4666666666666667,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "78",
+        "carrera": "Tecnico En Administracion De Empresas",
+        "sector": "Administración y Comercio",
+        "casos": 15,
+        "retenidos": 7,
+        "tasa": 0.4666666666666667,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2024,
+        "cod_car": "79",
+        "carrera": "Tecnico En Logistica",
+        "sector": "Administración y Comercio",
+        "casos": 23,
+        "retenidos": 10,
+        "tasa": 0.43478260869565216,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "1",
+        "carrera": "Ingenieria En Informatica",
+        "sector": "Tecnologías",
+        "casos": 118,
+        "retenidos": 81,
+        "tasa": 0.6864406779661016,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "3",
+        "carrera": "Ingenieria En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 63,
+        "retenidos": 43,
+        "tasa": 0.6825396825396826,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "46",
+        "carrera": "Ingenieria En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 102,
+        "retenidos": 65,
+        "tasa": 0.6372549019607843,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "47",
+        "carrera": "Tecnico En Ciberseguridad",
+        "sector": "Tecnologías",
+        "casos": 80,
+        "retenidos": 52,
+        "tasa": 0.65,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "57",
+        "carrera": "Tecnico En Programacion Y Analisis De Sistemas",
+        "sector": "Tecnologías",
+        "casos": 130,
+        "retenidos": 80,
+        "tasa": 0.6153846153846154,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "6",
+        "carrera": "Tecnico En Conectividad Y Redes",
+        "sector": "Tecnologías",
+        "casos": 42,
+        "retenidos": 26,
+        "tasa": 0.6190476190476191,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "76",
+        "carrera": "Ingenieria En Administracion De Empresas",
+        "sector": "Administración y Comercio",
+        "casos": 91,
+        "retenidos": 46,
+        "tasa": 0.5054945054945055,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "77",
+        "carrera": "Ingenieria En Logistica",
+        "sector": "Administración y Comercio",
+        "casos": 61,
+        "retenidos": 37,
+        "tasa": 0.6065573770491803,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "78",
+        "carrera": "Tecnico En Administracion De Empresas",
+        "sector": "Administración y Comercio",
+        "casos": 73,
+        "retenidos": 32,
+        "tasa": 0.4383561643835616,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "79",
+        "carrera": "Tecnico En Logistica",
+        "sector": "Administración y Comercio",
+        "casos": 82,
+        "retenidos": 47,
+        "tasa": 0.573170731707317,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "83",
+        "carrera": "Administracion Publica",
+        "sector": "Administración y Comercio",
+        "casos": 70,
+        "retenidos": 33,
+        "tasa": 0.4714285714285714,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "84",
+        "carrera": "Tecnico En Administracion Publica",
+        "sector": "Administración y Comercio",
+        "casos": 22,
+        "retenidos": 11,
+        "tasa": 0.5,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "85",
+        "carrera": "Contabilidad General",
+        "sector": "Administración y Comercio",
+        "casos": 38,
+        "retenidos": 19,
+        "tasa": 0.5,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "86",
+        "carrera": "Auditoria",
+        "sector": "Administración y Comercio",
+        "casos": 40,
+        "retenidos": 27,
+        "tasa": 0.675,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "88",
+        "carrera": "Ingenieria En Ciencia De Datos",
+        "sector": "Tecnologías",
+        "casos": 40,
+        "retenidos": 21,
+        "tasa": 0.525,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "89",
+        "carrera": "Tecnico En Ciencia De Datos",
+        "sector": "Tecnologías",
+        "casos": 23,
+        "retenidos": 13,
+        "tasa": 0.5652173913043478,
+        "estado": "PUBLICABLE"
+      },
+      {
+        "cohorte": 2025,
+        "cod_car": "91",
+        "carrera": "Tecnico En Enfermeria",
+        "sector": "Salud",
+        "casos": 75,
+        "retenidos": 35,
+        "tasa": 0.4666666666666667,
+        "estado": "PUBLICABLE"
+      }
+    ]
+  }
+}

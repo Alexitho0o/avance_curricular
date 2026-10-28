@@ -25,7 +25,7 @@ for y, (den, num) in expected.items():
     print(y, 'casos',den,'retenidos',num,'tasa',round(100*num/den,6),'personas_unicas',den)
 for result in calcular(rows, catalogo):
     assert (result['denominador'], result['retenidos']) == expected[result['cohorte']]
-print('consumidor_default_2022_2024: PASS')
+print('consumidor_default_2022_2025: PASS')
 
 # Compare old prototype's eligible individuals with H001 without exporting IDs.
 old = {llave(r) for r in rows if r['ANIO_INFORMADO'] == 2025 and r['ANIO_ING_ACT'] == 2025 and r['VIG'] == 1}

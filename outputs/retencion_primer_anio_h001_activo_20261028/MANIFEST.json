@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-10-28",
+  "estado": "ACTIVA_INTERNA",
+  "decision": "Aprobación expresa de Alexi del criterio H001, solo componente 1",
+  "rotulo": "Indicador interno alineado con la definición oficial SIES; no es la tasa oficial",
+  "unidad": "persona por cohorte",
+  "umbral_publicacion": 10,
+  "fuentes": {
+    "diagnostico_H001": "5f0f7c7f0f238556de374d287bf2931ccc8a93a5489f4c2f2b543befd38c77b3",
+    "mapeo_sector_H001": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+    "mapa_origen_V24": "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db"
+  },
+  "codigo": {
+    "scripts/analisis_desercion/calcular_retencion_primer_anio.py": "e80bfc929fdd3b5358be4ea3623909081e8b0fbf8f5f78d88373c8be5ff6fff2",
+    "common/analisis_desercion/h001.py": "91203bc6c4668a232b1f74f4249b63d4819a77e613923ae5a24a0dc01999b443",
+    "common/analisis_desercion/retencion_primer_anio.py": "5121c878d806efd276a5eb731705b6fc36e19657f3f2d85d170724b1938df098"
+  },
+  "salidas": {
+    "RETENCION_PRIMER_ANIO_AGREGADO.json": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+    "INFORME.md": "d3841c9ee8d8efafb579fc1e2f73460b6daf7949f216028d9da138456076244a"
+  },
+  "limites": ["brechas 2022 y 2024 pendientes", "causa individual de diferencia 2025 pendiente", "escenario de nóminas es hipotético y no es tasa SIES"]
+}

@@ -2,7 +2,7 @@
   "estado": "BORRADOR",
   "subproyecto": "ANALISIS_DESERCION_IPSS",
   "componentes": {
-    "1_retencion_primer_anio": {"estado": "pendiente_fase_2", "unidad": "persona"},
+    "1_retencion_primer_anio": {"estado": "ACTIVA_INTERNA", "unidad": "persona", "regla": "analisis_desercion_ipss/reglas/REGLA_RETENCION_PRIMER_ANIO.json", "rotulo": "Indicador interno alineado con la definición oficial SIES; no es la tasa oficial"},
     "2_salida_entre_periodos": {"estado": "referenciado", "descripcion": "Indicador intertrimestral; no es retención oficial SIES", "ruta": "data/reglas_negocio/indicador_intertrimestral/REGLA.json", "duplicar": false},
     "3_destino_de_la_salida": {"estado": "E", "categorias": ["cambio de institución", "deserción del sistema", "sin determinar"], "condicion": "vínculo verificable RUT–MRUN"},
     "4_reporte": {"estado": "pendiente_validacion", "salidas": ["tablas agregadas", "Excel generado desde código"]}
