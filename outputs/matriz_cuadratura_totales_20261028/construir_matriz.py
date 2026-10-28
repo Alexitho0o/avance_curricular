@@ -351,6 +351,16 @@ result['revision_c35j4']={'anio':2022,'familia':'I162S2C35J4','codcarpr_observad
 assert all(sum(x['registros'] for x in result['titulados_publicados_por_codigo'] if x['anio_publicacion']==y)==sum(public[y].values()) for y in public)
 assert total_publico==3504
 result['informes_hitos_20261028']={n:{'ruta':str(OUT/(n+'.json')),'sha256':hashfile(OUT/(n+'.json')),'clase':'C/E' if n.startswith('PRUEBA') else 'B/C/E'} for n in ('PRUEBA_INVERSA_MRUN2026','MALLAS_TITULO_INTERMEDIO_MRUN2026') if (OUT/(n+'.json')).exists()}
+# D Alexi 28-10-2026: cierre de investigación, sin cierre causal ni cambio de cifras.
+cierre_path=OUT/'CIERRE_BRECHA_MU2026.json'
+if cierre_path.exists():
+    cierre=jsonread(cierre_path)
+    assert cierre['estado']=='CERRADA_DOCUMENTADA' and cierre['causa']=='E'
+    assert cierre['brecha']['neta']==226 and cierre['brecha']['positiva']+cierre['brecha']['negativa']==226
+    for row in result['matriz']:
+        if row['anio']==2026:
+            row['mu_sies'].update(estado='CERRADA_DOCUMENTADA',causa='E',nota='Brecha 226: CERRADA_DOCUMENTADA, causa E',cierre='CIERRE_BRECHA_MU2026.md')
+    result['brecha_mu2026'].update(estado='CERRADA_DOCUMENTADA',causa='E',continuar_investigacion=False,requisito=cierre['reapertura']['condicion'],cierre={'ruta':'CIERRE_BRECHA_MU2026.json','sha256':hashfile(cierre_path),'documento':'CIERRE_BRECHA_MU2026.md'})
 (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 lines=['# Matriz de cuadratura 2022–2026','', 'B/C: datos observados y cálculos; E: pendiente. H001 cuenta filas; validar unicidad antes de llamar personas.','', '| Año | MU filas | Pregrado + nivel no acreditado | VIG1 / VIG0 pregrado | SIES pregrado + postítulo | Brecha pregrado | H001 candidatos / elegibles (filas) | Titulación carga / SIES t−1 (registros) | Respaldo de código único v20 / solo RUT / no localizado |','|---|---:|---:|---:|---:|---:|---:|---:|---|']
 for x in mat:
@@ -439,3 +449,9 @@ print('Matriz parcial generada; controles de suma aprobados; escaneo estructurad
 if result.get("informes_hitos_20261028"):
     with (OUT/"MATRIZ_CUADRATURA_TOTALES_2022_2026.md").open("a") as f:
         f.write("\n## Prueba inversa y mallas [B/C/E]\n\nVer PRUEBA_INVERSA_MRUN2026.md/.json y MALLAS_TITULO_INTERMEDIO_MRUN2026.md/.json: compatibilidad de perfiles y de conteo de unidades; sin certificar identidad, fórmula exportadora o plan individual. Bases y cifras conciliadas intactas.\n")
+
+if cierre_path.exists():
+    with (OUT/'MATRIZ_CUADRATURA_TOTALES_2022_2026.md').open('a') as f:
+        f.write('\n## Cierre operativo MU2026 [D / E causa]\n\nBrecha226: **CERRADA_DOCUMENTADA, causa E**. Alexi28-10-2026 dispone no continuar con las fuentes disponibles. Reapertura sólo con fuente individual SIES MU2026. Ver [cierre documentado](CIERRE_BRECHA_MU2026.md). Las cifras de la matriz se conservan.\n')
+    q=jsonread(OUT/'QA.json');q['cierre_brecha_mu2026']={'estado':'PASS','decision':'D Alexi2026-10-28','estado_brecha':'CERRADA_DOCUMENTADA','causa':'E','brecha_conservada':226,'sumas':{'3371_menos_3145':226,'228_menos_2':226,'54_menos_54':0,'193_mas_35':228},'sin_identificadores':True,'cierre_sha256':hashfile(cierre_path)}
+    (OUT/'QA.json').write_text(json.dumps(q,ensure_ascii=False,indent=2)+'\n')

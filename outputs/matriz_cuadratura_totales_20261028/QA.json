@@ -28,12 +28,8 @@
     "causa_normativa": "E"
   },
   "metodo_mu2026": {
-    "estado_documental": "PREPARADO_NO_EJECUTADO_SIN_FUENTE_IDENTIFICADA",
-    "estado_adaptador_mrun": "DIAGNOSTICO_EJECUTADO_SIN_VINCULOS_PERSONALES",
-    "pruebas_sinteticas": {
-      "cantidad": 15,
-      "resultado": "PASS"
-    },
+    "estado": "PREPARADO_NO_EJECUTADO_CON_FUENTE_REAL",
+    "pruebas_sinteticas": "Ejecutar test_metodo_mu2026.py; no sustituye validación real",
     "sha256": "f00e4c93506423dda64f0586e02e0b2e1aed18a4b95ad12d16b5ba4d74e2ca57"
   },
   "escaneo_cuatro_archivos_con_identificadores_de_fuentes": {
@@ -46,49 +42,23 @@
     "coincidencias": 0,
     "metodo": "Identificadores observados en MU/DA por límites de token; sólo se publica el número de coincidencias."
   },
-  "diagnostico_mrun2026": {
-    "estado": "PASS_CON_PENDIENTES_E",
-    "head": "782efc8b4e37e60898cbea832667c887199bf536",
-    "clases": "A oficial; B observado; C cálculo; D decisión; E pendiente",
-    "catalogos_repo_onedrive_identicos": true,
-    "duplicado_ausente_y_canonico_verificado": true,
-    "candidatas_borradas_por_ejecutora": 0,
-    "borrados_externos_confirmados": 1,
-    "carpetas_protegidas": 31,
-    "candidatas_para_confirmar": 0,
-    "cierres_D": 3,
-    "fuentes_h2_y_mu_por_hash": true,
-    "nacionales_identicos_solo_referencia": true,
-    "paridad_publicacion_por_codigo_diferencias": 0,
-    "MRUN2026": {
-      "total": 3425,
-      "pregrado": 3371,
-      "postitulo": 54
+  "cierre_brecha_mu2026": {
+    "estado": "PASS",
+    "decision": "D Alexi2026-10-28",
+    "estado_brecha": "CERRADA_DOCUMENTADA",
+    "causa": "E",
+    "brecha_conservada": 226,
+    "sumas": {
+      "3371_menos_3145": 226,
+      "228_menos_2": 226,
+      "54_menos_54": 0,
+      "193_mas_35": 228
     },
-    "SQL_independiente_A_B_C": {
-      "codigos": 48,
-      "registros": 2973,
-      "diferencias": 0
-    },
-    "pruebas_sinteticas": {
-      "cantidad": 15,
-      "resultado": "PASS"
-    },
-    "nucleo_matriz_igual_al_commit": true,
-    "descriptores_y_activo_intactos": true,
-    "bases_denominadores_tasas_intactos": true,
-    "identidades_certificadas": 0,
-    "vinculos_rut_mrun_persistidos": false,
-    "escaneo_identificadores": {
-      "archivos": 52,
-      "coincidencias": 0,
-      "alcance": "Documentos MU, CODCLI previos y MRUN leídos, por límites de token. Los datos individuales nunca se exportan en salidas."
-    },
-    "limites": [
-      "Candidaturas por perfiles no son identidad ni prueba de aceptación de VIG0",
-      "Ambigüedades, reutilización de candidatos y sin candidato permanecen E",
-      "La incertidumbre de metadatos de los27 archivos se conserva aunque su revisión se cierre D"
-    ],
-    "commit_push_ejecutados": false
+    "sin_identificadores": true,
+    "cierre_sha256": "89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a",
+    "cifras_matriz_iguales_al_commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162",
+    "pruebas_metodo": 15,
+    "motores_y_activo_intactos": true,
+    "escaneo_seis_archivos_coincidencias": 0
   }
 }

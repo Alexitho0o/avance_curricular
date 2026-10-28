@@ -40,7 +40,7 @@
     },
     "catalogo_fuentes": {
       "ruta": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
-      "sha256": "b48b97a3fcc252cae32823afbf812ed759046f03b96f8967bc7bd9187c2b59cb"
+      "sha256": "37ff3686308eeb4c02b88ea4c2bf823abcfbe66fcd4b1a26ad002830bbd58686"
     },
     "diccionario_activo": {
       "ruta": "data/diccionario_sies_seguimiento/activo.json",
@@ -1247,9 +1247,11 @@
         "publicado_postitulo": 54,
         "publicado_institucional": 3425,
         "diferencia_publicado_menos_vig1": 226,
-        "estado": "E",
+        "estado": "CERRADA_DOCUMENTADA",
         "fuente": "outputs/trazabilidad_integral_umas_sies_20261025/fase2/conciliacion/RESULTADOS.json",
-        "nota": "2025 y 2026: diferencia neta observada; causa individual pendiente."
+        "nota": "Brecha 226: CERRADA_DOCUMENTADA, causa E",
+        "causa": "E",
+        "cierre": "CIERRE_BRECHA_MU2026.md"
       },
       "retencion_mu": {
         "matriculas_mu": 4105,
@@ -3062,15 +3064,15 @@
     "publicable": false
   },
   "brecha_mu2026": {
-    "estado": "E",
+    "estado": "CERRADA_DOCUMENTADA",
     "valor_conservado": 226,
     "investigacion_realizada": true,
     "fuente_mrun_ipss_disponible_hasta": 2026,
-    "requisito": "Fuente SIES individual MU 2026: descarga lo cargado PES o precarga AC 2027; metadato de año y hash obligatorios",
+    "requisito": "Sólo con fuente individual SIES de MU2026, por ejemplo precarga AC2027 cuando exista; verificar origen, proceso, referencia2026 y hash.",
     "hipotesis": "E: algunos VIG 0 de nuestra MU 2026 podrían figurar matriculados en SIES, como se observa en 2025; no se extrapolan 73 ni 960 a retenidos ni se corrigen tasas.",
     "respaldo_hipotesis": "B cruce MU 2025 con precarga AC 2026: 73/73 VIG 0 aparecen con VIGENCIA 1",
     "metodo_preparado": "Contraste documental PES pendiente; adaptador MRUN ejecutado sólo como diagnóstico A/B/C de perfiles, sin enlaces personales.",
-    "metodo_sha256": "118f8c1daaf4e86a9d2d208ea657dc7371c564fd2f34f245851ffb382e873b4f",
+    "metodo_sha256": "f00e4c93506423dda64f0586e02e0b2e1aed18a4b95ad12d16b5ba4d74e2ca57",
     "precarga_ac2027_disponibilidad": {
       "clase": "D rótulo aprobado por Alexi; B/C búsqueda local",
       "fecha_busqueda": "2026-10-28",
@@ -3260,7 +3262,7 @@
     },
     "diagnostico_mrun": {
       "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/DIAGNOSTICO_BRECHA_MRUN2026.json",
-      "sha256": "153db46f2975b14b35631e96e5dfb5cd5afd315380bd0d28589b668d755e68c5",
+      "sha256": "5bd3e87413fb3789dd9a2315c32a9a9bfa7f7514b17a670410d97cc49039910d",
       "clase": "C/E compatibilidad de perfiles; no identidad",
       "resumen": {
         "registros_mrun": 2973,
@@ -4338,6 +4340,13 @@
           "dictamen": "E sin candidata VIG0 en perfiles comparables; no refuta ausencia de cobertura o errores de datos"
         }
       ]
+    },
+    "causa": "E",
+    "continuar_investigacion": false,
+    "cierre": {
+      "ruta": "CIERRE_BRECHA_MU2026.json",
+      "sha256": "89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a",
+      "documento": "CIERRE_BRECHA_MU2026.md"
     }
   },
   "informes_busqueda_y_dictamen": {
@@ -4363,7 +4372,7 @@
     },
     "DIAGNOSTICO_BRECHA_MRUN2026": {
       "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/DIAGNOSTICO_BRECHA_MRUN2026.json",
-      "sha256": "153db46f2975b14b35631e96e5dfb5cd5afd315380bd0d28589b668d755e68c5",
+      "sha256": "5bd3e87413fb3789dd9a2315c32a9a9bfa7f7514b17a670410d97cc49039910d",
       "clase": "C/E sin identidad acreditada"
     }
   },
@@ -4404,12 +4413,12 @@
   },
   "informes_hitos_20261028": {
     "PRUEBA_INVERSA_MRUN2026": {
-      "ruta": "outputs/matriz_cuadratura_totales_20261028/PRUEBA_INVERSA_MRUN2026.json",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/PRUEBA_INVERSA_MRUN2026.json",
       "sha256": "681e019d09eccb7f386a1915326cef6763bb6eef565420d6e2590a2b55e84d53",
       "clase": "C/E"
     },
     "MALLAS_TITULO_INTERMEDIO_MRUN2026": {
-      "ruta": "outputs/matriz_cuadratura_totales_20261028/MALLAS_TITULO_INTERMEDIO_MRUN2026.json",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MALLAS_TITULO_INTERMEDIO_MRUN2026.json",
       "sha256": "af619dfd7e282ab29508c98409ad4fa7a17077b25082e16a5c36ca04b452bcbe",
       "clase": "B/C/E"
     }

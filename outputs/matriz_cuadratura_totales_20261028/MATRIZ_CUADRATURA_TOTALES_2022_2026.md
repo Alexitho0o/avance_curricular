@@ -148,6 +148,8 @@ C/E: 198 registros tienen alguna candidata VIG0 (incluye ambigüedades); capacid
 
 ## Prueba inversa y mallas [B/C/E]
 
-Prueba inversa: 2.703 de 2.747 VIG1 con candidato de perfil completo; 44 sin candidato. De los 240 MRUN sin candidato completo, 224 tienen perfiles en otra familia con bloqueo A y 16 no. Compatibilidad, sin certificación de identidad ni cambio de la brecha. Detalle: PRUEBA_INVERSA_MRUN2026.md/.json.
+Ver PRUEBA_INVERSA_MRUN2026.md/.json y MALLAS_TITULO_INTERMEDIO_MRUN2026.md/.json: compatibilidad de perfiles y de conteo de unidades; sin certificar identidad, fórmula exportadora o plan individual. Bases y cifras conciliadas intactas.
 
-ADMP, AUDT e ICDA: diferencia +2 compatible con los dos ítems TITULO INTERMEDIO presentes en todas las listas frente a 5810; fórmula exportadora y plan individual siguen E. Detalle: MALLAS_TITULO_INTERMEDIO_MRUN2026.md/.json.
+## Cierre operativo MU2026 [D / E causa]
+
+Brecha226: **CERRADA_DOCUMENTADA, causa E**. Alexi28-10-2026 dispone no continuar con las fuentes disponibles. Reapertura sólo con fuente individual SIES MU2026. Ver [cierre documentado](CIERRE_BRECHA_MU2026.md). Las cifras de la matriz se conservan.
