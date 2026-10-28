@@ -1,0 +1,18 @@
+{
+  "estado": "BORRADOR_NO_ACTIVO",
+  "nombre_oficial": "Retención de 1er año",
+  "fuentes": [
+    {"clase":"A","ruta":"procesos/caracterizacion/gobernanza/sies/RETENCION/REGLA_RETENCION_1ER_ANIO_CORREO_20260909.txt","hash":"92716565c2ace72a1b3ea1a73fb257cab70b247e0c3eb49d7845ef72b14945a8"},
+    {"clase":"B","ruta":"outputs/base_retencion_matricula_unificada_2022_2026/20260901_142342/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx","hash":"19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"}
+  ],
+  "reglas": [
+    {"clase":"A","termino":"cohorte_1er_anio","definicion":"estudiantes matriculados como primer año en el año de referencia"},
+    {"clase":"A","termino":"fecha_referencia","definicion":"30 de abril"},
+    {"clase":"A","termino":"t_mas_1","definicion":"año académico siguiente"},
+    {"clase":"A/D","termino":"retenido","definicion":"matriculado en la misma institución y cohorte; cambio de carrera IPSS cuenta como retenido institucional"},
+    {"clase":"A","termino":"exclusiones","definicion":"programas especiales; diplomados cuando estén identificados por fuente gobernada"},
+    {"clase":"A","termino":"umbral_publicacion","definicion":"al menos 10 casos de cohorte"},
+    {"clase":"C","termino":"formula","definicion":"suma de retenidos / suma de elegibles; persona una vez"}
+  ],
+  "pendientes":["duración y programas especiales no identificables en MU; casos eliminados; paridad SIES/V24 en Fase 3"]
+}
