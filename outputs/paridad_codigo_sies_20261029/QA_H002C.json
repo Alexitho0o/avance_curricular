@@ -1,0 +1,64 @@
+{
+  "QA_historico": "El validador original conserva su baseline precommit 7807542. Se reusan sus pruebas, reproducción y controles de datos, con preservación nueva contra 76830cf, sin alterar sus bytes.",
+  "advertencias": [
+    "PASS no aprueba equivalencias; (b) documental no acredita aceptación PES.",
+    "A=regla; B=observación; C=cálculo; D=decisión existente; E=pendiente."
+  ],
+  "clase": "C",
+  "controles": {
+    "12_unicos_ordenados_sin_aplicar": true,
+    "24_cambios_ajenos_bytes": true,
+    "24_cambios_ajenos_status": true,
+    "43_codigos_originales_sin_aplicar": true,
+    "H002_106_161_universos": true,
+    "H002_2027_atributos_literales": true,
+    "H002_267_filas_sin_cambio": true,
+    "H002_CSV_JSON": true,
+    "H002_componentes_hash": true,
+    "H002_entradas_salidas_hash": true,
+    "H002_hito_manifest": true,
+    "H002_reproduccion_tabla": true,
+    "H002_sumas_estados": true,
+    "H002b_reproduccion_fichas_v1": true,
+    "H002c_fuentes_salidas_componentes_hash": true,
+    "H002c_reproduccion_hash": true,
+    "S4_no_hereda_plan_otra_sede": true,
+    "TIPO_asignatura_no_tipo_plan": true,
+    "aceptacion_no_acreditada_visible": true,
+    "calce_unico_dos_evidencias_mismo_plan": true,
+    "documental_D_separados": true,
+    "escaneo_identificadores_sin_hallazgos": true,
+    "grupo_B_no_plan_en_fuentes_y_sede_correcta": true,
+    "ninguna_fuente_copiada_ni_versionada": true,
+    "permanencia_no_se_presenta_con_plan": true,
+    "pruebas_H002_y_H002c": true,
+    "rama_HEAD_correctos": true,
+    "sin_modificaciones_rastreados": true,
+    "sumas_clases_12_y_43": true
+  },
+  "errores_ejecucion": {
+    "H002": "",
+    "H002c": "",
+    "v1": ""
+  },
+  "estado": "PASS_CON_PENDIENTES_E",
+  "hallazgos_privacidad": [],
+  "hito": "H002c",
+  "pruebas": [
+    {
+      "archivo": "test_h002b.py",
+      "exit": 0,
+      "pruebas": 11
+    },
+    {
+      "archivo": "test_h002c.py",
+      "exit": 0,
+      "pruebas": 10
+    },
+    {
+      "archivo": "test_paridad.py",
+      "exit": 0,
+      "pruebas": 11
+    }
+  ]
+}
