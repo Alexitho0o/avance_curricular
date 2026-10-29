@@ -1,0 +1,66 @@
+{
+  "advertencias": [
+    "La privacidad se comprueba por campos de catálogo y patrones; no certificación universal.",
+    "Las propuestas E siguen sin aprobarse; PASS no certifica equivalencias pendientes."
+  ],
+  "clase": "C",
+  "controles": {
+    "12_mismo_orden_sin_aplicar": true,
+    "267_llaves_unicas": true,
+    "43_sin_plan_intactos": true,
+    "CSV_JSON_mismas_llaves": true,
+    "H002b_solo_6_cambios_aprobados_D": true,
+    "V06_clase_C_confirmacion_usuario_D_no_B": true,
+    "atributos_2027_literales_en_48_columnas": true,
+    "conteos_fichas_sin_doble_periodo": true,
+    "conteos_independientes_106_161": true,
+    "escaneo_identificadores_sin_hallazgos": true,
+    "estados_sumados_por_via_independiente": true,
+    "fichas_reproducibles_por_hash": true,
+    "hashes_componentes_auxiliares_H002b": true,
+    "hashes_entradas_y_salidas": true,
+    "matriculas_MU_fuente_intactas": true,
+    "ninguna_propuesta_promovida": true,
+    "planes_multiples_no_forzados": true,
+    "plantilla_solo_encabezado": true,
+    "preservacion_total_salvo_linea_indice": true,
+    "reejecucion_mismos_hashes": true,
+    "registro_hito_apunta_manifest_actual": true,
+    "si_nuevos_version_unica_en_su_perfil_o_E": true,
+    "todas_pruebas_H002": true,
+    "universos_originales_completos": true
+  },
+  "estado": "PASS_CON_PENDIENTES_E",
+  "hallazgos_patrones": [],
+  "hashes_entrega": {
+    "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS.json": "8f93acbabfe6c561c8dcb6bf6cb235e4702ce0be7087ae47d1d035babf329cab",
+    "data/paridad_codigo_sies/20261029/FUENTES.json": "e42a0a6d8d4d48ccb4a210e865f15074698d96ef9d99cb2ea0b2950c7cd05160",
+    "data/paridad_codigo_sies/20261029/MANIFEST.json": "b4125699a24146e03a78dbbef494808d98bb4e1692080f6268692120bb95d01e",
+    "data/paridad_codigo_sies/20261029/README.md": "80a173fc5b090742168d23cda0f757167776fed559ef2137168e9b29a9b912f1",
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.csv": "e9445a81b9049f9c6d95f34003556e5944d38c7046d9558942c0c21ddb96f555",
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json": "93141a3318514789815105e25424f966d4b86e1afdbe237506e4a6eb39306b95",
+    "manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/README.md": "4bf69c345796edc1e3ecdcf7b2e1fcf573b430814621cf692dbcd3b9d5b99304",
+    "manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/REGISTRO.json": "bbb8a95c141ac90d8d16030b8df6477027bf610f9f3da63c3171c9f5b649519c"
+  },
+  "preservacion": {
+    "24_rutas_mismo_status": true,
+    "HEAD": "7807542b2b819521b7bd620239110686830ec406",
+    "archivos_ajenos_iniciales": 25,
+    "archivos_ajenos_intactos": true,
+    "archivos_nuevos_fuera_alcance": [],
+    "clase": "C",
+    "entradas_ajenas_iniciales": 24,
+    "index_sin_cambios_ajenos": true,
+    "indice_una_linea_H002": true,
+    "rama": "feature/ire-2026",
+    "rastreados_con_cambio": [
+      "manifests/master/MILESTONE_INDEX.md"
+    ]
+  },
+  "pruebas": 22,
+  "pruebas_exit_code": [
+    0,
+    0
+  ],
+  "reproduccion_exit_code": 0
+}

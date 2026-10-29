@@ -1,0 +1,330 @@
+{
+  "atribuciones_personales_modificadas": false,
+  "auxiliares_H002b": {
+    "data/paridad_codigo_sies/PLANTILLA_PLANES_UMAS_2027.tsv": "8803ac30b09c9eaa221ba11df9c1acbad95f4d2c69809c92abb6e0bebc765505",
+    "outputs/paridad_codigo_sies_20261029/cruzar_planes_2027.py": "904f3f7d6019b412c60ff5cddf4e70c466f9929ed8ef3c0ffb53412b6c2667f1",
+    "outputs/paridad_codigo_sies_20261029/revisar_casos.py": "2d6ccab3d1e1d3189009df9c212191239f263e10ab2a689299f2896bc988429b",
+    "outputs/paridad_codigo_sies_20261029/test_h002b.py": "0034a7e419b639eedb163af7369e52b6ebd495f79ed9e1435a927983d98c328c"
+  },
+  "commit_contexto": "7807542b2b819521b7bd620239110686830ec406",
+  "componente_decisiones": {
+    "ruta": "outputs/paridad_codigo_sies_20261029/aplicar_decisiones.py",
+    "sha256": "e3d85cad11b48544eb03503d2719695fdbeb1cd01ce525dfae5d0892b378acaa"
+  },
+  "configuracion": {
+    "ruta": "data/paridad_codigo_sies/20261029/FUENTES.json",
+    "sha256": "e42a0a6d8d4d48ccb4a210e865f15074698d96ef9d99cb2ea0b2950c7cd05160"
+  },
+  "datos_personales": false,
+  "entradas": [
+    {
+      "bytes": 87043,
+      "clase": "C/D",
+      "id": "grupos",
+      "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+      "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+    },
+    {
+      "bytes": 2035,
+      "clase": "C/D",
+      "id": "manifest_grupos",
+      "ruta": "data/versiones_por_cohorte/20261028/MANIFEST.json",
+      "sha256": "4217d2c82ee6bb3493d159369426c5d9f71998054be868e7c825056c8f4c156b"
+    },
+    {
+      "bytes": 184282,
+      "clase": "B/C",
+      "id": "historias",
+      "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+      "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+    },
+    {
+      "bytes": 2534007,
+      "clase": "C/E",
+      "id": "cohortes",
+      "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+      "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+    },
+    {
+      "bytes": 44165,
+      "clase": "C",
+      "id": "cobertura",
+      "ruta": "data/versiones_por_cohorte/20261016/cobertura_codigos.json",
+      "sha256": "c0913cbc8056c89327c641dd87a165966ca7096ef40d69658ce423c6cc48d882"
+    },
+    {
+      "bytes": 3268603,
+      "clase": "B/C/E",
+      "id": "maestro",
+      "ruta": "data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+      "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+    },
+    {
+      "bytes": 15801,
+      "clase": "C/D/E",
+      "id": "contrato_h5",
+      "ruta": "docs/fase_5_maestro_equivalencias.md",
+      "sha256": "4aa3f050e26d304e7d6d305b39398b2cc028ca36dd18fc3b660ae1a909873799"
+    },
+    {
+      "bytes": 37447,
+      "clase": "B/C/D",
+      "id": "duracion",
+      "ruta": "DURACION_ESTUDIOS.tsv",
+      "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+    },
+    {
+      "bytes": 203,
+      "clase": "B/C/D",
+      "id": "sedes",
+      "ruta": "gobernanza_sede.tsv",
+      "sha256": "1815149f8ab71f3f37c3b671b7474b02b1a1fd92df92b888a4abdbfaa20c47a1"
+    },
+    {
+      "bytes": 21845,
+      "clase": "B",
+      "id": "precarga5913",
+      "ruta": "oferta_academica_2027/02_precarga_pes/reporte_dinamico_5913_2026-08-12_08:22:23.csv",
+      "sha256": "4d84dbc4620cc9edccd47df3e657d4bbfcf0480b801d88fbd1a35c8dd13b04f3"
+    },
+    {
+      "bytes": 45334,
+      "clase": "C",
+      "id": "carga_v06",
+      "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+    },
+    {
+      "bytes": 45334,
+      "clase": "C/D",
+      "id": "copia_congelada",
+      "ruta": "oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+    },
+    {
+      "bytes": 6040,
+      "clase": "D",
+      "id": "aceptacion_usuario",
+      "ruta": "oferta_academica_2027/11_gobernanza/etapa1_octubre_20261023_v06/ACEPTACION_PES_CONFIRMADA_20261023.json",
+      "sha256": "4962d7e08fa7b71c55d4b782f5cf247a4db2257dd872e1280dff32f1976f29c6"
+    },
+    {
+      "bytes": 6040,
+      "clase": "C/D",
+      "id": "manifest_congelado",
+      "ruta": "oferta_academica_2027/07_resultados/cargas_congeladas/20261023_etapa1_octubre_v06_aceptada/MANIFIESTO_ACEPTACION.json",
+      "sha256": "4962d7e08fa7b71c55d4b782f5cf247a4db2257dd872e1280dff32f1976f29c6"
+    },
+    {
+      "bytes": 2099549,
+      "clase": "A",
+      "id": "manual_octubre",
+      "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+      "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+    },
+    {
+      "bytes": 139025,
+      "clase": "A",
+      "id": "manual_anterior_txt",
+      "ruta": "oferta_academica_2027/01_fuentes_oficiales/Instructivo_Oferta_Academica-Acceso_CFT-IP 2027.txt",
+      "sha256": "27095d34a42c37f23a875f925204fc99d03e53fa9011d66480167f834b790c7e"
+    },
+    {
+      "bytes": 5497,
+      "clase": "C",
+      "id": "contrato_campos",
+      "ruta": "oferta_academica_2027/11_gobernanza/CONTRATO_CAMPOS_ETAPA1_OFERTA_ACADEMICA_2027.tsv",
+      "sha256": "a6bf5ec8238b9afa53837dc7bea33eb4519738391e26963d66f0524f47f34da1"
+    },
+    {
+      "bytes": 8602,
+      "clase": "A/B/C",
+      "id": "mapa_etapas",
+      "ruta": "oferta_academica_2027/11_gobernanza/MAPA_ETAPAS_CARGAS_REPORTES_OFERTA_ACADEMICA_2027.md",
+      "sha256": "d6a50a12204002c968e29ddc3dbf6f9f9efceeffdf255ad184541d67d75599b8"
+    },
+    {
+      "bytes": 47516,
+      "clase": "A/C/E",
+      "id": "reglas_etapa2",
+      "ruta": "oferta_academica_2027/11_gobernanza/REGLAS_MANUAL_ETAPA2_OFERTA_NUEVA_2027_20260827.json",
+      "sha256": "06fb51d42458b5d53101109b9527c551c02f1ff2056e2c5186c7ad9effb479e4"
+    },
+    {
+      "bytes": 192656,
+      "clase": "B/C",
+      "id": "catalogo27",
+      "ruta": "data/catalogos_sies/2027/5910_20260907_6047_20261013_modalidad_v2/catalogo.json",
+      "sha256": "264f41dc115e1dd3560f9ebbd9f15bbc7a065d02a4708f55ec3e7ec8bf6a5ef4"
+    },
+    {
+      "bytes": 141976,
+      "clase": "B/C",
+      "id": "evidencia27",
+      "ruta": "data/catalogos_sies/2027/5910_20260907_6047_20261013/EVIDENCIA_DIMENSIONES.json",
+      "sha256": "c0b8b63ece57a23ceb83d6643dea6b5b604136bbc0f4b048d5ff892b0ba3c9cd"
+    },
+    {
+      "bytes": 7246,
+      "clase": "C/D/E",
+      "id": "contrato27",
+      "ruta": "docs/REVISION_EQUIVALENCIAS_6047_20261013.md",
+      "sha256": "3b1ebe11884726231418aaef129705f2101ded360a0287a3d3c431413f4c2aad"
+    },
+    {
+      "bytes": 8133,
+      "clase": "C/D",
+      "id": "contrato_anual",
+      "ruta": "docs/CATALOGOS_SIES_POR_ANIO.md",
+      "sha256": "206b164b03c7d8d4f2abee96d1a57668bdda1f8c8b329f1223dd754db5500960"
+    },
+    {
+      "bytes": 3821,
+      "clase": "C/D",
+      "id": "contrato_cohortes",
+      "ruta": "docs/versiones_por_cohorte_20261016.md",
+      "sha256": "85cb4f8ebf343ed4e998bae52cf78746061d341c0ec7e0181602dd1675b06370"
+    },
+    {
+      "bytes": 7308,
+      "clase": "C/E",
+      "id": "limites_cohortes",
+      "ruta": "docs/resultados_versiones_por_cohorte_20261016.md",
+      "sha256": "5b75ffd19f289ace0d7d51a4cd5818f395a122b401f233a9804611503f568552"
+    },
+    {
+      "bytes": 3006,
+      "clase": "C/D",
+      "id": "proyecto",
+      "ruta": "PROYECTO_IPSS.json",
+      "sha256": "253b86c9bfb895fde594e3bd3e86c4125842c07f42d7967e74c964012613d7d5"
+    },
+    {
+      "bytes": 6350,
+      "clase": "D",
+      "id": "agent",
+      "ruta": "agent.md",
+      "sha256": "7249cd81967394c84bf32673eb8819fd8016a69b14b5c47470645c2f2aa1b03b"
+    },
+    {
+      "bytes": 182,
+      "clase": "C/D",
+      "id": "diccionario_personal_puntero",
+      "ruta": "data/diccionario_sies_seguimiento/activo.json",
+      "sha256": "26615bd2849dd39dfbf947ffda9f8d5d211504ad8c4e900d4ff0f2f936d4cc55"
+    },
+    {
+      "bytes": 1623,
+      "clase": "D",
+      "id": "decisiones_aprobadas",
+      "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS.json",
+      "sha256": "8f93acbabfe6c561c8dcb6bf6cb235e4702ce0be7087ae47d1d035babf329cab"
+    },
+    {
+      "bytes": 1178,
+      "clase": "B/C",
+      "id": "gob_for_ing",
+      "ruta": "gobernanza_for_ing_act.tsv",
+      "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+    },
+    {
+      "bytes": 23262,
+      "clase": "B/C/E",
+      "id": "motor_for_ing",
+      "ruta": "scripts/motor_for_ing_act.py",
+      "sha256": "86219b86bef5d9850aa6745a8f8d69fbb98f9fd8dc59f2995debe149a739ff54"
+    },
+    {
+      "bytes": 5344,
+      "clase": "B/C/E",
+      "id": "config_for_ing",
+      "ruta": "control/config_for_ing_act.json",
+      "sha256": "fde2b7fa096cd213cd629916755e956342529a3fa91afd632b8edb53fb00c11f"
+    },
+    {
+      "bytes": 325014,
+      "clase": "B/C/E",
+      "id": "for_ing_runtime",
+      "ruta": "codigo_gobernanza_v2.py",
+      "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+    },
+    {
+      "bytes": 1456,
+      "clase": "B/C/E",
+      "id": "for_ing_runtime_evidencia",
+      "ruta": "control/evidencias/P_for_ing_act.md",
+      "sha256": "ca3e58e180bbb38a2fd3072810d6a5cb11252e7ef56476fc591febd983c6a2f0"
+    },
+    {
+      "bytes": 764,
+      "clase": "B/C/E",
+      "id": "for_ing_contrato",
+      "ruta": "gobernanza_columnas_mu/gob_mu_for_ing_act.tsv",
+      "sha256": "e46a4c5f6673a84cd081d1757694780f93de18c122776c6cd8f9885adbbf7f03"
+    },
+    {
+      "bytes": 9676,
+      "clase": "B/C/E",
+      "id": "for_ing_tests",
+      "ruta": "scripts/test_for_ing_act.py",
+      "sha256": "c1d113931ee097468ea7d4f80bbce7eefc0c46ad866502cea0df06482ebf4c30"
+    },
+    {
+      "bytes": 92087,
+      "clase": "B/C",
+      "id": "catalogo_fuentes",
+      "ruta": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+      "sha256": "37ff3686308eeb4c02b88ea4c2bf823abcfbe66fcd4b1a26ad002830bbd58686"
+    },
+    {
+      "bytes": 25413,
+      "clase": "B/C",
+      "id": "v20_descriptor",
+      "ruta": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+      "sha256": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+    }
+  ],
+  "especificacion": {
+    "ruta": "data/paridad_codigo_sies/20261029/README.md",
+    "sha256": "80a173fc5b090742168d23cda0f757167776fed559ef2137168e9b29a9b912f1"
+  },
+  "fecha": "2026-10-29",
+  "generador": {
+    "ruta": "outputs/paridad_codigo_sies_20261029/construir_paridad.py",
+    "sha256": "5665781bf201348f90dffe6c326b16f4836ff1ee9a028a093cdac7a1cb5e6914"
+  },
+  "hito": "H002-PARIDAD-CODIGO-SIES-2027",
+  "reglas_oficiales": {
+    "COD_TIPO_PLAN_CARRERA": {
+      "dominio": {
+        "1": "Plan Regular",
+        "2": "Plan Especial",
+        "3": "Plan Regular de Continuidad"
+      },
+      "fuente": "manual_octubre",
+      "pagina": 22
+    },
+    "VERSION": {
+      "fuente": "manual_octubre",
+      "pagina": 22,
+      "regla": "Código correlativo de versiones existentes; en Etapa 1 no modificable. No codifica por sí solo el año del plan UMAS."
+    },
+    "VIGENCIA_CARRERA": {
+      "dominio": {
+        "1": "Vigente con estudiantes nuevos",
+        "2": "Vigente sin estudiantes nuevos; quedan antiguos",
+        "3": "No vigente; sin nuevos ni antiguos"
+      },
+      "fuente": "manual_octubre",
+      "pagina": 28
+    }
+  },
+  "salidas": {
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.csv": "e9445a81b9049f9c6d95f34003556e5944d38c7046d9558942c0c21ddb96f555",
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json": "93141a3318514789815105e25424f966d4b86e1afdbe237506e4a6eb39306b95",
+    "outputs/paridad_codigo_sies_20261029/DECISIONES_PENDIENTES.json": "521a5a9925772377d31b78bf8d7817493cf9011c642e4f759e702eb6c21a53a1",
+    "outputs/paridad_codigo_sies_20261029/DECISIONES_PENDIENTES.md": "b01fa26b2391e4ae38073f90ef7a4a443376ce189afcd176329e2b9285245782",
+    "outputs/paridad_codigo_sies_20261029/QA.json": "b3cc9dd145e8c7b3c9abe84a70e7a1a364209466f2aa8656e018c7de7df9837a",
+    "outputs/paridad_codigo_sies_20261029/RESOLUCIONES_POR_GRUPO.json": "235fc708eb1aab01386a844d0242efb55aa6c852d136d93f07a15a60c66984ba"
+  }
+}

@@ -1,0 +1,3578 @@
+{
+  "FOR_ING_ACT": "Solo estratifica el valor informado. No se adopta versión según vía de ingreso; el catálogo manual 1..11 no se sustituye por restricciones del motor exploratorio antiguo.",
+  "casos": [
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 70
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 140
+        }
+      ],
+      "codcarpr": "CADMP",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"CADMP\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 1,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": "2025",
+          "codigo_unico": "I162S2C83J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 87",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C83J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C83J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2025,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "ADMINISTRACION PUBLICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2025",
+          "codigo_unico": "I162S2C83J4V2",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 88",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C83J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C83J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2025,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "ADMINISTRACION PUBLICA",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "2",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"CADMP\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "CADMP20251",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 12
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 101
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 198
+        }
+      ],
+      "codcarpr": "CIADM",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"CIADM\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 2,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": "2024",
+          "codigo_unico": "I162S2C76J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 72",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C76J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C76J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2024,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2024",
+          "codigo_unico": "I162S2C76J4V2",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 73",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C76J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C76J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2025,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "2",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 5",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"CIADM\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "CIADM20241",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 43
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 36
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 50
+        }
+      ],
+      "codcarpr": "CICIB",
+      "contextos_v20_otras_dimensiones_no_utilizados": [
+        {
+          "anio": 2024,
+          "contextos_no_matriculas": 42,
+          "jornada_SIES": "4",
+          "sede_SIES": "2"
+        },
+        {
+          "anio": 2025,
+          "contextos_no_matriculas": 85,
+          "jornada_SIES": "4",
+          "sede_SIES": "2"
+        }
+      ],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"CICIB\",\"RE\",\"V\"]",
+      "jornada_umas": "V",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 3,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C46J2V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 47",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C46J2V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C46J2V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CIBERSEGURIDAD",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C46J2V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 48",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C46J2V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C46J2V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CIBERSEGURIDAD",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "2"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 8",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"CICIB\",\"RE\",\"V\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C46J2V3",
+              "duracion_total": "4",
+              "fila_duracion": 76,
+              "tipo_plan": "3"
+            },
+            {
+              "codigo_unico": "I162S2C46J2V3",
+              "duracion_total": "4",
+              "fila_duracion": 77,
+              "tipo_plan": "3"
+            }
+          ],
+          "fuente_perfil": "CODCARPR_CANONICO",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "4",
+              "3"
+            ]
+          ],
+          "plan_umas": "CICIB20241",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 20
+        }
+      ],
+      "codcarpr": "CNATP",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"CNATP\",\"RE\",\"V\"]",
+      "jornada_umas": "V",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 4,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": "2025",
+          "codigo_unico": "I162S2C90J2V1",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 98",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C90J2V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C90J2V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2025,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "NATUROPATIA",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "1",
+          "vigencia_2027": "2"
+        },
+        {
+          "anio_inicio_declarado_2027": "2026",
+          "codigo_unico": "I162S2C90J2V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 99",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C90J2V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C90J2V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2026,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "NATUROPATIA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 19",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"CNATP\",\"RE\",\"V\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "CNATP20251",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 239
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_DOCUMENTO_NO_COMPARABLE",
+          "matriculas_familia": 1
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 287
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 363
+        }
+      ],
+      "codcarpr": "IECIRE",
+      "contextos_v20_otras_dimensiones_no_utilizados": [
+        {
+          "anio": 2024,
+          "contextos_no_matriculas": 18,
+          "jornada_SIES": "2",
+          "sede_SIES": "2"
+        }
+      ],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"IECIRE\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 5,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C1J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 37",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C1J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 7",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C1J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 8",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE20081",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE20101",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE20121",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE20151",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE20191",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE2020",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 50",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 37,
+              "tipo_plan": "1"
+            },
+            {
+              "codigo_unico": "I162S2C1J4V1",
+              "duracion_total": "8",
+              "fila_duracion": 144,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "PERFIL_UNANIME_GRUPO_EXISTENTE",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IECIRE20211",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 447
+        },
+        {
+          "anio_MU": 2024,
+          "estado": "VINCULO_OBSERVADO_UNICO",
+          "matriculas_familia": 70
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_DOCUMENTO_NO_COMPARABLE",
+          "matriculas_familia": 1
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 560
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "VINCULO_OBSERVADO_UNICO",
+          "matriculas_familia": 14
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 652
+        }
+      ],
+      "codcarpr": "IECIREOL",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "El perfil interno está ausente/múltiple o no coincide; el enlace observado no certifica duración curricular.",
+        "El grupo previo contiene varias familias C: no tratarlo como una misma carrera por nombre.",
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "DÉBIL",
+      "grupo": "[\"IECIREOL\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2020",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 1,
+          "plan_umas_observado": "IECIREOL20191",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2019",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 1,
+          "plan_umas_observado": "IECIREOL20201",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2020",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 3,
+          "plan_umas_observado": "IECIREOL20201",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2018",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 1,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2020",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 2,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2021",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 13,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2022",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 13,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2023",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 8,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2022",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 1,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "D_CORRESPONDENCIA_INTERNA"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2023",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 1,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "D_CORRESPONDENCIA_INTERNA"
+        },
+        {
+          "FOR_ING_ACT": "11",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2023",
+          "descripcion_via_gobernada_2026": "Articulacion de TNS a carrera profesional",
+          "matriculas": 20,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "3",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2023",
+          "descripcion_via_gobernada_2026": "Cambio Interno",
+          "matriculas": 6,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2025,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2021",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 2,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2025,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2022",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 5,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2025,
+          "codigo_SIES_informado": "I162S2C1J4V2",
+          "cohorte_ingreso_actual_MU": "2023",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 7,
+          "plan_umas_observado": "IECIREOL20211",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        }
+      ],
+      "numero": 6,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C1J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 37",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C1J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 7",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 84,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C1J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 8",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C3J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 69",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 20",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 21",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 52",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIREOL\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IECIREOL",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 52",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIREOL\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IECIREOL20191",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 52",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIREOL\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IECIREOL20201",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 52",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IECIREOL\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IECIREOL20211",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Referencia respaldada en MU: I162S2C1J4V2; solo propuesta C/E para Alexi.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 84
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 278
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 287
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 289
+        }
+      ],
+      "codcarpr": "IETMRE",
+      "contextos_v20_otras_dimensiones_no_utilizados": [
+        {
+          "anio": 2024,
+          "contextos_no_matriculas": 29,
+          "jornada_SIES": "2",
+          "sede_SIES": "2"
+        },
+        {
+          "anio": 2025,
+          "contextos_no_matriculas": 3,
+          "jornada_SIES": "2",
+          "sede_SIES": "2"
+        }
+      ],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"IETMRE\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 7,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C3J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 69",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 20",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 21",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 57",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IETMRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IETMRE20091",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 57",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IETMRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IETMRE20101",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 57",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IETMRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IETMRE20121",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 57",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IETMRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IETMRE20161",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 57",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IETMRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IETMRE20191",
+          "tipo_plan_malla_acreditado": null
+        },
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 57",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IETMRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "IETMRE20211",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 37
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 23
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "VINCULO_OBSERVADO_UNICO",
+          "matriculas_familia": 82
+        }
+      ],
+      "codcarpr": "IIND",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "El perfil interno está ausente/múltiple o no coincide; el enlace observado no certifica duración curricular.",
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "DÉBIL",
+      "grupo": "[\"IIND\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "0",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C87J4V2",
+          "cohorte_ingreso_actual_MU": "2026",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 13,
+          "plan_umas_observado": "IIND20251",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C87J4V2",
+          "cohorte_ingreso_actual_MU": "2025",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 17,
+          "plan_umas_observado": "IIND20251",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C87J4V2",
+          "cohorte_ingreso_actual_MU": "2026",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 51,
+          "plan_umas_observado": "IIND20251",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "11",
+          "VIG_MU": "1",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C87J4V2",
+          "cohorte_ingreso_actual_MU": "2026",
+          "descripcion_via_gobernada_2026": "Articulacion de TNS a carrera profesional",
+          "matriculas": 1,
+          "plan_umas_observado": "IIND20251",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        }
+      ],
+      "numero": 8,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": "2025",
+          "codigo_unico": "I162S2C87J4V1",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 93",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C87J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C87J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2025,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA INDUSTRIAL",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "1",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2026",
+          "codigo_unico": "I162S2C87J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 94",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C87J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C87J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2026,
+          "matriculas_MU_con_plan_vinculado": 82,
+          "nombre": "INGENIERIA INDUSTRIAL",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 61",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"IIND\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C87J4V1",
+              "duracion_total": "4",
+              "fila_duracion": 124,
+              "tipo_plan": "3"
+            },
+            {
+              "codigo_unico": "I162S2C87J4V2",
+              "duracion_total": "8",
+              "fila_duracion": 125,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "CODCARPR_CANONICO",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "4",
+              "3"
+            ],
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "plan_umas": "IIND20251",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Referencia respaldada en MU: I162S2C87J4V2; solo propuesta C/E para Alexi.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 82
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 278
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 287
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 289
+        }
+      ],
+      "codcarpr": "NCONRE",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"NCONRE\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 9,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C3J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 69",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 20",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 21",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 74",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"NCONRE\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "NCONRE",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 278
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 287
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 289
+        }
+      ],
+      "codcarpr": "NCONREOL",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"NCONREOL\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 10,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C3J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 69",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 20",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C3J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 21",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C3J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN CONECTIVIDAD Y REDES",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 76",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"NCONREOL\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "NCONREOL2019",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 239
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_DOCUMENTO_NO_COMPARABLE",
+          "matriculas_familia": 1
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 287
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 363
+        }
+      ],
+      "codcarpr": "NINFREOL",
+      "contextos_v20_otras_dimensiones_no_utilizados": [],
+      "contradicciones_y_limites": [
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "SIN EVIDENCIA",
+      "grupo": "[\"NINFREOL\",\"RE\",\"O\"]",
+      "jornada_umas": "O",
+      "matriculas_por_plan_codigo_FOR": [],
+      "numero": 11,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": null,
+          "codigo_unico": "I162S2C1J4V1",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "B/C/D",
+              "localizador": "fila 37",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2018,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": null
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C1J4V2",
+          "duracion_semestres": "8",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 7",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V2",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        },
+        {
+          "anio_inicio_declarado_2027": "2019",
+          "codigo_unico": "I162S2C1J4V3",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 8",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C1J4V3",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C1J4V3",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2019,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "INGENIERIA EN INFORMATICA",
+          "tipo_plan": "Plan Regular de Continuidad",
+          "tipo_plan_codigo": "3",
+          "version": "3",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "E_SIN_PERFIL_CURRICULAR_UNICO",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 85",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"NINFREOL\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "perfiles_codcarpr_gobernados": [],
+          "plan_umas": "NINFREOL2019",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Sin propuesta: no existe enlace MU–plan único de esta combinación.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 0
+    },
+    {
+      "aplicada": false,
+      "cobertura_familiar_no_atribuible_al_alias": [
+        {
+          "anio_MU": 2024,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 8
+        },
+        {
+          "anio_MU": 2024,
+          "estado": "VINCULO_OBSERVADO_UNICO",
+          "matriculas_familia": 3
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_DOCUMENTO_NO_COMPARABLE",
+          "matriculas_familia": 2
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 2
+        },
+        {
+          "anio_MU": 2025,
+          "estado": "VINCULO_OBSERVADO_UNICO",
+          "matriculas_familia": 7
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "E_SIN_ENLACE_DE_ESTA_COMBINACION",
+          "matriculas_familia": 11
+        },
+        {
+          "anio_MU": 2026,
+          "estado": "VINCULO_OBSERVADO_UNICO",
+          "matriculas_familia": 32
+        }
+      ],
+      "codcarpr": "TAMD",
+      "contextos_v20_otras_dimensiones_no_utilizados": [
+        {
+          "anio": 2024,
+          "contextos_no_matriculas": 30,
+          "jornada_SIES": "4",
+          "sede_SIES": "2"
+        },
+        {
+          "anio": 2025,
+          "contextos_no_matriculas": 142,
+          "jornada_SIES": "4",
+          "sede_SIES": "2"
+        },
+        {
+          "anio": 2026,
+          "contextos_no_matriculas": 17,
+          "jornada_SIES": "1",
+          "sede_SIES": "2"
+        },
+        {
+          "anio": 2026,
+          "contextos_no_matriculas": 264,
+          "jornada_SIES": "4",
+          "sede_SIES": "2"
+        }
+      ],
+      "contradicciones_y_limites": [
+        "El código observado no admite nuevos en la carga 2027; no trasladarlo a una versión nueva.",
+        "Existe cobertura familiar sin enlace de plan de esta combinación; no atribuirla al alias ni sumarla como evidencia a favor."
+      ],
+      "decision_Alexi": "____",
+      "estado_H002": "VERSION_MULTIPLE_E",
+      "fuentes": {
+        "FOR_ING_ACT": {
+          "clase": "B/C",
+          "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+          "ruta": "gobernanza_for_ing_act.tsv",
+          "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+        },
+        "MU": {
+          "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+          "clase": "B",
+          "hoja": "BASE_RETENCION_MU",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+        },
+        "motor": {
+          "clase": "C",
+          "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+          "no_ejecutado": true,
+          "ruta": "codigo_gobernanza_v2.py",
+          "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+        },
+        "v20": {
+          "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+          "clase": "C/D",
+          "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+          "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+          "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+          "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+        }
+      },
+      "fuerza": "DÉBIL",
+      "grupo": "[\"TAMD\",\"RE\",\"V\"]",
+      "jornada_umas": "V",
+      "matriculas_por_plan_codigo_FOR": [
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2024,
+          "codigo_SIES_informado": "I162S2C78J2V1",
+          "cohorte_ingreso_actual_MU": "2024",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 3,
+          "plan_umas_observado": "TAMD20241",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2025,
+          "codigo_SIES_informado": "I162S2C78J2V1",
+          "cohorte_ingreso_actual_MU": "2025",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 7,
+          "plan_umas_observado": "TAMD20241",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C78J2V1",
+          "cohorte_ingreso_actual_MU": "2025",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 3,
+          "plan_umas_observado": "TAMD20241",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "1",
+          "VIG_MU": "1",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C78J2V1",
+          "cohorte_ingreso_actual_MU": "2026",
+          "descripcion_via_gobernada_2026": "Ingreso Directo (regular)",
+          "matriculas": 28,
+          "plan_umas_observado": "TAMD20241",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        },
+        {
+          "FOR_ING_ACT": "3",
+          "VIG_MU": "1",
+          "anio_MU": 2026,
+          "codigo_SIES_informado": "I162S2C78J2V1",
+          "cohorte_ingreso_actual_MU": "2025",
+          "descripcion_via_gobernada_2026": "Cambio Interno",
+          "matriculas": 1,
+          "plan_umas_observado": "TAMD20241",
+          "respaldo_enlace": "B/C_DOCUMENTAL_ANUAL"
+        }
+      ],
+      "numero": 12,
+      "opciones_SIES": [
+        {
+          "anio_inicio_declarado_2027": "2024",
+          "codigo_unico": "I162S2C78J2V1",
+          "duracion_semestres": "5",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 79",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C78J2V1",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "codigo_unico=I162S2C78J2V1",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            }
+          ],
+          "inicio_oferta_observado": 2024,
+          "matriculas_MU_con_plan_vinculado": 42,
+          "nombre": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "1",
+          "vigencia_2027": "2"
+        },
+        {
+          "anio_inicio_declarado_2027": "2024",
+          "codigo_unico": "I162S2C78J2V2",
+          "duracion_semestres": "4",
+          "evidencia": [
+            {
+              "clase": "C",
+              "localizador": "fila 80",
+              "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+              "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+            },
+            {
+              "clase": "A",
+              "localizador": "páginas 22 y 28",
+              "ruta": "oferta_academica_2027/00_fuentes_originales/etapa1_octubre_20261020/Instructivo_Oferta_Academica_2027_CFT_E_IP_DFE.pdf",
+              "sha256": "ff864b1dce48168e6b031c454298e2d3df71d8f2377609366ead13828742d585"
+            },
+            {
+              "clase": "C/D",
+              "localizador": "I162S2C78J2V2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            }
+          ],
+          "inicio_oferta_observado": null,
+          "matriculas_MU_con_plan_vinculado": 0,
+          "nombre": "TECNICO EN ADMINISTRACION DE EMPRESAS",
+          "tipo_plan": "Plan Regular",
+          "tipo_plan_codigo": "1",
+          "version": "2",
+          "vigencia_2027": "1"
+        }
+      ],
+      "planes_UMAS": [
+        {
+          "duracion_semestres_malla_acreditada": null,
+          "duracion_tipo_confirmados_para_esta_malla": false,
+          "estado": "C_PERFIL_DEL_GRUPO_NO_CERTIFICA_MALLA",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 94",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"TAMD\",\"RE\",\"V\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            },
+            {
+              "localizador": "filas de evidencia_perfil del grupo",
+              "ruta": "DURACION_ESTUDIOS.tsv",
+              "sha256": "701025451acf2f84078cf185d6ae0be0d8483d37e3b3e9483f70070397aebc6e"
+            }
+          ],
+          "evidencia_DURACION_ESTUDIOS": [
+            {
+              "codigo_unico": "I162S2C78J2V1",
+              "duracion_total": "5",
+              "fila_duracion": 113,
+              "tipo_plan": "1"
+            }
+          ],
+          "fuente_perfil": "CODCARPR_CANONICO",
+          "perfiles_codcarpr_gobernados": [
+            [
+              "5",
+              "1"
+            ]
+          ],
+          "plan_umas": "TAMD20241",
+          "tipo_plan_malla_acreditado": null
+        }
+      ],
+      "propuesta": "Referencia respaldada en MU: I162S2C78J2V1; solo propuesta C/E para Alexi.",
+      "sede_umas": "RE",
+      "total_MU_vinculado": 42
+    }
+  ],
+  "clase": "C/E",
+  "fuentes": {
+    "FOR_ING_ACT": {
+      "clase": "B/C",
+      "regla": "Leer el valor informado; no derivarlo de nuevo ni elegir versión por vía.",
+      "ruta": "gobernanza_for_ing_act.tsv",
+      "sha256": "57387974e1c450790d572c9006d15a5a8fa718a726072b82db5d6b7d7adfeb71"
+    },
+    "MU": {
+      "catalogo": "data/catalogo_fuentes/CATALOGO_FUENTES.json",
+      "clase": "B",
+      "hoja": "BASE_RETENCION_MU",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd"
+    },
+    "motor": {
+      "clase": "C",
+      "localizador": "_load_for_ing_act_catalog, _resolve_for_ing_act_row",
+      "no_ejecutado": true,
+      "ruta": "codigo_gobernanza_v2.py",
+      "sha256": "ddb8cba1f4af1df8c273db90b462951db3db1ce52c3218af8d472e62da9e3c4d"
+    },
+    "v20": {
+      "base_privada_catalogada": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/07_PRIVADAS_DICCIONARIO/v20_20261027_base/DICCIONARIO_V20_CANDIDATA.sqlite",
+      "clase": "C/D",
+      "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+      "modo": "SOLO_LECTURA; no adjudicaciones nuevas",
+      "sha256_base": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb",
+      "sha256_descriptor": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+    }
+  },
+  "hito": "H002b",
+  "limitacion_plan": "Plan observado en los respaldos del contexto; no certifica por sí solo vigencia histórica curricular.",
+  "metodo_vinculo": "Identidad con DV exacto + año + código MU literal + CODCARPR/sede/jornada v20; expediente y plan únicos entre contextos. B/C documental y D internos separados; sin enlace E.",
+  "motor_exploratorio": {
+    "contraste": "config de abril restringe vías; evidencia P del runtime conserva 1..11 y documenta código 6. No se rederiva FOR ni se modifica el motor.",
+    "no_ejecutado": true,
+    "reglas_y_traza_no_localizadas": [
+      "control/for_ing_act_rules.tsv",
+      "control/for_ing_act_trace_long.tsv"
+    ]
+  },
+  "no_sumar_casos": "Las familias pueden repetirse entre alias/casos: no sumar sus conteos entre fichas.",
+  "regla_conteo": "Todas las filas MU 2024–2026, incluido VIG 0. Cada fila cuenta a lo sumo una vez dentro de cada caso si el enlace exacto es único.",
+  "totales_MU_sin_modificar": {
+    "2024": 1541,
+    "2025": 2371,
+    "2026": 4105
+  },
+  "unidad": "MATRICULAS_MU_FILAS; no personas ni filas de asignaturas"
+}
