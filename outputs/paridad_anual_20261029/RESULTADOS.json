@@ -1,0 +1,493 @@
+{
+  "ADMP_CADMP": {
+    "controles": [
+      {
+        "ancla_codigo": true,
+        "anio": 2025,
+        "clase": "B/C",
+        "codigo_sies": "I162S2C83J4V1",
+        "diferencia_sies_menos_mu": 0,
+        "estado": "CUADRA",
+        "fila_publicacion": 29588,
+        "filas_mu": 70,
+        "matriculas_enlazadas": 69,
+        "matriculas_sin_enlace": 1,
+        "mu_seleccionada": 70,
+        "nivel_publicacion": "Pregrado",
+        "por_vig": {
+          "1": 70
+        },
+        "regla_vig": "TODAS_OBSERVADO_PRECARGA_AC2026",
+        "sies_total": 70,
+        "sin_enlace_por_motivo": {
+          "SIN_ACTIVIDAD_ANUAL_COMPATIBLE": 1
+        }
+      },
+      {
+        "ancla_codigo": false,
+        "anio": 2026,
+        "clase": "B/C/E",
+        "codigo_sies": "I162S2C83J4V1",
+        "diferencia_sies_menos_mu": 10,
+        "estado": "DIFERENCIA_E",
+        "fila_publicacion": 14285,
+        "filas_mu": 130,
+        "matriculas_enlazadas": 72,
+        "matriculas_sin_enlace": 12,
+        "mu_seleccionada": 84,
+        "nivel_publicacion": "Pregrado",
+        "por_vig": {
+          "0": 46,
+          "1": 84
+        },
+        "regla_vig": "VIG_1_PATRON_PUENTE",
+        "sies_total": 94,
+        "sin_enlace_por_motivo": {
+          "SIN_ACTIVIDAD_ANUAL_COMPATIBLE": 12
+        }
+      },
+      {
+        "ancla_codigo": false,
+        "anio": 2026,
+        "clase": "B/C",
+        "codigo_sies": "I162S2C83J4V2",
+        "diferencia_sies_menos_mu": 0,
+        "estado": "CUADRA",
+        "fila_publicacion": 14286,
+        "filas_mu": 10,
+        "matriculas_enlazadas": 7,
+        "matriculas_sin_enlace": 2,
+        "mu_seleccionada": 9,
+        "nivel_publicacion": "Pregrado",
+        "por_vig": {
+          "0": 1,
+          "1": 9
+        },
+        "regla_vig": "VIG_1_PATRON_PUENTE",
+        "sies_total": 9,
+        "sin_enlace_por_motivo": {
+          "SIN_ACTIVIDAD_ANUAL_COMPATIBLE": 2
+        }
+      }
+    ],
+    "dictamen": "ADMP→V1: respaldo anual parcial en 2025. CADMP→V2: respaldo anual parcial en 2026, que no es año ancla institucional. Los enlaces faltantes impiden cerrar íntegramente los dos códigos; no se fuerza el plan desde el total. Se conserva H002 y su pendiente E. V2 no tuvo matrícula observada en 2025 (ausencia, no fila cero inventada).",
+    "matriz": [
+      {
+        "ancla_codigo": true,
+        "anio": 2025,
+        "clase": "C",
+        "codcarpr": "ADMP",
+        "codigo_es_destino_observado": true,
+        "codigo_sies": "I162S2C83J4V1",
+        "control_codigo": "CUADRA",
+        "estado": "CUADRA_UNICO",
+        "fuente_conteo": "BASE_MU_142342 + DATOSALUMNOS + PROMEDIOS; FUENTES.json",
+        "jornada_umas": "O",
+        "matriculas_mu_excluidas_vig": 0,
+        "matriculas_mu_incluidas": 69,
+        "mu_codigo_total": 70,
+        "plan_umas": "ADMP20251",
+        "sede_respaldo": "Catálogo y DA concordantes; no certifica sede individual al corte",
+        "sede_umas": "RE",
+        "sies_codigo_total": 70,
+        "sin_enlace_motivo": "",
+        "unidad": "matrículas MU",
+        "vigencia_historica": "Actividad anual observada; no estado actual ni foto al 30-abr"
+      },
+      {
+        "ancla_codigo": true,
+        "anio": 2025,
+        "clase": "C/E",
+        "codcarpr": "SIN_ENLACE",
+        "codigo_es_destino_observado": true,
+        "codigo_sies": "I162S2C83J4V1",
+        "control_codigo": "CUADRA",
+        "estado": "SIN_ENLACE",
+        "fuente_conteo": "BASE_MU_142342 + DATOSALUMNOS + PROMEDIOS; FUENTES.json",
+        "jornada_umas": "",
+        "matriculas_mu_excluidas_vig": 0,
+        "matriculas_mu_incluidas": 1,
+        "mu_codigo_total": 70,
+        "plan_umas": "SIN_ENLACE",
+        "sede_respaldo": "",
+        "sede_umas": "",
+        "sies_codigo_total": 70,
+        "sin_enlace_motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "unidad": "matrículas MU",
+        "vigencia_historica": "Actividad anual observada; no estado actual ni foto al 30-abr"
+      },
+      {
+        "ancla_codigo": false,
+        "anio": 2026,
+        "clase": "C/E",
+        "codcarpr": "ADMP",
+        "codigo_es_destino_observado": true,
+        "codigo_sies": "I162S2C83J4V1",
+        "control_codigo": "DIFERENCIA_E",
+        "estado": "UNICO_SIN_CUADRATURA",
+        "fuente_conteo": "BASE_MU_142342 + DATOSALUMNOS + PROMEDIOS; FUENTES.json",
+        "jornada_umas": "O",
+        "matriculas_mu_excluidas_vig": 3,
+        "matriculas_mu_incluidas": 72,
+        "mu_codigo_total": 84,
+        "plan_umas": "ADMP20251",
+        "sede_respaldo": "Catálogo y DA concordantes; no certifica sede individual al corte",
+        "sede_umas": "RE",
+        "sies_codigo_total": 94,
+        "sin_enlace_motivo": "",
+        "unidad": "matrículas MU",
+        "vigencia_historica": "Actividad anual observada; no estado actual ni foto al 30-abr"
+      },
+      {
+        "ancla_codigo": false,
+        "anio": 2026,
+        "clase": "C/E",
+        "codcarpr": "SIN_ENLACE",
+        "codigo_es_destino_observado": true,
+        "codigo_sies": "I162S2C83J4V1",
+        "control_codigo": "DIFERENCIA_E",
+        "estado": "SIN_ENLACE",
+        "fuente_conteo": "BASE_MU_142342 + DATOSALUMNOS + PROMEDIOS; FUENTES.json",
+        "jornada_umas": "",
+        "matriculas_mu_excluidas_vig": 43,
+        "matriculas_mu_incluidas": 12,
+        "mu_codigo_total": 84,
+        "plan_umas": "SIN_ENLACE",
+        "sede_respaldo": "",
+        "sede_umas": "",
+        "sies_codigo_total": 94,
+        "sin_enlace_motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "unidad": "matrículas MU",
+        "vigencia_historica": "Actividad anual observada; no estado actual ni foto al 30-abr"
+      },
+      {
+        "ancla_codigo": false,
+        "anio": 2026,
+        "clase": "C",
+        "codcarpr": "CADMP",
+        "codigo_es_destino_observado": true,
+        "codigo_sies": "I162S2C83J4V2",
+        "control_codigo": "CUADRA",
+        "estado": "CUADRA_UNICO",
+        "fuente_conteo": "BASE_MU_142342 + DATOSALUMNOS + PROMEDIOS; FUENTES.json",
+        "jornada_umas": "O",
+        "matriculas_mu_excluidas_vig": 0,
+        "matriculas_mu_incluidas": 7,
+        "mu_codigo_total": 9,
+        "plan_umas": "CADMP20251",
+        "sede_respaldo": "Catálogo y DA concordantes; no certifica sede individual al corte",
+        "sede_umas": "RE",
+        "sies_codigo_total": 9,
+        "sin_enlace_motivo": "",
+        "unidad": "matrículas MU",
+        "vigencia_historica": "Actividad anual observada; no estado actual ni foto al 30-abr"
+      },
+      {
+        "ancla_codigo": false,
+        "anio": 2026,
+        "clase": "C/E",
+        "codcarpr": "SIN_ENLACE",
+        "codigo_es_destino_observado": true,
+        "codigo_sies": "I162S2C83J4V2",
+        "control_codigo": "CUADRA",
+        "estado": "SIN_ENLACE",
+        "fuente_conteo": "BASE_MU_142342 + DATOSALUMNOS + PROMEDIOS; FUENTES.json",
+        "jornada_umas": "",
+        "matriculas_mu_excluidas_vig": 1,
+        "matriculas_mu_incluidas": 2,
+        "mu_codigo_total": 9,
+        "plan_umas": "SIN_ENLACE",
+        "sede_respaldo": "",
+        "sede_umas": "",
+        "sies_codigo_total": 9,
+        "sin_enlace_motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "unidad": "matrículas MU",
+        "vigencia_historica": "Actividad anual observada; no estado actual ni foto al 30-abr"
+      }
+    ],
+    "sin_enlace_desglose": [
+      {
+        "anio": 2025,
+        "carreras_DA": "ADMP",
+        "codigo": "I162S2C83J4V1",
+        "matriculas": 1,
+        "motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "vig": "1"
+      },
+      {
+        "anio": 2026,
+        "carreras_DA": "ADMP",
+        "codigo": "I162S2C83J4V1",
+        "matriculas": 43,
+        "motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "vig": "0"
+      },
+      {
+        "anio": 2026,
+        "carreras_DA": "ADMP",
+        "codigo": "I162S2C83J4V1",
+        "matriculas": 12,
+        "motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "vig": "1"
+      },
+      {
+        "anio": 2026,
+        "carreras_DA": "CADMP",
+        "codigo": "I162S2C83J4V2",
+        "matriculas": 1,
+        "motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "vig": "0"
+      },
+      {
+        "anio": 2026,
+        "carreras_DA": "CADMP",
+        "codigo": "I162S2C83J4V2",
+        "matriculas": 2,
+        "motivo": "SIN_ACTIVIDAD_ANUAL_COMPATIBLE",
+        "vig": "1"
+      }
+    ]
+  },
+  "actividad_diagnostico": {
+    "sede_catalogo_ausente_multiple_o_conflicto_DA": 83,
+    "sin_identidad_expediente_anio": 4211
+  },
+  "anual": [
+    {
+      "ancla": "SI_POR_CODIGO",
+      "anio": 2025,
+      "codigos_con_diferencia": 0,
+      "combinaciones_plan_conocido": {
+        "CUADRA_UNICO": 40,
+        "REPARTIDO": 9
+      },
+      "enlazadas": 2147,
+      "filas_mu": 2371,
+      "mu_seleccionada": 2371,
+      "personas_comparables": 2370,
+      "personas_enlazadas": 2147,
+      "porcentaje_enlazado": 90.553,
+      "sies_total_comparable": 2371,
+      "sin_enlace_codigo_motivo": 44,
+      "sin_enlace_matriculas": 224,
+      "todos_codigos_cuadran": true
+    },
+    {
+      "ancla": "SI_POR_CODIGO",
+      "anio": 2024,
+      "codigos_con_diferencia": 0,
+      "combinaciones_plan_conocido": {
+        "CUADRA_UNICO": 50,
+        "REPARTIDO": 2
+      },
+      "enlazadas": 1354,
+      "filas_mu": 1541,
+      "mu_seleccionada": 1455,
+      "personas_comparables": 1450,
+      "personas_enlazadas": 1349,
+      "porcentaje_enlazado": 93.058,
+      "sies_total_comparable": 1455,
+      "sin_enlace_codigo_motivo": 24,
+      "sin_enlace_matriculas": 101,
+      "todos_codigos_cuadran": true
+    },
+    {
+      "ancla": "PARCIAL_POR_CODIGO",
+      "anio": 2023,
+      "codigos_con_diferencia": 2,
+      "combinaciones_plan_conocido": {
+        "CUADRA_UNICO": 34,
+        "REPARTIDO": 1,
+        "UNICO_SIN_CUADRATURA": 2
+      },
+      "enlazadas": 1091,
+      "filas_mu": 1145,
+      "mu_seleccionada": 1142,
+      "personas_comparables": 1130,
+      "personas_enlazadas": 1080,
+      "porcentaje_enlazado": 95.534,
+      "sies_total_comparable": 1142,
+      "sin_enlace_codigo_motivo": 9,
+      "sin_enlace_matriculas": 51,
+      "todos_codigos_cuadran": false
+    },
+    {
+      "ancla": "SI_POR_CODIGO",
+      "anio": 2022,
+      "codigos_con_diferencia": 0,
+      "combinaciones_plan_conocido": {
+        "CUADRA_UNICO": 48,
+        "REPARTIDO": 2
+      },
+      "enlazadas": 979,
+      "filas_mu": 1038,
+      "mu_seleccionada": 1033,
+      "personas_comparables": 1018,
+      "personas_enlazadas": 965,
+      "porcentaje_enlazado": 94.773,
+      "sies_total_comparable": 1033,
+      "sin_enlace_codigo_motivo": 12,
+      "sin_enlace_matriculas": 54,
+      "todos_codigos_cuadran": true
+    },
+    {
+      "ancla": "NO_2026",
+      "anio": 2026,
+      "codigos_con_diferencia": 48,
+      "combinaciones_plan_conocido": {
+        "CUADRA_UNICO": 14,
+        "UNICO_SIN_CUADRATURA": 47
+      },
+      "enlazadas": 2915,
+      "filas_mu": 4105,
+      "mu_seleccionada": 3145,
+      "personas_comparables": 3111,
+      "personas_enlazadas": 2886,
+      "porcentaje_enlazado": 92.687,
+      "sies_total_comparable": 3371,
+      "sin_enlace_codigo_motivo": 41,
+      "sin_enlace_matriculas": 230,
+      "todos_codigos_cuadran": false
+    }
+  ],
+  "clases": "A norma; B observado; C cálculo; D decisión; E pendiente",
+  "cobertura_fuentes": [
+    {
+      "filas": 4733,
+      "fuente": "DATOSDEALUMNOS ORIGEN DE LOS DATOS2025.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 2391,
+      "fuente": "DATOSDEALUMNOS.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 14637,
+      "fuente": "DATOSDEALUMNOS_11248.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 15185,
+      "fuente": "DATOSDEALUMNOS_12159.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 10254,
+      "fuente": "DATOSDEALUMNOS_3194.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 3262,
+      "fuente": "DATOSDEALUMNOS_4094.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 3883,
+      "fuente": "DATOSDEALUMNOS_4490.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 3486,
+      "fuente": "DATOSDEALUMNOS_4649.xlsx",
+      "hoja": "Hoja1",
+      "uso": "identidad, expediente y extremos de año; no vigencia histórica"
+    },
+    {
+      "filas": 70000,
+      "fuente": "PROMEDIOSDEALUMNOS_12166.xlsx",
+      "hoja": "Hoja1",
+      "uso": "actividad anual; unión de expedientes, no suma de asignaturas"
+    },
+    {
+      "filas": 62742,
+      "fuente": "PROMEDIOSDEALUMNOS_2071.xlsx",
+      "hoja": "Hoja1",
+      "uso": "actividad anual; unión de expedientes, no suma de asignaturas"
+    },
+    {
+      "filas": 70000,
+      "fuente": "PROMEDIOSDEALUMNOS_3233.xlsx",
+      "hoja": "Hoja1",
+      "uso": "actividad anual; unión de expedientes, no suma de asignaturas"
+    },
+    {
+      "filas": 129493,
+      "fuente": "PROMEDIOSDEALUMNOS_7804.xlsx",
+      "hoja": "Hoja1",
+      "uso": "actividad anual; unión de expedientes, no suma de asignaturas"
+    }
+  ],
+  "codigos_publicos_no_ISCJV": [
+    {
+      "anio": 2008,
+      "codigo": "I162M2008N1"
+    },
+    {
+      "anio": 2008,
+      "codigo": "I162M2008N3"
+    }
+  ],
+  "extractos_DA_no_utilizados": [
+    {
+      "fuente": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025.xlsx",
+      "motivo": "Sin Hoja1 con encabezado CODCLI/RUT/CODCARPR; no inferir estructura de pivote ni identificador."
+    },
+    {
+      "fuente": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL.xlsx",
+      "motivo": "Sin Hoja1 con encabezado CODCLI/RUT/CODCARPR; no inferir estructura de pivote ni identificador."
+    },
+    {
+      "fuente": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES.xlsx",
+      "motivo": "Sin Hoja1 con encabezado CODCLI/RUT/CODCARPR; no inferir estructura de pivote ni identificador."
+    },
+    {
+      "fuente": "DATOSDEALUMNOS_1758_CRUDO_10_04_2025_FINAL_SIES__d59e0f31.xlsx",
+      "motivo": "Sin Hoja1 con encabezado CODCLI/RUT/CODCARPR; no inferir estructura de pivote ni identificador."
+    },
+    {
+      "fuente": "DATOSDEALUMNOS_2176.xlsx",
+      "motivo": "Sin Hoja1 con encabezado CODCLI/RUT/CODCARPR; no inferir estructura de pivote ni identificador."
+    },
+    {
+      "fuente": "DATOSDEALUMNOS_367_.xlsx",
+      "motivo": "Sin Hoja1 con encabezado CODCLI/RUT/CODCARPR; no inferir estructura de pivote ni identificador."
+    }
+  ],
+  "historia_carreras_por_estado_no_sumar": {
+    "APROXIMA": 8,
+    "CUADRA_TOTAL": 7,
+    "NO_CUADRA": 14
+  },
+  "historia_estados_filas": {
+    "APROXIMA": 37,
+    "CUADRA_TOTAL": 34,
+    "NO_CUADRA": 588
+  },
+  "lotes_revision": {
+    "carreras": 38,
+    "casos": 838,
+    "lotes": 8
+  },
+  "pendiente_cierre_historico": "No se declara completa la atribución: actividad anual y catálogo no certifican matrícula al corte, ni períodos sin cobertura.",
+  "periodos_literales": {
+    "1": 160911,
+    "2": 79469,
+    "3": 49686,
+    "4": 19809,
+    "5": 18149
+  },
+  "puente_reproducido": true,
+  "validacion_95": {
+    "CONFIRMA": 14,
+    "CONTRADICE": 6,
+    "SIN_DATO_ANUAL": 75
+  }
+}

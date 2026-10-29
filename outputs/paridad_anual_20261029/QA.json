@@ -1,0 +1,91 @@
+{
+  "alcance": "Integridad y reproducibilidad; PASS no equivale a paridad histórica cerrada.",
+  "archivos_escaneados": [
+    "data/paridad_codigo_sies/anual_20261029/MANIFEST.json",
+    "data/paridad_codigo_sies/anual_20261029/MATRIZ_PARIDAD_ANUAL.csv",
+    "data/paridad_codigo_sies/anual_20261029/MATRIZ_PARIDAD_ANUAL.json",
+    "data/paridad_codigo_sies/anual_20261029/README.md",
+    "data/paridad_codigo_sies/anual_20261029/RESUMEN_POR_CARRERA.csv",
+    "data/paridad_codigo_sies/anual_20261029/RESUMEN_POR_CARRERA.json",
+    "outputs/paridad_anual_20261029/CONTROL_POR_CODIGO_ANIO.json",
+    "outputs/paridad_anual_20261029/ESPECIFICACION.md",
+    "outputs/paridad_anual_20261029/ESTADO_INICIAL.json",
+    "outputs/paridad_anual_20261029/FUENTES.json",
+    "outputs/paridad_anual_20261029/INFORME.md",
+    "outputs/paridad_anual_20261029/LOTES_REVISION.md",
+    "outputs/paridad_anual_20261029/RESULTADOS.json",
+    "outputs/paridad_anual_20261029/VALIDACION_95_H002.json",
+    "outputs/paridad_anual_20261029/construir_anual.py",
+    "outputs/paridad_anual_20261029/qa_anual.py",
+    "outputs/paridad_anual_20261029/test_anual.py"
+  ],
+  "clase": "C",
+  "controles": {
+    "2026_no_ancla": true,
+    "24_ajenos_intactos": true,
+    "95_codigos_unicos": true,
+    "CSV_JSON_MATRIZ_PARIDAD_ANUAL": true,
+    "CSV_JSON_RESUMEN_POR_CARRERA": true,
+    "SQL_independiente_matriz_0_diferencias": true,
+    "anclas_declaradas_sin_falsos_cierres": true,
+    "arbol_privado_no_publicado": true,
+    "auxiliares_hash": true,
+    "base_preservada_en_historia": true,
+    "cambios_solo_nuevos_H002f": true,
+    "confirma_solo_con_enlace_completo": true,
+    "control_total_publicado_no_ajustado": true,
+    "enlazados_mas_sin_enlace_igual_mu": true,
+    "fuentes_integras": true,
+    "historico_no_atribuye_version": true,
+    "historico_tolerancia_10": true,
+    "lotes_cinco_carreras": true,
+    "markdown_sin_espacios_finales": true,
+    "no_elige_enlace_ambiguo": true,
+    "privacidad_0_identificadores": true,
+    "protegidos_H002_v20_grupos_ajenos": true,
+    "pruebas": true,
+    "puente_reutilizado": true,
+    "rama": true,
+    "repartidos_contados_por_codigo_distinto": true,
+    "reproduccion_completa_desde_fuentes": true,
+    "salidas_hash": true,
+    "script_hash": true,
+    "sin_duplicar_matriculas_por_join": true,
+    "suma_por_codigo_conserva_seleccion_y_fuera": true,
+    "toda_seleccion_tiene_fuentes_da_y_actividad": true,
+    "todas_filas_MU_por_anio": true
+  },
+  "estado": "PASS_CON_PENDIENTES_E",
+  "manifest_sha256": "899948f8e98bd9692d4bae03fec98b542f51ede5670878d353923d1a99ebc521",
+  "pendientes": {
+    "sin_enlace_por_anio": {
+      "2022": 54,
+      "2023": 51,
+      "2024": 101,
+      "2025": 224,
+      "2026": 230
+    },
+    "validacion_95": {
+      "CONFIRMA": 14,
+      "CONTRADICE": 6,
+      "SIN_DATO_ANUAL": 75
+    }
+  },
+  "pruebas": [
+    {
+      "directorio": "outputs/paridad_anual_20261029",
+      "resumen": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+      "returncode": 0
+    },
+    {
+      "directorio": "outputs/paridad_codigo_sies_20261029",
+      "resumen": "...................................................\n----------------------------------------------------------------------\nRan 51 tests in 1.251s\n\nOK\n",
+      "returncode": 0
+    }
+  ],
+  "reproduccion": {
+    "resultado": "PASS",
+    "returncode": 0
+  },
+  "violaciones": []
+}

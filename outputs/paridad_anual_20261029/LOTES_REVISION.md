@@ -1,0 +1,1825 @@
+# Lotes de revisión · cinco carreras SIES por lote
+
+C/E: propuestas no aplicadas. Primero el ancla más reciente, después contraste 2026 e historia descendente.
+
+## Lote 1
+
+### Carrera 1
+
+- 2025 · I162S2C1J1V1 · IINF / IINF20241 · REPARTIDO · conteo 7; SIES 7.
+  Decisión Alexi: ____
+- 2025 · I162S2C1J1V2 · IINF / IINF20241 · REPARTIDO · conteo 19; SIES 23.
+  Decisión Alexi: ____
+- 2025 · I162S2C1J1V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 23. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C1J1V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 23. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C1J2V1 · IINF / IINF20241 · REPARTIDO · conteo 8; SIES 9.
+  Decisión Alexi: ____
+- 2025 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 9. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C1J2V4 · IINF / IINF20241 · REPARTIDO · conteo 15; SIES 24.
+  Decisión Alexi: ____
+- 2025 · I162S2C1J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 8; SIES 24. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C1J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 24. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C1J4V2 · CIINF / CIINF20241 · REPARTIDO · conteo 42; SIES 254.
+  Decisión Alexi: ____
+- 2025 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 22; SIES 254. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 254. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C1J4V3 · CIINF / CIINF20241 · REPARTIDO · conteo 33; SIES 34.
+  Decisión Alexi: ____
+- 2025 · I162S2C1J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 34. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C1J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 28. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C1J4V2 · IINF / IINF20241 · REPARTIDO · conteo 128; SIES 231.
+  Decisión Alexi: ____
+- 2024 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 231. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 231. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2024 · I162S2C1J4V3 · IINF / IINF20241 · REPARTIDO · conteo 1; SIES 1.
+  Decisión Alexi: ____
+- 2023 · I162S2C1J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 28. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2023 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 163. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2022 · I162S2C1J1V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 6; SIES 19. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C1J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 29. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C1J4V1 · IECIREOL / IECIREOL20201 · REPARTIDO · conteo 1; SIES 1.
+  Decisión Alexi: ____
+- 2022 · I162S2C1J4V2 · IECIREOL / IECIREOL20201 · REPARTIDO · conteo 9; SIES 130.
+  Decisión Alexi: ____
+- 2022 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 130. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 2. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C1J1V2 · IINF / IINF20241 · UNICO_SIN_CUADRATURA · conteo 30; SIES 34.
+  Decisión Alexi: ____
+- 2026 · I162S2C1J1V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 34. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C1J2V4 · IINF / IINF20241 · UNICO_SIN_CUADRATURA · conteo 27; SIES 32.
+  Decisión Alexi: ____
+- 2026 · I162S2C1J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 32. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C1J4V2 · IINF / IINF20241 · UNICO_SIN_CUADRATURA · conteo 212; SIES 239.
+  Decisión Alexi: ____
+- 2026 · I162S2C1J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 20; SIES 239. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C1J4V2 ·  /  · CONTRADICE_H002 · conteo ver detalle; SIES ver VALIDACION_95_H002.json.
+  Observado: IECIREOL / IECIREOL20211, RE, O: 14 matrículas.
+  Observado: IINF / IINF20241, RE, O: 175 matrículas.
+  Observado: CIINF / CIINF20241, RE, O: 42 matrículas.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 1; SIES 9.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V1 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 2; SIES 9.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V1 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 3; SIES 9.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V1 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 6; SIES 9.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 1; SIES 10.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V2 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 2; SIES 10.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V2 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 3; SIES 10.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J1V2 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 6; SIES 10.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 1; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 7; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 16; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 13; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 21; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 3; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V1 · NINFRE / NINFRE · NO_CUADRA · conteo 7; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V2 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 1; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 7; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V2 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 16; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V2 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 13; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V2 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 21; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V2 · NINFRE / NINFRE · NO_CUADRA · conteo 7; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V3 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 1; SIES 7.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V3 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 16; SIES 7.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V3 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 13; SIES 7.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V3 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 21; SIES 7.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V3 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 3; SIES 7.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 1; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 7; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · IECIRE / IECIRE20191 · APROXIMA · conteo 16; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 13; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 21; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 3; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J2V4 · NINFRE / NINFRE · NO_CUADRA · conteo 7; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V1 · IECIREOL / IECIREOL · NO_CUADRA · conteo 24; SIES 86.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V1 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 13; SIES 86.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V1 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 14; SIES 86.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V1 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 58; SIES 86.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V1 · IINF / IINF20241 · NO_CUADRA · conteo 1; SIES 86.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V1 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 11; SIES 86.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V2 · IECIREOL / IECIREOL · NO_CUADRA · conteo 24; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V2 · IECIREOL / IECIREOL20191 · APROXIMA · conteo 13; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V2 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 58; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V2 · IINF / IINF20241 · NO_CUADRA · conteo 1; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V2 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 11; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V3 · IECIREOL / IECIREOL · NO_CUADRA · conteo 24; SIES 11.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V3 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 13; SIES 11.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V3 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 14; SIES 11.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V3 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 58; SIES 11.
+  Decisión Alexi: ____
+- 2021 · I162S2C1J4V3 · IINF / IINF20241 · NO_CUADRA · conteo 1; SIES 11.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J1V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 2; SIES 7.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J1V1 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 5; SIES 7.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J1V1 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 8; SIES 7.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J1V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 2; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J1V2 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 5; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J1V2 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 8; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 38; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 22; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 17; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 2; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 1; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 2; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V1 · NINFRE / NINFRE · NO_CUADRA · conteo 19; SIES 54.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 38; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 22; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 17; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 2; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 1; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 2; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V2 · NINFRE / NINFRE · NO_CUADRA · conteo 19; SIES 5.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 38; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 17; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 2; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 1; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 2; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V3 · NINFRE / NINFRE · NO_CUADRA · conteo 19; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 38; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 22; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 17; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 2; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 1; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 2; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J2V4 · NINFRE / NINFRE · NO_CUADRA · conteo 19; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V1 · IECIREOL / IECIREOL · NO_CUADRA · conteo 26; SIES 39.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V1 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 18; SIES 39.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V1 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 24; SIES 39.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V1 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 39.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V1 · IINF / IINF20241 · NO_CUADRA · conteo 1; SIES 39.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V1 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 15; SIES 39.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V2 · IECIREOL / IECIREOL · NO_CUADRA · conteo 26; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V2 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 18; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V2 · IECIREOL / IECIREOL20201 · APROXIMA · conteo 24; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V2 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V2 · IINF / IINF20241 · NO_CUADRA · conteo 1; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V2 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 15; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V3 · IECIREOL / IECIREOL · NO_CUADRA · conteo 26; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V3 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 18; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V3 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 24; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V3 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C1J4V3 · IINF / IINF20241 · NO_CUADRA · conteo 1; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J1V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 6; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J1V1 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 10; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J1V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 6; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J1V2 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 10; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 4; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 67; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 33; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 3; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · NECIRE / NECIRE20091 · NO_CUADRA · conteo 1; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · NECIRE / NECIRE20121 · NO_CUADRA · conteo 8; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 10; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 2; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 9; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V1 · NINFRE / NINFRE · NO_CUADRA · conteo 38; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 4; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 67; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 33; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 3; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · NECIRE / NECIRE20091 · NO_CUADRA · conteo 1; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · NECIRE / NECIRE20121 · NO_CUADRA · conteo 8; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 10; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 2; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 9; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V2 · NINFRE / NINFRE · NO_CUADRA · conteo 38; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 4; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 67; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 33; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 3; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · NECIRE / NECIRE20091 · NO_CUADRA · conteo 1; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · NECIRE / NECIRE20121 · NO_CUADRA · conteo 8; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 10; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 2; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V3 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 9; SIES 38.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · IECIRE / IECIRE20121 · NO_CUADRA · conteo 4; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 67; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · IECIRE / IECIRE20191 · NO_CUADRA · conteo 33; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · IECIRE / IECIRE2020 · NO_CUADRA · conteo 3; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · IECIRE / IECIRE20211 · NO_CUADRA · conteo 1; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · NECIRE / NECIRE20091 · NO_CUADRA · conteo 1; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · NECIRE / NECIRE20121 · NO_CUADRA · conteo 8; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · NECIRE / NECIRE20151 · NO_CUADRA · conteo 10; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · NICIRE / NICIRE20121 · NO_CUADRA · conteo 2; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · NICIRE / NICIRE20151 · NO_CUADRA · conteo 9; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J2V4 · NINFRE / NINFRE · NO_CUADRA · conteo 38; SIES 21.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V1 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 1; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V1 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 28; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V1 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 1; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V1 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V1 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 9; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V2 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 1; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V2 · IECIREOL / IECIREOL · NO_CUADRA · conteo 17; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V2 · IECIREOL / IECIREOL20191 · APROXIMA · conteo 28; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V2 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 1; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V2 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V2 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 9; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V3 · IECIRE / IECIRE20151 · NO_CUADRA · conteo 1; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V3 · IECIREOL / IECIREOL · NO_CUADRA · conteo 17; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V3 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 28; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V3 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 1; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V3 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C1J4V3 · NINFREOL / NINFREOL2019 · NO_CUADRA · conteo 9; SIES 5.
+  Decisión Alexi: ____
+- 2018 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 34.
+  Decisión Alexi: ____
+- 2018 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 84.
+  Decisión Alexi: ____
+- 2018 · I162S2C1J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 42.
+  Decisión Alexi: ____
+- 2018 · I162S2C1J2V3 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 31.
+  Decisión Alexi: ____
+- 2018 · I162S2C1J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 20.
+  Decisión Alexi: ____
+- 2017 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 41.
+  Decisión Alexi: ____
+- 2017 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 112.
+  Decisión Alexi: ____
+- 2017 · I162S2C1J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 64.
+  Decisión Alexi: ____
+- 2016 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 33.
+  Decisión Alexi: ____
+- 2016 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 121.
+  Decisión Alexi: ____
+- 2016 · I162S2C1J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 50.
+  Decisión Alexi: ____
+- 2015 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 36.
+  Decisión Alexi: ____
+- 2015 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 170.
+  Decisión Alexi: ____
+- 2014 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 37.
+  Decisión Alexi: ____
+- 2014 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 160.
+  Decisión Alexi: ____
+- 2013 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 41.
+  Decisión Alexi: ____
+- 2013 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 166.
+  Decisión Alexi: ____
+- 2012 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 19.
+  Decisión Alexi: ____
+- 2012 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 139.
+  Decisión Alexi: ____
+- 2011 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 20.
+  Decisión Alexi: ____
+- 2011 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 132.
+  Decisión Alexi: ____
+- 2010 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 26.
+  Decisión Alexi: ____
+- 2010 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 119.
+  Decisión Alexi: ____
+- 2009 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 26.
+  Decisión Alexi: ____
+- 2009 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 104.
+  Decisión Alexi: ____
+- 2008 · I162S2C1J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 28.
+  Decisión Alexi: ____
+- 2008 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 122.
+  Decisión Alexi: ____
+- 2007 · I162S2C1J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 158.
+  Decisión Alexi: ____
+
+### Carrera 10
+
+- 2026 · I162S2C10J4V1 · TPRE / TPRE20261 · UNICO_SIN_CUADRATURA · conteo 16; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C10J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 1.
+  Decisión Alexi: ____
+- 2018 · I162S2C10J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 1.
+  Decisión Alexi: ____
+- 2016 · I162S2C10J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 8.
+  Decisión Alexi: ____
+- 2015 · I162S2C10J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 15.
+  Decisión Alexi: ____
+- 2014 · I162S2C10J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 22.
+  Decisión Alexi: ____
+- 2013 · I162S2C10J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 9.
+  Decisión Alexi: ____
+- 2013 · I162S2C10J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 21.
+  Decisión Alexi: ____
+
+### Carrera 11
+
+- 2023 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 3. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2021 · I162S2C11J2V1 · TMIRE / TMIRE20171 · NO_CUADRA · conteo 8; SIES 19.
+  Decisión Alexi: ____
+- 2021 · I162S2C11J2V1 · TMIRE / TMIRE2020 · NO_CUADRA · conteo 5; SIES 19.
+  Decisión Alexi: ____
+- 2021 · I162S2C11J2V1 · TMIRE / TMIRE20211 · NO_CUADRA · conteo 8; SIES 19.
+  Decisión Alexi: ____
+- 2020 · I162S2C11J2V1 · TMIRE / TMIRE20171 · NO_CUADRA · conteo 18; SIES 25.
+  Decisión Alexi: ____
+- 2020 · I162S2C11J2V1 · TMIRE / TMIRE2020 · NO_CUADRA · conteo 6; SIES 25.
+  Decisión Alexi: ____
+- 2019 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C11J2V1 · TMIRE / TMIRE20171 · NO_CUADRA · conteo 27; SIES 32.
+  Decisión Alexi: ____
+- 2018 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 6.
+  Decisión Alexi: ____
+- 2018 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 36.
+  Decisión Alexi: ____
+- 2017 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 9.
+  Decisión Alexi: ____
+- 2017 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 34.
+  Decisión Alexi: ____
+- 2016 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 4.
+  Decisión Alexi: ____
+- 2016 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 36.
+  Decisión Alexi: ____
+- 2015 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 5.
+  Decisión Alexi: ____
+- 2015 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 62.
+  Decisión Alexi: ____
+- 2014 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 13.
+  Decisión Alexi: ____
+- 2014 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 52.
+  Decisión Alexi: ____
+- 2013 · I162S2C11J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 19.
+  Decisión Alexi: ____
+- 2013 · I162S2C11J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 52.
+  Decisión Alexi: ____
+
+### Carrera 111
+
+- 2026 · I162S2C111J4V1 · IFIN / IFIN20261 · UNICO_SIN_CUADRATURA · conteo 24; SIES 30.
+  Decisión Alexi: ____
+
+### Carrera 112
+
+- 2026 · I162S2C112J4V1 · IMDI / IMDI20261 · UNICO_SIN_CUADRATURA · conteo 55; SIES 66.
+  Decisión Alexi: ____
+- 2026 · I162S2C112J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 66. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+## Lote 2
+
+### Carrera 113
+
+- 2026 · I162S2C113J4V1 · IRHU / IRHU20261 · UNICO_SIN_CUADRATURA · conteo 26; SIES 33.
+  Decisión Alexi: ____
+
+### Carrera 114
+
+- 2026 · I162S2C114J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 94. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C114J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 94. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2026 · I162S2C114J2V1 · TEIQ / TEIQ20261 · UNICO_SIN_CUADRATURA · conteo 72; SIES 94.
+  Decisión Alexi: ____
+- 2026 · I162S3C114J2V1 · COTEIQ / COTEIQ20261 · UNICO_SIN_CUADRATURA · conteo 33; SIES 36.
+  Decisión Alexi: ____
+
+### Carrera 115
+
+- 2026 · I162S2C115J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 27. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C115J2V1 · TFAR / TFAR20261 · UNICO_SIN_CUADRATURA · conteo 22; SIES 27.
+  Decisión Alexi: ____
+- 2026 · I162S3C115J2V1 · COTFAR / COTFAR20261 · UNICO_SIN_CUADRATURA · conteo 18; SIES 19.
+  Decisión Alexi: ____
+
+### Carrera 116
+
+- 2026 · I162S2C116J4V1 · TFIN / TFIN20261 · UNICO_SIN_CUADRATURA · conteo 23; SIES 24.
+  Decisión Alexi: ____
+
+### Carrera 117
+
+- 2026 · I162S2C117J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 12. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+## Lote 3
+
+### Carrera 118
+
+- 2026 · I162S2C118J4V1 · TMDI / TMDI20261 · UNICO_SIN_CUADRATURA · conteo 62; SIES 64.
+  Decisión Alexi: ____
+
+### Carrera 119
+
+- 2026 · I162S2C119J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 28. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+### Carrera 124
+
+- 2026 · I162S2C124J4V1 · IPRE / IPRE20261 · UNICO_SIN_CUADRATURA · conteo 24; SIES 25.
+  Decisión Alexi: ____
+
+### Carrera 125
+
+- 2026 · I162S2C125J4V1 · ISEP / ISEP20261 · UNICO_SIN_CUADRATURA · conteo 11; SIES 13.
+  Decisión Alexi: ____
+
+### Carrera 2
+
+- 2021 · I162S2C2J1V1 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 8; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J1V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 3; SIES 8.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J2V1 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 4; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J2V1 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 7; SIES 3.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J2V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 4; SIES 7.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J4V1 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 1; SIES 6.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J4V1 · TPCREOL / TPCREOL · NO_CUADRA · conteo 7; SIES 6.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J4V1 · TPCREOL / TPCREOL20191 · NO_CUADRA · conteo 9; SIES 6.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J4V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 1; SIES 9.
+  Decisión Alexi: ____
+- 2021 · I162S2C2J4V2 · TPCREOL / TPCREOL · NO_CUADRA · conteo 7; SIES 9.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J1V1 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 5; SIES 6.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J1V1 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 14; SIES 6.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J1V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 5; SIES 14.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J2V1 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 13; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J2V2 · TPCRE / TPCRE20151 · APROXIMA · conteo 22; SIES 21.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J2V2 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 13; SIES 21.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J4V1 · TPCREOL / TPCREOL · APROXIMA · conteo 21; SIES 20.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J4V1 · TPCREOL / TPCREOL20191 · NO_CUADRA · conteo 14; SIES 20.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J4V2 · TPCREOL / TPCREOL · NO_CUADRA · conteo 21; SIES 16.
+  Decisión Alexi: ____
+- 2020 · I162S2C2J4V2 · TPCREOL / TPCREOL20191 · NO_CUADRA · conteo 14; SIES 16.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J1V1 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 20; SIES 28.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J1V1 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 20; SIES 28.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J1V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 20; SIES 18.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J1V2 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 20; SIES 18.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J2V1 · TPCRE / TPCRE20151 · APROXIMA · conteo 45; SIES 42.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J2V1 · TPCRE / TPCRE20191 · APROXIMA · conteo 40; SIES 42.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J2V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 45; SIES 35.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J2V2 · TPCRE / TPCRE20191 · NO_CUADRA · conteo 40; SIES 35.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J4V1 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 1; SIES 32.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J4V1 · TPCREOL / TPCREOL · APROXIMA · conteo 31; SIES 32.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J4V1 · TPCREOL / TPCREOL20191 · NO_CUADRA · conteo 18; SIES 32.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J4V2 · TPCRE / TPCRE20151 · NO_CUADRA · conteo 1; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J4V2 · TPCREOL / TPCREOL · NO_CUADRA · conteo 31; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C2J4V2 · TPCREOL / TPCREOL20191 · NO_CUADRA · conteo 18; SIES 12.
+  Decisión Alexi: ____
+- 2018 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 54.
+  Decisión Alexi: ____
+- 2018 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 77.
+  Decisión Alexi: ____
+- 2018 · I162S2C2J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 35.
+  Decisión Alexi: ____
+- 2017 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 52.
+  Decisión Alexi: ____
+- 2017 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 121.
+  Decisión Alexi: ____
+- 2017 · I162S2C2J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 22.
+  Decisión Alexi: ____
+- 2016 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 43.
+  Decisión Alexi: ____
+- 2016 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 125.
+  Decisión Alexi: ____
+- 2015 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 60.
+  Decisión Alexi: ____
+- 2015 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 119.
+  Decisión Alexi: ____
+- 2014 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 71.
+  Decisión Alexi: ____
+- 2014 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 141.
+  Decisión Alexi: ____
+- 2013 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 60.
+  Decisión Alexi: ____
+- 2013 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 160.
+  Decisión Alexi: ____
+- 2012 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 44.
+  Decisión Alexi: ____
+- 2012 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 130.
+  Decisión Alexi: ____
+- 2011 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 40.
+  Decisión Alexi: ____
+- 2011 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 108.
+  Decisión Alexi: ____
+- 2010 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 41.
+  Decisión Alexi: ____
+- 2010 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 94.
+  Decisión Alexi: ____
+- 2009 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 37.
+  Decisión Alexi: ____
+- 2009 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 65.
+  Decisión Alexi: ____
+- 2008 · I162S2C2J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 40.
+  Decisión Alexi: ____
+- 2008 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 75.
+  Decisión Alexi: ____
+- 2007 · I162S2C2J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 100.
+  Decisión Alexi: ____
+
+## Lote 4
+
+### Carrera 22
+
+- 2021 · I162S2C22J2V1 · IEMORE / IEMORE20171 · NO_CUADRA · conteo 7; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V1 · IEMORE / IEMORE20201 · NO_CUADRA · conteo 6; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V1 · IEMORE / IEMORE20211 · APROXIMA · conteo 19; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V1 · NAUTRE / NAUTRE · NO_CUADRA · conteo 1; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V1 · NAUTRE / NAUTRE2020 · NO_CUADRA · conteo 2; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V2 · IEMORE / IEMORE20171 · NO_CUADRA · conteo 7; SIES 8.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V2 · IEMORE / IEMORE20201 · NO_CUADRA · conteo 6; SIES 8.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V2 · IEMORE / IEMORE20211 · NO_CUADRA · conteo 19; SIES 8.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V2 · NAUTRE / NAUTRE · NO_CUADRA · conteo 1; SIES 8.
+  Decisión Alexi: ____
+- 2021 · I162S2C22J2V2 · NAUTRE / NAUTRE2020 · NO_CUADRA · conteo 2; SIES 8.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V1 · IEMORE / IEMORE20201 · NO_CUADRA · conteo 6; SIES 7.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V1 · NAUTRE / NAUTRE · NO_CUADRA · conteo 4; SIES 7.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V1 · NAUTRE / NAUTRE2020 · NO_CUADRA · conteo 2; SIES 7.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V2 · IEMORE / IEMORE20171 · NO_CUADRA · conteo 7; SIES 9.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V2 · IEMORE / IEMORE20201 · NO_CUADRA · conteo 6; SIES 9.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V2 · NAUTRE / NAUTRE · NO_CUADRA · conteo 4; SIES 9.
+  Decisión Alexi: ____
+- 2020 · I162S2C22J2V2 · NAUTRE / NAUTRE2020 · NO_CUADRA · conteo 2; SIES 9.
+  Decisión Alexi: ____
+- 2019 · I162S2C22J2V1 · IEMORE / IEMORE20171 · NO_CUADRA · conteo 13; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C22J2V1 · IEMORE / IEMORE20211 · NO_CUADRA · conteo 1; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C22J2V1 · NAUTRE / NAUTRE · NO_CUADRA · conteo 6; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C22J2V2 · IEMORE / IEMORE20171 · NO_CUADRA · conteo 13; SIES 6.
+  Decisión Alexi: ____
+- 2019 · I162S2C22J2V2 · IEMORE / IEMORE20211 · NO_CUADRA · conteo 1; SIES 6.
+  Decisión Alexi: ____
+- 2018 · I162S2C22J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 13.
+  Decisión Alexi: ____
+- 2018 · I162S2C22J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 4.
+  Decisión Alexi: ____
+- 2017 · I162S2C22J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 24.
+  Decisión Alexi: ____
+- 2016 · I162S2C22J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 14.
+  Decisión Alexi: ____
+- 2015 · I162S2C22J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 11.
+  Decisión Alexi: ____
+- 2014 · I162S2C22J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 2.
+  Decisión Alexi: ____
+- 2014 · I162S2C22J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 6.
+  Decisión Alexi: ____
+
+### Carrera 3
+
+- 2025 · I162S2C3J2V1 · ICRE / ICRE20241 · REPARTIDO · conteo 3; SIES 4.
+  Decisión Alexi: ____
+- 2025 · I162S2C3J2V4 · ICRE / ICRE20241 · REPARTIDO · conteo 8; SIES 11.
+  Decisión Alexi: ____
+- 2025 · I162S2C3J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 11. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C3J4V2 · CICRE / CICRE20241 · REPARTIDO · conteo 72; SIES 244.
+  Decisión Alexi: ____
+- 2025 · I162S2C3J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 9; SIES 244. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C3J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 244. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2025 · I162S2C3J4V3 · CICRE / CICRE20241 · REPARTIDO · conteo 43; SIES 43.
+  Decisión Alexi: ____
+- 2024 · I162S2C3J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 6; SIES 25. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C3J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 267. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C3J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 267. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2023 · I162S2C3J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 202. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C3J2V4 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 48. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C3J4V1 · IETMREOL / IETMREOL20211 · REPARTIDO · conteo 3; SIES 3.
+  Decisión Alexi: ____
+- 2022 · I162S2C3J4V2 · IETMREOL / IETMREOL20211 · REPARTIDO · conteo 132; SIES 155.
+  Decisión Alexi: ____
+- 2026 · I162S2C3J4V2 · ICRE / ICRE20241 · UNICO_SIN_CUADRATURA · conteo 143; SIES 153.
+  Decisión Alexi: ____
+- 2026 · I162S2C3J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 9; SIES 153. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C3J4V3 · CICRE / CICRE20241 · UNICO_SIN_CUADRATURA · conteo 111; SIES 113.
+  Decisión Alexi: ____
+- 2026 · I162S2C3J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 113. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C3J2V1 ·  /  · CONTRADICE_H002 · conteo ver detalle; SIES ver VALIDACION_95_H002.json.
+  Observado: ICRE / ICRE20241, RE, V: 3 matrículas.
+  Observado: IETMRE / IETMRE20211, RE, V: 1 matrículas.
+  Decisión Alexi: ____
+- 2025 · I162S2C3J4V2 ·  /  · CONTRADICE_H002 · conteo ver detalle; SIES ver VALIDACION_95_H002.json.
+  Observado: ICRE / ICRE20241, RE, O: 145 matrículas.
+  Observado: IETMREOL / IETMREOL20191, RE, O: 1 matrículas.
+  Observado: IETMREOL / IETMREOL20211, RE, O: 16 matrículas.
+  Observado: CICRE / CICRE20241, RE, O: 72 matrículas.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V1 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 3; SIES 43.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V1 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 12; SIES 43.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V1 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 14; SIES 43.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V1 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 31; SIES 43.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V1 · NCONRE / NCONRE · NO_CUADRA · conteo 26; SIES 43.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V1 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 1; SIES 43.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V2 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 3; SIES 1.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V2 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 12; SIES 1.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V2 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 14; SIES 1.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V2 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 31; SIES 1.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V2 · NCONRE / NCONRE · NO_CUADRA · conteo 26; SIES 1.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V3 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 3; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V3 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 12; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V3 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 14; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V3 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 31; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V3 · NCONRE / NCONRE · NO_CUADRA · conteo 26; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V3 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 1; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V4 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 3; SIES 12.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V4 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 14; SIES 12.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V4 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 31; SIES 12.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V4 · NCONRE / NCONRE · NO_CUADRA · conteo 26; SIES 12.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J2V4 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 1; SIES 12.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IECIREOL / IECIREOL · NO_CUADRA · conteo 24; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 13; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 14; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 58; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IETMREOL / IETMREOL · NO_CUADRA · conteo 15; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IETMREOL / IETMREOL20191 · NO_CUADRA · conteo 17; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · IETMREOL / IETMREOL20211 · NO_CUADRA · conteo 82; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V1 · NCONREOL / NCONREOL2019 · NO_CUADRA · conteo 45; SIES 122.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · IECIREOL / IECIREOL · NO_CUADRA · conteo 24; SIES 17.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 13; SIES 17.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 14; SIES 17.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 58; SIES 17.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · IETMREOL / IETMREOL · NO_CUADRA · conteo 15; SIES 17.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · IETMREOL / IETMREOL20211 · NO_CUADRA · conteo 82; SIES 17.
+  Decisión Alexi: ____
+- 2021 · I162S2C3J4V2 · NCONREOL / NCONREOL2019 · NO_CUADRA · conteo 45; SIES 17.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 1; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · IETMRE / IETMRE20161 · APROXIMA · conteo 33; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · IETMRE / IETMRE20191 · APROXIMA · conteo 33; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 10; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · NCONRE / NCONRE · NO_CUADRA · conteo 52; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 3; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V1 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 2; SIES 34.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V2 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 33; SIES 1.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V2 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 33; SIES 1.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V2 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 10; SIES 1.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V2 · NCONRE / NCONRE · NO_CUADRA · conteo 52; SIES 1.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V2 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 3; SIES 1.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V2 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 2; SIES 1.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 1; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 33; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 33; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 10; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · NCONRE / NCONRE · APROXIMA · conteo 52; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 3; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V3 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 2; SIES 51.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 1; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · IETMRE / IETMRE20161 · APROXIMA · conteo 33; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · IETMRE / IETMRE20191 · APROXIMA · conteo 33; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · IETMRE / IETMRE20211 · NO_CUADRA · conteo 10; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · NCONRE / NCONRE · NO_CUADRA · conteo 52; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 3; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J2V4 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 2; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IECIREOL / IECIREOL · NO_CUADRA · conteo 26; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 18; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 24; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 1; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IETMREOL / IETMREOL · NO_CUADRA · conteo 15; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · IETMREOL / IETMREOL20191 · NO_CUADRA · conteo 25; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · NCONRE / NCONRE · NO_CUADRA · conteo 1; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V1 · NCONREOL / NCONREOL2019 · APROXIMA · conteo 60; SIES 61.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IECIREOL / IECIREOL · APROXIMA · conteo 26; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 18; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 24; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 1; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IETMREOL / IETMREOL · NO_CUADRA · conteo 15; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · IETMREOL / IETMREOL20191 · APROXIMA · conteo 25; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · NCONRE / NCONRE · NO_CUADRA · conteo 1; SIES 27.
+  Decisión Alexi: ____
+- 2020 · I162S2C3J4V2 · NCONREOL / NCONREOL2019 · NO_CUADRA · conteo 60; SIES 27.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J1V1 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 1; SIES 8.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J1V1 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 2; SIES 8.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J1V1 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 1; SIES 8.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V1 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 9; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V1 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 42; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V1 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 25; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V1 · NCONRE / NCONRE · NO_CUADRA · conteo 92; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V1 · NETMRE / NETMRE20121 · APROXIMA · conteo 48; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V1 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 17; SIES 53.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V2 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 9; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V2 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 42; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V2 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 25; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V2 · NCONRE / NCONRE · NO_CUADRA · conteo 92; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V2 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 48; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V2 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 17; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V3 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 9; SIES 95.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V3 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 42; SIES 95.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V3 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 25; SIES 95.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V3 · NCONRE / NCONRE · APROXIMA · conteo 92; SIES 95.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V3 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 48; SIES 95.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V3 · NITMRE / NITMRE20121 · NO_CUADRA · conteo 17; SIES 95.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V4 · IETMRE / IETMRE20121 · NO_CUADRA · conteo 9; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V4 · IETMRE / IETMRE20161 · NO_CUADRA · conteo 42; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V4 · IETMRE / IETMRE20191 · NO_CUADRA · conteo 25; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V4 · NCONRE / NCONRE · NO_CUADRA · conteo 92; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J2V4 · NETMRE / NETMRE20121 · NO_CUADRA · conteo 48; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · IECIREOL / IECIREOL · NO_CUADRA · conteo 17; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 28; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 1; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · IETMREOL / IETMREOL20191 · NO_CUADRA · conteo 16; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · NCONRE / NCONRE · NO_CUADRA · conteo 2; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V1 · NCONREOL / NCONREOL2019 · NO_CUADRA · conteo 20; SIES 11.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · IECIREOL / IECIREOL · NO_CUADRA · conteo 17; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 28; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 1; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · IETMREOL / IETMREOL · NO_CUADRA · conteo 11; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · IETMREOL / IETMREOL20191 · APROXIMA · conteo 16; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · NCONRE / NCONRE · NO_CUADRA · conteo 2; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V2 · NCONREOL / NCONREOL2019 · NO_CUADRA · conteo 20; SIES 15.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · IECIREOL / IECIREOL · NO_CUADRA · conteo 17; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · IECIREOL / IECIREOL20191 · NO_CUADRA · conteo 28; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · IECIREOL / IECIREOL20201 · NO_CUADRA · conteo 1; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · IECIREOL / IECIREOL20211 · NO_CUADRA · conteo 1; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · IETMREOL / IETMREOL · APROXIMA · conteo 11; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · IETMREOL / IETMREOL20191 · NO_CUADRA · conteo 16; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · NCONRE / NCONRE · NO_CUADRA · conteo 2; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C3J4V3 · NCONREOL / NCONREOL2019 · NO_CUADRA · conteo 20; SIES 12.
+  Decisión Alexi: ____
+- 2018 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 9.
+  Decisión Alexi: ____
+- 2018 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 91.
+  Decisión Alexi: ____
+- 2018 · I162S2C3J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 148.
+  Decisión Alexi: ____
+- 2018 · I162S2C3J2V3 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 73.
+  Decisión Alexi: ____
+- 2018 · I162S2C3J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 15.
+  Decisión Alexi: ____
+- 2017 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 10.
+  Decisión Alexi: ____
+- 2017 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 119.
+  Decisión Alexi: ____
+- 2017 · I162S2C3J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 234.
+  Decisión Alexi: ____
+- 2016 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 7.
+  Decisión Alexi: ____
+- 2016 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 211.
+  Decisión Alexi: ____
+- 2016 · I162S2C3J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 142.
+  Decisión Alexi: ____
+- 2015 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 18.
+  Decisión Alexi: ____
+- 2015 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 360.
+  Decisión Alexi: ____
+- 2014 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 27.
+  Decisión Alexi: ____
+- 2014 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 330.
+  Decisión Alexi: ____
+- 2013 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 27.
+  Decisión Alexi: ____
+- 2013 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 281.
+  Decisión Alexi: ____
+- 2012 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 12.
+  Decisión Alexi: ____
+- 2012 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 227.
+  Decisión Alexi: ____
+- 2011 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 12.
+  Decisión Alexi: ____
+- 2011 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 209.
+  Decisión Alexi: ____
+- 2010 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 13.
+  Decisión Alexi: ____
+- 2010 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 172.
+  Decisión Alexi: ____
+- 2009 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 10.
+  Decisión Alexi: ____
+- 2009 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 135.
+  Decisión Alexi: ____
+- 2008 · I162S2C3J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 3.
+  Decisión Alexi: ____
+- 2008 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 103.
+  Decisión Alexi: ____
+- 2007 · I162S2C3J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 96.
+  Decisión Alexi: ____
+
+### Carrera 35
+
+- 2022 · I162S2C35J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 3. FAMILIA_SIN_MAPEO
+  Decisión Alexi: ____
+- 2021 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 2.
+  Decisión Alexi: ____
+- 2021 · I162S2C35J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 4.
+  Decisión Alexi: ____
+- 2021 · I162S2C35J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 5.
+  Decisión Alexi: ____
+- 2021 · I162S2C35J4V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 10.
+  Decisión Alexi: ____
+- 2020 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 9.
+  Decisión Alexi: ____
+- 2020 · I162S2C35J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C35J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C35J4V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 14.
+  Decisión Alexi: ____
+- 2019 · I162S2C35J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C35J1V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 1.
+  Decisión Alexi: ____
+- 2019 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 31.
+  Decisión Alexi: ____
+- 2019 · I162S2C35J2V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 29.
+  Decisión Alexi: ____
+- 2019 · I162S2C35J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 24.
+  Decisión Alexi: ____
+- 2019 · I162S2C35J4V2 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 14.
+  Decisión Alexi: ____
+- 2018 · I162S2C35J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 8.
+  Decisión Alexi: ____
+- 2018 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 47.
+  Decisión Alexi: ____
+- 2018 · I162S2C35J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 27.
+  Decisión Alexi: ____
+- 2017 · I162S2C35J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 20.
+  Decisión Alexi: ____
+- 2017 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 49.
+  Decisión Alexi: ____
+- 2017 · I162S2C35J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 13.
+  Decisión Alexi: ____
+- 2016 · I162S2C35J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 7.
+  Decisión Alexi: ____
+- 2016 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 26.
+  Decisión Alexi: ____
+- 2015 · I162S2C35J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 7.
+  Decisión Alexi: ____
+- 2015 · I162S2C35J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 15.
+  Decisión Alexi: ____
+
+### Carrera 46
+
+- 2025 · I162S2C46J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 33. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C46J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 33. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C46J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 9; SIES 36. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C46J4V1 · CICIB / CICIB20241 · REPARTIDO · conteo 41; SIES 42.
+  Decisión Alexi: ____
+- 2025 · I162S2C46J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 42. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C46J4V3 · CICIB / CICIB20241 · REPARTIDO · conteo 55; SIES 264.
+  Decisión Alexi: ____
+- 2025 · I162S2C46J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 16; SIES 264. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C46J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 264. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2024 · I162S2C46J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 21. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C46J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 18; SIES 42. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C46J4V1 · IECSREOL / IECSREOL20211 · REPARTIDO · conteo 1; SIES 1.
+  Decisión Alexi: ____
+- 2024 · I162S2C46J4V3 · IECSREOL / IECSREOL20211 · REPARTIDO · conteo 61; SIES 233.
+  Decisión Alexi: ____
+- 2024 · I162S2C46J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 233. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C46J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 233. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2023 · I162S2C46J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 41; SIES 41. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C46J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 7; SIES 15. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C46J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 28; SIES 39. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C46J1V1 · ICIB / ICIB20241 · UNICO_SIN_CUADRATURA · conteo 31; SIES 35.
+  Decisión Alexi: ____
+- 2026 · I162S2C46J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 35. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C46J2V1 · ICIB / ICIB20241 · UNICO_SIN_CUADRATURA · conteo 34; SIES 41.
+  Decisión Alexi: ____
+- 2026 · I162S2C46J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 5; SIES 41. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C46J4V1 · CICIB / CICIB20241 · UNICO_SIN_CUADRATURA · conteo 76; SIES 78.
+  Decisión Alexi: ____
+- 2026 · I162S2C46J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 78. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2026 · I162S2C46J4V3 · ICIB / ICIB20241 · UNICO_SIN_CUADRATURA · conteo 233; SIES 256.
+  Decisión Alexi: ____
+- 2026 · I162S2C46J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 9; SIES 256. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C46J4V3 ·  /  · CONTRADICE_H002 · conteo ver detalle; SIES ver VALIDACION_95_H002.json.
+  Observado: ICIB / ICIB20241, RE, O: 173 matrículas.
+  Observado: IECSREOL / IECSREOL20211, RE, O: 19 matrículas.
+  Observado: CICIB / CICIB20241, RE, O: 55 matrículas.
+  Decisión Alexi: ____
+- 2023 · I162S2C46J1V1 · IECSRE / IECSRE20211 · UNICO_SIN_CUADRATURA · conteo 5; SIES 6.
+  Decisión Alexi: ____
+- 2023 · I162S2C46J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 6. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2023 · I162S2C46J4V3 · IECSREOL / IECSREOL20211 · UNICO_SIN_CUADRATURA · conteo 171; SIES 173.
+  Decisión Alexi: ____
+- 2023 · I162S2C46J4V3 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 173. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2021 · I162S2C46J1V1 · IECSRE / IECSRE20191 · NO_CUADRA · conteo 4; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J1V1 · IECSRE / IECSRE20211 · NO_CUADRA · conteo 3; SIES 15.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V1 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 2; SIES 32.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V1 · NICCRE / NICCRE2020 · NO_CUADRA · conteo 2; SIES 32.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V1 · NTCCRE / NTCCRE20191 · NO_CUADRA · conteo 21; SIES 32.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V1 · NTCCRE / NTCCRE2020 · NO_CUADRA · conteo 19; SIES 32.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V2 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 2; SIES 21.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V2 · NICCRE / NICCRE2020 · NO_CUADRA · conteo 2; SIES 21.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V2 · NTCCRE / NTCCRE2020 · APROXIMA · conteo 19; SIES 21.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V3 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 2; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V3 · NICCRE / NICCRE2020 · NO_CUADRA · conteo 2; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V3 · NTCCRE / NTCCRE20191 · APROXIMA · conteo 21; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J2V3 · NTCCRE / NTCCRE2020 · NO_CUADRA · conteo 19; SIES 23.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V1 · ICIB / ICIB20241 · NO_CUADRA · conteo 1; SIES 61.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V1 · IECSREOL / IECSREOL20211 · APROXIMA · conteo 56; SIES 61.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V1 · NICCREOL / NICCREOL2020 · NO_CUADRA · conteo 9; SIES 61.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V1 · NTCCREOL / NTCCREOL2020 · NO_CUADRA · conteo 19; SIES 61.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V2 · ICIB / ICIB20241 · NO_CUADRA · conteo 1; SIES 19.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V2 · IECSREOL / IECSREOL20211 · NO_CUADRA · conteo 56; SIES 19.
+  Decisión Alexi: ____
+- 2021 · I162S2C46J4V2 · NICCREOL / NICCREOL2020 · NO_CUADRA · conteo 9; SIES 19.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J1V1 · IECSRE / IECSRE20191 · NO_CUADRA · conteo 5; SIES 10.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V1 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 4; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V1 · NICCRE / NICCRE2020 · NO_CUADRA · conteo 2; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V1 · NTCCRE / NTCCRE20191 · NO_CUADRA · conteo 21; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V1 · NTCCRE / NTCCRE2020 · NO_CUADRA · conteo 21; SIES 15.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V2 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 4; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V2 · NICCRE / NICCRE2020 · NO_CUADRA · conteo 2; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V2 · NTCCRE / NTCCRE20191 · APROXIMA · conteo 21; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V2 · NTCCRE / NTCCRE2020 · APROXIMA · conteo 21; SIES 22.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V3 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 4; SIES 28.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V3 · NICCRE / NICCRE2020 · NO_CUADRA · conteo 2; SIES 28.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V3 · NTCCRE / NTCCRE20191 · NO_CUADRA · conteo 21; SIES 28.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J2V3 · NTCCRE / NTCCRE2020 · NO_CUADRA · conteo 21; SIES 28.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V1 · ICIB / ICIB20241 · NO_CUADRA · conteo 1; SIES 11.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V1 · IECSREOL / IECSREOL20211 · NO_CUADRA · conteo 8; SIES 11.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V1 · NICCREOL / NICCREOL2020 · APROXIMA · conteo 12; SIES 11.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V1 · NTCCREOL / NTCCREOL2020 · NO_CUADRA · conteo 20; SIES 11.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V2 · ICIB / ICIB20241 · NO_CUADRA · conteo 1; SIES 10.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V2 · IECSREOL / IECSREOL20211 · NO_CUADRA · conteo 8; SIES 10.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V2 · NICCREOL / NICCREOL2020 · NO_CUADRA · conteo 12; SIES 10.
+  Decisión Alexi: ____
+- 2020 · I162S2C46J4V2 · NTCCREOL / NTCCREOL2020 · NO_CUADRA · conteo 20; SIES 10.
+  Decisión Alexi: ____
+- 2019 · I162S2C46J2V1 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 7; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C46J2V1 · NTCCRE / NTCCRE20191 · NO_CUADRA · conteo 26; SIES 12.
+  Decisión Alexi: ____
+- 2019 · I162S2C46J2V2 · NICCRE / NICCRE20191 · NO_CUADRA · conteo 7; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C46J2V3 · NTCCRE / NTCCRE20191 · NO_CUADRA · conteo 26; SIES 7.
+  Decisión Alexi: ____
+
+### Carrera 47
+
+- 2025 · I162S2C47J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 15. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C47J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 14; SIES 140. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C47J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 8. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C47J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 7; SIES 117. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C47J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 117. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2022 · I162S2C47J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 20. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C47J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 13. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C47J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 19. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C47J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 27. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C47J2V1 · TCIB / TCIB20241 · UNICO_SIN_CUADRATURA · conteo 24; SIES 27.
+  Decisión Alexi: ____
+- 2026 · I162S2C47J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 10; SIES 111. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2021 · I162S2C47J1V1 · TCSRE / TCSRE20191 · NO_CUADRA · conteo 7; SIES 19.
+  Decisión Alexi: ____
+- 2021 · I162S2C47J1V1 · TCSRE / TCSRE20211 · NO_CUADRA · conteo 12; SIES 19.
+  Decisión Alexi: ____
+- 2021 · I162S2C47J2V1 · TCSRE / TCSRE20191 · NO_CUADRA · conteo 15; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C47J2V1 · TCSRE / TCSRE20211 · NO_CUADRA · conteo 5; SIES 20.
+  Decisión Alexi: ____
+- 2021 · I162S2C47J4V1 · TCSREOL / TCSREOL2020 · NO_CUADRA · conteo 25; SIES 70.
+  Decisión Alexi: ____
+- 2021 · I162S2C47J4V1 · TCSREOL / TCSREOL20211 · NO_CUADRA · conteo 62; SIES 70.
+  Decisión Alexi: ____
+- 2020 · I162S2C47J1V1 · TCSREOL / TCSREOL2020 · NO_CUADRA · conteo 1; SIES 12.
+  Decisión Alexi: ____
+- 2020 · I162S2C47J2V1 · TCSRE / TCSRE20191 · APROXIMA · conteo 21; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C47J4V1 · TCSREOL / TCSREOL2020 · NO_CUADRA · conteo 38; SIES 26.
+  Decisión Alexi: ____
+- 2019 · I162S2C47J2V1 · TCSRE / TCSRE20191 · NO_CUADRA · conteo 17; SIES 12.
+  Decisión Alexi: ____
+
+## Lote 5
+
+### Carrera 53
+
+- 2020 · I162S2C53J3V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 5.
+  Decisión Alexi: ____
+- 2019 · I162S2C53J3V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 16.
+  Decisión Alexi: ____
+
+### Carrera 57
+
+- 2025 · I162S2C57J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 25. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C57J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 25. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 29; SIES 306. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 306. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2024 · I162S2C57J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 22. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C57J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 24. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C57J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 24. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2024 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 16; SIES 275. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 8; SIES 275. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2023 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 252. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2022 · I162S2C57J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 30. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 169. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C57J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 28. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C57J1V1 · TPAS / TPAS20241 · UNICO_SIN_CUADRATURA · conteo 21; SIES 28.
+  Decisión Alexi: ____
+- 2026 · I162S2C57J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 25. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C57J2V1 · TPAS / TPAS20241 · UNICO_SIN_CUADRATURA · conteo 21; SIES 25.
+  Decisión Alexi: ____
+- 2026 · I162S2C57J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 17; SIES 257. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C57J4V1 · TPAS / TPAS20241 · UNICO_SIN_CUADRATURA · conteo 238; SIES 257.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J1V1 · TPARE / TPARE2020 · NO_CUADRA · conteo 11; SIES 21.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J1V1 · TPARE / TPARE20211 · NO_CUADRA · conteo 8; SIES 21.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J2V1 · TPARE / TPARE2020 · NO_CUADRA · conteo 20; SIES 49.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J2V1 · TPARE / TPARE20211 · NO_CUADRA · conteo 32; SIES 49.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J4V1 · TPAREOL / TPAREOL2020 · NO_CUADRA · conteo 30; SIES 124.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J4V1 · TPAREOL / TPAREOL20211 · APROXIMA · conteo 119; SIES 124.
+  Decisión Alexi: ____
+- 2021 · I162S2C57J4V1 · TPAS / TPAS20241 · NO_CUADRA · conteo 1; SIES 124.
+  Decisión Alexi: ____
+- 2020 · I162S2C57J1V1 · TPARE / TPARE2020 · APROXIMA · conteo 20; SIES 21.
+  Decisión Alexi: ____
+- 2020 · I162S2C57J2V1 · TPARE / TPARE2020 · APROXIMA · conteo 31; SIES 29.
+  Decisión Alexi: ____
+- 2020 · I162S2C57J4V1 · TPAREOL / TPAREOL2020 · NO_CUADRA · conteo 37; SIES 27.
+  Decisión Alexi: ____
+
+### Carrera 6
+
+- 2025 · I162S2C6J2V1 · TCRE / TCRE20241 · REPARTIDO · conteo 2; SIES 2.
+  Decisión Alexi: ____
+- 2025 · I162S2C6J2V2 · TCRE / TCRE20241 · REPARTIDO · conteo 6; SIES 6.
+  Decisión Alexi: ____
+- 2025 · I162S2C6J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 8; SIES 63. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C6J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 63. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C6J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 63. VARIOS_EXPEDIENTES_COMPATIBLES
+  Decisión Alexi: ____
+- 2023 · I162S2C6J2V1 · TTMRE / TTMRE20211 · REPARTIDO · conteo 2; SIES 3.
+  Decisión Alexi: ____
+- 2023 · I162S2C6J2V2 · TTMRE / TTMRE20211 · REPARTIDO · conteo 4; SIES 5.
+  Decisión Alexi: ____
+- 2023 · I162S2C6J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 73. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2022 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 4. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C6J2V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 7. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C6J2V2 · TCRE / TCRE20241 · UNICO_SIN_CUADRATURA · conteo 2; SIES 7.
+  Decisión Alexi: ____
+- 2026 · I162S2C6J2V2 · TTMRE / TTMRE20191 · UNICO_SIN_CUADRATURA · conteo 1; SIES 7.
+  Decisión Alexi: ____
+- 2026 · I162S2C6J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 9; SIES 45. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C6J4V2 · TCRE / TCRE20241 · UNICO_SIN_CUADRATURA · conteo 37; SIES 45.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J1V1 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 12; SIES 4.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J1V2 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 12; SIES 10.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J1V2 · TTMRE / TTMRE20211 · NO_CUADRA · conteo 4; SIES 10.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V1 · TTMRE / TTMRE20121 · NO_CUADRA · conteo 2; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V1 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 2; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V1 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 37; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V1 · TTMRE / TTMRE20211 · NO_CUADRA · conteo 10; SIES 14.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V2 · TTMRE / TTMRE20121 · NO_CUADRA · conteo 2; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V2 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 2; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V2 · TTMRE / TTMRE20191 · APROXIMA · conteo 37; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J2V2 · TTMRE / TTMRE20211 · NO_CUADRA · conteo 10; SIES 35.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J4V1 · TTMREOL / TTMREOL20191 · NO_CUADRA · conteo 26; SIES 30.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J4V1 · TTMREOL / TTMREOL20211 · NO_CUADRA · conteo 51; SIES 30.
+  Decisión Alexi: ____
+- 2021 · I162S2C6J4V2 · TTMREOL / TTMREOL20211 · NO_CUADRA · conteo 51; SIES 26.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J1V1 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 2; SIES 3.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J1V1 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 14; SIES 3.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J1V2 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 2; SIES 17.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J1V2 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 14; SIES 17.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V1 · TTMRE / TTMRE20121 · NO_CUADRA · conteo 1; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V1 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 45; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V1 · TTMRE / TTMRE20211 · NO_CUADRA · conteo 3; SIES 23.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V2 · TTMRE / TTMRE20121 · NO_CUADRA · conteo 1; SIES 49.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V2 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 23; SIES 49.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V2 · TTMRE / TTMRE20191 · APROXIMA · conteo 45; SIES 49.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J2V2 · TTMRE / TTMRE20211 · NO_CUADRA · conteo 3; SIES 49.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J4V1 · TTMREOL / TTMREOL20191 · NO_CUADRA · conteo 41; SIES 8.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J4V2 · TTMREOL / TTMREOL · NO_CUADRA · conteo 8; SIES 35.
+  Decisión Alexi: ____
+- 2020 · I162S2C6J4V2 · TTMREOL / TTMREOL20191 · NO_CUADRA · conteo 41; SIES 35.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J1V1 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 22; SIES 33.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J1V1 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 16; SIES 33.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J1V2 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 22; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J1V2 · TTMRE / TTMRE20191 · APROXIMA · conteo 16; SIES 17.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J2V1 · TTMRE / TTMRE20121 · NO_CUADRA · conteo 4; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J2V1 · TTMRE / TTMRE20161 · APROXIMA · conteo 69; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J2V1 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 44; SIES 65.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J2V2 · TTMRE / TTMRE20121 · NO_CUADRA · conteo 4; SIES 39.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J2V2 · TTMRE / TTMRE20161 · NO_CUADRA · conteo 69; SIES 39.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J2V2 · TTMRE / TTMRE20191 · NO_CUADRA · conteo 44; SIES 39.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J4V1 · TTMREOL / TTMREOL20191 · NO_CUADRA · conteo 30; SIES 25.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J4V2 · TTMREOL / TTMREOL · NO_CUADRA · conteo 25; SIES 28.
+  Decisión Alexi: ____
+- 2019 · I162S2C6J4V2 · TTMREOL / TTMREOL20191 · APROXIMA · conteo 30; SIES 28.
+  Decisión Alexi: ____
+- 2018 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 60.
+  Decisión Alexi: ____
+- 2018 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 134.
+  Decisión Alexi: ____
+- 2018 · I162S2C6J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 39.
+  Decisión Alexi: ____
+- 2017 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 68.
+  Decisión Alexi: ____
+- 2017 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 184.
+  Decisión Alexi: ____
+- 2017 · I162S2C6J4V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 28.
+  Decisión Alexi: ____
+- 2016 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 58.
+  Decisión Alexi: ____
+- 2016 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 192.
+  Decisión Alexi: ____
+- 2015 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 57.
+  Decisión Alexi: ____
+- 2015 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 261.
+  Decisión Alexi: ____
+- 2014 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 73.
+  Decisión Alexi: ____
+- 2014 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 246.
+  Decisión Alexi: ____
+- 2013 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 63.
+  Decisión Alexi: ____
+- 2013 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 296.
+  Decisión Alexi: ____
+- 2012 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 48.
+  Decisión Alexi: ____
+- 2012 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 267.
+  Decisión Alexi: ____
+- 2011 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 61.
+  Decisión Alexi: ____
+- 2011 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 247.
+  Decisión Alexi: ____
+- 2010 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 60.
+  Decisión Alexi: ____
+- 2010 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 275.
+  Decisión Alexi: ____
+- 2009 · I162S2C6J1V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 59.
+  Decisión Alexi: ____
+- 2009 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 282.
+  Decisión Alexi: ____
+- 2007 · I162S2C6J2V1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 343.
+  Decisión Alexi: ____
+
+### Carrera 76
+
+- 2025 · I162S2C76J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 22. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C76J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 22. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C76J4V1 · CIADM / CIADM20241 · REPARTIDO · conteo 1; SIES 84.
+  Decisión Alexi: ____
+- 2025 · I162S2C76J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 84. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C76J4V2 · CIADM / CIADM20241 · REPARTIDO · conteo 15; SIES 17.
+  Decisión Alexi: ____
+- 2025 · I162S2C76J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 17. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C76J1V1 · IADM / IADM20241 · UNICO_SIN_CUADRATURA · conteo 6; SIES 7.
+  Decisión Alexi: ____
+- 2026 · I162S2C76J2V1 · IADM / IADM20241 · UNICO_SIN_CUADRATURA · conteo 17; SIES 25.
+  Decisión Alexi: ____
+- 2026 · I162S2C76J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 25. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C76J4V1 · IADM / IADM20241 · UNICO_SIN_CUADRATURA · conteo 105; SIES 132.
+  Decisión Alexi: ____
+- 2026 · I162S2C76J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 15; SIES 132. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C76J4V1 ·  /  · CONTRADICE_H002 · conteo ver detalle; SIES ver VALIDACION_95_H002.json.
+  Observado: IADM / IADM20241, RE, O: 80 matrículas.
+  Observado: CIADM / CIADM20241, RE, O: 1 matrículas.
+  Decisión Alexi: ____
+
+### Carrera 77
+
+- 2025 · I162S2C77J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 15. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C77J4V1 · CILOG / CILOG20241 · REPARTIDO · conteo 3; SIES 62.
+  Decisión Alexi: ____
+- 2025 · I162S2C77J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 62. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C77J4V2 · CILOG / CILOG20241 · REPARTIDO · conteo 14; SIES 14.
+  Decisión Alexi: ____
+- 2026 · I162S2C77J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 20. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C77J4V1 · ILOG / ILOG20241 · UNICO_SIN_CUADRATURA · conteo 80; SIES 98.
+  Decisión Alexi: ____
+- 2026 · I162S2C77J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 11; SIES 98. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C77J4V1 ·  /  · CONTRADICE_H002 · conteo ver detalle; SIES ver VALIDACION_95_H002.json.
+  Observado: ILOG / ILOG20241, RE, O: 58 matrículas.
+  Observado: CILOG / CILOG20241, RE, O: 3 matrículas.
+  Decisión Alexi: ____
+
+## Lote 6
+
+### Carrera 78
+
+- 2025 · I162S2C78J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 11. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C78J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 11. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C78J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 74. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C78J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 74. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2024 · I162S2C78J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 7. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C78J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 7. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2024 · I162S2C78J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 8. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C78J2V1 · TAMD / TAMD20241 · UNICO_SIN_CUADRATURA · conteo 34; SIES 36.
+  Decisión Alexi: ____
+- 2026 · I162S2C78J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 14; SIES 88. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C78J4V1 · TAMD / TAMD20241 · UNICO_SIN_CUADRATURA · conteo 68; SIES 88.
+  Decisión Alexi: ____
+
+### Carrera 79
+
+- 2025 · I162S2C79J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 24. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C79J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 74. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2024 · I162S2C79J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 8. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C79J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 5; SIES 25. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C79J2V1 · TLOG / TLOG20241 · UNICO_SIN_CUADRATURA · conteo 21; SIES 25.
+  Decisión Alexi: ____
+- 2026 · I162S2C79J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 14; SIES 87. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C79J4V1 · TLOG / TLOG20241 · UNICO_SIN_CUADRATURA · conteo 72; SIES 87.
+  Decisión Alexi: ____
+
+### Carrera 83
+
+- 2025 · I162S2C83J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 70. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C83J4V1 · ADMP / ADMP20251 · UNICO_SIN_CUADRATURA · conteo 72; SIES 94.
+  Decisión Alexi: ____
+- 2026 · I162S2C83J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 12; SIES 94. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C83J4V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 9. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+### Carrera 84
+
+- 2025 · I162S2C84J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 22. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C84J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 6; SIES 34. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C84J4V1 · TADP / TADP20251 · UNICO_SIN_CUADRATURA · conteo 24; SIES 34.
+  Decisión Alexi: ____
+
+### Carrera 85
+
+- 2026 · I162S2C85J4V1 · CONG / CONG20251 · UNICO_SIN_CUADRATURA · conteo 44; SIES 56.
+  Decisión Alexi: ____
+- 2026 · I162S2C85J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 8; SIES 56. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+## Lote 7
+
+### Carrera 86
+
+- 2026 · I162S2C86J4V1 · AUDT / AUDT20251 · UNICO_SIN_CUADRATURA · conteo 46; SIES 62.
+  Decisión Alexi: ____
+- 2026 · I162S2C86J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 14; SIES 62. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+### Carrera 87
+
+- 2025 · I162S2C87J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 37; SIES 37. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C87J4V2 · IIND / IIND20251 · UNICO_SIN_CUADRATURA · conteo 69; SIES 77.
+  Decisión Alexi: ____
+
+### Carrera 88
+
+- 2026 · I162S2C88J4V1 · ICDA / ICDA20251 · UNICO_SIN_CUADRATURA · conteo 43; SIES 52.
+  Decisión Alexi: ____
+- 2026 · I162S2C88J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 52. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+### Carrera 89
+
+- 2025 · I162S2C89J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 2; SIES 23. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C89J4V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 5; SIES 37. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C89J4V1 · TCDA / TCDA20251 · UNICO_SIN_CUADRATURA · conteo 25; SIES 37.
+  Decisión Alexi: ____
+
+### Carrera 90
+
+- 2026 · I162S2C90J2V2 · NATP / NATP20251 · UNICO_SIN_CUADRATURA · conteo 18; SIES 22.
+  Decisión Alexi: ____
+- 2026 · I162S2C90J2V2 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 1; SIES 22. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+
+## Lote 8
+
+### Carrera 91
+
+- 2025 · I162S2C91J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 35. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C91J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 6; SIES 35. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2025 · I162S2C91J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 4; SIES 43. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2025 · I162S2C91J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 43. SIN_IDENTIDAD_EXACTA_DATOS_ALUMNOS
+  Decisión Alexi: ____
+- 2026 · I162S2C91J1V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 3; SIES 87. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C91J1V1 · TENS / TENS20251 · UNICO_SIN_CUADRATURA · conteo 66; SIES 87.
+  Decisión Alexi: ____
+- 2026 · I162S2C91J2V1 · SIN_ENLACE / SIN_ENLACE · SIN_ENLACE · conteo 7; SIES 112. SIN_ACTIVIDAD_ANUAL_COMPATIBLE
+  Decisión Alexi: ____
+- 2026 · I162S2C91J2V1 · TENS / TENS20251 · UNICO_SIN_CUADRATURA · conteo 85; SIES 112.
+  Decisión Alexi: ____
+- 2026 · I162S3C91J2V1 · COTENS / COTENS20261 · UNICO_SIN_CUADRATURA · conteo 14; SIES 18.
+  Decisión Alexi: ____
+
+### Carrera I162M2008N1
+
+- 2008 · I162M2008N1 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 69.
+  Decisión Alexi: ____
+
+### Carrera I162M2008N3
+
+- 2008 · I162M2008N3 · SIN_ENLACE / SIN_ENLACE · NO_CUADRA · conteo 0; SIES 265.
+  Decisión Alexi: ____
