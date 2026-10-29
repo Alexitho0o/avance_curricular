@@ -394,6 +394,8 @@ def build():
         if car not in cars:cars.append(car)
     lots=[{'lote':cars.index(re.sub(r'J\d+$','',f))//5+1,'familia':f,'problema':p,'evidencia':problems[f,p],
            'propuesta':'Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.', 'decision_alexi':''} for f,p in ordered]
+    # Bloques contiguos: carreras por primer año, luego familias y problemas.
+    lots.sort(key=lambda r: (r['lote'], cars.index(re.sub(r'J\d+$','',r['familia'])), first_family.get(r['familia'],9999),r['familia'],r['problema']))
     way_rows=[{'anio':y, **{v:ways[y][v] for v in ['a','b','c','censurada','sin_identificador']}, 'total':sum(ways[y].values())} for y in sorted(ways)]
     sies_matrix=[dict(zip(['anio','codigo_sies','cohorte_anio','cohorte_semestre','via_cohorte','origen_anio_observado','origen_semestre_observado'],k),matriculas=n) for k,n in sorted(matrix.items(),key=lambda x:str(x[0]))]
     summary={'clases':'D método Alexi; B fuentes; C derivación; E causalidad o respaldo insuficiente; ninguna nueva norma A',
@@ -451,7 +453,7 @@ def build():
             'FUENTES.json y MANIFEST.json fijan rutas y hashes. Los enlaces H002g se reutilizan íntegros, cotejados línea a línea con identidad/código/selección de la base MU; no se modifica su detalle privado. Los códigos y totales SIES originales no cambian. MRUN sólo en memoria; sin nacimiento ni enlace RUT–MRUN.',
             'QA separado: hashes, sumas, reproducción byte a byte, pruebas y privacidad; fuentes, bases, denominadores, tasas y 24 cambios ajenos preservados.']
     files[OUT/'INFORME.md']='\n'.join(lines)+'\n'
-    lines=['# H002h · lotes de revisión v3','','Una decisión por familia y problema; máximo cinco carreras por lote. Los indicadores de causa son hipótesis E, salvo evidencia explícita.','']
+    lines=['# H002h · lotes de revisión v3','','Una decisión por familia y problema; máximo cinco carreras por lote, bloques contiguos y carreras ordenadas por su primer año informado. Los indicadores de causa son hipótesis E, salvo evidencia explícita.','']
     for r in lots:
         lines += [f"## Lote {r['lote']} · {r['familia']} · {r['problema']}",'']
         for e in r['evidencia']:lines.append('- '+json.dumps(e,ensure_ascii=False,sort_keys=True))

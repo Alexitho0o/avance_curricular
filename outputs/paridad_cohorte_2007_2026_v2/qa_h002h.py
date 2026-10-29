@@ -21,7 +21,10 @@ def main():
     git=lambda *args:subprocess.check_output(['git',*args],cwd=ROOT,text=True)
     scope=('outputs/paridad_cohorte_2007_2026_v2/','data/paridad_codigo_sies/cohorte_2007_2026_v2/')
     checks={}
-    checks['rama_head']=git('branch','--show-current').strip()=='feature/ire-2026' and git('rev-parse','HEAD').strip()==baseline['head']
+    checks['rama_head']=git('branch','--show-current').strip()=='feature/ire-2026'
+    delta=git('diff','--name-only',baseline['head'],'HEAD').splitlines()
+    ancestor=subprocess.run(['git','merge-base','--is-ancestor',baseline['head'],'HEAD'],cwd=ROOT).returncode==0
+    checks['historial_desde_head_inicial_solo_H002h']=ancestor and all(p.startswith(scope) for p in delta)
     checks['24_ajenos_intactos']=sorted(x for x in git('status','--porcelain').splitlines() if not x[3:].startswith(scope))==sorted(baseline['ajenos'])
     checks['protegidos_intactos']=all(sha(ROOT/k)==v for k,v in baseline['protegidos'].items())
     checks['fuentes_hash']=all(sha(e['ruta'])==e['sha256'] for e in manifest['fuentes'])
@@ -71,6 +74,7 @@ def main():
     groups=defaultdict(set)
     for x in lots:groups[x['lote']].add(re.sub(r'J\d+$','',x['familia']))
     checks['max5_carreras']=all(len(v)<=5 for v in groups.values())
+    checks['lotes_contiguos']= [x['lote'] for x in lots]==sorted(x['lote'] for x in lots)
     violations=[]
     for folder in [OUT,DATA]:
         for p in folder.iterdir():
