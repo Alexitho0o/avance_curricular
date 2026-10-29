@@ -1,0 +1,65 @@
+{
+  "clase": "C",
+  "controles": {
+    "12_regla_dos_vias_y_ninguna_contradice": true,
+    "12_suma_clases": true,
+    "12_unicos_sin_aplicar": true,
+    "24_ajenos_bytes": true,
+    "24_ajenos_status": true,
+    "37_sin_historia_publica_ni_MU": true,
+    "37_y_6_recomprobados": true,
+    "42_pruebas_H002_hasta_d": true,
+    "6_solo_C35_ultima_2019_2022": true,
+    "H002_106_161_sin_cambio": true,
+    "H002_auxiliares_hash": true,
+    "H002_b_c_bytes_intactos": true,
+    "H002_fuentes_y_salidas_hash": true,
+    "H002_milestone_hash": true,
+    "H002_reproduccion": true,
+    "H002b_reproduccion_fichas": true,
+    "H002c_QA_previo_PASS": true,
+    "H002c_hashes_para_reusar_QA": true,
+    "HEAD_rama": true,
+    "MRUN_2026_paridad": true,
+    "MU_solo_C35J4V2_2022": true,
+    "Permanencia_no_repetida_historicamente": true,
+    "c_no_vota_subtotales_ni_perfiles_incompatibles": true,
+    "c_sin_aproximaciones_ni_ceros": true,
+    "fuentes_salidas_componentes_H002d_hash": true,
+    "observacion_oferta_7_con_manual_p28": true,
+    "primera_anual_publica_no_sustituida_por_total": true,
+    "privacidad_sin_hallazgos": true,
+    "publicacion_280160_filas_3425_IPSS_2026": true,
+    "puente_198_y_cifras_publicas_paridad": true,
+    "reproduccion_H002d_hash": true,
+    "solo_nuevos_H002d": true,
+    "unidades_y_cortes_separados": true
+  },
+  "estado": "PASS_CON_PENDIENTES_E",
+  "hallazgos_privacidad": [],
+  "hito": "H002d",
+  "nota": "QA técnico no aprueba propuestas ni prueba identidad por totales. Se reusan validaciones previas sólo con entradas/salidas intactas.",
+  "pruebas": [
+    {
+      "archivo": "test_h002b.py",
+      "exit": 0,
+      "pruebas": 11
+    },
+    {
+      "archivo": "test_h002c.py",
+      "exit": 0,
+      "pruebas": 10
+    },
+    {
+      "archivo": "test_h002d.py",
+      "exit": 0,
+      "pruebas": 10
+    },
+    {
+      "archivo": "test_paridad.py",
+      "exit": 0,
+      "pruebas": 11
+    }
+  ],
+  "reproduccion_error": ""
+}
