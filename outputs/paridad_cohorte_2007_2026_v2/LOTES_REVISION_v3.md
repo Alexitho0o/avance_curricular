@@ -1,0 +1,829 @@
+# H002h · lotes de revisión v3
+
+Una decisión por familia y problema; máximo cinco carreras por lote. Los indicadores de causa son hipótesis E, salvo evidencia explícita.
+
+## Lote 1 · I162S2C1J2 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C1J2V1", "cohortes": [{"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2022, "1"], "matriculas": 3}, {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2024, "1"], "matriculas": 27}, {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2025, "1"], "matriculas": 16}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["IECIRE20081", "IECIRE20101", "IECIRE20121", "IECIRE20151", "IECIRE20191", "IECIRE2020", "IECIRE20211", "IINF20241", "NECIRE20091", "NECIRE20101", "NECIRE20121", "NECIRE20151", "NICIRE20091", "NICIRE20101", "NICIRE20121", "NICIRE20151", "NINFRE"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"IINF20241": 7}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 2, "PARCIAL": 1}, "repartos_originales": 3, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C1J2V4", "cohortes": [{"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2022, "1"], "matriculas": 3}, {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2024, "1"], "matriculas": 27}, {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2025, "1"], "matriculas": 16}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["IECIRE20081", "IECIRE20101", "IECIRE20121", "IECIRE20151", "IECIRE20191", "IECIRE2020", "IECIRE20211", "IINF20241", "NECIRE20091", "NECIRE20101", "NECIRE20121", "NECIRE20151", "NICIRE20091", "NICIRE20101", "NICIRE20121", "NICIRE20151", "NINFRE"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"IECIRE20191": 9, "IECIRE2020": 11, "IECIRE20211": 42, "IINF20241": 31}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 2, "PARCIAL": 1}, "repartos_originales": 3, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J2 · NO_CUADRA
+
+- {"anio": 2007, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 4, "sies": 47}
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 9, "sies": 28}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 7, "sies": 23}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 15, "sies": 40}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 18, "sies": 56}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 38, "sies": 31}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 76, "sies": 64}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 57, "sies": 43}
+- {"anio": 2016, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 61, "sies": 54}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 79, "sies": 66}
+- {"anio": 2018, "causas_E": ["SEGUNDO_SEMESTRE_OBSERVADO", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 63, "sies": 51}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 55, "sies": 37}
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 29, "sies": 25}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 20, "sies": 18}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J2 · REPARTO_MU
+
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2022, "1"], "matriculas_anuales": 3}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2024, "1"], "matriculas_anuales": 27}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "IINF20241", "RE", "V", 2025, "1"], "matriculas_anuales": 16}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", "IINF", "PLAN_NO_OBSERVADO", "RE", "V", 2025, "1"], "matriculas_anuales": 2}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J2 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2011, "1"], "matriculas_anuales": 143}
+- {"conflictos_forma": {}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", 2011, "2"], "matriculas_anuales": 11}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2012, "1"], "matriculas_anuales": 118}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", 2013, "1"], "matriculas_anuales": 165}
+- {"conflictos_forma": {}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", 2013, "2"], "matriculas_anuales": 8}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", 2014, "1"], "matriculas_anuales": 132}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2014, "2"], "matriculas_anuales": 20}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2015, "1"], "matriculas_anuales": 136}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V2"], "3": ["I162S2C1J2V1", "I162S2C1J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2016, "1"], "matriculas_anuales": 147}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V2", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2017, "1"], "matriculas_anuales": 147}
+- {"conflictos_forma": {"1": ["I162S2C1J2V2", "I162S2C1J2V4"], "3": ["I162S2C1J2V1", "I162S2C1J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J2", 2017, "2"], "matriculas_anuales": 11}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V3", "I162S2C1J2V4"], "11": ["I162S2C1J2V1", "I162S2C1J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2018, "1"], "matriculas_anuales": 99}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V3", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2019, "1"], "matriculas_anuales": 85}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V3", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2020, "1"], "matriculas_anuales": 48}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"], "4": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2021, "1"], "matriculas_anuales": 30}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2022, "1"], "matriculas_anuales": 15}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2024, "1"], "matriculas_anuales": 24}
+- {"conflictos_forma": {"1": ["I162S2C1J2V1", "I162S2C1J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J2", 2025, "1"], "matriculas_anuales": 18}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C2J2 · NO_CUADRA
+
+- {"anio": 2007, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 40}
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 37}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 5, "sies": 24}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 10, "sies": 41}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 18, "sies": 46}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 39, "sies": 53}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 86, "sies": 75}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 83, "sies": 64}
+- {"anio": 2015, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 52, "sies": 38}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 62, "sies": 49}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 64, "sies": 56}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 44, "sies": 38}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C2J2 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C2J2V1", "I162S2C2J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C2J2", 2016, "1"], "matriculas_anuales": 95}
+- {"conflictos_forma": {"1": ["I162S2C2J2V1", "I162S2C2J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C2J2", 2018, "1"], "matriculas_anuales": 75}
+- {"conflictos_forma": {"1": ["I162S2C2J2V1", "I162S2C2J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C2J2", 2019, "1"], "matriculas_anuales": 61}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J2 · AMBIGUA
+
+- {"anio": 2019, "causas_E": [], "interno": 50, "sies": 47}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J2 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "VARIOS_PLANES_UN_CODIGO", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C3J2V1", "cohortes": [{"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", "ICRE", "ICRE20241", "RE", "V", 2025, "1"], "matriculas": 15}, {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", "IETMRE", "IETMRE20211", "RE", "V", 2021, "1"], "matriculas": 38}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["ICRE20241", "NCONRE", "NETMRE20091", "NETMRE20101", "NETMRE20121", "NITMRE20091", "NITMRE20101", "NITMRE20121"], "planes_adicionales_matriculas_anuales": {"IETMRE20121": 1, "IETMRE20161": 1, "IETMRE20211": 1}, "planes_observados_matriculas_anuales": {"ICRE20241": 3, "IETMRE20121": 1, "IETMRE20161": 1, "IETMRE20211": 1}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "AMPLIAR_CANDIDATOS_PARA_REVISION_SIN_ASIGNAR_VERSION", "repartos_diagnosticados": {"NO_EXPLICADO": 1, "PARCIAL": 1}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "VARIOS_PLANES_UN_CODIGO", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C3J2V4", "cohortes": [{"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", "ICRE", "ICRE20241", "RE", "V", 2025, "1"], "matriculas": 15}, {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", "IETMRE", "IETMRE20211", "RE", "V", 2021, "1"], "matriculas": 38}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["ICRE20241", "NCONRE", "NETMRE20091", "NETMRE20101", "NETMRE20121", "NITMRE20091", "NITMRE20101", "NITMRE20121"], "planes_adicionales_matriculas_anuales": {"IETMRE20161": 1, "IETMRE20191": 12, "IETMRE20211": 74}, "planes_observados_matriculas_anuales": {"ICRE20241": 12, "IETMRE20161": 1, "IETMRE20191": 12, "IETMRE20211": 74, "NCONRE": 2, "NITMRE20121": 1}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "AMPLIAR_CANDIDATOS_PARA_REVISION_SIN_ASIGNAR_VERSION", "repartos_diagnosticados": {"NO_EXPLICADO": 1, "PARCIAL": 1}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J2 · NO_CUADRA
+
+- {"anio": 2007, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 55}
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 14, "sies": 30}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 22, "sies": 58}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 29, "sies": 73}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 38, "sies": 76}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 48, "sies": 82}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 138, "sies": 119}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 138, "sies": 114}
+- {"anio": 2015, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 123, "sies": 108}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 103, "sies": 94}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 112, "sies": 104}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J2 · REPARTO_MU
+
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", "ICRE", "ICRE20241", "RE", "V", 2025, "1"], "matriculas_anuales": 15}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", "IETMRE", "IETMRE20211", "RE", "V", 2021, "1"], "matriculas_anuales": 38}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J2 · REPARTO_SIES
+
+- {"conflictos_forma": {}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", 2008, "1"], "matriculas_anuales": 79}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2009, "1"], "matriculas_anuales": 196}
+- {"conflictos_forma": {}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", 2009, "2"], "matriculas_anuales": 53}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2010, "2"], "matriculas_anuales": 39}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", 2012, "1"], "matriculas_anuales": 235}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V2", "I162S2C3J2V3"], "10": ["I162S2C3J2V2", "I162S2C3J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2013, "1"], "matriculas_anuales": 344}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2013, "2"], "matriculas_anuales": 27}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2014, "1"], "matriculas_anuales": 341}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2014, "2"], "matriculas_anuales": 36}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2015, "1"], "matriculas_anuales": 290}
+- {"conflictos_forma": {"3": ["I162S2C3J2V1", "I162S2C3J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2015, "2"], "matriculas_anuales": 31}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V2", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2016, "1"], "matriculas_anuales": 253}
+- {"conflictos_forma": {}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2016, "2"], "matriculas_anuales": 11}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V2", "I162S2C3J2V3", "I162S2C3J2V4"], "3": ["I162S2C3J2V2", "I162S2C3J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2017, "1"], "matriculas_anuales": 279}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V2", "I162S2C3J2V3"], "3": ["I162S2C3J2V1", "I162S2C3J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", 2017, "2"], "matriculas_anuales": 9}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V3", "I162S2C3J2V4"], "11": ["I162S2C3J2V1", "I162S2C3J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2018, "1"], "matriculas_anuales": 208}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2018, "2"], "matriculas_anuales": 11}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V3", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2019, "1"], "matriculas_anuales": 93}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V3", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2020, "1"], "matriculas_anuales": 73}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"], "3": ["I162S2C3J2V1", "I162S2C3J2V3"], "4": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J2", 2021, "1"], "matriculas_anuales": 71}
+- {"conflictos_forma": {"1": ["I162S2C3J2V1", "I162S2C3J2V4"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J2", 2025, "1"], "matriculas_anuales": 10}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J2 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C6J2V1", "cohortes": [{"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TCRE", "TCRE20241", "RE", "V", 2025, "1"], "matriculas": 9}, {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TTMRE", "TTMRE20211", "RE", "V", 2021, "1"], "matriculas": 7}, {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TTMRE", "TTMRE20211", "RE", "V", 2022, "1"], "matriculas": 6}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["TCRE20241", "TTMRE20091", "TTMRE20101", "TTMRE20121", "TTMRE20121V2", "TTMRE20161", "TTMRE20191", "TTMRE20211"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"TCRE20241": 2, "TTMRE20161": 1, "TTMRE20211": 9}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 3}, "repartos_originales": 3, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C6J2V2", "cohortes": [{"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TCRE", "TCRE20241", "RE", "V", 2025, "1"], "matriculas": 9}, {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TTMRE", "TTMRE20211", "RE", "V", 2021, "1"], "matriculas": 7}, {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TTMRE", "TTMRE20211", "RE", "V", 2022, "1"], "matriculas": 6}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["TCRE20241", "TTMRE20091", "TTMRE20101", "TTMRE20121", "TTMRE20121V2", "TTMRE20161", "TTMRE20191", "TTMRE20211"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"TCRE20241": 9, "TTMRE20191": 19, "TTMRE20211": 4}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 3}, "repartos_originales": 3, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J2 · NO_CUADRA
+
+- {"anio": 2007, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 122}
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 3, "sies": 0}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 10, "sies": 108}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 13, "sies": 92}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 51, "sies": 85}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 74, "sies": 103}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 166, "sies": 150}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 109, "sies": 82}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 70, "sies": 59}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 103, "sies": 86}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 53, "sies": 40}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 42, "sies": 38}
+- {"anio": 2020, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 22, "sies": 20}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J2 · REPARTO_MU
+
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TCRE", "TCRE20241", "RE", "V", 2025, "1"], "matriculas_anuales": 9}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TTMRE", "TTMRE20211", "RE", "V", 2021, "1"], "matriculas_anuales": 7}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", "TTMRE", "TTMRE20211", "RE", "V", 2022, "1"], "matriculas_anuales": 6}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J2 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", 2017, "1"], "matriculas_anuales": 174}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C6J2", 2017, "2"], "matriculas_anuales": 9}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", 2018, "1"], "matriculas_anuales": 79}
+- {"conflictos_forma": {"3": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C6J2", 2019, "1"], "matriculas_anuales": 84}
+- {"conflictos_forma": {"3": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C6J2", 2020, "1"], "matriculas_anuales": 50}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C6J2", 2021, "1"], "matriculas_anuales": 18}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", 2022, "1"], "matriculas_anuales": 8}
+- {"conflictos_forma": {"1": ["I162S2C6J2V1", "I162S2C6J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J2", 2025, "1"], "matriculas_anuales": 7}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162M2008N1 · NO_CUADRA
+
+- {"anio": 2008, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 34}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162M2008N3 · NO_CUADRA
+
+- {"anio": 2008, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 85}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J1 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C1J1V1", "cohortes": [{"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", "IINF", "IINF20241", "RE", "D", 2024, "1"], "matriculas": 31}, {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", "IINF", "IINF20241", "RE", "D", 2025, "1"], "matriculas": 21}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["IECIRE20081", "IECIRE20101", "IECIRE20121", "IECIRE20151", "IECIRE20191", "IECIRE2020", "IECIRE20211", "IINF20241"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"IINF20241": 6}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"PARCIAL": 2}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "VARIOS_PLANES_UN_CODIGO", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C1J1V2", "cohortes": [{"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", "IINF", "IINF20241", "RE", "D", 2024, "1"], "matriculas": 31}, {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", "IINF", "IINF20241", "RE", "D", 2025, "1"], "matriculas": 21}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["IINF20241"], "planes_adicionales_matriculas_anuales": {"IECIRE20191": 2, "IECIRE2020": 2, "IECIRE20211": 13}, "planes_observados_matriculas_anuales": {"IECIRE20191": 2, "IECIRE2020": 2, "IECIRE20211": 13, "IINF20241": 31}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "AMPLIAR_CANDIDATOS_PARA_REVISION_SIN_ASIGNAR_VERSION", "repartos_diagnosticados": {"PARCIAL": 2}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J1 · NO_CUADRA
+
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 12}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 9}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 11}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 10}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 14}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 16, "sies": 23}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 11, "sies": 16}
+- {"anio": 2015, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 12, "sies": 15}
+- {"anio": 2016, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 11, "sies": 15}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 16, "sies": 21}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 10, "sies": 16}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 5, "sies": 15}
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 10, "sies": 9}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 8}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J1 · REPARTO_MU
+
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", "IINF", "IINF20241", "RE", "D", 2024, "1"], "matriculas_anuales": 31}
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", "IINF", "IINF20241", "RE", "D", 2025, "1"], "matriculas_anuales": 21}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J1 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J1", 2015, "1"], "matriculas_anuales": 29}
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J1", 2018, "1"], "matriculas_anuales": 41}
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J1", 2021, "1"], "matriculas_anuales": 15}
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J1", 2024, "1"], "matriculas_anuales": 27}
+- {"conflictos_forma": {"1": ["I162S2C1J1V1", "I162S2C1J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J1", 2025, "1"], "matriculas_anuales": 17}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C2J1 · NO_CUADRA
+
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 19}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 19}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 19}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 5, "sies": 18}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 12, "sies": 19}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 29, "sies": 34}
+- {"anio": 2015, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 19, "sies": 26}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 15, "sies": 21}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 24, "sies": 27}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 21, "sies": 24}
+- {"anio": 2019, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 20, "sies": 17}
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C2J1 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C2J1V1", "I162S2C2J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C2J1", 2016, "1"], "matriculas_anuales": 44}
+- {"conflictos_forma": {"1": ["I162S2C2J1V1", "I162S2C2J1V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C2J1", 2018, "1"], "matriculas_anuales": 47}
+- {"conflictos_forma": {"1": ["I162S2C2J1V1", "I162S2C2J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C2J1", 2019, "1"], "matriculas_anuales": 40}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J1 · NO_CUADRA
+
+- {"anio": 2008, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 1}
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 8}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 7}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 4}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 7}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 10, "sies": 17}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 13}
+- {"anio": 2015, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 0}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 4, "sies": 6}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 1}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 0}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J1 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C6J1V1", "cohortes": [{"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", "TTMRE", "TTMRE20211", "RE", "D", 2021, "1"], "matriculas": 4}, {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", "TTMRE", "TTMRE20211", "RE", "D", 2022, "1"], "matriculas": 3}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["TCRE20241", "TTMRE20091", "TTMRE20101", "TTMRE20121", "TTMRE20121V2", "TTMRE20161", "TTMRE20191", "TTMRE20211"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"TTMRE20211": 3}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 2}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C6J1V2", "cohortes": [{"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", "TTMRE", "TTMRE20211", "RE", "D", 2021, "1"], "matriculas": 4}, {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", "TTMRE", "TTMRE20211", "RE", "D", 2022, "1"], "matriculas": 3}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["TCRE20241", "TTMRE20091", "TTMRE20101", "TTMRE20121", "TTMRE20121V2", "TTMRE20161", "TTMRE20191", "TTMRE20211"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"TTMRE20191": 2, "TTMRE20211": 4}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 2}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J1 · NO_CUADRA
+
+- {"anio": 2009, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 27}
+- {"anio": 2010, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 27}
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 22}
+- {"anio": 2012, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 8, "sies": 22}
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 24, "sies": 29}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 26, "sies": 40}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 14, "sies": 21}
+- {"anio": 2020, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 5}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 5, "sies": 4}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J1 · REPARTO_MU
+
+- {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", "TTMRE", "TTMRE20211", "RE", "D", 2021, "1"], "matriculas_anuales": 4}
+- {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", "TTMRE", "TTMRE20211", "RE", "D", 2022, "1"], "matriculas_anuales": 3}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J1 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", 2014, "1"], "matriculas_anuales": 76}
+- {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", 2021, "1"], "matriculas_anuales": 8}
+- {"conflictos_forma": {"1": ["I162S2C6J1V1", "I162S2C6J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J1", 2022, "1"], "matriculas_anuales": 4}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C10J1 · NO_CUADRA
+
+- {"anio": 2013, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 9}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C10J2 · NO_CUADRA
+
+- {"anio": 2013, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 21}
+- {"anio": 2014, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 8}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C11J1 · NO_CUADRA
+
+- {"anio": 2013, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 19}
+- {"anio": 2014, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 6}
+- {"anio": 2017, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 8}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C11J2 · NO_CUADRA
+
+- {"anio": 2013, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 58, "sies": 52}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 32, "sies": 24}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 14, "sies": 12}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C22J1 · NO_CUADRA
+
+- {"anio": 2014, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 2}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C22J2 · NO_CUADRA
+
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 11, "sies": 6}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 13, "sies": 7}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 4}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 14, "sies": 11}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C22J2 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C22J2V1", "I162S2C22J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C22J2", 2019, "1"], "matriculas_anuales": 21}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C35J1 · NO_CUADRA
+
+- {"anio": 2015, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 7}
+- {"anio": 2016, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 6}
+- {"anio": 2017, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 18}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C35J1 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C35J1V1", "I162S2C35J1V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C35J1", 2016, "1"], "matriculas_anuales": 11}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C35J2 · NO_CUADRA
+
+- {"anio": 2015, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 15}
+- {"anio": 2016, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 24}
+- {"anio": 2017, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 39}
+- {"anio": 2018, "causas_E": ["SEGUNDO_SEMESTRE_OBSERVADO", "FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 26}
+- {"anio": 2019, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 29}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C35J2 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C35J2V1", "I162S2C35J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C35J2", 2017, "1"], "matriculas_anuales": 66}
+- {"conflictos_forma": {"1": ["I162S2C35J2V1", "I162S2C35J2V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C35J2", 2017, "2"], "matriculas_anuales": 5}
+- {"conflictos_forma": {"1": ["I162S2C35J2V1", "I162S2C35J2V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C35J2", 2018, "1"], "matriculas_anuales": 50}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C2J4 · NO_CUADRA
+
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 11, "sies": 22}
+- {"anio": 2018, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 44, "sies": 23}
+- {"anio": 2019, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 18, "sies": 12}
+- {"anio": 2020, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 4, "sies": 1}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C2J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C2J4V1", "I162S2C2J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C2J4", 2018, "1"], "matriculas_anuales": 50}
+- {"conflictos_forma": {"1": ["I162S2C2J4V1", "I162S2C2J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C2J4", 2018, "2"], "matriculas_anuales": 21}
+- {"conflictos_forma": {"1": ["I162S2C2J4V1", "I162S2C2J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C2J4", 2019, "1"], "matriculas_anuales": 29}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C35J4 · NO_CUADRA
+
+- {"anio": 2017, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 13}
+- {"anio": 2018, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 16}
+- {"anio": 2019, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 14}
+- {"anio": 2020, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 9}
+- {"anio": 2021, "causas_E": ["FAMILIA_SIN_EQUIVALENCIA_GOBERNADA"], "interno": 0, "sies": 2}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 2 · I162S2C35J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C35J4V1", "I162S2C35J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C35J4", 2018, "1"], "matriculas_anuales": 39}
+- {"conflictos_forma": {"1": ["I162S2C35J4V1", "I162S2C35J4V2"], "3": ["I162S2C35J4V1", "I162S2C35J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C35J4", 2020, "1"], "matriculas_anuales": 11}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J4 · NO_CUADRA
+
+- {"anio": 2011, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 20, "sies": 28}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 22, "sies": 17}
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 32, "sies": 28}
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 26, "sies": 14}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 52, "sies": 30}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C6J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C6J4V1", "I162S2C6J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J4", 2017, "1"], "matriculas_anuales": 55}
+- {"conflictos_forma": {"1": ["I162S2C6J4V1", "I162S2C6J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C6J4", 2017, "2"], "matriculas_anuales": 12}
+- {"conflictos_forma": {"1": ["I162S2C6J4V1", "I162S2C6J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C6J4", 2018, "1"], "matriculas_anuales": 39}
+- {"conflictos_forma": {"1": ["I162S2C6J4V1", "I162S2C6J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C6J4", 2021, "1"], "matriculas_anuales": 61}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J4 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C1J4V2", "cohortes": [{"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", "CIINF", "CIINF20241", "RE", "O", 2024, "1"], "matriculas": 53}, {"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", "CIINF", "CIINF20241", "RE", "O", 2025, "1"], "matriculas": 92}, {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", "IECIREOL", "IECIREOL", "RE", "O", 2018, "1"], "matriculas": 3}, {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", "IECIREOL", "IECIREOL20201", "RE", "O", 2020, "1"], "matriculas": 19}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CIINF20241", "IECIREOL", "IECIREOL20191", "IECIREOL20201", "IECIREOL20211", "IINF20241", "NINFREOL2019"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CIINF20241": 70, "IECIREOL": 8, "IECIREOL20191": 15, "IECIREOL20201": 21, "IECIREOL20211": 329, "IINF20241": 303, "NINFREOL2019": 1}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 2, "PARCIAL": 2}, "repartos_originales": 4, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "VARIOS_PLANES_UN_CODIGO", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C1J4V3", "cohortes": [{"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", "CIINF", "CIINF20241", "RE", "O", 2024, "1"], "matriculas": 53}, {"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", "CIINF", "CIINF20241", "RE", "O", 2025, "1"], "matriculas": 92}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CIINF20241", "NINFREOL2019"], "planes_adicionales_matriculas_anuales": {"IINF20241": 1}, "planes_observados_matriculas_anuales": {"CIINF20241": 33, "IINF20241": 1}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "AMPLIAR_CANDIDATOS_PARA_REVISION_SIN_ASIGNAR_VERSION", "repartos_diagnosticados": {"PARCIAL": 2}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J4 · NO_CUADRA
+
+- {"anio": 2015, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2016, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2018, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 19}
+- {"anio": 2019, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 11, "sies": 33}
+- {"anio": 2020, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 12, "sies": 38}
+- {"anio": 2021, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 53}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J4 · REPARTO_MU
+
+- {"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", "CIINF", "CIINF20241", "RE", "O", 2024, "1"], "matriculas_anuales": 53}
+- {"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", "CIINF", "CIINF20241", "RE", "O", 2025, "1"], "matriculas_anuales": 92}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", "IECIREOL", "IECIREOL", "RE", "O", 2018, "1"], "matriculas_anuales": 3}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", "IECIREOL", "IECIREOL20201", "RE", "O", 2020, "1"], "matriculas_anuales": 19}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C1J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", 2018, "1"], "matriculas_anuales": 60}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2", "I162S2C1J4V3"], "3": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", 2019, "1"], "matriculas_anuales": 73}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", 2019, "2"], "matriculas_anuales": 14}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2", "I162S2C1J4V3"], "3": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", 2020, "1"], "matriculas_anuales": 102}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C1J4", 2020, "2"], "matriculas_anuales": 10}
+- {"conflictos_forma": {"1": ["I162S2C1J4V1", "I162S2C1J4V2"], "4": ["I162S2C1J4V1", "I162S2C1J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", 2021, "1"], "matriculas_anuales": 138}
+- {"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", 2024, "1"], "matriculas_anuales": 196}
+- {"conflictos_forma": {"11": ["I162S2C1J4V2", "I162S2C1J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C1J4", 2025, "1"], "matriculas_anuales": 145}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J4 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C3J4V2", "cohortes": [{"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", "CICRE", "CICRE20241", "RE", "O", 2024, "1"], "matriculas": 109}, {"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", "CICRE", "CICRE20241", "RE", "O", 2025, "1"], "matriculas": 123}, {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", "IETMREOL", "IETMREOL20211", "RE", "O", 2018, "1"], "matriculas": 3}, {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", "IETMREOL", "IETMREOL20211", "RE", "O", 2021, "1"], "matriculas": 78}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CICRE20241", "ICRE20241", "IECIREOL", "IECIREOL20191", "IECIREOL20201", "IECIREOL20211", "IETMRE20091", "IETMRE20101", "IETMRE20121", "IETMRE20161", "IETMRE20191", "IETMRE20211", "IETMREOL", "IETMREOL20191", "IETMREOL20211", "NCONRE", "NCONREOL2019", "NETMRE20091", "NETMRE20101", "NETMRE20121"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CICRE20241": 130, "ICRE20241": 259, "IETMREOL": 1, "IETMREOL20191": 26, "IETMREOL20211": 424, "NCONREOL2019": 7}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"NO_EXPLICADO": 2, "PARCIAL": 2}, "repartos_originales": 4, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C3J4V3", "cohortes": [{"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", "CICRE", "CICRE20241", "RE", "O", 2024, "1"], "matriculas": 109}, {"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", "CICRE", "CICRE20241", "RE", "O", 2025, "1"], "matriculas": 123}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CICRE20241", "IECIREOL", "IECIREOL20191", "IECIREOL20201", "IECIREOL20211", "IETMRE20091", "IETMRE20101", "IETMRE20121", "IETMRE20161", "IETMRE20191", "IETMRE20211", "NCONRE", "NCONREOL2019"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CICRE20241": 43}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"PARCIAL": 2}, "repartos_originales": 2, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J4 · NO_CUADRA
+
+- {"anio": 2014, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2016, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2017, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 1, "sies": 0}
+- {"anio": 2018, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 16, "sies": 14}
+- {"anio": 2019, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 39, "sies": 26}
+- {"anio": 2020, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 70, "sies": 50}
+- {"anio": 2021, "causas_E": ["POSIBLE_CAMBIO_PLAN_EXPEDIENTE_POSTERIOR", "COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 89, "sies": 65}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J4 · REPARTO_MU
+
+- {"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", "CICRE", "CICRE20241", "RE", "O", 2024, "1"], "matriculas_anuales": 109}
+- {"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", "CICRE", "CICRE20241", "RE", "O", 2025, "1"], "matriculas_anuales": 123}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", "IETMREOL", "IETMREOL20211", "RE", "O", 2018, "1"], "matriculas_anuales": 3}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", "IETMREOL", "IETMREOL20211", "RE", "O", 2021, "1"], "matriculas_anuales": 78}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 1 · I162S2C3J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", 2013, "1"], "matriculas_anuales": 2}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", 2014, "1"], "matriculas_anuales": 5}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", 2018, "1"], "matriculas_anuales": 41}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", 2019, "1"], "matriculas_anuales": 70}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", 2019, "2"], "matriculas_anuales": 9}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"], "3": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", 2020, "1"], "matriculas_anuales": 115}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C3J4", 2020, "2"], "matriculas_anuales": 18}
+- {"conflictos_forma": {"1": ["I162S2C3J4V1", "I162S2C3J4V2"], "4": ["I162S2C3J4V1", "I162S2C3J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", 2021, "1"], "matriculas_anuales": 146}
+- {"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", 2024, "1"], "matriculas_anuales": 215}
+- {"conflictos_forma": {"11": ["I162S2C3J4V2", "I162S2C3J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C3J4", 2025, "1"], "matriculas_anuales": 126}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J2 · NO_CUADRA
+
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 35, "sies": 45}
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 26, "sies": 33}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 0, "sies": 20}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J2 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C46J2V1", "I162S2C46J2V2", "I162S2C46J2V3"], "11": ["I162S2C46J2V2", "I162S2C46J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J2", 2019, "1"], "matriculas_anuales": 111}
+- {"conflictos_forma": {"1": ["I162S2C46J2V1", "I162S2C46J2V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J2", 2020, "1"], "matriculas_anuales": 82}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C47J2 · NO_CUADRA
+
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 17, "sies": 12}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J1 · NO_CUADRA
+
+- {"anio": 2019, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 2, "sies": 0}
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 6, "sies": 10}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 3, "sies": 8}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J4 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "VARIOS_PLANES_UN_CODIGO", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C46J4V1", "cohortes": [{"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "CICIB", "CICIB20241", "RE", "O", 2024, "1"], "matriculas": 90}, {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "CICIB", "CICIB20241", "RE", "O", 2025, "1"], "matriculas": 95}, {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "IECSREOL", "IECSREOL20211", "RE", "O", 2023, "1"], "matriculas": 136}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CICIB20241"], "planes_adicionales_matriculas_anuales": {"IECSREOL20211": 1}, "planes_observados_matriculas_anuales": {"CICIB20241": 41, "IECSREOL20211": 1}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "AMPLIAR_CANDIDATOS_PARA_REVISION_SIN_ASIGNAR_VERSION", "repartos_diagnosticados": {"PARCIAL": 3}, "repartos_originales": 3, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "VARIOS_PLANES_UN_CODIGO", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C46J4V3", "cohortes": [{"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "CICIB", "CICIB20241", "RE", "O", 2024, "1"], "matriculas": 90}, {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "CICIB", "CICIB20241", "RE", "O", 2025, "1"], "matriculas": 95}, {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "IECSREOL", "IECSREOL20211", "RE", "O", 2023, "1"], "matriculas": 136}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["ICIB20241", "IECSREOL20211", "NICCREOL2020", "NTCCREOL2020"], "planes_adicionales_matriculas_anuales": {"CICIB20241": 98}, "planes_observados_matriculas_anuales": {"CICIB20241": 98, "ICIB20241": 294, "IECSREOL20211": 340, "NTCCREOL2020": 17}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "AMPLIAR_CANDIDATOS_PARA_REVISION_SIN_ASIGNAR_VERSION", "repartos_diagnosticados": {"PARCIAL": 3}, "repartos_originales": 3, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J4 · NO_CUADRA
+
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 35, "sies": 21}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 58, "sies": 51}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J4 · REPARTO_MU
+
+- {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "CICIB", "CICIB20241", "RE", "O", 2024, "1"], "matriculas_anuales": 90}
+- {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "CICIB", "CICIB20241", "RE", "O", 2025, "1"], "matriculas_anuales": 95}
+- {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", "IECSREOL", "IECSREOL20211", "RE", "O", 2023, "1"], "matriculas_anuales": 136}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C46J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"1": ["I162S2C46J4V1", "I162S2C46J4V2", "I162S2C46J4V3"], "11": ["I162S2C46J4V1", "I162S2C46J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", 2020, "1"], "matriculas_anuales": 67}
+- {"conflictos_forma": {"1": ["I162S2C46J4V2", "I162S2C46J4V3"]}, "estado": "NO_EXPLICADO", "grupo": ["I162S2C46J4", 2020, "2"], "matriculas_anuales": 16}
+- {"conflictos_forma": {"1": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", 2021, "1"], "matriculas_anuales": 134}
+- {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", 2023, "1"], "matriculas_anuales": 220}
+- {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", 2024, "1"], "matriculas_anuales": 183}
+- {"conflictos_forma": {"11": ["I162S2C46J4V1", "I162S2C46J4V3"]}, "estado": "PARCIAL", "grupo": ["I162S2C46J4", 2025, "1"], "matriculas_anuales": 145}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C47J4 · NO_CUADRA
+
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 41, "sies": 26}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 71, "sies": 45}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C57J1 · NO_CUADRA
+
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 8, "sies": 10}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C57J2 · NO_CUADRA
+
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 32, "sies": 29}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C57J4 · NO_CUADRA
+
+- {"anio": 2020, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 42, "sies": 27}
+- {"anio": 2021, "causas_E": ["COBERTURA_INTERNA_NO_CERTIFICADA"], "interno": 128, "sies": 94}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C76J4 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C76J4V1", "cohortes": [{"conflictos_forma": {"11": ["I162S2C76J4V1", "I162S2C76J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C76J4", "CIADM", "CIADM20241", "RE", "O", 2025, "1"], "matriculas": 26}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CIADM20241", "IADM20241"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CIADM20241": 1, "IADM20241": 87}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"PARCIAL": 1}, "repartos_originales": 1, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C76J4V2", "cohortes": [{"conflictos_forma": {"11": ["I162S2C76J4V1", "I162S2C76J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C76J4", "CIADM", "CIADM20241", "RE", "O", 2025, "1"], "matriculas": 26}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CIADM20241", "IADM20241"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CIADM20241": 15}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"PARCIAL": 1}, "repartos_originales": 1, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C76J4 · REPARTO_MU
+
+- {"conflictos_forma": {"11": ["I162S2C76J4V1", "I162S2C76J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C76J4", "CIADM", "CIADM20241", "RE", "O", 2025, "1"], "matriculas_anuales": 26}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C76J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"11": ["I162S2C76J4V1", "I162S2C76J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C76J4", 2025, "1"], "matriculas_anuales": 96}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C77J4 · H002_PROPUESTA
+
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C77J4V1", "cohortes": [{"conflictos_forma": {"11": ["I162S2C77J4V1", "I162S2C77J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C77J4", "CILOG", "CILOG20241", "RE", "O", 2025, "1"], "matriculas": 28}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CILOG20241", "ILOG20241"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CILOG20241": 3, "ILOG20241": 67}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"PARCIAL": 1}, "repartos_originales": 1, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+- {"cambio_plan_observado_transiciones_familia_cohorte": 0, "causa_principal": "SIN_EXPLICACION", "causa_reparto": "SIN_EXPLICACION_DEMOSTRADA", "clase": "C/E", "codigo_sies": "I162S2C77J4V2", "cohortes": [{"conflictos_forma": {"11": ["I162S2C77J4V1", "I162S2C77J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C77J4", "CILOG", "CILOG20241", "RE", "O", 2025, "1"], "matriculas": 28}], "decision_alexi": "", "limite": "Diagnóstico no autoriza modificación; compartir código o observar otro plan no demuestra error ni migración causal del reparto.", "planes_H002": ["CILOG20241"], "planes_adicionales_matriculas_anuales": {}, "planes_observados_matriculas_anuales": {"CILOG20241": 14}, "posible_error_carga": "E: no hay rectificación o bitácora que demuestre error", "propuesta": "MANTENER_PROVISIONAL; no corregir sin evidencia", "repartos_diagnosticados": {"PARCIAL": 1}, "repartos_originales": 1, "todos_repartos_explicados_por_forma": false, "version_por_cohorte": "NO_EXPLICA: los repartos originales ocurren dentro de la misma cohorte"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C77J4 · REPARTO_MU
+
+- {"conflictos_forma": {"11": ["I162S2C77J4V1", "I162S2C77J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C77J4", "CILOG", "CILOG20241", "RE", "O", 2025, "1"], "matriculas_anuales": 28}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 3 · I162S2C77J4 · REPARTO_SIES
+
+- {"conflictos_forma": {"11": ["I162S2C77J4V1", "I162S2C77J4V2"]}, "estado": "PARCIAL", "grupo": ["I162S2C77J4", 2025, "1"], "matriculas_anuales": 71}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## Lote 4 · I162S2C83J4 · ADMP_CADMP_PENDIENTE_ALEXI
+
+- {"estado": "PENDIENTE_D; no aprobado en H002h"}
+
+Propuesta: Revisar evidencia agregada y aprobar sólo el alcance acreditado; conservar E sin corregir H002 ni cargas.
+
+Decisión Alexi: ____
+
+## SIN_ENLACE
+
+Se conserva el resumen H002g, sin líneas de decisión individuales. No se modificó ningún enlace.

@@ -1,0 +1,61 @@
+{
+  "controles": {
+    "20961_conservadas": true,
+    "20_codigos_exactos": true,
+    "24_ajenos_intactos": true,
+    "ADMP_pendiente": true,
+    "c_no_inventa_semestre": true,
+    "candidatas_SIES_sin_plan_UMAS": true,
+    "candidatas_sin_conflicto_interno": true,
+    "censura_no_asigna_ingreso": true,
+    "comparacion_mismo_universo": true,
+    "derivacion_SQL_independiente": true,
+    "enlaces_MU_conservados": true,
+    "estados_historia_suman": true,
+    "explicaciones_sin_excepcion": true,
+    "fijadas_con_perfil": true,
+    "fuentes_hash": true,
+    "lotes_unicos": true,
+    "markdown_limpio": true,
+    "max5_carreras": true,
+    "privacidad": true,
+    "protegidos_intactos": true,
+    "pruebas": true,
+    "publicacion_0_diferencias": true,
+    "rama_head": true,
+    "reproduccion": true,
+    "salidas_hash": true,
+    "scripts_hash": true,
+    "sin_regla_activa": true
+  },
+  "estado": "PASS_CON_PENDIENTES_E",
+  "pendientes": [
+    "Primera observación no prueba ingreso real",
+    "Origen no equivale a carrera actual: sustitución D explícita",
+    "No se acredita fecha de ingreso respecto al corte con la última matrícula",
+    "Título sin año previo o expediente único no acredita articulación",
+    "SIES no se enlaza con MU; comparación de formas en universos separados"
+  ],
+  "privacidad_violaciones": [],
+  "pruebas": [
+    {
+      "resultado": "..........................\n----------------------------------------------------------------------\nRan 26 tests in 0.000s\n\nOK\n",
+      "returncode": 0,
+      "ruta": "outputs/paridad_cohorte_2007_2026_v2"
+    },
+    {
+      "resultado": "........................\n----------------------------------------------------------------------\nRan 24 tests in 0.001s\n\nOK\n",
+      "returncode": 0,
+      "ruta": "outputs/paridad_cohorte_2007_2026"
+    },
+    {
+      "resultado": "...................................................\n----------------------------------------------------------------------\nRan 51 tests in 1.415s\n\nOK\n",
+      "returncode": 0,
+      "ruta": "outputs/paridad_codigo_sies_20261029"
+    }
+  ],
+  "reproduccion": {
+    "resultado": "0 diferencias de bytes",
+    "returncode": 0
+  }
+}
