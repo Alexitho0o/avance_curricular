@@ -1,10 +1,28 @@
 {
+  "aplicacion_H002e": {
+    "base": {
+      "HEAD_base": "2969b638d2a7bf1892783d5eceef4df28316b28e",
+      "clase": "D",
+      "fuente": "Alexi, 29-10-2026",
+      "scope": "Catálogo 2027; no v20 ni oferta; 2026 y 37 pendientes intactos"
+    },
+    "componente": {
+      "ruta": "outputs/paridad_codigo_sies_20261029/aplicar_decisiones_h002e.py",
+      "sha256": "0db181eaa076cbdc457f18755869b50e67ec082e8560b9978eca56c54722c2f2"
+    }
+  },
   "atribuciones_personales_modificadas": false,
   "auxiliares_H002b": {
     "data/paridad_codigo_sies/PLANTILLA_PLANES_UMAS_2027.tsv": "8803ac30b09c9eaa221ba11df9c1acbad95f4d2c69809c92abb6e0bebc765505",
     "outputs/paridad_codigo_sies_20261029/cruzar_planes_2027.py": "904f3f7d6019b412c60ff5cddf4e70c466f9929ed8ef3c0ffb53412b6c2667f1",
     "outputs/paridad_codigo_sies_20261029/revisar_casos.py": "2d6ccab3d1e1d3189009df9c212191239f263e10ab2a689299f2896bc988429b",
     "outputs/paridad_codigo_sies_20261029/test_h002b.py": "0034a7e419b639eedb163af7369e52b6ebd495f79ed9e1435a927983d98c328c"
+  },
+  "auxiliares_H002e": {
+    "outputs/paridad_codigo_sies_20261029/CONTROL_VIGENTES_H002E.json": "cf01129c04c9d616a8c0c5db7667b552fc56be8fd09c53fac1aeb8bf934c15ee",
+    "outputs/paridad_codigo_sies_20261029/ESPECIFICACION_H002E.md": "a1a71d5f7da00f9971a21d96f71381790961318af6fc95d86cfbb680b83756f9",
+    "outputs/paridad_codigo_sies_20261029/qa_h002e.py": "6056a81e87c372e9a8dd0ee2d610606e89d0180b5c72c3b8ecf8ab3c79d1c29b",
+    "outputs/paridad_codigo_sies_20261029/test_h002e.py": "c4aa849226f396aef7ceeb85b3abcd03b434f2ee9c7b4a7befc4df686be8d404"
   },
   "commit_contexto": "7807542b2b819521b7bd620239110686830ec406",
   "componente_decisiones": {
@@ -13,7 +31,7 @@
   },
   "configuracion": {
     "ruta": "data/paridad_codigo_sies/20261029/FUENTES.json",
-    "sha256": "e42a0a6d8d4d48ccb4a210e865f15074698d96ef9d99cb2ea0b2950c7cd05160"
+    "sha256": "2e2d0ff6cf4f129311008428a5460ea848ba2cef47c60cadfe8a2f6bb9decfe7"
   },
   "datos_personales": false,
   "entradas": [
@@ -282,16 +300,46 @@
       "id": "v20_descriptor",
       "ruta": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
       "sha256": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+    },
+    {
+      "clase": "D",
+      "id": "decisiones_aprobadas_v2",
+      "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+      "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+    },
+    {
+      "clase": "B/C/E",
+      "id": "revision_h002d",
+      "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
+      "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+    },
+    {
+      "clase": "B/C/D/E",
+      "id": "propuesta_43_h002d",
+      "ruta": "outputs/paridad_codigo_sies_20261029/PROPUESTA_PLANES_43_v2.json",
+      "sha256": "006a092f3f4fda9437a6e5b8c1a26a5f7a5110dedddd28bd92de8df46f84a124"
+    },
+    {
+      "clase": "B/C",
+      "id": "control_vigentes_h002e",
+      "ruta": "outputs/paridad_codigo_sies_20261029/CONTROL_VIGENTES_H002E.json",
+      "sha256": "cf01129c04c9d616a8c0c5db7667b552fc56be8fd09c53fac1aeb8bf934c15ee"
+    },
+    {
+      "clase": "C",
+      "id": "readme_h002e",
+      "ruta": "outputs/paridad_codigo_sies_20261029/README_H002E.plantilla.md",
+      "sha256": "b1903ddc8f853aa7a29a92959c64fed953c28543dffa4b2e218c9b460574382b"
     }
   ],
   "especificacion": {
     "ruta": "data/paridad_codigo_sies/20261029/README.md",
-    "sha256": "80a173fc5b090742168d23cda0f757167776fed559ef2137168e9b29a9b912f1"
+    "sha256": "c67958304096cf400946456782c2b906b7784b65769c4cd5328f0df0ebf1187f"
   },
   "fecha": "2026-10-29",
   "generador": {
     "ruta": "outputs/paridad_codigo_sies_20261029/construir_paridad.py",
-    "sha256": "5665781bf201348f90dffe6c326b16f4836ff1ee9a028a093cdac7a1cb5e6914"
+    "sha256": "40c760c0edd1010e386ddc277eecbd3afab1c52fbab71cca0985fb8257ebf765"
   },
   "hito": "H002-PARIDAD-CODIGO-SIES-2027",
   "reglas_oficiales": {
@@ -320,11 +368,13 @@
     }
   },
   "salidas": {
-    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.csv": "e9445a81b9049f9c6d95f34003556e5944d38c7046d9558942c0c21ddb96f555",
-    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json": "93141a3318514789815105e25424f966d4b86e1afdbe237506e4a6eb39306b95",
-    "outputs/paridad_codigo_sies_20261029/DECISIONES_PENDIENTES.json": "521a5a9925772377d31b78bf8d7817493cf9011c642e4f759e702eb6c21a53a1",
-    "outputs/paridad_codigo_sies_20261029/DECISIONES_PENDIENTES.md": "b01fa26b2391e4ae38073f90ef7a4a443376ce189afcd176329e2b9285245782",
-    "outputs/paridad_codigo_sies_20261029/QA.json": "b3cc9dd145e8c7b3c9abe84a70e7a1a364209466f2aa8656e018c7de7df9837a",
-    "outputs/paridad_codigo_sies_20261029/RESOLUCIONES_POR_GRUPO.json": "235fc708eb1aab01386a844d0242efb55aa6c852d136d93f07a15a60c66984ba"
+    "data/paridad_codigo_sies/20261029/README.md": "c67958304096cf400946456782c2b906b7784b65769c4cd5328f0df0ebf1187f",
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.csv": "e6f3cd32c1a0b85336696123d8f555449cf81cad8ece34dedfd61756037a080a",
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json": "42873a2a97639cca39e926e784a5a9e198e816719de4273ec350fabd2e006992",
+    "outputs/paridad_codigo_sies_20261029/DECISIONES_PENDIENTES.json": "1218ee36b37ffe1cea95689dc86f7f9c75a83b5b4803c4ee1ddfdba257f122a1",
+    "outputs/paridad_codigo_sies_20261029/DECISIONES_PENDIENTES.md": "178ba8d845269ee98bc6e48aacd5ce0c37870f4dab0f7bfef9d445c7c885efc4",
+    "outputs/paridad_codigo_sies_20261029/OBSERVACIONES_OFERTA_2027.md": "964f3cb3d7d5e6ffe5589f9dd628328fefb00b9e1d63a2ec5005f7d39535ec4d",
+    "outputs/paridad_codigo_sies_20261029/QA.json": "0ab109f8061cf20554d3e8ddf2d3f2432598b51791225aeda07ec78dbc709bd0",
+    "outputs/paridad_codigo_sies_20261029/RESOLUCIONES_POR_GRUPO.json": "3e01eea68f160b0086b958d940b494d7e196fea919ae32c691d7f980c06e0334"
   }
 }

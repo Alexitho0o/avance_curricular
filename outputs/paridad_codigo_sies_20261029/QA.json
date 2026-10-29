@@ -6,9 +6,114 @@
     "Nuevos significa sin grupo interno 2026, no carrera creada en 2027.",
     "El perfil de equivalencias explícitas 2027 no es medición curricular independiente.",
     "Ausencia en oferta no demuestra cierre.",
-    "La conservación de fuentes no equivale a publicar cambios en Git."
+    "La conservación de fuentes no equivale a publicar cambios en Git.",
+    "Seis grupos históricos no equivalen a seis códigos cerrados: los códigos compartidos conservan sus planes activos.",
+    "Mallas/cohortes sin ámbito explícito conservan E; no se atribuyen personas.",
+    "Reproducción de H002b–d: checkout aislado del commit de origen; no cambiar sus manifiestos congelados."
   ],
-  "aprobadas_D_2027": 6,
+  "aplicacion_H002e": {
+    "aprobadas_5": [
+      "I162S2C78J2V1",
+      "I162S2C76J4V2",
+      "I162S2C46J2V3",
+      "I162S2C87J4V2",
+      "I162S2C1J4V2"
+    ],
+    "filas_2026_intactas": true,
+    "filas_afectadas": [
+      [
+        2027,
+        "I162S2C1J4V2"
+      ],
+      [
+        2027,
+        "I162S2C1J4V3"
+      ],
+      [
+        2027,
+        "I162S2C35J1V1"
+      ],
+      [
+        2027,
+        "I162S2C35J1V2"
+      ],
+      [
+        2027,
+        "I162S2C35J2V1"
+      ],
+      [
+        2027,
+        "I162S2C35J2V2"
+      ],
+      [
+        2027,
+        "I162S2C35J4V1"
+      ],
+      [
+        2027,
+        "I162S2C35J4V2"
+      ],
+      [
+        2027,
+        "I162S2C3J4V2"
+      ],
+      [
+        2027,
+        "I162S2C3J4V3"
+      ],
+      [
+        2027,
+        "I162S2C46J2V3"
+      ],
+      [
+        2027,
+        "I162S2C76J4V1"
+      ],
+      [
+        2027,
+        "I162S2C76J4V2"
+      ],
+      [
+        2027,
+        "I162S2C78J2V1"
+      ],
+      [
+        2027,
+        "I162S2C83J4V1"
+      ],
+      [
+        2027,
+        "I162S2C83J4V2"
+      ],
+      [
+        2027,
+        "I162S2C87J4V1"
+      ],
+      [
+        2027,
+        "I162S2C87J4V2"
+      ],
+      [
+        2027,
+        "I162S2C90J2V1"
+      ],
+      [
+        2027,
+        "I162S2C90J2V2"
+      ]
+    ],
+    "grupos_fuera_alcance": 6,
+    "grupos_historicos_6": [
+      "[\"CNATP\",\"RE\",\"V\"]",
+      "[\"IECIRE\",\"RE\",\"O\"]",
+      "[\"IETMRE\",\"RE\",\"O\"]",
+      "[\"NCONRE\",\"RE\",\"O\"]",
+      "[\"NCONREOL\",\"RE\",\"O\"]",
+      "[\"NINFREOL\",\"RE\",\"O\"]"
+    ],
+    "pendiente_CADMP": "[\"CADMP\",\"RE\",\"O\"]"
+  },
+  "aprobadas_D_2027": 11,
   "clase": "C",
   "cobertura_codigos_historicos_leidos": 141,
   "codigos_fuera_grupos_2026": 59,
@@ -16,13 +121,19 @@
     "106_codigos_2026_una_vez": true,
     "161_codigos_2027_una_vez": true,
     "CSV_y_JSON_mismas_267_llaves": true,
+    "H002e_11_codigos_D": true,
+    "H002e_2026_intacto": true,
+    "H002e_37_pendientes": true,
+    "H002e_6_C35": true,
+    "H002e_6_grupos_historicos_sin_version": true,
+    "H002e_CADMP_unico_grupo_E": true,
+    "H002e_solo_20_filas_2027_autorizadas": true,
     "catalogo_no_usa_personas": true,
     "conteo_independiente_por_anio": true,
     "copia_congelada_igual_V06": true,
     "fuentes_fijadas_y_sin_alteracion": true,
     "nuevos_2027_si_o_E": true,
     "propuestas_con_equivalencia_dimensiones_perfil_y_plan": true,
-    "seis_D_y_resto_estados_intactos": true,
     "selecciones_unicas_con_perfil": true,
     "sin_duplicados_anio_codigo": true,
     "sin_patrones_identificadores_en_tabla": true,
@@ -33,29 +144,34 @@
   "estado": "PASS_CON_PENDIENTES_E",
   "filas": 267,
   "grupos": 135,
+  "grupos_historicos_D": 6,
   "grupos_previos_multiversion": 52,
-  "grupos_version_multiple_E": 12,
+  "grupos_version_multiple_E": 1,
   "nuevos_con_PLAN_pendientes_D": 0,
   "por_anio_estado": {
     "2026": {
       "APROBADA_D_2027": 0,
       "CONTINUA": 53,
       "FUERA_ALCANCE": 11,
+      "HISTORICO_SIN_MATRICULA_RECIENTE": 0,
       "NUEVO_2027_CON_PLAN": 0,
       "NUEVO_2027_SIN_PLAN_E": 0,
+      "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
       "SIN_OFERTA_2027": 4,
       "VERSION_MULTIPLE_E": 14,
       "VERSION_MULTIPLE_RESUELTA": 24
     },
     "2027": {
-      "APROBADA_D_2027": 6,
+      "APROBADA_D_2027": 11,
       "CONTINUA": 53,
       "FUERA_ALCANCE": 21,
+      "HISTORICO_SIN_MATRICULA_RECIENTE": 6,
       "NUEVO_2027_CON_PLAN": 0,
-      "NUEVO_2027_SIN_PLAN_E": 43,
+      "NUEVO_2027_SIN_PLAN_E": 37,
+      "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
       "SIN_OFERTA_2027": 0,
-      "VERSION_MULTIPLE_E": 14,
-      "VERSION_MULTIPLE_RESUELTA": 24
+      "VERSION_MULTIPLE_E": 2,
+      "VERSION_MULTIPLE_RESUELTA": 31
     }
   }
 }

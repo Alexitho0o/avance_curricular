@@ -124,7 +124,9 @@
     "sede_umas": "RE"
   },
   {
+    "clase_paridad_2027": "E",
     "codcarpr": "CADMP",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C83J4V1",
       "I162S2C83J4V2"
@@ -133,9 +135,21 @@
       "I162S2C83J4V1",
       "I162S2C83J4V2"
     ],
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 2
     },
+    "estado_paridad_2027": "VERSION_MULTIPLE_E",
     "evidencia": [
       {
         "clase": "C/D",
@@ -158,6 +172,12 @@
     ],
     "fuente_perfil": "PERFIL_NO_UNIVOCO",
     "grupo": "[\"CADMP\",\"RE\",\"O\"]",
+    "indicio_H002e": {
+      "PROMEDIOS_2026_expedientes": 7,
+      "Permanencia_2026_expedientes": 10,
+      "SIES_2026_V1": 94,
+      "SIES_2026_V2": 9
+    },
     "jornada_umas": "O",
     "limite_historial": "Ensayo C/E; no asignación de plan ni vigencia para ingreso 2027.",
     "modalidades": [
@@ -168,6 +188,15 @@
     "planes_catalogados_candidatos": [
       "CADMP20251"
     ],
+    "resolucion_calculada_antes_H002e": {
+      "estado": "E",
+      "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
+      "opciones": [
+        "I162S2C83J4V1",
+        "I162S2C83J4V2"
+      ],
+      "seleccion": null
+    },
     "resolucion_nuevos_2027": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
@@ -296,7 +325,10 @@
     "sede_umas": "RE"
   },
   {
+    "ambito_mallas_cohortes": "D: plan explícito de catálogo, no asignación individual",
+    "clase_paridad_2027": "D",
     "codcarpr": "CIADM",
+    "codigo_sies_aprobado": "I162S2C76J4V2",
     "codigos_2027_familia": [
       "I162S2C76J4V1",
       "I162S2C76J4V2"
@@ -305,9 +337,21 @@
       "I162S2C76J4V1",
       "I162S2C76J4V2"
     ],
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 4
     },
+    "estado_paridad_2027": "APROBADA_D_2027",
     "evidencia": [
       {
         "clase": "C/D",
@@ -340,7 +384,10 @@
     "planes_catalogados_candidatos": [
       "CIADM20241"
     ],
-    "resolucion_nuevos_2027": {
+    "planes_explicitos_aprobados": [
+      "CIADM20241"
+    ],
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
@@ -348,6 +395,15 @@
         "I162S2C76J4V2"
       ],
       "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "codigo_catalogo_aprobado": "I162S2C76J4V2",
+      "estado": "D_APROBADA",
+      "motivo": "Decisión de Alexi; admisión separada y sujeta a vigencia literal de la carga.",
+      "opciones": [
+        "I162S2C76J4V2"
+      ],
+      "seleccion": "I162S2C76J4V2"
     },
     "sede_umas": "RE"
   },
@@ -472,7 +528,10 @@
     "sede_umas": "RE"
   },
   {
+    "ambito_mallas_cohortes": "D: plan explícito de catálogo, no asignación individual",
+    "clase_paridad_2027": "D",
     "codcarpr": "CICIB",
+    "codigo_sies_aprobado": "I162S2C46J2V3",
     "codigos_2027_familia": [
       "I162S2C46J2V1",
       "I162S2C46J2V3"
@@ -480,9 +539,21 @@
     "codigos_previos": [
       "I162S2C46J2V3"
     ],
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "INTERVALO_PROPUESTO": 2
     },
+    "estado_paridad_2027": "APROBADA_D_2027",
     "evidencia": [
       {
         "clase": "C/D",
@@ -520,13 +591,23 @@
     "planes_catalogados_candidatos": [
       "CICIB20241"
     ],
-    "resolucion_nuevos_2027": {
+    "planes_explicitos_aprobados": [
+      "CICIB20241"
+    ],
+    "resolucion_calculada_antes_H002e": {
       "compatibles_perfil": [],
       "estado": "E",
       "motivo": "Ninguna o varias versiones compatibles; revisar perfil/malla y ámbito.",
       "opciones": [
         "I162S2C46J2V1"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "codigo_catalogo_aprobado": "I162S2C46J2V3",
+      "estado": "D_CODIGO_APROBADO_SIN_NUEVOS",
+      "motivo": "Decisión de Alexi; admisión separada y sujeta a vigencia literal de la carga.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -1131,7 +1212,18 @@
     "sede_umas": "RE"
   },
   {
+    "ambiguedad_historica": {
+      "clase": "E",
+      "codigos_candidatos": [
+        "I162S2C90J2V1",
+        "I162S2C90J2V2"
+      ],
+      "motivo": "Fuera de la necesidad de paridad 2027 por decisión D; no resuelve atribución histórica.",
+      "version_asignada": null
+    },
+    "clase_paridad_2027": "D",
     "codcarpr": "CNATP",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C90J2V1",
       "I162S2C90J2V2"
@@ -1140,9 +1232,29 @@
       "I162S2C90J2V1",
       "I162S2C90J2V2"
     ],
+    "control_foto_Permanencia": {
+      "codcarpr": "CNATP",
+      "estados_UMAS": {},
+      "jornada": "V",
+      "sede": "RE",
+      "total_filas_foto": 0,
+      "vigentes_etiqueta_UMAS": 0
+    },
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 1
     },
+    "estado_paridad_2027": "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES",
     "evidencia": [
       {
         "clase": "C/D",
@@ -1175,12 +1287,18 @@
     "planes_catalogados_candidatos": [
       "CNATP20251"
     ],
-    "resolucion_nuevos_2027": {
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
         "I162S2C90J2V2"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "estado": "NO_REQUIERE_PARIDAD_2027_D",
+      "motivo": "Cero vigentes UMAS en la foto Permanencia 2026; códigos candidatos usados por otros planes. No requiere paridad 2027.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -3078,7 +3196,19 @@
     "sede_umas": "RE"
   },
   {
+    "ambiguedad_historica": {
+      "clase": "E",
+      "codigos_candidatos": [
+        "I162S2C1J4V1",
+        "I162S2C1J4V2",
+        "I162S2C1J4V3"
+      ],
+      "motivo": "Fuera de la necesidad de paridad 2027 por decisión D; no resuelve atribución histórica.",
+      "version_asignada": null
+    },
+    "clase_paridad_2027": "D",
     "codcarpr": "IECIRE",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C1J4V2",
       "I162S2C1J4V3"
@@ -3086,9 +3216,31 @@
     "codigos_previos": [
       "I162S2C1J4V1"
     ],
+    "control_foto_Permanencia": {
+      "codcarpr": "IECIRE",
+      "estados_UMAS": {
+        "TITULADO": 1
+      },
+      "jornada": "O",
+      "sede": "RE",
+      "total_filas_foto": 1,
+      "vigentes_etiqueta_UMAS": 0
+    },
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "COHORTE_ANTERIOR_INICIO_OFERTA": 3
     },
+    "estado_paridad_2027": "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES",
     "evidencia": [
       {
         "clase": "C/D",
@@ -3132,12 +3284,18 @@
       "IECIRE2020",
       "IECIRE20211"
     ],
-    "resolucion_nuevos_2027": {
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Versión fuera de los vínculos previos; requiere aprobación D de nueva correspondencia.",
       "opciones": [
         "I162S2C1J4V2"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "estado": "NO_REQUIERE_PARIDAD_2027_D",
+      "motivo": "Cero vigentes UMAS en la foto Permanencia 2026; códigos candidatos usados por otros planes. No requiere paridad 2027.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -3212,7 +3370,10 @@
     "sede_umas": "RE"
   },
   {
+    "ambito_mallas_cohortes": "E: ámbito por malla/cohorte no elegido",
+    "clase_paridad_2027": "D",
     "codcarpr": "IECIREOL",
+    "codigo_sies_aprobado": "I162S2C1J4V2",
     "codigos_2027_familia": [
       "I162S2C1J4V2",
       "I162S2C1J4V3",
@@ -3226,9 +3387,21 @@
       "I162S2C3J4V2",
       "I162S2C3J4V3"
     ],
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 47
     },
+    "estado_paridad_2027": "APROBADA_D_2027",
     "evidencia": [
       {
         "clase": "C/D",
@@ -3264,7 +3437,8 @@
       "IECIREOL20201",
       "IECIREOL20211"
     ],
-    "resolucion_nuevos_2027": {
+    "planes_explicitos_aprobados": [],
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
@@ -3274,6 +3448,15 @@
         "I162S2C3J4V3"
       ],
       "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "codigo_catalogo_aprobado": "I162S2C1J4V2",
+      "estado": "D_APROBADA",
+      "motivo": "Decisión de Alexi; admisión separada y sujeta a vigencia literal de la carga.",
+      "opciones": [
+        "I162S2C1J4V2"
+      ],
+      "seleccion": "I162S2C1J4V2"
     },
     "sede_umas": "RE"
   },
@@ -3518,7 +3701,19 @@
     "sede_umas": "RE"
   },
   {
+    "ambiguedad_historica": {
+      "clase": "E",
+      "codigos_candidatos": [
+        "I162S2C3J4V1",
+        "I162S2C3J4V2",
+        "I162S2C3J4V3"
+      ],
+      "motivo": "Fuera de la necesidad de paridad 2027 por decisión D; no resuelve atribución histórica.",
+      "version_asignada": null
+    },
+    "clase_paridad_2027": "D",
     "codcarpr": "IETMRE",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C3J4V2",
       "I162S2C3J4V3"
@@ -3528,9 +3723,29 @@
       "I162S2C3J4V2",
       "I162S2C3J4V3"
     ],
+    "control_foto_Permanencia": {
+      "codcarpr": "IETMRE",
+      "estados_UMAS": {},
+      "jornada": "O",
+      "sede": "RE",
+      "total_filas_foto": 0,
+      "vigentes_etiqueta_UMAS": 0
+    },
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 1
     },
+    "estado_paridad_2027": "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES",
     "evidencia": [
       {
         "clase": "C/D",
@@ -3568,13 +3783,19 @@
       "IETMRE20191",
       "IETMRE20211"
     ],
-    "resolucion_nuevos_2027": {
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
         "I162S2C3J4V2",
         "I162S2C3J4V3"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "estado": "NO_REQUIERE_PARIDAD_2027_D",
+      "motivo": "Cero vigentes UMAS en la foto Permanencia 2026; códigos candidatos usados por otros planes. No requiere paridad 2027.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -3765,7 +3986,10 @@
     "sede_umas": "RE"
   },
   {
+    "ambito_mallas_cohortes": "E: ámbito por malla/cohorte no elegido",
+    "clase_paridad_2027": "D",
     "codcarpr": "IIND",
+    "codigo_sies_aprobado": "I162S2C87J4V2",
     "codigos_2027_familia": [
       "I162S2C87J4V1",
       "I162S2C87J4V2"
@@ -3774,11 +3998,23 @@
       "I162S2C87J4V1",
       "I162S2C87J4V2"
     ],
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "AMBIGUEDAD_PERFIL_DURACION": 3,
       "COINCIDENCIA_INICIO": 4,
       "FUERA_AMBITO_2007_2026": 1
     },
+    "estado_paridad_2027": "APROBADA_D_2027",
     "evidencia": [
       {
         "clase": "C/D",
@@ -3820,7 +4056,8 @@
     "planes_catalogados_candidatos": [
       "IIND20251"
     ],
-    "resolucion_nuevos_2027": {
+    "planes_explicitos_aprobados": [],
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
@@ -3828,6 +4065,15 @@
         "I162S2C87J4V2"
       ],
       "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "codigo_catalogo_aprobado": "I162S2C87J4V2",
+      "estado": "D_APROBADA",
+      "motivo": "Decisión de Alexi; admisión separada y sujeta a vigencia literal de la carga.",
+      "opciones": [
+        "I162S2C87J4V2"
+      ],
+      "seleccion": "I162S2C87J4V2"
     },
     "sede_umas": "RE"
   },
@@ -4550,7 +4796,19 @@
     "sede_umas": "RE"
   },
   {
+    "ambiguedad_historica": {
+      "clase": "E",
+      "codigos_candidatos": [
+        "I162S2C3J4V1",
+        "I162S2C3J4V2",
+        "I162S2C3J4V3"
+      ],
+      "motivo": "Fuera de la necesidad de paridad 2027 por decisión D; no resuelve atribución histórica.",
+      "version_asignada": null
+    },
+    "clase_paridad_2027": "D",
     "codcarpr": "NCONRE",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C3J4V2",
       "I162S2C3J4V3"
@@ -4560,9 +4818,29 @@
       "I162S2C3J4V2",
       "I162S2C3J4V3"
     ],
+    "control_foto_Permanencia": {
+      "codcarpr": "NCONRE",
+      "estados_UMAS": {},
+      "jornada": "O",
+      "sede": "RE",
+      "total_filas_foto": 0,
+      "vigentes_etiqueta_UMAS": 0
+    },
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 2
     },
+    "estado_paridad_2027": "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES",
     "evidencia": [
       {
         "clase": "C/D",
@@ -4595,13 +4873,19 @@
     "planes_catalogados_candidatos": [
       "NCONRE"
     ],
-    "resolucion_nuevos_2027": {
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
         "I162S2C3J4V2",
         "I162S2C3J4V3"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "estado": "NO_REQUIERE_PARIDAD_2027_D",
+      "motivo": "Cero vigentes UMAS en la foto Permanencia 2026; códigos candidatos usados por otros planes. No requiere paridad 2027.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -4663,7 +4947,19 @@
     "sede_umas": "RE"
   },
   {
+    "ambiguedad_historica": {
+      "clase": "E",
+      "codigos_candidatos": [
+        "I162S2C3J4V1",
+        "I162S2C3J4V2",
+        "I162S2C3J4V3"
+      ],
+      "motivo": "Fuera de la necesidad de paridad 2027 por decisión D; no resuelve atribución histórica.",
+      "version_asignada": null
+    },
+    "clase_paridad_2027": "D",
     "codcarpr": "NCONREOL",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C3J4V2",
       "I162S2C3J4V3"
@@ -4673,9 +4969,29 @@
       "I162S2C3J4V2",
       "I162S2C3J4V3"
     ],
+    "control_foto_Permanencia": {
+      "codcarpr": "NCONREOL",
+      "estados_UMAS": {},
+      "jornada": "O",
+      "sede": "RE",
+      "total_filas_foto": 0,
+      "vigentes_etiqueta_UMAS": 0
+    },
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 10
     },
+    "estado_paridad_2027": "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES",
     "evidencia": [
       {
         "clase": "C/D",
@@ -4708,13 +5024,19 @@
     "planes_catalogados_candidatos": [
       "NCONREOL2019"
     ],
-    "resolucion_nuevos_2027": {
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
         "I162S2C3J4V2",
         "I162S2C3J4V3"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "estado": "NO_REQUIERE_PARIDAD_2027_D",
+      "motivo": "Cero vigentes UMAS en la foto Permanencia 2026; códigos candidatos usados por otros planes. No requiere paridad 2027.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -5202,7 +5524,19 @@
     "sede_umas": "RE"
   },
   {
+    "ambiguedad_historica": {
+      "clase": "E",
+      "codigos_candidatos": [
+        "I162S2C1J4V1",
+        "I162S2C1J4V2",
+        "I162S2C1J4V3"
+      ],
+      "motivo": "Fuera de la necesidad de paridad 2027 por decisión D; no resuelve atribución histórica.",
+      "version_asignada": null
+    },
+    "clase_paridad_2027": "D",
     "codcarpr": "NINFREOL",
+    "codigo_sies_aprobado": null,
     "codigos_2027_familia": [
       "I162S2C1J4V2",
       "I162S2C1J4V3"
@@ -5212,9 +5546,29 @@
       "I162S2C1J4V2",
       "I162S2C1J4V3"
     ],
+    "control_foto_Permanencia": {
+      "codcarpr": "NINFREOL",
+      "estados_UMAS": {},
+      "jornada": "O",
+      "sede": "RE",
+      "total_filas_foto": 0,
+      "vigentes_etiqueta_UMAS": 0
+    },
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 7
     },
+    "estado_paridad_2027": "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES",
     "evidencia": [
       {
         "clase": "C/D",
@@ -5247,13 +5601,19 @@
     "planes_catalogados_candidatos": [
       "NINFREOL2019"
     ],
-    "resolucion_nuevos_2027": {
+    "resolucion_calculada_antes_H002e": {
       "estado": "E",
       "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
       "opciones": [
         "I162S2C1J4V2",
         "I162S2C1J4V3"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "estado": "NO_REQUIERE_PARIDAD_2027_D",
+      "motivo": "Cero vigentes UMAS en la foto Permanencia 2026; códigos candidatos usados por otros planes. No requiere paridad 2027.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"
@@ -5735,7 +6095,10 @@
     "sede_umas": "RE"
   },
   {
+    "ambito_mallas_cohortes": "D: plan explícito de catálogo, no asignación individual",
+    "clase_paridad_2027": "D",
     "codcarpr": "TAMD",
+    "codigo_sies_aprobado": "I162S2C78J2V1",
     "codigos_2027_familia": [
       "I162S2C78J2V1",
       "I162S2C78J2V2"
@@ -5743,11 +6106,23 @@
     "codigos_previos": [
       "I162S2C78J2V1"
     ],
+    "decision_H002e": {
+      "clase": "D",
+      "evidencia": {
+        "clase": "D",
+        "localizador": "",
+        "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+        "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+      },
+      "fuente": "Alexi, 29-10-2026",
+      "id": "D_ALEXI_H002E_20261029"
+    },
     "ensayo_cohortes_estados": {
       "COINCIDENCIA_INICIO": 1,
       "FUERA_AMBITO_2007_2026": 1,
       "INTERVALO_PROPUESTO": 3
     },
+    "estado_paridad_2027": "APROBADA_D_2027",
     "evidencia": [
       {
         "clase": "C/D",
@@ -5785,13 +6160,23 @@
     "planes_catalogados_candidatos": [
       "TAMD20241"
     ],
-    "resolucion_nuevos_2027": {
+    "planes_explicitos_aprobados": [
+      "TAMD20241"
+    ],
+    "resolucion_calculada_antes_H002e": {
       "compatibles_perfil": [],
       "estado": "E",
       "motivo": "Ninguna o varias versiones compatibles; revisar perfil/malla y ámbito.",
       "opciones": [
         "I162S2C78J2V2"
       ],
+      "seleccion": null
+    },
+    "resolucion_nuevos_2027": {
+      "codigo_catalogo_aprobado": "I162S2C78J2V1",
+      "estado": "D_CODIGO_APROBADO_SIN_NUEVOS",
+      "motivo": "Decisión de Alexi; admisión separada y sujeta a vigencia literal de la carga.",
+      "opciones": [],
       "seleccion": null
     },
     "sede_umas": "RE"

@@ -25,6 +25,7 @@ TIPO = {'1': 'Plan Regular', '2': 'Plan Especial', '3': 'Plan Regular de Continu
 JORNADAS = {'D': '1', 'V': '2', 'O': '4'}
 ESTADOS = ['CONTINUA', 'VERSION_MULTIPLE_RESUELTA', 'VERSION_MULTIPLE_E',
            'NUEVO_2027_CON_PLAN', 'APROBADA_D_2027', 'NUEVO_2027_SIN_PLAN_E', 'SIN_OFERTA_2027', 'FUERA_ALCANCE']
+ESTADOS += ['PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES', 'HISTORICO_SIN_MATRICULA_RECIENTE']
 
 
 def sha(raw):
@@ -322,6 +323,13 @@ def construir(root=ROOT):
         from aplicar_decisiones import aplicar_aprobaciones
         approved_codes = aplicar_aprobaciones(rows, json.loads(raw['decisiones_aprobadas']), master, cohortes,
                                               evidence('decisiones_aprobadas'))
+    application_e = None
+    decision_e = None
+    if 'decisiones_aprobadas_v2' in raw:
+        from aplicar_decisiones_h002e import aplicar
+        decision_e = json.loads(raw['decisiones_aprobadas_v2'])
+        application_e = aplicar(rows, by_group, decision_e, evidence('decisiones_aprobadas_v2'),
+                               evidence('revision_h002d'), json.loads(raw['control_vigentes_h002e']), offers)
     # Listas por grupo/código, no personas. Las opciones incorporan atributos contrastables.
     def option(code):
         x = offers[code]
@@ -345,6 +353,14 @@ def construir(root=ROOT):
         'sin_oferta_2027': [r for r in rows if r['anio'] == 2026 and r['estado'] == 'SIN_OFERTA_2027'],
         'correspondencias_aprobadas_D': approved_codes,
         'requiere_aprobacion_D': bool(proposals), 'doce_y_43_no_aprobadas': True}
+    if application_e:
+        decisions.update(correspondencias_aprobadas_D=approved_codes + application_e['aprobadas_5'],
+            correspondencias_plan_aprobadas_H002e=decision_e['correspondencias'],
+            planes_historicos_2027=[by_group[k] for k in application_e['grupos_historicos_6']],
+            codigos_historicos_sin_matricula_reciente=decision_e['codigos_historicos'],
+            requiere_aprobacion_D=bool(proposals or pending_groups),doce_y_43_no_aprobadas=False,
+            estado_vigente='H002e: 5 relaciones D; 6 grupos históricos D; CADMP y 37 códigos pendientes',
+            observaciones_oferta='OBSERVACIONES_OFERTA_2027.md')
     counts = {str(year): {s: sum(r['anio'] == year and r['estado'] == s for r in rows) for s in ESTADOS}
               for year in (2026, 2027)}
     unique = {(r['anio'], r['codigo_unico']) for r in rows}
@@ -372,6 +388,20 @@ def construir(root=ROOT):
             'Nuevos significa sin grupo interno 2026, no carrera creada en 2027.',
             'El perfil de equivalencias explícitas 2027 no es medición curricular independiente.',
             'Ausencia en oferta no demuestra cierre.', 'La conservación de fuentes no equivale a publicar cambios en Git.']}
+    if application_e:
+        qa['controles'].update(H002e_solo_20_filas_2027_autorizadas=len(application_e['filas_afectadas'])==20,
+            H002e_2026_intacto=application_e['filas_2026_intactas'],
+            H002e_11_codigos_D=len([r for r in rows if r['anio']==2027 and r['estado']=='APROBADA_D_2027'])==11,
+            H002e_6_grupos_historicos_sin_version=sum(g.get('estado_paridad_2027')=='PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES' and
+                g['ambiguedad_historica']['version_asignada'] is None for g in by_group.values())==6,
+            H002e_CADMP_unico_grupo_E=len(pending_groups)==1 and pending_groups[0]['codcarpr']=='CADMP',
+            H002e_37_pendientes=len(decisions['nuevo_2027_sin_plan_E'])==37,
+            H002e_6_C35=sum(r['anio']==2027 and r['estado']=='HISTORICO_SIN_MATRICULA_RECIENTE' for r in rows)==6)
+        qa['aplicacion_H002e']=application_e
+        qa['grupos_historicos_D']=6
+        qa['advertencias'] += ['Seis grupos históricos no equivalen a seis códigos cerrados: los códigos compartidos conservan sus planes activos.',
+            'Mallas/cohortes sin ámbito explícito conservan E; no se atribuyen personas.',
+            'Reproducción de H002b–d: checkout aislado del commit de origen; no cambiar sus manifiestos congelados.']
     if not all(qa['controles'].values()):
         raise ValueError('QA bloqueante: ' + str(qa['controles']))
     payload = {'hito': config['hito'], 'fecha': config['fecha'], 'unidad': 'CODIGO_SIES_ANIO_CATALOGO_NO_PERSONAS',
@@ -391,12 +421,14 @@ def construir(root=ROOT):
     qa['controles']['conteo_independiente_por_anio'] = (
         Counter(int(r['anio']) for r in readback) == Counter({2026: 106, 2027: 161}))
     previous_path = root / OUT / 'ESTADO_ANTES_H002B.json'
-    if previous_path.is_file():
+    if previous_path.is_file() and not application_e:
         previous = {(x['anio'], x['codigo_unico']): x['estado'] for x in json.loads(previous_path.read_text())['estados']}
         changes = [(r['anio'], r['codigo_unico']) for r in rows if r['estado'] != previous[(r['anio'], r['codigo_unico'])]]
         qa['controles']['seis_D_y_resto_estados_intactos'] = (
             len(changes) == 6 and set(changes) == {(2027, c) for c in approved_codes})
         qa['aprobadas_D_2027'] = len(approved_codes)
+    elif application_e:
+        qa['aprobadas_D_2027'] = len(approved_codes) + len(application_e['aprobadas_5'])
     clean = re.sub(r'\b[a-fA-F0-9]{40}(?:[a-fA-F0-9]{24})?\b', 'HASH', encode(payload).decode())
     private = [r'\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b',
                r'(?<!\w)(?:\d{1,2}\.\d{3}\.\d{3}|\d{7,8})-[0-9Kk](?!\w)',
@@ -432,9 +464,20 @@ def construir(root=ROOT):
         for r in subset:
             md.append('| ' + r['codigo_unico'] + ' | ' + r['nombre_carrera'] + ' | ' + ', '.join(r['codcarpr']) + ' | ' + r['motivo'] + ' |')
         md += ['']
+    if application_e:
+        from aplicar_decisiones_h002e import pendientes_md
+        md = pendientes_md(rows, decisions, decision_e).splitlines()
     outputs = {DATA + '/TABLA_PARIDAD_2026_2027.json': encode(payload), DATA + '/TABLA_PARIDAD_2026_2027.csv': csvout.getvalue().encode(),
         OUT + '/DECISIONES_PENDIENTES.json': encode(decisions), OUT + '/DECISIONES_PENDIENTES.md': '\n'.join(md).encode(),
         OUT + '/QA.json': encode(qa), OUT + '/RESOLUCIONES_POR_GRUPO.json': encode(sorted(by_group.values(), key=lambda g: g['grupo']))}
+    if application_e:
+        from aplicar_decisiones_h002e import observaciones_md
+        states = ['| Estado | 2026 | 2027 |', '|---|---:|---:|']
+        states += ['| ' + s + ' | ' + str(counts['2026'][s]) + ' | ' + str(counts['2027'][s]) + ' |' for s in ESTADOS
+                   if counts['2026'][s] or counts['2027'][s]]
+        readme = raw['readme_h002e'].decode().replace('{{CONTEOS_ESTADOS}}', '\n'.join(states))
+        outputs[DATA + '/README.md'] = readme.encode()
+        outputs[OUT + '/OBSERVACIONES_OFERTA_2027.md'] = observaciones_md(decision_e).encode()
     outputs[DATA + '/MANIFEST.json'] = encode({'hito': config['hito'], 'fecha': config['fecha'],
         'commit_contexto': config['commit_contexto'], 'entradas': config['fuentes'],
         'configuracion': {'ruta': DATA + '/FUENTES.json', 'sha256': sha(config_raw)},
@@ -444,29 +487,78 @@ def construir(root=ROOT):
         'auxiliares_H002b': {name: sha((root / name).read_bytes()) for name in (
             OUT + '/revisar_casos.py', OUT + '/cruzar_planes_2027.py', OUT + '/test_h002b.py',
             'data/paridad_codigo_sies/PLANTILLA_PLANES_UMAS_2027.tsv') if (root / name).is_file()},
-        'especificacion': {'ruta': DATA + '/README.md', 'sha256': sha((root / DATA / 'README.md').read_bytes())},
+        'especificacion': {'ruta': DATA + '/README.md', 'sha256': sha(outputs.get(DATA + '/README.md', (root / DATA / 'README.md').read_bytes()))},
+        'aplicacion_H002e': {'base': config.get('activacion_H002e'),
+            'componente': {'ruta': OUT + '/aplicar_decisiones_h002e.py', 'sha256': sha((root / OUT / 'aplicar_decisiones_h002e.py').read_bytes())}}
+            if application_e else None,
+        'auxiliares_H002e': {OUT + '/' + name: sha((root / OUT / name).read_bytes()) for name in
+            ('test_h002e.py', 'qa_h002e.py', 'ESPECIFICACION_H002E.md', 'CONTROL_VIGENTES_H002E.json')}
+            if application_e else {},
         'salidas': {p: sha(b) for p, b in sorted(outputs.items())},
         'reglas_oficiales': config['reglas_oficiales'], 'datos_personales': False, 'atribuciones_personales_modificadas': False})
+    if application_e:
+        milestone_rel = 'manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/REGISTRO.json'
+        register = json.loads((root / milestone_rel).read_text())
+        register['manifest_sha256'] = sha(outputs[DATA + '/MANIFEST.json'])
+        register.update(actualizacion='H002e',estado='CATALOGO_CON_11_RELACIONES_D_Y_PENDIENTES_EXPLICITOS',
+            conteos=counts,correspondencias_aprobadas_D=11,decision=DATA + '/DECISIONES_APROBADAS_v2.json',
+            doce_combinaciones_sin_aplicar=False,**{'43_sin_plan_sin_resolver':False},
+            pendientes_sin_plan=37,QA_entrega=OUT + '/QA_H002E.json',
+            fichas=OUT + '/REVISION_CASO_A_CASO_12_v3.md',
+            commit_base_aplicacion_H002e=config['activacion_H002e']['HEAD_base'],
+            publicacion='Verificar el commit que contiene el registro y la referencia remota; el archivo no acredita por sí solo push.')
+        register.pop('commit_realizado',None)
+        register.pop('push_realizado',None)
+        register['aplicacion_H002e'] = {'decision': DATA + '/DECISIONES_APROBADAS_v2.json',
+            'fuente': decision_e['fuente'], 'aprobaciones_nuevas': 5, 'grupos_historicos': 6,
+            'codigos_C35_historicos': 6, 'pendientes': 'CADMP y 37 códigos',
+            'ambito': 'Catálogo 2027; 2026 intacto; no modifica v20 ni oferta.'}
+        outputs[milestone_rel] = encode(register)
+        milestone_readme = 'manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/README.md'
+        text = (root / milestone_readme).read_text()
+        marker = '## Estado vigente H002e'
+        if marker in text:
+            text = text[:text.index(marker)].rstrip() + '\n\n'
+        else:
+            text = text.rstrip() + '\n\n'
+        text += (marker + '\n\nD · Alexi, 29-10-2026. Esta sección reemplaza los estados pendientes de los antecedentes anteriores: '
+                 '11 códigos con relaciones D (6 previas + 5 nuevas), 6 grupos históricos con ambigüedad E sin versión, '
+                 '6 códigos C35 históricos. Pendientes: CADMP y 37 códigos sin planes. Las 106 filas 2026 se conservan. '
+                 'Los códigos compartidos no se cierran por retirar un plan.\n\n'
+                 'Decisión: DECISIONES_APROBADAS_v2.json. QA vigente: QA_H002E.json; QA.json es el control del constructor. '
+                 'Los informes H002b–d se conservan y se reproducen en checkout aislado del commit de origen. '
+                 'Observaciones de oferta: OBSERVACIONES_OFERTA_2027.md; no se modifica PES ni v20.\n')
+        outputs[milestone_readme] = text.encode()
     return outputs, qa
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--verificar', action='store_true', help='Verifica bytes de todas las salidas, sin escritura')
+    ap.add_argument('--aplicar-h002e', action='store_true', help='Sustituye sólo salidas autorizadas desde el HEAD/huellas previos H002e')
     args = ap.parse_args()
     outputs, qa = construir()
+    baseline = None
+    if args.aplicar_h002e:
+        import subprocess
+        if args.verificar or not qa.get('aplicacion_H002e'):
+            raise ValueError('Promoción H002e requiere decisiones activas y no acepta --verificar')
+        baseline = json.loads((ROOT / OUT / 'ESTADO_INICIAL_H002E.json').read_text())
+        if subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip() != baseline['HEAD']:
+            raise ValueError('HEAD distinto del autorizado para aplicar H002e')
     for rel, raw in outputs.items():
         p = ROOT / rel
         if args.verificar:
             if not p.is_file() or p.read_bytes() != raw:
                 raise ValueError('Salida no reproducible: ' + rel)
         elif p.exists() and p.read_bytes() != raw:
-            raise ValueError('Salida existente distinta; no sobrescribir: ' + rel)
+            if not baseline or sha(p.read_bytes()) != baseline['protegidos'].get(rel):
+                raise ValueError('Salida existente distinta del respaldo autorizado: ' + rel)
     if not args.verificar:
         for rel, raw in outputs.items():
             p = ROOT / rel
             p.parent.mkdir(parents=True, exist_ok=True)
-            if not p.exists():
+            if not p.exists() or baseline is not None:
                 p.write_bytes(raw)
     print(json.dumps({'estado': qa['estado'], 'filas': qa['filas'], 'conteos': qa['por_anio_estado'],
                       'grupos_E': qa['grupos_version_multiple_E'], 'reproduccion': args.verificar}, ensure_ascii=False))
