@@ -1,0 +1,51 @@
+{
+  "controles": {
+    "24_ajenos_status_intacto": true,
+    "95_unicos": true,
+    "H002_H002f_v20_fuentes_ajenos_intactos": true,
+    "MU_10200_una_vez": true,
+    "SQL_cobertura": true,
+    "SQL_totales_codigo": true,
+    "anclas_no_modificadas": true,
+    "brecha_226_intacta": true,
+    "enlace_sin_actividad_conservado": true,
+    "generador_hash": true,
+    "head_esperado": true,
+    "inputs_hash": true,
+    "lotes_sin_fragmentos": true,
+    "markdown_limpio": true,
+    "matriz_conserva_MU": true,
+    "maximo_cinco_carreras_lote": true,
+    "micro_publico_0_diferencias": true,
+    "no_cohorte_SIES_2026_inventada": true,
+    "no_regla_fija_si_cambios": true,
+    "output_hash": true,
+    "privacidad_sin_identificadores": true,
+    "pruebas": true,
+    "rama_correcta": true,
+    "reparto_declarado": true,
+    "reproducible": true,
+    "sies_20961": true,
+    "sin_eleccion_fuera_candidatos": true,
+    "sin_falso_confirma": true
+  },
+  "estado": "PASS_CON_PENDIENTES_E",
+  "pendientes": "Cohorte actual ausente; período UMAS no homologado históricamente; cambios de código; cobertura/planes incompletos; ADMP/CADMP no aprobado; sin adjudicación.",
+  "privacidad_violaciones": [],
+  "pruebas": [
+    {
+      "resultado": "........................\n----------------------------------------------------------------------\nRan 24 tests in 0.001s\n\nOK\n",
+      "returncode": 0,
+      "ruta": "outputs/paridad_cohorte_2007_2026"
+    },
+    {
+      "resultado": "...................................................\n----------------------------------------------------------------------\nRan 51 tests in 1.421s\n\nOK\n",
+      "returncode": 0,
+      "ruta": "outputs/paridad_codigo_sies_20261029"
+    }
+  ],
+  "reproduccion": {
+    "resultado": "Reproducción íntegra, cero diferencias de bytes",
+    "returncode": 0
+  }
+}
