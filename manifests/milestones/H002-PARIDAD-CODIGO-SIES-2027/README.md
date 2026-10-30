@@ -45,8 +45,15 @@ Revisar DECISIONES_PENDIENTES.md antes de cualquier promoción. Sin commit/push 
 
 Alexi aprobó seis relaciones código SIES–CODCARPR: estado APROBADA_D_2027, clase D. Las cohortes con varias mallas siguen E; no se extrapola una equivalencia individual. Las doce combinaciones permanecen pendientes y tienen fichas con agregados MU×plan×código×FOR_ING_ACT, cobertura y fuerza de la propuesta. Los 43 esperan el listado oficial UMAS. Plantilla vacía y script de cruce separados; pruebas solo ficticias, sin ejecutar contra un listado real. Commit y push H002 expresamente autorizados con QA aprobado; los textos del hito inicial sobre ausencia de autorización quedan como antecedente.
 
-## Estado vigente H002e
+## Antecedente H002e (superado sólo en alcance H002k)
 
 D · Alexi, 29-10-2026. Esta sección reemplaza los estados pendientes de los antecedentes anteriores: 11 códigos con relaciones D (6 previas + 5 nuevas), 6 grupos históricos con ambigüedad E sin versión, 6 códigos C35 históricos. Pendientes: CADMP y 37 códigos sin planes. Las 106 filas 2026 se conservan. Los códigos compartidos no se cierran por retirar un plan.
 
 Decisión: DECISIONES_APROBADAS_v2.json. QA vigente: QA_H002E.json; QA.json es el control del constructor. Los informes H002b–d se conservan y se reproducen en checkout aislado del commit de origen. Observaciones de oferta: OBSERVACIONES_OFERTA_2027.md; no se modifica PES ni v20.
+
+## Estado vigente H002k · 29-10-2026
+
+D · Alexi: ADMP20251/V1 y CADMP20251/V2 aprobados; 13 códigos APROBADA_D_2027 y cero VERSION_MULTIPLE_E en 2027.
+Regla interna activa: data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json. Antiguos conservan su código, aun inconsistente; tipo E y otros casos pasan a revisión.
+Pendientes: 37 códigos sin plan hasta MU 2027, revisión manual y reemplazo de V06 preparada por aceptada.
+No se modifica retención, VIG, v20 ni cargas. QA: outputs/activacion_codigo_mu2027_20261029/QA.json.

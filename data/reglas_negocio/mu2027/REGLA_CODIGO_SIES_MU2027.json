@@ -1,0 +1,286 @@
+{
+  "anio_proceso": 2027,
+  "aprobaciones": [
+    {
+      "codcarpr": "ADMP",
+      "codigo_unico": "I162S2C83J4V1",
+      "plan_umas": "ADMP20251",
+      "ramos": 49,
+      "semestres": 8,
+      "tipo_plan": "REGULAR"
+    },
+    {
+      "codcarpr": "CADMP",
+      "codigo_unico": "I162S2C83J4V2",
+      "plan_umas": "CADMP20251",
+      "ramos": 23,
+      "semestres": 4,
+      "tipo_plan": "CONTINUIDAD"
+    }
+  ],
+  "clase": "D",
+  "decision": "Alexi, 29-10-2026; H002k decisiones 1–4",
+  "estado": "ACTIVA",
+  "fecha": "2026-10-29",
+  "fuentes": {
+    "decision": {
+      "clase": "D",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
+      "sha256": "be16b491bf0a61bbb6cc56af4567c6e21292ef8de04aa584448ed194753ed63f"
+    },
+    "enlaces_privados_H002g": {
+      "clase": "C",
+      "datos_personales": true,
+      "ruta": "/Users/alexi/.local/share/ipss/h002g_20261029/ENLACES_MU_DA.json",
+      "sha256": "56782ae435caca8c880120df3304424e5663097e6303119f3f94f4ccdd59b05b"
+    },
+    "metricas": {
+      "clase": "C",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/METRICAS_H002i_H002j.json",
+      "sha256": "8d2018cf17ab26c89160e7cd05fd9b4ccf48271ca6811f36cf0290031ca5c5cf"
+    },
+    "oferta_2027": {
+      "clase": "C",
+      "datos_personales": false,
+      "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+    },
+    "prueba_privada_H002j": {
+      "clase": "C",
+      "datos_personales": true,
+      "ruta": "/Users/alexi/.local/share/ipss/h002j_20261029/PRUEBA.json",
+      "sha256": "abb86b96adb8afdc732920653777c5aeb2f708710321740c797ba2747f8a055d"
+    },
+    "tabla_H002": {
+      "clase": "C/D",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+      "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063"
+    },
+    "tipo_plan": {
+      "clase": "C",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/TIPO_PLAN_POR_PLAN_UMAS.json",
+      "sha256": "784af467f6ed85d08e39ea677ba35b62c113f50902d8c4ddbbf290b5045ead1f"
+    }
+  },
+  "funcion": "common/codigo_sies_mu2027.py:asignar_codigo_mu2027",
+  "id": "CODIGO_SIES_MU2027_H002K",
+  "limites": [
+    "Oferta V06 preparada C, sustituir por carga aceptada con hash y revisión antes de carga.",
+    "Decisión interna; no modifica norma, VIG, retención, v20, bases ni denominadores.",
+    "No hay exportador ni archivo de carga PES; no acredita matrícula ni elegibilidad 2027.",
+    "Sin plan anual observado no se rellena por nombre ni mayoría. Tipo por plan no se deduce de FOR_ING_ACT."
+  ],
+  "metricas_nota": "Métricas históricas H002j preservadas, no una promesa de acierto 2027; los nuevos bloqueos de revisión no recalculan sus denominadores.",
+  "metricas_prueba_H002j": {
+    "por_grupo": [
+      {
+        "acierto_H002i_pct": 98.29222,
+        "acierto_H002j_pct": 98.29222,
+        "aciertos_H002i": 518,
+        "aciertos_H002j": 518,
+        "anio": 2023,
+        "delta_pp": 0.0,
+        "filas_mu": 527,
+        "grupo": "ANTIGUO",
+        "predicciones_H002i": 527,
+        "predicciones_H002j": 527
+      },
+      {
+        "acierto_H002i_pct": 100.0,
+        "acierto_H002j_pct": 100.0,
+        "aciertos_H002i": 515,
+        "aciertos_H002j": 515,
+        "anio": 2023,
+        "delta_pp": 0.0,
+        "filas_mu": 515,
+        "grupo": "NUEVO",
+        "predicciones_H002i": 515,
+        "predicciones_H002j": 515
+      },
+      {
+        "acierto_H002i_pct": null,
+        "acierto_H002j_pct": null,
+        "aciertos_H002i": 0,
+        "aciertos_H002j": 0,
+        "anio": 2023,
+        "delta_pp": null,
+        "filas_mu": 103,
+        "grupo": "OTRO",
+        "predicciones_H002i": 0,
+        "predicciones_H002j": 0
+      },
+      {
+        "acierto_H002i_pct": 99.84639,
+        "acierto_H002j_pct": 99.84639,
+        "aciertos_H002i": 650,
+        "aciertos_H002j": 650,
+        "anio": 2024,
+        "delta_pp": 0.0,
+        "filas_mu": 651,
+        "grupo": "ANTIGUO",
+        "predicciones_H002i": 651,
+        "predicciones_H002j": 651
+      },
+      {
+        "acierto_H002i_pct": 99.616368,
+        "acierto_H002j_pct": 99.616368,
+        "aciertos_H002i": 779,
+        "aciertos_H002j": 779,
+        "anio": 2024,
+        "delta_pp": 0.0,
+        "filas_mu": 782,
+        "grupo": "NUEVO",
+        "predicciones_H002i": 782,
+        "predicciones_H002j": 782
+      },
+      {
+        "acierto_H002i_pct": null,
+        "acierto_H002j_pct": null,
+        "aciertos_H002i": 0,
+        "aciertos_H002j": 0,
+        "anio": 2024,
+        "delta_pp": null,
+        "filas_mu": 108,
+        "grupo": "OTRO",
+        "predicciones_H002i": 0,
+        "predicciones_H002j": 0
+      },
+      {
+        "acierto_H002i_pct": 92.098765,
+        "acierto_H002j_pct": 92.098765,
+        "aciertos_H002i": 746,
+        "aciertos_H002j": 746,
+        "anio": 2025,
+        "delta_pp": 0.0,
+        "filas_mu": 810,
+        "grupo": "ANTIGUO",
+        "predicciones_H002i": 810,
+        "predicciones_H002j": 810
+      },
+      {
+        "acierto_H002i_pct": 83.832335,
+        "acierto_H002j_pct": 94.411178,
+        "aciertos_H002i": 1260,
+        "aciertos_H002j": 1419,
+        "anio": 2025,
+        "delta_pp": 10.578843,
+        "filas_mu": 1503,
+        "grupo": "NUEVO",
+        "predicciones_H002i": 1335,
+        "predicciones_H002j": 1498
+      },
+      {
+        "acierto_H002i_pct": null,
+        "acierto_H002j_pct": null,
+        "aciertos_H002i": 0,
+        "aciertos_H002j": 0,
+        "anio": 2025,
+        "delta_pp": null,
+        "filas_mu": 58,
+        "grupo": "OTRO",
+        "predicciones_H002i": 0,
+        "predicciones_H002j": 0
+      },
+      {
+        "acierto_H002i_pct": 93.22542,
+        "acierto_H002j_pct": 93.22542,
+        "aciertos_H002i": 1555,
+        "aciertos_H002j": 1555,
+        "anio": 2026,
+        "delta_pp": 0.0,
+        "filas_mu": 1668,
+        "grupo": "ANTIGUO",
+        "predicciones_H002i": 1668,
+        "predicciones_H002j": 1668
+      },
+      {
+        "acierto_H002i_pct": 82.052441,
+        "acierto_H002j_pct": 89.014467,
+        "aciertos_H002i": 1815,
+        "aciertos_H002j": 1969,
+        "anio": 2026,
+        "delta_pp": 6.962026,
+        "filas_mu": 2212,
+        "grupo": "NUEVO",
+        "predicciones_H002i": 1998,
+        "predicciones_H002j": 2152
+      },
+      {
+        "acierto_H002i_pct": null,
+        "acierto_H002j_pct": null,
+        "aciertos_H002i": 0,
+        "aciertos_H002j": 0,
+        "anio": 2026,
+        "delta_pp": null,
+        "filas_mu": 225,
+        "grupo": "OTRO",
+        "predicciones_H002i": 0,
+        "predicciones_H002j": 0
+      }
+    ],
+    "totales": [
+      {
+        "acierto_H002i_pct": 99.136276,
+        "acierto_H002j_pct": 99.136276,
+        "aciertos_H002i": 1033,
+        "aciertos_H002j": 1033,
+        "anio": 2023,
+        "delta_pp": 0.0,
+        "filas_mu": 1042,
+        "predicciones_H002i": 1042,
+        "predicciones_H002j": 1042
+      },
+      {
+        "acierto_H002i_pct": 99.720865,
+        "acierto_H002j_pct": 99.720865,
+        "aciertos_H002i": 1429,
+        "aciertos_H002j": 1429,
+        "anio": 2024,
+        "delta_pp": 0.0,
+        "filas_mu": 1433,
+        "predicciones_H002i": 1433,
+        "predicciones_H002j": 1433
+      },
+      {
+        "acierto_H002i_pct": 86.727194,
+        "acierto_H002j_pct": 93.601383,
+        "aciertos_H002i": 2006,
+        "aciertos_H002j": 2165,
+        "anio": 2025,
+        "delta_pp": 6.874189,
+        "filas_mu": 2313,
+        "predicciones_H002i": 2145,
+        "predicciones_H002j": 2308
+      },
+      {
+        "acierto_H002i_pct": 86.85567,
+        "acierto_H002j_pct": 90.824742,
+        "aciertos_H002i": 3370,
+        "aciertos_H002j": 3524,
+        "anio": 2026,
+        "delta_pp": 3.969072,
+        "filas_mu": 3880,
+        "predicciones_H002i": 3666,
+        "predicciones_H002j": 3820
+      }
+    ]
+  },
+  "proceso": "Matrícula Unificada 2027",
+  "reglas": {
+    "ANTIGUO": "Conserva el código de su fila MU 2026, incluso inconsistente con tipo; tipo E y cambios pasan a revisión.",
+    "CODIGOS_SIN_HISTORIA": "Se cierran cuando exista MU 2027 por cuadratura de código y total; no solicitar listado nuevo a UMAS.",
+    "NUEVO": "Cohorte 2027: familia respaldada + plan/sede de tipo conocido + una única versión VIGENCIA 1 del mismo tipo.",
+    "REVISION_MANUAL": [
+      "Tipo E con alumnos potenciales",
+      "Familia con varias VIGENCIA 1 del mismo tipo",
+      "37 códigos sin plan",
+      "Cambio de carrera/plan, reingreso no acreditado u otra insuficiencia de evidencia"
+    ]
+  },
+  "responsable": "Alexi",
+  "vigencia_estado_situacion_independiente": "data/reglas_negocio/mu2027/activo.json"
+}

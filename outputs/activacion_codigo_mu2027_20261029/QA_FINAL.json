@@ -1,0 +1,114 @@
+{
+  "clase": "C",
+  "estado": "PASS",
+  "familias_ambiguas": 5,
+  "limites": [
+    "37 códigos y revisión manual no equivalen a paridad completa de alumnos 2027.",
+    "Los tests de promoción H002e se reproducen en su commit histórico; no se cambia su expectativa para hacerlos pasar sobre H002k."
+  ],
+  "manual": {
+    "cinco_familias_tipo_E": 252,
+    "codigos_inconsistentes_conservados": 0,
+    "manual_por_motivo": {
+      "ANTIGUO_TIPO_E": 1046
+    },
+    "por_via": {
+      "ANTIGUO": 3059,
+      "REVISION_MANUAL": 1046
+    },
+    "total": 4105,
+    "unidad": "MATRICULA"
+  },
+  "nuevos_catalogo": {
+    "motivos": {
+      "CODIGO_NUEVO_SIN_PLAN": 1,
+      "NUEVO_TIPO_E": 40,
+      "SIN_VERSION_VIGENTE_PARA_TIPO": 108,
+      "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO": 15
+    },
+    "revision": 164,
+    "total": 223,
+    "unidad": "OPCION_PLAN_FAMILIA_CATALOGO"
+  },
+  "preservacion": {
+    "cambios_ajenos_intactos": 24,
+    "skills_instaladas_intactas": 32,
+    "versionados_fuera_alcance_intactos": 4828
+  },
+  "privacidad": {
+    "archivos_escaneados": 30,
+    "coincidencias": 0,
+    "detalle_nominativo": "~/.local/share/ipss/h002k_20261029/LISTA_REVISION_MANUAL_MU2027.json",
+    "metodo": "Patrones de documento/correo y coincidencia con identificadores privados sólo en memoria; revisión de campos agregados."
+  },
+  "pruebas": [
+    {
+      "estado": "PASS",
+      "patron": "test_*.py",
+      "pruebas": 25,
+      "ruta": "outputs/activacion_codigo_mu2027_20261029"
+    },
+    {
+      "estado": "PASS",
+      "patron": "test_h002b.py",
+      "pruebas": 11,
+      "ruta": "outputs/paridad_codigo_sies_20261029"
+    },
+    {
+      "estado": "PASS",
+      "patron": "test_regla_v2.py",
+      "pruebas": 25,
+      "ruta": "outputs/regla_operativa_mu_v2_20261029"
+    },
+    {
+      "estado": "PASS",
+      "patron": "test_normalizacion_dv_cero_fase_c.py",
+      "pruebas": 3,
+      "ruta": "tests"
+    }
+  ],
+  "reproduccion": {
+    "diferencias": 0,
+    "salidas": 18
+  },
+  "tabla": {
+    "conteos": {
+      "2026": {
+        "APROBADA_D_2027": 0,
+        "CONTINUA": 53,
+        "FUERA_ALCANCE": 11,
+        "HISTORICO_SIN_MATRICULA_RECIENTE": 0,
+        "NUEVO_2027_CON_PLAN": 0,
+        "NUEVO_2027_SIN_PLAN_E": 0,
+        "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
+        "SIN_OFERTA_2027": 4,
+        "VERSION_MULTIPLE_E": 14,
+        "VERSION_MULTIPLE_RESUELTA": 24
+      },
+      "2027": {
+        "APROBADA_D_2027": 13,
+        "CONTINUA": 53,
+        "FUERA_ALCANCE": 21,
+        "HISTORICO_SIN_MATRICULA_RECIENTE": 6,
+        "NUEVO_2027_CON_PLAN": 0,
+        "NUEVO_2027_SIN_PLAN_E": 37,
+        "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
+        "SIN_OFERTA_2027": 0,
+        "VERSION_MULTIPLE_E": 0,
+        "VERSION_MULTIPLE_RESUELTA": 31
+      }
+    },
+    "filas_modificadas": [
+      [
+        2027,
+        "I162S2C83J4V1"
+      ],
+      [
+        2027,
+        "I162S2C83J4V2"
+      ]
+    ],
+    "restantes_intactas": 265
+  },
+  "total_pruebas": 64
+}

@@ -13,7 +13,7 @@
       "VERSION_MULTIPLE_RESUELTA": 24
     },
     "2027": {
-      "APROBADA_D_2027": 11,
+      "APROBADA_D_2027": 13,
       "CONTINUA": 53,
       "FUERA_ALCANCE": 21,
       "HISTORICO_SIN_MATRICULA_RECIENTE": 6,
@@ -21,7 +21,7 @@
       "NUEVO_2027_SIN_PLAN_E": 37,
       "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
       "SIN_OFERTA_2027": 0,
-      "VERSION_MULTIPLE_E": 2,
+      "VERSION_MULTIPLE_E": 0,
       "VERSION_MULTIPLE_RESUELTA": 31
     }
   },
@@ -56696,8 +56696,79 @@
     {
       "admite_nuevos_segun_carga_2027": true,
       "anio": 2027,
+      "antecedente_H002e_H002k": {
+        "decisiones_por_grupo_H002e": [
+          {
+            "ambiguedad_historica": null,
+            "clase": "E",
+            "codigo_sies_aprobado": null,
+            "estado": "VERSION_MULTIPLE_E",
+            "evidencia": {
+              "clase": "B/C/E",
+              "localizador": "casos[numero_original=1]",
+              "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
+              "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+            },
+            "grupo": "[\"CADMP\",\"RE\",\"O\"]"
+          }
+        ],
+        "indicio_H002e": {
+          "PROMEDIOS_2026_expedientes": 7,
+          "Permanencia_2026_expedientes": 10,
+          "SIES_2026_V1": 94,
+          "SIES_2026_V2": 9,
+          "aprobada": false,
+          "clase": "B/C/E",
+          "codigo_candidato_no_aprobado": "I162S2C83J4V2"
+        }
+      },
       "atributos_2026_fuente": null,
       "candidatos_internos": [
+        {
+          "clase_paridad_2027": "D",
+          "codcarpr": "ADMP",
+          "codigo_sies_aprobado_grupo": "I162S2C83J4V1",
+          "duracion_tipo_perfil": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "estado_paridad_2027": "APROBADA_D_2027",
+          "estado_plan": "CANDIDATO_CATALOGO_NO_EQUIVALENCIA_CURRICULAR_INDIVIDUAL",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "[\"ADMP\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C/E",
+              "localizador": "planes_umas/contextos_catalogo",
+              "ruta": "data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+              "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+            }
+          ],
+          "fuente_perfil": "CODCARPR_CANONICO",
+          "jornada_umas": "O",
+          "origen": "GRUPO_PREVIO_EXACTO",
+          "perfil_compatible": true,
+          "plan_umas": [
+            "ADMP20251"
+          ],
+          "sede_umas": "RE",
+          "seleccion_grupo": {
+            "estado": "D_APROBADA",
+            "motivo": "Alexi, 29-10-2026; H002k decisiones 1–4",
+            "opciones": [
+              "I162S2C83J4V1"
+            ],
+            "seleccion": "I162S2C83J4V1"
+          }
+        }
+      ],
+      "candidatos_internos_antes_H002k": [
         {
           "codcarpr": "ADMP",
           "duracion_tipo_perfil": [
@@ -56778,14 +56849,13 @@
           }
         }
       ],
-      "clase": "C/E",
+      "clase": "D",
       "clase_atributos_2027": "C; aceptación comunicada D, no comprobante técnico PES",
       "cod_carrera": "83",
       "cod_jornada": "4",
       "cod_sede": "2",
       "codcarpr": [
-        "ADMP",
-        "CADMP"
+        "ADMP"
       ],
       "codigo_unico": "I162S2C83J4V1",
       "codigos_2027_misma_familia": [
@@ -56793,30 +56863,31 @@
         "I162S2C83J4V2"
       ],
       "correspondencias_aprobadas_H002e": [],
+      "correspondencias_aprobadas_H002k": [
+        {
+          "codcarpr": "ADMP",
+          "codigo_unico": "I162S2C83J4V1",
+          "plan_umas": "ADMP20251",
+          "ramos": 49,
+          "semestres": 8,
+          "tipo_plan": "REGULAR"
+        }
+      ],
       "decision_H002e": {
         "alcance": "Sólo relaciones y grupos citados; no aprobación de todos los alias de la fila.",
         "clase": "D",
         "fuente": "Alexi, 29-10-2026",
         "id": "D_ALEXI_H002E_20261029"
       },
-      "decisiones_por_grupo_H002e": [
-        {
-          "ambiguedad_historica": null,
-          "clase": "E",
-          "codigo_sies_aprobado": null,
-          "estado": "VERSION_MULTIPLE_E",
-          "evidencia": {
-            "clase": "B/C/E",
-            "localizador": "casos[numero_original=1]",
-            "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
-            "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
-          },
-          "grupo": "[\"CADMP\",\"RE\",\"O\"]"
-        }
-      ],
+      "decision_H002k": {
+        "clase": "D",
+        "fuente": "Alexi, 29-10-2026; H002k decisiones 1–4",
+        "id": "D_ALEXI_H002K_20261029"
+      },
       "duracion_total_semestres": "8",
-      "estado": "VERSION_MULTIPLE_E",
+      "estado": "APROBADA_D_2027",
       "estado_antes_H002e": "VERSION_MULTIPLE_E",
+      "estado_plan_por_cohorte": "D_PLAN_EXPLICITO_SIN_ATRIBUCION_PERSONAL",
       "evidencia": [
         {
           "clase": "C",
@@ -56853,32 +56924,109 @@
           "localizador": "",
           "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
           "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+        },
+        {
+          "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/TIPO_PLAN_POR_PLAN_UMAS.json",
+          "sha256": "784af467f6ed85d08e39ea677ba35b62c113f50902d8c4ddbbf290b5045ead1f"
+        },
+        {
+          "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
+          "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+        },
+        {
+          "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/METRICAS_H002i_H002j.json",
+          "sha256": "8d2018cf17ab26c89160e7cd05fd9b4ccf48271ca6811f36cf0290031ca5c5cf"
+        },
+        {
+          "clase": "D",
+          "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
+          "sha256": "be16b491bf0a61bbb6cc56af4567c6e21292ef8de04aa584448ed194753ed63f"
         }
       ],
-      "indicio_H002e": {
-        "PROMEDIOS_2026_expedientes": 7,
-        "Permanencia_2026_expedientes": 10,
-        "SIES_2026_V1": 94,
-        "SIES_2026_V2": 9,
-        "aprobada": false,
-        "clase": "B/C/E",
-        "codigo_candidato_no_aprobado": "I162S2C83J4V2"
-      },
       "inicio_historia_oferta": 2025,
       "jornada_umas": [
         "O"
       ],
       "modalidad": "No presencial",
       "modalidad_codigo": "3",
-      "motivo": "Algún grupo interno vinculado conserva opciones/perfil sin resolver.",
+      "motivo": "Alexi, 29-10-2026; H002k decisiones 1–4; aprobación del plan explícito, sin cambio de historia informada.",
       "nivel_global": "Pregrado",
       "nivel_global_codigo": "1",
       "nombre_carrera": "ADMINISTRACION PUBLICA",
       "plan_umas": [
-        "ADMP20251",
-        "CADMP20251"
+        "ADMP20251"
       ],
       "resoluciones_grupo": [
+        {
+          "clase_paridad_2027": "D",
+          "codcarpr": "ADMP",
+          "codigo_sies_aprobado": "I162S2C83J4V1",
+          "codigos_2027_familia": [
+            "I162S2C83J4V1",
+            "I162S2C83J4V2"
+          ],
+          "codigos_previos": [
+            "I162S2C83J4V1",
+            "I162S2C83J4V2"
+          ],
+          "ensayo_cohortes_estados": {
+            "COINCIDENCIA_INICIO": 6,
+            "FUERA_AMBITO_2007_2026": 1,
+            "INTERVALO_PROPUESTO": 2
+          },
+          "estado_paridad_2027": "APROBADA_D_2027",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 0",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"ADMP\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            }
+          ],
+          "fuente_perfil": "CODCARPR_CANONICO",
+          "grupo": "[\"ADMP\",\"RE\",\"O\"]",
+          "jornada_umas": "O",
+          "limite_historial": "Ensayo C/E; no asignación de plan ni vigencia para ingreso 2027.",
+          "modalidades": [
+            "3"
+          ],
+          "multiple": true,
+          "perfiles": [
+            [
+              "8",
+              "1"
+            ]
+          ],
+          "planes_catalogados_candidatos": [
+            "ADMP20251"
+          ],
+          "planes_explicitos_aprobados": [
+            "ADMP20251"
+          ],
+          "resolucion_nuevos_2027": {
+            "estado": "D_APROBADA",
+            "motivo": "Alexi, 29-10-2026; H002k decisiones 1–4",
+            "opciones": [
+              "I162S2C83J4V1"
+            ],
+            "seleccion": "I162S2C83J4V1"
+          },
+          "sede_umas": "RE"
+        }
+      ],
+      "resoluciones_grupo_antes_H002k": [
         {
           "codcarpr": "ADMP",
           "codigos_2027_familia": [
@@ -57033,7 +57181,7 @@
       "tipo_plan": "Plan Regular",
       "tipo_plan_codigo": "1",
       "version": "1",
-      "version_para_nuevos_2027": "E",
+      "version_para_nuevos_2027": "sí",
       "version_umas": null,
       "version_umas_nota": "No hay campo independiente acreditado; no descomponer el año de CODPESTUD.",
       "vigencia_2027": "1",
@@ -57042,8 +57190,74 @@
     {
       "admite_nuevos_segun_carga_2027": true,
       "anio": 2027,
+      "antecedente_H002e_H002k": {
+        "decisiones_por_grupo_H002e": [
+          {
+            "ambiguedad_historica": null,
+            "clase": "E",
+            "codigo_sies_aprobado": null,
+            "estado": "VERSION_MULTIPLE_E",
+            "evidencia": {
+              "clase": "B/C/E",
+              "localizador": "casos[numero_original=1]",
+              "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
+              "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+            },
+            "grupo": "[\"CADMP\",\"RE\",\"O\"]"
+          }
+        ],
+        "indicio_H002e": {
+          "PROMEDIOS_2026_expedientes": 7,
+          "Permanencia_2026_expedientes": 10,
+          "SIES_2026_V1": 94,
+          "SIES_2026_V2": 9,
+          "aprobada": false,
+          "clase": "B/C/E",
+          "codigo_candidato_no_aprobado": "I162S2C83J4V2"
+        }
+      },
       "atributos_2026_fuente": null,
       "candidatos_internos": [
+        {
+          "clase_paridad_2027": "D",
+          "codcarpr": "CADMP",
+          "codigo_sies_aprobado_grupo": "I162S2C83J4V2",
+          "duracion_tipo_perfil": [],
+          "estado_paridad_2027": "APROBADA_D_2027",
+          "estado_plan": "CANDIDATO_CATALOGO_NO_EQUIVALENCIA_CURRICULAR_INDIVIDUAL",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "[\"CADMP\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C/E",
+              "localizador": "planes_umas/contextos_catalogo",
+              "ruta": "data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+              "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5"
+            }
+          ],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "jornada_umas": "O",
+          "origen": "GRUPO_PREVIO_EXACTO",
+          "perfil_compatible": false,
+          "plan_umas": [
+            "CADMP20251"
+          ],
+          "sede_umas": "RE",
+          "seleccion_grupo": {
+            "estado": "D_APROBADA",
+            "motivo": "Alexi, 29-10-2026; H002k decisiones 1–4",
+            "opciones": [
+              "I162S2C83J4V2"
+            ],
+            "seleccion": "I162S2C83J4V2"
+          }
+        }
+      ],
+      "candidatos_internos_antes_H002k": [
         {
           "codcarpr": "ADMP",
           "duracion_tipo_perfil": [
@@ -57124,13 +57338,12 @@
           }
         }
       ],
-      "clase": "C/E",
+      "clase": "D",
       "clase_atributos_2027": "C; aceptación comunicada D, no comprobante técnico PES",
       "cod_carrera": "83",
       "cod_jornada": "4",
       "cod_sede": "2",
       "codcarpr": [
-        "ADMP",
         "CADMP"
       ],
       "codigo_unico": "I162S2C83J4V2",
@@ -57139,30 +57352,31 @@
         "I162S2C83J4V2"
       ],
       "correspondencias_aprobadas_H002e": [],
+      "correspondencias_aprobadas_H002k": [
+        {
+          "codcarpr": "CADMP",
+          "codigo_unico": "I162S2C83J4V2",
+          "plan_umas": "CADMP20251",
+          "ramos": 23,
+          "semestres": 4,
+          "tipo_plan": "CONTINUIDAD"
+        }
+      ],
       "decision_H002e": {
         "alcance": "Sólo relaciones y grupos citados; no aprobación de todos los alias de la fila.",
         "clase": "D",
         "fuente": "Alexi, 29-10-2026",
         "id": "D_ALEXI_H002E_20261029"
       },
-      "decisiones_por_grupo_H002e": [
-        {
-          "ambiguedad_historica": null,
-          "clase": "E",
-          "codigo_sies_aprobado": null,
-          "estado": "VERSION_MULTIPLE_E",
-          "evidencia": {
-            "clase": "B/C/E",
-            "localizador": "casos[numero_original=1]",
-            "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
-            "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
-          },
-          "grupo": "[\"CADMP\",\"RE\",\"O\"]"
-        }
-      ],
+      "decision_H002k": {
+        "clase": "D",
+        "fuente": "Alexi, 29-10-2026; H002k decisiones 1–4",
+        "id": "D_ALEXI_H002K_20261029"
+      },
       "duracion_total_semestres": "4",
-      "estado": "VERSION_MULTIPLE_E",
+      "estado": "APROBADA_D_2027",
       "estado_antes_H002e": "VERSION_MULTIPLE_E",
+      "estado_plan_por_cohorte": "D_PLAN_EXPLICITO_SIN_ATRIBUCION_PERSONAL",
       "evidencia": [
         {
           "clase": "C",
@@ -57199,32 +57413,128 @@
           "localizador": "",
           "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
           "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+        },
+        {
+          "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/TIPO_PLAN_POR_PLAN_UMAS.json",
+          "sha256": "784af467f6ed85d08e39ea677ba35b62c113f50902d8c4ddbbf290b5045ead1f"
+        },
+        {
+          "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
+          "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+        },
+        {
+          "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/METRICAS_H002i_H002j.json",
+          "sha256": "8d2018cf17ab26c89160e7cd05fd9b4ccf48271ca6811f36cf0290031ca5c5cf"
+        },
+        {
+          "clase": "D",
+          "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
+          "sha256": "be16b491bf0a61bbb6cc56af4567c6e21292ef8de04aa584448ed194753ed63f"
         }
       ],
-      "indicio_H002e": {
-        "PROMEDIOS_2026_expedientes": 7,
-        "Permanencia_2026_expedientes": 10,
-        "SIES_2026_V1": 94,
-        "SIES_2026_V2": 9,
-        "aprobada": false,
-        "clase": "B/C/E",
-        "codigo_candidato_no_aprobado": "I162S2C83J4V2"
-      },
       "inicio_historia_oferta": 2025,
       "jornada_umas": [
         "O"
       ],
       "modalidad": "No presencial",
       "modalidad_codigo": "3",
-      "motivo": "Algún grupo interno vinculado conserva opciones/perfil sin resolver.",
+      "motivo": "Alexi, 29-10-2026; H002k decisiones 1–4; aprobación del plan explícito, sin cambio de historia informada.",
       "nivel_global": "Pregrado",
       "nivel_global_codigo": "1",
       "nombre_carrera": "ADMINISTRACION PUBLICA",
       "plan_umas": [
-        "ADMP20251",
         "CADMP20251"
       ],
       "resoluciones_grupo": [
+        {
+          "clase_paridad_2027": "D",
+          "codcarpr": "CADMP",
+          "codigo_sies_aprobado": "I162S2C83J4V2",
+          "codigos_2027_familia": [
+            "I162S2C83J4V1",
+            "I162S2C83J4V2"
+          ],
+          "codigos_previos": [
+            "I162S2C83J4V1",
+            "I162S2C83J4V2"
+          ],
+          "decision_H002e": {
+            "clase": "D",
+            "evidencia": {
+              "clase": "D",
+              "localizador": "",
+              "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+              "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
+            },
+            "fuente": "Alexi, 29-10-2026",
+            "id": "D_ALEXI_H002E_20261029"
+          },
+          "ensayo_cohortes_estados": {
+            "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 2
+          },
+          "estado_paridad_2027": "APROBADA_D_2027",
+          "evidencia": [
+            {
+              "clase": "C/D",
+              "localizador": "índice 2",
+              "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
+              "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
+            },
+            {
+              "clase": "B/C",
+              "localizador": "",
+              "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
+              "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
+            },
+            {
+              "clase": "C/E",
+              "localizador": "clave_grupo=[\"CADMP\",\"RE\",\"O\"]",
+              "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
+              "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
+            }
+          ],
+          "fuente_perfil": "PERFIL_NO_UNIVOCO",
+          "grupo": "[\"CADMP\",\"RE\",\"O\"]",
+          "indicio_H002e": {
+            "PROMEDIOS_2026_expedientes": 7,
+            "Permanencia_2026_expedientes": 10,
+            "SIES_2026_V1": 94,
+            "SIES_2026_V2": 9
+          },
+          "jornada_umas": "O",
+          "limite_historial": "Ensayo C/E; no asignación de plan ni vigencia para ingreso 2027.",
+          "modalidades": [
+            "3"
+          ],
+          "multiple": true,
+          "perfiles": [],
+          "planes_catalogados_candidatos": [
+            "CADMP20251"
+          ],
+          "planes_explicitos_aprobados": [
+            "CADMP20251"
+          ],
+          "resolucion_calculada_antes_H002e": {
+            "estado": "E",
+            "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
+            "opciones": [
+              "I162S2C83J4V1",
+              "I162S2C83J4V2"
+            ],
+            "seleccion": null
+          },
+          "resolucion_nuevos_2027": {
+            "estado": "D_APROBADA",
+            "motivo": "Alexi, 29-10-2026; H002k decisiones 1–4",
+            "opciones": [
+              "I162S2C83J4V2"
+            ],
+            "seleccion": "I162S2C83J4V2"
+          },
+          "sede_umas": "RE"
+        }
+      ],
+      "resoluciones_grupo_antes_H002k": [
         {
           "codcarpr": "ADMP",
           "codigos_2027_familia": [
@@ -57379,7 +57689,7 @@
       "tipo_plan": "Plan Regular de Continuidad",
       "tipo_plan_codigo": "3",
       "version": "2",
-      "version_para_nuevos_2027": "E",
+      "version_para_nuevos_2027": "sí",
       "version_umas": null,
       "version_umas_nota": "No hay campo independiente acreditado; no descomponer el año de CODPESTUD.",
       "vigencia_2027": "1",
@@ -62811,6 +63121,6 @@
     "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
     "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
   },
-  "hito": "H002-PARIDAD-CODIGO-SIES-2027",
+  "hito": "H002k",
   "unidad": "CODIGO_SIES_ANIO_CATALOGO_NO_PERSONAS"
 }

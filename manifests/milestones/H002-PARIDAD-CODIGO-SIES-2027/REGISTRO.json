@@ -1,8 +1,8 @@
 {
   "43_sin_plan_sin_resolver": false,
   "QA": "outputs/paridad_codigo_sies_20261029/QA.json",
-  "QA_entrega": "outputs/paridad_codigo_sies_20261029/QA_H002E.json",
-  "actualizacion": "H002e",
+  "QA_entrega": "outputs/activacion_codigo_mu2027_20261029/QA.json",
+  "actualizacion": "H002k",
   "aplicacion_H002e": {
     "ambito": "Catálogo 2027; 2026 intacto; no modifica v20 ni oferta.",
     "aprobaciones_nuevas": 5,
@@ -13,6 +13,13 @@
     "pendientes": "CADMP y 37 códigos"
   },
   "autorizacion_commit_push": "D Alexi, H002b, 29-10-2026; limitada a H002 y condicionada a QA",
+  "cierre": {
+    "clase": "D",
+    "fuente": "Alexi, 29-10-2026; H002k decisiones 1–4",
+    "lista_revision": "outputs/activacion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027.json",
+    "pendiente": "37 códigos sin plan hasta MU 2027; revisión manual potencial por tipo/ambigüedad; oferta aceptada antes de carga",
+    "resuelto": "Dos últimas versiones ADMP/CADMP, 13 aprobaciones D, 0 VERSION_MULTIPLE_E 2027"
+  },
   "clase": "C/D/E",
   "commit_base_aplicacion_H002e": "2969b638d2a7bf1892783d5eceef4df28316b28e",
   "commit_contexto": "7807542b2b819521b7bd620239110686830ec406",
@@ -30,7 +37,7 @@
       "VERSION_MULTIPLE_RESUELTA": 24
     },
     "2027": {
-      "APROBADA_D_2027": 11,
+      "APROBADA_D_2027": 13,
       "CONTINUA": 53,
       "FUERA_ALCANCE": 21,
       "HISTORICO_SIN_MATRICULA_RECIENTE": 6,
@@ -38,22 +45,24 @@
       "NUEVO_2027_SIN_PLAN_E": 37,
       "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
       "SIN_OFERTA_2027": 0,
-      "VERSION_MULTIPLE_E": 2,
+      "VERSION_MULTIPLE_E": 0,
       "VERSION_MULTIPLE_RESUELTA": 31
     }
   },
-  "correspondencias_aprobadas_D": 11,
-  "decision": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
+  "correspondencias_aprobadas_D": 13,
+  "decision": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
   "diccionario_personal_modificado": false,
   "doce_combinaciones_sin_aplicar": false,
-  "estado": "CATALOGO_CON_11_RELACIONES_D_Y_PENDIENTES_EXPLICITOS",
+  "estado": "PARIDAD_2027_CERRADA_CON_REVISION_MANUAL_Y_37_PENDIENTES",
   "fecha": "2026-10-29",
   "fichas": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.md",
   "hito": "H002-PARIDAD-CODIGO-SIES-2027",
   "manifest": "data/paridad_codigo_sies/20261029/MANIFEST.json",
-  "manifest_sha256": "03cc0949c72d4ac7c60007449aedd5d11ccffc43462d78ba517e1f5614fc161e",
+  "manifest_sha256": "5b988ecfea89f8a7c4cdb640ff08e3e5bb1873c6e23d0ecbef6549793dd4171e",
+  "pendiente_CADMP": false,
   "pendientes_sin_plan": 37,
   "personas_asignadas": false,
   "publicacion": "Verificar el commit que contiene el registro y la referencia remota; el archivo no acredita por sí solo push.",
-  "registro_publicacion": "Consultar el commit que contiene este registro; no incluir hash autorreferente."
+  "registro_publicacion": "Consultar el commit que contiene este registro; no incluir hash autorreferente.",
+  "regla_activa": "data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json"
 }

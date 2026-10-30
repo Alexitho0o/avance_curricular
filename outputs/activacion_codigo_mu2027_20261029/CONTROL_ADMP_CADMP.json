@@ -1,0 +1,85 @@
+{
+  "clase": "B/C",
+  "control_SIES_gobernado": [
+    {
+      "MRUN_estado": "B/C agregado gobernado",
+      "MRUN_total": 9,
+      "MU_VIG1": 9,
+      "MU_total": 10,
+      "SIES_estado": "B_PUBLICADO",
+      "SIES_primer_anio": null,
+      "SIES_total": 9,
+      "anio": 2026,
+      "codigo_unico": "I162S2C83J4V2",
+      "fila_SIES": 14286,
+      "unidad_publica_MU_MRUN": "registros de matrícula; no personas únicas"
+    }
+  ],
+  "decision": {
+    "clase": "D",
+    "datos_personales": false,
+    "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
+    "sha256": "be16b491bf0a61bbb6cc56af4567c6e21292ef8de04aa584448ed194753ed63f"
+  },
+  "evidencia_SIES": {
+    "ruta": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.json",
+    "sha256": "60e01052c003348f7d71bdb6376e50903502dc08b31d416b3e3055bfd7275969"
+  },
+  "filas": [
+    {
+      "VIG": "0",
+      "codcarpr": "ADMP",
+      "codigo_unico": "I162S2C83J4V1",
+      "matriculas_MU2026": 3,
+      "plan": "ADMP20251"
+    },
+    {
+      "VIG": "1",
+      "codcarpr": "ADMP",
+      "codigo_unico": "I162S2C83J4V1",
+      "matriculas_MU2026": 72,
+      "plan": "ADMP20251"
+    },
+    {
+      "VIG": "0",
+      "codcarpr": "ADMP",
+      "codigo_unico": "I162S2C83J4V1",
+      "matriculas_MU2026": 43,
+      "plan": "PLAN_NO_OBSERVADO"
+    },
+    {
+      "VIG": "1",
+      "codcarpr": "ADMP",
+      "codigo_unico": "I162S2C83J4V1",
+      "matriculas_MU2026": 12,
+      "plan": "PLAN_NO_OBSERVADO"
+    },
+    {
+      "VIG": "1",
+      "codcarpr": "CADMP",
+      "codigo_unico": "I162S2C83J4V2",
+      "matriculas_MU2026": 7,
+      "plan": "CADMP20251"
+    },
+    {
+      "VIG": "0",
+      "codcarpr": "CADMP",
+      "codigo_unico": "I162S2C83J4V2",
+      "matriculas_MU2026": 1,
+      "plan": "PLAN_NO_OBSERVADO"
+    },
+    {
+      "VIG": "1",
+      "codcarpr": "CADMP",
+      "codigo_unico": "I162S2C83J4V2",
+      "matriculas_MU2026": 2,
+      "plan": "PLAN_NO_OBSERVADO"
+    }
+  ],
+  "fuente": {
+    "clase": "C",
+    "datos_personales": true,
+    "ruta": "/Users/alexi/.local/share/ipss/h002j_20261029/PRUEBA.json",
+    "sha256": "abb86b96adb8afdc732920653777c5aeb2f708710321740c797ba2747f8a055d"
+  }
+}

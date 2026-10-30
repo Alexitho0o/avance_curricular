@@ -1,0 +1,124 @@
+{
+  "clase": "C",
+  "conteos": {
+    "2026": {
+      "APROBADA_D_2027": 0,
+      "CONTINUA": 53,
+      "FUERA_ALCANCE": 11,
+      "HISTORICO_SIN_MATRICULA_RECIENTE": 0,
+      "NUEVO_2027_CON_PLAN": 0,
+      "NUEVO_2027_SIN_PLAN_E": 0,
+      "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
+      "SIN_OFERTA_2027": 4,
+      "VERSION_MULTIPLE_E": 14,
+      "VERSION_MULTIPLE_RESUELTA": 24
+    },
+    "2027": {
+      "APROBADA_D_2027": 13,
+      "CONTINUA": 53,
+      "FUERA_ALCANCE": 21,
+      "HISTORICO_SIN_MATRICULA_RECIENTE": 6,
+      "NUEVO_2027_CON_PLAN": 0,
+      "NUEVO_2027_SIN_PLAN_E": 37,
+      "PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES": 0,
+      "SIN_OFERTA_2027": 0,
+      "VERSION_MULTIPLE_E": 0,
+      "VERSION_MULTIPLE_RESUELTA": 31
+    }
+  },
+  "controles": {
+    "106_2026_y_161_2027": true,
+    "13_aprobadas_0_version_multiple_E_2027": true,
+    "37_no_resueltos": true,
+    "MU2026_4105_potenciales": true,
+    "antiguos_con_codigo_conservado": true,
+    "base_H002e_reproducida": true,
+    "cinco_familias_252_E": true,
+    "nuevos_simulados_sin_personas": true,
+    "resto_filas_intacto": true,
+    "solo_dos_filas_2027": true
+  },
+  "estado": "PASS",
+  "familias_ambiguas": [
+    {
+      "codigos": [
+        "I162S2C47J4V1",
+        "I162S2C47J4V2"
+      ],
+      "familia": "I162S2C47J4",
+      "motivo": "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+      "tipo_plan_codigo": "1"
+    },
+    {
+      "codigos": [
+        "I162S2C57J4V1",
+        "I162S2C57J4V2"
+      ],
+      "familia": "I162S2C57J4",
+      "motivo": "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+      "tipo_plan_codigo": "1"
+    },
+    {
+      "codigos": [
+        "I162S2C6J4V2",
+        "I162S2C6J4V3"
+      ],
+      "familia": "I162S2C6J4",
+      "motivo": "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+      "tipo_plan_codigo": "1"
+    },
+    {
+      "codigos": [
+        "I162S2C78J4V1",
+        "I162S2C78J4V2"
+      ],
+      "familia": "I162S2C78J4",
+      "motivo": "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+      "tipo_plan_codigo": "1"
+    },
+    {
+      "codigos": [
+        "I162S2C79J4V1",
+        "I162S2C79J4V2"
+      ],
+      "familia": "I162S2C79J4",
+      "motivo": "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+      "tipo_plan_codigo": "1"
+    }
+  ],
+  "filas": 267,
+  "filas_modificadas": [
+    [
+      2027,
+      "I162S2C83J4V1"
+    ],
+    [
+      2027,
+      "I162S2C83J4V2"
+    ]
+  ],
+  "nuevos_catalogo": {
+    "motivos": {
+      "CODIGO_NUEVO_SIN_PLAN": 1,
+      "NUEVO_TIPO_E": 40,
+      "SIN_VERSION_VIGENTE_PARA_TIPO": 108,
+      "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO": 15
+    },
+    "revision": 164,
+    "total": 223,
+    "unidad": "OPCION_PLAN_FAMILIA_CATALOGO"
+  },
+  "revision": {
+    "cinco_familias_tipo_E": 252,
+    "codigos_inconsistentes_conservados": 0,
+    "manual_por_motivo": {
+      "ANTIGUO_TIPO_E": 1046
+    },
+    "por_via": {
+      "ANTIGUO": 3059,
+      "REVISION_MANUAL": 1046
+    },
+    "total": 4105,
+    "unidad": "MATRICULA"
+  }
+}

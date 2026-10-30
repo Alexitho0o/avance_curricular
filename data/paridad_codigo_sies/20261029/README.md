@@ -1,6 +1,6 @@
 # H002 · Paridad de catálogo UMAS–SIES, 2026 y 2027
 
-Estado vigente: H002e, decisiones D de Alexi del 29-10-2026. Oferta Académica
+Estado vigente: H002k, decisiones D de Alexi del 29-10-2026. Oferta Académica
 2027 ejecutada en 2026; catálogo por año/código completo, sin personas ni retención.
 106 filas de grupos 2026 y 161 de la carga V06 para 2027. Las filas 2026 quedan
 idénticas al antecedente 2969b63; las decisiones actuales tienen ámbito 2027.
@@ -30,17 +30,16 @@ RE/CO se consultan con gobernanza; PTG sólo en el ámbito 2027 documentado.
 
 ## Estados vigentes
 
-- APROBADA_D_2027: seis códigos H002b y cinco relaciones H002e. Código aprobado
+- APROBADA_D_2027: seis códigos H002b, cinco relaciones H002e y dos H002k. Código aprobado
   de catálogo; no asignación individual ni temporal automática de todas las mallas.
 - PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES: seis **grupos** (IECIRE, IETMRE, NCONRE,
   NCONREOL, NINFREOL, CNATP), clase D, registrados en resoluciones por grupo.
   La ambigüedad histórica E y candidatos se conservan, sin asignar versión.
   No convertir todos sus códigos compartidos en históricos: otros planes los usan.
 - HISTORICO_SIN_MATRICULA_RECIENTE: seis códigos C35, D; no requieren paridad 2027.
-- VERSION_MULTIPLE_E: CADMP, pendiente en dos filas de código; indicio 7–10
-  expedientes frente a 9 en V2 y 94 en V1, sin aprobación.
+- VERSION_MULTIPLE_E: ninguna fila 2027; ADMP y CADMP aprobados en DECISIONES_APROBADAS_v3.json. Los 14 casos históricos 2026 no se alteran.
 - NUEVO_2027_SIN_PLAN_E: 37 filas intactas, clasificadas en H002d como códigos sin
-  historia de matrícula pública 2007–2026 ni MU 2022–2026. Pendientes de planes UMAS.
+  historia de matrícula pública 2007–2026 ni MU 2022–2026. Se resolverán con MU 2027 por código y total, sin solicitar otro listado.
   No equivale necesariamente a 37 carreras nuevas ni a primera aparición en oferta.
 - VERSION_MULTIPLE_RESUELTA: los grupos relevantes tienen selección calculada o
   decisión D/retirada de alcance 2027. Conservar las asociaciones y E históricas.
@@ -58,15 +57,17 @@ sin modificar la oferta. IECIRE tiene una fila TITULADO; cero vigentes no es cer
 ## Conteos de filas por estado
 
 | Estado | 2026 | 2027 |
-|---|---:|---:|
+|---|---|---|
+| APROBADA_D_2027 | 0 | 13 |
 | CONTINUA | 53 | 53 |
-| VERSION_MULTIPLE_RESUELTA | 24 | 31 |
-| VERSION_MULTIPLE_E | 14 | 2 |
-| APROBADA_D_2027 | 0 | 11 |
-| NUEVO_2027_SIN_PLAN_E | 0 | 37 |
-| SIN_OFERTA_2027 | 4 | 0 |
 | FUERA_ALCANCE | 11 | 21 |
 | HISTORICO_SIN_MATRICULA_RECIENTE | 0 | 6 |
+| NUEVO_2027_CON_PLAN | 0 | 0 |
+| NUEVO_2027_SIN_PLAN_E | 0 | 37 |
+| PLAN_HISTORICO_SIN_ALUMNOS_VIGENTES | 0 | 0 |
+| SIN_OFERTA_2027 | 4 | 0 |
+| VERSION_MULTIPLE_E | 14 | 0 |
+| VERSION_MULTIPLE_RESUELTA | 24 | 31 |
 
 Los seis estados de grupos históricos se cuentan aparte de las filas por código.
 
@@ -89,3 +90,14 @@ con la tabla vigente. El pedido anterior de un listado nuevo general está super
 se reutilizaron los respaldos; la solicitud vigente a UMAS es la lista exacta de 37.
 
 No se cambia v20, oferta, bases, denominadores, tasas ni se habilita una carga PES.
+
+## Cierre H002k
+
+ADMP20251 → I162S2C83J4V1; CADMP20251 → I162S2C83J4V2 (D, Alexi).
+Se conservan las candidaturas anteriores como antecedente explícito dentro de las dos filas.
+Regla activa interna: `data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json`. Los 37 y las revisiones manuales permanecen visibles.
+No significa catálogo operativo sin pendientes ni autorización de carga.
+
+Reproducción vigente: `python3 outputs/activacion_codigo_mu2027_20261029/construir.py --check`.
+El constructor anterior reproduce H002e; para su salida histórica usar checkout del commit base.
+QA vigente: `outputs/activacion_codigo_mu2027_20261029/QA.json`; antecedentes QA_H002E y decisiones v1/v2 no se reescriben.

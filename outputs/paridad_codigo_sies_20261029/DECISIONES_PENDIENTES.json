@@ -1,4 +1,5 @@
 {
+  "cierre_codigos_nuevos": "Cuando exista MU 2027, por código y total; no solicitar otro listado UMAS",
   "codigos_historicos_sin_matricula_reciente": [
     {
       "clase": "D",
@@ -66,13 +67,15 @@
     "I162S2C10J2V1",
     "I162S2C114J1V1",
     "I162S2C11J1V1",
+    "I162S2C1J4V2",
     "I162S2C22J1V1",
-    "I162S2C48J4V1",
-    "I162S2C78J2V1",
-    "I162S2C76J4V2",
     "I162S2C46J2V3",
-    "I162S2C87J4V2",
-    "I162S2C1J4V2"
+    "I162S2C48J4V1",
+    "I162S2C76J4V2",
+    "I162S2C78J2V1",
+    "I162S2C83J4V1",
+    "I162S2C83J4V2",
+    "I162S2C87J4V2"
   ],
   "correspondencias_plan_aprobadas_H002e": [
     {
@@ -191,7 +194,7 @@
     }
   ],
   "doce_y_43_no_aprobadas": false,
-  "estado_vigente": "H002e: 5 relaciones D; 6 grupos históricos D; CADMP y 37 códigos pendientes",
+  "estado_vigente": "H002k: ADMP/CADMP aprobados; 37 códigos y revisión manual pendientes",
   "nuevo_2027_con_plan": [],
   "nuevo_2027_sin_plan_E": [
     {
@@ -5112,121 +5115,5 @@
       "vigencia_2027_texto": "E"
     }
   ],
-  "version_multiple_E_por_grupo": [
-    {
-      "clase_paridad_2027": "E",
-      "codcarpr": "CADMP",
-      "codigo_sies_aprobado": null,
-      "codigos_2027_familia": [
-        "I162S2C83J4V1",
-        "I162S2C83J4V2"
-      ],
-      "codigos_previos": [
-        "I162S2C83J4V1",
-        "I162S2C83J4V2"
-      ],
-      "decision_H002e": {
-        "clase": "D",
-        "evidencia": {
-          "clase": "D",
-          "localizador": "",
-          "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v2.json",
-          "sha256": "abcc279dd3ab631b7500633b82104ab0d7c381a50fd5397ed0ae8070bcd7630c"
-        },
-        "fuente": "Alexi, 29-10-2026",
-        "id": "D_ALEXI_H002E_20261029"
-      },
-      "decision_solicitada": "Acreditar perfil/plan y ámbito de la combinación. No elegir V por ordinal.",
-      "ensayo_cohortes_estados": {
-        "PERFIL_DURACION_NO_DETERMINADO_EN_GRUPO": 2
-      },
-      "estado_paridad_2027": "VERSION_MULTIPLE_E",
-      "evidencia": [
-        {
-          "clase": "C/D",
-          "localizador": "índice 2",
-          "ruta": "data/versiones_por_cohorte/20261028/grupos_existentes.json",
-          "sha256": "fe8837a760d4ed132505bf92138145e08adb3ce0a2486c9e3f26f08ca11babfc"
-        },
-        {
-          "clase": "B/C",
-          "localizador": "",
-          "ruta": "data/versiones_por_cohorte/20261016/historias_oferta.json",
-          "sha256": "2c0a09a8a85aad4b7af5fa8ba19a4c1017131927e4a848d4d82cd5bcdc2623f5"
-        },
-        {
-          "clase": "C/E",
-          "localizador": "clave_grupo=[\"CADMP\",\"RE\",\"O\"]",
-          "ruta": "data/versiones_por_cohorte/20261016/resultados_cohortes.json",
-          "sha256": "a7f55dbf2ac66f23a3899f4f45b9d8f0110a3abda4e5b8365da5e8003af82cca"
-        }
-      ],
-      "fuente_perfil": "PERFIL_NO_UNIVOCO",
-      "grupo": "[\"CADMP\",\"RE\",\"O\"]",
-      "indicio_H002e": {
-        "PROMEDIOS_2026_expedientes": 7,
-        "Permanencia_2026_expedientes": 10,
-        "SIES_2026_V1": 94,
-        "SIES_2026_V2": 9
-      },
-      "jornada_umas": "O",
-      "limite_historial": "Ensayo C/E; no asignación de plan ni vigencia para ingreso 2027.",
-      "modalidades": [
-        "3"
-      ],
-      "multiple": true,
-      "numero": 1,
-      "opciones_detalle": [
-        {
-          "codigo_unico": "I162S2C83J4V1",
-          "duracion_total": "8",
-          "evidencia": {
-            "clase": "C",
-            "localizador": "fila 87",
-            "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
-            "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
-          },
-          "modalidad": "No presencial",
-          "tipo_plan": "Plan Regular",
-          "vigencia_2027": "1"
-        },
-        {
-          "codigo_unico": "I162S2C83J4V2",
-          "duracion_total": "4",
-          "evidencia": {
-            "clase": "C",
-            "localizador": "fila 88",
-            "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
-            "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
-          },
-          "modalidad": "No presencial",
-          "tipo_plan": "Plan Regular de Continuidad",
-          "vigencia_2027": "1"
-        }
-      ],
-      "perfiles": [],
-      "planes_catalogados_candidatos": [
-        "CADMP20251"
-      ],
-      "resolucion_calculada_antes_H002e": {
-        "estado": "E",
-        "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
-        "opciones": [
-          "I162S2C83J4V1",
-          "I162S2C83J4V2"
-        ],
-        "seleccion": null
-      },
-      "resolucion_nuevos_2027": {
-        "estado": "E",
-        "motivo": "Perfil interno de duración/tipo ausente o múltiple; no elegir por nombre o V.",
-        "opciones": [
-          "I162S2C83J4V1",
-          "I162S2C83J4V2"
-        ],
-        "seleccion": null
-      },
-      "sede_umas": "RE"
-    }
-  ]
+  "version_multiple_E_por_grupo": []
 }
