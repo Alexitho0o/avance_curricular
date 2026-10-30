@@ -1,0 +1,151 @@
+{
+  "D7_habilitada": false,
+  "clase": "C",
+  "contextos_DOCUMENTAL_T1_con_versiones_identicas_en_perfiles_H011": {
+    "ABSTENCION": 233,
+    "ACIERTO": 956,
+    "ERROR": 1
+  },
+  "errores": [
+    {
+      "anio": 2025,
+      "n": 1,
+      "observado": "I162S2C76J4V1",
+      "plan": "CIADM20241",
+      "predicho": "I162S2C76J4V2"
+    },
+    {
+      "anio": 2024,
+      "n": 1,
+      "observado": "I162S2C76J2V1",
+      "plan": "IADM20241",
+      "predicho": "I162S2C76J4V1"
+    },
+    {
+      "anio": 2019,
+      "n": 1,
+      "observado": "I162S2C1J1V1",
+      "plan": "IECIRE20151",
+      "predicho": "I162S2C1J2V1"
+    },
+    {
+      "anio": 2020,
+      "n": 1,
+      "observado": "I162S2C1J1V1",
+      "plan": "IECIRE20151",
+      "predicho": "I162S2C1J2V1"
+    },
+    {
+      "anio": 2021,
+      "n": 1,
+      "observado": "I162S2C1J1V1",
+      "plan": "IECIRE20151",
+      "predicho": "I162S2C1J2V1"
+    },
+    {
+      "anio": 2021,
+      "n": 1,
+      "observado": "I162S2C1J4V2",
+      "plan": "IECIREOL20201",
+      "predicho": "I162S2C1J4V1"
+    },
+    {
+      "anio": 2022,
+      "n": 1,
+      "observado": "I162S2C1J4V1",
+      "plan": "IECIREOL20201",
+      "predicho": "I162S2C1J4V2"
+    },
+    {
+      "anio": 2024,
+      "n": 1,
+      "observado": "I162S2C46J4V1",
+      "plan": "IECSREOL20211",
+      "predicho": "I162S2C46J4V3"
+    },
+    {
+      "anio": 2019,
+      "n": 1,
+      "observado": "I162S2C3J1V1",
+      "plan": "IETMRE20121",
+      "predicho": "I162S2C3J2V1"
+    },
+    {
+      "anio": 2021,
+      "n": 1,
+      "observado": "I162S2C3J2V1",
+      "plan": "IETMRE20191",
+      "predicho": "I162S2C3J2V4"
+    },
+    {
+      "anio": 2021,
+      "n": 1,
+      "observado": "I162S2C3J2V3",
+      "plan": "IETMRE20211",
+      "predicho": "I162S2C3J2V1"
+    },
+    {
+      "anio": 2020,
+      "n": 1,
+      "observado": "I162S2C2J4V2",
+      "plan": "TPCREOL",
+      "predicho": "I162S2C2J4V1"
+    }
+  ],
+  "metodo": "Ocultar todos los códigos de la persona en el plan/año. Exigir 3 personas distintas restantes y unanimidad. Precisión = aciertos / predicciones emitidas. Abstenciones separadas. Prueba dentro del año, sin extrapolar al desfase temporal.",
+  "por_anio": {
+    "2019": {
+      "ABSTENCION": 211,
+      "ACIERTO": 316,
+      "ERROR": 2
+    },
+    "2020": {
+      "ABSTENCION": 188,
+      "ACIERTO": 408,
+      "ERROR": 2
+    },
+    "2021": {
+      "ABSTENCION": 189,
+      "ACIERTO": 703,
+      "ERROR": 4
+    },
+    "2022": {
+      "ABSTENCION": 361,
+      "ACIERTO": 646,
+      "ERROR": 1
+    },
+    "2023": {
+      "ABSTENCION": 138,
+      "ACIERTO": 994
+    },
+    "2024": {
+      "ABSTENCION": 968,
+      "ACIERTO": 392,
+      "ERROR": 2
+    },
+    "2025": {
+      "ABSTENCION": 1825,
+      "ACIERTO": 298,
+      "ERROR": 1
+    },
+    "2026": {
+      "ABSTENCION": 2022,
+      "ACIERTO": 1039
+    }
+  },
+  "precision_DOCUMENTAL_T1_pct": 99.76470588235294,
+  "precision_dominio_H011_pct": 99.89550679205851,
+  "precision_pct": 99.7504159733777,
+  "solo_DOCUMENTAL_T1": {
+    "ABSTENCION": 4510,
+    "ACIERTO": 3392,
+    "ERROR": 8
+  },
+  "totales": {
+    "ABSTENCION": 5902,
+    "ACIERTO": 4796,
+    "ERROR": 12
+  },
+  "umbral_pct": 99.9,
+  "unidad": "persona × CODPESTUD × año × código documental distinto"
+}
