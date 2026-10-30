@@ -1,0 +1,79 @@
+# H003c · Archivos incluidos en el respaldo
+
+Lista exacta previa al commit, limitada a esta carpeta. Tamaños en bytes. Las dependencias, cachés y temporales de Office quedan excluidos por .gitignore.
+
+| Archivo | Bytes |
+|---|---:|
+| outputs/entrega_retencion_20261029/.gitignore | 228 |
+| outputs/entrega_retencion_20261029/CONTROL_CELDAS.json | 323063 |
+| outputs/entrega_retencion_20261029/CONTROL_RESULTADOS.csv | 192024 |
+| outputs/entrega_retencion_20261029/CONTROL_RESULTADOS.json | 436530 |
+| outputs/entrega_retencion_20261029/DIFERENCIAS_QA.json | 3 |
+| outputs/entrega_retencion_20261029/DISENO.json | 1402 |
+| outputs/entrega_retencion_20261029/ENTREGA_RETENCION_IPSS_20261029.xlsx | 40042 |
+| outputs/entrega_retencion_20261029/ENTREGA_RETENCION_IPSS_20261029.xlsx.inspect.ndjson | 783440 |
+| outputs/entrega_retencion_20261029/ESPECIFICACION.md | 1242 |
+| outputs/entrega_retencion_20261029/ESTADO_INICIAL.json | 3674 |
+| outputs/entrega_retencion_20261029/FUENTES_FIJADAS.json | 7788 |
+| outputs/entrega_retencion_20261029/INFORME.md | 20565 |
+| outputs/entrega_retencion_20261029/INSPECCION_FORMULAS.ndjson | 847 |
+| outputs/entrega_retencion_20261029/LISTA_ARCHIVOS_COMMIT.md | 5434 |
+| outputs/entrega_retencion_20261029/MANIFEST.json | 1404 |
+| outputs/entrega_retencion_20261029/MODELO_AGREGADO.json | 97986 |
+| outputs/entrega_retencion_20261029/PAGINAS_RENDER.json | 4926 |
+| outputs/entrega_retencion_20261029/QA.json | 1267 |
+| outputs/entrega_retencion_20261029/QA_ARTIFACT.ndjson | 60 |
+| outputs/entrega_retencion_20261029/QA_COMPACTACION_H003C.json | 189007 |
+| outputs/entrega_retencion_20261029/QA_COMPARACION_H003B.json | 724 |
+| outputs/entrega_retencion_20261029/QA_COMPARACION_H003C.json | 521 |
+| outputs/entrega_retencion_20261029/QA_PRESERVACION_H003B.json | 232812 |
+| outputs/entrega_retencion_20261029/QA_PRIVACIDAD_H003C.json | 17771 |
+| outputs/entrega_retencion_20261029/RECALCULO_LIBREOFFICE.log | 573 |
+| outputs/entrega_retencion_20261029/VISTA_IMPRESION.pdf | 573054 |
+| outputs/entrega_retencion_20261029/construir_excel.mjs | 4772 |
+| outputs/entrega_retencion_20261029/construir_excel.py | 29471 |
+| outputs/entrega_retencion_20261029/renders/H003b_1_Retencion.png | 234815 |
+| outputs/entrega_retencion_20261029/renders/H003b_3_Paridad.png | 520057 |
+| outputs/entrega_retencion_20261029/renders/H003c_1_Retencion.png | 224835 |
+| outputs/entrega_retencion_20261029/renders/INDICE_VISUAL.png | 985909 |
+| outputs/entrega_retencion_20261029/renders/REVISION_1.png | 519701 |
+| outputs/entrega_retencion_20261029/renders/REVISION_2.png | 793764 |
+| outputs/entrega_retencion_20261029/renders/REVISION_3.png | 551587 |
+| outputs/entrega_retencion_20261029/renders/REVISION_4.png | 306749 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003B_01.png | 376712 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003B_06.png | 656441 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003B_11.png | 499016 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003B_16.png | 300830 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003C_01.png | 322036 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003C_07.png | 490637 |
+| outputs/entrega_retencion_20261029/renders/REVISION_H003C_13.png | 363936 |
+| outputs/entrega_retencion_20261029/renders/pagina_01.png | 133873 |
+| outputs/entrega_retencion_20261029/renders/pagina_02.png | 66811 |
+| outputs/entrega_retencion_20261029/renders/pagina_03.png | 76533 |
+| outputs/entrega_retencion_20261029/renders/pagina_04.png | 131794 |
+| outputs/entrega_retencion_20261029/renders/pagina_05.png | 162454 |
+| outputs/entrega_retencion_20261029/renders/pagina_06.png | 177980 |
+| outputs/entrega_retencion_20261029/renders/pagina_07.png | 205656 |
+| outputs/entrega_retencion_20261029/renders/pagina_08.png | 195476 |
+| outputs/entrega_retencion_20261029/renders/pagina_09.png | 195458 |
+| outputs/entrega_retencion_20261029/renders/pagina_10.png | 186312 |
+| outputs/entrega_retencion_20261029/renders/pagina_11.png | 194548 |
+| outputs/entrega_retencion_20261029/renders/pagina_12.png | 177706 |
+| outputs/entrega_retencion_20261029/renders/pagina_13.png | 188640 |
+| outputs/entrega_retencion_20261029/renders/pagina_14.png | 170588 |
+| outputs/entrega_retencion_20261029/renders/pagina_15.png | 139670 |
+| outputs/entrega_retencion_20261029/renders/pagina_16.png | 106600 |
+| outputs/entrega_retencion_20261029/renders/pagina_17.png | 49683 |
+| outputs/entrega_retencion_20261029/renders/pagina_18.png | 318458 |
+| outputs/entrega_retencion_20261029/renders/pagina_19.png | 14747 |
+| outputs/entrega_retencion_20261029/renders_artifact/0_LEEME.png | 142867 |
+| outputs/entrega_retencion_20261029/renders_artifact/1_Retencion_1er_anio.png | 158769 |
+| outputs/entrega_retencion_20261029/renders_artifact/1_Retencion_1er_anio_2.png | 55551 |
+| outputs/entrega_retencion_20261029/renders_artifact/2_Intertrimestral_2026.png | 162734 |
+| outputs/entrega_retencion_20261029/renders_artifact/3_Paridad_SIES_2027.png | 192914 |
+| outputs/entrega_retencion_20261029/renders_artifact/3_Paridad_SIES_2027_2.png | 247767 |
+| outputs/entrega_retencion_20261029/renders_artifact/4_Brecha_MU_2026.png | 98230 |
+| outputs/entrega_retencion_20261029/renders_artifact/5_Fuentes.png | 363109 |
+| outputs/entrega_retencion_20261029/verificar_entrega.py | 11602 |
+
+Total: 71 archivos; 14444185 bytes. Ninguno supera 20 MB.

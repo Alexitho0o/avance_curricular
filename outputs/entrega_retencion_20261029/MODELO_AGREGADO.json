@@ -1,0 +1,3312 @@
+{
+  "sheets": [
+    {
+      "name": "0_LEEME",
+      "title": "IPSS · Retención y conciliaciones",
+      "widths": [
+        29,
+        110
+      ],
+      "blocks": [
+        {
+          "row": 6,
+          "title": "Alcance y lectura",
+          "headers": [
+            "Tema",
+            "Alcance"
+          ],
+          "rows": [
+            [
+              "Entrega",
+              "Preparada el 29-10-2026 para entrega el 31-10-2026. Solo agregados; sin bases individuales."
+            ],
+            [
+              "Retención anual",
+              "Cohortes 2022–2025, observadas en el año siguiente. H001 interno; tasas publicadas SIES como referencia externa."
+            ],
+            [
+              "Intertrimestral",
+              "Año académico 2026. Foto T3 al 22-10-2026, período en curso. Borrador interno; no tasa oficial SIES."
+            ],
+            [
+              "Paridad de códigos",
+              "Catálogo 2026–2027, regla interna activa H002l. Oferta 2027 V06 preparada (C); no acredita aceptación PES."
+            ],
+            [
+              "Cuadratura MU",
+              "Matrículas informadas 2022–2026. La brecha 2026 está cerrada documentalmente, con causa E."
+            ],
+            [
+              "Unidades",
+              "Persona por cohorte en H001. Personas o matrículas según cada fila intertrimestral. Códigos y opciones en H002; no son estudiantes."
+            ],
+            [
+              "Fórmulas",
+              "Tasas = numerador / denominador; diferencia = (tasa interna − tasa SIES) × 100. No promediar porcentajes ni sumar unidades distintas."
+            ],
+            [
+              "Fuentes y commits",
+              "Rutas, SHA-256 y commits en 5_Fuentes. Los insumos se verifican antes de cada generación."
+            ],
+            [
+              "Corte de fuentes",
+              "Se conservan los cortes de cada fuente, no una fecha de corte institucional común. Consulta el bloque correspondiente."
+            ],
+            [
+              "Formato y marca",
+              "Paleta IPSS oficial. Arial sustituye a Montserrat/Gotham no instaladas. Porcentajes verificados en es-CL; el visor puede aplicar su configuración regional."
+            ],
+            [
+              "Cambios protegidos",
+              "No se modifican fuentes, bases, denominadores, tasas ni reglas. No hay carga a SIES/PES ni commit/push."
+            ]
+          ],
+          "source": "H003; H001; INTER; H002_CIERRE; BRECHA",
+          "formats": {},
+          "formulas": {}
+        },
+        {
+          "row": 20,
+          "title": "Clases de respaldo",
+          "headers": [
+            "Clase",
+            "Significado"
+          ],
+          "rows": [
+            [
+              "A",
+              "Regla oficial respaldada por manual, instructivo o comunicación oficial."
+            ],
+            [
+              "B",
+              "Dato observado en una fuente identificada; no constituye una regla."
+            ],
+            [
+              "C",
+              "Cálculo, implementación o inferencia técnica con alcance declarado."
+            ],
+            [
+              "D",
+              "Decisión interna aprobada; no sustituye una norma oficial."
+            ],
+            [
+              "E",
+              "Causa no acreditada, límite o pendiente expresamente conservado."
+            ]
+          ],
+          "source": "Instrucciones del proyecto",
+          "formats": {},
+          "formulas": {}
+        },
+        {
+          "row": 28,
+          "title": "Pendientes visibles",
+          "headers": [
+            "Tema",
+            "Pendiente y forma de cierre"
+          ],
+          "rows": [
+            [
+              "H001",
+              "Brechas 2022 y 2024 cerradas E: la investigación no acreditó su causa. No se ajustan tasas para igualar SIES."
+            ],
+            [
+              "Intertrimestral",
+              "Paridad desde fuentes crudas, proxies y desgloses pendientes; cinco personas con matrícula duplicada no están en V24."
+            ],
+            [
+              "Paridad 2027",
+              "34 opciones de revisión y 37 códigos nuevos; hay solapamiento. Resolver con evidencia y MU 2027; oferta aceptada antes de carga."
+            ],
+            [
+              "MU 2026",
+              "Reabrir únicamente con fuente individual SIES de MU 2026, por ejemplo precarga AC 2027 cuando exista."
+            ]
+          ],
+          "source": "H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura",
+          "formats": {},
+          "formulas": {}
+        }
+      ],
+      "notes": [],
+      "freeze": 6
+    },
+    {
+      "name": "1_Retencion_1er_anio",
+      "title": "Retención de 1er año · cohortes 2022–2025",
+      "widths": [
+        12,
+        16,
+        16,
+        17,
+        17,
+        19,
+        58,
+        20,
+        4,
+        34,
+        15,
+        16,
+        17,
+        15,
+        16,
+        17,
+        20
+      ],
+      "blocks": [
+        {
+          "row": 6,
+          "title": "Comparación institucional",
+          "headers": [
+            "Cohorte",
+            "Retenidos H001",
+            "Casos H001",
+            "Tasa H001",
+            "Tasa SIES publicada",
+            "Diferencia (pp)",
+            "Lectura",
+            "Clase"
+          ],
+          "rows": [
+            [
+              2022,
+              224,
+              305,
+              null,
+              0.6895161290322581,
+              null,
+              "E cerrada: +4,49 pp; causa no establecida tras revisar reglas y cobertura.",
+              "C/D; B SIES; E"
+            ],
+            [
+              2023,
+              258,
+              366,
+              null,
+              0.7057220708446866,
+              null,
+              "C: próxima a SIES; no idéntica (−0,08 pp).",
+              "C/D; B SIES; E"
+            ],
+            [
+              2024,
+              326,
+              558,
+              null,
+              0.675,
+              null,
+              "E cerrada: −9,08 pp; 180 ausentes en RAW 2025, sin causa oficial demostrada.",
+              "C/D; B SIES; E"
+            ],
+            [
+              2025,
+              668,
+              1150,
+              null,
+              0.5821152192605331,
+              null,
+              "C/E: próxima a SIES (−0,12 pp); 13 casos y 9 retenidos menos; causa individual E.",
+              "C/D; B SIES; E"
+            ]
+          ],
+          "source": "H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas",
+          "formats": {
+            "A": "year",
+            "B": "count",
+            "C": "count",
+            "D": "pct",
+            "E": "pct",
+            "F": "pp"
+          },
+          "formulas": {
+            "D7": "=B7/C7",
+            "F7": "=(D7-E7)*100",
+            "D8": "=B8/C8",
+            "F8": "=(D8-E8)*100",
+            "D9": "=B9/C9",
+            "F9": "=(D9-E9)*100",
+            "D10": "=B10/C10",
+            "F10": "=(D10-E10)*100"
+          }
+        },
+        {
+          "row": 6,
+          "title": "2025 · sectores IPSS (taxonomía institucional)",
+          "headers": [
+            "Sector IPSS",
+            "Ret. H001",
+            "Casos H001",
+            "Tasa H001",
+            "Ret. SIES",
+            "Casos SIES",
+            "Tasa SIES",
+            "Diferencia (pp)"
+          ],
+          "rows": [
+            [
+              "Administración y Comercio",
+              252,
+              477,
+              null,
+              256,
+              481,
+              null,
+              null
+            ],
+            [
+              "Salud",
+              35,
+              75,
+              null,
+              35,
+              75,
+              null,
+              null
+            ],
+            [
+              "Tecnologías",
+              381,
+              598,
+              null,
+              386,
+              607,
+              null,
+              null
+            ]
+          ],
+          "source": "H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9",
+          "formats": {
+            "K": "count",
+            "L": "count",
+            "M": "pct",
+            "N": "count",
+            "O": "count",
+            "P": "pct",
+            "Q": "pp"
+          },
+          "formulas": {
+            "M7": "=K7/L7",
+            "P7": "=N7/O7",
+            "Q7": "=(M7-P7)*100",
+            "M8": "=K8/L8",
+            "P8": "=N8/O8",
+            "Q8": "=(M8-P8)*100",
+            "M9": "=K9/L9",
+            "P9": "=N9/O9",
+            "Q9": "=(M9-P9)*100"
+          },
+          "startCol": 9
+        }
+      ],
+      "notes": [
+        {
+          "row": 3,
+          "text": "Indicador interno alineado a la definición SIES; la tasa oficial es la publicada por SIES. Unidad: personas por cohorte."
+        },
+        {
+          "row": 12,
+          "text": "C: agregación por sector con mapeo IPSS aprobado. No son áreas SIES/CINE-F. Los 92 «no considerar» SIES están fuera de los 1.163 casos.",
+          "start": "A",
+          "end": "Q",
+          "span": 1
+        },
+        {
+          "row": 13,
+          "text": "E cerrada, 2022/2024: las reglas y la cobertura ya se investigaron; no hay granular oficial comparable que permita acreditar la causa. No se reabre la conciliación.",
+          "start": "A",
+          "end": "Q",
+          "span": 1
+        },
+        {
+          "row": 14,
+          "text": "En 2025 los sectores suman los totales de cada fuente. Las tasas institucionales se obtienen de conteos, nunca del promedio de tasas sectoriales.",
+          "start": "A",
+          "end": "Q",
+          "span": 1
+        }
+      ],
+      "freeze": 6,
+      "contentEnd": "H",
+      "printAreas": [
+        "A1:Q14"
+      ],
+      "renderRanges": [
+        "A1:Q14"
+      ]
+    },
+    {
+      "name": "2_Intertrimestral_2026",
+      "title": "Seguimiento T1 a T2/T3 · 2026",
+      "widths": [
+        30,
+        21,
+        17,
+        17,
+        16,
+        18,
+        13,
+        56
+      ],
+      "blocks": [
+        {
+          "row": 6,
+          "title": "Medidas documentadas en la regla vigente (borrador)",
+          "headers": [
+            "Medida",
+            "Evidencia",
+            "Numerador",
+            "Denominador",
+            "Tasa",
+            "Unidad",
+            "Clase",
+            "Límite"
+          ],
+          "rows": [
+            [
+              "T1 → T2",
+              "Proxy actividad",
+              1042,
+              1471,
+              null,
+              "Personas",
+              "C/E",
+              "Estado del extracto PROMEDIOS; no acredita foto de matrícula."
+            ],
+            [
+              "T1 → T3",
+              "Foto T3",
+              1360,
+              1467,
+              null,
+              "Personas",
+              "B/C/D",
+              "1.471 originales menos 4 NO APLICA. T3 en curso al 22-10-2026."
+            ],
+            [
+              "Ingreso T2 → T2",
+              "Renuncias agregadas",
+              462,
+              528,
+              null,
+              "Matrículas",
+              "B/C/E",
+              "528 matrículas y 527 personas; no dividir por personas."
+            ],
+            [
+              "Ingreso T2 → T3",
+              "Foto T3",
+              467,
+              527,
+              null,
+              "Personas",
+              "B/C/E",
+              "Denominador de personas de la foto; no confundir con la tasa T2."
+            ],
+            [
+              "Ingreso T3 → T3",
+              "Foto T3",
+              480,
+              545,
+              null,
+              "Personas",
+              "B/C/E",
+              "Ingreso T3; T2 no aplica. Foto en curso."
+            ],
+            [
+              "Total único → T3",
+              "Foto T3",
+              2290,
+              2519,
+              null,
+              "Personas",
+              "C/D/E",
+              "2.523 originales menos 4 NO APLICA; deduplicación anual."
+            ],
+            [
+              "Total único → T2",
+              "Sin foto completa",
+              null,
+              null,
+              null,
+              "Personas",
+              "E",
+              "No calcular tasa; no equivale a cero."
+            ],
+            [
+              "Ingreso T3 → T2",
+              "No aplica",
+              null,
+              null,
+              null,
+              "Personas",
+              "C/E",
+              "No pertenece al seguimiento previo a su ingreso."
+            ]
+          ],
+          "source": "INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",
+          "formats": {
+            "C": "count",
+            "D": "count",
+            "E": "pct"
+          },
+          "formulas": {
+            "E7": "=C7/D7",
+            "E8": "=C8/D8",
+            "E9": "=C9/D9",
+            "E10": "=C10/D10",
+            "E11": "=C11/D11",
+            "E12": "=C12/D12"
+          }
+        }
+      ],
+      "notes": [
+        {
+          "row": 3,
+          "text": "BORRADOR · indicador interno · no oficial · paridad con fuentes crudas pendiente"
+        },
+        {
+          "row": 16,
+          "text": "No sumar estas filas: grupos y totales se solapan. Las matrículas T2 no se agregan a las personas. «Sin foto completa» y «No aplica» no son ceros.",
+          "span": 1
+        },
+        {
+          "row": 17,
+          "text": "E: cinco personas con dos matrículas vigentes están en la construcción desde fuentes y no en V24; la causa de exclusión sigue pendiente. Se conserva V24.",
+          "span": 1
+        },
+        {
+          "row": 18,
+          "text": "E: faltan la paridad completa de proxies y desgloses sector/tipo y la auditoría integral de exclusión de diplomados en V24. No se activa el indicador.",
+          "span": 1
+        }
+      ],
+      "freeze": 6
+    },
+    {
+      "name": "3_Paridad_SIES_2027",
+      "title": "Paridad de códigos · catálogo 2027",
+      "widths": [
+        52,
+        36,
+        44,
+        44,
+        20,
+        16,
+        14,
+        20
+      ],
+      "blocks": [
+        {
+          "row": 6,
+          "title": "Resumen por estado · unidad: códigos por año",
+          "headers": [
+            "Estado",
+            "Códigos 2026",
+            "Códigos 2027"
+          ],
+          "rows": [
+            [
+              "APROBADA_D_2027",
+              0,
+              13
+            ],
+            [
+              "CONTINUA",
+              53,
+              53
+            ],
+            [
+              "FUERA_ALCANCE",
+              11,
+              21
+            ],
+            [
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              0,
+              6
+            ],
+            [
+              "NUEVO_2027_SIN_PLAN_E",
+              0,
+              37
+            ],
+            [
+              "SIN_OFERTA_2027",
+              4,
+              0
+            ],
+            [
+              "VERSION_MULTIPLE_E",
+              14,
+              0
+            ],
+            [
+              "VERSION_MULTIPLE_RESUELTA",
+              24,
+              31
+            ],
+            [
+              "TOTAL",
+              null,
+              null
+            ]
+          ],
+          "source": "H002/filas agrupadas por anio y estado",
+          "formats": {
+            "B": "count",
+            "C": "count"
+          },
+          "formulas": {
+            "B15": "=SUM(B7:B14)",
+            "C15": "=SUM(C7:C14)"
+          },
+          "startCol": 0
+        },
+        {
+          "row": 20,
+          "title": "Tabla completa 2027 · resueltos, pendientes y fuera de alcance",
+          "headers": [
+            "Código SIES",
+            "Carrera SIES",
+            "Plan UMAS / candidatos",
+            "Estado",
+            "Versión para nuevos",
+            "Vigencia 2027",
+            "Clase",
+            "CODCARPR"
+          ],
+          "rows": [
+            [
+              "I162S2C10J1V1",
+              "TECNICO EN PREVENCION DE RIESGOS",
+              "TPRRE20131",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "TPRRE"
+            ],
+            [
+              "I162S2C10J2V1",
+              "TECNICO EN PREVENCION DE RIESGOS",
+              "TPRRE20131",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "TPRRE"
+            ],
+            [
+              "I162S2C10J4V1",
+              "TECNICO EN PREVENCION DE RIESGOS",
+              "TPRE20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TPRE"
+            ],
+            [
+              "I162S2C111J4V1",
+              "INGENIERIA EN FINANZAS",
+              "IFIN20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "IFIN"
+            ],
+            [
+              "I162S2C111J4V2",
+              "INGENIERIA EN FINANZAS",
+              "CIFIN20261; IFIN20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CIFIN; IFIN"
+            ],
+            [
+              "I162S2C112J4V1",
+              "INGENIERIA EN MARKETING DIGITAL",
+              "IMDI20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "IMDI"
+            ],
+            [
+              "I162S2C112J4V2",
+              "INGENIERIA EN MARKETING DIGITAL",
+              "CIMDI20261; IMDI20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CIMDI; IMDI"
+            ],
+            [
+              "I162S2C113J4V1",
+              "INGENIERIA EN RECURSOS HUMANOS",
+              "IRHU20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "IRHU"
+            ],
+            [
+              "I162S2C113J4V2",
+              "INGENIERIA EN RECURSOS HUMANOS",
+              "CIRHU20261; IRHU20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CIRHU; IRHU"
+            ],
+            [
+              "I162S2C114J1V1",
+              "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+              "TEIQ20261",
+              "APROBADA_D_2027",
+              "sí",
+              "1",
+              "D",
+              "TEIQ"
+            ],
+            [
+              "I162S2C114J2V1",
+              "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+              "TEIQ20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTEIQ; TEIQ"
+            ],
+            [
+              "I162S2C115J2V1",
+              "TECNICO EN FARMACIA",
+              "TFAR20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTFAR; TFAR"
+            ],
+            [
+              "I162S2C116J4V1",
+              "TECNICO EN FINANZAS",
+              "TFIN20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TFIN"
+            ],
+            [
+              "I162S2C117J4V1",
+              "TECNICO EN INFRAESTRUCTURA CLOUD",
+              "TICL20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TICL"
+            ],
+            [
+              "I162S2C118J4V1",
+              "TECNICO EN MARKETING DIGITAL",
+              "TMDI20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TMDI"
+            ],
+            [
+              "I162S2C119J4V1",
+              "TECNICO EN RECURSOS HUMANOS",
+              "TRHU20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TRHU"
+            ],
+            [
+              "I162S2C11J1V1",
+              "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "TMIRE20131; TMIRE20151; TMIRE20171; TMIRE2020; TMIRE20211",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "TMIRE"
+            ],
+            [
+              "I162S2C11J2V1",
+              "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "TACI20241; TMIRE20131; TMIRE20151; TMIRE20171; TMIRE2020; TMIRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TACI; TMIRE"
+            ],
+            [
+              "I162S2C124J4V1",
+              "INGENIERIA EN PREVENCION DE RIESGOS",
+              "IPRE20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "IPRE"
+            ],
+            [
+              "I162S2C124J4V2",
+              "INGENIERIA EN PREVENCION DE RIESGOS",
+              "CIPRE20261; IPRE20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CIPRE; IPRE"
+            ],
+            [
+              "I162S2C125J4V1",
+              "INGENIERIA EN SEGURIDAD PRIVADA",
+              "ISEP20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "ISEP"
+            ],
+            [
+              "I162S2C125J4V2",
+              "INGENIERIA EN SEGURIDAD PRIVADA",
+              "CISEP20261; ISEP20261",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CISEP; ISEP"
+            ],
+            [
+              "I162S2C1J1V1",
+              "INGENIERIA EN INFORMATICA",
+              "IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IECIRE; IINF"
+            ],
+            [
+              "I162S2C1J1V2",
+              "INGENIERIA EN INFORMATICA",
+              "IINF20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IINF"
+            ],
+            [
+              "I162S2C1J2V1",
+              "INGENIERIA EN INFORMATICA",
+              "IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IECIRE; IINF; NECIRE; NICIRE; NINFRE"
+            ],
+            [
+              "I162S2C1J2V2",
+              "INGENIERIA EN INFORMATICA",
+              "IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IINF; NECIRE; NICIRE; NINFRE"
+            ],
+            [
+              "I162S2C1J2V3",
+              "INGENIERIA EN INFORMATICA",
+              "IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IINF; NECIRE; NICIRE; NINFRE"
+            ],
+            [
+              "I162S2C1J2V4",
+              "INGENIERIA EN INFORMATICA",
+              "IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IECIRE; IINF; NECIRE; NICIRE; NINFRE"
+            ],
+            [
+              "I162S2C1J4V2",
+              "INGENIERIA EN INFORMATICA",
+              "CIINF20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IINF20241; NINFREOL2019",
+              "APROBADA_D_2027",
+              "sí",
+              "1",
+              "D",
+              "CIINF; IECIREOL; IINF; NINFREOL"
+            ],
+            [
+              "I162S2C1J4V3",
+              "INGENIERIA EN INFORMATICA",
+              "CIINF20241; NINFREOL2019",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C/D",
+              "CIINF; NINFREOL"
+            ],
+            [
+              "I162S2C22J1V1",
+              "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "IACI; IEMORE"
+            ],
+            [
+              "I162S2C22J2V1",
+              "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211; NAUTRE; NAUTRE2020",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IACI; IEMORE; NAUTRE"
+            ],
+            [
+              "I162S2C22J2V2",
+              "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211; NAUTRE; NAUTRE2020",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IACI; IEMORE; NAUTRE"
+            ],
+            [
+              "I162S2C22J4V1",
+              "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "CIIND20251; IACI20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "CIIND; IACI"
+            ],
+            [
+              "I162S2C22J4V2",
+              "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "CIACI20241; CIIND20251; IACI20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "CIACI; CIIND; IACI"
+            ],
+            [
+              "I162S2C2J1V1",
+              "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPCRE"
+            ],
+            [
+              "I162S2C2J1V2",
+              "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPCRE"
+            ],
+            [
+              "I162S2C2J2V1",
+              "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPCRE"
+            ],
+            [
+              "I162S2C2J2V2",
+              "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPCRE"
+            ],
+            [
+              "I162S2C2J4V1",
+              "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191; TPCREOL; TPCREOL20191",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPCRE; TPCREOL"
+            ],
+            [
+              "I162S2C2J4V2",
+              "TECNICO EN PROGRAMACION COMPUTACIONAL",
+              "TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191; TPCREOL; TPCREOL20191",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPCRE; TPCREOL"
+            ],
+            [
+              "I162S2C3J1V1",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IETMRE; NETMRE; NITMRE"
+            ],
+            [
+              "I162S2C3J1V2",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "ICRE20241; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "ICRE; IETMRE; NETMRE; NITMRE"
+            ],
+            [
+              "I162S2C3J2V1",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "ICRE20241; NCONRE; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "ICRE; NCONRE; NETMRE; NITMRE"
+            ],
+            [
+              "I162S2C3J2V3",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "CICRE20241; ICRE20241; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NCONRE",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "CICRE; ICRE; IETMRE; NCONRE"
+            ],
+            [
+              "I162S2C3J2V4",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "ICRE20241; NCONRE; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "ICRE; NCONRE; NETMRE; NITMRE"
+            ],
+            [
+              "I162S2C3J4V2",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "CICRE20241; ICRE20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; IETMREOL; IETMREOL20191; IETMREOL20211; NCONRE; NCONREOL2019; NETMRE20091; NETMRE20101; NETMRE20121",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C/D",
+              "CICRE; ICRE; IECIREOL; IETMRE; IETMREOL; NCONRE; NCONREOL; NETMRE"
+            ],
+            [
+              "I162S2C3J4V3",
+              "INGENIERIA EN CONECTIVIDAD Y REDES",
+              "CICRE20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NCONRE; NCONREOL2019",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C/D",
+              "CICRE; IECIREOL; IETMRE; NCONRE; NCONREOL"
+            ],
+            [
+              "I162S2C46J1V1",
+              "INGENIERIA EN CIBERSEGURIDAD",
+              "ICIB20241; IECSRE20191; IECSRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "ICIB; IECSRE"
+            ],
+            [
+              "I162S2C46J2V1",
+              "INGENIERIA EN CIBERSEGURIDAD",
+              "ICIB20241; NICCRE20191; NICCRE2020; NTCCRE20191; NTCCRE2020",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "ICIB; NICCRE; NTCCRE"
+            ],
+            [
+              "I162S2C46J2V3",
+              "INGENIERIA EN CIBERSEGURIDAD",
+              "CICIB20241",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "CICIB"
+            ],
+            [
+              "I162S2C46J4V1",
+              "INGENIERIA EN CIBERSEGURIDAD",
+              "CICIB20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CICIB"
+            ],
+            [
+              "I162S2C46J4V3",
+              "INGENIERIA EN CIBERSEGURIDAD",
+              "ICIB20241; IECSREOL20211; NICCREOL2020; NTCCREOL2020",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "ICIB; IECSREOL; NICCREOL; NTCCREOL"
+            ],
+            [
+              "I162S2C47J1V1",
+              "TECNICO EN CIBERSEGURIDAD",
+              "TCIB20241; TCSRE20191; TCSRE20211; TCSREOL2020; TCSREOL20211; TCSREOL20231",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TCIB; TCSRE; TCSREOL"
+            ],
+            [
+              "I162S2C47J2V1",
+              "TECNICO EN CIBERSEGURIDAD",
+              "TCIB20241; TCSRE20191; TCSRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TCIB; TCSRE"
+            ],
+            [
+              "I162S2C47J4V1",
+              "TECNICO EN CIBERSEGURIDAD",
+              "TCIB20241; TCSREOL2020; TCSREOL20211; TCSREOL20231",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "TCIB; TCSREOL"
+            ],
+            [
+              "I162S2C48J4V1",
+              "TECNICO EN CONTROL INDUSTRIAL",
+              "TCIREOL20191; TCIREOL20211",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "TCIOL"
+            ],
+            [
+              "I162S2C57J1V1",
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+              "TPARE2020; TPARE20211; TPAS20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPARE; TPAS"
+            ],
+            [
+              "I162S2C57J2V1",
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+              "TPARE2020; TPARE20211; TPAS20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TPARE; TPAS"
+            ],
+            [
+              "I162S2C57J4V1",
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+              "TPAREOL2020; TPAREOL20211; TPAREOL20231; TPAS20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "TPAREOL; TPAS"
+            ],
+            [
+              "I162S2C6J1V1",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TCRE; TTMRE"
+            ],
+            [
+              "I162S2C6J1V2",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TCRE; TTMRE"
+            ],
+            [
+              "I162S2C6J2V1",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TCRE; TTMRE"
+            ],
+            [
+              "I162S2C6J2V2",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TCRE; TTMRE"
+            ],
+            [
+              "I162S2C6J4V2",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "TCRE20241; TTMREOL; TTMREOL20191; TTMREOL20211; TTMREOL20231",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "TCRE; TTMREOL"
+            ],
+            [
+              "I162S2C76J1V1",
+              "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "IADM20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "IADM"
+            ],
+            [
+              "I162S2C76J2V1",
+              "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "IADM20241",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "IADM"
+            ],
+            [
+              "I162S2C76J4V1",
+              "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "CIADM20241; IADM20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C/D",
+              "CIADM; IADM"
+            ],
+            [
+              "I162S2C76J4V2",
+              "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+              "CIADM20241; IADM20241",
+              "APROBADA_D_2027",
+              "sí",
+              "1",
+              "D",
+              "CIADM; IADM"
+            ],
+            [
+              "I162S2C77J1V1",
+              "INGENIERIA EN LOGISTICA",
+              "ILOG20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "ILOG"
+            ],
+            [
+              "I162S2C77J2V1",
+              "INGENIERIA EN LOGISTICA",
+              "ILOG20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "ILOG"
+            ],
+            [
+              "I162S2C77J4V1",
+              "INGENIERIA EN LOGISTICA",
+              "CILOG20241; ILOG20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CILOG; ILOG"
+            ],
+            [
+              "I162S2C77J4V2",
+              "INGENIERIA EN LOGISTICA",
+              "CILOG20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CILOG"
+            ],
+            [
+              "I162S2C78J1V1",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "TAMD20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TAMD"
+            ],
+            [
+              "I162S2C78J2V1",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "TAMD20241",
+              "APROBADA_D_2027",
+              "no",
+              "2",
+              "D",
+              "TAMD"
+            ],
+            [
+              "I162S2C78J4V1",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "TAMD20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "TAMD"
+            ],
+            [
+              "I162S2C79J1V1",
+              "TECNICO EN LOGISTICA",
+              "TLOG20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TLOG"
+            ],
+            [
+              "I162S2C79J2V1",
+              "TECNICO EN LOGISTICA",
+              "TLOG20241",
+              "CONTINUA",
+              "no",
+              "2",
+              "C",
+              "TLOG"
+            ],
+            [
+              "I162S2C79J4V1",
+              "TECNICO EN LOGISTICA",
+              "TLOG20241",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "TLOG"
+            ],
+            [
+              "I162S2C83J4V1",
+              "ADMINISTRACION PUBLICA",
+              "ADMP20251",
+              "APROBADA_D_2027",
+              "sí",
+              "1",
+              "D",
+              "ADMP"
+            ],
+            [
+              "I162S2C83J4V2",
+              "ADMINISTRACION PUBLICA",
+              "CADMP20251",
+              "APROBADA_D_2027",
+              "sí",
+              "1",
+              "D",
+              "CADMP"
+            ],
+            [
+              "I162S2C84J4V1",
+              "TECNICO EN ADMINISTRACION PUBLICA",
+              "TADP20251",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TADP"
+            ],
+            [
+              "I162S2C85J4V1",
+              "CONTABILIDAD GENERAL",
+              "CONG20251",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "CONG"
+            ],
+            [
+              "I162S2C86J4V1",
+              "AUDITORIA",
+              "AUDT20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "AUDT"
+            ],
+            [
+              "I162S2C86J4V2",
+              "AUDITORIA",
+              "AUDT20251; CAUDT20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "AUDT; CAUDT"
+            ],
+            [
+              "I162S2C87J4V1",
+              "INGENIERIA INDUSTRIAL",
+              "IIND20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "E",
+              "1",
+              "C/D",
+              "IIND"
+            ],
+            [
+              "I162S2C87J4V2",
+              "INGENIERIA INDUSTRIAL",
+              "IIND20251",
+              "APROBADA_D_2027",
+              "sí",
+              "1",
+              "D",
+              "IIND"
+            ],
+            [
+              "I162S2C88J4V1",
+              "INGENIERIA EN CIENCIA DE DATOS",
+              "ICDA20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "ICDA"
+            ],
+            [
+              "I162S2C88J4V2",
+              "INGENIERIA EN CIENCIA DE DATOS",
+              "CICDA20251; ICDA20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C",
+              "CICDA; ICDA"
+            ],
+            [
+              "I162S2C89J4V1",
+              "TECNICO EN CIENCIA DE DATOS",
+              "TCDA20251",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "TCDA"
+            ],
+            [
+              "I162S2C90J2V1",
+              "NATUROPATIA",
+              "CNATP20251; NATP20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "no",
+              "2",
+              "C/D",
+              "CNATP; NATP"
+            ],
+            [
+              "I162S2C90J2V2",
+              "NATUROPATIA",
+              "CNATP20251; NATP20251",
+              "VERSION_MULTIPLE_RESUELTA",
+              "sí",
+              "1",
+              "C/D",
+              "CNATP; NATP"
+            ],
+            [
+              "I162S2C91J1V1",
+              "TECNICO EN ENFERMERIA",
+              "TENS20251",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTENS; TENS"
+            ],
+            [
+              "I162S2C91J2V1",
+              "TECNICO EN ENFERMERIA",
+              "TENS20251",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTENS; TENS"
+            ],
+            [
+              "I162S3C114J2V1",
+              "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+              "COTEIQ20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTEIQ"
+            ],
+            [
+              "I162S3C115J2V1",
+              "TECNICO EN FARMACIA",
+              "COTFAR20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTFAR"
+            ],
+            [
+              "I162S3C91J2V1",
+              "TECNICO EN ENFERMERIA",
+              "COTENS20261",
+              "CONTINUA",
+              "sí",
+              "1",
+              "C",
+              "COTENS"
+            ],
+            [
+              "I162S2C115J3V1",
+              "TECNICO EN FARMACIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C11J4V1",
+              "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "no",
+              "2",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C130J4V1",
+              "INGENIERIA EN ARQUITECTURA CLOUD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C130J4V2",
+              "INGENIERIA EN ARQUITECTURA CLOUD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C131J4V1",
+              "INGENIERIA EN COMERCIO EXTERIOR",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "ICEX"
+            ],
+            [
+              "I162S2C132J3V1",
+              "INGENIERIA EN CONSTRUCCION",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C133J3V1",
+              "INGENIERIA EN ELECTRICIDAD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C134J4V1",
+              "INGENIERIA EN INTELIGENCIA ARTIFICIAL",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "IIART"
+            ],
+            [
+              "I162S2C135J4V1",
+              "INGENIERIA EN OPERACIONES MINERAS",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "IOPMI"
+            ],
+            [
+              "I162S2C136J4V1",
+              "TECNICO EN COMERCIO EXTERIOR",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C137J3V1",
+              "TECNICO EN CONSTRUCCION",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C138J3V1",
+              "TECNICO EN ELECTRICIDAD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C139J3V1",
+              "TECNICO EN IMAGENOLOGIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C140J4V1",
+              "TECNICO EN INTELIGENCIA ARTIFICIAL",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "TIART"
+            ],
+            [
+              "I162S2C142J4V1",
+              "TECNICO EN OPERACIONES MINERAS",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "TOPMI"
+            ],
+            [
+              "I162S2C143J3V1",
+              "TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C35J1V1",
+              "TECNICO EN ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              "no",
+              "2",
+              "D",
+              ""
+            ],
+            [
+              "I162S2C35J1V2",
+              "TECNICO EN ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              "no",
+              "2",
+              "D",
+              ""
+            ],
+            [
+              "I162S2C35J2V1",
+              "TECNICO EN ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              "no",
+              "2",
+              "D",
+              ""
+            ],
+            [
+              "I162S2C35J2V2",
+              "TECNICO EN ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              "no",
+              "2",
+              "D",
+              ""
+            ],
+            [
+              "I162S2C35J4V1",
+              "TECNICO EN ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              "no",
+              "2",
+              "D",
+              ""
+            ],
+            [
+              "I162S2C35J4V2",
+              "TECNICO EN ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "HISTORICO_SIN_MATRICULA_RECIENTE",
+              "no",
+              "2",
+              "D",
+              ""
+            ],
+            [
+              "I162S2C47J4V2",
+              "TECNICO EN CIBERSEGURIDAD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C57J4V2",
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C6J4V3",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C78J2V2",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C78J4V2",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C79J4V2",
+              "TECNICO EN LOGISTICA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S2C91J3V1",
+              "TECNICO EN ENFERMERIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C115J3V1",
+              "TECNICO EN FARMACIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C132J3V1",
+              "INGENIERIA EN CONSTRUCCION",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C133J3V1",
+              "INGENIERIA EN ELECTRICIDAD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C137J3V1",
+              "TECNICO EN CONSTRUCCION",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C138J3V1",
+              "TECNICO EN ELECTRICIDAD",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C139J3V1",
+              "TECNICO EN IMAGENOLOGIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C141J3V1",
+              "TECNICO EN ODONTOLOGIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C143J3V1",
+              "TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C91J1V1",
+              "TECNICO EN ENFERMERIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S3C91J3V1",
+              "TECNICO EN ENFERMERIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S4C114J2V1",
+              "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "PMTEIQ"
+            ],
+            [
+              "I162S4C115J2V1",
+              "TECNICO EN FARMACIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "PMTFAR"
+            ],
+            [
+              "I162S4C115J3V1",
+              "TECNICO EN FARMACIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              ""
+            ],
+            [
+              "I162S4C91J2V1",
+              "TECNICO EN ENFERMERIA",
+              "E: sin plan",
+              "NUEVO_2027_SIN_PLAN_E",
+              "E",
+              "1",
+              "C/E",
+              "PMTENS"
+            ],
+            [
+              "I162S2C101J4V1",
+              "DIPLOMADO EN SALUD FAMILIAR CON ENFOQUE COMUNITARIO",
+              "DSFA20251",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              "DSFA"
+            ],
+            [
+              "I162S2C102J4V1",
+              "DIPLOMADO SALUD CON FOCO EN MIGRACION",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C103J4V1",
+              "DIPLOMADO ABORDAJE INTEGRAL DE LA VIOLENCIA DE GENERO EN ATENCION PRIMARIA DE SALUD",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C104J4V1",
+              "DIPLOMADO EN INNOVACION PARA LA DOCENCIA",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C105J4V1",
+              "DIPLOMADO EN HUMANIZACION EN SALUD",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C40J2V1",
+              "DIPLOMADO EN DOCENCIA EN EDUCACION SUPERIOR TECNICO PROFESIONAL",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C53J3V1",
+              "DIPLOMADO EN CIBERSEGURIDAD APLICADA",
+              "DCBS20251",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              "DCBS"
+            ],
+            [
+              "I162S2C63J4V1",
+              "DIPLOMADO EN ARQUITECTURA CLOUD",
+              "DACD20251",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              "DACD"
+            ],
+            [
+              "I162S2C64J4V1",
+              "DIPLOMADO EN BACKEND",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C65J4V1",
+              "DIPLOMADO EN FRONTEND",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C66J4V1",
+              "DIPLOMADO EN FULLSTACK",
+              "DFSK20251",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              "DFSK"
+            ],
+            [
+              "I162S2C67J4V1",
+              "DIPLOMADO EN QUALITY ASSURANCE",
+              "DQAS",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              "DQAS"
+            ],
+            [
+              "I162S2C68J4V1",
+              "DIPLOMADO EN SEGURIDAD OFENSIVA",
+              "DSOF20251",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              "DSOF"
+            ],
+            [
+              "I162S2C69J4V1",
+              "DIPLOMADO INFRAESTRUCTURA CLOUD",
+              "DICD",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              "DICD"
+            ],
+            [
+              "I162S2C70J4V1",
+              "DIPLOMADO REDES INDUSTRIALES",
+              "DRID",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              "DRID"
+            ],
+            [
+              "I162S2C71J4V1",
+              "DIPLOMADO SEGURIDAD EN ARQUITECTURA DE REDES",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C95J4V1",
+              "DIPLOMADO EN INTELIGENCIA ARTIFICIAL",
+              "DIAR20251",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              "DIAR"
+            ],
+            [
+              "I162S2C96J4V1",
+              "DIPLOMADO EN GOBERNANZA DE DATOS",
+              "DGDA",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              "DGDA"
+            ],
+            [
+              "I162S2C97J4V1",
+              "DIPLOMADO EN SUPPLY CHAIN MANAGEMENT Y MINERIA DE REQUERIMIENTOS",
+              "DDSC20251; DSCM20251",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              "DDSC; DSCM"
+            ],
+            [
+              "I162S2C98J4V1",
+              "DIPLOMADO EN HABILIDADES DIRECTIVAS PARA PROFESIONALES STEM",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "3",
+              "C/D",
+              ""
+            ],
+            [
+              "I162S2C99J4V1",
+              "DIPLOMADO EN GESTION PUBLICA LOCAL",
+              "E: sin plan",
+              "FUERA_ALCANCE",
+              "no",
+              "1",
+              "C/D",
+              ""
+            ]
+          ],
+          "source": "H002/filas[anio=2027]",
+          "formats": {},
+          "formulas": {},
+          "startCol": 0
+        },
+        {
+          "row": 187,
+          "title": "Revisión real · 34 opciones de catálogo (no personas)",
+          "headers": [
+            "Familia",
+            "Plan UMAS",
+            "Motivo",
+            "Unidad"
+          ],
+          "rows": [
+            [
+              "I162S2C1J4",
+              "IECIREOL",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C1J4",
+              "IECIREOL20191",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C1J4",
+              "IECIREOL20201",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C1J4",
+              "IECIREOL20211",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C1J4",
+              "NINFREOL2019",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "IECIREOL",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "IECIREOL20191",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "IECIREOL20201",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "IECIREOL20211",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "NCONRE",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "NCONREOL2019",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C3J4",
+              "NETMRE20121",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C46J2",
+              "CICIB20241",
+              "REVISION_REAL_TIPO_SIN_VERSION_EN_FAMILIA_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C46J2",
+              "NICCRE20191",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C46J2",
+              "NICCRE2020",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C46J2",
+              "NTCCRE20191",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C46J2",
+              "NTCCRE2020",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C47J4",
+              "TCIB20241",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C47J4",
+              "TCSREOL2020",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C47J4",
+              "TCSREOL20211",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C47J4",
+              "TCSREOL20231",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C57J4",
+              "TPAREOL2020",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C57J4",
+              "TPAREOL20211",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C57J4",
+              "TPAREOL20231",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C57J4",
+              "TPAS20241",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C6J4",
+              "TCRE20241",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C6J4",
+              "TTMREOL",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C6J4",
+              "TTMREOL20191",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C6J4",
+              "TTMREOL20211",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C6J4",
+              "TTMREOL20231",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C78J2",
+              "TAMD20241",
+              "CODIGO_NUEVO_SIN_PLAN",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C78J4",
+              "TAMD20241",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C79J4",
+              "TLOG20241",
+              "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO",
+              "Opción plan–familia"
+            ],
+            [
+              "I162S2C90J2",
+              "CNATP20251",
+              "NUEVO_TIPO_E_CON_ADMISION",
+              "Opción plan–familia"
+            ]
+          ],
+          "source": "REVISION/nuevos",
+          "formats": {},
+          "formulas": {}
+        },
+        {
+          "row": 224,
+          "title": "37 códigos nuevos · cierre cuando exista MU 2027",
+          "headers": [
+            "Código SIES",
+            "Carrera SIES",
+            "Forma de cierre",
+            "Clase"
+          ],
+          "rows": [
+            [
+              "I162S2C115J3V1",
+              "TECNICO EN FARMACIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C11J4V1",
+              "TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C130J4V1",
+              "INGENIERIA EN ARQUITECTURA CLOUD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C130J4V2",
+              "INGENIERIA EN ARQUITECTURA CLOUD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C131J4V1",
+              "INGENIERIA EN COMERCIO EXTERIOR",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C132J3V1",
+              "INGENIERIA EN CONSTRUCCION",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C133J3V1",
+              "INGENIERIA EN ELECTRICIDAD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C134J4V1",
+              "INGENIERIA EN INTELIGENCIA ARTIFICIAL",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C135J4V1",
+              "INGENIERIA EN OPERACIONES MINERAS",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C136J4V1",
+              "TECNICO EN COMERCIO EXTERIOR",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C137J3V1",
+              "TECNICO EN CONSTRUCCION",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C138J3V1",
+              "TECNICO EN ELECTRICIDAD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C139J3V1",
+              "TECNICO EN IMAGENOLOGIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C140J4V1",
+              "TECNICO EN INTELIGENCIA ARTIFICIAL",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C142J4V1",
+              "TECNICO EN OPERACIONES MINERAS",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C143J3V1",
+              "TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C47J4V2",
+              "TECNICO EN CIBERSEGURIDAD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C57J4V2",
+              "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C6J4V3",
+              "TECNICO EN CONECTIVIDAD Y REDES",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C78J2V2",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C78J4V2",
+              "TECNICO EN ADMINISTRACION DE EMPRESAS",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C79J4V2",
+              "TECNICO EN LOGISTICA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S2C91J3V1",
+              "TECNICO EN ENFERMERIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C115J3V1",
+              "TECNICO EN FARMACIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C132J3V1",
+              "INGENIERIA EN CONSTRUCCION",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C133J3V1",
+              "INGENIERIA EN ELECTRICIDAD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C137J3V1",
+              "TECNICO EN CONSTRUCCION",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C138J3V1",
+              "TECNICO EN ELECTRICIDAD",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C139J3V1",
+              "TECNICO EN IMAGENOLOGIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C141J3V1",
+              "TECNICO EN ODONTOLOGIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C143J3V1",
+              "TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C91J1V1",
+              "TECNICO EN ENFERMERIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S3C91J3V1",
+              "TECNICO EN ENFERMERIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S4C114J2V1",
+              "TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S4C115J2V1",
+              "TECNICO EN FARMACIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S4C115J3V1",
+              "TECNICO EN FARMACIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ],
+            [
+              "I162S4C91J2V1",
+              "TECNICO EN ENFERMERIA",
+              "MU 2027: cuadratura por código y total",
+              "D/E"
+            ]
+          ],
+          "source": "H002/filas; H002_CIERRE/pendientes",
+          "formats": {},
+          "formulas": {}
+        }
+      ],
+      "notes": [
+        {
+          "row": 3,
+          "text": "Catálogo agregado, no asignación de personas ni archivo de carga. Oferta V06 preparada (C); regla interna activa (D)."
+        },
+        {
+          "row": 17,
+          "text": "ANTIGUO: conserva el código MU 2026. Revisión solo si falta código, no existe en oferta 2027 o tiene VIGENCIA 3; tipo E queda informativo.",
+          "span": 1
+        },
+        {
+          "row": 183,
+          "text": "NUEVO: única versión VIGENCIA 1 de su familia y tipo de plan UMAS; sin admisión queda informativo. No se elige versión por nombre.",
+          "span": 1
+        },
+        {
+          "row": 184,
+          "text": "REVISIÓN: tipo desconocido con admisión, incompatibilidad o varias versiones vigentes. Los 37 códigos nuevos se cierran con la MU 2027; no sumar a 34 opciones.",
+          "span": 1
+        }
+      ],
+      "freeze": 20,
+      "renderRanges": [
+        "A1:H27",
+        "A20:H39"
+      ]
+    },
+    {
+      "name": "4_Brecha_MU_2026",
+      "title": "Cuadratura MU · matrículas 2022–2026",
+      "widths": [
+        26,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        17,
+        18
+      ],
+      "blocks": [
+        {
+          "row": 6,
+          "title": "Pregrado · publicado menos VIG 1",
+          "headers": [
+            "Año",
+            "Filas base MU",
+            "Pregrado MU",
+            "Nivel no acreditado",
+            "VIG 1 pregrado",
+            "VIG 0 pregrado",
+            "SIES pregrado",
+            "SIES − VIG 1",
+            "Control base"
+          ],
+          "rows": [
+            [
+              2022,
+              1038,
+              1036,
+              2,
+              1033,
+              3,
+              1033,
+              null,
+              null
+            ],
+            [
+              2023,
+              1145,
+              1145,
+              0,
+              1142,
+              3,
+              1142,
+              null,
+              null
+            ],
+            [
+              2024,
+              1541,
+              1535,
+              6,
+              1455,
+              80,
+              1455,
+              null,
+              null
+            ],
+            [
+              2025,
+              2371,
+              2371,
+              0,
+              2298,
+              73,
+              2371,
+              null,
+              null
+            ],
+            [
+              2026,
+              4105,
+              4105,
+              0,
+              3145,
+              960,
+              3371,
+              null,
+              null
+            ]
+          ],
+          "source": "MATRIZ/matriz[*]/mu_sies",
+          "formats": {
+            "A": "year",
+            "B": "count",
+            "C": "count",
+            "D": "count",
+            "E": "count",
+            "F": "count",
+            "G": "count",
+            "H": "count",
+            "I": "count"
+          },
+          "formulas": {
+            "H7": "=G7-E7",
+            "I7": "=C7+D7-B7",
+            "H8": "=G8-E8",
+            "I8": "=C8+D8-B8",
+            "H9": "=G9-E9",
+            "I9": "=C9+D9-B9",
+            "H10": "=G10-E10",
+            "I10": "=C10+D10-B10",
+            "H11": "=G11-E11",
+            "I11": "=C11+D11-B11"
+          }
+        },
+        {
+          "row": 16,
+          "title": "Total institucional publicado · nivel separado",
+          "headers": [
+            "Año",
+            "SIES pregrado",
+            "SIES postítulo",
+            "SIES institucional",
+            "Control total"
+          ],
+          "rows": [
+            [
+              2022,
+              1033,
+              0,
+              1033,
+              null
+            ],
+            [
+              2023,
+              1142,
+              19,
+              1161,
+              null
+            ],
+            [
+              2024,
+              1455,
+              13,
+              1468,
+              null
+            ],
+            [
+              2025,
+              2371,
+              151,
+              2522,
+              null
+            ],
+            [
+              2026,
+              3371,
+              54,
+              3425,
+              null
+            ]
+          ],
+          "source": "MATRIZ/matriz[*]/mu_sies",
+          "formats": {
+            "A": "year",
+            "B": "count",
+            "C": "count",
+            "D": "count",
+            "E": "count"
+          },
+          "formulas": {
+            "E17": "=B17+C17-D17",
+            "E18": "=B18+C18-D18",
+            "E19": "=B19+C19-D19",
+            "E20": "=B20+C20-D20",
+            "E21": "=B21+C21-D21"
+          }
+        },
+        {
+          "row": 24,
+          "title": "2026 · detalle del cierre",
+          "headers": [
+            "Concepto",
+            "Registros",
+            "Referencia",
+            "Clase"
+          ],
+          "rows": [
+            [
+              "Brecha positiva",
+              228,
+              "46 códigos",
+              "B/C"
+            ],
+            [
+              "Brecha negativa",
+              -2,
+              "2 códigos",
+              "B/C"
+            ],
+            [
+              "Brecha neta",
+              null,
+              "Publicado pregrado − VIG 1 (enlaza H11)",
+              "B/C"
+            ],
+            [
+              "Postítulo registro MRUN",
+              54,
+              "Agregado; no contiene identificadores",
+              "B"
+            ],
+            [
+              "Postítulo publicado",
+              54,
+              "Control frente al registro anterior",
+              "B"
+            ]
+          ],
+          "source": "BRECHA/brecha",
+          "formats": {
+            "B": "count"
+          },
+          "formulas": {
+            "B27": "=H11"
+          }
+        }
+      ],
+      "notes": [
+        {
+          "row": 3,
+          "text": "Brecha 2026: CERRADA_DOCUMENTADA, causa E. Decisión D: no continuar con las fuentes disponibles."
+        },
+        {
+          "row": 13,
+          "text": "2025 cuadra contra VIG 1 + VIG 0 = 2.371: la precarga AC 2026 registra las 73 VIG 0. La causa normativa permanece E; no cambia la regla VIG.",
+          "span": 1
+        },
+        {
+          "row": 31,
+          "text": "Reapertura (D): solo con fuente individual SIES de MU 2026, por ejemplo precarga AC 2027 cuando exista; verificar origen, proceso, año y hash.",
+          "span": 1
+        },
+        {
+          "row": 32,
+          "text": "Cierre documental no significa causa resuelta. La compatibilidad observada con VIG 0 no identifica qué matrículas registró SIES.",
+          "span": 1
+        }
+      ],
+      "freeze": 6
+    },
+    {
+      "name": "5_Fuentes",
+      "title": "Fuentes fijadas y trazabilidad",
+      "widths": [
+        24,
+        94,
+        66,
+        18,
+        20,
+        44
+      ],
+      "blocks": [
+        {
+          "row": 6,
+          "title": "Entradas verificadas antes de escribir el libro",
+          "headers": [
+            "ID",
+            "Ruta",
+            "SHA-256",
+            "Fecha verificación",
+            "Clase",
+            "Commit / origen"
+          ],
+          "rows": [
+            [
+              "H001",
+              "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+              "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+              "2026-10-29",
+              "B/C/D",
+              "47519076159145468ebfca20dcafce87e74d3534"
+            ],
+            [
+              "H001_CIERRE",
+              "/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H001-RETENCION-IPSS162/README.md",
+              "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+              "2026-10-29",
+              "B/C/D/E",
+              "55e3b709afb9483f0ecdd2d166f67229a454a5ef"
+            ],
+            [
+              "H001_BASE",
+              "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_h001_base_20261028/INFORME.md",
+              "637b953628eae93529db13ed057e14945bcc3e582e69562fecc4659d2d68a3dd",
+              "2026-10-29",
+              "B/C/E",
+              "ad5baf116fd097ab39f47d2223a352c566662453"
+            ],
+            [
+              "SECTORES",
+              "/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json",
+              "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+              "2026-10-29",
+              "B/C",
+              "47519076159145468ebfca20dcafce87e74d3534"
+            ],
+            [
+              "SIES_GRANULAR",
+              "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.tsv",
+              "1e1e4872c8aa54ba97c1c4749d1fa509e13a4c11f498e933c9efddbb92b24c61",
+              "2026-10-29",
+              "B",
+              "55e3b709afb9483f0ecdd2d166f67229a454a5ef"
+            ],
+            [
+              "INTER",
+              "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.json",
+              "1428eda2858f0b2f5918c568607aa339c7c20eea21af83e1db3e30d09c68ab53",
+              "2026-10-29",
+              "C/D/E",
+              "edc4b8c487861b6b9c686e9315d54d6249e88788"
+            ],
+            [
+              "INTER_MD",
+              "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.md",
+              "d347cfe0226bc25c8a11de64644832b7112d74f1645dd8b184a41fcea47ba29b",
+              "2026-10-29",
+              "C/D/E",
+              "edc4b8c487861b6b9c686e9315d54d6249e88788"
+            ],
+            [
+              "H002",
+              "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+              "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063",
+              "2026-10-29",
+              "B/C/D/E",
+              "82cb49c8b1136214a989676d914766d829e4c4dc"
+            ],
+            [
+              "CODIGOS_REGLA",
+              "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+              "197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2",
+              "2026-10-29",
+              "D",
+              "75ed9501afe66c941709809ade79c7015827e3cb"
+            ],
+            [
+              "REVISION",
+              "/Users/alexi/Documents/GitHub/avance_curricular/outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json",
+              "6add2daaaed871ad438f0d74146a1af988c2f5f0fafa01f82337b1aa716f8dab",
+              "2026-10-29",
+              "C/D/E",
+              "75ed9501afe66c941709809ade79c7015827e3cb"
+            ],
+            [
+              "H002_CIERRE",
+              "/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.json",
+              "a4a704a6a399a4230f693e9763c87283ff4063337f40244c17b1ef07cdf90e46",
+              "2026-10-29",
+              "D/E",
+              "75ed9501afe66c941709809ade79c7015827e3cb"
+            ],
+            [
+              "MATRIZ",
+              "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+              "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+              "2026-10-29",
+              "B/C/D/E",
+              "7807542b2b819521b7bd620239110686830ec406"
+            ],
+            [
+              "BRECHA",
+              "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/CIERRE_BRECHA_MU2026.json",
+              "89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a",
+              "2026-10-29",
+              "B/C/D/E",
+              "7807542b2b819521b7bd620239110686830ec406"
+            ],
+            [
+              "V24",
+              "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx",
+              "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db",
+              "2026-10-29",
+              "B/C",
+              "Fuente externa; hash fijado"
+            ],
+            [
+              "V24_COPIA_RECALCULADA",
+              "/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx",
+              "1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481",
+              "2026-10-29",
+              "B/C",
+              "Fuente externa; hash fijado"
+            ],
+            [
+              "BASES_V16",
+              "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_BASES_TASAS_2026_V16_20261023.md",
+              "f90d19bef2d61e1880b3a0aa49833aa9152e1b2a95dacb61370246347ffd6012",
+              "2026-10-29",
+              "D/C",
+              "e390385a58289ea54a70938102ae640f0aba2dc5"
+            ],
+            [
+              "MARCA",
+              "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/marca/paleta_ipss_2026.json",
+              "eaf142973cb8b28b4919cd156612587b0d811f94c3e3c41a4f480a1ef4828c26",
+              "2026-10-29",
+              "A",
+              "Fuente externa; hash fijado"
+            ],
+            [
+              "SIES_TASAS",
+              "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx",
+              "03897a1604aa656f9ff60e232eda739e29f4912123e5d7127d6551a37957a8a1",
+              "2026-10-29",
+              "B",
+              "Fuente externa; hash fijado"
+            ],
+            [
+              "MANUAL_MARCA",
+              "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Portal de Colaboradores - Recursos Gráficos/Manual de Marca IP San Sebastián.pdf",
+              "78b3ec0c8b1a55276ee00d961bf8e6800757de8ac5b3903c15ae93294d513a47",
+              "2026-10-29",
+              "A",
+              "Manual oficial, páginas 10–11"
+            ]
+          ],
+          "source": "FUENTES_FIJADAS.json",
+          "formats": {},
+          "formulas": {}
+        }
+      ],
+      "notes": [
+        {
+          "row": 3,
+          "text": "Fecha = verificación de la huella (29-10-2026), no corte de matrícula. Cada bloque indica su referencia temporal. Las rutas son solo metadatos."
+        },
+        {
+          "row": 27,
+          "text": "H001 activo: commit 4751907; cierre de brecha: 7807542; cierre H002l: 75ed950. Se conservan los hashes completos en la tabla.",
+          "span": 1
+        }
+      ],
+      "freeze": 6
+    }
+  ],
+  "sources": [
+    {
+      "id": "H001",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+      "sha256": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+      "clase": "B/C/D",
+      "commit": "47519076159145468ebfca20dcafce87e74d3534",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "H001_CIERRE",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H001-RETENCION-IPSS162/README.md",
+      "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+      "clase": "B/C/D/E",
+      "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "H001_BASE",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_h001_base_20261028/INFORME.md",
+      "sha256": "637b953628eae93529db13ed057e14945bcc3e582e69562fecc4659d2d68a3dd",
+      "clase": "B/C/E",
+      "commit": "ad5baf116fd097ab39f47d2223a352c566662453",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "SECTORES",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json",
+      "sha256": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+      "clase": "B/C",
+      "commit": "47519076159145468ebfca20dcafce87e74d3534",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "SIES_GRANULAR",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.tsv",
+      "sha256": "1e1e4872c8aa54ba97c1c4749d1fa509e13a4c11f498e933c9efddbb92b24c61",
+      "clase": "B",
+      "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "INTER",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.json",
+      "sha256": "1428eda2858f0b2f5918c568607aa339c7c20eea21af83e1db3e30d09c68ab53",
+      "clase": "C/D/E",
+      "commit": "edc4b8c487861b6b9c686e9315d54d6249e88788",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "INTER_MD",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.md",
+      "sha256": "d347cfe0226bc25c8a11de64644832b7112d74f1645dd8b184a41fcea47ba29b",
+      "clase": "C/D/E",
+      "commit": "edc4b8c487861b6b9c686e9315d54d6249e88788",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "H002",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+      "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063",
+      "clase": "B/C/D/E",
+      "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "CODIGOS_REGLA",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+      "sha256": "197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2",
+      "clase": "D",
+      "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "REVISION",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json",
+      "sha256": "6add2daaaed871ad438f0d74146a1af988c2f5f0fafa01f82337b1aa716f8dab",
+      "clase": "C/D/E",
+      "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "H002_CIERRE",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.json",
+      "sha256": "a4a704a6a399a4230f693e9763c87283ff4063337f40244c17b1ef07cdf90e46",
+      "clase": "D/E",
+      "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "MATRIZ",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+      "clase": "B/C/D/E",
+      "commit": "7807542b2b819521b7bd620239110686830ec406",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "BRECHA",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/CIERRE_BRECHA_MU2026.json",
+      "sha256": "89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a",
+      "clase": "B/C/D/E",
+      "commit": "7807542b2b819521b7bd620239110686830ec406",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "V24",
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx",
+      "sha256": "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db",
+      "clase": "B/C",
+      "commit": "Fuente externa; hash fijado",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "V24_COPIA_RECALCULADA",
+      "ruta": "/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx",
+      "sha256": "1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481",
+      "clase": "B/C",
+      "commit": "Fuente externa; hash fijado",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "BASES_V16",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_BASES_TASAS_2026_V16_20261023.md",
+      "sha256": "f90d19bef2d61e1880b3a0aa49833aa9152e1b2a95dacb61370246347ffd6012",
+      "clase": "D/C",
+      "commit": "e390385a58289ea54a70938102ae640f0aba2dc5",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "MARCA",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/marca/paleta_ipss_2026.json",
+      "sha256": "eaf142973cb8b28b4919cd156612587b0d811f94c3e3c41a4f480a1ef4828c26",
+      "clase": "A",
+      "commit": "Fuente externa; hash fijado",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "SIES_TASAS",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx",
+      "sha256": "03897a1604aa656f9ff60e232eda739e29f4912123e5d7127d6551a37957a8a1",
+      "clase": "B",
+      "commit": "Fuente externa; hash fijado",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella; corte según bloque"
+    },
+    {
+      "id": "MANUAL_MARCA",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Portal de Colaboradores - Recursos Gráficos/Manual de Marca IP San Sebastián.pdf",
+      "sha256": "78b3ec0c8b1a55276ee00d961bf8e6800757de8ac5b3903c15ae93294d513a47",
+      "clase": "A",
+      "commit": "Manual oficial, páginas 10–11",
+      "fecha": "2026-10-29",
+      "fecha_tipo": "verificación de huella"
+    }
+  ],
+  "palette": {
+    "source": "Manual de Marca IPSS, pagina 10",
+    "source_sha256": "78b3ec0c8b1a55276ee00d961bf8e6800757de8ac5b3903c15ae93294d513a47",
+    "principal": {
+      "azul_institucional": "#102B42",
+      "dorado_institucional": "#CFB47C",
+      "azul_oscuro": "#0E4273"
+    },
+    "secundaria": {
+      "azul_medio": "#0077B6",
+      "celeste": "#0096C7",
+      "gris_oscuro": "#3A3A3A",
+      "gris_claro": "#F2F2F2"
+    }
+  },
+  "font": "Arial",
+  "book": "ENTREGA_RETENCION_IPSS_20261029.xlsx"
+}

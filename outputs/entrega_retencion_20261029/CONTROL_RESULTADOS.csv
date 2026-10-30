@@ -1,0 +1,1957 @@
+hoja,celda,esperado,fuente,tipo,formula,obtenido,coincide
+0_LEEME,A7,Entrega,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Entrega,True
+0_LEEME,B7,Preparada el 29-10-2026 para entrega el 31-10-2026. Solo agregados; sin bases individuales.,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Preparada el 29-10-2026 para entrega el 31-10-2026. Solo agregados; sin bases individuales.,True
+0_LEEME,A8,Retención anual,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Retención anual,True
+0_LEEME,B8,"Cohortes 2022–2025, observadas en el año siguiente. H001 interno; tasas publicadas SIES como referencia externa.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"Cohortes 2022–2025, observadas en el año siguiente. H001 interno; tasas publicadas SIES como referencia externa.",True
+0_LEEME,A9,Intertrimestral,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Intertrimestral,True
+0_LEEME,B9,"Año académico 2026. Foto T3 al 22-10-2026, período en curso. Borrador interno; no tasa oficial SIES.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"Año académico 2026. Foto T3 al 22-10-2026, período en curso. Borrador interno; no tasa oficial SIES.",True
+0_LEEME,A10,Paridad de códigos,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Paridad de códigos,True
+0_LEEME,B10,"Catálogo 2026–2027, regla interna activa H002l. Oferta 2027 V06 preparada (C); no acredita aceptación PES.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"Catálogo 2026–2027, regla interna activa H002l. Oferta 2027 V06 preparada (C); no acredita aceptación PES.",True
+0_LEEME,A11,Cuadratura MU,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Cuadratura MU,True
+0_LEEME,B11,"Matrículas informadas 2022–2026. La brecha 2026 está cerrada documentalmente, con causa E.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"Matrículas informadas 2022–2026. La brecha 2026 está cerrada documentalmente, con causa E.",True
+0_LEEME,A12,Unidades,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Unidades,True
+0_LEEME,B12,Persona por cohorte en H001. Personas o matrículas según cada fila intertrimestral. Códigos y opciones en H002; no son estudiantes.,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Persona por cohorte en H001. Personas o matrículas según cada fila intertrimestral. Códigos y opciones en H002; no son estudiantes.,True
+0_LEEME,A13,Fórmulas,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Fórmulas,True
+0_LEEME,B13,Tasas = numerador / denominador; diferencia = (tasa interna − tasa SIES) × 100. No promediar porcentajes ni sumar unidades distintas.,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Tasas = numerador / denominador; diferencia = (tasa interna − tasa SIES) × 100. No promediar porcentajes ni sumar unidades distintas.,True
+0_LEEME,A14,Fuentes y commits,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Fuentes y commits,True
+0_LEEME,B14,"Rutas, SHA-256 y commits en 5_Fuentes. Los insumos se verifican antes de cada generación.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"Rutas, SHA-256 y commits en 5_Fuentes. Los insumos se verifican antes de cada generación.",True
+0_LEEME,A15,Corte de fuentes,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Corte de fuentes,True
+0_LEEME,B15,"Se conservan los cortes de cada fuente, no una fecha de corte institucional común. Consulta el bloque correspondiente.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"Se conservan los cortes de cada fuente, no una fecha de corte institucional común. Consulta el bloque correspondiente.",True
+0_LEEME,A16,Formato y marca,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Formato y marca,True
+0_LEEME,B16,Paleta IPSS oficial. Arial sustituye a Montserrat/Gotham no instaladas. Porcentajes verificados en es-CL; el visor puede aplicar su configuración regional.,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Paleta IPSS oficial. Arial sustituye a Montserrat/Gotham no instaladas. Porcentajes verificados en es-CL; el visor puede aplicar su configuración regional.,True
+0_LEEME,A17,Cambios protegidos,H003; H001; INTER; H002_CIERRE; BRECHA,valor,,Cambios protegidos,True
+0_LEEME,B17,"No se modifican fuentes, bases, denominadores, tasas ni reglas. No hay carga a SIES/PES ni commit/push.",H003; H001; INTER; H002_CIERRE; BRECHA,valor,,"No se modifican fuentes, bases, denominadores, tasas ni reglas. No hay carga a SIES/PES ni commit/push.",True
+0_LEEME,A21,A,Instrucciones del proyecto,valor,,A,True
+0_LEEME,B21,"Regla oficial respaldada por manual, instructivo o comunicación oficial.",Instrucciones del proyecto,valor,,"Regla oficial respaldada por manual, instructivo o comunicación oficial.",True
+0_LEEME,A22,B,Instrucciones del proyecto,valor,,B,True
+0_LEEME,B22,Dato observado en una fuente identificada; no constituye una regla.,Instrucciones del proyecto,valor,,Dato observado en una fuente identificada; no constituye una regla.,True
+0_LEEME,A23,C,Instrucciones del proyecto,valor,,C,True
+0_LEEME,B23,"Cálculo, implementación o inferencia técnica con alcance declarado.",Instrucciones del proyecto,valor,,"Cálculo, implementación o inferencia técnica con alcance declarado.",True
+0_LEEME,A24,D,Instrucciones del proyecto,valor,,D,True
+0_LEEME,B24,Decisión interna aprobada; no sustituye una norma oficial.,Instrucciones del proyecto,valor,,Decisión interna aprobada; no sustituye una norma oficial.,True
+0_LEEME,A25,E,Instrucciones del proyecto,valor,,E,True
+0_LEEME,B25,"Causa no acreditada, límite o pendiente expresamente conservado.",Instrucciones del proyecto,valor,,"Causa no acreditada, límite o pendiente expresamente conservado.",True
+0_LEEME,A29,H001,H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,H001,True
+0_LEEME,B29,Brechas 2022 y 2024 cerradas E: la investigación no acreditó su causa. No se ajustan tasas para igualar SIES.,H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,Brechas 2022 y 2024 cerradas E: la investigación no acreditó su causa. No se ajustan tasas para igualar SIES.,True
+0_LEEME,A30,Intertrimestral,H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,Intertrimestral,True
+0_LEEME,B30,"Paridad desde fuentes crudas, proxies y desgloses pendientes; cinco personas con matrícula duplicada no están en V24.",H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,"Paridad desde fuentes crudas, proxies y desgloses pendientes; cinco personas con matrícula duplicada no están en V24.",True
+0_LEEME,A31,Paridad 2027,H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,Paridad 2027,True
+0_LEEME,B31,34 opciones de revisión y 37 códigos nuevos; hay solapamiento. Resolver con evidencia y MU 2027; oferta aceptada antes de carga.,H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,34 opciones de revisión y 37 códigos nuevos; hay solapamiento. Resolver con evidencia y MU 2027; oferta aceptada antes de carga.,True
+0_LEEME,A32,MU 2026,H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,MU 2026,True
+0_LEEME,B32,"Reabrir únicamente con fuente individual SIES de MU 2026, por ejemplo precarga AC 2027 cuando exista.",H001_CIERRE; INTER/cierre_hito_2c; REVISION/totales; BRECHA/reapertura,valor,,"Reabrir únicamente con fuente individual SIES de MU 2026, por ejemplo precarga AC 2027 cuando exista.",True
+1_Retencion_1er_anio,A7,2022,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,2022,True
+1_Retencion_1er_anio,B7,224,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,224,True
+1_Retencion_1er_anio,C7,305,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,305,True
+1_Retencion_1er_anio,E7,0.6895161290322581,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,0.689516129032258,True
+1_Retencion_1er_anio,G7,"E cerrada: +4,49 pp; causa no establecida tras revisar reglas y cobertura.",H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,"E cerrada: +4,49 pp; causa no establecida tras revisar reglas y cobertura.",True
+1_Retencion_1er_anio,H7,C/D; B SIES; E,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,C/D; B SIES; E,True
+1_Retencion_1er_anio,A8,2023,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,2023,True
+1_Retencion_1er_anio,B8,258,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,258,True
+1_Retencion_1er_anio,C8,366,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,366,True
+1_Retencion_1er_anio,E8,0.7057220708446866,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,0.705722070844687,True
+1_Retencion_1er_anio,G8,"C: próxima a SIES; no idéntica (−0,08 pp).",H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,"C: próxima a SIES; no idéntica (−0,08 pp).",True
+1_Retencion_1er_anio,H8,C/D; B SIES; E,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,C/D; B SIES; E,True
+1_Retencion_1er_anio,A9,2024,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,2024,True
+1_Retencion_1er_anio,B9,326,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,326,True
+1_Retencion_1er_anio,C9,558,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,558,True
+1_Retencion_1er_anio,E9,0.675,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,0.675,True
+1_Retencion_1er_anio,G9,"E cerrada: −9,08 pp; 180 ausentes en RAW 2025, sin causa oficial demostrada.",H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,"E cerrada: −9,08 pp; 180 ausentes en RAW 2025, sin causa oficial demostrada.",True
+1_Retencion_1er_anio,H9,C/D; B SIES; E,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,C/D; B SIES; E,True
+1_Retencion_1er_anio,A10,2025,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,2025,True
+1_Retencion_1er_anio,B10,668,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,668,True
+1_Retencion_1er_anio,C10,1150,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,1150,True
+1_Retencion_1er_anio,E10,0.5821152192605331,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,0.582115219260533,True
+1_Retencion_1er_anio,G10,"C/E: próxima a SIES (−0,12 pp); 13 casos y 9 retenidos menos; causa individual E.",H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,"C/E: próxima a SIES (−0,12 pp); 13 casos y 9 retenidos menos; causa individual E.",True
+1_Retencion_1er_anio,H10,C/D; B SIES; E,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,valor,,C/D; B SIES; E,True
+1_Retencion_1er_anio,D7,0.7344262295081967,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=B7/C7,0.734426229508197,True
+1_Retencion_1er_anio,F7,4.491010047593857,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=(D7-E7)*100,4.49101004759386,True
+1_Retencion_1er_anio,D8,0.7049180327868853,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=B8/C8,0.704918032786885,True
+1_Retencion_1er_anio,F8,-0.08040380578013817,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=(D8-E8)*100,-0.0804038057801382,True
+1_Retencion_1er_anio,D9,0.5842293906810035,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=B9/C9,0.584229390681004,True
+1_Retencion_1er_anio,F9,-9.07706093189965,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=(D9-E9)*100,-9.07706093189965,True
+1_Retencion_1er_anio,D10,0.5808695652173913,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=B10/C10,0.580869565217391,True
+1_Retencion_1er_anio,F10,-0.12456540431418084,H001/grupos/institucional; SIES_TASAS/Retención 1er año x IES!R59:U59; H001_CIERRE/adendas,formula,=(D10-E10)*100,-0.124565404314181,True
+1_Retencion_1er_anio,J7,Administración y Comercio,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,Administración y Comercio,True
+1_Retencion_1er_anio,K7,252,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,252,True
+1_Retencion_1er_anio,L7,477,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,477,True
+1_Retencion_1er_anio,N7,256,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,256,True
+1_Retencion_1er_anio,O7,481,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,481,True
+1_Retencion_1er_anio,J8,Salud,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,Salud,True
+1_Retencion_1er_anio,K8,35,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,35,True
+1_Retencion_1er_anio,L8,75,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,75,True
+1_Retencion_1er_anio,N8,35,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,35,True
+1_Retencion_1er_anio,O8,75,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,75,True
+1_Retencion_1er_anio,J9,Tecnologías,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,Tecnologías,True
+1_Retencion_1er_anio,K9,381,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,381,True
+1_Retencion_1er_anio,L9,598,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,598,True
+1_Retencion_1er_anio,N9,386,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,386,True
+1_Retencion_1er_anio,O9,607,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,valor,,607,True
+1_Retencion_1er_anio,M7,0.5283018867924528,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=K7/L7,0.528301886792453,True
+1_Retencion_1er_anio,P7,0.5322245322245323,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=N7/O7,0.532224532224532,True
+1_Retencion_1er_anio,Q7,-0.392264543207943,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=(M7-P7)*100,-0.392264543207943,True
+1_Retencion_1er_anio,M8,0.4666666666666667,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=K8/L8,0.466666666666667,True
+1_Retencion_1er_anio,P8,0.4666666666666667,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=N8/O8,0.466666666666667,True
+1_Retencion_1er_anio,Q8,0.0,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=(M8-P8)*100,0,True
+1_Retencion_1er_anio,M9,0.637123745819398,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=K9/L9,0.637123745819398,True
+1_Retencion_1er_anio,P9,0.6359143327841845,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=N9/O9,0.635914332784185,True
+1_Retencion_1er_anio,Q9,0.12094130352134913,H001/grupos/sector[2025]; SIES_GRANULAR por código + SECTORES; contraste V24_COPIA_RECALCULADA/4_Resultados_Sector!H7:O9,formula,=(M9-P9)*100,0.120941303521349,True
+2_Intertrimestral_2026,A7,T1 → T2,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,T1 → T2,True
+2_Intertrimestral_2026,B7,Proxy actividad,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Proxy actividad,True
+2_Intertrimestral_2026,C7,1042,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,1042,True
+2_Intertrimestral_2026,D7,1471,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,1471,True
+2_Intertrimestral_2026,F7,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G7,C/E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,C/E,True
+2_Intertrimestral_2026,H7,Estado del extracto PROMEDIOS; no acredita foto de matrícula.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Estado del extracto PROMEDIOS; no acredita foto de matrícula.,True
+2_Intertrimestral_2026,A8,T1 → T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,T1 → T3,True
+2_Intertrimestral_2026,B8,Foto T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Foto T3,True
+2_Intertrimestral_2026,C8,1360,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,1360,True
+2_Intertrimestral_2026,D8,1467,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,1467,True
+2_Intertrimestral_2026,F8,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G8,B/C/D,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,B/C/D,True
+2_Intertrimestral_2026,H8,1.471 originales menos 4 NO APLICA. T3 en curso al 22-10-2026.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,1.471 originales menos 4 NO APLICA. T3 en curso al 22-10-2026.,True
+2_Intertrimestral_2026,A9,Ingreso T2 → T2,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Ingreso T2 → T2,True
+2_Intertrimestral_2026,B9,Renuncias agregadas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Renuncias agregadas,True
+2_Intertrimestral_2026,C9,462,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,462,True
+2_Intertrimestral_2026,D9,528,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,528,True
+2_Intertrimestral_2026,F9,Matrículas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Matrículas,True
+2_Intertrimestral_2026,G9,B/C/E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,B/C/E,True
+2_Intertrimestral_2026,H9,528 matrículas y 527 personas; no dividir por personas.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,528 matrículas y 527 personas; no dividir por personas.,True
+2_Intertrimestral_2026,A10,Ingreso T2 → T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Ingreso T2 → T3,True
+2_Intertrimestral_2026,B10,Foto T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Foto T3,True
+2_Intertrimestral_2026,C10,467,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,467,True
+2_Intertrimestral_2026,D10,527,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,527,True
+2_Intertrimestral_2026,F10,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G10,B/C/E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,B/C/E,True
+2_Intertrimestral_2026,H10,Denominador de personas de la foto; no confundir con la tasa T2.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Denominador de personas de la foto; no confundir con la tasa T2.,True
+2_Intertrimestral_2026,A11,Ingreso T3 → T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Ingreso T3 → T3,True
+2_Intertrimestral_2026,B11,Foto T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Foto T3,True
+2_Intertrimestral_2026,C11,480,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,480,True
+2_Intertrimestral_2026,D11,545,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,545,True
+2_Intertrimestral_2026,F11,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G11,B/C/E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,B/C/E,True
+2_Intertrimestral_2026,H11,Ingreso T3; T2 no aplica. Foto en curso.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Ingreso T3; T2 no aplica. Foto en curso.,True
+2_Intertrimestral_2026,A12,Total único → T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Total único → T3,True
+2_Intertrimestral_2026,B12,Foto T3,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Foto T3,True
+2_Intertrimestral_2026,C12,2290,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,2290,True
+2_Intertrimestral_2026,D12,2519,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,2519,True
+2_Intertrimestral_2026,F12,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G12,C/D/E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,C/D/E,True
+2_Intertrimestral_2026,H12,2.523 originales menos 4 NO APLICA; deduplicación anual.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,2.523 originales menos 4 NO APLICA; deduplicación anual.,True
+2_Intertrimestral_2026,A13,Total único → T2,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Total único → T2,True
+2_Intertrimestral_2026,B13,Sin foto completa,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Sin foto completa,True
+2_Intertrimestral_2026,F13,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G13,E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,E,True
+2_Intertrimestral_2026,H13,No calcular tasa; no equivale a cero.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,No calcular tasa; no equivale a cero.,True
+2_Intertrimestral_2026,A14,Ingreso T3 → T2,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Ingreso T3 → T2,True
+2_Intertrimestral_2026,B14,No aplica,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,No aplica,True
+2_Intertrimestral_2026,F14,Personas,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,Personas,True
+2_Intertrimestral_2026,G14,C/E,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,C/E,True
+2_Intertrimestral_2026,H14,No pertenece al seguimiento previo a su ingreso.,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",valor,,No pertenece al seguimiento previo a su ingreso.,True
+2_Intertrimestral_2026,E7,0.708361658735554,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",formula,=C7/D7,0.708361658735554,True
+2_Intertrimestral_2026,E8,0.9270620313565099,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",formula,=C8/D8,0.92706203135651,True
+2_Intertrimestral_2026,E9,0.875,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",formula,=C9/D9,0.875,True
+2_Intertrimestral_2026,E10,0.8861480075901328,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",formula,=C10/D10,0.886148007590133,True
+2_Intertrimestral_2026,E11,0.8807339449541285,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",formula,=C11/D11,0.880733944954129,True
+2_Intertrimestral_2026,E12,0.9090909090909091,"INTER/reglas y tipos_de_celda; BASES_V16; V24_COPIA_RECALCULADA/18_Foto_Intertrimestral!D11:H14,D93:I95",formula,=C12/D12,0.909090909090909,True
+3_Paridad_SIES_2027,A7,APROBADA_D_2027,H002/filas agrupadas por anio y estado,valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,B7,0,H002/filas agrupadas por anio y estado,valor,,0,True
+3_Paridad_SIES_2027,C7,13,H002/filas agrupadas por anio y estado,valor,,13,True
+3_Paridad_SIES_2027,A8,CONTINUA,H002/filas agrupadas por anio y estado,valor,,CONTINUA,True
+3_Paridad_SIES_2027,B8,53,H002/filas agrupadas por anio y estado,valor,,53,True
+3_Paridad_SIES_2027,C8,53,H002/filas agrupadas por anio y estado,valor,,53,True
+3_Paridad_SIES_2027,A9,FUERA_ALCANCE,H002/filas agrupadas por anio y estado,valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,B9,11,H002/filas agrupadas por anio y estado,valor,,11,True
+3_Paridad_SIES_2027,C9,21,H002/filas agrupadas por anio y estado,valor,,21,True
+3_Paridad_SIES_2027,A10,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas agrupadas por anio y estado,valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,B10,0,H002/filas agrupadas por anio y estado,valor,,0,True
+3_Paridad_SIES_2027,C10,6,H002/filas agrupadas por anio y estado,valor,,6,True
+3_Paridad_SIES_2027,A11,NUEVO_2027_SIN_PLAN_E,H002/filas agrupadas por anio y estado,valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,B11,0,H002/filas agrupadas por anio y estado,valor,,0,True
+3_Paridad_SIES_2027,C11,37,H002/filas agrupadas por anio y estado,valor,,37,True
+3_Paridad_SIES_2027,A12,SIN_OFERTA_2027,H002/filas agrupadas por anio y estado,valor,,SIN_OFERTA_2027,True
+3_Paridad_SIES_2027,B12,4,H002/filas agrupadas por anio y estado,valor,,4,True
+3_Paridad_SIES_2027,C12,0,H002/filas agrupadas por anio y estado,valor,,0,True
+3_Paridad_SIES_2027,A13,VERSION_MULTIPLE_E,H002/filas agrupadas por anio y estado,valor,,VERSION_MULTIPLE_E,True
+3_Paridad_SIES_2027,B13,14,H002/filas agrupadas por anio y estado,valor,,14,True
+3_Paridad_SIES_2027,C13,0,H002/filas agrupadas por anio y estado,valor,,0,True
+3_Paridad_SIES_2027,A14,VERSION_MULTIPLE_RESUELTA,H002/filas agrupadas por anio y estado,valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,B14,24,H002/filas agrupadas por anio y estado,valor,,24,True
+3_Paridad_SIES_2027,C14,31,H002/filas agrupadas por anio y estado,valor,,31,True
+3_Paridad_SIES_2027,B15,106,H002/filas agrupadas por anio y estado,formula,=SUM(B7:B14),106,True
+3_Paridad_SIES_2027,C15,161,H002/filas agrupadas por anio y estado,formula,=SUM(C7:C14),161,True
+3_Paridad_SIES_2027,A161,I162S2C101J4V1,H002/filas[anio=2027],valor,,I162S2C101J4V1,True
+3_Paridad_SIES_2027,B161,DIPLOMADO EN SALUD FAMILIAR CON ENFOQUE COMUNITARIO,H002/filas[anio=2027],valor,,DIPLOMADO EN SALUD FAMILIAR CON ENFOQUE COMUNITARIO,True
+3_Paridad_SIES_2027,C161,DSFA20251,H002/filas[anio=2027],valor,,DSFA20251,True
+3_Paridad_SIES_2027,D161,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E161,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F161,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G161,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H161,DSFA,H002/filas[anio=2027],valor,,DSFA,True
+3_Paridad_SIES_2027,A162,I162S2C102J4V1,H002/filas[anio=2027],valor,,I162S2C102J4V1,True
+3_Paridad_SIES_2027,B162,DIPLOMADO SALUD CON FOCO EN MIGRACION,H002/filas[anio=2027],valor,,DIPLOMADO SALUD CON FOCO EN MIGRACION,True
+3_Paridad_SIES_2027,C162,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D162,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E162,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F162,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G162,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H162,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A163,I162S2C103J4V1,H002/filas[anio=2027],valor,,I162S2C103J4V1,True
+3_Paridad_SIES_2027,B163,DIPLOMADO ABORDAJE INTEGRAL DE LA VIOLENCIA DE GENERO EN ATENCION PRIMARIA DE SALUD,H002/filas[anio=2027],valor,,DIPLOMADO ABORDAJE INTEGRAL DE LA VIOLENCIA DE GENERO EN ATENCION PRIMARIA DE SALUD,True
+3_Paridad_SIES_2027,C163,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D163,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E163,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F163,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G163,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H163,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A164,I162S2C104J4V1,H002/filas[anio=2027],valor,,I162S2C104J4V1,True
+3_Paridad_SIES_2027,B164,DIPLOMADO EN INNOVACION PARA LA DOCENCIA,H002/filas[anio=2027],valor,,DIPLOMADO EN INNOVACION PARA LA DOCENCIA,True
+3_Paridad_SIES_2027,C164,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D164,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E164,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F164,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G164,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H164,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A165,I162S2C105J4V1,H002/filas[anio=2027],valor,,I162S2C105J4V1,True
+3_Paridad_SIES_2027,B165,DIPLOMADO EN HUMANIZACION EN SALUD,H002/filas[anio=2027],valor,,DIPLOMADO EN HUMANIZACION EN SALUD,True
+3_Paridad_SIES_2027,C165,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D165,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E165,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F165,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G165,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H165,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A21,I162S2C10J1V1,H002/filas[anio=2027],valor,,I162S2C10J1V1,True
+3_Paridad_SIES_2027,B21,TECNICO EN PREVENCION DE RIESGOS,H002/filas[anio=2027],valor,,TECNICO EN PREVENCION DE RIESGOS,True
+3_Paridad_SIES_2027,C21,TPRRE20131,H002/filas[anio=2027],valor,,TPRRE20131,True
+3_Paridad_SIES_2027,D21,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E21,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F21,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G21,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H21,TPRRE,H002/filas[anio=2027],valor,,TPRRE,True
+3_Paridad_SIES_2027,A22,I162S2C10J2V1,H002/filas[anio=2027],valor,,I162S2C10J2V1,True
+3_Paridad_SIES_2027,B22,TECNICO EN PREVENCION DE RIESGOS,H002/filas[anio=2027],valor,,TECNICO EN PREVENCION DE RIESGOS,True
+3_Paridad_SIES_2027,C22,TPRRE20131,H002/filas[anio=2027],valor,,TPRRE20131,True
+3_Paridad_SIES_2027,D22,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E22,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F22,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G22,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H22,TPRRE,H002/filas[anio=2027],valor,,TPRRE,True
+3_Paridad_SIES_2027,A23,I162S2C10J4V1,H002/filas[anio=2027],valor,,I162S2C10J4V1,True
+3_Paridad_SIES_2027,B23,TECNICO EN PREVENCION DE RIESGOS,H002/filas[anio=2027],valor,,TECNICO EN PREVENCION DE RIESGOS,True
+3_Paridad_SIES_2027,C23,TPRE20261,H002/filas[anio=2027],valor,,TPRE20261,True
+3_Paridad_SIES_2027,D23,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E23,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F23,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G23,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H23,TPRE,H002/filas[anio=2027],valor,,TPRE,True
+3_Paridad_SIES_2027,A24,I162S2C111J4V1,H002/filas[anio=2027],valor,,I162S2C111J4V1,True
+3_Paridad_SIES_2027,B24,INGENIERIA EN FINANZAS,H002/filas[anio=2027],valor,,INGENIERIA EN FINANZAS,True
+3_Paridad_SIES_2027,C24,IFIN20261,H002/filas[anio=2027],valor,,IFIN20261,True
+3_Paridad_SIES_2027,D24,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E24,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F24,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G24,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H24,IFIN,H002/filas[anio=2027],valor,,IFIN,True
+3_Paridad_SIES_2027,A25,I162S2C111J4V2,H002/filas[anio=2027],valor,,I162S2C111J4V2,True
+3_Paridad_SIES_2027,B25,INGENIERIA EN FINANZAS,H002/filas[anio=2027],valor,,INGENIERIA EN FINANZAS,True
+3_Paridad_SIES_2027,C25,CIFIN20261; IFIN20261,H002/filas[anio=2027],valor,,CIFIN20261; IFIN20261,True
+3_Paridad_SIES_2027,D25,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E25,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F25,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G25,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H25,CIFIN; IFIN,H002/filas[anio=2027],valor,,CIFIN; IFIN,True
+3_Paridad_SIES_2027,A26,I162S2C112J4V1,H002/filas[anio=2027],valor,,I162S2C112J4V1,True
+3_Paridad_SIES_2027,B26,INGENIERIA EN MARKETING DIGITAL,H002/filas[anio=2027],valor,,INGENIERIA EN MARKETING DIGITAL,True
+3_Paridad_SIES_2027,C26,IMDI20261,H002/filas[anio=2027],valor,,IMDI20261,True
+3_Paridad_SIES_2027,D26,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E26,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F26,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G26,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H26,IMDI,H002/filas[anio=2027],valor,,IMDI,True
+3_Paridad_SIES_2027,A27,I162S2C112J4V2,H002/filas[anio=2027],valor,,I162S2C112J4V2,True
+3_Paridad_SIES_2027,B27,INGENIERIA EN MARKETING DIGITAL,H002/filas[anio=2027],valor,,INGENIERIA EN MARKETING DIGITAL,True
+3_Paridad_SIES_2027,C27,CIMDI20261; IMDI20261,H002/filas[anio=2027],valor,,CIMDI20261; IMDI20261,True
+3_Paridad_SIES_2027,D27,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E27,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F27,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G27,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H27,CIMDI; IMDI,H002/filas[anio=2027],valor,,CIMDI; IMDI,True
+3_Paridad_SIES_2027,A28,I162S2C113J4V1,H002/filas[anio=2027],valor,,I162S2C113J4V1,True
+3_Paridad_SIES_2027,B28,INGENIERIA EN RECURSOS HUMANOS,H002/filas[anio=2027],valor,,INGENIERIA EN RECURSOS HUMANOS,True
+3_Paridad_SIES_2027,C28,IRHU20261,H002/filas[anio=2027],valor,,IRHU20261,True
+3_Paridad_SIES_2027,D28,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E28,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F28,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G28,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H28,IRHU,H002/filas[anio=2027],valor,,IRHU,True
+3_Paridad_SIES_2027,A29,I162S2C113J4V2,H002/filas[anio=2027],valor,,I162S2C113J4V2,True
+3_Paridad_SIES_2027,B29,INGENIERIA EN RECURSOS HUMANOS,H002/filas[anio=2027],valor,,INGENIERIA EN RECURSOS HUMANOS,True
+3_Paridad_SIES_2027,C29,CIRHU20261; IRHU20261,H002/filas[anio=2027],valor,,CIRHU20261; IRHU20261,True
+3_Paridad_SIES_2027,D29,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E29,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F29,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G29,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H29,CIRHU; IRHU,H002/filas[anio=2027],valor,,CIRHU; IRHU,True
+3_Paridad_SIES_2027,A30,I162S2C114J1V1,H002/filas[anio=2027],valor,,I162S2C114J1V1,True
+3_Paridad_SIES_2027,B30,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,True
+3_Paridad_SIES_2027,C30,TEIQ20261,H002/filas[anio=2027],valor,,TEIQ20261,True
+3_Paridad_SIES_2027,D30,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E30,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F30,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G30,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H30,TEIQ,H002/filas[anio=2027],valor,,TEIQ,True
+3_Paridad_SIES_2027,A31,I162S2C114J2V1,H002/filas[anio=2027],valor,,I162S2C114J2V1,True
+3_Paridad_SIES_2027,B31,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,True
+3_Paridad_SIES_2027,C31,TEIQ20261,H002/filas[anio=2027],valor,,TEIQ20261,True
+3_Paridad_SIES_2027,D31,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E31,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F31,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G31,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H31,COTEIQ; TEIQ,H002/filas[anio=2027],valor,,COTEIQ; TEIQ,True
+3_Paridad_SIES_2027,A32,I162S2C115J2V1,H002/filas[anio=2027],valor,,I162S2C115J2V1,True
+3_Paridad_SIES_2027,B32,TECNICO EN FARMACIA,H002/filas[anio=2027],valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C32,TFAR20261,H002/filas[anio=2027],valor,,TFAR20261,True
+3_Paridad_SIES_2027,D32,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E32,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F32,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G32,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H32,COTFAR; TFAR,H002/filas[anio=2027],valor,,COTFAR; TFAR,True
+3_Paridad_SIES_2027,A118,I162S2C115J3V1,H002/filas[anio=2027],valor,,I162S2C115J3V1,True
+3_Paridad_SIES_2027,B118,TECNICO EN FARMACIA,H002/filas[anio=2027],valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C118,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D118,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E118,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F118,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G118,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H118,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A33,I162S2C116J4V1,H002/filas[anio=2027],valor,,I162S2C116J4V1,True
+3_Paridad_SIES_2027,B33,TECNICO EN FINANZAS,H002/filas[anio=2027],valor,,TECNICO EN FINANZAS,True
+3_Paridad_SIES_2027,C33,TFIN20261,H002/filas[anio=2027],valor,,TFIN20261,True
+3_Paridad_SIES_2027,D33,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E33,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F33,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G33,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H33,TFIN,H002/filas[anio=2027],valor,,TFIN,True
+3_Paridad_SIES_2027,A34,I162S2C117J4V1,H002/filas[anio=2027],valor,,I162S2C117J4V1,True
+3_Paridad_SIES_2027,B34,TECNICO EN INFRAESTRUCTURA CLOUD,H002/filas[anio=2027],valor,,TECNICO EN INFRAESTRUCTURA CLOUD,True
+3_Paridad_SIES_2027,C34,TICL20261,H002/filas[anio=2027],valor,,TICL20261,True
+3_Paridad_SIES_2027,D34,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E34,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F34,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G34,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H34,TICL,H002/filas[anio=2027],valor,,TICL,True
+3_Paridad_SIES_2027,A35,I162S2C118J4V1,H002/filas[anio=2027],valor,,I162S2C118J4V1,True
+3_Paridad_SIES_2027,B35,TECNICO EN MARKETING DIGITAL,H002/filas[anio=2027],valor,,TECNICO EN MARKETING DIGITAL,True
+3_Paridad_SIES_2027,C35,TMDI20261,H002/filas[anio=2027],valor,,TMDI20261,True
+3_Paridad_SIES_2027,D35,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E35,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F35,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G35,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H35,TMDI,H002/filas[anio=2027],valor,,TMDI,True
+3_Paridad_SIES_2027,A36,I162S2C119J4V1,H002/filas[anio=2027],valor,,I162S2C119J4V1,True
+3_Paridad_SIES_2027,B36,TECNICO EN RECURSOS HUMANOS,H002/filas[anio=2027],valor,,TECNICO EN RECURSOS HUMANOS,True
+3_Paridad_SIES_2027,C36,TRHU20261,H002/filas[anio=2027],valor,,TRHU20261,True
+3_Paridad_SIES_2027,D36,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E36,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F36,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G36,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H36,TRHU,H002/filas[anio=2027],valor,,TRHU,True
+3_Paridad_SIES_2027,A37,I162S2C11J1V1,H002/filas[anio=2027],valor,,I162S2C11J1V1,True
+3_Paridad_SIES_2027,B37,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C37,TMIRE20131; TMIRE20151; TMIRE20171; TMIRE2020; TMIRE20211,H002/filas[anio=2027],valor,,TMIRE20131; TMIRE20151; TMIRE20171; TMIRE2020; TMIRE20211,True
+3_Paridad_SIES_2027,D37,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E37,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F37,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G37,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H37,TMIRE,H002/filas[anio=2027],valor,,TMIRE,True
+3_Paridad_SIES_2027,A38,I162S2C11J2V1,H002/filas[anio=2027],valor,,I162S2C11J2V1,True
+3_Paridad_SIES_2027,B38,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C38,TACI20241; TMIRE20131; TMIRE20151; TMIRE20171; TMIRE2020; TMIRE20211,H002/filas[anio=2027],valor,,TACI20241; TMIRE20131; TMIRE20151; TMIRE20171; TMIRE2020; TMIRE20211,True
+3_Paridad_SIES_2027,D38,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E38,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F38,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G38,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H38,TACI; TMIRE,H002/filas[anio=2027],valor,,TACI; TMIRE,True
+3_Paridad_SIES_2027,A119,I162S2C11J4V1,H002/filas[anio=2027],valor,,I162S2C11J4V1,True
+3_Paridad_SIES_2027,B119,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C119,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D119,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E119,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F119,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G119,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H119,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A39,I162S2C124J4V1,H002/filas[anio=2027],valor,,I162S2C124J4V1,True
+3_Paridad_SIES_2027,B39,INGENIERIA EN PREVENCION DE RIESGOS,H002/filas[anio=2027],valor,,INGENIERIA EN PREVENCION DE RIESGOS,True
+3_Paridad_SIES_2027,C39,IPRE20261,H002/filas[anio=2027],valor,,IPRE20261,True
+3_Paridad_SIES_2027,D39,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E39,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F39,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G39,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H39,IPRE,H002/filas[anio=2027],valor,,IPRE,True
+3_Paridad_SIES_2027,A40,I162S2C124J4V2,H002/filas[anio=2027],valor,,I162S2C124J4V2,True
+3_Paridad_SIES_2027,B40,INGENIERIA EN PREVENCION DE RIESGOS,H002/filas[anio=2027],valor,,INGENIERIA EN PREVENCION DE RIESGOS,True
+3_Paridad_SIES_2027,C40,CIPRE20261; IPRE20261,H002/filas[anio=2027],valor,,CIPRE20261; IPRE20261,True
+3_Paridad_SIES_2027,D40,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E40,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F40,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G40,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H40,CIPRE; IPRE,H002/filas[anio=2027],valor,,CIPRE; IPRE,True
+3_Paridad_SIES_2027,A41,I162S2C125J4V1,H002/filas[anio=2027],valor,,I162S2C125J4V1,True
+3_Paridad_SIES_2027,B41,INGENIERIA EN SEGURIDAD PRIVADA,H002/filas[anio=2027],valor,,INGENIERIA EN SEGURIDAD PRIVADA,True
+3_Paridad_SIES_2027,C41,ISEP20261,H002/filas[anio=2027],valor,,ISEP20261,True
+3_Paridad_SIES_2027,D41,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E41,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F41,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G41,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H41,ISEP,H002/filas[anio=2027],valor,,ISEP,True
+3_Paridad_SIES_2027,A42,I162S2C125J4V2,H002/filas[anio=2027],valor,,I162S2C125J4V2,True
+3_Paridad_SIES_2027,B42,INGENIERIA EN SEGURIDAD PRIVADA,H002/filas[anio=2027],valor,,INGENIERIA EN SEGURIDAD PRIVADA,True
+3_Paridad_SIES_2027,C42,CISEP20261; ISEP20261,H002/filas[anio=2027],valor,,CISEP20261; ISEP20261,True
+3_Paridad_SIES_2027,D42,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E42,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F42,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G42,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H42,CISEP; ISEP,H002/filas[anio=2027],valor,,CISEP; ISEP,True
+3_Paridad_SIES_2027,A120,I162S2C130J4V1,H002/filas[anio=2027],valor,,I162S2C130J4V1,True
+3_Paridad_SIES_2027,B120,INGENIERIA EN ARQUITECTURA CLOUD,H002/filas[anio=2027],valor,,INGENIERIA EN ARQUITECTURA CLOUD,True
+3_Paridad_SIES_2027,C120,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D120,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E120,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F120,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G120,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H120,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A121,I162S2C130J4V2,H002/filas[anio=2027],valor,,I162S2C130J4V2,True
+3_Paridad_SIES_2027,B121,INGENIERIA EN ARQUITECTURA CLOUD,H002/filas[anio=2027],valor,,INGENIERIA EN ARQUITECTURA CLOUD,True
+3_Paridad_SIES_2027,C121,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D121,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E121,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F121,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G121,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H121,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A122,I162S2C131J4V1,H002/filas[anio=2027],valor,,I162S2C131J4V1,True
+3_Paridad_SIES_2027,B122,INGENIERIA EN COMERCIO EXTERIOR,H002/filas[anio=2027],valor,,INGENIERIA EN COMERCIO EXTERIOR,True
+3_Paridad_SIES_2027,C122,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D122,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E122,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F122,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G122,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H122,ICEX,H002/filas[anio=2027],valor,,ICEX,True
+3_Paridad_SIES_2027,A123,I162S2C132J3V1,H002/filas[anio=2027],valor,,I162S2C132J3V1,True
+3_Paridad_SIES_2027,B123,INGENIERIA EN CONSTRUCCION,H002/filas[anio=2027],valor,,INGENIERIA EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C123,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D123,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E123,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F123,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G123,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H123,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A124,I162S2C133J3V1,H002/filas[anio=2027],valor,,I162S2C133J3V1,True
+3_Paridad_SIES_2027,B124,INGENIERIA EN ELECTRICIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C124,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D124,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E124,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F124,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G124,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H124,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A125,I162S2C134J4V1,H002/filas[anio=2027],valor,,I162S2C134J4V1,True
+3_Paridad_SIES_2027,B125,INGENIERIA EN INTELIGENCIA ARTIFICIAL,H002/filas[anio=2027],valor,,INGENIERIA EN INTELIGENCIA ARTIFICIAL,True
+3_Paridad_SIES_2027,C125,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D125,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E125,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F125,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G125,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H125,IIART,H002/filas[anio=2027],valor,,IIART,True
+3_Paridad_SIES_2027,A126,I162S2C135J4V1,H002/filas[anio=2027],valor,,I162S2C135J4V1,True
+3_Paridad_SIES_2027,B126,INGENIERIA EN OPERACIONES MINERAS,H002/filas[anio=2027],valor,,INGENIERIA EN OPERACIONES MINERAS,True
+3_Paridad_SIES_2027,C126,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D126,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E126,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F126,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G126,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H126,IOPMI,H002/filas[anio=2027],valor,,IOPMI,True
+3_Paridad_SIES_2027,A127,I162S2C136J4V1,H002/filas[anio=2027],valor,,I162S2C136J4V1,True
+3_Paridad_SIES_2027,B127,TECNICO EN COMERCIO EXTERIOR,H002/filas[anio=2027],valor,,TECNICO EN COMERCIO EXTERIOR,True
+3_Paridad_SIES_2027,C127,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D127,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E127,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F127,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G127,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H127,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A128,I162S2C137J3V1,H002/filas[anio=2027],valor,,I162S2C137J3V1,True
+3_Paridad_SIES_2027,B128,TECNICO EN CONSTRUCCION,H002/filas[anio=2027],valor,,TECNICO EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C128,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D128,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E128,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F128,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G128,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H128,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A129,I162S2C138J3V1,H002/filas[anio=2027],valor,,I162S2C138J3V1,True
+3_Paridad_SIES_2027,B129,TECNICO EN ELECTRICIDAD,H002/filas[anio=2027],valor,,TECNICO EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C129,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D129,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E129,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F129,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G129,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H129,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A130,I162S2C139J3V1,H002/filas[anio=2027],valor,,I162S2C139J3V1,True
+3_Paridad_SIES_2027,B130,TECNICO EN IMAGENOLOGIA,H002/filas[anio=2027],valor,,TECNICO EN IMAGENOLOGIA,True
+3_Paridad_SIES_2027,C130,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D130,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E130,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F130,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G130,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H130,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A131,I162S2C140J4V1,H002/filas[anio=2027],valor,,I162S2C140J4V1,True
+3_Paridad_SIES_2027,B131,TECNICO EN INTELIGENCIA ARTIFICIAL,H002/filas[anio=2027],valor,,TECNICO EN INTELIGENCIA ARTIFICIAL,True
+3_Paridad_SIES_2027,C131,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D131,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E131,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F131,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G131,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H131,TIART,H002/filas[anio=2027],valor,,TIART,True
+3_Paridad_SIES_2027,A132,I162S2C142J4V1,H002/filas[anio=2027],valor,,I162S2C142J4V1,True
+3_Paridad_SIES_2027,B132,TECNICO EN OPERACIONES MINERAS,H002/filas[anio=2027],valor,,TECNICO EN OPERACIONES MINERAS,True
+3_Paridad_SIES_2027,C132,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D132,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E132,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F132,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G132,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H132,TOPMI,H002/filas[anio=2027],valor,,TOPMI,True
+3_Paridad_SIES_2027,A133,I162S2C143J3V1,H002/filas[anio=2027],valor,,I162S2C143J3V1,True
+3_Paridad_SIES_2027,B133,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,H002/filas[anio=2027],valor,,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,True
+3_Paridad_SIES_2027,C133,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D133,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E133,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F133,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G133,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H133,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A43,I162S2C1J1V1,H002/filas[anio=2027],valor,,I162S2C1J1V1,True
+3_Paridad_SIES_2027,B43,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C43,IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241,H002/filas[anio=2027],valor,,IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241,True
+3_Paridad_SIES_2027,D43,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E43,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F43,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G43,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H43,IECIRE; IINF,H002/filas[anio=2027],valor,,IECIRE; IINF,True
+3_Paridad_SIES_2027,A44,I162S2C1J1V2,H002/filas[anio=2027],valor,,I162S2C1J1V2,True
+3_Paridad_SIES_2027,B44,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C44,IINF20241,H002/filas[anio=2027],valor,,IINF20241,True
+3_Paridad_SIES_2027,D44,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E44,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F44,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G44,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H44,IINF,H002/filas[anio=2027],valor,,IINF,True
+3_Paridad_SIES_2027,A45,I162S2C1J2V1,H002/filas[anio=2027],valor,,I162S2C1J2V1,True
+3_Paridad_SIES_2027,B45,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C45,IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,H002/filas[anio=2027],valor,,IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,True
+3_Paridad_SIES_2027,D45,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E45,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F45,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G45,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H45,IECIRE; IINF; NECIRE; NICIRE; NINFRE,H002/filas[anio=2027],valor,,IECIRE; IINF; NECIRE; NICIRE; NINFRE,True
+3_Paridad_SIES_2027,A46,I162S2C1J2V2,H002/filas[anio=2027],valor,,I162S2C1J2V2,True
+3_Paridad_SIES_2027,B46,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C46,IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,H002/filas[anio=2027],valor,,IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,True
+3_Paridad_SIES_2027,D46,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E46,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F46,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G46,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H46,IINF; NECIRE; NICIRE; NINFRE,H002/filas[anio=2027],valor,,IINF; NECIRE; NICIRE; NINFRE,True
+3_Paridad_SIES_2027,A47,I162S2C1J2V3,H002/filas[anio=2027],valor,,I162S2C1J2V3,True
+3_Paridad_SIES_2027,B47,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C47,IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,H002/filas[anio=2027],valor,,IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,True
+3_Paridad_SIES_2027,D47,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E47,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F47,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G47,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H47,IINF; NECIRE; NICIRE; NINFRE,H002/filas[anio=2027],valor,,IINF; NECIRE; NICIRE; NINFRE,True
+3_Paridad_SIES_2027,A48,I162S2C1J2V4,H002/filas[anio=2027],valor,,I162S2C1J2V4,True
+3_Paridad_SIES_2027,B48,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C48,IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,H002/filas[anio=2027],valor,,IECIRE20081; IECIRE20101; IECIRE20121; IECIRE20151; IECIRE20191; IECIRE2020; IECIRE20211; IINF20241; NECIRE20091; NECIRE20101; NECIRE20121; NECIRE20151; NICIRE20091; NICIRE20101; NICIRE20121; NICIRE20151; NINFRE,True
+3_Paridad_SIES_2027,D48,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E48,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F48,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G48,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H48,IECIRE; IINF; NECIRE; NICIRE; NINFRE,H002/filas[anio=2027],valor,,IECIRE; IINF; NECIRE; NICIRE; NINFRE,True
+3_Paridad_SIES_2027,A49,I162S2C1J4V2,H002/filas[anio=2027],valor,,I162S2C1J4V2,True
+3_Paridad_SIES_2027,B49,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C49,CIINF20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IINF20241; NINFREOL2019,H002/filas[anio=2027],valor,,CIINF20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IINF20241; NINFREOL2019,True
+3_Paridad_SIES_2027,D49,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E49,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F49,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G49,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H49,CIINF; IECIREOL; IINF; NINFREOL,H002/filas[anio=2027],valor,,CIINF; IECIREOL; IINF; NINFREOL,True
+3_Paridad_SIES_2027,A50,I162S2C1J4V3,H002/filas[anio=2027],valor,,I162S2C1J4V3,True
+3_Paridad_SIES_2027,B50,INGENIERIA EN INFORMATICA,H002/filas[anio=2027],valor,,INGENIERIA EN INFORMATICA,True
+3_Paridad_SIES_2027,C50,CIINF20241; NINFREOL2019,H002/filas[anio=2027],valor,,CIINF20241; NINFREOL2019,True
+3_Paridad_SIES_2027,D50,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E50,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F50,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G50,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H50,CIINF; NINFREOL,H002/filas[anio=2027],valor,,CIINF; NINFREOL,True
+3_Paridad_SIES_2027,A51,I162S2C22J1V1,H002/filas[anio=2027],valor,,I162S2C22J1V1,True
+3_Paridad_SIES_2027,B51,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C51,IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211,H002/filas[anio=2027],valor,,IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211,True
+3_Paridad_SIES_2027,D51,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E51,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F51,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G51,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H51,IACI; IEMORE,H002/filas[anio=2027],valor,,IACI; IEMORE,True
+3_Paridad_SIES_2027,A52,I162S2C22J2V1,H002/filas[anio=2027],valor,,I162S2C22J2V1,True
+3_Paridad_SIES_2027,B52,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C52,IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211; NAUTRE; NAUTRE2020,H002/filas[anio=2027],valor,,IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211; NAUTRE; NAUTRE2020,True
+3_Paridad_SIES_2027,D52,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E52,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F52,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G52,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H52,IACI; IEMORE; NAUTRE,H002/filas[anio=2027],valor,,IACI; IEMORE; NAUTRE,True
+3_Paridad_SIES_2027,A53,I162S2C22J2V2,H002/filas[anio=2027],valor,,I162S2C22J2V2,True
+3_Paridad_SIES_2027,B53,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C53,IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211; NAUTRE; NAUTRE2020,H002/filas[anio=2027],valor,,IACI20241; IEMORE20141; IEMORE20151; IEMORE20171; IEMORE20201; IEMORE20211; NAUTRE; NAUTRE2020,True
+3_Paridad_SIES_2027,D53,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E53,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F53,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G53,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H53,IACI; IEMORE; NAUTRE,H002/filas[anio=2027],valor,,IACI; IEMORE; NAUTRE,True
+3_Paridad_SIES_2027,A54,I162S2C22J4V1,H002/filas[anio=2027],valor,,I162S2C22J4V1,True
+3_Paridad_SIES_2027,B54,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C54,CIIND20251; IACI20241,H002/filas[anio=2027],valor,,CIIND20251; IACI20241,True
+3_Paridad_SIES_2027,D54,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E54,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F54,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G54,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H54,CIIND; IACI,H002/filas[anio=2027],valor,,CIIND; IACI,True
+3_Paridad_SIES_2027,A55,I162S2C22J4V2,H002/filas[anio=2027],valor,,I162S2C22J4V2,True
+3_Paridad_SIES_2027,B55,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C55,CIACI20241; CIIND20251; IACI20241,H002/filas[anio=2027],valor,,CIACI20241; CIIND20251; IACI20241,True
+3_Paridad_SIES_2027,D55,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E55,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F55,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G55,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H55,CIACI; CIIND; IACI,H002/filas[anio=2027],valor,,CIACI; CIIND; IACI,True
+3_Paridad_SIES_2027,A56,I162S2C2J1V1,H002/filas[anio=2027],valor,,I162S2C2J1V1,True
+3_Paridad_SIES_2027,B56,TECNICO EN PROGRAMACION COMPUTACIONAL,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION COMPUTACIONAL,True
+3_Paridad_SIES_2027,C56,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,H002/filas[anio=2027],valor,,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,True
+3_Paridad_SIES_2027,D56,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E56,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F56,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G56,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H56,TPCRE,H002/filas[anio=2027],valor,,TPCRE,True
+3_Paridad_SIES_2027,A57,I162S2C2J1V2,H002/filas[anio=2027],valor,,I162S2C2J1V2,True
+3_Paridad_SIES_2027,B57,TECNICO EN PROGRAMACION COMPUTACIONAL,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION COMPUTACIONAL,True
+3_Paridad_SIES_2027,C57,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,H002/filas[anio=2027],valor,,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,True
+3_Paridad_SIES_2027,D57,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E57,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F57,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G57,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H57,TPCRE,H002/filas[anio=2027],valor,,TPCRE,True
+3_Paridad_SIES_2027,A58,I162S2C2J2V1,H002/filas[anio=2027],valor,,I162S2C2J2V1,True
+3_Paridad_SIES_2027,B58,TECNICO EN PROGRAMACION COMPUTACIONAL,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION COMPUTACIONAL,True
+3_Paridad_SIES_2027,C58,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,H002/filas[anio=2027],valor,,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,True
+3_Paridad_SIES_2027,D58,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E58,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F58,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G58,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H58,TPCRE,H002/filas[anio=2027],valor,,TPCRE,True
+3_Paridad_SIES_2027,A59,I162S2C2J2V2,H002/filas[anio=2027],valor,,I162S2C2J2V2,True
+3_Paridad_SIES_2027,B59,TECNICO EN PROGRAMACION COMPUTACIONAL,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION COMPUTACIONAL,True
+3_Paridad_SIES_2027,C59,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,H002/filas[anio=2027],valor,,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191,True
+3_Paridad_SIES_2027,D59,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E59,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F59,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G59,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H59,TPCRE,H002/filas[anio=2027],valor,,TPCRE,True
+3_Paridad_SIES_2027,A60,I162S2C2J4V1,H002/filas[anio=2027],valor,,I162S2C2J4V1,True
+3_Paridad_SIES_2027,B60,TECNICO EN PROGRAMACION COMPUTACIONAL,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION COMPUTACIONAL,True
+3_Paridad_SIES_2027,C60,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191; TPCREOL; TPCREOL20191,H002/filas[anio=2027],valor,,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191; TPCREOL; TPCREOL20191,True
+3_Paridad_SIES_2027,D60,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E60,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F60,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G60,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H60,TPCRE; TPCREOL,H002/filas[anio=2027],valor,,TPCRE; TPCREOL,True
+3_Paridad_SIES_2027,A61,I162S2C2J4V2,H002/filas[anio=2027],valor,,I162S2C2J4V2,True
+3_Paridad_SIES_2027,B61,TECNICO EN PROGRAMACION COMPUTACIONAL,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION COMPUTACIONAL,True
+3_Paridad_SIES_2027,C61,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191; TPCREOL; TPCREOL20191,H002/filas[anio=2027],valor,,TPCRE20081; TPCRE20101; TPCRE20121; TPCRE20121V2; TPCRE20151; TPCRE20191; TPCREOL; TPCREOL20191,True
+3_Paridad_SIES_2027,D61,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E61,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F61,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G61,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H61,TPCRE; TPCREOL,H002/filas[anio=2027],valor,,TPCRE; TPCREOL,True
+3_Paridad_SIES_2027,A134,I162S2C35J1V1,H002/filas[anio=2027],valor,,I162S2C35J1V1,True
+3_Paridad_SIES_2027,B134,TECNICO EN ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C134,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D134,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas[anio=2027],valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,E134,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F134,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G134,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H134,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A135,I162S2C35J1V2,H002/filas[anio=2027],valor,,I162S2C35J1V2,True
+3_Paridad_SIES_2027,B135,TECNICO EN ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C135,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D135,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas[anio=2027],valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,E135,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F135,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G135,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H135,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A136,I162S2C35J2V1,H002/filas[anio=2027],valor,,I162S2C35J2V1,True
+3_Paridad_SIES_2027,B136,TECNICO EN ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C136,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D136,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas[anio=2027],valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,E136,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F136,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G136,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H136,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A137,I162S2C35J2V2,H002/filas[anio=2027],valor,,I162S2C35J2V2,True
+3_Paridad_SIES_2027,B137,TECNICO EN ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C137,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D137,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas[anio=2027],valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,E137,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F137,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G137,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H137,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A138,I162S2C35J4V1,H002/filas[anio=2027],valor,,I162S2C35J4V1,True
+3_Paridad_SIES_2027,B138,TECNICO EN ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C138,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D138,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas[anio=2027],valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,E138,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F138,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G138,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H138,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A139,I162S2C35J4V2,H002/filas[anio=2027],valor,,I162S2C35J4V2,True
+3_Paridad_SIES_2027,B139,TECNICO EN ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C139,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D139,HISTORICO_SIN_MATRICULA_RECIENTE,H002/filas[anio=2027],valor,,HISTORICO_SIN_MATRICULA_RECIENTE,True
+3_Paridad_SIES_2027,E139,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F139,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G139,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H139,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A62,I162S2C3J1V1,H002/filas[anio=2027],valor,,I162S2C3J1V1,True
+3_Paridad_SIES_2027,B62,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C62,IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,H002/filas[anio=2027],valor,,IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,True
+3_Paridad_SIES_2027,D62,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E62,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F62,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G62,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H62,IETMRE; NETMRE; NITMRE,H002/filas[anio=2027],valor,,IETMRE; NETMRE; NITMRE,True
+3_Paridad_SIES_2027,A63,I162S2C3J1V2,H002/filas[anio=2027],valor,,I162S2C3J1V2,True
+3_Paridad_SIES_2027,B63,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C63,ICRE20241; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,H002/filas[anio=2027],valor,,ICRE20241; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,True
+3_Paridad_SIES_2027,D63,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E63,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F63,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G63,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H63,ICRE; IETMRE; NETMRE; NITMRE,H002/filas[anio=2027],valor,,ICRE; IETMRE; NETMRE; NITMRE,True
+3_Paridad_SIES_2027,A64,I162S2C3J2V1,H002/filas[anio=2027],valor,,I162S2C3J2V1,True
+3_Paridad_SIES_2027,B64,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C64,ICRE20241; NCONRE; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,H002/filas[anio=2027],valor,,ICRE20241; NCONRE; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,True
+3_Paridad_SIES_2027,D64,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E64,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F64,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G64,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H64,ICRE; NCONRE; NETMRE; NITMRE,H002/filas[anio=2027],valor,,ICRE; NCONRE; NETMRE; NITMRE,True
+3_Paridad_SIES_2027,A65,I162S2C3J2V3,H002/filas[anio=2027],valor,,I162S2C3J2V3,True
+3_Paridad_SIES_2027,B65,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C65,CICRE20241; ICRE20241; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NCONRE,H002/filas[anio=2027],valor,,CICRE20241; ICRE20241; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NCONRE,True
+3_Paridad_SIES_2027,D65,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E65,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F65,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G65,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H65,CICRE; ICRE; IETMRE; NCONRE,H002/filas[anio=2027],valor,,CICRE; ICRE; IETMRE; NCONRE,True
+3_Paridad_SIES_2027,A66,I162S2C3J2V4,H002/filas[anio=2027],valor,,I162S2C3J2V4,True
+3_Paridad_SIES_2027,B66,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C66,ICRE20241; NCONRE; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,H002/filas[anio=2027],valor,,ICRE20241; NCONRE; NETMRE20091; NETMRE20101; NETMRE20121; NITMRE20091; NITMRE20101; NITMRE20121,True
+3_Paridad_SIES_2027,D66,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E66,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F66,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G66,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H66,ICRE; NCONRE; NETMRE; NITMRE,H002/filas[anio=2027],valor,,ICRE; NCONRE; NETMRE; NITMRE,True
+3_Paridad_SIES_2027,A67,I162S2C3J4V2,H002/filas[anio=2027],valor,,I162S2C3J4V2,True
+3_Paridad_SIES_2027,B67,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C67,CICRE20241; ICRE20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; IETMREOL; IETMREOL20191; IETMREOL20211; NCONRE; NCONREOL2019; NETMRE20091; NETMRE20101; NETMRE20121,H002/filas[anio=2027],valor,,CICRE20241; ICRE20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; IETMREOL; IETMREOL20191; IETMREOL20211; NCONRE; NCONREOL2019; NETMRE20091; NETMRE20101; NETMRE20121,True
+3_Paridad_SIES_2027,D67,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E67,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F67,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G67,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H67,CICRE; ICRE; IECIREOL; IETMRE; IETMREOL; NCONRE; NCONREOL; NETMRE,H002/filas[anio=2027],valor,,CICRE; ICRE; IECIREOL; IETMRE; IETMREOL; NCONRE; NCONREOL; NETMRE,True
+3_Paridad_SIES_2027,A68,I162S2C3J4V3,H002/filas[anio=2027],valor,,I162S2C3J4V3,True
+3_Paridad_SIES_2027,B68,INGENIERIA EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,INGENIERIA EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C68,CICRE20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NCONRE; NCONREOL2019,H002/filas[anio=2027],valor,,CICRE20241; IECIREOL; IECIREOL20191; IECIREOL20201; IECIREOL20211; IETMRE20091; IETMRE20101; IETMRE20121; IETMRE20161; IETMRE20191; IETMRE20211; NCONRE; NCONREOL2019,True
+3_Paridad_SIES_2027,D68,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E68,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F68,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G68,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H68,CICRE; IECIREOL; IETMRE; NCONRE; NCONREOL,H002/filas[anio=2027],valor,,CICRE; IECIREOL; IETMRE; NCONRE; NCONREOL,True
+3_Paridad_SIES_2027,A166,I162S2C40J2V1,H002/filas[anio=2027],valor,,I162S2C40J2V1,True
+3_Paridad_SIES_2027,B166,DIPLOMADO EN DOCENCIA EN EDUCACION SUPERIOR TECNICO PROFESIONAL,H002/filas[anio=2027],valor,,DIPLOMADO EN DOCENCIA EN EDUCACION SUPERIOR TECNICO PROFESIONAL,True
+3_Paridad_SIES_2027,C166,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D166,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E166,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F166,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G166,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H166,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A69,I162S2C46J1V1,H002/filas[anio=2027],valor,,I162S2C46J1V1,True
+3_Paridad_SIES_2027,B69,INGENIERIA EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C69,ICIB20241; IECSRE20191; IECSRE20211,H002/filas[anio=2027],valor,,ICIB20241; IECSRE20191; IECSRE20211,True
+3_Paridad_SIES_2027,D69,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E69,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F69,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G69,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H69,ICIB; IECSRE,H002/filas[anio=2027],valor,,ICIB; IECSRE,True
+3_Paridad_SIES_2027,A70,I162S2C46J2V1,H002/filas[anio=2027],valor,,I162S2C46J2V1,True
+3_Paridad_SIES_2027,B70,INGENIERIA EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C70,ICIB20241; NICCRE20191; NICCRE2020; NTCCRE20191; NTCCRE2020,H002/filas[anio=2027],valor,,ICIB20241; NICCRE20191; NICCRE2020; NTCCRE20191; NTCCRE2020,True
+3_Paridad_SIES_2027,D70,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E70,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F70,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G70,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H70,ICIB; NICCRE; NTCCRE,H002/filas[anio=2027],valor,,ICIB; NICCRE; NTCCRE,True
+3_Paridad_SIES_2027,A71,I162S2C46J2V3,H002/filas[anio=2027],valor,,I162S2C46J2V3,True
+3_Paridad_SIES_2027,B71,INGENIERIA EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C71,CICIB20241,H002/filas[anio=2027],valor,,CICIB20241,True
+3_Paridad_SIES_2027,D71,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E71,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F71,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G71,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H71,CICIB,H002/filas[anio=2027],valor,,CICIB,True
+3_Paridad_SIES_2027,A72,I162S2C46J4V1,H002/filas[anio=2027],valor,,I162S2C46J4V1,True
+3_Paridad_SIES_2027,B72,INGENIERIA EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C72,CICIB20241,H002/filas[anio=2027],valor,,CICIB20241,True
+3_Paridad_SIES_2027,D72,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E72,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F72,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G72,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H72,CICIB,H002/filas[anio=2027],valor,,CICIB,True
+3_Paridad_SIES_2027,A73,I162S2C46J4V3,H002/filas[anio=2027],valor,,I162S2C46J4V3,True
+3_Paridad_SIES_2027,B73,INGENIERIA EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C73,ICIB20241; IECSREOL20211; NICCREOL2020; NTCCREOL2020,H002/filas[anio=2027],valor,,ICIB20241; IECSREOL20211; NICCREOL2020; NTCCREOL2020,True
+3_Paridad_SIES_2027,D73,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E73,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F73,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G73,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H73,ICIB; IECSREOL; NICCREOL; NTCCREOL,H002/filas[anio=2027],valor,,ICIB; IECSREOL; NICCREOL; NTCCREOL,True
+3_Paridad_SIES_2027,A74,I162S2C47J1V1,H002/filas[anio=2027],valor,,I162S2C47J1V1,True
+3_Paridad_SIES_2027,B74,TECNICO EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,TECNICO EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C74,TCIB20241; TCSRE20191; TCSRE20211; TCSREOL2020; TCSREOL20211; TCSREOL20231,H002/filas[anio=2027],valor,,TCIB20241; TCSRE20191; TCSRE20211; TCSREOL2020; TCSREOL20211; TCSREOL20231,True
+3_Paridad_SIES_2027,D74,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E74,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F74,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G74,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H74,TCIB; TCSRE; TCSREOL,H002/filas[anio=2027],valor,,TCIB; TCSRE; TCSREOL,True
+3_Paridad_SIES_2027,A75,I162S2C47J2V1,H002/filas[anio=2027],valor,,I162S2C47J2V1,True
+3_Paridad_SIES_2027,B75,TECNICO EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,TECNICO EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C75,TCIB20241; TCSRE20191; TCSRE20211,H002/filas[anio=2027],valor,,TCIB20241; TCSRE20191; TCSRE20211,True
+3_Paridad_SIES_2027,D75,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E75,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F75,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G75,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H75,TCIB; TCSRE,H002/filas[anio=2027],valor,,TCIB; TCSRE,True
+3_Paridad_SIES_2027,A76,I162S2C47J4V1,H002/filas[anio=2027],valor,,I162S2C47J4V1,True
+3_Paridad_SIES_2027,B76,TECNICO EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,TECNICO EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C76,TCIB20241; TCSREOL2020; TCSREOL20211; TCSREOL20231,H002/filas[anio=2027],valor,,TCIB20241; TCSREOL2020; TCSREOL20211; TCSREOL20231,True
+3_Paridad_SIES_2027,D76,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E76,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F76,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G76,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H76,TCIB; TCSREOL,H002/filas[anio=2027],valor,,TCIB; TCSREOL,True
+3_Paridad_SIES_2027,A140,I162S2C47J4V2,H002/filas[anio=2027],valor,,I162S2C47J4V2,True
+3_Paridad_SIES_2027,B140,TECNICO EN CIBERSEGURIDAD,H002/filas[anio=2027],valor,,TECNICO EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C140,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D140,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E140,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F140,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G140,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H140,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A77,I162S2C48J4V1,H002/filas[anio=2027],valor,,I162S2C48J4V1,True
+3_Paridad_SIES_2027,B77,TECNICO EN CONTROL INDUSTRIAL,H002/filas[anio=2027],valor,,TECNICO EN CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C77,TCIREOL20191; TCIREOL20211,H002/filas[anio=2027],valor,,TCIREOL20191; TCIREOL20211,True
+3_Paridad_SIES_2027,D77,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E77,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F77,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G77,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H77,TCIOL,H002/filas[anio=2027],valor,,TCIOL,True
+3_Paridad_SIES_2027,A167,I162S2C53J3V1,H002/filas[anio=2027],valor,,I162S2C53J3V1,True
+3_Paridad_SIES_2027,B167,DIPLOMADO EN CIBERSEGURIDAD APLICADA,H002/filas[anio=2027],valor,,DIPLOMADO EN CIBERSEGURIDAD APLICADA,True
+3_Paridad_SIES_2027,C167,DCBS20251,H002/filas[anio=2027],valor,,DCBS20251,True
+3_Paridad_SIES_2027,D167,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E167,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F167,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G167,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H167,DCBS,H002/filas[anio=2027],valor,,DCBS,True
+3_Paridad_SIES_2027,A78,I162S2C57J1V1,H002/filas[anio=2027],valor,,I162S2C57J1V1,True
+3_Paridad_SIES_2027,B78,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C78,TPARE2020; TPARE20211; TPAS20241,H002/filas[anio=2027],valor,,TPARE2020; TPARE20211; TPAS20241,True
+3_Paridad_SIES_2027,D78,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E78,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F78,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G78,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H78,TPARE; TPAS,H002/filas[anio=2027],valor,,TPARE; TPAS,True
+3_Paridad_SIES_2027,A79,I162S2C57J2V1,H002/filas[anio=2027],valor,,I162S2C57J2V1,True
+3_Paridad_SIES_2027,B79,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C79,TPARE2020; TPARE20211; TPAS20241,H002/filas[anio=2027],valor,,TPARE2020; TPARE20211; TPAS20241,True
+3_Paridad_SIES_2027,D79,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E79,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F79,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G79,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H79,TPARE; TPAS,H002/filas[anio=2027],valor,,TPARE; TPAS,True
+3_Paridad_SIES_2027,A80,I162S2C57J4V1,H002/filas[anio=2027],valor,,I162S2C57J4V1,True
+3_Paridad_SIES_2027,B80,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C80,TPAREOL2020; TPAREOL20211; TPAREOL20231; TPAS20241,H002/filas[anio=2027],valor,,TPAREOL2020; TPAREOL20211; TPAREOL20231; TPAS20241,True
+3_Paridad_SIES_2027,D80,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E80,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F80,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G80,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H80,TPAREOL; TPAS,H002/filas[anio=2027],valor,,TPAREOL; TPAS,True
+3_Paridad_SIES_2027,A141,I162S2C57J4V2,H002/filas[anio=2027],valor,,I162S2C57J4V2,True
+3_Paridad_SIES_2027,B141,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,H002/filas[anio=2027],valor,,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C141,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D141,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E141,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F141,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G141,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H141,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A168,I162S2C63J4V1,H002/filas[anio=2027],valor,,I162S2C63J4V1,True
+3_Paridad_SIES_2027,B168,DIPLOMADO EN ARQUITECTURA CLOUD,H002/filas[anio=2027],valor,,DIPLOMADO EN ARQUITECTURA CLOUD,True
+3_Paridad_SIES_2027,C168,DACD20251,H002/filas[anio=2027],valor,,DACD20251,True
+3_Paridad_SIES_2027,D168,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E168,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F168,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G168,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H168,DACD,H002/filas[anio=2027],valor,,DACD,True
+3_Paridad_SIES_2027,A169,I162S2C64J4V1,H002/filas[anio=2027],valor,,I162S2C64J4V1,True
+3_Paridad_SIES_2027,B169,DIPLOMADO EN BACKEND,H002/filas[anio=2027],valor,,DIPLOMADO EN BACKEND,True
+3_Paridad_SIES_2027,C169,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D169,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E169,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F169,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G169,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H169,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A170,I162S2C65J4V1,H002/filas[anio=2027],valor,,I162S2C65J4V1,True
+3_Paridad_SIES_2027,B170,DIPLOMADO EN FRONTEND,H002/filas[anio=2027],valor,,DIPLOMADO EN FRONTEND,True
+3_Paridad_SIES_2027,C170,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D170,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E170,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F170,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G170,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H170,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A171,I162S2C66J4V1,H002/filas[anio=2027],valor,,I162S2C66J4V1,True
+3_Paridad_SIES_2027,B171,DIPLOMADO EN FULLSTACK,H002/filas[anio=2027],valor,,DIPLOMADO EN FULLSTACK,True
+3_Paridad_SIES_2027,C171,DFSK20251,H002/filas[anio=2027],valor,,DFSK20251,True
+3_Paridad_SIES_2027,D171,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E171,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F171,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G171,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H171,DFSK,H002/filas[anio=2027],valor,,DFSK,True
+3_Paridad_SIES_2027,A172,I162S2C67J4V1,H002/filas[anio=2027],valor,,I162S2C67J4V1,True
+3_Paridad_SIES_2027,B172,DIPLOMADO EN QUALITY ASSURANCE,H002/filas[anio=2027],valor,,DIPLOMADO EN QUALITY ASSURANCE,True
+3_Paridad_SIES_2027,C172,DQAS,H002/filas[anio=2027],valor,,DQAS,True
+3_Paridad_SIES_2027,D172,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E172,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F172,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G172,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H172,DQAS,H002/filas[anio=2027],valor,,DQAS,True
+3_Paridad_SIES_2027,A173,I162S2C68J4V1,H002/filas[anio=2027],valor,,I162S2C68J4V1,True
+3_Paridad_SIES_2027,B173,DIPLOMADO EN SEGURIDAD OFENSIVA,H002/filas[anio=2027],valor,,DIPLOMADO EN SEGURIDAD OFENSIVA,True
+3_Paridad_SIES_2027,C173,DSOF20251,H002/filas[anio=2027],valor,,DSOF20251,True
+3_Paridad_SIES_2027,D173,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E173,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F173,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G173,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H173,DSOF,H002/filas[anio=2027],valor,,DSOF,True
+3_Paridad_SIES_2027,A174,I162S2C69J4V1,H002/filas[anio=2027],valor,,I162S2C69J4V1,True
+3_Paridad_SIES_2027,B174,DIPLOMADO INFRAESTRUCTURA CLOUD,H002/filas[anio=2027],valor,,DIPLOMADO INFRAESTRUCTURA CLOUD,True
+3_Paridad_SIES_2027,C174,DICD,H002/filas[anio=2027],valor,,DICD,True
+3_Paridad_SIES_2027,D174,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E174,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F174,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G174,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H174,DICD,H002/filas[anio=2027],valor,,DICD,True
+3_Paridad_SIES_2027,A81,I162S2C6J1V1,H002/filas[anio=2027],valor,,I162S2C6J1V1,True
+3_Paridad_SIES_2027,B81,TECNICO EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C81,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,H002/filas[anio=2027],valor,,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,True
+3_Paridad_SIES_2027,D81,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E81,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F81,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G81,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H81,TCRE; TTMRE,H002/filas[anio=2027],valor,,TCRE; TTMRE,True
+3_Paridad_SIES_2027,A82,I162S2C6J1V2,H002/filas[anio=2027],valor,,I162S2C6J1V2,True
+3_Paridad_SIES_2027,B82,TECNICO EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C82,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,H002/filas[anio=2027],valor,,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,True
+3_Paridad_SIES_2027,D82,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E82,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F82,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G82,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H82,TCRE; TTMRE,H002/filas[anio=2027],valor,,TCRE; TTMRE,True
+3_Paridad_SIES_2027,A83,I162S2C6J2V1,H002/filas[anio=2027],valor,,I162S2C6J2V1,True
+3_Paridad_SIES_2027,B83,TECNICO EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C83,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,H002/filas[anio=2027],valor,,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,True
+3_Paridad_SIES_2027,D83,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E83,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F83,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G83,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H83,TCRE; TTMRE,H002/filas[anio=2027],valor,,TCRE; TTMRE,True
+3_Paridad_SIES_2027,A84,I162S2C6J2V2,H002/filas[anio=2027],valor,,I162S2C6J2V2,True
+3_Paridad_SIES_2027,B84,TECNICO EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C84,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,H002/filas[anio=2027],valor,,TCRE20241; TTMRE20091; TTMRE20101; TTMRE20121; TTMRE20121V2; TTMRE20161; TTMRE20191; TTMRE20211,True
+3_Paridad_SIES_2027,D84,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E84,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F84,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G84,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H84,TCRE; TTMRE,H002/filas[anio=2027],valor,,TCRE; TTMRE,True
+3_Paridad_SIES_2027,A85,I162S2C6J4V2,H002/filas[anio=2027],valor,,I162S2C6J4V2,True
+3_Paridad_SIES_2027,B85,TECNICO EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C85,TCRE20241; TTMREOL; TTMREOL20191; TTMREOL20211; TTMREOL20231,H002/filas[anio=2027],valor,,TCRE20241; TTMREOL; TTMREOL20191; TTMREOL20211; TTMREOL20231,True
+3_Paridad_SIES_2027,D85,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E85,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F85,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G85,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H85,TCRE; TTMREOL,H002/filas[anio=2027],valor,,TCRE; TTMREOL,True
+3_Paridad_SIES_2027,A142,I162S2C6J4V3,H002/filas[anio=2027],valor,,I162S2C6J4V3,True
+3_Paridad_SIES_2027,B142,TECNICO EN CONECTIVIDAD Y REDES,H002/filas[anio=2027],valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C142,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D142,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E142,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F142,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G142,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H142,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A175,I162S2C70J4V1,H002/filas[anio=2027],valor,,I162S2C70J4V1,True
+3_Paridad_SIES_2027,B175,DIPLOMADO REDES INDUSTRIALES,H002/filas[anio=2027],valor,,DIPLOMADO REDES INDUSTRIALES,True
+3_Paridad_SIES_2027,C175,DRID,H002/filas[anio=2027],valor,,DRID,True
+3_Paridad_SIES_2027,D175,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E175,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F175,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G175,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H175,DRID,H002/filas[anio=2027],valor,,DRID,True
+3_Paridad_SIES_2027,A176,I162S2C71J4V1,H002/filas[anio=2027],valor,,I162S2C71J4V1,True
+3_Paridad_SIES_2027,B176,DIPLOMADO SEGURIDAD EN ARQUITECTURA DE REDES,H002/filas[anio=2027],valor,,DIPLOMADO SEGURIDAD EN ARQUITECTURA DE REDES,True
+3_Paridad_SIES_2027,C176,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D176,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E176,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F176,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G176,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H176,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A86,I162S2C76J1V1,H002/filas[anio=2027],valor,,I162S2C76J1V1,True
+3_Paridad_SIES_2027,B86,INGENIERIA EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,INGENIERIA EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C86,IADM20241,H002/filas[anio=2027],valor,,IADM20241,True
+3_Paridad_SIES_2027,D86,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E86,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F86,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G86,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H86,IADM,H002/filas[anio=2027],valor,,IADM,True
+3_Paridad_SIES_2027,A87,I162S2C76J2V1,H002/filas[anio=2027],valor,,I162S2C76J2V1,True
+3_Paridad_SIES_2027,B87,INGENIERIA EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,INGENIERIA EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C87,IADM20241,H002/filas[anio=2027],valor,,IADM20241,True
+3_Paridad_SIES_2027,D87,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E87,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F87,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G87,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H87,IADM,H002/filas[anio=2027],valor,,IADM,True
+3_Paridad_SIES_2027,A88,I162S2C76J4V1,H002/filas[anio=2027],valor,,I162S2C76J4V1,True
+3_Paridad_SIES_2027,B88,INGENIERIA EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,INGENIERIA EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C88,CIADM20241; IADM20241,H002/filas[anio=2027],valor,,CIADM20241; IADM20241,True
+3_Paridad_SIES_2027,D88,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E88,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F88,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G88,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H88,CIADM; IADM,H002/filas[anio=2027],valor,,CIADM; IADM,True
+3_Paridad_SIES_2027,A89,I162S2C76J4V2,H002/filas[anio=2027],valor,,I162S2C76J4V2,True
+3_Paridad_SIES_2027,B89,INGENIERIA EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,INGENIERIA EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C89,CIADM20241; IADM20241,H002/filas[anio=2027],valor,,CIADM20241; IADM20241,True
+3_Paridad_SIES_2027,D89,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E89,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F89,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G89,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H89,CIADM; IADM,H002/filas[anio=2027],valor,,CIADM; IADM,True
+3_Paridad_SIES_2027,A90,I162S2C77J1V1,H002/filas[anio=2027],valor,,I162S2C77J1V1,True
+3_Paridad_SIES_2027,B90,INGENIERIA EN LOGISTICA,H002/filas[anio=2027],valor,,INGENIERIA EN LOGISTICA,True
+3_Paridad_SIES_2027,C90,ILOG20241,H002/filas[anio=2027],valor,,ILOG20241,True
+3_Paridad_SIES_2027,D90,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E90,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F90,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G90,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H90,ILOG,H002/filas[anio=2027],valor,,ILOG,True
+3_Paridad_SIES_2027,A91,I162S2C77J2V1,H002/filas[anio=2027],valor,,I162S2C77J2V1,True
+3_Paridad_SIES_2027,B91,INGENIERIA EN LOGISTICA,H002/filas[anio=2027],valor,,INGENIERIA EN LOGISTICA,True
+3_Paridad_SIES_2027,C91,ILOG20241,H002/filas[anio=2027],valor,,ILOG20241,True
+3_Paridad_SIES_2027,D91,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E91,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F91,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G91,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H91,ILOG,H002/filas[anio=2027],valor,,ILOG,True
+3_Paridad_SIES_2027,A92,I162S2C77J4V1,H002/filas[anio=2027],valor,,I162S2C77J4V1,True
+3_Paridad_SIES_2027,B92,INGENIERIA EN LOGISTICA,H002/filas[anio=2027],valor,,INGENIERIA EN LOGISTICA,True
+3_Paridad_SIES_2027,C92,CILOG20241; ILOG20241,H002/filas[anio=2027],valor,,CILOG20241; ILOG20241,True
+3_Paridad_SIES_2027,D92,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E92,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F92,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G92,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H92,CILOG; ILOG,H002/filas[anio=2027],valor,,CILOG; ILOG,True
+3_Paridad_SIES_2027,A93,I162S2C77J4V2,H002/filas[anio=2027],valor,,I162S2C77J4V2,True
+3_Paridad_SIES_2027,B93,INGENIERIA EN LOGISTICA,H002/filas[anio=2027],valor,,INGENIERIA EN LOGISTICA,True
+3_Paridad_SIES_2027,C93,CILOG20241,H002/filas[anio=2027],valor,,CILOG20241,True
+3_Paridad_SIES_2027,D93,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E93,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F93,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G93,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H93,CILOG,H002/filas[anio=2027],valor,,CILOG,True
+3_Paridad_SIES_2027,A94,I162S2C78J1V1,H002/filas[anio=2027],valor,,I162S2C78J1V1,True
+3_Paridad_SIES_2027,B94,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C94,TAMD20241,H002/filas[anio=2027],valor,,TAMD20241,True
+3_Paridad_SIES_2027,D94,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E94,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F94,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G94,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H94,TAMD,H002/filas[anio=2027],valor,,TAMD,True
+3_Paridad_SIES_2027,A95,I162S2C78J2V1,H002/filas[anio=2027],valor,,I162S2C78J2V1,True
+3_Paridad_SIES_2027,B95,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C95,TAMD20241,H002/filas[anio=2027],valor,,TAMD20241,True
+3_Paridad_SIES_2027,D95,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E95,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F95,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G95,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H95,TAMD,H002/filas[anio=2027],valor,,TAMD,True
+3_Paridad_SIES_2027,A143,I162S2C78J2V2,H002/filas[anio=2027],valor,,I162S2C78J2V2,True
+3_Paridad_SIES_2027,B143,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C143,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D143,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E143,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F143,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G143,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H143,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A96,I162S2C78J4V1,H002/filas[anio=2027],valor,,I162S2C78J4V1,True
+3_Paridad_SIES_2027,B96,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C96,TAMD20241,H002/filas[anio=2027],valor,,TAMD20241,True
+3_Paridad_SIES_2027,D96,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E96,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F96,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G96,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H96,TAMD,H002/filas[anio=2027],valor,,TAMD,True
+3_Paridad_SIES_2027,A144,I162S2C78J4V2,H002/filas[anio=2027],valor,,I162S2C78J4V2,True
+3_Paridad_SIES_2027,B144,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas[anio=2027],valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C144,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D144,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E144,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F144,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G144,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H144,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A97,I162S2C79J1V1,H002/filas[anio=2027],valor,,I162S2C79J1V1,True
+3_Paridad_SIES_2027,B97,TECNICO EN LOGISTICA,H002/filas[anio=2027],valor,,TECNICO EN LOGISTICA,True
+3_Paridad_SIES_2027,C97,TLOG20241,H002/filas[anio=2027],valor,,TLOG20241,True
+3_Paridad_SIES_2027,D97,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E97,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F97,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G97,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H97,TLOG,H002/filas[anio=2027],valor,,TLOG,True
+3_Paridad_SIES_2027,A98,I162S2C79J2V1,H002/filas[anio=2027],valor,,I162S2C79J2V1,True
+3_Paridad_SIES_2027,B98,TECNICO EN LOGISTICA,H002/filas[anio=2027],valor,,TECNICO EN LOGISTICA,True
+3_Paridad_SIES_2027,C98,TLOG20241,H002/filas[anio=2027],valor,,TLOG20241,True
+3_Paridad_SIES_2027,D98,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E98,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F98,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G98,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H98,TLOG,H002/filas[anio=2027],valor,,TLOG,True
+3_Paridad_SIES_2027,A99,I162S2C79J4V1,H002/filas[anio=2027],valor,,I162S2C79J4V1,True
+3_Paridad_SIES_2027,B99,TECNICO EN LOGISTICA,H002/filas[anio=2027],valor,,TECNICO EN LOGISTICA,True
+3_Paridad_SIES_2027,C99,TLOG20241,H002/filas[anio=2027],valor,,TLOG20241,True
+3_Paridad_SIES_2027,D99,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E99,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F99,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G99,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H99,TLOG,H002/filas[anio=2027],valor,,TLOG,True
+3_Paridad_SIES_2027,A145,I162S2C79J4V2,H002/filas[anio=2027],valor,,I162S2C79J4V2,True
+3_Paridad_SIES_2027,B145,TECNICO EN LOGISTICA,H002/filas[anio=2027],valor,,TECNICO EN LOGISTICA,True
+3_Paridad_SIES_2027,C145,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D145,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E145,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F145,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G145,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H145,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A100,I162S2C83J4V1,H002/filas[anio=2027],valor,,I162S2C83J4V1,True
+3_Paridad_SIES_2027,B100,ADMINISTRACION PUBLICA,H002/filas[anio=2027],valor,,ADMINISTRACION PUBLICA,True
+3_Paridad_SIES_2027,C100,ADMP20251,H002/filas[anio=2027],valor,,ADMP20251,True
+3_Paridad_SIES_2027,D100,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E100,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F100,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G100,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H100,ADMP,H002/filas[anio=2027],valor,,ADMP,True
+3_Paridad_SIES_2027,A101,I162S2C83J4V2,H002/filas[anio=2027],valor,,I162S2C83J4V2,True
+3_Paridad_SIES_2027,B101,ADMINISTRACION PUBLICA,H002/filas[anio=2027],valor,,ADMINISTRACION PUBLICA,True
+3_Paridad_SIES_2027,C101,CADMP20251,H002/filas[anio=2027],valor,,CADMP20251,True
+3_Paridad_SIES_2027,D101,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E101,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F101,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G101,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H101,CADMP,H002/filas[anio=2027],valor,,CADMP,True
+3_Paridad_SIES_2027,A102,I162S2C84J4V1,H002/filas[anio=2027],valor,,I162S2C84J4V1,True
+3_Paridad_SIES_2027,B102,TECNICO EN ADMINISTRACION PUBLICA,H002/filas[anio=2027],valor,,TECNICO EN ADMINISTRACION PUBLICA,True
+3_Paridad_SIES_2027,C102,TADP20251,H002/filas[anio=2027],valor,,TADP20251,True
+3_Paridad_SIES_2027,D102,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E102,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F102,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G102,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H102,TADP,H002/filas[anio=2027],valor,,TADP,True
+3_Paridad_SIES_2027,A103,I162S2C85J4V1,H002/filas[anio=2027],valor,,I162S2C85J4V1,True
+3_Paridad_SIES_2027,B103,CONTABILIDAD GENERAL,H002/filas[anio=2027],valor,,CONTABILIDAD GENERAL,True
+3_Paridad_SIES_2027,C103,CONG20251,H002/filas[anio=2027],valor,,CONG20251,True
+3_Paridad_SIES_2027,D103,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E103,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F103,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G103,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H103,CONG,H002/filas[anio=2027],valor,,CONG,True
+3_Paridad_SIES_2027,A104,I162S2C86J4V1,H002/filas[anio=2027],valor,,I162S2C86J4V1,True
+3_Paridad_SIES_2027,B104,AUDITORIA,H002/filas[anio=2027],valor,,AUDITORIA,True
+3_Paridad_SIES_2027,C104,AUDT20251,H002/filas[anio=2027],valor,,AUDT20251,True
+3_Paridad_SIES_2027,D104,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E104,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F104,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G104,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H104,AUDT,H002/filas[anio=2027],valor,,AUDT,True
+3_Paridad_SIES_2027,A105,I162S2C86J4V2,H002/filas[anio=2027],valor,,I162S2C86J4V2,True
+3_Paridad_SIES_2027,B105,AUDITORIA,H002/filas[anio=2027],valor,,AUDITORIA,True
+3_Paridad_SIES_2027,C105,AUDT20251; CAUDT20251,H002/filas[anio=2027],valor,,AUDT20251; CAUDT20251,True
+3_Paridad_SIES_2027,D105,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E105,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F105,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G105,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H105,AUDT; CAUDT,H002/filas[anio=2027],valor,,AUDT; CAUDT,True
+3_Paridad_SIES_2027,A106,I162S2C87J4V1,H002/filas[anio=2027],valor,,I162S2C87J4V1,True
+3_Paridad_SIES_2027,B106,INGENIERIA INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA INDUSTRIAL,True
+3_Paridad_SIES_2027,C106,IIND20251,H002/filas[anio=2027],valor,,IIND20251,True
+3_Paridad_SIES_2027,D106,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E106,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F106,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G106,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H106,IIND,H002/filas[anio=2027],valor,,IIND,True
+3_Paridad_SIES_2027,A107,I162S2C87J4V2,H002/filas[anio=2027],valor,,I162S2C87J4V2,True
+3_Paridad_SIES_2027,B107,INGENIERIA INDUSTRIAL,H002/filas[anio=2027],valor,,INGENIERIA INDUSTRIAL,True
+3_Paridad_SIES_2027,C107,IIND20251,H002/filas[anio=2027],valor,,IIND20251,True
+3_Paridad_SIES_2027,D107,APROBADA_D_2027,H002/filas[anio=2027],valor,,APROBADA_D_2027,True
+3_Paridad_SIES_2027,E107,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F107,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G107,D,H002/filas[anio=2027],valor,,D,True
+3_Paridad_SIES_2027,H107,IIND,H002/filas[anio=2027],valor,,IIND,True
+3_Paridad_SIES_2027,A108,I162S2C88J4V1,H002/filas[anio=2027],valor,,I162S2C88J4V1,True
+3_Paridad_SIES_2027,B108,INGENIERIA EN CIENCIA DE DATOS,H002/filas[anio=2027],valor,,INGENIERIA EN CIENCIA DE DATOS,True
+3_Paridad_SIES_2027,C108,ICDA20251,H002/filas[anio=2027],valor,,ICDA20251,True
+3_Paridad_SIES_2027,D108,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E108,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F108,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G108,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H108,ICDA,H002/filas[anio=2027],valor,,ICDA,True
+3_Paridad_SIES_2027,A109,I162S2C88J4V2,H002/filas[anio=2027],valor,,I162S2C88J4V2,True
+3_Paridad_SIES_2027,B109,INGENIERIA EN CIENCIA DE DATOS,H002/filas[anio=2027],valor,,INGENIERIA EN CIENCIA DE DATOS,True
+3_Paridad_SIES_2027,C109,CICDA20251; ICDA20251,H002/filas[anio=2027],valor,,CICDA20251; ICDA20251,True
+3_Paridad_SIES_2027,D109,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E109,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F109,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G109,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H109,CICDA; ICDA,H002/filas[anio=2027],valor,,CICDA; ICDA,True
+3_Paridad_SIES_2027,A110,I162S2C89J4V1,H002/filas[anio=2027],valor,,I162S2C89J4V1,True
+3_Paridad_SIES_2027,B110,TECNICO EN CIENCIA DE DATOS,H002/filas[anio=2027],valor,,TECNICO EN CIENCIA DE DATOS,True
+3_Paridad_SIES_2027,C110,TCDA20251,H002/filas[anio=2027],valor,,TCDA20251,True
+3_Paridad_SIES_2027,D110,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E110,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F110,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G110,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H110,TCDA,H002/filas[anio=2027],valor,,TCDA,True
+3_Paridad_SIES_2027,A111,I162S2C90J2V1,H002/filas[anio=2027],valor,,I162S2C90J2V1,True
+3_Paridad_SIES_2027,B111,NATUROPATIA,H002/filas[anio=2027],valor,,NATUROPATIA,True
+3_Paridad_SIES_2027,C111,CNATP20251; NATP20251,H002/filas[anio=2027],valor,,CNATP20251; NATP20251,True
+3_Paridad_SIES_2027,D111,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E111,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F111,2,H002/filas[anio=2027],valor,,2,True
+3_Paridad_SIES_2027,G111,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H111,CNATP; NATP,H002/filas[anio=2027],valor,,CNATP; NATP,True
+3_Paridad_SIES_2027,A112,I162S2C90J2V2,H002/filas[anio=2027],valor,,I162S2C90J2V2,True
+3_Paridad_SIES_2027,B112,NATUROPATIA,H002/filas[anio=2027],valor,,NATUROPATIA,True
+3_Paridad_SIES_2027,C112,CNATP20251; NATP20251,H002/filas[anio=2027],valor,,CNATP20251; NATP20251,True
+3_Paridad_SIES_2027,D112,VERSION_MULTIPLE_RESUELTA,H002/filas[anio=2027],valor,,VERSION_MULTIPLE_RESUELTA,True
+3_Paridad_SIES_2027,E112,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F112,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G112,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H112,CNATP; NATP,H002/filas[anio=2027],valor,,CNATP; NATP,True
+3_Paridad_SIES_2027,A113,I162S2C91J1V1,H002/filas[anio=2027],valor,,I162S2C91J1V1,True
+3_Paridad_SIES_2027,B113,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C113,TENS20251,H002/filas[anio=2027],valor,,TENS20251,True
+3_Paridad_SIES_2027,D113,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E113,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F113,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G113,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H113,COTENS; TENS,H002/filas[anio=2027],valor,,COTENS; TENS,True
+3_Paridad_SIES_2027,A114,I162S2C91J2V1,H002/filas[anio=2027],valor,,I162S2C91J2V1,True
+3_Paridad_SIES_2027,B114,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C114,TENS20251,H002/filas[anio=2027],valor,,TENS20251,True
+3_Paridad_SIES_2027,D114,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E114,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F114,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G114,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H114,COTENS; TENS,H002/filas[anio=2027],valor,,COTENS; TENS,True
+3_Paridad_SIES_2027,A146,I162S2C91J3V1,H002/filas[anio=2027],valor,,I162S2C91J3V1,True
+3_Paridad_SIES_2027,B146,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C146,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D146,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E146,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F146,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G146,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H146,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A177,I162S2C95J4V1,H002/filas[anio=2027],valor,,I162S2C95J4V1,True
+3_Paridad_SIES_2027,B177,DIPLOMADO EN INTELIGENCIA ARTIFICIAL,H002/filas[anio=2027],valor,,DIPLOMADO EN INTELIGENCIA ARTIFICIAL,True
+3_Paridad_SIES_2027,C177,DIAR20251,H002/filas[anio=2027],valor,,DIAR20251,True
+3_Paridad_SIES_2027,D177,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E177,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F177,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G177,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H177,DIAR,H002/filas[anio=2027],valor,,DIAR,True
+3_Paridad_SIES_2027,A178,I162S2C96J4V1,H002/filas[anio=2027],valor,,I162S2C96J4V1,True
+3_Paridad_SIES_2027,B178,DIPLOMADO EN GOBERNANZA DE DATOS,H002/filas[anio=2027],valor,,DIPLOMADO EN GOBERNANZA DE DATOS,True
+3_Paridad_SIES_2027,C178,DGDA,H002/filas[anio=2027],valor,,DGDA,True
+3_Paridad_SIES_2027,D178,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E178,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F178,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G178,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H178,DGDA,H002/filas[anio=2027],valor,,DGDA,True
+3_Paridad_SIES_2027,A179,I162S2C97J4V1,H002/filas[anio=2027],valor,,I162S2C97J4V1,True
+3_Paridad_SIES_2027,B179,DIPLOMADO EN SUPPLY CHAIN MANAGEMENT Y MINERIA DE REQUERIMIENTOS,H002/filas[anio=2027],valor,,DIPLOMADO EN SUPPLY CHAIN MANAGEMENT Y MINERIA DE REQUERIMIENTOS,True
+3_Paridad_SIES_2027,C179,DDSC20251; DSCM20251,H002/filas[anio=2027],valor,,DDSC20251; DSCM20251,True
+3_Paridad_SIES_2027,D179,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E179,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F179,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G179,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H179,DDSC; DSCM,H002/filas[anio=2027],valor,,DDSC; DSCM,True
+3_Paridad_SIES_2027,A180,I162S2C98J4V1,H002/filas[anio=2027],valor,,I162S2C98J4V1,True
+3_Paridad_SIES_2027,B180,DIPLOMADO EN HABILIDADES DIRECTIVAS PARA PROFESIONALES STEM,H002/filas[anio=2027],valor,,DIPLOMADO EN HABILIDADES DIRECTIVAS PARA PROFESIONALES STEM,True
+3_Paridad_SIES_2027,C180,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D180,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E180,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F180,3,H002/filas[anio=2027],valor,,3,True
+3_Paridad_SIES_2027,G180,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H180,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A181,I162S2C99J4V1,H002/filas[anio=2027],valor,,I162S2C99J4V1,True
+3_Paridad_SIES_2027,B181,DIPLOMADO EN GESTION PUBLICA LOCAL,H002/filas[anio=2027],valor,,DIPLOMADO EN GESTION PUBLICA LOCAL,True
+3_Paridad_SIES_2027,C181,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D181,FUERA_ALCANCE,H002/filas[anio=2027],valor,,FUERA_ALCANCE,True
+3_Paridad_SIES_2027,E181,no,H002/filas[anio=2027],valor,,no,True
+3_Paridad_SIES_2027,F181,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G181,C/D,H002/filas[anio=2027],valor,,C/D,True
+3_Paridad_SIES_2027,H181,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A115,I162S3C114J2V1,H002/filas[anio=2027],valor,,I162S3C114J2V1,True
+3_Paridad_SIES_2027,B115,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,True
+3_Paridad_SIES_2027,C115,COTEIQ20261,H002/filas[anio=2027],valor,,COTEIQ20261,True
+3_Paridad_SIES_2027,D115,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E115,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F115,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G115,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H115,COTEIQ,H002/filas[anio=2027],valor,,COTEIQ,True
+3_Paridad_SIES_2027,A116,I162S3C115J2V1,H002/filas[anio=2027],valor,,I162S3C115J2V1,True
+3_Paridad_SIES_2027,B116,TECNICO EN FARMACIA,H002/filas[anio=2027],valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C116,COTFAR20261,H002/filas[anio=2027],valor,,COTFAR20261,True
+3_Paridad_SIES_2027,D116,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E116,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F116,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G116,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H116,COTFAR,H002/filas[anio=2027],valor,,COTFAR,True
+3_Paridad_SIES_2027,A147,I162S3C115J3V1,H002/filas[anio=2027],valor,,I162S3C115J3V1,True
+3_Paridad_SIES_2027,B147,TECNICO EN FARMACIA,H002/filas[anio=2027],valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C147,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D147,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E147,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F147,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G147,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H147,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A148,I162S3C132J3V1,H002/filas[anio=2027],valor,,I162S3C132J3V1,True
+3_Paridad_SIES_2027,B148,INGENIERIA EN CONSTRUCCION,H002/filas[anio=2027],valor,,INGENIERIA EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C148,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D148,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E148,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F148,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G148,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H148,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A149,I162S3C133J3V1,H002/filas[anio=2027],valor,,I162S3C133J3V1,True
+3_Paridad_SIES_2027,B149,INGENIERIA EN ELECTRICIDAD,H002/filas[anio=2027],valor,,INGENIERIA EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C149,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D149,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E149,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F149,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G149,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H149,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A150,I162S3C137J3V1,H002/filas[anio=2027],valor,,I162S3C137J3V1,True
+3_Paridad_SIES_2027,B150,TECNICO EN CONSTRUCCION,H002/filas[anio=2027],valor,,TECNICO EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C150,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D150,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E150,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F150,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G150,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H150,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A151,I162S3C138J3V1,H002/filas[anio=2027],valor,,I162S3C138J3V1,True
+3_Paridad_SIES_2027,B151,TECNICO EN ELECTRICIDAD,H002/filas[anio=2027],valor,,TECNICO EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C151,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D151,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E151,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F151,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G151,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H151,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A152,I162S3C139J3V1,H002/filas[anio=2027],valor,,I162S3C139J3V1,True
+3_Paridad_SIES_2027,B152,TECNICO EN IMAGENOLOGIA,H002/filas[anio=2027],valor,,TECNICO EN IMAGENOLOGIA,True
+3_Paridad_SIES_2027,C152,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D152,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E152,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F152,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G152,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H152,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A153,I162S3C141J3V1,H002/filas[anio=2027],valor,,I162S3C141J3V1,True
+3_Paridad_SIES_2027,B153,TECNICO EN ODONTOLOGIA,H002/filas[anio=2027],valor,,TECNICO EN ODONTOLOGIA,True
+3_Paridad_SIES_2027,C153,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D153,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E153,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F153,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G153,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H153,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A154,I162S3C143J3V1,H002/filas[anio=2027],valor,,I162S3C143J3V1,True
+3_Paridad_SIES_2027,B154,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,H002/filas[anio=2027],valor,,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,True
+3_Paridad_SIES_2027,C154,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D154,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E154,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F154,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G154,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H154,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A155,I162S3C91J1V1,H002/filas[anio=2027],valor,,I162S3C91J1V1,True
+3_Paridad_SIES_2027,B155,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C155,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D155,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E155,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F155,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G155,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H155,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A117,I162S3C91J2V1,H002/filas[anio=2027],valor,,I162S3C91J2V1,True
+3_Paridad_SIES_2027,B117,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C117,COTENS20261,H002/filas[anio=2027],valor,,COTENS20261,True
+3_Paridad_SIES_2027,D117,CONTINUA,H002/filas[anio=2027],valor,,CONTINUA,True
+3_Paridad_SIES_2027,E117,sí,H002/filas[anio=2027],valor,,sí,True
+3_Paridad_SIES_2027,F117,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G117,C,H002/filas[anio=2027],valor,,C,True
+3_Paridad_SIES_2027,H117,COTENS,H002/filas[anio=2027],valor,,COTENS,True
+3_Paridad_SIES_2027,A156,I162S3C91J3V1,H002/filas[anio=2027],valor,,I162S3C91J3V1,True
+3_Paridad_SIES_2027,B156,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C156,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D156,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E156,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F156,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G156,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H156,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A157,I162S4C114J2V1,H002/filas[anio=2027],valor,,I162S4C114J2V1,True
+3_Paridad_SIES_2027,B157,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,True
+3_Paridad_SIES_2027,C157,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D157,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E157,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F157,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G157,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H157,PMTEIQ,H002/filas[anio=2027],valor,,PMTEIQ,True
+3_Paridad_SIES_2027,A158,I162S4C115J2V1,H002/filas[anio=2027],valor,,I162S4C115J2V1,True
+3_Paridad_SIES_2027,B158,TECNICO EN FARMACIA,H002/filas[anio=2027],valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C158,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D158,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E158,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F158,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G158,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H158,PMTFAR,H002/filas[anio=2027],valor,,PMTFAR,True
+3_Paridad_SIES_2027,A159,I162S4C115J3V1,H002/filas[anio=2027],valor,,I162S4C115J3V1,True
+3_Paridad_SIES_2027,B159,TECNICO EN FARMACIA,H002/filas[anio=2027],valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C159,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D159,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E159,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F159,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G159,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H159,,H002/filas[anio=2027],valor,,,True
+3_Paridad_SIES_2027,A160,I162S4C91J2V1,H002/filas[anio=2027],valor,,I162S4C91J2V1,True
+3_Paridad_SIES_2027,B160,TECNICO EN ENFERMERIA,H002/filas[anio=2027],valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C160,E: sin plan,H002/filas[anio=2027],valor,,E: sin plan,True
+3_Paridad_SIES_2027,D160,NUEVO_2027_SIN_PLAN_E,H002/filas[anio=2027],valor,,NUEVO_2027_SIN_PLAN_E,True
+3_Paridad_SIES_2027,E160,E,H002/filas[anio=2027],valor,,E,True
+3_Paridad_SIES_2027,F160,1,H002/filas[anio=2027],valor,,1,True
+3_Paridad_SIES_2027,G160,C/E,H002/filas[anio=2027],valor,,C/E,True
+3_Paridad_SIES_2027,H160,PMTENS,H002/filas[anio=2027],valor,,PMTENS,True
+3_Paridad_SIES_2027,A188,I162S2C1J4,REVISION/nuevos,valor,,I162S2C1J4,True
+3_Paridad_SIES_2027,B188,IECIREOL,REVISION/nuevos,valor,,IECIREOL,True
+3_Paridad_SIES_2027,C188,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D188,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A189,I162S2C1J4,REVISION/nuevos,valor,,I162S2C1J4,True
+3_Paridad_SIES_2027,B189,IECIREOL20191,REVISION/nuevos,valor,,IECIREOL20191,True
+3_Paridad_SIES_2027,C189,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D189,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A190,I162S2C1J4,REVISION/nuevos,valor,,I162S2C1J4,True
+3_Paridad_SIES_2027,B190,IECIREOL20201,REVISION/nuevos,valor,,IECIREOL20201,True
+3_Paridad_SIES_2027,C190,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D190,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A191,I162S2C1J4,REVISION/nuevos,valor,,I162S2C1J4,True
+3_Paridad_SIES_2027,B191,IECIREOL20211,REVISION/nuevos,valor,,IECIREOL20211,True
+3_Paridad_SIES_2027,C191,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D191,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A192,I162S2C1J4,REVISION/nuevos,valor,,I162S2C1J4,True
+3_Paridad_SIES_2027,B192,NINFREOL2019,REVISION/nuevos,valor,,NINFREOL2019,True
+3_Paridad_SIES_2027,C192,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D192,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A193,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B193,IECIREOL,REVISION/nuevos,valor,,IECIREOL,True
+3_Paridad_SIES_2027,C193,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D193,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A194,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B194,IECIREOL20191,REVISION/nuevos,valor,,IECIREOL20191,True
+3_Paridad_SIES_2027,C194,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D194,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A195,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B195,IECIREOL20201,REVISION/nuevos,valor,,IECIREOL20201,True
+3_Paridad_SIES_2027,C195,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D195,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A196,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B196,IECIREOL20211,REVISION/nuevos,valor,,IECIREOL20211,True
+3_Paridad_SIES_2027,C196,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D196,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A197,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B197,NCONRE,REVISION/nuevos,valor,,NCONRE,True
+3_Paridad_SIES_2027,C197,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D197,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A198,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B198,NCONREOL2019,REVISION/nuevos,valor,,NCONREOL2019,True
+3_Paridad_SIES_2027,C198,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D198,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A199,I162S2C3J4,REVISION/nuevos,valor,,I162S2C3J4,True
+3_Paridad_SIES_2027,B199,NETMRE20121,REVISION/nuevos,valor,,NETMRE20121,True
+3_Paridad_SIES_2027,C199,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D199,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A200,I162S2C46J2,REVISION/nuevos,valor,,I162S2C46J2,True
+3_Paridad_SIES_2027,B200,CICIB20241,REVISION/nuevos,valor,,CICIB20241,True
+3_Paridad_SIES_2027,C200,REVISION_REAL_TIPO_SIN_VERSION_EN_FAMILIA_CON_ADMISION,REVISION/nuevos,valor,,REVISION_REAL_TIPO_SIN_VERSION_EN_FAMILIA_CON_ADMISION,True
+3_Paridad_SIES_2027,D200,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A201,I162S2C46J2,REVISION/nuevos,valor,,I162S2C46J2,True
+3_Paridad_SIES_2027,B201,NICCRE20191,REVISION/nuevos,valor,,NICCRE20191,True
+3_Paridad_SIES_2027,C201,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D201,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A202,I162S2C46J2,REVISION/nuevos,valor,,I162S2C46J2,True
+3_Paridad_SIES_2027,B202,NICCRE2020,REVISION/nuevos,valor,,NICCRE2020,True
+3_Paridad_SIES_2027,C202,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D202,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A203,I162S2C46J2,REVISION/nuevos,valor,,I162S2C46J2,True
+3_Paridad_SIES_2027,B203,NTCCRE20191,REVISION/nuevos,valor,,NTCCRE20191,True
+3_Paridad_SIES_2027,C203,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D203,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A204,I162S2C46J2,REVISION/nuevos,valor,,I162S2C46J2,True
+3_Paridad_SIES_2027,B204,NTCCRE2020,REVISION/nuevos,valor,,NTCCRE2020,True
+3_Paridad_SIES_2027,C204,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D204,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A205,I162S2C47J4,REVISION/nuevos,valor,,I162S2C47J4,True
+3_Paridad_SIES_2027,B205,TCIB20241,REVISION/nuevos,valor,,TCIB20241,True
+3_Paridad_SIES_2027,C205,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D205,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A206,I162S2C47J4,REVISION/nuevos,valor,,I162S2C47J4,True
+3_Paridad_SIES_2027,B206,TCSREOL2020,REVISION/nuevos,valor,,TCSREOL2020,True
+3_Paridad_SIES_2027,C206,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D206,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A207,I162S2C47J4,REVISION/nuevos,valor,,I162S2C47J4,True
+3_Paridad_SIES_2027,B207,TCSREOL20211,REVISION/nuevos,valor,,TCSREOL20211,True
+3_Paridad_SIES_2027,C207,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D207,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A208,I162S2C47J4,REVISION/nuevos,valor,,I162S2C47J4,True
+3_Paridad_SIES_2027,B208,TCSREOL20231,REVISION/nuevos,valor,,TCSREOL20231,True
+3_Paridad_SIES_2027,C208,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D208,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A209,I162S2C57J4,REVISION/nuevos,valor,,I162S2C57J4,True
+3_Paridad_SIES_2027,B209,TPAREOL2020,REVISION/nuevos,valor,,TPAREOL2020,True
+3_Paridad_SIES_2027,C209,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D209,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A210,I162S2C57J4,REVISION/nuevos,valor,,I162S2C57J4,True
+3_Paridad_SIES_2027,B210,TPAREOL20211,REVISION/nuevos,valor,,TPAREOL20211,True
+3_Paridad_SIES_2027,C210,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D210,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A211,I162S2C57J4,REVISION/nuevos,valor,,I162S2C57J4,True
+3_Paridad_SIES_2027,B211,TPAREOL20231,REVISION/nuevos,valor,,TPAREOL20231,True
+3_Paridad_SIES_2027,C211,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D211,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A212,I162S2C57J4,REVISION/nuevos,valor,,I162S2C57J4,True
+3_Paridad_SIES_2027,B212,TPAS20241,REVISION/nuevos,valor,,TPAS20241,True
+3_Paridad_SIES_2027,C212,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D212,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A213,I162S2C6J4,REVISION/nuevos,valor,,I162S2C6J4,True
+3_Paridad_SIES_2027,B213,TCRE20241,REVISION/nuevos,valor,,TCRE20241,True
+3_Paridad_SIES_2027,C213,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D213,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A214,I162S2C6J4,REVISION/nuevos,valor,,I162S2C6J4,True
+3_Paridad_SIES_2027,B214,TTMREOL,REVISION/nuevos,valor,,TTMREOL,True
+3_Paridad_SIES_2027,C214,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D214,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A215,I162S2C6J4,REVISION/nuevos,valor,,I162S2C6J4,True
+3_Paridad_SIES_2027,B215,TTMREOL20191,REVISION/nuevos,valor,,TTMREOL20191,True
+3_Paridad_SIES_2027,C215,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D215,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A216,I162S2C6J4,REVISION/nuevos,valor,,I162S2C6J4,True
+3_Paridad_SIES_2027,B216,TTMREOL20211,REVISION/nuevos,valor,,TTMREOL20211,True
+3_Paridad_SIES_2027,C216,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D216,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A217,I162S2C6J4,REVISION/nuevos,valor,,I162S2C6J4,True
+3_Paridad_SIES_2027,B217,TTMREOL20231,REVISION/nuevos,valor,,TTMREOL20231,True
+3_Paridad_SIES_2027,C217,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D217,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A218,I162S2C78J2,REVISION/nuevos,valor,,I162S2C78J2,True
+3_Paridad_SIES_2027,B218,TAMD20241,REVISION/nuevos,valor,,TAMD20241,True
+3_Paridad_SIES_2027,C218,CODIGO_NUEVO_SIN_PLAN,REVISION/nuevos,valor,,CODIGO_NUEVO_SIN_PLAN,True
+3_Paridad_SIES_2027,D218,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A219,I162S2C78J4,REVISION/nuevos,valor,,I162S2C78J4,True
+3_Paridad_SIES_2027,B219,TAMD20241,REVISION/nuevos,valor,,TAMD20241,True
+3_Paridad_SIES_2027,C219,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D219,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A220,I162S2C79J4,REVISION/nuevos,valor,,I162S2C79J4,True
+3_Paridad_SIES_2027,B220,TLOG20241,REVISION/nuevos,valor,,TLOG20241,True
+3_Paridad_SIES_2027,C220,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,REVISION/nuevos,valor,,VARIAS_VERSIONES_VIGENTES_MISMO_TIPO,True
+3_Paridad_SIES_2027,D220,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A221,I162S2C90J2,REVISION/nuevos,valor,,I162S2C90J2,True
+3_Paridad_SIES_2027,B221,CNATP20251,REVISION/nuevos,valor,,CNATP20251,True
+3_Paridad_SIES_2027,C221,NUEVO_TIPO_E_CON_ADMISION,REVISION/nuevos,valor,,NUEVO_TIPO_E_CON_ADMISION,True
+3_Paridad_SIES_2027,D221,Opción plan–familia,REVISION/nuevos,valor,,Opción plan–familia,True
+3_Paridad_SIES_2027,A225,I162S2C115J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C115J3V1,True
+3_Paridad_SIES_2027,B225,TECNICO EN FARMACIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C225,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D225,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A226,I162S2C11J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C11J4V1,True
+3_Paridad_SIES_2027,B226,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN AUTOMATIZACION Y CONTROL INDUSTRIAL,True
+3_Paridad_SIES_2027,C226,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D226,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A227,I162S2C130J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C130J4V1,True
+3_Paridad_SIES_2027,B227,INGENIERIA EN ARQUITECTURA CLOUD,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN ARQUITECTURA CLOUD,True
+3_Paridad_SIES_2027,C227,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D227,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A228,I162S2C130J4V2,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C130J4V2,True
+3_Paridad_SIES_2027,B228,INGENIERIA EN ARQUITECTURA CLOUD,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN ARQUITECTURA CLOUD,True
+3_Paridad_SIES_2027,C228,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D228,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A229,I162S2C131J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C131J4V1,True
+3_Paridad_SIES_2027,B229,INGENIERIA EN COMERCIO EXTERIOR,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN COMERCIO EXTERIOR,True
+3_Paridad_SIES_2027,C229,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D229,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A230,I162S2C132J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C132J3V1,True
+3_Paridad_SIES_2027,B230,INGENIERIA EN CONSTRUCCION,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C230,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D230,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A231,I162S2C133J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C133J3V1,True
+3_Paridad_SIES_2027,B231,INGENIERIA EN ELECTRICIDAD,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C231,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D231,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A232,I162S2C134J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C134J4V1,True
+3_Paridad_SIES_2027,B232,INGENIERIA EN INTELIGENCIA ARTIFICIAL,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN INTELIGENCIA ARTIFICIAL,True
+3_Paridad_SIES_2027,C232,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D232,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A233,I162S2C135J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C135J4V1,True
+3_Paridad_SIES_2027,B233,INGENIERIA EN OPERACIONES MINERAS,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN OPERACIONES MINERAS,True
+3_Paridad_SIES_2027,C233,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D233,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A234,I162S2C136J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C136J4V1,True
+3_Paridad_SIES_2027,B234,TECNICO EN COMERCIO EXTERIOR,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN COMERCIO EXTERIOR,True
+3_Paridad_SIES_2027,C234,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D234,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A235,I162S2C137J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C137J3V1,True
+3_Paridad_SIES_2027,B235,TECNICO EN CONSTRUCCION,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C235,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D235,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A236,I162S2C138J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C138J3V1,True
+3_Paridad_SIES_2027,B236,TECNICO EN ELECTRICIDAD,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C236,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D236,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A237,I162S2C139J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C139J3V1,True
+3_Paridad_SIES_2027,B237,TECNICO EN IMAGENOLOGIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN IMAGENOLOGIA,True
+3_Paridad_SIES_2027,C237,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D237,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A238,I162S2C140J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C140J4V1,True
+3_Paridad_SIES_2027,B238,TECNICO EN INTELIGENCIA ARTIFICIAL,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN INTELIGENCIA ARTIFICIAL,True
+3_Paridad_SIES_2027,C238,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D238,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A239,I162S2C142J4V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C142J4V1,True
+3_Paridad_SIES_2027,B239,TECNICO EN OPERACIONES MINERAS,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN OPERACIONES MINERAS,True
+3_Paridad_SIES_2027,C239,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D239,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A240,I162S2C143J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C143J3V1,True
+3_Paridad_SIES_2027,B240,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,True
+3_Paridad_SIES_2027,C240,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D240,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A241,I162S2C47J4V2,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C47J4V2,True
+3_Paridad_SIES_2027,B241,TECNICO EN CIBERSEGURIDAD,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN CIBERSEGURIDAD,True
+3_Paridad_SIES_2027,C241,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D241,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A242,I162S2C57J4V2,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C57J4V2,True
+3_Paridad_SIES_2027,B242,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS,True
+3_Paridad_SIES_2027,C242,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D242,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A243,I162S2C6J4V3,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C6J4V3,True
+3_Paridad_SIES_2027,B243,TECNICO EN CONECTIVIDAD Y REDES,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN CONECTIVIDAD Y REDES,True
+3_Paridad_SIES_2027,C243,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D243,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A244,I162S2C78J2V2,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C78J2V2,True
+3_Paridad_SIES_2027,B244,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C244,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D244,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A245,I162S2C78J4V2,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C78J4V2,True
+3_Paridad_SIES_2027,B245,TECNICO EN ADMINISTRACION DE EMPRESAS,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ADMINISTRACION DE EMPRESAS,True
+3_Paridad_SIES_2027,C245,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D245,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A246,I162S2C79J4V2,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C79J4V2,True
+3_Paridad_SIES_2027,B246,TECNICO EN LOGISTICA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN LOGISTICA,True
+3_Paridad_SIES_2027,C246,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D246,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A247,I162S2C91J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S2C91J3V1,True
+3_Paridad_SIES_2027,B247,TECNICO EN ENFERMERIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C247,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D247,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A248,I162S3C115J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C115J3V1,True
+3_Paridad_SIES_2027,B248,TECNICO EN FARMACIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C248,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D248,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A249,I162S3C132J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C132J3V1,True
+3_Paridad_SIES_2027,B249,INGENIERIA EN CONSTRUCCION,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C249,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D249,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A250,I162S3C133J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C133J3V1,True
+3_Paridad_SIES_2027,B250,INGENIERIA EN ELECTRICIDAD,H002/filas; H002_CIERRE/pendientes,valor,,INGENIERIA EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C250,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D250,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A251,I162S3C137J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C137J3V1,True
+3_Paridad_SIES_2027,B251,TECNICO EN CONSTRUCCION,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN CONSTRUCCION,True
+3_Paridad_SIES_2027,C251,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D251,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A252,I162S3C138J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C138J3V1,True
+3_Paridad_SIES_2027,B252,TECNICO EN ELECTRICIDAD,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ELECTRICIDAD,True
+3_Paridad_SIES_2027,C252,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D252,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A253,I162S3C139J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C139J3V1,True
+3_Paridad_SIES_2027,B253,TECNICO EN IMAGENOLOGIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN IMAGENOLOGIA,True
+3_Paridad_SIES_2027,C253,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D253,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A254,I162S3C141J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C141J3V1,True
+3_Paridad_SIES_2027,B254,TECNICO EN ODONTOLOGIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ODONTOLOGIA,True
+3_Paridad_SIES_2027,C254,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D254,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A255,I162S3C143J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C143J3V1,True
+3_Paridad_SIES_2027,B255,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO VETERINARIO EN CLINICA DE ANIMALES DE COMPAÑIA,True
+3_Paridad_SIES_2027,C255,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D255,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A256,I162S3C91J1V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C91J1V1,True
+3_Paridad_SIES_2027,B256,TECNICO EN ENFERMERIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C256,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D256,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A257,I162S3C91J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S3C91J3V1,True
+3_Paridad_SIES_2027,B257,TECNICO EN ENFERMERIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C257,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D257,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A258,I162S4C114J2V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S4C114J2V1,True
+3_Paridad_SIES_2027,B258,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ENFERMERIA E INSTRUMENTACION QUIRURGICA,True
+3_Paridad_SIES_2027,C258,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D258,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A259,I162S4C115J2V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S4C115J2V1,True
+3_Paridad_SIES_2027,B259,TECNICO EN FARMACIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C259,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D259,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A260,I162S4C115J3V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S4C115J3V1,True
+3_Paridad_SIES_2027,B260,TECNICO EN FARMACIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN FARMACIA,True
+3_Paridad_SIES_2027,C260,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D260,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+3_Paridad_SIES_2027,A261,I162S4C91J2V1,H002/filas; H002_CIERRE/pendientes,valor,,I162S4C91J2V1,True
+3_Paridad_SIES_2027,B261,TECNICO EN ENFERMERIA,H002/filas; H002_CIERRE/pendientes,valor,,TECNICO EN ENFERMERIA,True
+3_Paridad_SIES_2027,C261,MU 2027: cuadratura por código y total,H002/filas; H002_CIERRE/pendientes,valor,,MU 2027: cuadratura por código y total,True
+3_Paridad_SIES_2027,D261,D/E,H002/filas; H002_CIERRE/pendientes,valor,,D/E,True
+4_Brecha_MU_2026,A7,2022,MATRIZ/matriz[*]/mu_sies,valor,,2022,True
+4_Brecha_MU_2026,B7,1038,MATRIZ/matriz[*]/mu_sies,valor,,1038,True
+4_Brecha_MU_2026,C7,1036,MATRIZ/matriz[*]/mu_sies,valor,,1036,True
+4_Brecha_MU_2026,D7,2,MATRIZ/matriz[*]/mu_sies,valor,,2,True
+4_Brecha_MU_2026,E7,1033,MATRIZ/matriz[*]/mu_sies,valor,,1033,True
+4_Brecha_MU_2026,F7,3,MATRIZ/matriz[*]/mu_sies,valor,,3,True
+4_Brecha_MU_2026,G7,1033,MATRIZ/matriz[*]/mu_sies,valor,,1033,True
+4_Brecha_MU_2026,A8,2023,MATRIZ/matriz[*]/mu_sies,valor,,2023,True
+4_Brecha_MU_2026,B8,1145,MATRIZ/matriz[*]/mu_sies,valor,,1145,True
+4_Brecha_MU_2026,C8,1145,MATRIZ/matriz[*]/mu_sies,valor,,1145,True
+4_Brecha_MU_2026,D8,0,MATRIZ/matriz[*]/mu_sies,valor,,0,True
+4_Brecha_MU_2026,E8,1142,MATRIZ/matriz[*]/mu_sies,valor,,1142,True
+4_Brecha_MU_2026,F8,3,MATRIZ/matriz[*]/mu_sies,valor,,3,True
+4_Brecha_MU_2026,G8,1142,MATRIZ/matriz[*]/mu_sies,valor,,1142,True
+4_Brecha_MU_2026,A9,2024,MATRIZ/matriz[*]/mu_sies,valor,,2024,True
+4_Brecha_MU_2026,B9,1541,MATRIZ/matriz[*]/mu_sies,valor,,1541,True
+4_Brecha_MU_2026,C9,1535,MATRIZ/matriz[*]/mu_sies,valor,,1535,True
+4_Brecha_MU_2026,D9,6,MATRIZ/matriz[*]/mu_sies,valor,,6,True
+4_Brecha_MU_2026,E9,1455,MATRIZ/matriz[*]/mu_sies,valor,,1455,True
+4_Brecha_MU_2026,F9,80,MATRIZ/matriz[*]/mu_sies,valor,,80,True
+4_Brecha_MU_2026,G9,1455,MATRIZ/matriz[*]/mu_sies,valor,,1455,True
+4_Brecha_MU_2026,A10,2025,MATRIZ/matriz[*]/mu_sies,valor,,2025,True
+4_Brecha_MU_2026,B10,2371,MATRIZ/matriz[*]/mu_sies,valor,,2371,True
+4_Brecha_MU_2026,C10,2371,MATRIZ/matriz[*]/mu_sies,valor,,2371,True
+4_Brecha_MU_2026,D10,0,MATRIZ/matriz[*]/mu_sies,valor,,0,True
+4_Brecha_MU_2026,E10,2298,MATRIZ/matriz[*]/mu_sies,valor,,2298,True
+4_Brecha_MU_2026,F10,73,MATRIZ/matriz[*]/mu_sies,valor,,73,True
+4_Brecha_MU_2026,G10,2371,MATRIZ/matriz[*]/mu_sies,valor,,2371,True
+4_Brecha_MU_2026,A11,2026,MATRIZ/matriz[*]/mu_sies,valor,,2026,True
+4_Brecha_MU_2026,B11,4105,MATRIZ/matriz[*]/mu_sies,valor,,4105,True
+4_Brecha_MU_2026,C11,4105,MATRIZ/matriz[*]/mu_sies,valor,,4105,True
+4_Brecha_MU_2026,D11,0,MATRIZ/matriz[*]/mu_sies,valor,,0,True
+4_Brecha_MU_2026,E11,3145,MATRIZ/matriz[*]/mu_sies,valor,,3145,True
+4_Brecha_MU_2026,F11,960,MATRIZ/matriz[*]/mu_sies,valor,,960,True
+4_Brecha_MU_2026,G11,3371,MATRIZ/matriz[*]/mu_sies,valor,,3371,True
+4_Brecha_MU_2026,H7,0,MATRIZ/matriz[*]/mu_sies,formula,=G7-E7,0,True
+4_Brecha_MU_2026,I7,0,MATRIZ/matriz[*]/mu_sies,formula,=C7+D7-B7,0,True
+4_Brecha_MU_2026,H8,0,MATRIZ/matriz[*]/mu_sies,formula,=G8-E8,0,True
+4_Brecha_MU_2026,I8,0,MATRIZ/matriz[*]/mu_sies,formula,=C8+D8-B8,0,True
+4_Brecha_MU_2026,H9,0,MATRIZ/matriz[*]/mu_sies,formula,=G9-E9,0,True
+4_Brecha_MU_2026,I9,0,MATRIZ/matriz[*]/mu_sies,formula,=C9+D9-B9,0,True
+4_Brecha_MU_2026,H10,73,MATRIZ/matriz[*]/mu_sies,formula,=G10-E10,73,True
+4_Brecha_MU_2026,I10,0,MATRIZ/matriz[*]/mu_sies,formula,=C10+D10-B10,0,True
+4_Brecha_MU_2026,H11,226,MATRIZ/matriz[*]/mu_sies,formula,=G11-E11,226,True
+4_Brecha_MU_2026,I11,0,MATRIZ/matriz[*]/mu_sies,formula,=C11+D11-B11,0,True
+4_Brecha_MU_2026,A17,2022,MATRIZ/matriz[*]/mu_sies,valor,,2022,True
+4_Brecha_MU_2026,B17,1033,MATRIZ/matriz[*]/mu_sies,valor,,1033,True
+4_Brecha_MU_2026,C17,0,MATRIZ/matriz[*]/mu_sies,valor,,0,True
+4_Brecha_MU_2026,D17,1033,MATRIZ/matriz[*]/mu_sies,valor,,1033,True
+4_Brecha_MU_2026,A18,2023,MATRIZ/matriz[*]/mu_sies,valor,,2023,True
+4_Brecha_MU_2026,B18,1142,MATRIZ/matriz[*]/mu_sies,valor,,1142,True
+4_Brecha_MU_2026,C18,19,MATRIZ/matriz[*]/mu_sies,valor,,19,True
+4_Brecha_MU_2026,D18,1161,MATRIZ/matriz[*]/mu_sies,valor,,1161,True
+4_Brecha_MU_2026,A19,2024,MATRIZ/matriz[*]/mu_sies,valor,,2024,True
+4_Brecha_MU_2026,B19,1455,MATRIZ/matriz[*]/mu_sies,valor,,1455,True
+4_Brecha_MU_2026,C19,13,MATRIZ/matriz[*]/mu_sies,valor,,13,True
+4_Brecha_MU_2026,D19,1468,MATRIZ/matriz[*]/mu_sies,valor,,1468,True
+4_Brecha_MU_2026,A20,2025,MATRIZ/matriz[*]/mu_sies,valor,,2025,True
+4_Brecha_MU_2026,B20,2371,MATRIZ/matriz[*]/mu_sies,valor,,2371,True
+4_Brecha_MU_2026,C20,151,MATRIZ/matriz[*]/mu_sies,valor,,151,True
+4_Brecha_MU_2026,D20,2522,MATRIZ/matriz[*]/mu_sies,valor,,2522,True
+4_Brecha_MU_2026,A21,2026,MATRIZ/matriz[*]/mu_sies,valor,,2026,True
+4_Brecha_MU_2026,B21,3371,MATRIZ/matriz[*]/mu_sies,valor,,3371,True
+4_Brecha_MU_2026,C21,54,MATRIZ/matriz[*]/mu_sies,valor,,54,True
+4_Brecha_MU_2026,D21,3425,MATRIZ/matriz[*]/mu_sies,valor,,3425,True
+4_Brecha_MU_2026,E17,0,MATRIZ/matriz[*]/mu_sies,formula,=B17+C17-D17,0,True
+4_Brecha_MU_2026,E18,0,MATRIZ/matriz[*]/mu_sies,formula,=B18+C18-D18,0,True
+4_Brecha_MU_2026,E19,0,MATRIZ/matriz[*]/mu_sies,formula,=B19+C19-D19,0,True
+4_Brecha_MU_2026,E20,0,MATRIZ/matriz[*]/mu_sies,formula,=B20+C20-D20,0,True
+4_Brecha_MU_2026,E21,0,MATRIZ/matriz[*]/mu_sies,formula,=B21+C21-D21,0,True
+4_Brecha_MU_2026,A25,Brecha positiva,BRECHA/brecha,valor,,Brecha positiva,True
+4_Brecha_MU_2026,B25,228,BRECHA/brecha,valor,,228,True
+4_Brecha_MU_2026,C25,46 códigos,BRECHA/brecha,valor,,46 códigos,True
+4_Brecha_MU_2026,D25,B/C,BRECHA/brecha,valor,,B/C,True
+4_Brecha_MU_2026,A26,Brecha negativa,BRECHA/brecha,valor,,Brecha negativa,True
+4_Brecha_MU_2026,B26,-2,BRECHA/brecha,valor,,-2,True
+4_Brecha_MU_2026,C26,2 códigos,BRECHA/brecha,valor,,2 códigos,True
+4_Brecha_MU_2026,D26,B/C,BRECHA/brecha,valor,,B/C,True
+4_Brecha_MU_2026,A27,Brecha neta,BRECHA/brecha,valor,,Brecha neta,True
+4_Brecha_MU_2026,C27,Publicado pregrado − VIG 1 (enlaza H11),BRECHA/brecha,valor,,Publicado pregrado − VIG 1 (enlaza H11),True
+4_Brecha_MU_2026,D27,B/C,BRECHA/brecha,valor,,B/C,True
+4_Brecha_MU_2026,A28,Postítulo registro MRUN,BRECHA/brecha,valor,,Postítulo registro MRUN,True
+4_Brecha_MU_2026,B28,54,BRECHA/brecha,valor,,54,True
+4_Brecha_MU_2026,C28,Agregado; no contiene identificadores,BRECHA/brecha,valor,,Agregado; no contiene identificadores,True
+4_Brecha_MU_2026,D28,B,BRECHA/brecha,valor,,B,True
+4_Brecha_MU_2026,A29,Postítulo publicado,BRECHA/brecha,valor,,Postítulo publicado,True
+4_Brecha_MU_2026,B29,54,BRECHA/brecha,valor,,54,True
+4_Brecha_MU_2026,C29,Control frente al registro anterior,BRECHA/brecha,valor,,Control frente al registro anterior,True
+4_Brecha_MU_2026,D29,B,BRECHA/brecha,valor,,B,True
+4_Brecha_MU_2026,B27,226,BRECHA/brecha,formula,=H11,226,True
+5_Fuentes,A7,H001,FUENTES_FIJADAS.json,valor,,H001,True
+5_Fuentes,B7,/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json,True
+5_Fuentes,C7,ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5,FUENTES_FIJADAS.json,valor,,ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5,True
+5_Fuentes,D7,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E7,B/C/D,FUENTES_FIJADAS.json,valor,,B/C/D,True
+5_Fuentes,F7,47519076159145468ebfca20dcafce87e74d3534,FUENTES_FIJADAS.json,valor,,47519076159145468ebfca20dcafce87e74d3534,True
+5_Fuentes,A8,H001_CIERRE,FUENTES_FIJADAS.json,valor,,H001_CIERRE,True
+5_Fuentes,B8,/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H001-RETENCION-IPSS162/README.md,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H001-RETENCION-IPSS162/README.md,True
+5_Fuentes,C8,6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48,FUENTES_FIJADAS.json,valor,,6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48,True
+5_Fuentes,D8,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E8,B/C/D/E,FUENTES_FIJADAS.json,valor,,B/C/D/E,True
+5_Fuentes,F8,55e3b709afb9483f0ecdd2d166f67229a454a5ef,FUENTES_FIJADAS.json,valor,,55e3b709afb9483f0ecdd2d166f67229a454a5ef,True
+5_Fuentes,A9,H001_BASE,FUENTES_FIJADAS.json,valor,,H001_BASE,True
+5_Fuentes,B9,/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_h001_base_20261028/INFORME.md,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/outputs/retencion_h001_base_20261028/INFORME.md,True
+5_Fuentes,C9,637b953628eae93529db13ed057e14945bcc3e582e69562fecc4659d2d68a3dd,FUENTES_FIJADAS.json,valor,,637b953628eae93529db13ed057e14945bcc3e582e69562fecc4659d2d68a3dd,True
+5_Fuentes,D9,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E9,B/C/E,FUENTES_FIJADAS.json,valor,,B/C/E,True
+5_Fuentes,F9,ad5baf116fd097ab39f47d2223a352c566662453,FUENTES_FIJADAS.json,valor,,ad5baf116fd097ab39f47d2223a352c566662453,True
+5_Fuentes,A10,SECTORES,FUENTES_FIJADAS.json,valor,,SECTORES,True
+5_Fuentes,B10,/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json,True
+5_Fuentes,C10,d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1,FUENTES_FIJADAS.json,valor,,d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1,True
+5_Fuentes,D10,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E10,B/C,FUENTES_FIJADAS.json,valor,,B/C,True
+5_Fuentes,F10,47519076159145468ebfca20dcafce87e74d3534,FUENTES_FIJADAS.json,valor,,47519076159145468ebfca20dcafce87e74d3534,True
+5_Fuentes,A11,SIES_GRANULAR,FUENTES_FIJADAS.json,valor,,SIES_GRANULAR,True
+5_Fuentes,B11,/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.tsv,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/procesos/caracterizacion/gobernanza/sies/RETENCION/RETENCION_SIES_IPSS_162_GRANULAR_2025_CORREO_20260909.tsv,True
+5_Fuentes,C11,1e1e4872c8aa54ba97c1c4749d1fa509e13a4c11f498e933c9efddbb92b24c61,FUENTES_FIJADAS.json,valor,,1e1e4872c8aa54ba97c1c4749d1fa509e13a4c11f498e933c9efddbb92b24c61,True
+5_Fuentes,D11,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E11,B,FUENTES_FIJADAS.json,valor,,B,True
+5_Fuentes,F11,55e3b709afb9483f0ecdd2d166f67229a454a5ef,FUENTES_FIJADAS.json,valor,,55e3b709afb9483f0ecdd2d166f67229a454a5ef,True
+5_Fuentes,A12,INTER,FUENTES_FIJADAS.json,valor,,INTER,True
+5_Fuentes,B12,/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.json,True
+5_Fuentes,C12,1428eda2858f0b2f5918c568607aa339c7c20eea21af83e1db3e30d09c68ab53,FUENTES_FIJADAS.json,valor,,1428eda2858f0b2f5918c568607aa339c7c20eea21af83e1db3e30d09c68ab53,True
+5_Fuentes,D12,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E12,C/D/E,FUENTES_FIJADAS.json,valor,,C/D/E,True
+5_Fuentes,F12,edc4b8c487861b6b9c686e9315d54d6249e88788,FUENTES_FIJADAS.json,valor,,edc4b8c487861b6b9c686e9315d54d6249e88788,True
+5_Fuentes,A13,INTER_MD,FUENTES_FIJADAS.json,valor,,INTER_MD,True
+5_Fuentes,B13,/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.md,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.md,True
+5_Fuentes,C13,d347cfe0226bc25c8a11de64644832b7112d74f1645dd8b184a41fcea47ba29b,FUENTES_FIJADAS.json,valor,,d347cfe0226bc25c8a11de64644832b7112d74f1645dd8b184a41fcea47ba29b,True
+5_Fuentes,D13,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E13,C/D/E,FUENTES_FIJADAS.json,valor,,C/D/E,True
+5_Fuentes,F13,edc4b8c487861b6b9c686e9315d54d6249e88788,FUENTES_FIJADAS.json,valor,,edc4b8c487861b6b9c686e9315d54d6249e88788,True
+5_Fuentes,A14,H002,FUENTES_FIJADAS.json,valor,,H002,True
+5_Fuentes,B14,/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json,True
+5_Fuentes,C14,0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063,FUENTES_FIJADAS.json,valor,,0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063,True
+5_Fuentes,D14,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E14,B/C/D/E,FUENTES_FIJADAS.json,valor,,B/C/D/E,True
+5_Fuentes,F14,82cb49c8b1136214a989676d914766d829e4c4dc,FUENTES_FIJADAS.json,valor,,82cb49c8b1136214a989676d914766d829e4c4dc,True
+5_Fuentes,A15,CODIGOS_REGLA,FUENTES_FIJADAS.json,valor,,CODIGOS_REGLA,True
+5_Fuentes,B15,/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json,True
+5_Fuentes,C15,197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2,FUENTES_FIJADAS.json,valor,,197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2,True
+5_Fuentes,D15,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E15,D,FUENTES_FIJADAS.json,valor,,D,True
+5_Fuentes,F15,75ed9501afe66c941709809ade79c7015827e3cb,FUENTES_FIJADAS.json,valor,,75ed9501afe66c941709809ade79c7015827e3cb,True
+5_Fuentes,A16,REVISION,FUENTES_FIJADAS.json,valor,,REVISION,True
+5_Fuentes,B16,/Users/alexi/Documents/GitHub/avance_curricular/outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json,True
+5_Fuentes,C16,6add2daaaed871ad438f0d74146a1af988c2f5f0fafa01f82337b1aa716f8dab,FUENTES_FIJADAS.json,valor,,6add2daaaed871ad438f0d74146a1af988c2f5f0fafa01f82337b1aa716f8dab,True
+5_Fuentes,D16,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E16,C/D/E,FUENTES_FIJADAS.json,valor,,C/D/E,True
+5_Fuentes,F16,75ed9501afe66c941709809ade79c7015827e3cb,FUENTES_FIJADAS.json,valor,,75ed9501afe66c941709809ade79c7015827e3cb,True
+5_Fuentes,A17,H002_CIERRE,FUENTES_FIJADAS.json,valor,,H002_CIERRE,True
+5_Fuentes,B17,/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.json,True
+5_Fuentes,C17,a4a704a6a399a4230f693e9763c87283ff4063337f40244c17b1ef07cdf90e46,FUENTES_FIJADAS.json,valor,,a4a704a6a399a4230f693e9763c87283ff4063337f40244c17b1ef07cdf90e46,True
+5_Fuentes,D17,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E17,D/E,FUENTES_FIJADAS.json,valor,,D/E,True
+5_Fuentes,F17,75ed9501afe66c941709809ade79c7015827e3cb,FUENTES_FIJADAS.json,valor,,75ed9501afe66c941709809ade79c7015827e3cb,True
+5_Fuentes,A18,MATRIZ,FUENTES_FIJADAS.json,valor,,MATRIZ,True
+5_Fuentes,B18,/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json,True
+5_Fuentes,C18,4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e,FUENTES_FIJADAS.json,valor,,4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e,True
+5_Fuentes,D18,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E18,B/C/D/E,FUENTES_FIJADAS.json,valor,,B/C/D/E,True
+5_Fuentes,F18,7807542b2b819521b7bd620239110686830ec406,FUENTES_FIJADAS.json,valor,,7807542b2b819521b7bd620239110686830ec406,True
+5_Fuentes,A19,BRECHA,FUENTES_FIJADAS.json,valor,,BRECHA,True
+5_Fuentes,B19,/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/CIERRE_BRECHA_MU2026.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/CIERRE_BRECHA_MU2026.json,True
+5_Fuentes,C19,89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a,FUENTES_FIJADAS.json,valor,,89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a,True
+5_Fuentes,D19,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E19,B/C/D/E,FUENTES_FIJADAS.json,valor,,B/C/D/E,True
+5_Fuentes,F19,7807542b2b819521b7bd620239110686830ec406,FUENTES_FIJADAS.json,valor,,7807542b2b819521b7bd620239110686830ec406,True
+5_Fuentes,A20,V24,FUENTES_FIJADAS.json,valor,,V24,True
+5_Fuentes,B20,/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx,FUENTES_FIJADAS.json,valor,,/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx,True
+5_Fuentes,C20,bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db,FUENTES_FIJADAS.json,valor,,bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db,True
+5_Fuentes,D20,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E20,B/C,FUENTES_FIJADAS.json,valor,,B/C,True
+5_Fuentes,F20,Fuente externa; hash fijado,FUENTES_FIJADAS.json,valor,,Fuente externa; hash fijado,True
+5_Fuentes,A21,V24_COPIA_RECALCULADA,FUENTES_FIJADAS.json,valor,,V24_COPIA_RECALCULADA,True
+5_Fuentes,B21,/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx,FUENTES_FIJADAS.json,valor,,/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx,True
+5_Fuentes,C21,1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481,FUENTES_FIJADAS.json,valor,,1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481,True
+5_Fuentes,D21,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E21,B/C,FUENTES_FIJADAS.json,valor,,B/C,True
+5_Fuentes,F21,Fuente externa; hash fijado,FUENTES_FIJADAS.json,valor,,Fuente externa; hash fijado,True
+5_Fuentes,A22,BASES_V16,FUENTES_FIJADAS.json,valor,,BASES_V16,True
+5_Fuentes,B22,/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_BASES_TASAS_2026_V16_20261023.md,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/avance_curricular/docs/ESPECIFICACION_BASES_TASAS_2026_V16_20261023.md,True
+5_Fuentes,C22,f90d19bef2d61e1880b3a0aa49833aa9152e1b2a95dacb61370246347ffd6012,FUENTES_FIJADAS.json,valor,,f90d19bef2d61e1880b3a0aa49833aa9152e1b2a95dacb61370246347ffd6012,True
+5_Fuentes,D22,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E22,D/C,FUENTES_FIJADAS.json,valor,,D/C,True
+5_Fuentes,F22,e390385a58289ea54a70938102ae640f0aba2dc5,FUENTES_FIJADAS.json,valor,,e390385a58289ea54a70938102ae640f0aba2dc5,True
+5_Fuentes,A23,MARCA,FUENTES_FIJADAS.json,valor,,MARCA,True
+5_Fuentes,B23,/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/marca/paleta_ipss_2026.json,FUENTES_FIJADAS.json,valor,,/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/marca/paleta_ipss_2026.json,True
+5_Fuentes,C23,eaf142973cb8b28b4919cd156612587b0d811f94c3e3c41a4f480a1ef4828c26,FUENTES_FIJADAS.json,valor,,eaf142973cb8b28b4919cd156612587b0d811f94c3e3c41a4f480a1ef4828c26,True
+5_Fuentes,D23,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E23,A,FUENTES_FIJADAS.json,valor,,A,True
+5_Fuentes,F23,Fuente externa; hash fijado,FUENTES_FIJADAS.json,valor,,Fuente externa; hash fijado,True
+5_Fuentes,A24,SIES_TASAS,FUENTES_FIJADAS.json,valor,,SIES_TASAS,True
+5_Fuentes,B24,/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx,FUENTES_FIJADAS.json,valor,,/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/Informe_Retencion_SIES_2026_270702026.xlsx,True
+5_Fuentes,C24,03897a1604aa656f9ff60e232eda739e29f4912123e5d7127d6551a37957a8a1,FUENTES_FIJADAS.json,valor,,03897a1604aa656f9ff60e232eda739e29f4912123e5d7127d6551a37957a8a1,True
+5_Fuentes,D24,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E24,B,FUENTES_FIJADAS.json,valor,,B,True
+5_Fuentes,F24,Fuente externa; hash fijado,FUENTES_FIJADAS.json,valor,,Fuente externa; hash fijado,True
+5_Fuentes,A25,MANUAL_MARCA,FUENTES_FIJADAS.json,valor,,MANUAL_MARCA,True
+5_Fuentes,B25,/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Portal de Colaboradores - Recursos Gráficos/Manual de Marca IP San Sebastián.pdf,FUENTES_FIJADAS.json,valor,,/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Portal de Colaboradores - Recursos Gráficos/Manual de Marca IP San Sebastián.pdf,True
+5_Fuentes,C25,78b3ec0c8b1a55276ee00d961bf8e6800757de8ac5b3903c15ae93294d513a47,FUENTES_FIJADAS.json,valor,,78b3ec0c8b1a55276ee00d961bf8e6800757de8ac5b3903c15ae93294d513a47,True
+5_Fuentes,D25,2026-10-29,FUENTES_FIJADAS.json,valor,,2026-10-29,True
+5_Fuentes,E25,A,FUENTES_FIJADAS.json,valor,,A,True
+5_Fuentes,F25,"Manual oficial, páginas 10–11",FUENTES_FIJADAS.json,valor,,"Manual oficial, páginas 10–11",True
