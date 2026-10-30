@@ -1,0 +1,3 @@
+# v20 archivada · decisión de Alexi, 30-10-2026
+
+La edición activa a 27-10 quedó archivada al activar H013. La carpeta conserva el puntero original, con SHA-256 `26615bd2849dd39dfbf947ffda9f8d5d211504ad8c4e900d4ff0f2f936d4cc55`. Descriptor original `data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json`, SHA-256 `37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809`. Base privada original SHA-256 `84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb`. H002 reproduce su evidencia congelada con este puntero y verifica el mismo hash en lectura y cierre.

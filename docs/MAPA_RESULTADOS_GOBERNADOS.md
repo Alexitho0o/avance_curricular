@@ -9,7 +9,7 @@ A: regla oficial; B: dato observado; C: implementación/inferencia técnica; D: 
 Año del proceso, año de los datos y período se separan en el JSON complementario.
 Los commits indican el último cambio del archivo; en fuentes externas, el commit es el de su catálogo/evidencia y no significa que los bytes privados estén en Git.
 
-## Mapa (30 resultados)
+## Mapa (31 resultados)
 
 | ID / pregunta | Resultado clave | Archivo y hoja/sección | Script productor (no ejecutado) | Commit | SHA-256 | Clase | Fecha del resultado | No recalcular salvo… |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -44,9 +44,11 @@ Los commits indican el último cambio del archivo; en fuentes externas, el commi
 
 
 | R28 · ¿Se validó cómo se unen los campos UMAS con el código SIES? | EVIDENCIA_METODOLOGICA_REENCUADRADA: 278 grupos, 256 únicos/22 múltiples; K3 mínimo 3 personas: 8.354 contextos, 7.664 aciertos, 6 errores, 684 abstenciones. Prospectiva T_plan: 50,6 % cobertura, 87,5 % precisión; 425/530 errores en 2022. No mide la regla de primer T1 posterior de H010. | outputs/auditoria_metodos_puente_20261023_155309/RESUMEN.json | scripts/auditar_metodos_puente_20261023.py | 68ab3f91 | 6a8d2109fd28eee04bda5d11ce88d1560f23c457ae4c113742254df024477411 | B/C; D reencuadre; E grupos | 2026-10-30 | Fuente independiente que discrimine los 22 grupos. |
-| R29 · Asignación de código SIES por regla T1 (H010) | CANDIDATA v21 H010/H010b: 3.049 observaciones, 2.085 respaldadas y 964 E (604 períodos 4/5, 360 otros); 99 posiciones respaldadas, E 0. D1–D3 aplicadas sólo a residuales. Tasas 0,00 pp por conservación; no activación. | outputs/regla_t1_h010_20261030/INFORME_H010.md | outputs/regla_t1_h010_20261030/resolver_h010b.py | PUBLICACION_H010_H010B; base 6505cae | e9f2a3d02ba082abb7224eb0aa718b128f94e66da31c7c27fe0a85489d6c3d96 | D método; B/C evidencia; E límites | 2026-10-30 | Nueva evidencia de T1/expediente/plan, perfil tipo/duración o decisión explícita sobre residual; activación sólo por Alexi. |
+| R29 · Asignación de código SIES por regla T1 (H010) | ACTIVA v21 H013. 2.990 de 3.049 contextos y 99 de 99 posiciones respaldadas. Quedan 59 E. Recálculo R01–R04 y R19 con 0,00 pp. | outputs/activacion_v21_h013_20261030/INFORME_H013.md | outputs/activacion_v21_h013_20261030/activar.py | PUBLICACION_H013; base 989198f | ce6c9c09d667724b2c29e0e59b572d9ca9273668e8ba716d093a57248ea5b2ad | D activación; B/C evidencia y recálculo; E residual | 2026-10-30 | Nueva evidencia de las combinaciones de RESIDUAL.json o control explícito de Alexi. |
 
 | R30 · ¿Qué código candidato de seguimiento se puede respaldar con el perfil anual, el período bimestral y el último T1? | CANDIDATA H011/H012. 2952 de 3.049 con respaldo y 97 E, 99 de 99 posiciones. Familia IECIREOL candidata C1. D7 no alcanza 99,9 %. D8 sin altas autónomas. R01–R04 y R19 con 0,00 pp. | outputs/versiones_mu_h012_20261030/INFORME_H012.md | outputs/versiones_mu_h012_20261030/resolver.py | PUBLICACION_H012; base dd34eaf | d4681d5897eb414ee24929620be4ea0ff4e25a2e449913694d1354b2c8b17f7b | D decisiones; B/C fuentes y aplicación; E pendientes | 2026-10-30 | Nueva evidencia de familia, perfil, versión o matrícula anterior, o nueva decisión explícita validada por Alexi. |
+
+| R31 · ¿Qué edición respalda las reproducciones históricas que fijaron v20? | ARCHIVADA v20. Descriptor y base privada íntegros. H002 verifica el puntero histórico por su hash original. | data/diccionario_sies_seguimiento/archivo_v20_h013/ARCHIVO_V20.md | outputs/activacion_v21_h013_20261030/construir_v21.py | PUBLICACION_H013; base 989198f | f6fcb8c3061ab2c90f9f93e0a7030129c044d774ad0c6b9db2b801226170a29c | B hash; D archivo | 2026-10-30 | Verificación expresa de la instantánea histórica. |
 
 ## Límites por resultado
 

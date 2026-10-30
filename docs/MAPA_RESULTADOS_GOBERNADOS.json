@@ -981,16 +981,16 @@
     {
       "id": "R29",
       "pregunta": "Asignación de código SIES por regla T1 (H010)",
-      "resultado_clave": "CANDIDATA v21 H010/H010b: 3.049 observaciones, 2.085 respaldadas y 964 E (604 períodos 4/5, 360 otros); 99 posiciones respaldadas, E 0. D1–D3 aplicadas sólo a residuales. Tasas 0,00 pp por conservación; no activación.",
-      "archivo": "outputs/regla_t1_h010_20261030/INFORME_H010.md",
-      "hoja_o_seccion": "H010b: cobertura, residuales y períodos 4/5",
-      "script_productor": "outputs/regla_t1_h010_20261030/resolver_h010b.py",
-      "commit": "PUBLICACION_H010_H010B; base 6505cae",
-      "sha256": "e9f2a3d02ba082abb7224eb0aa718b128f94e66da31c7c27fe0a85489d6c3d96",
-      "clase": "D método; B/C evidencia; E límites",
+      "resultado_clave": "ACTIVA v21 H013. 2.990 de 3.049 contextos y 99 de 99 posiciones respaldadas. Quedan 59 E. Recálculo R01–R04 y R19 con 0,00 pp.",
+      "archivo": "outputs/activacion_v21_h013_20261030/INFORME_H013.md",
+      "hoja_o_seccion": "Cobertura, activación y recálculo",
+      "script_productor": "outputs/activacion_v21_h013_20261030/activar.py",
+      "commit": "PUBLICACION_H013; base 989198f",
+      "sha256": "ce6c9c09d667724b2c29e0e59b572d9ca9273668e8ba716d093a57248ea5b2ad",
+      "clase": "D activación; B/C evidencia y recálculo; E residual",
       "fecha_resultado": "2026-10-30",
-      "no_recalcular_salvo": "Nueva evidencia de T1/expediente/plan, perfil tipo/duración o decisión explícita sobre residual; activación sólo por Alexi.",
-      "limites": "Períodos 4/5 sin homologar; sin T1 posterior con antecedente previo queda E. NUNCA_INFORMADO sólo ausencia en fuentes disponibles; D2 no convierte cohorte 2026 en 2027."
+      "no_recalcular_salvo": "Nueva evidencia de las combinaciones de RESIDUAL.json o control explícito de Alexi.",
+      "limites": "VERSION_POR_MU_DEL_PLAN es correspondencia interna. Riesgo D7 aceptado. 59 contextos requieren evidencia adicional."
     },
     {
       "id": "R30",
@@ -1005,6 +1005,20 @@
       "fecha_resultado": "2026-10-30",
       "no_recalcular_salvo": "Nueva evidencia de familia, perfil, versión o matrícula anterior, o nueva decisión explícita validada por Alexi.",
       "limites": "La v21 es candidata. El catálogo v3 propuesto se separa del perfil v2 y de H002m."
+    },
+    {
+      "id": "R31",
+      "pregunta": "¿Qué edición respalda las reproducciones históricas que fijaron v20?",
+      "resultado_clave": "ARCHIVADA v20. Descriptor y base privada íntegros. H002 verifica el puntero histórico por su hash original.",
+      "archivo": "data/diccionario_sies_seguimiento/archivo_v20_h013/ARCHIVO_V20.md",
+      "hoja_o_seccion": "Archivo de v20",
+      "script_productor": "outputs/activacion_v21_h013_20261030/construir_v21.py",
+      "commit": "PUBLICACION_H013; base 989198f",
+      "sha256": "f6fcb8c3061ab2c90f9f93e0a7030129c044d774ad0c6b9db2b801226170a29c",
+      "clase": "B hash; D archivo",
+      "fecha_resultado": "2026-10-30",
+      "no_recalcular_salvo": "Verificación expresa de la instantánea histórica.",
+      "limites": "La selección operativa se resuelve por activo.json."
     }
   ],
   "diferencias_catalogo": [

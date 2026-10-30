@@ -113,8 +113,16 @@ def construir(root=ROOT):
     config = json.loads(config_raw)
     refs = {e['id']: e for e in config['fuentes']}
     raw = {}
-    for id, rec in refs.items():
+    def fuente_fijada(rec):
         p = root / rec['ruta']
+        # Esta edición de H002 congela la instantánea v20 por hash.
+        # El puntero operativo avanza independientemente del catálogo histórico.
+        if rec['ruta'] == 'data/diccionario_sies_seguimiento/activo.json':
+            p = root / 'data/diccionario_sies_seguimiento/archivo_v20_h013/activo.json'
+        return p
+
+    for id, rec in refs.items():
+        p = fuente_fijada(rec)
         if not p.resolve().is_relative_to(root.resolve()):
             raise ValueError('Fuente fuera del repositorio')
         raw[id] = p.read_bytes()
@@ -377,7 +385,7 @@ def construir(root=ROOT):
         'propuestas_con_equivalencia_dimensiones_perfil_y_plan': all(any(c['perfil_compatible'] and c['plan_umas']
             and c['origen'] == 'EQUIVALENCIA_EXPLICITA_CATALOGO_2027' for c in r['candidatos_internos']) for r in proposals),
         'solo_seis_correspondencias_D_autorizadas': len(approved_codes) in (0, 6), 'copia_congelada_igual_V06': True,
-        'fuentes_fijadas_y_sin_alteracion': all(sha((root / x['ruta']).read_bytes()) == x['sha256'] for x in refs.values()),
+        'fuentes_fijadas_y_sin_alteracion': all(sha(fuente_fijada(x).read_bytes()) == x['sha256'] for x in refs.values()),
         'catalogo_no_usa_personas': True}, 'filas': len(rows), 'por_anio_estado': counts,
         'grupos': len(groups), 'grupos_previos_multiversion': 52,
         'grupos_version_multiple_E': len(pending_groups), 'codigos_fuera_grupos_2026': len(set(offers) - old_codes),
