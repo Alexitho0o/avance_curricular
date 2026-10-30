@@ -535,18 +535,18 @@
     {
       "id": "R20",
       "pregunta": "¿Cuál es la entrega Excel agregada validada de H003?",
-      "resultado_clave": "6 hojas, 1.956 controles sin diferencias, 41 fórmulas sin errores, 14 tablas con filtro; libro agregado validado y publicado en 4bf6cdd.",
+      "resultado_clave": "6 hojas, 1.956 controles sin diferencias, 41 fórmulas sin errores, 14 tablas con filtro; entrega H003 publicada en 4bf6cdd y formato centrado H006 publicado en 05cfda5.",
       "archivo": "outputs/entrega_retencion_20261029/ENTREGA_RETENCION_IPSS_20261029.xlsx",
       "hoja_o_seccion": "0_LEEME; 1_Retencion_1er_anio; 2_Intertrimestral_2026; 3_Paridad_SIES_2027; 4_Brecha_MU_2026; 5_Fuentes",
-      "sha256": "0424ab7094b024592ffe272d4ec042e9cbb1484e6294782bad17f259cef31e14",
-      "commit": "4bf6cdd6bbf44582094c16cf3faee7f3b9c0b052",
-      "alcance_commit": "Último commit que modifica este archivo",
+      "sha256": "70baf95a8daf364854f75d714d0d37af82876eb9f8302e01cb334f90e668a19e",
+      "commit": "05cfda5aed151835af2f9f1c5938dd57581e80a0",
+      "alcance_commit": "Publicación del libro con formato centrado H006; cifras y fórmulas H003 preservadas.",
       "script_productor": "outputs/entrega_retencion_20261029/construir_excel.py; construir_excel.mjs; verificar_entrega.py",
       "clase": "B/C; D publicación; E visibles",
       "fecha_resultado": "2026-10-29",
       "anio_proceso_y_referencia": "Entrega 20261029; referencia mixta indicada en cada hoja",
       "no_recalcular_salvo": "Cambio autorizado de presentación o fuente gobernada nueva; conservar original y comparar contra sus controles, sin recalcular análisis cerrados.",
-      "limites": "Estado QA reutilizado de H003c, no ejecutado otra vez en H004. Sin datos individuales.",
+      "limites": "H004 reutilizó el QA H003c; H006 repitió los controles tras centrar el formato, sin diferencias ni datos individuales.",
       "evidencias": [
         {
           "archivo": "outputs/entrega_retencion_20261029/QA.json",
@@ -554,9 +554,19 @@
           "sha256": "bd973e21cc563edbac89ed0d3544d9b8a1cf0313c4f41fe971bf983dc63d4b74",
           "commit": "4bf6cdd6bbf44582094c16cf3faee7f3b9c0b052",
           "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "outputs/entrega_retencion_20261029/QA_FORMATO_H006.json",
+          "hoja_o_seccion": "QA de formato H006: PASS, 1.956 controles y 41 fórmulas",
+          "sha256": "db040198d3aa4e1dd68274a1a640abd463d64e844a683301b683b4415235ac52",
+          "commit": "05cfda5aed151835af2f9f1c5938dd57581e80a0",
+          "alcance_commit": "QA del libro centrado publicado en H005–H006"
         }
       ],
-      "fecha_verificacion_documental": "2026-10-30"
+      "fecha_verificacion_documental": "2026-10-30",
+      "sha256_antes_H006": "0424ab7094b024592ffe272d4ec042e9cbb1484e6294782bad17f259cef31e14",
+      "actualizacion_H006": "Presentación centrada y QA repetido sin diferencias; libro publicado en 05cfda5. No cambia cifras ni fórmulas.",
+      "qa": "outputs/entrega_retencion_20261029/QA_FORMATO_H006.json"
     },
     {
       "id": "R21",
@@ -920,5 +930,5 @@
     "diferencias_no_autorizadas": 0,
     "sin_nuevos_enlaces": true
   },
-  "actualizacion_H006": "R21: nueva huella de formato; R22–R24: agregaciones nuevas autorizadas, QA sin diferencias y filtros probados."
+  "actualizacion_H006": "R20/R21: nueva huella de formato; R22–R24: agregaciones nuevas autorizadas, QA sin diferencias y filtros probados."
 }
