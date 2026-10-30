@@ -981,16 +981,16 @@
     {
       "id": "R29",
       "pregunta": "Asignación de código SIES por regla T1 (H010)",
-      "resultado_clave": "ACTIVA v21 H013. 2.990 de 3.049 contextos y 99 de 99 posiciones respaldadas. Quedan 59 E. Recálculo R01–R04 y R19 con 0,00 pp.",
-      "archivo": "outputs/activacion_v21_h013_20261030/INFORME_H013.md",
-      "hoja_o_seccion": "Cobertura, activación y recálculo",
-      "script_productor": "outputs/activacion_v21_h013_20261030/activar.py",
-      "commit": "PUBLICACION_H013; base 989198f",
-      "sha256": "ce6c9c09d667724b2c29e0e59b572d9ca9273668e8ba716d093a57248ea5b2ad",
+      "resultado_clave": "ACTIVA v22 H014. 2.990 de 3.049 contextos y 99 de 99 posiciones respaldadas. D10 verifica oferta del primer T1 individual posterior. Cero altas, 59 E. R01–R04 y R19 con 0,00 pp por recálculo.",
+      "archivo": "outputs/primer_t1_h014_20261030/INFORME_H014.md",
+      "hoja_o_seccion": "D10, residual y control del puntero real",
+      "script_productor": "outputs/primer_t1_h014_20261030/activar_v22.py",
+      "commit": "PUBLICACION_H014; base b2ebab0",
+      "sha256": "7debf6dde25a82ebd552c69d38e9c05000a3468c9c2162689c911e5eb8feb240",
       "clase": "D activación; B/C evidencia y recálculo; E residual",
       "fecha_resultado": "2026-10-30",
       "no_recalcular_salvo": "Nueva evidencia de las combinaciones de RESIDUAL.json o control explícito de Alexi.",
-      "limites": "VERSION_POR_MU_DEL_PLAN es correspondencia interna. Riesgo D7 aceptado. 59 contextos requieren evidencia adicional."
+      "limites": "La referencia del plan no acredita un primer T1 del mismo expediente. D7 conserva el riesgo H013. v20 y v21 archivadas."
     },
     {
       "id": "R30",
