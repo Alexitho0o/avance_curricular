@@ -1,0 +1,515 @@
+{
+  "entradas": {
+    "v24": {
+      "ruta": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx",
+      "sha256": "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db"
+    },
+    "v24_recalculada": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase_h_regla_intertrimestral_20261027/V24_QA_COPIA.xlsx",
+      "sha256": "1e28d5955d874e7d86ec0ca87ab6a2cc478515c0dbd604f4fc86f60fa491c481"
+    },
+    "slots": {
+      "ruta": "/Users/alexi/.local/share/ipss/trazabilidad_integral_fase3_20261025/VISTA_T1_T2_T3.json",
+      "sha256": "72edecb9507f46985533d1c63b83735beb4db58d743c89c226ca6be1a2c8ef31"
+    },
+    "posiciones_h007": {
+      "ruta": "/Users/alexi/.local/share/ipss/h007_20261030/POSICIONES_3520.json",
+      "sha256": "fb33b947149368204d7b9bef6620a22e890594dc92aaf1dfba5b3aba1582a8f2"
+    },
+    "reevaluacion_99": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/REEVALUACION_99.json",
+      "sha256": "650557724ebc83e152cc754411da242b61aa8947339b5fbff70452fa641468b9"
+    },
+    "regla_r19": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/indicador_intertrimestral/REGLA.json",
+      "sha256": "1428eda2858f0b2f5918c568607aa339c7c20eea21af83e1db3e30d09c68ab53"
+    },
+    "reglas_estado": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/versiones/20261021_v1/reglas.json",
+      "sha256": "5ffa47d537f3ae81cd470ae9c1c9ed75cafb4adb4eb38e980d45fd21a272714e"
+    },
+    "casos_filtros": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/trazabilidad_integral_umas_sies_20261025/fase5/CASOS_FILTROS.json",
+      "sha256": "78b6a8aa27aac4f19bd24821cfe4429c489c2eb1877247126a5b3641cd8bb412"
+    },
+    "descriptor": {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+      "sha256": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+    },
+    "base_v20": {
+      "ruta": "/Users/alexi/.local/share/ipss/fase_g_v20_candidata_20261027/DICCIONARIO_V20_CANDIDATA.sqlite",
+      "sha256": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb"
+    }
+  },
+  "fotos": [
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "hoja": "Hoja1",
+      "corte": "E: fecha exacta de cierre no acreditada por el nombre",
+      "origen": "Downloads/cierre; R19 ya utiliza T3_2025",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "filas": 225,
+      "columnas": 63,
+      "cobertura_documento_literal_T1": [
+        {
+          "cohorte": 2024,
+          "coincidencias": 1,
+          "universo": 558
+        },
+        {
+          "cohorte": 2025,
+          "coincidencias": 4,
+          "universo": 1150
+        },
+        {
+          "cohorte": 2026,
+          "coincidencias": 0,
+          "universo": 1471
+        }
+      ],
+      "anios_ingreso": [
+        {
+          "anio": "2025",
+          "filas": 225
+        }
+      ],
+      "estado_academico_disponible": true,
+      "limite_cobertura": "Igualdad literal normalizada del documento; ausencia no significa no matrícula. No se usa para adjudicar ni calcular tasas."
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "hoja": "T3_2025",
+      "corte": "Cierre T3 2025 (D Alexi 30-10-2026); fecha exacta no requerida",
+      "origen": "Downloads/cierre; R19 ya utiliza T3_2025",
+      "completa_para": [
+        2025,
+        3
+      ],
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "filas": 3081,
+      "columnas": 63,
+      "cobertura_documento_literal_T1": [
+        {
+          "cohorte": 2024,
+          "coincidencias": 325,
+          "universo": 558
+        },
+        {
+          "cohorte": 2025,
+          "coincidencias": 1102,
+          "universo": 1150
+        },
+        {
+          "cohorte": 2026,
+          "coincidencias": 55,
+          "universo": 1471
+        }
+      ],
+      "anios_ingreso": [
+        {
+          "anio": "2005",
+          "filas": 1
+        },
+        {
+          "anio": "2016",
+          "filas": 3
+        },
+        {
+          "anio": "2017",
+          "filas": 1
+        },
+        {
+          "anio": "2020",
+          "filas": 6
+        },
+        {
+          "anio": "2021",
+          "filas": 17
+        },
+        {
+          "anio": "2022",
+          "filas": 66
+        },
+        {
+          "anio": "2023",
+          "filas": 269
+        },
+        {
+          "anio": "2024",
+          "filas": 500
+        },
+        {
+          "anio": "2025",
+          "filas": 2218
+        }
+      ],
+      "estado_academico_disponible": true,
+      "limite_cobertura": "Igualdad literal normalizada del documento; ausencia no significa no matrícula. No se usa para adjudicar ni calcular tasas."
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T_2_13_07_2026.xlsx",
+      "hoja": "Hoja1",
+      "corte": "E: fecha exacta de cierre no acreditada por el nombre",
+      "origen": "Downloads/cierre; R19 ya utiliza T3_2025",
+      "sha256": "7926a9cabcc67ed19abb50459132fd74ebb323bff9f5cb53e9116378c21a6769",
+      "filas": 528,
+      "columnas": 19,
+      "cobertura_documento_literal_T1": [
+        {
+          "cohorte": 2024,
+          "coincidencias": 1,
+          "universo": 558
+        },
+        {
+          "cohorte": 2025,
+          "coincidencias": 2,
+          "universo": 1150
+        },
+        {
+          "cohorte": 2026,
+          "coincidencias": 10,
+          "universo": 1471
+        }
+      ],
+      "anios_ingreso": [
+        {
+          "anio": "2026",
+          "filas": 528
+        }
+      ],
+      "estado_academico_disponible": false,
+      "limite_cobertura": "Igualdad literal normalizada del documento; ausencia no significa no matrícula. No se usa para adjudicar ni calcular tasas."
+    },
+    {
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula_T3_02_10_2026.xlsx",
+      "hoja": "Base",
+      "corte": "E: fecha exacta de cierre no acreditada por el nombre",
+      "origen": "Downloads/cierre; R19 ya utiliza T3_2025",
+      "sha256": "de4e73ee7d27779cdc531c6816f745d412e1021cbd61e4fceb8ab0459cbda4ae",
+      "filas": 557,
+      "columnas": 66,
+      "cobertura_documento_literal_T1": [
+        {
+          "cohorte": 2024,
+          "coincidencias": 1,
+          "universo": 558
+        },
+        {
+          "cohorte": 2025,
+          "coincidencias": 0,
+          "universo": 1150
+        },
+        {
+          "cohorte": 2026,
+          "coincidencias": 2,
+          "universo": 1471
+        }
+      ],
+      "anios_ingreso": [
+        {
+          "anio": "2024",
+          "filas": 22
+        },
+        {
+          "anio": "2025",
+          "filas": 34
+        },
+        {
+          "anio": "2026",
+          "filas": 501
+        }
+      ],
+      "estado_academico_disponible": true,
+      "limite_cobertura": "Igualdad literal normalizada del documento; ausencia no significa no matrícula. No se usa para adjudicar ni calcular tasas."
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "hoja": "Hoja1",
+      "corte": "Cierre P2 2026 (D Alexi 30-10-2026); congelamiento 2026-07-21 acreditado",
+      "origen": "CARACTERIZACIÓN/docs/gobernanza/FUENTES_CONGELADAS_2026_P2.json",
+      "completa_para": [
+        2026,
+        2
+      ],
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "filas": 14204,
+      "columnas": 67,
+      "cobertura_documento_literal_T1": [
+        {
+          "cohorte": 2024,
+          "coincidencias": 552,
+          "universo": 558
+        },
+        {
+          "cohorte": 2025,
+          "coincidencias": 1130,
+          "universo": 1150
+        },
+        {
+          "cohorte": 2026,
+          "coincidencias": 1471,
+          "universo": 1471
+        }
+      ],
+      "anios_ingreso": [
+        {
+          "anio": "1989",
+          "filas": 1
+        },
+        {
+          "anio": "2000",
+          "filas": 3
+        },
+        {
+          "anio": "2002",
+          "filas": 3
+        },
+        {
+          "anio": "2003",
+          "filas": 5
+        },
+        {
+          "anio": "2004",
+          "filas": 3
+        },
+        {
+          "anio": "2005",
+          "filas": 8
+        },
+        {
+          "anio": "2006",
+          "filas": 14
+        },
+        {
+          "anio": "2007",
+          "filas": 14
+        },
+        {
+          "anio": "2008",
+          "filas": 28
+        },
+        {
+          "anio": "2009",
+          "filas": 47
+        },
+        {
+          "anio": "2010",
+          "filas": 70
+        },
+        {
+          "anio": "2011",
+          "filas": 138
+        },
+        {
+          "anio": "2012",
+          "filas": 228
+        },
+        {
+          "anio": "2013",
+          "filas": 652
+        },
+        {
+          "anio": "2014",
+          "filas": 523
+        },
+        {
+          "anio": "2015",
+          "filas": 429
+        },
+        {
+          "anio": "2016",
+          "filas": 411
+        },
+        {
+          "anio": "2017",
+          "filas": 573
+        },
+        {
+          "anio": "2018",
+          "filas": 505
+        },
+        {
+          "anio": "2019",
+          "filas": 541
+        },
+        {
+          "anio": "2020",
+          "filas": 536
+        },
+        {
+          "anio": "2021",
+          "filas": 656
+        },
+        {
+          "anio": "2022",
+          "filas": 593
+        },
+        {
+          "anio": "2023",
+          "filas": 982
+        },
+        {
+          "anio": "2024",
+          "filas": 1204
+        },
+        {
+          "anio": "2025",
+          "filas": 2239
+        },
+        {
+          "anio": "2026",
+          "filas": 3798
+        }
+      ],
+      "estado_academico_disponible": true,
+      "limite_cobertura": "Igualdad literal normalizada del documento; ausencia no significa no matrícula. No se usa para adjudicar ni calcular tasas."
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_12159.xlsx",
+      "hoja": "Hoja1",
+      "completa_para": [
+        2026,
+        3
+      ],
+      "corte": "Cierre P3 2026 (D Alexi 30-10-2026); foto ya usada por R19",
+      "origen": "CATALOGO_FUENTES; R19; no es fuente nueva",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9",
+      "filas": 15185,
+      "columnas": 67,
+      "cobertura_documento_literal_T1": [
+        {
+          "cohorte": 2024,
+          "coincidencias": 552,
+          "universo": 558
+        },
+        {
+          "cohorte": 2025,
+          "coincidencias": 1130,
+          "universo": 1150
+        },
+        {
+          "cohorte": 2026,
+          "coincidencias": 1471,
+          "universo": 1471
+        }
+      ],
+      "anios_ingreso": [
+        {
+          "anio": "1989",
+          "filas": 1
+        },
+        {
+          "anio": "2000",
+          "filas": 3
+        },
+        {
+          "anio": "2002",
+          "filas": 3
+        },
+        {
+          "anio": "2003",
+          "filas": 5
+        },
+        {
+          "anio": "2004",
+          "filas": 3
+        },
+        {
+          "anio": "2005",
+          "filas": 8
+        },
+        {
+          "anio": "2006",
+          "filas": 14
+        },
+        {
+          "anio": "2007",
+          "filas": 14
+        },
+        {
+          "anio": "2008",
+          "filas": 28
+        },
+        {
+          "anio": "2009",
+          "filas": 47
+        },
+        {
+          "anio": "2010",
+          "filas": 70
+        },
+        {
+          "anio": "2011",
+          "filas": 138
+        },
+        {
+          "anio": "2012",
+          "filas": 228
+        },
+        {
+          "anio": "2013",
+          "filas": 652
+        },
+        {
+          "anio": "2014",
+          "filas": 523
+        },
+        {
+          "anio": "2015",
+          "filas": 429
+        },
+        {
+          "anio": "2016",
+          "filas": 411
+        },
+        {
+          "anio": "2017",
+          "filas": 573
+        },
+        {
+          "anio": "2018",
+          "filas": 505
+        },
+        {
+          "anio": "2019",
+          "filas": 540
+        },
+        {
+          "anio": "2020",
+          "filas": 536
+        },
+        {
+          "anio": "2021",
+          "filas": 656
+        },
+        {
+          "anio": "2022",
+          "filas": 593
+        },
+        {
+          "anio": "2023",
+          "filas": 982
+        },
+        {
+          "anio": "2024",
+          "filas": 1204
+        },
+        {
+          "anio": "2025",
+          "filas": 2239
+        },
+        {
+          "anio": "2026",
+          "filas": 4323
+        },
+        {
+          "anio": "2027",
+          "filas": 457
+        }
+      ],
+      "estado_academico_disponible": true,
+      "limite_cobertura": "Igualdad literal normalizada del documento; ausencia no significa no matrícula. No se usa para adjudicar ni calcular tasas."
+    }
+  ],
+  "clase": "B rutas y hashes; C tratamiento; E cortes no acreditados"
+}

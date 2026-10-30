@@ -1,0 +1,24 @@
+{
+  "estado": "PASS",
+  "clase": "C: privacidad y preservación; no cierra QA nativo pendiente",
+  "controles": {
+    "HEAD_intacto": true,
+    "stage_vacio": true,
+    "25_cambios_ajenos_status_intacto": true,
+    "25_archivos_ajenos_hash_intacto": true,
+    "solo_modificaciones_tracked_autorizadas": true,
+    "R01_R24_intactos": true,
+    "R25_solo_pendientes": true,
+    "R26_candidata": true,
+    "v2_conservada": true,
+    "fuentes_intactas": true,
+    "sin_XLSX_ni_detalle_privado_en_lista": true,
+    "escaneo_sin_hallazgos": true,
+    "archivos_menores_20MB": true
+  },
+  "hallazgos_sin_valores": [],
+  "archivos_escaneados": 37,
+  "limite_privacidad": "Patrones documento/DV/contactos y cotejo con identificadores privados conocidos. Revisión de esquema: conteos, códigos de catálogo y metadatos; no columnas de nombres individuales. PNG agregado revisado visualmente. No es certificación universal de identificación por texto libre.",
+  "commit": false,
+  "push": false
+}

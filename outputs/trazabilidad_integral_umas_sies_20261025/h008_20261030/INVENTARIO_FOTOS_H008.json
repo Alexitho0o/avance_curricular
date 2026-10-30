@@ -1,0 +1,100 @@
+{
+  "combinaciones": [
+    {
+      "cohorte": 2024,
+      "anio": 2025,
+      "periodo_nativo": 2,
+      "C4": 282,
+      "estado": "parcial",
+      "filas": 225,
+      "cobertura_literal": "1/558",
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "corte": "Cierre período 2 de 2025; D Alexi 30-10-2026, sin exigir fecha exacta",
+      "causa": "225 filas, todas de ingreso 2025: no es una foto completa del padrón T1 2024.",
+      "clase": "B/C/D; limitaciones E"
+    },
+    {
+      "cohorte": 2024,
+      "anio": 2025,
+      "periodo_nativo": 3,
+      "C4": 261,
+      "estado": "hallada",
+      "filas": 3081,
+      "cobertura_literal": "325/558",
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "corte": "Cierre período 3 de 2025; D Alexi 30-10-2026, sin exigir fecha exacta",
+      "causa": "Foto T3_2025 completa reutilizada, ahora visible como respaldo de seguimiento 2024→2025; no sustituye el proxy T3 2024 de R19.",
+      "clase": "B/C/D; limitaciones E"
+    },
+    {
+      "cohorte": 2025,
+      "anio": 2025,
+      "periodo_nativo": 2,
+      "C4": 451,
+      "estado": "parcial",
+      "filas": 225,
+      "cobertura_literal": "4/1150",
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T2_2025 2.xlsx",
+      "sha256": "ed5de007202df0780bb3396ad88307f4096d7c8b729005486a20d1123096d5b3",
+      "corte": "Cierre período 2 de 2025; D Alexi 30-10-2026, sin exigir fecha exacta",
+      "causa": "225 filas de ingreso T2; cobertura literal T1 4/1150. No acredita el estado de quienes no están en ella.",
+      "clase": "B/C/D; limitaciones E"
+    },
+    {
+      "cohorte": 2025,
+      "anio": 2025,
+      "periodo_nativo": 3,
+      "C4": 0,
+      "estado": "hallada",
+      "filas": 3081,
+      "cobertura_literal": "1102/1150",
+      "ruta": "/Users/alexi/Downloads/cierre/Matrícula T3_2025 2.xlsx",
+      "sha256": "68a1cd54ee48c1e6a679c1dbb3999e12d491543e9425e81f3d0508fefdc8d6cc",
+      "corte": "Cierre período 3 de 2025; D Alexi 30-10-2026, sin exigir fecha exacta",
+      "causa": "La foto ya estaba en R19. No es hallazgo nuevo ni tiene C4.",
+      "clase": "B/C/D; limitaciones E"
+    },
+    {
+      "cohorte": 2026,
+      "anio": 2026,
+      "periodo_nativo": 2,
+      "C4": 420,
+      "estado": "hallada",
+      "filas": 14204,
+      "cobertura_literal": "1471/1471",
+      "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/fuentes_congeladas/2026/P2/2026_P2_20260721_161905/DATOSDEALUMNOS_10246.xlsx",
+      "sha256": "b175d63bd9e3280c5757fb0d7292e45fb594d8f076e277f2e06bad2b15e9d869",
+      "corte": "Cierre período 2 de 2026; D Alexi 30-10-2026, sin exigir fecha exacta",
+      "causa": "14204 filas; padrón T1 completo localizado literalmente 1471/1471. Manifiesto congelado y hash coincidentes.",
+      "clase": "B/C/D; limitaciones E"
+    },
+    {
+      "cohorte": 2026,
+      "anio": 2026,
+      "periodo_nativo": 3,
+      "C4": 0,
+      "estado": "hallada",
+      "filas": 15185,
+      "cobertura_literal": "1471/1471",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/03_UMAS_DATOSDEALUMNOS/DATOSDEALUMNOS_12159.xlsx",
+      "sha256": "a0638483420324bcb2bba8bcbea426ca0a2be6162d1c8879569b507f409bdfc9",
+      "corte": "Cierre período 3 de 2026; D Alexi 30-10-2026, sin exigir fecha exacta",
+      "causa": "La foto ya estaba en R19. No es hallazgo nuevo ni tiene C4.",
+      "clase": "B/C/D; limitaciones E"
+    }
+  ],
+  "C4": 1414,
+  "C4_con_foto_hallada": 681,
+  "C4_foto_parcial": 733,
+  "decision_corte": "D Alexi: no importa la fecha; las fotos son el cierre del 2 y 3",
+  "rutas_buscadas": [
+    "Escritorio",
+    "Descargas (incluye cierre/)",
+    "CARACTERIZACIÓN (incluye .local/)",
+    "avance_curricular/data",
+    "avance_curricular/outputs"
+  ],
+  "no_aceptar_como_historia": "Las carpetas de análisis anual P1/P2/P3 con DATOSDEALUMNOS_11998 son copias de una extracción de octubre, no fotos distintas por trimestre."
+}
