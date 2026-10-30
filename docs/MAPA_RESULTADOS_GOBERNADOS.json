@@ -872,6 +872,44 @@
         }
       ],
       "qa": "outputs/excel_resumen_cruce_20261030/QA_H006.json"
+    },
+    {
+      "id": "R25",
+      "pregunta": "¿Qué respalda hoy la trazabilidad integral fotos–UMAS–SIES–MRUN y qué pendientes de V24 siguen abiertos?",
+      "resultado_clave": "REANCLADO_CON_LIMITES_EXPLICITOS: 3.520 posiciones clasificadas (1.135 con contexto v20); 99 pendientes, 95 candidatos únicos de catálogo y 4 múltiples, 0 atribuciones nuevas. MRUN solo agregado. 0/131 en H001 2024, 0,00 pp por inclusión. Fase 6 del plan pendiente.",
+      "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/INFORME_H007.md",
+      "hoja_o_seccion": "Hitos 1–4; pendientes y parada",
+      "sha256": "7cfa53d7b5ea61d80d2e59bb71770de4ef2475d5210705ace715591f733731f8",
+      "commit": null,
+      "alcance_commit": "H007 local sin commit ni push; base 88f0319801c53ba44316f0fcf7c3dee636baa5d3",
+      "script_productor": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/reanclar.py",
+      "clase": "B/C/D/E",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Fotos seguimiento T2/T3 2025–2026; MU y MRUN anual 2022–2026; alcance H001 2024; catálogo H002 2026/2027",
+      "no_recalcular_salvo": "Fuente del mismo período que cubra el requisito E o autorización explícita de integración de vista v20/Fase 6; R09 solo con nueva fuente individual SIES. No repetir este diagnóstico con los mismos insumos.",
+      "limites": "95 candidatos de catálogo no son personas atribuidas; no hay vínculo entre MRUN e identidad UMAS. Cohorte T1 2024 se observa en 2025. No se actualizó V24 ni tasas.",
+      "evidencias": [
+        {
+          "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/POSICIONES_SIN_CONTEXTO.json",
+          "sha256": "80d8478c7bf4f330a48ff8b8da08f3a7c311f88261101f54e44dd3b6e3bec823"
+        },
+        {
+          "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/REEVALUACION_99.json",
+          "sha256": "650557724ebc83e152cc754411da242b61aa8947339b5fbff70452fa641468b9"
+        },
+        {
+          "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/MRUN_AGREGADO.json",
+          "sha256": "2aab02106986f091468b85f68039dc39456c96649fb92f794305c941195129d7"
+        },
+        {
+          "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/ESCENARIO_131_H001.json",
+          "sha256": "984c4c55e36d3ad2948cbf027b9f7883fa48dd85f4fa534c475d65a0f0e83e53"
+        },
+        {
+          "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h007_20261030/FUENTES_H007.json",
+          "sha256": "e961b30391d8ffb04ff1e753b03f29834dcb4fc919c899d155e7378a08ffd938"
+        }
+      ]
     }
   ],
   "diferencias_catalogo": [

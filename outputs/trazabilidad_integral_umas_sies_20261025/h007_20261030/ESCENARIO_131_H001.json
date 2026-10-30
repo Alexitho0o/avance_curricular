@@ -1,0 +1,208 @@
+{
+  "H001_preservado": {
+    "casos": 558,
+    "personas_distintas_en_los_131": 131,
+    "personas_h001_localizadas_en_MU_2024": 558,
+    "retenidos": 326
+  },
+  "clase": "C escenario; causalidad E",
+  "cohorte_origen_131": [
+    {
+      "anio_origen": 1900,
+      "carrera": "CICIB",
+      "n": 23,
+      "semestre_origen": "0"
+    },
+    {
+      "anio_origen": 2009,
+      "carrera": "CICIB",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2011,
+      "carrera": "CICIB",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2013,
+      "carrera": "CICIB",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2015,
+      "carrera": "CICIB",
+      "n": 2,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2018,
+      "carrera": "CICIB",
+      "n": 2,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2019,
+      "carrera": "CICIB",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2020,
+      "carrera": "CICIB",
+      "n": 2,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2021,
+      "carrera": "CICIB",
+      "n": 4,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2022,
+      "carrera": "CICIB",
+      "n": 7,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 1900,
+      "carrera": "CICRE",
+      "n": 42,
+      "semestre_origen": "0"
+    },
+    {
+      "anio_origen": 2012,
+      "carrera": "CICRE",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2015,
+      "carrera": "CICRE",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2017,
+      "carrera": "CICRE",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2018,
+      "carrera": "CICRE",
+      "n": 2,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2019,
+      "carrera": "CICRE",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2020,
+      "carrera": "CICRE",
+      "n": 2,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2021,
+      "carrera": "CICRE",
+      "n": 2,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2022,
+      "carrera": "CICRE",
+      "n": 7,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 1900,
+      "carrera": "CIINF",
+      "n": 14,
+      "semestre_origen": "0"
+    },
+    {
+      "anio_origen": 2016,
+      "carrera": "CIINF",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2017,
+      "carrera": "CIINF",
+      "n": 1,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2021,
+      "carrera": "CIINF",
+      "n": 6,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2021,
+      "carrera": "CIINF",
+      "n": 1,
+      "semestre_origen": "2"
+    },
+    {
+      "anio_origen": 2022,
+      "carrera": "CIINF",
+      "n": 4,
+      "semestre_origen": "1"
+    },
+    {
+      "anio_origen": 2023,
+      "carrera": "CIINF",
+      "n": 1,
+      "semestre_origen": "1"
+    }
+  ],
+  "continuidad_en_regular_2024": 131,
+  "detalle_agrupado": [
+    {
+      "carrera": "CICIB",
+      "codigo": "I162S2C46J4V3",
+      "n": 44,
+      "pertenencia": "FUERA_H001",
+      "plan": "CICIB20241",
+      "retenido": "NO_APLICA"
+    },
+    {
+      "carrera": "CICRE",
+      "codigo": "I162S2C3J4V2",
+      "n": 59,
+      "pertenencia": "FUERA_H001",
+      "plan": "CICRE20241",
+      "retenido": "NO_APLICA"
+    },
+    {
+      "carrera": "CIINF",
+      "codigo": "I162S2C1J4V2",
+      "n": 28,
+      "pertenencia": "FUERA_H001",
+      "plan": "CIINF20241",
+      "retenido": "NO_APLICA"
+    }
+  ],
+  "en_cohorte_H001": 0,
+  "escenario_exclusion_interseccion": {
+    "cambio_pp": 0.0,
+    "casos": 558,
+    "condicion": "Supuesto de excluir del denominador y numerador los planes de continuidad; no aprobado ni aplicado",
+    "formula": "100*((326-r)/(558-n)-326/558)",
+    "retenidos": 326
+  },
+  "evidencia": "COHERENCIA_TIPO_H005C + ENLACES_MU_DA congelados + V24_QA_COPIA hoja 9; no reproducción de H001 ni nuevo enlace UMAS",
+  "fuera_cohorte_H001": 131,
+  "pp_causalmente_explicados": null,
+  "pp_explicados_por_inclusion_en_H001": 0.0,
+  "requisito_causal": "No hay cohorte nominal SIES oficial 2024 enlazable autorizada ni contrafactual de retención; cambiar versión no prueba cambio en permanencia institucional. La sensibilidad no identifica la causa de -9,08 pp.",
+  "retenidos_en_interseccion": 0
+}
