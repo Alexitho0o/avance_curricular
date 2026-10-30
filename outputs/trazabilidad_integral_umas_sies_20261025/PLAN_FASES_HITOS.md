@@ -1,6 +1,6 @@
-# Plan de trazabilidad integral fotos ↔ UMAS ↔ SIES ↔ MRUN · v3
+# Plan de trazabilidad integral fotos ↔ UMAS ↔ SIES ↔ MRUN · v4
 
-Fecha: 30-10-2026. C: re-anclaje documental H007; D: alcance solicitado por Alexi. Estado: REANCLADO_CON_LIMITES_EXPLICITOS. H008 genera V25 candidata; sin publicación y sin modificar V24.
+Fecha: 30-10-2026. C: re-anclaje documental H007; D: alcance solicitado por Alexi. Estado: REANCLADO_CON_LIMITES_EXPLICITOS. H008 publicado con límites; H009 genera V26 candidata con QA nativo E. V24 y V25 intactas.
 
 ## Versión conservada
 
@@ -48,3 +48,7 @@ V2 íntegra: PLAN_FASES_HITOS_v2_20261030.md, SHA-256 `6ec8b1f67bcd9cfe44c7fd156
 H1 inventario cerrado: 681 C4 con foto disponible y 733 parciales T2-2025. D Alexi: cierre académico 2/3 sin exigir fecha exacta. H2 V25 candidata: 1135 posiciones/1136 contextos, fotos como respaldo separado, 6740 resultados nativos sin diferencias; falta certificar 77 escenarios nativos. H3 propuesta99 lista sin aplicar. H4 sin nueva fuente MRUN, R09 cerrado. H5 ensamblado incremental idéntico; no reproduce R19 crudo integral. R26 candidata, R19 borrador.
 
 Comando e insumos: h008_20261030/REPRODUCIR.md, FUENTES_H008.json y FUENTES_FOTOS_H008.json. No abrir otra iteración de atribución con las mismas fuentes. Pendientes exactos y paradas en INFORME_H008.md. Sin commit ni push.
+
+## H009 · estado v4
+
+Diez gráficos de V26 con auxiliares compactados, nombres dinámicos y orden D. QA estructural PASS, 244190 valores sin diferencias; QA nativo 77 casos y revisión visual E después del único reintento. H006 v2 corrige tres gráficos, también candidata con QA nativo E. R20 intacto. H008 publicado con límites; la Fase 6 integral sigue pendiente. Reproducción y requisitos exactos: h009_20261030/REPRODUCIR.md e INFORME_H009.md. No confundir publicación de evidencia con validación nativa completa.

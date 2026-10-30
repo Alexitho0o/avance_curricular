@@ -1,0 +1,36 @@
+{
+  "estado": "E_QA_NATIVO_NO_COMPLETADO",
+  "clase": "B observación de aplicación; E cobertura no acreditada",
+  "apertura_inicial_sin_reparacion": true,
+  "guardado_inicial_y_recalculo": true,
+  "totales_iniciales_guardados": {
+    "estudiantes": 2379,
+    "retenidos": 1476,
+    "tasa": 0.6204287515762925
+  },
+  "intento_1": {
+    "bloque": 1,
+    "casos_previstos": "1–15",
+    "ultimo_caso_observado": 4,
+    "seleccion": "Acumulado 2022-2025 / Tecnologías / Todas",
+    "estudiantes_observados": 1766,
+    "retenidos_observados": 1162,
+    "resultado": "Tiempo de espera agotado en comando nativo y lectura posterior; el bloque no entregó resultados certificables"
+  },
+  "cierre": "Excel cerrado normalmente sin guardar selecciones de prueba; no cierre forzado",
+  "reintento_unico": {
+    "bloque": 1,
+    "caso": 1,
+    "fase": "reapertura previa al primer caso",
+    "resultado": "Dos lecturas de accesibilidad agotaron tiempo de respuesta; se detiene sin tercera iteración"
+  },
+  "casos_certificados": 0,
+  "casos_esperados": 77,
+  "capturas_representativas_revisadas": 0,
+  "pendiente": "Completar bloques 1–6 (15+15+15+15+15+2), prueba visual de cada año/sector/jornada y 10 combinaciones; capturar cuatro selecciones. También QA nativo de H006 v2.",
+  "bloqueos_no_borrados": [
+    "~$RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V21.xlsx",
+    "~$RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V20.xlsx"
+  ],
+  "limite": "77/77 de H008 es regresión independiente, no 77 selecciones en Excel. No se publican capturas de pantallas con datos individuales."
+}

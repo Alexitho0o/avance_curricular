@@ -1,0 +1,182 @@
+{
+  "estado": "PASS_ESTRUCTURAL_CON_QA_NATIVO_E",
+  "clase": "C QA estructural; B cachés Excel; E cobertura nativa",
+  "controles": {
+    "V25_hash_intacto": true,
+    "hojas_preservadas": true,
+    "contenido_original_preservado": true,
+    "numeros_originales_iguales": true,
+    "sin_errores_inesperados": true,
+    "centrado_HV": true,
+    "13_graficos": true,
+    "37_tablas": true,
+    "G4_nombres_dinamicos": true,
+    "G4_orden_y_compactacion": true,
+    "G5_nombres_dinamicos": true,
+    "G5_orden_y_compactacion": true,
+    "G6_nombres_dinamicos": true,
+    "G6_orden_y_compactacion": true,
+    "G7_nombres_dinamicos": true,
+    "G7_orden_y_compactacion": true,
+    "G8_nombres_dinamicos": true,
+    "G8_orden_y_compactacion": true,
+    "G9_nombres_dinamicos": true,
+    "G9_orden_y_compactacion": true,
+    "G10_nombres_dinamicos": true,
+    "G10_orden_y_compactacion": true,
+    "G11_nombres_dinamicos": true,
+    "G11_orden_y_compactacion": true,
+    "G12_nombres_dinamicos": true,
+    "G12_orden_y_compactacion": true,
+    "G13_nombres_dinamicos": true,
+    "G13_orden_y_compactacion": true,
+    "filtros_preservados": true
+  },
+  "valores_numericos_comparados": 244190,
+  "diferencias_numericas": [],
+  "celdas_originales_alteradas": [],
+  "errores_inesperados": [],
+  "NA_intencionales_auxiliares": 3,
+  "no_centradas": [],
+  "vacias_omitidas": 0,
+  "auxiliares": [
+    {
+      "cantidad": 4,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 4
+    },
+    {
+      "cantidad": 2,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 5
+    },
+    {
+      "cantidad": 4,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 6
+    },
+    {
+      "cantidad": 16,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 7
+    },
+    {
+      "cantidad": 26,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 8
+    },
+    {
+      "cantidad": 3,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 9
+    },
+    {
+      "cantidad": 3,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 1,
+      "grafico": 10
+    },
+    {
+      "cantidad": 5,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 11
+    },
+    {
+      "cantidad": 4,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 12
+    },
+    {
+      "cantidad": 4,
+      "cantidad_correcta": true,
+      "rangos_consecutivos": true,
+      "orden": true,
+      "sin_etiquetas_vacias": true,
+      "series_ausentes": 0,
+      "ceros_observados": 0,
+      "grafico": 13
+    }
+  ],
+  "qa_nativo": {
+    "estado": "E_QA_NATIVO_NO_COMPLETADO",
+    "clase": "B observación de aplicación; E cobertura no acreditada",
+    "apertura_inicial_sin_reparacion": true,
+    "guardado_inicial_y_recalculo": true,
+    "totales_iniciales_guardados": {
+      "estudiantes": 2379,
+      "retenidos": 1476,
+      "tasa": 0.6204287515762925
+    },
+    "intento_1": {
+      "bloque": 1,
+      "casos_previstos": "1–15",
+      "ultimo_caso_observado": 4,
+      "seleccion": "Acumulado 2022-2025 / Tecnologías / Todas",
+      "estudiantes_observados": 1766,
+      "retenidos_observados": 1162,
+      "resultado": "Tiempo de espera agotado en comando nativo y lectura posterior; el bloque no entregó resultados certificables"
+    },
+    "cierre": "Excel cerrado normalmente sin guardar selecciones de prueba; no cierre forzado",
+    "reintento_unico": {
+      "bloque": 1,
+      "caso": 1,
+      "fase": "reapertura previa al primer caso",
+      "resultado": "Dos lecturas de accesibilidad agotaron tiempo de respuesta; se detiene sin tercera iteración"
+    },
+    "casos_certificados": 0,
+    "casos_esperados": 77,
+    "capturas_representativas_revisadas": 0,
+    "pendiente": "Completar bloques 1–6 (15+15+15+15+15+2), prueba visual de cada año/sector/jornada y 10 combinaciones; capturar cuatro selecciones. También QA nativo de H006 v2.",
+    "bloqueos_no_borrados": [
+      "~$RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V21.xlsx",
+      "~$RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V20.xlsx"
+    ],
+    "limite": "77/77 de H008 es regresión independiente, no 77 selecciones en Excel. No se publican capturas de pantallas con datos individuales."
+  },
+  "sha256_v26": "d7e68859cdba52a636e562a9cd287f8114afbc0fb97f0840dfc9284fb2a43a51",
+  "sha256_v25": "63b55351334616833a2e687fbeb36314a0cbb1538c10b6a891c99f94475adc0a"
+}

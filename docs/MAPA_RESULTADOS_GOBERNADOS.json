@@ -931,6 +931,20 @@
       "fecha_resultado": "2026-10-30",
       "no_recalcular_salvo": "Completar QA nativo; foto completa T2-2025 o evidencia/decisión explícita para los 99; reproducción cruda gobernada R19. R09 sólo con fuente individual nueva.",
       "limites": "No activa R19, no adjudica 99, no modifica H001/R20/v20; V25 contiene identificadores y queda local."
+    },
+    {
+      "id": "R27",
+      "pregunta": "¿Qué corrige H009 en los gráficos y qué QA falta?",
+      "resultado_clave": "CANDIDATA_CON_QA_NATIVO_E: V26, 10 gráficos corregidos; 244190 valores sin diferencias; 13 gráficos/37 tablas conservados. 77 casos nativos y revisión visual pendientes tras único reintento. H006 v2 candidata; R20 intacto.",
+      "archivo": "outputs/trazabilidad_integral_umas_sies_20261025/h009_20261030/INFORME_H009.md",
+      "hoja_o_seccion": "Resultados y pendiente exacto",
+      "sha256": "b85fb797db1ed46a703eaa9f5c33011e3874e3ced19c8e78f92ff12d5a87ca19",
+      "commit": "PUBLICACION_H009; base 5d6c840253db871149221b754e0aeca7fdf201ea",
+      "script_productor": "outputs/trazabilidad_integral_umas_sies_20261025/h009_20261030/construir_v26.py",
+      "clase": "D orden; B/C evidencia e implementación; E QA nativo",
+      "fecha_resultado": "2026-10-30",
+      "no_recalcular_salvo": "Excel estable para completar QA delimitado o corrección demostrada de presentación; no recalcular H001/R19 ni adjudicar pendientes.",
+      "limites": "Publicación de scripts/informes no certifica 77 selectores ni cuatro capturas. Libros privados; sin cambios de cifras."
     }
   ],
   "diferencias_catalogo": [
