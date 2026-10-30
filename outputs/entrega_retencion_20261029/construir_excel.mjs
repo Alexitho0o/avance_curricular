@@ -51,6 +51,7 @@ for(const spec of model.sheets){
     for(let i=0;i<b.rows.length;i++)for(let j=0;j<b.rows[i].length;j++)if(typeof b.rows[i][j]==='number' && b.rows[i][j]<0)sh.getCell(b.row+i,j).setNumberFormat('0;-0;0');
     for(const [a,f]of Object.entries(b.formulas))sh.getRange(a).formulas=[[f]];
   }
+  all.format.horizontalAlignment='center';all.format.verticalAlignment='center';all.format.wrapText=true;
   sh.freezePanes.freezeRows(spec.freeze);
   layout.push({name:spec.name,lastRow:last,lastCol:end,blocks:spec.blocks.map(b=>({row:b.row,bottom:b.row+b.rows.length}))});
 }

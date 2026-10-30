@@ -1,0 +1,146 @@
+{
+  "antiguas": 4,
+  "vig1_antiguas": 78,
+  "extincion_2027": 3,
+  "extincion_2027_E": 1,
+  "rezago": 1,
+  "rezago_E": 0,
+  "no_abiertas": 125,
+  "no_abiertas_por_anio": {
+    "2013": 2,
+    "2014": 7,
+    "2015": 2,
+    "2016": 1,
+    "2017": 3,
+    "2018": 3,
+    "2019": 7,
+    "2020": 4,
+    "2021": 8,
+    "2022": 10,
+    "2023": 10,
+    "2024": 19,
+    "2025": 23,
+    "2026": 26
+  },
+  "tendencia": {
+    "CERRADA": 21,
+    "NUEVA": 40,
+    "ALZA": 10,
+    "BAJA": 4,
+    "ESTABLE": 2
+  },
+  "familias_tendencia": 77,
+  "top5_alzas": [
+    {
+      "familia": "I162S2C46J4",
+      "carrera": "INGENIERIA EN CIBERSEGURIDAD",
+      "delta": 228,
+      "base2022": 106,
+      "matricula2026": 334
+    },
+    {
+      "familia": "I162S2C1J4",
+      "carrera": "INGENIERIA EN INFORMATICA",
+      "delta": 194,
+      "base2022": 131,
+      "matricula2026": 325
+    },
+    {
+      "familia": "I162S2C76J4",
+      "carrera": "INGENIERIA EN ADMINISTRACION DE EMPRESAS",
+      "delta": 153,
+      "base2022": 0,
+      "matricula2026": 153
+    },
+    {
+      "familia": "I162S2C77J4",
+      "carrera": "INGENIERIA EN LOGISTICA",
+      "delta": 130,
+      "base2022": 0,
+      "matricula2026": 130
+    },
+    {
+      "familia": "I162S2C91J2",
+      "carrera": "TECNICO EN ENFERMERIA",
+      "delta": 112,
+      "base2022": 0,
+      "matricula2026": 112
+    }
+  ],
+  "top5_bajas": [
+    {
+      "familia": "I162S2C3J2",
+      "carrera": "INGENIERIA EN CONECTIVIDAD Y REDES",
+      "delta": -40,
+      "base2022": 48,
+      "matricula2026": 8
+    },
+    {
+      "familia": "I162S2C6J4",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "delta": -27,
+      "base2022": 72,
+      "matricula2026": 45
+    },
+    {
+      "familia": "I162S2C57J2",
+      "carrera": "TECNICO EN PROGRAMACION Y ANALISIS DE SISTEMAS",
+      "delta": -19,
+      "base2022": 44,
+      "matricula2026": 25
+    },
+    {
+      "familia": "I162S2C22J2",
+      "carrera": "INGENIERIA EN AUTOMATIZACION Y CONTROL INDUSTRIAL",
+      "delta": -16,
+      "base2022": 16,
+      "matricula2026": 0
+    },
+    {
+      "familia": "I162S2C6J2",
+      "carrera": "TECNICO EN CONECTIVIDAD Y REDES",
+      "delta": -16,
+      "base2022": 23,
+      "matricula2026": 7
+    }
+  ],
+  "vig_mu2026": {
+    "1": 3145,
+    "0": 960
+  },
+  "fuentes": [
+    {
+      "id": "SECTOR",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json",
+      "sha256": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+      "clase": "B/C; reutilización gobernada"
+    },
+    {
+      "id": "TITULACION_AGREGADA",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+      "clase": "B/C; reutilización gobernada"
+    },
+    {
+      "id": "MAPA_H006",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/excel_resumen_cruce_20261030/MAPA_FUENTE_H006.json",
+      "sha256": "19ef4b6abd2fabfc64d774a56a1112b5c8ecb48f301bccab8da773b096157966",
+      "clase": "B/C; reutilización gobernada"
+    },
+    {
+      "id": "OFERTA_V06",
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+      "clase": "C carga preparada"
+    },
+    {
+      "id": "MU_142342",
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+      "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+      "clase": "B; solo campos de catálogo y cohorte, agregados"
+    }
+  ],
+  "criterio_rezago": "2026 menos ANIO_ING_ACT > duración de estudios en semestres / 2; sin meses, aproximación C",
+  "criterio_tendencia": "Prioridad CERRADA > NUEVA > EN_EXTINCION > ALZA/BAJA/ESTABLE; +/-10%; referencia 2022",
+  "alcance": "Agregados nuevos autorizados; no reconstruye enlaces ni modifica reglas de cálculo activas"
+}

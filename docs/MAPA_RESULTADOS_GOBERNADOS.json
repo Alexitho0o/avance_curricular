@@ -557,6 +557,311 @@
         }
       ],
       "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R21",
+      "pregunta": "¿Dónde consultar el resumen de programas SIES, planes UMAS y enlaces históricos sin recalcular la paridad?",
+      "resultado_clave": "106 códigos SIES históricos, 66 activos 2026; 236 planes y 127 CODCARPR del maestro; 8.814/9.146 matrículas-año enlazadas (96,4 %), 8.424 con plan observado (92,1 %); catálogo 2027: 97/37/6/21. H005b: EN_OFERTA 139 (117 pregrado, 22 postítulo), 124 en 2026; 17 familias con atributos distintos y 4 idénticas; 9 códigos cambian atributos; H005c: coherencia de tipos con catálogo UMAS v2 y oferta anual informada, 304 cruces (133 en 2024 y 171 en 2025), cero en 2026 entre evaluables. Universo diagnóstico 253: 210 traslados correctos a continuidad, 36 versión por plan/año, 5 cruces de tipo y 2 no evaluables.",
+      "archivo": "outputs/excel_resumen_cruce_20261030/RESUMEN_CRUCE_SIES_UMAS_20261030.xlsx",
+      "hoja_o_seccion": "Cinco hojas: Base_Completa, Programas_SIES, Versiones_SIES, Codigos_UMAS y Cruce_SIES_UMAS",
+      "sha256": "5338543e375ed227e0297ed6ab136e1a67392e94f5969b1dd38b0d537578b03d",
+      "commit": "SIN_COMMIT H006 · base 430c7d4",
+      "alcance_commit": "La huella actual corresponde al derivado local H006, no al commit previo.",
+      "script_productor": "outputs/excel_resumen_cruce_20261030/construir.py y construir.mjs; verificar.py",
+      "clase": "A criterio oferta 2027; B/C datos y contrastes; D cierres reutilizados; E límites históricos",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Matrícula 2007–2026, enlaces MU 2022–2026 y catálogo/oferta 2027",
+      "no_recalcular_salvo": "Cambio autorizado de una fuente gobernada o corrección demostrada de presentación; para paridad respetar las fuentes nuevas y el techo H002. No reconstruir enlaces con estas mismas fuentes.",
+      "fuentes_adicionales": [
+        {
+          "id": "PUBLICA",
+          "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/publicacion_fechafirma_20261022/gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv",
+          "sha256": "4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+          "clase": "B",
+          "commit": "Referencia externa por hash"
+        },
+        {
+          "id": "H002",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+          "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063",
+          "clase": "C/D",
+          "commit": "82cb49c8b1136214a989676d914766d829e4c4dc"
+        },
+        {
+          "id": "MAESTRO",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+          "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+          "clase": "B/C/E",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef"
+        },
+        {
+          "id": "MATRIZ",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/cohorte_2007_2026/MATRIZ_PARIDAD_COHORTE.csv",
+          "sha256": "44c2c12a37a0f8d552e8a4b93759d09cc4a66babe996218c72d2a64962a481fe",
+          "clase": "B/C/E",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "RESULTADOS",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/paridad_cohorte_2007_2026/RESULTADOS.json",
+          "sha256": "ee11647f6a2a6e00696334f0a2cbc2ed41034aa93f137ab6ad217862dde645d4",
+          "clase": "B/C",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "CONTROL_SIES",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/paridad_cohorte_2007_2026/CONTROL_SIES_PUBLICACION.json",
+          "sha256": "da1adb185e4294e41dcb4a8b93d3e0be8cb2eaf08f7f96bca8ad39f0263ad40e",
+          "clase": "B/C",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "PRIMER_ANIO",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/cohorte_2007_2026/PRIMER_ANIO_POR_FAMILIA.csv",
+          "sha256": "3b2f1020f3800db6840c4b99951a092ac265f1f9f94fe4a4f4752c5e80807ef4",
+          "clase": "B/C",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "TIPOS_V2",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/regla_operativa_mu_v2/TIPO_PLAN_POR_PLAN_UMAS.csv",
+          "sha256": "065716db537fe9f67935235df293802005f33d5f7eb60a6f85d9b67c12a84e95",
+          "clase": "C",
+          "commit": "a6c34668983eb8a067f360ecef7ff1fa18559d83"
+        },
+        {
+          "id": "TIPOS_V3",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/regla_operativa_mu_v3/TIPO_PLAN_POR_PLAN_UMAS_v3.csv",
+          "sha256": "4e33b83fd1079545a17dd7508694fee82ad438e025438ca02743ac209dbcc0cc",
+          "clase": "C/E CANDIDATO",
+          "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada"
+        },
+        {
+          "id": "PERFILES",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/paridad_codigo_sies_20261029/PERFIL_PLANES_H002C.json",
+          "sha256": "56bdc927d8098319fce1ddb5c82c4fe6bf39988666ecf9328036bc108810bcd9",
+          "clase": "B/C/E",
+          "commit": "cd78f5ac439e442733a69d0d4d30d61619b49b47"
+        },
+        {
+          "id": "DICCIONARIO_UMAS",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_umas/DICCIONARIO_UMAS.json",
+          "sha256": "f05ac03aa8ca0ec6cf5f754cbaacebac630b2a3346ff592d7ee0b181b82e8811",
+          "clase": "B/C/E",
+          "commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162"
+        },
+        {
+          "id": "MALLAS",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_umas/COMPROBACION_MALLAS.json",
+          "sha256": "2d13dd9123f839343f4ff6b41ce931e7c72a54a90a81390197fed379c92cdc0c",
+          "clase": "B/C/E",
+          "commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162"
+        },
+        {
+          "id": "REGLA",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+          "sha256": "197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2",
+          "clase": "D ACTIVA",
+          "commit": "75ed9501afe66c941709809ade79c7015827e3cb"
+        },
+        {
+          "id": "CIERRE",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/cierre_historico_2007_2021/README.md",
+          "sha256": "cddd0f2dad9abe85dd5bf64b284030129dba341e55a7e38f5f846d7352242645",
+          "clase": "D/E",
+          "commit": "8b79a8acbe093ad78fd7564d9b7b48455f0df96c"
+        },
+        {
+          "id": "TECHO",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/TECHO_ALCANZADO.md",
+          "sha256": "60528910ee02f96e18ece8e064d4a0b1fe2f2341f5cbc5393d7144de355dd872",
+          "clase": "D/E",
+          "commit": "430c7d4a9cc82c4ed4b259a99bd775eb3f504bbc"
+        },
+        {
+          "id": "PALETA",
+          "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/marca/paleta_ipss_2026.json",
+          "sha256": "eaf142973cb8b28b4919cd156612587b0d811f94c3e3c41a4f480a1ef4828c26",
+          "clase": "A/C",
+          "commit": "Referencia externa por hash"
+        },
+        {
+          "id": "LISTADO_AC",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+          "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+          "clase": "B; solo hash, perfiles agregados reutilizados",
+          "commit": "Referencia externa por hash"
+        },
+        {
+          "id": "DIAG253",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/regla_operativa_mu_v3_20261029/DIAGNOSTICO_253.json",
+          "sha256": "9c4f4e8b8be749dd57641a02d6c1d6c4271d08b61a6f0445f17df659bcb3d06d",
+          "clase": "C/E",
+          "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada"
+        },
+        {
+          "id": "MANUAL_OFERTA2027",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/01_fuentes_oficiales/Instructivo_Oferta_Academica-Acceso_CFT-IP 2027.txt",
+          "sha256": "27095d34a42c37f23a875f925204fc99d03e53fa9011d66480167f834b790c7e",
+          "clase": "A",
+          "commit": "25fb135a7630c5f2602e5a653a126f0711aec7d4"
+        },
+        {
+          "id": "LIMITES_VERSION",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/unificacion_proyectos_y_reglas_negocio_20261015.md",
+          "sha256": "ef7d47f940f46045fc1c179642fd76807b8f3c876f03b1c1bc680271434a3d53",
+          "clase": "A/C/E",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef"
+        }
+      ],
+      "qa": "outputs/excel_resumen_cruce_20261030/QA_H006.json",
+      "correccion_H005c": "Se compara el tipo UMAS v2 con la versión SIES efectivamente informada en oferta_anual del mismo año, en vez del código esperado por arrastre H002j. Se conserva la etiqueta anterior como trazabilidad; no se reconstruyen enlaces.",
+      "sha256_antes_H006": "95550f580ad0c44e464f5a142d46f2d25ad6cfb4740104405222d09984f135be",
+      "actualizacion_H006": "Presentación centrada y QA repetido sin diferencias; nuevas hojas H006 sólo en resumen. Sin commit."
+    },
+    {
+      "id": "R22",
+      "pregunta": "¿Qué familias antiguas conservan matrícula 2026?",
+      "resultado_clave": "4 familias; 78 VIG1; 3 sólo antiguos 2027 y 1 E; rezago aproximado 1; 38 registros de titulación proceso 2026.",
+      "archivo": "outputs/excel_resumen_cruce_20261030/RESUMEN_CRUCE_SIES_UMAS_20261030.xlsx",
+      "hoja_o_seccion": "6_Carreras_Antiguas",
+      "sha256": "5338543e375ed227e0297ed6ab136e1a67392e94f5969b1dd38b0d537578b03d",
+      "commit": "SIN_COMMIT · base 430c7d4",
+      "alcance_commit": "Derivado local H006",
+      "script_productor": "outputs/excel_resumen_cruce_20261030/construir.py; ampliar_h006.py; verificar_h006.py",
+      "clase": "B/C datos y agregación; D alcance y rótulos; E límites",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Matrícula 2007–2026; oferta 2010–2027; titulación proceso 2026",
+      "no_recalcular_salvo": "Nueva fuente gobernada pertinente o corrección demostrada. No reconstruir enlaces ni paridades.",
+      "fuentes_adicionales": [
+        {
+          "id": "SECTOR",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json",
+          "sha256": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "TITULACION_AGREGADA",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+          "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "MAPA_H006",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/excel_resumen_cruce_20261030/MAPA_FUENTE_H006.json",
+          "sha256": "19ef4b6abd2fabfc64d774a56a1112b5c8ecb48f301bccab8da773b096157966",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "OFERTA_V06",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+          "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+          "clase": "C carga preparada"
+        },
+        {
+          "id": "MU_142342",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+          "clase": "B; solo campos de catálogo y cohorte, agregados"
+        }
+      ],
+      "qa": "outputs/excel_resumen_cruce_20261030/QA_H006.json"
+    },
+    {
+      "id": "R23",
+      "pregunta": "¿Qué oferta con nuevos no registra primer año publicado?",
+      "resultado_clave": "125 códigos-año 2010–2026, todos sin fila pública. No prueba no apertura operativa. 2027 E hasta MU 2027.",
+      "archivo": "outputs/excel_resumen_cruce_20261030/RESUMEN_CRUCE_SIES_UMAS_20261030.xlsx",
+      "hoja_o_seccion": "7_Ofertadas_No_Abiertas",
+      "sha256": "5338543e375ed227e0297ed6ab136e1a67392e94f5969b1dd38b0d537578b03d",
+      "commit": "SIN_COMMIT · base 430c7d4",
+      "alcance_commit": "Derivado local H006",
+      "script_productor": "outputs/excel_resumen_cruce_20261030/construir.py; ampliar_h006.py; verificar_h006.py",
+      "clase": "B/C datos y agregación; D alcance y rótulos; E límites",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Matrícula 2007–2026; oferta 2010–2027; titulación proceso 2026",
+      "no_recalcular_salvo": "Nueva fuente gobernada pertinente o corrección demostrada. No reconstruir enlaces ni paridades.",
+      "fuentes_adicionales": [
+        {
+          "id": "SECTOR",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json",
+          "sha256": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "TITULACION_AGREGADA",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+          "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "MAPA_H006",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/excel_resumen_cruce_20261030/MAPA_FUENTE_H006.json",
+          "sha256": "19ef4b6abd2fabfc64d774a56a1112b5c8ecb48f301bccab8da773b096157966",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "OFERTA_V06",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+          "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+          "clase": "C carga preparada"
+        },
+        {
+          "id": "MU_142342",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+          "clase": "B; solo campos de catálogo y cohorte, agregados"
+        }
+      ],
+      "qa": "outputs/excel_resumen_cruce_20261030/QA_H006.json"
+    },
+    {
+      "id": "R24",
+      "pregunta": "¿Cómo varía la matrícula por familia entre 2022 y 2026?",
+      "resultado_clave": "77 familias/grupos: ALZA 10, BAJA 4, ESTABLE 2, NUEVA 40, EN_EXTINCION 0 y CERRADA 21; suma de versiones.",
+      "archivo": "outputs/excel_resumen_cruce_20261030/RESUMEN_CRUCE_SIES_UMAS_20261030.xlsx",
+      "hoja_o_seccion": "8_Tendencia_Matricula",
+      "sha256": "5338543e375ed227e0297ed6ab136e1a67392e94f5969b1dd38b0d537578b03d",
+      "commit": "SIN_COMMIT · base 430c7d4",
+      "alcance_commit": "Derivado local H006",
+      "script_productor": "outputs/excel_resumen_cruce_20261030/construir.py; ampliar_h006.py; verificar_h006.py",
+      "clase": "B/C datos y agregación; D alcance y rótulos; E límites",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Matrícula 2007–2026; oferta 2010–2027; titulación proceso 2026",
+      "no_recalcular_salvo": "Nueva fuente gobernada pertinente o corrección demostrada. No reconstruir enlaces ni paridades.",
+      "fuentes_adicionales": [
+        {
+          "id": "SECTOR",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/analisis_desercion_ipss/reglas/MAPEO_SECTOR_IPSS_H001.json",
+          "sha256": "d88abac17453a023753a367657b1a8b3dd8353d250bb0e03e8aa0a356746f8c1",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "TITULACION_AGREGADA",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+          "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "MAPA_H006",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/excel_resumen_cruce_20261030/MAPA_FUENTE_H006.json",
+          "sha256": "19ef4b6abd2fabfc64d774a56a1112b5c8ecb48f301bccab8da773b096157966",
+          "clase": "B/C; reutilización gobernada"
+        },
+        {
+          "id": "OFERTA_V06",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+          "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b",
+          "clase": "C carga preparada"
+        },
+        {
+          "id": "MU_142342",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/02_MATRICULA_UNIFICADA_Y_CARGAS_SIES/BASE_RETENCION_MATRICULA_UNIFICADA_INFORMADA_SIES_2022_2026_20260901_142342.xlsx",
+          "sha256": "19cf33ae4925a7c13ec4745394141a297f4f64be4052a240cb0d2c42ffeb53bd",
+          "clase": "B; solo campos de catálogo y cohorte, agregados"
+        }
+      ],
+      "qa": "outputs/excel_resumen_cruce_20261030/QA_H006.json"
     }
   ],
   "diferencias_catalogo": [
@@ -595,5 +900,25 @@
     "catalogos_sin_modificacion": true,
     "hashes_verificados": true,
     "productores_no_ejecutados": true
-  }
+  },
+  "actualizacion_H005": "2026-10-30: R21 agregada; las veinte filas H004 se conservan.",
+  "actualizacion_H005b": {
+    "fecha": "2026-10-30",
+    "resultado": "R21",
+    "sha256_anterior": "301f27ca29c9c154cbf88c74e03b9e1c2d06b956da184b46725d6a0c8f2b7981",
+    "sha256_actual": "3ebeb7300024a0be217a6b8dad0af59cc87b61ce8e05fb5a802abaa95b24708e",
+    "controles": 34510,
+    "diferencias": 0,
+    "sin_nuevos_enlaces": true
+  },
+  "actualizacion_H005c": {
+    "fecha": "2026-10-30",
+    "resultado": "R21",
+    "sha256_anterior": "3ebeb7300024a0be217a6b8dad0af59cc87b61ce8e05fb5a802abaa95b24708e",
+    "sha256_actual": "95550f580ad0c44e464f5a142d46f2d25ad6cfb4740104405222d09984f135be",
+    "controles": 34960,
+    "diferencias_no_autorizadas": 0,
+    "sin_nuevos_enlaces": true
+  },
+  "actualizacion_H006": "R21: nueva huella de formato; R22–R24: agregaciones nuevas autorizadas, QA sin diferencias y filtros probados."
 }

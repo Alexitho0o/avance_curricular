@@ -1,0 +1,777 @@
+{
+  "hito": "H004",
+  "fecha": "2026-10-30",
+  "decision": "D · Alexi, 30-10-2026",
+  "repo": "avance_curricular",
+  "rama": "feature/ire-2026",
+  "commit_base": "a0bb8f10b4143402b7dfc818c25506b74ead1ada",
+  "alcance": "Inventario y lectura documental; sin cálculos de indicadores, cambios de fuentes ni ejecución de productores. Hashes de archivos sí verificados.",
+  "clases": {
+    "A": "Regla oficial del proceso y edición citados",
+    "B": "Dato observado en fuente o resultado guardado",
+    "C": "Implementación, comparación o inferencia técnica",
+    "D": "Decisión interna de Alexi",
+    "E": "Hipótesis, límite, contradicción o pendiente explícito"
+  },
+  "resultados": [
+    {
+      "id": "R01",
+      "pregunta": "¿Qué retención de primer año tiene la cohorte 2022 frente a SIES?",
+      "resultado_clave": "224/305; H001 73,44 %; SIES 68,95 %; +4,49 pp; causa E cerrada",
+      "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+      "hoja_o_seccion": "grupos/institucional, cohorte 2022; informe tabla institucional",
+      "sha256": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+      "commit": "47519076159145468ebfca20dcafce87e74d3534",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "scripts/analisis_desercion/calcular_retencion_primer_anio.py; common/analisis_desercion/h001.py",
+      "clase": "B/C/D; E brechas",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "Cohorte 2022; permanencia 2023; publicación comparativa SIES 2026",
+      "no_recalcular_salvo": "Nueva fuente oficial pertinente, rectificación demostrada o instrucción explícita; no repetir conciliación con las mismas fuentes.",
+      "limites": "Indicador interno alineado con definición SIES; no es tasa oficial. Personas por cohorte; tasas reutilizadas, no recalculadas.",
+      "evidencias": [
+        {
+          "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/INFORME.md",
+          "hoja_o_seccion": "Tabla institucional y límites",
+          "sha256": "0c96f6efed5918d38bb42afd3b11c9810e42d9f096f4d8103ca9d1f485d14c45",
+          "commit": "9af5a1ace0f4f5aa2ea74dfa6f54222ed000fa48",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "manifests/milestones/H001-RETENCION-IPSS162/README.md",
+          "hoja_o_seccion": "Adendas y cierre de investigación",
+          "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R02",
+      "pregunta": "¿Qué retención de primer año tiene la cohorte 2023 frente a SIES?",
+      "resultado_clave": "258/366; H001 70,49 %; SIES 70,57 %; −0,08 pp",
+      "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+      "hoja_o_seccion": "grupos/institucional, cohorte 2023; informe tabla institucional",
+      "sha256": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+      "commit": "47519076159145468ebfca20dcafce87e74d3534",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "scripts/analisis_desercion/calcular_retencion_primer_anio.py; common/analisis_desercion/h001.py",
+      "clase": "B/C/D; E brechas",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "Cohorte 2023; permanencia 2024; publicación comparativa SIES 2026",
+      "no_recalcular_salvo": "Nueva fuente oficial pertinente, rectificación demostrada o instrucción explícita; no repetir conciliación con las mismas fuentes.",
+      "limites": "Indicador interno alineado con definición SIES; no es tasa oficial. Personas por cohorte; tasas reutilizadas, no recalculadas.",
+      "evidencias": [
+        {
+          "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/INFORME.md",
+          "hoja_o_seccion": "Tabla institucional y límites",
+          "sha256": "0c96f6efed5918d38bb42afd3b11c9810e42d9f096f4d8103ca9d1f485d14c45",
+          "commit": "9af5a1ace0f4f5aa2ea74dfa6f54222ed000fa48",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "manifests/milestones/H001-RETENCION-IPSS162/README.md",
+          "hoja_o_seccion": "Adendas y cierre de investigación",
+          "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R03",
+      "pregunta": "¿Qué retención de primer año tiene la cohorte 2024 frente a SIES?",
+      "resultado_clave": "326/558; H001 58,42 %; SIES 67,50 %; −9,08 pp; causa E cerrada",
+      "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+      "hoja_o_seccion": "grupos/institucional, cohorte 2024; informe tabla institucional",
+      "sha256": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+      "commit": "47519076159145468ebfca20dcafce87e74d3534",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "scripts/analisis_desercion/calcular_retencion_primer_anio.py; common/analisis_desercion/h001.py",
+      "clase": "B/C/D; E brechas",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "Cohorte 2024; permanencia 2025; publicación comparativa SIES 2026",
+      "no_recalcular_salvo": "Nueva fuente oficial pertinente, rectificación demostrada o instrucción explícita; no repetir conciliación con las mismas fuentes.",
+      "limites": "Indicador interno alineado con definición SIES; no es tasa oficial. Personas por cohorte; tasas reutilizadas, no recalculadas.",
+      "evidencias": [
+        {
+          "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/INFORME.md",
+          "hoja_o_seccion": "Tabla institucional y límites",
+          "sha256": "0c96f6efed5918d38bb42afd3b11c9810e42d9f096f4d8103ca9d1f485d14c45",
+          "commit": "9af5a1ace0f4f5aa2ea74dfa6f54222ed000fa48",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "manifests/milestones/H001-RETENCION-IPSS162/README.md",
+          "hoja_o_seccion": "Adendas y cierre de investigación",
+          "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R04",
+      "pregunta": "¿Qué retención de primer año tiene la cohorte 2025 frente a SIES?",
+      "resultado_clave": "668/1.150; H001 58,09 %; SIES 58,21 %; −0,12 pp; SIES 677/1.163",
+      "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/RETENCION_PRIMER_ANIO_AGREGADO.json",
+      "hoja_o_seccion": "grupos/institucional, cohorte 2025; informe tabla institucional",
+      "sha256": "ad40ada98ec2f30fbd788afc5dc4c1afd620d8ab624ab41d114049f882e258c5",
+      "commit": "47519076159145468ebfca20dcafce87e74d3534",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "scripts/analisis_desercion/calcular_retencion_primer_anio.py; common/analisis_desercion/h001.py",
+      "clase": "B/C/D; E brechas",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "Cohorte 2025; permanencia 2026; publicación comparativa SIES 2026",
+      "no_recalcular_salvo": "Nueva fuente oficial pertinente, rectificación demostrada o instrucción explícita; no repetir conciliación con las mismas fuentes.",
+      "limites": "Indicador interno alineado con definición SIES; no es tasa oficial. Personas por cohorte; tasas reutilizadas, no recalculadas.",
+      "evidencias": [
+        {
+          "archivo": "outputs/retencion_primer_anio_h001_activo_20261028/INFORME.md",
+          "hoja_o_seccion": "Tabla institucional y límites",
+          "sha256": "0c96f6efed5918d38bb42afd3b11c9810e42d9f096f4d8103ca9d1f485d14c45",
+          "commit": "9af5a1ace0f4f5aa2ea74dfa6f54222ed000fa48",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "manifests/milestones/H001-RETENCION-IPSS162/README.md",
+          "hoja_o_seccion": "Adendas y cierre de investigación",
+          "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R05",
+      "pregunta": "¿Dónde consultar la versión ejecutiva restringida de H001?",
+      "resultado_clave": "Libro ejecutivo catalogado; uso restringido por datos personales en 9_Base_Analitica_Detalle y 11_BASE_RETENCION_MU_RAW.",
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx",
+      "hoja_o_seccion": "4_Resultados_Sector; 5_Evolucion; 13_Granular_Codigo_Unico; 14_Vistas_Ejecutivas; 15_Tablas_Ejecutivas",
+      "sha256": "5b64030011ad64f742a95ad72a91cc326ad918afaea46ea989496d2e8c44f899",
+      "commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162",
+      "alcance_commit": "Commit del catálogo/evidencia; fuente externa no versionada",
+      "script_productor": "Antecedente: outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20261005_revision_final/corregir_referencias_y_nota.py; linaje byte a byte del hash 5b640300… no acreditado por ese manifiesto",
+      "clase": "B/C; E linaje completo",
+      "fecha_resultado": "2026-10-05",
+      "anio_proceso_y_referencia": "Cohortes 2022–2025, observaciones MU hasta 2026",
+      "no_recalcular_salvo": "Cambio autorizado del producto ejecutivo o nueva evidencia; nunca regenerar para sustituir el resultado sin control de versión.",
+      "limites": "No publicar el libro ni hojas individuales. El manifiesto 05-10 registra otra huella (7987d0fd…); la copia canónica catalogada 5b640300… se verifica por bytes en H004. No son el mismo objeto.",
+      "evidencias": [
+        {
+          "archivo": "outputs/retencion_ipss_analisis_ejecutivo_2022_2026/20261005_revision_final/REVISION_FINAL.manifest.json",
+          "hoja_o_seccion": "sha256_salida; validaciones históricas",
+          "sha256": "d3177c6f6b0e44670963474755b4a51939ed8d20a04d1b071d6d1aa95c573787",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "outputs/retencion_intermedia_t2_t3/20261021_153436/MANIFEST_SEGUIMIENTO_MAQUETA_T1.json",
+          "hoja_o_seccion": "Plantilla canónica por hash",
+          "sha256": "d21ca9f94a8fa73cce2ca93349e1b7080296a4ac1ecb0853416544b174a9a0c4",
+          "commit": "68ab3f913b38811aba8089cb02c46f2984f83008",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R06",
+      "pregunta": "¿La hoja 13 acredita cero diferencias internas frente a SIES 2025 por código único?",
+      "resultado_clave": "NO: 27/36 códigos coinciden; nueve difieren. Caché K45=13 casos y L45=9 retenidos; G45/H45=1.150/668 frente a I45/J45=1.163/677.",
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx",
+      "hoja_o_seccion": "13_Granular_Codigo_Unico!B3,B7:L45; totales G45:L45",
+      "sha256": "5b64030011ad64f742a95ad72a91cc326ad918afaea46ea989496d2e8c44f899",
+      "commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162",
+      "alcance_commit": "Commit del catálogo/evidencia; fuente externa no versionada",
+      "script_productor": "Fórmulas CONTAR.SI.CONJUNTO/SUMAR.SI.CONJUNTO del libro; incorporación documentada en H001 Adenda 3; productor exacto del objeto final E",
+      "clase": "B/C; E afirmación de cero diferencias",
+      "fecha_resultado": "2026-10-05",
+      "anio_proceso_y_referencia": "Cohorte 2025; permanencia 2026",
+      "no_recalcular_salvo": "Fuente oficial nueva o versión acreditada distinta; no intentar forzar paridad ni resolver planes con este código.",
+      "limites": "Código I162S{COD_SED}C{COD_CAR}J{JOR}V{VERSION} reconstruido desde MU; NO incorpora plan UMAS. Lectura de valores guardados, sin recálculo ni acceso a hojas personales. La suma del granular SIES coincide con su total general; eso no elimina la diferencia frente a H001.",
+      "evidencias": [
+        {
+          "archivo": "manifests/milestones/H001-RETENCION-IPSS162/README.md",
+          "hoja_o_seccion": "Adenda 3, sección A",
+          "sha256": "6f1184f40f91d2c0df73fed2296cd11323aa108ce1cb30474bb000b8bdef7c48",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R07",
+      "pregunta": "¿Cuadran los totales MU y SIES 2022–2026?",
+      "resultado_clave": "2022: VIG1/SIES 1.033/1.033; 2023 1.142/1.142; 2024 1.455/1.455; 2025 2.298/2.371 (73 VIG0 registradas); 2026 3.145/3.371 (brecha 226).",
+      "archivo": "outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "hoja_o_seccion": "matriz[*].mu_sies",
+      "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+      "commit": "7807542b2b819521b7bd620239110686830ec406",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/matriz_cuadratura_totales_20261028/construir_matriz.py",
+      "clase": "B/C; D cierre; E causa",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "MU/SIES años 2022–2026",
+      "no_recalcular_salvo": "Fuente anual nueva y pertinente, o rectificación demostrada. Para MU2026 sólo fuente individual SIES según cierre.",
+      "limites": "Totales de matrículas, no personas; igualdad institucional no prueba igualdad de cada código. Postítulo separado.",
+      "evidencias": [
+        {
+          "archivo": "outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.md",
+          "hoja_o_seccion": "Matriz por año",
+          "sha256": "9ee7320b77edd8781bb033b04f920ae2a381517522b58d6af788bc11c8b76347",
+          "commit": "7807542b2b819521b7bd620239110686830ec406",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R08",
+      "pregunta": "¿Qué acredita la precarga AC 2026 sobre MU 2025?",
+      "resultado_clave": "2.371/2.371 coinciden en documento+DV y código con VIGENCIA 1: 2.298 VIG1 y 73 VIG0 de nuestra MU.",
+      "archivo": "outputs/matriz_cuadratura_totales_20261028/MATRIZ_CUADRATURA_TOTALES_2022_2026.json",
+      "hoja_o_seccion": "matriz[2025].mu_sies.contraste_precarga_ac2026",
+      "sha256": "4d4d69f51dac6919907efff2779eb78f9e3777d64f65c333be5030ec1c50436e",
+      "commit": "7807542b2b819521b7bd620239110686830ec406",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/matriz_cuadratura_totales_20261028/construir_matriz.py",
+      "clase": "B/C; E causa normativa",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "Proceso AC 2026; matrícula de referencia 2025",
+      "no_recalcular_salvo": "Rectificación oficial de MU2025/precarga AC2026 o nueva evidencia normativa del mismo proceso.",
+      "limites": "No trasladar a VIG de otro proceso ni a cada caso MU2026.",
+      "evidencias": [],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R09",
+      "pregunta": "¿Qué conclusión queda sobre la brecha MU 2026 de 226?",
+      "resultado_clave": "CERRADA_DOCUMENTADA, causa E; pregrado 3.371 frente a 3.145; postítulo 54/54.",
+      "archivo": "outputs/matriz_cuadratura_totales_20261028/CIERRE_BRECHA_MU2026.json",
+      "hoja_o_seccion": "estado; brecha; reapertura",
+      "sha256": "89a0cbe196810b7c98abc663f4218665026155c5f1e100fdfbf1e5e9c783d99a",
+      "commit": "7807542b2b819521b7bd620239110686830ec406",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "Cierre documental D; evidencia de outputs/matriz_cuadratura_totales_20261028/construir_matriz.py; metodo_mu2026.py preparado, no ejecutado en H004",
+      "clase": "D cierre; B/C evidencia; E causa",
+      "fecha_resultado": "2026-10-28",
+      "anio_proceso_y_referencia": "MU2026; eventual proceso AC2027 informa matrícula 2026",
+      "no_recalcular_salvo": "Sólo fuente individual SIES de MU2026, por ejemplo precarga AC2027 acreditada.",
+      "limites": "No reabrir con perfiles MRUN ni envíos locales; la compatibilidad no certifica identidad.",
+      "evidencias": [
+        {
+          "archivo": "outputs/matriz_cuadratura_totales_20261028/CIERRE_BRECHA_MU2026.md",
+          "hoja_o_seccion": "Cierre completo",
+          "sha256": "29b976c9cf4f8e55de4316856cfcc60086f52f1c0665b16caa75e36850e5f84c",
+          "commit": "7807542b2b819521b7bd620239110686830ec406",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R10",
+      "pregunta": "¿El registro SIES individual 2007–2025 coincide con la matrícula pública?",
+      "resultado_clave": "20.961 filas; control por código y año con 0 diferencias (QA H002g).",
+      "archivo": "outputs/paridad_cohorte_2007_2026/CONTROL_SIES_PUBLICACION.json",
+      "hoja_o_seccion": "filas; respaldo QA controles micro_publico_0_diferencias y sies_20961",
+      "sha256": "da1adb185e4294e41dcb4a8b93d3e0be8cb2eaf08f7f96bca8ad39f0263ad40e",
+      "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/paridad_cohorte_2007_2026/construir_cohortes.py; qa_cohortes.py",
+      "clase": "B/C",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Matrícula SIES 2007–2025; 2026 separado",
+      "no_recalcular_salvo": "Nueva edición oficial o anomalía documentada del mismo control; no repetir por falta de plan UMAS.",
+      "limites": "El registro SIES responde historia por código; no identifica plan UMAS ni permite reconstruir RUT–MRUN.",
+      "evidencias": [
+        {
+          "archivo": "outputs/paridad_cohorte_2007_2026/QA.json",
+          "hoja_o_seccion": "Controles",
+          "sha256": "62f7c229d4dc8625f08d5d1943cc686602b5fe7c9f213cd4be4637f16d41e0eb",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "outputs/paridad_cohorte_2007_2026/FUENTES.json",
+          "hoja_o_seccion": "Fuentes por hash",
+          "sha256": "eae8190a255e165ef5a8ca1e2449f2bc7183aecc5beacf1450c14de485abaf5e",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R11",
+      "pregunta": "¿Qué paridad de catálogo 2027 quedó aprobada en H002?",
+      "resultado_clave": "161 códigos 2027; 97 resueltos (53 CONTINUA + 31 VERSION_MULTIPLE_RESUELTA + 13 APROBADA_D_2027); 0 VERSION_MULTIPLE_E. Catálogo 2026: 106.",
+      "archivo": "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+      "hoja_o_seccion": "filas por anio y estado",
+      "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063",
+      "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/activacion_codigo_mu2027_20261029/construir.py; antecedente outputs/paridad_codigo_sies_20261029/construir_paridad.py",
+      "clase": "B/C/D; E pendientes",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Catálogo 2026/2027",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "Es catálogo, no atribución personal v20. Las 37 nuevas siguen pendientes.",
+      "evidencias": [
+        {
+          "archivo": "manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.md",
+          "hoja_o_seccion": "Resuelto",
+          "sha256": "921993527d4f8545dfb93ca7d579f0ea26cf8f03d48efb35236e8a927071140a",
+          "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R12",
+      "pregunta": "¿Qué regla activa asigna código MU2027?",
+      "resultado_clave": "ANTIGUO conserva MU2026; NUEVO usa VIGENCIA 1 y tipo plan; revisión por falta de código, ausencia en oferta o vigencia 3 para antiguos; ambigüedades reales para nuevos.",
+      "archivo": "data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+      "hoja_o_seccion": "Regla activa H002l",
+      "sha256": "197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2",
+      "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "common/codigo_sies_mu2027.py; outputs/depuracion_codigo_mu2027_20261029/construir.py",
+      "clase": "D/C",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Proceso MU2027; antecedente MU2026",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "Oferta V06 preparada C debe reemplazarse por aceptada cuando exista. No genera carga PES; tipo E del antiguo es informativo.",
+      "evidencias": [],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R13",
+      "pregunta": "¿Cuánta revisión real MU2027 queda después de H002l?",
+      "resultado_clave": "0 antiguos de 4.105; 34 opciones nuevas de 223; 130 informativas y 59 asignadas; 37 códigos sin plan en unidad separada.",
+      "archivo": "outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json",
+      "hoja_o_seccion": "antiguos; nuevos; codigos_sin_plan",
+      "sha256": "6add2daaaed871ad438f0d74146a1af988c2f5f0fafa01f82337b1aa716f8dab",
+      "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/depuracion_codigo_mu2027_20261029/construir.py",
+      "clase": "D/C/E",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Universo potencial MU2026 → 2027 y opciones de catálogo",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "No sumar opciones, matrículas y códigos; el código sin plan de las opciones se solapa con los 37.",
+      "evidencias": [
+        {
+          "archivo": "outputs/depuracion_codigo_mu2027_20261029/INFORME.md",
+          "hoja_o_seccion": "Resumen",
+          "sha256": "353fd937c74a1dea57dba6cf4c3e9b68c1265cdcb20dc4ac2a90e66b6c726694",
+          "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R14",
+      "pregunta": "¿H002 está cerrado y qué conserva pendiente?",
+      "resultado_clave": "CERRADO_DOCUMENTADO_CON_PENDIENTES_OPERATIVOS_2027: tabla, regla, cierre histórico y paridad 2022–2026 documentados; 37 códigos y revisión real pendientes.",
+      "archivo": "manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.json",
+      "hoja_o_seccion": "resuelto; pendientes; commits",
+      "sha256": "a4a704a6a399a4230f693e9763c87283ff4063337f40244c17b1ef07cdf90e46",
+      "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/depuracion_codigo_mu2027_20261029/construir.py",
+      "clase": "D/C/E",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Catálogo MU2027; antecedentes 2007–2026",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "Anclas 2022/2024/2025; 2023 parcial y 2026 contraste. No equivale a identidad completa de planes.",
+      "evidencias": [
+        {
+          "archivo": "manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.md",
+          "hoja_o_seccion": "Resuelto y pendientes",
+          "sha256": "921993527d4f8545dfb93ca7d579f0ea26cf8f03d48efb35236e8a927071140a",
+          "commit": "75ed9501afe66c941709809ade79c7015827e3cb",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R15",
+      "pregunta": "¿H002m completó los tipos E y resolvió revisión 2027?",
+      "resultado_clave": "De 102: 3 REGULAR, 8 CONTINUIDAD, 6 DEBIL, 7 CONFLICTO, 78 E. Resuelve 0 de 34 revisiones. CANDIDATO_NO_ACTIVO.",
+      "archivo": "outputs/regla_operativa_mu_v3_20261029/RESULTADOS.json",
+      "hoja_o_seccion": "clasificacion_102; revision_34_resueltas",
+      "sha256": "0b1dbf93917b065d53a0cc708d8fef69be7f21165199f6fbae590d68487a7031",
+      "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/regla_operativa_mu_v3_20261029/construir_v3.py",
+      "clase": "B/C/E; D no activar",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Prueba retrospectiva 2023–2026; simulación MU2027",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "102 perfiles no son 1.046 matrículas sin tipo. No sustituye catálogo v2 ni regla activa.",
+      "evidencias": [
+        {
+          "archivo": "data/paridad_codigo_sies/regla_operativa_mu_v3/TIPO_PLAN_POR_PLAN_UMAS_v3.json",
+          "hoja_o_seccion": "Catálogo candidato",
+          "sha256": "8919ce623a4d66bd23a3a507f7e7165b89bf1dd3f0de30a0e903c14bc77c8b9b",
+          "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R16",
+      "pregunta": "¿Cuál es el techo medido por H002m?",
+      "resultado_clave": "Acierto principal 2025 93,644617 % y 2026 91,829897 %; sensibilidad sin patrones agregados 2025 99,586207 % (99,6 % a un decimal), 2026 94,384106 %.",
+      "archivo": "data/paridad_codigo_sies/regla_operativa_mu_v3/METRICAS_TOTALES.json",
+      "hoja_o_seccion": "acierto_m_pct; acierto_sensibilidad_sin_patron_pct; denominadores",
+      "sha256": "45dc9027dc304574cab5e9cabf199ad115911e22ce17985d21381d1c2861ab59",
+      "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/regla_operativa_mu_v3_20261029/construir_v3.py",
+      "clase": "C/E",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Retrospectiva 2023–2026",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "Sensibilidad con denominador propio; no son errores individuales oficiales certificados. La mejora procede de retirar opciones sin matrícula, no de corregir vigencia; no acredita predicción.",
+      "evidencias": [],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R17",
+      "pregunta": "¿Se explicaron las inconsistencias y la oferta histórica en H002m?",
+      "resultado_clave": "253 patrones también observados en SIES sin causa individual acreditada; de 212 residuales, 210 confirman vigencia sin nuevos y 2 E. Sin diferencias de vigencia en códigos-año comparables.",
+      "archivo": "outputs/regla_operativa_mu_v3_20261029/RESULTADOS.json",
+      "hoja_o_seccion": "253_estados; 212_causas; vigencia_contraste",
+      "sha256": "0b1dbf93917b065d53a0cc708d8fef69be7f21165199f6fbae590d68487a7031",
+      "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/regla_operativa_mu_v3_20261029/construir_v3.py",
+      "clase": "B/C/E",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "SIES/MU 2022–2026",
+      "no_recalcular_salvo": "Sólo MU2027, oferta2027 aceptada en PES, precarga AC2027 o registro histórico UMAS por año; verificar pertinencia y hash antes de abrir un hito.",
+      "limites": "No confirma que la extracción histórica estuviera desactualizada. Cargas locales no acreditadas como aceptadas.",
+      "evidencias": [
+        {
+          "archivo": "outputs/regla_operativa_mu_v3_20261029/INFORME.md",
+          "hoja_o_seccion": "Diagnósticos y límites",
+          "sha256": "f0f0f693d278f84c64a569e783a5077c0be1644d4eac9a867682291a7ea82396",
+          "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R18",
+      "pregunta": "¿Debe cuadrarse 2007–2021 con Datos Alumnos actual?",
+      "resultado_clave": "CIERRE E CON CAUSA por decisión D: foto actual no sustituye registro histórico anual. SIES sí cuadra con publicación.",
+      "archivo": "data/paridad_codigo_sies/cierre_historico_2007_2021/README.md",
+      "hoja_o_seccion": "Cierre, tabla de universos y límites",
+      "sha256": "cddd0f2dad9abe85dd5bf64b284030129dba341e55a7e38f5f846d7352242645",
+      "commit": "8b79a8acbe093ad78fd7564d9b7b48455f0df96c",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/regla_operativa_mu_20261029/construir.py",
+      "clase": "D cierre; B/C evidencia; E paridad interna",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Historia 2007–2021",
+      "no_recalcular_salvo": "Registro histórico UMAS por año comparable; aplicar además el techo H004 para el resto de la paridad.",
+      "limites": "La referencia 264 de 2007 es cohorte derivada; primer año publicado es 211. No equiparar unidades ni reabrir con la misma foto.",
+      "evidencias": [],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R19",
+      "pregunta": "¿Qué se puede usar del indicador intertrimestral 2026?",
+      "resultado_clave": "BORRADOR_NO_ACTIVO; paridad parcial. T1→T3 1.360/1.467 personas; total T3 2.290/2.519 personas; ingreso T2 462/528 matrículas.",
+      "archivo": "data/reglas_negocio/indicador_intertrimestral/REGLA.json",
+      "hoja_o_seccion": "fuentes; tipos_de_celda; cierre_hito_2c; V24 hoja 18",
+      "sha256": "1428eda2858f0b2f5918c568607aa339c7c20eea21af83e1db3e30d09c68ab53",
+      "commit": "edc4b8c487861b6b9c686e9315d54d6249e88788",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "common/indicador_intertrimestral.py; scripts/indicador_intertrimestral/paridad_institucional.py; outputs/fase_h_hito2c_20261027/construir_universo.py",
+      "clase": "B/C/D/E; no oficial",
+      "fecha_resultado": "2026-10-27",
+      "anio_proceso_y_referencia": "Seguimiento T1/T2/T3 2026; no retención anual SIES",
+      "no_recalcular_salvo": "Fuente nueva o decisión explícita sobre los pendientes documentados y criterio de parada antes de continuar; no crear V25 ni activar por reutilización.",
+      "limites": "No sumar matrículas y personas ni convertir sin foto en cero. Cinco personas T1-2026 y paridad de proxies/sector/tipo pendientes.",
+      "evidencias": [
+        {
+          "archivo": "data/reglas_negocio/indicador_intertrimestral/REGLA.md",
+          "hoja_o_seccion": "Estado y alcance",
+          "sha256": "d347cfe0226bc25c8a11de64644832b7112d74f1645dd8b184a41fcea47ba29b",
+          "commit": "edc4b8c487861b6b9c686e9315d54d6249e88788",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "outputs/entrega_retencion_20261029/INFORME.md",
+          "hoja_o_seccion": "Controles existentes de hoja 2",
+          "sha256": "1b3d36247bd59521dbca408fe1a325e70baa8a3e614cda8024e0a02eecd7e903",
+          "commit": "4bf6cdd6bbf44582094c16cf3faee7f3b9c0b052",
+          "alcance_commit": "Último commit que modifica este archivo"
+        },
+        {
+          "archivo": "/Users/alexi/Desktop/RETENCION_IPSS_SEGUIMIENTO_T1_T2_T3_20261025_V24.xlsx",
+          "hoja_o_seccion": "18_Foto_Intertrimestral!H11,H14,F12; 20_Foto_BBDD (privada); 24–26 soporte",
+          "sha256": "bfeba67628107f460cad69c5db119a6245782142bd5b65ab435b0cd116bca2db",
+          "commit": "edc4b8c487861b6b9c686e9315d54d6249e88788",
+          "alcance_commit": "Commit del catálogo/evidencia; fuente externa no versionada"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R20",
+      "pregunta": "¿Cuál es la entrega Excel agregada validada de H003?",
+      "resultado_clave": "6 hojas, 1.956 controles sin diferencias, 41 fórmulas sin errores, 14 tablas con filtro; libro agregado validado y publicado en 4bf6cdd.",
+      "archivo": "outputs/entrega_retencion_20261029/ENTREGA_RETENCION_IPSS_20261029.xlsx",
+      "hoja_o_seccion": "0_LEEME; 1_Retencion_1er_anio; 2_Intertrimestral_2026; 3_Paridad_SIES_2027; 4_Brecha_MU_2026; 5_Fuentes",
+      "sha256": "0424ab7094b024592ffe272d4ec042e9cbb1484e6294782bad17f259cef31e14",
+      "commit": "4bf6cdd6bbf44582094c16cf3faee7f3b9c0b052",
+      "alcance_commit": "Último commit que modifica este archivo",
+      "script_productor": "outputs/entrega_retencion_20261029/construir_excel.py; construir_excel.mjs; verificar_entrega.py",
+      "clase": "B/C; D publicación; E visibles",
+      "fecha_resultado": "2026-10-29",
+      "anio_proceso_y_referencia": "Entrega 20261029; referencia mixta indicada en cada hoja",
+      "no_recalcular_salvo": "Cambio autorizado de presentación o fuente gobernada nueva; conservar original y comparar contra sus controles, sin recalcular análisis cerrados.",
+      "limites": "Estado QA reutilizado de H003c, no ejecutado otra vez en H004. Sin datos individuales.",
+      "evidencias": [
+        {
+          "archivo": "outputs/entrega_retencion_20261029/QA.json",
+          "hoja_o_seccion": "QA existente",
+          "sha256": "bd973e21cc563edbac89ed0d3544d9b8a1cf0313c4f41fe971bf983dc63d4b74",
+          "commit": "4bf6cdd6bbf44582094c16cf3faee7f3b9c0b052",
+          "alcance_commit": "Último commit que modifica este archivo"
+        }
+      ],
+      "fecha_verificacion_documental": "2026-10-30"
+    },
+    {
+      "id": "R21",
+      "pregunta": "¿Dónde consultar el resumen de programas SIES, planes UMAS y enlaces históricos sin recalcular la paridad?",
+      "resultado_clave": "106 códigos SIES históricos, 66 activos 2026; 236 planes y 127 CODCARPR del maestro; 8.814/9.146 matrículas-año enlazadas (96,4 %), 8.424 con plan observado (92,1 %); catálogo 2027: 97/37/6/21. H005b: EN_OFERTA 139 (117 pregrado, 22 postítulo), 124 en 2026; 17 familias con atributos distintos y 4 idénticas; 9 códigos cambian atributos; H005c: coherencia de tipos con catálogo UMAS v2 y oferta anual informada, 304 cruces (133 en 2024 y 171 en 2025), cero en 2026 entre evaluables. Universo diagnóstico 253: 210 traslados correctos a continuidad, 36 versión por plan/año, 5 cruces de tipo y 2 no evaluables.",
+      "archivo": "outputs/excel_resumen_cruce_20261030/RESUMEN_CRUCE_SIES_UMAS_20261030.xlsx",
+      "hoja_o_seccion": "Cinco hojas: Base_Completa, Programas_SIES, Versiones_SIES, Codigos_UMAS y Cruce_SIES_UMAS",
+      "sha256": "95550f580ad0c44e464f5a142d46f2d25ad6cfb4740104405222d09984f135be",
+      "commit": "SIN_COMMIT · base 430c7d4a9cc82c4ed4b259a99bd775eb3f504bbc",
+      "alcance_commit": "Entrega local H005/H005b/H005c; sin autorización de commit/push",
+      "script_productor": "outputs/excel_resumen_cruce_20261030/construir.py y construir.mjs; verificar.py",
+      "clase": "A criterio oferta 2027; B/C datos y contrastes; D cierres reutilizados; E límites históricos",
+      "fecha_resultado": "2026-10-30",
+      "anio_proceso_y_referencia": "Matrícula 2007–2026, enlaces MU 2022–2026 y catálogo/oferta 2027",
+      "no_recalcular_salvo": "Cambio autorizado de una fuente gobernada o corrección demostrada de presentación; para paridad respetar las fuentes nuevas y el techo H002. No reconstruir enlaces con estas mismas fuentes.",
+      "fuentes_adicionales": [
+        {
+          "id": "PUBLICA",
+          "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/.local/publicacion_fechafirma_20261022/gobernanza/sies/Matricula_2007_2026_WEB_10_07_2026.csv",
+          "sha256": "4c630e05e07312ebd567ed77b0c26c5d0230380deea4fc89a6123b11b7aba154",
+          "clase": "B",
+          "commit": "Referencia externa por hash"
+        },
+        {
+          "id": "H002",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+          "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063",
+          "clase": "C/D",
+          "commit": "82cb49c8b1136214a989676d914766d829e4c4dc"
+        },
+        {
+          "id": "MAESTRO",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/versiones_historicas_sies_umas/fase_5_20261015/maestro.json",
+          "sha256": "2ef459251e91ecebe5370402e3d2ea25341aeecbfb3ca54eca210cc347c392a5",
+          "clase": "B/C/E",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef"
+        },
+        {
+          "id": "MATRIZ",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/cohorte_2007_2026/MATRIZ_PARIDAD_COHORTE.csv",
+          "sha256": "44c2c12a37a0f8d552e8a4b93759d09cc4a66babe996218c72d2a64962a481fe",
+          "clase": "B/C/E",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "RESULTADOS",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/paridad_cohorte_2007_2026/RESULTADOS.json",
+          "sha256": "ee11647f6a2a6e00696334f0a2cbc2ed41034aa93f137ab6ad217862dde645d4",
+          "clase": "B/C",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "CONTROL_SIES",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/paridad_cohorte_2007_2026/CONTROL_SIES_PUBLICACION.json",
+          "sha256": "da1adb185e4294e41dcb4a8b93d3e0be8cb2eaf08f7f96bca8ad39f0263ad40e",
+          "clase": "B/C",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "PRIMER_ANIO",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/cohorte_2007_2026/PRIMER_ANIO_POR_FAMILIA.csv",
+          "sha256": "3b2f1020f3800db6840c4b99951a092ac265f1f9f94fe4a4f4752c5e80807ef4",
+          "clase": "B/C",
+          "commit": "3ce8490fe09c0fef19493b6832165a10a6dc7bc9"
+        },
+        {
+          "id": "TIPOS_V2",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/regla_operativa_mu_v2/TIPO_PLAN_POR_PLAN_UMAS.csv",
+          "sha256": "065716db537fe9f67935235df293802005f33d5f7eb60a6f85d9b67c12a84e95",
+          "clase": "C",
+          "commit": "a6c34668983eb8a067f360ecef7ff1fa18559d83"
+        },
+        {
+          "id": "TIPOS_V3",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/regla_operativa_mu_v3/TIPO_PLAN_POR_PLAN_UMAS_v3.csv",
+          "sha256": "4e33b83fd1079545a17dd7508694fee82ad438e025438ca02743ac209dbcc0cc",
+          "clase": "C/E CANDIDATO",
+          "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada"
+        },
+        {
+          "id": "PERFILES",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/paridad_codigo_sies_20261029/PERFIL_PLANES_H002C.json",
+          "sha256": "56bdc927d8098319fce1ddb5c82c4fe6bf39988666ecf9328036bc108810bcd9",
+          "clase": "B/C/E",
+          "commit": "cd78f5ac439e442733a69d0d4d30d61619b49b47"
+        },
+        {
+          "id": "DICCIONARIO_UMAS",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_umas/DICCIONARIO_UMAS.json",
+          "sha256": "f05ac03aa8ca0ec6cf5f754cbaacebac630b2a3346ff592d7ee0b181b82e8811",
+          "clase": "B/C/E",
+          "commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162"
+        },
+        {
+          "id": "MALLAS",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_umas/COMPROBACION_MALLAS.json",
+          "sha256": "2d13dd9123f839343f4ff6b41ce931e7c72a54a90a81390197fed379c92cdc0c",
+          "clase": "B/C/E",
+          "commit": "e5a5cdb7c80f9ae06808ee34d0aa9b63ee8bc162"
+        },
+        {
+          "id": "REGLA",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+          "sha256": "197fe68f1a7a24ab6a7ed844e4cefbdcf8774d655acc33ad49886aaadc8b90f2",
+          "clase": "D ACTIVA",
+          "commit": "75ed9501afe66c941709809ade79c7015827e3cb"
+        },
+        {
+          "id": "CIERRE",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/paridad_codigo_sies/cierre_historico_2007_2021/README.md",
+          "sha256": "cddd0f2dad9abe85dd5bf64b284030129dba341e55a7e38f5f846d7352242645",
+          "clase": "D/E",
+          "commit": "8b79a8acbe093ad78fd7564d9b7b48455f0df96c"
+        },
+        {
+          "id": "TECHO",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/TECHO_ALCANZADO.md",
+          "sha256": "60528910ee02f96e18ece8e064d4a0b1fe2f2341f5cbc5393d7144de355dd872",
+          "clase": "D/E",
+          "commit": "430c7d4a9cc82c4ed4b259a99bd775eb3f504bbc"
+        },
+        {
+          "id": "PALETA",
+          "ruta": "/Users/alexi/Documents/GitHub/CARACTERIZACIÓN/gobernanza/marca/paleta_ipss_2026.json",
+          "sha256": "eaf142973cb8b28b4919cd156612587b0d811f94c3e3c41a4f480a1ef4828c26",
+          "clase": "A/C",
+          "commit": "Referencia externa por hash"
+        },
+        {
+          "id": "LISTADO_AC",
+          "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/Datos DAI (RAW) - 1.1 Datos crudos/1.2.1 Datos Institucionales/1.2.1.1 SIES/Enviados/Avance Curricular/2026/Listado_Planes_estudio_Sedes RE+CO.xlsx",
+          "sha256": "fb3a6847dca0745a197867090a9d7d12e8bb7e53e6b421f96826ea0c5657d049",
+          "clase": "B; solo hash, perfiles agregados reutilizados",
+          "commit": "Referencia externa por hash"
+        },
+        {
+          "id": "DIAG253",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/outputs/regla_operativa_mu_v3_20261029/DIAGNOSTICO_253.json",
+          "sha256": "9c4f4e8b8be749dd57641a02d6c1d6c4271d08b61a6f0445f17df659bcb3d06d",
+          "clase": "C/E",
+          "commit": "a0bb8f10b4143402b7dfc818c25506b74ead1ada"
+        },
+        {
+          "id": "MANUAL_OFERTA2027",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/oferta_academica_2027/01_fuentes_oficiales/Instructivo_Oferta_Academica-Acceso_CFT-IP 2027.txt",
+          "sha256": "27095d34a42c37f23a875f925204fc99d03e53fa9011d66480167f834b790c7e",
+          "clase": "A",
+          "commit": "25fb135a7630c5f2602e5a653a126f0711aec7d4"
+        },
+        {
+          "id": "LIMITES_VERSION",
+          "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/docs/unificacion_proyectos_y_reglas_negocio_20261015.md",
+          "sha256": "ef7d47f940f46045fc1c179642fd76807b8f3c876f03b1c1bc680271434a3d53",
+          "clase": "A/C/E",
+          "commit": "55e3b709afb9483f0ecdd2d166f67229a454a5ef"
+        }
+      ],
+      "qa": "outputs/excel_resumen_cruce_20261030/QA.json",
+      "correccion_H005c": "Se compara el tipo UMAS v2 con la versión SIES efectivamente informada en oferta_anual del mismo año, en vez del código esperado por arrastre H002j. Se conserva la etiqueta anterior como trazabilidad; no se reconstruyen enlaces."
+    }
+  ],
+  "diferencias_catalogo": [
+    {
+      "archivo": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/RETENCION/RETENCION_IPSS_FINAL_REVISADO_20261005.xlsx",
+      "sha256": "5b64030011ad64f742a95ad72a91cc326ad918afaea46ea989496d2e8c44f899",
+      "catalogo": "data/catalogo_datos/CATALOGO_DATOS_IPSS.json",
+      "campo": "cobertura_real",
+      "valor_catalogo": "pendiente",
+      "rol_catalogo": "canónico",
+      "dato_personal": "sí",
+      "contraste": "Uso gobernado acreditado por H001, hojas agregadas del libro y plantilla intertrimestral con mismo hash; pendiente no significa archivo sin uso gobernado.",
+      "accion": "Informar; catálogo intacto. No inferir glosario oficial desde un producto interno."
+    }
+  ],
+  "precisiones": [
+    {
+      "id": "P01",
+      "clase": "B/E",
+      "tema": "Cero diferencias en hoja 13",
+      "resultado": "El archivo catalogado y H001 Adenda 3 contradicen esa premisa: K45=13 y L45=9; 27/36 códigos coincidentes. No se registra cero diferencias internas frente a SIES.",
+      "accion": "Corrección documental del mapa, sin recálculo ni modificación del libro."
+    },
+    {
+      "id": "P02",
+      "clase": "B/E",
+      "tema": "Linaje del libro final",
+      "resultado": "REVISION_FINAL.manifest.json registra 7987d0fd…, distinto del objeto canónico 5b640300…; se cita productor antecedente sin certificar generación byte a byte de la copia catalogada.",
+      "accion": "Conservar ambas huellas y alcance, sin búsqueda/cálculo adicional."
+    }
+  ],
+  "control_documental": {
+    "filas_mapa": 20,
+    "sin_recalculo_indicadores": true,
+    "sin_lectura_hojas_personales": true,
+    "catalogos_sin_modificacion": true,
+    "hashes_verificados": true,
+    "productores_no_ejecutados": true
+  },
+  "actualizacion_H005": "2026-10-30: R21 agregada; las veinte filas H004 se conservan.",
+  "actualizacion_H005b": {
+    "fecha": "2026-10-30",
+    "resultado": "R21",
+    "sha256_anterior": "301f27ca29c9c154cbf88c74e03b9e1c2d06b956da184b46725d6a0c8f2b7981",
+    "sha256_actual": "3ebeb7300024a0be217a6b8dad0af59cc87b61ce8e05fb5a802abaa95b24708e",
+    "controles": 34510,
+    "diferencias": 0,
+    "sin_nuevos_enlaces": true
+  },
+  "actualizacion_H005c": {
+    "fecha": "2026-10-30",
+    "resultado": "R21",
+    "sha256_anterior": "3ebeb7300024a0be217a6b8dad0af59cc87b61ce8e05fb5a802abaa95b24708e",
+    "sha256_actual": "95550f580ad0c44e464f5a142d46f2d25ad6cfb4740104405222d09984f135be",
+    "controles": 34960,
+    "diferencias_no_autorizadas": 0,
+    "sin_nuevos_enlaces": true
+  }
+}
