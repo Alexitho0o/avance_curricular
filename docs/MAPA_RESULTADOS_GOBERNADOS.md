@@ -9,7 +9,7 @@ A: regla oficial; B: dato observado; C: implementación/inferencia técnica; D: 
 Año del proceso, año de los datos y período se separan en el JSON complementario.
 Los commits indican el último cambio del archivo; en fuentes externas, el commit es el de su catálogo/evidencia y no significa que los bytes privados estén en Git.
 
-## Mapa (31 resultados)
+## Mapa (32 resultados)
 
 | ID / pregunta | Resultado clave | Archivo y hoja/sección | Script productor (no ejecutado) | Commit | SHA-256 | Clase | Fecha del resultado | No recalcular salvo… |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -49,6 +49,7 @@ Los commits indican el último cambio del archivo; en fuentes externas, el commi
 | R30 · ¿Qué código candidato de seguimiento se puede respaldar con el perfil anual, el período bimestral y el último T1? | CANDIDATA H011/H012. 2952 de 3.049 con respaldo y 97 E, 99 de 99 posiciones. Familia IECIREOL candidata C1. D7 no alcanza 99,9 %. D8 sin altas autónomas. R01–R04 y R19 con 0,00 pp. | outputs/versiones_mu_h012_20261030/INFORME_H012.md | outputs/versiones_mu_h012_20261030/resolver.py | PUBLICACION_H012; base dd34eaf | d4681d5897eb414ee24929620be4ea0ff4e25a2e449913694d1354b2c8b17f7b | D decisiones; B/C fuentes y aplicación; E pendientes | 2026-10-30 | Nueva evidencia de familia, perfil, versión o matrícula anterior, o nueva decisión explícita validada por Alexi. |
 
 | R31 · ¿Qué edición respalda las reproducciones históricas que fijaron v20? | ARCHIVADA v20. Descriptor y base privada íntegros. H002 verifica el puntero histórico por su hash original. | data/diccionario_sies_seguimiento/archivo_v20_h013/ARCHIVO_V20.md | outputs/activacion_v21_h013_20261030/construir_v21.py | PUBLICACION_H013; base 989198f | f6fcb8c3061ab2c90f9f93e0a7030129c044d774ad0c6b9db2b801226170a29c | B hash; D archivo | 2026-10-30 | Verificación expresa de la instantánea histórica. |
+| R32 · ¿Qué cobertura interna respalda la foto T2-2025 y qué cambia en el residual de v22? | CANDIDATA H015. Foto para 72/733 C4, 661 sin foto; cuatro asignaciones nuevas, 55 E. v23 en ensayo; v22 activa. | outputs/fuentes_internas_h015_20261030/INFORME_H015.md | outputs/fuentes_internas_h015_20261030/cerrar.py | PUBLICACION_H015; base eb389ed | 97db69d62d5597f5c55eccbd71ba5431926a4b2bff19eaca7f51447fda2d6c13 | B fuentes; C cruce; D criterio; E pendientes | 2026-10-30 | Nueva fuente interna de cierre o decisión explícita para Fase 2/3. |
 
 ## Límites por resultado
 
