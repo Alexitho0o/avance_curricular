@@ -1,0 +1,40 @@
+{
+  "archivos_protegidos_intactos": 4971,
+  "cambios_ajenos_intactos": 24,
+  "clase": "C",
+  "ejecucion": "2026-10-30",
+  "estado": "PASS",
+  "fuentes_hash_verificadas": 61,
+  "limites": [
+    "Candidata; no cambia regla activa",
+    "Patrones SIES agregados no certifican errores individuales",
+    "Microdatos con matrícula no equivalen a oferta completa"
+  ],
+  "privacidad": {
+    "archivos_escaneados": 40,
+    "hallazgos": [],
+    "metodo": "Patrones documento/contacto/expediente/credencial + tokens exactos de fuentes sólo en memoria; salidas de esquema agregado sin campos nominales"
+  },
+  "pruebas": [
+    {
+      "estado": "PASS",
+      "pruebas": 33,
+      "ruta": "outputs/regla_operativa_mu_v3_20261029/test_v3.py",
+      "sha256": "10f5b5bb67cf0f04e8bbe9185f992642a02ecf51fe2477cf4473658ac53504d3"
+    },
+    {
+      "estado": "PASS",
+      "pruebas": 25,
+      "ruta": "outputs/regla_operativa_mu_v2_20261029/test_regla_v2.py",
+      "sha256": "be807e36ee950eea6bbb8caa33c06eda8c8affcd5fd45b38d7c527f2ffcc2a31"
+    },
+    {
+      "estado": "PASS",
+      "pruebas": 27,
+      "ruta": "outputs/depuracion_codigo_mu2027_20261029/test_h002l.py",
+      "sha256": "94e776bcb049a7b768f84a6d2f8590e6029a6fbbe6fc6b48343b3708068115bd"
+    }
+  ],
+  "reproduccion_por_hash": "IDENTICA",
+  "total_pruebas": 85
+}

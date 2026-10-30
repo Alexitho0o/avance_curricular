@@ -1,0 +1,9 @@
+# H002m · Candidata, 29-10-2026
+
+D: encargo de Alexi; no modifica la regla activa ni H002–l. C: evaluación retrospectiva, filas de matrícula; mismos grupos y denominadores H002i/j. B: fuentes y conteos observados. E: ausencia o contradicción de evidencia.
+
+1. Revisar los 102 perfiles E; conservar los 121 tipos anteriores. Dos mediciones independientes (malla y duración formal, o malla y contraste de ramos con perfil formal) y sin contradicción SIES permiten propuesta C. El régimen S/A de la malla sigue sin catálogo acreditado; conversión con PROMEDIOS explícito es condicional C, no duración oficial. No convertir prefijo ni nombre en tipo. Permanencia carece de plan; H112B reutiliza la malla y no se cuenta como confirmación independiente de sus ramos. Una mayoría no elimina una contradicción minoritaria.
+2. Vigencia registrada por código/año en microdatos SIES 2022–2026; MRUN 2026 ya gobernado, sin vínculo entre personas. Ausencia en microdatos no demuestra ausencia de oferta: las familias con códigos del catálogo sin vigencia registrada se marcan cobertura parcial. Presentar predicción retrospectiva con códigos observados y sensibilidad bloqueando esas familias; no interpretar mejora como validación prospectiva.
+3. Reproducir los 253/212 de H002j. Comparar repartos agregados por código/cohorte/año, formas y semestres. Igualdad agregada no acredita identidad ni error individual. Reservar INCONSISTENCIA_OFICIAL_REGISTRADA para patrón de reparto o cambio observado también en SIES, con cobertura comparable; lo no demostrado queda E. No excluir errores simplemente para lograr 98 %.
+4. Simulación 2027 sobre opciones H002l con la función activa pura, inyectando sólo catálogo candidato. No aplicar resultados. Los antiguos conservan código por decisión H002l.
+5. Fuentes fijadas por SHA-256; salidas agregadas deterministas y detalle sólo privado. QA de denominadores, privacidad, fuentes, reproducción y preservación integral del estado inicial.

@@ -1,0 +1,434 @@
+{
+  "102_con_MU2026": {},
+  "102_con_opciones2027": {
+    "CONFLICTO": 7,
+    "CONTINUIDAD": 8,
+    "DEBIL": 6,
+    "E": 7,
+    "REGULAR": 3
+  },
+  "102_matriculas_MU2026": {
+    "CONFLICTO": 0,
+    "CONTINUIDAD": 0,
+    "DEBIL": 0,
+    "E": 0,
+    "REGULAR": 0
+  },
+  "212_causas": {
+    "REGISTRO_CONFIRMA_SIN_NUEVOS": 210,
+    "VIGENCIA_REGISTRADA_E": 2
+  },
+  "253_causas": {
+    "PATRON_AGREGADO_SIN_EXPLICACION; NO_IDENTIDAD_NI_ERROR_PERSONAL_PROBADO": 253
+  },
+  "253_estados": {
+    "INCONSISTENCIA_OFICIAL_REGISTRADA": 253
+  },
+  "cargas_locales_contraste": [
+    {
+      "anio": 2023,
+      "comparacion_local_extraccion": "COINCIDE",
+      "comparacion_local_registro": "COINCIDE",
+      "filas": 22
+    },
+    {
+      "anio": 2023,
+      "comparacion_local_extraccion": "COINCIDE",
+      "comparacion_local_registro": "NO_COMPARABLE_E",
+      "filas": 48
+    },
+    {
+      "anio": 2024,
+      "comparacion_local_extraccion": "COINCIDE",
+      "comparacion_local_registro": "COINCIDE",
+      "filas": 27
+    },
+    {
+      "anio": 2024,
+      "comparacion_local_extraccion": "COINCIDE",
+      "comparacion_local_registro": "NO_COMPARABLE_E",
+      "filas": 34
+    },
+    {
+      "anio": 2024,
+      "comparacion_local_extraccion": "DIFIERE",
+      "comparacion_local_registro": "NO_COMPARABLE_E",
+      "filas": 5
+    },
+    {
+      "anio": 2024,
+      "comparacion_local_extraccion": "NO_COMPARABLE_E",
+      "comparacion_local_registro": "NO_COMPARABLE_E",
+      "filas": 10
+    },
+    {
+      "anio": 2026,
+      "comparacion_local_extraccion": "COINCIDE",
+      "comparacion_local_registro": "COINCIDE",
+      "filas": 178
+    },
+    {
+      "anio": 2026,
+      "comparacion_local_extraccion": "COINCIDE",
+      "comparacion_local_registro": "NO_COMPARABLE_E",
+      "filas": 150
+    },
+    {
+      "anio": 2026,
+      "comparacion_local_extraccion": "DIFIERE",
+      "comparacion_local_registro": "NO_COMPARABLE_E",
+      "filas": 1
+    }
+  ],
+  "clasificacion_102": {
+    "CONFLICTO": 7,
+    "CONTINUIDAD": 8,
+    "DEBIL": 6,
+    "E": 78,
+    "REGULAR": 3
+  },
+  "cobertura_MU2026": {
+    "PLAN_NO_CATALOGADO_O_NO_OBSERVADO": 1021,
+    "SIN_EXPEDIENTE_ENLAZADO": 25,
+    "TIPO_CATALOGADO_1": 2680,
+    "TIPO_CATALOGADO_3": 379
+  },
+  "errores_individuales_oficiales_certificados": 0,
+  "estado": "CANDIDATO_NO_ACTIVO",
+  "fecha_decision": "2026-10-29",
+  "fecha_ejecucion": "2026-10-30",
+  "meta_98_2025_2026": {
+    "2025": false,
+    "2026": false
+  },
+  "por_grupo": [
+    {
+      "acierto_i_pct": 98.29222,
+      "acierto_j_pct": 98.29222,
+      "acierto_m_pct": 98.29222,
+      "acierto_sensibilidad_cobertura_completa_pct": 98.29222,
+      "acierto_sensibilidad_sin_patron_pct": 100.0,
+      "aciertos_i": 518,
+      "aciertos_j": 518,
+      "aciertos_m": 518,
+      "anio": 2023,
+      "denominador_sensibilidad_sin_patron": 518,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 527,
+      "grupo": "ANTIGUO",
+      "patrones_oficiales_sin_explicacion": 9,
+      "sin_prediccion_m": 0
+    },
+    {
+      "acierto_i_pct": 100.0,
+      "acierto_j_pct": 100.0,
+      "acierto_m_pct": 100.0,
+      "acierto_sensibilidad_cobertura_completa_pct": 35.728155,
+      "acierto_sensibilidad_sin_patron_pct": 100.0,
+      "aciertos_i": 515,
+      "aciertos_j": 515,
+      "aciertos_m": 515,
+      "anio": 2023,
+      "denominador_sensibilidad_sin_patron": 515,
+      "familia_cobertura_parcial_filas": 331,
+      "filas_mu": 515,
+      "grupo": "NUEVO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 0
+    },
+    {
+      "acierto_i_pct": null,
+      "acierto_j_pct": null,
+      "acierto_m_pct": null,
+      "acierto_sensibilidad_cobertura_completa_pct": null,
+      "acierto_sensibilidad_sin_patron_pct": null,
+      "aciertos_i": 0,
+      "aciertos_j": 0,
+      "aciertos_m": 0,
+      "anio": 2023,
+      "denominador_sensibilidad_sin_patron": 103,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 103,
+      "grupo": "OTRO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 103
+    },
+    {
+      "acierto_i_pct": 99.84639,
+      "acierto_j_pct": 99.84639,
+      "acierto_m_pct": 99.84639,
+      "acierto_sensibilidad_cobertura_completa_pct": 99.84639,
+      "acierto_sensibilidad_sin_patron_pct": 100.0,
+      "aciertos_i": 650,
+      "aciertos_j": 650,
+      "aciertos_m": 650,
+      "anio": 2024,
+      "denominador_sensibilidad_sin_patron": 650,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 651,
+      "grupo": "ANTIGUO",
+      "patrones_oficiales_sin_explicacion": 1,
+      "sin_prediccion_m": 0
+    },
+    {
+      "acierto_i_pct": 99.616368,
+      "acierto_j_pct": 99.616368,
+      "acierto_m_pct": 99.104859,
+      "acierto_sensibilidad_cobertura_completa_pct": 75.191816,
+      "acierto_sensibilidad_sin_patron_pct": 99.104859,
+      "aciertos_i": 779,
+      "aciertos_j": 779,
+      "aciertos_m": 775,
+      "anio": 2024,
+      "denominador_sensibilidad_sin_patron": 782,
+      "familia_cobertura_parcial_filas": 193,
+      "filas_mu": 782,
+      "grupo": "NUEVO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 4
+    },
+    {
+      "acierto_i_pct": null,
+      "acierto_j_pct": null,
+      "acierto_m_pct": null,
+      "acierto_sensibilidad_cobertura_completa_pct": null,
+      "acierto_sensibilidad_sin_patron_pct": null,
+      "aciertos_i": 0,
+      "aciertos_j": 0,
+      "aciertos_m": 0,
+      "anio": 2024,
+      "denominador_sensibilidad_sin_patron": 108,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 108,
+      "grupo": "OTRO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 108
+    },
+    {
+      "acierto_i_pct": 92.098765,
+      "acierto_j_pct": 92.098765,
+      "acierto_m_pct": 92.098765,
+      "acierto_sensibilidad_cobertura_completa_pct": 92.098765,
+      "acierto_sensibilidad_sin_patron_pct": 100.0,
+      "aciertos_i": 746,
+      "aciertos_j": 746,
+      "aciertos_m": 746,
+      "anio": 2025,
+      "denominador_sensibilidad_sin_patron": 746,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 810,
+      "grupo": "ANTIGUO",
+      "patrones_oficiales_sin_explicacion": 64,
+      "sin_prediccion_m": 0
+    },
+    {
+      "acierto_i_pct": 83.832335,
+      "acierto_j_pct": 94.411178,
+      "acierto_m_pct": 94.477711,
+      "acierto_sensibilidad_cobertura_completa_pct": 81.969395,
+      "acierto_sensibilidad_sin_patron_pct": 99.370189,
+      "aciertos_i": 1260,
+      "aciertos_j": 1419,
+      "aciertos_m": 1420,
+      "anio": 2025,
+      "denominador_sensibilidad_sin_patron": 1429,
+      "familia_cobertura_parcial_filas": 196,
+      "filas_mu": 1503,
+      "grupo": "NUEVO",
+      "patrones_oficiales_sin_explicacion": 74,
+      "sin_prediccion_m": 4
+    },
+    {
+      "acierto_i_pct": null,
+      "acierto_j_pct": null,
+      "acierto_m_pct": null,
+      "acierto_sensibilidad_cobertura_completa_pct": null,
+      "acierto_sensibilidad_sin_patron_pct": null,
+      "aciertos_i": 0,
+      "aciertos_j": 0,
+      "aciertos_m": 0,
+      "anio": 2025,
+      "denominador_sensibilidad_sin_patron": 58,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 58,
+      "grupo": "OTRO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 58
+    },
+    {
+      "acierto_i_pct": 93.22542,
+      "acierto_j_pct": 93.22542,
+      "acierto_m_pct": 93.22542,
+      "acierto_sensibilidad_cobertura_completa_pct": 93.22542,
+      "acierto_sensibilidad_sin_patron_pct": 99.488164,
+      "aciertos_i": 1555,
+      "aciertos_j": 1555,
+      "aciertos_m": 1555,
+      "anio": 2026,
+      "denominador_sensibilidad_sin_patron": 1563,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 1668,
+      "grupo": "ANTIGUO",
+      "patrones_oficiales_sin_explicacion": 105,
+      "sin_prediccion_m": 0
+    },
+    {
+      "acierto_i_pct": 82.052441,
+      "acierto_j_pct": 89.014467,
+      "acierto_m_pct": 90.777577,
+      "acierto_sensibilidad_cobertura_completa_pct": 77.44123,
+      "acierto_sensibilidad_sin_patron_pct": 90.777577,
+      "aciertos_i": 1815,
+      "aciertos_j": 1969,
+      "aciertos_m": 2008,
+      "anio": 2026,
+      "denominador_sensibilidad_sin_patron": 2212,
+      "familia_cobertura_parcial_filas": 317,
+      "filas_mu": 2212,
+      "grupo": "NUEVO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 21
+    },
+    {
+      "acierto_i_pct": null,
+      "acierto_j_pct": null,
+      "acierto_m_pct": null,
+      "acierto_sensibilidad_cobertura_completa_pct": null,
+      "acierto_sensibilidad_sin_patron_pct": null,
+      "aciertos_i": 0,
+      "aciertos_j": 0,
+      "aciertos_m": 0,
+      "anio": 2026,
+      "denominador_sensibilidad_sin_patron": 225,
+      "familia_cobertura_parcial_filas": 0,
+      "filas_mu": 225,
+      "grupo": "OTRO",
+      "patrones_oficiales_sin_explicacion": 0,
+      "sin_prediccion_m": 225
+    }
+  ],
+  "revision_34_resueltas": 0,
+  "simulacion": {
+    "COINCIDE": 59,
+    "NO_COMPARABLE_E": 164
+  },
+  "totales": [
+    {
+      "acierto_i_pct": 99.136276,
+      "acierto_j_pct": 99.136276,
+      "acierto_m_pct": 99.136276,
+      "acierto_sensibilidad_cobertura_completa_pct": 67.370441,
+      "acierto_sensibilidad_sin_patron_pct": 100.0,
+      "aciertos_i": 1033,
+      "aciertos_j": 1033,
+      "aciertos_m": 1033,
+      "anio": 2023,
+      "denominador_sensibilidad_sin_patron": 1033,
+      "familia_cobertura_parcial_filas": 331,
+      "filas_mu": 1042,
+      "patrones_oficiales_sin_explicacion": 9,
+      "sin_prediccion_m": 0
+    },
+    {
+      "acierto_i_pct": 99.720865,
+      "acierto_j_pct": 99.720865,
+      "acierto_m_pct": 99.441731,
+      "acierto_sensibilidad_cobertura_completa_pct": 86.392184,
+      "acierto_sensibilidad_sin_patron_pct": 99.511173,
+      "aciertos_i": 1429,
+      "aciertos_j": 1429,
+      "aciertos_m": 1425,
+      "anio": 2024,
+      "denominador_sensibilidad_sin_patron": 1432,
+      "familia_cobertura_parcial_filas": 193,
+      "filas_mu": 1433,
+      "patrones_oficiales_sin_explicacion": 1,
+      "sin_prediccion_m": 4
+    },
+    {
+      "acierto_i_pct": 86.727194,
+      "acierto_j_pct": 93.601383,
+      "acierto_m_pct": 93.644617,
+      "acierto_sensibilidad_cobertura_completa_pct": 85.516645,
+      "acierto_sensibilidad_sin_patron_pct": 99.586207,
+      "aciertos_i": 2006,
+      "aciertos_j": 2165,
+      "aciertos_m": 2166,
+      "anio": 2025,
+      "denominador_sensibilidad_sin_patron": 2175,
+      "familia_cobertura_parcial_filas": 196,
+      "filas_mu": 2313,
+      "patrones_oficiales_sin_explicacion": 138,
+      "sin_prediccion_m": 4
+    },
+    {
+      "acierto_i_pct": 86.85567,
+      "acierto_j_pct": 90.824742,
+      "acierto_m_pct": 91.829897,
+      "acierto_sensibilidad_cobertura_completa_pct": 84.226804,
+      "acierto_sensibilidad_sin_patron_pct": 94.384106,
+      "aciertos_i": 3370,
+      "aciertos_j": 3524,
+      "aciertos_m": 3563,
+      "anio": 2026,
+      "denominador_sensibilidad_sin_patron": 3775,
+      "familia_cobertura_parcial_filas": 317,
+      "filas_mu": 3880,
+      "patrones_oficiales_sin_explicacion": 105,
+      "sin_prediccion_m": 21
+    }
+  ],
+  "vigencia_contraste": [
+    {
+      "anio": 2022,
+      "clasificacion": "COINCIDE_REGISTRO_EXTRACCION",
+      "filas": 26
+    },
+    {
+      "anio": 2022,
+      "clasificacion": "REGISTRO_SIN_CODIGO_E",
+      "filas": 35
+    },
+    {
+      "anio": 2023,
+      "clasificacion": "COINCIDE_REGISTRO_EXTRACCION",
+      "filas": 22
+    },
+    {
+      "anio": 2023,
+      "clasificacion": "REGISTRO_SIN_CODIGO_E",
+      "filas": 48
+    },
+    {
+      "anio": 2024,
+      "clasificacion": "COINCIDE_REGISTRO_EXTRACCION",
+      "filas": 28
+    },
+    {
+      "anio": 2024,
+      "clasificacion": "REGISTRO_SIN_CODIGO_E",
+      "filas": 59
+    },
+    {
+      "anio": 2025,
+      "clasificacion": "COINCIDE_REGISTRO_EXTRACCION",
+      "filas": 50
+    },
+    {
+      "anio": 2025,
+      "clasificacion": "REGISTRO_SIN_CODIGO_E",
+      "filas": 52
+    },
+    {
+      "anio": 2026,
+      "clasificacion": "COINCIDE_REGISTRO_EXTRACCION",
+      "filas": 66
+    },
+    {
+      "anio": 2026,
+      "clasificacion": "REGISTRO_SIN_CODIGO_E",
+      "filas": 58
+    }
+  ],
+  "vigencia_no_unica": []
+}
