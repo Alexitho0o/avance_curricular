@@ -991,6 +991,20 @@
       "fecha_resultado": "2026-10-30",
       "no_recalcular_salvo": "Nueva evidencia de T1/expediente/plan, perfil tipo/duración o decisión explícita sobre residual; activación sólo por Alexi.",
       "limites": "Períodos 4/5 sin homologar; sin T1 posterior con antecedente previo queda E. NUNCA_INFORMADO sólo ausencia en fuentes disponibles; D2 no convierte cohorte 2026 en 2027."
+    },
+    {
+      "id": "R30",
+      "pregunta": "¿Qué código candidato de seguimiento se puede respaldar con el perfil anual, el período bimestral y el último T1?",
+      "resultado_clave": "CANDIDATA H011: 2872 de 3.049 contextos respaldados, 177 E. 99 de 99 posiciones respaldadas. R01–R04/R19 0,00 pp por conservación.",
+      "archivo": "outputs/regla_reol_h011_20261030/INFORME_H011.md",
+      "hoja_o_seccion": "Cobertura y residual histórico",
+      "script_productor": "outputs/regla_reol_h011_20261030/aplicar_h011.py",
+      "commit": "PUBLICACION_H011; base fc9d401",
+      "sha256": "7082b506431be3b66631a6b2051765fe13f6a534aa37987281a31c668d8fd9c7",
+      "clase": "D decisiones; B/C fuentes y aplicación; E pendientes",
+      "fecha_resultado": "2026-10-30",
+      "no_recalcular_salvo": "Nueva evidencia anual, de perfil o de expediente que resuelva los motivos E, o decisión expresa de Alexi.",
+      "limites": "La v21 es candidata. El catálogo v3 propuesto se separa del perfil v2 y de H002m."
     }
   ],
   "diferencias_catalogo": [
