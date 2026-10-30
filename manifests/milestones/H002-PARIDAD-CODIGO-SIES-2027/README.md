@@ -51,9 +51,15 @@ D · Alexi, 29-10-2026. Esta sección reemplaza los estados pendientes de los an
 
 Decisión: DECISIONES_APROBADAS_v2.json. QA vigente: QA_H002E.json; QA.json es el control del constructor. Los informes H002b–d se conservan y se reproducen en checkout aislado del commit de origen. Observaciones de oferta: OBSERVACIONES_OFERTA_2027.md; no se modifica PES ni v20.
 
-## Estado vigente H002k · 29-10-2026
+## Antecedente H002k (corregido por H002l) · 29-10-2026
 
 D · Alexi: ADMP20251/V1 y CADMP20251/V2 aprobados; 13 códigos APROBADA_D_2027 y cero VERSION_MULTIPLE_E en 2027.
 Regla interna activa: data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json. Antiguos conservan su código, aun inconsistente; tipo E y otros casos pasan a revisión.
 Pendientes: 37 códigos sin plan hasta MU 2027, revisión manual y reemplazo de V06 preparada por aceptada.
 No se modifica retención, VIG, v20 ni cargas. QA: outputs/activacion_codigo_mu2027_20261029/QA.json.
+
+## Cierre vigente H002l · 29-10-2026
+
+D · Alexi: CERRADO_DOCUMENTADO_CON_PENDIENTES_OPERATIVOS_2027. Antiguos conservan sin usar tipo de plan; sólo tres motivos de revisión.
+Véase [cierre y commits](CIERRE_H002L.md). Lista v2: outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.md.
+La tabla 2027, V1 y antecedentes quedan intactos; 37 códigos y revisión real se cierran con evidencia MU 2027.

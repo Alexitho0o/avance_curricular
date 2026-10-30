@@ -1,4 +1,4 @@
-"""H002k: regla interna D de código MU 2027; consulta sin generar cargas."""
+"""H002l: regla interna D de código MU 2027; consulta sin generar cargas."""
 import hashlib
 import json
 import re
@@ -31,25 +31,32 @@ def resolver(fila, planes, oferta, antiguos, pendientes):
         return manual('ANIO_FUERA_DE_ALCANCE')
     via = fila.get('via_solicitada')
     if via == 'ANTIGUO':
-        if fila.get('cambio_carrera_o_plan') is not False:
-            return manual('CAMBIO_O_CONTINUIDAD_NO_ACREDITADA')
         ref = fila.get('fila_mu2026')
-        if isinstance(ref, bool) or ref not in antiguos:
-            return manual('FILA_MU2026_NO_LOCALIZADA')
+        if not isinstance(ref, int) or isinstance(ref, bool) or ref not in antiguos:
+            return manual('ANTIGUO_1_CODIGO_O_FILA_NO_RESUELTA')
         old = antiguos[ref]
-        key = (old['codcarpr'], old['plan'], old['sede_umas'])
+        key = (old.get('codcarpr'), old.get('plan'), old.get('sede_umas'))
         typ = planes.get(key, 'E')
-        if typ not in {'1', '3'}:
-            return manual('ANTIGUO_TIPO_E')
-        code = old['real']
+        code = old.get('real')
         if not isinstance(code, str) or not CODE.fullmatch(code):
-            return manual('CODIGO_ANTERIOR_NO_VALIDO')
+            return manual('ANTIGUO_1_CODIGO_O_FILA_NO_RESUELTA')
         current = [r for r in oferta if r['codigo_unico'] == code]
-        mismatch = bool(current and current[0]['tipo_plan_codigo'] != typ)
+        if not current:
+            return manual('ANTIGUO_2_CODIGO_SIN_OFERTA_2027')
+        if len(current) != 1 or current[0]['vigencia_2027'] not in {'1', '2', '3'}:
+            raise ValueError('Oferta no unívoca o vigencia no acreditada')
+        if current[0]['vigencia_2027'] == '3':
+            return manual('ANTIGUO_3_VIGENCIA_3')
+        marks = []
+        if typ not in {'1', '3'}:
+            marks.append('ANTIGUO_TIPO_E_INFORMATIVO')
+        if old.get('plan') in {None, '', 'PLAN_NO_OBSERVADO', 'SIN_ENLACE', 'PLAN_MULTIPLE_E'}:
+            marks.append('PLAN_NO_OBSERVADO_INFORMATIVO')
+        mismatch = typ in {'1', '3'} and current[0]['tipo_plan_codigo'] != typ
         return {'codigo': code, 'via': 'ANTIGUO',
                 'motivo': 'CONSERVA_CODIGO_INCONSISTENTE_D' if mismatch else 'CONSERVA_FILA_MU2026_D',
                 'clase': 'D', 'oferta_preparada_C': True,
-                'advertencia': 'Código ausente en V06; conservación no autoriza carga' if not current else None}
+                'marcas_informativas': marks}
     if via != 'NUEVO':
         return manual('OTRO_REQUIERE_REVISION')
     if fila.get('cohorte') != 2027:
@@ -58,14 +65,17 @@ def resolver(fila, planes, oferta, antiguos, pendientes):
         return manual('CODIGO_NUEVO_SIN_PLAN')
     key = (fila.get('codcarpr'), fila.get('plan_umas'), fila.get('sede_umas'))
     typ = planes.get(key, 'E')
-    if typ not in {'1', '3'}:
-        return manual('NUEVO_TIPO_E')
     fam = fila.get('familia')
     family_rows = [r for r in oferta if r['codigo_unico'].rsplit('V', 1)[0] == fam]
     if not family_rows:
         return manual('FAMILIA_SIN_OFERTA')
     if all(r['estado'] == 'FUERA_ALCANCE' for r in family_rows):
         return manual('FUERA_ALCANCE')
+    if not any(r['vigencia_2027'] == '1' for r in family_rows):
+        return {'codigo': None, 'via': 'INFORMATIVO', 'motivo': 'PLAN_SIN_ADMISION_2027',
+                'tipo_E': typ not in {'1', '3'}, 'clase': 'D/C', 'oferta_preparada_C': True}
+    if typ not in {'1', '3'}:
+        return manual('NUEVO_TIPO_E_CON_ADMISION')
     # Familia previamente respaldada; un tipo compatible no crea una equivalencia.
     backed = any(any(c['codcarpr'] == key[0] and c['sede_umas'] == key[2]
                      and key[1] in c.get('planes_catalogados', c.get('planes_umas', []))
@@ -85,7 +95,7 @@ def resolver(fila, planes, oferta, antiguos, pendientes):
     if options & set(pendientes):
         return manual('CODIGO_NUEVO_SIN_PLAN')
     if not options:
-        return manual('SIN_VERSION_VIGENTE_PARA_TIPO')
+        return manual('REVISION_REAL_TIPO_SIN_VERSION_EN_FAMILIA_CON_ADMISION')
     return {'codigo': next(iter(options)), 'via': 'NUEVO',
             'motivo': 'VIGENCIA_1_Y_TIPO_PLAN_UNICOS_D', 'clase': 'D/C', 'oferta_preparada_C': True}
 
@@ -127,7 +137,8 @@ def cargar_contexto():
 def asignar_codigo_mu2027(fila):
     """Devuelve código, vía y motivo; revisión interna, nunca un archivo de carga.
 
-    ANTIGUO: anio=2027, fila_mu2026 y cambio_carrera_o_plan=False explícitos.
+    ANTIGUO: anio=2027 y referencia inequívoca fila_mu2026; tipo sólo informativo.
+    El llamador acredita la clasificación; OTRO no se convierte en ANTIGUO.
     NUEVO: anio/cohorte=2027, familia SIES y clave exacta codcarpr/plan_umas/sede_umas.
     Las entradas personales y respuestas individuales deben permanecer privadas.
     """

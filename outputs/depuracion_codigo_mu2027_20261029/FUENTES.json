@@ -1,0 +1,69 @@
+{
+  "entradas": {
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.csv": {
+      "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+      "sha256": "a7c5d620978127f3b4ed00184ff15501e1cac417e750e517c85a158da69e005f"
+    },
+    "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json": {
+      "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+      "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063"
+    },
+    "outputs/activacion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027.json": {
+      "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+      "sha256": "e99119d175bd8d268d7704f439bf2542361602f90cbacb7dec62d2c07d6e4d77"
+    },
+    "outputs/activacion_codigo_mu2027_20261029/SIMULACION_CATALOGO_NUEVOS_2027.json": {
+      "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+      "sha256": "3108f95389055e0004654c32e86950cd4dfabb1802c62e4ef6de7803b6fcaecb"
+    }
+  },
+  "fuentes_privadas": {
+    "decision": {
+      "clase": "D",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
+      "sha256": "be16b491bf0a61bbb6cc56af4567c6e21292ef8de04aa584448ed194753ed63f"
+    },
+    "enlaces_privados_H002g": {
+      "clase": "C",
+      "datos_personales": true,
+      "ruta": "/Users/alexi/.local/share/ipss/h002g_20261029/ENLACES_MU_DA.json",
+      "sha256": "56782ae435caca8c880120df3304424e5663097e6303119f3f94f4ccdd59b05b"
+    },
+    "metricas": {
+      "clase": "C",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/METRICAS_H002i_H002j.json",
+      "sha256": "8d2018cf17ab26c89160e7cd05fd9b4ccf48271ca6811f36cf0290031ca5c5cf"
+    },
+    "oferta_2027": {
+      "clase": "C",
+      "datos_personales": false,
+      "ruta": "oferta_academica_2027/10_entrega/etapa1_octubre_20261023_v06/CARGA_OFERTA_2027_ETAPA1_17467_20261023_V06.csv",
+      "sha256": "d7fe88035cd1215d448272a9854bee0932c45c200f4f80bb58636b62a6ae4e0b"
+    },
+    "prueba_privada_H002j": {
+      "clase": "C",
+      "datos_personales": true,
+      "ruta": "/Users/alexi/.local/share/ipss/h002j_20261029/PRUEBA.json",
+      "sha256": "abb86b96adb8afdc732920653777c5aeb2f708710321740c797ba2747f8a055d"
+    },
+    "tabla_H002": {
+      "clase": "C/D",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/20261029/TABLA_PARIDAD_2026_2027.json",
+      "sha256": "0ed5e17b1a452c85ab25b08ef0e65cdfc7258fd920d0f4dd40c60c9c4eb71063"
+    },
+    "tipo_plan": {
+      "clase": "C",
+      "datos_personales": false,
+      "ruta": "data/paridad_codigo_sies/regla_operativa_mu_v2/TIPO_PLAN_POR_PLAN_UMAS.json",
+      "sha256": "784af467f6ed85d08e39ea677ba35b62c113f50902d8c4ddbbf290b5045ead1f"
+    }
+  },
+  "regla_antecedente": {
+    "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+    "ruta": "data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+    "sha256": "6e849841e98e015db5ce7a9f2516d53d57508be713cdcba69baf3a80b56ae933"
+  }
+}

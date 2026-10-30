@@ -1,0 +1,92 @@
+{
+  "clase": "C",
+  "controles": {
+    "antiguos_conciliados": true,
+    "antiguos_sin_tipo_como_filtro": true,
+    "opciones_nuevos_conciliadas": true,
+    "regla_ACTIVA": true,
+    "tabla_H002_inalterada": true,
+    "v1_inalterada": true
+  },
+  "diferencias": 0,
+  "estado": "PASS",
+  "independiente_por_codigo": {
+    "sin_codigo": 0,
+    "sin_oferta": 0,
+    "vigencia_3": 0
+  },
+  "limite": "No son alumnos observados 2027 ni carga; 37 códigos permanecen E. Pruebas H002k se reproducen con su versión congelada.",
+  "preservacion": {
+    "archivos_ajenos_por_hash": 26,
+    "entradas_ajenas": 24,
+    "versionados": 4853
+  },
+  "privacidad": {
+    "archivos": 22,
+    "coincidencias": 0,
+    "metodo": "Patrones, identificadores privados sólo en memoria y revisión de estructura agregada; detalle fuera de Git."
+  },
+  "reproduccion_salidas": 13,
+  "tests": [
+    {
+      "estado": "PASS",
+      "patron": "test_*.py",
+      "pruebas": 27,
+      "ruta": "outputs/depuracion_codigo_mu2027_20261029"
+    },
+    {
+      "estado": "PASS",
+      "patron": "test_h002b.py",
+      "pruebas": 11,
+      "ruta": "outputs/paridad_codigo_sies_20261029"
+    },
+    {
+      "estado": "PASS",
+      "patron": "test_normalizacion_dv_cero_fase_c.py",
+      "pruebas": 3,
+      "ruta": "tests"
+    }
+  ],
+  "total_tests": 41,
+  "totales": {
+    "antiguos": {
+      "conservan_codigo": 4105,
+      "por_motivo": {
+        "ANTIGUO_1_CODIGO_O_FILA_NO_RESUELTA": 0,
+        "ANTIGUO_2_CODIGO_SIN_OFERTA_2027": 0,
+        "ANTIGUO_3_VIGENCIA_3": 0
+      },
+      "revision_H002k": 1046,
+      "revision_H002l": 0,
+      "tipo_E_informativo": 1046,
+      "total": 4105,
+      "unidad": "MATRICULAS_POTENCIALES_MU2026"
+    },
+    "codigos_sin_plan": {
+      "solapamiento": "El código sin plan de las opciones nuevas está incluido en los 37; no sumar unidades.",
+      "total": 37,
+      "unidad": "CODIGO_CATALOGO_NO_PERSONAS"
+    },
+    "nuevos": {
+      "asignacion": 59,
+      "de_108": {
+        "PLAN_SIN_ADMISION_2027": 107,
+        "REVISION_REAL": 1
+      },
+      "de_40_tipo_E": {
+        "familia_admite": 17,
+        "familia_no_admite": 23
+      },
+      "informativos": 130,
+      "revision_por_motivo": {
+        "CODIGO_NUEVO_SIN_PLAN": 1,
+        "NUEVO_TIPO_E_CON_ADMISION": 17,
+        "REVISION_REAL_TIPO_SIN_VERSION_EN_FAMILIA_CON_ADMISION": 1,
+        "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO": 15
+      },
+      "revision_real": 34,
+      "total": 223,
+      "unidad": "OPCIONES_PLAN_FAMILIA_CATALOGO_NO_PERSONAS"
+    }
+  }
+}

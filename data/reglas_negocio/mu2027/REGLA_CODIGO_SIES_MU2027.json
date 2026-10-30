@@ -1,5 +1,10 @@
 {
   "anio_proceso": 2027,
+  "antecedente": {
+    "commit": "82cb49c8b1136214a989676d914766d829e4c4dc",
+    "ruta": "data/reglas_negocio/mu2027/REGLA_CODIGO_SIES_MU2027.json",
+    "sha256": "6e849841e98e015db5ce7a9f2516d53d57508be713cdcba69baf3a80b56ae933"
+  },
   "aprobaciones": [
     {
       "codcarpr": "ADMP",
@@ -19,9 +24,12 @@
     }
   ],
   "clase": "D",
+  "contrato_entrada": "ANTIGUO requiere referencia inequívoca a fila MU 2026. Su clasificación está acreditada por el llamador. NUEVO exige cohorte 2027; OTRO queda separado. La simulación no acredita continuidad efectiva 2027.",
   "decision": "Alexi, 29-10-2026; H002k decisiones 1–4",
+  "decision_correccion": "D · Alexi, 29-10-2026, H002l: antiguo no depende del tipo; revisión sólo por código/fila, ausencia en oferta o VIGENCIA 3.",
   "estado": "ACTIVA",
   "fecha": "2026-10-29",
+  "fecha_correccion": "2026-10-29",
   "fuentes": {
     "decision": {
       "clase": "D",
@@ -74,6 +82,8 @@
     "No hay exportador ni archivo de carga PES; no acredita matrícula ni elegibilidad 2027.",
     "Sin plan anual observado no se rellena por nombre ni mayoría. Tipo por plan no se deduce de FOR_ING_ACT."
   ],
+  "lista_revision_vigente": "outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json",
+  "marcas_informativas": "outputs/depuracion_codigo_mu2027_20261029/MARCAS_INFORMATIVAS_MU2027.json",
   "metricas_nota": "Métricas históricas H002j preservadas, no una promesa de acierto 2027; los nuevos bloqueos de revisión no recalculan sus denominadores.",
   "metricas_prueba_H002j": {
     "por_grupo": [
@@ -271,16 +281,17 @@
   },
   "proceso": "Matrícula Unificada 2027",
   "reglas": {
-    "ANTIGUO": "Conserva el código de su fila MU 2026, incluso inconsistente con tipo; tipo E y cambios pasan a revisión.",
+    "ANTIGUO": "Conserva código MU 2026 sin usar tipo de plan. Revisión sólo (1) código/fila no resuelta; (2) código ausente en oferta 2027; (3) VIGENCIA 3. Tipo E/plan ausente son informativos.",
     "CODIGOS_SIN_HISTORIA": "Se cierran cuando exista MU 2027 por cuadratura de código y total; no solicitar listado nuevo a UMAS.",
     "NUEVO": "Cohorte 2027: familia respaldada + plan/sede de tipo conocido + una única versión VIGENCIA 1 del mismo tipo.",
+    "PLAN_SIN_ADMISION_2027": "Si no hay ninguna VIGENCIA 1 en la familia, informativo (incluye tipo E); no asigna código para nuevos. Si la familia admite pero no el tipo, REVISION_REAL.",
     "REVISION_MANUAL": [
-      "Tipo E con alumnos potenciales",
-      "Familia con varias VIGENCIA 1 del mismo tipo",
-      "37 códigos sin plan",
-      "Cambio de carrera/plan, reingreso no acreditado u otra insuficiencia de evidencia"
+      "Antiguo: sólo motivos 1/2/3 anteriores.",
+      "Nuevo: familia admite pero tipo no determinable o sin versión compatible; varias versiones vigentes del mismo tipo; códigos sin plan.",
+      "OTRO: revisión fuera de la vía ANTIGUO; no convertir cambios de carrera ni reingresos sin evidencia en antiguos."
     ]
   },
   "responsable": "Alexi",
+  "revision": "H002l",
   "vigencia_estado_situacion_independiente": "data/reglas_negocio/mu2027/activo.json"
 }

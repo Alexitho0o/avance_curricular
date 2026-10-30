@@ -1,8 +1,8 @@
 {
   "43_sin_plan_sin_resolver": false,
   "QA": "outputs/paridad_codigo_sies_20261029/QA.json",
-  "QA_entrega": "outputs/activacion_codigo_mu2027_20261029/QA.json",
-  "actualizacion": "H002k",
+  "QA_entrega": "outputs/depuracion_codigo_mu2027_20261029/QA_FINAL.json",
+  "actualizacion": "H002l",
   "aplicacion_H002e": {
     "ambito": "Catálogo 2027; 2026 intacto; no modifica v20 ni oferta.",
     "aprobaciones_nuevas": 5,
@@ -14,12 +14,12 @@
   },
   "autorizacion_commit_push": "D Alexi, H002b, 29-10-2026; limitada a H002 y condicionada a QA",
   "cierre": {
-    "clase": "D",
-    "fuente": "Alexi, 29-10-2026; H002k decisiones 1–4",
-    "lista_revision": "outputs/activacion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027.json",
-    "pendiente": "37 códigos sin plan hasta MU 2027; revisión manual potencial por tipo/ambigüedad; oferta aceptada antes de carga",
-    "resuelto": "Dos últimas versiones ADMP/CADMP, 13 aprobaciones D, 0 VERSION_MULTIPLE_E 2027"
+    "historico_2007_2021": "Cerrado E con causa por decisión D H002i; SIES cuadra con publicación, sin vínculo a planes/notas UMAS. No cuadrar con foto actual Datos Alumnos.",
+    "paridad_2022_2026": "Trabajo documentado H002f–j: anclas 2022/2024/2025; 2023 parcial y 2026 contraste. No implica identidad completa de planes ni explicación de la brecha 226; antecedentes y discrepancias conservados.",
+    "regla": "ACTIVA interna MU 2027, corrección H002l; no exportador PES.",
+    "tabla_2027": "97 códigos resueltos (53 CONTINUA + 31 VERSION_MULTIPLE_RESUELTA + 13 APROBADA_D); 0 VERSION_MULTIPLE_E. Tabla inalterada."
   },
+  "cierre_documentado": "manifests/milestones/H002-PARIDAD-CODIGO-SIES-2027/CIERRE_H002L.json",
   "clase": "C/D/E",
   "commit_base_aplicacion_H002e": "2969b638d2a7bf1892783d5eceef4df28316b28e",
   "commit_contexto": "7807542b2b819521b7bd620239110686830ec406",
@@ -53,13 +53,58 @@
   "decision": "data/paridad_codigo_sies/20261029/DECISIONES_APROBADAS_v3.json",
   "diccionario_personal_modificado": false,
   "doce_combinaciones_sin_aplicar": false,
-  "estado": "PARIDAD_2027_CERRADA_CON_REVISION_MANUAL_Y_37_PENDIENTES",
+  "estado": "CERRADO_DOCUMENTADO_CON_PENDIENTES_OPERATIVOS_2027",
   "fecha": "2026-10-29",
   "fichas": "outputs/paridad_codigo_sies_20261029/REVISION_CASO_A_CASO_12_v3.md",
   "hito": "H002-PARIDAD-CODIGO-SIES-2027",
   "manifest": "data/paridad_codigo_sies/20261029/MANIFEST.json",
   "manifest_sha256": "5b988ecfea89f8a7c4cdb640ff08e3e5bb1873c6e23d0ecbef6549793dd4171e",
   "pendiente_CADMP": false,
+  "pendientes": {
+    "37_codigos": "Cerrar con MU 2027 por código y total; hasta entonces sin plan E. No pedir otro listado.",
+    "oferta": "Reemplazar V06 preparada C por carga aceptada con hash antes de una carga real.",
+    "revision_manual": {
+      "antiguos": {
+        "conservan_codigo": 4105,
+        "por_motivo": {
+          "ANTIGUO_1_CODIGO_O_FILA_NO_RESUELTA": 0,
+          "ANTIGUO_2_CODIGO_SIN_OFERTA_2027": 0,
+          "ANTIGUO_3_VIGENCIA_3": 0
+        },
+        "revision_H002k": 1046,
+        "revision_H002l": 0,
+        "tipo_E_informativo": 1046,
+        "total": 4105,
+        "unidad": "MATRICULAS_POTENCIALES_MU2026"
+      },
+      "codigos_sin_plan": {
+        "solapamiento": "El código sin plan de las opciones nuevas está incluido en los 37; no sumar unidades.",
+        "total": 37,
+        "unidad": "CODIGO_CATALOGO_NO_PERSONAS"
+      },
+      "nuevos": {
+        "asignacion": 59,
+        "de_108": {
+          "PLAN_SIN_ADMISION_2027": 107,
+          "REVISION_REAL": 1
+        },
+        "de_40_tipo_E": {
+          "familia_admite": 17,
+          "familia_no_admite": 23
+        },
+        "informativos": 130,
+        "revision_por_motivo": {
+          "CODIGO_NUEVO_SIN_PLAN": 1,
+          "NUEVO_TIPO_E_CON_ADMISION": 17,
+          "REVISION_REAL_TIPO_SIN_VERSION_EN_FAMILIA_CON_ADMISION": 1,
+          "VARIAS_VERSIONES_VIGENTES_MISMO_TIPO": 15
+        },
+        "revision_real": 34,
+        "total": 223,
+        "unidad": "OPCIONES_PLAN_FAMILIA_CATALOGO_NO_PERSONAS"
+      }
+    }
+  },
   "pendientes_sin_plan": 37,
   "personas_asignadas": false,
   "publicacion": "Verificar el commit que contiene el registro y la referencia remota; el archivo no acredita por sí solo push.",

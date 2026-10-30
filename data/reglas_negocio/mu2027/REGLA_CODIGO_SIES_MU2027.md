@@ -2,10 +2,11 @@
 
 D · Alexi, 29-10-2026. Activación interna H002k.
 
-- **ANTIGUO**: Conserva el código de su fila MU 2026, incluso inconsistente con tipo; tipo E y cambios pasan a revisión.
-- **NUEVO**: Cohorte 2027: familia respaldada + plan/sede de tipo conocido + una única versión VIGENCIA 1 del mismo tipo.
-- **REVISION_MANUAL**: Tipo E con alumnos potenciales; Familia con varias VIGENCIA 1 del mismo tipo; 37 códigos sin plan; Cambio de carrera/plan, reingreso no acreditado u otra insuficiencia de evidencia
+- **ANTIGUO**: Conserva código MU 2026 sin usar tipo de plan. Revisión sólo (1) código/fila no resuelta; (2) código ausente en oferta 2027; (3) VIGENCIA 3. Tipo E/plan ausente son informativos.
 - **CODIGOS_SIN_HISTORIA**: Se cierran cuando exista MU 2027 por cuadratura de código y total; no solicitar listado nuevo a UMAS.
+- **NUEVO**: Cohorte 2027: familia respaldada + plan/sede de tipo conocido + una única versión VIGENCIA 1 del mismo tipo.
+- **REVISION_MANUAL**: Antiguo: sólo motivos 1/2/3 anteriores.; Nuevo: familia admite pero tipo no determinable o sin versión compatible; varias versiones vigentes del mismo tipo; códigos sin plan.; OTRO: revisión fuera de la vía ANTIGUO; no convertir cambios de carrera ni reingresos sin evidencia en antiguos.
+- **PLAN_SIN_ADMISION_2027**: Si no hay ninguna VIGENCIA 1 en la familia, informativo (incluye tipo E); no asigna código para nuevos. Si la familia admite pero no el tipo, REVISION_REAL.
 
 ## Límites
 
@@ -48,6 +49,14 @@ Estas métricas no son una tasa SIES ni un resultado de matrícula 2027.
 ## Uso
 
 `common.codigo_sies_mu2027.asignar_codigo_mu2027(fila)` verifica hashes antes de resolver.
-Antiguo: referencia exacta `fila_mu2026` y `cambio_carrera_o_plan=False` explícito; sin certeza pasa a revisión.
+Antiguo: referencia exacta `fila_mu2026`; tipo E y plan ausente sólo informativos. La clasificación previa ANTIGUO debe estar acreditada por el llamador.
 Nuevo: `anio=2027`, `cohorte=2027`, familia y clave de plan/sede exactos.
 Sin actividad anual no se inventa plan; FOR_ING_ACT no decide regular/continuidad.
+
+## Corrección H002l · D, Alexi, 29-10-2026
+
+Sustituye el bloqueo de tipo E de H002k. VIGENCIA 2 permite conservar antiguos; VIGENCIA 3 bloquea.
+La regla no revisa tipo de plan para conservar el código anterior. Las marcas no son decisiones pendientes.
+Lista vigente: `outputs/depuracion_codigo_mu2027_20261029/LISTA_REVISION_MANUAL_MU2027_v2.json`. V1 preservada por commit y archivo original.
+Nuevos: familia sin admisión es informativa; familia con admisión y sin tipo compatible requiere revisión.
+La oferta V06 sigue preparada C; no se genera carga y no se alteran fuentes ni H002.
