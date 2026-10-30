@@ -9,7 +9,7 @@ A: regla oficial; B: dato observado; C: implementación/inferencia técnica; D: 
 Año del proceso, año de los datos y período se separan en el JSON complementario.
 Los commits indican el último cambio del archivo; en fuentes externas, el commit es el de su catálogo/evidencia y no significa que los bytes privados estén en Git.
 
-## Mapa (27 resultados)
+## Mapa (29 resultados)
 
 | ID / pregunta | Resultado clave | Archivo y hoja/sección | Script productor (no ejecutado) | Commit | SHA-256 | Clase | Fecha del resultado | No recalcular salvo… |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -41,6 +41,10 @@ Los commits indican el último cambio del archivo; en fuentes externas, el commi
 | R26 · ¿Qué integra V25 del seguimiento T1–T3 sobre v20 y qué falta certificar? | CANDIDATA_CON_LIMITES: 1135 posiciones/1136 contextos; 681 C4 con foto disponible y 733 parciales; tasas R19 sin cambios; QA nativo de 77 escenarios y reproducción integral pendientes. | outputs/trazabilidad_integral_umas_sies_20261025/h008_20261030/INFORME_H008.md · Hitos 1–5 | outputs/trazabilidad_integral_umas_sies_20261025/h008_20261030/reproducir_seguimiento.py | SIN_COMMIT; base 54f465d0a26b35d068b8c313487ad9c5702ec22b | f5725730c71281f149c20cf0eef6924fd00822cca9ddabc39b7187de433811a8 | B/C; D corte académico; E pendientes | 2026-10-30 | Completar QA nativo; foto completa T2-2025 o evidencia/decisión explícita para los 99; reproducción cruda gobernada R19. R09 sólo con fuente individual nueva. |
 
 | R27 · ¿Qué corrige H009 en los gráficos y qué QA falta? | CANDIDATA_CON_QA_NATIVO_E: V26, 10 gráficos corregidos; 244190 valores sin diferencias; 13 gráficos/37 tablas conservados. 77 casos nativos y revisión visual pendientes tras único reintento. H006 v2 candidata; R20 intacto. | outputs/trazabilidad_integral_umas_sies_20261025/h009_20261030/INFORME_H009.md | outputs/trazabilidad_integral_umas_sies_20261025/h009_20261030/construir_v26.py | PUBLICACION_H009; base 5d6c840253db871149221b754e0aeca7fdf201ea | b85fb797db1ed46a703eaa9f5c33011e3874e3ced19c8e78f92ff12d5a87ca19 | D orden; B/C evidencia e implementación; E QA nativo | 2026-10-30 | Excel estable para completar QA delimitado o corrección demostrada de presentación; no recalcular H001/R19 ni adjudicar pendientes. |
+
+
+| R28 · ¿Se validó cómo se unen los campos UMAS con el código SIES? | EVIDENCIA_METODOLOGICA_REENCUADRADA: 278 grupos, 256 únicos/22 múltiples; K3 mínimo 3 personas: 8.354 contextos, 7.664 aciertos, 6 errores, 684 abstenciones. Prospectiva T_plan: 50,6 % cobertura, 87,5 % precisión; 425/530 errores en 2022. No mide la regla de primer T1 posterior de H010. | outputs/auditoria_metodos_puente_20261023_155309/RESUMEN.json | scripts/auditar_metodos_puente_20261023.py | 68ab3f91 | 6a8d2109fd28eee04bda5d11ce88d1560f23c457ae4c113742254df024477411 | B/C; D reencuadre; E grupos | 2026-10-30 | Fuente independiente que discrimine los 22 grupos. |
+| R29 · Asignación de código SIES por regla T1 (H010) | CANDIDATA v21 H010/H010b: 3.049 observaciones, 2.085 respaldadas y 964 E (604 períodos 4/5, 360 otros); 99 posiciones respaldadas, E 0. D1–D3 aplicadas sólo a residuales. Tasas 0,00 pp por conservación; no activación. | outputs/regla_t1_h010_20261030/INFORME_H010.md | outputs/regla_t1_h010_20261030/resolver_h010b.py | PUBLICACION_H010_H010B; base 6505cae | e9f2a3d02ba082abb7224eb0aa718b128f94e66da31c7c27fe0a85489d6c3d96 | D método; B/C evidencia; E límites | 2026-10-30 | Nueva evidencia de T1/expediente/plan, perfil tipo/duración o decisión explícita sobre residual; activación sólo por Alexi. |
 
 ## Límites por resultado
 

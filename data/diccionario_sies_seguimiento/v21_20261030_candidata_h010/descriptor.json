@@ -1,0 +1,37 @@
+{
+  "actualizacion": "H010b D1–D3; CANDIDATA, períodos 4/5 sin asignar",
+  "base_privada": {
+    "ruta": "/Users/alexi/.local/share/ipss/h010_20261030/DICCIONARIO_V21_H010B_CANDIDATA.sqlite",
+    "sha256": "79c37f13975c07a62278d5a2278877ca2616d1f56e5c0bfacccd36a9de2513c3"
+  },
+  "campos": [
+    "nivel_asignacion",
+    "codigo_candidato",
+    "año_T1_fuente",
+    "desfase",
+    "regla",
+    "evidencia",
+    "clase"
+  ],
+  "capa_promedios": {
+    "alcance": "Actividad, estado del extracto y fotografías comparadas por período; sin inferir vigencia histórica.",
+    "metadata": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/CAPA_PROMEDIOS.json",
+    "sha256": "e0f9f72e4950342779c69a605cda703d822f94bc5d2af034ba3fe1826466c66b"
+  },
+  "componentes_sha256": {
+    "outputs/regla_t1_h010_20261030/construir.py": "985657f1c0f5baecebc303149537de79b54a04624d5bca48ce917615b6bf1df9",
+    "outputs/regla_t1_h010_20261030/resolver_h010b.py": "149a1c5c29c3fb8697fd43b6aa8439a5e1e3a1fe35f1d249562b52750d696a16"
+  },
+  "contrato": "Tablas v20 intactas; campos candidatos en asignaciones_h010.payload. No consumidor activo ni reemplazo documental. Requiere aprobación e integración posterior.",
+  "edicion": "v21_20261030_candidata_h010",
+  "estado": "CANDIDATA_NO_ACTIVA_OVERLAY",
+  "resumen": {
+    "V24_99_posiciones": 99,
+    "v20_completa": 27196,
+    "v7_3049": 3049
+  },
+  "v20_origen": {
+    "descriptor": "data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+    "sha256": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+  }
+}

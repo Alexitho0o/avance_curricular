@@ -1,0 +1,981 @@
+{
+  "calendario_2026_B": [
+    {
+      "cierre_desde": "2026-06-17",
+      "cierre_hasta": "2026-06-18",
+      "inicio_clases": "2026-03-23",
+      "paginas": [
+        2,
+        5
+      ],
+      "periodo_etiqueta": "Primer Trimestre"
+    },
+    {
+      "cierre_desde": "2026-09-30",
+      "cierre_hasta": "2026-10-01",
+      "inicio_clases": "2026-06-30",
+      "paginas": [
+        5,
+        7
+      ],
+      "periodo_etiqueta": "Segundo Trimestre"
+    },
+    {
+      "cierre_desde": "2026-12-28",
+      "cierre_hasta": "2026-12-31",
+      "inicio_clases": "2026-10-05",
+      "paginas": [
+        8,
+        9
+      ],
+      "periodo_etiqueta": "Tercer Trimestre"
+    }
+  ],
+  "clase": "B/C; homologación E, decisión D pendiente",
+  "coexistencia_historicos": [
+    {
+      "expediente_con_123_mismo_anio": false,
+      "n": 158,
+      "periodo": "4",
+      "persona_con_123_mismo_anio": false
+    },
+    {
+      "expediente_con_123_mismo_anio": false,
+      "n": 7,
+      "periodo": "4",
+      "persona_con_123_mismo_anio": true
+    },
+    {
+      "expediente_con_123_mismo_anio": true,
+      "n": 146,
+      "periodo": "4",
+      "persona_con_123_mismo_anio": true
+    },
+    {
+      "expediente_con_123_mismo_anio": false,
+      "n": 146,
+      "periodo": "5",
+      "persona_con_123_mismo_anio": false
+    },
+    {
+      "expediente_con_123_mismo_anio": false,
+      "n": 4,
+      "periodo": "5",
+      "persona_con_123_mismo_anio": true
+    },
+    {
+      "expediente_con_123_mismo_anio": true,
+      "n": 143,
+      "periodo": "5",
+      "persona_con_123_mismo_anio": true
+    }
+  ],
+  "documentos": [
+    "docs/SEGUIMIENTO_RUT_Y_CONVERSION_PERIODOS_20261023.md",
+    "docs/ESPECIFICACION_PERIODOS_815_H113_20261027.md",
+    "data/diccionario_umas/EQUIVALENCIAS_UMAS.json"
+  ],
+  "efecto_simulado": "EFECTO_HIPOTETICO_PERIODOS45.json; escenario condicionado de mismo año; no homologación",
+  "esquemas_consultados": [
+    {
+      "REGIMEN_FUENTE": "REGIMEN",
+      "archivo": "PROMEDIOSDEALUMNOS_12166.xlsx",
+      "columnas_temporales": [],
+      "filas_objetivo": 5649,
+      "hoja": "Hoja1"
+    },
+    {
+      "REGIMEN_FUENTE": "REGIMEN",
+      "archivo": "PROMEDIOSDEALUMNOS_3233.xlsx",
+      "columnas_temporales": [],
+      "filas_objetivo": 41,
+      "hoja": "Hoja1"
+    },
+    {
+      "REGIMEN_FUENTE": "REGIMEN",
+      "archivo": "PROMEDIOSDEALUMNOS_7804.xlsx",
+      "columnas_temporales": [],
+      "filas_objetivo": 593,
+      "hoja": "Hoja1"
+    }
+  ],
+  "fechas_periodos45": {
+    "estado": "E",
+    "inicio": null,
+    "motivo": "PROMEDIOS no contiene inicio/término. FECHAMATRICULA de DA es evento de matrícula, no calendario del período; no sustituye fechas.",
+    "requisito": "Definición UMAS y calendario histórico por año/régimen para PERIODO 4 y 5.",
+    "termino": null
+  },
+  "fuentes": [
+    {
+      "ruta": "/Users/alexi/.local/share/ipss/fase_g_v20_candidata_20261027/DICCIONARIO_V20_CANDIDATA.sqlite",
+      "sha256": "84dffa1985b67a2307677a4d78d1993a516715209a5fd706261b3d3bca2133bb"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/activo.json",
+      "sha256": "26615bd2849dd39dfbf947ffda9f8d5d211504ad8c4e900d4ff0f2f936d4cc55"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v20_20261027_candidata_fase_g/descriptor.json",
+      "sha256": "37265daa07ec15d6b93f45028653c97366637bbc61894fe3e6ea370f5a68c809"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_sies_seguimiento/v7_20261023_inf35_03_t3/descriptor.json",
+      "sha256": "9037a9a8eb324dafa6b0535b0e66bd50425a058be8295f0edd405339115ac1b8"
+    },
+    {
+      "ruta": "/Users/alexi/Documents/GitHub/avance_curricular/data/diccionario_umas/DICCIONARIO_UMAS.json",
+      "sha256": "f05ac03aa8ca0ec6cf5f754cbaacebac630b2a3346ff592d7ee0b181b82e8811"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/0 BASES DE DATOS/Calendario-Academico-por-Periodo_2026_v3.pdf",
+      "sha256": "2167498aabed4a557a70ac51706488ce99a04dfd84cc855f4a2ced80e6ebdd4f"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_12166.xlsx",
+      "sha256": "aad1a71d166bdfb839049a5db534a21d050df1ed4e9251ad9982245896429015"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_3233.xlsx",
+      "sha256": "b1f2e395b9c5fbbd20e2a99f9e652843c24d2d743d3c9a2901303c4a06b0a25e"
+    },
+    {
+      "ruta": "/Users/alexi/Library/CloudStorage/OneDrive-InstitutoProfesionalSanSebastián/IPSS_CONCILIACION_UMAS_SIES_BASES/04_UMAS_PROMEDIOSDEALUMNOS/PROMEDIOSDEALUMNOS_7804.xlsx",
+      "sha256": "83a0ba72b21d25dd0d151b75fb0182a1f55bbe3f5efba06d088c994067262fca"
+    },
+    {
+      "ruta": "data/diccionario_umas/EQUIVALENCIAS_UMAS.json",
+      "sha256": "078dd975d0319d2c78f2f98a2c12c41ce14125c6c3d723dc4c60be841e6f1df9"
+    },
+    {
+      "ruta": "docs/ESPECIFICACION_PERIODOS_815_H113_20261027.md",
+      "sha256": "12a9c4baa860b2494265848e8454c0d13db14f5e99573215128051638f557aad"
+    },
+    {
+      "ruta": "docs/SEGUIMIENTO_RUT_Y_CONVERSION_PERIODOS_20261023.md",
+      "sha256": "79479caefc114d0dcdda2ea992829d4246adec2bf22f19756dac889d3cad5e91"
+    }
+  ],
+  "historicos_por_anio_periodo_regimen": [
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "n": 9,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "n": 8,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "n": 28,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2020,
+      "n": 1,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "n": 94,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2021,
+      "n": 2,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "n": 56,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2021,
+      "n": 1,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "n": 106,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "n": 91,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "n": 98,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "n": 90,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2023,
+      "n": 2,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "n": 2,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "n": 12,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "n": 1,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "n": 3,
+      "periodo": "5"
+    }
+  ],
+  "historicos_por_carrera_plan": [
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "carrera": "IECIREOL",
+      "n": 2,
+      "periodo": "5",
+      "plan": "IECIREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "carrera": "IETMREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "IETMREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "carrera": "TPCREOL",
+      "n": 5,
+      "periodo": "5",
+      "plan": "TPCREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "carrera": "TTMREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TTMREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "IECIREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "IECIREOL"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "IECIREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "IECIREOL20201"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "IETMREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "IETMREOL"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "NTCCREOL",
+      "n": 3,
+      "periodo": "4",
+      "plan": "NTCCREOL2020"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "TCSREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "TCSREOL2020"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "TPAREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "TPAREOL2020"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "IECIREOL",
+      "n": 2,
+      "periodo": "5",
+      "plan": "IECIREOL20201"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "IETMREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "IETMREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2020,
+      "carrera": "IINF",
+      "n": 1,
+      "periodo": "5",
+      "plan": "IINF20241"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "NTCCREOL",
+      "n": 2,
+      "periodo": "5",
+      "plan": "NTCCREOL2020"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "TCSREOL",
+      "n": 8,
+      "periodo": "5",
+      "plan": "TCSREOL2020"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "TPAREOL",
+      "n": 8,
+      "periodo": "5",
+      "plan": "TPAREOL2020"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "carrera": "TTMREOL",
+      "n": 7,
+      "periodo": "5",
+      "plan": "TTMREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IECIREOL",
+      "n": 2,
+      "periodo": "4",
+      "plan": "IECIREOL20201"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IECIREOL",
+      "n": 6,
+      "periodo": "4",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IECSREOL",
+      "n": 5,
+      "periodo": "4",
+      "plan": "IECSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IETMREOL",
+      "n": 18,
+      "periodo": "4",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "TCSREOL",
+      "n": 17,
+      "periodo": "4",
+      "plan": "TCSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "TPAREOL",
+      "n": 25,
+      "periodo": "4",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2021,
+      "carrera": "TTMRE",
+      "n": 2,
+      "periodo": "4",
+      "plan": "TTMRE20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "TTMREOL",
+      "n": 21,
+      "periodo": "4",
+      "plan": "TTMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IECIREOL",
+      "n": 6,
+      "periodo": "5",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IECSREOL",
+      "n": 2,
+      "periodo": "5",
+      "plan": "IECSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "IETMREOL",
+      "n": 15,
+      "periodo": "5",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "TCSREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TCSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "TPAREOL",
+      "n": 17,
+      "periodo": "5",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2021,
+      "carrera": "TTMRE",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TTMRE20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "carrera": "TTMREOL",
+      "n": 15,
+      "periodo": "5",
+      "plan": "TTMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "IECIREOL",
+      "n": 12,
+      "periodo": "4",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "IECSREOL",
+      "n": 18,
+      "periodo": "4",
+      "plan": "IECSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "IETMREOL",
+      "n": 34,
+      "periodo": "4",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TCSREOL",
+      "n": 4,
+      "periodo": "4",
+      "plan": "TCSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TPAREOL",
+      "n": 27,
+      "periodo": "4",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TTMREOL",
+      "n": 10,
+      "periodo": "4",
+      "plan": "TTMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TTMREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "TTMREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "IECIREOL",
+      "n": 17,
+      "periodo": "5",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "IECSREOL",
+      "n": 10,
+      "periodo": "5",
+      "plan": "IECSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "IETMREOL",
+      "n": 26,
+      "periodo": "5",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TCSREOL",
+      "n": 5,
+      "periodo": "5",
+      "plan": "TCSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TPAREOL",
+      "n": 25,
+      "periodo": "5",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TTMREOL",
+      "n": 7,
+      "periodo": "5",
+      "plan": "TTMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "carrera": "TTMREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TTMREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "IECIREOL",
+      "n": 17,
+      "periodo": "4",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "IECSREOL",
+      "n": 7,
+      "periodo": "4",
+      "plan": "IECSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "IETMREOL",
+      "n": 24,
+      "periodo": "4",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TCSREOL",
+      "n": 12,
+      "periodo": "4",
+      "plan": "TCSREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TPAREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TPAREOL",
+      "n": 31,
+      "periodo": "4",
+      "plan": "TPAREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TTMREOL",
+      "n": 6,
+      "periodo": "4",
+      "plan": "TTMREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "IECIREOL",
+      "n": 22,
+      "periodo": "5",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "IECSREOL",
+      "n": 8,
+      "periodo": "5",
+      "plan": "IECSREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "IETMREOL",
+      "n": 14,
+      "periodo": "5",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2023,
+      "carrera": "IINF",
+      "n": 1,
+      "periodo": "5",
+      "plan": "IINF20241"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TCSREOL",
+      "n": 8,
+      "periodo": "5",
+      "plan": "TCSREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TPAREOL",
+      "n": 2,
+      "periodo": "5",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TPAREOL",
+      "n": 31,
+      "periodo": "5",
+      "plan": "TPAREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2023,
+      "carrera": "TPAS",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TPAS20241"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "carrera": "TTMREOL",
+      "n": 5,
+      "periodo": "5",
+      "plan": "TTMREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "carrera": "IECIREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "carrera": "IETMREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "carrera": "IECIREOL",
+      "n": 4,
+      "periodo": "5",
+      "plan": "IECIREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "carrera": "IETMREOL",
+      "n": 4,
+      "periodo": "5",
+      "plan": "IETMREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "carrera": "TCSREOL",
+      "n": 3,
+      "periodo": "5",
+      "plan": "TCSREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "carrera": "TPAREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TPAREOL20231"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "carrera": "TPAREOL",
+      "n": 1,
+      "periodo": "4",
+      "plan": "TPAREOL20211"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "carrera": "IETMREOL",
+      "n": 2,
+      "periodo": "5",
+      "plan": "IETMREOL20191"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "carrera": "TPAREOL",
+      "n": 1,
+      "periodo": "5",
+      "plan": "TPAREOL20211"
+    }
+  ],
+  "limite_calendario": "Sólo trimestral 2026; no define los valores nativos 4/5 de otros años/régimen. No acredita verano.",
+  "personas_historicas_con_123": 185,
+  "personas_historicas_unicas": 377,
+  "propuesta": "Conservar 4/5 nativos. No proponer equivalencia estacional no probada. Si se acredita que son actividad del mismo año, someter a D la herencia del T1 de ese año o primer T1 posterior del mismo expediente/plan, con controles anuales; simular no equivale a aplicar.",
+  "universos": {
+    "historico_3049_periodos45": 604,
+    "v20_periodos45": 4149
+  },
+  "v20_por_anio_periodo_regimen": [
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "n": 28,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2019,
+      "n": 60,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "n": 105,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2020,
+      "n": 163,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2020,
+      "n": 1,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "n": 401,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2021,
+      "n": 3,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2021,
+      "n": 459,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2021,
+      "n": 1,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "n": 575,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2022,
+      "n": 547,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2022,
+      "n": 2,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "n": 685,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2023,
+      "n": 1,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2023,
+      "n": 683,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2023,
+      "n": 3,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "TRIMESTRAL",
+      "anio": 2023,
+      "n": 2,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "n": 192,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2024,
+      "n": 2,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2024,
+      "n": 212,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "SEMESTRAL",
+      "anio": 2024,
+      "n": 2,
+      "periodo": "5"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "n": 5,
+      "periodo": "4"
+    },
+    {
+      "REGIMEN_FUENTE": "BIMESTRAL",
+      "anio": 2025,
+      "n": 17,
+      "periodo": "5"
+    }
+  ]
+}

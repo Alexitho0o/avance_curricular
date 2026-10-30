@@ -945,6 +945,52 @@
       "fecha_resultado": "2026-10-30",
       "no_recalcular_salvo": "Excel estable para completar QA delimitado o corrección demostrada de presentación; no recalcular H001/R19 ni adjudicar pendientes.",
       "limites": "Publicación de scripts/informes no certifica 77 selectores ni cuatro capturas. Libros privados; sin cambios de cifras."
+    },
+    {
+      "id": "R28",
+      "pregunta": "¿Se validó cómo se unen los campos UMAS con el código SIES?",
+      "resultado_clave": "EVIDENCIA_METODOLOGICA_REENCUADRADA: 278 grupos, 256 únicos/22 múltiples; K3 mínimo 3 personas: 8.354 contextos, 7.664 aciertos, 6 errores, 684 abstenciones. Prospectiva T_plan: 50,6 % cobertura, 87,5 % precisión; 425/530 errores en 2022. No mide la regla de primer T1 posterior de H010.",
+      "archivo": "outputs/auditoria_metodos_puente_20261023_155309/RESUMEN.json",
+      "hoja_o_seccion": "RESUMEN; IDENTIFICABILIDAD K2; VALIDACION_POR_PERSONA K3_min3; VALIDACION_TEMPORAL T_plan",
+      "script_productor": "scripts/auditar_metodos_puente_20261023.py",
+      "commit": "68ab3f91",
+      "sha256": "6a8d2109fd28eee04bda5d11ce88d1560f23c457ae4c113742254df024477411",
+      "clase": "B/C; D reencuadre; E grupos",
+      "fecha_resultado": "2026-10-30",
+      "no_recalcular_salvo": "Fuente independiente que discrimine los 22 grupos.",
+      "limites": "Precisión anual no aplicable a ingresos T2/T3; no se borran errores anteriores ni se declaran resueltos por conversación.",
+      "evidencias": [
+        {
+          "ruta": "outputs/auditoria_metodos_puente_20261023_155309/IDENTIFICABILIDAD.json",
+          "sha256": "d9645d16e8071fa4e3df10354a0f3538e443e5c200931a825faa2191e862ae9f"
+        },
+        {
+          "ruta": "outputs/auditoria_metodos_puente_20261023_155309/VALIDACION_POR_PERSONA.json",
+          "sha256": "6798986dc5fc37ac3e2de79f6314ec85c981e4f90f12f6973393766984190456"
+        },
+        {
+          "ruta": "outputs/auditoria_metodos_puente_20261023_155309/VALIDACION_TEMPORAL.json",
+          "sha256": "cb1f46f08eddda3d209e01949201f6c7f0afc967231c94f6c2f22d5ebac41076"
+        },
+        {
+          "ruta": "outputs/conflictos_22_errores_6_20261023_161400/INFORME.md",
+          "sha256": "7b43a30bbb5a6da4916b4c338722b7e1c5db11b875aa8705b3111db8a412a3fd"
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "pregunta": "Asignación de código SIES por regla T1 (H010)",
+      "resultado_clave": "CANDIDATA v21 H010/H010b: 3.049 observaciones, 2.085 respaldadas y 964 E (604 períodos 4/5, 360 otros); 99 posiciones respaldadas, E 0. D1–D3 aplicadas sólo a residuales. Tasas 0,00 pp por conservación; no activación.",
+      "archivo": "outputs/regla_t1_h010_20261030/INFORME_H010.md",
+      "hoja_o_seccion": "H010b: cobertura, residuales y períodos 4/5",
+      "script_productor": "outputs/regla_t1_h010_20261030/resolver_h010b.py",
+      "commit": "PUBLICACION_H010_H010B; base 6505cae",
+      "sha256": "e9f2a3d02ba082abb7224eb0aa718b128f94e66da31c7c27fe0a85489d6c3d96",
+      "clase": "D método; B/C evidencia; E límites",
+      "fecha_resultado": "2026-10-30",
+      "no_recalcular_salvo": "Nueva evidencia de T1/expediente/plan, perfil tipo/duración o decisión explícita sobre residual; activación sólo por Alexi.",
+      "limites": "Períodos 4/5 sin homologar; sin T1 posterior con antecedente previo queda E. NUNCA_INFORMADO sólo ausencia en fuentes disponibles; D2 no convierte cohorte 2026 en 2027."
     }
   ],
   "diferencias_catalogo": [
